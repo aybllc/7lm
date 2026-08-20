@@ -19,13 +19,12 @@ this scaffold.
 7lm/
   README.md                      this file; no README.md exists under L7/ or uso/
   seven_layer_methodology.md     author-controlled; not maintained by scaffold work
-  durable/                       outside the scaffold; neither USO nor L7
-    bin/  delete/  foster/  orphan/  results/  README.md
   L7/                            Scientific Desktop; sits OUTSIDE the USO
-    intake/
-    PINNED/
-    compositions/
-    process-lessons.md
+    public/                      ingress/ (in, and where immutables rest)
+                                 egress/  (out)
+    private/                     durable/ (found/ caught/ naught/)
+                                 regress/
+    corpus/                      what is released
   uso/
     l0/
       definitions/
@@ -49,10 +48,8 @@ this scaffold.
         source-ledger.md
 ```
 
-Every directory under `L7/` and `uso/` carries a `0.md`; `durable/` is outside the scaffold
-and is not covered by this convention. Internal directories never use `README.md` — `L7/`
-and `uso/` hold none — so the root file you are reading is the scaffold's only one, and
-`durable/README.md` lies outside the scaffold.
+Every directory under `L7/` and `uso/` carries a `0.md`. Internal directories never use
+`README.md`, so the root file you are reading is the scaffold's only one.
 
 ## The layer map (L0-L6)
 
@@ -98,11 +95,11 @@ adjudicated, and a composition-specific choice would leak into the corpus as tho
 universal. L7 composes results; it never acquires ownership of what it composes.
 
 Direction matters. Intake is top-down through L7 — every incoming object enters at
-`L7/intake/` first. The dependency audit runs the other way, bottom-up from L0.
+`L7/public/ingress/` first. The dependency audit runs the other way, bottom-up from L0.
 
 ## The manual cycle: intake -> adjudication -> routing -> composition
 
-1. **Intake.** The source object is preserved unchanged in `L7/intake/` with its origin and
+1. **Intake.** The source object is preserved unchanged in `L7/public/ingress/` with its origin and
    version. It is decomposed provisionally into candidate local artifacts, each with one or
    more candidate layer owners. Early intake is provisional; overlap and contradiction are
    expected and are written down, not resolved on the spot.
@@ -112,7 +109,7 @@ Direction matters. Intake is top-down through L7 — every incoming object enter
    Candidate classification is not adjudicated routing or ownership.
 3. **Routing.** Only an adjudicated artifact is routed, and only to the lowest layer that
    can state it cleanly. Unrouted material stays in intake with its open questions visible.
-4. **Composition.** Compositions are assembled in `L7/compositions/`, naming every layer
+4. **Composition.** Compositions are assembled in `L7/corpus/`, naming every layer
    artifact and every pinned authority they depend on.
 
 Two rules govern the cycle throughout. Contradiction, tension, inconsistency, rejection,
@@ -122,7 +119,7 @@ does not send it to `uso/l6/history/`.
 
 ## PINNED
 
-`L7/PINNED/` holds fixed bindings to authority artifacts, and nothing else. Only the
+`L7/public/ingress/` holds fixed bindings to authority artifacts, and nothing else. Only the
 binding — the fixed referent, its immutable identification, and the scope it is pinned for
 — lives here. Authority content stays in its owning repository and is never copied,
 paraphrased, or routed down into `uso/`.
@@ -168,8 +165,8 @@ bounded, not filled out for symmetry.
   substitutes for it.
 - Mapping and similarity never establish identity or semantic authority, and formal
   consistency under one interpretation does not choose that interpretation.
-- `durable/` and `seven_layer_methodology.md` are outside this scaffold's documentation
-  surface and are not maintained by scaffold work.
+- `seven_layer_methodology.md` is outside this scaffold's documentation surface and is
+  not maintained by scaffold work.
 
 When a problem you hit here is reusable rather than local to one artifact, record it in
 /L7/process-lessons.md.
