@@ -1,0 +1,75 @@
+# L0 - Prior Art
+
+This directory records external work that bears on the corpus, so that local artifacts can be
+compared with it and attributed against it. A prior-art record fixes what a source says, at what
+version, within the scope the source itself declares, and exactly how narrowly it touches the local
+artifact. Prior art supplies comparison and attribution. It does not supply automatic validation of
+anything written in this corpus, and no record here may be read as external endorsement of the
+layering itself.
+
+## Required fields per record
+
+| Field | What it must contain | Basis | Source or locator |
+| --- | --- | --- | --- |
+| Exact source identity | Full title, standard or document number, publisher or issuing body, and named editors or authors as printed. | Project rule | - |
+| Version | Edition, revision, corrected-version marker, and date as printed on the document. | Adapted from [source] | ISO/IEC/IEEE 24765:2017, 3.339 def. 1 "baseline": "formally approved version of a configuration item, regardless of media, formally designated and fixed at a specific time during the configuration item's life cycle" |
+| Stable locator | Clause, entry, section, or printed page that carries the cited text, plus the local file path or the persistent URI. Note where a page number is not printed. | Project rule | - |
+| Access date | The date the document was read for this record, and by whom. | Project rule | - |
+| Holding status | Held locally and read, or named but not held. A source not held is never cited as read. | Project rule | - |
+| Narrow relevance | One or two sentences on the single point of contact with the named local artifact. Not a summary of the source. | Project rule | - |
+| Declared scope | The scope the source states for itself, quoted or cited from its own scope clause. | Adapted from [source] | ISO/IEC/IEEE 24765:2017, 1.1 General: "The scope of each concept defined has been chosen to provide a definition that is suitable for general application. In those circumstances where a restricted application is concerned, a more specific definition might be needed." |
+| Negative findings | What was searched for and not found, including terms absent from the source and questions it does not address. | Project rule | - |
+| Limits | What this record does not establish: which local claim it leaves untouched, and which epistemic status is unchanged by it. | Project rule | - |
+| Relation type | How the source stands to the local artifact, named with the /uso/l0/semantics relation vocabulary. | Project working use | - |
+
+## Manual work
+
+1. Read the source before opening a record. If it was not read in a locally held file, open the
+   record with holding status "named but not held" and stop there.
+2. Copy the exact identity, version, and stable locator from the document itself, not from a
+   citation of it elsewhere.
+3. Quote or cite the source's own scope clause before writing relevance, and check the intended
+   local use against that scope.
+4. Write the narrow relevance last, after the scope is on the page, and keep it to the one point of
+   contact with one named local artifact.
+5. Record the negative findings in the same pass, including failed searches and absent terms.
+   Negative results are part of the record, not a sign that the pass failed.
+6. Write the limits explicitly: name the local claim that remains at its prior epistemic status
+   despite this record.
+7. Name the relation type between source and local artifact, and keep identity, equivalence,
+   similarity, and semantic mapping distinct, per /uso/l0/semantics.
+8. Where two held sources disagree, record both records and the disagreement. Do not harmonize
+   them, and do not rank one over the other from this directory.
+
+## Sources named in scope work but not held locally
+
+The not-held list is maintained in exactly one place, /uso/l0/definitions/0.md, and is not
+duplicated here. A distinction that would need one of those sources is written as a project rule or
+project working use and is not attributed to the absent source.
+
+## Keep out
+
+- Prior art is not validation. A record here establishes that a source exists, says something, at a
+  version, in a scope. Confirmation of fitness for use is a separate activity: ISO/IEC/IEEE
+  24765:2017, 3.4500 def. 1, defines validation as "confirmation, through the provision of
+  objective evidence, that the requirements for a specific intended use or application have been
+  fulfilled", and JCGM 200:2012, 2.44 Note 5, adds that "Not every verification is a validation".
+- Absence of contradiction is not evidence of support. A source that does not mention a local
+  claim has said nothing about it, and the negative finding is what gets recorded.
+- Similarity is not validation. Resemblance between an external construct and a local artifact is a
+  similarity result and must be recorded as one, never as agreement, equivalence, or identity.
+- A source used outside its own declared scope is a new claim, not a citation. Record the intended
+  extension as a local claim with its own epistemic status, and attribute it to this corpus.
+- Custody, an exact hash, an authority binding, internal consistency, or a clean provenance chain
+  does not establish scientific validity. PROV-DM (W3C Rec. 30 April 2013), Abstract, puts
+  provenance at its actual weight: "Provenance is information about entities, activities, and
+  people involved in producing a piece of data or thing, which can be used to form assessments
+  about its quality, reliability or trustworthiness."
+- No invented citations, quotes, page numbers, or clause numbers, and no citing a source that was
+  not read. No forums, blogs, encyclopedia entries, vendor copy, search snippets, or model output
+  as authority; such material may only locate a primary source, which is then read and recorded.
+- No authority content copied down from /L7/public/ingress into this directory. Only the fixed binding
+  lives there, and the content stays with its owner.
+
+Reusable process problems discovered while doing this work belong in /L7/process-lessons.md, not in
+this directory.

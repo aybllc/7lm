@@ -1,0 +1,55 @@
+# L3 - Approximation, Measurement, and Finite Representation
+
+L3 is where exactness ends. Anything that carries a resolution, a rounding rule, a
+tolerance, an error, or an uncertainty is L3 work, and so is the finite side of a unit; naming the
+quantity kind and unit that fix an L1 domain is not. Every L3 artifact names the exact L2
+object it approximates and the conditions under which the approximation is claimed to hold.
+L4 sits above as the present application and implementation boundary; L3 stops short of it.
+
+## What L3 owns
+
+- Approximations and the numerical methods that produce them.
+- Measurement results, units, and resolution.
+- Calibration as /uso/l0/definitions/0.md defines it: the recorded relation between an instrument's indication and the quantity value assigned to it, with its date, conditions, and the authority the assignment is referred to — distinct from the apparatus settings recorded at L4.
+- Finite representation: rounding, truncation, representable ranges, overflow behaviour.
+- Uncertainty, error, and tolerance, kept distinct from one another.
+- Reproducibility conditions recorded with the result they belong to.
+
+## What L3 must name from below
+
+- The exact L2 object being approximated, by name, together with the L2 artifact's own
+  named L0 interpretation and L1 declaration.
+- The conditions under which the approximation is asserted to hold, stated as conditions
+  and not as background assumptions the reader is expected to supply.
+
+## The standing statement of this layer
+
+A finite result is not the exact L2 object it approximates. It is a different artifact with
+its own conditions, its own error behaviour, and its own failure modes. It inherits neither
+the exactness of the L2 object nor whatever that object was proved to satisfy. Agreement to
+within a tolerance is agreement to within a tolerance and nothing more.
+
+## Children
+
+- `engineering-mathematics/` - the finite artifacts themselves: approximation, measurement,
+  calibration, numerical method, finite representation, units, resolution, uncertainty,
+  error, tolerance, rounding, and the reproducibility conditions recorded with each result.
+
+## Manual work
+
+1. Name the exact L2 object before producing any finite result; a result with no named L2 object approximates nothing that can be checked.
+2. State the conditions under which the approximation holds, including where it is known to fail.
+3. Keep tolerance, error, and uncertainty as three separate entries, never one number wearing three names.
+4. Record the reproducibility conditions with the result: inputs, environment, method, and what a failure of this result would look like.
+5. Check that no finite result has been substituted for the L2 object anywhere upstream of it.
+6. Raise a defect in the L2 object as an L2 matter, in L2; do not patch it with an approximation here.
+7. Route anything whose owner or layer is not yet adjudicated back through L7 ingress.
+
+## Boundary
+
+- L3 never rewrites, narrows, or repairs the L2 object it approximates; a mismatch is reported to L2, not absorbed here.
+- L3 does not make application or deployment choices. Those are L4 or an L7 composition, and such a choice is not universal supersession of anything at L3 or below.
+- A similarity measure between two results is not semantic authority, and close numbers do not establish identity or equivalence.
+- Reproducing a result establishes reproducibility under the recorded conditions; it does not by itself establish scientific validity.
+
+Record reusable process problems found while doing L3 work in /L7/process-lessons.md.

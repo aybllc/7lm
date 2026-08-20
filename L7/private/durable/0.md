@@ -1,8 +1,0 @@
-# durable
-
-Holds: the task lifecycle. The directory a file sits in is its state.
-Being here means: state is position, not metadata.
-
-## Do
-- Claude writes new files into `found/`.
-- The owner moves them between states. No one else does.
