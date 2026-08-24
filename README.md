@@ -18,7 +18,6 @@ this scaffold.
 ```
 7lm/
   README.md                      this file; no README.md exists under L7/ or uso/
-  seven_layer_methodology.md     author-controlled; not maintained by scaffold work
   L7/                            Scientific Desktop; sits OUTSIDE the USO
     public/                      ingress/ (in, and where immutables rest)
                                  egress/  (out)
@@ -44,6 +43,8 @@ this scaffold.
     l5/
     l6/
       history/
+        origin/
+          seven_layer_methodology.md   author-controlled; not maintained by scaffold work
       provenance/
         source-ledger.md
 ```
