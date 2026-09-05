@@ -163,7 +163,7 @@ The owner's rule, stated plainly: the exemplars fill in the layers by reference;
 
 ## Where things live
 
-- Controlling specification: `USO/l4/work/writing/7lm-harmonized-architecture-specification.docx` and its Markdown conversion `USO/l4/work/writing/7lm-harmonized-architecture-specification.md` (filed as a produced writing artifact; its research meaning is L5 and its release state is L7).
+- Controlling specification: `USO/l4/work/writing/7lm-harmonized-architecture-specification.docx` (the owner's document, byte for byte; controls the wording), its canonical Markdown form `USO/l4/work/writing/7lm-harmonized-architecture-specification.md` (normalized 2026-09-05, word for word, the unlabelled Word styles made visible as bracketed tags), and the plain Word rendering generated from that Markdown, `USO/l4/work/writing/7lm-harmonized-architecture-specification-normalized.docx` (built-in styles only, one page per top-level section). Filed as produced writing; research meaning is L5 and release state is L7.
 - Superseded draft (its own footer dates it "3 September 2026"): `USO/l6/retired/specification-draft-2026-09-03/`.
 - Retired pre-harmonization scaffold (2026-08-20), every gate file at its original relative path, including the owner's README sketch: `USO/l6/retired/scaffold-2026-08-20/`.
 - Harmonization record of this displacement event (2026-09-04): `USO/l6/history/harmonization-2026-09-04.md`.
