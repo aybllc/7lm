@@ -91,3 +91,7 @@ The Harmonization Record's row "L6 provenance — Split": "Internal reconstructa
 - Whether any retired text was right. That is an L5 judgment.
 - The provenance of external sources any retired sheet cited (ISO/IEC/IEEE 24765:2017, JCGM 200:2012, IEEE Std 2755-2017, W3C PROV). Those references resolve to `L7/provenance/`; they are not re-owned by this record.
 - Any placement for a reserved term.
+
+## 6. Addendum, 2026-09-05 — the owner's copyright rule
+
+The owner wrote into the README of `aybllc/autonomous` (commit `7465e77`, 2026-09-04): "THIS IS GREAT BUT WE NEED TO TEACH THAT THE PLACE TO LOOK FOR COPYRIGHT IS ONLY ONE PLACE, FROM THERE IT SHOULD BE OBVIOUS TO THE OBSERVER THERE WHAT TO DO NEXT. I THINK WE NEED TO ENFORCE INTUITVITY BY NOT DEFINING SO MANY RULES. COPYRIGHT FOR TO COPYRIGHT WE DON'T SPEAK ABOUT THAT HERE." The teaching is placed in this scaffold at `L7/governance/copyright/0.md` ("One place") and named in the README; the two exemplars apply it. The specification's text is not changed; it already gives copyright its own position and says "Copyright governs external use of an artifact; it does not change the artifact's scientific meaning."

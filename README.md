@@ -170,6 +170,7 @@ The owner's rule, stated plainly: the exemplars fill in the layers by reference;
 - Source ledger (header-only, no rows): `L7/provenance/sources/source-ledger.md`.
 - Curated sources: served by pointer from the archive `aybllc/l6` (INTERNAL; read-only from every consuming repository; each row pins the `l6` commit it was read at) — see `L7/provenance/sources/0.md`.
 - Layer root sheets: `USO/l0/0.md` … `USO/l6/0.md`, `L7/0.md`; interior root: `USO/0.md`.
+- Copyright: one place, `L7/governance/copyright/`. Nothing else in a 7LM repository restates a copyright rule; the sheet there says what to do next (owner's rule, 2026-09-04; applied in `aybllc/autonomous` and `aybllc/auditonomous`).
 
 ## Harmonization dispositions
 
