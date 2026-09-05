@@ -68,6 +68,8 @@ The owner's README working sketch, titled "Unified Science Object", is retired v
 | 2026-09-03 | Draft "SEVEN-LAYER MODEL (7LM) Authoritative Architecture Specification" — the date its own footer carries. Superseded the next day. | — |
 | 2026-09-04 | Retirement and filing: the nineteen `0.md` files and README.md moved verbatim to `USO/l6/retired/scaffold-2026-08-20/…` at their old relative paths (§1a); `USO/l6/provenance/source-ledger.md` (header-only, no rows) relocated to `L7/provenance/sources/source-ledger.md` unchanged; the harmonized specification filed at `USO/l4/work/writing/7lm-harmonized-architecture-specification.docx` and `.md`; the superseded draft filed at `USO/l6/retired/specification-draft-2026-09-03/7lm-architecture-specification-draft.pdf` (386,578 bytes; 19 pages) and `.txt`. | e810f61 |
 | 2026-09-04 | Uniform `0.md` sheets written for every directory of the canonical topology, by hand, without automation; the stubs `L7/0.md`, `L7/governance/0.md`, `L7/peering/0.md`, `L7/publications/0.md` (empty at e295a5d) overwritten by harmonized sheets. | (uncommitted at time of writing) |
+| 2026-09-04 | The sheets of the previous row were committed. | fb22e25 |
+| 2026-09-05 | Owner designated `aybllc/l6` (INTERNAL) as the archive that serves curated sources to this program, read-only from every consuming repository ("don't edit l6; use it to serve curated sources"). Recorded at `L7/provenance/sources/0.md` and `L7/peering/private/ingress/0.md`; the archive pinned at `53b28f6`. | (the commit that added this row) |
 
 ## 3. Reserved — no current path
 

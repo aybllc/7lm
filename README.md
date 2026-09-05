@@ -157,6 +157,7 @@ Three exemplar programs fill in the layers by reference. Each layer root sheet c
 - **EXEMPLAR OMMP — aybllc/ommp @ 609e4de, with aybllc/uha-stack @ 49ab41f as the UHA it attaches to** — https://github.com/aybllc/ommp and https://github.com/aybllc/uha-stack
   In its own words, ommp is "the research repository of Eric D. Martin. Subject: oMMP (Observer MetaModal Platform) — an observer-anchored grammar for recording an observation as typed mathematical fields rather than as a narrative story."
   uha-stack is the configuration-controlled home of the UHA, "an observer-rooted, state-space-first, openly decodable binary addressing and record system", whose address is the first, opaque, anchored field of the oMMP record; ommp is declared INTERNAL ONLY; uha-stack keeps every claim labelled at or below INTERNALLY VALIDATED, with no outside-verified claim.
+- All three point into the same curated-source archive, `aybllc/l6`, by path and pinned commit; none holds a source file.
 
 The owner's rule, stated plainly: the exemplars fill in the layers by reference; they are not merged into this scaffold as research projects. In the specification's words, the Autonomous and Auditonomous repositories are implementation work in progress; their current layouts do not control the architecture. Architecture and implementation status are separate claims. The Autonomous/Auditonomous root issue supplies the concrete origin of the agnostic peering rule: one bounded research object must be able to depend on another without owning, copying, redefining, or maintaining both objects' foundational semantics. Reference implementations: https://github.com/aybllc/autonomous and https://github.com/aybllc/auditonomous.
 
@@ -167,6 +168,7 @@ The owner's rule, stated plainly: the exemplars fill in the layers by reference;
 - Retired pre-harmonization scaffold (2026-08-20), every gate file at its original relative path, including the owner's README sketch: `USO/l6/retired/scaffold-2026-08-20/`.
 - Harmonization record of this displacement event (2026-09-04): `USO/l6/history/harmonization-2026-09-04.md`.
 - Source ledger (header-only, no rows): `L7/provenance/sources/source-ledger.md`.
+- Curated sources: served by pointer from the archive `aybllc/l6` (INTERNAL; read-only from every consuming repository; each row pins the `l6` commit it was read at) — see `L7/provenance/sources/0.md`.
 - Layer root sheets: `USO/l0/0.md` … `USO/l6/0.md`, `L7/0.md`; interior root: `USO/0.md`.
 
 ## Harmonization dispositions
