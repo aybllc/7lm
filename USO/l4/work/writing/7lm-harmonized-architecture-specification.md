@@ -1,12 +1,19 @@
 <!-- Source: FINAL.docx, "SEVEN-LAYER MODEL (7LM) Harmonized Authoritative Architecture Specification",
-     57,442 bytes, supplied by the owner 2026-09-04. This file is a text conversion of that document made by
-     extracting word/document.xml paragraph, list, and table text; tables were rewritten as Markdown tables or
-     fenced blocks; no wording was changed. The .docx alongside this file is the authored artifact and controls
-     where the conversion and the document differ. -->
+     57,442 bytes, supplied by the owner 2026-09-04; the .docx beside this file is that file, byte for byte, and
+     controls wherever this conversion and the document differ. This file is a text conversion made by reading
+     word/document.xml in body order: paragraphs, headings, lists, and tables (tables as Markdown tables; the
+     diagram cells as fenced blocks). Verified 2026-09-05 by word-for-word comparison against the .docx: 9,135
+     words in the document, 9,135 words here, in the same order, none added, none removed, none changed. Four
+     Word paragraph styles carry no visible label in the document (Clarification; Note; Boundary Rule; Research
+     Note); their paragraphs are marked here by a comment like this one and set in the style's formatting, and
+     an earlier revision of this file that had prefixed them with the style name as a bold label is superseded. -->
 
 SEVEN-LAYER MODEL (7LM)
 Harmonized Authoritative Architecture Specification
 Canonical research directory topology and uniform layer information sheets
+
+<!-- page footer, printed on every page of the .docx -->
+*7LM Harmonized Authoritative Architecture Specification • 4 September 2026*
 | Authority |
 |---|
 | This specification states the controlling 7LM research architecture: one canonical agnostic directory topology and one uniform information sheet for each layer. The structure, layer boundaries, directory prose, machine-metadata distinction, and stated rationales are authoritative for this research program. Capability branches may remain empty when unused; they remain part of the agnostic topology so a project can instantiate them without changing the architecture. |
@@ -18,7 +25,8 @@ Scientific construction proceeds from L0 outward only as dependencies are establ
 ## Originating architectural constraint
 
 The Autonomous/Auditonomous root issue supplies the concrete origin of the agnostic peering rule: one bounded research object must be able to depend on another without owning, copying, redefining, or maintaining both objects' foundational semantics. Auditonomous can use the exact Autonomous definition without becoming a second semantic authority for Autonomous. peer-1/object-1 is the agnostic form of this concrete ownership problem.
-**Clarification.** The Autonomous and Auditonomous repositories are implementation work in progress; their current layouts do not control the architecture. Architecture and implementation status are separate claims.
+<!-- Word paragraph style "Clarification" (indented) -->
+> The Autonomous and Auditonomous repositories are implementation work in progress; their current layouts do not control the architecture. Architecture and implementation status are separate claims.
 
 ### Contextual semantic route
 
@@ -67,7 +75,8 @@ APA-like hierarchy with author notes • current working architecture
 
 The Seven-Layer Model (7LM) is a dependency and fault-containment architecture for separating local meaning, admissibility, exact formalization, engineering approximation, realized work, research interpretation, reconstructable memory, and external presentation. Its practical debugging rule is to find the first layer at which the required invariant, evidence relation, or handoff fails, then return the correction to that owner.
 Scientific construction/prescription proceeds outward: L0 → L1 → L2 → L3 → L4 → L5 → L6 → L7, but only as far as established dependencies justify. Interpretive inspection of an externally owned object proceeds inward: L7 → L6 → L5 → L4 → L3 → L2 → L1 → L0.
-**Clarification.** Author note. Description does not prescribe. A path can be observed or interpreted without becoming a normative requirement. Prescription requires an established dependency that has actually been tested or ratified to the degree the next layer needs.
+<!-- Word paragraph style "Clarification" (indented) -->
+> Author note. Description does not prescribe. A path can be observed or interpreted without becoming a normative requirement. Prescription requires an established dependency that has actually been tested or ratified to the degree the next layer needs.
 
 ## 2. Topology and traversal
 
@@ -104,7 +113,8 @@ The canonical research tree keeps the interior physically flat: l6/, l5/, l4/, l
 | L3 / L2 nested sub-bundle | Within the broader L3-L2-L1 view, L3-L2 is a tighter engineering/formal sub-bundle when L1 is already pinned and not itself under question. |
 | L0 local semantic boundary | L0 is deliberately separated from L1. L0 establishes the local semantic/foundational contract; L1 establishes admissible states under that contract. |
 
-**Clarification.** Author note. These bundles are semantic and dependency views, not filesystem nesting and not mandatory traversal paths. The same scientific object may be railed through different subsets of the architecture according to the question being asked, while each representation remains owned by the layer that can state it correctly.
+<!-- Word paragraph style "Clarification" (indented) -->
+> Author note. These bundles are semantic and dependency views, not filesystem nesting and not mandatory traversal paths. The same scientific object may be railed through different subsets of the architecture according to the question being asked, while each representation remains owned by the layer that can state it correctly.
 
 ## 3. Contained architectures and analytic expansion
 
@@ -126,7 +136,8 @@ When the question changes to the origins, development, justification, standardiz
 | L1 - State Space | Admissible structural states, possibilities, exclusions, or coordinate/state-space descriptions when these are part of the question. |
 | L0 - Semantic / Foundational | The locally authored semantic distinctions required to describe what is being investigated. Externally owned standards definitions remain owned by their source and are bound through L7 rather than copied into L0. |
 
-**Clarification.** Author note. The OSI model does not become 7LM L0-L7. The question about the OSI object expands. Operational containment remains L4, while representations produced by the inquiry are owned by the 7LM layer that can state them correctly.
+<!-- Word paragraph style "Clarification" (indented) -->
+> Author note. The OSI model does not become 7LM L0-L7. The question about the OSI object expands. Operational containment remains L4, while representations produced by the inquiry are owned by the 7LM layer that can state them correctly.
 
 ### 3.3 Nested analytic views
 
@@ -207,9 +218,11 @@ Notation: /0 means the directory carries its local 0.md human-readable semantic 
 ```
 
 Canonical-tree rule. Unused now does not mean removed. The same complete topology is available to Autonomous, Auditonomous, OMMP, classroom research, institutional research, and future research repositories.
-**Research note.** Each /0 begins with the object directory and path: /data/location/object
+<!-- Word paragraph style "Research Note" (indented, bold) -->
+> **Each /0 begins with the object directory and path: /data/location/object**
 
-**Clarification.** Standing. Each local 0.md first identifies the directory/object and its path, then supplies that directory's semantic description. Machine instructions belong to the directory metadata, not to the semantic prose.
+<!-- Word paragraph style "Clarification" (indented) -->
+> Standing. Each local 0.md first identifies the directory/object and its path, then supplies that directory's semantic description. Machine instructions belong to the directory metadata, not to the semantic prose.
 
 L7 = Desktop
 USO = USO as bounded scientific object
@@ -243,7 +256,8 @@ USO/l0/0
 └── definitions/0
 ```
 
-**Boundary rule.** Boundary / traversal rule. L0/semantics contains the semantic representation authored by the bounded thing. An externally owned definition is not copied into L0 merely to populate the directory.
+<!-- Word paragraph style "Boundary Rule" (bold) -->
+**Boundary / traversal rule. L0/semantics contains the semantic representation authored by the bounded thing. An externally owned definition is not copied into L0 merely to populate the directory.**
 
 #### Directory prose and rationale
 
@@ -257,16 +271,20 @@ USO/l0/0
 | semantics/ | Directory for the Semantic rail content authored by this bounded object. | Keeps local semantic meaning separate from externally owned definitions and later formal representation. |
 | semantics/definitions/ | Directory for definitions actually authored by this object under its Semantic rail. | Prevents an external definition from being copied inward and mistaken for locally owned meaning. |
 
-**Note.** Author note. Current correction: L0/semantics is the semantic version we make of the thing. If we do not make one, the directory is not populated with someone else’s definition.
+<!-- Word paragraph style "Note" (indented, italic) -->
+> *Author note. Current correction: L0/semantics is the semantic version we make of the thing. If we do not make one, the directory is not populated with someone else’s definition.*
 
-**Research note.** MOST IMPORTANT: I THINK DRIFT LIVES HERE! NOT ANYWHERE ELSE...(NEEDS A LOT OF STUDY)
+<!-- Word paragraph style "Research Note" (indented, bold) -->
+> **MOST IMPORTANT: I THINK DRIFT LIVES HERE! NOT ANYWHERE ELSE...(NEEDS A LOT OF STUDY)**
 
-**Clarification.** Standing. This statement is retained as a research hypothesis: semantic drift is expected to originate when the local L0 meaning contract changes or is misapplied. The hypothesis remains open to testing rather than being promoted to a settled rule.
+<!-- Word paragraph style "Clarification" (indented) -->
+> Standing. This statement is retained as a research hypothesis: semantic drift is expected to originate when the local L0 meaning contract changes or is misapplied. The hypothesis remains open to testing rather than being promoted to a settled rule.
 
 ### In the case of:
 
 In the Autonomous exemplar, IEEE/IEC have already been adjudicating relevant definitions through standards. The locally authored semantic definition used by this bounded object still lives at Layer 0, while the discourse, research, and state-space objects are distilled to their own layers. AUTONOMOUS and AUDITONOMOUS are retained as pedagogical exemplars: EXEMPLAR AUTO and EXEMPLAR AUDIT.
-**Clarification.** Standing. In this exemplar, the L0 object is the locally authored semantic definition of Autonomous. IEEE/IEC source definitions and standards remain externally owned inputs bound through L7 peering; their source identity, version, authority, and prior-art relation are represented through L7 provenance. Historical internal use remains reconstructable through L6.
+<!-- Word paragraph style "Clarification" (indented) -->
+> Standing. In this exemplar, the L0 object is the locally authored semantic definition of Autonomous. IEEE/IEC source definitions and standards remain externally owned inputs bound through L7 peering; their source identity, version, authority, and prior-art relation are represented through L7 provenance. Historical internal use remains reconstructable through L6.
 
 # L1 — STATE SPACE
 
@@ -288,7 +306,8 @@ USO/l1/0
 └── state-space/0
 ```
 
-**Boundary rule.** Boundary / traversal rule. L1 establishes the admissible state space. Formal operation begins at L2.
+<!-- Word paragraph style "Boundary Rule" (bold) -->
+**Boundary / traversal rule. L1 establishes the admissible state space. Formal operation begins at L2.**
 
 #### Directory prose and rationale
 
@@ -327,7 +346,8 @@ State-space and claim boundaries
 An object or formal operation may not silently leave the declared state space and still claim continuity with the same L1 contract. An out-of-space result either fails under the current model or motivates an explicit proposal for a revised state space.
 Mathematical permission is not automatic engineering or empirical permission. A mathematically valid object may stop at L2. Engineering feasibility must be earned at L3, realized work at L4, and scientific interpretation at L5. Packaging or publicity at L7 never promotes maturity by itself.
 The architecture therefore permits speculation while making maturity explicit: build whatever the mathematics legitimately permits; claim only what the completed handoffs have earned.
-**Note.** Author note. STATE and IMMUTABLE remain useful descriptive/mnemonic language, but the controlling layer name is State Space.
+<!-- Word paragraph style "Note" (indented, italic) -->
+> *Author note. STATE and IMMUTABLE remain useful descriptive/mnemonic language, but the controlling layer name is State Space.*
 
 # L2 — FORMAL MATHEMATICS
 
@@ -352,7 +372,8 @@ USO/l2/0
 └── proofs/0
 ```
 
-**Boundary rule.** Boundary / traversal rule. Engineering tolerance, numerical approximation, and numerical uncertainty belong to L3, not to L2 exact formal ownership.
+<!-- Word paragraph style "Boundary Rule" (bold) -->
+**Boundary / traversal rule. Engineering tolerance, numerical approximation, and numerical uncertainty belong to L3, not to L2 exact formal ownership.**
 
 #### Directory prose and rationale
 
@@ -364,7 +385,8 @@ USO/l2/0
 | operators/ | Directory for exact operators, functions, gates, constructors, and other lawful formal actions. | Keeps operation explicit rather than burying it inside prose or engineering implementation. |
 | proofs/ | Directory for proofs, lemmas, derivations, and explicit unproved obligations. | Keeps warrant for exact claims inspectable and separate from the claim’s notation or later numerical realization. |
 
-**Note.** Author note. Current correction: “finite tolerance” is not an L2 ownership rule. Engineering tolerance and numerical uncertainty belong at L3.
+<!-- Word paragraph style "Note" (indented, italic) -->
+> *Author note. Current correction: “finite tolerance” is not an L2 ownership rule. Engineering tolerance and numerical uncertainty belong at L3.*
 
 # L3 — ENGINEERING MATHEMATICS
 
@@ -389,7 +411,8 @@ USO/l3/0
 └── tolerances/0
 ```
 
-**Boundary rule.** Boundary / traversal rule. L3 owns engineering approximation and feasibility; it does not own the realized L4 output.
+<!-- Word paragraph style "Boundary Rule" (bold) -->
+**Boundary / traversal rule. L3 owns engineering approximation and feasibility; it does not own the realized L4 output.**
 
 #### Directory prose and rationale
 
@@ -405,9 +428,11 @@ USO/l3/0
 
 L2 may formalize exact relations about life, but L2 does not mathematically support life.
 Mathematics that depends on continuation, tolerance, uncertainty, adaptation, feedback, or environmental exchange begins at L3. L4 realizes or records the resulting conversion.
-**Clarification.** This boundary remains a research hypothesis until tested.
+<!-- Word paragraph style "Clarification" (indented) -->
+> This boundary remains a research hypothesis until tested.
 
-**Note.** Author note. INFINITE is retained as a working term for open-ended tolerance/refinement across implementations and time, not as permission to move exact L2 objects here.
+<!-- Word paragraph style "Note" (indented, italic) -->
+> *Author note. INFINITE is retained as a working term for open-ended tolerance/refinement across implementations and time, not as permission to move exact L2 objects here.*
 
 # L4 — LAYER 4
 
@@ -437,7 +462,8 @@ USO/l4/0
 └── computation/0
 ```
 
-**Boundary rule.** Boundary / traversal rule. Writing belongs to L4 as performed work. Its research meaning belongs to L5; a released publication belongs to L7. Contained architectures may expand internally without changing their 7LM owner. When the question is how the OSI architecture operates, the complete OSI L1-L7 stack remains inside 7LM L4, and OSI L7 is not 7LM L7. When the question instead concerns OSI origins, development, justification, standardization, or design constraints, the inquiry may expand across the appropriate 7LM layers without remapping the OSI stack itself. An OSI network fault is therefore an L4 operational fault unless separately shown to affect another layer's owned object.
+<!-- Word paragraph style "Boundary Rule" (bold) -->
+**Boundary / traversal rule. Writing belongs to L4 as performed work. Its research meaning belongs to L5; a released publication belongs to L7. Contained architectures may expand internally without changing their 7LM owner. When the question is how the OSI architecture operates, the complete OSI L1-L7 stack remains inside 7LM L4, and OSI L7 is not 7LM L7. When the question instead concerns OSI origins, development, justification, standardization, or design constraints, the inquiry may expand across the appropriate 7LM layers without remapping the OSI stack itself. An OSI network fault is therefore an L4 operational fault unless separately shown to affect another layer's owned object.**
 
 #### Directory prose and rationale
 
@@ -455,9 +481,11 @@ Any intellectual property to energy, or energy to intellectual property.
 IP to energy: an intellectual object is made operative through writing, computation, experiment, integration, transport, deployment, teaching, operation, or manufacturing.
 Energy to IP: an energetic event, operation, measurement, observation, success, or failure is captured as an identifiable intellectual object.
 A toy, model, OSI stack, writing event, computation, manufactured thing, or full system can be L4. Role remains decisive: an exact model may be L2, its engineering realization may be L3, the model as made or operated is L4, and its research meaning is L5.
-**Research note.** MOST IMPORTANT: THE CUT LIVES HERE
+<!-- Word paragraph style "Research Note" (indented, bold) -->
+> **MOST IMPORTANT: THE CUT LIVES HERE**
 
-**Clarification.** Standing. The cut is the realization boundary: L3 and below specify what is admissible, exact, or engineerable; L4 is where resources are committed and an identifiable work product, measurement, execution, or failure is produced.
+<!-- Word paragraph style "Clarification" (indented) -->
+> Standing. The cut is the realization boundary: L3 and below specify what is admissible, exact, or engineerable; L4 is where resources are committed and an identifiable work product, measurement, execution, or failure is produced.
 
 ### In the case of:
 
@@ -473,7 +501,8 @@ Cross-layer activity cases
 | External definition | Owner remains external at L7 peering; source/version/authority/prior-art relation is L7 provenance; applicable legal/access conditions are L7 governance; internal use history is L6; interpretation is L5; no local L0 object exists unless this bounded thing authors a semantic version. |
 | Publication | Production is L4; scholarly/research meaning is L5; internal history is L6; provenance, public/legal governance, and the released publication object are L7. |
 
-**Note.** Author note. Writing is L4 as work. An exemplar/model/thesis/file is made here; its research meaning may be L5 and its released publication may be L7.
+<!-- Word paragraph style "Note" (indented, italic) -->
+> *Author note. Writing is L4 as work. An exemplar/model/thesis/file is made here; its research meaning may be L5 and its released publication may be L7.*
 
 ## Auditonomous academic-book traversal
 
@@ -517,7 +546,8 @@ USO/l5/0
 └── undergraduates/0
 ```
 
-**Boundary rule.** Boundary / traversal rule. L5 may interpret externally owned definitions, but interpretation does not transfer ownership of the peer definition into L0.
+<!-- Word paragraph style "Boundary Rule" (bold) -->
+**Boundary / traversal rule. L5 may interpret externally owned definitions, but interpretation does not transfer ownership of the peer definition into L0.**
 
 #### Directory prose and rationale
 
@@ -534,11 +564,14 @@ USO/l5/0
 
 ### In the case of:
 
-**Research note.** Forward-facing discourse forums, chat, and institutional documentation may allow fellows or participants to operate under a shared institutional identity while access controls separate participant roles and lower-layer discourse backends.
+<!-- Word paragraph style "Research Note" (indented, bold) -->
+> **Forward-facing discourse forums, chat, and institutional documentation may allow fellows or participants to operate under a shared institutional identity while access controls separate participant roles and lower-layer discourse backends.**
 
-**Clarification.** Standing. A forum or chat interface may be realized operationally at L4 and exposed at L7, while institutional roles, discourse, interpretation, review, and research meaning carried through it remain L5-owned. L7 governance concerns the external/public legal and access relation, not scientific judgment.
+<!-- Word paragraph style "Clarification" (indented) -->
+> Standing. A forum or chat interface may be realized operationally at L4 and exposed at L7, while institutional roles, discourse, interpretation, review, and research meaning carried through it remain L5-owned. L7 governance concerns the external/public legal and access relation, not scientific judgment.
 
-**Note.** Author note. External definitions can be interpreted here. Interpretation does not transfer ownership of the peer definition into L0.
+<!-- Word paragraph style "Note" (indented, italic) -->
+> *Author note. External definitions can be interpreted here. Interpretation does not transfer ownership of the peer definition into L0.*
 
 # L6 — LIBRARY
 
@@ -569,7 +602,8 @@ USO/l6/0
 └── retired/0
 ```
 
-**Boundary rule.** Boundary / traversal rule. For an externally encountered object, L7 is the boundary and owns its external provenance/governance relation. L6 is the first interior layer used to reconstruct prior internal states, changes, failures, supersession, and retirement before deeper inspection.
+<!-- Word paragraph style "Boundary Rule" (bold) -->
+**Boundary / traversal rule. For an externally encountered object, L7 is the boundary and owns its external provenance/governance relation. L6 is the first interior layer used to reconstruct prior internal states, changes, failures, supersession, and retirement before deeper inspection.**
 
 #### Directory prose and rationale
 
@@ -582,7 +616,8 @@ USO/l6/0
 ## Git and scientific memory
 
 Git history can support L6 reconstruction, but Git history and scientific memory/provenance are not the same object. Git records repository change events; L6 must preserve the scientific relations, decisions, failures, corrections, versions, and retirement needed for reconstruction. External source, authority, and prior-art provenance remain L7-owned.
-**Note.** Author note. When full interpretation begins outside the object, L7 is encountered first and L6 is the first interior layer. Interior-only inspection can therefore be described as beginning at L6.
+<!-- Word paragraph style "Note" (indented, italic) -->
+> *Author note. When full interpretation begins outside the object, L7 is encountered first and L6 is the first interior layer. Interior-only inspection can therefore be described as beginning at L6.*
 
 # L7 — SURFACE / FORWARD FACE
 
@@ -641,7 +676,8 @@ L7/0
 └── publications/0
 ```
 
-**Boundary rule.** Boundary / traversal rule. L7 is the forward face outside the USO. It owns the external relations of the bounded object: provenance, governance, peering, and publication state. Public/private exposure and ingress/egress direction remain independent peering distinctions. L7 does not thereby acquire or change the lower-layer scientific meaning.
+<!-- Word paragraph style "Boundary Rule" (bold) -->
+**Boundary / traversal rule. L7 is the forward face outside the USO. It owns the external relations of the bounded object: provenance, governance, peering, and publication state. Public/private exposure and ingress/egress direction remain independent peering distinctions. L7 does not thereby acquire or change the lower-layer scientific meaning.**
 
 ### In the case of:
 
@@ -658,9 +694,11 @@ L7/peering/
 ```
 
 Public ingress is the natural peering position for externally owned, publicly available definitions or peer objects. Private ingress is available for controlled inbound material. Public egress handles outward public exchange toward peers; private egress supports restricted outbound exchange. Released publications are represented by the L7 publications branch, while provenance and public/legal governance remain separately addressable.
-**Note.** Peer-object contract. peer-1 identifies the external peer and object-1 identifies the bounded object exposed by that peer. The object may be a document, database, foreign/federated data endpoint, or repository. A peer-owned ingress object is bound/reference-only: NO EDIT and NO DELETE by the receiving repository. Retirement or supersession of the internal binding history is preserved at USO/l6/retired/ rather than erased.
+<!-- Word paragraph style "Note" (indented, italic) -->
+> *Peer-object contract. peer-1 identifies the external peer and object-1 identifies the bounded object exposed by that peer. The object may be a document, database, foreign/federated data endpoint, or repository. A peer-owned ingress object is bound/reference-only: NO EDIT and NO DELETE by the receiving repository. Retirement or supersession of the internal binding history is preserved at USO/l6/retired/ rather than erased.*
 
-**Note.** Author note. The agnostic L7 topology carries admissible external-facing capabilities even when a project does not use them. A classroom experiment may leave governance and publication branches empty; a science fair, public release, publication, patent, or controlled exchange can populate the relevant forward-face positions without changing the architecture.
+<!-- Word paragraph style "Note" (indented, italic) -->
+> *Author note. The agnostic L7 topology carries admissible external-facing capabilities even when a project does not use them. A classroom experiment may leave governance and publication branches empty; a science fair, public release, publication, patent, or controlled exchange can populate the relevant forward-face positions without changing the architecture.*
 
 External definitions and inward interpretation
 A definition lives once at its owner. When 7LM does not author the definition, its exact version is bound at L7 peering and may be carried inward to receiving L0 and referenced at any needed layer with its immutable external-ownership tag intact. L7 provenance records source, version, authority, and prior-art relation; L7 governance records applicable public/legal/access conditions; L6 preserves binding history; L5 compares and interprets it. No receiving layer thereby becomes the definition's author.
@@ -678,9 +716,11 @@ Auditonomous L6 preserves the binding event, exact version, use, correction, sup
 An argument about Autonomous cannot silently stand in for an argument about Auditonomous. Any cross-object claim requires an explicit named relation or handoff; the same identity-tagging rule applies to agnostic methods as they are made now.
 Autonomous freezes the narrowest reasonable agreement among its exact source-tagged standards inputs as the Autonomous consensus baseline. It must not manufacture consensus where sources materially disagree. Auditonomous then authors the Auditonomous difference as an explicit local delta; the baseline and delta remain separately owned and overlaid.
 An upstream change creates a new binding; it does not mutate the pinned object. A change to the Autonomous definition returns to the Autonomous owner. Auditonomous updates or retires its binding; it does not edit the peer-owned definition.
-**Clarification.** This is not an optional exemplar. It is the concrete originating boundary test for the agnostic architecture.
+<!-- Word paragraph style "Clarification" (indented) -->
+> This is not an optional exemplar. It is the concrete originating boundary test for the agnostic architecture.
 
-**Note.** Author note. Public/private and ingress/egress are explicit semantic positions in the canonical research tree. Their presence does not assert that every external implementation must use the same filesystem vocabulary.
+<!-- Word paragraph style "Note" (indented, italic) -->
+> *Author note. Public/private and ingress/egress are explicit semantic positions in the canonical research tree. Their presence does not assert that every external implementation must use the same filesystem vocabulary.*
 
 #### Directory prose and rationale
 
@@ -749,7 +789,8 @@ Architecture and implementation status are separate claims. The canonical topolo
 Supporting-evidence disposition: Git history can support L6 reconstruction, but Git history and scientific memory/provenance are not the same object. External provenance remains L7-owned; internal reconstructable scientific memory remains L6-owned.
 ## Controlling reserved-state rule
 
-**Clarification.** Questionable inherited semantics are preserved in their stated or recoverable meaning. Unless a row above expressly ratifies an owner and path, topology remains unadjudicated. No convenience placement in this document settles an open scientific question.
+<!-- Word paragraph style "Clarification" (indented) -->
+> Questionable inherited semantics are preserved in their stated or recoverable meaning. Unless a row above expressly ratifies an owner and path, topology remains unadjudicated. No convenience placement in this document settles an open scientific question.
 
 ## Baseline-to-current disposition
 
