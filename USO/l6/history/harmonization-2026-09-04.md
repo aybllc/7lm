@@ -70,6 +70,7 @@ The owner's README working sketch, titled "Unified Science Object", is retired v
 | 2026-09-04 | Uniform `0.md` sheets written for every directory of the canonical topology, by hand, without automation; the stubs `L7/0.md`, `L7/governance/0.md`, `L7/peering/0.md`, `L7/publications/0.md` (empty at e295a5d) overwritten by harmonized sheets. | (uncommitted at time of writing) |
 | 2026-09-04 | The sheets of the previous row were committed. | fb22e25 |
 | 2026-09-05 | Owner designated `aybllc/l6` (INTERNAL) as the archive that serves curated sources to this program, read-only from every consuming repository ("don't edit l6; use it to serve curated sources"). Recorded at `L7/provenance/sources/0.md` and `L7/peering/private/ingress/0.md`; the archive pinned at `53b28f6`. | (the commit that added this row) |
+| 2026-09-05 | Owner rule for the originating boundary test: "Auditonomous gets the definitions of autonomous from Autonomous and nowhere else." Recorded at `L7/peering/public/ingress/0.md`; applied in the auditonomous routing proposal. | (the commit that added this row) |
 
 ## 3. Reserved — no current path
 
