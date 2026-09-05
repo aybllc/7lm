@@ -1,0 +1,82 @@
+# L0 - Ontology
+
+This directory fixes what kinds of things this corpus admits, how an instance of each kind is
+identified, and which relations may hold between them. An entry here is a local artifact that can
+be stated without importing an unresolved assumption from a higher layer; every higher layer that
+uses an entry must NAME it rather than restate it. Writing an entry settles nothing scientific: an
+entry carries a definition status, and any claim built on the entry carries a separate epistemic
+status. Candidates arrive from L7 ingress as provisional, with candidate owners, and are adjudicated
+here before any layer treats an entry as owned.
+
+## Controlling distinctions
+
+| Term | Local meaning in this corpus | Basis | Source or locator |
+| --- | --- | --- | --- |
+| concept | The abstract unit that decides category membership. It is not the word used to name it. | [External source] | ISO/IEC 2382:2015, Cl. 2 "concept": "abstract entity for determining category membership" |
+| term | A linguistic construct that refers to an entity. A term is a name, not a thing. | [External source] | ISO/IEC 2382:2015, Cl. 2 "term": "linguistic construct in a conceptual schema language that refers to an entity" |
+| type | A predicate over instances, admitted here only once its admission conditions are written out. | Adapted from [source] | ISO/IEC/IEEE 24765:2017, 3.4404 def. 2: "of an <X>, a predicate characterizing a collection of <X>s" |
+| category label | A name for a bin in some scheme. It carries no admission condition until one is written here. | Project rule | - |
+| identity | What distinguishes an instance from every other instance, independent of its property values and of the classes it belongs to. | [External source] | ISO/IEC/IEEE 31320-2:2012, 3.1.80 "identity" |
+| admission condition | The stated test something must satisfy to count as an instance of a type in this corpus. | Project rule | - |
+| kind | A grouping by an aspect common to comparable members. The division into kinds is partly a choice and must be stated as one. | Adapted from [source] | JCGM 200:2012 (VIM), 1.2 "kind of quantity", definition: "aspect common to mutually comparable quantities"; then NOTE 1: "The division of ‘quantity’ according to ‘kind of quantity’ is to some extent arbitrary." |
+| role | The part an artifact plays in one action. The same artifact can play a different part in another action. | Adapted from [source] | ISO/IEC/IEEE 24765:2017, 3.233 Note 1: "An enterprise object that is an artifact in one action can be an actor in another action." |
+| property | An attributed characteristic of an instance, marked essential or incidental to the type. | Project working use | - |
+| taxonomy | A scheme that partitions a body of knowledge and defines the relationships among the pieces. | [External source] | ISO/IEC/IEEE 24765:2017, 3.4167 "taxonomy" |
+| thesaurus | A structure of typed term relations (synonym, quasi-synonym, broader term, narrower term, related term). The governing terminology standards are NOT held locally. | Project working use | - |
+| ontology | The logical structure of the terms describing a domain, including the definitions of the terms and their relationships. | [External source] | ISO/IEC/IEEE 24765:2017, 3.2691 "ontology" |
+
+A taxonomy is not an ontology, and a thesaurus is not an ontology. IEEE Std 1872-2015, Introduction
+(printed note: "This introduction is not part of IEEE Std 1872-2015"), states: "Unlike taxonomies,
+which provide only a set of vocabulary and a single type of relationship between terms, an ontology
+provides a richer set of relationships, constraints, and rules." Sameness of structure is likewise
+not sameness of kind: JCGM 200:2012, 1.2 Note 2 records that "Quantities of the same kind within a
+given system of quantities have the same quantity dimension. However, quantities of the same
+dimension are not necessarily of the same kind."
+
+## Manual work
+
+1. Restate the provisional candidate from L7 ingress in your own prose before touching any label. If
+   you cannot state it without an unresolved higher-layer assumption, keep it provisional and write
+   down which assumption blocks it.
+2. Write the admission conditions as a test a reader could apply: what must hold, what must not
+   hold, and what evidence would decide a borderline case.
+3. Write the identity conditions separately from the admission conditions. Admission says what
+   counts as an instance; identity says when two instances are the same instance. Where an entry
+   describes both an occurrence and a record of that occurrence, admit them as two entries with
+   two identities and two times, and never let the record's time stand in for the occurrence's
+   time.
+4. List the properties and the roles instances may bear, marking each essential or incidental, and
+   note that a role is relative to an action, not intrinsic to the thing.
+5. Name every relation by relation type, and keep the typed vocabulary of /uso/l0/semantics. An
+   untyped arrow between two entries is not an admitted relation. The /uso/l0/semantics table types
+   relations between interpretations only; a relation between admitted entities — a device to the
+   reading it emits, a reading to the occurrence it is taken to indicate — is typed here with its
+   own admission conditions, and never carries one of the semantics relation names.
+6. Record definition status, the scope the entry is stated for, the version, the layer owner, and
+   any remaining candidate owners.
+7. Record the live alternatives: other readings that remain current. Non-selection in one
+   composition retires nothing and sends nothing to L6 history.
+8. Route the entry to the lowest layer able to state it without importing an unresolved assumption
+   from above, and leave the routing decision and its date in the entry.
+9. When an entry changes materially, record the supersession and the successor relation. A lexical
+   change to a term alone is not supersession and must not be recorded as one.
+
+## Keep out
+
+- Do NOT convert a taxonomy into an ontological identity claim. A partition scheme tells you where
+  a thing was filed, not what it is.
+- Do NOT convert a thesaurus relation into identity. Synonym, quasi-synonym, broader term, narrower
+  term, and related term are distinct relations, and none of them is identity.
+- Do NOT convert a shared label into a shared concept. Two sources using one word is a lexical
+  coincidence until the concepts, admission conditions, and identity conditions are compared.
+- Do NOT convert a similarity measure, a clustering result, or any automatically inferred relation
+  into an ontological claim. Such results may prompt review; they cannot establish identity.
+- No early merge of two materially different concepts into one entry. Keep both, typed and scoped.
+- No formal manipulation, derivation, or proof here. Those belong to L2 and L3.
+- No authority content copied down from /L7/public/ingress. Only the fixed binding lives there, and the
+  content stays in the owning repository.
+- Canonical here means owner-designated as controlling for a stated scope and version. It does not
+  mean proven, validated, or universally true, and it never upgrades an epistemic status.
+
+Reusable process problems discovered while doing this work belong in /L7/process-lessons.md, not in
+this directory.
