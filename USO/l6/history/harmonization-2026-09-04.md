@@ -202,3 +202,5 @@ Nothing else left the document. Every paragraph removed was checked against ever
 
 The specification is 3,215 words where it was 10,765.
 
+Every passage removed, reproduced exactly as it stood and with the file that carries it now, is at `USO/l6/history/specification-removed-2026-09-07.md`. That list covers all three of the day's removals from the document, not only this one: it compares the version as it was made on 7 September 2026 against the version as it now stands.
+

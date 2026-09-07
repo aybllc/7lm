@@ -117,4 +117,4 @@ The first reduction had removed 1,274 words and kept, in item 6 above, the eight
 4. Four passages that stood only in the specification were carried into the sheets before removal: the integrity rule to `USO/l6/0.md`, the status-ladder clarification to `USO/l5/0.md`, the curated-source pointer rule to `L7/provenance/sources/0.md`, and the concrete originating case to `L7/0.md`.
 5. "How to use this document" was rewritten: the document states the model, the sheets are the documentation, and where they differ this document controls.
 
-The specification is 3,215 words where it was 10,765, and 12,039 the version before. The `.docx` is regenerated from the Markdown and reads back to it unchanged.
+The specification is 3,215 words where it was 10,765, and 12,039 the version before. Every passage removed across the day's three removals stands, exactly as it was written, at `specification-removed-2026-09-07.md`. The `.docx` is regenerated from the Markdown and reads back to it unchanged.
