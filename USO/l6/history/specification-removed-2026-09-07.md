@@ -1,4 +1,10 @@
-# What was removed from the specification on 7 September 2026
+# WHAT WAS REMOVED FROM THE SPECIFICATION
+
+Seven-Layer Model (7LM) — the record of 7 September 2026
+
+Every passage removed from the specification that day, exactly as it stood, with the file that carries it now
+
+*7LM record • L6 Library • 7 September 2026*
 
 Every passage below stood in the specification as it was made on 7 September 2026 (commit `a2af3ce`) and does not stand in the specification as it is now. Each is reproduced here exactly as it stood, in the order it stood. Nothing here is summarised or recalled: the two versions were split into blocks — a paragraph, a table, a fenced diagram, a heading — by the same rule, and every block of the earlier version that does not appear in the current one is below.
 
@@ -7,7 +13,6 @@ Where each passage stands now was established the same way, not from memory. Eve
 The search is exact, and that is its limit: a line reported as standing only here may still be stated elsewhere in other words. What the test establishes is whether the line itself stands somewhere, not whether its rule does.
 
 Removed: 195 passages, 10936 words.
-
 
 ### 1. Under “SEVEN-LAYER MODEL (7LM)” — 9 words
 
@@ -41,7 +46,6 @@ This is the version of 7 September 2026. It supersedes the draft of 6 September 
 - It supersedes the draft of 6 September 2026, which was never adopted and stands in the scaffold repository's git history, and the version of 4 September 2026, whose authored document is preserved at L8/L6/retired/specification-2026-09-04/ in the scaffold repository (there still under the directory names USO/ and L6/ until the rename pass).
 - What changed is listed in the Harmonization Record under "Changes of 6 September 2026" and "Changes of 7 September 2026".
 
-
 ### 4. Under “SEVEN-LAYER MODEL (7LM)” — 68 words
 
 Removed text, exactly as it stood:
@@ -64,16 +68,13 @@ Scientific construction proceeds from L0 outward only as dependencies are establ
 
 ## Removed heading: Originating architectural constraint
 
-
 ---
 
 ## Removed heading: Contextual semantic route
 
-
 ---
 
 ## Removed heading: Seven-layer count and harmonization rule
-
 
 ### 6. Under “SEVEN-LAYER MODEL (7LM) › Originating architectural constraint › Seven-layer count and harmonization rule” — 15 words
 
@@ -87,7 +88,6 @@ The owner's definition of 6 September 2026, given with its table:
 **Found in no other file, and therefore only here — 1 of 1:**
 
 - First is always 0. The owner's definition of 6 September 2026, given with its table:
-
 
 ### 7. Under “SEVEN-LAYER MODEL (7LM) › Originating architectural constraint › Seven-layer count and harmonization rule” — 194 words
 
@@ -103,11 +103,9 @@ Removed text, exactly as it stood:
 - I think tghe dir structurs should carry uppercae"): L0 through L7 are the eight bits of a byte, 0 being a bit ("so you see the byte"; "you're really asking if 0 and s a bit or not"), and L8 is the extra bit that carries the semantic, as information needs an extra bit to catch any error ("the joke I intended was L8 to carry the SEMANTIC you need an extra bit ... like information you need an extra bit to cash any").
 - The earlier reading of the same day, uppercase for furniture and lowercase for a layer, is superseded by this one.
 
-
 ---
 
 ## Removed heading: 7LM is a dependency and fault-containment architecture
-
 
 ### 8. Under “SEVEN-LAYER MODEL (7LM) › 7LM is a dependency and fault-containment architecture” — 11 words
 
@@ -121,16 +119,13 @@ Removed text, exactly as it stood:
 
 ## Removed heading: Two valid directions
 
-
 ---
 
 ## Removed heading: Architecture-wide dependency rules
 
-
 ---
 
 ## Removed heading: Structured Architecture Outline
-
 
 ### 9. Under “SEVEN-LAYER MODEL (7LM) › Structured Architecture Outline” — 9 words
 
@@ -143,7 +138,6 @@ Removed text, exactly as it stood:
 ---
 
 ## Removed heading: 1. Purpose and controlling method
-
 
 ### 10. Under “SEVEN-LAYER MODEL (7LM) › Structured Architecture Outline › 1. Purpose and controlling method” — 55 words
 
@@ -173,11 +167,9 @@ Removed text, exactly as it stood:
 
 ## Removed heading: 2. Topology and traversal
 
-
 ---
 
 ## Removed heading: 3. Contained architectures and analytic expansion
-
 
 ### 13. Under “SEVEN-LAYER MODEL (7LM) › Structured Architecture Outline › 3. Contained architectures and analytic expansion” — 43 words
 
@@ -191,7 +183,6 @@ An architecture may be contained at one 7LM layer operationally while questions 
 
 ## Removed heading: 3.1 OSI as an operating architecture
 
-
 ### 14. Under “SEVEN-LAYER MODEL (7LM) › Structured Architecture Outline › 3. Contained architectures and analytic expansion › 3.1 OSI as an operating architecture” — 49 words
 
 Removed text, exactly as it stood:
@@ -203,7 +194,6 @@ When the question is how the OSI architecture operates, the complete OSI model r
 ---
 
 ## Removed heading: 3.2 OSI as an object of inquiry
-
 
 ### 15. Under “SEVEN-LAYER MODEL (7LM) › Structured Architecture Outline › 3. Contained architectures and analytic expansion › 3.2 OSI as an object of inquiry” — 50 words
 
@@ -242,7 +232,6 @@ Removed text, exactly as it stood:
 
 ## Removed heading: 3.3 Nested analytic views
 
-
 ### 18. Under “SEVEN-LAYER MODEL (7LM) › Structured Architecture Outline › 3. Contained architectures and analytic expansion › 3.3 Nested analytic views” — 56 words
 
 Removed text, exactly as it stood:
@@ -263,7 +252,6 @@ Removed text, exactly as it stood:
 
 - The owner, 7 September 2026: "the read me files all need updating.
 
-
 ### 20. Under “SEVEN-LAYER MODEL (7LM) › Canonical Research Directory Topology” — 55 words
 
 Removed text, exactly as it stood:
@@ -276,11 +264,9 @@ Removed text, exactly as it stood:
 
 - Where such rules exist they belong to repository infrastructure outside the layers, and general repository infrastructure is not automatically a layer. (Owner's direction, 6 September 2026.)
 
-
 ---
 
 ## Removed heading: L0 — LAYER 0
-
 
 ### 21. Under “SEVEN-LAYER MODEL (7LM) › L0 — LAYER 0” — 15 words
 
@@ -342,7 +328,6 @@ L8/L0/0
 
 - ```text L8/L0/0 ├── universality/0 ├── pedagogy/0 ├── epistemic/0 ├── ontology/0 └── semantics/0 └── definitions/0 ```
 
-
 ### 26. Under “SEVEN-LAYER MODEL (7LM) › L0 — LAYER 0” — 30 words
 
 Removed text, exactly as it stood:
@@ -403,7 +388,6 @@ Removed text, exactly as it stood:
 
 ## Removed heading: In the case of:
 
-
 ### 32. Under “SEVEN-LAYER MODEL (7LM) › L0 — LAYER 0 › In the case of:” — 54 words
 
 Removed text, exactly as it stood:
@@ -423,7 +407,6 @@ Removed text, exactly as it stood:
 ---
 
 ## Removed heading: L1 — STATE SPACE
-
 
 ### 34. Under “SEVEN-LAYER MODEL (7LM) › L1 — STATE SPACE” — 6 words
 
@@ -480,7 +463,6 @@ L8/L1/0
 
 - ```text L8/L1/0 └── state-space/0 ```
 
-
 ### 39. Under “SEVEN-LAYER MODEL (7LM) › L1 — STATE SPACE” — 17 words
 
 Removed text, exactly as it stood:
@@ -520,7 +502,6 @@ In the case of: State-space containment and scientific claim boundaries
 
 ## Removed heading: State-space boundary — leaving the declared state space
 
-
 ### 43. Under “SEVEN-LAYER MODEL (7LM) › L1 — STATE SPACE › State-space boundary — leaving the declared state space” — 16 words
 
 Removed text, exactly as it stood:
@@ -558,7 +539,6 @@ The model may not silently step outside its state space and still claim continui
 
 ## Removed heading: Mathematical permission is not automatic scientific or engineering permission
 
-
 ### 47. Under “SEVEN-LAYER MODEL (7LM) › L1 — STATE SPACE › Mathematical permission is not automatic scientific or engineering permission” — 15 words
 
 Removed text, exactly as it stood:
@@ -595,7 +575,6 @@ Example used in session: peer-reviewed FTL/warp-drive mathematics may be legitim
 
 ## Removed heading: No exotic capability gets a free explanatory advantage
 
-
 ### 51. Under “SEVEN-LAYER MODEL (7LM) › L1 — STATE SPACE › No exotic capability gets a free explanatory advantage” — 16 words
 
 Removed text, exactly as it stood:
@@ -631,7 +610,6 @@ Removed text, exactly as it stood:
 ---
 
 ## Removed heading: Observable science is bounded without forbidding speculation
-
 
 ### 55. Under “SEVEN-LAYER MODEL (7LM) › L1 — STATE SPACE › Observable science is bounded without forbidding speculation” — 5 words
 
@@ -701,7 +679,6 @@ Removed text, exactly as it stood:
 
 ## Removed heading: L2 — FORMAL MATHEMATICS
 
-
 ### 63. Under “SEVEN-LAYER MODEL (7LM) › L2 — FORMAL MATHEMATICS” — 8 words
 
 Removed text, exactly as it stood:
@@ -760,7 +737,6 @@ L8/L2/0
 
 - ```text L8/L2/0 └── formal-mathematics/0 ├── relations/0 ├── operators/0 └── proofs/0 ```
 
-
 ### 68. Under “SEVEN-LAYER MODEL (7LM) › L2 — FORMAL MATHEMATICS” — 22 words
 
 Removed text, exactly as it stood:
@@ -802,7 +778,6 @@ Removed text, exactly as it stood:
 ---
 
 ## Removed heading: L3 — ENGINEERING MATHEMATICS
-
 
 ### 72. Under “SEVEN-LAYER MODEL (7LM) › L3 — ENGINEERING MATHEMATICS” — 7 words
 
@@ -862,7 +837,6 @@ L8/L3/0
 
 - ```text L8/L3/0 └── engineering-mathematics/0 ├── approximation/0 ├── uncertainty/0 └── tolerances/0 ```
 
-
 ### 77. Under “SEVEN-LAYER MODEL (7LM) › L3 — ENGINEERING MATHEMATICS” — 20 words
 
 Removed text, exactly as it stood:
@@ -896,7 +870,6 @@ Removed text, exactly as it stood:
 ---
 
 ## Removed heading: Working life boundary hypothesis
-
 
 ### 80. Under “SEVEN-LAYER MODEL (7LM) › L3 — ENGINEERING MATHEMATICS › Working life boundary hypothesis” — 14 words
 
@@ -933,7 +906,6 @@ Removed text, exactly as it stood:
 ---
 
 ## Removed heading: L4 — LAYER 4
-
 
 ### 84. Under “SEVEN-LAYER MODEL (7LM) › L4 — LAYER 4” — 7 words
 
@@ -993,7 +965,6 @@ L8/L4/0
 
 - ```text L8/L4/0 └── work/0 ├── writing/0 ├── experiments/0 └── computation/0 ```
 
-
 ### 89. Under “SEVEN-LAYER MODEL (7LM) › L4 — LAYER 4” — 107 words
 
 Removed text, exactly as it stood:
@@ -1027,7 +998,6 @@ Removed text, exactly as it stood:
 ---
 
 ## Removed heading: L4 conversion rule
-
 
 ### 92. Under “SEVEN-LAYER MODEL (7LM) › L4 — LAYER 4 › L4 conversion rule” — 10 words
 
@@ -1081,7 +1051,6 @@ Removed text, exactly as it stood:
 
 ## Removed heading: In the case of:
 
-
 ### 98. Under “SEVEN-LAYER MODEL (7LM) › L4 — LAYER 4 › L4 conversion rule › In the case of:” — 3 words
 
 Removed text, exactly as it stood:
@@ -1118,7 +1087,6 @@ Removed text, exactly as it stood:
 ---
 
 ## Removed heading: Auditonomous academic-book traversal
-
 
 ### 101. Under “SEVEN-LAYER MODEL (7LM) › L4 — LAYER 4 › Auditonomous academic-book traversal” — 7 words
 
@@ -1212,7 +1180,6 @@ Overlay does not collapse ownership or duplicate the whole book at every layer. 
 
 ## Removed heading: L5 — RESEARCH / DISCOURSE
 
-
 ### 112. Under “SEVEN-LAYER MODEL (7LM) › L5 — RESEARCH / DISCOURSE” — 6 words
 
 Removed text, exactly as it stood:
@@ -1274,7 +1241,6 @@ L8/L5/0
 
 - ```text L8/L5/0 ├── research/0 │ ├── lanes/0 │ ├── review/0 │ └── findings/0 └── institution/0 ├── peers/0 └── undergraduates/0 ```
 
-
 ### 117. Under “SEVEN-LAYER MODEL (7LM) › L5 — RESEARCH / DISCOURSE” — 24 words
 
 Removed text, exactly as it stood:
@@ -1311,7 +1277,6 @@ Removed text, exactly as it stood:
 ---
 
 ## Removed heading: In the case of:
-
 
 ### 120. Under “SEVEN-LAYER MODEL (7LM) › L5 — RESEARCH / DISCOURSE › In the case of:” — 31 words
 
@@ -1352,7 +1317,6 @@ Removed text, exactly as it stood:
 - What the owner takes up moves to research/lanes/, the working position, and back if set down again.
 - No other position and no new directory is needed for this. (Owner's rule, 6 September 2026: "research/review/ works as a catch all".)
 
-
 ### 124. Under “SEVEN-LAYER MODEL (7LM) › L5 — RESEARCH / DISCOURSE › In the case of:” — 76 words
 
 Removed text, exactly as it stood:
@@ -1365,11 +1329,9 @@ Removed text, exactly as it stood:
 
 - A ladder of review statuses is research governance and stands at L5, not at the L0 epistemic rail. (Owner's ruling, 6 September 2026, given for the exemplars' autonomy scale and status ladder.)
 
-
 ---
 
 ## Removed heading: L6 — LIBRARY
-
 
 ### 125. Under “SEVEN-LAYER MODEL (7LM) › L6 — LIBRARY” — 7 words
 
@@ -1427,7 +1389,6 @@ L8/L6/0
 
 - ```text L8/L6/0 ├── history/0 └── retired/0 ```
 
-
 ### 130. Under “SEVEN-LAYER MODEL (7LM) › L6 — LIBRARY” — 41 words
 
 Removed text, exactly as it stood:
@@ -1460,7 +1421,6 @@ Removed text, exactly as it stood:
 
 ## Removed heading: Git and scientific memory
 
-
 ### 133. Under “SEVEN-LAYER MODEL (7LM) › L6 — LIBRARY › Git and scientific memory” — 45 words
 
 Removed text, exactly as it stood:
@@ -1482,7 +1442,6 @@ Removed text, exactly as it stood:
 - The owner, 7 September 2026: "we cant enforce integroty by ebforceing no deletion. we can only imply no deletion to enforcer integiortyty".
 - Nothing is deleted before it is enumerated ("that does nto mean delete over tehre until we enumerate", the owner, 6 September 2026), and no rule of no deletion is enforced anywhere: the one CI check checks integrity, not the absence of deletion.
 
-
 ### 135. Under “SEVEN-LAYER MODEL (7LM) › L6 — LIBRARY › Git and scientific memory” — 31 words
 
 Removed text, exactly as it stood:
@@ -1494,7 +1453,6 @@ Removed text, exactly as it stood:
 ---
 
 ## Removed heading: L7 — SURFACE / FORWARD FACE
-
 
 ### 136. Under “SEVEN-LAYER MODEL (7LM) › L7 — SURFACE / FORWARD FACE” — 9 words
 
@@ -1586,7 +1544,6 @@ Removed text, exactly as it stood:
 
 ## Removed heading: In the case of:
 
-
 ### 142. Under “SEVEN-LAYER MODEL (7LM) › L7 — SURFACE / FORWARD FACE › In the case of:” — 6 words
 
 Removed text, exactly as it stood:
@@ -1639,7 +1596,6 @@ Removed text, exactly as it stood:
 
 - Retirement or supersession of the internal binding history is preserved at L8/L6/retired/ rather than erased.
 
-
 ### 147. Under “SEVEN-LAYER MODEL (7LM) › L7 — SURFACE / FORWARD FACE › In the case of:” — 49 words
 
 Removed text, exactly as it stood:
@@ -1667,7 +1623,6 @@ A definition lives once at its owner. When 7LM does not author the definition, i
 ---
 
 ## Removed heading: Autonomous and Auditonomous: peering without semantic annexation
-
 
 ### 150. Under “SEVEN-LAYER MODEL (7LM) › L7 — SURFACE / FORWARD FACE › Autonomous and Auditonomous: peering without semantic annexation” — 28 words
 
@@ -1795,7 +1750,6 @@ Removed text, exactly as it stood:
 - The peer's 0 is the owner's register of that peer's objects and their standing, and it is written by a person; nothing here presumes an automated mover.
 - The tree states positions; what any intelligence may write is not stated by the tree. (Owner's direction, 5 and 6 September 2026.)
 
-
 ### 165. Under “SEVEN-LAYER MODEL (7LM) › L7 — SURFACE / FORWARD FACE › Autonomous and Auditonomous: peering without semantic annexation” — 4 words
 
 Removed text, exactly as it stood:
@@ -1848,7 +1802,6 @@ Removed text, exactly as it stood:
 
 - [Clarification] Copyright has one place, governance/copyright/: every copyright or licence condition the bounded object is under is stated there once, with what to do next. governance/licensing/ and governance/restrictions/ point to it rather than restating it. (Owner's rule, 5 September 2026.)
 
-
 ### 168. Under “SEVEN-LAYER MODEL (7LM) › L7 — SURFACE / FORWARD FACE › Autonomous and Auditonomous: peering without semantic annexation” — 61 words
 
 Removed text, exactly as it stood:
@@ -1860,7 +1813,6 @@ Removed text, exactly as it stood:
 **Found in no other file, and therefore only here — 1 of 3:**
 
 - A consuming repository keeps one ledger row per source at provenance/sources/, with the archive path and the pinned commit, and no source file lives in it. (Owner's direction, 5 September 2026.)
-
 
 ### 169. Under “SEVEN-LAYER MODEL (7LM) › L7 — SURFACE / FORWARD FACE › Autonomous and Auditonomous: peering without semantic annexation” — 62 words
 
@@ -1899,7 +1851,6 @@ This direction preserves ownership and makes interpretation inspectable. It also
 
 ## Removed heading: Forward-face model
 
-
 ### 171. Under “SEVEN-LAYER MODEL (7LM) › L7 — SURFACE / FORWARD FACE › Forward-face model” — 29 words
 
 Removed text, exactly as it stood:
@@ -1928,11 +1879,9 @@ Presence on the desk establishes nothing by itself. Provenance, custody, authori
 
 ## Removed heading: Standing rules
 
-
 ---
 
 ## Removed heading: Exemplars as instantiated — 6 September 2026
-
 
 ### 174. Under “SEVEN-LAYER MODEL (7LM) › Exemplars as instantiated — 6 September 2026” — 16 words
 
@@ -1953,7 +1902,6 @@ Removed text, exactly as it stood:
 **Found in no other file, and therefore only here — 1 of 3:**
 
 - What follows documents the two exemplars as they stand on 6 September 2026, including what is not yet as this specification states, and it is recorded that way on the owner's word: "even if its not perfect right now i woaant iot documenyted that way".
-
 
 ### 176. Under “SEVEN-LAYER MODEL (7LM) › Exemplars as instantiated — 6 September 2026” — 4 words
 
@@ -1985,7 +1933,6 @@ Removed text, exactly as it stood:
 - Auditonomous owns l0/semantics/definitions/AUDITONOMOUS_DEFINITION.md, the local delta over the bound Autonomous root. - The binding of the Autonomous definition at Auditonomous's L7/peering/public/ingress/peer-1/object-1/, reference-only, NO EDIT and NO DELETE, under the owner's rule of 5 September 2026: "Auditonomous gets the definitions of autonomous from Autonomous and nowhere else." Autonomous exposes the definition at its L7/peering/public/egress/peer-1/. - Curated sources served by pointer from aybllc/l6, bound at each repository's L7/peering/private/ingress/peer-1/; one ledger row per source at L7/provenance/sources/LEDGER.md; no source file in either repository. - Copyright in one place, L7/governance/copyright/, with licensing/ and restrictions/ pointing to it. - l5/research/review/ as the catch-all and l5/research/lanes/ as the working position, since 6 September 2026.
 - The queue that preceded them at the repository roots, orphan, foster, results, delete, with its access rules for sessions, is retired at l6/retired/layout-2026-09-06/ in each repository; its files were filed by layer; nothing was deleted but 0-byte placeholders. - The records: l6/history/harmonization-2026-09-05.md in each repository, carrying the owner's words verbatim and every move, retirement, and binding, with the routing plan that preceded the layout filed beside it. - No rule in either tree about what a session or any other intelligence may touch.
 - The repository file that would carry such rules is held off on the owner's word.
-
 
 ### 178. Under “SEVEN-LAYER MODEL (7LM) › Exemplars as instantiated — 6 September 2026” — 5 words
 
@@ -2023,7 +1970,6 @@ Not yet as stated. The interior is named USO/, not L8/. The catch-all holds mate
 
 - A CI check that refuses conflict markers is repository infrastructure, not a layer.
 
-
 ### 182. Under “SEVEN-LAYER MODEL (7LM) › Exemplars as instantiated — 6 September 2026” — 5 words
 
 Removed text, exactly as it stood:
@@ -2059,7 +2005,6 @@ Not yet as stated. The interior is named USO/, not L8/. The binding of the Auton
 **Found in no other file, and therefore only here — 1 of 6:**
 
 - Two 0-byte files, manuscripts/definitions/README.md and REGISTER.md, sit outside L7/ and the interior under an owner ruling not to restore them; whether they stay is the owner's call.
-
 
 ### 186. Under “SEVEN-LAYER MODEL (7LM) › Exemplars as instantiated — 6 September 2026” — 4 words
 
@@ -2116,7 +2061,6 @@ Supporting-evidence disposition: Git history can support L6 reconstruction, but 
 
 ## Removed heading: Controlling reserved-state rule
 
-
 ### 192. Under “SEVEN-LAYER MODEL (7LM) › Harmonization Record › Controlling reserved-state rule” — 36 words
 
 Removed text, exactly as it stood:
@@ -2128,7 +2072,6 @@ Removed text, exactly as it stood:
 ---
 
 ## Removed heading: Baseline-to-current disposition
-
 
 ### 193. Under “SEVEN-LAYER MODEL (7LM) › Harmonization Record › Baseline-to-current disposition” — 516 words
 
@@ -2160,7 +2103,6 @@ Removed text, exactly as it stood:
 
 ## Removed heading: Changes of 6 September 2026
 
-
 ### 194. Under “SEVEN-LAYER MODEL (7LM) › Harmonization Record › Changes of 6 September 2026” — 300 words
 
 Removed text, exactly as it stood:
@@ -2183,7 +2125,6 @@ Removed text, exactly as it stood:
 
 ## Removed heading: Changes of 7 September 2026
 
-
 ### 195. Under “SEVEN-LAYER MODEL (7LM) › Harmonization Record › Changes of 7 September 2026” — 278 words
 
 Removed text, exactly as it stood:
@@ -2197,5 +2138,7 @@ Removed text, exactly as it stood:
 **Stands at:** still in the specification (1 of 10), in the record at `USO/l6/history/specification-history.md` (9 of 10).
 
 ---
+
+## What no other file carries
 
 Passages with at least one sentence, cell, or diagram that no other file carries: 23 of 195, 37 lines in all. Each of those lines is listed under its passage above; this file is their only place in the repository.
