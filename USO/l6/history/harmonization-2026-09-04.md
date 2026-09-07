@@ -123,3 +123,26 @@ The owner's direction, quoted as written, 2026-09-06: "under autonomous and auid
 Done here. The same workflow, without the exemplar's retired step, added at `.github/workflows/integrity.yml`, so that the scaffold is the example of the root it prescribes. The check is repository infrastructure, not a layer ("General repository infrastructure is not automatically a layer"); it reads the tree and moves nothing. The README's two sentences on automation and the USO root sheet's sentence are revised to say so; the layout itself holds no metadata, hooks, or movers, as before. No `.gitignore` is added: there is nothing here to ignore, and G-002 permits its absence.
 
 Not done. The rename of `USO/` to `L8/`, and the uppercase interior the owner proposed ("I think tghe dir structurs should carry uppercae"), wait on the owner's word; the workflow already admits either spelling.
+
+## 11. 2026-09-07 — the README is the start, not the documentation
+
+The owner's rule, quoted as written, 2026-09-07: "the read me files all need updating. Again. we dont use the reasd me for teh docuemtnation". The documentation is the sheets, one `0.md` per directory, with the specification; the README is where a reader starts, in the reading order the owner gave at the outset of this work: the README, then the L7 desk, then every directory, reading every `0.md`.
+
+Done. The README of 2026-09-04, as revised through 2026-09-07, is retired verbatim at `USO/l6/retired/readme-2026-09-07/README.md`. The new README states what the repository is, the reading order, the root, and where the prior READMEs are, and nothing else. Where each section of the retired README stands:
+
+| Section of the retired README | Where it stands |
+|---|---|
+| What 7LM is | the specification ("7LM exists to", the debugging principle); `USO/0.md`, "What the USO is" |
+| Two valid directions | `USO/0.md`, "Two valid directions"; `L7/0.md`, "Direction" |
+| Canonical research directory topology | the specification's tree; `L7/0.md`, "Directory structure"; `USO/0.md`, "Topology" and "Directory structure", with the canonical-tree rule |
+| Layers | `USO/0.md`, "The interior layers" and "Seven-layer count and harmonization rule"; `L7/0.md`, "Position in the architecture" |
+| Architecture-wide dependency rules | `USO/0.md`, "Architecture-wide dependency rules" |
+| The 0.md convention | `USO/0.md`, "Self-description and machine metadata" |
+| Exemplars | `USO/0.md` and `L7/0.md`, "Exemplars (by reference)"; the specification, "Exemplars as instantiated" |
+| Where things live | the sheets of the positions named: `USO/l4/work/writing/0.md` (the specification and its versions), `USO/l6/retired/0.md`, `USO/l6/history/0.md`, `L7/provenance/sources/0.md`, `L7/governance/copyright/0.md` |
+| Harmonization dispositions | §1 of this record; `USO/0.md` and `L7/0.md`, "Inherited terms and dispositions" |
+| Owner's working sketch (retained) | verbatim at `USO/l6/retired/scaffold-2026-08-20/README.md`; the README's commentary on it is carried in the next paragraph |
+
+The retired README's commentary on the owner's working sketch, carried here so that it is not lost with the README: three of the sketch's bands match rows of the specification's analytic-view table (the L6 / L5 upper interior, the L4 realization bay, and the L3 / L2 nested sub-bundle); its L1 and L0 lines match the L1 STATE SPACE band and the L0 local semantic boundary; the specification states that such bundles are semantic and dependency views, not filesystem nesting; the sketch's own separators and terms are the owner's and are not adjudicated; the ledger the sketch names is now `L7/provenance/sources/source-ledger.md`.
+
+Not done. Nothing deleted; no sheet text removed. The exemplars' READMEs are given the same shape in their own pull requests, on the same rule.
