@@ -44,6 +44,30 @@ The specification's exemplar section was first written against Autonomous `main`
 | no deletion as a rule | Superseded | 7 September 2026 |
 | l0 … l6 as the interior directory names | Superseded | 7 September 2026 |
 
+## Inherited terms and their dispositions
+
+| **Inherited term or issue** | **Disposition** | **Controlling harmonization** |
+|---|---|---|
+| prior-art | Relocated | External antecedents belong at L7/provenance/prior-art/. |
+| definitions | Ratified | Locally authored definitions belong at L8/L0/semantics/definitions/; peer definitions arrive as immutable external bindings. |
+| semantic-formulas | Split and reserved | Semantic reading remains L0; an exact formula is L2; an applied, tolerant, adaptive, or engineering formula is L3. The inherited compound term remains searchable. |
+| thesis-statements | Relocated | Research claims and thesis statements belong at L8/L5/research/lanes/ or the corresponding L5 research artifact. |
+| origidity; certainty; intolerance | Reserved | Candidate L1 semantics preserved; topology remains unadjudicated. |
+| found; caught; naught | Reserved | caught remains the zero state; found remains the observer role; naught remains the empty or settled state. Their topology remains unadjudicated. |
+| regress | Reserved | Preserved as a prior unadjudicated holding concept; active path and owner remain unadjudicated. |
+| corpus | Split and reserved | Released corpus/publication identity belongs at L7/publications/; the broader inherited term remains reserved where its exact role is not yet adjudicated. |
+| INFRASTRUCTURE | Superseded as L4 name | L4 is Conversion. Infrastructure belongs at L4 only when it is the bounded work or conversion being made; generic repository support is not automatically a layer. |
+| DEVOID; IMMUTABLE; FINITE; INFINITE; IDENTITY BY PROSE; RESEARCH MEMORY; SCIENTIFIC DESKTOP | Descriptive | Preserved as historical mnemonics or working language; the principal layer sheets control ownership. |
+| L6 provenance | Split | Internal reconstructable memory remains L6; external source, authority, prior art, and public provenance belong at L7/provenance/. |
+| USO/ as the directory name of the interior | Renamed L8/ | The term USO remains the name of the bounded scientific object's interior; the directory is L8, the research packet on the desk, a count and not a rank. The scaffold and the exemplars carry USO/ until the rename pass. |
+| README.md as documentation | Superseded | README.md is where a reader starts; the sheets and this specification are the documentation. The READMEs that carried documentation were deleted after enumeration, records kept at L8/L6/history/. |
+| no deletion as a rule | Superseded | Integrity is enforced; no deletion is implied. Retirement is for what integrity needs reconstructable; deletion after enumeration is the ordinary act, recorded at L8/L6/history/. |
+| l0 … l6 as the interior directory names | Superseded | L0 through L6 under L8: the eight bits L0 through L7 and the extra bit L8. The repositories carry lowercase until the rename pass. |
+| orphan; foster; results; delete | Retired | The exemplars' queue vocabulary and the access rules that came with it were retired on the owner's word; L8/L5/research/review/ is the catch-all and L8/L5/research/lanes/ the working position; nothing is deleted. |
+| peer-1 / object-1 numbering | Reported, not resolved | The peering enumeration begins at 1 while the layers count from 0 under "First is always 0"; the owner's call. |
+
+Each term is also disposed of at the sheet of the layer that received it, under that sheet's "Inherited terms and dispositions". This table left the specification on 7 September 2026; the enumeration is at `harmonization-2026-09-04.md` §15.
+
 ## What changed in each version
 
 ### Changes of 6 September 2026
@@ -81,3 +105,16 @@ Made the same day as the version above, after the history was pulled out and the
 
 The enumeration made before the removal is at `USO/l6/history/harmonization-2026-09-04.md` §14.
 
+### Second reduction of 7 September 2026
+
+Made after the first, the same day. The owner, quoted as written: "you read 50 pages...go ahead....50 pages of jargon and shit my 7lm doesnt need in order to understand hwo to ouse it. And, the oinvoprmationm that is helpful is burrioed ion your rhoretoric of your own greatness".
+
+The first reduction had removed 1,274 words and kept, in item 6 above, the eight layer contracts and the directory prose of every canonical directory, on the ground that the sheets quote them. That ground is the reason to remove them, not to keep them: what the sheets carry, the specification does not need to carry a second time. Item 6 is superseded.
+
+1. The eight layer sections, 7,109 words, left the document. Each stands in full at its own sheet: `USO/l0/0.md` through `USO/l6/0.md`, and `L7/0.md` for the face. What the specification keeps of them is one table: each layer, what it owns, and where it stops, in the owner's words, with the hard boundary quoted in full.
+2. The inherited-terms table, 507 words, left the document; it stands above in this file, and each term at the sheet that received it.
+3. The contained-architectures section, 493 words, was reduced to one paragraph; the OSI-origin table's rows stand at the sheets of the layers they name, and the analytic views at `USO/l3/0.md`.
+4. Four passages that stood only in the specification were carried into the sheets before removal: the integrity rule to `USO/l6/0.md`, the status-ladder clarification to `USO/l5/0.md`, the curated-source pointer rule to `L7/provenance/sources/0.md`, and the concrete originating case to `L7/0.md`.
+5. "How to use this document" was rewritten: the document states the model, the sheets are the documentation, and where they differ this document controls.
+
+The specification is 3,215 words where it was 10,765, and 12,039 the version before. The `.docx` is regenerated from the Markdown and reads back to it unchanged.

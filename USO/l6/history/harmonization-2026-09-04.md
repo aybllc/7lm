@@ -180,3 +180,25 @@ What was kept, and why. The eight layer contracts stand in full: the core questi
 
 The specification is 10,765 words where it was 12,039. The `.docx` is regenerated from the Markdown and reads back to it unchanged.
 
+## 15. 2026-09-07 — the specification carries the model, the sheets carry the positions
+
+The owner, 2026-09-07, quoted as written: "you read 50 pages...go ahead....50 pages of jargon and shit my 7lm doesnt need in order to understand hwo to ouse it. And, the oinvoprmationm that is helpful is burrioed ion your rhoretoric of your own greatness".
+
+Section 14 kept the eight layer contracts and the directory prose on the ground that forty-two sheets quote them as the specification's own text. That is the reason to remove them. A reader who needs the contract of a layer reads that layer's sheet, which states it in full and states the position besides; the specification states what no single sheet can state, which is the model.
+
+Enumerated before removal, with where each stands:
+
+1. **The eight layer sections, 7,109 words.** L0 826, L1 610, L2 438, L3 498, L4 1,264, L5 750, L6 603, L7 2,120. Each section — its information sheet, what it owns, what may be done there, the acceptance check, its directory structure, its directory prose and rationale, its boundary rule, its worked cases, its author and research notes — stands in full at that layer's own sheet: `USO/l0/0.md`, `USO/l1/0.md`, `USO/l2/0.md`, `USO/l3/0.md`, `USO/l4/0.md`, `USO/l5/0.md`, `USO/l6/0.md`, and `L7/0.md`. Kept in the specification: one table of eight rows, each layer's own subtitle and its hard boundary quoted in full, and the pointer to the sheets.
+2. **"Inherited terms and their dispositions", 507 words.** The table stands verbatim at `USO/l6/history/specification-history.md`, and each term at the sheet of the layer that received it, under "Inherited terms and dispositions". Kept: the non-erasure rule, the separation of architecture from implementation status, and the reserved-state rule.
+3. **"Contained architectures and analytic expansion", 493 words.** Reduced to one paragraph stating operational containment and analytic expansion. The OSI-origin table's eight rows stand at the sheets of the layers they name — for example `USO/l4/0.md` "Contained architectures: OSI" and `USO/l3/0.md` "An architecture as an object of inquiry" — and the nested analytic views at `USO/l3/0.md` "Analytic views that include L3".
+4. **Four passages stood only in the specification and were carried into the sheets before removal, verbatim:**
+   - the integrity rule, "Integrity is enforced; no deletion is implied…", 92 words, to `USO/l6/0.md` at the end of "Git and scientific memory";
+   - the status-ladder clarification, "A scale, a ladder, or a vocabulary of levels or statuses…", 62 words, to `USO/l5/0.md` under "In the case of";
+   - the curated-source pointer rule, "Curated sources are served by pointer…", 56 words, to `L7/provenance/sources/0.md`;
+   - the concrete originating case, "The originating case, in its concrete form…", 114 words, to `L7/0.md` in the peering section.
+5. **The front matter's "How to use this document", 155 words,** was rewritten rather than moved: the document states the model, the sheets are the documentation, and where a sheet and the document differ the document controls.
+
+Nothing else left the document. Every paragraph removed was checked against every sheet in the repository before removal; the four in item 4 were the only ones that stood nowhere else, and they were placed first.
+
+The specification is 3,215 words where it was 10,765.
+
