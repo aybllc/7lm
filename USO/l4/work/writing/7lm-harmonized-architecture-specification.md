@@ -1,10 +1,7 @@
 <!-- Canonical Markdown form of the Seven-Layer Model (7LM) Harmonized Authoritative Architecture Specification,
-     version of 7 September 2026. This Markdown is the source of this version; the .docx filed beside it is generated
-     from the text below this comment and reads back to it unchanged. The prior version, the owner's authored FINAL.docx
-     of 4 September 2026 (which controlled the wording of that version) with its normalized Markdown and generated .docx,
-     is preserved at USO/l6/retired/specification-2026-09-04/; the draft of 6 September 2026 that stood between them was
-     never adopted and stands in this repository's git history. What changed is listed in the Harmonization Record under
-     "Changes of 6 September 2026" and "Changes of 7 September 2026". -->
+     version of 7 September 2026. This Markdown is the source; the .docx filed beside it is generated from the text
+     below this comment and reads back to it unchanged. The history of versions and changes, with the owner's words
+     behind each rule, is at USO/l6/history/specification-history.md. -->
 
 # SEVEN-LAYER MODEL (7LM)
 
@@ -18,7 +15,7 @@ Canonical research directory topology and uniform layer information sheets
 > This specification states the controlling 7LM research architecture: one canonical agnostic directory topology and one uniform information sheet for each layer. The structure, layer boundaries, directory prose, machine-metadata distinction, and stated rationales are authoritative for this research program. Capability branches may remain empty when unused; they remain part of the agnostic topology so a project can instantiate them without changing the architecture.
 
 Version\
-This is the version of 7 September 2026. It supersedes the draft of 6 September 2026, which was never adopted and stands in the scaffold repository's git history, and the version of 4 September 2026, whose authored document is preserved at L8/L6/retired/specification-2026-09-04/ in the scaffold repository (there still under the directory names USO/ and L6/ until the rename pass). What changed is listed in the Harmonization Record under "Changes of 6 September 2026" and "Changes of 7 September 2026".
+Version of 7 September 2026. The history of versions and changes, with the owner's words behind each rule, is at L8/L6/history/specification-history.md in the scaffold repository.
 
 Self-description and machine-instruction rule\
 Every directory carries a local Layer 0 semantic description. In tree notation, /0 denotes that directory's local 0.md without drawing the file as a separate branch. The same directory separately carries machine-readable metadata for machine instructions, constraints, permissions, routing, validation, and lifecycle behavior. /0 carries human-readable meaning; metadata carries machine-actionable instruction. Neither replaces the other. This separation keeps semantic description distinct from machine operation.
@@ -55,7 +52,7 @@ L0 through L6 are the seven interior dependency layers. L7 is the numbered exter
 The coherent principal L0-L7 information sheets control. Repeated contracts and contradictory anchors are superseded; unique notes, cases, rationales, and boundary research are preserved. Questionable inherited concepts are reserved with topology unadjudicated unless this specification expressly places them.
 
 First is always 0.\
-The owner's definition of 6 September 2026, given with its table:
+The owner's definition, given with its table:
 
 | **semantic** | **>** | **magnitude** |
 |---|---|---|
@@ -66,7 +63,7 @@ The owner's definition of 6 September 2026, given with its table:
 
 **[Clarification]** Ordinals are semantics; numbers are magnitudes; the relation between them is "is". The seven interior layers are the seven semantics FIRST through SEVENTH and the seven magnitudes L0 through L6, so the seventh layer is L6: layer 7 will always be layer 6. L7 is a magnitude, the position numbered 7, the eighth reached in traversal: numbered, not a layer. L8 is a count, not a position: the interior's own zero over the seven layer zeros. Nothing follows the desk in traversal; past the face the count begins again at zero, in another object's tree, where this whole object is one bound object at a peer position.
 
-**[Note]** Author note. L7, pronounced El-Seven, is the desk: the L is the lower left hand corner of the desk and the 7 is the upper right; the name draws the rectangle that this layer is, its Surface. L8 is the research packet on the desk: two zeros stacked, the interior's zero over the zeros of the seven layers. The interior directories carry uppercase too, on the owner's word of 6 September 2026 ("theinterior of L8 is interesting. I think tghe dir structurs should carry uppercae"): L0 through L7 are the eight bits of a byte, 0 being a bit ("so you see the byte"; "you're really asking if 0 and s a bit or not"), and L8 is the extra bit that carries the semantic, as information needs an extra bit to catch any error ("the joke I intended was L8 to carry the SEMANTIC you need an extra bit ... like information you need an extra bit to cash any"). The earlier reading of the same day, uppercase for furniture and lowercase for a layer, is superseded by this one. The names are design, not decoration, and were not chosen by accident.
+**[Note]** Author note. L7, pronounced El-Seven, is the desk: the L is the lower left hand corner of the desk and the 7 is the upper right; the name draws the rectangle that this layer is, its Surface. L8 is the research packet on the desk: two zeros stacked, the interior's zero over the zeros of the seven layers. The interior directories carry uppercase too: L0 through L7 are the eight bits of a byte, 0 being a bit, and L8 is the extra bit that carries the semantic, as information needs an extra bit to catch any error. The names are design, not decoration, and were not chosen by accident.
 
 ### 7LM is a dependency and fault-containment architecture
 
@@ -269,13 +266,13 @@ Notation: /0 means the directory carries its local 0.md human-readable semantic 
 
 Canonical-tree rule. Unused now does not mean removed. The same complete topology is available to Autonomous, Auditonomous, OMMP, classroom research, institutional research, and future research repositories.
 
-**[Clarification]** README.md is where a reader starts; it is not the documentation. The owner, 7 September 2026: "the read me files all need updating. Again. we dont use the reasd me for teh docuemtnation". The documentation is the sheets, one 0.md per directory, and this specification. The README states what the repository is, the reading order (the desk L7/0, the interior L8/0, then every sheet), the root, and where the prior README is, and nothing else. The root holds README.md, L7/, and L8/, and may hold repository infrastructure that is not a layer: the one CI check at .github/workflows/integrity.yml, which refuses unresolved conflict markers, a root that is not canonical, and a sheet whose heading is not its path, reports directories without a sheet, and moves nothing; and .gitignore. Every 7LM repository has the same root.
+**[Clarification]** README.md is where a reader starts; it is not the documentation. The documentation is the sheets, one 0.md per directory, and this specification. The README states what the repository is, the reading order (the desk L7/0, the interior L8/0, then every sheet), the root, and where the prior README is, and nothing else. The root holds README.md, L7/, and L8/, and may hold repository infrastructure that is not a layer: the one CI check at .github/workflows/integrity.yml, which refuses unresolved conflict markers, a root that is not canonical, and a sheet whose heading is not its path, reports directories without a sheet, and moves nothing; and .gitignore. Every 7LM repository has the same root.
 
 **[Research Note]** Each /0 begins with the object directory and path: /data/location/object
 
 **[Clarification]** Standing. Each local 0.md first identifies the directory/object and its path, then supplies that directory's semantic description. Machine instructions belong to the directory metadata, not to the semantic prose.
 
-**[Clarification]** The topology states positions and meaning. It states no rule about what any intelligence, a person, a session, a model, or an orchestrator, may or may not touch. Where such rules exist they belong to repository infrastructure outside the layers, and general repository infrastructure is not automatically a layer. (Owner's direction, 6 September 2026.)
+**[Clarification]** The topology states positions and meaning. It states no rule about what any intelligence, a person, a session, a model, or an orchestrator, may or may not touch. Where such rules exist they belong to repository infrastructure outside the layers, and general repository infrastructure is not automatically a layer.
 
 L7 = Desktop
 
@@ -667,9 +664,9 @@ L8/L5/0
 
 **[Note]** Author note. External definitions can be interpreted here. Interpretation does not transfer ownership of the peer definition into L0.
 
-**[Clarification]** The catch-all. research/review/ is also where everything awaiting the owner's review lands, however much of it there is. What the owner sets aside stays there labelled PARKED. What the owner takes up moves to research/lanes/, the working position, and back if set down again. Finished work is filed at its layer. Nothing is deleted. No other position and no new directory is needed for this. (Owner's rule, 6 September 2026: "research/review/ works as a catch all".)
+**[Clarification]** The catch-all. research/review/ is also where everything awaiting the owner's review lands, however much of it there is. What the owner sets aside stays there labelled PARKED. What the owner takes up moves to research/lanes/, the working position, and back if set down again. Finished work is filed at its layer. Nothing is deleted. No other position and no new directory is needed for this.
 
-**[Clarification]** A scale, a ladder, or a vocabulary of levels or statuses is semantics of layer 4 and up: as written it is an L4 object, and what it means is L5 discourse. It is not an L1 state space and not L2 mathematics. A ladder of review statuses is research governance and stands at L5, not at the L0 epistemic rail. (Owner's ruling, 6 September 2026, given for the exemplars' autonomy scale and status ladder.)
+**[Clarification]** A scale, a ladder, or a vocabulary of levels or statuses is semantics of layer 4 and up: as written it is an L4 object, and what it means is L5 discourse. It is not an L1 state space and not L2 mathematics. A ladder of review statuses is research governance and stands at L5, not at the L0 epistemic rail.
 
 ---
 
@@ -711,7 +708,7 @@ L8/L6/0
 
 Git history can support L6 reconstruction, but Git history and scientific memory/provenance are not the same object. Git records repository change events; L6 must preserve the scientific relations, decisions, failures, corrections, versions, and retirement needed for reconstruction. External source, authority, and prior-art provenance remain L7-owned.
 
-**[Clarification]** Integrity is enforced; no deletion is implied. The owner, 7 September 2026: "we cant enforce integroty by ebforceing no deletion. we can only imply no deletion to enforcer integiortyty". What integrity needs reconstructable from the repository itself is retired, not deleted: the owner's authored documents, the rule texts of a prior layout, the error records. A superseded file whose every part is enumerated, in the record at L8/L6/history/, as standing elsewhere is deleted after that enumeration; git keeps the change event, the record keeps the enumeration. Nothing is deleted before it is enumerated ("that does nto mean delete over tehre until we enumerate", the owner, 6 September 2026), and no rule of no deletion is enforced anywhere: the one CI check checks integrity, not the absence of deletion.
+**[Clarification]** Integrity is enforced; no deletion is implied. What integrity needs reconstructable from the repository itself is retired, not deleted: the owner's authored documents, the rule texts of a prior layout, the error records. A superseded file whose every part is enumerated, in the record at L8/L6/history/, as standing elsewhere is deleted after that enumeration; git keeps the change event, the record keeps the enumeration. Nothing is deleted before it is enumerated, and no rule of no deletion is enforced anywhere: the one CI check checks integrity, not the absence of deletion.
 
 **[Note]** Author note. When full interpretation begins outside the object, L7 is encountered first and L6 is the first interior layer. Interior-only inspection can therefore be described as beginning at L6.
 
@@ -825,7 +822,7 @@ An upstream change creates a new binding; it does not mutate the pinned object. 
 
 **[Note]** Author note. Public/private and ingress/egress are explicit semantic positions in the canonical research tree. Their presence does not assert that every external implementation must use the same filesystem vocabulary.
 
-**[Note]** Author note. Many intelligences at one face. The peering positions are not sized for one counterpart: peer-1 opens an enumeration that is the same on all four faces, so the bounded object can meet any number of intelligences at once, a person, an institution, a standards body, another repository, an archive, a model session, an orchestrator, each at its own numbered peer position and each delivery its own object. Provenance is positional: the path says who brought a thing before anyone reads it. The peer's 0 is the owner's register of that peer's objects and their standing, and it is written by a person; nothing here presumes an automated mover. The tree states positions; what any intelligence may write is not stated by the tree. (Owner's direction, 5 and 6 September 2026.)
+**[Note]** Author note. Many intelligences at one face. The peering positions are not sized for one counterpart: peer-1 opens an enumeration that is the same on all four faces, so the bounded object can meet any number of intelligences at once, a person, an institution, a standards body, another repository, an archive, a model session, an orchestrator, each at its own numbered peer position and each delivery its own object. Provenance is positional: the path says who brought a thing before anyone reads it. The peer's 0 is the owner's register of that peer's objects and their standing, and it is written by a person; nothing here presumes an automated mover. The tree states positions; what any intelligence may write is not stated by the tree.
 
 **Directory prose and rationale**
 
@@ -855,9 +852,9 @@ An upstream change creates a new binding; it does not mutate the pinned object. 
 | ***/peer-1/object-1/** | Directory identifying one bounded peer-owned or peer-directed object. | Allows one peer to expose or receive multiple objects without treating the peer itself as the object. Peer-owned ingress is reference/binding only: NO EDIT and NO DELETE by the receiving repository. |
 | **publications/** | Directory for released publication objects at the forward face. | Keeps publication release at L7 while writing remains L4, research meaning remains L5, and internal history remains L6. |
 
-**[Clarification]** Copyright has one place, governance/copyright/: every copyright or licence condition the bounded object is under is stated there once, with what to do next. governance/licensing/ and governance/restrictions/ point to it rather than restating it. (Owner's rule, 5 September 2026.)
+**[Clarification]** Copyright has one place, governance/copyright/: every copyright or licence condition the bounded object is under is stated there once, with what to do next. governance/licensing/ and governance/restrictions/ point to it rather than restating it.
 
-**[Note]** Author note. Curated sources are served by pointer. A designated archive repository holds the source files; it is bound at private ingress and is read-only from every consuming repository. A consuming repository keeps one ledger row per source at provenance/sources/, with the archive path and the pinned commit, and no source file lives in it. (Owner's direction, 5 September 2026.)
+**[Note]** Author note. Curated sources are served by pointer. A designated archive repository holds the source files; it is bound at private ingress and is read-only from every consuming repository. A consuming repository keeps one ledger row per source at provenance/sources/, with the archive path and the pinned commit, and no source file lives in it.
 
 ```text
 external owner L0 definition
@@ -902,38 +899,39 @@ Machine-readable metadata may support automation, but the architecture does not 
 
 ---
 
-## Exemplars as instantiated — 6 September 2026
+## Exemplars as instantiated
 
 Reference implementations: https://github.com/aybllc/autonomous and https://github.com/aybllc/auditonomous, with the scaffold at https://github.com/aybllc/7lm and the curated-source archive at https://github.com/aybllc/l6.
 
-**[Clarification]** Architecture and implementation status are separate claims. What follows documents the two exemplars as they stand on 6 September 2026, including what is not yet as this specification states, and it is recorded that way on the owner's word: "even if its not perfect right now i woaant iot documenyted that way". Their layouts do not control the architecture.
+**[Clarification]** Architecture and implementation status are separate claims. What follows documents the two exemplars as they stand, including what is not yet as this specification states. Their layouts do not control the architecture.
 
 **What both exemplars carry**
 
-- The canonical tree under README.md, L7/, and the interior container, which both still name USO/; the rename to L8/ is pending. Every directory has its 0.md, headed by its path. No directory metadata, no automation.
+- The canonical tree under README.md, L7/, and the interior container, which both still name USO/ pending the rename pass. Every directory has its 0.md, headed by its path. No directory metadata, no automation in the layout; the one CI check at .github/workflows/integrity.yml, and the same root in both.
 - One locally authored L0 definition each. Autonomous owns l0/semantics/definitions/AUTONOMOUS.md, a plural entry of eleven codified definitions A1–A11 carried in verbatim with their issuing bodies' ownership tags. Auditonomous owns l0/semantics/definitions/AUDITONOMOUS_DEFINITION.md, the local delta over the bound Autonomous root.
-- The binding of the Autonomous definition at Auditonomous's L7/peering/public/ingress/peer-1/object-1/, reference-only, NO EDIT and NO DELETE, under the owner's rule of 5 September 2026: "Auditonomous gets the definitions of autonomous from Autonomous and nowhere else." Autonomous exposes the definition at its L7/peering/public/egress/peer-1/.
+- The binding of the Autonomous definition at Auditonomous's L7/peering/public/ingress/peer-1/object-1/, reference-only, NO EDIT and NO DELETE, under the owner's rule that Auditonomous gets the definitions of autonomous from Autonomous and nowhere else. Autonomous exposes the definition at its L7/peering/public/egress/peer-1/.
 - Curated sources served by pointer from aybllc/l6, bound at each repository's L7/peering/private/ingress/peer-1/; one ledger row per source at L7/provenance/sources/LEDGER.md; no source file in either repository.
 - Copyright in one place, L7/governance/copyright/, with licensing/ and restrictions/ pointing to it.
-- l5/research/review/ as the catch-all and l5/research/lanes/ as the working position, since 6 September 2026. The queue that preceded them at the repository roots, orphan, foster, results, delete, with its access rules for sessions, is retired at l6/retired/layout-2026-09-06/ in each repository; its files were filed by layer; nothing was deleted but 0-byte placeholders.
-- The records: l6/history/harmonization-2026-09-05.md in each repository, carrying the owner's words verbatim and every move, retirement, and binding, with the routing plan that preceded the layout filed beside it.
-- No rule in either tree about what a session or any other intelligence may touch. The repository file that would carry such rules is held off on the owner's word.
+- l5/research/review/ as the catch-all and l5/research/lanes/ as the working position. The queue that preceded them at the repository roots, orphan, foster, results, delete, with its access rules for sessions, is retired at l6/retired/layout-2026-09-06/ in each repository.
+- The records at l6/history/ in each repository, carrying the owner's words verbatim and every move, retirement, deletion, and binding.
+- No rule in either tree about what a session or any other intelligence may touch. The repository file that would carry such rules is held off.
+- A README that is a start page: the subject, the reading order, the root, and where the prior README is. The evidence rules of Autonomous and the status and label discipline of Auditonomous stand verbatim at l5/research/review/.
 
-**Autonomous** (aybllc/autonomous, main at 85a0320)
+**Autonomous** (aybllc/autonomous)
 
 Face. Public ingress peer-1 to peer-9: the issuing bodies whose clauses are bound into the definition, ISO/TC 299, ISO/IEC JTC 1/SC 42, ISO/IEC JTC 1/SC 7, IEEE, NIST, the European Union, US DoD, EASA, and ETSI, one object per bound clause. Public egress peer-1: aybllc/auditonomous, the definition as exposed. Private ingress peer-1 aybllc/l6; peer-2 aybllc/eb-stack with abba-01/ebios; peer-3 aybllc/auditonomous, the coinage, referenced and not adopted; peer-4 the principal's intake corpus. Private egress: none. Provenance: the pointer ledger into l6 and a 450-entry capture register. Publications: a binder; nothing released.
 
 Interior. l6: the master ledger, five forensic reconstructions, the two records, two retired layouts, and four definition error records. l5: six lanes; the reviews, audits, and adjudications; seven findings. l4: the manuscript placeholder, the autonomy scale (an L4 object by the owner's ruling), and one deep-research run. l3: two engineering-mathematics notes. l2: an empty formulas ledger. l1: empty, its dimensions fixed by content inside four L5 findings. l0: the definition with its companions and a universality scope statement.
 
-Not yet as stated. The interior is named USO/, not L8/. The catch-all holds material that belongs to other objects: Autonomous Theory, one work and not the definition of autonomous, whose home the owner has not named; a template of the Auditonomous definition; and the owner's notes on memory consolidation with conserved uncertainty. Each leaves on the owner's word. The provenance rows for the bound issuing bodies are not yet ledgered. A CI check that refuses conflict markers is repository infrastructure, not a layer.
+Not yet as stated. The interior is named USO/, not L8/. The catch-all holds material that belongs to other objects: Autonomous Theory, one work and not the definition of autonomous, whose home the owner has not named; a template of the Auditonomous definition; and the owner's notes on memory consolidation with conserved uncertainty. Each leaves on the owner's word. The provenance rows for the bound issuing bodies are not yet ledgered.
 
-**Auditonomous** (aybllc/auditonomous, main at 64e3ed2)
+**Auditonomous** (aybllc/auditonomous)
 
 Face. Public ingress peer-1: aybllc/autonomous, the definition of autonomous, bound at commit 0504961. Private ingress peer-1 aybllc/l6; peer-2 aybllc/eb-audit; peer-3 abba-01/ebios with the Martin 2026 manuscript. Private egress peer-1: the closed transfer of the source corpus to l6; peer-2: the pending transfer of the Third Power Corpus to aybllc/ncf-research, whose files wait at object-1. Public egress: nothing released. Provenance: 62 pointer rows into l6, the staging records about those sources, and one session-provenance record at lineage/. Publications: presentation rules and an empty press-kit checklist.
 
 Interior. l6: the master index, three session ledgers, the two records, two retired layouts. l5: two lanes; two reviews and the status ladder carried verbatim; three findings. l4: drafts, chat transcripts, a session record, three requirements extractions, and one deep-research run with its exports. l3: a proposal and an external-priors note. l2: an empty formulas ledger. l1: the auditon envelope, the substitutability states, and the requirements partition. l0: the one locally authored definition; the other rails empty.
 
-Not yet as stated. The interior is named USO/, not L8/. The binding of the Autonomous definition names the path the peer used before its own 7LM layout, research/definitions/AUTONOMOUS.md at 0504961; the same object now stands at the peer's l0/semantics/definitions/AUTONOMOUS.md, and rebinding to a current version is the owner's act. The binding record says three files still take a definition of autonomous from somewhere other than the binding. Two 0-byte files, manuscripts/definitions/README.md and REGISTER.md, sit outside L7/ and the interior under an owner ruling not to restore them; whether they stay is the owner's call. The catch-all holds two Autonomous Theory files that leave once that work's home is named. The l0 epistemic rail is empty; its vocabulary stands at L5 as review status.
+Not yet as stated. The interior is named USO/, not L8/. The binding of the Autonomous definition names the path the peer used before its own 7LM layout, research/definitions/AUTONOMOUS.md at 0504961; the same object now stands at the peer's l0/semantics/definitions/AUTONOMOUS.md, and rebinding to a current version is the owner's act. The binding record says three files still take a definition of autonomous from somewhere other than the binding. The catch-all holds two Autonomous Theory files that leave once that work's home is named. The l0 epistemic rail is empty; its vocabulary stands at L5 as review status.
 
 **What the exemplars show**
 
@@ -941,8 +939,6 @@ Not yet as stated. The interior is named USO/, not L8/. The binding of the Auton
 - Position is state. Three motions and no metadata carried the two repositories from a root queue to the catch-all: rename, retire, file. Nothing was deleted.
 - The desk is not a layer. Reaching for layer seven hands the reader l6, exactly as the count rule says.
 - The tree's silence on access is deliberate. Both repositories ran for one day with the sessions' rules stated in the tree and then removed; nothing in the tree depended on them.
-
-**[Clarification]** Since this snapshot, on 7 September 2026: both exemplars carry the one CI check and the same root (Autonomous main d707b7d, Auditonomous main e2199e5); the two 0-byte files in Auditonomous are deleted after enumeration; the READMEs of both are drafted as start pages, their documentation in their sheets, with the evidence rules of Autonomous and the status and label discipline of Auditonomous carried verbatim to l5/research/review/, awaiting the owner's word. What "Not yet as stated" lists otherwise stands, the lowercase interior names included.
 
 ---
 
@@ -958,7 +954,7 @@ Supporting-evidence disposition: Git history can support L6 reconstruction, but 
 
 **[Clarification]** Questionable inherited semantics are preserved in their stated or recoverable meaning. Unless a row above expressly ratifies an owner and path, topology remains unadjudicated. No convenience placement in this document settles an open scientific question.
 
-### Baseline-to-current disposition
+### Inherited terms and their dispositions
 
 | **Inherited term or issue** | **Disposition** | **Controlling harmonization** |
 |---|---|---|
@@ -973,31 +969,11 @@ Supporting-evidence disposition: Git history can support L6 reconstruction, but 
 | INFRASTRUCTURE | Superseded as L4 name | L4 is Conversion. Infrastructure belongs at L4 only when it is the bounded work or conversion being made; generic repository support is not automatically a layer. |
 | DEVOID; IMMUTABLE; FINITE; INFINITE; IDENTITY BY PROSE; RESEARCH MEMORY; SCIENTIFIC DESKTOP | Descriptive | Preserved as historical mnemonics or working language; the principal layer sheets control ownership. |
 | L6 provenance | Split | Internal reconstructable memory remains L6; external source, authority, prior art, and public provenance belong at L7/provenance/. |
-| USO/ as the directory name of the interior | Renamed L8/ (6 September 2026) | The term USO remains the name of the bounded scientific object's interior; the directory is L8, the research packet on the desk, a count and not a rank. The scaffold and the exemplars carry USO/ until the rename pass. |
-| README.md as documentation | Superseded (7 September 2026) | README.md is where a reader starts; the sheets and this specification are the documentation. The READMEs that carried documentation were deleted after enumeration, records kept at L8/L6/history/. |
-| no deletion as a rule | Superseded (7 September 2026) | Integrity is enforced; no deletion is implied. Retirement is for what integrity needs reconstructable; deletion after enumeration is the ordinary act, recorded at L8/L6/history/. |
-| l0 … l6 as the interior directory names | Superseded (7 September 2026) | L0 through L6 under L8: the eight bits L0 through L7 and the extra bit L8. The repositories carry lowercase until the rename pass. |
-| orphan; foster; results; delete | Retired (6 September 2026) | The exemplars' queue vocabulary and the access rules that came with it were retired on the owner's word; L8/L5/research/review/ is the catch-all and L8/L5/research/lanes/ the working position; nothing is deleted. |
+| USO/ as the directory name of the interior | Renamed L8/ | The term USO remains the name of the bounded scientific object's interior; the directory is L8, the research packet on the desk, a count and not a rank. The scaffold and the exemplars carry USO/ until the rename pass. |
+| README.md as documentation | Superseded | README.md is where a reader starts; the sheets and this specification are the documentation. The READMEs that carried documentation were deleted after enumeration, records kept at L8/L6/history/. |
+| no deletion as a rule | Superseded | Integrity is enforced; no deletion is implied. Retirement is for what integrity needs reconstructable; deletion after enumeration is the ordinary act, recorded at L8/L6/history/. |
+| l0 … l6 as the interior directory names | Superseded | L0 through L6 under L8: the eight bits L0 through L7 and the extra bit L8. The repositories carry lowercase until the rename pass. |
+| orphan; foster; results; delete | Retired | The exemplars' queue vocabulary and the access rules that came with it were retired on the owner's word; L8/L5/research/review/ is the catch-all and L8/L5/research/lanes/ the working position; nothing is deleted. |
 | peer-1 / object-1 numbering | Reported, not resolved | The peering enumeration begins at 1 while the layers count from 0 under "First is always 0"; the owner's call. |
 
-### Changes of 6 September 2026
-
-1. The interior container is named L8; the term USO remains the name of what it holds. The canonical tree and every path in this document say L8/. The scaffold and the exemplars still carry USO/ until the rename pass, which is one mechanical change across all three repositories on the owner's word.
-2. "First is always 0" is stated in the count rule with the owner's table and is filed in the scaffold as a locally authored definition of the model at L8/L0/semantics/definitions/FIRST_IS_ALWAYS_0.md.
-3. The naming of L7 and L8 is recorded as design: uppercase L is furniture, lowercase l is a layer, the desk is drawn by its two corners, the packet is two zeros stacked.
-4. The topology states positions and meaning and no rule about what any intelligence may touch.
-5. research/review/ is the catch-all and research/lanes/ the working position; PARKED marks what is set aside; nothing is deleted.
-6. A scale, a ladder, or a vocabulary of levels or statuses is an L4 object as written and L5 discourse as meant, never an L1 state space or L2 mathematics; review statuses stand at L5.
-7. Copyright has one place, governance/copyright/ (5 September 2026).
-8. Curated sources are served by pointer from a designated archive bound at private ingress (5 September 2026).
-9. Many intelligences meet the object at one face, each at its own numbered peer position; the peer's 0 is the owner's register, written by a person.
-10. The exemplars' queue vocabulary is retired and the two exemplars are documented as instantiated, imperfections included.
-11. Open, the owner's calls: the peering enumeration from 1 against "First is always 0"; the home of Autonomous Theory; the two 0-byte files in Auditonomous; rebinding the Autonomous definition to a current version; the held-off rules file for sessions.
-
-### Changes of 7 September 2026
-
-1. README.md is where a reader starts, not the documentation; the documentation is the sheets and this specification. The READMEs that carried documentation in the scaffold and both exemplars are deleted from HEAD after enumeration (records: scaffold §11, Autonomous §11, Auditonomous §10); the evidence rules of Autonomous and the status and label discipline of Auditonomous are carried verbatim to L8/L5/research/review/ in each.
-2. Integrity is enforced; no deletion is implied. Stated at L6 with the owner's words; the retired/ sheets and the header of the one CI check say the same. The two 0-byte files in Auditonomous, open in item 11 above, are deleted after enumeration.
-3. The interior directories carry uppercase: L0 through L6 under L8, the eight bits L0 through L7 and the extra bit L8 that carries the semantic. The reading of item 3 above, lowercase l for a layer, is superseded. The repositories carry USO/ and l0/ through l6/ until the rename pass, which is now one mechanical change across all three: USO/ to L8/ and l0/ through l6/ to L0/ through L6/.
-4. The one CI check stands in all three repositories (Autonomous and Auditonomous merged 7 September 2026; the scaffold's in the same pull request as this version), and the three roots are the same.
-5. Open, the owner's calls: the peering enumeration from 1 against "First is always 0"; the home of Autonomous Theory; rebinding the Autonomous definition to a current version; the held-off rules file for sessions; the queue's rule texts at L8/L6/retired/layout-2026-09-06/ in each exemplar, the canon the owner said to delete, pending one reading to carry out whatever in them is the corpus's own rule; the rename pass.
+The dated lists of what changed in each version stand at L8/L6/history/specification-history.md in the scaffold repository.
