@@ -12,4 +12,4 @@ Read in this order:
 
 The root holds `README.md`, `L7/`, `USO/`, and `.github/` (one CI check, repository infrastructure and not a layer), and nothing else.
 
-Every prior README is retired, not deleted, at `USO/l6/retired/`: `scaffold-2026-08-20/README.md`, the owner's working sketch; `readme-2026-09-07/README.md`, the README that carried the documentation until 7 September 2026. The record of this repository's layout is `USO/l6/history/harmonization-2026-09-04.md`.
+The owner's first README, the working sketch, is retired at `USO/l6/retired/scaffold-2026-08-20/README.md`. The record of this repository's layout is `USO/l6/history/harmonization-2026-09-04.md`.
