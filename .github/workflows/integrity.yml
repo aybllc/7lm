@@ -1,0 +1,64 @@
+name: integrity
+on: [push, pull_request]
+jobs:
+  invariants:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: No unresolved conflict markers (G-001)
+        run: |
+          ! grep -rnE '^<{7}( |$)|^={7}$|^>{7}( |$)' . --exclude-dir=.git -I
+
+      - name: The root is canonical (G-002)
+        run: |
+          # The root holds README.md, L7/, the interior container (USO/ until the rename pass, L8/ after),
+          # .github/, and .gitignore, and nothing else. Every 7LM repository has the same root.
+          fail=0
+          for e in $(git ls-tree --name-only HEAD); do
+            case "$e" in README.md|L7|USO|L8|.github|.gitignore) ;; *) echo "not canonical at root: $e"; fail=1;; esac
+          done
+          git ls-tree --name-only HEAD | grep -qx 'README.md' || { echo "missing README.md"; fail=1; }
+          git ls-tree --name-only HEAD | grep -qx 'L7' || { echo "missing L7/"; fail=1; }
+          n=$(git ls-tree --name-only HEAD | grep -cxE 'USO|L8')
+          [ "$n" -eq 1 ] || { echo "the interior container must be exactly one of USO/ or L8/ (found $n)"; fail=1; }
+          exit $fail
+
+      - name: Every sheet is headed by its path, and every canonical position has a sheet (G-003)
+        run: |
+          # A sheet is a 0.md whose first line is "# <path>/". Retired sets under l6/retired/ keep their prior
+          # sheets verbatim and are not checked below their own root. The canonical positions are the
+          # specification's tree; material filed beneath them may carry sheets or not (reported in the next step).
+          fail=0; checked=0
+          top=$(git ls-tree --name-only HEAD | grep -xE 'USO|L8')
+          for s in $(git ls-files | grep -E "^(L7|$top)(/.*)?/0\.md$"); do
+            d=${s%/0.md}
+            case "$d" in */l6/retired/*/*|*/L6/retired/*/*) continue;; esac
+            checked=$((checked+1))
+            first=$(head -n 1 "$s")
+            [ "$first" = "# $d/" ] || { echo "heading is not the path: $s -> $first"; fail=1; }
+          done
+          echo "sheets checked: $checked"
+          lower=l; [ "$top" = "L8" ] && lower=L
+          canon="L7 L7/provenance L7/provenance/prior-art L7/provenance/sources L7/provenance/lineage L7/provenance/authority
+                 L7/governance L7/governance/copyright L7/governance/licensing L7/governance/patents L7/governance/permissions L7/governance/access L7/governance/restrictions
+                 L7/peering L7/peering/private L7/peering/private/ingress L7/peering/private/egress L7/peering/public L7/peering/public/ingress L7/peering/public/egress
+                 L7/publications
+                 $top $top/${lower}6 $top/${lower}6/history $top/${lower}6/retired
+                 $top/${lower}5 $top/${lower}5/research $top/${lower}5/research/lanes $top/${lower}5/research/review $top/${lower}5/research/findings
+                 $top/${lower}5/institution $top/${lower}5/institution/peers $top/${lower}5/institution/undergraduates
+                 $top/${lower}4 $top/${lower}4/work $top/${lower}4/work/writing $top/${lower}4/work/experiments $top/${lower}4/work/computation
+                 $top/${lower}3 $top/${lower}3/engineering-mathematics $top/${lower}3/engineering-mathematics/approximation $top/${lower}3/engineering-mathematics/uncertainty $top/${lower}3/engineering-mathematics/tolerances
+                 $top/${lower}2 $top/${lower}2/formal-mathematics $top/${lower}2/formal-mathematics/relations $top/${lower}2/formal-mathematics/operators $top/${lower}2/formal-mathematics/proofs
+                 $top/${lower}1 $top/${lower}1/state-space
+                 $top/${lower}0 $top/${lower}0/universality $top/${lower}0/pedagogy $top/${lower}0/epistemic $top/${lower}0/ontology $top/${lower}0/semantics $top/${lower}0/semantics/definitions"
+          for d in $canon; do [ -f "$d/0.md" ] || { echo "canonical position without a sheet: $d/0.md"; fail=1; }; done
+          exit $fail
+
+      - name: Report directories without a sheet (not a failure)
+        run: |
+          top=$(git ls-tree --name-only HEAD | grep -xE 'USO|L8')
+          for d in $(git ls-tree -r -d --name-only HEAD -- L7 "$top"); do
+            case "$d" in */l6/retired/*/*|*/L6/retired/*/*) continue;; esac
+            [ -f "$d/0.md" ] || echo "::notice::no sheet: $d/"
+          done
