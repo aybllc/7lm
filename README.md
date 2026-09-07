@@ -163,8 +163,9 @@ The owner's rule, stated plainly: the exemplars fill in the layers by reference;
 
 ## Where things live
 
-- Controlling specification: `USO/l4/work/writing/7lm-harmonized-architecture-specification.docx` (the owner's document, byte for byte; controls the wording), its canonical Markdown form `USO/l4/work/writing/7lm-harmonized-architecture-specification.md` (normalized 2026-09-05, word for word, the unlabelled Word styles made visible as bracketed tags), and the plain Word rendering generated from that Markdown, `USO/l4/work/writing/7lm-harmonized-architecture-specification-normalized.docx` (built-in styles only, one page per top-level section). Filed as produced writing; research meaning is L5 and release state is L7.
+- Controlling specification: `USO/l4/work/writing/7lm-harmonized-architecture-specification.md`, the canonical Markdown form and, for the version of 6 September 2026, the source; `USO/l4/work/writing/7lm-harmonized-architecture-specification.docx` is generated from it and reads back to it unchanged, and is the draft of the next controlling document awaiting the owner's hand. Its Harmonization Record lists every change from the prior version under "Changes of 6 September 2026".
 - Superseded draft (its own footer dates it "3 September 2026"): `USO/l6/retired/specification-draft-2026-09-03/`.
+- Prior version (the owner's authored document of 4 September 2026, which controlled the wording of that version): `USO/l6/retired/specification-2026-09-04/`.
 - Retired pre-harmonization scaffold (2026-08-20), every gate file at its original relative path, including the owner's README sketch: `USO/l6/retired/scaffold-2026-08-20/`.
 - Harmonization record of this displacement event (2026-09-04): `USO/l6/history/harmonization-2026-09-04.md`.
 - Source ledger (header-only, no rows): `L7/provenance/sources/source-ledger.md`.
