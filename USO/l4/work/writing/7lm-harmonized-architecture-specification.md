@@ -23,6 +23,18 @@ Every directory carries a local Layer 0 semantic description. In tree notation, 
 Direction rule\
 Scientific construction proceeds from L0 outward only as dependencies are established. External inspection begins at L7 and proceeds inward. Description does not become prescription merely because the structure can be traversed.
 
+### How to use this document
+
+What controls. The layer contracts below control: for each of L0 through L7, the core question, the function, the directional inputs, the output, the hard boundary, what the layer owns, what may be done there, and what the acceptance check is. Every directory of the canonical tree also carries its own 0.md, which states that one position locally and in detail. Where a sheet and this document differ, this document controls.
+
+To place a thing, ask which layer can state it correctly and read that layer's section; each representation belongs at the lowest layer where it can be stated correctly. The cross-layer cases at L4 settle the recurring ones: research, writing, experiment, contained architecture, code, data, external definition, and publication.
+
+To debug, find the first layer where the invariant or contract fails, and return the correction to that owner.
+
+To bring in something an outside owner authored, read the contextual semantic route below and the L7 section: it is bound at the face, carried inward with its ownership tag intact, and it stays theirs.
+
+To find what changed, when, and on whose word, read the records at L6/history/ in the repository; this document states the architecture as it is.
+
 ### Originating architectural constraint
 
 The Autonomous/Auditonomous root issue supplies the concrete origin of the agnostic peering rule: one bounded research object must be able to depend on another without owning, copying, redefining, or maintaining both objects' foundational semantics. Auditonomous can use the exact Autonomous definition without becoming a second semantic authority for Autonomous. peer-1/object-1 is the agnostic form of this concrete ownership problem.
@@ -78,7 +90,7 @@ The owner's definition, given with its table:
 
 The operational debugging principle is:
 
-> Find the first layer where the invariant or contract fails.
+> Find the first layer where the invariant or contract fails, and return the correction to that owner.
 
 ### Two valid directions
 
@@ -106,19 +118,7 @@ Operational containment and analytic expansion are different relations. A comple
 
 ---
 
-## Structured Architecture Outline
-
-*APA-like hierarchy with author notes • current working architecture*
-
-### 1. Purpose and controlling method
-
-The Seven-Layer Model (7LM) is a dependency and fault-containment architecture for separating local meaning, admissibility, exact formalization, engineering approximation, realized work, research interpretation, reconstructable memory, and external presentation. Its practical debugging rule is to find the first layer at which the required invariant, evidence relation, or handoff fails, then return the correction to that owner.
-
-Scientific construction/prescription proceeds outward: L0 → L1 → L2 → L3 → L4 → L5 → L6 → L7, but only as far as established dependencies justify. Interpretive inspection of an externally owned object proceeds inward: L7 → L6 → L5 → L4 → L3 → L2 → L1 → L0.
-
-**[Clarification]** *Author note.* Description does not prescribe. A path can be observed or interpreted without becoming a normative requirement. Prescription requires an established dependency that has actually been tested or ratified to the degree the next layer needs.
-
-### 2. Topology and traversal
+## Topology and traversal
 
 L7 is outside the USO and is physically a sibling boundary to L8/. L6 through L0 are the scientific interior. Physical siblinghood and semantic sequence are different relations: crossing L7 <-> L6 is a boundary/peering event, not filesystem nesting.
 
@@ -157,15 +157,17 @@ The canonical research tree keeps the interior physically flat: L6/, L5/, L4/, L
 
 **[Clarification]** *Author note.* These bundles are semantic and dependency views, not filesystem nesting and not mandatory traversal paths. The same scientific object may be railed through different subsets of the architecture according to the question being asked, while each representation remains owned by the layer that can state it correctly.
 
-### 3. Contained architectures and analytic expansion
+---
+
+## Contained architectures and analytic expansion
 
 An architecture may be contained at one 7LM layer operationally while questions about that architecture expand across 7LM epistemically. Operational ownership answers where the architecture is realized; analytic expansion answers which 7LM owner is needed to state the particular question or representation correctly.
 
-#### 3.1 OSI as an operating architecture
+### OSI as an operating architecture
 
 When the question is how the OSI architecture operates, the complete OSI model remains inside 7LM L4. OSI L1 through OSI L7 are internal layers of a contained realized architecture; OSI L7 is not 7LM L7, and the OSI layer numbers do not map onto the 7LM layer numbers.
 
-#### 3.2 OSI as an object of inquiry
+### OSI as an object of inquiry
 
 When the question changes to the origins, development, justification, standardization, institutional history, or design constraints of OSI, the inquiry may rail the OSI object across the 7LM architecture. The operating OSI stack remains an L4 object; the inquiry generates layer-owned representations of that object according to what is being asked.
 
@@ -182,7 +184,7 @@ When the question changes to the origins, development, justification, standardiz
 
 **[Clarification]** *Author note.* The OSI model does not become 7LM L0-L7. The question about the OSI object expands. Operational containment remains L4, while representations produced by the inquiry are owned by the 7LM layer that can state them correctly.
 
-#### 3.3 Nested analytic views
+### Nested analytic views
 
 Some questions require only the L3-L2 engineering/formal sub-bundle. Others require the broader L3-L2-L1 technical-possibility bundle because admissibility itself is under examination. L0 is crossed only when the local semantic or foundational contract is itself part of the question. These are selectable analytic rails, not new containers and not a requirement that every inquiry traverse every layer.
 
@@ -412,14 +414,6 @@ The architecture is not anti-speculation.
 Hypotheses may be created and mathematically explored.
 
 The discipline is that unobserved or unengineered capability cannot be silently promoted downward into the foundational or physical claim space.
-
-State-space and claim boundaries
-
-An object or formal operation may not silently leave the declared state space and still claim continuity with the same L1 contract. An out-of-space result either fails under the current model or motivates an explicit proposal for a revised state space.
-
-Mathematical permission is not automatic engineering or empirical permission. A mathematically valid object may stop at L2. Engineering feasibility must be earned at L3, realized work at L4, and scientific interpretation at L5. Packaging or publicity at L7 never promotes maturity by itself.
-
-The architecture therefore permits speculation while making maturity explicit: build whatever the mathematics legitimately permits; claim only what the completed handoffs have earned.
 
 **[Note]** Author note. STATE and IMMUTABLE remain useful descriptive/mnemonic language, but the controlling layer name is State Space.
 
@@ -794,29 +788,7 @@ A definition lives once at its owner. When 7LM does not author the definition, i
 
 #### Autonomous and Auditonomous: peering without semantic annexation
 
-The Autonomous/Auditonomous root issue is the originating case for the agnostic peer-1/object-1 relation. The repositories are implementation work in progress; their current layouts do not control this architecture.
-
-Reference implementations: https://github.com/aybllc/autonomous and https://github.com/aybllc/auditonomous
-
-Autonomous owns the locally authored definition of Autonomous.
-
-Autonomous L7 public egress may expose an exact version of that Autonomous L0 definition.
-
-Auditonomous L7 public ingress binds that version as a peer-owned, reference-only object under NO EDIT and NO DELETE.
-
-Source L0 definition → source L7 egress → receiving L7 ingress → receiving L0. Auditonomous L0 may receive and bind the Autonomous definition as externally authored semantic input while remaining responsible only for the locally authored definition of Auditonomous. Receipt at L0 does not copy authorship.
-
-Auditonomous does not have to redefine the peer definition. Wherever it is referenced internally, the exact bound version carries an immutable external-ownership tag containing object identity, owner, source layer, version, and ingress binding.
-
-Declared semantic-deference rule. Auditonomous intentionally takes the owner's exact bound definition as authoritative for what the owner means and does not re-prove or locally redefine that meaning. This is not a claim that the definition is objectively true, an endorsement of downstream claims, or a transfer of authorship.
-
-Auditonomous L6 preserves the binding event, exact version, use, correction, supersession, and retirement history. Auditonomous L5 interprets the bound definition without taking semantic ownership.
-
-An argument about Autonomous cannot silently stand in for an argument about Auditonomous. Any cross-object claim requires an explicit named relation or handoff; the same identity-tagging rule applies to agnostic methods as they are made now.
-
-Autonomous freezes the narrowest reasonable agreement among its exact source-tagged standards inputs as the Autonomous consensus baseline. It must not manufacture consensus where sources materially disagree. Auditonomous then authors the Auditonomous difference as an explicit local delta; the baseline and delta remain separately owned and overlaid.
-
-An upstream change creates a new binding; it does not mutate the pinned object. A change to the Autonomous definition returns to the Autonomous owner. Auditonomous updates or retires its binding; it does not edit the peer-owned definition.
+The originating case, in its concrete form. Autonomous owns the locally authored definition of Autonomous and exposes an exact version at its L7 public egress. Auditonomous binds that version at its L7 public ingress as peer-owned and reference-only, NO EDIT and NO DELETE, and may carry it inward to its own L0 as externally authored semantic input; receipt does not copy authorship. Auditonomous L6 preserves the binding event, exact version, use, correction, supersession, and retirement; Auditonomous L5 interprets the bound definition without taking semantic ownership. A change to the definition returns to the Autonomous owner, who issues a new version; the receiver rebinds or retires its binding and does not edit the peer-owned object.
 
 **[Clarification]** This is not an optional exemplar. It is the concrete originating boundary test for the agnostic architecture.
 
@@ -899,46 +871,11 @@ Machine-readable metadata may support automation, but the architecture does not 
 
 ---
 
-## Exemplars as instantiated
+## Exemplars
 
-Reference implementations: https://github.com/aybllc/autonomous and https://github.com/aybllc/auditonomous, with the scaffold at https://github.com/aybllc/7lm and the curated-source archive at https://github.com/aybllc/l6.
+The architecture is instantiated in four repositories: the scaffold at https://github.com/aybllc/7lm, the exemplars at https://github.com/aybllc/autonomous and https://github.com/aybllc/auditonomous, and the curated-source archive at https://github.com/aybllc/l6.
 
-**[Clarification]** Architecture and implementation status are separate claims. What follows documents the two exemplars as they stand, including what is not yet as this specification states. Their layouts do not control the architecture.
-
-**What both exemplars carry**
-
-- The canonical tree under README.md, L7/, and the interior container, which both still name USO/ pending the rename pass. Every directory has its 0.md, headed by its path. No directory metadata, no automation in the layout; the one CI check at .github/workflows/integrity.yml, and the same root in both.
-- One locally authored L0 definition each. Autonomous owns l0/semantics/definitions/AUTONOMOUS.md, a plural entry of eleven codified definitions A1–A11 carried in verbatim with their issuing bodies' ownership tags. Auditonomous owns l0/semantics/definitions/AUDITONOMOUS_DEFINITION.md, the local delta over the bound Autonomous root.
-- The binding of the Autonomous definition at Auditonomous's L7/peering/public/ingress/peer-1/object-1/, reference-only, NO EDIT and NO DELETE, under the owner's rule that Auditonomous gets the definitions of autonomous from Autonomous and nowhere else. Autonomous exposes the definition at its L7/peering/public/egress/peer-1/.
-- Curated sources served by pointer from aybllc/l6, bound at each repository's L7/peering/private/ingress/peer-1/; one ledger row per source at L7/provenance/sources/LEDGER.md; no source file in either repository.
-- Copyright in one place, L7/governance/copyright/, with licensing/ and restrictions/ pointing to it.
-- l5/research/review/ as the catch-all and l5/research/lanes/ as the working position. The queue that preceded them at the repository roots, orphan, foster, results, delete, with its access rules for sessions, is retired at l6/retired/layout-2026-09-06/ in each repository.
-- The records at l6/history/ in each repository, carrying the owner's words verbatim and every move, retirement, deletion, and binding.
-- No rule in either tree about what a session or any other intelligence may touch. The repository file that would carry such rules is held off.
-- A README that is a start page: the subject, the reading order, the root, and where the prior README is. The evidence rules of Autonomous and the status and label discipline of Auditonomous stand verbatim at l5/research/review/.
-
-**Autonomous** (aybllc/autonomous)
-
-Face. Public ingress peer-1 to peer-9: the issuing bodies whose clauses are bound into the definition, ISO/TC 299, ISO/IEC JTC 1/SC 42, ISO/IEC JTC 1/SC 7, IEEE, NIST, the European Union, US DoD, EASA, and ETSI, one object per bound clause. Public egress peer-1: aybllc/auditonomous, the definition as exposed. Private ingress peer-1 aybllc/l6; peer-2 aybllc/eb-stack with abba-01/ebios; peer-3 aybllc/auditonomous, the coinage, referenced and not adopted; peer-4 the principal's intake corpus. Private egress: none. Provenance: the pointer ledger into l6 and a 450-entry capture register. Publications: a binder; nothing released.
-
-Interior. l6: the master ledger, five forensic reconstructions, the two records, two retired layouts, and four definition error records. l5: six lanes; the reviews, audits, and adjudications; seven findings. l4: the manuscript placeholder, the autonomy scale (an L4 object by the owner's ruling), and one deep-research run. l3: two engineering-mathematics notes. l2: an empty formulas ledger. l1: empty, its dimensions fixed by content inside four L5 findings. l0: the definition with its companions and a universality scope statement.
-
-Not yet as stated. The interior is named USO/, not L8/. The catch-all holds material that belongs to other objects: Autonomous Theory, one work and not the definition of autonomous, whose home the owner has not named; a template of the Auditonomous definition; and the owner's notes on memory consolidation with conserved uncertainty. Each leaves on the owner's word. The provenance rows for the bound issuing bodies are not yet ledgered.
-
-**Auditonomous** (aybllc/auditonomous)
-
-Face. Public ingress peer-1: aybllc/autonomous, the definition of autonomous, bound at commit 0504961. Private ingress peer-1 aybllc/l6; peer-2 aybllc/eb-audit; peer-3 abba-01/ebios with the Martin 2026 manuscript. Private egress peer-1: the closed transfer of the source corpus to l6; peer-2: the pending transfer of the Third Power Corpus to aybllc/ncf-research, whose files wait at object-1. Public egress: nothing released. Provenance: 62 pointer rows into l6, the staging records about those sources, and one session-provenance record at lineage/. Publications: presentation rules and an empty press-kit checklist.
-
-Interior. l6: the master index, three session ledgers, the two records, two retired layouts. l5: two lanes; two reviews and the status ladder carried verbatim; three findings. l4: drafts, chat transcripts, a session record, three requirements extractions, and one deep-research run with its exports. l3: a proposal and an external-priors note. l2: an empty formulas ledger. l1: the auditon envelope, the substitutability states, and the requirements partition. l0: the one locally authored definition; the other rails empty.
-
-Not yet as stated. The interior is named USO/, not L8/. The binding of the Autonomous definition names the path the peer used before its own 7LM layout, research/definitions/AUTONOMOUS.md at 0504961; the same object now stands at the peer's l0/semantics/definitions/AUTONOMOUS.md, and rebinding to a current version is the owner's act. The binding record says three files still take a definition of autonomous from somewhere other than the binding. The catch-all holds two Autonomous Theory files that leave once that work's home is named. The l0 epistemic rail is empty; its vocabulary stands at L5 as review status.
-
-**What the exemplars show**
-
-- A second work inside a repository is not the object. Autonomous Theory appeared in both exemplars and is neither's definition; the catch-all holds it until the owner names its home, and the architecture's place for a second work is a repository of its own, met here by peering. Whether it takes that route is the owner's call.
-- Position is state. Three motions and no metadata carried the two repositories from a root queue to the catch-all: rename, retire, file. Nothing was deleted.
-- The desk is not a layer. Reaching for layer seven hands the reader l6, exactly as the count rule says.
-- The tree's silence on access is deliberate. Both repositories ran for one day with the sessions' rules stated in the tree and then removed; nothing in the tree depended on them.
+Architecture and implementation status are separate claims. What each repository holds, and where it is not yet as this specification states, is documented in that repository's own sheets and in its records at L6/history/. Their layouts do not control the architecture.
 
 ---
 
