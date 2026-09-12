@@ -235,3 +235,15 @@ Plates 13 and 14 are the development, and they are marked on their face as PROPO
 The field guide carries no diagrams of its own, by the same instruction. Eleven figures had been drafted into it earlier the same day and were not published; they were moved onto this sheet rather than duplicated, and the guide now points at it in its opening and in section 16. The guide's own text is otherwise unchanged, except that emphasis marked in its Markdown now renders as emphasis on the published page, which it had not.
 
 Nothing was deleted. No statement of the specification was changed by this pass. The one CI check passes on the result.
+
+## 20. 2026-09-12 — the packet reading refined: origin, payload, glue, connector
+
+The owner, 2026-09-12, quoted as written: "L8 has to envelope them all to simulate a packet where gteh floor is l1 the end is l6, ythe glue is l7 adn l8 is gthe connectror the the next l0...get it?"
+
+This refines the reading recorded in §19 and corrects the drawing of it. Under §19 the plate had drawn L8 as two frame bars carrying L1 through L7, with L0 outside. The owner's words assign each position its part. L0 is the origin: what exists in the head first and is written down second, and not payload. L1 is the floor of the payload and L6 its end. L7 is the glue, the face at which the object binds outward. L8 envelopes the whole unit, and its trailing edge is the connector: the hand-off to the next object's L0. Objects therefore chain L8 to L0 to L8 to L0, and the run of them is the lineage.
+
+Done, on the plate sheet at `L8/L0/pedagogy/7lm-plate-sheet.py` and its generated `7lm-plate-sheet.html`, which now carries fifteen plates. Plate 13, the packet, draws one unit left to right: L0 as origin, L1 through L6 under the payload bracket with floor and end named, L7 as glue, the L8 envelope around all of them with its trailing edge thickened into the connector and an arrow to the next object's L0. Plate 14, the chain, draws Autonomous joined to Auditonomous at L8 → L0, with a third object drawn faintly as the one not yet written. Plate 15, what has to be ruled, sets the specification's reading beside the owner's and asks the two questions that decide between them: whether the directory tree moves, and what L8's job is, with a third answer left open, the boundary that also carries the semantic.
+
+One thing the refinement settles, and the plate states it: the count rule is untouched under either reading. Eight positions, L0 through L7, first is always 0; L8 is not a ninth position under either. The question §19 had raised about what "eight" counts once L0 sits outside the frame does not arise, because L0 remains the first position; it is only excluded from the payload, not from the count. What remains open is L8's job and whether the tree moves.
+
+Plates 13 through 15 remain marked PROPOSED and OPEN CALL on their face. The specification is unchanged by this pass and stands as written until the owner rules. The field guide's two pointers and the pedagogy register now say fifteen plates. The generator reproduces the filed sheet byte for byte. The one CI check passes on the result.

@@ -600,7 +600,7 @@ A set of inherited terms with no adjudicated position: *corpus* in its broad sen
 
 ## 16. Where to read more
 
-- The diagrams: the 7LM Plate Sheet, `L8/L0/pedagogy/7lm-plate-sheet.html`. Fourteen plates. Plates 01 through 12 draw what the specification ratifies; plates 13 and 14 carry a proposal it does not yet contain.
+- The diagrams: the 7LM Plate Sheet, `L8/L0/pedagogy/7lm-plate-sheet.html`. Fifteen plates. Plates 01 through 12 draw what the specification ratifies; plates 13 through 15 carry a proposal it does not yet contain.
 - The specification: `L8/L4/work/writing/7lm-harmonized-architecture-specification.md` in `aybllc/7lm`.
 - The interior sheet and the count rule: `L8/0.md`.
 - The desk sheet: `L7/0.md`.

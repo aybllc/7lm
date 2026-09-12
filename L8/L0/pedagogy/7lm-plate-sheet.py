@@ -5,7 +5,7 @@ One source file. Every drawing on the sheet is defined here and nowhere else, so
 there is one place to change when the model changes.
 
 Plates 01-12 state what the Harmonized Authoritative Architecture Specification
-(12 September 2026) ratifies. Plates 13-14 carry a proposal that is not in the
+(12 September 2026) ratifies. Plates 13-15 carry a proposal that is not in the
 specification and are marked open.
 """
 import pathlib
@@ -435,116 +435,160 @@ def p12():
           "A decision diagram: a superseded file reaches the question of whether integrity needs it reconstructable, with yes leading to retirement unchanged and no leading to enumeration then deletion")
 
 
-# ============================================ V. OPEN - NOT IN THE SPECIFICATION
-
-def unit(x0, name, role, sub):
-    """One bounded object drawn as a framed packet: start bar, body, stop bar."""
-    g = [f'<rect x="{x0}" y="60" width="10" height="120" fill="var(--open)"/>',
-         f'<rect x="{x0 + 180}" y="60" width="10" height="120" fill="var(--open)"/>',
-         box(x0 + 14, 60, 162, 120)]
-    g.append(t(x0 + 95, 84, name, 10, MONO, "var(--ink)", "middle"))
-    g.append(t(x0 + 95, 102, role, 10.5, SANS, "currentColor", "middle", 0.9))
-    g.append(t(x0 + 95, 116, sub, 9, SANS, "currentColor", "middle", 0.7))
-    for i in range(7):
-        g.append(line(x0 + 26, 132 + i * 6, x0 + 86, 132 + i * 6, sw=2, op=0.45))
-    g.append(t(x0 + 94, 156, "L1 &#8230; L7", 9.5, MONO, op=0.8))
-    g.append(t(x0 + 94, 168, "carried", 9, SANS, op=0.7))
-    g.append(t(x0 + 95, 196, "L8 &#8212; the frame", 9.5, NARR, "var(--open)", "middle"))
-    g.append(line(x0 + 95, 202, x0 + 95, 218, dash="3 3", op=0.5, sw=1))
-    g.append(box(x0 + 20, 218, 150, 36, dash="4 3", op=0.75))
-    g.append(t(x0 + 95, 234, "L0", 10, MONO, "var(--ink)", "middle"))
-    g.append(t(x0 + 95, 247, "in the head, then written down", 8.5, SANS, "currentColor", "middle", 0.8))
-    return ''.join(g)
-
+# ========================== V. OPEN - NOT IN THE SPECIFICATION
 
 def p13():
-    s = [arrows("p13"),
-         box(16, 78, 118, 84, fill="none", dash="4 3", op=0.6),
-         t(75, 100, "nine standards", 10, SANS, "currentColor", "middle", 0.9),
-         t(75, 114, "bodies", 10, SANS, "currentColor", "middle", 0.9),
-         t(75, 134, "ISO &#183; IEEE &#183; NIST", 8.5, MONO, "currentColor", "middle", 0.75),
-         t(75, 147, "EU &#183; DoD &#183; EASA &#183; ETSI", 8.5, MONO, "currentColor", "middle", 0.75),
-         line(138, 120, 164, 120, sw=1.4, marker="p13"),
-         unit(170, "aybllc/autonomous", "consensus baseline", "the narrowest agreement"),
-         line(364, 120, 404, 120, stroke="var(--open)", sw=1.6, marker="p13o"),
-         t(384, 112, "bound", 9, SANS, "var(--open)", "middle"),
-         unit(410, "aybllc/auditonomous", "local delta", "its own difference only"),
-         line(604, 120, 640, 120, stroke="var(--open)", sw=1.6, marker="p13o"),
-         t(692, 116, "&#8230; the stream continues", 10, SANS, "currentColor", "middle", 0.7),
-         t(692, 132, "each frame joins to the next", 9, SANS, "currentColor", "middle", 0.6),
-         line(16, 286, 744, 286, op=0.25, sw=1),
-         t(16, 306, "The frame is the glue: it marks where one object ends and the next begins, so a run of them reads as a stream rather than a blur.",
-           10, SANS, op=0.9),
-         t(16, 322, "L0 sits outside the frame. The packet carries a reference to the meaning, not the meaning itself.",
-           10, SANS, op=0.9)]
-    plate("13", "V. Open &#8212; not in the specification", "Objects in a stream",
-          "L8 read as the frame that makes one object a single unit, so objects can be set end to end and the run of them is lineage.",
-          ''.join(s), "0 0 760 336",
-          "Nine standards bodies feeding the autonomous object, which binds to the auditonomous object, each object drawn as a packet between two frame bars with L0 outside the frame",
+    s = [arrows("p13")]
+    # the envelope, and its trailing edge
+    s.append(box(12, 56, 651, 150, fill="none", stroke="var(--open)", sw=1.5, dash="6 4", rx=3))
+    s.append('<rect x="655" y="56" width="8" height="150" fill="var(--open)"/>')
+    s.append(t(12, 46, "L8 &#8212; ENVELOPES THEM ALL", 10, NARR, "var(--open)", "start", 1,
+               ' letter-spacing="0.1em"'))
+    # the origin
+    s.append(box(32, 100, 96, 58))
+    s.append(t(80, 88, "ORIGIN", 9.5, NARR, "currentColor", "middle", 0.8, ' letter-spacing="0.1em"'))
+    s.append(t(80, 138, "L0", 17, MONO, "var(--ink)", "middle"))
+    s.append(t(80, 180, "the meaning, first", 9.5, SANS, "currentColor", "middle", 0.85))
+    # the payload: floor L1, end L6
+    for i in range(6):
+        x = 148 + i * 70
+        s.append(box(x, 100, 62, 58, op=0.9))
+        s.append(t(x + 31, 138, f"L{i + 1}", 16, MONO, "var(--accent)", "middle"))
+    s.append('<path d="M 148 96 L 148 90 L 560 90 L 560 96" fill="none" stroke="currentColor" '
+             'stroke-width="1.1" opacity="0.5"/>')
+    s.append(t(354, 82, "PAYLOAD &#183; FLOOR L1, END L6", 9.5, NARR, "currentColor", "middle", 0.8,
+               ' letter-spacing="0.08em"'))
+    s.append(t(354, 180, "states &#8594; exact relations &#8594; engineering &#8594; realized work "
+                         "&#8594; judgment &#8594; memory", 9.5, SANS, "currentColor", "middle", 0.85))
+    # the glue
+    s.append(box(576, 100, 72, 58, fill="var(--accent-wash)", stroke="var(--accent)", sw=1.4))
+    s.append(t(612, 88, "GLUE", 9.5, NARR, "var(--accent)", "middle", 1, ' letter-spacing="0.1em"'))
+    s.append(t(612, 138, "L7", 17, MONO, "var(--accent-ink)", "middle"))
+    s.append(t(612, 180, "binds outward", 9.5, SANS, "currentColor", "middle", 0.85))
+    # the connector
+    s.append(line(672, 131, 738, 131, stroke="var(--open)", sw=1.8, marker="p13o"))
+    s.append(t(676, 120, "CONNECTOR", 9.5, NARR, "var(--open)", "start", 1, ' letter-spacing="0.08em"'))
+    s.append(t(676, 152, "to the next", 9.5, SANS, op=0.85))
+    s.append(t(676, 165, "object&#8217;s L0", 9.5, SANS, op=0.85))
+    # what the drawing asserts
+    s.append(line(12, 224, 788, 224, op=0.25, sw=1))
+    for i, ln in enumerate([
+            "L0 is not payload. It is the origin: what exists in the head first, and is written down second.",
+            "L7 is the glue &#8212; the face at which the object binds to whatever is outside it.",
+            "L8 envelopes the whole unit, and its trailing edge is the connector: the hand-off to the next object&#8217;s L0."]):
+        s.append(t(12, 244 + i * 16, ln, 10, SANS, op=0.9))
+    plate("13", "V. Open &#8212; not in the specification", "The packet",
+          "One bounded object read as a frame: origin, payload, glue, connector.",
+          ''.join(s), "0 0 800 292",
+          "One unit drawn left to right inside an envelope: L0 as origin, L1 to L6 as the payload with L1 the floor and L6 the end, L7 as the glue, and the envelope's trailing edge as the connector to the next object's L0",
           status="PROPOSED")
 
 
 def p14():
     s = [arrows("p14")]
-    # Reading A - what the specification says today
-    s.append(box(16, 44, 348, 168, fill="none", op=0.5))
-    s.append(t(32, 34, "READING A &#183; specification, 12 September 2026", 9.5, NARR,
-               "currentColor", "start", 0.8, ' letter-spacing="0.08em"'))
-    s.append(box(36, 64, 96, 40, fill="var(--accent-wash)", stroke="var(--accent)", sw=1.3))
-    s.append(t(84, 89, "L7", 13, MONO, "var(--accent-ink)", "middle"))
-    s.append(box(146, 64, 198, 40))
-    s.append(t(245, 89, "L8 &#8835; L0 &#8230; L6", 12, MONO, "var(--ink)", "middle"))
-    s.append(t(190, 122, "siblings on disk", 10, SANS, "currentColor", "middle", 0.85))
+    units = [("aybllc/autonomous", "consensus baseline", False),
+             ("aybllc/auditonomous", "local delta", False),
+             ("the next object", "not yet written", True)]
+    for i, (name, role, faint) in enumerate(units):
+        x0 = 20 + i * 250
+        op = 0.42 if faint else 1
+        s.append(box(x0, 70, 196, 110, fill="none", stroke="var(--open)", sw=1.4, dash="6 4",
+                     rx=3, op=0.5 if faint else 0.85))
+        s.append(f'<rect x="{x0 + 196}" y="70" width="8" height="110" fill="var(--open)" '
+                 f'opacity="{0.42 if faint else 1}"/>')
+        s.append(t(x0 + 100, 60, name, 10, MONO, "var(--ink)", "middle", op))
+        s.append(box(x0 + 10, 100, 36, 50, op=op * 0.9))
+        s.append(t(x0 + 28, 131, "L0", 11, MONO, "var(--ink)", "middle", op))
+        for j in range(6):
+            s.append(box(x0 + 54 + j * 14, 100, 12, 50, op=op * 0.7, rx=1))
+        s.append(box(x0 + 144, 100, 42, 50, fill="var(--accent-wash)", stroke="var(--accent)",
+                     sw=1.3, op=op))
+        s.append(t(x0 + 165, 131, "L7", 11, MONO, "var(--accent-ink)", "middle", op))
+        s.append(t(x0 + 100, 198, role, 10, SANS, "currentColor", "middle", op * 0.9))
+        if i < 2:
+            s.append(line(x0 + 208, 125, x0 + 246, 125, stroke="var(--open)", sw=1.6, marker="p14o"))
+            s.append(t(x0 + 227, 115, "L8 &#8594; L0", 8.5, MONO, "var(--open)", "middle"))
+    s.append(t(115, 166, "L1 &#8230; L6", 8.5, MONO, "currentColor", "middle", 0.75))
+    s.append(line(732, 125, 788, 125, stroke="var(--open)", sw=1.4, op=0.35, dash="4 4"))
+    s.append(line(20, 228, 788, 228, op=0.25, sw=1))
+    for i, ln in enumerate([
+            "The connector of one object meets the L0 of the next. Only the binding crosses; authorship never does.",
+            "A run of connected objects is the lineage: where this came from, in the order it came."]):
+        s.append(t(20, 248 + i * 16, ln, 10, SANS, op=0.9))
+    plate("14", "V. Open &#8212; not in the specification", "The chain",
+          "Objects joined end to end: the connector of one meets the origin of the next, and the run of them is lineage.",
+          ''.join(s), "0 0 800 280",
+          "Three enveloped objects in a row, the trailing connector of each joining the L0 of the next, labelled L8 to L0, with the third drawn faintly as the object not yet written",
+          status="PROPOSED")
+
+
+def p15():
+    s = [arrows("p15")]
+    # Reading A - the specification as written
+    s.append(box(16, 44, 376, 150, fill="none", op=0.5))
+    s.append(t(32, 34, "READING A &#183; the specification as written", 9.5, NARR, "currentColor",
+               "start", 0.8, ' letter-spacing="0.08em"'))
+    s.append(box(36, 64, 90, 38, fill="var(--accent-wash)", stroke="var(--accent)", sw=1.3))
+    s.append(t(81, 89, "L7", 13, MONO, "var(--accent-ink)", "middle"))
+    s.append(box(140, 64, 232, 38))
+    s.append(t(256, 89, "L8 &#8835; L0 &#8230; L6", 12, MONO, "var(--ink)", "middle"))
+    s.append(t(204, 120, "siblings on disk; L8 holds the interior", 9.5, SANS, "currentColor", "middle", 0.85))
     for i in range(8):
-        s.append(box(36 + i * 32, 140, 28, 28, op=0.8))
-        s.append(t(50 + i * 32, 158, f"{i}", 10, MONO, "var(--ink)", "middle"))
-    s.append(box(298, 140, 46, 28, fill="var(--accent-wash)", stroke="var(--accent)", sw=1.3))
-    s.append(t(321, 158, "L8", 10, MONO, "var(--accent-ink)", "middle"))
-    s.append(t(36, 186, "L0 &#8230; L7 are the eight bits; L8 is the extra bit, a check bit.", 9.5, SANS, op=0.85))
-    s.append(t(36, 200, "It carries the semantic and catches an error.", 9.5, SANS, op=0.85))
-    # Reading B - the proposal
-    s.append(box(396, 44, 348, 168, fill="none", stroke="var(--open)", op=0.6))
-    s.append(t(412, 34, "READING B &#183; proposed", 9.5, NARR, "var(--open)", "start", 1,
+        s.append(box(36 + i * 34, 136, 30, 26, op=0.8))
+        s.append(t(51 + i * 34, 154, str(i), 10, MONO, "var(--ink)", "middle"))
+    s.append(box(312, 136, 44, 26, fill="var(--accent-wash)", stroke="var(--accent)", sw=1.3))
+    s.append(t(334, 154, "L8", 10, MONO, "var(--accent-ink)", "middle"))
+    s.append(t(36, 182, "L8 is the extra bit: a check bit, carrying the semantic and catching an error.",
+               9, SANS, op=0.85))
+    # Reading B - proposed
+    s.append(box(408, 44, 376, 150, fill="none", stroke="var(--open)", op=0.6))
+    s.append(t(424, 34, "READING B &#183; proposed", 9.5, NARR, "var(--open)", "start", 1,
                ' letter-spacing="0.08em"'))
-    s.append('<rect x="416" y="64" width="8" height="40" fill="var(--open)"/>')
-    s.append('<rect x="700" y="64" width="8" height="40" fill="var(--open)"/>')
-    s.append(box(428, 64, 268, 40))
-    s.append(t(500, 89, "L7", 12, MONO, "var(--ink)", "middle"))
-    s.append(line(540, 68, 540, 100, op=0.35, sw=1))
-    s.append(t(620, 89, "L1 &#8230; L6", 12, MONO, "var(--ink)", "middle"))
-    s.append(t(562, 122, "L8 frames the whole object", 10, SANS, "var(--open)", "middle"))
-    s.append(box(416, 140, 84, 30, dash="4 3", op=0.75))
-    s.append(t(458, 159, "L0", 11, MONO, "var(--ink)", "middle"))
-    s.append(line(504, 155, 524, 155, dash="3 3", op=0.5, sw=1))
-    s.append(t(530, 152, "outside the frame &#8212; referenced,", 9.5, SANS, op=0.85))
-    s.append(t(530, 165, "not carried", 9.5, SANS, op=0.85))
-    s.append(t(416, 190, "The extra bit changes job: framing marks the boundary,", 9.5, SANS, op=0.85))
-    s.append(t(416, 204, "where parity only detects a corruption after the fact.", 9.5, SANS, op=0.85))
-    # the two unresolved questions
-    s.append(line(16, 238, 744, 238, op=0.25, sw=1))
+    s.append(box(424, 64, 216, 38, fill="none", stroke="var(--open)", sw=1.3, dash="5 3"))
+    s.append('<rect x="640" y="64" width="6" height="38" fill="var(--open)"/>')
+    s.append(box(430, 70, 34, 26, op=0.9))
+    s.append(t(447, 88, "L0", 10, MONO, "var(--ink)", "middle"))
+    for j in range(6):
+        s.append(box(470 + j * 17, 70, 13, 26, op=0.7, rx=1))
+    s.append(box(576, 70, 38, 26, fill="var(--accent-wash)", stroke="var(--accent)", sw=1.2))
+    s.append(t(595, 88, "L7", 10, MONO, "var(--accent-ink)", "middle"))
+    s.append(line(652, 83, 700, 83, stroke="var(--open)", sw=1.5, marker="p15o"))
+    s.append(t(706, 86, "the next L0", 9, SANS, "var(--open)"))
+    s.append(t(596, 120, "L0 origin &#183; L1&#8211;L6 payload &#183; L7 glue &#183; L8 envelope and connector",
+               9.5, SANS, "currentColor", "middle", 0.9))
+    s.append(t(424, 146, "L8&#8217;s job changes: not parity checked after the fact, but the boundary itself",
+               9, SANS, op=0.85))
+    s.append(t(424, 160, "&#8212; where one object ends, and where the next one is reached.", 9, SANS, op=0.85))
+    s.append(t(424, 182, "A third answer is open: the boundary that also carries the semantic.", 9, SANS,
+               "var(--open)", op=0.95))
+    # what is not in question
+    s.append(box(16, 206, 768, 42, fill="var(--accent-wash)", stroke="var(--accent)", sw=1.2))
+    s.append(t(400, 224, "The count rule is untouched either way: eight positions, L0 through L7, and first is always 0.",
+               10.5, SANS, "var(--accent-ink)", "middle"))
+    s.append(t(400, 239, "L8 is not a ninth position under either reading. What is in question is L8&#8217;s job, and whether the tree moves.",
+               9.5, SANS, "var(--accent-ink)", "middle", 0.9))
+    # the two questions
     qs = [(16, "Does the tree move?",
-           "L7/ and L8/ stay siblings", "L7/ moves inside L8/",
-           "semantic enclosure only, paths unchanged",
-           "every path in three repositories, plus check G-002"),
-          (396, "What does eight count?",
-           "L0 &#8230; L7 are the bits", "L1 &#8230; L7, and L0 outside",
-           "the byte reading stands as written",
-           "the byte reading is retired for the frame reading")]
-    for x0, q, optA, optB, noteA, noteB in qs:
-        s.append(t(x0, 262, q, 12, NARR, "var(--open)"))
-        for i, (opt, note) in enumerate(((optA, noteA), (optB, noteB))):
-            y = 276 + i * 44
-            s.append(box(x0, y, 348, 38, stroke="var(--open)", op=0.55, dash="4 3"))
+           ("L7/ and L8/ stay siblings", "semantic enclosure only; no path changes"),
+           ("L7/ moves inside L8/", "every path in three repositories, plus check G-002")),
+          (408, "What is L8&#8217;s job?",
+           ("the extra bit, a check bit", "as the specification has it now"),
+           ("the envelope and the connector", "the boundary, and the hand-off to the next L0"))]
+    for x0, q, a, b in qs:
+        s.append(t(x0, 278, q, 12, NARR, "var(--open)"))
+        for i, (opt, note) in enumerate((a, b)):
+            y = 292 + i * 44
+            s.append(box(x0, y, 376, 38, stroke="var(--open)", op=0.55, dash="4 3"))
             s.append(t(x0 + 14, y + 17, opt, 10.5, MONO, "var(--ink)"))
             s.append(t(x0 + 14, y + 31, note, 9, SANS, op=0.8))
-    plate("14", "V. Open &#8212; not in the specification", "What does L8 enclose?",
-          "Two readings, and the two questions that have to be ruled before either can be written into the specification.",
-          ''.join(s), "0 0 760 372",
-          "Reading A shows L7 and L8 as siblings with L0 to L7 as eight bits and L8 as a check bit. Reading B shows L8 as a frame around the whole object with L0 outside it. Below, two open questions: whether the directory tree moves, and what the count of eight refers to",
+    plate("15", "V. Open &#8212; not in the specification", "What has to be ruled",
+          "The two readings side by side, what neither of them disturbs, and the two questions that decide between them.",
+          ''.join(s), "0 0 800 386",
+          "Reading A shows L7 and L8 as siblings with L0 to L7 as eight bits and L8 the check bit. Reading B shows L8 as an envelope around origin, payload and glue, its trailing edge connecting to the next L0. A banner states the count rule is unchanged either way. Below, two questions: whether the directory tree moves, and what L8's job is",
           status="OPEN CALL")
 
 
-for fn in (p01, p02, p03, p04, p05, p06, p07, p08, p09, p10, p11, p12, p13, p14):
+for fn in (p01, p02, p03, p04, p05, p06, p07, p08, p09, p10, p11, p12, p13, p14, p15):
     fn()
 
 # ---------------------------------------------------------------- the page
@@ -659,13 +703,13 @@ TITLEBLOCK = """
 <header class="titleblock">
   <p class="kicker">Seven-Layer Model &#183; drawn, not described</p>
   <h1>The 7LM Plate Sheet</h1>
-  <p class="lede">Fourteen plates. Every rule of the model that can be drawn is drawn here, and
+  <p class="lede">Fifteen plates. Every rule of the model that can be drawn is drawn here, and
   drawn here only &#8212; one sheet to change when the model changes. Plates 01&#8211;12 state what the
-  specification ratifies. Plates 13&#8211;14 carry a proposal it does not yet contain.</p>
+  specification ratifies. Plates 13&#8211;15 carry a proposal it does not yet contain.</p>
   <dl class="specs">
     <div><dt>Source</dt><dd>Harmonized Authoritative Architecture Specification, 12 September 2026</dd></div>
     <div><dt>Repository</dt><dd class="mono">aybllc/7lm</dd></div>
-    <div><dt>Plates</dt><dd>14 &#183; twelve ratified, two open</dd></div>
+    <div><dt>Plates</dt><dd>15 &#183; twelve ratified, three open</dd></div>
     <div><dt>Controls</dt><dd>Where this sheet and the specification differ, the specification controls.</dd></div>
   </dl>
 </header>
@@ -676,14 +720,14 @@ FOOT = """
   <div>
     <h3>Reading the drawings</h3>
     <p><span class="swatch a"></span>Pine marks the element carrying the claim in each plate.</p>
-    <p><span class="swatch o"></span>Oxide marks what is proposed and not yet ruled &#8212; plates 13 and 14 only.</p>
+    <p><span class="swatch o"></span>Oxide marks what is proposed and not yet ruled &#8212; plates 13 to 15 only.</p>
     <p>Monospace is a real path in the repository. Every file and folder named here exists.</p>
   </div>
   <div>
     <h3>Open calls on this sheet</h3>
     <ul>
       <li>Does the tree move, or is the enclosure semantic only?</li>
-      <li>What does the count of eight refer to once L0 sits outside the frame?</li>
+      <li>What is L8&#8217;s job: the check bit, or the envelope whose trailing edge connects to the next L0?</li>
     </ul>
     <p>Both are the owner&#8217;s to rule. Until then the specification stands as written.</p>
   </div>
