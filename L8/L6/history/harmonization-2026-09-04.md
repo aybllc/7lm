@@ -219,3 +219,19 @@ Not changed: every statement of fact, every rule, every path, every worked examp
 
 Where the guide is edited, for the record: the source is this file at `L8/L0/pedagogy/7lm-field-guide.md`. The published page is generated from it and carries no separate source.
 
+
+## 19. 2026-09-12 — the plate sheet: the model drawn, with one source for the drawings
+
+The owner, 2026-09-12, quoted as written: "Lets develop the model using only diagrams can you reate a new dopagrams infographic page on emajor big infogrphic so we dont have kmultiple versions and forgte to update something".
+
+Two instructions, and the second governs the shape of the first. The model is to be developed in diagrams; and the diagrams are to have one home, so that a change to the model cannot leave a stale drawing standing somewhere else.
+
+Done. `L8/L0/pedagogy/7lm-plate-sheet.py` is the single source: every drawing in this repository is defined there and nowhere else. `L8/L0/pedagogy/7lm-plate-sheet.html` is what it generates, one sheet of fourteen plates in five parts.
+
+Plates 01 through 12 draw what the specification ratifies, and nothing beyond it. I. The object: the eight positions with L7 and L8 as siblings and the boundary between them; the count rule with its ordinals and magnitudes, the seven layers ending at L6, and the peer count from 1 beside it; the two namings as the drawings they are. II. Movement: construction outward and inspection inward; the bridge, with a claim that moves and a claim that stops at honest placement; operational containment against analytic expansion, on the specification's OSI case. III. Placement: one document owned four times over; the desk in its four branches; exposure by direction as a two-by-two with the real path patterns; the route a borrowed definition travels across the object boundary. IV. Operation: the catch-all and the lanes, with their two moves and two exits; retirement against enumerated deletion, as the decision it is.
+
+Plates 13 and 14 are the development, and they are marked on their face as PROPOSED and OPEN CALL because the specification does not contain them. They draw the owner's reading of L8 as the frame that makes one bounded object a single unit — the glue, in the owner's word, that lets objects be set end to end so that a run of them is lineage — with L0 outside the frame because the meaning precedes any framing of it. Plate 14 sets that reading beside the specification's own and draws the two questions that have to be ruled before either can be written down: whether the directory tree moves or the enclosure is semantic only, and what the count of eight refers to once L0 sits outside the frame. Neither plate states a rule. Until the owner rules, the specification stands as written.
+
+The field guide carries no diagrams of its own, by the same instruction. Eleven figures had been drafted into it earlier the same day and were not published; they were moved onto this sheet rather than duplicated, and the guide now points at it in its opening and in section 16. The guide's own text is otherwise unchanged, except that emphasis marked in its Markdown now renders as emphasis on the published page, which it had not.
+
+Nothing was deleted. No statement of the specification was changed by this pass. The one CI check passes on the result.

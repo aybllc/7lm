@@ -1,7 +1,3 @@
-<!-- The 7LM field guide. Filed at L8/L0/pedagogy/ on 12 September 2026 as system-level traversal and attachment pedagogy,
-     drawn from the specification (version of 12 September 2026) and the sheets. Where this guide and the specification
-     differ, the specification controls. Record: L8/L6/history/harmonization-2026-09-04.md §15, revised §17 and §18. -->
-
 # The Seven-Layer Model: A Field Guide
 
 A research program accumulates claims of different kinds, and without a discipline separating them, a definition, a measurement, a derivation, and a conjecture come to look alike on the page. The Seven-Layer Model is a dependency and fault-containment architecture that keeps them apart and makes the difference inspectable.
@@ -9,6 +5,8 @@ A research program accumulates claims of different kinds, and without a discipli
 This guide states what each layer owns, where a given piece of work belongs, and the procedures for the operations you will perform most often. Section 12 is a glossary of the terms used throughout.
 
 Everything here is drawn from the specification and from the sheets, the `0.md` files that describe every folder in the `aybllc/7lm` repository. Where this guide and the specification differ, the specification controls.
+
+The diagrams live on their own sheet. The 7LM Plate Sheet draws every rule that can be drawn, and it is the only place they are drawn, so there is one sheet to change when the model changes. It is filed at `L8/L0/pedagogy/7lm-plate-sheet.html`.
 
 ---
 
@@ -602,6 +600,7 @@ A set of inherited terms with no adjudicated position: *corpus* in its broad sen
 
 ## 16. Where to read more
 
+- The diagrams: the 7LM Plate Sheet, `L8/L0/pedagogy/7lm-plate-sheet.html`. Fourteen plates. Plates 01 through 12 draw what the specification ratifies; plates 13 and 14 carry a proposal it does not yet contain.
 - The specification: `L8/L4/work/writing/7lm-harmonized-architecture-specification.md` in `aybllc/7lm`.
 - The interior sheet and the count rule: `L8/0.md`.
 - The desk sheet: `L7/0.md`.
