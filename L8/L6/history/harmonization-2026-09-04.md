@@ -187,3 +187,9 @@ How it was checked before filing. Drafted from the specification and the sheets;
 
 Not a rule. The guide is teaching. Where it and the specification differ, the specification controls, as its own first lines say. Nothing else in the repository changed for this filing.
 
+## 16. 2026-09-12 — the peering enumeration resolved: peers from 1, the layers from 0
+
+The owner, 2026-09-12, asked whether anything was outstanding and, told that the peering enumeration from 1 stood against "First is always 0" as an open call, ruled, quoted as written: "0 is the semantic inverse  to itseklf. Peers are physical and should start at 1. 0 is where semantics, eptistemic etc define the iupper layers. Its what exists in your ghead first".
+
+Done. The specification's Harmonization Record row "peer-1 / object-1 numbering" moves from "Reported, not resolved" to "Resolved", and one clarification under "First is always 0" states the rule: peers are physical and are counted from 1 at `L7/peering/`; the layers are counted from 0, the semantic origin, where the Semantic and Epistemic rails define the layers above, what exists first, before anything physical. The peering sheet `L7/peering/0.md` says the same where it used to report the difference as unresolved. The owner's words stand on the definition they extend, at `L8/L0/semantics/definitions/FIRST_IS_ALWAYS_0.md`, and in `specification-history.md` with the version's fourth change. The field guide at `L8/L0/pedagogy/` teaches the rule in section 3 and no longer lists the question as open. The generated rendering of the specification is patched to the same text in the two paragraphs that changed, each read back against the Markdown. Nothing else changed; the exemplars carried no statement on the question. The one CI check passes on the result.
+

@@ -91,6 +91,7 @@ Now apply it to the layers.
 - So the seventh layer is L6. In the owner's own words: "layer 7 will always be layer 6."
 - L7 carries the number 7, but it is not a layer. It is the desk. If you count up from L0, it is the eighth position you reach.
 - L8 is not a position at all. It is the count of the eight positions, L0 through L7. It is also the name of the folder that holds the interior.
+- One more count, so nobody trips on it. Peers at the desk are numbered from 1: `peer-1`, `object-1`. Layers are numbered from 0. The owner's reason is simple. Peers are physical things, so you count them from 1. Zero is the semantic origin, where meaning and knowing define the layers above. It is what exists in your head first, before anything physical.
 
 The names are design, not decoration. The owner was clear about that.
 
@@ -546,7 +547,6 @@ Keep these two claims apart in your head. The design is one claim. How far each 
 
 The specification records a few decisions the owner has not made yet.
 
-- Peers are numbered from 1, while layers count from 0. Whether to change that is the owner's call.
 - There is a held-off rules file about what a session or a model may touch. The tree itself states no such rule.
 - Some older words in the records have no home yet: corpus in its broad sense, regress, found, caught, naught, origidity, certainty, and intolerance. The specification keeps them "reserved." Do not make a folder for any of them.
 
