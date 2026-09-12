@@ -6,7 +6,7 @@ This guide states what each layer owns, where a given piece of work belongs, and
 
 Everything here is drawn from the specification and from the sheets, the `0.md` files that describe every folder in the `aybllc/7lm` repository. Where this guide and the specification differ, the specification controls.
 
-The diagrams live on their own sheet. The 7LM Plate Sheet draws every rule that can be drawn, and it is the only place they are drawn, so there is one sheet to change when the model changes. It is filed at `L8/L0/pedagogy/7lm-plate-sheet.html`.
+The diagrams live on their own sheet. The 7LM Plate Sheet is the only place the model is drawn, so there is one sheet to change when the model changes. It carries one plate for now, the eight positions with L8 as the envelope around all of them, and it is filed at `L8/L0/pedagogy/7lm-plate-sheet.html`.
 
 ---
 
@@ -600,7 +600,7 @@ A set of inherited terms with no adjudicated position: *corpus* in its broad sen
 
 ## 16. Where to read more
 
-- The diagrams: the 7LM Plate Sheet, `L8/L0/pedagogy/7lm-plate-sheet.html`. Fifteen plates. Plates 01 through 12 draw what the specification ratifies; plates 13 through 15 carry a proposal it does not yet contain.
+- The diagrams: the 7LM Plate Sheet, `L8/L0/pedagogy/7lm-plate-sheet.html`. One plate for now: the eight positions, with L8 drawn as the envelope around all of them, as the owner has described it.
 - The specification: `L8/L4/work/writing/7lm-harmonized-architecture-specification.md` in `aybllc/7lm`.
 - The interior sheet and the count rule: `L8/0.md`.
 - The desk sheet: `L7/0.md`.
