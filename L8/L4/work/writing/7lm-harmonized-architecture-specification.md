@@ -63,6 +63,8 @@ The owner's definition, given with its table:
 
 **[Clarification]** Ordinals are semantics; numbers are magnitudes; the relation between them is "is". The seven interior layers are the seven semantics FIRST through SEVENTH and the seven magnitudes L0 through L6, so the seventh layer is L6: layer 7 will always be layer 6. L7 is a magnitude, the position numbered 7, the eighth reached in traversal: numbered, not a layer. L8 is a count, not a position: the interior's own zero over the seven layer zeros. Nothing follows the desk in traversal; past the face the count begins again at zero, in another object's tree, where this whole object is one bound object at a peer position.
 
+**[Clarification]** Peers are physical and are counted from 1 at L7/peering/: peer-1, object-1. The layers are counted from 0: 0 is the semantic origin, where the Semantic and Epistemic rails define the layers above; it is what exists first, before anything physical. The two counts do not conflict.
+
 **[Note]** Author note. L7, pronounced El-Seven, is the desk: the L is the lower left hand corner of the desk and the 7 is the upper right; the name draws the rectangle that this layer is, its Surface. L8 is the research packet on the desk: two zeros stacked, the interior's zero over the zeros of the seven layers. The interior directories carry uppercase too: L0 through L7 are the eight bits of a byte, 0 being a bit, and L8 is the extra bit that carries the semantic, as information needs an extra bit to catch any error. The names are design, not decoration, and were not chosen by accident.
 
 ### 7LM is a dependency and fault-containment architecture
@@ -974,6 +976,6 @@ Supporting-evidence disposition: Git history can support L6 reconstruction, but 
 | no deletion as a rule | Superseded | Integrity is enforced; no deletion is implied. Retirement is for what integrity needs reconstructable; deletion after enumeration is the ordinary act, recorded at L8/L6/history/. |
 | l0 … l6 as the interior directory names | Superseded | L0 through L6 under L8: the eight bits L0 through L7 and the extra bit L8. |
 | orphan; foster; results; delete | Retired | The exemplars' queue vocabulary and the access rules that came with it were retired on the owner's word; L8/L5/research/review/ is the catch-all and L8/L5/research/lanes/ the working position; nothing is deleted. |
-| peer-1 / object-1 numbering | Reported, not resolved | The peering enumeration begins at 1 while the layers count from 0 under "First is always 0"; the owner's call. |
+| peer-1 / object-1 numbering | Resolved | Peers are physical and are counted from 1; the layers are counted from 0, the semantic origin, where the Semantic and Epistemic rails define the layers above. The owner's ruling of 12 September 2026; the words are at L8/L6/history/specification-history.md. |
 
 The dated lists of what changed in each version stand at L8/L6/history/specification-history.md in the scaffold repository.

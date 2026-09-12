@@ -29,6 +29,7 @@ The Harmonized Authoritative Architecture Specification at `L8/L4/work/writing/7
 | Deletion after enumeration, retirement for scientific memory | "wait, nothing deleted? then your saying nothing is ever deleted? I'm confused on who is being intelligent and who is making an intelligent point but the things is I get both and most likely you only get one. note that I put both in your court please do as I am" | 7 September 2026 |
 | Integrity enforced, no deletion implied | "we cant enforce integroty by ebforceing no deletion. we can only imply no deletion to enforcer integiortyty" | 7 September 2026 |
 | The rename pass carried out: `USO/` to `L8/`, `l0` … `l6` to `L0` … `L6` | "Lets do this today"; "L8 (consider the 8 to be 2 0's stacked ontop of eachj other.)"; "DIgest L8 for wewhat it is and how ywouuld you propgate that through thd system?" | 12 September 2026 |
+| Peers counted from 1, the layers from 0 | "0 is the semantic inverse  to itseklf. Peers are physical and should start at 1. 0 is where semantics, eptistemic etc define the iupper layers. Its what exists in your ghead first" | 12 September 2026 |
 | The same root in every repository; solutions brought as workflows | "under autonomous and auidtonomous the root needs to be the same for both and anything we need to discuss shoudl be brough to my atgention with soluitionsw like gitworkflows" | 6 September 2026 |
 
 ## The exemplars' snapshots
@@ -45,6 +46,7 @@ The specification's exemplar section was first written against Autonomous `main`
 | no deletion as a rule | Superseded | 7 September 2026 |
 | l0 … l6 as the interior directory names | Superseded | 7 September 2026 |
 | USO/ as the directory name of the interior; l0 … l6 as the interior directory names | Carried out in the scaffold and both exemplars: `USO/` to `L8/`, `l0` … `l6` to `L0` … `L6` | 12 September 2026 |
+| peer-1 / object-1 numbering | Resolved: peers are physical and are counted from 1; the layers are counted from 0, the semantic origin | 12 September 2026 |
 
 ## What changed in each version
 
@@ -75,3 +77,4 @@ The specification's exemplar section was first written against Autonomous `main`
 1. The rename pass is carried out in the scaffold and both exemplars: `USO/` is `L8/`, and `l0/` through `l6/` are `L0/` through `L6/`. The sentences that said the repositories carried the old names until the rename pass are removed from the two dispositions (USO/ as the directory name of the interior; l0 … l6 as the interior directory names) and from the exemplar section ("which both still name USO/ pending the rename pass"; "The interior is named USO/, not L8/.", once per exemplar). The exemplar section's paths carry L0 … L6, and "Reaching for layer seven hands the reader L6."
 2. The header comment names `L8/L6/history/specification-history.md`. The version date is 12 September 2026 in the header comment, the dateline, the Version box, and the generated rendering's footer and description. No rule changes; the L8 text (the count, the byte, the extra bit) stands as written on 6 and 7 September 2026.
 3. The rename pass is closed. Open, the owner's calls: the peering enumeration from 1 against "First is always 0"; the home of Autonomous Theory; rebinding the Autonomous definition to a current version; the held-off rules file for sessions; the queue's rule texts at `L8/L6/retired/layout-2026-09-06/` in each exemplar.
+4. Later the same day, the peering enumeration is resolved on the owner's word: peers are physical and are counted from 1; the layers are counted from 0, the semantic origin, where the Semantic and Epistemic rails define the layers above. The Harmonization Record row moves from "Reported, not resolved" to "Resolved", and one clarification under "First is always 0" states the rule. The generated rendering is patched to the same text. Open, the owner's calls: the home of Autonomous Theory; rebinding the Autonomous definition to a current version; the held-off rules file for sessions; the queue's rule texts at `L8/L6/retired/layout-2026-09-06/` in each exemplar.
