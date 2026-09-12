@@ -1,43 +1,43 @@
 <!-- The 7LM field guide. Filed at L8/L0/pedagogy/ on 12 September 2026 as system-level traversal and attachment pedagogy,
      drawn from the specification (version of 12 September 2026) and the sheets. Where this guide and the specification
-     differ, the specification controls. Record: L8/L6/history/harmonization-2026-09-04.md §15, revised §17. -->
+     differ, the specification controls. Record: L8/L6/history/harmonization-2026-09-04.md §15, revised §17 and §18. -->
 
 # The Seven-Layer Model: A Field Guide
 
-Every research program eventually hits the same wall. Someone writes a sentence that sounds authoritative, and six months later nobody can tell whether it was a definition, a measurement, a piece of math, or an educated guess. The Seven-Layer Model exists to stop that from happening.
+A research program accumulates claims of different kinds, and without a discipline separating them, a definition, a measurement, a derivation, and a conjecture come to look alike on the page. The Seven-Layer Model is a dependency and fault-containment architecture that keeps them apart and makes the difference inspectable.
 
-I am going to walk you through it the way I would walk you through it standing at the filing cabinet, pulling drawers open. Plain talk, real examples, one idea at a time. If a word throws you, section 12 is a glossary. Jump there and come back.
+This guide states what each layer owns, where a given piece of work belongs, and the procedures for the operations you will perform most often. Section 12 is a glossary of the terms used throughout.
 
-One ground rule before we start. Everything here comes from the model's own rulebook, the specification, and from the little description files that sit in every folder of the `aybllc/7lm` repository. If this guide and the specification ever disagree, the specification wins. No exceptions.
+Everything here is drawn from the specification and from the sheets, the `0.md` files that describe every folder in the `aybllc/7lm` repository. Where this guide and the specification differ, the specification controls.
 
 ---
 
 ## 1. What the Seven-Layer Model is
 
-Strip away the vocabulary and 7LM is a folder layout with a strict conscience. Every folder has exactly one job. Every folder also carries a description file named `0.md`, which we call a sheet, and that sheet tells you what belongs in the folder and what does not.
+7LM is a directory layout with one rule per position. Every folder has exactly one job. Every folder also carries a description file named `0.md`, called a sheet, which states what belongs in that folder and what does not.
 
-Nothing runs on its own. There is no engine, no validator sorting your files for you. People do the filing by hand, and that is deliberate. The whole model is written down in a single document, the Harmonized Authoritative Architecture Specification, which lives at `L8/L4/work/writing/7lm-harmonized-architecture-specification.md`.
+Nothing runs on its own. There is no engine and no validator that files material for you. The filing is manual, by design. The whole model is written down in a single document, the Harmonized Authoritative Architecture Specification, which lives at `L8/L4/work/writing/7lm-harmonized-architecture-specification.md`.
 
 ### The one idea
 
-Take a single word and watch how many different claims hide inside it. The `aybllc/autonomous` repository studies one word: *autonomous*. Here is how that one word spreads out.
+A single subject carries several distinct kinds of claim, and each kind belongs to a different layer. The `aybllc/autonomous` repository studies one word, *autonomous*. Its claims distribute as follows.
 
 - **What the word means here.** Somebody had to sit down and write the definition this project actually uses. That is `L8/L0/semantics/definitions/AUTONOMOUS.md`, and it lives at the bottom layer, L0.
 - **Which states are admissible.** Before you can say a system moved from one condition to another, you have to declare which conditions the definition admits at all. In the sister repository, `aybllc/auditonomous`, that work sits in `L8/L1/state-space/AUDITON_ENVELOPE.md`.
-- **What follows exactly, by derivation.** Axioms, operators, exact relations, theorems. In both exemplar repositories this layer holds a formulas ledger that currently declares itself empty, and that emptiness is honest rather than embarrassing.
+- **What follows exactly, by derivation.** Axioms, operators, exact relations, theorems. In both exemplar repositories this layer holds a formulas ledger that currently declares itself empty.
 - **What survives engineering tolerance.** This is where an exact relation meets units, error budgets, convergence, and the question of whether the thing is feasible at all.
 - **What was genuinely made or measured.** A manuscript, a computation that ran, an experiment with a result. Autonomous keeps its manuscript and a deep research run here.
 - **What you may responsibly conclude.** Autonomous states one of its conclusions plainly in a file called `FINDING_autonomy_is_an_edge_property.md`. That is a judgment about evidence, not the evidence itself.
 - **What this thing used to be.** Old versions, corrections, retired layouts, the record of what changed and why.
 - **What the outside world gets to see.** Sources, copyright, the standards bodies you depend on, anything you actually published.
 
-Eight different kinds of claim, all tangled in one word. 7LM hands each kind its own address. The first seven get the seven layers, L0 through L6. The eighth, meeting the outside world, gets the desk, L7, which is not a layer at all. Section 3 explains that wrinkle, and it is worth the detour.
+Eight kinds of claim, one subject. 7LM gives each kind its own position. The first seven take the seven layers, L0 through L6. The eighth, the object's relation to the outside world, takes the desk, L7, which is not a layer. Section 3 states the count rule that makes this consistent.
 
-The whole payoff is one sentence: a claim is only as strong as what its layer has actually earned.
+The operating principle: a claim is only as strong as what its layer has earned.
 
 ### The debugging rule
 
-When something breaks, you go looking for the first layer where a promise fails, and you fix it right there. You do not paper over it from a layer above. That rule shows up again and again, and by the end of this guide you will be sick of hearing it, which is the point.
+When something fails, locate the first layer at which a promise breaks, and correct it at that layer. Do not compensate for it from a layer above. This rule governs every correction procedure in the guide.
 
 ---
 
@@ -56,21 +56,21 @@ Read this table bottom to top when you are building something. Read it top to bo
 | L1 | State Space | Which states are admissible at all, under the contract L0 established? |
 | L0 | Semantic / Foundational | What does this object mean, before anything else is said? |
 
-Two more names turn up constantly, so let me introduce them now.
+Two further names appear throughout.
 
-**L8** is the folder that holds the seven interior layers. The specification calls it the research packet on the desk. It is a count rather than a layer, which sounds like wordplay until section 3, where it stops sounding like wordplay.
+**L8** is the folder that holds the seven interior layers. The specification calls it the research packet on the desk. It is a count rather than a layer; section 3 explains the distinction.
 
 **USO** is the name for what L8 holds: the inside of one bounded object. A bounded object is a single research thing with a clear edge, like one definition or one project. So `L8/` is the folder, and the USO is what sits in it.
 
-Two facts about how this lands on disk. First, L7 is outside the packet, and `L7/` and `L8/` sit side by side. Stepping from the desk into L6 is crossing a boundary, not opening a subfolder. Second, nothing comes after the desk. Past it the count restarts at zero inside somebody else's tree, where your entire object is just one bound object at their peer position.
+Two facts about the layout on disk. L7 is outside the packet: `L7/` and `L8/` are siblings, and moving from the desk into L6 crosses a boundary rather than opening a subfolder. And nothing follows the desk. Past it the count restarts at zero inside another object's tree, where this entire object is one bound object at a peer position.
 
 ---
 
 ## 3. The count rule: "First is always 0"
 
-This is the part that trips people, so we are going to slow down.
+This is the most common source of confusion in the model.
 
-The owner's rule is four words long. First is always 0. It arrives with this table:
+The owner's rule is four words: first is always 0. It is stated with this table:
 
 | semantic | > | magnitude |
 |---|---|---|
@@ -79,19 +79,21 @@ The owner's rule is four words long. First is always 0. It arrives with this tab
 | THIRD | is | 2 |
 | FOURTH | is | 3 |
 
-Words like *first* and *second* are meanings. Numbers like 0 and 1 are magnitudes. The word *is* connects them. First is 0. Second is 1. Simple enough, until you apply it to the layers and the arithmetic starts to feel wrong.
+Ordinals such as *first* and *second* are semantics. Numbers such as 0 and 1 are magnitudes. The relation between them is *is*. First is 0, second is 1, and so on.
 
-The seven layers are L0 through L6, so the seventh layer is L6. The owner put it better: "layer 7 will always be layer 6." L7 wears the number 7 but is not a layer. It is the desk, and counting up from L0 it is the eighth position you reach. L8 is not a position at all. It counts the eight positions L0 through L7, and it also names the folder holding the interior.
+The seven layers are L0 through L6, so the seventh layer is L6. In the owner's words, "layer 7 will always be layer 6." L7 carries the number 7 but is not a layer. It is the desk, and counting up from L0 it is the eighth position you reach. L8 is not a position at all. It counts the eight positions L0 through L7, and it also names the folder holding the interior.
 
-One more count, because mixing these two is the classic stumble. Peers at the desk start at 1: `peer-1`, `object-1`. Layers start at 0. The owner's reasoning is worth having: peers are physical things, and you count physical things from one. Zero is the semantic origin, where meaning and knowing define everything above them. Zero is what exists in your head before anything physical exists at all.
+A second count runs in parallel, and the two must not be confused. Peers at the desk are numbered from 1: `peer-1`, `object-1`. Layers are numbered from 0. The owner's reasoning: peers are physical, and physical things are counted from one. Zero is the semantic origin, where the Semantic and Epistemic rails define the layers above. It is what exists before anything physical does.
 
-### The names are jokes, and the jokes are load-bearing
+### The names are descriptive
 
-**L7 is a picture.** Say it out loud, El-Seven, then look at the two characters. The L gives you the left side and the bottom edge of a desk seen from above. The 7 gives you the top edge and the right side. Set them next to each other in the right font and they close into a rectangle. That rectangle is the desktop. The owner drew the thing he was naming.
+The specification records that the names were chosen to depict what they name. Three readings are given.
 
-**L8 is the same trick, one level up.** Because counting starts at L0, every layer owns a zero, its `0.md`. The interior owns one too, `L8/0.md`. Stack the interior's zero on top of the layers' zeros and you have 0 over 0, which is an 8. An 8 is a closed shape, and that closure is the point: L8 encloses the seven layers inside it.
+**L7 depicts the desk.** Pronounced El-Seven. The L forms the left side and bottom edge of a desk seen from above; the 7 forms the top edge and right side. Set side by side in the right font, the two characters close into a rectangle, which is the surface the layer is.
 
-**The byte reading.** L0 through L7 are the eight bits of a byte. L8 is the extra bit, and like a check bit in computing it carries the meaning and catches the error.
+**L8 depicts the enclosure.** Because the count starts at L0, every layer carries a zero, its `0.md`, and the interior carries one as well, `L8/0.md`. The interior's zero over the layers' zeros gives 0 over 0, which forms an 8. An 8 is a closed figure: L8 encloses the seven layers.
+
+**The byte reading.** L0 through L7 are the eight bits of a byte. L8 is the extra bit, which, like a check bit, carries the semantic and catches an error.
 
 ---
 
@@ -99,9 +101,9 @@ One more count, because mixing these two is the classic stumble. Peers at the de
 
 There are exactly two legitimate ways to move through this structure.
 
-**Construction goes outward.** Scientific construction, in the specification's phrasing. You start at L0 and climb: L1, L2, L3, L4, L5, L6, and finally L7. You only climb when the layer beneath you has settled its promise. Sometimes there is no settled way to carry your work up to the next layer, and when that happens you stop where you are. The specification calls the missing link a bridge, and it calls stopping at one *honest placement*. You leave the work at the last layer that earned it. That is a result, not a failure.
+**Construction goes outward.** Scientific construction, in the specification's phrasing. Start at L0 and proceed upward through L1, L2, L3, L4, L5, L6, to L7. Move up only when the layer beneath has settled its promise. Sometimes there is no settled way to carry your work up to the next layer, and when that happens you stop where you are. The specification calls the missing link a bridge, and it calls stopping at one *honest placement*. You leave the work at the last layer that earned it. That is a result, not a failure.
 
-**Inspection goes inward.** Authorized external inspection, formally. You start at L7 and descend to L6, L5, L4, L3, L2, L1, and finally L0. Picture a stranger arriving at your repository. They meet the desk first and see your sources and your rights. Then the memory, where they learn what this used to be. Then the research, the actual work, the math, the allowed states, and at the very bottom, what you meant by your own words.
+**Inspection goes inward.** Authorized external inspection, formally. Start at L7 and descend through L6, L5, L4, L3, L2, L1, to L0. An external reader meets the desk first, with the sources and rights; then the memory, and what the object used to be; then the research, the realized work, the engineering, the exact relations, the admissible states; and last, the meaning the object authored for its own terms.
 
 One warning, straight from the specification: "Description does not become prescription merely because the structure can be traversed." Traversal is not prescription. Being able to walk a path does not turn that path into a rule.
 
@@ -109,9 +111,9 @@ One warning, straight from the specification: "Description does not become presc
 
 ## 5. The rules that hold everywhere
 
-These apply at every layer, all the time. Learn them and most filing questions answer themselves before you ask.
+These apply at every layer. Most filing questions are answered by them directly.
 
-**Higher layers do not silently repair lower layers.** Suppose your research at L5 needs a word at L0 to mean something slightly different than it does. You do not quietly bend L0 to fit. You change it out in the open, with a new version, and everything resting on the old meaning gets to notice.
+**Higher layers do not silently repair lower layers.** Suppose your research at L5 needs a word at L0 to mean something slightly different than it does. L0 is not reinterpreted in place. It is revised explicitly, with a new version, so that everything depending on the old meaning is affected visibly.
 
 **Each representation lives at the lowest layer that can state it correctly.** A representation is one distinct way of stating the thing. The same topic can have a representation at several layers, and that is expected. Each representation belongs to exactly one of them.
 
@@ -121,31 +123,31 @@ These apply at every layer, all the time. Learn them and most filing questions a
 
 **The sheet carries meaning; metadata carries machine instructions.** The `0.md` file is written for humans. Machine metadata, if it ever exists, attaches to the folder itself rather than sitting in the tree as a file, so do not go creating one. Right now no machine metadata is switched on anywhere in the scaffold or either exemplar. Everything is manual, and the specification does not pretend otherwise.
 
-**Build whatever the math permits. Claim only what the layer has earned.** This one is the owner's, and it does a lot of work. Valid math at L2 does not become an engineering claim at L3 on its own, and it does not become a claim about measured results at L4 either. Publishing something at L7 never strengthens it.
+**Build whatever the math permits. Claim only what the layer has earned.** The owner's rule. Valid math at L2 does not become an engineering claim at L3 on its own, and it does not become a claim about measured results at L4 either. Publishing something at L7 never strengthens it.
 
-That rule is not hostility toward speculation. You may state a hypothesis and chase it through the math as far as it goes. The specification's example is faster-than-light travel: peer-reviewed FTL mathematics can be perfectly good mathematics, and it stays at L2. It gets no free ride to buildable propulsion. Stopping there is honest placement, not rejection.
+The rule does not prohibit speculation. A hypothesis may be stated and explored mathematically as far as it goes. The specification's example is faster-than-light travel: peer-reviewed FTL mathematics may be legitimate mathematics and still stop at L2, with no promotion to realizable propulsion. Stopping there is honest placement, not rejection.
 
-The same applies to any assumed power. Unlimited energy, perfect information, zero latency, infinite endurance. Study them on condition all you like. What they cannot do is serve as free evidence. If your claim leans on one, that power has to carry its own engineering and evidence burden first, and nothing unobserved or unbuilt gets pushed downward into the foundational claims.
+The same applies to any assumed capability: unlimited power, perfect information, zero latency, infinite endurance. Each may be studied conditionally. None may serve as free evidence. A claim that depends on one requires that capability to carry its own engineering and evidentiary burden first, and nothing unobserved or unbuilt is promoted downward into the foundational claim space.
 
 ---
 
 ## 6. Each layer, up close
 
-### First, a warning about groups
+### Analytic groups are not folders
 
-The specification sometimes discusses layers in clusters, and none of those clusters is a folder. Under `L8/`, the seven layer folders sit flat, side by side.
+The specification discusses layers in groups for certain questions. None of those groups is a folder. Under `L8/`, the seven layer folders sit flat, side by side.
 
-L6 and L5 together get called the upper interior, memory and research, though they remain two separate owners. L4 on its own is the realization bay, roomy enough to hold an entire built system with its own internal layers. L3, L2, and L1 together form the technical-possibility bundle, which you reach for when a question needs engineering, exact math, and allowed states at once. L3 and L2 alone make a tighter pair, useful when L1 is settled and nobody is arguing about it. L0 stands apart from L1 on purpose, because L0 says what things mean and L1 says which states that meaning allows.
+L6 and L5 together are the upper interior, memory and research, and they remain separate owners. L4 alone is the realization bay, which can contain an entire realized system with its own internal layers. L3, L2, and L1 together are the technical-possibility bundle, used when a question requires engineering, exact formalization, and admissibility at once. L3 and L2 form a tighter pair when L1 is already pinned and not itself under question. L0 is separated from L1 deliberately: L0 establishes the semantic contract, and L1 establishes the states admissible under it.
 
-A question can visit some layers and skip others. Each piece of the answer still belongs to exactly one. Whatever you do, do not create a folder for a cluster.
+A question may traverse some layers and skip others. Each part of the answer still belongs to exactly one. Do not create a folder for a group.
 
 ### L0: Semantic / Foundational
 
 This is where the object's own meaning lives, and only the meaning this object actually authored. The specification calls what L0 produces the local semantic contract: the foundational representation everything above it depends on.
 
-Four rails divide the work, each with its own folder: ontology, semantics, epistemic, and universality. A fifth folder, pedagogy, explains how to walk the layers and how to connect this object to others. Pedagogy is a folder, not a rail, and the distinction matters to the people who drew the rails.
+Four rails divide the work, each with its own folder: ontology, semantics, epistemic, and universality. A fifth folder, pedagogy, holds the explanation of how the layers are traversed and how this object attaches to others. Pedagogy is a folder and a function, not a fifth rail.
 
-Definitions this object wrote go in `semantics/definitions/`. Autonomous keeps its definition of *autonomous* there, an entry carrying eleven codified definitions labelled A1 through A11, each one reproduced verbatim with its issuing body's ownership tag attached. That tagging is the whole discipline in miniature: the clauses came from standards bodies, so they stay marked as theirs.
+Definitions this object wrote go in `semantics/definitions/`. Autonomous keeps its definition of *autonomous* there, an entry carrying eleven codified definitions labelled A1 through A11, each one reproduced verbatim with its issuing body's ownership tag attached. The tagging is the discipline in miniature: the clauses originate with standards bodies, so they remain marked as theirs.
 
 Somebody else's definition never gets copied here just to fill the folder. It gets bound at the desk instead, and section 8 shows you how.
 
@@ -153,11 +155,11 @@ The owner left a research note at this layer worth repeating. Semantic drift, th
 
 ### L1: State Space
 
-The job is to freeze the board. Which states are admissible, which are excluded, and which invariants hold, meaning the properties that stay fixed no matter what else varies. The layer also owns dimensions, domains and ranges, equivalence classes, and identity conditions, which together decide when two states count as the same state. One folder, `state-space/`, holds all of it.
+The specification's phrase for the job is to freeze the board: which states are admissible, which are excluded, and which invariants hold, meaning the properties that stay fixed no matter what else varies. The layer also owns dimensions, domains and ranges, equivalence classes, and identity conditions, which together decide when two states count as the same state. One folder, `state-space/`, holds all of it.
 
 Nothing moves at this layer. No calculation, no transformation, no transition. That machinery starts at L2.
 
-Auditonomous fills this layer with three files, including the auditon envelope and a partition of requirements ownership. Autonomous, by contrast, leaves L1 empty, with its dimensions fixed inside findings at L5 instead. Two repositories on the same architecture, two honest answers about what they have actually pinned down.
+Auditonomous fills this layer with three files, including the auditon envelope and a partition of requirements ownership. Autonomous, by contrast, leaves L1 empty, with its dimensions fixed inside findings at L5 instead. The same architecture, two different states of completion.
 
 Sometimes a result lands outside the declared state space. When that happens, exactly one of two things is true. Either the construction is invalid under the current model, or the state space is incomplete for the phenomenon and needs an explicit, justified extension. Nothing steps outside its admissibility conditions quietly and still claims continuity with the same system.
 
@@ -169,13 +171,13 @@ Every symbol here traces back to an L0 meaning and an L1 admissible state. Every
 
 Both exemplar repositories keep a formulas ledger at this layer, and both ledgers currently say the same thing: empty, no formulas held. The ledger's own preamble explains why it exists at all. A formula's existence and a formula's application get checked in separate columns, because collapsing those two is precisely the failure the file was built to prevent.
 
-No tolerances here, and no approximations. Those belong upstairs.
+No tolerances and no approximations at this layer. Both belong to L3.
 
 ### L3: Engineering Mathematics
 
 Here the exact relation meets realizable conditions: units, numerical representation and precision, approximation and discretization, tolerance, error and uncertainty budgets, sensitivity, stability, convergence, computational complexity, and the operating region in which any of it holds. One folder, `engineering-mathematics/`, holds three more: `approximation/`, `uncertainty/`, and `tolerances/`.
 
-Formulas split three ways, and knowing the split saves arguments. The meaning of a formula in words belongs to L0. The exact formula belongs to L2. The formula as you actually apply it, with approximations and tolerances and adaptation and open ends, belongs to L3.
+A formula divides three ways. Its meaning in words belongs to L0. The exact formula belongs to L2. The formula as you actually apply it, with approximations and tolerances and adaptation and open ends, belongs to L3.
 
 Autonomous files two notes at this layer that show the range. One sits under tolerances and works through a defect in a shared referent. The other sits under uncertainty and examines dependence and a gate. Neither is a proof, and neither is a measurement. Each states the conditions, bounds, and failure modes under which the thing could be built or trusted.
 
@@ -185,27 +187,27 @@ What leaves this layer is an engineering specification telling L4 what can be bu
 
 ### L4: Conversion / Realization
 
-This is where you spend resources and something identifiable comes out the other side.
+This is the layer at which resources are committed and an identifiable output or recorded failure is produced.
 
-The specification's phrase for it is any conversion between intellectual property and energy, in either direction. Careful with that phrase, because *intellectual property* here means ideas and intellectual objects, a piece of writing or a model. It does not mean copyright and patents. Those are legal conditions and they live at L7.
+The specification's phrase is any conversion between intellectual property and energy, in either direction. Note the sense of the term: *intellectual property* here means ideas and intellectual objects, such as a piece of writing or a model. It does not mean copyright and patents, which are legal conditions owned at L7.
 
 Ideas to energy looks like writing, computing, running an experiment, building, deploying, or teaching. Energy to ideas looks like measurements, observations, datasets, and recorded failures. One folder, `work/`, holds three more: `writing/`, `experiments/`, and `computation/`.
 
 Autonomous shows the layer at work. Its manuscript sits under writing, in three formats. So does its autonomy scale, which the owner ruled explicitly is an L4 object as a written thing even though what it means is L5 discourse. Under computation sits a deep research run, filed as a thing that ran rather than a thing that was concluded. Auditonomous goes further and files its chat transcripts and a session record here too, because those are also events that happened.
 
-A whole system with its own internal layers sits inside L4 as a single object. The classic case is a complete OSI network stack, which carries seven layers of its own. Its internal "layer 7" has nothing to do with 7LM's L7, and mixing them is a genuine mistake people make.
+A whole system with its own internal layers sits inside L4 as a single object. The classic case is a complete OSI network stack, which carries seven layers of its own. Its internal "layer 7" is not 7LM's L7, and the two must not be confused.
 
-Now, two very different questions can be asked about that same stack, and they file differently.
+Two different questions can be asked about that stack, and they file differently.
 
-Ask *how does it run*, and the whole stack is one L4 object with its own layers kept intact. Ask *where did it come from and why is it shaped this way*, and the question fans out across the architecture. The standards bodies and source bindings go to L7. Its development history goes to L6. The debate about why it took this form goes to L5. The engineering trade-offs that shaped it go to L3. Exact relations go to L2 where they are genuinely warranted. Allowed states go to L1 when they are part of the question. And the words your object coins to describe it go to L0.
+Ask *how does it operate*, and the whole stack is one L4 object with its own internal layers intact. Ask *where did it come from, and why is it built this way*, and the inquiry expands across the architecture. The standards bodies and source bindings go to L7. Its development history goes to L6. The debate about why it took this form goes to L5. The engineering trade-offs that shaped it go to L3. Exact relations go to L2 where they are genuinely warranted. Allowed states go to L1 when they are part of the question. And the words your object coins to describe it go to L0.
 
-The stack itself does not budge while the question fans out. It stays at L4. The specification names this distinction operational containment versus analytic expansion, and it means a network fault inside the stack is an L4 fault unless somebody separately shows it touches another layer's object.
+The stack does not move when the question expands. It remains an L4 object. The specification names this distinction operational containment versus analytic expansion, and it means a network fault inside the stack is an L4 fault unless somebody separately shows it touches another layer's object.
 
 The owner calls this layer the cut. Below L4, things are specified. At L4, things are made.
 
 Failures get filed here as first-class objects. A run that died, a build that broke, a measurement that went sideways: each one is an L4 object recorded as a failure, not quietly converted into a conclusion. What the specification asks for is an audit-ready conversion product, meaning the filing stays traceable through its inputs, conditions, transformations, results, tests, and rework, with the lower-layer contracts it depends on pinned and resolvable.
 
-And L4 never interprets its own results. That belongs to L5.
+L4 does not interpret its own results. That belongs to L5.
 
 ### L5: Research / Discourse
 
@@ -215,15 +217,15 @@ Interpretation, review, judgment, argument, teaching.
 
 `research/review/` holds review, criticism, and audit, and it doubles as the catch-all, which section 9 explains.
 
-`research/findings/` holds what you can responsibly state from the evidence. Autonomous keeps seven, and their titles tell you how blunt this layer is allowed to be: autonomy is an edge property, IEEE 1872.2 does not define autonomy, NASA will not buy autonomy. Every finding carries its cited dependencies, its stated limitations and uncertainty, its review status, and its reproducibility information. A finding is never broader than its evidence or its maturity.
+`research/findings/` holds what may responsibly be stated from the evidence. Autonomous keeps seven, among them that autonomy is an edge property, that IEEE 1872.2 does not define autonomy, and that NASA will not buy autonomy. Every finding carries its cited dependencies, its stated limitations and uncertainty, its review status, and its reproducibility information. A finding is never broader than its evidence or its maturity.
 
 A review names the claim it reviews and returns one of four verdicts: accept, reject, qualify, or supersede. It may request revision from a lower-layer owner. It never mutates that owner's object itself.
 
 `institution/peers/` and `institution/undergraduates/` record who takes part. They say nothing about what the research concluded.
 
-The hard boundary at L5 is worth memorizing. Consensus, prose, authority, and usefulness never substitute for proof or measurement. A beautifully argued paragraph is still not a result.
+The hard boundary at L5: consensus, prose, authority, and usefulness never substitute for proof or measurement. A well-argued paragraph is not a result.
 
-One more ruling lives here. A scale, a ladder, or a set of status labels is an L4 object as a written thing, and what it means is L5 discourse. It is never an L1 state space and never L2 mathematics.
+One further ruling applies here. A scale, a ladder, or a set of status labels is an L4 object as a written thing, and what it means is L5 discourse. It is never an L1 state space and never L2 mathematics.
 
 ### L6: Library / Memory
 
@@ -261,7 +263,7 @@ One thing can appear across several layers, each layer owning a different aspect
 
 ## 8. The desk in detail
 
-Spend some time here. The desk is where newcomers get tangled, and it is also where the model does some of its cleverest work.
+The desk carries the object's external relations. It is the position most often filed incorrectly, so each branch is covered separately below.
 
 ### Provenance
 
@@ -289,13 +291,13 @@ A peer's `0.md` sits one level above that peer's objects and serves as the owner
 
 Once bound, an object never moves and never changes. When you make a decision about it, the decision goes in that register, marked authorized, denied, quarantined, or retired. The record of the decision goes to `L8/L6/history/`. A binding that falls out of use gets retired to `L8/L6/retired/` rather than erased.
 
-Everything a peer brings takes the same road. It gets compared and judged at `L8/L5/`, and only what survives moves inward, rewritten as your object's own work with a citation back to the bound original. A professor's manuscript, a standards clause, and a model's draft all travel that identical road, which is the point.
+Everything a peer brings follows one acceptance path. It is compared and interpreted at `L8/L5/`, and only what survives is carried inward, stated as the object's own work with a citation to the bound original. A manuscript, a standards clause, and a model's draft all follow the same route.
 
 The path itself tells you who brought a thing before anyone reads a word of it. The specification calls that provenance by position.
 
 To change a peer's object, you go to its owner. You can update your binding or retire it. You do not edit theirs.
 
-And egress is not publication. Handing something to a named peer is egress. A public release with a release identity goes in `publications/`.
+Egress is not publication. Handing something to a named peer is egress. A public release with a release identity goes in `publications/`.
 
 ### Where these rules came from
 
@@ -307,7 +309,7 @@ Autonomous has one bounded semantic job. It freezes what the specification calls
 
 An argument about one of them never silently counts as an argument about the other. Any claim crossing between objects has to name the relation or the hand-off explicitly.
 
-The specification is unusually firm about this case, calling it not an optional exemplar but the originating boundary test of the whole architecture.
+The specification states that this case is not an optional exemplar but the originating boundary test of the architecture.
 
 ### How a borrowed definition travels
 
@@ -315,7 +317,7 @@ A definition lives once, at its owner. When your object uses someone else's, tha
 
 The bound object is reference-only. You may not edit it and you may not delete it, which the specification writes in capitals as NO EDIT and NO DELETE. Wherever you use it internally, it carries an unchanging tag: object identity, owner, source layer, version, and ingress binding.
 
-If the owner changes the definition, that creates a new binding. The one you pinned does not change under your feet.
+If the owner changes the definition, that creates a new binding. The pinned version does not change.
 
 The last piece is a matter of stance, and the specification names it the declared semantic-deference rule. For the bounded purpose of interpreting the peer, you take the owner's exact bound definition as authoritative for what the owner means, and you do not re-prove or locally redefine it. That is declared trust. It is not a claim that the definition is objectively true, not an endorsement of anything downstream of it, and not a transfer of authorship.
 
@@ -327,11 +329,11 @@ The last piece is a matter of stance, and the specification names it the declare
 
 ## 9. Two working habits
 
-Two habits keep the whole structure honest. Get these into your hands and the rest follows.
+Two procedures govern day-to-day filing.
 
 ### The catch-all
 
-Everything waiting on the owner's review lands at `L8/L5/research/review/`. All of it, however much there is, whatever kind of thing it is.
+Everything awaiting the owner's review lands at `L8/L5/research/review/`, whatever its kind and however much of it there is.
 
 When the owner picks something up, it moves to `L8/L5/research/lanes/`, the working position. If they set it down again, it moves back. Position is state here: the moves are the record, and nothing gets deleted along the way. Anything the owner sets aside stays in review with the label PARKED. Finished work gets filed at its proper layer.
 
@@ -345,7 +347,7 @@ The rule that actually gets enforced is integrity: the repository has to stay wh
 
 Some things have to stay readable so the past can be rebuilt, and those get retired to `L8/L6/retired/` rather than deleted. The owner's authored documents, the rule texts of a prior layout, error records.
 
-Everything else works differently. A superseded file gets deleted once every part of it is listed in a record at `L8/L6/history/` saying where each part now lives. Deleted, not retired, and that is the ordinary act rather than a special case. Git keeps the change event and the record keeps the list. Retiring such a file instead would just turn L6 into a second copy of git.
+Everything else follows the ordinary act. A superseded file is deleted once every part of it is enumerated in a record at `L8/L6/history/` stating where each part now stands. Deleted, not retired. Git keeps the change event and the record keeps the enumeration. Retiring such a file would make L6 a second copy of git.
 
 The one automated check on the repository, which section 10 describes, checks integrity. It does not check for the absence of deletion, and the owner was explicit that it must not.
 
@@ -454,9 +456,7 @@ A retired set under `L8/L6/retired/<name>/` keeps its old sheets exactly as they
 
 ---
 
-## 11. How to do common things
-
-Enough theory.
+## 11. Procedures
 
 ### Read a 7LM repository for the first time
 
@@ -469,7 +469,7 @@ Enough theory.
 ### Start a new bounded object
 
 1. Copy the full layout, leaving the folders you do not need empty.
-2. Write your object's own definition under `L8/L0/semantics/definitions/`. If you have not written one yet, leave the folder empty. Do not paste in somebody else's to make it look finished.
+2. Write the object's own definition under `L8/L0/semantics/definitions/`. If none has been authored yet, leave the folder empty. Do not populate it with another object's definition.
 3. Move outward only as each layer settles its promise.
 
 ### Use a definition someone else owns
@@ -497,12 +497,12 @@ Enough theory.
 
 ### Handle something when you cannot tell where it goes
 
-Put it in `L8/L5/research/review/`. That is precisely what the catch-all exists for, and the owner decides from there. Guessing wrong and filing it somewhere tidy is worse than leaving it in the open.
+Put it in `L8/L5/research/review/`. That is what the catch-all exists for, and the owner decides from there. A wrong placement that looks orderly is worse than material left visibly unfiled.
 
 ### Retire a prior state
 
 1. Make a dated set under `L8/L6/retired/`, something like `L8/L6/retired/layout-2026-09-06/`.
-2. Put the prior files inside it at their old relative paths, unchanged. Do not fix their headings, however much they itch.
+2. Put the prior files inside it at their old relative paths, unchanged. Do not correct their headings.
 3. Give the set its own `0.md` at its root, saying what the set is and where the current state now lives.
 4. Record the retirement in `L8/L6/history/`.
 
@@ -546,27 +546,25 @@ Find the first layer where a promise breaks, and fix it there. The specification
 
 ---
 
-## 13. Common mistakes
-
-I have watched capable people make every one of these.
+## 13. Common errors
 
 **Treating L7 as the seventh layer.** It is not. The seventh layer is L6, and the count rule in section 3 explains why.
 
-**Copying an external definition into L0 to complete it.** An empty rail is honest. A rail filled with somebody else's words is a forgery of authorship.
+**Copying an external definition into L0 to complete it.** An empty rail is a correct state. A rail filled with another object's words misstates authorship.
 
-**Letting a well-argued L5 paragraph stand in for a missing L2 proof or L4 measurement.** Good prose is not evidence, and the hard boundary at L5 says so outright.
+**Letting a well-argued L5 paragraph stand in for a missing L2 proof or L4 measurement.** Prose is not evidence. The hard boundary at L5 states this directly.
 
-**Mapping a contained system's layers onto the 7LM layers.** An OSI stack sits whole inside L4. Questions about it can fan out across the architecture; the stack itself never does.
+**Mapping a contained system's layers onto the 7LM layers.** An OSI stack sits whole inside L4. Questions about it may expand across the architecture; the stack does not.
 
-**Filing an outside repository or standards body at `L8/L5/institution/peers/`.** Outside counterparts belong at `L7/peering/`. The institution folder holds participant positions only, and the two senses of "peer" catch people constantly.
+**Filing an outside repository or standards body at `L8/L5/institution/peers/`.** Outside counterparts belong at `L7/peering/`. The institution folder holds participant positions only. The two senses of *peer* are easily confused.
 
-**Deleting a file to tidy up.** List its parts first. Anything the repository needs in order to rebuild its past gets retired instead.
+**Deleting a file to tidy up.** Enumerate its parts first. Anything the repository needs in order to reconstruct its past is retired instead.
 
 **Fixing a lower-layer problem by rewording a higher-layer document.** That is patching from above, and it is the exact move the debugging rule forbids.
 
-**Using the README as documentation.** The sheets are the documentation. The README just points you at them.
+**Using the README as documentation.** The sheets are the documentation. The README states the reading order and nothing more.
 
-**Reading the archive's name, `l6`, as a layer name.** `aybllc/l6` is a separate repository. `L8/L6/` is the layer. They are unrelated despite the collision.
+**Reading the archive's name, `l6`, as a layer name.** `aybllc/l6` is a separate repository. `L8/L6/` is the layer. The names collide; the things are unrelated.
 
 ---
 
@@ -584,13 +582,13 @@ The specification calls `autonomous` and `auditonomous` its two exemplars, meani
 
 In Autonomous, the catch-all holds work belonging to other objects, and the provenance rows for the nine bound issuing bodies are not yet ledgered. In Auditonomous, the binding names the path the peer used before its own 7LM layout, three files still take a definition of *autonomous* from somewhere other than the binding, and the L0 epistemic rail is empty with its vocabulary standing at L5 as review status.
 
-Keep those two claims apart in your head. The design is one claim. How far each repository has actually been built is a separate one.
+Keep the two claims separate. The design is one claim. How far each repository has been built is another.
 
 ---
 
-## 15. Still being decided
+## 15. Open calls
 
-A few calls the owner has not made yet.
+The specification records these as decisions the owner has not yet made.
 
 A held-off rules file about what a session or a model may touch. The tree itself states no such rule, deliberately.
 
@@ -598,7 +596,7 @@ The home of a body of work called Autonomous Theory, which currently sits in bot
 
 Rebinding the Autonomous definition in Auditonomous to its current path.
 
-And a handful of older words with no home yet: *corpus* in its broad sense, along with *regress*, *found*, *caught*, *naught*, *origidity*, *certainty*, and *intolerance*. The specification keeps them reserved. Do not make a folder for any of them.
+A set of inherited terms with no adjudicated position: *corpus* in its broad sense, *regress*, *found*, *caught*, *naught*, *origidity*, *certainty*, and *intolerance*. The specification holds them reserved. Do not create a folder for any of them.
 
 ---
 
@@ -611,6 +609,4 @@ And a handful of older words with no home yet: *corpus* in its broad sense, alon
 - How the layout came to be: `L8/L6/history/harmonization-2026-09-04.md`.
 - The specification's own history, with the owner's words behind each rule: `L8/L6/history/specification-history.md`.
 
-A closing note on older records. Anything dated before 12 September 2026 may write the interior as `USO/` and the layers as `l0` through `l6`. Read `USO/lN/` as `L8/LN/`, and `USO/` as `L8/`. Some older records go further back still and write lowercase `uso/`, which was an earlier layout's own path from before 24 August 2026. Leave those exactly as they are.
-
-That is the tour. Go find the first layer where the promise breaks.
+A note on older records. Anything dated before 12 September 2026 may write the interior as `USO/` and the layers as `l0` through `l6`. Read `USO/lN/` as `L8/LN/`, and `USO/` as `L8/`. Some older records go further back still and write lowercase `uso/`, which was an earlier layout's own path from before 24 August 2026. Leave those as they are.

@@ -207,3 +207,15 @@ The terms. Paraphrase was replaced by the discipline's own vocabulary, glossed o
 
 Not changed: every statement of fact, every rule, every path, and the structure of sixteen sections. The guide's standing is unchanged, and it says so in its own first lines: where it and the specification differ, the specification controls. Paths were re-verified against this repository after the rewrite. The one CI check passes.
 
+## 18. 2026-09-12 — the field guide's register corrected: a reference document, not a performance
+
+The owner, 2026-09-12, quoted as written: "where can i edit the guidfe. you put jopkes and stuff in there nine  of that shoud[d be there. it shoudfl a fiedd guide not a circus".
+
+The fault was in the execution of §17, not in its instruction. The owner's earlier direction had been to write in a named speaking voice; that was carried too far, and the guide acquired framing that a reference document must not carry: a narrator ("I am going to walk you through it"), asides addressed to the reader ("by the end of this guide you will be sick of hearing it"), a section headed "The names are jokes, and the jokes are load-bearing", figurative characterization of the model ("a folder layout with a strict conscience"), and a closing line ("That is the tour").
+
+Done, in sixty-five edits across every section. Removed: all first-person narration, all rhetorical asides, the framing of the L7 and L8 namings as jokes, and every figure of speech standing in for a statement. The count-rule subsection is now headed "The names are descriptive" and states the three readings the specification records, as readings rather than as humour. Section 11 is now "Procedures", section 13 "Common errors", section 15 "Open calls". The opening states what the model is, in the specification's own terms, and what the guide contains.
+
+Not changed: every statement of fact, every rule, every path, every worked example, the terminology of §17, and the structure of sixteen sections. Paths re-verified; the one CI check passes. The guide's standing is unchanged: where it and the specification differ, the specification controls.
+
+Where the guide is edited, for the record: the source is this file at `L8/L0/pedagogy/7lm-field-guide.md`. The published page is generated from it and carries no separate source.
+
