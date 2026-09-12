@@ -5,9 +5,10 @@ One source file. Every drawing on the sheet is defined here and nowhere else, so
 there is one place to change when the model changes.
 
 One plate for now, on the owner's word of 12 September 2026: the eight positions,
-with L8 as the envelope around all of them. L0 is the origin. L1 is the floor and
-L6 the end of the payload. L7 is the glue. L8's trailing edge is the connector to
-the next object's L0.
+as laid out on disk and as read. L7/ and L8/ stay siblings at the root, L8/ holding
+the interior. L8 is the envelope around all of them. L0 is the origin. L1 is the
+floor and L6 the end of the payload. L7 is the glue. L8's trailing edge is the
+connector to the next object's L0.
 """
 import pathlib
 
@@ -73,66 +74,78 @@ def p01():
     s = [arrows("p1")]
 
     # the connector: L8's trailing edge, and where it goes
-    s.append(line(360, 64, 360, 24, stroke="var(--accent)", sw=1.8, marker="p1a"))
-    s.append(t(372, 32, "CONNECTOR", 9.5, NARR, "var(--accent)", "start", 1, SMALLCAPS))
-    s.append(t(372, 46, "to the next object&#8217;s L0", 10, SANS, op=0.85))
-    s.append(t(348, 46, "L8&#8217;s trailing edge", 10, SANS, "currentColor", "end", 0.85))
+    s.append(line(380, 64, 380, 24, stroke="var(--accent)", sw=1.8, marker="p1a"))
+    s.append(t(392, 32, "CONNECTOR", 9.5, NARR, "var(--accent)", "start", 1, SMALLCAPS))
+    s.append(t(392, 46, "to the next object&#8217;s L0", 10, SANS, op=0.85))
+    s.append(t(368, 46, "L8&#8217;s trailing edge", 10, SANS, "currentColor", "end", 0.85))
 
-    # the envelope: L8 around every position
-    s.append(box(30, 70, 660, 532, fill="none", stroke="currentColor", sw=1.4, rx=4))
-    s.append('<rect x="30" y="66" width="660" height="8" rx="2" fill="var(--accent)"/>')
-    s.append(t(50, 100, "L8", 15, MONO, "var(--ink)"))
-    s.append(t(84, 100, "the envelope &#8212; it encloses every position, and hands off to the next object",
+    # the envelope: L8 around the whole object
+    s.append(box(30, 70, 700, 580, fill="none", stroke="currentColor", sw=1.4, rx=4))
+    s.append('<rect x="30" y="66" width="700" height="8" rx="2" fill="var(--accent)"/>')
+    s.append(t(50, 98, "L8", 15, MONO, "var(--ink)"))
+    s.append(t(84, 98, "the envelope &#8212; the object as one unit, and the count of its eight positions",
                11, SANS, op=0.85))
 
-    # L7: the glue
-    s.append(box(50, 114, 620, 54, fill="var(--accent-wash)", stroke="var(--accent)", sw=1.5))
-    s.append(t(70, 139, "L7", 15, MONO, "var(--accent-ink)"))
-    s.append(t(106, 139, "the desk &#183; Surface / Forward Face", 13, NARR, "var(--accent-ink)"))
-    s.append(t(70, 158, "provenance &#183; governance &#183; peering &#183; publications", 10.5,
+    # the tree, as it is on disk: the root, and its two children
+    s.append(t(50, 128, "&lt;repo&gt;/", 11.5, MONO, "var(--ink)"))
+    s.append(t(50, 142, "on disk", 9, SANS, op=0.7))
+    s.append(line(58, 148, 58, 232, sw=1.1, op=0.55))
+    s.append(line(58, 165, 108, 165, sw=1.1, op=0.55))
+    s.append(line(58, 232, 108, 232, sw=1.1, op=0.55))
+
+    # L7/: the glue
+    s.append(box(118, 138, 592, 54, fill="var(--accent-wash)", stroke="var(--accent)", sw=1.5))
+    s.append(t(138, 163, "L7/", 15, MONO, "var(--accent-ink)"))
+    s.append(t(182, 163, "the desk &#183; Surface / Forward Face", 13, NARR, "var(--accent-ink)"))
+    s.append(t(138, 182, "provenance &#183; governance &#183; peering &#183; publications", 10.5,
                SANS, "var(--accent-ink)", op=0.85))
-    s.append(t(650, 139, "GLUE", 9.5, NARR, "var(--accent)", "end", 1, SMALLCAPS))
-    s.append(t(650, 158, "binds outward", 9.5, SANS, "var(--accent-ink)", "end", 0.85))
+    s.append(t(690, 163, "GLUE", 9.5, NARR, "var(--accent)", "end", 1, SMALLCAPS))
+    s.append(t(690, 182, "binds outward", 9.5, SANS, "var(--accent-ink)", "end", 0.85))
+
+    # L8/: the folder that holds the interior
+    s.append(box(118, 208, 592, 404, fill="none", sw=1.2, rx=3))
+    s.append(t(134, 232, "L8/", 13, MONO, "var(--ink)"))
+    s.append(t(176, 232, "the folder &#8212; holds the interior, L0 through L6", 10.5, SANS, op=0.85))
 
     # the payload: floor L1, end L6
-    s.append(t(650, 190, "PAYLOAD", 9.5, NARR, "currentColor", "end", 0.75, SMALLCAPS))
-    y = 198
+    s.append(t(676, 256, "PAYLOAD", 9.5, NARR, "currentColor", "end", 0.75, SMALLCAPS))
+    y = 264
     for code, name, job, mark in payload:
-        s.append(box(50, y, 620, 40, op=0.9))
-        s.append(t(70, y + 25, code, 13, MONO, "var(--accent)"))
-        s.append(t(110, y + 25, name, 12.5, SANS, "var(--ink)"))
-        s.append(t(300, y + 25, job, 10.5, SANS, op=0.85))
+        s.append(box(138, y, 552, 38, op=0.9))
+        s.append(t(158, y + 24, code, 13, MONO, "var(--accent)"))
+        s.append(t(198, y + 24, name, 12.5, SANS, "var(--ink)"))
+        s.append(t(380, y + 24, job, 10.5, SANS, op=0.85))
         if mark:
-            s.append(t(650, y + 25, mark, 9.5, NARR, "currentColor", "end", 0.75, SMALLCAPS))
-        y += 46
-    # bracket down the right of the payload
-    s.append('<path d="M 680 198 L 686 198 L 686 474 L 680 474" fill="none" stroke="currentColor" '
+            s.append(t(676, y + 24, mark, 9.5, NARR, "currentColor", "end", 0.75, SMALLCAPS))
+        y += 44
+    s.append('<path d="M 698 264 L 704 264 L 704 522 L 698 522" fill="none" stroke="currentColor" '
              'stroke-width="1.1" opacity="0.5"/>')
 
     # L0: the origin
-    s.append(line(50, 486, 670, 486, dash="4 4", op=0.45, sw=1))
-    s.append(box(50, 498, 620, 54, fill="var(--ground)"))
-    s.append(t(70, 523, "L0", 15, MONO, "var(--ink)"))
-    s.append(t(106, 523, "Semantic / Foundational", 13, NARR, "var(--ink)"))
-    s.append(t(70, 542, "the meaning &#8212; in the head first, written down second &#183; not payload",
+    s.append(line(138, 534, 690, 534, dash="4 4", op=0.45, sw=1))
+    s.append(box(138, 546, 552, 52, fill="var(--ground)"))
+    s.append(t(158, 570, "L0", 15, MONO, "var(--ink)"))
+    s.append(t(194, 570, "Semantic / Foundational", 13, NARR, "var(--ink)"))
+    s.append(t(158, 589, "the meaning &#8212; in the head first, written down second &#183; not payload",
                10.5, SANS, op=0.85))
-    s.append(t(650, 523, "ORIGIN", 9.5, NARR, "currentColor", "end", 0.75, SMALLCAPS))
+    s.append(t(676, 570, "ORIGIN", 9.5, NARR, "currentColor", "end", 0.75, SMALLCAPS))
 
-    # the count, unchanged
-    s.append(t(360, 576, "Eight positions, L0 through L7. First is always 0.",
+    # the count, unchanged; the tree, unchanged
+    s.append(t(380, 628, "Eight positions, L0 through L7. First is always 0. On disk, L7/ and L8/ are siblings at the root, as they are today.",
                10, SANS, "currentColor", "middle", 0.8))
-    s.append(t(360, 591, "L8 is not a ninth position: it is the envelope around the eight, and the connector to the next.",
+    s.append(t(380, 643, "L8 is not a ninth position: it counts the eight, names the folder that holds the interior, and is the envelope around the whole.",
                10, SANS, "currentColor", "middle", 0.8))
 
     plate("01", "The eight positions",
-          "L8 envelopes them all. L0 is the origin. L1 is the floor and L6 the end of the payload. "
-          "L7 is the glue. L8&#8217;s trailing edge is the connector to the next object&#8217;s L0.",
-          ''.join(s), "0 0 720 616",
-          "An envelope labelled L8 enclosing, from top to bottom, the desk L7 marked glue, the six "
-          "payload layers L6 down to L1 with L6 marked end and L1 marked floor, and L0 at the base "
-          "marked origin. The envelope's top edge is thickened and an arrow leaves it upward, "
-          "labelled connector to the next object's L0.")
-
+          "L8 envelopes them all, and the tree stays as it is: <span class=\"mono\">L7/</span> and "
+          "<span class=\"mono\">L8/</span> siblings at the root. L0 is the origin. L1 is the floor and L6 the end "
+          "of the payload. L7 is the glue. L8&#8217;s trailing edge is the connector to the next object&#8217;s L0.",
+          ''.join(s), "0 0 760 666",
+          "An envelope labelled L8 enclosing the repository as it is on disk: a root with two children, "
+          "the L7 folder marked glue at the top, and beneath it the L8 folder holding the six payload "
+          "layers L6 down to L1, L6 marked end and L1 marked floor, and L0 at the base marked origin. "
+          "The envelope's top edge is thickened and an arrow leaves it upward, labelled connector to "
+          "the next object's L0.")
 
 p01()
 
@@ -231,14 +244,15 @@ TITLEBLOCK = """
 <header class="titleblock">
   <p class="kicker">Seven-Layer Model &#183; drawn, not described</p>
   <h1>The 7LM Plate Sheet</h1>
-  <p class="lede">One plate, for now: the eight positions, with L8 as the envelope around all of
-  them. Every rule of the model that can be drawn will be drawn here, and here only &#8212; one
-  sheet to change when the model changes.</p>
+  <p class="lede">One plate, for now: the eight positions, as laid out on disk and as read &#8212;
+  <span class="mono">L7/</span> and <span class="mono">L8/</span> siblings at the root, and L8 the envelope
+  around all of them. Every rule of the model that can be drawn will be drawn here, and here only
+  &#8212; one sheet to change when the model changes.</p>
   <dl class="specs">
     <div><dt>Source</dt><dd>The owner&#8217;s words of 12 September 2026, on the Harmonized Authoritative Architecture Specification of the same date</dd></div>
     <div><dt>Repository</dt><dd class="mono">aybllc/7lm</dd></div>
     <div><dt>Plates</dt><dd>1 &#183; the eight positions</dd></div>
-    <div><dt>Standing</dt><dd>The specification&#8217;s text still places L7 beside L8 and names L8 the interior. This plate draws L8 as the owner has since described it; the specification&#8217;s revision awaits the owner&#8217;s word on the tree.</dd></div>
+    <div><dt>Standing</dt><dd>The tree stands as the specification has it: <span class="mono">L7/</span> and <span class="mono">L8/</span> siblings at the root, <span class="mono">L8/</span> holding the interior. The packet reading &#8212; origin, payload, glue, connector, and L8 as the envelope &#8212; is the owner&#8217;s, drawn here, and awaits entry into the specification&#8217;s text.</dd></div>
   </dl>
 </header>
 """
@@ -251,8 +265,9 @@ FOOT = """
     <p>Monospace is a real path in the repository. Every position named here carries its own <span class="mono">0.md</span> sheet.</p>
   </div>
   <div>
-    <h3>What the drawing does not decide</h3>
-    <p>Whether <span class="mono">L7/</span> moves inside <span class="mono">L8/</span> on disk, or the envelope is semantic and the paths stay as they are. That is the owner&#8217;s call, and it is what stands between this drawing and the specification.</p>
+    <h3>What is settled, and what is not</h3>
+    <p>The tree is settled: <span class="mono">L7/</span> and <span class="mono">L8/</span> stay siblings at the root, as the specification has them. The envelope is a reading of that layout, not a change to it.</p>
+    <p>Not yet in the specification&#8217;s text: the packet reading itself &#8212; L8 as envelope and connector, L0 as origin, L1&#8211;L6 as payload, L7 as glue.</p>
   </div>
   <div>
     <h3>Standing rules</h3>
