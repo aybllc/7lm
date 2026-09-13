@@ -81,7 +81,7 @@ The owner's rule is four words: first is always 0. It is stated with this table:
 
 Ordinals such as *first* and *second* are semantics. Numbers such as 0 and 1 are magnitudes. The relation between them is *is*. First is 0, second is 1, and so on.
 
-The seven layers are L0 through L6, so the seventh layer is L6. In the owner's words, "layer 7 will always be layer 6." L7 carries the number 7 but is not a layer. It is the desk, and counting up from L0 it is the eighth position you reach. L8 is not a position at all. It counts the eight positions L0 through L7, and it also names the folder holding the interior.
+The seven layers are L0 through L6, so the seventh layer is L6. In the owner's words, "layer 7 will always be layer 6 :)". L7 carries the number 7 but is not a layer. It is the desk, and counting up from L0 it is the eighth position you reach. L8 is not a position at all. It counts the eight positions L0 through L7, and it also names the folder holding the interior.
 
 A second count runs in parallel, and the two must not be confused. Peers at the desk are numbered from 1: `peer-1`, `object-1`. Layers are numbered from 0. The owner's reasoning: peers are physical, and physical things are counted from one. Zero is the semantic origin, where the Semantic and Epistemic rails define the layers above. It is what exists before anything physical does.
 
