@@ -249,10 +249,10 @@ TITLEBLOCK = """
   around all of them. Every rule of the model that can be drawn will be drawn here, and here only
   &#8212; one sheet to change when the model changes.</p>
   <dl class="specs">
-    <div><dt>Source</dt><dd>The owner&#8217;s words of 12 September 2026, on the Harmonized Authoritative Architecture Specification of the same date</dd></div>
+    <div><dt>Source</dt><dd>The Harmonized Authoritative Architecture Specification, version of 13 September 2026</dd></div>
     <div><dt>Repository</dt><dd class="mono">aybllc/7lm</dd></div>
     <div><dt>Plates</dt><dd>1 &#183; the eight positions</dd></div>
-    <div><dt>Standing</dt><dd>The tree stands as the specification has it: <span class="mono">L7/</span> and <span class="mono">L8/</span> siblings at the root, <span class="mono">L8/</span> holding the interior. The packet reading &#8212; origin, payload, glue, connector, and L8 as the envelope &#8212; is the owner&#8217;s, drawn here, and awaits entry into the specification&#8217;s text.</dd></div>
+    <div><dt>Standing</dt><dd>Everything drawn here is in the specification. The tree stands as it has it: <span class="mono">L7/</span> and <span class="mono">L8/</span> siblings at the root, <span class="mono">L8/</span> holding the interior. The packet reading &#8212; origin, payload, glue, connector, and L8 as the envelope &#8212; entered its text on 13 September 2026.</dd></div>
   </dl>
 </header>
 """
@@ -265,9 +265,9 @@ FOOT = """
     <p>Monospace is a real path in the repository. Every position named here carries its own <span class="mono">0.md</span> sheet.</p>
   </div>
   <div>
-    <h3>What is settled, and what is not</h3>
+    <h3>Where this comes from</h3>
     <p>The tree is settled: <span class="mono">L7/</span> and <span class="mono">L8/</span> stay siblings at the root, as the specification has them. The envelope is a reading of that layout, not a change to it.</p>
-    <p>Not yet in the specification&#8217;s text: the packet reading itself &#8212; L8 as envelope and connector, L0 as origin, L1&#8211;L6 as payload, L7 as glue.</p>
+    <p>The packet reading &#8212; L8 as envelope and connector, L0 as origin, L1&#8211;L6 as payload, L7 as glue &#8212; is in the specification&#8217;s text, added 13 September 2026. The record is <span class="mono">L8/L6/history/harmonization-2026-09-04.md</span> §23.</p>
   </div>
   <div>
     <h3>Standing rules</h3>

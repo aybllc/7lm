@@ -1,5 +1,5 @@
 <!-- Canonical Markdown form of the Seven-Layer Model (7LM) Harmonized Authoritative Architecture Specification,
-     version of 12 September 2026. This Markdown is the source; the .docx filed beside it is generated from the text
+     version of 13 September 2026. This Markdown is the source; the .docx filed beside it is generated from the text
      below this comment and reads back to it unchanged. The history of versions and changes, with the owner's words
      behind each rule, is at L8/L6/history/specification-history.md. -->
 
@@ -9,13 +9,13 @@ Harmonized Authoritative Architecture Specification
 
 Canonical research directory topology and uniform layer information sheets
 
-*7LM Harmonized Authoritative Architecture Specification • 12 September 2026*
+*7LM Harmonized Authoritative Architecture Specification • 13 September 2026*
 
 > Authority\
 > This specification states the controlling 7LM research architecture: one canonical agnostic directory topology and one uniform information sheet for each layer. The structure, layer boundaries, directory prose, machine-metadata distinction, and stated rationales are authoritative for this research program. Capability branches may remain empty when unused; they remain part of the agnostic topology so a project can instantiate them without changing the architecture.
 
 Version\
-Version of 12 September 2026. The history of versions and changes, with the owner's words behind each rule, is at L8/L6/history/specification-history.md in the scaffold repository.
+Version of 13 September 2026. The history of versions and changes, with the owner's words behind each rule, is at L8/L6/history/specification-history.md in the scaffold repository.
 
 Self-description and machine-instruction rule\
 Every directory carries a local Layer 0 semantic description. In tree notation, /0 denotes that directory's local 0.md without drawing the file as a separate branch. The same directory separately carries machine-readable metadata for machine instructions, constraints, permissions, routing, validation, and lifecycle behavior. /0 carries human-readable meaning; metadata carries machine-actionable instruction. Neither replaces the other. This separation keeps semantic description distinct from machine operation.
@@ -66,6 +66,10 @@ The owner's definition, given with its table:
 **[Clarification]** Peers are physical and are counted from 1 at L7/peering/: peer-1, object-1. The layers are counted from 0: 0 is the semantic origin, where the Semantic and Epistemic rails define the layers above; it is what exists first, before anything physical. The two counts do not conflict.
 
 **[Note]** Author note. L7, pronounced El-Seven, is the desk: the L is the lower left hand corner of the desk and the 7 is the upper right; the name draws the rectangle that this layer is, its Surface. L8 is the research packet on the desk: two zeros stacked, the interior's zero over the zeros of the seven layers. The interior directories carry uppercase too: L0 through L7 are the eight bits of a byte, 0 being a bit, and L8 is the extra bit that carries the semantic, as information needs an extra bit to catch any error. The names are design, not decoration, and were not chosen by accident.
+
+**[Clarification]** The packet reading. The owner, 12 September 2026, quoted as written: "L8 has to envelope them all to simulate a packet where gteh floor is l1 the end is l6, ythe glue is l7 adn l8 is gthe connectror the the next l0". Read the bounded object as one packet. L0 is the origin: the meaning that exists in the head first and is written down second; it is not payload. L1 is the floor of the payload and L6 its end. L7 is the glue, the face at which the object binds to what is outside it. L8 envelopes them all, and its trailing edge is the connector to the next object's L0. The connector is why nothing follows the desk in traversal: past the face the object hands off, and the count begins again at zero in another object's tree. This states as a structure what the byte reading above states as a count, and the two agree.
+
+**[Clarification]** The packet reading changes no position, no count, and no path. The eight positions remain L0 through L7; first is always 0; L8 remains a count and not a ninth position; L0 remains the first position, excluded from the payload but not from the count. On disk L7/ and L8/ remain siblings at the repository root, with L8/ holding the interior L0 through L6, as the canonical topology states. The owner ruled the directory structure unchanged, 12 September 2026, quoted as written: "I like to waive that l seven and l eight are set up right now in the current directory structure." The envelope is a reading of that layout, not a change to it.
 
 ### 7LM is a dependency and fault-containment architecture
 

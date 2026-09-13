@@ -62,6 +62,8 @@ Two further names appear throughout.
 
 Two facts about the layout on disk. L7 is outside the packet: `L7/` and `L8/` are siblings, and moving from the desk into L6 crosses a boundary rather than opening a subfolder. And nothing follows the desk. Past it the count restarts at zero inside another object's tree, where this entire object is one bound object at a peer position.
 
+**The packet reading.** The specification states one more thing about these positions, and it is the owner's. Read the object as one packet. L0 is the origin: the meaning that exists in the head first and is written down second, and it is not payload. L1 is the floor of the payload and L6 its end. L7 is the glue, the face at which the object binds to what is outside it. L8 envelopes them all, and its trailing edge is the connector to the next object's L0. That connector is why nothing follows the desk: past the face the object hands off, and the count starts again at zero in the next object's tree. The reading changes no position and no path. It is drawn on the plate sheet.
+
 ---
 
 ## 3. The count rule: "First is always 0"
