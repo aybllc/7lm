@@ -1,0 +1,700 @@
+<title>UHA and oMMP on the Layers</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&family=Source+Sans+3:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
+<style>
+:root {
+  --ground:#EFEFF3; --sheet:#FBFBFD; --ink:#16161F; --ink-2:#4B4B5C; --ink-3:#7C7C8D;
+  --rule:#CFCFD9; --rule-2:#E2E2EA;
+  --uha:#2E3A8C; --uha-wash:#E3E6F5;
+  --ommp:#8A5A16; --ommp-wash:#F5EBDC;
+  --seam:#A6203C; --seam-wash:#F7E2E6;
+  color-scheme: light;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --ground:#131319; --sheet:#1B1B23; --ink:#E8E8EF; --ink-2:#B2B2C0; --ink-3:#82828F;
+    --rule:#33333F; --rule-2:#26262F;
+    --uha:#93A3EA; --uha-wash:#1E2340;
+    --ommp:#D9A45F; --ommp-wash:#332614;
+    --seam:#EC8199; --seam-wash:#3A1B23;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --ground:#131319; --sheet:#1B1B23; --ink:#E8E8EF; --ink-2:#B2B2C0; --ink-3:#82828F;
+  --rule:#33333F; --rule-2:#26262F;
+  --uha:#93A3EA; --uha-wash:#1E2340;
+  --ommp:#D9A45F; --ommp-wash:#332614;
+  --seam:#EC8199; --seam-wash:#3A1B23;
+  color-scheme: dark;
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0; background: var(--ground); color: var(--ink);
+  font-family: "Source Sans 3", system-ui, sans-serif; font-size: 16.5px; line-height: 1.6;
+  padding-block: 1.5rem 3.5rem; padding-inline: clamp(16px, 3vw, 32px);
+}
+.doc { max-width: 1060px; margin: 0 auto; background: var(--sheet); border: 1px solid var(--rule); }
+.mono, code { font-family: "JetBrains Mono", ui-monospace, Menlo, monospace; }
+code { font-size: 0.87em; }
+
+/* masthead */
+header.mast { padding: 2rem clamp(18px, 3vw, 40px) 1.5rem; border-bottom: 2px solid var(--ink); }
+.kicker { font-family: "JetBrains Mono", monospace; font-size: 0.7rem; letter-spacing: 0.16em;
+          text-transform: uppercase; color: var(--ink-3); margin: 0 0 0.7rem; }
+h1 { font-family: "Source Serif 4", Georgia, serif; font-weight: 600; font-size: clamp(1.9rem, 4.4vw, 2.9rem);
+     line-height: 1.06; letter-spacing: -0.015em; margin: 0 0 0.9rem; text-wrap: balance; }
+.thesis { font-size: 1.06rem; color: var(--ink-2); max-width: 66ch; margin: 0; }
+.thesis strong { color: var(--ink); font-weight: 600; }
+.status { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 1.4rem; }
+.tag { font-family: "JetBrains Mono", monospace; font-size: 0.66rem; letter-spacing: 0.1em;
+       text-transform: uppercase; padding: 0.24em 0.6em; border: 1px solid var(--rule); color: var(--ink-3); }
+.tag.warn { border-color: var(--seam); color: var(--seam); background: var(--seam-wash); }
+
+/* sections */
+section { padding: 1.9rem clamp(18px, 3vw, 40px) 1.7rem; border-top: 1px solid var(--rule-2); }
+.stamp { font-family: "JetBrains Mono", monospace; font-size: 0.68rem; letter-spacing: 0.12em;
+         text-transform: uppercase; color: var(--ink-3); margin: 0 0 0.45rem; }
+h2 { font-family: "Source Serif 4", Georgia, serif; font-weight: 600; font-size: 1.5rem; line-height: 1.2;
+     margin: 0 0 0.8rem; text-wrap: balance; }
+h3 { font-family: "Source Serif 4", Georgia, serif; font-weight: 600; font-size: 1.08rem; margin: 1.5rem 0 0.5rem; }
+p { margin: 0 0 0.85rem; max-width: 68ch; }
+p.lead { font-size: 1.03rem; color: var(--ink-2); }
+
+/* quotation of an object's own words */
+blockquote { margin: 1rem 0 1.1rem; padding: 0.7rem 0 0.7rem 1.1rem; border-left: 3px solid var(--rule);
+             color: var(--ink-2); max-width: 68ch; }
+blockquote p { margin: 0 0 0.4rem; }
+blockquote p:last-child { margin: 0; }
+blockquote cite { display: block; font-style: normal; font-family: "JetBrains Mono", monospace;
+                  font-size: 0.72rem; color: var(--ink-3); margin-top: 0.5rem; }
+blockquote.uha { border-left-color: var(--uha); }
+blockquote.ommp { border-left-color: var(--ommp); }
+
+/* figures */
+figure { margin: 1.5rem 0 0.4rem; }
+figure .frame { overflow-x: auto; border: 1px solid var(--rule); background: var(--sheet); }
+figure svg { display: block; width: 100%; height: auto; color: var(--ink-2); padding: 0.7rem 0.4rem; }
+@media (max-width: 760px) { figure svg { min-width: 660px; } }
+figcaption { margin-top: 0.6rem; font-size: 0.87rem; line-height: 1.5; color: var(--ink-3);
+             max-width: 72ch; }
+figcaption b { color: var(--ink-2); font-weight: 600; }
+
+/* the ledger: layer → artifact */
+.ledger { width: 100%; border-collapse: collapse; margin: 1rem 0 0.6rem; font-size: 0.92rem; }
+.ledger th { text-align: left; font-family: "JetBrains Mono", monospace; font-weight: 500; font-size: 0.67rem;
+             letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-3);
+             padding: 0.5rem 0.7rem; border-bottom: 1px solid var(--rule); }
+.ledger td { padding: 0.6rem 0.7rem; border-bottom: 1px solid var(--rule-2); vertical-align: top; }
+.ledger td:first-child { font-family: "JetBrains Mono", monospace; color: var(--uha); white-space: nowrap;
+                         font-size: 0.86rem; }
+.ledger tr:last-child td { border-bottom: 0; }
+.wrap-x { overflow-x: auto; }
+
+ul { margin: 0 0 1rem; padding-left: 1.2rem; max-width: 68ch; }
+li { margin: 0.32rem 0; }
+li::marker { color: var(--ink-3); }
+
+/* open calls */
+.calls { border: 1px solid var(--seam); background: var(--seam-wash); padding: 1.1rem 1.3rem; margin: 1.2rem 0 0.5rem; }
+.calls h3 { margin-top: 0; color: var(--seam); }
+.calls p, .calls li { color: var(--ink-2); }
+.calls ul { margin-bottom: 0; }
+
+footer.colophon { padding: 1.4rem clamp(18px, 3vw, 40px) 1.6rem; border-top: 2px solid var(--ink);
+                  color: var(--ink-3); font-size: 0.85rem; }
+footer.colophon p { max-width: 78ch; }
+a { color: var(--uha); text-underline-offset: 3px; }
+a:focus-visible { outline: 2px solid var(--uha); outline-offset: 3px; }
+</style>
+
+<div class="doc">
+
+<header class="mast">
+  <p class="kicker">Worked exemplar &middot; 13 September 2026 &middot; corrected 14 September</p>
+  <h1>UHA and oMMP on the Layers</h1>
+  <p class="thesis">Two bounded objects <em>built with</em> this model, filed against it. UHA is a binary
+  codec for a region of space; oMMP is a grammar for recording an observation. They meet at a hard edge:
+  <strong>UHA&rsquo;s own definition refuses to carry an observer, and oMMP cannot proceed without one.</strong>
+  That is not a defect in either object, and it is not a coincidence either. It is the boundary the model exists
+  to hold, holding &mdash; in two objects that were laid out by it while they were being built.</p>
+  <div class="status">
+    <span class="tag">aybllc/uha &middot; aybllc/ommp</span>
+    <span class="tag warn">Internal only</span>
+    <span class="tag warn">Not externally validated</span>
+    <span class="tag">A filing exemplar, not a claim of correctness</span>
+  </div>
+</header>
+
+<section>
+  <p class="stamp">Provenance</p>
+  <h2>Both of these were built with the model</h2>
+  <p class="lead">This is not a page about two systems that happen to fit the Seven-Layer Model. Both objects are
+  the model&rsquo;s own output &mdash; one author, one method, one lineage &mdash; and oMMP goes further: it
+  carries the model inside itself, pinned by hash, as the gate its development has to pass.</p>
+
+  <figure>
+    <div class="frame">
+      <svg viewBox="0 0 1000 400" role="img" aria-label="Provenance diagram. At the top, the Seven-Layer Model shown as one thing in two versions: Methodology v1.3 of about July 2026, harmonized into the specification of 13 September 2026. Two arrows labelled built with descend from it to the two objects below, aybllc/uha on the left and aybllc/ommp on the right. A dashed line arcs from the v1.3 version over the top of the diagram and down into oMMP, labelled the same document, pinned inside: inside oMMP it appears as v1.3 pinned by SHA-256, the development gate. Between the two objects, a crimson arrow marks the seam. A footnote reads: one author, one method, one lineage.">
+        <defs>
+          <marker id="ar0" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+            <path d="M 0 0 L 10 5 L 0 10 z" fill="currentColor"/>
+          </marker>
+          <marker id="ar0s" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+            <path d="M 0 0 L 10 5 L 0 10 z" fill="var(--seam)"/>
+          </marker>
+          <marker id="ar0o" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+            <path d="M 0 0 L 10 5 L 0 10 z" fill="var(--ommp)"/>
+          </marker>
+        </defs>
+
+        <!-- the model band -->
+        <rect x="170" y="38" width="660" height="92" rx="4" fill="none" stroke="var(--ink)" stroke-width="1.5"/>
+        <text x="186" y="58" font-family="JetBrains Mono, monospace" font-size="9.5" letter-spacing="0.14em" fill="currentColor" opacity="0.75">THE MODEL</text>
+
+        <rect x="196" y="66" width="252" height="50" rx="3" fill="var(--sheet)" stroke="currentColor" stroke-width="1.2"/>
+        <text x="212" y="88" font-family="JetBrains Mono, monospace" font-size="11" fill="var(--ink)">Methodology v1.3</text>
+        <text x="212" y="105" font-family="Source Sans 3, sans-serif" font-size="10.5" fill="currentColor" opacity="0.85">c. July 2026 &middot; seven positions</text>
+
+        <line x1="456" y1="91" x2="544" y2="91" stroke="currentColor" stroke-width="1.4" marker-end="url(#ar0)"/>
+        <text x="500" y="83" text-anchor="middle" font-family="Source Sans 3, sans-serif" font-size="10.5" fill="currentColor" opacity="0.9">harmonized</text>
+
+        <rect x="552" y="66" width="252" height="50" rx="3" fill="var(--sheet)" stroke="var(--ink)" stroke-width="1.4"/>
+        <text x="568" y="88" font-family="JetBrains Mono, monospace" font-size="11" fill="var(--ink)">Harmonized specification</text>
+        <text x="568" y="105" font-family="Source Sans 3, sans-serif" font-size="10.5" fill="currentColor" opacity="0.85">13 Sept 2026 &middot; L0&ndash;L7, and L8 the envelope</text>
+
+        <!-- the pinned copy, arcing over -->
+        <path d="M 322 66 V 22 H 920 V 270 H 916" fill="none" stroke="var(--ommp)" stroke-width="1.3" stroke-dasharray="5 4" marker-end="url(#ar0o)"/>
+        <text x="621" y="14" text-anchor="middle" font-family="Source Sans 3, sans-serif" font-size="10.5" fill="var(--ommp)">the same document, pinned inside</text>
+
+        <!-- built with -->
+        <line x1="300" y1="130" x2="248" y2="202" stroke="currentColor" stroke-width="1.5" marker-end="url(#ar0)"/>
+        <line x1="700" y1="130" x2="748" y2="202" stroke="currentColor" stroke-width="1.5" marker-end="url(#ar0)"/>
+        <text x="250" y="180" text-anchor="end" font-family="Source Sans 3, sans-serif" font-size="11" fill="currentColor">built with</text>
+        <text x="742" y="180" font-family="Source Sans 3, sans-serif" font-size="11" fill="currentColor">built with</text>
+
+        <!-- UHA -->
+        <rect x="60" y="206" width="376" height="140" rx="4" fill="none" stroke="var(--uha)" stroke-width="1.3" stroke-dasharray="6 4" opacity="0.75"/>
+        <text x="248" y="234" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="13" fill="var(--uha)">aybllc/uha</text>
+        <rect x="84" y="248" width="328" height="46" rx="3" fill="var(--uha-wash)" stroke="var(--uha)" stroke-width="1.3"/>
+        <text x="100" y="269" font-family="JetBrains Mono, monospace" font-size="10.5" fill="var(--uha)">L0 &mdash; no observer, no vantage</text>
+        <text x="100" y="286" font-family="Source Sans 3, sans-serif" font-size="10.5" fill="currentColor">the address is fixed by coordinates alone</text>
+        <text x="248" y="318" text-anchor="middle" font-family="Source Sans 3, sans-serif" font-size="11" fill="currentColor" opacity="0.85">definition, formulas, tolerances, codec, sources &mdash;</text>
+        <text x="248" y="334" text-anchor="middle" font-family="Source Sans 3, sans-serif" font-size="11" fill="currentColor" opacity="0.85">each document governs one thing</text>
+
+        <!-- oMMP -->
+        <rect x="560" y="206" width="376" height="140" rx="4" fill="none" stroke="var(--ommp)" stroke-width="1.3" stroke-dasharray="6 4" opacity="0.75"/>
+        <text x="748" y="234" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="13" fill="var(--ommp)">aybllc/ommp</text>
+        <rect x="584" y="248" width="328" height="46" rx="3" fill="var(--ommp-wash)" stroke="var(--ommp)" stroke-width="1.3"/>
+        <text x="600" y="269" font-family="JetBrains Mono, monospace" font-size="10.5" fill="var(--ommp)">v1.3 &mdash; pinned by SHA-256</text>
+        <text x="600" y="286" font-family="Source Sans 3, sans-serif" font-size="10.5" fill="currentColor">the model itself, held as the development gate</text>
+        <text x="748" y="318" text-anchor="middle" font-family="Source Sans 3, sans-serif" font-size="11" fill="currentColor" opacity="0.85">the observer is authored here as a local delta,</text>
+        <text x="748" y="334" text-anchor="middle" font-family="Source Sans 3, sans-serif" font-size="11" fill="currentColor" opacity="0.85">over an address it binds but never edits</text>
+
+        <!-- the seam -->
+        <line x1="444" y1="300" x2="552" y2="300" stroke="var(--seam)" stroke-width="1.6" marker-end="url(#ar0s)"/>
+        <text x="498" y="292" text-anchor="middle" font-family="Source Sans 3, sans-serif" font-size="10.5" fill="var(--seam)">the seam</text>
+        <text x="498" y="318" text-anchor="middle" font-family="Source Sans 3, sans-serif" font-size="10" fill="var(--seam)" opacity="0.85">drawn next</text>
+
+        <text x="498" y="380" text-anchor="middle" font-family="Source Sans 3, sans-serif" font-size="11" fill="currentColor" opacity="0.9">one author &middot; one method &middot; one lineage &mdash; nothing in this picture is prior art to anything else in it</text>
+      </svg>
+    </div>
+    <figcaption><b>One lineage, not a convergence.</b> The model is versioned: v1.3 is an earlier cut of it, the
+    harmonized specification is where that work arrived, and the earlier version is still the pinned gate inside
+    oMMP. By the specification&rsquo;s own rule that makes v1.3 a <em>version</em>, held at L6 with the rest of
+    this programme&rsquo;s memory &mdash; not prior art, a branch it reserves for &ldquo;external
+    antecedents.&rdquo;</figcaption>
+  </figure>
+
+  <p>That settles what the rest of this page is evidence of. A seam between two independently built systems would
+  be a coincidence worth checking. A seam between two objects built with the same model is the model doing the
+  job it was built for: it kept the observer out of UHA&rsquo;s L0 while that definition was being written, and
+  it gave oMMP somewhere to put the observer that did not require editing UHA. The fact worth reporting is not
+  that the boundary appears. It is that when it appeared, neither object had to be amended.</p>
+</section>
+
+<section>
+  <p class="stamp">The two objects</p>
+  <h2>What each one says it is</h2>
+  <p class="lead">Take each object&rsquo;s own words for its own meaning. That is what L0 is: the semantic
+  contract an object authors for itself, before anything else is said about it.</p>
+
+  <blockquote class="uha">
+    <p>&ldquo;A UHA Record is a canonical binary representation of a spatial region &hellip; The address is
+    fixed by coordinates alone: two regions sharing a center, extent and epoch encode to the same bytes
+    whether one holds matter and the other vacuum &hellip; the record carries no observer, nothing an observer
+    is attached to, and no viewpoint from which the region is seen. The frame field declares an origin and
+    axes, which is a stated convention, not a vantage.&rdquo;</p>
+    <cite>aybllc/uha &middot; bz/README.md &middot; Part 1, Definition</cite>
+  </blockquote>
+
+  <blockquote class="ommp">
+    <p>&ldquo;oMMP (Observer MetaModal Platform) &mdash; an observer-anchored grammar for recording an
+    observation as typed mathematical fields rather than as a narrative story.&rdquo;</p>
+    <p>&ldquo;The UHA address consumed by oMMP is observer-rooted &hellip; The observer&rsquo;s localized state
+    is foundational address context. oMMP begins its semantic work after that origin is established.&rdquo;</p>
+    <cite>aybllc/ommp &middot; README.md; research/definitions/7lm/OBSERVER_ROOTED_UHA_CONSUMPTION_MODEL_2026-07-20.md</cite>
+  </blockquote>
+
+  <p>Read those together and the edge is plain. UHA declares that no viewpoint is expressed and that there is
+  no field through which one could be. oMMP declares that the observer&rsquo;s localized state is foundational
+  and must come first. Both statements are each object&rsquo;s own L0. Neither is wrong. They cannot be merged.</p>
+</section>
+
+<section>
+  <p class="stamp">The seam</p>
+  <h2>The wrong fix is to edit UHA</h2>
+  <p class="lead">There is an obvious and wrong repair: add an observer field to the UHA record, or reinterpret
+  <code>frame</code> as a vantage. It is wrong for a reason the model states as a rule &mdash; higher layers do
+  not silently repair lower layers, and one object never rewrites another object&rsquo;s authored meaning.</p>
+
+  <figure>
+    <div class="frame">
+      <svg viewBox="0 0 1000 420" role="img" aria-label="Two objects side by side. UHA on the left, with its L0 stating that the record carries no observer, rising to its L7 face where the definition is exposed at an exact version. oMMP on the right, binding that definition at its L7 ingress marked no edit and no delete, and authoring the observer as its own local delta at its own L0. A crimson boundary line runs between them.">
+        <defs>
+          <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+            <path d="M 0 0 L 10 5 L 0 10 z" fill="currentColor"/>
+          </marker>
+          <marker id="arS" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+            <path d="M 0 0 L 10 5 L 0 10 z" fill="var(--seam)"/>
+          </marker>
+        </defs>
+
+        <!-- UHA object -->
+        <rect x="20" y="52" width="400" height="336" rx="4" fill="none" stroke="var(--uha)" stroke-width="1.3" stroke-dasharray="6 4" opacity="0.7"/>
+        <text x="220" y="40" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="13" fill="var(--uha)">aybllc/uha</text>
+        <text x="220" y="70" text-anchor="middle" font-family="Source Sans 3, sans-serif" font-size="11.5" fill="currentColor" opacity="0.85">the object that owns the address</text>
+
+        <rect x="44" y="88" width="352" height="66" rx="3" fill="var(--uha-wash)" stroke="var(--uha)" stroke-width="1.4"/>
+        <text x="62" y="112" font-family="JetBrains Mono, monospace" font-size="12" fill="var(--uha)">L7 egress</text>
+        <text x="62" y="131" font-family="Source Sans 3, sans-serif" font-size="11" fill="currentColor">the definition, exposed at an exact version</text>
+        <text x="62" y="147" font-family="Source Sans 3, sans-serif" font-size="10.5" fill="currentColor" opacity="0.8">the README governs; subordinate docs only what it delegates</text>
+
+        <line x1="220" y1="300" x2="220" y2="162" stroke="currentColor" stroke-width="1.4" marker-end="url(#ar)"/>
+        <text x="232" y="236" font-family="Source Sans 3, sans-serif" font-size="10.5" fill="currentColor" opacity="0.85">construction outward</text>
+
+        <rect x="44" y="308" width="352" height="66" rx="3" fill="var(--sheet)" stroke="currentColor" stroke-width="1.3"/>
+        <text x="62" y="332" font-family="JetBrains Mono, monospace" font-size="12" fill="var(--ink)">L0</text>
+        <text x="62" y="351" font-family="Source Sans 3, sans-serif" font-size="11" fill="currentColor">&ldquo;no observer, nothing an observer is attached to,</text>
+        <text x="62" y="366" font-family="Source Sans 3, sans-serif" font-size="11" fill="currentColor">and no viewpoint from which the region is seen&rdquo;</text>
+
+        <!-- the boundary -->
+        <line x1="500" y1="30" x2="500" y2="120" stroke="var(--seam)" stroke-width="1.4" stroke-dasharray="5 4" opacity="0.8"/>
+        <line x1="500" y1="168" x2="500" y2="400" stroke="var(--seam)" stroke-width="1.4" stroke-dasharray="5 4" opacity="0.8"/>
+        <text x="500" y="22" text-anchor="middle" font-family="Source Sans 3, sans-serif" font-size="10.5" fill="var(--seam)">object boundary</text>
+        <line x1="400" y1="121" x2="576" y2="121" stroke="var(--seam)" stroke-width="1.8" marker-end="url(#arS)"/>
+        <text x="500" y="112" text-anchor="middle" font-family="Source Sans 3, sans-serif" font-size="10.5" fill="var(--seam)">bound at an exact version</text>
+        <text x="500" y="158" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="10.5" fill="var(--seam)">NO EDIT &middot; NO DELETE</text>
+
+        <!-- oMMP object -->
+        <rect x="580" y="52" width="400" height="336" rx="4" fill="none" stroke="var(--ommp)" stroke-width="1.3" stroke-dasharray="6 4" opacity="0.7"/>
+        <text x="780" y="40" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="13" fill="var(--ommp)">aybllc/ommp</text>
+        <text x="780" y="70" text-anchor="middle" font-family="Source Sans 3, sans-serif" font-size="11.5" fill="currentColor" opacity="0.85">the object that needs the observer</text>
+
+        <rect x="604" y="88" width="352" height="66" rx="3" fill="var(--ommp-wash)" stroke="var(--ommp)" stroke-width="1.4"/>
+        <text x="622" y="112" font-family="JetBrains Mono, monospace" font-size="12" fill="var(--ommp)">L7 ingress</text>
+        <text x="622" y="131" font-family="Source Sans 3, sans-serif" font-size="11" fill="currentColor">the UHA definition, bound, reference-only</text>
+        <text x="622" y="147" font-family="Source Sans 3, sans-serif" font-size="10.5" fill="currentColor" opacity="0.8">&ldquo;must not redefine the lower-layer UHA address&rdquo;</text>
+
+        <line x1="780" y1="162" x2="780" y2="300" stroke="var(--ommp)" stroke-width="1.4" marker-end="url(#ar)"/>
+        <text x="792" y="236" font-family="Source Sans 3, sans-serif" font-size="10.5" fill="currentColor" opacity="0.85">arrives as external input,</text>
+        <text x="792" y="250" font-family="Source Sans 3, sans-serif" font-size="10.5" fill="currentColor" opacity="0.85">never as local authorship</text>
+
+        <rect x="604" y="308" width="352" height="66" rx="3" fill="var(--sheet)" stroke="var(--ommp)" stroke-width="1.3"/>
+        <text x="622" y="332" font-family="JetBrains Mono, monospace" font-size="12" fill="var(--ink)">L0</text>
+        <text x="622" y="351" font-family="Source Sans 3, sans-serif" font-size="11" fill="currentColor">the observer, authored here &mdash; oMMP&rsquo;s own</text>
+        <text x="622" y="366" font-family="Source Sans 3, sans-serif" font-size="11" fill="currentColor">difference from what it bound: a local delta</text>
+      </svg>
+    </div>
+    <figcaption><b>The seam, drawn.</b> UHA authors the address and exposes it; oMMP binds it reference-only and
+    authors the observer as its own difference. Nothing crosses the boundary but the binding &mdash; authorship
+    never does. oMMP&rsquo;s own owner-directed model already states the rule in its own words: the grammar
+    &ldquo;may express these relationships, but it must not redefine the lower-layer UHA address.&rdquo;</figcaption>
+  </figure>
+
+  <p>The specification calls the general form of this <em>peering</em>: one object depends on another without
+  owning, copying, redefining, or maintaining the other&rsquo;s meaning. It records that the case which
+  originated the architecture was Autonomous and Auditonomous sharing one definition. UHA and oMMP are that same
+  case again &mdash; and they did not stumble into the same discipline. oMMP holds a copy of the model inside
+  itself as its development gate, pinned by SHA-256, and writes its rule for consuming UHA in the model&rsquo;s
+  own vocabulary: lower layer, no redefinition. The seam held because the model was in the room while both
+  objects were being built.</p>
+</section>
+
+<section>
+  <p class="stamp">Construction outward</p>
+  <h2>UHA, filed layer by layer</h2>
+  <p class="lead">The model asks where each kind of claim belongs. UHA is unusually good to file because it has
+  already done the separation itself &mdash; its definition, its formulas, its tolerances, its built codec and
+  its sources are distinct documents that govern distinct things.</p>
+
+  <figure>
+    <div class="frame">
+      <svg viewBox="0 0 1000 330" role="img" aria-label="UHA climbing the layers. L0 the definition of a record, L1 the admissible dial states, L2 the six frozen formulas, L3 the declared horizon with its margin, L4 the sixty-four byte codec with its tests, L6 the superseded repositories held as history, L7 the bundled sources and the governing README.">
+        <text x="20" y="22" font-family="JetBrains Mono, monospace" font-size="10.5" fill="currentColor" opacity="0.75" letter-spacing="1">CLAIM ONLY WHAT THE LAYER HAS EARNED</text>
+        <line x1="20" y1="30" x2="980" y2="30" stroke="currentColor" stroke-width="1" opacity="0.25"/>
+        <g font-family="Source Sans 3, sans-serif">
+          <rect x="20" y="44" width="960" height="34" rx="2" fill="var(--uha-wash)" stroke="var(--uha)" stroke-width="1.2"/>
+          <text x="38" y="66" font-family="JetBrains Mono, monospace" font-size="12" fill="var(--uha)">L7</text>
+          <text x="78" y="66" font-size="12" fill="var(--ink)">the face</text>
+          <text x="188" y="66" font-size="11" fill="currentColor" opacity="0.9">19 bundled sources, <tspan font-family="JetBrains Mono, monospace" font-size="10">sha256sum</tspan> 19/19 &middot; a provenance row per document &middot; three cited works stated as NOT bundled</text>
+
+          <rect x="20" y="86" width="960" height="34" rx="2" fill="var(--sheet)" stroke="currentColor" stroke-width="1.1" opacity="0.9"/>
+          <text x="38" y="108" font-family="JetBrains Mono, monospace" font-size="12" fill="var(--uha)">L6</text>
+          <text x="78" y="108" font-size="12" fill="var(--ink)">memory</text>
+          <text x="188" y="108" font-size="11" fill="currentColor" opacity="0.9"><tspan font-family="JetBrains Mono, monospace" font-size="10">uha-stack</tspan> and <tspan font-family="JetBrains Mono, monospace" font-size="10">uha-archive</tspan> declared &ldquo;provenance and research history only&rdquo; &mdash; superseded, not authoritative</text>
+
+          <rect x="20" y="128" width="960" height="34" rx="2" fill="var(--sheet)" stroke="currentColor" stroke-width="1.1" opacity="0.9"/>
+          <text x="38" y="150" font-family="JetBrains Mono, monospace" font-size="12" fill="var(--uha)">L4</text>
+          <text x="78" y="150" font-size="12" fill="var(--ink)">made</text>
+          <text x="188" y="150" font-size="11" fill="currentColor" opacity="0.9">the codec: 64-byte record, 41 tests green, golden byte vectors frozen &middot; a cleanroom experiment, dated</text>
+
+          <rect x="20" y="170" width="960" height="34" rx="2" fill="var(--sheet)" stroke="currentColor" stroke-width="1.1" opacity="0.9"/>
+          <text x="38" y="192" font-family="JetBrains Mono, monospace" font-size="12" fill="var(--uha)">L3</text>
+          <text x="78" y="192" font-size="12" fill="var(--ink)">tolerance</text>
+          <text x="188" y="192" font-size="11" fill="currentColor" opacity="0.9">R_H declared at the comoving particle horizon; <tspan font-family="JetBrains Mono, monospace" font-size="10">b = 91</tspan> the smallest binary dial containing it, with 1.19&times; margin</text>
+
+          <rect x="20" y="212" width="960" height="34" rx="2" fill="var(--sheet)" stroke="currentColor" stroke-width="1.1" opacity="0.9"/>
+          <text x="38" y="234" font-family="JetBrains Mono, monospace" font-size="12" fill="var(--uha)">L2</text>
+          <text x="78" y="234" font-size="12" fill="var(--ink)">exact</text>
+          <text x="188" y="234" font-size="11" fill="currentColor" opacity="0.9">the six frozen formulas, governed by <tspan font-family="JetBrains Mono, monospace" font-size="10">docs/formulas.md</tspan> &middot; formula 1 maps [0, R_H] onto [0, 1] continuously and monotonically</text>
+
+          <rect x="20" y="254" width="960" height="34" rx="2" fill="var(--sheet)" stroke="currentColor" stroke-width="1.1" opacity="0.9"/>
+          <text x="38" y="276" font-family="JetBrains Mono, monospace" font-size="12" fill="var(--uha)">L1</text>
+          <text x="78" y="276" font-size="12" fill="var(--ink)">admissible</text>
+          <text x="188" y="276" font-size="11" fill="currentColor" opacity="0.9">ruling R1: a record MUST satisfy <tspan font-family="JetBrains Mono, monospace" font-size="10">b &gt; a</tspan> &mdash; the entire malformed-dial class is made unrepresentable, not merely rejected</text>
+
+          <rect x="20" y="296" width="960" height="34" rx="2" fill="var(--uha-wash)" stroke="var(--uha)" stroke-width="1.3"/>
+          <text x="38" y="318" font-family="JetBrains Mono, monospace" font-size="12" fill="var(--uha)">L0</text>
+          <text x="78" y="318" font-size="12" fill="var(--ink)">meaning</text>
+          <text x="188" y="318" font-size="11" fill="currentColor" opacity="0.9">what a UHA Record <tspan font-style="italic">is</tspan>: coordinates, extent, epoch &middot; occupancy incidental &middot; no observer, no vantage</text>
+        </g>
+      </svg>
+    </div>
+    <figcaption><b>One object, seven positions.</b> Read bottom to top: this is construction outward, and every
+    row names a document that exists in <code>aybllc/uha</code> today. L5 is deliberately absent from the
+    drawing &mdash; UHA files no research judgment about itself, which is a correct state, not a gap.</figcaption>
+  </figure>
+
+  <p>Two rows deserve attention because they are the discipline working, not just filing. <strong>L1 is
+  doing real containment:</strong> ruling R1 carries only the exponents, so an inverted, equal, non-positive or
+  overflowing dial has no byte pattern at all. A whole error class is removed from the state space rather than
+  caught downstream. And <strong>L3 is honest about its own bound:</strong> the README says declaring R_H at the
+  comoving particle horizon &ldquo;is a <em>causal</em> bound, not a claim that no matter lies beyond it.&rdquo;
+  That sentence is the L2/L3 boundary observed in the object&rsquo;s own words &mdash; the mathematics is exact,
+  the physical reading is bounded and says so.</p>
+</section>
+
+<section>
+  <p class="stamp">L4 &middot; the realized object</p>
+  <h2>Sixty-four bytes, always</h2>
+  <p class="lead">The record is where UHA becomes a made thing. Every field below is a lower layer&rsquo;s
+  contract, carried as bytes &mdash; which is what L4 means: resources committed, an identifiable output
+  produced.</p>
+
+  <figure>
+    <div class="frame">
+      <svg viewBox="0 0 1000 196" role="img" aria-label="The 64-byte UHA version-1 record drawn to scale. Bytes 0 to 3 magic, byte 4 version, bytes 5 to 20 frame, byte 21 epoch scale, bytes 22 to 29 epoch count, byte 30 unit identifier, bytes 31 to 34 the dial a and b, bytes 35 to 58 sigma, byte 59 N, bytes 60 to 63 the CRC computed over bytes 0 to 59.">
+        <!-- CRC span -->
+        <path d="M 20 40 L 20 32 L 920 32 L 920 40" fill="none" stroke="var(--seam)" stroke-width="1.2" opacity="0.85"/>
+        <text x="470" y="24" text-anchor="middle" font-family="Source Sans 3, sans-serif" font-size="10.5" fill="var(--seam)">CRC-32 computed over bytes 0&ndash;59 &mdash; reject, not ignore</text>
+
+        <!-- offset ticks -->
+        <g font-family="JetBrains Mono, monospace" font-size="9" fill="currentColor" opacity="0.6">
+          <text x="20" y="54">0</text>
+          <text x="95" y="54">5</text>
+          <text x="335" y="54">21</text>
+          <text x="545" y="54">35</text>
+          <text x="905" y="54">59</text>
+        </g>
+
+        <!-- the strip: 64 cells, 15px each, x from 20 -->
+        <g>
+          <!-- magic 0-3 : carrier -->
+          <rect x="20" y="60" width="60" height="42" fill="var(--rule-2)" stroke="currentColor" stroke-width="1" opacity="0.95"/>
+          <text x="50" y="86" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="9.5" fill="var(--ink)">A9 55 21 5A</text>
+          <!-- version 4 : carrier -->
+          <rect x="80" y="60" width="15" height="42" fill="var(--rule-2)" stroke="currentColor" stroke-width="1" opacity="0.95"/>
+          <!-- frame 5-20 : content, declared convention -->
+          <rect x="95" y="60" width="240" height="42" fill="var(--uha-wash)" stroke="var(--uha)" stroke-width="1.1" stroke-dasharray="4 3"/>
+          <text x="215" y="81" text-anchor="middle" font-family="Source Sans 3, sans-serif" font-size="11" fill="var(--ink)">frame &mdash; 16 bytes, opaque</text>
+          <text x="215" y="95" text-anchor="middle" font-family="Source Sans 3, sans-serif" font-size="9.5" fill="currentColor" opacity="0.8">the codec never interprets it</text>
+          <!-- epoch scale 21 -->
+          <rect x="335" y="60" width="15" height="42" fill="var(--uha-wash)" stroke="var(--uha)" stroke-width="1"/>
+          <!-- epoch count 22-29 -->
+          <rect x="350" y="60" width="120" height="42" fill="var(--uha-wash)" stroke="var(--uha)" stroke-width="1.1"/>
+          <text x="410" y="81" text-anchor="middle" font-family="Source Sans 3, sans-serif" font-size="11" fill="var(--ink)">epoch count</text>
+          <text x="410" y="95" text-anchor="middle" font-family="Source Sans 3, sans-serif" font-size="9.5" fill="currentColor" opacity="0.8">int64, ticks from the frame&rsquo;s origin</text>
+          <!-- unit 30 -->
+          <rect x="470" y="60" width="15" height="42" fill="var(--uha-wash)" stroke="var(--uha)" stroke-width="1"/>
+          <!-- a 31-32, b 33-34 : the dial -->
+          <rect x="485" y="60" width="30" height="42" fill="var(--uha-wash)" stroke="var(--uha)" stroke-width="1"/>
+          <rect x="515" y="60" width="30" height="42" fill="var(--uha-wash)" stroke="var(--uha)" stroke-width="1"/>
+          <!-- sigma 35-58 -->
+          <rect x="545" y="60" width="360" height="42" fill="var(--uha-wash)" stroke="var(--uha)" stroke-width="1.3"/>
+          <text x="725" y="81" text-anchor="middle" font-family="Source Sans 3, sans-serif" font-size="11.5" fill="var(--ink)">&sigma; &mdash; 24 bytes, the address itself</text>
+          <text x="725" y="95" text-anchor="middle" font-family="Source Sans 3, sans-serif" font-size="9.5" fill="currentColor" opacity="0.8">radial-lowest Morton order &middot; bits &ge; 3N MUST be zero</text>
+          <!-- N 59 -->
+          <rect x="905" y="60" width="15" height="42" fill="var(--uha-wash)" stroke="var(--uha)" stroke-width="1"/>
+          <!-- CRC 60-63 : carrier -->
+          <rect x="920" y="60" width="60" height="42" fill="var(--rule-2)" stroke="currentColor" stroke-width="1" opacity="0.95"/>
+          <text x="950" y="86" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="10" fill="var(--ink)">CRC</text>
+        </g>
+
+        <!-- leaders and labels for narrow fields -->
+        <g stroke="currentColor" stroke-width="0.9" opacity="0.5">
+          <line x1="87" y1="104" x2="87" y2="118"/>
+          <line x1="342" y1="104" x2="342" y2="118"/>
+          <line x1="912" y1="104" x2="912" y2="118"/>
+          <line x1="477" y1="104" x2="477" y2="144"/>
+          <line x1="530" y1="104" x2="530" y2="144"/>
+        </g>
+        <g font-family="Source Sans 3, sans-serif" font-size="10">
+          <text x="87" y="130" text-anchor="middle" fill="currentColor" opacity="0.9">version</text>
+          <text x="342" y="130" text-anchor="middle" fill="currentColor" opacity="0.9">epoch scale <tspan font-family="JetBrains Mono, monospace" font-size="9.5">e</tspan></text>
+          <text x="912" y="130" text-anchor="middle" fill="currentColor" opacity="0.9"><tspan font-family="JetBrains Mono, monospace" font-size="9.5">N</tspan></text>
+          <text x="455" y="156" text-anchor="end" fill="currentColor" opacity="0.9">unit-id</text>
+          <text x="548" y="156" fill="currentColor" opacity="0.9">the dial: <tspan font-family="JetBrains Mono, monospace" font-size="9.5">a</tspan>, <tspan font-family="JetBrains Mono, monospace" font-size="9.5">b</tspan> &mdash; r&#8320; = 2&#7491;&middot;&lambda;&#8322;&#8321;, R_H = 2&#7495;&middot;&lambda;&#8322;&#8321;</text>
+        </g>
+
+        <!-- legend -->
+        <line x1="20" y1="172" x2="980" y2="172" stroke="currentColor" stroke-width="1" opacity="0.2"/>
+        <g font-family="Source Sans 3, sans-serif" font-size="10">
+          <rect x="20" y="180" width="11" height="11" fill="var(--uha-wash)" stroke="var(--uha)" stroke-width="1"/>
+          <text x="38" y="189" fill="currentColor" opacity="0.9">content &mdash; the region, and what is needed to reconstruct it deterministically</text>
+          <rect x="500" y="180" width="11" height="11" fill="var(--rule-2)" stroke="currentColor" stroke-width="1"/>
+          <text x="518" y="189" fill="currentColor" opacity="0.9">carrier &mdash; magic, version, CRC: not the address, only its envelope</text>
+        </g>
+      </svg>
+    </div>
+    <figcaption><b>Drawn to scale &mdash; each cell is one byte.</b> The carrier/content split is UHA&rsquo;s own:
+    the README names the content fields as &ldquo;context&rsquo;s sub-fields, &sigma;, and N,&rdquo; with magic,
+    version and CRC as carrier. Note what is <em>not</em> in the 64 bytes: there is no observer field, and no
+    place one could be put. That absence is a design ruling at L0, visible here as a fact about the bytes.</figcaption>
+  </figure>
+</section>
+
+<section>
+  <p class="stamp">The containment rule</p>
+  <h2>UHA does not get re-mapped onto oMMP&rsquo;s layers</h2>
+  <p class="lead">The specification carries a rule for exactly this shape: a whole system with its own internal
+  layers sits inside L4 as a single object. Its internal layer numbering is not the model&rsquo;s. The rule is
+  written against an OSI network stack; UHA is the same case, closer to home.</p>
+
+  <figure>
+    <div class="frame">
+      <svg viewBox="0 0 1000 250" role="img" aria-label="Left panel: asking how it operates, the whole UHA codec is one object at oMMP's L4. Right panel: asking where it came from, the inquiry expands across layers, with the sources going to L7, the superseded repositories to L6, the design debate to L5, the margin to L3 and the formulas to L2, while the codec itself does not move.">
+        <text x="250" y="26" text-anchor="middle" font-family="Source Serif 4, serif" font-size="14" fill="var(--ink)">&ldquo;How does it operate?&rdquo;</text>
+        <text x="250" y="44" text-anchor="middle" font-family="Source Sans 3, sans-serif" font-size="10.5" fill="currentColor" opacity="0.85">the codec is one object, whole</text>
+        <rect x="60" y="62" width="380" height="150" rx="3" fill="var(--ommp-wash)" stroke="var(--ommp)" stroke-width="1.3"/>
+        <text x="78" y="86" font-family="JetBrains Mono, monospace" font-size="11.5" fill="var(--ommp)">oMMP L4</text>
+        <rect x="82" y="100" width="336" height="94" rx="2" fill="var(--sheet)" stroke="var(--uha)" stroke-width="1.2" stroke-dasharray="5 3"/>
+        <text x="250" y="130" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="11.5" fill="var(--uha)">UHA v1 codec</text>
+        <text x="250" y="152" text-anchor="middle" font-family="Source Sans 3, sans-serif" font-size="10.5" fill="currentColor" opacity="0.9">its own rulings R1&ndash;R6, its own 64-byte layout,</text>
+        <text x="250" y="167" text-anchor="middle" font-family="Source Sans 3, sans-serif" font-size="10.5" fill="currentColor" opacity="0.9">its own tests &mdash; all intact, none re-mapped</text>
+        <text x="250" y="186" text-anchor="middle" font-family="Source Sans 3, sans-serif" font-size="10" fill="var(--uha)" opacity="0.95">a fault in here is an L4 fault</text>
+
+        <line x1="500" y1="20" x2="500" y2="230" stroke="currentColor" stroke-width="1" opacity="0.22"/>
+
+        <text x="750" y="26" text-anchor="middle" font-family="Source Serif 4, serif" font-size="14" fill="var(--ink)">&ldquo;Where did it come from?&rdquo;</text>
+        <text x="750" y="44" text-anchor="middle" font-family="Source Sans 3, sans-serif" font-size="10.5" fill="currentColor" opacity="0.85">the inquiry expands; the codec does not move</text>
+        <g font-family="Source Sans 3, sans-serif" font-size="10.5">
+          <text x="566" y="72" font-family="JetBrains Mono, monospace" font-size="11" fill="var(--uha)">L7</text>
+          <text x="600" y="72" fill="currentColor" opacity="0.9">the 19 bundled sources and their provenance rows</text>
+          <text x="566" y="98" font-family="JetBrains Mono, monospace" font-size="11" fill="var(--uha)">L6</text>
+          <text x="600" y="98" fill="currentColor" opacity="0.9"><tspan font-family="JetBrains Mono, monospace" font-size="9.5">uha-stack</tspan>, <tspan font-family="JetBrains Mono, monospace" font-size="9.5">uha-archive</tspan> &mdash; history, not authority</text>
+          <text x="566" y="124" font-family="JetBrains Mono, monospace" font-size="11" fill="var(--uha)">L5</text>
+          <text x="600" y="124" fill="currentColor" opacity="0.9">why the dial was ruled this way, and what it costs</text>
+          <text x="566" y="150" font-family="JetBrains Mono, monospace" font-size="11" fill="var(--uha)">L3</text>
+          <text x="600" y="150" fill="currentColor" opacity="0.9">the 1.19&times; margin, and what it is a margin against</text>
+          <text x="566" y="176" font-family="JetBrains Mono, monospace" font-size="11" fill="var(--uha)">L2</text>
+          <text x="600" y="176" fill="currentColor" opacity="0.9">the six formulas, exactly as frozen</text>
+          <text x="566" y="202" font-family="JetBrains Mono, monospace" font-size="11" fill="var(--uha)">L0</text>
+          <text x="600" y="202" fill="currentColor" opacity="0.9">the words oMMP coins to describe what it consumes</text>
+        </g>
+        <rect x="560" y="216" width="404" height="24" rx="2" fill="none" stroke="var(--uha)" stroke-width="1" stroke-dasharray="4 3" opacity="0.8"/>
+        <text x="762" y="232" text-anchor="middle" font-family="Source Sans 3, sans-serif" font-size="10.5" fill="var(--uha)">the codec itself: still one L4 object</text>
+      </svg>
+    </div>
+    <figcaption><b>Operational containment against analytic expansion.</b> The question decides how far the
+    inquiry spreads; it never decides where the object sits. A bug in the CRC span is an L4 fault until somebody
+    separately shows it touches another layer&rsquo;s object.</figcaption>
+  </figure>
+</section>
+
+<section>
+  <p class="stamp">A version, not a rival</p>
+  <h2>oMMP is gated on an earlier version of this model</h2>
+  <p class="lead">oMMP does not merely illustrate the model &mdash; it carries a copy of it and builds against
+  that copy. Its development gate is <code>research/definitions/7lm/seven_layer_methodology.md</code>,
+  &ldquo;Seven-Layer Methodology v1.3,&rdquo; pinned by SHA-256. That document is an earlier cut of this model by
+  the same hand; the harmonized specification is where the same line of work arrived. What follows is therefore
+  a version gap inside one lineage, not a disagreement between two.</p>
+
+  <figure>
+    <div class="frame">
+      <svg viewBox="0 0 1000 400" role="img" aria-label="Two seven-layer models side by side. On the left, methodology version 1.3 as oMMP holds it, with L0 resolution basis, L1 immutable mathematics, L2 finite precision, L3 experiment schema, L4 technical infrastructure, L5 discourse and governance, L6 research memory, and a unified state space spine spanning them. On the right, the harmonized specification, with L0 semantic, L1 state space, L2 formal mathematics, L3 engineering mathematics, L4 conversion, L5 research, L6 library, plus L7 the desk and L8 the envelope which version 1.3 has no equivalent of.">
+        <text x="235" y="26" text-anchor="middle" font-family="Source Serif 4, serif" font-size="14" fill="var(--ommp)">Methodology v1.3</text>
+        <text x="235" y="44" text-anchor="middle" font-family="Source Sans 3, sans-serif" font-size="10.5" fill="currentColor" opacity="0.85">as <tspan font-family="JetBrains Mono, monospace" font-size="9.5">aybllc/ommp</tspan> pins it &middot; c. July 2026</text>
+        <text x="735" y="26" text-anchor="middle" font-family="Source Serif 4, serif" font-size="14" fill="var(--ink)">Harmonized specification</text>
+        <text x="735" y="44" text-anchor="middle" font-family="Source Sans 3, sans-serif" font-size="10.5" fill="currentColor" opacity="0.85">as <tspan font-family="JetBrains Mono, monospace" font-size="9.5">aybllc/7lm</tspan> states it &middot; 13 September 2026</text>
+
+        <g font-family="Source Sans 3, sans-serif" font-size="11">
+          <!-- v1.3 stack: L6 top -->
+          <rect x="40" y="58" width="390" height="30" rx="2" fill="var(--ommp-wash)" stroke="var(--ommp)" stroke-width="1"/>
+          <text x="58" y="78" font-family="JetBrains Mono, monospace" font-size="11" fill="var(--ommp)">L6</text>
+          <text x="92" y="78" fill="var(--ink)">Research Memory &mdash; provenance DAG</text>
+
+          <rect x="40" y="92" width="390" height="30" rx="2" fill="var(--ommp-wash)" stroke="var(--ommp)" stroke-width="1"/>
+          <text x="58" y="112" font-family="JetBrains Mono, monospace" font-size="11" fill="var(--ommp)">L5</text>
+          <text x="92" y="112" fill="var(--ink)">Discourse and Governance</text>
+
+          <rect x="40" y="126" width="390" height="30" rx="2" fill="var(--ommp-wash)" stroke="var(--ommp)" stroke-width="1"/>
+          <text x="58" y="146" font-family="JetBrains Mono, monospace" font-size="11" fill="var(--ommp)">L4</text>
+          <text x="92" y="146" fill="var(--ink)">Technical Infrastructure</text>
+
+          <rect x="40" y="160" width="390" height="30" rx="2" fill="var(--sheet)" stroke="var(--seam)" stroke-width="1.3"/>
+          <text x="58" y="180" font-family="JetBrains Mono, monospace" font-size="11" fill="var(--seam)">L3</text>
+          <text x="92" y="180" fill="var(--ink)">Abstract Experiment Schema &mdash; IV/DV</text>
+
+          <rect x="40" y="194" width="390" height="30" rx="2" fill="var(--sheet)" stroke="var(--seam)" stroke-width="1.3"/>
+          <text x="58" y="214" font-family="JetBrains Mono, monospace" font-size="11" fill="var(--seam)">L2</text>
+          <text x="92" y="214" fill="var(--ink)">Finite Precision Mathematics</text>
+
+          <rect x="40" y="228" width="390" height="30" rx="2" fill="var(--sheet)" stroke="var(--seam)" stroke-width="1.3"/>
+          <text x="58" y="248" font-family="JetBrains Mono, monospace" font-size="11" fill="var(--seam)">L1</text>
+          <text x="92" y="248" fill="var(--ink)">Immutable Mathematics</text>
+
+          <rect x="40" y="262" width="390" height="30" rx="2" fill="var(--ommp-wash)" stroke="var(--ommp)" stroke-width="1"/>
+          <text x="58" y="282" font-family="JetBrains Mono, monospace" font-size="11" fill="var(--ommp)">L0</text>
+          <text x="92" y="282" fill="var(--ink)">Resolution Basis and UN &mdash; broken-0</text>
+
+          <rect x="40" y="304" width="390" height="26" rx="2" fill="none" stroke="var(--ommp)" stroke-width="1" stroke-dasharray="4 3"/>
+          <text x="235" y="321" text-anchor="middle" font-size="10.5" fill="var(--ommp)">USS &mdash; one state-space spine across L0&ndash;L6</text>
+
+          <!-- harmonized stack -->
+          <rect x="540" y="58" width="420" height="30" rx="2" fill="var(--uha-wash)" stroke="var(--uha)" stroke-width="1.2"/>
+          <text x="558" y="78" font-family="JetBrains Mono, monospace" font-size="11" fill="var(--uha)">L8</text>
+          <text x="592" y="78" fill="var(--ink)">the envelope &mdash; and the connector outward</text>
+
+          <rect x="540" y="92" width="420" height="30" rx="2" fill="var(--uha-wash)" stroke="var(--uha)" stroke-width="1.2"/>
+          <text x="558" y="112" font-family="JetBrains Mono, monospace" font-size="11" fill="var(--uha)">L7</text>
+          <text x="592" y="112" fill="var(--ink)">the desk &mdash; provenance, governance, peering</text>
+
+          <rect x="540" y="126" width="420" height="30" rx="2" fill="var(--sheet)" stroke="currentColor" stroke-width="1" opacity="0.9"/>
+          <text x="558" y="146" font-family="JetBrains Mono, monospace" font-size="11" fill="var(--ink)">L6</text>
+          <text x="592" y="146" fill="var(--ink)">Library / Memory</text>
+
+          <rect x="540" y="160" width="420" height="30" rx="2" fill="var(--sheet)" stroke="currentColor" stroke-width="1" opacity="0.9"/>
+          <text x="558" y="180" font-family="JetBrains Mono, monospace" font-size="11" fill="var(--ink)">L5</text>
+          <text x="592" y="180" fill="var(--ink)">Research / Discourse</text>
+
+          <rect x="540" y="194" width="420" height="30" rx="2" fill="var(--sheet)" stroke="currentColor" stroke-width="1" opacity="0.9"/>
+          <text x="558" y="214" font-family="JetBrains Mono, monospace" font-size="11" fill="var(--ink)">L4</text>
+          <text x="592" y="214" fill="var(--ink)">Conversion / Realization &mdash; the cut</text>
+
+          <rect x="540" y="228" width="420" height="30" rx="2" fill="var(--sheet)" stroke="var(--seam)" stroke-width="1.3"/>
+          <text x="558" y="248" font-family="JetBrains Mono, monospace" font-size="11" fill="var(--seam)">L3</text>
+          <text x="592" y="248" fill="var(--ink)">Engineering Mathematics</text>
+
+          <rect x="540" y="262" width="420" height="30" rx="2" fill="var(--sheet)" stroke="var(--seam)" stroke-width="1.3"/>
+          <text x="558" y="282" font-family="JetBrains Mono, monospace" font-size="11" fill="var(--seam)">L2</text>
+          <text x="592" y="282" fill="var(--ink)">Formal Mathematics</text>
+
+          <rect x="540" y="296" width="420" height="30" rx="2" fill="var(--sheet)" stroke="var(--seam)" stroke-width="1.3"/>
+          <text x="558" y="316" font-family="JetBrains Mono, monospace" font-size="11" fill="var(--seam)">L1</text>
+          <text x="592" y="316" fill="var(--ink)">State Space</text>
+
+          <rect x="540" y="330" width="420" height="30" rx="2" fill="var(--sheet)" stroke="currentColor" stroke-width="1" opacity="0.9"/>
+          <text x="558" y="350" font-family="JetBrains Mono, monospace" font-size="11" fill="var(--ink)">L0</text>
+          <text x="592" y="350" fill="var(--ink)">Semantic / Foundational</text>
+        </g>
+
+        <text x="500" y="384" text-anchor="middle" font-family="Source Sans 3, sans-serif" font-size="11" fill="var(--seam)">crimson marks the three positions that were re-cut &mdash; and the two the later model adds</text>
+      </svg>
+    </div>
+    <figcaption><b>One model, two versions.</b> They agree at the top and bottom and disagree in the middle.
+    v1.3 puts <em>mathematics</em> at L1 and <em>finite precision</em> at L2; the harmonized specification puts
+    <em>state space</em> at L1, <em>exact mathematics</em> at L2 and pushes precision and tolerance out to L3, so
+    that L0 can hold semantics alone. v1.3 has no L7 and no L8: no desk, and no connector to the next
+    object &mdash; which is why its treatment of an external dependency like UHA has to be written as a separate
+    consumption model rather than falling out of the topology.</figcaption>
+  </figure>
+
+  <p>The kinship is not resemblance; it is descent. v1.3&rsquo;s stack-wide invariant S1 &mdash; &ldquo;Claims at layer k are
+  derivable solely from artifacts at or below k. No upward layer introduces unproven assumptions about lower
+  layers&rdquo; &mdash; is the harmonized specification&rsquo;s &ldquo;claim only what the layer has earned&rdquo;
+  and &ldquo;higher layers do not silently repair lower layers,&rdquo; stated formally. S6, append-only evidence
+  at L4, is the deletion rule. S5, version pinning with &ldquo;no moving floor,&rdquo; is the pinned contract.
+  S7 is provenance carried forward. Neither document took these from the other. They are one line of work
+  stated twice &mdash; v1.3 as numbered stack-wide invariants, the specification as rules over eight positions
+  &mdash; and what moved between them is where a rule sits, not what it says.</p>
+</section>
+
+<section>
+  <p class="stamp">What this exemplar establishes</p>
+  <h2>And what it does not</h2>
+  <p>It establishes that the model files two real objects without strain, that the hardest case between them
+  resolves by peering rather than by amendment, and that this is what it looks like when a model is used to
+  <em>build</em> rather than applied to finished work afterward. Neither object had to be argued into position:
+  UHA&rsquo;s repository already separates definition, formulas, tolerances, codec and sources into distinct
+  governing documents, and oMMP already refuses to redefine a lower layer in so many words. The filing below was
+  transcription, not interpretation. Three things are left to rule.</p>
+
+  <div class="wrap-x">
+    <table class="ledger">
+      <thead><tr><th>Position</th><th>What UHA files there today</th></tr></thead>
+      <tbody>
+        <tr><td>L0</td><td>The definition of a UHA Record: coordinates, extent, epoch. Occupancy incidental. No observer, no vantage.</td></tr>
+        <tr><td>L1</td><td>Ruling R1 and R1a: <code>b &gt; a</code>, span cap <code>b &minus; a &le; 1023</code>. The malformed-dial class is unrepresentable.</td></tr>
+        <tr><td>L2</td><td>The six frozen formulas, governed by <code>docs/formulas.md</code>.</td></tr>
+        <tr><td>L3</td><td>R_H at the comoving particle horizon; <code>b = 91</code> with 1.19&times; margin, stated as a causal bound.</td></tr>
+        <tr><td>L4</td><td>The codec: 64-byte record, 41 tests green, frozen golden vectors, a dated cleanroom experiment.</td></tr>
+        <tr><td>L5</td><td>Nothing yet &mdash; a correct state, not a gap.</td></tr>
+        <tr><td>L6</td><td><code>uha-stack</code> and <code>uha-archive</code>, declared provenance and research history only.</td></tr>
+        <tr><td>L7</td><td>19 bundled sources, <code>sha256sum</code> 19/19, a provenance row each; three cited works stated as not bundled; the README named as governing.</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="calls">
+    <h3>Open, for Eric to rule</h3>
+    <ul>
+      <li><strong>v1.3 is a version of this model, and the specification says where a version goes.</strong>
+      <code>L7/provenance/prior-art/</code> is not it: the specification reserves that branch for
+      &ldquo;external antecedents,&rdquo; and this is the programme&rsquo;s own earlier cut, not someone
+      else&rsquo;s. L6 is it &mdash; the layer that must preserve &ldquo;the scientific relations, decisions,
+      failures, corrections, <em>versions</em>, and retirement needed for reconstruction,&rdquo; where
+      <code>L8/L6/retired/specification-2026-09-04/</code> already holds the last superseded text verbatim.
+      Filing v1.3 the same way, with the SHA-256 oMMP pins, would identify the gate oMMP actually builds against
+      and close the lineage. Whether to do it, and under what date, is yours to say.</li>
+      <li><strong>oMMP is gated on the older version.</strong> Its gate is v1.3 while the harmonized specification
+      is current, and its repository is laid out after <code>aybllc/autonomous</code> rather than the canonical
+      topology. By v1.3&rsquo;s own S5 &mdash; version pinning, &ldquo;no moving floor&rdquo; &mdash; a pinned
+      gate is correct behaviour and advancing it is a deliberate act with a date, not housekeeping. The
+      specification already names OMMP among the repositories the topology is available to. When oMMP moves, and
+      whether the layout moves with it, is a ruling.</li>
+      <li><strong>The seam needs a binding of record.</strong> The relation drawn above is real in both
+      repositories&rsquo; prose but is not filed as a peering object at either desk.</li>
+    </ul>
+  </div>
+</section>
+
+<footer class="colophon">
+  <p><strong>Status.</strong> Everything above is internal. oMMP states it plainly and the statement governs this
+  page too: nothing here presents oMMP, 7LM, USS, or UHA as established fact. The v1.3 sheet is marked UNVERIFIED
+  pending its canonical scrub, and oMMP&rsquo;s own L4/UHA interface is embargoed pending Eric&rsquo;s canonical
+  UHA single source of truth. This page files and argues; it validates nothing.</p>
+  <p>Drawn from <code>aybllc/uha</code> at <code>c483188</code> and <code>aybllc/ommp</code> at <code>609e4de</code>,
+  against the Harmonized Authoritative Architecture Specification of 13 September 2026 in <code>aybllc/7lm</code>.
+  Where this page and the specification differ, the specification controls. Corrected 14 September 2026 on the
+  owner&rsquo;s statement that both objects were built using the model: an earlier version of this page read the
+  UHA/oMMP seam as a second, independent arrival at the same discipline and called v1.3 prior art. Both were
+  wrong in the one way that matters here &mdash; there is one author, one method, and one lineage, and the seam
+  is the method working, not a coincidence corroborating it. The model&rsquo;s own diagram is the
+  7LM Plate Sheet, <code>L8/L0/pedagogy/7lm-plate-sheet.html</code>; this page draws two objects filed under it,
+  not the model itself.</p>
+</footer>
+
+</div>
