@@ -450,6 +450,8 @@ Any other folder missing a sheet only gets reported. The check never moves anyth
 
 You can add folders under a canonical position for your own material, something like `L8/L5/research/review/some-work/`. Give each one a `0.md` when you can. A missing one gets reported, not failed. Both exemplar repositories do exactly this.
 
+One of these has a standard name and meaning. `in/` is a position's inbox: what belongs to that position but has not been worked into it yet. `L8/L6/in/` holds what is L6's to keep and is not yet part of any record; `L8/L4/work/writing/in/` would hold a draft that belongs to that writing position and has not been taken up. Read it as the to-be and the to-do of the folder it sits in. Any position may have one, it is never required, and it carries a `0.md` like every other folder.
+
 What you cannot do is add anything at the root, or remove or rename a canonical folder.
 
 A retired set under `L8/L6/retired/<name>/` keeps its old sheets exactly as they were, headings and all. The check reads the set's own `0.md` and nothing beneath it, which is what lets retired material stay frozen.
@@ -499,6 +501,8 @@ A retired set under `L8/L6/retired/<name>/` keeps its old sheets exactly as they
 
 Put it in `L8/L5/research/review/`. That is what the catch-all exists for, and the owner decides from there. A wrong placement that looks orderly is worse than material left visibly unfiled.
 
+If you know which position owns it but not where it goes inside that position, put it in that position's `in/` instead. The catch-all is for not knowing the layer; an inbox is for knowing the layer and not yet having filed the thing.
+
 ### Retire a prior state
 
 1. Make a dated set under `L8/L6/retired/`, something like `L8/L6/retired/layout-2026-09-06/`.
@@ -539,6 +543,7 @@ Find the first layer where a promise breaks, and fix it there. The specification
 - **Peer.** The word carries two senses and the specification uses one word for both. At `L7/peering/.../peer-N/`, a peer is an outside counterpart handing you something or receiving something from you. At `L8/L5/institution/peers/`, a peer is a participant position inside the research setting. File by whichever one you actually mean.
 - **Catch-all.** `L8/L5/research/review/`, where anything waiting on the owner lands.
 - **PARKED.** The label on catch-all material the owner has set aside.
+- **Inbox.** An `in/` folder at any position, holding what belongs to that position and has not been worked into it yet.
 - **Retire.** To move a prior state to `L8/L6/retired/` unchanged rather than deleting it.
 - **Enumerate.** To list every part of a file and where each part now stands, in a record, before that file is deleted.
 - **The cut.** The boundary at L4 where a specification becomes something actually made.
