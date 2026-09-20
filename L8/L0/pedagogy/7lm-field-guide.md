@@ -321,9 +321,18 @@ If the owner changes the definition, that creates a new binding. The pinned vers
 
 The last piece is a matter of stance, and the specification names it the declared semantic-deference rule. For the bounded purpose of interpreting the peer, you take the owner's exact bound definition as authoritative for what the owner means, and you do not re-prove or locally redefine it. That is declared trust. It is not a claim that the definition is objectively true, not an endorsement of anything downstream of it, and not a transfer of authorship.
 
-### Publications
+### Allications
 
-`L7/publications/` holds released objects, each with a release identity. The writing stays at L4, the meaning stays at L5, and the history stays at L6.
+`L7/allications/` holds what the object does outward. Six positions, each a nominalized outward act that leaves a record someone can point at afterwards:
+
+- `publications/` — released objects, each with a release identity.
+- `applications/` — what the object asks of an external body: funding, review, admission, or its method applied to an outside case.
+- `communications/` — statements, correspondence, announcements, answers issued outward.
+- `specifications/` — a contract handed outward for others to build or check against.
+- `notifications/` — notices given, usually discharging an obligation, where the fact of having given notice on a date is the point.
+- `participations/` — bodies, panels, working groups the object took part in, with the role and the period.
+
+The name is the owner's, and it is a mnemonic for the family rather than the test for membership: an outward act belongs here whether or not its name ends in *-ication*. The writing stays at L4, the meaning stays at L5, and the history stays at L6.
 
 ---
 
@@ -376,7 +385,7 @@ In the tree below, `/0` after a folder name means that folder carries its `0.md`
 │   │   ├── patents/0
 │   │   ├── permissions/0
 │   │   ├── access/0
-│   │   └── restrictions/0
+│   │   └── controlled/0
 │   ├── peering/0
 │   │   ├── private/0
 │   │   │   ├── ingress/0
@@ -392,7 +401,13 @@ In the tree below, `/0` after a folder name means that folder carries its `0.md`
 │   │       └── egress/0
 │   │           └── peer-1/0
 │   │               └── object-1/0
-│   └── publications/0
+│   └── allications/0
+│       ├── publications/0
+│       ├── applications/0
+│       ├── communications/0
+│       ├── specifications/0
+│       ├── notifications/0
+│       └── participations/0
 └── L8/0
     ├── L6/0
     │   ├── history/0
@@ -495,7 +510,7 @@ A retired set under `L8/L6/retired/<name>/` keeps its old sheets exactly as they
 1. The file itself goes to `L8/L4/work/writing/`.
 2. What it argues goes to `L8/L5/`.
 3. Its drafts and corrections get recorded at `L8/L6/history/`.
-4. If it is released, its release identity goes to `L7/publications/`.
+4. If it is released, its release identity goes to `L7/allications/publications/`.
 
 ### Handle something when you cannot tell where it goes
 

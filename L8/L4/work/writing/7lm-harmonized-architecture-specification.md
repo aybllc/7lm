@@ -1,5 +1,5 @@
 <!-- Canonical Markdown form of the Seven-Layer Model (7LM) Harmonized Authoritative Architecture Specification,
-     version of 13 September 2026. This Markdown is the source; the .docx filed beside it is generated from the text
+     version of 20 September 2026. This Markdown is the source; the .docx filed beside it is generated from the text
      below this comment and reads back to it unchanged. The history of versions and changes, with the owner's words
      behind each rule, is at L8/L6/history/specification-history.md. -->
 
@@ -9,13 +9,13 @@ Harmonized Authoritative Architecture Specification
 
 Canonical research directory topology and uniform layer information sheets
 
-*7LM Harmonized Authoritative Architecture Specification • 13 September 2026*
+*7LM Harmonized Authoritative Architecture Specification • 20 September 2026*
 
 > Authority\
 > This specification states the controlling 7LM research architecture: one canonical agnostic directory topology and one uniform information sheet for each layer. The structure, layer boundaries, directory prose, machine-metadata distinction, and stated rationales are authoritative for this research program. Capability branches may remain empty when unused; they remain part of the agnostic topology so a project can instantiate them without changing the architecture.
 
 Version\
-Version of 13 September 2026. The history of versions and changes, with the owner's words behind each rule, is at L8/L6/history/specification-history.md in the scaffold repository.
+Version of 20 September 2026. The history of versions and changes, with the owner's words behind each rule, is at L8/L6/history/specification-history.md in the scaffold repository.
 
 Self-description and machine-instruction rule\
 Every directory carries a local Layer 0 semantic description. In tree notation, /0 denotes that directory's local 0.md without drawing the file as a separate branch. The same directory separately carries machine-readable metadata for machine instructions, constraints, permissions, routing, validation, and lifecycle behavior. /0 carries human-readable meaning; metadata carries machine-actionable instruction. Neither replaces the other. This separation keeps semantic description distinct from machine operation.
@@ -43,7 +43,7 @@ Autonomous has one bounded semantic job: state and freeze the narrowest reasonab
 
 Auditonomous consumes the pinned Autonomous consensus baseline and authors the Auditonomous difference as an explicit local delta. The baseline and delta remain separately owned and overlaid rather than blended into a dual-owned definition.
 
-Canonical direct L7 branches are L7/provenance/, L7/governance/, L7/peering/, and L7/publications/.
+Canonical direct L7 branches are L7/provenance/, L7/governance/, L7/peering/, and L7/allications/.
 
 #### Seven-layer count and harmonization rule
 
@@ -215,7 +215,7 @@ Notation: /0 means the directory carries its local 0.md human-readable semantic 
 │   │   ├── patents/0
 │   │   ├── permissions/0
 │   │   ├── access/0
-│   │   └── restrictions/0
+│   │   └── controlled/0
 │   ├── peering/0
 │   │   ├── private/0
 │   │   │   ├── ingress/0
@@ -231,7 +231,13 @@ Notation: /0 means the directory carries its local 0.md human-readable semantic 
 │   │       └── egress/0
 │   │           └── peer-1/0
 │   │               └── object-1/0
-│   └── publications/0
+│   └── allications/0
+│       ├── publications/0
+│       ├── applications/0
+│       ├── communications/0
+│       ├── specifications/0
+│       ├── notifications/0
+│       └── participations/0
 └── L8/0
     ├── L6/0
     │   ├── history/0
@@ -751,7 +757,7 @@ L7/0
 │   ├── patents/0
 │   ├── permissions/0
 │   ├── access/0
-│   └── restrictions/0
+│   └── controlled/0
 ├── peering/0
 │   ├── private/0
 │   │   ├── ingress/0
@@ -767,7 +773,13 @@ L7/0
 │       └── egress/0
 │           └── peer-1/0
 │               └── object-1/0
-└── publications/0
+└── allications/0
+    ├── publications/0
+    ├── applications/0
+    ├── communications/0
+    ├── specifications/0
+    ├── notifications/0
+    └── participations/0
 ```
 
 **[Boundary Rule]** Boundary / traversal rule. L7 is the forward face outside the USO. It owns the external relations of the bounded object: provenance, governance, peering, and publication state. Public/private exposure and ingress/egress direction remain independent peering distinctions. L7 does not thereby acquire or change the lower-layer scientific meaning.
@@ -776,7 +788,7 @@ L7/0
 
 L7 scientific desktop and forward-face semantics
 
-The Surface is organized around four owned external relations: provenance, governance, peering, and publications. Within peering, exposure/custody (public versus private) and direction (ingress versus egress) remain independent semantic distinctions.
+The Surface is organized around four owned external relations: provenance, governance, peering, and allications — the outward acts, of which publication is one. Within peering, exposure/custody (public versus private) and direction (ingress versus egress) remain independent semantic distinctions.
 
 ```text
 L7/peering/
@@ -846,7 +858,7 @@ An upstream change creates a new binding; it does not mutate the pinned object. 
 | **governance/patents/** | Directory for patent-related representation when applicable. | Provides an agnostic forward-face position for patent status or materials without requiring every project to use it. |
 | **governance/permissions/** | Directory for explicit permissions attached to external use, disclosure, or exchange. | Keeps permission separate from ownership and from scientific validity. |
 | **governance/access/** | Directory for access conditions applicable to externally facing objects. | Makes who may access an object a boundary condition rather than an internal scientific claim. |
-| **governance/restrictions/** | Directory for restrictions that constrain external disclosure, use, transfer, or handling. | Keeps restrictions explicit and machine-addressable without redefining the underlying research. |
+| **governance/controlled/** | Directory for restrictions and other conditions that constrain external disclosure, use, transfer, or handling. | Keeps what is controlled explicit and machine-addressable without redefining the underlying research. |
 | **peering/** | Directory for relationships to externally owned peers and the bounded objects exchanged with them. | Preserves external ownership and authority instead of absorbing the peer into the USO. |
 | **private/** | Peering branch for non-public exposure or custody. | Keeps exposure/custody distinct from direction. |
 | **private/ingress/** | Private inbound peering position. | Represents something entering from a peer without making it public or internally owned. |
@@ -856,9 +868,15 @@ An upstream change creates a new binding; it does not mutate the pinned object. 
 | **public/egress/** | Public outbound peering position. | Represents public outward exchange toward a peer; the released publication object itself is held by the L7 publications branch. |
 | ***/peer-1/** | Directory identifying the external peer within an ingress or egress position. | Keeps peer identity distinct from the particular object exchanged with that peer. |
 | ***/peer-1/object-1/** | Directory identifying one bounded peer-owned or peer-directed object. | Allows one peer to expose or receive multiple objects without treating the peer itself as the object. Peer-owned ingress is reference/binding only: NO EDIT and NO DELETE by the receiving repository. |
-| **publications/** | Directory for released publication objects at the forward face. | Keeps publication release at L7 while writing remains L4, research meaning remains L5, and internal history remains L6. |
+| **allications/** | Directory for the bounded object's outward acts: publications, applications, communications, specifications, notifications, participations. | Each is a nominalized outward act that leaves an addressable record. One family, one place, the six senses kept distinct within it. |
+| **allications/publications/** | Directory for released publication objects at the forward face. | Keeps publication release at L7 while writing remains L4, research meaning remains L5, and internal history remains L6. |
+| **allications/applications/** | Directory for applications the object makes outward: for funding, review, admission, or of its method to an outside case. | An application asks something of a named external authority and binds the object to what it claimed; that is not a release. |
+| **allications/communications/** | Directory for communications the object issues outward: statements, correspondence, announcements, answers. | Saying something outward is neither releasing nor asking nor discharging a duty to notify. |
+| **allications/specifications/** | Directory for specifications issued outward for others to build or check against. | A specification handed outward becomes a commitment to whoever builds on it, and the version they built against matters afterwards. |
+| **allications/notifications/** | Directory for notices the object issues outward. | A notice usually discharges an obligation; whether it was given, and when, needs one place to be answered. |
+| **allications/participations/** | Directory for the object's participations in external settings: bodies, panels, working groups, collaborations. | Where the object has stood is an external relation with a role and a period, not a release and not a peer binding. |
 
-**[Clarification]** Copyright has one place, governance/copyright/: every copyright or licence condition the bounded object is under is stated there once, with what to do next. governance/licensing/ and governance/restrictions/ point to it rather than restating it.
+**[Clarification]** Copyright has one place, governance/copyright/: every copyright or licence condition the bounded object is under is stated there once, with what to do next. governance/licensing/ and governance/controlled/ point to it rather than restating it.
 
 **[Note]** Author note. Curated sources are served by pointer. A designated archive repository holds the source files; it is bound at private ingress and is read-only from every consuming repository. A consuming repository keeps one ledger row per source at provenance/sources/, with the archive path and the pinned commit, and no source file lives in it.
 
@@ -917,7 +935,7 @@ Reference implementations: https://github.com/aybllc/autonomous and https://gith
 - One locally authored L0 definition each. Autonomous owns L0/semantics/definitions/AUTONOMOUS.md, a plural entry of eleven codified definitions A1–A11 carried in verbatim with their issuing bodies' ownership tags. Auditonomous owns L0/semantics/definitions/AUDITONOMOUS_DEFINITION.md, the local delta over the bound Autonomous root.
 - The binding of the Autonomous definition at Auditonomous's L7/peering/public/ingress/peer-1/object-1/, reference-only, NO EDIT and NO DELETE, under the owner's rule that Auditonomous gets the definitions of autonomous from Autonomous and nowhere else. Autonomous exposes the definition at its L7/peering/public/egress/peer-1/.
 - Curated sources served by pointer from aybllc/l6, bound at each repository's L7/peering/private/ingress/peer-1/; one ledger row per source at L7/provenance/sources/LEDGER.md; no source file in either repository.
-- Copyright in one place, L7/governance/copyright/, with licensing/ and restrictions/ pointing to it.
+- Copyright in one place, L7/governance/copyright/, with licensing/ and controlled/ pointing to it.
 - L5/research/review/ as the catch-all and L5/research/lanes/ as the working position. The queue that preceded them at the repository roots, orphan, foster, results, delete, with its access rules for sessions, is retired at L6/retired/layout-2026-09-06/ in each repository.
 - The records at L6/history/ in each repository, carrying the owner's words verbatim and every move, retirement, deletion, and binding.
 - No rule in either tree about what a session or any other intelligence may touch. The repository file that would carry such rules is held off.
@@ -971,7 +989,7 @@ Supporting-evidence disposition: Git history can support L6 reconstruction, but 
 | origidity; certainty; intolerance | Reserved | Candidate L1 semantics preserved; topology remains unadjudicated. |
 | found; caught; naught | Reserved | caught remains the zero state; found remains the observer role; naught remains the empty or settled state. Their topology remains unadjudicated. |
 | regress | Reserved | Preserved as a prior unadjudicated holding concept; active path and owner remain unadjudicated. |
-| corpus | Split and reserved | Released corpus/publication identity belongs at L7/publications/; the broader inherited term remains reserved where its exact role is not yet adjudicated. |
+| corpus | Split and reserved | Released corpus/publication identity belongs at L7/allications/publications/; the broader inherited term remains reserved where its exact role is not yet adjudicated. |
 | INFRASTRUCTURE | Superseded as L4 name | L4 is Conversion. Infrastructure belongs at L4 only when it is the bounded work or conversion being made; generic repository support is not automatically a layer. |
 | DEVOID; IMMUTABLE; FINITE; INFINITE; IDENTITY BY PROSE; RESEARCH MEMORY; SCIENTIFIC DESKTOP | Descriptive | Preserved as historical mnemonics or working language; the principal layer sheets control ownership. |
 | L6 provenance | Split | Internal reconstructable memory remains L6; external source, authority, prior art, and public provenance belong at L7/provenance/. |

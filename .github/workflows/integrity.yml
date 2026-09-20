@@ -2,7 +2,7 @@ name: integrity
 # Enforces integrity: no unresolved conflict markers, a canonical root, every sheet headed by its path.
 # It does not enforce no-deletion, and must not. The owner, 2026-09-07, quoted as written: "we cant enforce
 # integroty by ebforceing no deletion. we can only imply no deletion to enforcer integiortyty". A deletion is
-# preceded by its enumeration in the record at USO/l6/history/; git keeps the change event.
+# preceded by its enumeration in the record at L8/L6/history/; git keeps the change event.
 on: [push, pull_request]
 jobs:
   invariants:
@@ -45,9 +45,9 @@ jobs:
           echo "sheets checked: $checked"
           lower=l; [ "$top" = "L8" ] && lower=L
           canon="L7 L7/provenance L7/provenance/prior-art L7/provenance/sources L7/provenance/lineage L7/provenance/authority
-                 L7/governance L7/governance/copyright L7/governance/licensing L7/governance/patents L7/governance/permissions L7/governance/access L7/governance/restrictions
+                 L7/governance L7/governance/copyright L7/governance/licensing L7/governance/patents L7/governance/permissions L7/governance/access L7/governance/controlled
                  L7/peering L7/peering/private L7/peering/private/ingress L7/peering/private/egress L7/peering/public L7/peering/public/ingress L7/peering/public/egress
-                 L7/publications
+                 L7/allications L7/allications/publications L7/allications/applications L7/allications/communications L7/allications/specifications L7/allications/notifications L7/allications/participations
                  $top $top/${lower}6 $top/${lower}6/history $top/${lower}6/retired
                  $top/${lower}5 $top/${lower}5/research $top/${lower}5/research/lanes $top/${lower}5/research/review $top/${lower}5/research/findings
                  $top/${lower}5/institution $top/${lower}5/institution/peers $top/${lower}5/institution/undergraduates
