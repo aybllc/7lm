@@ -356,3 +356,15 @@ Done, in the guide. The sheet rule of section 10 is restated: the two things tha
 Not changed. The specification: its clarification "Each local 0.md first identifies the directory/object and its path, then supplies that directory's semantic description" already states the one requirement and leaves the description open. The CI: G-003 already checks the first line and that every canonical position has a sheet, and checks nothing after the first line — the requirement, not the recommendation. The sheets of this repository, all of them.
 
 Read, not resolved. The owner's "You may remove them, and list them in HOA" is read here as the pushed items an adopter declines, listed in their record, and not as the directories of the pushed tree, which the same words call required. The recommendation is stated for layers; whether it reaches the desk and the interior is not stated by the owner and is not stated in the guide.
+
+## 28. 2026-09-20 — the sheet templates, at three degrees
+
+The owner, 2026-09-20, quoted as written: "I love your 0.md but we can't make it the default :) we can make a template default in various degrees of control issues users have"
+
+Done. `L8/L6/7lm-sheet-templates.md`, beside the guide at L6 as source material an adopter takes. Three degrees. Minimal: the requirement and the recommendation and nothing else — the path, then one sentence more than the layer's number — with a one-sentence example at L0 and a two-sentence example at L1. Standard: the four questions under their own headings, what this directory is, why it exists, holds, does not hold, with a filled example at L4. Full: the form this repository's sheets take — the object line, the four questions, the boundary, the standing — with a layer sheet's additions named and the worked examples pointed to rather than reproduced, `L7/allications/notifications/0.md` for a position and `L8/L0/0.md` for a layer. The default sheet for a new repository is a template at the degree its owner chooses; this repository's sheets are at the full degree by its own choice, and that is not the default.
+
+Done, in the guide. The sheet rule of section 10 names the templates and states the default. Step 1 of "Start a new bounded object" in section 11 says the sheets come from a template at the degree the owner chooses, the scaffold's own sheets being the fullest and keeping them one choice. `L8/L6/0.md` lists the templates among what the layer holds.
+
+Not changed. The specification, the CI, and every sheet. The templates are not sheets: no `0.md` is added, and the one CI check reads nothing in them.
+
+Read, not resolved. "various degrees" is taken as three; the number is the owner's to change. The recommendation's sentence count is applied in the templates to every sheet within a layer at that layer's number — `L8/L1/state-space/0.md` at two, like `L8/L1/0.md` — where the owner stated the count for layers and did not say whether a sub-position takes its layer's number.

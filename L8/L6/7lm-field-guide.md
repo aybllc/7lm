@@ -452,7 +452,7 @@ In the tree below, `/0` after a folder name means that folder carries its `0.md`
 
 Every folder has a `0.md`. Two things about it are not design choices. The sheet exists, in every folder of the tree the scaffold pushes. And its first line is the folder's own path from the root, written like `# L8/L3/engineering-mathematics/`. Keep the tree and keep the sheets so, and the repository is a 7LM repository. Drop either and it has branched outside the system: the work may be good research, but it is not how this system works, and it is not supported or developed as part of it.
 
-After the first line the sheet states the space of the folder and what it does. How much it says is a design choice. The recommendation is at least one sentence more than the layer's number: one sentence at L0, two at L1, three at L2, and so on up. The sheets in `aybllc/7lm` say a great deal more than that; that is this repository's choice, and it binds no one else.
+After the first line the sheet states the space of the folder and what it does. How much it says is a design choice. The recommendation is at least one sentence more than the layer's number: one sentence at L0, two at L1, three at L2, and so on up. The sheets in `aybllc/7lm` say a great deal more than that; that is this repository's choice, and it binds no one else. The default sheet for a new repository is a template, not the scaffold's own sheet: three templates, one at each degree, are beside this guide at `L8/L6/7lm-sheet-templates.md`, and the owner of the repository chooses the degree.
 
 A sheet is a working document. It is read while filing, and it belongs to its folder: when the folder moves, the sheet moves with it. It is not a support document. Support is help for things that break, and it is a service to users; 7LM does not provide one. Its users are researchers working self-service, and a researcher whose work warrants technical support has an institution that provides it.
 
@@ -491,7 +491,7 @@ A retired set under `L8/L6/retired/<name>/` keeps its old sheets exactly as they
 
 ### Start a new bounded object
 
-1. Copy the full layout, leaving the folders you do not need empty.
+1. Copy the full layout, leaving the folders you do not need empty. Write each folder's sheet from a template at the degree you choose (`L8/L6/7lm-sheet-templates.md`); the scaffold's own sheets are the fullest degree, and keeping them is one choice.
 2. Write the object's own definition under `L8/L0/semantics/definitions/`. If none has been authored yet, leave the folder empty. Do not populate it with another object's definition.
 3. Move outward only as each layer settles its promise.
 
