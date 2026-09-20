@@ -450,9 +450,11 @@ In the tree below, `/0` after a folder name means that folder carries its `0.md`
 
 ### The sheet rule
 
-Every folder has a `0.md`. Its first line is that folder's own path, written like `# L8/L3/engineering-mathematics/`. After that the sheet states the space of the folder and what it does: what the folder is, why it exists, what it holds, and what it does not hold. That is all a sheet states.
+Every folder has a `0.md`. Two things about it are not design choices. The sheet exists, in every folder of the tree the scaffold pushes. And its first line is the folder's own path from the root, written like `# L8/L3/engineering-mathematics/`. Keep the tree and keep the sheets so, and the repository is a 7LM repository. Drop either and it has branched outside the system: the work may be good research, but it is not how this system works, and it is not supported or developed as part of it.
 
-A sheet is a working document. It is read while filing, and it belongs to its folder: when the folder moves, the sheet moves with it. It is not a support document. It does not explain the model, teach it, or say what to do when something breaks. Support is help for things that break, and it is a service to users; 7LM does not provide one. Its users are researchers working self-service, and a researcher whose work warrants technical support has an institution that provides it.
+After the first line the sheet states the space of the folder and what it does. How much it says is a design choice. The recommendation is at least one sentence more than the layer's number: one sentence at L0, two at L1, three at L2, and so on up. The sheets in `aybllc/7lm` say a great deal more than that; that is this repository's choice, and it binds no one else.
+
+A sheet is a working document. It is read while filing, and it belongs to its folder: when the folder moves, the sheet moves with it. It is not a support document. Support is help for things that break, and it is a service to users; 7LM does not provide one. Its users are researchers working self-service, and a researcher whose work warrants technical support has an institution that provides it.
 
 ### The one CI check
 
@@ -547,6 +549,7 @@ Find the first layer where a promise breaks, and fix it there. The specification
 - **Bounded object.** One research thing with a clear edge: a definition, a theory, a project. Each 7LM repository is about exactly one, and when this guide says "the object," that is what it means.
 - **Owner.** The person who runs a 7LM repository and decides what gets filed where. A definition's owner is the object that wrote it.
 - **HOA.** Human-only actions: the owner's marker for a step a person takes and nothing else does. Filing is one. Taking this guide from L6 and publishing a version of it is another.
+- **Design choice.** What the model leaves to the owner of a repository. What a sheet says after its first line, the version of this guide an adopter publishes and where, and whether a position is used at all are design choices. The tree and the sheets' first lines are not.
 - **USO.** The interior of a bounded object, living in `L8/`.
 - **Sheet.** A `0.md` file, one per folder, stating the space of that folder and what it does. A working document, not a support document.
 - **Rail.** One of the four L0 tracks: ontology, semantics, epistemic, universality.
@@ -589,7 +592,7 @@ Find the first layer where a promise breaks, and fix it there. The specification
 
 **Reading the README for the layout.** The sheets state the layout. The README states the reading order and nothing more.
 
-**Reading a sheet as a support document.** A sheet states the space of its folder and what it does. It does not explain the model, and it does not say what to do when something breaks.
+**Reading a sheet as a support document.** A sheet states the space of its folder and what it does. Help for something that has broken is not what it is for.
 
 **Reading the archive's name, `l6`, as a layer name.** `aybllc/l6` is a separate repository. `L8/L6/` is the layer. The names collide; the things are unrelated.
 
@@ -598,6 +601,8 @@ Find the first layer where a promise breaks, and fix it there. The specification
 ## 14. Where it is used today
 
 **`aybllc/7lm`** is the scaffold, holding the specification, one sheet for every canonical position, and this guide at L6 as the source each adopter takes. The other repositories mirror it, by hand: the scaffold is updated first and alone, and the others are brought into step when the owner judges it close to settled.
+
+How a push from the scaffold is meant to reach an adopter, once the mechanism exists. The scaffold's update arrives, pinned to its hashes, as an item for HOA review at the adopter's `L7/peering/private/`: the scaffold is a peer, and its push is ingress. A person decides, item by item, to follow or to edit. The pushed tree is required; taking up everything in it is not, and what the person declines is listed in their HOA record rather than dropped without a trace. Automating that review instead of doing it runs the risk the review exists to catch: a directory created outside the canon, which is an easy fix and a bad pull request. The path is meant to run the other way as well: an action from the scaffold collects the adopter's working guide, the version they actually work from, through their HOA, so that the source at L6 can learn from it. None of this is built. Today the mirroring is by hand, and what each adopter does with their guide is, as before, their design choice.
 
 **`aybllc/autonomous`** defines the word *autonomous* out of codified standards, meaning standards written down by standards bodies. The nine bodies whose clauses feed that definition are bound as peers at public ingress, and the definition itself is exposed at public egress.
 
