@@ -1,6 +1,6 @@
 # The Seven-Layer Model: Sheet Templates
 
-A sheet is the `0.md` in a folder. Two things about it are not design choices: it exists, in every folder of the tree the scaffold pushes, and its first line is the folder's own path from the root, written like `# L8/L3/engineering-mathematics/`. Everything after the first line is a design choice. The recommendation is at least one sentence more than the layer's number — one at L0, two at L1, three at L2, and so on — stating the space of the folder and what it does.
+A sheet is the `0.md` in a folder. Two things about it are not design choices: it exists, in every folder of the tree the scaffold pushes, and its first line is the folder's own path from the root, written like `# L8/L3/engineering-mathematics/`. Everything after the first line is a design choice. For a layer's own sheet, `L8/L0/0.md` through `L8/L6/0.md`, the recommendation is at least one sentence more than the layer's number — one at L0, two at L1, three at L2, and so on — stating the space of the folder and what it does. A folder beneath a layer is a design choice through and through: its sheet may be blank, the first line and nothing else. A blank sheet is skipped, and is tagged at the end of the document that collects the sheets as an audit exception for HOA review.
 
 A new repository's sheets start at the degree its owner chooses. Three degrees are given here. The sheets of `aybllc/7lm` are complete, detailed, and rigorous: the full degree. Where a template and the specification differ, the specification controls.
 
@@ -12,7 +12,7 @@ A template here is the content of a sheet, at a degree. The form in which all of
 
 ## Minimal
 
-The requirement and the recommendation, and nothing else. The first line is the path. The body is one sentence more than the layer's number, stating the space of the folder and what it does.
+The requirement and the recommendation, and nothing else. For a layer's own sheet, the first line is the path and the body is one sentence more than the layer's number, stating the space of the folder and what it does.
 
 ```markdown
 # <path from root>/
@@ -23,24 +23,32 @@ The requirement and the recommendation, and nothing else. The first line is the 
 At L0, one sentence:
 
 ```markdown
-# L8/L0/semantics/definitions/
+# L8/L0/
 
-Definitions this object authored itself under its Semantic rail; a definition someone else owns is bound at the desk and never copied here.
+What this object means before anything else is said: the ontological, semantic, epistemic, and universality distinctions it authored itself, and only those.
 ```
 
 At L1, two:
 
 ```markdown
-# L8/L1/state-space/
+# L8/L1/
 
-The admissible states of this object, the states excluded, and the invariants that hold across them. Nothing moves here; transitions begin at L2.
+The states this object admits under the contract L0 established, the states it excludes, and the invariants that hold across them. Nothing moves here; transitions begin at L2.
 ```
+
+For a folder beneath a layer, the minimal sheet is blank: the first line and nothing else.
+
+```markdown
+# L8/L1/state-space/
+```
+
+A blank sheet passes the one CI check, which reads the first line and nothing after it. It is skipped, and it is tagged at the end of the document that collects the sheets as an audit exception for HOA review: a person sees the list of what was left blank and decides.
 
 ---
 
 ## Standard
 
-The four questions a filer asks of a folder, each under its own heading. The first line is the path.
+The four questions a filer asks of a folder, each under its own heading. The first line is the path. This degree and the full one serve a layer's own sheet and a folder beneath it alike.
 
 ```markdown
 # <path from root>/

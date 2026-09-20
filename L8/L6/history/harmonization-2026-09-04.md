@@ -382,3 +382,17 @@ Done. The templates file and section 10 of the guide no longer say "not the defa
 Not changed. Everything else. Nothing is built.
 
 Read, not resolved. "Delarers choice" is read as the repository owner's choice, which "dealer's choice" and "declarer's choice" both give; whether "declarer" is a term the owner means for the one who declares a bounded object is not settled here.
+
+## 30. 2026-09-20 — folders beneath a layer: design choices; blank with the location; audit exceptions for HOA review
+
+The owner, 2026-09-20, the first line of the message quoted as written: "I left out sub folders because those are design choices but they should all either be blank with just the location this being skipped and tagged at the end of the doc as an adult xception for HOA review"
+
+§28 read the sentence recommendation as reaching every sheet within a layer at that layer's number. The owner left the folders beneath a layer out on purpose: they are design choices, and the recommendation is for a layer's own sheet, `L8/L0/0.md` through `L8/L6/0.md`. A folder beneath a layer keeps its sheet — the tree and the first line are not design choices — and the sheet may be blank, the first line and nothing else. A blank sheet is skipped, and it is tagged at the end of the document that collects the sheets as an audit exception for HOA review. The document is the one meant one day (§29), the republishing of every sheet; the review is a person's, as every step is for now.
+
+Done, in the templates. The header states the recommendation for a layer's own sheet and the blank form for a folder beneath it. The minimal degree's two examples, which had been folders beneath a layer at their layer's count, are now the layer sheets `L8/L0/0.md` in one sentence and `L8/L1/0.md` in two; a third example is the blank sheet, `# L8/L1/state-space/` and nothing else, with the note that it passes the one CI check, which reads the first line and nothing after it. The standard degree says it and the full degree serve a layer's own sheet and a folder beneath it alike.
+
+Done, in the guide. The sheet rule of section 10 states the same. The vocabulary gains "Audit exception". Section 13 gains the error of leaving a folder without a sheet: a blank sheet is an audit exception, a missing sheet is a folder outside the system.
+
+Not changed. The CI: a blank sheet already passes G-003, and no check is added to report blank sheets — the tag belongs to the collecting document, not to the check, and for now everything is HOA. The specification. Every sheet of this repository, none of which is blank.
+
+Read, not resolved. "adult xception" is read as "audit exception", the term the guide and the templates now use; the owner's spelling is kept in the quotation. "the doc" is read as the document that collects the sheets, meant one day; where a person keeps the list of blank sheets until then is not stated by the owner and is not stated here.

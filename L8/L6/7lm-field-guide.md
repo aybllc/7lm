@@ -452,7 +452,7 @@ In the tree below, `/0` after a folder name means that folder carries its `0.md`
 
 Every folder has a `0.md`. Two things about it are not design choices. The sheet exists, in every folder of the tree the scaffold pushes. And its first line is the folder's own path from the root, written like `# L8/L3/engineering-mathematics/`. Keep the tree and keep the sheets so, and the repository is a 7LM repository. Drop either and it has branched outside the system: the work may be good research, but it is not how this system works, and it is not supported or developed as part of it.
 
-After the first line the sheet states the space of the folder and what it does. How much it says is a design choice. The recommendation is at least one sentence more than the layer's number: one sentence at L0, two at L1, three at L2, and so on up. The sheets in `aybllc/7lm` say a great deal more than that: they are complete, detailed, and rigorous — the full degree — and they bind no one else's. A new repository's sheets start at the degree its owner chooses; three templates, one at each degree, are beside this guide at `L8/L6/7lm-sheet-templates.md`.
+After the first line the sheet states the space of the folder and what it does. How much it says is a design choice. For a layer's own sheet, `L8/L0/0.md` through `L8/L6/0.md`, the recommendation is at least one sentence more than the layer's number: one sentence at L0, two at L1, three at L2, and so on up. A folder beneath a layer is a design choice through and through, and its sheet may be blank: the first line and nothing else. A blank sheet is skipped, and it is tagged at the end of the document that collects the sheets as an audit exception for HOA review — a person's review, as every step is for now. The sheets in `aybllc/7lm` say a great deal more than that: they are complete, detailed, and rigorous — the full degree, every one of them — and they bind no one else's. A new repository's sheets start at the degree its owner chooses; three templates, one at each degree, are beside this guide at `L8/L6/7lm-sheet-templates.md`.
 
 A sheet is a working document. It is read while filing, and it belongs to its folder: when the folder moves, the sheet moves with it. It is not a support document. Support is help for things that break, and it is a service to users; 7LM does not provide one. Its users are researchers working self-service, and a researcher whose work warrants technical support has an institution that provides it.
 
@@ -550,6 +550,7 @@ Find the first layer where a promise breaks, and fix it there. The specification
 - **Owner.** The person who runs a 7LM repository and decides what gets filed where. A definition's owner is the object that wrote it.
 - **HOA.** Human-only actions: the owner's marker for a step a person takes and nothing else does. Filing is one. Taking this guide from L6 and publishing a version of it is another.
 - **Design choice.** What the model leaves to the owner of a repository. What a sheet says after its first line, the version of this guide an adopter publishes and where, and whether a position is used at all are design choices. The tree and the sheets' first lines are not.
+- **Audit exception.** A blank sheet beneath a layer — the first line and nothing else — listed at the end of the document that collects the sheets, for HOA review.
 - **USO.** The interior of a bounded object, living in `L8/`.
 - **Sheet.** A `0.md` file, one per folder, stating the space of that folder and what it does. A working document, not a support document.
 - **Rail.** One of the four L0 tracks: ontology, semantics, epistemic, universality.
@@ -593,6 +594,8 @@ Find the first layer where a promise breaks, and fix it there. The specification
 **Reading the README for the layout.** The sheets state the layout. The README states the reading order and nothing more.
 
 **Reading a sheet as a support document.** A sheet states the space of its folder and what it does. Help for something that has broken is not what it is for.
+
+**Leaving a folder without a sheet.** A sheet beneath a layer may be blank, the first line and nothing else, and a blank sheet is an audit exception for HOA review. A missing sheet is a folder outside the system.
 
 **Reading the archive's name, `l6`, as a layer name.** `aybllc/l6` is a separate repository. `L8/L6/` is the layer. The names collide; the things are unrelated.
 
