@@ -6,7 +6,7 @@ This file is the start, not the documentation. The documentation is the sheets: 
 
 Read in this order:
 
-1. `L7/0.md` — the desk, the forward face: provenance, governance, peering, publications.
+1. `L7/0.md` — the desk, the forward face: provenance, governance, peering, allications.
 2. `L8/0.md` — the interior: the seven layers `L6/` down to `L0/`, the count rule, the dependency rules, the tree.
 3. The `0.md` of every directory beneath them.
 

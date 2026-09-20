@@ -97,7 +97,7 @@ def p01():
     s.append(box(118, 138, 592, 54, fill="var(--accent-wash)", stroke="var(--accent)", sw=1.5))
     s.append(t(138, 163, "L7/", 15, MONO, "var(--accent-ink)"))
     s.append(t(182, 163, "the desk &#183; Surface / Forward Face", 13, NARR, "var(--accent-ink)"))
-    s.append(t(138, 182, "provenance &#183; governance &#183; peering &#183; publications", 10.5,
+    s.append(t(138, 182, "provenance &#183; governance &#183; peering &#183; allications", 10.5,
                SANS, "var(--accent-ink)", op=0.85))
     s.append(t(690, 163, "GLUE", 9.5, NARR, "var(--accent)", "end", 1, SMALLCAPS))
     s.append(t(690, 182, "binds outward", 9.5, SANS, "var(--accent-ink)", "end", 0.85))
@@ -249,7 +249,7 @@ TITLEBLOCK = """
   around all of them. Every rule of the model that can be drawn will be drawn here, and here only
   &#8212; one sheet to change when the model changes.</p>
   <dl class="specs">
-    <div><dt>Source</dt><dd>The Harmonized Authoritative Architecture Specification, version of 13 September 2026</dd></div>
+    <div><dt>Source</dt><dd>The Harmonized Authoritative Architecture Specification, version of 20 September 2026</dd></div>
     <div><dt>Repository</dt><dd class="mono">aybllc/7lm</dd></div>
     <div><dt>Plates</dt><dd>1 &#183; the eight positions</dd></div>
     <div><dt>Standing</dt><dd>Everything drawn here is in the specification. The tree stands as it has it: <span class="mono">L7/</span> and <span class="mono">L8/</span> siblings at the root, <span class="mono">L8/</span> holding the interior. The packet reading &#8212; origin, payload, glue, connector, and L8 as the envelope &#8212; entered its text on 13 September 2026.</dd></div>

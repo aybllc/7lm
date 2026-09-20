@@ -278,7 +278,7 @@ Notation: /0 means the directory carries its local 0.md human-readable semantic 
 
 Canonical-tree rule. Unused now does not mean removed. The same complete topology is available to Autonomous, Auditonomous, OMMP, classroom research, institutional research, and future research repositories.
 
-**[Clarification]** README.md is where a reader starts; it is not the documentation. The documentation is the sheets, one 0.md per directory, and this specification. The README states what the repository is, the reading order (the desk L7/0, the interior L8/0, then every sheet), the root, and where the prior README is, and nothing else. The root holds README.md, L7/, and L8/, and may hold repository infrastructure that is not a layer: the one CI check at .github/workflows/integrity.yml, which refuses unresolved conflict markers, a root that is not canonical, and a sheet whose heading is not its path, reports directories without a sheet, and moves nothing; and .gitignore. Every 7LM repository has the same root.
+**[Clarification]** README.md is where a reader starts; it is not the documentation. The documentation is the sheets, one 0.md per directory, and this specification. The README states what the repository is, the reading order (the desk L7/0, the interior L8/0, then every sheet), the root, and where the prior README is, and nothing else. The root holds README.md, L7/, and L8/, and may hold repository infrastructure that is not a layer: the one CI check at .github/workflows/integrity.yml, which refuses unresolved conflict markers, a root that is not canonical, a sheet whose heading is not its path, and a canonical position without a sheet, reports any other directory without a sheet, and moves nothing; and .gitignore. Every 7LM repository has the same root.
 
 **[Research Note]** Each /0 begins with the object directory and path: /data/location/object
 
@@ -740,7 +740,7 @@ External provenance, public/legal governance, peering, publications, exposure, a
 
 | **Owns / represents** | **Permitted actions** | **Acceptance / boundary check** |
 |---|---|---|
-| - provenance: prior art, sources, lineage, authority<br>- public/legal governance: copyright, licensing, patents, permissions, access, restrictions<br>- peering: exposure/custody, ingress/egress, peer/object bindings<br>- publications and release identity | - receive, bind, attribute, disclose, present, publish, release, route<br>- record provenance and prior art<br>- apply public/legal permissions and restrictions<br>- authorize, deny, quarantine, retire a binding without deleting its history | - Source, version, authority, and provenance are explicit where required.<br>- Applicable public/legal governance is explicit where required.<br>- External ingress is not silently admitted to L6-L0.<br>- Publication or legal status does not strengthen scientific evidence.<br>- Unused canonical branches may remain empty without implying failure. |
+| - provenance: prior art, sources, lineage, authority<br>- public/legal governance: copyright, licensing, patents, permissions, access, controlled<br>- peering: exposure/custody, ingress/egress, peer/object bindings<br>- allications: the outward acts, of which publication is one | - receive, bind, attribute, disclose, present, publish, release, route<br>- record provenance and prior art<br>- apply public/legal permissions and restrictions<br>- authorize, deny, quarantine, retire a binding without deleting its history | - Source, version, authority, and provenance are explicit where required.<br>- Applicable public/legal governance is explicit where required.<br>- External ingress is not silently admitted to L6-L0.<br>- Publication or legal status does not strengthen scientific evidence.<br>- Unused canonical branches may remain empty without implying failure. |
 
 **Directory structure**
 
@@ -782,7 +782,7 @@ L7/0
     └── participations/0
 ```
 
-**[Boundary Rule]** Boundary / traversal rule. L7 is the forward face outside the USO. It owns the external relations of the bounded object: provenance, governance, peering, and publication state. Public/private exposure and ingress/egress direction remain independent peering distinctions. L7 does not thereby acquire or change the lower-layer scientific meaning.
+**[Boundary Rule]** Boundary / traversal rule. L7 is the forward face outside the USO. It owns the external relations of the bounded object: provenance, governance, peering, and allications — the outward acts, of which publication is one. Public/private exposure and ingress/egress direction remain independent peering distinctions. L7 does not thereby acquire or change the lower-layer scientific meaning.
 
 #### In the case of:
 
@@ -800,7 +800,7 @@ L7/peering/
     └── egress/peer-1/object-1/
 ```
 
-Public ingress is the natural peering position for externally owned, publicly available definitions or peer objects. Private ingress is available for controlled inbound material. Public egress handles outward public exchange toward peers; private egress supports restricted outbound exchange. Released publications are represented by the L7 publications branch, while provenance and public/legal governance remain separately addressable.
+Public ingress is the natural peering position for externally owned, publicly available definitions or peer objects. Private ingress is available for controlled inbound material. Public egress handles outward public exchange toward peers; private egress supports restricted outbound exchange. Released publications are represented by L7/allications/publications/, while provenance and public/legal governance remain separately addressable.
 
 **[Note]** Peer-object contract. peer-1 identifies the external peer and object-1 identifies the bounded object exposed by that peer. The object may be a document, database, foreign/federated data endpoint, or repository. A peer-owned ingress object is bound/reference-only: NO EDIT and NO DELETE by the receiving repository. Retirement or supersession of the internal binding history is preserved at L8/L6/retired/ rather than erased.
 
@@ -865,7 +865,7 @@ An upstream change creates a new binding; it does not mutate the pinned object. 
 | **private/egress/** | Private outbound peering position. | Represents something leaving toward a peer without making it a public release. |
 | **public/** | Peering branch for public exposure or custody. | Keeps public exposure distinct from whether the object is entering or leaving. |
 | **public/ingress/** | Public inbound peering position. | Represents a publicly exposed external object entering the local boundary without transferring ownership. |
-| **public/egress/** | Public outbound peering position. | Represents public outward exchange toward a peer; the released publication object itself is held by the L7 publications branch. |
+| **public/egress/** | Public outbound peering position. | Represents public outward exchange toward a peer; the released publication object itself is held by L7/allications/publications/. |
 | ***/peer-1/** | Directory identifying the external peer within an ingress or egress position. | Keeps peer identity distinct from the particular object exchanged with that peer. |
 | ***/peer-1/object-1/** | Directory identifying one bounded peer-owned or peer-directed object. | Allows one peer to expose or receive multiple objects without treating the peer itself as the object. Peer-owned ingress is reference/binding only: NO EDIT and NO DELETE by the receiving repository. |
 | **allications/** | Directory for the bounded object's outward acts: publications, applications, communications, specifications, notifications, participations. | Each is a nominalized outward act that leaves an addressable record. One family, one place, the six senses kept distinct within it. |
@@ -903,7 +903,7 @@ This direction preserves ownership and makes interpretation inspectable. It also
 
 ### Forward-face model
 
-L7 is the desk: the current external surface where finished work, external bindings, provenance, governance, peering, and publications become addressable without moving their scientific meaning out of the USO.
+L7 is the desk: the current external surface where finished work, external bindings, provenance, governance, peering, and allications become addressable without moving their scientific meaning out of the USO.
 
 Conceptual distinctions include consumer <-> product; customer <-> service; request <-> response; need <-> offer; incoming object <-> outgoing object; and private custody <-> public exchange.
 
@@ -935,7 +935,7 @@ Reference implementations: https://github.com/aybllc/autonomous and https://gith
 - One locally authored L0 definition each. Autonomous owns L0/semantics/definitions/AUTONOMOUS.md, a plural entry of eleven codified definitions A1–A11 carried in verbatim with their issuing bodies' ownership tags. Auditonomous owns L0/semantics/definitions/AUDITONOMOUS_DEFINITION.md, the local delta over the bound Autonomous root.
 - The binding of the Autonomous definition at Auditonomous's L7/peering/public/ingress/peer-1/object-1/, reference-only, NO EDIT and NO DELETE, under the owner's rule that Auditonomous gets the definitions of autonomous from Autonomous and nowhere else. Autonomous exposes the definition at its L7/peering/public/egress/peer-1/.
 - Curated sources served by pointer from aybllc/l6, bound at each repository's L7/peering/private/ingress/peer-1/; one ledger row per source at L7/provenance/sources/LEDGER.md; no source file in either repository.
-- Copyright in one place, L7/governance/copyright/, with licensing/ and controlled/ pointing to it.
+- Copyright in one place, L7/governance/copyright/, with licensing/ and restrictions/ (the position this specification now names controlled/) pointing to it.
 - L5/research/review/ as the catch-all and L5/research/lanes/ as the working position. The queue that preceded them at the repository roots, orphan, foster, results, delete, with its access rules for sessions, is retired at L6/retired/layout-2026-09-06/ in each repository.
 - The records at L6/history/ in each repository, carrying the owner's words verbatim and every move, retirement, deletion, and binding.
 - No rule in either tree about what a session or any other intelligence may touch. The repository file that would carry such rules is held off.
@@ -947,7 +947,7 @@ Face. Public ingress peer-1 to peer-9: the issuing bodies whose clauses are boun
 
 Interior. L6: the master ledger, five forensic reconstructions, the two records, two retired layouts, and four definition error records. L5: six lanes; the reviews, audits, and adjudications; seven findings. L4: the manuscript placeholder, the autonomy scale (an L4 object by the owner's ruling), and one deep-research run. L3: two engineering-mathematics notes. L2: an empty formulas ledger. L1: empty, its dimensions fixed by content inside four L5 findings. L0: the definition with its companions and a universality scope statement.
 
-Not yet as stated. The catch-all holds material that belongs to other objects: Autonomous Theory, one work and not the definition of autonomous, whose home the owner has not named; a template of the Auditonomous definition; and the owner's notes on memory consolidation with conserved uncertainty. Each leaves on the owner's word. The provenance rows for the bound issuing bodies are not yet ledgered.
+Not yet as stated. The catch-all holds material that belongs to other objects: Autonomous Theory, one work and not the definition of autonomous, whose home the owner has not named; a template of the Auditonomous definition; and the owner's notes on memory consolidation with conserved uncertainty. Each leaves on the owner's word. The provenance rows for the bound issuing bodies are not yet ledgered. The desk carries the L7 branch names of the version before 20 September 2026, publications/ as a direct branch and governance/restrictions/; the L7 restructure is not yet mirrored.
 
 **Auditonomous** (aybllc/auditonomous)
 
@@ -955,7 +955,7 @@ Face. Public ingress peer-1: aybllc/autonomous, the definition of autonomous, bo
 
 Interior. L6: the master index, three session ledgers, the two records, two retired layouts. L5: two lanes; two reviews and the status ladder carried verbatim; three findings. L4: drafts, chat transcripts, a session record, three requirements extractions, and one deep-research run with its exports. L3: a proposal and an external-priors note. L2: an empty formulas ledger. L1: the auditon envelope, the substitutability states, and the requirements partition. L0: the one locally authored definition; the other rails empty.
 
-Not yet as stated. The binding of the Autonomous definition names the path the peer used before its own 7LM layout, research/definitions/AUTONOMOUS.md at 0504961; the same object now stands at the peer's L0/semantics/definitions/AUTONOMOUS.md, and rebinding to a current version is the owner's act. The binding record says three files still take a definition of autonomous from somewhere other than the binding. The catch-all holds two Autonomous Theory files that leave once that work's home is named. The L0 epistemic rail is empty; its vocabulary stands at L5 as review status.
+Not yet as stated. The binding of the Autonomous definition names the path the peer used before its own 7LM layout, research/definitions/AUTONOMOUS.md at 0504961; the same object now stands at the peer's L0/semantics/definitions/AUTONOMOUS.md, and rebinding to a current version is the owner's act. The binding record says three files still take a definition of autonomous from somewhere other than the binding. The catch-all holds two Autonomous Theory files that leave once that work's home is named. The L0 epistemic rail is empty; its vocabulary stands at L5 as review status. The desk carries the L7 branch names of the version before 20 September 2026, publications/ as a direct branch and governance/restrictions/; the L7 restructure is not yet mirrored.
 
 **What the exemplars show**
 
