@@ -426,3 +426,28 @@ Named, as proposed in answer to the owner's "can you help me":
 - **One generator, many plates.** The guide's rule that the plate sheet is the only place the model is drawn survives as single-source, not single-file: each `1.md` carries a plate emitted by the one generator.
 
 The owner, on the proposal, quoted as written: "I didn't mean to say hold off....TYPO. I LIKED WHAT YOU DID. Go back through and make sure we make the right decisions" — the "hold off" of the message recorded in §33 being the typo named here. The check the owner asked for is running as a read-only design review: six lenses attack the decisions, two skeptics test every objection, one synthesis returns a verdict per decision and a build order. Its findings come to the owner as proposals.
+
+## 33. 2026-09-20 — the plate assignments; lineage, the one of one; allics; definitions' one home; the library plate
+
+The owner, 2026-09-20, quoted as written:
+
+```text
+Allications is meant to be expanded by HOA so that should have 1. Governance, peering, provenance(lineage gets HOA input only, delivered blank. 0.md stars we can't possibly know how you'll use it and that's kind of a big deal, so that's yours and probably one of one that never gets one.
+
+L0 actually may have unlimited tics, ics, gics we start with the main ones. L0 gets 1. Hold off on making them for the allics (all-ics) sound all- icks like all-ations, allations . 
+
+Definitions don't necessarily go under any particular allicks. N fact, a separate dir needs to established for the one location that houses definitions, the ideas, uncertainty etc. the allicks are meant to bridge why where how decisions are made to define the things. And to slide up and down the uso under an idealogy. L1 gets the biggest. Basic, state space glyphs, we must use this to teach. Hard. State Space is the key!!! It allows minds to make fantastic ideas real within only known formalized math that can be manufactured and if it can't it never leaves l3 as a whole while parts of it may go beyond. Point is. Everything is possible when you pin down reality afterwards with formalized math. Then engineering. Without those two, you don't have physicality thus we aren't worried your trying to build FTL
+```
+
+And, on L6, quoted as written: "L6 needs a layered library infographic like a library and what is where and why. It should also provide historical reasons why things were selected. How to form, as branches I don't see being used in the same way as 7lm. It's almost all or nothing or all and editing so that nothing is lost"
+
+Recorded, not applied. Named:
+
+- **Allications** — a `1.md`, yes: the family is meant to be expanded by HOA, so the picture of it matters.
+- **Governance, peering, provenance** — a `1.md` each. Peering: one landscape, unless two.
+- **Lineage, the one of one.** `L7/provenance/lineage/` takes HOA input only and is delivered blank: 7lm cannot know how an adopter will use lineage, "and that's kind of a big deal, so that's yours". It is the one position that never gets a `1.md`. Open, for the owner: this repository's own sheets are to be complete, detailed, and rigorous (§29), so either 7lm's own lineage sheet is the deliberate one exception, blank as the statement that lineage is always the adopter's, or the push blanks it on the way out.
+- **L0 and the allics.** L0 gets a `1.md`. Its family of -ics — "tics, ics, gics" — is unlimited in principle; the main ones first. The owner's name for the family: allics, all-ics, sounding all-icks, beside allications, all-ations. Naming only; no directory changes.
+- **Definitions' one home.** Definitions do not belong under any one -ics. A separate directory is to be established as the one location housing "definitions, the ideas, uncertainty etc."; the allics bridge the why, where, and how of the decisions that define things and slide up and down the USO under an ideology. Open, for the owner: where the home sits, and whether "the ideas, uncertainty etc." names definitions of those terms or the things themselves. This is the one decision of the evening that changes the canonical tree, the CI canon list, and sheets; it waits.
+- **L1, the biggest.** Basic state-space glyphs, to teach. "State Space is the key!!!" Its brief is in §34.
+- **L6, the layered library.** A picture like a library: the shelves — history/, retired/, in/ — and what is where and why; the historical reasons things were selected (retire rather than delete; git is not scientific memory; nothing deleted before it is enumerated); how an L6 forms over time, as branches — the specification's branch history and decision history, failed paths, unresolved obligations — which an adopter's will not resemble this repository's; and the mode over the whole, "all or nothing or all and editing so that nothing is lost". Under the hard rule (§31), the picture draws the shape of an L6 and none of this repository's contents: it is the only thing about L6 that travels.
+- **Not yet assigned.** L2, L3, L4, L5; the two roots' own pictures.
