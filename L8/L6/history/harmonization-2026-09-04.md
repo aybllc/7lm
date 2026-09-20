@@ -410,3 +410,19 @@ Done, in the guide. Section 5, the rules that hold everywhere, gains the rule un
 Not changed. Everything else. This guide's pointers to this repository's own records at `L8/L6/history/` stand: they are this repository's guide pointing at this repository's L6, which is the rule kept, not broken. The specification, the CI, every sheet, the templates.
 
 Read. "the job" is read as L6's job, the keeping of a repository's history; "anything" as anything other than that repository's own L6, an automation included. On the same word, the offer made in conversation the same day to run a job that parallelizes as a workflow of agents is withdrawn: for now everything is HOA.
+
+## 32. 2026-09-20 — the second file: `1.md`, and base dirs
+
+The owner, 2026-09-20, quoted as written: "I am thinking we may use a 1.md as needed, defaults provided for root and base for that carry subs, the subs would not carry default and are user generated. 1.md is an info graphic of everything the dir and sub dirs do. A dir with sub for May have a sub for that becomes a base dir. A base dir cannot occupy root. That would collide their names and references. A base dir is any dir 7lm assigned a default 1.md for and any HOA rules etc. As normal. We may push ew base dir as needed. I'm thinking a base dir is a category of one part of the whole thing. I can't define it yet, can you help me so that every dir does not carry a 1.md for instance peering only needs one kick ass info graphic in landscape detail unless r two"
+
+Recorded, not applied. Nothing in the tree, the sheets, the guide, the templates, the specification, or the CI changes on this section; the owner's standing instruction of the same evening (§36) is that the system is not changed without asking, and the design review named below has not returned.
+
+Named, as proposed in answer to the owner's "can you help me":
+
+- **The second file.** `1.md` is a directory's second file, as `0.md` is its first, by the count rule: 0 states what the space is; 1 shows what is admissible beneath it and what it does. It is an infographic of everything the directory and its subdirectories do — function and flows, not the tree, which the layer sheets already draw in text. Landscape.
+- **Base dir.** A directory that names one part of the whole — a category — and for which 7lm ships a default `1.md`. Proposed criterion: the canonical children of the two roots. `L7/`: provenance/, governance/, peering/, allications/. `L8/`: L0/ through L6/. Eleven base dirs, two roots. The repository root gains nothing, so a base dir is never at root and no name or reference collides.
+- **Sub.** Any directory beneath a base dir. Carries no default `1.md`; the base dir's picture covers it. A sub's `1.md`, if an adopter writes one, is theirs — a design choice, like a sub-folder's sheet.
+- **Promotion.** A sub becomes a base dir when one picture stops serving; 7lm pushes it with its default, HOA-reviewed like any push; the parent's picture shrinks to the picture of the split. Peering is the test: one landscape unless two.
+- **One generator, many plates.** The guide's rule that the plate sheet is the only place the model is drawn survives as single-source, not single-file: each `1.md` carries a plate emitted by the one generator.
+
+The owner, on the proposal, quoted as written: "I didn't mean to say hold off....TYPO. I LIKED WHAT YOU DID. Go back through and make sure we make the right decisions" — the "hold off" of the message recorded in §33 being the typo named here. The check the owner asked for is running as a read-only design review: six lenses attack the decisions, two skeptics test every objection, one synthesis returns a verdict per decision and a build order. Its findings come to the owner as proposals.
