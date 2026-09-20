@@ -368,3 +368,17 @@ Done, in the guide. The sheet rule of section 10 names the templates and states 
 Not changed. The specification, the CI, and every sheet. The templates are not sheets: no `0.md` is added, and the one CI check reads nothing in them.
 
 Read, not resolved. "various degrees" is taken as three; the number is the owner's to change. The recommendation's sentence count is applied in the templates to every sheet within a layer at that layer's number — `L8/L1/state-space/0.md` at two, like `L8/L1/0.md` — where the owner stated the count for layers and did not say whether a sub-position takes its layer's number.
+
+## 29. 2026-09-20 — the degrees confirmed; this repository's sheets complete, detailed, and rigorous; for now everything is HOA
+
+The owner, 2026-09-20, quoted as written: "So various degrees of difficulty. Delarers choice. But eventually, a click at HOA republishes all 0.md into a default format docx that can also be swapped out by the team or we can issue several default ones they can choose. Eventually, an option to put to GitHub project, docs maybe"
+
+And minutes later, quoted as written: "OUR 7Lm 0.md files will be absolutely complete and detailed and rigorous. My mistake. I want clear usage would start at a degree they choose, one day we can do choices for now everything is HOA"
+
+The three degrees stand, and an adopter starts at the degree they choose. This repository's own sheets are complete, detailed, and rigorous — the full degree — and that is what they will be. §28's "not the default" is withdrawn on the owner's "My mistake": the sheets of this repository are not a default that an adopter declines, and an adopter's sheets at a lesser degree are not a lesser form of them; an adopter starts where they choose. What is meant one day, and is not built: at the HOA step, one action republishes every sheet of the repository into a document in a default format, a `.docx`; the format the team's to swap for its own, or the scaffold issuing several to choose from; and later an option to put that out to a GitHub project or, perhaps, a docs site. For now everything is HOA. Two kinds of template are kept distinct: the content of a sheet, at a degree, which `L8/L6/7lm-sheet-templates.md` gives; and the form in which all the sheets are rendered outward, which is not given anywhere yet.
+
+Done. The templates file and section 10 of the guide no longer say "not the default"; they say that an adopter starts at the degree they choose and that this repository's sheets are complete, detailed, and rigorous. Section 14 states what is meant one day, in the paragraph that states the push mechanism, and that for now every step is HOA. The templates file says which kind of template it is and points to the guide for the other. `L8/L6/0.md`'s row for the templates says the same.
+
+Not changed. Everything else. Nothing is built.
+
+Read, not resolved. "Delarers choice" is read as the repository owner's choice, which "dealer's choice" and "declarer's choice" both give; whether "declarer" is a term the owner means for the one who declares a bounded object is not settled here.

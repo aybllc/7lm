@@ -2,9 +2,11 @@
 
 A sheet is the `0.md` in a folder. Two things about it are not design choices: it exists, in every folder of the tree the scaffold pushes, and its first line is the folder's own path from the root, written like `# L8/L3/engineering-mathematics/`. Everything after the first line is a design choice. The recommendation is at least one sentence more than the layer's number — one at L0, two at L1, three at L2, and so on — stating the space of the folder and what it does.
 
-The default for a new repository is a template, at the degree its owner chooses. Three are given here. The sheets of `aybllc/7lm` are written at the full degree; that is this repository's choice and not the default. Where a template and the specification differ, the specification controls.
+A new repository's sheets start at the degree its owner chooses. Three degrees are given here. The sheets of `aybllc/7lm` are complete, detailed, and rigorous: the full degree. Where a template and the specification differ, the specification controls.
 
 A template is copied into the folder as its `0.md`, the angle-bracketed parts replaced, and the brackets removed. Keep the first line exact.
+
+A template here is the content of a sheet, at a degree. The form in which all of a repository's sheets are republished outward is a separate choice; section 14 of the guide states what is meant there one day; for now everything is HOA.
 
 ---
 
