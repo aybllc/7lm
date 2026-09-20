@@ -6,13 +6,15 @@ This guide states what each layer owns, where a given piece of work belongs, and
 
 Everything here is drawn from the specification and from the sheets, the `0.md` files that describe every folder in the `aybllc/7lm` repository. Where this guide and the specification differ, the specification controls.
 
+This guide is filed at `L8/L6/` in `aybllc/7lm`, as a source document. It is not the L0 pedagogy of a repository that uses the model: a repository's `L8/L0/pedagogy/` explains how that one object is traversed and attached, in its own terms, and a guide to the model as a whole is not that. A person who adopts the model takes this guide from L6, applies its updates or leaves them, publishes their own version at their L7 or keeps it at their L6, and secures their L7 surface as part of the same decision. This is the guide before the last one; the last is the one each adopter publishes. The step is taken by a person and by nothing else. The owner marks such steps HOA, human-only actions. Where an adopter's version sits is a design choice of theirs, not a rule of the model.
+
 The diagrams live on their own sheet. The 7LM Plate Sheet is the only place the model is drawn, so there is one sheet to change when the model changes. It carries one plate for now, the eight positions with L8 as the envelope around all of them, and it is filed at `L8/L0/pedagogy/7lm-plate-sheet.html`.
 
 ---
 
 ## 1. What the Seven-Layer Model is
 
-7LM is a directory layout with one rule per position. Every folder has exactly one job. Every folder also carries a description file named `0.md`, called a sheet, which states what belongs in that folder and what does not.
+7LM is a directory layout with one rule per position. Every folder has exactly one job. Every folder also carries a file named `0.md`, called a sheet, which states the space of that folder and what it does. Section 10 says what a sheet is and is not.
 
 Nothing runs on its own. There is no engine and no validator that files material for you. The filing is manual, by design. The whole model is written down in a single document, the Harmonized Authoritative Architecture Specification, which lives at `L8/L4/work/writing/7lm-harmonized-architecture-specification.md`.
 
@@ -366,7 +368,7 @@ The one automated check on the repository, which section 10 describes, checks in
 
 The root, meaning the top folder of the repository, holds `README.md`, `L7/`, and `L8/`. It may also hold two pieces of repository infrastructure that are not layers: the one CI workflow under `.github/`, and a `.gitignore` if there is anything to ignore. Nothing else belongs at the root, and every 7LM repository has the same one.
 
-The README is where a reader starts. It is not the documentation. The documentation is the sheets and the specification.
+The README is where a reader starts. It states the reading order. The layout is stated folder by folder in the sheets, and the model in the specification.
 
 In the tree below, `/0` after a folder name means that folder carries its `0.md`.
 
@@ -448,7 +450,9 @@ In the tree below, `/0` after a folder name means that folder carries its `0.md`
 
 ### The sheet rule
 
-Every folder has a `0.md`. Its first line is that folder's own path, written like `# L8/L3/engineering-mathematics/`. After that the sheet says what the folder is, why it exists, what it holds, and what it does not hold.
+Every folder has a `0.md`. Its first line is that folder's own path, written like `# L8/L3/engineering-mathematics/`. After that the sheet states the space of the folder and what it does: what the folder is, why it exists, what it holds, and what it does not hold. That is all a sheet states.
+
+A sheet is a working document. It is read while filing, and it belongs to its folder: when the folder moves, the sheet moves with it. It is not a support document. It does not explain the model, teach it, or say what to do when something breaks. Support is help for things that break, and it is a service to users; 7LM does not provide one. Its users are researchers working self-service, and a researcher whose work warrants technical support has an institution that provides it.
 
 ### The one CI check
 
@@ -542,8 +546,9 @@ Find the first layer where a promise breaks, and fix it there. The specification
 
 - **Bounded object.** One research thing with a clear edge: a definition, a theory, a project. Each 7LM repository is about exactly one, and when this guide says "the object," that is what it means.
 - **Owner.** The person who runs a 7LM repository and decides what gets filed where. A definition's owner is the object that wrote it.
+- **HOA.** Human-only actions: the owner's marker for a step a person takes and nothing else does. Filing is one. Taking this guide from L6 and publishing a version of it is another.
 - **USO.** The interior of a bounded object, living in `L8/`.
-- **Sheet.** A `0.md` file, one per folder.
+- **Sheet.** A `0.md` file, one per folder, stating the space of that folder and what it does. A working document, not a support document.
 - **Rail.** One of the four L0 tracks: ontology, semantics, epistemic, universality.
 - **Contract.** What a layer guarantees to the layer above it. This guide often just calls it a promise.
 - **Admissible.** Permitted under the contract in force. L1's whole job is declaring which states are admissible and which are excluded.
@@ -582,7 +587,9 @@ Find the first layer where a promise breaks, and fix it there. The specification
 
 **Fixing a lower-layer problem by rewording a higher-layer document.** That is patching from above, and it is the exact move the debugging rule forbids.
 
-**Using the README as documentation.** The sheets are the documentation. The README states the reading order and nothing more.
+**Reading the README for the layout.** The sheets state the layout. The README states the reading order and nothing more.
+
+**Reading a sheet as a support document.** A sheet states the space of its folder and what it does. It does not explain the model, and it does not say what to do when something breaks.
 
 **Reading the archive's name, `l6`, as a layer name.** `aybllc/l6` is a separate repository. `L8/L6/` is the layer. The names collide; the things are unrelated.
 
@@ -590,7 +597,7 @@ Find the first layer where a promise breaks, and fix it there. The specification
 
 ## 14. Where it is used today
 
-**`aybllc/7lm`** is the scaffold, holding the specification and one sheet for every canonical position.
+**`aybllc/7lm`** is the scaffold, holding the specification, one sheet for every canonical position, and this guide at L6 as the source each adopter takes. The other repositories mirror it, by hand: the scaffold is updated first and alone, and the others are brought into step when the owner judges it close to settled.
 
 **`aybllc/autonomous`** defines the word *autonomous* out of codified standards, meaning standards written down by standards bodies. The nine bodies whose clauses feed that definition are bound as peers at public ingress, and the definition itself is exposed at public egress.
 
