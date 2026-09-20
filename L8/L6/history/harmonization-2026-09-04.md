@@ -396,3 +396,17 @@ Done, in the guide. The sheet rule of section 10 states the same. The vocabulary
 Not changed. The CI: a blank sheet already passes G-003, and no check is added to report blank sheets — the tag belongs to the collecting document, not to the check, and for now everything is HOA. The specification. Every sheet of this repository, none of which is blank.
 
 Read, not resolved. "adult xception" is read as "audit exception", the term the guide and the templates now use; the owner's spelling is kept in the quotation. "the doc" is read as the document that collects the sheets, meant one day; where a person keeps the list of blank sheets until then is not stated by the owner and is not stated here.
+
+## 31. 2026-09-20 — hard rule: the guides share no history
+
+The owner, 2026-09-20, quoted as written: "Our 7Lm guides DO NOT share ANY HISTORY! HARD RULE. That's why you have l6. Start handing the job out to anything and you break away from 7lm"
+
+And, as the record of it was begun, quoted as written: "I'm telling you to add that not that you did anything wrong"
+
+The rule is added; nothing in the guide is withdrawn by it. Each repository's history is its own, kept at its own L6 and nowhere else. The guides — the source at this repository's L6 and every version an adopter publishes — carry the model and not the past of any repository. That is why there is an L6. Handing that job to anything else breaks away from 7LM.
+
+Done, in the guide. Section 5, the rules that hold everywhere, gains the rule under its own heading, marked as the owner's hard rule. The opening paragraph, where the adopter's taking of the guide is described, says what is never a design choice. The L6 section of section 6 says the layer is what the rule is for. The mechanism paragraph of section 14 says the push carries the tree and the sheets, never the scaffold's L6, and that no repository's history moves in either direction. The vocabulary's "Design choice" names the rule among what is not one.
+
+Not changed. Everything else. This guide's pointers to this repository's own records at `L8/L6/history/` stand: they are this repository's guide pointing at this repository's L6, which is the rule kept, not broken. The specification, the CI, every sheet, the templates.
+
+Read. "the job" is read as L6's job, the keeping of a repository's history; "anything" as anything other than that repository's own L6, an automation included. On the same word, the offer made in conversation the same day to run a job that parallelizes as a workflow of agents is withdrawn: for now everything is HOA.
