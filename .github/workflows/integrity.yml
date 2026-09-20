@@ -30,7 +30,7 @@ jobs:
 
       - name: Every sheet is headed by its path, and every canonical position has a sheet (G-003)
         run: |
-          # A sheet is a 0.md whose first line is "# <path>/". Retired sets under l6/retired/ keep their prior
+          # A sheet is a 0.md whose first line is "# <path>/". Retired sets under L6/retired/ (l6/retired/ before the rename pass) keep their prior
           # sheets verbatim and are not checked below their own root. The canonical positions are the
           # specification's tree; material filed beneath them may carry sheets or not (reported in the next step).
           fail=0; checked=0
@@ -47,6 +47,7 @@ jobs:
           canon="L7 L7/provenance L7/provenance/prior-art L7/provenance/sources L7/provenance/lineage L7/provenance/authority
                  L7/governance L7/governance/copyright L7/governance/licensing L7/governance/patents L7/governance/permissions L7/governance/access L7/governance/controlled
                  L7/peering L7/peering/private L7/peering/private/ingress L7/peering/private/egress L7/peering/public L7/peering/public/ingress L7/peering/public/egress
+                 L7/peering/private/ingress/peer-1 L7/peering/private/ingress/peer-1/object-1 L7/peering/private/egress/peer-1 L7/peering/private/egress/peer-1/object-1 L7/peering/public/ingress/peer-1 L7/peering/public/ingress/peer-1/object-1 L7/peering/public/egress/peer-1 L7/peering/public/egress/peer-1/object-1
                  L7/allications L7/allications/publications L7/allications/applications L7/allications/communications L7/allications/specifications L7/allications/notifications L7/allications/participations
                  $top $top/${lower}6 $top/${lower}6/history $top/${lower}6/retired
                  $top/${lower}5 $top/${lower}5/research $top/${lower}5/research/lanes $top/${lower}5/research/review $top/${lower}5/research/findings
