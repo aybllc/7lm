@@ -476,3 +476,15 @@ Acuawesome
 ```
 
 Recorded, not applied. The thirteen plates of §32, read in order — the desk and its four relations; the interior and its seven layers; L1's page, where an idea first becomes checkable; L6's library — are the picture book: the guide for the reader who will not read the guide, the researcher without time or reading in a second language. The standard, in the owner's word acu-awesome, in three parts: academically rigorous — nothing drawn that the specification does not say, each plate traceable to a section, as the plate sheet already holds itself; design rigorous — one visual grammar across all thirteen, the same glyph for a layer, a boundary, a direction, a binding, a peer, which is the strongest reason for one generator rather than thirteen drawings; accurate under pressure — language-light, leaning on paths and glyphs, a one-line caption per plate carrying the sentence. This sharpens two decisions under review: the second file shows function and now for whom; single-source is a rigor requirement, not only a maintenance one.
+
+## 36. 2026-09-20 — standing: the system is not changed without asking; the pass of tonight; what 7LM is the key to; the review workflows
+
+The owner, 2026-09-20, quoted as written: "Don't change the system unless you ask or are unsure"
+
+Standing from that word: no change to the system without asking first; when unsure, ask instead of deciding. Findings and design verdicts come to the owner as proposals — file, what is wrong, the exact fix — and nothing is applied until the owner says which. PR housekeeping — check-ins, reading CI, reporting — continues, touching nothing.
+
+Earlier the same evening, from a longer message, the two sentences bearing on the repository, quoted as written: "to perfect the 7LM in this pass tonight"; and "7LM is the key to ebios, s,m, uha, ommp, autonomous and Auditonomous and eb audit,"
+
+And, invoking the workflow-authoring skill: "I'm asking you ..." — on which §31's reading is corrected: the offer to run a job as a workflow of agents was not withdrawn by the owner's word but asked for. The workflows run read-only over the tree and return findings; no decision is theirs. Three ran this evening: a review of the two open pull requests across nine dimensions; an audit of all seventy-five sheets against the specification and the disk, and of the specification against itself, across twenty; and the design review of §32. Every finding is tested by independent skeptics before it is shown. Every change remains HOA, at the owner's word.
+
+The owner, on this record, quoted as written: "Please commit everything so far, name them" — five sections, §32 through §36, five commits, each named for what it carries. Nothing else in the repository changed.
