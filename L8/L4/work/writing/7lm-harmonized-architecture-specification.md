@@ -459,7 +459,7 @@ Exact formal objects and lawful operation over L1.
 
 | **Owns / represents** | **What occurs here** | **Boundary indicators** |
 |---|---|---|
-| • formal symbols and types<br>• relations, functions, operators, gates, constructors, carriers, transition systems<br>• axioms, definitions, lemmas, theorems, derivations, exact formulas | • formalize, derive, prove, type-check, construct, test closure<br>• declare domain/codomain/partiality<br>• mark conjectural or unproved claims explicitly | • Every symbol binds to L0 meaning and L1 admissibility.<br>• Every operation has declared domain/codomain or partiality.<br>• Exact results are supported by proof/derivation or marked as unproved. |
+| • formal symbols and types<br>• relations, functions, operators, gates, constructors, carriers, transition systems<br>• axioms, definitions, lemmas, theorems, derivations, exact formulas | • formalize, derive, prove, type-check, construct, test closure<br>• state carriers and relation domains; for functions and operators, state domain and codomain and, when partial, the subset on which the operation is defined<br>• mark conjectural or unproved claims explicitly | • Every symbol resolves to the L0 meaning and L1 admissibility on which it depends.<br>• Every function or operator has a domain and codomain; a partial one also states its domain of definition. General relations state the carrier or product over which they are defined.<br>• Exact results are supported by proof/derivation or marked as unproved. |
 
 **Directory structure**
 
@@ -471,7 +471,7 @@ L8/L2/0
     └── proofs/0
 ```
 
-**[Boundary Rule]** **Boundary / traversal rule.** Engineering tolerance, numerical approximation, and numerical uncertainty belong to L3, not to L2 exact formal ownership.
+**[Boundary Rule]** **Boundary / traversal rule.** Exact formal structure belongs to L2. Engineering tolerance, numerical approximation, finite-precision representation, and numerical uncertainty belong to L3. Exact dimensioned or unit-bearing relations may remain L2.
 
 **Directory prose and rationale**
 
@@ -493,7 +493,7 @@ Approximation, numerical representation, tolerance, uncertainty, and feasibility
 
 | **Core question** | How can the exact L2 relation be made feasible under declared constraints? |
 |---|---|
-| **Function** | Translate formal behavior into implementable numerical/engineering methods with explicit units, precision, approximation, tolerance, uncertainty, complexity, and operating regions. |
+| **Function** | Translate exact formal behavior into implementable numerical/engineering methods through representation choices, precision, approximation, tolerance, uncertainty, feasibility, complexity, and operating regions; include engineering treatment of units where relevant. |
 | **Directional inputs** | Construction: the L2 formal contract plus declared environmental, resource, and performance constraints. Inspection: L4 evidence may force re-evaluation without silently changing L2. |
 | **Output** | An L3 engineering specification telling L4 what can be built/run and within what conditions. |
 | **Hard boundary** | L3 is not the realized L4 output and does not itself create empirical evidence. |
@@ -501,7 +501,7 @@ Approximation, numerical representation, tolerance, uncertainty, and feasibility
 
 | **Owns / represents** | **What occurs here** | **Boundary indicators** |
 |---|---|---|
-| • algorithms and abstract data-structure choices<br>• units, numerical representation, precision, approximation, discretization, tolerance<br>• error/uncertainty budgets, sensitivity, stability, convergence, complexity<br>• simulation, optimization, feasibility arguments | • approximate, discretize, optimize, estimate, bound error, choose representation<br>• compare candidate methods to L2 invariants<br>• state operating assumptions and valid region | • Error/uncertainty, units, precision, and tolerance are explicit.<br>• Required L2 invariants are preserved within declared bounds.<br>• Resource/complexity claims are analyzed or labeled estimates. |
+| • algorithms and abstract data-structure choices<br>• numerical representation, precision, approximation, discretization, tolerance, and engineering/measurement treatment of units<br>• error/uncertainty budgets, sensitivity, stability, convergence, complexity<br>• simulation, optimization, feasibility arguments | • approximate, discretize, optimize, estimate, bound error, choose representation<br>• compare candidate methods to L2 invariants<br>• state operating assumptions and valid region | • Representation, precision, approximation, uncertainty, tolerance, units, and operating assumptions are explicit where they materially affect the engineering object.<br>• Required L2 invariants are preserved within declared bounds where preservation is claimed.<br>• Resource/complexity claims are analyzed or identified as estimates where relevant. |
 
 **Directory structure**
 
@@ -520,18 +520,16 @@ L8/L3/0
 | **Directory / thing** | **Prose** | **Why** |
 |---|---|---|
 | **L8/L3/** | Layer 3 container for numerical and engineering feasibility applied to the L2 formal contract. | Separates implementable approximation and constraint handling from exact L2 mathematics and realized L4 work. |
-| **engineering-mathematics/** | Directory for algorithms, numerical representation, units, precision, feasibility, stability, and complexity. | Keeps the engineering translation of exact formal behavior explicit and inspectable. |
+| **engineering-mathematics/** | Directory for algorithms, numerical representation, precision, approximation, uncertainty, tolerances, feasibility, stability, complexity, and engineering treatment of units. | Keeps the engineering translation of exact formal behavior explicit and inspectable. |
 | **approximation/** | Directory for approximations and discretizations used to make exact relations workable. | Makes loss or approximation visible instead of letting it appear as exact mathematics. |
 | **uncertainty/** | Directory for uncertainty and error characterization associated with an engineering representation. | Keeps uncertainty explicit rather than silently absorbing it into a result. |
 | **tolerances/** | Directory for declared tolerances and admissible engineering bounds. | Keeps acceptance bounds separate from the exact L2 relation they approximate or implement. |
 
 ### Working life boundary hypothesis
 
-L2 may formalize exact relations about life, but L2 does not mathematically support life.
+**Research hypothesis, not layer boundary.** The working statement that "L2 does not mathematically support life" is retained as an untested hypothesis. It does not define the L2/L3 boundary.
 
-Mathematics that depends on continuation, tolerance, uncertainty, adaptation, feedback, or environmental exchange begins at L3. L4 realizes or records the resulting conversion.
-
-**[Clarification]** This boundary remains a research hypothesis until tested.
+Exact relations involving continuation, feedback, control, adaptation, or environmental exchange may be represented at L2 when stated exactly. Their engineering realization belongs to L3 when finite precision, numerical representation, approximation, tolerance, uncertainty, stability under implementation, resource constraints, or other feasibility conditions become part of the representation. L4 realizes or records the resulting work.
 
 **[Note]** Author note. INFINITE is retained as a working term for open-ended tolerance/refinement across implementations and time, not as permission to move exact L2 objects here.
 
@@ -544,14 +542,14 @@ Conversion / realized work / identifiable output.
 | **Core question** | What conversion between intellectual property and energy, in either direction, was actually made, written, run, measured, instantiated, operated, manufactured, or recorded? |
 |---|---|
 | **Function** | Own Conversion: any intellectual property to energy, or energy to intellectual property. Commit resources to realize an intellectual object, or capture an energetic event, work, or failure as an identifiable intellectual object. |
-| **Directional inputs** | Construction: pinned L3-L0 contracts plus resources required for conversion. Inspection: realized output or failure returns evidence upward; L7 authority or release status is not a scientific construction dependency. |
-| **Output** | An audit-ready conversion product or recorded failure with traceable inputs, transformations, conditions, tests, results, and rework. |
+| **Directional inputs** | Construction: the relevant established L3-L0 representations plus resources required for conversion. Inspection: realized output or failure can expose questions about those dependencies; L7 authority or release status is not a scientific construction dependency. |
+| **Output** | An identifiable conversion product, event record, or recorded failure with enough context to distinguish what work occurred and, where relevant, how it was produced. |
 | **Hard boundary** | L4 does not authorize its own L5 interpretation and cannot flatten lower contracts into a convenience summary. |
 | **Machine metadata** | Machine-readable metadata may identify build/run instructions, environment, resource requirements, inputs/outputs, integrity checks, permissions, and fault routing for realized work. It does not supply the L5 interpretation of the result. |
 
 | **Owns / represents** | **What occurs here** | **Boundary indicators** |
 |---|---|---|
-| • IP-to-energy realization: writing, models, toys, computation, code execution, experiments, integration, transport, deployment, operation, and manufacturing.<br>• Energy-to-IP capture: observations, measurements, records, datasets, failures, and other identifiable intellectual objects.<br>• A contained architecture, including an OSI stack, as actually specified, made, taught, tested, or operated. | • make, write, code, run, measure, test, collect, integrate, convert, store, transport, deploy, manufacture<br>• verify conformance and rework against the governing input contract<br>• record result or failure without converting it into a conclusion | • Governing lower dependencies are pinned and resolvable.<br>• A distinguishable IP/energy conversion output or recorded failure exists.<br>• Inputs, conditions, transformations, results, and evidence remain traceable.<br>• L4 existence does not authorize its own L5 interpretation. |
+| • IP-to-energy realization: writing, models, toys, computation, code execution, experiments, integration, transport, deployment, operation, and manufacturing.<br>• Energy-to-IP capture: observations, measurements, records, datasets, failures, and other identifiable intellectual objects.<br>• A contained architecture, including an OSI stack, as actually specified, made, taught, tested, or operated. | • make, write, code, run, measure, test, collect, integrate, convert, store, transport, deploy, manufacture<br>• compare realized work with the lower-layer representations relevant to that work<br>• record result or failure without converting it into a conclusion | • Relevant lower dependencies are identifiable to the extent needed to understand the realized work.<br>• A distinguishable conversion output, event record, or recorded failure exists.<br>• Inputs, conditions, transformations, results, and evidence remain traceable where the realized work requires them.<br>• L4 existence does not authorize its own L5 interpretation. |
 
 **Directory structure**
 
@@ -570,7 +568,7 @@ L8/L4/0
 | **Directory / thing** | **Prose** | **Why** |
 |---|---|---|
 | **L8/L4/** | Layer 4 container for performed and realized work that returns an identifiable output or recorded failure. | Keeps the event of making or doing distinct from the later L5 interpretation of what the result means. |
-| **work/** | Directory for traceable realized work governed by pinned lower-layer dependencies. | Provides one place for the performed event without flattening the L3-L0 package that governs it. A complete internal architecture, including OSI, remains an L4 object even when it has its own internal layers. |
+| **work/** | Directory for realized work whose relevant conditions and dependencies can be identified. | Provides one place for the performed event without flattening the lower-layer representations relevant to it. A complete internal architecture, including OSI, remains an L4 object even when it has its own internal layers. |
 | **writing/** | Directory for writing and document production as performed work. | Distinguishes making the document from its L5 research meaning and its L7 released publication. |
 | **experiments/** | Directory for experiments as actually executed, including observations, measurements, tests, and failures. | Distinguishes performed experiment from L3 measurement design and L5 interpretation. |
 | **computation/** | Directory for computation as actually run, including executable processing and recorded outputs or failures. | Separates executed computation from the formal L2 relation and engineering L3 method that specify it. OSI application and network layers remain execution detail inside L4; OSI L7 is not the 7LM Surface / Peering layer. |
@@ -585,6 +583,8 @@ Energy to IP: an energetic event, operation, measurement, observation, success, 
 
 A toy, model, OSI stack, writing event, computation, manufactured thing, or full system can be L4. Role remains decisive: an exact model may be L2, its engineering realization may be L3, the model as made or operated is L4, and its research meaning is L5.
 
+**[Clarification]** "IP to energy / energy to IP" is an architectural classification of realized conversion and capture. It is not a claim that intellectual objects and physical energy are equivalent quantities and not a conservation law.
+
 **[Research Note]** MOST IMPORTANT: THE CUT LIVES HERE
 
 **[Clarification]** Standing. The cut is the realization boundary: L3 and below specify what is admissible, exact, or engineerable; L4 is where resources are committed and an identifiable work product, measurement, execution, or failure is produced.
@@ -595,7 +595,7 @@ Cross-layer activity cases
 
 | **Case** | **Placement rule** |
 |---|---|
-| **Research** | L5 owns interpretation/review; L6 preserves internal memory/history; L7 owns external provenance and exposes permitted presentations; L4 performs research work events; lower layers own their specific representations. |
+| **Research** | L5 owns interpretation/review; L6 holds retained library material and reconstructable internal memory; L7 owns external provenance and outward relations; L4 performs research work events; lower layers own their specific representations. |
 | **Writing** | The act/file production is L4. The research argument is L5. Internal version and correction history are L6. Public provenance, governance, and the released publication are L7. |
 | **Experiment** | Executed experiment, observation, measurement, and raw work product are L4; engineering method/tolerance L3; exact relations L2; possibilities L1; interpretation/conclusion L5. |
 | Contained architecture (OSI) | Operationally, the full OSI L1-L7 architecture remains an L4 object. Questions about its origins, development, justification, standards history, or design constraints may be railed through other 7LM layers; this analytic expansion does not remap OSI layers to 7LM layers. |
@@ -606,29 +606,27 @@ Cross-layer activity cases
 
 **[Note]** Author note. Writing is L4 as work. An exemplar/model/thesis/file is made here; its research meaning may be L5 and its released publication may be L7.
 
-### Auditonomous academic-book traversal
+### Auditonomous academic-book traversal — implementation exemplar
 
-L0 owns the locally authored Auditonomous definition.
+This example demonstrates one possible traversal of a bounded academic-book project. It does not define the agnostic architecture.
 
-L1 owns the Auditonomous state space.
+L0 owns the semantic definition used by the Auditonomous project; source authorship and provenance remain separately representable.
 
-L2 may own exact formal relations or proofs about the project when actually established, but it does not support life or own the project's formulas for life.
+L1 owns the Auditonomous state-space representation where one is declared.
 
-L3 owns the project's formulas for life when they are applied, open-ended, constrained, approximate, or engineering formulas.
+L2 may own exact formal relations or proofs when actually established, including exact feedback or adaptive relations if they can be stated exactly. The working "life" hypothesis does not decide placement.
 
-L4 owns the Auditonomous model as made, written, instantiated, or operated, including production of the book artifact.
+L3 owns numerical, approximate, tolerant, uncertainty-bearing, finite-precision, or otherwise engineering-constrained representations used by the project.
 
-L5 owns the book's research argument, interpretation, and teaching.
+L4 owns the model, writing, computation, experiment, or book artifact as made, instantiated, or operated.
 
-L6 owns the reconstructable development, correction, failure, and supersession history.
+L5 owns the book's research argument, interpretation, review, and teaching.
 
-L7 owns release and publication of the academic book and the peer binding to the separately owned Autonomous definition.
+L6 holds durable project reference material and the reconstructable development, correction, failure, and supersession history.
 
-Separate layer-owned representations overlay the same bounded subject.
+L7 owns the book's external provenance, governance, outward publication/release, and any peer relationship that the project actually represents. A separately owned Autonomous definition may have provenance without requiring peering; if the relationship to the Autonomous project is itself represented, that relationship is peering.
 
-The L4 Auditonomous model does not contain the L1 state space or L3 formulas as its own layer contents; it is governed by and related to those separately owned representations.
-
-Overlay does not collapse ownership or duplicate the whole book at every layer. A peer definition may reach the receiving L0 through the two L7 faces while remaining an immutable, externally authored binding.
+Separate layer-owned representations can overlay the same bounded subject without duplicating the whole object at every layer. In an implementation that chooses version pinning or reference-only handling for a peer object, those conditions belong to that exemplar's governance or handling contract rather than to peering generally.
 
 ---
 
@@ -661,7 +659,7 @@ L8/L5/0
     └── undergraduates/0
 ```
 
-**[Boundary Rule]** **Boundary / traversal rule.** L5 may interpret externally owned definitions, but interpretation does not transfer ownership of the peer definition into L0.
+**[Boundary Rule]** **Boundary / traversal rule.** L5 may interpret definitions and other lower-layer representations regardless of source. Interpretation does not silently rewrite the underlying L0 meaning, provenance relation, or any separately represented peer relationship.
 
 **Directory prose and rationale**
 
@@ -682,51 +680,53 @@ L8/L5/0
 
 **[Clarification]** Standing. A forum or chat interface may be realized operationally at L4 and exposed at L7, while institutional roles, discourse, interpretation, review, and research meaning carried through it remain L5-owned. L7 governance concerns the external/public legal and access relation, not scientific judgment.
 
-**[Note]** Author note. External definitions can be interpreted here. Interpretation does not transfer ownership of the peer definition into L0.
+**[Note]** Author note. External-source definitions can be interpreted here. Their semantic role remains L0 where used, source relation remains provenance where relevant, and a peer relationship remains separate if one exists.
 
-**[Clarification]** The catch-all. research/review/ is also where everything awaiting the owner's review lands, however much of it there is. What the owner sets aside stays there labelled PARKED. What the owner takes up moves to research/lanes/, the working position, and back if set down again. Finished work is filed at its layer. Nothing is deleted. No other position and no new directory is needed for this.
+**[Exemplar]** This repository may use research/review/ as temporary custody for material awaiting owner review or semantic classification. Temporary custody does not make the material L5-owned. Labels such as PARKED, movement between intake and a lane, and a particular retention practice are repository implementation choices rather than the agnostic definition of review.
 
-**[Clarification]** A scale, a ladder, or a vocabulary of levels or statuses is semantics of layer 4 and up: as written it is an L4 object, and what it means is L5 discourse. It is not an L1 state space and not L2 mathematics. A ladder of review statuses is research governance and stands at L5, not at the L0 epistemic rail.
+**[Clarification]** A scale, ladder, or status vocabulary is placed by the role of the representation, not by the word used for it. An admissible ordered state scale may have L1/L2 representations; a realized table or interface is L4; the meaning of a review-status ladder is L5 research governance. Topic name alone does not decide layer ownership.
 
 ---
 
 ## L6 — LIBRARY
 
-Memory, history, reconstruction, retirement, and query orientation.
+Library: retained reference material and reconstructable internal memory.
 
-| **Core question** | Can the object's internal history, prior states, failures, corrections, and retirement be reconstructed and correctly oriented for inspection? |
+| **Core question** | What must be retained so the object's reference context, path, prior states, and changes can be reconstructed and correctly oriented? |
 |---|---|
-| **Function** | Preserve internal memory, prior versions, branch history, corrections, failures, supersession, retirement, ledgers, and reconstructable relations without re-owning external provenance. |
-| **Directional inputs** | Construction: versioned artifacts and relations from L5 through L0. Inspection/query: L7 boundary events orient reconstruction; external provenance remains owned at L7. |
-| **Output** | A reconstructable Library record identifying the relevant prior state, branch, correction, failure, supersession, retirement, and internal relation needed for inspection or reproduction. |
+| **Function** | Retain durable internal reference material and reconstructable memory: current library resources, prior versions, branch history, corrections, failures, supersession, retirement, ledgers, and internal relations, without re-owning external provenance. |
+| **Directional inputs** | Construction: retained reference material and historically relevant states or relations from the bounded object's work. Inspection/query: L7 may provide the external starting context, while external provenance remains owned at L7. |
+| **Output** | A Library from which the retained reference context and the internal path relevant to inspection, continuation, or reconstruction can be recovered. |
 | **Hard boundary** | L6 records, preserves, and orients; it does not make the L5 research judgment or establish truth. |
 | **Machine metadata** | Machine-readable metadata may identify retention, archival, retirement, supersession, reconstruction, and integrity instructions for memory/history. References to external provenance resolve to L7 rather than being re-owned by L6. |
 
 | **Owns / represents** | **What occurs here** | **Boundary indicators** |
 |---|---|---|
-| - prior internal states and versions<br>- branch history and decision history<br>- failed paths and unresolved obligations<br>- corrections, supersession, retirement, and retained memory | - record, preserve, compare, branch, supersede, retire, reconstruct<br>- retain prior classifications and corrections without erasure<br>- orient inspection before entering the active payload | - Prior internal states and changes are reconstructable.<br>- Correction does not require deletion of prior state.<br>- External source/provenance references resolve back to L7.<br>- Retirement preserves the record rather than erasing it. |
+| - durable internal reference material used to orient or continue the bounded object's work<br>- prior internal states and versions<br>- branch history and decision history<br>- failed paths and unresolved obligations<br>- corrections, supersession, retirement, and reconstructable memory | - retain, reference, record, compare, branch, supersede, retire, reconstruct<br>- preserve enough distinction among current reference material, prior states, and later corrections to reconstruct their relation<br>- orient inspection or continuation of the work | - Prior internal states and changes are reconstructable.<br>- Current reference material can be distinguished from prior or retired states.<br>- External source/provenance references resolve back to L7 rather than becoming L6-owned provenance.<br>- A correction or retirement leaves enough retained information to reconstruct the earlier state and its relation to the later one. |
 
 **Directory structure**
 
 ```text
 L8/L6/0
 ├── history/0
+├── in/0
 └── retired/0
 ```
 
-**[Boundary Rule]** Boundary / traversal rule. For an externally encountered object, L7 is the boundary and owns its external provenance/governance relation. L6 is the first interior layer used to reconstruct prior internal states, changes, failures, supersession, and retirement before deeper inspection.
+**[Boundary Rule]** Boundary / traversal rule. L6 owns the internal Library and reconstructable memory. It may retain current reference material and prior states, but it does not own the L5 scientific judgment or the external provenance/governance relation stated at L7.
 
 **Directory prose and rationale**
 
 | **Directory / thing** | **Prose** | **Why** |
 |---|---|---|
-| **L8/L6/** | Layer 6 Library container for internal memory, history, prior states, failures, corrections, supersession, retirement, and reconstruction. | Keeps reconstructable scientific memory inside the USO while external provenance and public/legal relations remain on the L7 forward face. |
+| **L8/L6/** | Layer 6 Library for durable internal reference material and reconstructable memory/history. | Keeps the material needed to orient, continue, and reconstruct the bounded object's work while external provenance and public/legal relations remain at L7. |
 | **history/** | Directory for prior states, branch history, corrections, failures, unresolved paths, and reconstructable development over time. | Preserves how the object changed instead of presenting only the latest state. |
+| **in/** | Optional L6 intake position for material believed to belong to the Library but not yet classified within it. | Allows temporary L6 custody without pretending the intake state is the final semantic classification. |
 | **retired/** | Directory for retired or superseded internal states or relations that are no longer current. | Keeps prior states separately reconstructable when they no longer represent the current object. |
 
 ### Git and scientific memory
 
-Git history can support L6 reconstruction, but Git history and scientific memory/provenance are not the same object. Git records repository change events; L6 must preserve the scientific relations, decisions, failures, corrections, versions, and retirement needed for reconstruction. External source, authority, and prior-art provenance remain L7-owned.
+Git history can support L6 reconstruction, but Git history and the L6 Library are not the same object. Git records repository change events; L6 represents the retained reference context and internal scientific relations needed to orient and reconstruct the work. External source, authority, and prior-art provenance remain L7-owned.
 
 **[Clarification]** L6 requires reconstructability of the internal history it claims to preserve; it does not prescribe one storage or deletion policy. A repository may preserve prior states through retained files, version-control history, explicit retirement records, archival storage, or another method adequate to reconstruction. In this repository, Git history and L6 records are used together as an implementation choice. Reconstructability is the architectural function; the retention mechanism is not.
 
@@ -963,11 +963,11 @@ Not yet as stated. The binding of the Autonomous definition names the path the p
 
 ## Harmonization Record
 
-Normative authority and non-erasure rule. The principal L0-L7 sheets and the explicit rules in this record control. Harmonization removes stale duplicate contracts but preserves unique research notes, author notes, examples, cases, rationales, hypotheses, and inherited terms. A reserved term remains available for research without manufacturing a directory or layer owner.
+Current authority and reconstruction rule. This specification controls the current 7LM architecture. Current local `/0` sheets state the semantic meaning of their directories under this specification. Harmonization may revise current architecture while L6 history preserves prior wording, failed attempts, and superseded states rather than pretending they never existed. A reserved term remains available for research without manufacturing a directory or layer owner.
 
-Architecture and implementation status are separate claims. The canonical topology declares admissible and owned positions even when a present repository has not instantiated them. Current Autonomous, Auditonomous, and agnostic-method layouts are implementation work in progress and do not rewrite the architecture. Disposition: blank 0.md / status markers remain historical implementation evidence at L6, not architecture.
+Architecture and implementation status are separate claims. The canonical topology states available and owned positions even when a project has no artifacts to place in one of them. A current canonical directory still has a semantic `0.md`; a historical blank sheet or prior status marker may remain preserved at L6 as implementation evidence, not as the current architecture.
 
-Supporting-evidence disposition: Git history can support L6 reconstruction, but Git history and scientific memory/provenance are not the same object. External provenance remains L7-owned; internal reconstructable scientific memory remains L6-owned.
+Supporting-evidence disposition: Git history can support L6 reconstruction, but Git history and the L6 Library are not the same object. External provenance remains L7-owned; internal durable reference material and reconstructable memory remain L6-owned.
 
 ### Controlling reserved-state rule
 
