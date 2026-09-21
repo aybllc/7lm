@@ -827,9 +827,9 @@ Peering does not, merely by representing a relationship, establish authorship, o
 \text{external relation}\neq\text{scientific meaning}
 \]
 
-[
-	ext{external source}\not\Rightarrow	ext{peer}
-]
+\[
+\text{external source}\not\Rightarrow\text{peer}
+\]
 
 A source encountered through a book, archive, database, article, search engine, or standards collection may be represented through provenance without peering when no counterpart relationship itself is being represented.
 
