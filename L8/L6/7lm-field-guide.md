@@ -129,7 +129,7 @@ The rule does not prohibit speculation. A hypothesis may be stated and explored 
 
 The same applies to any assumed capability: unlimited power, perfect information, zero latency, infinite endurance. Each may be studied conditionally. None may serve as free evidence. A claim that depends on one requires that capability to carry its own engineering and evidentiary burden first, and nothing unobserved or unbuilt is promoted downward into the foundational claim space.
 
-**The guides share no history.** The owner's hard rule. Each repository's history is its own, kept at its own L6 and nowhere else: what the object was, how it changed, what was retired and why. This guide, and every version of it an adopter publishes, carries the model and not the past of any repository. That is why there is an L6. Hand that job to anything else — another repository's guide, a shared document, an automation — and the repository has broken away from 7LM.
+**L6 history is local to the bounded object it reconstructs.** A shared guide can describe the model, and external archives or tools can support reconstruction, but another object's history does not become this object's L6 merely because it is accessible. What matters architecturally is that the internal history claimed by this object can be reconstructed and correctly oriented.
 
 ---
 
@@ -139,21 +139,21 @@ The same applies to any assumed capability: unlimited power, perfect information
 
 The specification discusses layers in groups for certain questions. None of those groups is a folder. Under `L8/`, the seven layer folders sit flat, side by side.
 
-L6 and L5 together are the upper interior, memory and research, and they remain separate owners. L4 alone is the realization bay, which can contain an entire realized system with its own internal layers. L3, L2, and L1 together are the technical-possibility bundle, used when a question requires engineering, exact formalization, and admissibility at once. L3 and L2 form a tighter pair when L1 is already pinned and not itself under question. L0 is separated from L1 deliberately: L0 establishes the semantic contract, and L1 establishes the states admissible under it.
+L6 and L5 together are the upper interior, memory and research, and they remain separate owners. L4 alone is the realization bay, which can contain an entire realized system with its own internal layers. L3, L2, and L1 together are the technical-possibility bundle, used when a question requires engineering, exact formalization, and admissibility at once. L3 and L2 form a tighter pair when the relevant L1 state space is already established and not itself under question. L0 is separated from L1 deliberately: L0 establishes the semantic contract, and L1 establishes the states admissible under it.
 
 A question may traverse some layers and skip others. Each part of the answer still belongs to exactly one. Do not create a folder for a group.
 
 ### L0: Semantic / Foundational
 
-This is where the object's own meaning lives, and only the meaning this object actually authored. The specification calls what L0 produces the local semantic contract: the foundational representation everything above it depends on.
+This is where the foundational meaning used by the bounded object lives. The specification calls what L0 produces the semantic/foundational contract on which the state-space representation above it depends.
 
-Four rails divide the work, each with its own folder: ontology, semantics, epistemic, and universality. A fifth folder, pedagogy, holds the explanation of how the layers are traversed and how this object attaches to others. Pedagogy is a folder and a function, not a fifth rail.
+Four rails divide the work, each with its own folder: ontology, semantics, epistemic, and universality. A fifth folder, pedagogy, holds explanation of traversal and attachment. Pedagogy is a folder and a function, not a fifth rail.
 
-Definitions this object wrote go in `semantics/definitions/`. Autonomous keeps its definition of *autonomous* there, an entry carrying eleven codified definitions labelled A1 through A11, each one reproduced verbatim with its issuing body's ownership tag attached. The tagging is the discipline in miniature: the clauses originate with standards bodies, so they remain marked as theirs.
+Definitions that function in this object's semantic contract go in `semantics/definitions/`. They may be locally authored, adopted from an external source, adapted, or explicitly provisional. Filing a definition at L0 does not erase its source authorship.
 
-Somebody else's definition never gets copied here just to fill the folder. It gets bound at the desk instead, and section 8 shows you how.
+If a definition came from outside, its source relation is represented at L7/provenance where relevant. Peering is used only when an identifiable external counterpart relationship is itself part of what the object represents. A definition found in a book, article, database, archive, standard, or web search does not become a peer merely because it came from outside.
 
-The owner left a research note at this layer worth repeating. Semantic drift, the divergence that sets in when the local L0 meaning contract changes or is misapplied, is suspected to originate right here. The specification retains that as an open hypothesis, not a settled rule.
+The owner left a research note at this layer worth repeating. Semantic drift, the divergence that sets in when the L0 meaning contract changes or is misapplied, is retained as an open hypothesis, not a settled rule.
 
 ### L1: State Space
 
@@ -169,21 +169,21 @@ Sometimes a result lands outside the declared state space. When that happens, ex
 
 Exact objects only: notation and types, relations, operators, constructors, carriers, transition systems, and the axioms, lemmas, theorems, and derivations that bind them together. One folder, `formal-mathematics/`, holds three more: `relations/`, `operators/`, and `proofs/`.
 
-Every symbol here traces back to an L0 meaning and an L1 admissible state. Every operation declares its domain and codomain, the set it accepts and the set it returns into, and an operation undefined across part of its domain declares itself partial rather than pretending to be total. Conjectural and unproved claims get marked as such, because writing something down has never constituted a proof of it.
+Every symbol here resolves to the L0 meaning and L1 admissibility on which it depends. Functions and operators state domain and codomain; a partial operation additionally states the subset on which it is defined. General relations are not forced into function terminology: a relation may instead be stated as a subset of an appropriate Cartesian product or other formal carrier. Conjectural and unproved claims remain explicitly unproved.
 
 Both exemplar repositories keep a formulas ledger at this layer, and both ledgers currently say the same thing: empty, no formulas held. The ledger's own preamble explains why it exists at all. A formula's existence and a formula's application get checked in separate columns, because collapsing those two is precisely the failure the file was built to prevent.
 
-No tolerances and no approximations at this layer. Both belong to L3.
+Engineering tolerances, numerical approximation, and numerical uncertainty do not belong to L2 exact formal ownership. Exact relations may nevertheless include dimensioned quantities or units; units alone do not move an exact relation to L3.
 
 ### L3: Engineering Mathematics
 
-Here the exact relation meets realizable conditions: units, numerical representation and precision, approximation and discretization, tolerance, error and uncertainty budgets, sensitivity, stability, convergence, computational complexity, and the operating region in which any of it holds. One folder, `engineering-mathematics/`, holds three more: `approximation/`, `uncertainty/`, and `tolerances/`.
+Here the exact relation meets realizable conditions: numerical representation and precision, approximation and discretization, tolerance, error and uncertainty budgets, sensitivity, stability, convergence, computational complexity, measurement/engineering treatment of units, and the operating region in which any of it holds. One folder, `engineering-mathematics/`, holds three more: `approximation/`, `uncertainty/`, and `tolerances/`.
 
-A formula divides three ways. Its meaning in words belongs to L0. The exact formula belongs to L2. The formula as you actually apply it, with approximations and tolerances and adaptation and open ends, belongs to L3.
+A formula can have several layer-specific representations. Its semantic meaning belongs to L0; its exact formal statement belongs to L2; its numerically represented, approximate, tolerant, uncertainty-bearing, or otherwise engineering-constrained form belongs to L3.
 
 Autonomous files two notes at this layer that show the range. One sits under tolerances and works through a defect in a shared referent. The other sits under uncertainty and examines dependence and a gate. Neither is a proof, and neither is a measurement. Each states the conditions, bounds, and failure modes under which the thing could be built or trusted.
 
-The specification carries a working hypothesis here too. Mathematics that depends on continuation, feedback, adaptation, tolerance, uncertainty, or exchange with an environment begins at L3. L2 can state exact relations about a living or adaptive thing, but L2 does not support that thing. The specification marks this explicitly as untested.
+The specification retains a working life-boundary hypothesis here, but it does not define the L2/L3 boundary. Exact feedback, dynamical, control, or adaptive relations can be represented at L2 when stated exactly. Their numerical realization, tolerances, uncertainty, finite precision, stability under implementation, or other engineering constraints are L3 questions. The broader claim that L2 'does not support life' remains an untested research hypothesis.
 
 What leaves this layer is an engineering specification telling L4 what can be built or run, within which bounds, and with what declared error. L3 produces no empirical evidence of its own.
 
@@ -201,13 +201,13 @@ A whole system with its own internal layers sits inside L4 as a single object. T
 
 Two different questions can be asked about that stack, and they file differently.
 
-Ask *how does it operate*, and the whole stack is one L4 object with its own internal layers intact. Ask *where did it come from, and why is it built this way*, and the inquiry expands across the architecture. The standards bodies and source bindings go to L7. Its development history goes to L6. The debate about why it took this form goes to L5. The engineering trade-offs that shaped it go to L3. Exact relations go to L2 where they are genuinely warranted. Allowed states go to L1 when they are part of the question. And the words your object coins to describe it go to L0.
+Ask *how does it operate*, and the whole stack is one L4 object with its own internal layers intact. Ask *where did it come from, and why is it built this way*, and the inquiry expands across the architecture. External standards sources and their provenance go to L7/provenance; relationships with standards bodies go to L7/peering only when those relationships themselves are represented. Development history goes to L6. Debate and interpretation go to L5. Engineering trade-offs go to L3. Exact relations go to L2 where genuinely warranted. Admissible states go to L1 when part of the question. Foundational meanings used by the bounded object go to L0.
 
 The stack does not move when the question expands. It remains an L4 object. The specification names this distinction operational containment versus analytic expansion, and it means a network fault inside the stack is an L4 fault unless somebody separately shows it touches another layer's object.
 
 The owner calls this layer the cut. Below L4, things are specified. At L4, things are made.
 
-Failures get filed here as first-class objects. A run that died, a build that broke, a measurement that went sideways: each one is an L4 object recorded as a failure, not quietly converted into a conclusion. What the specification asks for is an audit-ready conversion product, meaning the filing stays traceable through its inputs, conditions, transformations, results, tests, and rework, with the lower-layer contracts it depends on pinned and resolvable.
+Failures are first-class L4 work products. A run that died, a build that broke, or a measurement that failed is still an event that occurred; it is not quietly converted into a conclusion. The relevant inputs, conditions, transformations, results, and lower-layer dependencies remain identifiable to the degree needed to understand or reproduce the realized work.
 
 L4 does not interpret its own results. That belongs to L5.
 
@@ -257,7 +257,7 @@ One thing can appear across several layers, each layer owning a different aspect
 | An experiment | Running it and the raw results are L4. Method and tolerance are L3. Exact relations are L2. Which states are possible is L1. The conclusion is L5. |
 | Code | Algorithm and engineering choices are L3. A formal proof or model is L2. Execution, deployed bytes, and results are L4. |
 | Data | Collected and stored instances are L4. Precision is L3. Formal encoding is L2. State categories are L1. External source and lineage are L7. Its own development history is L6. Interpretation is L5. |
-| A definition someone else owns | The owner stays external, at L7 peering. Source and version are L7 provenance. Legal conditions are L7 governance. Use history is L6. Interpretation is L5. L0 holds a definition only if this object writes its own. The external one is never copied in. |
+| A definition from an external source | If the definition functions in this object's semantic contract, that semantic role is L0 regardless of source authorship. Source/version/authority relations are L7 provenance where relevant. Legal/access conditions are L7 governance where relevant. A peer relation is L7 peering only when an identifiable external counterpart relationship exists. Interpretation is L5; internal history may be L6. |
 | A publication | Producing it is L4. Its scholarly meaning is L5. Its internal history is L6. Provenance, rights, and the released object are L7. |
 | A system with its own layers, like an OSI stack | Running it is L4, whole. Questions about its origin, history, or design each go to the layer that owns the answer. The system itself is never re-mapped onto 7LM layers. |
 | A forum, chat, or discussion tool | The tool as built and run is L4. Its outside face is L7. The roles, discussion, review, and judgments carried through it are L5. |
@@ -271,66 +271,60 @@ The desk carries the object's external relations. Each branch is covered separat
 
 ### Provenance
 
-`L7/provenance/` answers four questions: where a thing came from, what came before it, which version is in use, and who speaks for it. Four folders carry them: `prior-art/` for the antecedent work your object stands on, `sources/` for exact source and version identity, `lineage/` for derivation relationships, and `authority/` for who speaks for an external object. Prior art sits here rather than at L0 on purpose: what came before you is an external relation, not your own authored meaning.
+`L7/provenance/` represents external source relations: prior art, source identity/version, lineage, and represented authority. A source can be a paper, book, database, archive, standard, website, dataset, repository object, or other external material.
 
-Source files do not live here. They are pointed to. A designated archive repository holds the actual documents, bound once at private ingress and read-only from every repository that uses it. A repository that cites a source keeps one row in a ledger, and that row gives the file's path inside the archive and the exact archive version it is pinned to. No source file is ever copied in.
+7LM does not require source files to live in one designated archive. One implementation may use a curated archive and point to exact versions there; another may use DOI records, publisher copies, library holdings, URLs, local files, or other stable references. What matters to provenance is the source relation being represented, not the storage mechanism.
 
-In the repositories described in section 14, that archive is `aybllc/l6`, holding well over a thousand tracked files across journals, standards, books, and captures. That is a fact about those repositories, not a rule of the model. Another 7LM object could name a different archive, or none at all.
+A source does not become a peer merely because it is external. If the relationship with an identifiable external counterpart itself matters, that relationship can additionally be represented at `L7/peering/`.
 
 ### Governance
 
-`L7/governance/` holds the legal and access conditions: copyright, licensing, patents, permissions, access, controlled.
+`L7/governance/` represents external conditions that bear on use, disclosure, access, or legal/custodial status. Its child positions answer different questions:
 
-Copyright gets exactly one place, `governance/copyright/`. You state every copyright and licence condition there once, and the licensing and controlled folders point at it rather than repeating it. The owner was emphatic about this: a reader looking for copyright should have exactly one place to look, and from there it should be obvious what to do next.
+- `copyright/` — copyright status, claim, holder, notice, or uncertainty;
+- `licensing/` — licence terms or status;
+- `patents/` — patent-related external facts where relevant;
+- `permissions/` — a specific grant or permission;
+- `access/` — conditions under which an object can be reached;
+- `controlled/` — restrictions on disclosure, use, transfer, or handling.
+
+One object can have several of these relations at once. None substitutes for the others, and peering does not manufacture a permission or restriction.
 
 ### Peering
 
-`L7/peering/` handles everyone outside your object.
+`L7/peering/` represents an identifiable relationship between the bounded object and an external counterpart.
 
-A peer is any party you exchange something with: a person, an institution, a standards body, another repository, an archive, a model session. Any number of them can meet your object at once, and each gets its own numbered position. Autonomous binds nine standards bodies at public ingress, one per organisation whose clauses feed its definition: ISO/TC 299, two ISO/IEC JTC 1 subcommittees, IEEE, NIST, the European Union, the US Department of Defense, EASA, and ETSI.
+A peer may be a person, institution, repository, archive, laboratory, publisher, standards body, service, model, instrument, organization, or another bounded object. The relationship need not itself be scientific.
 
-Two independent distinctions organise the folder. Exposure is either `public/` or `private/`. Direction is either `ingress/`, coming in, or `egress/`, going out. Under each direction, `peer-N/` names one peer, and under a peer, `object-M/` names one thing exchanged with them.
+Two independent coordinates describe the relation:
 
-A peer's `0.md` sits one level above that peer's objects and serves as the owner's register: what they sent, and where each item stands.
+- `public/` or `private/` describes **exposure**. Both are auditable surface channels; a private channel has a restricted audit audience rather than no auditability.
+- `ingress/` or `egress/` describes **direction relative to the bounded object**.
 
-Once bound, an object never moves and never changes. When you make a decision about it, the decision goes in that register, marked authorized, denied, quarantined, or retired. The record of the decision goes to `L8/L6/history/`. A binding that falls out of use gets retired to `L8/L6/retired/` rather than erased.
+Beneath those coordinates, `peer-N/` distinguishes one external counterpart and `object-M/` distinguishes one object or interaction in that relation. The numbers are local identifiers, not ranks, authority levels, global identities, or lifecycle states.
 
-Everything a peer brings follows one acceptance path. It is compared and interpreted at `L8/L5/`. What the object concludes from it is the object's own work at L5, citing the bound original; the bound object itself is carried inward only with its immutable ownership tag and is never restated as the object's own. A manuscript, a standards clause, and a model's draft all follow the same route.
+Peering does not by itself establish authorship, ownership, provenance, permission, acceptance, truth, immutability, scientific validity, or what should happen next.
 
-The path itself tells you who brought a thing before anyone reads a word of it. The specification calls that provenance by position.
+#### Instructional examples
 
-To change a peer's object, you go to its owner. You can update your binding or retire it. You do not edit theirs.
+A student sends a draft to a teacher through a restricted course system: private egress. The teacher returns comments: private ingress. Whether the student adopts the comments is an L5 research/discourse question, not a peering fact.
 
-Egress is not publication. Handing something to a named peer is egress. A public release with a release identity goes in `allications/publications/`.
+A laboratory receives a dataset directly from a collaborator through a restricted exchange: private ingress. The source provenance of the dataset may also be represented under provenance.
 
-### Where these rules came from
+An external researcher opens a public issue: public ingress. A public response directed to that researcher is public egress. Neither interaction becomes a publication merely because it is visible.
 
-The peering machinery grew out of one concrete problem. Two research objects, Autonomous and Auditonomous, needed to share a single definition without both of them owning it.
+A researcher finds a definition in a standards document through a web search: provenance may apply, but peering need not. The definition's semantic role can still be L0 if the bounded object actually uses that definition.
 
-The solution generalizes: one object can depend on another without owning, copying, redefining, or maintaining the other's meaning. The `peer-1/object-1/` structure is that solution in its abstract form.
+#### Originating implementation example
 
-Autonomous has one bounded semantic job. It freezes what the specification calls the consensus baseline: the narrowest reasonable agreement shared across its exact, independently bound standards definitions. Where sources materially disagree it must not manufacture consensus, and each disagreement stays source-tagged and visible. Auditonomous consumes that pinned baseline and authors only its own difference from it, which the specification calls an explicit local delta. Baseline and delta stay separately owned and overlaid rather than blended into a dual-owned definition.
-
-An argument about one of them never silently counts as an argument about the other. Any claim crossing between objects has to name the relation or the hand-off explicitly.
-
-The specification states that this case is not an optional exemplar but the originating boundary test of the architecture.
-
-### How a borrowed definition travels
-
-A definition lives once, at its owner. When your object uses someone else's, that definition follows a fixed route: it starts at the owner's L0, leaves through the owner's L7 egress, enters through your L7 ingress, and arrives at your L0.
-
-The bound object is reference-only. You may not edit it and you may not delete it, which the specification writes in capitals as NO EDIT and NO DELETE. Wherever you use it internally, it carries an unchanging tag: object identity, owner, source layer, version, and ingress binding.
-
-If the owner changes the definition, that creates a new binding. The pinned version does not change.
-
-The last piece is a matter of stance, and the specification names it the declared semantic-deference rule. For the bounded purpose of interpreting the peer, you take the owner's exact bound definition as authoritative for what the owner means, and you do not re-prove or locally redefine it. That is declared trust. It is not a claim that the definition is objectively true, not an endorsement of anything downstream of it, and not a transfer of authorship.
+The Autonomous/Auditonomous work historically motivated one use of peering: one bounded research object relating explicitly to another while keeping their source identities distinct. Those repositories may choose version pinning, reference-only handling, or local-delta conventions. Those are implementation properties of that exemplar, not the general definition of peering.
 
 ### Allications
 
 `L7/allications/` holds what the object does outward. Six positions, each a nominalized outward act that leaves a record someone can point at afterwards:
 
 - `publications/` — released objects, each with a release identity.
-- `applications/` — what the object asks of an external body: funding, review, admission, or its method applied to an outside case.
+- `applications/` — outward applications or submissions that request an external decision, such as funding, review, admission, approval, participation, or registration.
 - `communications/` — statements, correspondence, announcements, answers issued outward.
 - `specifications/` — a contract handed outward for others to build or check against.
 - `notifications/` — notices given, usually discharging an obligation, where the fact of having given notice on a date is the point.
@@ -493,25 +487,26 @@ A retired set under `L8/L6/retired/<name>/` keeps its old sheets exactly as they
 
 ### Start a new bounded object
 
-1. Copy the full layout, leaving the folders you do not need empty. Write each folder's sheet at the degree you choose, from the templates at `L8/L6/7lm-sheet-templates.md`; the scaffold's own sheets are the full degree, and keeping them is one choice.
-2. Write the object's own definition under `L8/L0/semantics/definitions/`. If none has been authored yet, leave the folder empty. Do not populate it with another object's definition.
-3. Move outward only as each layer settles its promise.
+1. Establish the bounded object and use the canonical topology as the coordinate system.
+2. Give each current canonical directory a local `0.md` that states what occurs there. An unused branch may remain otherwise empty; its sheet is still the semantic statement of that coordinate.
+3. State the foundational L0 meanings the object actually uses. They may be locally authored, externally adopted, adapted, or provisional. Preserve source provenance separately where relevant.
+4. Populate additional layers only when the work genuinely has a representation of that type. Do not manufacture an L2 formula, L3 engineering object, L4 work event, or L7 relation merely to fill the sequence.
 
-### Use a definition someone else owns
+### Use a definition from an external source
 
-1. Bind it at `L7/peering/public/ingress/peer-N/object-M/`, or private if the exchange is controlled. The folder holds a binding record rather than the definition: object identity, owner, source layer, exact version, this ingress position, and its standing. None of the peer's files live there.
-2. Add one row at `L7/provenance/sources/`.
-3. State any rights conditions once, at `L7/governance/copyright/`.
-4. Refer to it internally with its tag, at L0 or any layer that needs it. Never write it into `L8/L0/semantics/definitions/`.
-5. Record the binding event at `L8/L6/history/`. If the owner later changes the definition, add a new binding beside the old one and retire the old one to `L8/L6/retired/`.
+1. Identify the definition that actually functions in the bounded object's semantic contract; its semantic representation belongs at L0.
+2. Represent the external source relation at `L7/provenance/` when source identity, version, authority, lineage, or prior-art relation matters.
+3. Represent governance conditions at `L7/governance/` only when such conditions actually apply.
+4. Use `L7/peering/` only when the relationship with an identifiable external counterpart is itself being represented.
+5. Preserve authorship/source attribution without treating source origin as a reason to move semantic meaning out of L0.
 
 ### Cite a source
 
-1. The source file stays in the designated archive, bound once at `L7/peering/private/ingress/peer-N/` and read-only from your repository. For the repositories in section 14, that archive is `aybllc/l6`.
-2. Add one row at `L7/provenance/sources/` carrying an ID, the citation, the archive path, and the archive commit you read it at.
-3. If the source carries a copyright or licence condition, state it once at `L7/governance/copyright/`.
-4. Quote and cite in your work, pointing at the row. Never copy the source file into your repository.
-5. If the archive does not hold the source, ask the archive's owner to add it. Do not park the file here instead.
+1. Identify the source precisely enough for the research use at hand: citation, version/date, locator, archive identity, DOI, commit, or other distinguishing reference as appropriate.
+2. Represent that source relation under `L7/provenance/sources/`.
+3. Represent any relevant copyright, licence, permission, access, or controlled condition in its own governance position.
+4. Store or access the source using an implementation suitable to the project. A curated archive is one option, not a 7LM requirement.
+5. A source relationship is not automatically a peer relationship.
 
 ### File a piece of writing
 
@@ -549,7 +544,7 @@ Find the first layer where a promise breaks, and fix it there. The specification
 ## 12. Vocabulary
 
 - **Bounded object.** One research thing with a clear edge: a definition, a theory, a project. Each 7LM repository is about exactly one, and when this guide says "the object," that is what it means.
-- **Owner.** The person who runs a 7LM repository and decides what gets filed where. A definition's owner is the object that wrote it.
+- **Owner.** The local person or role responsible for a bounded 7LM object or repository. Source authorship, issuing authority, copyright ownership, and local repository responsibility are separate relations unless they happen to coincide.
 - **HOA.** Human-only actions: the owner's marker for a step a person takes and nothing else does. Filing is one. Taking this guide from L6 and publishing a version of it is another.
 - **Design choice.** What the model leaves to the owner of a repository. What a sheet says after its first line, the version of this guide an adopter publishes and where, and whether a position is used at all are design choices. The tree, the sheets' first lines, and the rule that the guides share no history are not.
 - **Audit exception.** A blank sheet beneath a layer — the first line and nothing else — listed at the end of the document that collects the sheets, for HOA review.
@@ -563,15 +558,15 @@ Find the first layer where a promise breaks, and fix it there. The specification
 - **Partial.** Said of an operation that is undefined across part of its domain. L2 requires an operation to declare this rather than imply totality.
 - **Reconstructable.** Recoverable from the record itself. L6's standard: prior states, corrections, failures, and retirements can all be rebuilt from what is written down.
 - **Supersede.** To replace a claim or a state with a later one while the earlier one stays on the record.
-- **Local delta.** The explicit difference one object authors over a peer's pinned baseline, kept separately owned rather than blended into it.
-- **Pinned.** Fixed to an exact version, usually a commit.
-- **Binding.** The reference-only link to a peer's object at L7.
+- **Local delta.** An exemplar term for an explicitly represented difference over a stated baseline. Useful in some implementations; not a universal peering requirement.
+- **Pinned.** An implementation term meaning fixed to an exact version or revision. Pinning may be useful for reproducibility but is not the definition of peering.
+- **Binding.** An implementation term for a recorded relation or reference between objects. A peering relation does not require every implementation to use a reference-only binding object.
 - **Peer.** The word carries two senses and the specification uses one word for both. At `L7/peering/.../peer-N/`, a peer is an outside counterpart handing you something or receiving something from you. At `L8/L5/institution/peers/`, a peer is a participant position inside the research setting. File by whichever one you actually mean.
 - **Catch-all.** `L8/L5/research/review/`, where anything waiting on the owner lands.
 - **PARKED.** The label on catch-all material the owner has set aside.
 - **Inbox.** An `in/` folder at any position, holding what belongs to that position and has not been worked into it yet.
-- **Retire.** To move a prior state to `L8/L6/retired/` unchanged rather than deleting it.
-- **Enumerate.** To list every part of a file and where each part now stands, in a record, before that file is deleted.
+- **Retire.** To mark or represent a prior state as no longer current while preserving enough information for reconstruction. Physical retention strategy is an implementation choice.
+- **Enumerate.** A repository-specific reconstruction technique: list the parts of a superseded file and where they now stand. It is one possible implementation of L6 reconstructability, not a universal prerequisite to deletion.
 - **The cut.** The boundary at L4 where a specification becomes something actually made.
 - **The desk.** L7.
 
@@ -581,13 +576,13 @@ Find the first layer where a promise breaks, and fix it there. The specification
 
 **Treating L7 as the seventh layer.** It is not. The seventh layer is L6, and the count rule in section 3 explains why.
 
-**Copying an external definition into L0 to complete it.** An empty rail is a correct state. A rail filled with another object's words misstates authorship.
+**Confusing semantic role with source provenance.** If an externally sourced definition actually functions as this object's L0 meaning, L0 is the correct semantic position. Preserve the source authorship/provenance separately; do not claim local authorship merely because the definition is used locally.
 
 **Letting a well-argued L5 paragraph stand in for a missing L2 proof or L4 measurement.** Prose is not evidence. The hard boundary at L5 states this directly.
 
 **Mapping a contained system's layers onto the 7LM layers.** An OSI stack sits whole inside L4. Questions about it may expand across the architecture; the stack does not.
 
-**Filing an outside repository or standards body at `L8/L5/institution/peers/`.** Outside counterparts belong at `L7/peering/`. The institution folder holds participant positions only. The two senses of *peer* are easily confused.
+**Confusing an L5 peer participant with an L7 external counterpart.** `L8/L5/institution/peers/` represents participant roles in research/discourse. `L7/peering/` represents an external counterpart relationship when that relationship itself matters. A standards body used only as a source may instead appear through provenance without peering.
 
 **Deleting a file to tidy up.** Enumerate its parts first. Anything the repository needs in order to reconstruct its past is retired instead.
 
@@ -597,15 +592,17 @@ Find the first layer where a promise breaks, and fix it there. The specification
 
 **Reading a sheet as a support document.** A sheet states the space of its folder and what it does. Help for something that has broken is not what it is for.
 
-**Leaving a folder without a sheet.** A sheet beneath a layer may be blank, the first line and nothing else, and a blank sheet is an audit exception for HOA review. A missing sheet is a folder outside the system.
+**Leaving a current canonical directory without a semantic sheet.** The local `0.md` is the directory's semantic statement: it says what occurs there and its boundary. The branch may otherwise remain empty when unused. A header-only sheet does not state the coordinate's meaning.
 
 **Reading the archive's name, `l6`, as a layer name.** `aybllc/l6` is a separate repository. `L8/L6/` is the layer. The names collide; the things are unrelated.
 
 ---
 
-## 14. Where it is used today
+## 14. Implementation examples (non-controlling)
 
-**`aybllc/7lm`** is the scaffold, holding the specification, one sheet for every canonical position, and this guide at L6 as the source each adopter takes. The other repositories mirror it, by hand: the scaffold is updated first and alone, and the others are brought into step when the owner judges it close to settled.
+The examples below record implementation history and are not part of the agnostic definition of 7LM. They have not been re-audited in this architectural pass and do not control the layer meanings above.
+
+**`aybllc/7lm`** is the current scaffold holding the specification, canonical position sheets, and this field guide.
 
 How a push from the scaffold is meant to reach an adopter, once the mechanism exists. The scaffold's update arrives, pinned to its hashes, as an item for HOA review at the adopter's `L7/peering/private/`: the scaffold is a peer, and its push is ingress. A person decides, item by item, to follow or to edit. The pushed tree is required; taking up everything in it is not, and what the person declines is listed in their HOA record rather than dropped without a trace. The push carries the tree and the sheets, never the scaffold's L6; no repository's history moves in either direction. Automating that review instead of doing it runs the risk the review exists to catch: a directory created outside the canon, which is an easy fix and a bad pull request. The path is meant to run the other way as well: an action from the scaffold collects the adopter's working guide, the version they actually work from, through their HOA, so that the source at L6 can learn from it. Meant one day: at the HOA step, one action republishes every sheet of the repository into a document in a default format, a `.docx`, whose format the team swaps for its own or chooses from several the scaffold issues; and, later, an option to put that out to a GitHub project or, perhaps, a docs site. None of this is built; for now every step is HOA. Today the mirroring is by hand, and what each adopter does with their guide is, as before, their design choice.
 
@@ -629,11 +626,7 @@ The specification records these as decisions the owner has not yet made.
 
 A held-off rules file about what a session or a model may touch. The tree itself states no such rule, deliberately.
 
-The home of a body of work called Autonomous Theory, which currently sits in both exemplars' catch-alls because it belongs to neither object's definition.
-
-Rebinding the Autonomous definition in Auditonomous to its current path.
-
-A set of inherited terms with no adjudicated position: *corpus* in its broad sense, *regress*, *found*, *caught*, *naught*, *origidity*, *certainty*, and *intolerance*. The specification holds them reserved. Do not create a folder for any of them.
+A set of inherited terms with no adjudicated position: *corpus* in its broad sense, *regress*, *found*, *caught*, *naught*, *origidity*, *certainty*, and *intolerance*. The specification preserves them as reserved vocabulary while their topology remains unadjudicated.
 
 ---
 
