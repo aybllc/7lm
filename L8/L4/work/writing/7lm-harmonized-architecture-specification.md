@@ -87,7 +87,7 @@ The owner's definition, given with its table:
 2. pin lower-layer contracts so multiple research corpora can rely on them;
 3. prevent semantic drift;
 4. localize errors to the layer that owns them;
-5. allow repair, promotion, pinning, supersession, and shedding without collapsing the whole research program;
+5. allow repair, promotion, explicit version/source distinction, supersession, and shedding without collapsing the whole research program;
 6. keep implementation details from silently redefining lower-layer science.
 
 The operational debugging principle is:
@@ -96,7 +96,7 @@ The operational debugging principle is:
 
 ### Two valid directions
 
-Authorized external inspection inward:
+External inspection inward:
 
 L7→L6→L5→L4→L3→L2→L1→L0
 
@@ -185,7 +185,7 @@ When the question changes to the origins, development, justification, standardiz
 
 | **7LM layer** | **OSI-origin inquiry may ask / represent** |
 |---|---|
-| L7 - Surface / Forward Face | Externally owned standards and source bindings, provenance, standards-publication state, public/legal governance, and relationships to standards bodies or other peers. |
+| L7 - Surface / Forward Face | External source provenance, standards-publication state, governance conditions, outward acts, and relationships to standards bodies or other external counterparts. |
 | L6 - Library / Memory | Reconstructable development history, versions, superseded or retired material, internal chronology, and the record needed to recover how the local inquiry developed. |
 | L5 - Research / Discourse | Institutional debate, research interpretation, committee or scholarly discourse, pedagogical framing, competing explanations, and judgments about why the architecture took its form. |
 | L4 - Conversion / Realization | The realized OSI architecture itself as specified, implemented, taught, tested, transmitted, or otherwise made operational. |
@@ -722,13 +722,13 @@ L8/L6/0
 |---|---|---|
 | **L8/L6/** | Layer 6 Library container for internal memory, history, prior states, failures, corrections, supersession, retirement, and reconstruction. | Keeps reconstructable scientific memory inside the USO while external provenance and public/legal relations remain on the L7 forward face. |
 | **history/** | Directory for prior states, branch history, corrections, failures, unresolved paths, and reconstructable development over time. | Preserves how the object changed instead of presenting only the latest state. |
-| **retired/** | Directory for retired or superseded internal states and bindings that are no longer current. | Implements retirement as preservation rather than deletion, including the history of peer bindings that are no longer active. |
+| **retired/** | Directory for retired or superseded internal states or relations that are no longer current. | Keeps prior states separately reconstructable when they no longer represent the current object. |
 
 ### Git and scientific memory
 
 Git history can support L6 reconstruction, but Git history and scientific memory/provenance are not the same object. Git records repository change events; L6 must preserve the scientific relations, decisions, failures, corrections, versions, and retirement needed for reconstruction. External source, authority, and prior-art provenance remain L7-owned.
 
-**[Clarification]** Integrity is enforced; no deletion is implied. What integrity needs reconstructable from the repository itself is retired, not deleted: the owner's authored documents, the rule texts of a prior layout, the error records. A superseded file whose every part is enumerated, in the record at L8/L6/history/, as standing elsewhere is deleted after that enumeration; git keeps the change event, the record keeps the enumeration. Nothing is deleted before it is enumerated, and no rule of no deletion is enforced anywhere: the one CI check checks integrity, not the absence of deletion.
+**[Clarification]** L6 requires reconstructability of the internal history it claims to preserve; it does not prescribe one storage or deletion policy. A repository may preserve prior states through retained files, version-control history, explicit retirement records, archival storage, or another method adequate to reconstruction. In this repository, Git history and L6 records are used together as an implementation choice. Reconstructability is the architectural function; the retention mechanism is not.
 
 **[Note]** Author note. When full interpretation begins outside the object, L7 is encountered first and L6 is the first interior layer. Interior-only inspection can therefore be described as beginning at L6.
 
@@ -893,7 +893,7 @@ Those handling choices remain valid **for that exemplar**. They do not define pe
 
 ### Forward-face model
 
-L7 is the desk: the current external surface where finished work, external bindings, provenance, governance, peering, and allications become addressable without moving their scientific meaning out of the USO.
+L7 is the desk: the current external surface where finished work, external relations, provenance, governance, peering, and allications become addressable without moving their scientific meaning out of the USO.
 
 Conceptual distinctions include consumer <-> product; customer <-> service; request <-> response; need <-> offer; incoming interaction <-> outgoing interaction; and restricted exposure <-> public exposure.
 
@@ -978,7 +978,7 @@ Supporting-evidence disposition: Git history can support L6 reconstruction, but 
 | **Inherited term or issue** | **Disposition** | **Controlling harmonization** |
 |---|---|---|
 | prior-art | Relocated | External antecedents belong at L7/provenance/prior-art/. |
-| definitions | Ratified | Locally authored definitions belong at L8/L0/semantics/definitions/; peer definitions arrive as immutable external bindings. |
+| definitions | Revised | Definitions that function in the bounded object's semantic contract belong at L8/L0/semantics/definitions/ regardless of source authorship. External source relations belong to provenance where relevant; peering applies only when an identifiable counterpart relationship is represented. |
 | semantic-formulas | Split and reserved | Semantic reading remains L0; an exact formula is L2; an applied, tolerant, adaptive, or engineering formula is L3. The inherited compound term remains searchable. |
 | thesis-statements | Relocated | Research claims and thesis statements belong at L8/L5/research/lanes/ or the corresponding L5 research artifact. |
 | origidity; certainty; intolerance | Reserved | Candidate L1 semantics preserved; topology remains unadjudicated. |
