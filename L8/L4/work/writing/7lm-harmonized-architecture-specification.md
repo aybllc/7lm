@@ -316,7 +316,7 @@ Foundational semantic/rail contract used by the bounded object before admissible
 | **Hard boundary** | L0 owns foundational meaning and distinctions, not prior art, provenance, public/legal governance, state transition, operator, proof, numerical method, experiment, or research conclusion. Source origin does not change the layer role of a meaning used at L0. |
 | **Machine metadata** | Machine-readable metadata may identify rail, source reference, scope, version, gate status, or implementation-specific handling conditions. Metadata may describe the representation but must not replace its semantic meaning. |
 
-| **Owns / represents** | **Permitted actions** | **Acceptance / boundary check** |
+| **Owns / represents** | **What occurs here** | **Boundary indicators** |
 |---|---|---|
 | • Ontological, Semantic, Epistemic, and Universality rail boundaries for this object.<br>• System-level traversal/attachment pedagogy as a directory/function, without making Pedagogy a fifth rail.<br>• Vocabulary and semantic representations used by this bounded object, whether locally formulated or explicitly adopted for a stated scope. | • place each foundational distinction in the rail that states its role<br>• state ambiguity or unresolved meaning without filling it by guess<br>• distinguish semantic use from external provenance when a source relation matters<br>• record changed meaning as a changed semantic state rather than silently conflating it with the prior state | • Every L1 distinction resolves to an L0 meaning actually used by the bounded object.<br>• Source origin and semantic role are not conflated: provenance may describe where a meaning came from, while L0 describes what meaning functions here.<br>• Peering is not required merely because a source is external.<br>• No neighboring rail silently supplies another rail's local meaning. |
 
@@ -372,7 +372,7 @@ Admissible states and static possibility bounds.
 | **Hard boundary** | No carrying, transition, selection, learning, calculation, propagation, or transformation. Formal operation begins at L2. |
 | **Machine metadata** | Machine-readable metadata may identify the state-space version, pinning/immutability status, admission checks, and compatibility validation. It may enforce the frozen board, but it does not create the states or their meaning. |
 
-| **Owns / represents** | **Permitted actions** | **Acceptance / boundary check** |
+| **Owns / represents** | **What occurs here** | **Boundary indicators** |
 |---|---|---|
 | • admissible and excluded states<br>• dimensions, domains, ranges, equivalence classes, identity conditions<br>• static invariants and compatibility constraints | • admit, exclude, distinguish, bound, freeze<br>• test state membership and compatibility<br>• issue a new version when the possibility landscape changes | • Every admitted state is grounded in L0.<br>• Invariants are mutually compatible or the collision is explicit.<br>• Changes return to L1 and create a new version. |
 
@@ -457,7 +457,7 @@ Exact formal objects and lawful operation over L1.
 | **Hard boundary** | No engineering tolerance, approximation quality, physical realization, measurement, or empirical truth is claimed here. |
 | **Machine metadata** | Machine-readable metadata may identify formal artifact type, dependencies, proof/test status, domain/codomain pointers, and execution restrictions. It assists machines without replacing the formal or semantic statement. |
 
-| **Owns / represents** | **Permitted actions** | **Acceptance / boundary check** |
+| **Owns / represents** | **What occurs here** | **Boundary indicators** |
 |---|---|---|
 | • formal symbols and types<br>• relations, functions, operators, gates, constructors, carriers, transition systems<br>• axioms, definitions, lemmas, theorems, derivations, exact formulas | • formalize, derive, prove, type-check, construct, test closure<br>• declare domain/codomain/partiality<br>• mark conjectural or unproved claims explicitly | • Every symbol binds to L0 meaning and L1 admissibility.<br>• Every operation has declared domain/codomain or partiality.<br>• Exact results are supported by proof/derivation or marked as unproved. |
 
@@ -499,7 +499,7 @@ Approximation, numerical representation, tolerance, uncertainty, and feasibility
 | **Hard boundary** | L3 is not the realized L4 output and does not itself create empirical evidence. |
 | **Machine metadata** | Machine-readable metadata may identify units, precision, approximation profile, tolerance/uncertainty bounds, implementation target, and validation conditions. It carries machine constraints while /0 carries the human semantic description. |
 
-| **Owns / represents** | **Permitted actions** | **Acceptance / boundary check** |
+| **Owns / represents** | **What occurs here** | **Boundary indicators** |
 |---|---|---|
 | • algorithms and abstract data-structure choices<br>• units, numerical representation, precision, approximation, discretization, tolerance<br>• error/uncertainty budgets, sensitivity, stability, convergence, complexity<br>• simulation, optimization, feasibility arguments | • approximate, discretize, optimize, estimate, bound error, choose representation<br>• compare candidate methods to L2 invariants<br>• state operating assumptions and valid region | • Error/uncertainty, units, precision, and tolerance are explicit.<br>• Required L2 invariants are preserved within declared bounds.<br>• Resource/complexity claims are analyzed or labeled estimates. |
 
@@ -549,7 +549,7 @@ Conversion / realized work / identifiable output.
 | **Hard boundary** | L4 does not authorize its own L5 interpretation and cannot flatten lower contracts into a convenience summary. |
 | **Machine metadata** | Machine-readable metadata may identify build/run instructions, environment, resource requirements, inputs/outputs, integrity checks, permissions, and fault routing for realized work. It does not supply the L5 interpretation of the result. |
 
-| **Owns / represents** | **Permitted actions** | **Acceptance / boundary check** |
+| **Owns / represents** | **What occurs here** | **Boundary indicators** |
 |---|---|---|
 | • IP-to-energy realization: writing, models, toys, computation, code execution, experiments, integration, transport, deployment, operation, and manufacturing.<br>• Energy-to-IP capture: observations, measurements, records, datasets, failures, and other identifiable intellectual objects.<br>• A contained architecture, including an OSI stack, as actually specified, made, taught, tested, or operated. | • make, write, code, run, measure, test, collect, integrate, convert, store, transport, deploy, manufacture<br>• verify conformance and rework against the governing input contract<br>• record result or failure without converting it into a conclusion | • Governing lower dependencies are pinned and resolvable.<br>• A distinguishable IP/energy conversion output or recorded failure exists.<br>• Inputs, conditions, transformations, results, and evidence remain traceable.<br>• L4 existence does not authorize its own L5 interpretation. |
 
@@ -644,7 +644,7 @@ Interpretation, review, judgment, argument, and teaching.
 | **Hard boundary** | Consensus, prose, authority, or usefulness cannot substitute for proof, measurement, or a lower-layer fact. |
 | **Machine metadata** | Machine-readable metadata may identify workflow state, ACL/role constraints, review status, routing, institutional access, and release readiness. These instructions govern machine handling; they do not create the research meaning. |
 
-| **Owns / represents** | **Permitted actions** | **Acceptance / boundary check** |
+| **Owns / represents** | **What occurs here** | **Boundary indicators** |
 |---|---|---|
 | • research questions, hypotheses, rationale, analyses, interpretations, findings<br>• literature search and relevance judgment<br>• claim scope, limitations, uncertainty, explanation, conclusion<br>• review, audit, research governance, teaching, manuscript meaning | • compare claim to evidence; interpret; criticize; accept/reject/qualify/supersede<br>• request revision from a lower owner without silently mutating it<br>• prepare a claim for preservation and presentation | • Claim is no broader than evidence/maturity.<br>• Methods, exclusions, uncertainty, and inferential limits are disclosed.<br>• Research meaning is distinguished from L4 writing and L7 release. |
 
@@ -702,7 +702,7 @@ Memory, history, reconstruction, retirement, and query orientation.
 | **Hard boundary** | L6 records, preserves, and orients; it does not make the L5 research judgment or establish truth. |
 | **Machine metadata** | Machine-readable metadata may identify retention, archival, retirement, supersession, reconstruction, and integrity instructions for memory/history. References to external provenance resolve to L7 rather than being re-owned by L6. |
 
-| **Owns / represents** | **Permitted actions** | **Acceptance / boundary check** |
+| **Owns / represents** | **What occurs here** | **Boundary indicators** |
 |---|---|---|
 | - prior internal states and versions<br>- branch history and decision history<br>- failed paths and unresolved obligations<br>- corrections, supersession, retirement, and retained memory | - record, preserve, compare, branch, supersede, retire, reconstruct<br>- retain prior classifications and corrections without erasure<br>- orient inspection before entering the active payload | - Prior internal states and changes are reconstructable.<br>- Correction does not require deletion of prior state.<br>- External source/provenance references resolve back to L7.<br>- Retirement preserves the record rather than erasing it. |
 
@@ -746,7 +746,7 @@ External provenance, public/legal governance, peering, publications, exposure, a
 | **Hard boundary** | L7 owns external relations, not lower-layer scientific meaning. Presence, publication, copyright, patent status, exposure, custody, provenance, or peering does not make an object valid, complete, true, adopted, or internally authored. |
 | **Machine metadata** | Machine-readable metadata may identify provenance, governance, visibility, ingress/egress direction, peer/object identity, release state, permissions, and implementation-specific handling conditions. Metadata describes or enforces an implementation contract; it does not define scientific meaning. |
 
-| **Owns / represents** | **Permitted actions** | **Acceptance / boundary check** |
+| **Owns / represents** | **What occurs here** | **Boundary indicators** |
 |---|---|---|
 | - provenance: prior art, sources, lineage, authority<br>- public/legal governance: copyright, licensing, patents, permissions, access, controlled<br>- peering: public/private exposure, ingress/egress direction, peer/object relation<br>- allications: outward acts, of which publication is one | - represent and distinguish external relations<br>- identify source and provenance relations<br>- state governance conditions where relevant<br>- identify peer counterpart, exposure, and direction<br>- represent outward acts and releases | - Each L7 record states only the external relation it owns.<br>- Peering does not silently determine authorship, acceptance, truth, or interior layer ownership.<br>- Public/private and ingress/egress remain independent peering coordinates.<br>- Publication or legal status does not strengthen scientific evidence.<br>- Unused canonical branches may remain empty without implying failure. |
 
