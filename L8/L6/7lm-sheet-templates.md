@@ -98,7 +98,7 @@ Keeps the produced file at the layer that made it, apart from its argument at L5
 
 ## Full
 
-The form the sheets of `aybllc/7lm` take: the standard four, with the object identified on a line beneath the path, the boundary the specification states for the position, and the position's standing — whether it may remain empty, what inherited term touches it, whether machine metadata is instantiated. A position sheet takes the form below. A layer's own sheet, `L8/Ln/0.md`, takes a different form. Beneath the object and path line it states the layer in prose; then the specification's information sheet for the layer — core question, function, directional inputs, output, hard boundary, machine metadata — with what the layer owns, its permitted actions, its acceptance checks, its directory structure, a prose-and-rationale row for each child, the specification's notes on the layer, and its direction.
+The form the sheets of `aybllc/7lm` take: the standard four, with the object identified on a line beneath the path, the boundary the specification states for the position, and the position's standing — whether it may remain empty, what inherited term touches it, whether machine metadata is instantiated. A position sheet takes the form below. A layer's own sheet, `L8/Ln/0.md`, takes a different form. Beneath the object and path line it states the layer in prose; then the specification's information sheet for the layer — core question, function, directional inputs, output, hard boundary, machine metadata — with what the layer owns, what occurs there, its boundary indicators, its directory structure, a prose-and-rationale row for each child, the specification's notes on the layer, and its direction.
 
 ```markdown
 # <path from root>/
