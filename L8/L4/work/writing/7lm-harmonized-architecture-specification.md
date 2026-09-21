@@ -41,9 +41,9 @@ In the originating Autonomous/Auditonomous exemplar, the receiving object chose 
 
 A definition may also be adopted from a book, article, archive, database, standards source, web search, or another external source without a peering relation being represented at all. In that case the semantic use belongs where the meaning functions, while provenance describes the source relation where relevant.
 
-[
-	ext{external source}\not\Rightarrow	ext{peer}
-]
+\[
+\text{external source}\not\Rightarrow\text{peer}
+\]
 
 The architectural distinction is:
 
@@ -819,13 +819,13 @@ Here **auditable** means that the represented relationship can be identified and
 
 Peering does not, merely by representing a relationship, establish authorship, ownership, acceptance, rejection, adoption, provenance, permission, truth, scientific validity, or internal layer ownership.
 
-[
-	ext{peering}=	ext{represented relationship across the boundary}
-]
+\[
+\text{peering}=\text{represented relationship across the boundary}
+\]
 
-[
-	ext{external relation}\neq	ext{scientific meaning}
-]
+\[
+\text{external relation}\neq\text{scientific meaning}
+\]
 
 [
 	ext{external source}\not\Rightarrow	ext{peer}
