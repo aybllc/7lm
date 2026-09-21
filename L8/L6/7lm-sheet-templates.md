@@ -1,6 +1,8 @@
 # The Seven-Layer Model: Sheet Templates
 
-A sheet is the `0.md` in a folder. Two things about it are not design choices: it exists, in every folder of the tree the scaffold pushes, and its first line is the folder's own path from the root, written like `# L8/L3/engineering-mathematics/`. Everything after the first line is a design choice. For a layer's own sheet, `L8/L0/0.md` through `L8/L6/0.md`, the recommendation is at least one sentence more than the layer's number — one at L0, two at L1, three at L2, and so on — stating the space of the folder and what it does. A folder beneath a layer is a design choice through and through: its sheet may be blank, the first line and nothing else. A blank sheet is skipped, and is tagged at the end of the document that collects the sheets as an audit exception for HOA review.
+A sheet is the `0.md` in a directory. In the current 7LM scaffold, every canonical directory has one. Its first line is the directory's own path from the root, written like `# L8/L3/engineering-mathematics/`, and its body states the semantic meaning of that directory: what occurs there and what distinguishes it from neighboring positions.
+
+The directory may otherwise remain empty when unused. The `0.md` does not need to manufacture content for the directory, but a current canonical sheet is not complete if it contains only a heading. Detail can range from a minimal semantic statement to a full information sheet; the minimum is meaning, not population.
 
 A new repository's sheets start at the degree its owner chooses. Three degrees are given here. The sheets of `aybllc/7lm` are complete, detailed, and rigorous: the full degree. Where a template and the specification differ, the specification controls.
 
@@ -12,12 +14,12 @@ A template here is the content of a sheet, at a degree. The form in which all of
 
 ## Minimal
 
-The requirement and the recommendation, and nothing else. For a layer's own sheet, the first line is the path and the body is at least one sentence more than the layer's number, stating the space of the folder and what it does.
+The smallest current sheet states the path and at least one substantive semantic statement describing what occurs in the directory. Minimal means concise; it does not mean semantically blank.
 
 ```markdown
 # <path from root>/
 
-<The space of this folder and what it does, in at least one sentence more than the layer's number.>
+<What this directory represents or what occurs here, stated in at least one substantive sentence.>
 ```
 
 At L0, one sentence:
@@ -25,7 +27,7 @@ At L0, one sentence:
 ```markdown
 # L8/L0/
 
-What this object means before anything else is said: the ontological, semantic, epistemic, and universality distinctions it authored itself, and only those.
+The foundational ontological, semantic, epistemic, and universality distinctions used by this bounded object before an admissible state is declared.
 ```
 
 At L1, two:
@@ -36,13 +38,15 @@ At L1, two:
 The states this object admits under the contract L0 established, the states it excludes, and the invariants that hold across them. Nothing moves here; transitions begin at L2.
 ```
 
-For a folder beneath a layer, the minimal sheet is blank: the first line and nothing else.
+For a directory beneath a layer, the same semantic minimum applies:
 
 ```markdown
 # L8/L1/state-space/
+
+The admissible and excluded states, dimensions, identity conditions, and static invariants of the bounded object before formal operation begins.
 ```
 
-A blank sheet passes the one CI check, which reads the first line and nothing after it. It is skipped, and it is tagged at the end of the document that collects the sheets as an audit exception for HOA review: a person sees the list of what was left blank and decides.
+The branch may contain no other files when unused. The sheet still states what the coordinate means.
 
 ---
 
@@ -104,7 +108,7 @@ The form the sheets of `aybllc/7lm` take: the standard four, with the object ide
 # <path from root>/
 
 **Object:** <One line: what this position is for, in the specification's words where it has them.>
-**Path:** `<path from root>/` · **Layer:** <Ln — NAME> · **Owner:** <the owning position>
+**Path:** `<path from root>/` · **Position or Layer:** <use "Layer" for L0-L6 interior layers; use "Position" for L7 surface positions> · **Owner:** <the owning position>
 
 ## What this directory is
 
@@ -128,7 +132,7 @@ The form the sheets of `aybllc/7lm` take: the standard four, with the object ide
 
 ## Standing
 
-- This branch may remain empty. Presence in the agnostic topology establishes admissible capability, not mandatory population; unused now does not mean removed.
+- This branch may remain otherwise empty. Presence in the canonical topology states the meaning of the position; it does not require a project to populate that position with artifacts.
 - <Inherited terms and dispositions that touch this position, or that none does.>
 - Machine metadata: described at <the layer's sheet>; <instantiated or not>.
 ```
