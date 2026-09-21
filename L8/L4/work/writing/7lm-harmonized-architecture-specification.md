@@ -356,7 +356,7 @@ L8/L0/0
 
 In the Autonomous exemplar, IEEE/IEC have already been adjudicating relevant definitions through standards. The locally authored semantic definition used by this bounded object still lives at Layer 0, while the discourse, research, and state-space objects are distilled to their own layers. AUTONOMOUS and AUDITONOMOUS are retained as pedagogical exemplars: EXEMPLAR AUTO and EXEMPLAR AUDIT.
 
-**[Clarification]** Standing. In this exemplar, the L0 object is the locally authored semantic definition of Autonomous. IEEE/IEC source definitions and standards remain externally owned inputs bound through L7 peering; their source identity, version, authority, and prior-art relation are represented through L7 provenance. Historical internal use remains reconstructable through L6.
+**[Clarification]** Standing. In this exemplar, the L0 object is the semantic definition used for Autonomous. IEEE/IEC source definitions and standards retain their external source provenance at L7/provenance. A direct peer relation is represented at L7/peering only where this exemplar actually maintains one. Historical internal use remains reconstructable through L6.
 
 ---
 
@@ -601,7 +601,7 @@ Cross-layer activity cases
 | Contained architecture (OSI) | Operationally, the full OSI L1-L7 architecture remains an L4 object. Questions about its origins, development, justification, standards history, or design constraints may be railed through other 7LM layers; this analytic expansion does not remap OSI layers to 7LM layers. |
 | **Code** | Algorithmic/engineering representation can be L3; formal proof/model L2; execution, deployed bytes, storage, interfaces, and operational result L4. |
 | **Data** | Collected/stored instances and transformations are L4; engineering representation/precision L3; formal encoding may be L2; state categories L1; external source/lineage is L7 provenance; internal development history is L6; interpretation is L5. |
-| **External definition** | Owner remains external at L7 peering; source/version/authority/prior-art relation is L7 provenance; applicable legal/access conditions are L7 governance; internal use history is L6; interpretation is L5; no local L0 object exists unless this bounded thing authors a semantic version. |
+| **External-source definition** | When the bounded object uses the definition as part of its semantic contract, that semantic role is L0 regardless of who authored the source. Source/version/authority/prior-art relations are L7 provenance where relevant; applicable legal/access conditions are L7 governance; a peer relationship is L7 peering only when such a relationship actually exists; internal use history may be L6; interpretation is L5. |
 | **Publication** | Production is L4; scholarly/research meaning is L5; internal history is L6; provenance, public/legal governance, and the released publication object are L7. |
 
 **[Note]** Author note. Writing is L4 as work. An exemplar/model/thesis/file is made here; its research meaning may be L5 and its released publication may be L7.
