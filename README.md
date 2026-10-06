@@ -10,6 +10,6 @@ Read in this order:
 2. `L8/0.md` — the interior: the seven layers `L6/` down to `L0/`, the count rule, the dependency rules, the tree.
 3. The `0.md` of every directory beneath them.
 
-The root holds `README.md`, `L7/`, `L8/`, and `.github/` (one CI check, repository infrastructure and not a layer), and nothing else.
+The root holds `README.md`, `L7/`, `L8/`, and `.github/` (the one CI check and the release script, repository infrastructure and not a layer), and nothing else.
 
 The first README, the working sketch, is retired at `L8/L6/retired/scaffold-2026-08-20/README.md`. The record of this repository's layout is `L8/L6/history/harmonization-2026-09-04.md`.

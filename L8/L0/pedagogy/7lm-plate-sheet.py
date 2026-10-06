@@ -4,8 +4,8 @@
 One source file. Every drawing on the sheet is defined here and nowhere else, so
 there is one place to change when the model changes.
 
-One plate for now, settled on 12 September 2026 (record: L8/L6/history/harmonization-2026-09-04.md
-§21 and §22): the eight positions,
+One plate for now, settled on 12 September 2026 (record:
+L8/L6/history/harmonization-2026-09-04.md §21 and §22): the eight positions,
 as laid out on disk and as read. L7/ and L8/ stay siblings at the root, L8/ holding
 the interior. L8 is the envelope around all of them. L0 is the origin. L1 is the
 floor and L6 the end of the payload. L7 is the glue. L8's trailing edge is the

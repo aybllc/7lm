@@ -605,7 +605,7 @@ Find the first layer where a promise breaks, and fix it there. The specification
 
 ## 14. Where it is used today
 
-**This repository** is the scaffold, holding the specification, one sheet for every canonical position, and this guide at L6 as the source each adopter takes. The other repositories mirror it, by hand: the scaffold is updated first and alone, and the others are brought into step when it is judged close to settled.
+**This repository** is the scaffold, holding the specification, one sheet for every canonical position, and this guide at L6 as the source each adopter takes. The other repositories mirror it, by hand: the scaffold is updated first and alone, and the others are brought into step when it is judged close to settled. The scaffold's own public release is that push made outward: `.github/release.sh`, run by a person, carries the tree, the sheets and the source documents as one commit with no history and no author, and nothing from the scaffold's L6 beyond its three sheets.
 
 How a push from the scaffold is meant to reach an adopter, once the mechanism exists. The scaffold's update arrives, pinned to its hashes, as an item for HOA review at the adopter's `L7/peering/private/`: the scaffold is a peer, and its push is ingress. A person decides, item by item, to follow or to edit. The pushed tree is required; taking up everything in it is not, and what the person declines is listed in their HOA record rather than dropped without a trace. The push carries the tree and the sheets, never the scaffold's L6; no repository's history moves in either direction. Automating that review instead of doing it runs the risk the review exists to catch: a directory created outside the canon, which is an easy fix and a bad pull request. The path is meant to run the other way as well: an action from the scaffold collects the adopter's working guide, the version they actually work from, through their HOA, so that the source at L6 can learn from it. Meant one day: at the HOA step, one action republishes every sheet of the repository into a document in a default format, a `.docx`, whose format the team swaps for its own or chooses from several the scaffold issues; and, later, an option to put that out to a GitHub project or, perhaps, a docs site. None of this is built; for now every step is HOA. Today the mirroring is by hand, and what each adopter does with their guide is, as before, their design choice.
 
@@ -645,6 +645,6 @@ A set of inherited terms with no adjudicated position: *corpus* in its broad sen
 - The desk sheet: `L7/0.md`.
 - The definition "First is always 0": `L8/L0/semantics/definitions/FIRST_IS_ALWAYS_0.md`.
 - How the layout came to be: `L8/L6/history/harmonization-2026-09-04.md`.
-- The specification's own history, with the quoted words behind each rule: `L8/L6/history/specification-history.md`.
+- The specification's own history: `L8/L6/history/specification-history.md`.
 
 A note on older records. Anything dated before 12 September 2026 may write the interior as `USO/` and the layers as `l0` through `l6`. Read `USO/lN/` as `L8/LN/`, and `USO/` as `L8/`. Some older records go further back still and write lowercase `uso/`, which was an earlier layout's own path from before 24 August 2026. Leave those as they are.

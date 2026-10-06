@@ -1,7 +1,7 @@
 <!-- Canonical Markdown form of the Seven-Layer Model (7LM) Harmonized Authoritative Architecture Specification,
      version of 6 October 2026. This Markdown is the source; the .docx filed beside it is generated from the text
-     below this comment and reads back to it unchanged. The history of versions and changes
-     is at L8/L6/history/specification-history.md. -->
+     below this comment and reads back to it unchanged. The history of versions and changes is at
+     L8/L6/history/specification-history.md. -->
 
 # SEVEN-LAYER MODEL (7LM)
 
@@ -67,9 +67,9 @@ The definition, given with its table:
 
 **[Note]** L7, pronounced El-Seven, is the desk: the L is the lower left hand corner of the desk and the 7 is the upper right; the name draws the rectangle that this layer is, its Surface. L8 is the research packet on the desk: two zeros stacked, the interior's zero over the zeros of the seven layers. The interior directories carry uppercase too: L0 through L7 are the eight bits of a byte, 0 being a bit, and L8 is the extra bit that carries the semantic, as information needs an extra bit to catch any error. The names are design, not decoration, and were not chosen by accident.
 
-**[Clarification]** The packet reading, 12 September 2026. Read the bounded object as one packet. L0 is the origin: the meaning that exists in the head first and is written down second; it is not payload. L1 is the floor of the payload and L6 its end. L7 is the glue, the face at which the object binds to what is outside it. L8 envelopes them all, and its trailing edge is the connector to the next object's L0. The connector is why nothing follows the desk in traversal: past the face the object hands off, and the count begins again at zero in another object's tree. This states as a structure what the byte reading above states as a count, and the two agree.
+**[Clarification]** The packet reading, 12 September 2026 (record: L8/L6/history/harmonization-2026-09-04.md §20). Read the bounded object as one packet. L0 is the origin: the meaning that exists in the head first and is written down second; it is not payload. L1 is the floor of the payload and L6 its end. L7 is the glue, the face at which the object binds to what is outside it. L8 envelopes them all, and its trailing edge is the connector to the next object's L0. The connector is why nothing follows the desk in traversal: past the face the object hands off, and the count begins again at zero in another object's tree. This states as a structure what the byte reading above states as a count, and the two agree.
 
-**[Clarification]** The packet reading changes no position, no count, and no path. The eight positions remain L0 through L7; first is always 0; L8 remains a count and not a ninth position; L0 remains the first position, excluded from the payload but not from the count. On disk L7/ and L8/ remain siblings at the repository root, with L8/ holding the interior L0 through L6, as the canonical topology states. The directory structure was settled unchanged on 12 September 2026: L7/ and L8/ stay as laid out. The envelope is a reading of that layout, not a change to it.
+**[Clarification]** The packet reading changes no position, no count, and no path. The eight positions remain L0 through L7; first is always 0; L8 remains a count and not a ninth position; L0 remains the first position, excluded from the payload but not from the count. On disk L7/ and L8/ remain siblings at the repository root, with L8/ holding the interior L0 through L6, as the canonical topology states. The directory structure was settled unchanged on 12 September 2026 (record: L8/L6/history/harmonization-2026-09-04.md §22). The envelope is a reading of that layout, not a change to it.
 
 ### 7LM is a dependency and fault-containment architecture
 
@@ -405,7 +405,7 @@ The construction stops at the first unresolved required bridge.
 
 That is not rejection. It is honest placement.
 
-Example used in session: peer-reviewed FTL/warp-drive mathematics may be legitimate mathematics while still lacking an engineering bridge. The math can stay where it is. It does not receive a free promotion into realizable propulsion.
+Example: peer-reviewed FTL/warp-drive mathematics may be legitimate mathematics while still lacking an engineering bridge. The math can stay where it is. It does not receive a free promotion into realizable propulsion.
 
 ### No exotic capability gets a free explanatory advantage
 
@@ -413,7 +413,7 @@ FTL, unlimited power, perfect information, zero latency, infinite endurance, and
 
 They may not be used as free empirical resources unless the capability itself carries its own evidentiary and engineering burden.
 
-The session rule became:
+The rule became:
 
 > Build whatever the math permits. Claim only what the layer has earned.
 
@@ -925,7 +925,7 @@ Machine-readable metadata may support automation, but the architecture does not 
 
 ## Exemplars as instantiated
 
-Reference implementations: the Autonomous and Auditonomous repositories, with the scaffold, this repository, and the curated-source archive, the repository `l6`.
+Reference implementations: the Autonomous and Auditonomous repositories, with the scaffold (this repository) and the curated-source archive (the repository `l6`).
 
 **[Clarification]** Architecture and implementation status are separate claims. What follows documents the two exemplars as they stand, including what is not yet as this specification states. Their layouts do not control the architecture.
 
