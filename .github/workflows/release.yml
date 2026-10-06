@@ -1,0 +1,29 @@
+name: release
+# The public release of this repository, on a person's dispatch and never on its own: .github/release.sh builds
+# the tree, the sheets, and the source documents from HEAD as one commit that carries no history and no author,
+# checks it, and pushes it to the repository named by the repository variable PUBLIC_REPO (owner/name) with the
+# secret PUBLIC_REPO_TOKEN (a token with write access to that repository's contents, and nothing else). The
+# optional variable RELEASE_BRANCH names the branch there (default main). With PUBLIC_REPO or the token unset,
+# the run is a dry run: the tree is built and checked, and nothing leaves.
+on:
+  workflow_dispatch:
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+
+      - name: Build, check, and release
+        env:
+          PUBLIC_REPO: ${{ vars.PUBLIC_REPO }}
+          PUBLIC_REPO_TOKEN: ${{ secrets.PUBLIC_REPO_TOKEN }}
+          RELEASE_BRANCH: ${{ vars.RELEASE_BRANCH }}
+        run: |
+          if [ -n "$PUBLIC_REPO" ] && [ -n "$PUBLIC_REPO_TOKEN" ]; then
+            .github/release.sh "https://x-access-token:${PUBLIC_REPO_TOKEN}@github.com/${PUBLIC_REPO}.git"
+          else
+            echo "::notice::PUBLIC_REPO or PUBLIC_REPO_TOKEN is not set: dry run, nothing leaves"
+            .github/release.sh
+          fi

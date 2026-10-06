@@ -4,7 +4,8 @@
 One source file. Every drawing on the sheet is defined here and nowhere else, so
 there is one place to change when the model changes.
 
-One plate for now, on the owner's word of 12 September 2026: the eight positions,
+One plate for now, settled on 12 September 2026 (record: L8/L6/history/harmonization-2026-09-04.md
+§21 and §22): the eight positions,
 as laid out on disk and as read. L7/ and L8/ stay siblings at the root, L8/ holding
 the interior. L8 is the envelope around all of them. L0 is the origin. L1 is the
 floor and L6 the end of the payload. L7 is the glue. L8's trailing edge is the
@@ -249,8 +250,7 @@ TITLEBLOCK = """
   around all of them. Every rule of the model that can be drawn will be drawn here, and here only
   &#8212; one sheet to change when the model changes.</p>
   <dl class="specs">
-    <div><dt>Source</dt><dd>The Harmonized Authoritative Architecture Specification, version of 20 September 2026</dd></div>
-    <div><dt>Repository</dt><dd class="mono">aybllc/7lm</dd></div>
+    <div><dt>Source</dt><dd>The Harmonized Authoritative Architecture Specification, version of 6 October 2026</dd></div>
     <div><dt>Plates</dt><dd>1 &#183; the eight positions</dd></div>
     <div><dt>Standing</dt><dd>Everything drawn here is in the specification. The tree stands as it has it: <span class="mono">L7/</span> and <span class="mono">L8/</span> siblings at the root, <span class="mono">L8/</span> holding the interior. The packet reading &#8212; origin, payload, glue, connector, and L8 as the envelope &#8212; entered its text on 13 September 2026.</dd></div>
   </dl>
@@ -294,8 +294,8 @@ def render():
             f'{p["svg"]}</svg></div>'
             '</div></section>')
     page = (HEAD + '\n<div class="sheet">' + TITLEBLOCK + ''.join(out) + FOOT + '</div>\n'
-            '<p class="colophon">Drawn from the owner&#8217;s words and the '
-            '<span class="mono">0.md</span> sheets of <span class="mono">aybllc/7lm</span>. '
+            '<p class="colophon">Drawn from the specification and the '
+            '<span class="mono">0.md</span> sheets of this repository. '
             'The plain-language companion is the 7LM Field Guide, filed at '
             '<span class="mono">L8/L6/7lm-field-guide.md</span>.</p>\n')
     OUT.write_text(page, encoding='utf-8')
