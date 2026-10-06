@@ -2,7 +2,7 @@
 
 A sheet is the `0.md` in a folder. Two things about it are not design choices: it exists, in every folder of the tree the scaffold pushes, and its first line is the folder's own path from the root, written like `# L8/L3/engineering-mathematics/`. Everything after the first line is a design choice. For a layer's own sheet, `L8/L0/0.md` through `L8/L6/0.md`, the recommendation is at least one sentence more than the layer's number — one at L0, two at L1, three at L2, and so on — stating the space of the folder and what it does. A folder beneath a layer is a design choice through and through: its sheet may be blank, the first line and nothing else. A blank sheet is skipped, and is tagged at the end of the document that collects the sheets as an audit exception for HOA review.
 
-A new repository's sheets start at the degree its owner chooses. Three degrees are given here. The sheets of `aybllc/7lm` are complete, detailed, and rigorous: the full degree. Where a template and the specification differ, the specification controls.
+A new repository's sheets start at the degree its owner chooses. Three degrees are given here. The sheets of this repository are complete, detailed, and rigorous: the full degree. Where a template and the specification differ, the specification controls.
 
 A template is copied into the folder as its `0.md`, the angle-bracketed parts replaced, and the brackets removed. Keep the first line exact.
 
@@ -98,7 +98,7 @@ Keeps the produced file at the layer that made it, apart from its argument at L5
 
 ## Full
 
-The form the sheets of `aybllc/7lm` take: the standard four, with the object identified on a line beneath the path, the boundary the specification states for the position, and the position's standing — whether it may remain empty, what inherited term touches it, whether machine metadata is instantiated. A position sheet takes the form below. A layer's own sheet, `L8/Ln/0.md`, takes a different form. Beneath the object and path line it states the layer in prose; then the specification's information sheet for the layer — core question, function, directional inputs, output, hard boundary, machine metadata — with what the layer owns, its permitted actions, its acceptance checks, its directory structure, a prose-and-rationale row for each child, the specification's notes on the layer, and its direction.
+The form the sheets of this repository take: the standard four, with the object identified on a line beneath the path, the boundary the specification states for the position, and the position's standing — whether it may remain empty, what inherited term touches it, whether machine metadata is instantiated. A position sheet takes the form below. A layer's own sheet, `L8/Ln/0.md`, takes a different form. Beneath the object and path line it states the layer in prose; then the specification's information sheet for the layer — core question, function, directional inputs, output, hard boundary, machine metadata — with what the layer owns, its permitted actions, its acceptance checks, its directory structure, a prose-and-rationale row for each child, the specification's notes on the layer, and its direction.
 
 ```markdown
 # <path from root>/
