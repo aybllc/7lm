@@ -4,9 +4,9 @@ A research program accumulates claims of different kinds, and without a discipli
 
 This guide states what each layer owns, where a given piece of work belongs, and the procedures for the operations you will perform most often. Section 12 is a glossary of the terms used throughout.
 
-Everything here is drawn from the specification, from the sheets, the `0.md` files that describe every folder in the `aybllc/7lm` repository, and, where the exemplar repositories are described, from those repositories as they stood. Where this guide and the specification differ, the specification controls.
+Everything here is drawn from the specification, from the sheets, the `0.md` files that describe every folder in this repository, and, where the exemplar repositories are described, from those repositories as they stood. Where this guide and the specification differ, the specification controls.
 
-This guide is filed at `L8/L6/` in `aybllc/7lm`, as a source document. It is not the L0 pedagogy of a repository that uses the model: a repository's `L8/L0/pedagogy/` explains how that one object is traversed and attached, in its own terms, and a guide to the model as a whole is not that. A person who adopts the model takes this guide from L6, applies its updates or leaves them, publishes their own version at their L7 or keeps it at their L6, and secures their L7 surface as part of the same decision. This is the guide before the last one; the last is the one each adopter publishes. The step is taken by a person and by nothing else. The owner marks such steps HOA, human-only actions. Where an adopter's version sits is a design choice of theirs, not a rule of the model. What is never a design choice: the guides share no history. This guide carries the model; what `aybllc/7lm` was and how it changed is in its own L6, and an adopter's past is in theirs.
+This guide is filed at `L8/L6/` in this repository, as a source document. It is not the L0 pedagogy of a repository that uses the model: a repository's `L8/L0/pedagogy/` explains how that one object is traversed and attached, in its own terms, and a guide to the model as a whole is not that. A person who adopts the model takes this guide from L6, applies its updates or leaves them, publishes their own version at their L7 or keeps it at their L6, and secures their L7 surface as part of the same decision. This is the guide before the last one; the last is the one each adopter publishes. The step is taken by a person and by nothing else. Such steps are marked HOA, human-only actions. Where an adopter's version sits is a design choice of theirs, not a rule of the model. What is never a design choice: the guides share no history. This guide carries the model; what this repository was and how it changed is in its own L6, and an adopter's past is in theirs.
 
 The diagrams live on their own sheet. The 7LM Plate Sheet is the only place the model is drawn, so there is one sheet to change when the model changes. It carries one plate for now, the eight positions with L8 as the envelope around all of them, and it is filed at `L8/L0/pedagogy/7lm-plate-sheet.html`.
 
@@ -20,10 +20,10 @@ Nothing runs on its own. There is no engine and no validator that files material
 
 ### The one idea
 
-A single subject carries several distinct kinds of claim, and each kind belongs to a different layer. The `aybllc/autonomous` repository studies one word, *autonomous*. Its claims distribute as follows.
+A single subject carries several distinct kinds of claim, and each kind belongs to a different layer. The Autonomous repository studies one word, *autonomous*. Its claims distribute as follows.
 
 - **What the word means here.** Somebody had to sit down and write the definition this project actually uses. That is `L8/L0/semantics/definitions/AUTONOMOUS.md`, and it lives at the bottom layer, L0.
-- **Which states are admissible.** Before you can say a system moved from one condition to another, you have to declare which conditions the definition admits at all. In the sister repository, `aybllc/auditonomous`, that work sits in `L8/L1/state-space/AUDITON_ENVELOPE.md`.
+- **Which states are admissible.** Before you can say a system moved from one condition to another, you have to declare which conditions the definition admits at all. In the sister repository, Auditonomous, that work sits in `L8/L1/state-space/AUDITON_ENVELOPE.md`.
 - **What follows exactly, by derivation.** Axioms, operators, exact relations, theorems. In both exemplar repositories this layer holds a formulas ledger that currently declares itself empty.
 - **What survives engineering tolerance.** This is where an exact relation meets units, error budgets, convergence, and the question of whether the thing is feasible at all.
 - **What was genuinely made or measured.** A manuscript, a computation that ran, an experiment with a result. Autonomous keeps its manuscript placeholder and a deep research run here.
@@ -64,13 +64,13 @@ Two further names appear throughout.
 
 Two facts about the layout on disk. L7 is outside the packet: `L7/` and `L8/` are siblings, and moving from the desk into L6 crosses a boundary rather than opening a subfolder. And nothing follows the desk. Past it the count restarts at zero inside another object's tree, where this entire object is one bound object at a peer position.
 
-**The packet reading.** The specification states one more thing about these positions, and it is the owner's. Read the object as one packet. L0 is the origin: the meaning that exists in the head first and is written down second, and it is not payload. L1 is the floor of the payload and L6 its end. L7 is the glue, the face at which the object binds to what is outside it. L8 envelopes them all, and its trailing edge is the connector to the next object's L0. That connector is why nothing follows the desk: past the face the object hands off, and the count starts again at zero in the next object's tree. The reading changes no position and no path. It is drawn on the plate sheet.
+**The packet reading.** The specification states one more thing about these positions. Read the object as one packet. L0 is the origin: the meaning that exists in the head first and is written down second, and it is not payload. L1 is the floor of the payload and L6 its end. L7 is the glue, the face at which the object binds to what is outside it. L8 envelopes them all, and its trailing edge is the connector to the next object's L0. That connector is why nothing follows the desk: past the face the object hands off, and the count starts again at zero in the next object's tree. The reading changes no position and no path. It is drawn on the plate sheet.
 
 ---
 
 ## 3. The count rule: "First is always 0"
 
-The owner's rule is four words: first is always 0. It is stated with this table:
+The rule is four words: first is always 0. It is stated with this table:
 
 | semantic | > | magnitude |
 |---|---|---|
@@ -81,9 +81,9 @@ The owner's rule is four words: first is always 0. It is stated with this table:
 
 Ordinals such as *first* and *second* are semantics. Numbers such as 0 and 1 are magnitudes. The relation between them is *is*. First is 0, second is 1, and so on.
 
-The seven layers are L0 through L6, so the seventh layer is L6. In the owner's words, "layer 7 will always be layer 6 :)". L7 carries the number 7 but is not a layer. It is the desk, and counting up from L0 it is the eighth position you reach. L8 is not a position at all. It counts the eight positions L0 through L7, and it also names the folder holding the interior.
+The seven layers are L0 through L6, so the seventh layer is L6. L7 carries the number 7 but is not a layer. It is the desk, and counting up from L0 it is the eighth position you reach. L8 is not a position at all. It counts the eight positions L0 through L7, and it also names the folder holding the interior.
 
-A second count runs in parallel, and the two must not be confused. Peers at the desk are numbered from 1: `peer-1`, `object-1`. Layers are numbered from 0. The owner's reasoning: peers are physical, and physical things are counted from one. Zero is the semantic origin, where the Semantic and Epistemic rails define the layers above. It is what exists before anything physical does.
+A second count runs in parallel, and the two must not be confused. Peers at the desk are numbered from 1: `peer-1`, `object-1`. Layers are numbered from 0. The reasoning: peers are physical, and physical things are counted from one. Zero is the semantic origin, where the Semantic and Epistemic rails define the layers above. It is what exists before anything physical does.
 
 ### The names are descriptive
 
@@ -123,13 +123,13 @@ These apply at every layer. Most filing questions are answered by them directly.
 
 **The sheet carries meaning; metadata carries machine instructions.** The `0.md` file is written for humans. Machine metadata, if it ever exists, attaches to the folder itself rather than sitting in the tree as a file, so none is created. Right now no machine metadata is switched on anywhere in the scaffold or either exemplar. Everything is manual, and the specification does not pretend otherwise.
 
-**Build whatever the math permits. Claim only what the layer has earned.** The owner's rule. Valid math at L2 does not become an engineering claim at L3 on its own, and it does not become a claim about measured results at L4 either. Publishing something at L7 never strengthens it.
+**Build whatever the math permits. Claim only what the layer has earned.** The rule. Valid math at L2 does not become an engineering claim at L3 on its own, and it does not become a claim about measured results at L4 either. Publishing something at L7 never strengthens it.
 
 The rule does not prohibit speculation. A hypothesis may be stated and explored mathematically as far as it goes. The specification's example is faster-than-light travel: peer-reviewed FTL mathematics may be legitimate mathematics and still stop at L2, with no promotion to realizable propulsion. Stopping there is honest placement, not rejection.
 
 The same applies to any assumed capability: unlimited power, perfect information, zero latency, infinite endurance. Each may be studied conditionally. None may serve as free evidence. A claim that depends on one requires that capability to carry its own engineering and evidentiary burden first, and nothing unobserved or unbuilt is promoted downward into the foundational claim space.
 
-**The guides share no history.** The owner's hard rule. Each repository's history is its own, kept at its own L6 and nowhere else: what the object was, how it changed, what was retired and why. This guide, and every version of it an adopter publishes, carries the model and not the past of any repository. That is why there is an L6. Hand that job to anything else — another repository's guide, a shared document, an automation — and the repository has broken away from 7LM.
+**The guides share no history.** The hard rule. Each repository's history is its own, kept at its own L6 and nowhere else: what the object was, how it changed, what was retired and why. This guide, and every version of it an adopter publishes, carries the model and not the past of any repository. That is why there is an L6. Hand that job to anything else — another repository's guide, a shared document, an automation — and the repository has broken away from 7LM.
 
 ---
 
@@ -153,7 +153,7 @@ Definitions this object wrote go in `semantics/definitions/`. Autonomous keeps i
 
 Somebody else's definition never gets copied here just to fill the folder. It gets bound at the desk instead, and section 8 shows you how.
 
-The owner left a research note at this layer worth repeating. Semantic drift, the divergence that sets in when the local L0 meaning contract changes or is misapplied, is suspected to originate right here. The specification retains that as an open hypothesis, not a settled rule.
+A research note at this layer is worth repeating. Semantic drift, the divergence that sets in when the local L0 meaning contract changes or is misapplied, is suspected to originate right here. The specification retains that as an open hypothesis, not a settled rule.
 
 ### L1: State Space
 
@@ -195,7 +195,7 @@ The specification's phrase is any conversion between intellectual property and e
 
 Ideas to energy looks like writing, computing, running an experiment, building, deploying, or teaching. Energy to ideas looks like measurements, observations, datasets, and recorded failures. One folder, `work/`, holds three more: `writing/`, `experiments/`, and `computation/`.
 
-Autonomous shows the layer at work. Its manuscript placeholder sits under writing. So does its autonomy scale, which the owner ruled explicitly is an L4 object as a written thing even though what it means is L5 discourse. Under computation sits a deep research run, filed as a thing that ran rather than a thing that was concluded. Auditonomous goes further and files its chat transcripts and a session record here too, because those are also events that happened.
+Autonomous shows the layer at work. Its manuscript placeholder sits under writing. So does its autonomy scale, which is ruled an L4 object as a written thing even though what it means is L5 discourse. Under computation sits a deep research run, filed as a thing that ran rather than a thing that was concluded. Auditonomous goes further and files its chat transcripts and a session record here too, because those are also events that happened.
 
 A whole system with its own internal layers sits inside L4 as a single object. The classic case is a complete OSI network stack, which carries seven layers of its own. Its internal "layer 7" is not 7LM's L7, and the two must not be confused.
 
@@ -205,7 +205,7 @@ Ask *how does it operate*, and the whole stack is one L4 object with its own int
 
 The stack does not move when the question expands. It remains an L4 object. The specification names this distinction operational containment versus analytic expansion, and it means a network fault inside the stack is an L4 fault unless somebody separately shows it touches another layer's object.
 
-The owner calls this layer the cut. Below L4, things are specified. At L4, things are made.
+This layer is the cut. Below L4, things are specified. At L4, things are made.
 
 Failures get filed here as first-class objects. A run that died, a build that broke, a measurement that went sideways: each one is an L4 object recorded as a failure, not quietly converted into a conclusion. What the specification asks for is an audit-ready conversion product, meaning the filing stays traceable through its inputs, conditions, transformations, results, tests, and rework, with the lower-layer contracts it depends on pinned and resolvable.
 
@@ -275,13 +275,13 @@ The desk carries the object's external relations. Each branch is covered separat
 
 Source files do not live here. They are pointed to. A designated archive repository holds the actual documents, bound once at private ingress and read-only from every repository that uses it. A repository that cites a source keeps one row in a ledger, and that row gives the file's path inside the archive and the exact archive version it is pinned to. No source file is ever copied in.
 
-In the repositories described in section 14, that archive is `aybllc/l6`, holding well over a thousand tracked files across journals, standards, books, and captures. That is a fact about those repositories, not a rule of the model. Another 7LM object could name a different archive, or none at all.
+In the repositories described in section 14, that archive is `l6`, holding well over a thousand tracked files across journals, standards, books, and captures. That is a fact about those repositories, not a rule of the model. Another 7LM object could name a different archive, or none at all.
 
 ### Governance
 
 `L7/governance/` holds the legal and access conditions: copyright, licensing, patents, permissions, access, controlled.
 
-Copyright gets exactly one place, `governance/copyright/`. You state every copyright and licence condition there once, and the licensing and controlled folders point at it rather than repeating it. The owner was emphatic about this: a reader looking for copyright should have exactly one place to look, and from there it should be obvious what to do next.
+Copyright gets exactly one place, `governance/copyright/`. You state every copyright and licence condition there once, and the licensing and controlled folders point at it rather than repeating it. The rule is emphatic: a reader looking for copyright should have exactly one place to look, and from there it should be obvious what to do next.
 
 ### Peering
 
@@ -336,7 +336,7 @@ The last piece is a matter of stance, and the specification names it the declare
 - `notifications/` — notices given, usually discharging an obligation, where the fact of having given notice on a date is the point.
 - `participations/` — bodies, panels, working groups the object took part in, with the role and the period.
 
-The name is the owner's, and it is a mnemonic for the family rather than the test for membership: an outward act belongs here whether or not its name ends in *-ication*. The writing stays at L4, the meaning stays at L5, and the history stays at L6.
+The name is a mnemonic for the family rather than the test for membership: an outward act belongs here whether or not its name ends in *-ication*. The writing stays at L4, the meaning stays at L5, and the history stays at L6.
 
 ---
 
@@ -358,11 +358,11 @@ To enumerate a file means listing every part of it and where each part now stand
 
 The rule that actually gets enforced is integrity: the repository has to stay whole and reconstructable. "Nothing is deleted" is not a separate rule sitting beside it. It falls out of integrity as a consequence.
 
-Some things have to stay readable so the past can be rebuilt, and those get retired to `L8/L6/retired/` rather than deleted. The owner's authored documents, the rule texts of a prior layout, error records.
+Some things have to stay readable so the past can be rebuilt, and those get retired to `L8/L6/retired/` rather than deleted. The authored documents, the rule texts of a prior layout, error records.
 
 Everything else follows the ordinary act. A superseded file is deleted once every part of it is enumerated in a record at `L8/L6/history/` stating where each part now stands. Deleted, not retired. Git keeps the change event and the record keeps the enumeration. Retiring such a file would make L6 a second copy of git.
 
-The one automated check on the repository, which section 10 describes, checks integrity. It does not check for the absence of deletion, and the owner was explicit that it must not.
+The one automated check on the repository, which section 10 describes, checks integrity. It does not check for the absence of deletion, and it must not.
 
 ---
 
@@ -454,7 +454,7 @@ In the tree below, `/0` after a folder name means that folder carries its `0.md`
 
 Every folder has a `0.md`. Two things about it are not design choices. The sheet exists, in every folder of the tree the scaffold pushes. And its first line is the folder's own path from the root, written like `# L8/L3/engineering-mathematics/`. Keep the tree and keep the sheets so, and the repository is a 7LM repository. Drop either and it has branched outside the system: the work may be good research, but it is not how this system works, and it is not supported or developed as part of it.
 
-After the first line the sheet states the space of the folder and what it does. How much it says is a design choice. For a layer's own sheet, `L8/L0/0.md` through `L8/L6/0.md`, the recommendation is at least one sentence more than the layer's number: one sentence at L0, two at L1, three at L2, and so on up. A folder beneath a layer keeps its sheet, since the tree and the first line are not design choices; what its sheet says is a design choice through and through, and the sheet may be blank: the first line and nothing else. A blank sheet is skipped, and it is tagged at the end of the document that collects the sheets — the republishing meant one day, which section 14 describes — as an audit exception for HOA review — a person's review, as every step is for now. The sheets in `aybllc/7lm` say a great deal more than that: they are complete, detailed, and rigorous — the full degree, every one of them — and they bind no one else's. A new repository's sheets start at the degree its owner chooses; three templates, one at each degree, are beside this guide at `L8/L6/7lm-sheet-templates.md`.
+After the first line the sheet states the space of the folder and what it does. How much it says is a design choice. For a layer's own sheet, `L8/L0/0.md` through `L8/L6/0.md`, the recommendation is at least one sentence more than the layer's number: one sentence at L0, two at L1, three at L2, and so on up. A folder beneath a layer keeps its sheet, since the tree and the first line are not design choices; what its sheet says is a design choice through and through, and the sheet may be blank: the first line and nothing else. A blank sheet is skipped, and it is tagged at the end of the document that collects the sheets — the republishing meant one day, which section 14 describes — as an audit exception for HOA review — a person's review, as every step is for now. The sheets in this repository say a great deal more than that: they are complete, detailed, and rigorous — the full degree, every one of them — and they bind no one else's. A new repository's sheets start at the degree its owner chooses; three templates, one at each degree, are beside this guide at `L8/L6/7lm-sheet-templates.md`.
 
 A sheet is a working document. It is read while filing, and it belongs to its folder: when the folder moves, the sheet moves with it. It is not a support document. Support is help for things that break, and it is a service to users; 7LM does not provide one. Its users are researchers working self-service, and a researcher whose work warrants technical support has an institution that provides it.
 
@@ -507,7 +507,7 @@ A retired set under `L8/L6/retired/<name>/` keeps its old sheets exactly as they
 
 ### Cite a source
 
-1. The source file stays in the designated archive, bound once at `L7/peering/private/ingress/peer-N/` and read-only from your repository. For the repositories in section 14, that archive is `aybllc/l6`.
+1. The source file stays in the designated archive, bound once at `L7/peering/private/ingress/peer-N/` and read-only from your repository. For the repositories in section 14, that archive is `l6`.
 2. Add one row at `L7/provenance/sources/` carrying an ID, the citation, the archive path, and the archive commit you read it at.
 3. If the source carries a copyright or licence condition, state it once at `L7/governance/copyright/`.
 4. Quote and cite in your work, pointing at the row. Never copy the source file into your repository.
@@ -533,7 +533,7 @@ If you know which position owns it but not where it goes inside that position, p
 3. Give the set its own `0.md` at its root, saying what the set is and where the current state now lives.
 4. Record the retirement in `L8/L6/history/`.
 
-Retire only what integrity needs in order to rebuild the past: the owner's authored documents, the rule texts of a prior layout, error records. Everything else superseded gets enumerated in the record and then deleted.
+Retire only what integrity needs in order to rebuild the past: the authored documents, the rule texts of a prior layout, error records. Everything else superseded gets enumerated in the record and then deleted.
 
 ### Trace a fault
 
@@ -550,7 +550,7 @@ Find the first layer where a promise breaks, and fix it there. The specification
 
 - **Bounded object.** One research thing with a clear edge: a definition, a theory, a project. Each 7LM repository is about exactly one, and when this guide says "the object," that is what it means.
 - **Owner.** The person who runs a 7LM repository and decides what gets filed where. A definition's owner is the object that wrote it.
-- **HOA.** Human-only actions: the owner's marker for a step a person takes and nothing else does. Filing is one. Taking this guide from L6 and publishing a version of it is another.
+- **HOA.** Human-only actions: the marker for a step a person takes and nothing else does. Filing is one. Taking this guide from L6 and publishing a version of it is another.
 - **Design choice.** What the model leaves to the owner of a repository. What a sheet says after its first line, the version of this guide an adopter publishes and where, and whether a position is used at all are design choices. The tree, the sheets' first lines, and the rule that the guides share no history are not.
 - **Audit exception.** A blank sheet beneath a layer — the first line and nothing else — listed at the end of the document that collects the sheets, for HOA review.
 - **USO.** The interior of a bounded object, living in `L8/`.
@@ -599,23 +599,23 @@ Find the first layer where a promise breaks, and fix it there. The specification
 
 **Leaving a folder without a sheet.** A sheet beneath a layer may be blank, the first line and nothing else, and a blank sheet is an audit exception for HOA review. A missing sheet is a folder outside the system.
 
-**Reading the archive's name, `l6`, as a layer name.** `aybllc/l6` is a separate repository. `L8/L6/` is the layer. The names collide; the things are unrelated.
+**Reading the archive's name, `l6`, as a layer name.** `l6` is a separate repository. `L8/L6/` is the layer. The names collide; the things are unrelated.
 
 ---
 
 ## 14. Where it is used today
 
-**`aybllc/7lm`** is the scaffold, holding the specification, one sheet for every canonical position, and this guide at L6 as the source each adopter takes. The other repositories mirror it, by hand: the scaffold is updated first and alone, and the others are brought into step when the owner judges it close to settled.
+**This repository** is the scaffold, holding the specification, one sheet for every canonical position, and this guide at L6 as the source each adopter takes. The other repositories mirror it, by hand: the scaffold is updated first and alone, and the others are brought into step when it is judged close to settled.
 
 How a push from the scaffold is meant to reach an adopter, once the mechanism exists. The scaffold's update arrives, pinned to its hashes, as an item for HOA review at the adopter's `L7/peering/private/`: the scaffold is a peer, and its push is ingress. A person decides, item by item, to follow or to edit. The pushed tree is required; taking up everything in it is not, and what the person declines is listed in their HOA record rather than dropped without a trace. The push carries the tree and the sheets, never the scaffold's L6; no repository's history moves in either direction. Automating that review instead of doing it runs the risk the review exists to catch: a directory created outside the canon, which is an easy fix and a bad pull request. The path is meant to run the other way as well: an action from the scaffold collects the adopter's working guide, the version they actually work from, through their HOA, so that the source at L6 can learn from it. Meant one day: at the HOA step, one action republishes every sheet of the repository into a document in a default format, a `.docx`, whose format the team swaps for its own or chooses from several the scaffold issues; and, later, an option to put that out to a GitHub project or, perhaps, a docs site. None of this is built; for now every step is HOA. Today the mirroring is by hand, and what each adopter does with their guide is, as before, their design choice.
 
-**`aybllc/autonomous`** defines the word *autonomous* out of codified standards, meaning standards written down by standards bodies. The nine bodies whose clauses feed that definition are bound as peers at public ingress, and the definition itself is exposed at public egress.
+**Autonomous** defines the word *autonomous* out of codified standards, meaning standards written down by standards bodies. The nine bodies whose clauses feed that definition are bound as peers at public ingress, and the definition itself is exposed at public egress.
 
-**`aybllc/auditonomous`** defines the coined word *auditonomous*. It binds the Autonomous definition at public ingress, reference-only, then writes only how its own word differs. The specification calls that difference a local delta.
+**Auditonomous** defines the coined word *auditonomous*. It binds the Autonomous definition at public ingress, reference-only, then writes only how its own word differs. The specification calls that difference a local delta.
 
-**`aybllc/l6`** is the curated-source archive. It is not laid out as a 7LM repository at all. The others point at its files rather than copying them.
+**`l6`** is the curated-source archive. It is not laid out as a 7LM repository at all. The others point at its files rather than copying them.
 
-The specification calls `autonomous` and `auditonomous` its two exemplars, meaning its worked examples, and its section "Exemplars as instantiated" lists exactly what in them does not yet match the architecture, under the heading "Not yet as stated." Read that before you copy anything from either one. As of the version of 20 September 2026 it says this:
+The specification calls `autonomous` and `auditonomous` its two exemplars, meaning its worked examples, and its section "Exemplars as instantiated" lists exactly what in them does not yet match the architecture, under the heading "Not yet as stated." Read that before you copy anything from either one. As of the version of 6 October 2026 it says this:
 
 In Autonomous, the catch-all holds work belonging to other objects, and the provenance rows for the nine bound issuing bodies are not yet ledgered. In Auditonomous, the binding names the path the peer used before its own 7LM layout, three files still take a definition of *autonomous* from somewhere other than the binding, and the L0 epistemic rail is empty with its vocabulary standing at L5 as review status.
 
@@ -625,7 +625,7 @@ Keep the two claims separate. The design is one claim. How far each repository h
 
 ## 15. Open calls
 
-The specification records these as decisions the owner has not yet made.
+The specification records these as decisions not yet made.
 
 A held-off rules file about what a session or a model may touch. The tree itself states no such rule, deliberately.
 
@@ -639,12 +639,12 @@ A set of inherited terms with no adjudicated position: *corpus* in its broad sen
 
 ## 16. Where to read more
 
-- The diagrams: the 7LM Plate Sheet, `L8/L0/pedagogy/7lm-plate-sheet.html`. One plate for now: the eight positions, with L8 drawn as the envelope around all of them, as the owner has described it.
-- The specification: `L8/L4/work/writing/7lm-harmonized-architecture-specification.md` in `aybllc/7lm`.
+- The diagrams: the 7LM Plate Sheet, `L8/L0/pedagogy/7lm-plate-sheet.html`. One plate for now: the eight positions, with L8 drawn as the envelope around all of them.
+- The specification: `L8/L4/work/writing/7lm-harmonized-architecture-specification.md` in this repository.
 - The interior sheet and the count rule: `L8/0.md`.
 - The desk sheet: `L7/0.md`.
-- The owner's definition "First is always 0": `L8/L0/semantics/definitions/FIRST_IS_ALWAYS_0.md`.
+- The definition "First is always 0": `L8/L0/semantics/definitions/FIRST_IS_ALWAYS_0.md`.
 - How the layout came to be: `L8/L6/history/harmonization-2026-09-04.md`.
-- The specification's own history, with the owner's words behind each rule: `L8/L6/history/specification-history.md`.
+- The specification's own history, with the quoted words behind each rule: `L8/L6/history/specification-history.md`.
 
 A note on older records. Anything dated before 12 September 2026 may write the interior as `USO/` and the layers as `l0` through `l6`. Read `USO/lN/` as `L8/LN/`, and `USO/` as `L8/`. Some older records go further back still and write lowercase `uso/`, which was an earlier layout's own path from before 24 August 2026. Leave those as they are.
