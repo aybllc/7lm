@@ -7,6 +7,8 @@ name: release
 # the run is a dry run: the tree is built and checked, and nothing leaves.
 on:
   workflow_dispatch:
+permissions:
+  contents: read
 jobs:
   release:
     runs-on: ubuntu-latest
