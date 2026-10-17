@@ -296,8 +296,8 @@ def render():
     page = (HEAD + '\n<div class="sheet">' + TITLEBLOCK + ''.join(out) + FOOT + '</div>\n'
             '<p class="colophon">Drawn from the owner&#8217;s words and the '
             '<span class="mono">0.md</span> sheets of <span class="mono">aybllc/7lm</span>. '
-            'The plain-language companion is the 7LM Field Guide, filed at '
-            '<span class="mono">L8/L6/7lm-field-guide.md</span>.</p>\n')
+            'The field guide that accompanied the model is retired at '
+            '<span class="mono">L8/L6/retired/field-guide-2026-09-20/</span>, stale and kept as an example.</p>\n')
     OUT.write_text(page, encoding='utf-8')
     print(f"wrote {OUT} ({len(page):,} bytes); plates: {len(PLATES)}")
 
