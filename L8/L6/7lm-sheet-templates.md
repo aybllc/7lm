@@ -8,7 +8,7 @@ A new repository's sheets start at the degree its owner chooses. Three degrees a
 
 A template is copied into the folder as its `0.md`, the angle-bracketed parts replaced, and the brackets removed. Keep the first line exact.
 
-A template here is the content of a sheet, at a degree. The form in which all of a repository's sheets are republished outward is a separate choice; section 14 of the guide states what is meant there one day; for now everything is HOA.
+A template here is the content of a sheet, at a degree. The form in which all of a repository's sheets are republished outward is a separate choice; section 14 of the field guide, now retired at `L8/L6/retired/field-guide-2026-09-20/`, describes the form meant one day; for now everything is HOA.
 
 ---
 
