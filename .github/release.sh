@@ -6,7 +6,7 @@
 # What leaves: README.md, .github/workflows/integrity.yml (the one CI check, the same in every 7LM
 # repository), and everything under L7/ and L8/ except the contents of L8/L6/history/, L8/L6/in/ and
 # L8/L6/retired/, whose own sheets (0.md) leave and whose records do not. A repository's history is its
-# own and is kept at its own L6: the release never carries it (the hard rule, L8/L6/7lm-field-guide.md §5).
+# own and is kept at its own L6: the release never carries it (the hard rule, L8/L6/0.md).
 # This script and its workflow do not leave either.
 #
 # What the public sees: one commit, authored "7LM <7lm@localhost>", whose message is the release date.
