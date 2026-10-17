@@ -509,7 +509,11 @@ Not changed. The tree. Every sheet's first line. The owner's words, anywhere. Th
 
 Read. "Please take the qwheel", the same evening as "Don't change the system unless you ask or are unsure" (§36): read as leave to make the words say what the folders already say and to act on findings verified three ways, and as no leave to change what any position is, holds, or is named. Nothing here does the latter.
 
-## 38. 2026-10-17 — the field guide retired: stale, deprecated, kept as an example
+## 38. Reserved
+
+Reserved for the pass of 6 October 2026, the agnostic sweep and the release, which is carried by the open pull request #19 and is not on `main`; numbered ahead of §39 so that this record stays in date order whichever is merged first. If that pass is never merged, this number stays empty and this line says why.
+
+## 39. 2026-10-17 — the field guide retired: stale, deprecated, kept as an example
 
 The owner, 2026-10-17, quoted as written: "Put the field guide into l6 as provenance stale. Deprecated and to be used as an example." And, the same message: "Print every 0.md file into a pdf I can read from top to bottom". Earlier the same day, on another matter and bearing on this one: "I didn't want anything automated yet".
 
@@ -519,4 +523,17 @@ Done, on disk. `L8/L6/7lm-field-guide.md` is `L8/L6/retired/field-guide-2026-09-
 
 Not changed. The tree: `retired/` is canonical and a dated set beneath it is the established form. Every sheet's first line. The specification, which never named the guide (§26). The templates' content. The CI, which skips a retired set's nested sheets and checks the set's own. The guide's text. The hard rule of §31, which stands in this record.
 
-Open, for the owner. The hard rule of §31 was written into the guide's section 5 and into no live sheet; with the guide retired it stands in this record alone. Whether `L8/L6/0.md` is to carry it is the owner's call. Two open branches edit the guide at its former path, `ccr-00099fac-hjosbo` (PR #19) and `audit/peering-descriptive-reframe-2026-09-20`; whichever is merged after this change will need the rename reconciled, and PR #19's own §38 would become §39.
+Open, for the owner, as it stood when this section was written. The hard rule of §31 was written into the guide's section 5 and into no live sheet; with the guide retired it stood in this record alone, and whether `L8/L6/0.md` was to carry it was the owner's call. Two open branches edit the guide at its former path, `ccr-00099fac-hjosbo` (PR #19) and `audit/peering-descriptive-reframe-2026-09-20`, and whichever was merged after this change would need the rename reconciled. Both were decided the same day: §40.
+
+## 40. 2026-10-17 — the hard rule placed in the L6 sheet; the rename reconciled on the two open branches
+
+The owner, 2026-10-17, on the two items §39 left open, quoted as written: "fix them".
+
+Done, the rule. `L8/L6/0.md` gains the section "The hard rule: the guides share no history", placed after "Git and scientific memory": the rule of §31 in the words the record and the retired guide's section 5 give it, with the date it was set and this section as its record. The retired set's sheet points at it. Since the guide was retired the rule had stood in no live sheet (§39); it now stands in the sheet of the layer it is about.
+
+Done, the reconciliation. Each of the two branches that edit the guide at its former path receives one merge commit of this branch, so that it merges cleanly after this change whichever lands first; neither branch's history is rewritten, and the guide's text in the retired set stays verbatim on both.
+
+- `ccr-00099fac-hjosbo` (PR #19, the pass of 6 October 2026). Five files conflict and are resolved by keeping that pass's wording and adding this pass's: `L8/L6/0.md` (its release sentence and attribution-free wording; this pass's retired entry and rule section), `L8/L6/retired/0.md`, the plate generator's colophon (its first sentence, this pass's second), the plate sheet regenerated from the generator, and this record, where that pass's section takes the number §38 reserved for it. That pass's edits to the guide's text are not carried onto the retired copy: its own scope is live text only, nothing under `L8/L6/retired/`, and a retired set is preserved verbatim; they remain in that branch's history. The release script's comment that cited the hard rule at the guide's section 5 now cites `L8/L6/0.md`.
+- `audit/peering-descriptive-reframe-2026-09-20`. One file conflicts, `L7/0.md`, where that branch's rewrite meets the heading added on `main` on 5 October; both are kept. That branch's edits to the guide are likewise not carried onto the retired copy and remain in its history. The branch itself is neither adopted nor retired by this: its disposition is still the owner's call (§36).
+
+Not changed. The tree. Every sheet's first line. The specification. The guide's text, in the retired set, on all three branches.
