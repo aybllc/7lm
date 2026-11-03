@@ -93,7 +93,7 @@ The specification records that the names were chosen to depict what they name. T
 
 **L8 depicts the enclosure.** Because the count starts at L0, every layer carries a zero, its `0.md`, and the interior carries one as well, `L8/0.md`. The interior's zero over the layers' zeros gives 0 over 0, which forms an 8. An 8 is a closed figure: L8 encloses the seven layers.
 
-**The byte reading.** L0 through L7 are the eight bits of a byte. L8 is the extra bit, which, like a check bit, carries the semantic and catches an error.
+**The byte reading.** L0 through L7 are the eight bits of a byte. L8 is the extra bit in the architectural mnemonic, carrying the semantic. This analogy supplies no universal error-detection guarantee; any such guarantee requires a stated code and error model.
 
 ---
 
@@ -147,7 +147,7 @@ A question may traverse some layers and skip others. Each part of the answer sti
 
 This is where the object's own meaning lives, and only the meaning this object actually authored. The specification calls what L0 produces the local semantic contract: the foundational representation everything above it depends on.
 
-Four rails divide the work, each with its own folder: ontology, semantics, epistemic, and universality. A fifth folder, pedagogy, holds the explanation of how the layers are traversed and how this object attaches to others. Pedagogy is a folder and a function, not a fifth rail.
+Four named foundational rails divide the work, each with its own folder: ontology, semantics, epistemic, and universality. They do not exhaust the locally authored foundational distinctions a model may require. A model can support multiple vertical analytic inquiries through its applicable dependencies; these inquiries and L5 research lanes do not create lateral rail traversal. A fifth folder, pedagogy, holds the explanation of how the layers are traversed and how this object attaches to others. Pedagogy is a folder and a function, not a fifth rail.
 
 Definitions this object wrote go in `semantics/definitions/`. Autonomous keeps its definition of *autonomous* there, an entry carrying eleven codified definitions labelled A1 through A11, each one reproduced verbatim with its issuing body's ownership tag attached. The tagging is the discipline in miniature: the clauses originate with standards bodies, so they remain marked as theirs.
 
@@ -227,7 +227,7 @@ A review compares the claim to its evidence and may accept, reject, qualify, or 
 
 The hard boundary at L5: consensus, prose, authority, and usefulness never substitute for proof or measurement. A well-argued paragraph is not a result.
 
-One further ruling applies here. A scale, a ladder, or a set of status labels is an L4 object as a written thing, and what it means is L5 discourse. It is never an L1 state space and never L2 mathematics.
+The autonomy scale or a review-status ladder is an L4 object as a written instrument; its research or review meaning is L5 discourse. Separately declared admissible values may be L1 representations, and exact relations or operators may be L2 representations under their contracts. This does not relocate the written instrument or its review meaning.
 
 ### L6: Library / Memory
 

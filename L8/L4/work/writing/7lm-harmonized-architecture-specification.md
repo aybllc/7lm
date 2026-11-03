@@ -18,7 +18,7 @@ Version\
 Version of 20 September 2026. The history of versions and changes, with the owner's words behind each rule, is at L8/L6/history/specification-history.md in the scaffold repository.
 
 Self-description and machine-instruction rule\
-Every directory carries a local Layer 0 semantic description. In tree notation, /0 denotes that directory's local 0.md without drawing the file as a separate branch. The same directory separately carries machine-readable metadata for machine instructions, constraints, permissions, routing, validation, and lifecycle behavior. /0 carries human-readable meaning; metadata carries machine-actionable instruction. Neither replaces the other. This separation keeps semantic description distinct from machine operation.
+Every directory carries a local Layer 0 semantic description. In tree notation, /0 denotes that directory's local 0.md without drawing the file as a separate branch. When machine instructions are enabled, the same directory separately carries machine-readable metadata for machine instructions, constraints, permissions, routing, validation, and lifecycle behavior. Current manual practice does not imply that such metadata or enforcement has been instantiated. /0 carries human-readable meaning; metadata carries machine-actionable instruction. Neither replaces the other. This separation keeps semantic description distinct from machine operation.
 
 Direction rule\
 Scientific construction proceeds from L0 outward only as dependencies are established. External inspection begins at L7 and proceeds inward. Description does not become prescription merely because the structure can be traversed.
@@ -65,7 +65,7 @@ The owner's definition, given with its table:
 
 **[Clarification]** Peers are physical and are counted from 1 at L7/peering/: peer-1, object-1. The layers are counted from 0: 0 is the semantic origin, where the Semantic and Epistemic rails define the layers above; it is what exists first, before anything physical. The two counts do not conflict.
 
-**[Note]** Author note. L7, pronounced El-Seven, is the desk: the L is the lower left hand corner of the desk and the 7 is the upper right; the name draws the rectangle that this layer is, its Surface. L8 is the research packet on the desk: two zeros stacked, the interior's zero over the zeros of the seven layers. The interior directories carry uppercase too: L0 through L7 are the eight bits of a byte, 0 being a bit, and L8 is the extra bit that carries the semantic, as information needs an extra bit to catch any error. The names are design, not decoration, and were not chosen by accident.
+**[Note]** Author note. L7, pronounced El-Seven, is the desk: the L is the lower left hand corner of the desk and the 7 is the upper right; the name draws the rectangle that this layer is, its Surface. L8 is the research packet on the desk: two zeros stacked, the interior's zero over the zeros of the seven layers. The interior directories carry uppercase too: L0 through L7 are the eight bits of a byte, 0 being a bit, and L8 is the extra bit that carries the semantic, as information needs an extra bit to catch any error. The names are design, not decoration, and were not chosen by accident. This byte/extra-bit reading is an architectural mnemonic, not a theorem that one extra bit detects every possible error; any error-detection guarantee requires its own stated code and error model.
 
 **[Clarification]** The packet reading. The owner, 12 September 2026, quoted as written: "L8 has to envelope them all to simulate a packet where gteh floor is l1 the end is l6, ythe glue is l7 adn l8 is gthe connectror the the next l0". Read the bounded object as one packet. L0 is the origin: the meaning that exists in the head first and is written down second; it is not payload. L1 is the floor of the payload and L6 its end. L7 is the glue, the face at which the object binds to what is outside it. L8 envelopes them all, and its trailing edge is the connector to the next object's L0. The connector is why nothing follows the desk in traversal: past the face the object hands off, and the count begins again at zero in another object's tree. This states as a structure what the byte reading above states as a count, and the two agree.
 
@@ -184,7 +184,7 @@ When the question changes to the origins, development, justification, standardiz
 | L3 - Engineering Mathematics | Engineering constraints, tradeoffs, approximation, tolerances, uncertainty, feasibility, or other engineering conditions that shaped or test the architecture. |
 | L2 - Formal Mathematics | Exact formal relations, operators, proofs, or formal constraints used to state the architecture where such formalization is actually warranted. |
 | L1 - State Space | Admissible structural states, possibilities, exclusions, or coordinate/state-space descriptions when these are part of the question. |
-| L0 - Semantic / Foundational | The locally authored semantic distinctions required to describe what is being investigated. Externally owned standards definitions remain owned by their source and are bound through L7 rather than copied into L0. |
+| L0 - Semantic / Foundational | The locally authored semantic distinctions required to describe what is being investigated. Externally owned standards definitions remain source-owned and are bound through L7; an exact tagged semantic reference may reach receiving L0 without local authorship or redefinition. |
 
 **[Clarification]** *Author note.* The OSI model does not become 7LM L0-L7. The question about the OSI object expands. Operational containment remains L4, while representations produced by the inquiry are owned by the 7LM layer that can state them correctly.
 
@@ -351,6 +351,8 @@ In the Autonomous exemplar, IEEE/IEC have already been adjudicating relevant def
 **[Clarification]** Standing. In this exemplar, the L0 object is the locally authored semantic definition of Autonomous. IEEE/IEC source definitions and standards remain externally owned inputs bound through L7 peering; their source identity, version, authority, and prior-art relation are represented through L7 provenance. Historical internal use remains reconstructable through L6.
 
 ---
+
+**[Clarification]** The named foundational branches do not exhaust the locally authored foundational distinctions a model may require. Other justified distinctions retain their stated scope and owning contract within the existing topology; no new directory or fixed ontology is required. These foundational branches, model-attached vertical analytic inquiries, and L5 research lanes are distinct. One model may support multiple vertical inquiries through the applicable dependencies; output comparison does not permit lateral rail traversal.
 
 ## L1 — STATE SPACE
 
@@ -593,7 +595,7 @@ Cross-layer activity cases
 | Contained architecture (OSI) | Operationally, the full OSI L1-L7 architecture remains an L4 object. Questions about its origins, development, justification, standards history, or design constraints may be railed through other 7LM layers; this analytic expansion does not remap OSI layers to 7LM layers. |
 | **Code** | Algorithmic/engineering representation can be L3; formal proof/model L2; execution, deployed bytes, storage, interfaces, and operational result L4. |
 | **Data** | Collected/stored instances and transformations are L4; engineering representation/precision L3; formal encoding may be L2; state categories L1; external source/lineage is L7 provenance; internal development history is L6; interpretation is L5. |
-| **External definition** | Owner remains external at L7 peering; source/version/authority/prior-art relation is L7 provenance; applicable legal/access conditions are L7 governance; internal use history is L6; interpretation is L5; no local L0 object exists unless this bounded thing authors a semantic version. |
+| **External definition** | Owner remains external at L7 peering; source/version/authority/prior-art relation is L7 provenance; applicable legal/access conditions are L7 governance; internal use history is L6; interpretation is L5; an exact source-owned semantic reference may reach receiving L0; a locally authored L0 definition exists only if this bounded thing authors one. |
 | **Publication** | Production is L4; scholarly/research meaning is L5; internal history is L6; provenance, public/legal governance, and the released publication object are L7. |
 
 **[Note]** Author note. Writing is L4 as work. An exemplar/model/thesis/file is made here; its research meaning may be L5 and its released publication may be L7.
@@ -678,7 +680,7 @@ L8/L5/0
 
 **[Clarification]** The catch-all. research/review/ is also where everything awaiting the owner's review lands, however much of it there is. What the owner sets aside stays there labelled PARKED. What the owner takes up moves to research/lanes/, the working position, and back if set down again. Finished work is filed at its layer. Nothing is deleted. No other position and no new directory is needed for this.
 
-**[Clarification]** A scale, a ladder, or a vocabulary of levels or statuses is semantics of layer 4 and up: as written it is an L4 object, and what it means is L5 discourse. It is not an L1 state space and not L2 mathematics. A ladder of review statuses is research governance and stands at L5, not at the L0 epistemic rail.
+**[Clarification]** The autonomy scale or a review-status ladder, considered as a written instrument, is an L4 object; its research or review meaning is L5 discourse. This does not prevent separately declared admissible values at L1 or exact relations and operators at L2 under their governing contracts. A ladder of review statuses remains L5 research governance, not the L0 epistemic rail.
 
 ---
 

@@ -1,0 +1,519 @@
+{
+  "format": "7lm.beta.demonstration.v1",
+  "objects": [
+    {
+      "scientific_object": "Numeric N/U pair, separate from Semantic Magnitude",
+      "model": {
+        "id": "research-object:nu-numeric-pair:bounded-consumer-1",
+        "owner": "bounded audit consumer",
+        "synthetic": true,
+        "scope": "rational subset, independent interval-input target"
+      },
+      "rails": [
+        {
+          "id": "research-object:nu-numeric-pair:bounded-consumer-1:rail:semantic",
+          "name": "Semantic",
+          "model_id": "research-object:nu-numeric-pair:bounded-consumer-1",
+          "inquiry_ids": [
+            "research-object:nu-numeric-pair:bounded-consumer-1:rail:semantic:inquiry"
+          ]
+        },
+        {
+          "id": "research-object:nu-numeric-pair:bounded-consumer-1:rail:epistemic",
+          "name": "Epistemic",
+          "model_id": "research-object:nu-numeric-pair:bounded-consumer-1",
+          "inquiry_ids": [
+            "research-object:nu-numeric-pair:bounded-consumer-1:rail:epistemic:inquiry"
+          ]
+        }
+      ],
+      "inquiries": [
+        {
+          "id": "research-object:nu-numeric-pair:bounded-consumer-1:rail:semantic:inquiry",
+          "rail_id": "research-object:nu-numeric-pair:bounded-consumer-1:rail:semantic",
+          "question": "Does the declared interval consumer interpretation justify full-product enclosure?",
+          "inward_path": [
+            "L7",
+            "L6",
+            "L5",
+            "L4",
+            "L3",
+            "L2",
+            "L1",
+            "L0"
+          ],
+          "outward_path": [
+            "L0",
+            "L1",
+            "L2",
+            "L3",
+            "L4",
+            "L5",
+            "L6",
+            "L7"
+          ],
+          "representation_ids": [
+            "research-object:nu-numeric-pair:bounded-consumer-1:rail:semantic:inquiry:L0",
+            "research-object:nu-numeric-pair:bounded-consumer-1:rail:semantic:inquiry:L1",
+            "research-object:nu-numeric-pair:bounded-consumer-1:rail:semantic:inquiry:L2",
+            "research-object:nu-numeric-pair:bounded-consumer-1:rail:semantic:inquiry:L3",
+            "research-object:nu-numeric-pair:bounded-consumer-1:rail:semantic:inquiry:L4",
+            "research-object:nu-numeric-pair:bounded-consumer-1:rail:semantic:inquiry:L5",
+            "research-object:nu-numeric-pair:bounded-consumer-1:rail:semantic:inquiry:L6",
+            "research-object:nu-numeric-pair:bounded-consumer-1:rail:semantic:inquiry:L7"
+          ],
+          "dependency_ids": [
+            "approved-common-layer-contracts"
+          ],
+          "status": "counterexample",
+          "result": {
+            "source_product": [
+              "50",
+              "10"
+            ],
+            "decoded": [
+              "40",
+              "60"
+            ],
+            "reference": [
+              "81/2",
+              "121/2"
+            ],
+            "contains": false
+          },
+          "limits": "Fixture-specific qualification; shared dependencies, no statistical independence or lateral traversal."
+        },
+        {
+          "id": "research-object:nu-numeric-pair:bounded-consumer-1:rail:epistemic:inquiry",
+          "rail_id": "research-object:nu-numeric-pair:bounded-consumer-1:rail:epistemic",
+          "question": "Does a conserved scalar establish recoverability of the original pair?",
+          "inward_path": [
+            "L7",
+            "L6",
+            "L5",
+            "L4",
+            "L2",
+            "L1",
+            "L0"
+          ],
+          "outward_path": [
+            "L0",
+            "L1",
+            "L2",
+            "L4",
+            "L5",
+            "L6",
+            "L7"
+          ],
+          "representation_ids": [
+            "research-object:nu-numeric-pair:bounded-consumer-1:rail:epistemic:inquiry:L0",
+            "research-object:nu-numeric-pair:bounded-consumer-1:rail:epistemic:inquiry:L1",
+            "research-object:nu-numeric-pair:bounded-consumer-1:rail:epistemic:inquiry:L2",
+            "research-object:nu-numeric-pair:bounded-consumer-1:rail:epistemic:inquiry:L4",
+            "research-object:nu-numeric-pair:bounded-consumer-1:rail:epistemic:inquiry:L5",
+            "research-object:nu-numeric-pair:bounded-consumer-1:rail:epistemic:inquiry:L6",
+            "research-object:nu-numeric-pair:bounded-consumer-1:rail:epistemic:inquiry:L7"
+          ],
+          "dependency_ids": [
+            "approved-common-layer-contracts"
+          ],
+          "status": "claim_rejected",
+          "result": {
+            "input_a": [
+              "5",
+              "2"
+            ],
+            "input_b": [
+              "3",
+              "4"
+            ],
+            "catch_a": [
+              "0",
+              "7"
+            ],
+            "catch_b": [
+              "0",
+              "7"
+            ],
+            "same_output": true,
+            "full_input_ledger_required_for_reconstruction": true
+          },
+          "limits": "Fixture-specific qualification; shared dependencies, no statistical independence or lateral traversal."
+        }
+      ],
+      "representations": [
+        {
+          "id": "research-object:nu-numeric-pair:bounded-consumer-1:rail:semantic:inquiry:L0",
+          "layer": "L0",
+          "owner": "L0",
+          "path": "L8/L0/semantics/beta-research-scope.md",
+          "dependency_ids": []
+        },
+        {
+          "id": "research-object:nu-numeric-pair:bounded-consumer-1:rail:semantic:inquiry:L1",
+          "layer": "L1",
+          "owner": "L1",
+          "path": "L8/L1/state-space/beta-research-admissibility.md",
+          "dependency_ids": [
+            "research-object:nu-numeric-pair:bounded-consumer-1:rail:semantic:inquiry:L0"
+          ]
+        },
+        {
+          "id": "research-object:nu-numeric-pair:bounded-consumer-1:rail:semantic:inquiry:L2",
+          "layer": "L2",
+          "owner": "L2",
+          "path": "L8/L2/formal-mathematics/proofs/beta-research-boundaries.md",
+          "dependency_ids": [
+            "research-object:nu-numeric-pair:bounded-consumer-1:rail:semantic:inquiry:L1"
+          ]
+        },
+        {
+          "id": "research-object:nu-numeric-pair:bounded-consumer-1:rail:semantic:inquiry:L3",
+          "layer": "L3",
+          "owner": "L3",
+          "path": "L8/L3/engineering-mathematics/approximation/beta-exact-reference-method.md",
+          "dependency_ids": [
+            "research-object:nu-numeric-pair:bounded-consumer-1:rail:semantic:inquiry:L2"
+          ]
+        },
+        {
+          "id": "research-object:nu-numeric-pair:bounded-consumer-1:rail:semantic:inquiry:L4",
+          "layer": "L4",
+          "owner": "L4",
+          "path": "L8/L4/work/computation/beta-boundary-results.json",
+          "dependency_ids": [
+            "research-object:nu-numeric-pair:bounded-consumer-1:rail:semantic:inquiry:L3"
+          ]
+        },
+        {
+          "id": "research-object:nu-numeric-pair:bounded-consumer-1:rail:semantic:inquiry:L5",
+          "layer": "L5",
+          "owner": "L5",
+          "path": "L8/L5/research/findings/beta-research-boundary-findings.md",
+          "dependency_ids": [
+            "research-object:nu-numeric-pair:bounded-consumer-1:rail:semantic:inquiry:L4"
+          ]
+        },
+        {
+          "id": "research-object:nu-numeric-pair:bounded-consumer-1:rail:semantic:inquiry:L6",
+          "layer": "L6",
+          "owner": "L6",
+          "path": "L8/L6/history/specification-history.md",
+          "dependency_ids": [
+            "research-object:nu-numeric-pair:bounded-consumer-1:rail:semantic:inquiry:L5"
+          ]
+        },
+        {
+          "id": "research-object:nu-numeric-pair:bounded-consumer-1:rail:semantic:inquiry:L7",
+          "layer": "L7",
+          "owner": "L7",
+          "path": "L7/provenance/sources/source-ledger.md",
+          "dependency_ids": [
+            "research-object:nu-numeric-pair:bounded-consumer-1:rail:semantic:inquiry:L6"
+          ]
+        },
+        {
+          "id": "research-object:nu-numeric-pair:bounded-consumer-1:rail:epistemic:inquiry:L0",
+          "layer": "L0",
+          "owner": "L0",
+          "path": "L8/L0/semantics/beta-research-scope.md",
+          "dependency_ids": []
+        },
+        {
+          "id": "research-object:nu-numeric-pair:bounded-consumer-1:rail:epistemic:inquiry:L1",
+          "layer": "L1",
+          "owner": "L1",
+          "path": "L8/L1/state-space/beta-research-admissibility.md",
+          "dependency_ids": [
+            "research-object:nu-numeric-pair:bounded-consumer-1:rail:epistemic:inquiry:L0"
+          ]
+        },
+        {
+          "id": "research-object:nu-numeric-pair:bounded-consumer-1:rail:epistemic:inquiry:L2",
+          "layer": "L2",
+          "owner": "L2",
+          "path": "L8/L2/formal-mathematics/proofs/beta-research-boundaries.md",
+          "dependency_ids": [
+            "research-object:nu-numeric-pair:bounded-consumer-1:rail:epistemic:inquiry:L1"
+          ]
+        },
+        {
+          "id": "research-object:nu-numeric-pair:bounded-consumer-1:rail:epistemic:inquiry:L4",
+          "layer": "L4",
+          "owner": "L4",
+          "path": "L8/L4/work/computation/beta-boundary-results.json",
+          "dependency_ids": [
+            "research-object:nu-numeric-pair:bounded-consumer-1:rail:epistemic:inquiry:L2"
+          ]
+        },
+        {
+          "id": "research-object:nu-numeric-pair:bounded-consumer-1:rail:epistemic:inquiry:L5",
+          "layer": "L5",
+          "owner": "L5",
+          "path": "L8/L5/research/findings/beta-research-boundary-findings.md",
+          "dependency_ids": [
+            "research-object:nu-numeric-pair:bounded-consumer-1:rail:epistemic:inquiry:L4"
+          ]
+        },
+        {
+          "id": "research-object:nu-numeric-pair:bounded-consumer-1:rail:epistemic:inquiry:L6",
+          "layer": "L6",
+          "owner": "L6",
+          "path": "L8/L6/history/specification-history.md",
+          "dependency_ids": [
+            "research-object:nu-numeric-pair:bounded-consumer-1:rail:epistemic:inquiry:L5"
+          ]
+        },
+        {
+          "id": "research-object:nu-numeric-pair:bounded-consumer-1:rail:epistemic:inquiry:L7",
+          "layer": "L7",
+          "owner": "L7",
+          "path": "L7/provenance/sources/source-ledger.md",
+          "dependency_ids": [
+            "research-object:nu-numeric-pair:bounded-consumer-1:rail:epistemic:inquiry:L6"
+          ]
+        }
+      ],
+      "scientific_outcome": "enclosure_claim_rejected"
+    },
+    {
+      "scientific_object": "Semantic Magnitude, separate from numerical N/U",
+      "model": {
+        "id": "research-object:semantic-magnitude:open-algebra-1",
+        "owner": "source-scoped research fixture",
+        "synthetic": true,
+        "scope": "named semantic labels and nonnegative rational magnitude; S/Phi remain open"
+      },
+      "rails": [
+        {
+          "id": "research-object:semantic-magnitude:open-algebra-1:rail:semantic",
+          "name": "Semantic",
+          "model_id": "research-object:semantic-magnitude:open-algebra-1",
+          "inquiry_ids": [
+            "research-object:semantic-magnitude:open-algebra-1:rail:semantic:inquiry"
+          ]
+        },
+        {
+          "id": "research-object:semantic-magnitude:open-algebra-1:rail:epistemic",
+          "name": "Epistemic",
+          "model_id": "research-object:semantic-magnitude:open-algebra-1",
+          "inquiry_ids": [
+            "research-object:semantic-magnitude:open-algebra-1:rail:epistemic:inquiry"
+          ]
+        }
+      ],
+      "inquiries": [
+        {
+          "id": "research-object:semantic-magnitude:open-algebra-1:rail:semantic:inquiry",
+          "rail_id": "research-object:semantic-magnitude:open-algebra-1:rail:semantic",
+          "question": "Can distinct semantic coordinates be preserved at zero magnitude?",
+          "inward_path": [
+            "L7",
+            "L6",
+            "L5",
+            "L4",
+            "L1",
+            "L0"
+          ],
+          "outward_path": [
+            "L0",
+            "L1",
+            "L4",
+            "L5",
+            "L6",
+            "L7"
+          ],
+          "representation_ids": [
+            "research-object:semantic-magnitude:open-algebra-1:rail:semantic:inquiry:L0",
+            "research-object:semantic-magnitude:open-algebra-1:rail:semantic:inquiry:L1",
+            "research-object:semantic-magnitude:open-algebra-1:rail:semantic:inquiry:L4",
+            "research-object:semantic-magnitude:open-algebra-1:rail:semantic:inquiry:L5",
+            "research-object:semantic-magnitude:open-algebra-1:rail:semantic:inquiry:L6",
+            "research-object:semantic-magnitude:open-algebra-1:rail:semantic:inquiry:L7"
+          ],
+          "dependency_ids": [
+            "approved-common-layer-contracts"
+          ],
+          "status": "supported_with_limits",
+          "result": {
+            "state_a": [
+              "negative",
+              "0"
+            ],
+            "state_b": [
+              "zero",
+              "0"
+            ],
+            "distinct": true
+          },
+          "limits": "Fixture-specific qualification; shared dependencies, no statistical independence or lateral traversal."
+        },
+        {
+          "id": "research-object:semantic-magnitude:open-algebra-1:rail:epistemic:inquiry",
+          "rail_id": "research-object:semantic-magnitude:open-algebra-1:rail:epistemic",
+          "question": "Is a full aggradation computation warranted by the supplied source?",
+          "inward_path": [
+            "L2",
+            "L1",
+            "L0"
+          ],
+          "outward_path": [
+            "L0",
+            "L1",
+            "L2"
+          ],
+          "representation_ids": [
+            "research-object:semantic-magnitude:open-algebra-1:rail:epistemic:inquiry:L0",
+            "research-object:semantic-magnitude:open-algebra-1:rail:epistemic:inquiry:L1",
+            "research-object:semantic-magnitude:open-algebra-1:rail:epistemic:inquiry:L2"
+          ],
+          "dependency_ids": [
+            "approved-common-layer-contracts"
+          ],
+          "status": "unresolved",
+          "result": {
+            "status": "unresolved",
+            "output": null,
+            "stopped_at": "L2",
+            "obligation": "Source has not fixed semantic S, interaction Phi, and their preservation laws; no default is invented."
+          },
+          "limits": "Fixture-specific qualification; shared dependencies, no statistical independence or lateral traversal."
+        }
+      ],
+      "representations": [
+        {
+          "id": "research-object:semantic-magnitude:open-algebra-1:rail:semantic:inquiry:L0",
+          "layer": "L0",
+          "owner": "L0",
+          "path": "L8/L0/semantics/beta-research-scope.md",
+          "dependency_ids": []
+        },
+        {
+          "id": "research-object:semantic-magnitude:open-algebra-1:rail:semantic:inquiry:L1",
+          "layer": "L1",
+          "owner": "L1",
+          "path": "L8/L1/state-space/beta-research-admissibility.md",
+          "dependency_ids": [
+            "research-object:semantic-magnitude:open-algebra-1:rail:semantic:inquiry:L0"
+          ]
+        },
+        {
+          "id": "research-object:semantic-magnitude:open-algebra-1:rail:semantic:inquiry:L4",
+          "layer": "L4",
+          "owner": "L4",
+          "path": "L8/L4/work/computation/beta-boundary-results.json",
+          "dependency_ids": [
+            "research-object:semantic-magnitude:open-algebra-1:rail:semantic:inquiry:L1"
+          ]
+        },
+        {
+          "id": "research-object:semantic-magnitude:open-algebra-1:rail:semantic:inquiry:L5",
+          "layer": "L5",
+          "owner": "L5",
+          "path": "L8/L5/research/findings/beta-research-boundary-findings.md",
+          "dependency_ids": [
+            "research-object:semantic-magnitude:open-algebra-1:rail:semantic:inquiry:L4"
+          ]
+        },
+        {
+          "id": "research-object:semantic-magnitude:open-algebra-1:rail:semantic:inquiry:L6",
+          "layer": "L6",
+          "owner": "L6",
+          "path": "L8/L6/history/specification-history.md",
+          "dependency_ids": [
+            "research-object:semantic-magnitude:open-algebra-1:rail:semantic:inquiry:L5"
+          ]
+        },
+        {
+          "id": "research-object:semantic-magnitude:open-algebra-1:rail:semantic:inquiry:L7",
+          "layer": "L7",
+          "owner": "L7",
+          "path": "L7/provenance/sources/source-ledger.md",
+          "dependency_ids": [
+            "research-object:semantic-magnitude:open-algebra-1:rail:semantic:inquiry:L6"
+          ]
+        },
+        {
+          "id": "research-object:semantic-magnitude:open-algebra-1:rail:epistemic:inquiry:L0",
+          "layer": "L0",
+          "owner": "L0",
+          "path": "L8/L0/semantics/beta-research-scope.md",
+          "dependency_ids": []
+        },
+        {
+          "id": "research-object:semantic-magnitude:open-algebra-1:rail:epistemic:inquiry:L1",
+          "layer": "L1",
+          "owner": "L1",
+          "path": "L8/L1/state-space/beta-research-admissibility.md",
+          "dependency_ids": [
+            "research-object:semantic-magnitude:open-algebra-1:rail:epistemic:inquiry:L0"
+          ]
+        },
+        {
+          "id": "research-object:semantic-magnitude:open-algebra-1:rail:epistemic:inquiry:L2",
+          "layer": "L2",
+          "owner": "L2",
+          "path": "L8/L2/formal-mathematics/proofs/beta-research-boundaries.md",
+          "dependency_ids": [
+            "research-object:semantic-magnitude:open-algebra-1:rail:epistemic:inquiry:L1"
+          ]
+        }
+      ],
+      "scientific_outcome": "aggradation_unresolved"
+    }
+  ],
+  "sources": [
+    {
+      "id": "NU-17271561",
+      "owner": "author deposit",
+      "version": "10.5281/zenodo.17271561",
+      "path": "nualgebra-main.zip",
+      "sha256": "60cccd3222b00965505a6f890f3540639fe976edbd1ab209f4b4bf8497cf6f0e",
+      "role": "version-specific numerical fixture",
+      "status": "source formulas transcribed; original source not modified"
+    },
+    {
+      "id": "SM-PDF",
+      "owner": "supplied source owner",
+      "version": "supplied two-page PDF",
+      "path": "Semantic_Magnitude_Aggradation_Core.docx.pdf",
+      "sha256": "b8d36fa37ab68db59825050e4ba1789d915ceab4093bab8a662e3f922829f235",
+      "role": "unfinished algebra fixture",
+      "status": "source identity from completed audit; full source bytes not redistributed"
+    }
+  ],
+  "execution": {
+    "arithmetic": "fractions.Fraction",
+    "python": "3.14.4",
+    "synthetic": true,
+    "command": "python3 L8/L4/work/computation/beta_boundary_probes.py --output L8/L4/work/computation/beta-boundary-results.json",
+    "code_sha256": "7fa4562d00f627e9319a0f8531a358b5711d0af48a0ff732ee42f52c78283d3c"
+  },
+  "fault_and_requalification": {
+    "injection": "Promote finite source arithmetic to full interval enclosure",
+    "faulty_claim_status": "rejected",
+    "observed_failure_at": "L5 claim versus exact target",
+    "correction_owner": "L5",
+    "satisfied_upstream": [
+      "L1 rational admission",
+      "L2 source operator evaluated as defined",
+      "L3 exact reference method",
+      "L4 recorded output"
+    ],
+    "affected_dependents": [
+      "enclosure conclusion",
+      "outward qualification statement"
+    ],
+    "correction": "Restrict the conclusion to the defined first-order operation; retain the failed enclosure witness.",
+    "source_operator_changed": false,
+    "requalified_status": "supported_with_limits"
+  },
+  "limitations": [
+    "No theory repaired or completed.",
+    "No empirical uncertainty or memory claim validated.",
+    "Original NU constructor behavior is not replaced by this consumer admission gate.",
+    "Semantic Magnitude cannot prescribe aggradation through its unresolved L2 bridge.",
+    "Rail identities are model-attached perspectives, not two algorithms or L5 lanes.",
+    "This bounded packet is not directory metadata, access enforcement or universal qualification."
+  ]
+}
