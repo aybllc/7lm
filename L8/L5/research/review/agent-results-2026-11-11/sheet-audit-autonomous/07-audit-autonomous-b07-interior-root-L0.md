@@ -1,0 +1,88 @@
+# audit:autonomous:b07-interior-root-L0
+
+Agent result, as returned. Workflow: Sheet audit, Autonomous. Run `wf_8e13ec8e-47f`. Phase: Audit.
+
+- **sheets_audited**
+  - L8/0.md
+  - L8/L0/0.md
+  - L8/L0/epistemic/0.md
+  - L8/L0/ontology/0.md
+  - L8/L0/pedagogy/0.md
+  - L8/L0/semantics/0.md
+  - L8/L0/semantics/definitions/0.md
+  - L8/L0/universality/0.md
+- **statements_checked**: 150
+- **clean_sheets**
+  - L8/L0/0.md
+  - L8/L0/ontology/0.md
+  - L8/L0/pedagogy/0.md
+  - L8/L0/universality/0.md
+- **findings**
+  - item 1
+    - **id**: b07-01
+    - **kind**: WRONG-FACT
+    - **sheet**: L8/0.md
+    - **line**: 137
+    - **sheet_says**: `L8/L5/research/` (six lanes, seven findings, twelve review and adjudication files)
+    - **truth**: Six lanes and seven findings are right. `L8/L5/research/review/` holds 23 files beside its sheet plus the folder `autonomous-theory/` (11 files). Twelve is the count of the review and audit files alone (REVIEW_1..5, AUDIT_L1/L2/L4/L5/L6, AUDIT_OF_PULLED_MATERIAL, EXTERNAL_CHECK_mag_multiplicativity). The seven adjudications relocated from `manuscripts/main/` (ASSESSMENT_ebios, ASSESSMENT_nu_algebra_cannot_require_architecture, CLOSED_LOOP_GOVERNANCE, REQUIREMENTS_BY_BODY_IEEE_ISO_NIST, PREMISE_CHECK_standards_lag, EBIOS_RECODE_single_object, RULINGS) are not in the twelve, so review and adjudication files together number nineteen. The four catch-all files (auditon.ott, EVIDENCE_RULES.md, memories.odt, memories2.odt) are also uncounted.
+    - **evidence**: `git -C /home/user/autonomous ls-tree -r -l 8257118 L8/L5/research/review` lists 23 top-level files other than 0.md, and 11 files under autonomous-theory/. L8/L5/0.md line 79 itself names 'REVIEW_1…5, AUDIT_L1/L2/L4/L5/L6, AUDIT_OF_PULLED_MATERIAL, EXTERNAL_CHECK_mag_multiplicativity, and the adjudications relocated from `manuscripts/main/` (ASSESSMENT_ebios, ASSESSMENT_nu_algebra…, CLOSED_LOOP_GOVERNANCE, REQUIREMENTS_BY_BODY_IEEE_ISO_NIST, PREMISE_CHECK_standards_lag, EBIOS_RECODE_single_object, RULINGS)', which is 12 + 7 = 19.
+    - **exact_fix**: `L8/L5/research/` (six lanes, seven findings, and in `review/` twelve review and audit files, seven adjudications relocated from `manuscripts/main/`, and the catch-all: `autonomous-theory/`, `auditon.ott`, `EVIDENCE_RULES.md`, `memories.odt`, `memories2.odt`)
+  - item 2
+    - **id**: b07-02
+    - **kind**: STALE
+    - **sheet**: L8/0.md
+    - **line**: 137
+    - **sheet_says**: `L8/L6/` (the master ledger, five forensic reconstructions, the record of this pass, the retired 2026-08-14 layout, and the four definition error records)
+    - **truth**: "this pass" was the harmonization pass of 2026-09-05. The sheet has since been revised by later passes; its own line 8 cites 'the rename pass of 12 September 2026', and the record now runs to section 14 of 2026-11-11. The record is `L8/L6/history/harmonization-2026-09-05.md`. A second record, `L8/L6/history/sheets-2026-09-07.md` (6798 bytes), now stands in history and is not in this account of L6.
+    - **evidence**: `git ls-tree -l 8257118 L8/L6/history/` shows harmonization-2026-09-05.md (34909 bytes) and sheets-2026-09-07.md (6798 bytes). Record headings: '## 13. 2026-09-12 — the rename pass' and '## 14. 2026-11-11 — the L7 restructure mirrored by hand'. L8/0.md line 8 reads 'since the rename pass of 12 September 2026'.
+    - **exact_fix**: `L8/L6/` (the master ledger, five forensic reconstructions, the harmonization record `harmonization-2026-09-05.md`, the sheets record `sheets-2026-09-07.md`, the retired 2026-08-14 layout, and the four definition error records)
+  - item 3
+    - **id**: b07-03
+    - **kind**: WRONG-FACT
+    - **sheet**: L8/L0/semantics/definitions/0.md
+    - **line**: 35
+    - **sheet_says**: auditability CONTESTED; heteronomy single-source; the five compounds
+    - **truth**: REGISTER.md's 'Not yet entered' table blocks six compounds: autonomous networks, [source text withheld from the public copy], autonomous governance, and autonomous perpetual mission. REGISTER.md itself says 'six compounds'.
+    - **evidence**: `git show 8257118:L8/L0/semantics/definitions/REGISTER.md` lines 22-25. Line 22: '**[source text withheld from the public copy]**'. Line 23: manufacturing, replication, preservation. Line 24: governance. Line 25: '**[source text withheld from the public copy].**'
+    - **exact_fix**: auditability CONTESTED; heteronomy single-source; the six compounds
+  - item 4
+    - **id**: b07-04
+    - **kind**: WRONG-FACT
+    - **sheet**: L8/L0/semantics/0.md
+    - **line**: 38
+    - **sheet_says**: the compounds register in `REGISTER.md` (autonomous networks; manufacturing; replication; preservation; [source text withheld from the public copy]")
+    - **truth**: The register blocks six compounds; the list omits 'autonomous perpetual mission' (REGISTER.md line 25). The quoted words are REGISTER.md's blocker for autonomous governance only (line 24), not for the whole list.
+    - **evidence**: `git show 8257118:L8/L0/semantics/definitions/REGISTER.md` line 24: '**[source text withheld from the public copy]'. Line 25: '**[source text withheld from the public copy].**'. Line 22: 'the six compounds'.
+    - **exact_fix**: the compounds register in `REGISTER.md` (autonomous networks; manufacturing; replication; preservation; [source text withheld from the public copy]"; perpetual mission, not codified)
+  - item 5
+    - **id**: b07-05
+    - **kind**: WRONG-FACT
+    - **sheet**: L8/L0/semantics/definitions/0.md
+    - **line**: 32
+    - **sheet_says**: `L8/L5/research/review/REVIEW_4_AUTONOMOUS_ADJUDICATION.md` (2026-08-08) records CRITICAL defects in §6
+    - **truth**: REVIEW_4 records fifteen findings, two of them CRITICAL. Only one CRITICAL is in §6: F2, rule 3's universal. The other, F1, is in §1: the A3 row's label cell contradicts the row's own text. The date 2026-08-08 is right.
+    - **evidence**: `git show 8257118:L8/L5/research/review/REVIEW_4_AUTONOMOUS_ADJUDICATION.md`. Line 99: '### [source text withheld from the public copy]'. Line 243: '### [source text withheld from the public copy]'. Line 435: '**[source text withheld from the public copy]'. The A3 row is in §1 of AUTONOMOUS.md (line 72); rule 3 is in §6 (line 258). L8/L5/research/review/0.md line 35 says 'fifteen severity-ranked findings against the L0 object, two CRITICAL'.
+    - **exact_fix**: `L8/L5/research/review/REVIEW_4_AUTONOMOUS_ADJUDICATION.md` (2026-08-08) records two CRITICAL defects, one in §1 (the A3 label) and one in §6 (rule 3)
+  - item 6
+    - **id**: b07-06
+    - **kind**: WRONG-FACT
+    - **sheet**: L8/L0/epistemic/0.md
+    - **line**: 33
+    - **sheet_says**: the evidence-label vocabulary [source text withheld from the public copy]; the copyright labels are defined at `L7/governance/copyright/`)
+    - **truth**: EVIDENCE_RULES.md lists ten evidence labels in use, not seven. The sheet's enumeration leaves out ABSTRACT ONLY, FAILED CHECK and COMPOSITE OBJECT UNVERIFIED. The statement about the two copyright labels is right.
+    - **evidence**: `git show 8257118:L8/L5/research/review/EVIDENCE_RULES.md` lines 24-27: '[source text withheld from the public copy]/`.'
+    - **exact_fix**: the evidence-label vocabulary [source text withheld from the public copy] copyright labels are defined at `L7/governance/copyright/`)
+  - item 7
+    - **id**: b07-07
+    - **kind**: MISFILED
+    - **sheet**: L8/L0/semantics/definitions/0.md
+    - **line**: 24, 26 (Does not hold); 34-35 (Holdings)
+    - **sheet_says**: Does not hold: "Peer or standards definitions copied inward — they are bound at `L7/peering/` and their source identity, version, authority, and prior-art relation are represented at `L7/provenance/`." and "Semantic representation that is not a definition — `L8/L0/semantics/`."
+    - **truth**: Observation for the owner; the sheet lists both files openly. `DEFINITION_LIST_AUTONOMOUS.md` (14004 bytes) is by its own header a compilation of verbatim peer and standards definitions, not a definition this object authored. By the sheet's first Does-not-hold line that content is bound at `L7/peering/public/ingress/` and represented at `L7/provenance/`. `REGISTER.md` (5636 bytes) is a ledger of which terms are entered or blocked, not a definition; by the sheet's line 26 it would sit one level up at `L8/L0/semantics/`. The same question touches §1 of `AUTONOMOUS.md` (the A1–A11 rows, quoted verbatim), which the sheet at line 37 states as 'ingress carried inward with ownership tags'.
+    - **evidence**: `git show 8257118:L8/L0/semantics/definitions/DEFINITION_LIST_AUTONOMOUS.md` lines 3-5: '**[source text withheld from the public copy]'. REGISTER.md line 1: '# [source text withheld from the public copy]'; line 38: '[source text withheld from the public copy]'. Specification row for semantics/definitions/: 'Directory for definitions actually authored by this object under its Semantic rail.' / 'Prevents an external definition from being copied inward and mistaken for locally owned meaning.'
+    - **exact_fix**: None required. If the owner decides to move them: `REGISTER.md` to `L8/L0/semantics/`; `DEFINITION_LIST_AUTONOMOUS.md` beside the ingress bindings or the provenance sources under `L7/`.
+- **could_not_check**
+  - L8/0.md line 8: "the one CI check's third step reads every zero's first line against its path". The heading check (G-003) is the third run step of .github/workflows/integrity.yml but the fourth step if actions/checkout is counted; the sheet's counting convention is not determinable.
+  - L8/0.md line 137: "Nothing sits outside the layers but the git and GitHub files". README.md also sits at the root; whether the sheet counts it as a GitHub file is not determinable.
+  - L8/L0/ontology/0.md line 33: the paraphrase 'indexed to task, function, or interface rather than intrinsic to a thing' was not compared word for word with FINDING_autonomy_is_an_edge_property.md; only the phrase 'an edge property' (finding line 29) and AUTONOMOUS.md §6 rule 3 were confirmed.
+  - L8/L0/0.md line 97 and L8/L0/semantics/definitions/0.md line 37: the statement about what `aybllc/auditonomous` binds concerns another repository. The local clone /home/user/auditonomous (origin/main) does have L7/peering/public/ingress/peer-1/object-1/0.md and carries the rule sentence, but names the object by its former path `research/definitions/AUTONOMOUS.md`; that repository's state is not pinned for this audit.

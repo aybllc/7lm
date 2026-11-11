@@ -1,0 +1,52 @@
+# resolve:D2
+
+Agent result, as returned. Workflow: Resolutions for the 23 owner decisions. Run `wf_3293f65c-a92`. Phase: Resolve.
+
+- **decision**: 2. Whether the order of 14 September 2026 still governs, and with it the merge, tag and protection of Autonomous as a read-only exemplar, the papers' review, and roadmap decisions D1 to D23.
+- **resolution**: Treat the order of 14 September 2026 as still governing the sequence, and treat today's instruction as that order's "stable" step being done again, because the model changed on 20 September. Do not merge, tag, protect or re-open anything on the two closed branches, and rule none of D1 to D23, until the owner says so. The one act available now is to re-propose the read-only declaration, re-pathed from L7/governance/restrictions/ to L7/governance/controlled/, as a draft pull request the owner can merge or close.
+- **reasoning**
+  - item 1
+    - **speaker**: owner
+    - **quote**: [source text withheld from the public copy].
+    - **locator**: /home/user/autonomous@origin/claude/scholarly-pair-baseline-k8ap82:L8/L6/history/exemplar-2026-09-14.md:7
+    - **bears**: The owner set the order: Autonomous as a read-only exemplar, Auditonomous set up, peering and the model stable, and only then Auditonomous work; no ref in the three clones holds owner words withdrawing it.
+  - item 2
+    - **speaker**: owner
+    - **quote**: Get qa hanfle on the research and manuscruipt for Auditonomous but firwst re0ull7lm and deep research the mopdel becuase its chamnged and we need to uipdate the autonomous and auditonomous repos phsyciall; to match first .
+    - **locator**: owner's instruction of 11 November 2026 (as given in the task)
+    - **bears**: Today's instruction keeps the same sequence (model and exemplars first, Auditonomous research after) and gives the reason the stability step must be redone: the model changed.
+  - item 3
+    - **speaker**: record
+    - **quote**: [source text withheld from the public copy]
+    - **locator**: /home/user/auditonomous@origin/claude/book-structure-roadmap-k8ap82:L8/L5/research/review/BOOK_STRUCTURE_AND_ROADMAP_2026-09-13.md:586
+    - **bears**: The stability finding of 14 September was made against the specification of 12 September, so it cannot stand for the model after the restructure of 20 September.
+  - item 4
+    - **speaker**: record
+    - **quote**: The tag and the branch protection (§2); the merge of the pull request that carries this record.
+    - **locator**: /home/user/autonomous@origin/claude/scholarly-pair-baseline-k8ap82:L8/L6/history/exemplar-2026-09-14.md:25
+    - **bears**: Under the heading "Left to the owner", the record puts the merge, the tag and the protection in the owner's hands; that branch is not an ancestor of origin/main and the clone holds no tag, so none of the three has been done.
+  - item 5
+    - **speaker**: record
+    - **quote**: [source text withheld from the public copy]).
+    - **locator**: /home/user/auditonomous@origin/claude/book-structure-roadmap-k8ap82:L8/L5/research/review/BOOK_STRUCTURE_AND_ROADMAP_2026-09-13.md:596
+    - **bears**: The roadmap also names these as the owner's acts, and names the papers' reading and review (move 1) and D22 and D23 (move 3) as waiting on the owner.
+  - item 6
+    - **speaker**: record
+    - **quote**: [source text withheld from the public copy].
+    - **locator**: /home/user/auditonomous@origin/claude/book-structure-roadmap-k8ap82:L8/L5/research/review/BOOK_STRUCTURE_AND_ROADMAP_2026-09-13.md:608
+    - **bears**: D1 to D23 are proposals on a closed, unmerged branch; none is in force except by the owner's word, so a session cannot treat any of them as ruled.
+  - item 7
+    - **speaker**: record
+    - **quote**: `L7/governance/restrictions/` is `L7/governance/controlled/`: its sheet.
+    - **locator**: /home/user/autonomous@origin/ccr-9391bd81-f2enmj:L8/L6/history/harmonization-2026-09-05.md:189
+    - **bears**: The declaration of 14 September was filed at L7/governance/restrictions/0.md, a position the mirror renames, so it cannot be merged as written once the mirror is accepted and must be re-pathed.
+  - item 8
+    - **speaker**: owner
+    - **quote**: Don't change the system unless you ask or are unsure
+    - **locator**: /home/user/7lm@origin/main:L8/L6/history/harmonization-2026-09-04.md:482
+    - **bears**: Merging, tagging, protecting main or ruling a decision changes the system; the standing word is to ask the owner first and to put a proposal before them.
+- **against**: "On the owner's instruction of that day (\"[source text withheld from the public copy]\"), this repository is declared a read-only exemplar of the Seven-Layer Model" (/home/user/autonomous@origin/claude/scholarly-pair-baseline-k8ap82:L7/governance/restrictions/0.md:34). The owner's words of 14 September are a direct instruction, so the declaration arguably needs no second word and its pull request #29 should simply be re-opened and merged. Against that, the pull request was closed unmerged, and no ref in the three clones records who closed it or why. Today's instruction also names neither the read-only exemplar, the papers nor the roadmap.
+- **confidence**: the quotations favour it
+- **alternatives**: (a) Re-open and merge the closed pull requests #29 (autonomous) and #27 (auditonomous) as they stand: this honours the order literally, but the declaration lands at a path the mirror renames, and the roadmap's "stable now" finding is out of date. (b) Treat the order of 14 September as superseded by today's instruction and drop the exemplar declaration, the two papers and the roadmap: no owner quotation supports this, and the restored research and chapter files would stay off main. (c) Do nothing beyond the mirror and wait: safe, but the owner has nothing to merge or close, and the gap between the order and the closed pull requests stays unstated.
+- **what_it_costs**: One draft pull request on aybllc/autonomous that carries only the re-pathed declaration and its record entry, based on the mirror branch (draft PR #30). Closing it and deleting its branch reverses it. Nothing merges and no tag or protection is created. The two papers stay unreviewed, D22's rebinding stays open (the binding remains at 0504961), and the Auditonomous research and manuscript stay on the closed branch at 9259c18 until the owner speaks.
+- **who_acts**: The owner says three things: (1) whether the order of 14 September 2026 still stands, and whether the closing of pull requests #29 and #27 was a ruling against their content or housekeeping; (2) whether to merge the re-pathed declaration, create the tag and protect main (settings on the hosting service that only the owner can make); (3) which of D1 to D23 they rule, starting with D22 and D23, and whether the two papers go to adversarial review. A session only prepares the re-pathed declaration as a draft pull request and reports; it merges, tags and rules nothing.

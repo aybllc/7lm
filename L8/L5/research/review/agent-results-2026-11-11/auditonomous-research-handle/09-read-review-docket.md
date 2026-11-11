@@ -1,6 +1,6 @@
 # read:review-docket
 
-Agent result, as returned. Workflow: Handle on the Auditonomous research and manuscript. Run `wf_9c2917a7-7f0`. Phase: Read. Checked in 2026-11-11 19:56 UTC.
+Agent result, as returned. Workflow: Handle on the Auditonomous research and manuscript. Run `wf_9c2917a7-7f0`. Phase: Read.
 
 - **scope**: ROADMAP only (origin/claude/book-structure-roadmap-k8ap82, 9259c18), L8/L5/research/review/: RESEARCH_DOCKET.md, AUTHOR_ASSERTIONS.md, SOURCE_REQUESTS.md, CENSUS_SOURCES_DOSSIER.md, NASA_PAPER_DEFECT_LEDGER.md, WALK_ACROSS_repo-instrument-standards_2026-08-05.md, AUTONOMOUS_vs_AUDITONOMOUS_CYCLES.md, TICTAC_PROPULSION_ADJUDICATION.md. Left scope only to follow specific cross-references: the review sheet 0.md, EXTERNAL_AUDIT_2026-08-04.md (sections 2.1, 3.1, 3.2, 4.1, 6), STANDARDS_REGISTER.md, staging-records/ieee/FINDINGS_2026-08-04.md, SESSION_2026-08-05_VERIFICATION_LOG.md, the probes directory, AUDITONOMOUS_DEFINITION.md lines 52 and 257, Blocks 43-45, the book roadmap's feed lines, HISTORY HUB_LEDGER.md at 3c25633, and four locators in aybllc/autonomous at 6568e3c. All reads were from git objects. No script was run (the task did not authorise it); arithmetic marked "by hand" is my own recomputation.
 - **summary**: All eight documents exist only on the ROADMAP branch and in pre-prune HISTORY. Each is byte-identical to its August blob, so none has changed since 2026-08-04 to 08-08, and none is on MAIN or BETA.
@@ -650,7 +650,7 @@ Agent result, as returned. Workflow: Handle on the Auditonomous research and man
     - **key_claims**
       - X16: '[source text withheld from the public copy] 8373 3.2.
       - X18: recording is tied to autonomy categories in binding law ([source text withheld from the public copy]), each not read by the walk.
-      - X19: the attestation base case is "The program's live front"; [source text withheld from the public copy]".
+      - X19: the attestation base case is "The program's live front"; [source text withheld from the public copy] itself".
       - X21: [source text withheld from the public copy].
       - Three blockers, "[source text withheld from the public copy], IEEE 1872-2015 body text, the F-1 remediation.
     - **open_items**

@@ -1,6 +1,6 @@
 # read:sheets-L8
 
-Agent result, as returned. Workflow: The model, read deep. Run `wf_9a60cf50-a5f`. Phase: Read. Checked in 2026-11-11 19:56 UTC.
+Agent result, as returned. Workflow: The model, read deep. Run `wf_9a60cf50-a5f`. Phase: Read.
 
 - **scope**: 7lm@origin/main (c9dc061): README.md; all 40 in-scope L8 sheets (L8/0.md, L0-L6 layer sheets and every sub-sheet, the three retired-set root sheets, L8/L6/in/0.md); what L8/L0/pedagogy/ and L8/L6/in/ hold (tree); .github/workflows/integrity.yml on main and on origin/beta/common-contracts-r1-r6 (97314c5); the diff origin/main..origin/beta/common-contracts-r1-r6 over L8 (json/docx excluded). Read only from git objects. Left scope only for four cross-checks: fork-point attribution (2e5a6d6), a merge-tree test, the head of L8/L6/in/7lm-layer-lists.md, and one grep of each exemplar's own integrity.yml.
 - **summary**: On main the model's interior is unchanged in substance since 2e5a6d6: the only difference is one file added by PR #21, L8/L6/in/7lm-layer-lists.md, a proposal in the L6 inbox. No sheet, no position, and no line of the CI check changed. The 40 in-scope sheets give each layer a core question, an information sheet, a tree, and a boundary rule; all 75 checked sheets on main are headed by their path and all 71 canonical positions are sheeted (simulated from git objects).

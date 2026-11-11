@@ -1,6 +1,6 @@
 # verify:auditonomous:RT-3
 
-Agent result, as returned. Workflow: Review of the two commits. Run `wf_26752832-654`. Phase: Verify. Checked in 2026-11-11 19:56 UTC.
+Agent result, as returned. Workflow: Review of the two commits. Run `wf_26752832-654`. Phase: Verify.
 
 - **real**: yes
 - **reasoning**: Confirmed from git objects: the finding is real and minor.

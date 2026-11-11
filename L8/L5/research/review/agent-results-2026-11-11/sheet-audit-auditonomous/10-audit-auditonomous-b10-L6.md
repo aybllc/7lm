@@ -1,0 +1,72 @@
+# audit:auditonomous:b10-L6
+
+Agent result, as returned. Workflow: Sheet audit, Auditonomous. Run `wf_1ec3ea42-dcb`. Phase: Audit.
+
+- **sheets_audited**
+  - L8/L6/0.md
+  - L8/L6/history/0.md
+  - L8/L6/retired/0.md
+- **statements_checked**: 96
+- **clean_sheets**: (empty)
+- **findings**
+  - item 1
+    - **id**: b10-L6-01
+    - **kind**: WRONG-FACT
+    - **sheet**: L8/L6/history/0.md
+    - **line**: 35
+    - **sheet_says**: `LEDGER.md` — the master ledger: the tree by state, what each area waits on, retired objects, staleness "declared, not silently repaired".
+    - **truth**: The quoted phrase is not in LEDGER.md. The file contains no occurrence of "silent", "stale" or "repair" at all, and it has no section on staleness. Its four sections are "Current state in one line", "The tree, by state" (columns Area / State / Waiting on, with retired objects as struck-through rows), "Standing constraints" and "[source text withheld from the public copy])".
+    - **evidence**: `git -C /home/user/auditonomous show f2d5b37:L8/L6/history/LEDGER.md | grep -n -i 'silent\|stale\|repair'` returns nothing. `git grep -n -i -E 'silently repair|declared, not' f2d5b37` finds the phrase only in L8/L6/history/0.md:35 itself (no other file in the tree carries it). Headings from `grep -n '^## '`: lines 14, 25, 44, 57 as listed.
+    - **exact_fix**: - `LEDGER.md` — the master ledger: the current state in one line, the tree by state (what each area waits on; retired objects as struck rows), the standing constraints, and the known open items. Several rows point to git history or the rescue branch as the only surviving copy; git history is not L6.
+  - item 2
+    - **id**: b10-L6-02
+    - **kind**: STALE
+    - **sheet**: L8/L6/history/0.md
+    - **line**: 35
+    - **sheet_says**: git history is not L6, and this clone is shallow.
+    - **truth**: Depth is a property of one clone at one time, not of the repository; the clone audited here is not shallow. Caveat: this is evidence from clone state, not from the tree at the commit, so it shows the statement is not generally true, not that it was false where it was written. Separately observed (not a defect of the sheet): commit `9aefa6e` named by the ledgers is absent from this clone and no `rescue/reorg-2026-08-14` branch is among its 17 local/remote refs, while `ca87bba`, `1d83788`, `8c98573`, `4a1c1db`, `db426ab`, `280226a` are present.
+    - **evidence**: `git -C /home/user/auditonomous rev-parse --is-shallow-repository` -> `false`; no `.git/shallow` file; `git rev-list --count f2d5b37` -> 148. `git cat-file -e 9aefa6e^{commit}` fails; `git branch -a | grep -i rescue` returns nothing.
+    - **exact_fix**: git history is not L6, and a clone may be shallow or may lack the rescue branch.
+  - item 3
+    - **id**: b10-L6-03
+    - **kind**: STALE
+    - **sheet**: L8/L6/history/0.md
+    - **line**: 37
+    - **sheet_says**: `harmonization-2026-09-05.md` — the record of this pass: every path moved, retired, bound, or left in place, and the renumbering of the old `uso/l6/` register to L7; its §8 records the 2026-09-06 dissolution of `common/` and `intake/`, and its §13 the L7 restructure mirrored on 2026-11-11.
+    - **truth**: "this pass" was the 2026-09-05 instantiation of the topology. At f2d5b37 the latest pass is the 2026-11-11 L7 restructure (the record's §13, which itself says "This pass mirrors it, by hand"), and the record now runs to thirteen sections dated 2026-09-05 through 2026-11-11. The record's own Standing line names its event: "[source text withheld from the public copy] instantiation of the harmonized Seven-Layer Model (7LM) canonical topology in this repository". The same file's §11 and sheets-2026-09-07.md record that "at HEAD of this pass" was pulled out of other sheets on 2026-09-07.
+    - **evidence**: `git show f2d5b37:L8/L6/history/harmonization-2026-09-05.md | grep -n '^#'` -> sections 1-13, §13 headed "2026-11-11 — the L7 restructure mirrored by hand"; line 3 Standing as quoted. L8/L6/0.md:74 already words it without "this": "the L6 record of the instantiation of the canonical topology on 2026-09-05".
+    - **exact_fix**: - `harmonization-2026-09-05.md` — the record of the instantiation of the canonical topology on 2026-09-05 and of the passes since: every path moved, retired, bound, or left in place, and the renumbering of the old `uso/l6/` register to L7; its §8 records the 2026-09-06 dissolution of `common/` and `intake/`, and its §13 the L7 restructure mirrored on 2026-11-11.
+  - item 4
+    - **id**: b10-L6-04
+    - **kind**: STALE
+    - **sheet**: L8/L6/0.md
+    - **line**: 88
+    - **sheet_says**: `history/harmonization-2026-09-05.md` — the L6 record of this displacement event.
+    - **truth**: "this displacement event" has no antecedent in the sheet; it was the 2026-09-05 instantiation, which is no longer the current event (the record now also carries the 2026-09-06, 2026-09-07, 2026-09-12 and 2026-11-11 passes). The same sheet states it concretely at line 74.
+    - **evidence**: L8/L6/0.md:74: "`L8/L6/history/harmonization-2026-09-05.md` — the L6 record of the instantiation of the canonical topology on 2026-09-05." Record headings §8-§13 dated 2026-09-06 to 2026-11-11 (`git show f2d5b37:L8/L6/history/harmonization-2026-09-05.md | grep -n '^## '`).
+    - **exact_fix**: `history/harmonization-2026-09-05.md` — the L6 record of the instantiation of the canonical topology on 2026-09-05.
+  - item 5
+    - **id**: b10-L6-05
+    - **kind**: UNLISTED
+    - **sheet**: L8/L6/0.md
+    - **line**: 70-75 and 88-89
+    - **sheet_says**: "**In this repository.** Held at this layer:" followed by four bullets (LEDGER.md; the three session ledgers; harmonization-2026-09-05.md; `L8/L6/retired/layout-2026-08-14/`), and "## Holdings" with the same five history files and `retired/layout-2026-08-14/` only.
+    - **truth**: The layer also holds two history files and a second retired set that neither list mentions: `L8/L6/history/sheets-2026-09-07.md` (8,907 bytes), `L8/L6/history/7LM_ROUTING_PLAN_2026-09-05.md` (32,587 bytes), and `L8/L6/retired/layout-2026-09-06/` (its 0.md plus five files). The two sub-position sheets do list them (L8/L6/history/0.md:38-39; L8/L6/retired/0.md:35).
+    - **evidence**: `git ls-tree -l f2d5b37 L8/L6/history/` shows 7LM_ROUTING_PLAN_2026-09-05.md and sheets-2026-09-07.md; `git ls-tree -r -l f2d5b37 L8/L6/retired/` shows layout-2026-09-06/0.md, common/README.md, common/durable/README.md, common/durable/orphan/deep-research-report.md, common/durable/orphan/eb-carrier/eb-audit/auditonomous-departure-protocol.md, intake/README.md. `git show f2d5b37:L8/L6/0.md | grep -n -F -e 'sheets-2026' -e 'ROUTING' -e '2026-09-06'` returns nothing.
+    - **exact_fix**: Add to both lists (lines 70-75 with the `L8/L6/` prefix, lines 88-89 without): "- `history/sheets-2026-09-07.md` — what the sheets carried about their past until 2026-09-07, pulled out verbatim." "- `history/7LM_ROUTING_PLAN_2026-09-05.md` — the routing proposal the 2026-09-05 instantiation followed; a decision record." "- `retired/layout-2026-09-06/` — the queue's rule texts (`common/README.md`, `common/durable/README.md`, `intake/README.md`) and two duplicate files, verbatim at their old relative paths."
+  - item 6
+    - **id**: b10-L6-06
+    - **kind**: STALE
+    - **sheet**: L8/L6/retired/0.md
+    - **line**: 34
+    - **sheet_says**: `layout-2026-08-14/` — the layout reorganised on 2026-08-14 as it stood before this pass:
+    - **truth**: "this pass" was the 2026-09-05 instantiation of the Seven-Layer Model topology; at f2d5b37 the current pass is the 2026-11-11 L7 restructure, and the set does not show the layout as it stood before that. The set's own sheet states it without "this pass".
+    - **evidence**: L8/L6/retired/layout-2026-08-14/0.md:3: "**Object:** The layout reorganised on 2026-08-14 as it stood before the Seven-Layer Model topology was instantiated, preserved verbatim at its original relative paths." Record §4b (harmonization-2026-09-05.md:61-63) dates the retirement to the 2026-09-05 event. The eight files the line names all exist (`git ls-tree -r f2d5b37 L8/L6/retired/layout-2026-08-14`).
+    - **exact_fix**: `layout-2026-08-14/` — the layout reorganised on 2026-08-14 as it stood before the Seven-Layer Model topology was instantiated on 2026-09-05:
+- **could_not_check**
+  - L8/L6/retired/0.md line 23: the bullet "- In this repository:" under "## Holds" ends in a colon and is followed by nothing (the next line is blank, then "## Does not hold"). No statement is made, so nothing could be tested; the owner may want to complete it (for example "- In this repository: no retired peer binding; two retired layout sets, listed under Holdings.") or remove it. No retired peer binding exists under L8/L6/retired/ at the commit.
+  - L8/L6/history/0.md line 36: "append-only session ledgers" - whether the three ledgers have only ever been appended to was not established (would need the history of each file, not the pinned tree). The four field names (Commands Run / Results / Failures / Next Required Check) are present in all three.
+  - L8/L6/history/0.md line 36: "Item 1 of the 2026-08-16 queue (the authority-interface register) is answered by [source text withheld from the public copy]-1/`" - item 1 of the queue is the authority-interface register (LEDGER_2026-08-16 line 46) and the path exists, but whether the binding record 'answers' it is a judgment; the object-1 sheet does not itself mention the queue item.
+  - L8/L6/history/0.md line 35: "Several rows point to git history or the rescue branch as the only surviving copy" - the rows do say so (LEDGER.md lines 29, 30, 33, 50); whether those copies are in fact the only surviving ones was not determinable.
+  - L8/L6/retired/0.md line 35: "byte-identical to the copy in `aybllc/autonomous`" - confirmed only against the local clone /home/user/autonomous, where blob bbd7c3285cf8d53905693105f754045b05629ada exists at L8/L4/work/computation/deep-research-report.md on some ref (rev-list --all); not checked against the upstream repository or a specific ref. (The peer-2 claim was confirmed inside this repository: both paths are blob 99ecb6caa131222cf5cb15f7f52c85d7004d23a1.)
+  - Verified and found true, for the record: every specification quotation in the three sheets is verbatim in origin/main of the specification and is the cell for this position (L6 information sheet lines ~688-700, tree at 704-706, prose/why rows for L8/L6/, history/, retired/ at 715-717, Git note 721, Author note 725, Analytic-view row 158, OSI row 181, Harmonization Record 973 and 975, directions 93/97/129); every in-repository path named resolves; the tree drawing matches the two sub-folders; README lines 13 and 17 agree with the sheets.

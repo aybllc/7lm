@@ -1,6 +1,6 @@
 # verify:autonomous:AUT-TOUCH-02
 
-Agent result, as returned. Workflow: Review of the two commits. Run `wf_26752832-654`. Phase: Verify. Checked in 2026-11-11 19:56 UTC.
+Agent result, as returned. Workflow: Review of the two commits. Run `wf_26752832-654`. Phase: Verify.
 
 - **real**: yes
 - **reasoning**: Evidence reproduced from git objects only. autonomous@8257118 (parent c9076c3), L8/L6/history/harmonization-2026-09-05.md:189 contains: "Each states its position as the scaffold's sheet at the same path states it, with this repository's Holdings line added; nothing is filed at any of the five." Diffing 7lm@c9dc061 (origin/main) against autonomous@8257118 for the six new sheets: the five leaf sheets differ by the four-line Holdings section only (28a29,32 or 29a30,33). The container L7/allications/0.md differs in two hunks: 30a31,34 (Holdings) and 38c42, where the scaffold's "- `publications/` moved here from `L7/publications/` in the pass of 2026-09-20; the record is at `L8/L6/history/harmonization-2026-09-04.md` §25." became autonomous@8257118:L7/allications/0.md:42 "- `publications/` moved here from `L7/publications/` in the pass of 2026-11-11; the record is at `L8/L6/history/harmonization-2026-09-05.md` §14."

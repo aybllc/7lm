@@ -1,6 +1,6 @@
 # read:beta-and-prs
 
-Agent result, as returned. Workflow: The model, read deep. Run `wf_9a60cf50-a5f`. Phase: Read. Checked in 2026-11-11 19:56 UTC.
+Agent result, as returned. Workflow: The model, read deep. Run `wf_9a60cf50-a5f`. Phase: Read.
 
 - **scope**: Everything on the scaffold repository /home/user/7lm that is NOT on origin/main (c9dc061): the beta candidate origin/beta/common-contracts-r1-r6 (97314c5, two commits on 2e5a6d6); open draft PR #20 origin/ccr-9391bd81-f2enmj (c9638a9); open draft PR #19 origin/ccr-00099fac-hjosbo (b5c3984); origin/audit/peering-descriptive-reframe-2026-09-20 (3555866); origin/copilot/create-error-list (1e2fe77); origin/copilot/create-academic-guide-plan (e22c5fc); origin/ccr-9a67809a-iwii3n (c6d598a). Read from git objects only; merge tests by git merge-tree --write-tree only. The exemplar repositories were touched only for two cross-reference checks (root entries; search for an R1-R6 enumeration). No network was used, so the open/draft state of PRs #19/#20 is taken from the task statement, not verified.
 - **summary**: No branch off main changes the physical model. Every ref carries the same 71 canonical positions in integrity.yml, and no canonical directory is added, removed or renamed anywhere. The only directory not on main is the dated retired set L8/L6/retired/field-guide-2026-09-20/ (PR #20, also merged into PR #19 and the audit branch), which sits beneath the canonical retired/ position.

@@ -1,6 +1,6 @@
 # read:layer-lists
 
-Agent result, as returned. Workflow: The model, read deep. Run `wf_9a60cf50-a5f`. Phase: Read. Checked in 2026-11-11 19:56 UTC.
+Agent result, as returned. Workflow: The model, read deep. Run `wf_9a60cf50-a5f`. Phase: Read.
 
 - **scope**: 7lm@origin/main (c9dc061): L8/L6/in/7lm-layer-lists.md (415 lines), L8/L6/7lm-sheet-templates.md, L8/L6/7lm-field-guide.md sections 10-14 (lines 369-622), L8/L6/0.md. Checked against the nine layer sheets (L7/0.md, L8/0.md, L8/L0..L6/0.md), the specification, .github/workflows/integrity.yml and README.md on origin/main; against PR #20 (origin/ccr-9391bd81-f2enmj, c9638a9) and the beta candidate (origin/beta/common-contracts-r1-r6, 97314c5). Read-only; git objects only; the only write was `git merge-tree --write-tree` test merges.
 - **summary**: On main the model itself has not changed since 2e5a6d6. The only difference is one added file, the layer-lists proposal in the L6 inbox. Tree, sheets, specification, guide, templates and CI are identical. Every substantive change sits on unmerged branches: the beta candidate and PR #20.

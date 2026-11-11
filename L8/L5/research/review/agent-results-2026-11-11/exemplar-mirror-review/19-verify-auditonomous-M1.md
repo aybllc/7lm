@@ -1,6 +1,6 @@
 # verify:auditonomous:M1
 
-Agent result, as returned. Workflow: Review of the two commits. Run `wf_26752832-654`. Phase: Verify. Checked in 2026-11-11 19:56 UTC.
+Agent result, as returned. Workflow: Review of the two commits. Run `wf_26752832-654`. Phase: Verify.
 
 - **real**: no
 - **reasoning**: The quoted evidence is accurate, but it does not show a defect of the commit.

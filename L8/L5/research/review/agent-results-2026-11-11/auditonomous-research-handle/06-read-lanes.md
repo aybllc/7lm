@@ -1,6 +1,6 @@
 # read:lanes
 
-Agent result, as returned. Workflow: Handle on the Auditonomous research and manuscript. Run `wf_9c2917a7-7f0`. Phase: Read. Checked in 2026-11-11 19:56 UTC.
+Agent result, as returned. Workflow: Handle on the Auditonomous research and manuscript. Run `wf_9c2917a7-7f0`. Phase: Read.
 
 - **scope**: Layer 5 lanes of aybllc/auditonomous: MAIN:L8/L5/research/lanes/0.md (49 lines), THEME_LEDGER.md (355 lines, read in full), RECORD_ONTOLOGY_OPEN_QUESTIONS.md (255 lines, read in full). Cross-references followed only to confirm or locate a cited line: the Master Archive, TOC, Block outlines, embodied manuscript and eBIOS draft (ROADMAP and HISTORY), AUDITONOMOUS_DEFINITION.md and PERPETUITY_QUESTION_ADJUDICATION.md (MAIN), RESEARCH_DOCKET.md and SOURCE_REQUESTS.md (ROADMAP/HISTORY), the ARIES reading record and SEGREGATION_AND_FORGETTING finding (MAIN), and the git log of the two lane files. Read from git objects only; nothing written to the repositories; no network; external sources not re-fetched.
 - **summary**: The lanes directory holds exactly three files, byte-identical on MAIN, ROADMAP and BETA: a sheet, a theme ledger and a record-ontology question file. Both research files date from one session (2026-08-02, one edit 2026-08-04) and have not been worked since; no LANE_* file exists.

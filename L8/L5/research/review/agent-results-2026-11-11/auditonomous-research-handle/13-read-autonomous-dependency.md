@@ -1,6 +1,6 @@
 # read:autonomous-dependency
 
-Agent result, as returned. Workflow: Handle on the Auditonomous research and manuscript. Run `wf_9c2917a7-7f0`. Phase: Read. Checked in 2026-11-11 19:56 UTC.
+Agent result, as returned. Workflow: Handle on the Auditonomous research and manuscript. Run `wf_9c2917a7-7f0`. Phase: Read.
 
 - **scope**: What Auditonomous takes from Autonomous, and the state of that source. Read as git objects only: aybllc/autonomous origin/main (c9076c3), its bound commit 0504961, its beta (e64b382 / 805cd42) and closed PR #29 branch (9b49910); aybllc/auditonomous MAIN (origin/main), BETA (714480d), ROADMAP (9259c18), HISTORY (1d83788); aybllc/7lm origin/main and beta only for the one cross-referenced rule ("consensus baseline") and the architecture commit 4ca3edb. Locator prefixes: MAIN/BETA/ROADMAP/HISTORY = auditonomous; AUT-MAIN, AUT@0504961, AUT-BETA, AUT-PR29 = autonomous; 7LM-MAIN = 7lm. No external source was fetched; no test was run; no quotation was re-verified against a standard.
 - **summary**: Autonomous does not supply one definition of "autonomous". Its L0 object, AUTONOMOUS.md, is a plural entry: eleven codified definitions A1 to A11 from nine issuing bodies (ISO/TC 299, ISO/IEC JTC 1/SC 42, ISO/IEC JTC 1/SC 7, IEEE, [source text withheld from the public copy]), plus five usage rules the entry itself labels INTERNALLY DERIVED. It says "[source text withheld from the public copy]". The Seven-Layer Model specification asks Autonomous to freeze a "consensus baseline"; none is stated anywhere, and the autonomous beta says so explicitly.
@@ -219,7 +219,7 @@ Agent result, as returned. Workflow: Handle on the Auditonomous research and man
     - **locator**: AUT-MAIN:L8/L5/research/findings/FINDING_autonomy_is_an_edge_property.md:74-77
     - **quote**: [source text withheld from the public copy].
     - **key_claims**
-      - "[source text withheld from the public copy]." (line 16)
+      - "UMS's Autonomy is characterized into levels from the perspective of Human Independence (HI), the inverse of HRI." (line 16)
       - Aggregation over N edges is "genuinely unoccupied ground" - minimum, maximum or vector, none codified (lines 118-135)
     - **checked_how**: Read lines 1-45, 72-78, 105-139. Not re-checked against NIST SP 1011-I-2.0.
     - **open_items**
@@ -796,7 +796,7 @@ Agent result, as returned. Workflow: Handle on the Auditonomous research and man
     - **statement**: Status conflict inside one directory: AUTONOMOUS.md says "[source text withheld from the public copy] directory sheet records it as "a recorded inconsistency, carried unchanged". Only the unmerged beta changes the register.
     - **locator**: AUT-MAIN:L8/L0/semantics/definitions/AUTONOMOUS.md:24 against REGISTER.md:19; sheet 0.md:35
   - item 7
-    - **statement**: Rows A9 and A10 differ between the two definition objects. AUTONOMOUS.md A9 is a paraphrase attributed to "AI Roadmap 2.0" and A10 is the truncated "[source text withheld from the public copy]"; DEFINITION_LIST gives A9 as a verbatim "EASA glossary" sentence and A10 as "[source text withheld from the public copy]." Both are labelled VERIFIED. A6 likewise drops the source marker "<A.4>" that the list keeps.
+    - **statement**: Rows A9 and A10 differ between the two definition objects. AUTONOMOUS.md A9 is a paraphrase attributed to "AI Roadmap 2.0" and A10 is the truncated "an autonomic system is a self-governing system"; DEFINITION_LIST gives A9 as a verbatim "EASA glossary" sentence and A10 as "NOTE 2: An autonomic system is a *self-governing system* that can manage itself in accordance with high-level objectives." Both are labelled VERIFIED. A6 likewise drops the source marker "<A.4>" that the list keeps.
     - **locator**: AUT-MAIN:L8/L0/semantics/definitions/AUTONOMOUS.md:75,78,79 against DEFINITION_LIST_AUTONOMOUS.md:28,31,32
   - item 8
     - **statement**: The bound entry and its companions cite internal paths of the layout before 2026-08-14 that no longer exist at those paths (for example `governance/RULINGS.md`, `research/DEFINITION_OF_AUTONOMOUS_v2.md`, `sources/QUARANTINE_AND_REMEDIATION.md`, `research/FINDING_overridability_third_axis.md`, `definitions/AUTOMATION.md`). The v2 file now sits at L8/L6/retired/error-records/. Because the object is pinned, a reader following the binding cannot resolve them on origin/main.

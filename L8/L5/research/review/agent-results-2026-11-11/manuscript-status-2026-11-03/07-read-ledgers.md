@@ -1,6 +1,6 @@
 # read:ledgers
 
-Agent result, as returned. Workflow: Manuscript status of 3 November 2026. Run `wf_1cf4205c-c72`. Phase: Read. Checked in 2026-11-11 19:56 UTC.
+Agent result, as returned. Workflow: Manuscript status of 3 November 2026. Run `wf_1cf4205c-c72`. Phase: Read.
 
 - **summary**: Source: the L6 ledgers and layer sheets of aybllc/auditonomous at origin/main (HEAD 2165144, merge of PR #26, 2026-09-11), plus read-only git history (147 commits reachable from HEAD; first commit fc3b018 of 2026-07-30), cross-checked against the retired 2026-08-14 layout and the 7LM sheets. These are the repository's own records of what happened to the manuscript material, not the drafts themselves.
 

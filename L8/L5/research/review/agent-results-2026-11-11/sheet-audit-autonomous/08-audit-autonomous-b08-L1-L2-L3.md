@@ -1,0 +1,69 @@
+# audit:autonomous:b08-L1-L2-L3
+
+Agent result, as returned. Workflow: Sheet audit, Autonomous. Run `wf_8e13ec8e-47f`. Phase: Audit.
+
+- **sheets_audited**
+  - L8/L1/0.md
+  - L8/L1/state-space/0.md
+  - L8/L2/0.md
+  - L8/L2/formal-mathematics/0.md
+  - L8/L2/formal-mathematics/operators/0.md
+  - L8/L2/formal-mathematics/proofs/0.md
+  - L8/L2/formal-mathematics/relations/0.md
+  - L8/L3/0.md
+  - L8/L3/engineering-mathematics/0.md
+  - L8/L3/engineering-mathematics/approximation/0.md
+  - L8/L3/engineering-mathematics/tolerances/0.md
+  - L8/L3/engineering-mathematics/uncertainty/0.md
+- **findings**
+  - item 1
+    - **id**: b08-1
+    - **kind**: WRONG-FACT
+    - **sheet**: L8/L3/engineering-mathematics/uncertainty/0.md
+    - **line**: 33
+    - **sheet_says**: "Peer quotations (Rump, Kearfott, Neumaier, Wang) are ingress; the local content is the engineering reasoning."
+    - **truth**: The held file DEPENDENCE_AND_THE_GATE.md contains no quotation from, and no mention of, Kearfott or Neumaier. The sources it quotes are Wang 2012, Rump 1999 and Rump 2010, IEEE Std 1788-2015 and IEEE Std 1788.1-2017, NIST TN 1297, and Ku 1966.
+    - **evidence**: `git -C /home/user/autonomous grep -n -i -E 'Neumaier|Kearfott' 8257118 -- L8/L3/engineering-mathematics/uncertainty/DEPENDENCE_AND_THE_GATE.md` returns nothing. The file (194 lines, read in full) quotes: IEEE Std 1788-2015 at lines 39-44; Rump 1999 at 45-47 and 78; Wang 2012 at 58-68 and 167-169; Rump 2010 at 73-75 and 169-171; NIST TN 1297 at 88-96; Ku 1966 at 98-119; IEEE Std 1788.1-2017 at 157-159. Across the whole batch 'Kearfott' occurs only in this sheet line (`git grep -c -i Kearfott 8257118 -- L8/L3` gives uncertainty/0.md:1).
+    - **exact_fix**: Replace the sentence with: "Peer quotations (Wang 2012; Rump 1999 and 2010; IEEE Std 1788-2015 and 1788.1-2017; NIST TN 1297; Ku 1966) are ingress; the local content is the engineering reasoning."
+  - item 2
+    - **id**: b08-2
+    - **kind**: WRONG-FACT
+    - **sheet**: L8/L1/state-space/0.md
+    - **line**: 48
+    - **sheet_says**: "\"origidity; certainty; intolerance\" — Reserved: \"Candidate L1 semantics preserved; topology remains unadjudicated.\" Given no home here; see `L8/L1/0.md`."
+    - **truth**: L8/L1/0.md says nothing about these reserved terms, so the pointer leads to no statement. The disposition quoted is from the specification's table under "Inherited terms and their dispositions" (spec line 989), and the quotation itself is verbatim.
+    - **evidence**: `git -C /home/user/autonomous grep -n -i -F 'origidity' 8257118 -- ':!L8/L6'` returns only L8/L1/state-space/0.md lines 33 and 48; L8/L1/0.md (111 lines, read in full) has no occurrence of origidity, certainty or intolerance as reserved terms. Specification origin/main line 989: "| origidity; certainty; intolerance | Reserved | Candidate L1 semantics preserved; topology remains unadjudicated. |"
+    - **exact_fix**: Replace "Given no home here; see `L8/L1/0.md`." with "Given no home here; the disposition is the specification's, in its table of inherited terms and their dispositions."
+  - item 3
+    - **id**: b08-3
+    - **kind**: WRONG-FACT
+    - **sheet**: L8/L1/0.md
+    - **line**: 54
+    - **sheet_says**: "(The spec prints the four headings below at H2; their depth is reduced here only to nest under this sheet's section. Words are unchanged.)"
+    - **truth**: The current specification prints the four headings at H3 ("###"), the same depth the sheet uses at lines 56, 67, 77 and 87. No depth is reduced. The words of the headings and the text under them are verbatim. This is a statement about the specification's formatting and not about this repository's tree, so the owner may weigh it accordingly.
+    - **evidence**: `git -C /home/user/7lm grep -n -E '^#+ (State-space boundary|Mathematical permission|No exotic|Observable science)' origin/main -- L8/L4/work/writing/7lm-harmonized-architecture-specification.md` gives lines 389, 400, 410 and 420, each beginning "### ". `git log origin/main -G'^## State-space boundary'` on that file returns no commit, so no version at this path had the heading at H2.
+    - **exact_fix**: Replace line 54 with: "(The four headings below stand at H3 in the specification, as here. Words are unchanged.)"
+  - item 4
+    - **id**: b08-4
+    - **kind**: MISFILED
+    - **sheet**: L8/L3/engineering-mathematics/tolerances/0.md
+    - **line**: 26-28, 33
+    - **sheet_says**: Holdings: "`THE_SHARED_REFERENT_DEFECT.md` — relocated from `manuscripts/main/`: Monte-Carlo lineages under a ±0.001 gate, RMS drift over 200 generations, the re-anchoring fix — feasibility under a declared tolerance." Does not hold: "the error or uncertainty characterization of that representation — `../uncertainty/`" and "the test, run, or measurement showing whether a bound was met — `L8/L4/work/`"
+    - **truth**: Observation for the owner, not a defect. The file declares no tolerance of its own. It is a draft manuscript whose subject is how uncertainty is composed (double-counting, interval versus RSS propagation, independence structure), and it reports the figures of one Monte-Carlo run made elsewhere. By the sheet's own Does-not-hold list, uncertainty characterization belongs at `L8/L3/engineering-mathematics/uncertainty/` (beside its declared companion DEPENDENCE_AND_THE_GATE.md), and run results showing whether a bound was met belong under `L8/L4/work/`. The current placement follows the owner-approved routing plan row.
+    - **evidence**: File header line 5: "[source text withheld from the public copy]`". Line 19: "[source text withheld from the public copy]." Lines 36-42 report run results ("[source text withheld from the public copy]"; "71.0% of lineages out of spec"). Lines 114-115: "[source text withheld from the public copy]". Routing record: L8/L6/history/7LM_ROUTING_PLAN_2026-09-05.md line 51 moved it to tolerances/ as "feasibility under declared tolerance".
+    - **exact_fix**: None required. If the owner agrees, move the file to `L8/L3/engineering-mathematics/uncertainty/` and move its Holdings line to that sheet; otherwise leave as is.
+- **clean_sheets**
+  - L8/L2/0.md
+  - L8/L2/formal-mathematics/0.md
+  - L8/L2/formal-mathematics/operators/0.md
+  - L8/L2/formal-mathematics/proofs/0.md
+  - L8/L2/formal-mathematics/relations/0.md
+  - L8/L3/0.md
+  - L8/L3/engineering-mathematics/0.md
+  - L8/L3/engineering-mathematics/approximation/0.md
+- **could_not_check**
+  - L8/L3/engineering-mathematics/0.md line 40: "Both concern peer objects (the auditonomous gate; the eb-stack carrier)". DEPENDENCE_AND_THE_GATE.md does concern the auditonomous gate. THE_SHARED_REFERENT_DEFECT.md never names eb-stack (grep for 'eb-stack' and 'ebios' in the file returns nothing); its subtitle is "three layers of the auditonomous cycle" and it mentions an unnamed "carrier" only at lines 120 and 143. Whether that carrier is the eb-stack carrier cannot be determined from the tree.
+  - L8/L2/0.md line 76 and L8/L3/0.md line 92: the phrase "L2 or L3, unresolved" is in quotation marks beside ASSESSMENT_nu_algebra_cannot_require_architecture.md. It is not text of that file; it occurs only in sheets (also L8/L5/research/review/0.md line 39) and in the harmonization record line 79. Whether it is meant as a quotation of the file or as the record's label cannot be determined.
+  - L8/L1/0.md line 107 and L8/L1/state-space/0.md line 37: "by the owner's ruling of 2026-09-06" on AUTONOMY_SCALE.md. The record (harmonization-2026-09-05.md section 9, dated 2026-09-06, line 124) carries "the owner's ruling: semantics, an L4 object with L5 discourse; not math, not a state space", which is consistent, but the ruling's own date is not stated separately from the section date.
+  - L8/L3/engineering-mathematics/tolerances/0.md line 33 and uncertainty/0.md line 33: "relocated from `manuscripts/main/`". Supported only by history records (HUB_SURVEY_2026-08-14.md line 26; routing plan lines 50-51), which were read as evidence and not audited; the files passed through an intermediate USO/l3/ path.
+- **statements_checked**: 240

@@ -1,6 +1,6 @@
 # verify:autonomous:REC-6
 
-Agent result, as returned. Workflow: Review of the two commits. Run `wf_26752832-654`. Phase: Verify. Checked in 2026-11-11 19:56 UTC.
+Agent result, as returned. Workflow: Review of the two commits. Run `wf_26752832-654`. Phase: Verify.
 
 - **real**: yes
 - **reasoning**: Real, but only as a minor omission; nothing in the record is false. I checked the git objects myself.

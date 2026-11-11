@@ -1,6 +1,6 @@
 # read:assessment
 
-Agent result, as returned. Workflow: Manuscript status of 3 November 2026. Run `wf_1cf4205c-c72`. Phase: Read. Checked in 2026-11-11 19:56 UTC.
+Agent result, as returned. Workflow: Manuscript status of 3 November 2026. Run `wf_1cf4205c-c72`. Phase: Read.
 
 - **summary**: Abbreviations: IMP.md = /tmp/claude-0/-home-user/bfcfd013-a2da-5019-961e-7f46116f08be/scratchpad/manuscript/text/auditonomouos-important.md (620 lines, 7,611 words; extraction of L8/L4/work/writing/auditonomouos-important.docx at origin/main 2165144). PROSP.md = .../manuscript/text/auditonomous-08-03-26.md. PROMPT.txt = /tmp/claude-0/-home-user/bfcfd013-a2da-5019-961e-7f46116f08be/scratchpad/odt-extract/prompt.odt.txt (my tag-stripped extraction of git 71f75cb:manuscripts/main/notes/auditonomous-08-03-26-prompt.odt, history-only). RM = origin/claude/book-structure-roadmap-k8ap82 (9259c18, 2026-09-14). R = /home/user/auditonomous.
 

@@ -1,6 +1,6 @@
 # read:peering-governance
 
-Agent result, as returned. Workflow: Handle on the Auditonomous research and manuscript. Run `wf_9c2917a7-7f0`. Phase: Read. Checked in 2026-11-11 19:56 UTC.
+Agent result, as returned. Workflow: Handle on the Auditonomous research and manuscript. Run `wf_9c2917a7-7f0`. Phase: Read.
 
 - **scope**: The rest of the desk of aybllc/auditonomous: L7/0.md, L7/peering (all peers and objects), L7/governance (all sheets), L7/publications (sheets and the three binder READMEs) on MAIN (origin/main 2165144); the L7 diff MAIN -> BETA (origin/beta/7lm-exemplar-auditonomous 714480d); the peer-3 object on ROADMAP (origin/claude/book-structure-roadmap-k8ap82 9259c18). Cross-references followed only where a sheet named them: the l6 pointer LEDGER (row and Access tallies), the IEEE staging README and SOURCE_LEDGER rule IL-001-R2, the 2026-08-16 history queue, the autonomous-side egress sheets, and the 7lm model's L7 layout. Read only from git objects; nothing changed. Scratch: /tmp/claude-0/-home-user/bfcfd013-a2da-5019-961e-7f46116f08be/scratchpad/wf-handle/desk/
 - **summary**: The desk holds eight peering positions, one statement of copyright conditions, and a publications binder containing rules only. Nothing has been released in any of the three states: the press-kit and internal folders hold a README each, public egress is empty, and all six release-checklist boxes are unticked.

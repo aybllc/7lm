@@ -1,0 +1,62 @@
+# audit:auditonomous:b09-L5
+
+Agent result, as returned. Workflow: Sheet audit, Auditonomous. Run `wf_1ec3ea42-dcb`. Phase: Audit.
+
+- **sheets_audited**
+  - L8/L5/0.md
+  - L8/L5/institution/0.md
+  - L8/L5/institution/peers/0.md
+  - L8/L5/institution/undergraduates/0.md
+  - L8/L5/research/0.md
+  - L8/L5/research/findings/0.md
+  - L8/L5/research/lanes/0.md
+  - L8/L5/research/review/0.md
+- **statements_checked**: 96
+- **clean_sheets**
+  - L8/L5/institution/0.md
+  - L8/L5/institution/peers/0.md
+  - L8/L5/institution/undergraduates/0.md
+  - L8/L5/research/findings/0.md
+- **could_not_check**
+  - L8/L5/research/review/0.md line 42: '#autonomous(1).txt (the 2025 Autonomous Theory draft)' - the file carries no title date; the only dates found inside it are embedded chat-export timestamps of 2025-06-25, which is consistent with but does not establish 'the 2025 draft'.
+  - L8/L5/research/review/0.md line 44 (and the retired README it quotes verbatim): 'three external literature lanes reported' - THEME_LEDGER.md T3 carries three LITERATURE FINDING lanes (law; audit/records/infosec; philosophy) plus a later 'CORRECTION (ISO retrieval lane, 2026-08-02)'; whether that correction counts as a fourth lane is the owner's reading. The sheet's wording matches L8/L6/retired/layout-2026-08-14/README.md verbatim.
+  - L8/L5/research/review/0.md line 35: which rows of CONTRADICTIONS.md compare definitions of autonomy and are 'Autonomous's bounded job' - the sheet itself says this is the owner's reading; not testable from the tree.
+  - L8/L5/research/findings/0.md line 35: DISTILLATION.md described as 'a grandfathered multi-claim import' - the one-claim-per-file rule exists in L8/L6/retired/layout-2026-08-14/research/findings/README.md, but no record of the grandfathering decision was located in the sheets read.
+  - L8/L5/research/review/0.md line 42: the EB:22 quotation 'Autonomous Theory and Auditonomous are separate works' - confirmed only second-hand (L8/L6/retired/layout-2026-08-14/README.md lines 82-83 quote it as EB:22); the EB source file itself is not in this repository.
+- **findings**
+  - item 1
+    - **id**: b09-L5-01
+    - **kind**: WRONG-FACT
+    - **sheet**: L8/L5/research/lanes/0.md
+    - **line**: 36
+    - **sheet_says**: `THEME_LEDGER.md` — cluster analysis of the theory manuscript corpus (C1–C6) and the named tensions T1–T11, including [source text withheld from the public copy]")
+    - **truth**: THEME_LEDGER.md holds eleven like-theme clusters, C1 through C11, and sixteen named tensions, T1 through T16. Both ranges in the sheet are short.
+    - **evidence**: git show f2d5b37:L8/L5/research/lanes/THEME_LEDGER.md | grep -n '^#': cluster headings '### C1 — Inversion and the census of heirs' (line 15) through '### [source text withheld from the public copy])' (line 128), including C7 (82), C8 (93), C9 (105), C10 (116). Under '## Dissimilar / tension register' (line 142) the bullet entries run '- **T1 — CLOSED 2026-08-02 ...' through '- **T16 — Embodied manuscript internal defects.' (T12 Block 39's evidence status, T13 coined word's own record, T14 Naming fork, T15 Outline-layer drift, T16).
+    - **exact_fix**: `THEME_LEDGER.md` — cluster analysis of the theory manuscript corpus (C1–C11) and the named tensions T1–T16, including [source text withheld from the public copy]")
+  - item 2
+    - **id**: b09-L5-02
+    - **kind**: WRONG-FACT
+    - **sheet**: L8/L5/research/review/0.md
+    - **line**: 38 (governing lines 40-42; the item concerned is line 41)
+    - **sheet_says**: Placed here on 2026-09-06 from the dissolved `common/durable/`, none adjudicated:  [list follows, whose second item is] `STATUS_AND_LABEL_DISCIPLINE.md` — INTERNAL ONLY, the registry labels, and the two standing rules ...
+    - **truth**: Of the three listed items only STATUS_LADDER.md and autonomous-theory/ came from common/durable/ on 2026-09-06. STATUS_AND_LABEL_DISCIPLINE.md was carried [source text withheld from the public copy], not from common/durable/.
+    - **evidence**: git show f2d5b37:L8/L5/research/review/STATUS_AND_LABEL_DISCIPLINE.md line 3: '[source text withheld from the public copy]).' L8/L6/history/sheets-2026-09-07.md line 65: 'STATUS_AND_LABEL_DISCIPLINE.[source text withheld from the public copy]'. The record's section 8 table (harmonization-2026-09-05.md lines 111-123) lists the 2026-09-06 moves out of common/durable/: the two Autonomous Theory files and the status-ladder section only; the label discipline is not among them (it is in section 10, line 144).
+    - **exact_fix**: Line 38 tail: "Placed here, none adjudicated; the first and third on 2026-09-06 from the dissolved `common/durable/`, the second [source text withheld from the public copy]`:"  and line 41 begins: "`STATUS_AND_LABEL_DISCIPLINE.md` — [source text withheld from the public copy]`: INTERNAL ONLY, the registry labels, and the two standing rules (...)" with the rest unchanged.
+  - item 3
+    - **id**: b09-L5-03
+    - **kind**: STALE
+    - **sheet**: L8/L5/research/0.md
+    - **line**: 38
+    - **sheet_says**: The root trees `common/` and `intake/` were dissolved that day: their files filed by layer, their rule texts retired to `L8/L6/retired/layout-2026-09-06/`, the Autonomous Theory files placed in `review/`.
+    - **truth**: The sheet names no day anywhere before 'that day'; the antecedent date was lost when the surrounding text was reduced. The dissolution was on 2026-09-06. The rest of the sentence is true (retired set exists with common/README.md, common/durable/README.md, intake/README.md; the Autonomous Theory files are in review/autonomous-theory/).
+    - **evidence**: git show f2d5b37:L8/L5/research/0.md: no date appears in lines 1-38 before 'that day'. Record L8/L6/history/harmonization-2026-09-05.md line 105: '## 8. 2026-09-06 — the owner dissolves `common/` and `intake/`; `research/review/` is the catch-all' and 'Executed 2026-09-06 by `git mv`'. L8/0.md line 137: 'On 2026-09-06, on the owner's word, `common/` and `intake/` were dissolved'.
+    - **exact_fix**: The root trees `common/` and `intake/` were dissolved on 2026-09-06: their files filed by layer, their rule texts retired to `L8/L6/retired/layout-2026-09-06/`, the Autonomous Theory files placed in `review/`.
+  - item 4
+    - **id**: b09-L5-04
+    - **kind**: UNLISTED
+    - **sheet**: L8/L5/0.md
+    - **line**: 80
+    - **sheet_says**: - `research/review/` — `CONTRADICTIONS.md`, `PERPETUITY_QUESTION_ADJUDICATION.md`.
+    - **truth**: research/review/ holds four files and one sub-folder besides its sheet. The layer sheet's Holdings line gives two and does not mention STATUS_LADDER.md, STATUS_AND_LABEL_DISCIPLINE.md or autonomous-theory/ (two files) anywhere; line 83 speaks of the catch-all only in general terms. The lines for lanes/ and findings/ in the same list are complete, so the review/ line reads as complete and is not. README.md line 12 and L8/L5/research/review/0.md lines 40-42 name the three omitted items.
+    - **evidence**: git ls-tree -r -l f2d5b37 L8/L5/research/review: 0.md (6194), CONTRADICTIONS.md (20581), PERPETUITY_QUESTION_ADJUDICATION.md (42605), STATUS_AND_LABEL_DISCIPLINE.md (1861), STATUS_LADDER.md (1415), autonomous-theory/#autonomous(1).txt (1060768), autonomous-theory/02_AutonomousTheory(1).pdf (219277). git grep -n -E 'STATUS_LADDER|STATUS_AND_LABEL|autonomous-theory' f2d5b37 -- L8/L5/0.md returns nothing.
+    - **exact_fix**: - `research/review/` — `CONTRADICTIONS.md`, `PERPETUITY_QUESTION_ADJUDICATION.md`; in the catch-all: `STATUS_LADDER.md`, `STATUS_AND_LABEL_DISCIPLINE.md`, `autonomous-theory/` (`#autonomous(1).txt`, `02_AutonomousTheory(1).pdf`).

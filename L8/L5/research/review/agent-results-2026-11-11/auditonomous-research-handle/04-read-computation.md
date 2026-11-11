@@ -1,6 +1,6 @@
 # read:computation
 
-Agent result, as returned. Workflow: Handle on the Auditonomous research and manuscript. Run `wf_9c2917a7-7f0`. Phase: Read. Checked in 2026-11-11 19:56 UTC.
+Agent result, as returned. Workflow: Handle on the Auditonomous research and manuscript. Run `wf_9c2917a7-7f0`. Phase: Read.
 
 - **scope**: Layer 4 computation and experiments (not writing): MAIN L8/L4/work/computation/ (sheet + six objects) and L8/L4/work/experiments/0.md; BETA auditonomous_beta.py, test_auditonomous_beta.py, auditonomous_beta_result.json and the sheet change; ROADMAP all-research-corpus-auditonomous.md, probes/ (sheet + eight scripts), ommp/ (sheet, README, three modules, one test). All read from git objects only; all code run from copies under /tmp/claude-0/-home-user/bfcfd013-a2da-5019-961e-7f46116f08be/scratchpad/wf-handle/l4comp/ with python3 -I (Python 3.13.16), no network, no installs.
 - **summary**: Layer 4 computation holds three kinds of thing, and nothing is filed under experiments in any state (the sheet is the same blob everywhere and says "No experiment has been executed").

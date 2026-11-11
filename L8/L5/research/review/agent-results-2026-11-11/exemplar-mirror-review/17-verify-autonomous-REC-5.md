@@ -1,6 +1,6 @@
 # verify:autonomous:REC-5
 
-Agent result, as returned. Workflow: Review of the two commits. Run `wf_26752832-654`. Phase: Verify. Checked in 2026-11-11 19:56 UTC.
+Agent result, as returned. Workflow: Review of the two commits. Run `wf_26752832-654`. Phase: Verify.
 
 - **real**: yes
 - **reasoning**: Checked from git objects only (autonomous, parent c9076c3, commit 8257118).

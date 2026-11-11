@@ -1,0 +1,213 @@
+# check:definition-citations
+
+Agent result, as returned. Workflow: Public sources against their originals. Run `wf_73fbd9d4-516`. Phase: Check.
+
+- **check**: definition-citations: public-source quotations, control identifiers and counts in the Auditonomous definition, findings and state-space files (auditonomous origin/main 2165144) versus NIST SP 800-53 Rev. 5, FIPS 180-4, AI 100-1, SP 1011 (ALFUS) Vol. I and II, RFC 6962, RFC 9162 (plus RFC 4949 and the CSRC glossary, which the definition file also quotes)
+- **sources**
+  - item 1
+    - **name**: NIST SP 800-53 Rev. 5 (PDF)
+    - **official_url**: https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-53r5.pdf
+    - **http_status**: 200
+    - **final_url**: https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-53r5.pdf
+    - **bytes**: 6073678
+    - **sha256**: fc63bcd61715d0181dd8e85998b1e6201ae3515fc6626102101cab1841e11ec6
+    - **saved_at**: /tmp/claude-0/-home-user/bfcfd013-a2da-5019-961e-7f46116f08be/scratchpad/wf-sources/definition-citations/dl-1/NIST.SP.800-53r5.pdf
+    - **repo_recorded**: SHA-256 fc63bcd61715d0181dd8e85998b1e6201ae3515fc6626102101cab1841e11ec6, 6,073,678 bytes (origin/main:L7/provenance/sources/staging-records/standards/extracted/SP800-53r5_AC-AU_verbatim.md:10)
+    - **same_as_recorded**: yes - hash and size identical
+  - item 2
+    - **name**: NIST FIPS 180-4 (PDF)
+    - **official_url**: https://nvlpubs.nist.gov/nistpubs/FIPS/NIST.FIPS.180-4.pdf
+    - **http_status**: 200
+    - **final_url**: https://nvlpubs.nist.gov/nistpubs/FIPS/NIST.FIPS.180-4.pdf
+    - **bytes**: 833315
+    - **sha256**: 0455b406d89648d20cbde375561e19c245b9815e894164c2670772e3d54deb82
+    - **saved_at**: /tmp/claude-0/-home-user/bfcfd013-a2da-5019-961e-7f46116f08be/scratchpad/wf-sources/definition-citations/dl-2/NIST.FIPS.180-4.pdf
+    - **repo_recorded**: SHA-256 0455b406d89648d20cbde375561e19c245b9815e894164c2670772e3d54deb82 (origin/main:L7/provenance/sources/staging-records/library/reading/NIST_FIPS-180-4_Secure-Hash-Standard.md:3); no size recorded there
+    - **same_as_recorded**: yes - hash identical
+  - item 3
+    - **name**: NIST AI 100-1, AI RMF 1.0 (PDF)
+    - **official_url**: https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.100-1.pdf
+    - **http_status**: 200
+    - **final_url**: https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.100-1.pdf
+    - **bytes**: 1946127
+    - **sha256**: 7576edb531d9848825814ee88e28b1795d3a84b435b4b797d3670eafdc4a89f1
+    - **saved_at**: /tmp/claude-0/-home-user/bfcfd013-a2da-5019-961e-7f46116f08be/scratchpad/wf-sources/definition-citations/dl-3/NIST.AI.100-1.pdf
+    - **repo_recorded**: not recorded (URL only, AUDITONOMOUS_DEFINITION.md:322; fetch note without hash at L8/L4/work/computation/nist-requirements-for-autonomouos.md:22)
+    - **same_as_recorded**: not comparable - no hash recorded
+  - item 4
+    - **name**: [source text withheld from the public copy] (PDF, 47 pages)
+    - **official_url**: https://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication1011-I-2.0.pdf
+    - **http_status**: 200
+    - **final_url**: https://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication1011-I-2.0.pdf
+    - **bytes**: 216691
+    - **sha256**: a7b5c3a37c487ec7a15eeae8f3ffb1df7b84992a03e5eefecb3c4dbff854da84
+    - **saved_at**: /tmp/claude-0/-home-user/bfcfd013-a2da-5019-961e-7f46116f08be/scratchpad/wf-sources/definition-citations/dl-4/nistspecialpublication1011-I-2.0.pdf
+    - **repo_recorded**: sha256 a7b5c3a37c487ec7a15eeae8f3ffb1df7b84992a03e5eefecb3c4dbff854da84, 47 pp. (origin/main:L8/L4/work/computation/nist-requirements-for-autonomouos.md:14-16)
+    - **same_as_recorded**: yes - hash and page count identical
+  - item 5
+    - **name**: [source text withheld from the public copy] Framework Models (PDF, 73 pages)
+    - **official_url**: https://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication1011-II-1.0.pdf
+    - **http_status**: 200
+    - **final_url**: https://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication1011-II-1.0.pdf
+    - **bytes**: 1327094
+    - **sha256**: e594879c77929b47da192748d4379aca00759212d126c4535bd7cf227d3c6ac9
+    - **saved_at**: /tmp/claude-0/-home-user/bfcfd013-a2da-5019-961e-7f46116f08be/scratchpad/wf-sources/definition-citations/dl-5/nistspecialpublication1011-II-1.0.pdf
+    - **repo_recorded**: 73 pp., no hash (origin/main:L8/L4/work/computation/nist-requirements-for-autonomouos.md:18-19)
+    - **same_as_recorded**: page count identical (73); no hash recorded
+  - item 6
+    - **name**: RFC 6962 (text)
+    - **official_url**: https://www.rfc-editor.org/rfc/rfc6962.txt
+    - **http_status**: 200
+    - **final_url**: https://www.rfc-editor.org/rfc/rfc6962.txt
+    - **bytes**: 55048
+    - **sha256**: 08fdf31c10b9f20872a65c027a9fe8cee27280f930120784241a57de744752af
+    - **saved_at**: /tmp/claude-0/-home-user/bfcfd013-a2da-5019-961e-7f46116f08be/scratchpad/wf-sources/definition-citations/dl-6/rfc6962.txt
+    - **repo_recorded**: repository holds a PDF rendering, SHA-256 9e5060bbf9850ebd955ff20a67ac35583d3a1dfeffc5d3443044370fa101833e (origin/main:L7/provenance/sources/staging-records/library/reading/RFC6962_Certificate-Transparency.md:3); no hash for the .txt
+    - **same_as_recorded**: not comparable - different file format; rfc-editor's own PDF (https://www.rfc-editor.org/rfc/pdfrfc/rfc6962.txt.pdf, 200, 42139 bytes, sha256 5cef85c6b572bc89e0e938c7a9591ef9c111f3d169416370997635faf398dcf7, saved in dl-11) does not equal 9e5060bb..., but the repository does not say which URL its PDF came from
+  - item 7
+    - **name**: RFC 9162 (text)
+    - **official_url**: https://www.rfc-editor.org/rfc/rfc9162.txt
+    - **http_status**: 200
+    - **final_url**: https://www.rfc-editor.org/rfc/rfc9162.txt
+    - **bytes**: 128266
+    - **sha256**: a0e432ce7580c99fcc8faf0cf3f6191f9ce6b4864f949158e020d4ecb295081f
+    - **saved_at**: /tmp/claude-0/-home-user/bfcfd013-a2da-5019-961e-7f46116f08be/scratchpad/wf-sources/definition-citations/dl-7/rfc9162.txt
+    - **repo_recorded**: not recorded in the seven files checked (they never cite RFC 9162)
+    - **same_as_recorded**: not applicable
+  - item 8
+    - **name**: RFC 4949 (text) - quoted by the definition file
+    - **official_url**: https://www.rfc-editor.org/rfc/rfc4949.txt
+    - **http_status**: 200
+    - **final_url**: https://www.rfc-editor.org/rfc/rfc4949.txt
+    - **bytes**: 867626
+    - **sha256**: 32d1e3837ae5a7d2e99a63f43c6fea3dd350ffc6ac55b3aaadad250546ad7f87
+    - **saved_at**: /tmp/claude-0/-home-user/bfcfd013-a2da-5019-961e-7f46116f08be/scratchpad/wf-sources/definition-citations/dl-8/rfc4949.txt
+    - **repo_recorded**: line numbers 1418-1419, 7287-7292, 14940-14945 (AUDITONOMOUS_DEFINITION.md:318, 334); no hash
+    - **same_as_recorded**: line numbers identical in today's file
+  - item 9
+    - **name**: NIST CSRC Glossary, term 'audit trail' (HTML)
+    - **official_url**: https://csrc.nist.gov/glossary/term/audit_trail
+    - **http_status**: 200
+    - **final_url**: https://csrc.nist.gov/glossary/term/audit_trail
+    - **bytes**: 47390
+    - **sha256**: dce28b9e1e530e18c9cdca5d2cccb4a09a9c8361bfeace9773e5b8fec5aec45c
+    - **saved_at**: /tmp/claude-0/-home-user/bfcfd013-a2da-5019-961e-7f46116f08be/scratchpad/wf-sources/definition-citations/dl-9/audit_trail.html
+    - **repo_recorded**: not recorded ("[source text withheld from the public copy]", no hash; AUDITONOMOUS_DEFINITION.md:310, 314)
+    - **same_as_recorded**: not comparable - no hash; page content differs from what the repository quotes (see definition-citations-1)
+  - item 10
+    - **name**: NIST CSRC Glossary, term 'firmware' (HTML)
+    - **official_url**: https://csrc.nist.gov/glossary/term/firmware
+    - **http_status**: 200
+    - **final_url**: https://csrc.nist.gov/glossary/term/firmware
+    - **bytes**: 68439
+    - **sha256**: b4d9559122238605417d71be801e349cf2cd1c16c6a3bfe3890864f9751bd3ae
+    - **saved_at**: /tmp/claude-0/-home-user/bfcfd013-a2da-5019-961e-7f46116f08be/scratchpad/wf-sources/definition-citations/dl-10/firmware.html
+    - **repo_recorded**: not recorded (AUDITONOMOUS_DEFINITION.md:334)
+    - **same_as_recorded**: not comparable - no hash
+- **items_total**: 80
+- **confirmed**: 71
+- **problems**
+  - item 1
+    - **id**: definition-citations-1
+    - **kind**: NOT-FOUND
+    - **repo_locator**: origin/main:L8/L0/semantics/definitions/AUDITONOMOUS_DEFINITION.md:310-312
+    - **repo_text**: [source text withheld from the public copy]
+    - **source_locator**: https://csrc.nist.gov/glossary/term/audit_trail (fetched 2026-11-11, sha256 dce28b9e...)
+    - **source_text**: The page now lists three definitions; the CNSS one reads: "A chronological record that reconstructs and examines the sequence of activities surrounding or leading to a specific operation, procedure, or event in a [source text withheld from the public copy]-2022". The string "A record showing who" occurs 0 times in the page.
+    - **note**: The quoted sentence and the CNSSI 4009-2015 attribution are not on the official page today. The page appears to have been updated to CNSSI 4009-2022 since the repository's 2026-07-30 download; the repository recorded no hash, so this cannot be proved either way. This is a CNSS definition hosted by NIST, outside the six sources named in the task; reported because it sits beside them.
+  - item 2
+    - **id**: definition-citations-2
+    - **kind**: MISMATCH
+    - **repo_locator**: origin/main:L8/L5/research/findings/OVERRIDE_NECESSITY_2026-08-04.md:53
+    - **repo_text**: SI-10(1) ... (b) Restrict the use [source text withheld from the public copy] use of the manual override capability.
+    - **source_locator**: SP 800-53r5, [source text withheld from the public copy]
+    - **source_text**: (b) Restrict the use of the manual override capability to only [Assignment: [source text withheld from the public copy] use of the manual override capability.
+    - **note**: The word "Assignment:" is dropped inside the bracket without an ellipsis. Title, item (a) (elided with a marked ellipsis) and item (c) are verbatim. Meaning unchanged.
+  - item 3
+    - **id**: definition-citations-3
+    - **kind**: MISMATCH
+    - **repo_locator**: origin/main:L8/L5/research/findings/OVERRIDE_NECESSITY_2026-08-04.md:133
+    - **repo_text**: [source text withheld from the public copy]]"
+    - **source_locator**: SP 800-53r5, AC-3(10)
+    - **source_text**: by [Assignment: organization-defined roles]
+    - **note**: "Assignment:" dropped inside the quotation marks. The same file quotes the clause correctly at line 42. Meaning unchanged.
+  - item 4
+    - **id**: definition-citations-4
+    - **kind**: MISATTRIBUTED
+    - **repo_locator**: origin/main:L8/L1/state-space/HUMINT_ENCODE.md:41
+    - **repo_text**: "...[source text withheld from the public copy])
+    - **source_locator**: SP 800-53r5, CM-3(5) CONFIGURATION CHANGE CONTROL | AUTOMATED SECURITY RESPONSE
+    - **source_text**: Implement the following security responses automatically if baseline configurations are changed in an unauthorized manner: [Assignment: organization-defined security responses].
+    - **note**: CM-2(2) and CM-3(3) carry the quoted form verbatim; CM-3(1) reads "Use [Assignment: organization-defined automated mechanisms] to:". CM-3(5) does not contain an "automated mechanisms" assignment at all; it only uses the adverb "automatically". The claim holds for three of the four enhancements named.
+  - item 5
+    - **id**: definition-citations-5
+    - **kind**: MISMATCH
+    - **repo_locator**: origin/main:L8/L1/state-space/HUMINT_ENCODE.md:80
+    - **repo_text**: [source text withheld from the public copy])"
+    - **source_locator**: SP 1011-I-2.0, definition of Autonomy (footnote 5 heading), text lines 732-735
+    - **source_text**: to achieve its goals as assigned by its human operator(s) through designed Human-Robot Interface (HRI) or by another system that the UMS communicates with
+    - **note**: The word "its" is dropped inside the quotation marks. The same file quotes the passage correctly at line 37. Meaning unchanged.
+  - item 6
+    - **id**: definition-citations-6
+    - **kind**: COUNT-WRONG
+    - **repo_locator**: origin/main:L8/L1/state-space/HUMINT_ENCODE.md:159-161 (heading "[source text withheld from the public copy]" and "[source text withheld from the public copy]")
+    - **repo_text**: [source text withheld from the public copy]
+    - **source_locator**: SP 800-53r5, [source text withheld from the public copy]
+    - **source_text**: SR-2 to SR-11 is 10 base controls; with CM-2, CM-3 and SA-10 the named set is 13 base controls. Enhancements: SR-2(1); SR-3(1)-(3); SR-4(1)-(4); SR-5(1)-(2); SR-6(1); SR-9(1); SR-11(1)-(3) = 15; CM-2(1)-(7) = 7, of which (1), (4), (5) are withdrawn; CM-3(1)-(8) = 8; SA-10(1)-(7) = 7. Total 37 listed, 34 not withdrawn.
+    - **note**: The named set has 13 controls and 34 active enhancements, not 11 and 27. 27 is reproduced only by leaving out SA-10's seven enhancements (15 + 4 + 8). The zero-hit term counts in the table beneath (natural person, human, witness, judgment, signature) do reproduce exactly, including the whole-document figures 0, 41, 0, 2, 45.
+  - item 7
+    - **id**: definition-citations-7
+    - **kind**: MISATTRIBUTED
+    - **repo_locator**: origin/main:L8/L1/state-space/HUMINT_ENCODE.md:180-181
+    - **repo_text**: [source text withheld from the public copy]
+    - **source_locator**: SP 800-53r5, SR-5(2) Discussion; SR-2(1) statement; SR-3a
+    - **source_text**: SR-5(2) Discussion: "Organizational personnel or independent, external entities conduct assessments of systems, components, products, tools, and services to uncover evidence of tampering, unintentional and intentional vulnerabilities..." (first clause verbatim). SR-2(1): "Establish a supply chain risk management team consisting of [Assignment: organization-defined personnel, roles, and responsibilities] to lead and support the following SCRM activities". SR-3a: "in coordination with [Assignment: organization-defined supply chain personnel]".
+    - **note**: Paraphrase, judged on support only. The universal claim is not supported: in SR-5(2) personnel conduct the assessment, in SR-2(1) personnel lead SCRM activities, and in SR-3a they are coordinated with. The narrower statements next to it (SR-4(1) requires personnel to be identified; SR-10 names no inspector; SR-9 has no human terms) are confirmed.
+  - item 8
+    - **id**: definition-citations-8
+    - **kind**: MISMATCH
+    - **repo_locator**: origin/main:L8/L1/state-space/HUMINT_ENCODE.md:240-241
+    - **repo_text**: [source text withheld from the public copy] representatives] to be members of..."
+    - **source_locator**: SP 800-53r5, SA-10(7) DEVELOPER CONFIGURATION MANAGEMENT | SECURITY AND PRIVACY REPRESENTATIVES
+    - **source_text**: Require [Assignment: organization-defined security and privacy representatives] to be included in the [Assignment: organization-defined configuration change management and control process].
+    - **note**: The quotation is verbatim for CM-3(4) ("to be members of the [Assignment: organization-defined configuration change control element]"). SA-10(7) says "to be included in", not "to be members of". Both Discussions do name human offices, as the repository says.
+  - item 9
+    - **id**: definition-citations-9
+    - **kind**: COUNT-WRONG
+    - **repo_locator**: origin/main:L8/L1/state-space/HUMINT_ENCODE.md:243-244
+    - **repo_text**: [source text withheld from the public copy]
+    - **source_locator**: SP 800-53r5, control statements of SR-2..SR-11, CM-2, CM-3, SA-10 and their enhancements
+    - **source_text**: CM-3(1)(f): "Notify [Assignment: organization-defined personnel] when approved changes to the system are completed." SR-4(1): "...supply chain elements, processes, and personnel associated with..." (twice). SA-10(2): "...using organizational personnel in the absence of a dedicated developer configuration management team." SR-2(1): "[Assignment: organization-defined personnel, roles, and responsibilities]".
+    - **note**: There are more than two. CM-3(1)(f) is an assignment of exactly the same form as SA-10e. SR-4(1) (two uses) and SA-10(2) also use "personnel" in the control statement with no "or roles". Only SR-11b and SR-11(1) carry the "personnel or roles" disjunct in this set.
+- **could_not_check**
+  - item 1
+    - **what**: RFC 9162 citations
+    - **why**: None of the seven files cites RFC 9162 (0 hits for '9162'). The document was downloaded (200, sha256 a0e432ce...) but there was nothing to test against it. Likewise no AC-5 or AC-6 citation occurs in these files.
+  - item 2
+    - **what**: Whether the repository's held RFC 6962 PDF (sha256 9e5060bb...) is the same file as the official one
+    - **why**: The repository does not record the URL its PDF came from. rfc-editor's own PDF rendering hashes to 5cef85c6..., which differs, but that may be a different rendering and not a changed source. The two RFC 6962 quotations were compared against the official .txt and are verbatim.
+  - item 3
+    - **what**: NIST SP 800-88 (cryptographic erase as a purge technique) and NIST SP 800-193, mentioned in SEGREGATION_AND_FORGETTING_2026-08-04.md:158,190, AUDITON_ENVELOPE.md:235 and HUMINT_ENCODE.md:329
+    - **why**: Outside the six sources named in this check; not downloaded and not tested.
+  - item 4
+    - **what**: The CSRC attribution of the 'audit trail' definition to SP 800-37 Rev. 2
+    - **why**: SP 800-37 is outside the named sources. The CSRC page does list both SP 800-37 Rev. 2 and [source text withheld from the public copy] sources, and the wording was confirmed in the SP 800-53r5 glossary only.
+  - item 5
+    - **what**: ALFUS 'N1' to 'N9' labels (AUDITON_ENVELOPE.md:124-133, HUMINT_ENCODE.md:37)
+    - **why**: These labels are the repository's own numbering, not SP 1011's. Only the words attached to them were tested; all occur in the SP 1011-I-2.0 definition of Autonomy.
+- **summary**: I tested 80 items across the seven files: 71 are confirmed against the official documents and 9 have problems, none of which reverses a finding.
+
+  All sources came from nvlpubs.nist.gov, csrc.nist.gov and www.rfc-editor.org with HTTP 200. Three downloads match the hashes the repository recorded (SP 800-53r5, FIPS 180-4, SP 1011-I-2.0), so there is no SOURCE-CHANGED finding.
+
+  Confirmed:
+  - **SP 800-53r5:** every control identifier and title cited exists and says what is attributed to it, including the AC-3(10), AU-10, AC-4(7), AU-9(2), AU-9(7), AC-25, SR-4(3), SR-9, SR-10, SR-11 and AC-14 quotations.
+  - **Other sources:** the AI 100-1 quotations sit on pages 15 and 16 as stated; the FIPS 180-4, RFC 6962 and RFC 4949 quotations are verbatim, and the RFC 4949 line numbers are exact.
+  - **Counts:** SP 1011 contains zero "shall" in both volumes, and the HUMINT term-count table reproduces exactly.
+
+  Problems:
+  - **Dropped words (4):** "Assignment:" is missing from two bracketed quotations, "its" from one ALFUS quotation, and SA-10(7) says "to be included in" where the repository quotes "to be members of".
+  - **Wrong counts (2):** the "eleven controls and twenty-seven enhancements" heading should be 13 and 34 for the set it names, and "only two" uses of "personnel" without "or roles" is an undercount.
+  - **Unsupported attributions (2):** CM-3(5) does not have the "automated mechanisms" form, and SR-5(2) has personnel conducting assessments, which contradicts the "never the actor" claim.
+  - **Not found (1):** the CSRC "audit trail" sentence attributed to CNSSI 4009-2015 is not on the page today.
+
+  RFC 9162 is never cited in these files.

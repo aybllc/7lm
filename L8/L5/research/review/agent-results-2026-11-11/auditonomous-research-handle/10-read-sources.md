@@ -1,6 +1,6 @@
 # read:sources
 
-Agent result, as returned. Workflow: Handle on the Auditonomous research and manuscript. Run `wf_9c2917a7-7f0`. Phase: Read. Checked in 2026-11-11 19:56 UTC.
+Agent result, as returned. Workflow: Handle on the Auditonomous research and manuscript. Run `wf_9c2917a7-7f0`. Phase: Read.
 
 - **scope**: The source base, L7/provenance, of /home/user/auditonomous: MAIN (origin/main 2165144) in full; ROADMAP additions (STANDARDS_REGISTER.md, lists-2026-08-08/); BETA changes (LEDGER.md and the three sheets). Read from git objects only. Cross-references followed: MAIN L8/L0/semantics/definitions/AUDITONOMOUS_DEFINITION.md (citation spot-check), MAIN L8/L5/research/findings/DISTILLATION.md §5/§7, MAIN L8/L6/history/LEDGER_2026-08-16_l6-close-and-normalization.md, MAIN L7/peering/private (row-count and reconciliation record), HISTORY 1d83788 (_STAGING_TO_L6 tree, AUTONOMOUS_TERMS.md), and object checks in /home/user/autonomous for the BETA peer-source row. Working copies of git objects are in /tmp/claude-0/-home-user/bfcfd013-a2da-5019-961e-7f46116f08be/scratchpad/wf-handle/provenance/.
 - **summary**: The source base is one pointer register plus a tree of records about sources. By my own count the register (MAIN L7/provenance/sources/LEDGER.md) has 60 rows, not the 62 the MAIN sheets state: 34 standards (IEEE 29, IETF 2, ISO/IEC 1, ITU-T 1, NIST 1), 20 papers, 4 IEEE institutional documents and 2 exclusions. There are no book rows and no government-document class; the LAW- prefix is unused. Fifty-eight rows are access FULL. Each points into the private archive aybllc/l6, 39 at commit b328334 and 19 at e4f0d5c. No source PDF is in the repository, but one full-text copy of a paper (the Ferreira numbered text) is, with licence status unrecorded. I could not resolve any pointer because l6 is not on this machine.
@@ -128,7 +128,7 @@ Agent result, as returned. Workflow: Handle on the Auditonomous research and man
     - **title**: Class: government documents (no class; two government-issued items sit in other classes)
     - **path**: L7/provenance/sources/LEDGER.md
     - **where**: MAIN
-    - **what_it_is**: The ID rule names a LAW- prefix but there are zero LAW- rows. Two rows are government-issued: STD-002 NIST FIPS 180-4 (a US federal standard) and PR-008 the SEXTANT paper (NASA NTRS 20180003358). [source text withheld from the public copy] was extracted into the repository but has no row.
+    - **what_it_is**: The ID rule names a LAW- prefix but there are zero LAW- rows. Two rows are government-issued: STD-002 NIST FIPS 180-4 (a US federal standard) and PR-008 the SEXTANT paper (NASA NTRS 20180003358). NIST SP 800-53 Rev. 5 was extracted into the repository but has no row.
     - **own_label**: Column rule: "[source text withheld from the public copy]-…`)"
     - **evidence_state**: EMPTY as a class
     - **checked_how**: Script count of LAW- rows: 0. Searched the ledger for '800-53', 'CSRC', 'AI 100-1': 0 hits each in MAIN and BETA.
@@ -495,7 +495,7 @@ Agent result, as returned. Workflow: Handle on the Auditonomous research and man
     - **title**: Spot-check: five external citations in the definition that the ledger lacks
     - **path**: L8/L0/semantics/definitions/AUDITONOMOUS_DEFINITION.md
     - **where**: MAIN (definition); ledger checked in MAIN and BETA
-    - **what_it_is**: Five external sources the defining entry cites, each labelled VERIFIED or PARTIALLY VERIFIED by a fetch on 2026-07-30, none of which has a row in the source ledger: (1) American Heritage Dictionary, 5th ed., s.v. autonomous, audit, auto-; (2) Liddell-Scott short definition via Perseus, Tufts; (3) NIST CSRC Glossary 'audit trail' (CNSSI 4009-2015; SP 800-37 Rev. 2 and SP 800-53 Rev. 5); (4) IETF RFC 4949; (5) [source text withheld from the public copy]. A sixth, Lewis and Short via Perseus, is PARTIALLY VERIFIED and also unledgered. IEEE 7001-2021 is in the ledger (STD-004), but the definition cites its catalogue page scope text, not the held standard.
+    - **what_it_is**: Five external sources the defining entry cites, each labelled VERIFIED or PARTIALLY VERIFIED by a fetch on 2026-07-30, none of which has a row in the source ledger: (1) American Heritage Dictionary, 5th ed., s.v. autonomous, audit, auto-; (2) Liddell-Scott short definition via Perseus, Tufts; (3) NIST CSRC Glossary 'audit trail' (CNSSI 4009-2015; SP 800-37 Rev. 2 and SP 800-53 Rev. 5); (4) IETF RFC 4949; (5) NIST AI [source text withheld from the public copy]. A sixth, Lewis and Short via Perseus, is PARTIALLY VERIFIED and also unledgered. IEEE 7001-2021 is in the ledger (STD-004), but the definition cites its catalogue page scope text, not the held standard.
     - **own_label**: Definition: "[source text withheld from the public copy])"; Lewis and Short: "[source text withheld from the public copy]"
     - **evidence_state**: EXTERNALLY CHECKED by the definition's own record (web fetch, 2026-07-30, byte-checked against a session scratch file that is not in the repository); provenance rows EMPTY
     - **checked_how**: Read the definition's source list (lines 281-347). Searched LEDGER.md in MAIN and BETA for 'American Heritage', 'Liddell', 'Lewis', '4949', 'AI 100-1', 'CSRC', '800-53': 0 hits each; '7001': 1 hit (STD-004).
@@ -515,7 +515,7 @@ Agent result, as returned. Workflow: Handle on the Auditonomous research and man
     - **title**: Sources the staging findings and registers rely on that the ledger lacks
     - **path**: L7/provenance/sources/LEDGER.md
     - **where**: MAIN (ledger and staging records); ROADMAP (register)
-    - **what_it_is**: Sources named as used, needed or held in the scope's own records without a ledger row: [source text withheld from the public copy] (215 statements extracted); Rump 1999 and Rump 2010 (cited as confirming the exact-radius form); Beer, Fisk and Rogers 2014 (live request, not obtained); IEEE 1872-2015 and IEEE 7010-2020 (held in l6 per the ROADMAP register's A-004); SEVOCAB and ISO/IEC TS 25052-1 (sources of the two stored auditability definitions); Crosby and Wallach 2009 (lead); plus the ROADMAP register's OBTAINED rows (ISO 8373, ISO/IEC 25059, 42001, ISO 15489-1:2001, ALFUS SP 1011, NIST AI 100-1, NASA NTRS reports).
+    - **what_it_is**: Sources named as used, needed or held in the scope's own records without a ledger row: NIST SP 800-53 Rev. 5 (215 statements extracted); Rump 1999 and Rump 2010 (cited as confirming the exact-radius form); Beer, Fisk and Rogers 2014 (live request, not obtained); IEEE 1872-2015 and IEEE 7010-2020 (held in l6 per the ROADMAP register's A-004); SEVOCAB and ISO/IEC TS 25052-1 (sources of the two stored auditability definitions); Crosby and Wallach 2009 (lead); plus the ROADMAP register's OBTAINED rows (ISO 8373, ISO/IEC 25059, 42001, ISO 15489-1:2001, ALFUS SP 1011, NIST AI 100-1, NASA NTRS reports).
     - **evidence_state**: UNRESOLVED (unledgered citations); the 'Not held' table that should carry the gaps is EMPTY
     - **checked_how**: Searched LEDGER.md in MAIN and BETA for '800-53', 'Rump', 'Beer', '1872-2015', '7010', 'Moore', '8373', 'JCGM', 'Crosby', '15489': 0 hits each. Read the 'Not held' table: one blank row.
     - **key_claims**
@@ -556,7 +556,7 @@ Agent result, as returned. Workflow: Handle on the Auditonomous research and man
     - **statement**: Unledgered citations in the defining entry: American Heritage Dictionary, Liddell-Scott and Lewis and Short via Perseus, NIST CSRC Glossary, RFC 4949 and NIST AI 100-1 have no ledger row, against the ledger's own rule.
     - **locator**: MAIN:L8/L0/semantics/definitions/AUDITONOMOUS_DEFINITION.md:282-336 against MAIN:L7/provenance/sources/LEDGER.md:10-12
   - item 10
-    - **statement**: [source text withheld from the public copy] was retrieved, hashed and extracted (215 control statements held in the repository) but has no ledger row.
+    - **statement**: NIST SP 800-53 Rev. 5 was retrieved, hashed and extracted (215 control statements held in the repository) but has no ledger row.
     - **locator**: MAIN:L7/provenance/sources/staging-records/standards/extracted/SP800-53r5_AC-AU_verbatim.md:7-20
   - item 11
     - **statement**: Four rows whose labels report an IEEE Xplore stamp carry no WSU class-2 hold-private tag (STD-021, STD-022, INST-001, PR-013), while the staging manifest says all 33 IEEE files carry the WSU watermark.

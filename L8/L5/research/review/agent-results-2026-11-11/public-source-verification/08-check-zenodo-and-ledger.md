@@ -1,0 +1,181 @@
+# check:zenodo-and-ledger
+
+Agent result, as returned. Workflow: Public sources against their originals. Run `wf_73fbd9d4-516`. Phase: Check.
+
+- **check**: zenodo-and-ledger: identities of public sources in the 7lm source ledger (Zenodo record 17271561) and citation check of the publicly recorded rows of the auditonomous L6 source ledger (NIST, RFC, ITU-T, NASA NTRS)
+- **sources**
+  - item 1
+    - **name**: Zenodo record 17271561 metadata (API)
+    - **official_url**: https://zenodo.org/api/records/17271561
+    - **http_status**: 200
+    - **final_url**: https://zenodo.org/api/records/17271561
+    - **bytes**: 30954
+    - **sha256**: 2dced70e6dcbe26b30a0a797b2282c1efbcaaa7382e2d3c1572a80e591f785e0
+    - **saved_at**: /tmp/claude-0/-home-user/bfcfd013-a2da-5019-961e-7f46116f08be/scratchpad/wf-sources/zenodo-and-ledger/dl-1/record.json
+    - **repo_recorded**: DOI 10.5281/zenodo.17271561 (7lm origin/beta/common-contracts-r1-r6:L7/provenance/sources/source-ledger.md row NU-17271561)
+    - **same_as_recorded**: yes: API doi = 10.5281/zenodo.17271561
+  - item 2
+    - **name**: nualgebra-main.zip (Zenodo record 17271561 file)
+    - **official_url**: https://zenodo.org/api/records/17271561/files/nualgebra-main.zip/content
+    - **http_status**: 200
+    - **final_url**: https://zenodo.org/api/records/17271561/files/nualgebra-main.zip/content
+    - **bytes**: 519365
+    - **sha256**: 60cccd3222b00965505a6f890f3540639fe976edbd1ab209f4b4bf8497cf6f0e
+    - **saved_at**: /tmp/claude-0/-home-user/bfcfd013-a2da-5019-961e-7f46116f08be/scratchpad/wf-sources/zenodo-and-ledger/dl-11/nualgebra-main.zip
+    - **repo_recorded**: ZIP SHA256 60cccd3222b00965505a6f890f3540639fe976edbd1ab209f4b4bf8497cf6f0e (source-ledger.md row NU-17271561); no size recorded
+    - **same_as_recorded**: yes: sha256 identical; size 519365 and md5 a531972d5c222f44d6624f6a297682b0 also equal the Zenodo API file entry
+  - item 3
+    - **name**: Zenodo latest version of the same concept (record 17283314)
+    - **official_url**: https://zenodo.org/api/records/17271561/versions/latest
+    - **http_status**: 200
+    - **final_url**: https://zenodo.org/api/records/17283314
+    - **bytes**: 7579
+    - **sha256**: 84dc92f929bb8ee774630e733ceadd850086f857cb9cbe7d9b80f531fd1cd74f
+    - **saved_at**: /tmp/claude-0/-home-user/bfcfd013-a2da-5019-961e-7f46116f08be/scratchpad/wf-sources/zenodo-and-ledger/dl-12/latest.json
+    - **repo_recorded**: not recorded
+    - **same_as_recorded**: n/a
+  - item 4
+    - **name**: RFC 6962 metadata (RFC Editor JSON)
+    - **official_url**: https://www.rfc-editor.org/rfc/rfc6962.json
+    - **http_status**: 200
+    - **final_url**: https://www.rfc-editor.org/rfc/rfc6962.json
+    - **bytes**: 1275
+    - **sha256**: d8c2a4208bd9aa8cb78fef3192abe65c01c3074326a569bba8f49c990636e2b1
+    - **saved_at**: /tmp/claude-0/-home-user/bfcfd013-a2da-5019-961e-7f46116f08be/scratchpad/wf-sources/zenodo-and-ledger/dl-2/rfc6962.json
+    - **repo_recorded**: sha256 9e5060bbf9850ebd… of a privately held PDF (LEDGER.md STD-033); not comparable to this record page
+    - **same_as_recorded**: not comparable
+  - item 5
+    - **name**: RFC 9162 metadata (RFC Editor JSON)
+    - **official_url**: https://www.rfc-editor.org/rfc/rfc9162.json
+    - **http_status**: 200
+    - **final_url**: https://www.rfc-editor.org/rfc/rfc9162.json
+    - **bytes**: 1550
+    - **sha256**: 717b83368cf12750e7c34deed30ee4903ef85da6e10d260519cf63166456e0ca
+    - **saved_at**: /tmp/claude-0/-home-user/bfcfd013-a2da-5019-961e-7f46116f08be/scratchpad/wf-sources/zenodo-and-ledger/dl-3/rfc9162.json
+    - **repo_recorded**: sha256 0b153d1f65c17042… of a privately held PDF (LEDGER.md STD-034); not comparable
+    - **same_as_recorded**: not comparable
+  - item 6
+    - **name**: RFC 6962 info page (RFC Editor)
+    - **official_url**: https://www.rfc-editor.org/info/rfc6962
+    - **http_status**: 200
+    - **final_url**: https://www.rfc-editor.org/info/rfc6962/
+    - **bytes**: 336904
+    - **sha256**: cb13f16bad77f9405a63299cca12b7c6ee1bd0353d7452be9ad91934cf2d7f52
+    - **saved_at**: /tmp/claude-0/-home-user/bfcfd013-a2da-5019-961e-7f46116f08be/scratchpad/wf-sources/zenodo-and-ledger/dl-4/info6962.html
+    - **repo_recorded**: not recorded
+    - **same_as_recorded**: n/a
+  - item 7
+    - **name**: RFC 9162 info page (RFC Editor)
+    - **official_url**: https://www.rfc-editor.org/info/rfc9162
+    - **http_status**: 200
+    - **final_url**: https://www.rfc-editor.org/info/rfc9162/
+    - **bytes**: 1334611
+    - **sha256**: bd5e572fd2300891129d0451e57dfb81e47fbd47538b2425e9c9b7d672a66110
+    - **saved_at**: /tmp/claude-0/-home-user/bfcfd013-a2da-5019-961e-7f46116f08be/scratchpad/wf-sources/zenodo-and-ledger/dl-5/info9162.html
+    - **repo_recorded**: not recorded
+    - **same_as_recorded**: n/a
+  - item 8
+    - **name**: NIST CSRC record page for FIPS 180-4
+    - **official_url**: https://csrc.nist.gov/pubs/fips/180-4/upd1/final
+    - **http_status**: 200
+    - **final_url**: https://csrc.nist.gov/pubs/fips/180-4/upd1/final
+    - **bytes**: 40642
+    - **sha256**: d3c9f1d05c643d086b7359b8712a28263740713724145991ae07682b3f2b3f6c
+    - **saved_at**: /tmp/claude-0/-home-user/bfcfd013-a2da-5019-961e-7f46116f08be/scratchpad/wf-sources/zenodo-and-ledger/dl-6/fips1804.html
+    - **repo_recorded**: not recorded (LEDGER.md STD-002 gives no hash)
+    - **same_as_recorded**: n/a
+  - item 9
+    - **name**: NIST FIPS 180-4 PDF (nvlpubs)
+    - **official_url**: https://nvlpubs.nist.gov/nistpubs/FIPS/NIST.FIPS.180-4.pdf
+    - **http_status**: 200
+    - **final_url**: https://nvlpubs.nist.gov/nistpubs/FIPS/NIST.FIPS.180-4.pdf
+    - **bytes**: 833315
+    - **sha256**: 0455b406d89648d20cbde375561e19c245b9815e894164c2670772e3d54deb82
+    - **saved_at**: /tmp/claude-0/-home-user/bfcfd013-a2da-5019-961e-7f46116f08be/scratchpad/wf-sources/zenodo-and-ledger/dl-13/NIST.FIPS.180-4.pdf
+    - **repo_recorded**: no hash or size in LEDGER.md; staging record NIST_FIPS-180-4_Secure-Hash-Standard.md line 10 says 36 PDF pages
+    - **same_as_recorded**: page count matches (pdfinfo: 36 pages); cover reads [source text withheld from the public copy]), August 2015
+  - item 10
+    - **name**: NASA NTRS citation 20180003358 (API)
+    - **official_url**: https://ntrs.nasa.gov/api/citations/20180003358
+    - **http_status**: 200
+    - **final_url**: https://ntrs.nasa.gov/api/citations/20180003358
+    - **bytes**: 7800
+    - **sha256**: 9b6f4f788deb5d19d6f319eb6bc4ee96b5d95b918257fe109de30a65458bb338
+    - **saved_at**: /tmp/claude-0/-home-user/bfcfd013-a2da-5019-961e-7f46116f08be/scratchpad/wf-sources/zenodo-and-ledger/dl-7/ntrs.json
+    - **repo_recorded**: NTRS number 20180003358 (LEDGER.md PR-008); no hash
+    - **same_as_recorded**: number resolves to a SEXTANT paper with Winternitz as first author
+  - item 11
+    - **name**: NASA NTRS citation 20180003358 (HTML page)
+    - **official_url**: https://ntrs.nasa.gov/citations/20180003358
+    - **http_status**: 200
+    - **final_url**: https://ntrs.nasa.gov/citations/20180003358
+    - **bytes**: 121743
+    - **sha256**: 61ee9d430addf8193fb3e97a41da4938b3c28c1faef4e669dfa3a8f3682b4b26
+    - **saved_at**: /tmp/claude-0/-home-user/bfcfd013-a2da-5019-961e-7f46116f08be/scratchpad/wf-sources/zenodo-and-ledger/dl-10/ntrs.html
+    - **repo_recorded**: not recorded
+    - **same_as_recorded**: n/a
+  - item 12
+    - **name**: ITU-T Rec. X.200 (07/94) record page (www.itu.int is ITU's own domain, the issuing body of ITU-T Recommendations)
+    - **official_url**: https://www.itu.int/rec/T-REC-X.200-199407-I/en
+    - **http_status**: 200
+    - **final_url**: https://www.itu.int/rec/T-REC-X.200-199407-I/en
+    - **bytes**: 19423
+    - **sha256**: 9c3f62e3ae7ce44aacb67bb1090d542b0124c72d8f5e07144084be5d98b39d66
+    - **saved_at**: /tmp/claude-0/-home-user/bfcfd013-a2da-5019-961e-7f46116f08be/scratchpad/wf-sources/zenodo-and-ledger/dl-8/x200.html
+    - **repo_recorded**: not recorded (LEDGER.md STD-001 gives no hash)
+    - **same_as_recorded**: n/a
+  - item 13
+    - **name**: ITU-T Rec. X.200 all-editions page
+    - **official_url**: https://www.itu.int/rec/T-REC-X.200/en
+    - **http_status**: 200
+    - **final_url**: https://www.itu.int/rec/T-REC-X.200/en
+    - **bytes**: 10985
+    - **sha256**: ba9bbcebb4ee796549fb56d18c7ebdabc4d8c736dc4f4db2f59e326cf6ef4b1d
+    - **saved_at**: /tmp/claude-0/-home-user/bfcfd013-a2da-5019-961e-7f46116f08be/scratchpad/wf-sources/zenodo-and-ledger/dl-9/x200all.html
+    - **repo_recorded**: not recorded
+    - **same_as_recorded**: n/a
+- **items_total**: 6
+- **confirmed**: 4
+- **problems**
+  - item 1
+    - **id**: zenodo-and-ledger-1
+    - **kind**: MISMATCH
+    - **repo_locator**: auditonomous origin/main:L7/provenance/sources/LEDGER.md line 66, row STD-033
+    - **repo_text**: [source text withheld from the public copy]. | ... | FULL | ACCESSIONED; sha256 `9e5060bbf9850ebd…` verified
+    - **source_locator**: https://www.rfc-editor.org/rfc/rfc6962.json (field obsoleted_by) and https://www.rfc-editor.org/info/rfc6962/ (About this RFC, Details)
+    - **source_text**: "obsoleted_by": ["RFC9162"]; info page: "Obsoleted by (1) [source text withheld from the public copy].0 . Date published June 2013 [source text withheld from the public copy]. Kasper"; status "EXPERIMENTAL"
+    - **note**: Title, number, year (June 2013) and authors are correct. The defect is an omission: the row names an obsoleted document and does not say so. Nothing in the row links it to STD-034 (RFC 9162), which obsoletes it. Neither row states that both [source text withheld from the public copy], although both carry an STD- identifier.
+  - item 2
+    - **id**: zenodo-and-ledger-2
+    - **kind**: MISMATCH
+    - **repo_locator**: auditonomous origin/main:L7/provenance/sources/LEDGER.md line 27, row PR-008
+    - **repo_text**: [source text withheld from the public copy]).
+    - **source_locator**: https://ntrs.nasa.gov/api/citations/20180003358 (fields title, stiType, meetings, publications)
+    - **source_text**: "title": "[source text withheld from the public copy]**"; stiType "CONFERENCE_PAPER"; meeting "International Conference on Space Operations (Space Ops 2018)", Marseille, 2018-05-28 to 2018-06-01; publicationDate 2018-05-28; first author "Winternitz, Luke M. B." (17 authors); distribution PUBLIC
+    - **note**: The NTRS number, first author and main title are right. The citation drops the subtitle "Additional On-Orbit Results" and gives no year or venue (2018, SpaceOps 2018). The ledger's own column rule asks for a full bibliographic citation. The subtitle is what the official title uses to mark this paper as the follow-on results paper. The NTRS number does identify it uniquely, so this is an incomplete citation, not a wrong document.
+- **could_not_check**
+  - item 1
+    - **what**: 7lm source-ledger.md row SM-PDF (Supplied Semantic_Magnitude_Aggradation_Core.docx.pdf, SHA256 b8d36fa37ab68db59825050e4ba1789d915ceab4093bab8a662e3f922829f235)
+    - **why**: Supplied private PDF; not published at any official host, so neither identity nor hash can be tested.
+  - item 2
+    - **what**: auditonomous LEDGER.md: 19 journal, conference and preprint rows (PR-001 to PR-007, PR-009 to PR-020)
+    - **why**: Not checked: no public official text or record in the scope of this check (journal articles, conference papers, preprints).
+  - item 3
+    - **what**: auditonomous LEDGER.md: 29 IEEE standards rows (STD-003 to STD-024, STD-026 to STD-032) and 1 ISO/IEC row (STD-025)
+    - **why**: Not checked: IEEE and ISO standards have no public official text.
+  - item 4
+    - **what**: auditonomous LEDGER.md: 4 IEEE institutional documents (INST-001 to INST-004) and 2 excluded rows (EXC-001 iTeh preview of ISO/IEC 22989, EXC-002 vendor glossary)
+    - **why**: Not checked: outside the issuing bodies named for this check (IEEE publications, a reseller preview and a vendor glossary).
+  - item 5
+    - **what**: Byte identity of the privately held files behind STD-001, STD-002, STD-033, STD-034 and PR-008
+    - **why**: The files are in the private l6 archive. The ledger gives only truncated sha256 prefixes for STD-033/034 (PDF renderings) and no hash for the others, so only the citations were tested, not the bytes.
+- **summary**: Part 1 (7lm ledger). Row NU-17271561 is true. Zenodo's API gives record 17271561 with DOI 10.5281/zenodo.17271561, title "[source text withheld from the public copy]", creator Martin, Eric D., published 2025-10-05, licence cc-by-4.0, type Dataset, and no version field (the description says v3.0.0). Its only file is nualgebra-main.zip, 519,365 bytes. The downloaded sha256 is 60cccd32...6f0e, identical to the ledger. The archive has 36 entries under one top-level folder, nualgebra-main/. One thing the ledger does not say: this is not the latest version; record 17283314 (2025-10-07, nualgebra-v3.1.0.zip) is. Row SM-PDF could not be checked.
+
+  Part 2 (auditonomous ledger, 60 rows). Five rows have an official public record: STD-001, STD-002, STD-033, STD-034 and PR-008. There are no W3C rows. Three citations are confirmed:
+  - STD-001, ITU-T X.200 (07/94): "Status : In force"; the title is shortened.
+  - STD-002, FIPS 180-4: August 2015, current; CSRC notes "NIST has decided to revise FIPS 180-4".
+  - STD-034, RFC 9162: December 2021, Laurie, Messeri, Stradling; Experimental.
+
+  Two have problems. STD-033 (RFC 6962) is "Obsoleted by RFC 9162" and the row does not say so. PR-008 omits the subtitle "Additional On-Orbit Results", the year and the venue.
+
+  Totals: 6 items tested, 4 confirmed. The other 55 rows were not checked.

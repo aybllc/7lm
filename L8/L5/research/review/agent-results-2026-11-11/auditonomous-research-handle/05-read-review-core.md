@@ -1,6 +1,6 @@
 # read:review-core
 
-Agent result, as returned. Workflow: Handle on the Auditonomous research and manuscript. Run `wf_9c2917a7-7f0`. Phase: Read. Checked in 2026-11-11 19:56 UTC.
+Agent result, as returned. Workflow: Handle on the Auditonomous research and manuscript. Run `wf_9c2917a7-7f0`. Phase: Read.
 
 - **scope**: Layer 5 review, core set, aybllc/auditonomous. Read from git objects only: MAIN (origin/main 2165144) L8/L5/0.md, L8/L5/research/0.md, L8/L5/research/review/{0.md, CONTRADICTIONS.md, PERPETUITY_QUESTION_ADJUDICATION.md, STATUS_LADDER.md, STATUS_AND_LABEL_DISCIPLINE.md}; BETA (714480d) diff under L8/L5/research/review (one file changed: CONTRADICTIONS.md, +15 lines). Cross-references followed: the three per-body extractions and reading records the contradictions cite (MAIN L8/L4/work/computation, L7/provenance/sources/staging-records), the definition's line 52, the bound Autonomous blob ffbdc28 (AUT-SOURCE-001), HISTORY 1d83788:AUDITONOMOUS.md sections 2.8, 6.7, 10, 11, the CYCLES file (ROADMAP/HISTORY), the retired README and routing plan on MAIN. No standard, paper or PDF was read; every "confirmed" below is record-against-record inside the repositories.
 - **summary**: The core review set on MAIN is small: two governance texts (a four-rung status ladder and a fourteen-label registry), one register of seven standards conflicts (C1 to C7), one adjudication (the perpetuity question), and a sheet listing four open author's calls. ROADMAP carries the same four documents byte-identical; BETA changes only CONTRADICTIONS.md.
@@ -139,7 +139,7 @@ Agent result, as returned. Workflow: Handle on the Auditonomous research and man
     - **title**: C5: ISO/IEC 22989 (self-modified goal) against NIST ALFUS (assigned goal)
     - **path**: L8/L5/research/review/CONTRADICTIONS.md
     - **where**: MAIN, ROADMAP, BETA, HISTORY
-    - **what_it_is**: Side A: ISO/IEC 22989 cl. 3.1.5, a system "[source text withheld from the public copy]". Side B: NIST SP 1011-I-2.0 section 2, [source text withheld from the public copy] entry narrows itself: ALFUS admits a non-human assigner [source text withheld from the public copy]. Who resolves: neither standard settles it; the owner for row ownership (the routing plan names this row). BETA disposition: "[source text withheld from the public copy]".
+    - **what_it_is**: Side A: ISO/IEC 22989 cl. 3.1.5, a system "capable of modifying its intended domain of use [source text withheld from the public copy]". Side B: NIST SP 1011-I-2.0 section 2, goals "as assigned by its human operator([source text withheld from the public copy] entry narrows itself: ALFUS admits a non-human assigner [source text withheld from the public copy]. Who resolves: neither standard settles it; the owner for row ownership (the routing plan names this row). BETA disposition: "[source text withheld from the public copy]".
     - **own_label**: `CONTESTED`
     - **evidence_state**: EXTERNALLY CHECKED for the quotes as recorded; UNRESOLVED
     - **locator**: MAIN:L8/L5/research/review/CONTRADICTIONS.md:118-143; BETA same file line 32
@@ -155,7 +155,7 @@ Agent result, as returned. Workflow: Handle on the Auditonomous research and man
     - **title**: C6: NIST ALFUS Volume I v2.0 against Volume II v1.0 on where goals come from
     - **path**: L8/L5/research/review/CONTRADICTIONS.md
     - **where**: MAIN, ROADMAP, BETA, HISTORY
-    - **what_it_is**: Side A: SP 1011-I-2.0 (October 2008) adds "[source text withheld from the public copy]". Side B: SP 1011-II-1.0 (December 2007) says "[source text withheld from the public copy]." The entry's reading, offered as most probable and not stronger, is that Volume II quotes the superseded Volume I v1.1 and was never updated. Who resolves: anyone who obtains Volume I v1.1 and diffs it; NIST for intent. BETA disposition: "[source text withheld from the public copy]".
+    - **what_it_is**: Side A: SP 1011-I-2.0 (October 2008) adds "or by another system that the UMS communicates with". Side B: SP 1011-II-1.0 (December 2007) says "Ultimately, the goals assigned to UMS come from the HRI." The entry's reading, offered as most probable and not stronger, is that Volume II quotes the superseded Volume I v1.1 and was never updated. Who resolves: anyone who obtains Volume I v1.1 and diffs it; NIST for intent. BETA disposition: "[source text withheld from the public copy]".
     - **own_label**: `PARTIALLY VERIFIED`
     - **evidence_state**: EXTERNALLY CHECKED for the two quotes as recorded; UNRESOLVED on the explanation (a check not run: v1.1 not obtained)
     - **locator**: MAIN:L8/L5/research/review/CONTRADICTIONS.md:147-167; BETA same file line 33

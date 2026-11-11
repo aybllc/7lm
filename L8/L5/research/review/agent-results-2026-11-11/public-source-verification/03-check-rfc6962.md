@@ -1,0 +1,160 @@
+# check:rfc6962
+
+Agent result, as returned. Workflow: Public sources against their originals. Run `wf_73fbd9d4-516`. Phase: Check.
+
+- **check**: RFC 6962, Certificate Transparency (label rfc6962): official text and status at www.rfc-editor.org; the two stored copies and the ct-lane sheet in Autonomous; every quotation and section claim in the Auditonomous reading record
+- **sources**
+  - item 1
+    - **name**: RFC 6962 plain text, the canonical edition (www.rfc-editor.org is the RFC Editor's own host, as the task names)
+    - **official_url**: https://www.rfc-editor.org/rfc/rfc6962.txt
+    - **http_status**: 200
+    - **final_url**: https://www.rfc-editor.org/rfc/rfc6962.txt
+    - **bytes**: 55048
+    - **sha256**: 08fdf31c10b9f20872a65c027a9fe8cee27280f930120784241a57de744752af
+    - **saved_at**: /tmp/claude-0/-home-user/bfcfd013-a2da-5019-961e-7f46116f08be/scratchpad/wf-sources/rfc6962/dl-1/rfc6962.txt
+    - **repo_recorded**: not recorded. Neither repository records a hash, size or retrieval date for this file. Autonomous origin/main holds two copies in L7/provenance/prior-art/ct-lane/: rfc6962-canonical.txt (git blob d760281e, 55,048 bytes) and RFC6962.txt (git blob ee3e4c6c, 85,837 bytes, sha256 cdc9bcecbf8b26b9c00156385d054ba5f9bd09b58242090f4c7f4cc66f77753b). The sheet ct-lane/0.md describes them at lines 3, 8, 16, 18 and 20.
+    - **same_as_recorded**: No recorded hash exists to compare with. A second download (dl-8) gave the same sha256. rfc6962-canonical.txt is byte-identical to the download. RFC6962.txt is not byte-identical: it is a plain-text rendering of a 54-page browser print of https://www.rfc-editor.org/info/rfc6962/ stamped '8/4/26, 8:43 AM'. Every difference: (1) four extra lines at the top ('[source text withheld from the public copy].'); (2) 54 print header lines and 54 print footer lines ('https://www.rfc-editor.org/info/rfc6962/ n/54'); (3) 54 form feeds, one per print page, against 27, and no final newline; (4) every line indented 14 or more extra columns, with indentation scaled; (5) spacing inside 319 of 966 non-blank lines changed: the two-space gap after a full stop is collapsed on 99 lines and gaps are widened on 220 (masthead, RFC page headers and footers, section headings, 37 of 39 tree-diagram lines, some struct, reference and prose lines), so the ASCII trees in section 2.1.3 lose their shape; (6) 701 blank lines against 550, longest line 131 columns against 72. Line endings are LF in both; no CR, tab or non-ASCII byte in either. Nothing differs in the words: each of the 966 non-blank official lines, RFC page headers and footers included, has one capture line with the same tokens, and all 7,259 whitespace-separated tokens appear in order with no substitution, insertion or deletion. Git history shows both blobs unchanged since their first commit (c866842, 2026-08-04) through two 100%-similarity renames.
+  - item 2
+    - **name**: RFC Editor info page for RFC 6962
+    - **official_url**: https://www.rfc-editor.org/info/rfc6962
+    - **http_status**: 200 (after a 301 to the trailing-slash URL on the same host)
+    - **final_url**: https://www.rfc-editor.org/info/rfc6962/
+    - **bytes**: 336904
+    - **sha256**: cb13f16bad77f9405a63299cca12b7c6ee1bd0353d7452be9ad91934cf2d7f52
+    - **saved_at**: /tmp/claude-0/-home-user/bfcfd013-a2da-5019-961e-7f46116f08be/scratchpad/wf-sources/rfc6962/dl-2/info_rfc6962.html
+    - **repo_recorded**: Autonomous ct-lane/0.md lines 8 and 16 call RFC6962.txt an 'RFC Editor page capture, 2026-08-04'. The Auditonomous reading record quotes the page banner at lines 15, 33 and 103. No hash or size of the page is recorded.
+    - **same_as_recorded**: Not comparable byte for byte: the page is generated HTML. Its title ('[source text withheld from the public copy]'), authors, status and [source text withheld from the public copy].') match the capture and the record. Its embedded metadata gives published 2013-06-06, status experimental, 27 pages, stream IETF, obsoleted_by RFC 9162, updates none, updated_by none. The RFC text embedded in the page is token-identical to rfc6962.txt.
+  - item 3
+    - **name**: RFC Index, entry 6962
+    - **official_url**: https://www.rfc-editor.org/rfc-index.txt
+    - **http_status**: 200
+    - **final_url**: https://www.rfc-editor.org/rfc-index.txt
+    - **bytes**: 2028672
+    - **sha256**: 135b00365e5fe88a88e9f55580bb33f7fd1eb07ba43b4cede0f664095c192ca5
+    - **saved_at**: /tmp/claude-0/-home-user/bfcfd013-a2da-5019-961e-7f46116f08be/scratchpad/wf-sources/rfc6962/dl-4/rfc-index.txt
+    - **repo_recorded**: not recorded
+    - **same_as_recorded**: Nothing recorded to compare. Index created 11/10/2026. Entry 6962 reads: 'Certificate Transparency. B. Laurie, A. Langley, E. Kasper. June 2013. (Format: TXT, HTML) (Obsoleted by RFC9162) (Status: EXPERIMENTAL) (DOI: 10.17487/RFC6962)'. It has no 'Updated by' tag. Entry 9162 carries '(Obsoletes RFC6962)'.
+  - item 4
+    - **name**: RFC 6962 metadata record (rfc6962.json)
+    - **official_url**: https://www.rfc-editor.org/rfc/rfc6962.json
+    - **http_status**: 200
+    - **final_url**: https://www.rfc-editor.org/rfc/rfc6962.json
+    - **bytes**: 1275
+    - **sha256**: d8c2a4208bd9aa8cb78fef3192abe65c01c3074326a569bba8f49c990636e2b1
+    - **saved_at**: /tmp/claude-0/-home-user/bfcfd013-a2da-5019-961e-7f46116f08be/scratchpad/wf-sources/rfc6962/dl-3/rfc6962.json
+    - **repo_recorded**: not recorded
+    - **same_as_recorded**: Nothing recorded to compare. It gives title 'Certificate Transparency'; [source text withheld from the public copy]. Kasper; status EXPERIMENTAL; pub_date June 2013; page_count 27; obsoleted_by [RFC9162]; updates []; updated_by []; source 'IETF - NON WORKING GROUP'; doi 10.17487/RFC6962.
+  - item 5
+    - **name**: RFC 6962 HTML rendering (cross-check only)
+    - **official_url**: https://www.rfc-editor.org/rfc/rfc6962.html
+    - **http_status**: 200
+    - **final_url**: https://www.rfc-editor.org/rfc/rfc6962.html
+    - **bytes**: 68207
+    - **sha256**: 1f09313bd14d952683954db8a2c64993c6b0fe4f86122adab7fdd5d20be503f4
+    - **saved_at**: /tmp/claude-0/-home-user/bfcfd013-a2da-5019-961e-7f46116f08be/scratchpad/wf-sources/rfc6962/dl-5/rfc6962.html
+    - **repo_recorded**: not recorded
+    - **same_as_recorded**: Nothing recorded to compare. Its text is token-identical to rfc6962.txt (7,259 tokens, no differences).
+  - item 6
+    - **name**: RFC 6962 PDF rendering of the text (fetched only to test the hash the reading record gives for its PDF)
+    - **official_url**: https://www.rfc-editor.org/rfc/pdfrfc/rfc6962.txt.pdf
+    - **http_status**: 200
+    - **final_url**: https://www.rfc-editor.org/rfc/pdfrfc/rfc6962.txt.pdf
+    - **bytes**: 42139
+    - **sha256**: 5cef85c6b572bc89e0e938c7a9591ef9c111f3d169416370997635faf398dcf7
+    - **saved_at**: /tmp/claude-0/-home-user/bfcfd013-a2da-5019-961e-7f46116f08be/scratchpad/wf-sources/rfc6962/dl-6/rfc6962.txt.pdf
+    - **repo_recorded**: Auditonomous reading record line 3 records sha256 9e5060bbf9850ebd955ff20a67ac35583d3a1dfeffc5d3443044370fa101833e for pdf/RFC6962_Certificate-Transparency.pdf, which line 25 describes as a 54-page [source text withheld from the public copy].
+    - **same_as_recorded**: The hashes differ, but these are different kinds of file, so this is not reported as SOURCE-CHANGED. The official PDF is a 27-page rendering of the text made on 2013-06-06. The record's file is its own 54-page print, which is not in the repository and which no official URL serves. See could_not_check.
+  - item 7
+    - **name**: RFC Editor errata listing for RFC 6962 (supplementary; www.rfc-editor.org redirects to errata.rfc-editor.org, the RFC Editor's own errata host under the same domain)
+    - **official_url**: https://www.rfc-editor.org/errata/rfc6962
+    - **http_status**: 200 (after a 302 from www.rfc-editor.org)
+    - **final_url**: https://errata.rfc-editor.org/search/?rfc_number=6962&presentation=records
+    - **bytes**: 22563
+    - **sha256**: c1f7406a49255e9be75f1c594f0c3f20f0f47da1e663d8b1d2c31e3e9df7c96a
+    - **saved_at**: /tmp/claude-0/-home-user/bfcfd013-a2da-5019-961e-7f46116f08be/scratchpad/wf-sources/rfc6962/dl-7/errata_rfc6962.html
+    - **repo_recorded**: not recorded; neither repository object mentions errata
+    - **same_as_recorded**: Nothing recorded to compare, and no verdict rests on this page. It lists three errata: 3686 (Verified, section 4.2), 4204 (Reported, section 3.1) and 4286 (Reported, section 3). Erratum 4286 proposes 'When a valid certificate or Precertificate is submitted to a log, the log MUST immediately return ...' for a sentence the reading record quotes in capture C14; the record quotes the RFC as published. The other two touch no quoted passage.
+- **items_total**: 152
+- **confirmed**: 137
+- **problems**
+  - item 1
+    - **id**: rfc6962-1
+    - **kind**: MISMATCH
+    - **repo_locator**: auditonomous origin/main:L7/provenance/sources/staging-records/library/reading/RFC6962_Certificate-Transparency.md line 366 (Recorded absences, fourth bullet)
+    - **repo_text**: [source text withheld from the public copy]
+    - **source_locator**: rfc6962.txt section 3.1 (p.9 lines 488-490; p.10 lines 513-515 and 522-525); section 4.1 (p.17 lines 940-941; p.18 lines 967-970); section 4.6 (p.20 lines 1094-1096 and 1101-1102); section 5.2 (p.22 line 1191); section 5.3 step 3 (p.22 lines 1214-1215)
+    - **source_text**: 3.1: "Each submitted certificate MUST be accompanied by all additional certificates required to verify the certificate chain up to an accepted root certificate." | 3.1: "The Precertificate Signing Certificate MUST be directly certified by the (root or intermediate) CA certificate that will ultimately sign the end-entity TBSCertificate" | 3.1: "the Precertificate submission MUST be accompanied by the Precertificate Signing Certificate, if used, and all additional certificates required to verify the chain up to an accepted root certificate." | 4.1: "A compliant v1 implementation MUST NOT expect this to be 0 (i.e., v1)." | 4.1: "then a v1 client may be unable to verify the signature. It MUST NOT construe this as an error. (Note: Log clients don't need to be able to verify this structure; only TLS clients do." | 4.6: "However, a compliant v1 client MUST NOT construe an unrecognized MerkleLeafType or LogEntryType value as an error." | 4.6: 'The "start" and "end" parameters SHOULD be within the range 0 <= x < "tree_size"' | 5.2: "TLS clients are not directly clients of the log" | 5.3 step 3: "Fetch all the entries in the tree corresponding to the STH (Section 4.6)."
+    - **note**: A claim about the whole document, not a quotation. The second sentence is contradicted by the source: capitalised RFC 2119 keywords also bind submitters and CAs (section 3.1) and log clients (sections 4.1 and 4.6), and the RFC separates log clients from TLS clients (section 5.2). The first sentence is true only by name: no MUST, SHALL or SHOULD sentence has a monitor or auditor as its subject, but the section 4.6 MUST NOT and SHOULD govern whoever calls get-entries, and section 5.3 steps 3 and 7 send monitors to section 4.6. The record itself quotes the 4.6 sentence in capture C19 (line 249). Its conclusion that the RFC does not require any monitor or auditor to exist is not affected. Related: line 211 calls 'Auditors can thus verify that each certificate ... indeed appears in the log.' (section 3, p.9) a 'normative operational sentence'; that sentence contains no RFC 2119 keyword.
+  - item 2
+    - **id**: rfc6962-2
+    - **kind**: MISMATCH
+    - **repo_locator**: auditonomous origin/main:L7/provenance/sources/staging-records/library/reading/RFC6962_Certificate-Transparency.md line 323 (capture C27, 'Bears on')
+    - **repo_text**: [source text withheld from the public copy]
+    - **source_locator**: rfc6962.txt section 7.3 Misbehaving Logs, p.24, lines 1324-1328, 1331-1332 and 1340-1341
+    - **source_text**: "A log can misbehave in two ways: (1) by failing to incorporate a certificate with an SCT in the Merkle Tree within the MMD and (2) by violating its append-only property by presenting two different, conflicting views of the Merkle Tree at different times and/or to different parties." [...] "Violation of the MMD contract is detected by log clients requesting a Merkle audit proof for each observed SCT." [...] "Violation of the append-only property is detected by global gossiping"
+    - **note**: A paraphrase, not a quotation, and ambiguous. On its natural reading ('Both' = omission and equivocation) it misstates section 7.3: the RFC ties only way (2) to the append-only property and calls way (1) a violation of 'the MMD contract'. If 'Both' was meant as the two kinds of conflicting view (at different times, to different parties), the statement is correct but the wording does not say so. The verbatim capture C27 directly above it is accurate.
+  - item 3
+    - **id**: rfc6962-3
+    - **kind**: MISATTRIBUTED
+    - **repo_locator**: auditonomous origin/main:L7/provenance/sources/staging-records/library/reading/RFC6962_Certificate-Transparency.md line 329 (heading of capture C28); quotation at line 331
+    - **repo_text**: [source text withheld from the public copy]
+    - **source_locator**: rfc6962.txt section 7.3: p.24 lines 1340-1342 and p.25 lines 1351-1352
+    - **source_text**: Last text line of p.24 (line 1342): "the latest Signed Tree Heads. As soon as two conflicting Signed Tree" | first text lines of p.25 (lines 1351-1352): "Heads for the same log are detected, this is cryptographic proof of that log's misbehavior."
+    - **note**: The words and the section are right; the printed-page locator is incomplete. 167 of the quotation's 244 non-space characters are on printed p.24 and 77 on p.25, so it should read 'printed pp.24-25'. The record notes the PDF-page straddle (48/49, line 333) but not the printed-page one. This [source text withheld from the public copy] 30 captures that crosses a printed-page boundary. Separately, and counted as confirmed: the headings of C12 (line 183, '[source text withheld from the public copy]') and C24 (line 289, '[source text withheld from the public copy]') name a second section that supplies no words to the quotation.
+  - item 4
+    - **id**: rfc6962-4
+    - **kind**: MISMATCH
+    - **repo_locator**: auditonomous origin/main:L7/provenance/sources/staging-records/library/reading/RFC6962_Certificate-Transparency.md line 364 (Recorded absences, second bullet)
+    - **repo_text**: [source text withheld from the public copy]
+    - **source_locator**: rfc6962.txt section 3.2, p.12, lines 657-659
+    - **source_text**: "Note that it is also possible to reconstruct this TBSCertificate from the final certificate by extracting the TBSCertificate from it and deleting the SCT extension."
+    - **note**: True for the literal string 'delete' (0 hits) and for the other eight terms, but the verb occurs once in inflected form ('deleting'). The record's other absence searches use stems ('equivocat', 'penalt'); the stem 'delet' gives 1 hit. The passage is about removing an extension from a certificate, not about log entries, so the record's conclusion that the RFC never claims the log cannot be altered is not affected.
+  - item 5
+    - **id**: rfc6962-5
+    - **kind**: MISMATCH
+    - **repo_locator**: auditonomous origin/main:L7/provenance/sources/staging-records/library/reading/RFC6962_Certificate-Transparency.md line 139 (capture C6, 'Bears on') and line 366 (Recorded absences, fourth bullet)
+    - **repo_text**: [source text withheld from the public copy]
+    - **source_locator**: rfc6962.txt section 1, p.4 line 185; section 5, p.21 line 1166; section 5.3, p.22 lines 1206 and 1208; section 5.4, p.23 lines 1260-1261
+    - **source_text**: "can be used to show that any particular version" | "some typical clients and how they could function" | "needs to, at least, inspect every new entry" | "should follow these steps" | "might be an integral component of a TLS client"
+    - **note**: Capital letters only, five quotations. The record puts words in upper case for emphasis inside quotation marks; the source has them in lower case. Wording, section and page are otherwise right. It matters most for 'SHOULD', which in upper case is an RFC 2119 keyword. The record does add '(PDF p.43, lowercase, descriptive)' after the two section 5.3 fragments, but says nothing of the kind for SHOW, COULD or MIGHT.
+  - item 6
+    - **id**: rfc6962-6
+    - **kind**: MISMATCH
+    - **repo_locator**: auditonomous origin/main:L7/provenance/sources/staging-records/library/reading/RFC6962_Certificate-Transparency.md lines 35, 163, 171 and 371
+    - **repo_text**: [source text withheld from the public copy]
+    - **source_locator**: rfc6962.txt section 5, p.21 lines 1168-1169; section 2.1, p.5 line 248; section 2.1.1, p.5 lines 259-260
+    - **source_text**: "and the signatures on the data structures prevent the log from denying that misbehavior." | "however, its shape is uniquely determined by the number of leaves." | "At each step up the tree (towards the root), a node from the audit path is combined"
+    - **note**: First letter only, four occurrences. Two fragments taken from mid-sentence are given a capital, and one sentence-opening fragment is put in lower case. Nothing else differs and the sections are right. The record quotes the same three passages with the source's capitals elsewhere (lines 365 and 371, and capture C10 at line 169). Lowest priority; listed because the prescribed normalization does not fold case.
+  - item 7
+    - **id**: rfc6962-7
+    - **kind**: COUNT-WRONG
+    - **repo_locator**: auditonomous origin/main:L7/provenance/sources/staging-records/library/reading/RFC6962_Certificate-Transparency.md line 29 ('How it was read')
+    - **repo_text**: [source text withheld from the public copy]
+    - **source_locator**: The same record, line 121 (capture C4) and line 390; cross-checked against autonomous origin/main:L7/provenance/prior-art/ct-lane/RFC6962.txt, print pages 5 and 6
+    - **source_text**: Record line 121: "[source text withheld from the public copy]." Record line 390: "[source text withheld from the public copy])". Capture text: print page 5 ends "beyond the scope of this document, but broadly speaking, they can"; print page 6 begins "invoke existing business mechanisms for dealing with misissued".
+    - **note**: An internal count, not a discrepancy with the RFC's words. Four captures straddle a PDF page break (C4, C18, C23, C28), as the record's own C4 note and verifier section say. PDF pagination belongs to the repository's own print, so this was checked against the record itself and the Autonomous capture text, not against the official host. Also internal: five of the 13 verifier-flag blocks are copies placed under a neighbouring capture they do not concern (under C3, C17, C18, C25 and C27), so C3, C25 and C27 look flagged when the verifier flagged only eight quotations.
+  - item 8
+    - **id**: rfc6962-8
+    - **kind**: COUNT-WRONG
+    - **repo_locator**: auditonomous origin/main:L7/provenance/sources/staging-records/library/reading/RFC6962_Certificate-Transparency.md line 390 (Adversarial verification, class 1)
+    - **repo_text**: [source text withheld from the public copy]
+    - **source_locator**: rfc6962.txt section 3.5, p.16, line 889: the line that the record itself (lines 231 and 243) gives as the last body line of PDF p.31
+    - **source_text**: Each log MUST produce on demand a Signed Tree Head that is no older
+    - **note**: An internal count, not a discrepancy with the RFC's words. That line has 14 words, not 12; it has 54 non-space characters, which is the figure the record gives at line 231. The quotation C18 itself is verbatim.
+- **could_not_check**
+  - item 1
+    - **what**: Reading record line 3: SHA-256 9e5060bbf9850ebd955ff20a67ac35583d3a1dfeffc5d3443044370fa101833e recorded for pdf/RFC6962_Certificate-Transparency.pdf
+    - **why**: The PDF is not in aybllc/auditonomous at origin/main or at origin/claude/book-structure-roadmap-k8ap82. The record describes it as a 54-page [source text withheld from the public copy] page, and no official URL serves such a file. The official PDF rendering (https://www.rfc-editor.org/rfc/pdfrfc/rfc6962.txt.pdf, HTTP 200, 42,139 bytes, 27 pages, sha256 5cef85c6...dcf7) is a different file, so its different hash decides nothing.
+  - item 2
+    - **what**: The record's PDF-page locators ('PDF p.N' on 30 captures and about 25 in-prose citations) and the verifier's per-page character counts
+    - **why**: PDF pagination belongs to the repository's own print, not to the official source. As a stand-in I used Autonomous RFC6962.txt, which has the same 54-page layout. All 30 capture page numbers agree with it. The four quotations that straddle two PDF pages and their counts (322 of 390, 54 of 201, 109 of 162, 167 of 244) agree. Converting each in-prose PDF page to a printed page (two PDF pages per printed page) agrees with the official text. This is a repository-to-repository check, not an official-source check, and it is not part of items_total.
+  - item 3
+    - **what**: The capture date 2026-08-04 (Autonomous ct-lane/0.md lines 8 and 16; reading record line 4, 'Read: 2026-08-04')
+    - **why**: The official host cannot attest when a print was made or what the info page showed on that day. The date agrees with the stamp '8/4/26, 8:43 AM' on all 54 print pages of RFC6962.txt and with the first commit of both stored files (c866842, 2026-08-04). Today's info page shows the same title, authors, status and obsolescence banner.
+- **summary**: RFC 6962 was fetched from www.rfc-editor.org (55,048 bytes, sha256 08fdf31c…52af). The text, the RFC index, the JSON record and the info page agree: Certificate Transparency; B. Laurie, A. Langley, E. Kasper; June 2013; Experimental; 27 pages; obsoleted by RFC 9162; updated by none.
+
+  Autonomous: rfc6962-canonical.txt is byte-identical to the official file. RFC6962.txt is a text rendering of a 54-page browser print of the info page, stamped 8/4/26. It adds 4 site lines and 108 print header and footer lines, has 54 form feeds against 27, and changes indentation and spacing, which distorts the tree diagrams. All 7,259 tokens of the RFC are present, in order and unaltered. The ct-lane sheet's four statements about the two files hold; the capture date rests on the file's own print stamp.
+
+  Auditonomous reading record: 148 items tested, 133 confirmed (152 and 137 with the sheet). All 30 captures are verbatim; 29 have the right section and printed page, and C28 runs onto page 25. Two statements about the RFC do not match it: who bears obligations, and, on its natural reading, what counts as an append-only violation. One absence claim overlooks the word "deleting". Nine in-prose quotations differ only in capital letters. Two internal page counts are wrong. The record's PDF hash could not be checked, because the PDF is not in the repository.
+
+  Working files: /tmp/claude-0/-home-user/bfcfd013-a2da-5019-961e-7f46116f08be/scratchpad/wf-sources/rfc6962/work/tally.out and the other files in that directory.

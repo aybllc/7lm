@@ -1,0 +1,185 @@
+# check:rfc9162
+
+Agent result, as returned. Workflow: Public sources against their originals. Run `wf_73fbd9d4-516`. Phase: Check.
+
+- **check**: rfc9162 — [source text withheld from the public copy].0 (Auditonomous reading record; Autonomous ct-lane stored copies and sheet)
+- **sources**
+  - item 1
+    - **name**: RFC 9162 plain text as served by the RFC Editor. Host www.rfc-editor.org is the RFC Editor's own site, the publisher of the RFC series; the RFC itself points there for its status and errata.
+    - **official_url**: https://www.rfc-editor.org/rfc/rfc9162.txt
+    - **http_status**: 200
+    - **final_url**: https://www.rfc-editor.org/rfc/rfc9162.txt
+    - **bytes**: 128266
+    - **sha256**: a0e432ce7580c99fcc8faf0cf3f6191f9ce6b4864f949158e020d4ecb295081f
+    - **saved_at**: /tmp/claude-0/-home-user/bfcfd013-a2da-5019-961e-7f46116f08be/scratchpad/wf-sources/rfc9162/dl-1/rfc9162.txt
+    - **repo_recorded**: No hash or size is written down anywhere. The repository holds a stored copy instead: aybllc/autonomous origin/main:L7/provenance/prior-art/ct-lane/rfc9162-canonical.txt (git blob 772637a964c51ec796c0f0b6dfad889bbd88507d, 128,266 bytes, sha256 a0e432ce7580c99fcc8faf0cf3f6191f9ce6b4864f949158e020d4ecb295081f), which ct-lane/0.md line 18 calls one of 'the canonical plain-text editions'.
+    - **same_as_recorded**: Yes. Byte-identical to the stored copy (cmp, sha256 and git blob id all agree). A second download 30 minutes later gave the same hash.
+  - item 2
+    - **name**: RFC Editor info page for RFC 9162 (same official host). Used for title, date, status, authors, relation to RFC 6962, DOI and errata.
+    - **official_url**: https://www.rfc-editor.org/info/rfc9162
+    - **http_status**: 200
+    - **final_url**: https://www.rfc-editor.org/info/rfc9162/
+    - **bytes**: 1334611
+    - **sha256**: bd5e572fd2300891129d0451e57dfb81e47fbd47538b2425e9c9b7d672a66110
+    - **saved_at**: /tmp/claude-0/-home-user/bfcfd013-a2da-5019-961e-7f46116f08be/scratchpad/wf-sources/rfc9162/dl-2/info-rfc9162.html
+    - **repo_recorded**: No hash recorded. ct-lane/0.md line 17 calls aybllc/autonomous origin/main:L7/provenance/prior-art/ct-lane/RFC9162.txt (git blob 0e412402168adf26abe614cb0312df7a754a241a, 150,154 bytes, sha256 c909e1175c0ce3fe19c8845fc075cb7e2577ce930f0f24b4e67e4325a12d4c26) an 'RFC Editor page capture, 2026-08-04'. That file is the text of a browser print of this page; every page of it is stamped '8/4/26, 8:43 AM'.
+    - **same_as_recorded**: Not comparable byte for byte: a live HTML page against text extracted from a print. The page states: title 'Certificate Transparency Version 2.0'; [source text withheld from the public copy]. Stradling; status Experimental; stream IETF; published December 2021 (2021-12-09); 'Obsoletes (1): RFC 6962: Certificate Transparency'; no 'obsoleted by', 'updates' or 'updated by'; DOI 10.17487/RFC9162; one erratum (ID 8670, editorial, held for document update, Section 2.1.3.2), which touches no text the reading record quotes. The stored capture's wording was compared with the official plain text instead; see rfc9162-15.
+  - item 3
+    - **name**: RFC 9162 PDF rendition as served by the RFC Editor (same official host). Downloaded only to test the PDF hash and page count the reading record gives.
+    - **official_url**: https://www.rfc-editor.org/rfc/rfc9162.pdf
+    - **http_status**: 200
+    - **final_url**: https://www.rfc-editor.org/rfc/rfc9162.pdf
+    - **bytes**: 665522
+    - **sha256**: f0fafb9ef6f0555fc9ea5a65fb3552dea5957999aeb04162b2e8d0a748b1a89d
+    - **saved_at**: /tmp/claude-0/-home-user/bfcfd013-a2da-5019-961e-7f46116f08be/scratchpad/wf-sources/rfc9162/dl-3/rfc9162.pdf
+    - **repo_recorded**: aybllc/auditonomous origin/main:L7/provenance/sources/staging-records/library/reading/RFC9162_Certificate-Transparency-v2.md lines 2-3: file 'pdf/RFC9162_Certificate-Transparency-v2.pdf', SHA-256 0b153d1f65c1704253e26c2efd58d90622a70dbe9ece86aa05b57518d5fba802; line 10: 62 pages.
+    - **same_as_recorded**: No, and it was never the same file: the record says its PDF is a 62-page [source text withheld from the public copy]. The official PDF has 53 numbered pages and a different hash. The recorded hash matches no file the official host serves (text a0e432ce..., PDF f0fafb9e...) and could not be tested; see could_not_check.
+- **items_total**: 311
+- **confirmed**: 296
+- **problems**
+  - item 1
+    - **id**: rfc9162-1
+    - **kind**: MISMATCH
+    - **repo_locator**: aybllc/auditonomous origin/main:L7/provenance/sources/staging-records/library/reading/RFC9162_Certificate-Transparency-v2.md line 241 (capture [source text withheld from the public copy] Proof'), last character of the quotation
+    - **repo_text**: [source text withheld from the public copy]
+    - **source_locator**: https://www.rfc-editor.org/rfc/rfc9162.txt lines 493-503, Section 2.1.4.1 (the differing character is on line 503; the formula it introduces is on line 505)
+    - **source_text**: ... created from the original D_n for which PROOF was requested and the subtree Merkle Tree Hash MTH(D[0:m]) is known)[[:]]  SUBPROOF(m, D_m, true) = {}
+    - **note**: Punctuation only: 1 of 603 characters. The record closes the quotation with a full stop; the RFC has a colon that introduces the displayed formula. The record's own verifier flag (line 247, 'ALTERED_WORDING') reports exactly this, yet the capture still carries the label VERIFIED. Section is right; page 9 is right in the Autonomous text of the print.
+  - item 2
+    - **id**: rfc9162-2
+    - **kind**: MISMATCH
+    - **repo_locator**: aybllc/auditonomous origin/main:L7/provenance/sources/staging-records/library/reading/RFC9162_Certificate-Transparency-v2.md line 76 (table-of-contents list, lines 35-125)
+    - **repo_text**: [source text withheld from the public copy]
+    - **source_locator**: https://www.rfc-editor.org/rfc/rfc9162.txt lines 1544-1545 (section heading) and lines 105-106 (Table of Contents)
+    - **source_text**: 5.5. Retrieve Merkle Inclusion Proof, STH, and Consistency Proof [[by Leaf Hash]]
+    - **note**: Heading truncated: the last three words are missing (in the print the heading wraps onto a second line). The other 90 of the 91 listed headings match the official body headings exactly and in the same order. The official Table of Contents has 87 entries; the record's four extra fourth-level headings (2.1.3.1, 2.1.3.2, 2.1.4.1, 2.1.4.2) are real body headings.
+  - item 3
+    - **id**: rfc9162-3
+    - **kind**: MISMATCH
+    - **repo_locator**: aybllc/auditonomous origin/main:L7/provenance/sources/staging-records/library/reading/RFC9162_Certificate-Transparency-v2.md line 12 ('DOI / ID') and line 543 (Recorded absences)
+    - **repo_text**: [source text withheld from the public copy]
+    - **source_locator**: https://www.rfc-editor.org/rfc/rfc9162.txt lines 5-10 (first-page header). DOI: https://www.rfc-editor.org/info/rfc9162/ ('About this RFC' panel and the citation_doi meta tag)
+    - **source_text**: Request for Comments: 9162 / Obsoletes: 6962 / Category: Experimental / [[ISSN: 2070-1721]] / December 2021. Info page: DOI https://doi.org/10.17487/RFC9162
+    - **note**: True only of the record's browser print, which has no RFC header block (the Autonomous text of that print contains neither 'ISSN' nor 'Request for Comments'). The RFC as issued prints the RFC series ISSN and its own RFC number in the header, in both the official text and the official PDF. The DOI half of the claim holds: the RFC does not print its own DOI; the RFC Editor lists it as 10.17487/RFC9162.
+  - item 4
+    - **id**: rfc9162-4
+    - **kind**: MISATTRIBUTED
+    - **repo_locator**: aybllc/auditonomous origin/main:L7/provenance/sources/staging-records/library/reading/RFC9162_Certificate-Transparency-v2.md line 501 (heading of capture C46; the quotation is on line 503)
+    - **repo_text**: [source text withheld from the public copy]
+    - **source_locator**: https://www.rfc-editor.org/rfc/rfc9162.txt lines 1769-1779, Section 6.2 (wording and section confirmed). Page checked in aybllc/autonomous origin/main:L7/provenance/prior-art/ct-lane/RFC9162.txt lines 1372-1379, which come after the footer '36/62' (line 1366) and before '37/62' (line 1405)
+    - **source_text**: If a CA and a log collude, it is possible to temporarily hide misissuance from clients. When a TLS client requires SCTs from multiple logs to be provided, it is more difficult to mount this attack. ...  — on page [[37]] of the print
+    - **note**: Wrong page only. The quoted words are on page 37 of the 62-page print; page 36 holds just the '6.2. Multiple SCTs' heading and the start of the first bullet. The official text is unpaginated, so this was checked against the Autonomous text of the same print, which is a repository object and not an official source. C46 is one of five captures (C44-C48) the record's adversarial pass did not cover: that pass handled 43 quotations, line 27 speaks of '45 captures', and the record contains 48.
+  - item 5
+    - **id**: rfc9162-5
+    - **kind**: MISATTRIBUTED
+    - **repo_locator**: aybllc/auditonomous origin/main:L7/provenance/sources/staging-records/library/reading/RFC9162_Certificate-Transparency-v2.md line 533 (Recorded absences, 'immutable')
+    - **repo_text**: [source text withheld from the public copy]
+    - **source_locator**: https://www.rfc-editor.org/rfc/rfc9162.txt lines 2439-2441, Section 10.2.5 (wording and section confirmed). Page checked in aybllc/autonomous origin/main:L7/provenance/prior-art/ct-lane/RFC9162.txt line 1852, which comes after the footer '50/62' (line 1837) and before '51/62' (line 1869)
+    - **source_text**: IANA is asked to reject any request to update a Log ID or Log Base URL in this registry because these fields are immutable (see Section 4.1).  — on page [[51]] of the print
+    - **note**: Wrong page only. The sentence is on page 51 of the print; the '10.2.5. Log IDs' heading is on page 50. The other two 'immutable' locations (p.16 §4.1, p.34 §5.6) and the count of three occurrences are correct. Same caveat as rfc9162-4: checked against the Autonomous text of the print.
+  - item 6
+    - **id**: rfc9162-6
+    - **kind**: MISMATCH
+    - **repo_locator**: aybllc/auditonomous origin/main:L7/provenance/sources/staging-records/library/reading/RFC9162_Certificate-Transparency-v2.md line 489 ('Bears on' for capture C44)
+    - **repo_text**: [source text withheld from the public copy]
+    - **source_locator**: https://www.rfc-editor.org/rfc/rfc9162.txt line 2588, Section 11.3
+    - **source_text**: A log can misbehave in several ways.  [[Examples include the following:]] failing to incorporate a certificate with an SCT in the Merkle Tree within the MMD; ...
+    - **note**: Commentary, not a quotation. The RFC offers its five items as examples, not as a complete list. The capture itself (line 487) is verbatim and contains the words 'Examples include the following'.
+  - item 7
+    - **id**: rfc9162-7
+    - **kind**: NOT-FOUND
+    - **repo_locator**: aybllc/auditonomous origin/main:L7/provenance/sources/staging-records/library/reading/RFC9162_Certificate-Transparency-v2.md line 301 ('Bears on' for capture C21)
+    - **repo_text**: [source text withheld from the public copy]
+    - **source_locator**: https://www.rfc-editor.org/rfc/rfc9162.txt Sections 4.2, 4.2.1 and 4.2.2 (lines 858-918); Sections 4.1 and 5.7 and every occurrence of 'publish' were also searched
+    - **source_text**: Nearest passages: 'The log SHALL allow retrieval of its list of accepted trust anchors (see Section 5.7)' (lines 870-871); '... then the acceptability of the submission is left to the log's discretion.' (lines 908-909)
+    - **note**: Commentary, not a quotation. Part (b) is in the text. Part (a) is not: no sentence of RFC 9162 requires a log to publish its acceptance criteria. 'Publish' occurs only at lines 36, 1250, 2069-2070, 2085 and 2556 (status boilerplate, the final STH, published tree heads, a logged certificate). The minimum criteria are fixed by the RFC itself (4.2.1); the discretionary ones are left to the log (4.2.2).
+  - item 8
+    - **id**: rfc9162-8
+    - **kind**: MISMATCH
+    - **repo_locator**: aybllc/auditonomous origin/main:L7/provenance/sources/staging-records/library/reading/RFC9162_Certificate-Transparency-v2.md line 497 ('Bears on' for capture C45)
+    - **repo_text**: [source text withheld from the public copy]
+    - **source_locator**: https://www.rfc-editor.org/rfc/rfc9162.txt lines 2602-2604 (Section 11.3) and lines 2096-2099 (Section 8.3)
+    - **source_text**: Violation of the append-only property or the STH issuance rate limit [[can be]] detected by multiple clients comparing their instances of the STHs.  |  A monitor (Section 8.2) can audit by verifying the consistency of STHs it receives, ...
+    - **note**: Commentary. The quoted words are verbatim, but 'ONLY' is the record's addition: the RFC says 'can be detected by', and Sections 8.1.5, 8.2 (step 5) and 8.3 also have a single TLS client or monitor verify consistency between tree heads it has itself received. The record's own commentary on C41 (line 463) says three of the four audited [source text withheld from the public copy]'.
+  - item 9
+    - **id**: rfc9162-9
+    - **kind**: MISATTRIBUTED
+    - **repo_locator**: aybllc/auditonomous origin/main:L7/provenance/sources/staging-records/library/reading/RFC9162_Certificate-Transparency-v2.md line 139 ('Bears on' for capture C1)
+    - **repo_text**: [source text withheld from the public copy]
+    - **source_locator**: https://www.rfc-editor.org/rfc/rfc9162.txt lines 159-165, Section 1, first paragraph
+    - **source_text**: (1) Certificate Transparency aims to mitigate the problem of misissued certificates by providing append-only logs of issued certificates.  ([source text withheld from the public copy] prevent misissuance, [source text withheld from the public copy].  (3) Note that this is a general mechanism that could be used for transparently logging any form of binary data, subject to some kind of inclusion criteria.
+    - **note**: Minor. The quoted words are verbatim, but they are in the second and third sentences of the Introduction, not its 'opening' and 'second' sentences (and the document itself opens with the Abstract). 'First paragraph' is right for Section 1.
+  - item 10
+    - **id**: rfc9162-10
+    - **kind**: MISMATCH
+    - **repo_locator**: aybllc/auditonomous origin/main:L7/provenance/sources/staging-records/library/reading/RFC9162_Certificate-Transparency-v2.md line 431 ('Bears on' for capture C37)
+    - **repo_text**: [source text withheld from the public copy]
+    - **source_locator**: https://www.rfc-editor.org/rfc/rfc9162.txt lines 2014-2015, Section 8.2
+    - **source_text**: A monitor MUST at least inspect every new entry in every log it watches[[,]] and it MAY also choose to keep copies of entire logs.
+    - **note**: Punctuation only; no word differs. The inline quotation ends with a full stop inside the quotation marks where the RFC sentence continues after a comma. Capture C37 (line 429) gives the whole sentence correctly.
+  - item 11
+    - **id**: rfc9162-11
+    - **kind**: MISMATCH
+    - **repo_locator**: aybllc/auditonomous origin/main:L7/provenance/sources/staging-records/library/reading/RFC9162_Certificate-Transparency-v2.md line 455 ('Bears on' for capture C40)
+    - **repo_text**: [source text withheld from the public copy]
+    - **source_locator**: https://www.rfc-editor.org/rfc/rfc9162.txt lines 2092-2094, Section 8.3
+    - **source_text**: The action taken by the auditor, if an audit fails, is not specified[[,]] but note that in general, if an audit fails, the auditor is in possession of signed proof of the log's misbehavior.
+    - **note**: Punctuation only; no word differs. Full stop inside the quotation marks where the RFC sentence continues after a comma. Capture C40 (line 453) gives the whole sentence, and line 536 quotes the same clause without the full stop.
+  - item 12
+    - **id**: rfc9162-12
+    - **kind**: MISMATCH
+    - **repo_locator**: aybllc/auditonomous origin/main:L7/provenance/sources/staging-records/library/reading/RFC9162_Certificate-Transparency-v2.md line 235 ('Bears on' for capture C13)
+    - **repo_text**: [source text withheld from the public copy]
+    - **source_locator**: https://www.rfc-editor.org/rfc/rfc9162.txt line 479, Section 2.1.4
+    - **source_text**: ... required to verify that the first m inputs D[0:m] are equal [[in both trees]].
+    - **note**: Letter case only: capitals added for emphasis inside the quotation marks, without saying so. Capture C13 (line 233) is verbatim. A third case-only difference, 'keep the log running' (line 373) for the RFC's sentence-initial 'Keep the log running' (line 1256), is counted as confirmed.
+  - item 13
+    - **id**: rfc9162-13
+    - **kind**: MISMATCH
+    - **repo_locator**: aybllc/auditonomous origin/main:L7/provenance/sources/staging-records/library/reading/RFC9162_Certificate-Transparency-v2.md line 413 ('Bears on' for capture C35)
+    - **repo_text**: [source text withheld from the public copy]
+    - **source_locator**: https://www.rfc-editor.org/rfc/rfc9162.txt lines 1896-1897, Section 8
+    - **source_text**: ... and the signatures on the data structures prevent the log from [[denying]] that misbehavior.
+    - **note**: Letter case only: emphasis capitals added inside the quotation marks. The same words are quoted without capitals at line 411 (capture C35) and line 541.
+  - item 14
+    - **id**: rfc9162-14
+    - **kind**: MISMATCH
+    - **repo_locator**: aybllc/auditonomous origin/main:L7/provenance/sources/staging-records/library/reading/RFC9162_Certificate-Transparency-v2.md line 25 ('[source text withheld from the public copy]')
+    - **repo_text**: [source text withheld from the public copy]
+    - **source_locator**: https://www.rfc-editor.org/rfc/rfc9162.txt lines 974, 987-990 and 992 (Section 4.5), set against aybllc/autonomous origin/main:L7/provenance/prior-art/ct-lane/RFC9162.txt lines 705, 719-722 and 724 (page 19 of the print)
+    - **source_text**: Official: 'consistency_proof_v2(0x0105),' / 'TimestampedCertificateEntryDataV2;' (twice) / 'SignedCertificateTimestampDataV2;' (twice) / 'ConsistencyProofDataV2;'.  Text of the print: 'consistency_proof_v2(0x0' / 'TimestampedCertificateEntryDa' / 'TimestampedCertificateEntr' / 'SignedCertificateTimestampDataV' / 'SignedCertificateTimestampDa' / 'ConsistencyProofDataV2'
+    - **note**: The page-10 truncation is exactly as the record describes (official line 526 ends 'MTH(D[0:k])'). But page 19 of the same print has six more lines cut at the right margin, in the TransItem definition, so 'every other page extracted cleanly' does not hold. The record lists page 19 as not read and quotes nothing from it. This rests on the Autonomous text of the print, which agrees with the record's file on every other test (same print stamp, 62 pages, the page 9, 10, 16 and 25 artifacts the record describes, 47 of 48 capture pages). Three related statements disagree with the record itself rather than with the RFC and are not counted: line 23 says §§5.1, 5.5 and 5.6 were 'read in full', although §5.5 opens on page 32, §5.6 ends on page 35 and §5.1 ends on page 30, pages the same line lists as not read; line 23 says page 19's semantics were 'captured from p.20', but no capture cites page 20; line 17 counts three ellipsis captures where there are four (C36, C41, C43, C48).
+  - item 15
+    - **id**: rfc9162-15
+    - **kind**: MISMATCH
+    - **repo_locator**: aybllc/autonomous origin/main:L7/provenance/prior-art/ct-lane/RFC9162.txt (git blob 0e412402168adf26abe614cb0312df7a754a241a, 150,154 bytes, sha256 c909e1175c0ce3fe19c8845fc075cb7e2577ce930f0f24b4e67e4325a12d4c26)
+    - **repo_text**: [source text withheld from the public copy]
+    - **source_locator**: https://www.rfc-editor.org/rfc/rfc9162.txt lines 526, 974, 987-990, 992 and 945-946; also lines 5-10 (header) and 66-155 (Table of Contents)
+    - **source_text**: 'SUBPROOF(m, D_n, b) = SUBPROOF(m - k, D[k:n], false) : MTH(D[[[0:k])]]';  'consistency_proof_v2(0x0[[105),]]';  'TimestampedCertificateEntryDa[[taV2;]]' (twice);  'SignedCertificateTimestampDataV[[2;]]' (twice);  'ConsistencyProofDataV2[[;]]';  'registration form [[(https://pen.iana.org/pen/PenApplication.page)]].'
+    - **note**: Not byte-identical to the official text (128,266 bytes, sha256 a0e432ce...) and not a copy of it: the file is the pdftotext-style text of a 62-page browser print of https://www.rfc-editor.org/info/rfc9162/, stamped '8/4/26, 8:43 AM' on every page. Every difference from the official text: (1) added: 62 print header lines, 62 footer lines 'https://www.rfc-editor.org/info/rfc9162/ N/62', 62 form feeds; (2) the RFC's first-page header (IETF, Request for Comments: 9162, Obsoletes: 6962, Category: Experimental, ISSN: 2070-1721, December 2021, Google, Sectigo) is absent, and in its place stand 'RFC 9162:' before the title and 'B. [source text withheld from the public copy]' after it; (3) the Table of Contents (official lines 66-155) is absent; (4) seven tokens are cut off at the right margin of code blocks, shown above; (5) one URL is absent (it is a hyperlink in the HTML); (6) layout only: no list-bullet markers (85), no table rule lines (115), no table cell bars, aside bars or '*Note:*' asterisks; different indentation and line breaks; 58 tokens split or joined by line wrapping; wrapped table cells read in a different order in the tables of Sections 5.1-5.6 and 10.1.1-10.2.6 (64 places, same words), including three table header rows repeated at page breaks (pages 49, 50, 53). All remaining words are the same and in the same order (15,507 word tokens align one to one). The sheet's description of this file ('RFC Editor page capture, 2026-08-04', ct-lane/0.md line 17) is accurate, and git history shows the four files moved unchanged from manuscripts/prior-art/ct-lane/ (100% renames in commit b49deb0). Because of the truncations, code and formulas should be taken from rfc9162-canonical.txt, which is byte-identical to the official text, not from this file.
+- **could_not_check**
+  - item 1
+    - **what**: The SHA-256 0b153d1f65c1704253e26c2efd58d90622a70dbe9ece86aa05b57518d5fba802 that the Auditonomous reading record gives (lines 2-3) for its file pdf/RFC9162_Certificate-Transparency-v2.pdf
+    - **why**: The PDF is not an object in aybllc/auditonomous at origin/main, the only ref this check was told to use, and it is a private [source text withheld from the public copy] info page, not a file the official host serves. No HTTP request applies. The official renditions have other hashes (text a0e432ce..., PDF f0fafb9e..., 53 pages), so the recorded hash can be neither reproduced nor refuted from the official host.
+  - item 2
+    - **what**: The page numbers 'PDF p.N (printed p.N/62)' of the 48 captures and the page cites in the absences section, against an official source
+    - **why**: The official text is unpaginated and the official PDF has 53 numbered pages; the 62-page numbering exists only in the repository's own print. Pages were checked instead against the Autonomous text of that print (RFC9162.txt, 62 form-feed pages, same '8/4/26, 8:43 AM' stamp), which is a repository object. On that basis 47 of 48 capture pages and all but one inline page cite agree; the two exceptions are rfc9162-4 and rfc9162-5.
+  - item 3
+    - **what**: The capture date 2026-08-04 that ct-lane/0.md (lines 8 and 17) gives for RFC9162.txt
+    - **why**: Only the file's own print stamp ('8/4/26, 8:43 AM', read as month/day/year) and the reading record's 'Read: 2026-08-04' support it. The official host cannot say when a local print was made.
+  - item 4
+    - **what**: What RFC 6962 itself says, where the RFC 9162 record's commentary speaks of it (C7, C8, C9, for example that RFC 6962 '[source text withheld from the public copy]'), and the two RFC 6962 files the ct-lane sheet names
+    - **why**: This check covers RFC 9162 only; RFC 6962 was not downloaded here. RFC 9162 Section 1.3 does say that detailed verification algorithms 'have been added', which is the half of the claim that was confirmed.
+  - item 5
+    - **what**: 29 quoted phrases that the record attributes to the corpus or the assignment (for example '[source text withheld from the public copy]') and the interpretive arguments in the 'Bears on' paragraphs
+    - **why**: They are not statements of what RFC 9162 says, so there is no official source to test them against in this check. Only the factual statements about the RFC inside those paragraphs were tested.
+  - item 6
+    - **what**: The content of Crosby and Wallach, 'Efficient Data Structures for Tamper-Evident Logging' (USENIX Security 2009), which the record names as the peer-reviewed root of the design
+    - **why**: Only its citation in RFC 9162 Section 12.2 was confirmed (verbatim, capture C48). The paper is not part of this check, usenix.org was not consulted, and the record itself says the paper was not read.
+- **summary**: Tested the Auditonomous RFC 9162 reading record and the two Autonomous ct-lane copies with their sheet against the RFC Editor's own text (www.rfc-editor.org/rfc/rfc9162.txt, 128,266 bytes) and info page. The RFC Editor states: Certificate Transparency Version 2.[source text withheld from the public copy]; December 2021; obsoletes RFC 6962.
+
+  Autonomous: rfc9162-canonical.txt is byte-identical to the official text. RFC9162.txt is the text of a 62-page browser print of the info page; it lacks the RFC header block and table of contents and cuts off seven code tokens, but its words are otherwise the same. What the sheet says about both files is true.
+
+  Auditonomous: all 48 captures are in the sections named and 47 are verbatim (ten drop only list bullets); C14 ends with a full stop where the RFC has a colon. One of 91 headings is truncated. Of 103 inline quotations, 98 are clean; two swap a comma for a full stop, two add capitals, and one cites the wrong page, as does capture C46. The record says no ISSN is printed; the official header prints one. Three commentary claims go beyond the text, one misnumbers sentences, and one says only page 10 of the print is truncated when page 19 is too. All 11 word-count claims and 41 of 46 section or page claims hold.
+
+  Totals: 311 items (including 5 file checks and 7 citation fields), 296 confirmed, 15 problems. Page numbers were checked against the Autonomous print text; the official text is unpaginated.

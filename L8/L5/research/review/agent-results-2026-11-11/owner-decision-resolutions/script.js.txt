@@ -1,0 +1,40 @@
+export const meta = {
+  name: 'owner-decision-resolutions',
+  description: 'A recommended resolution for each of the 23 owner decisions, reasoned from verbatim quotations; every quotation and inference tested by a skeptic',
+  phases: [
+    { title: 'Resolve', detail: 'one resolver per decision, reasoning only from quoted text' },
+    { title: 'Verify', detail: 'one skeptic per resolution checks every quotation and the inference' },
+  ],
+}
+const D = args.decisions
+const RULES = `You work READ-ONLY over three local git clones. Never run a git command that writes; never read a working tree; read only git objects (git -C <repo> show <ref>:<path>, ls-tree, grep <text> <ref> -- <paths>, log, diff).
+REPOSITORIES
+- /home/user/7lm (aybllc/7lm, the Seven-Layer Model scaffold, public). origin/main = c9dc061 (model of record). origin/beta/common-contracts-r1-r6 = 97314c5 (the owner's unmerged candidate, made by Codex, 2-3 Nov 2026). origin/ccr-9391bd81-f2enmj (draft PR #20: field guide retired; its record has sections 38-40). origin/ccr-00099fac-hjosbo (draft PR #19). origin/audit/peering-descriptive-reframe-2026-09-20 (the owner's audit branch).
+- /home/user/autonomous (internal). origin/main = c9076c3. origin/ccr-9391bd81-f2enmj = a719cec (draft PR #30: the L7 restructure mirrored by hand on 11 Nov 2026; record section 14). origin/beta/7lm-exemplar-autonomous = e64b382. origin/claude/scholarly-pair-baseline-k8ap82 (closed PR #29). origin/claude/no-deletion-fix-2026-09-07 (open PR #27).
+- /home/user/auditonomous (internal). origin/main = 2165144. origin/ccr-9391bd81-f2enmj = 294c843 (draft PR #28: the same mirror; record section 13). origin/beta/7lm-exemplar-auditonomous = 714480d. origin/claude/book-structure-roadmap-k8ap82 = 9259c18 (closed PR #27: restored research, roadmap with decisions D1-D23, chapter files). origin/claude/no-deletion-fix-2026-09-07 (open PR #25).
+WHERE THE OWNER'S WORDS AND RULES ARE
+- The scaffold's record: /home/user/7lm origin/main:L8/L6/history/harmonization-2026-09-04.md (sections 1-37; it quotes the owner "as written"), and L8/L6/history/specification-history.md. On the PR #20 branch the same file has sections 38-40.
+- The specification: /home/user/7lm origin/main:L8/L4/work/writing/7lm-harmonized-architecture-specification.md. The field guide: L8/L6/7lm-field-guide.md. The sheet templates: L8/L6/7lm-sheet-templates.md. The layer lists: L8/L6/in/7lm-layer-lists.md. The check: .github/workflows/integrity.yml.
+- Each exemplar's record: L8/L6/history/harmonization-2026-09-05.md and LEDGER.md; on the closed branches also exemplar-2026-09-14.md (autonomous) and restore-2026-09-14.md and L8/L5/research/review/BOOK_STRUCTURE_AND_ROADMAP_2026-09-13.md (auditonomous).
+- The owner's instructions of 11 November 2026, as typed: "Get qa hanfle on the research and manuscruipt for Auditonomous but firwst re0ull7lm and deep research the mopdel becuase its chamnged and we need to uipdate the autonomous and auditonomous repos phsyciall; to match first ."  And: "have them check in their results periodically so we dont lose them."  And: "put them in auditonomous too and the public one its public so you can access it and one other ai right npow". Earlier in the same session, 17 October 2026: "I didn't want anything automated yet".
+A full background report is at /tmp/claude-0/-home-user/bfcfd013-a2da-5019-961e-7f46116f08be/scratchpad/model/7lm-model-deep-research-2026-11-11.md (read it first; it is a secondary source: do not quote it as evidence, go to the git objects it cites).
+QUOTATION RULES. A quotation is evidence only if it is copied character for character from a git object or from the owner's instructions above, typos included, with its locator (<repo>@<ref>:<path>:<line>). Quote the owner's own words in preference to anything else, then the specification, then the records. Never paraphrase inside quotation marks. Never invent or repair a quotation.`
+const RES = { type: 'object', properties: {
+  decision: { type: 'string' }, resolution: { type: 'string', description: 'the recommended resolution in one to three plain sentences, as an action' },
+  reasoning: { type: 'array', items: { type: 'object', properties: {
+    quote: { type: 'string' }, locator: { type: 'string' }, speaker: { type: 'string', description: 'owner | specification | record | sheet | other' },
+    bears: { type: 'string', description: 'one sentence: what this quotation establishes for the decision' } }, required: ['quote', 'locator', 'bears'] } },
+  against: { type: 'string', description: 'the strongest quoted consideration against the resolution, with its locator, or "none found"' },
+  what_it_costs: { type: 'string' }, alternatives: { type: 'string' },
+  confidence: { type: 'string', enum: ['the quotations settle it', 'the quotations favour it', 'the quotations do not reach it: the owner must say'] },
+  who_acts: { type: 'string' } }, required: ['decision', 'resolution', 'reasoning', 'confidence'] }
+const VER = { type: 'object', properties: {
+  quotes: { type: 'array', items: { type: 'object', properties: { locator: { type: 'string' }, verbatim: { type: 'boolean' }, correction: { type: 'string' } }, required: ['locator', 'verbatim'] } },
+  inference_holds: { type: 'boolean' }, objection: { type: 'string' },
+  missed_quotation: { type: 'string', description: 'a quotation of the owner that bears on the decision and was not used, verbatim with locator, or empty' },
+  corrected_resolution: { type: 'string' }, corrected_confidence: { type: 'string' } }, required: ['quotes', 'inference_holds'] }
+const out = await pipeline(D,
+  (d, _, i) => agent(RULES + `\nYOU ARE A RESOLVER. Recommend a resolution for this one decision, which is the owner's to make:\n${d}\nMethod: (1) establish the facts of the matter from the git objects; (2) collect every quotation that bears on it, the owner's own words first, searching the records widely (grep for key words across the three records and the specification; also the closed branches where the owner's words of 14 September 2026 are quoted); (3) reason ONLY from those quotations to a recommendation: each step of the reasoning is one quotation and what it establishes; (4) state the strongest quoted consideration against; (5) say plainly if the quotations do not reach the decision, in which case recommend the most conservative course consistent with "Don't change the system unless you ask or are unsure" and name what the owner must say. Give four to nine quotations. Prefer a resolution that can be acted on at once and reversed.`, { label: `resolve:D${i + 1}`, phase: 'Resolve', schema: RES }),
+  (r, d, i) => !r ? null : agent(RULES + `\nYOU ARE A SKEPTIC. A resolver recommended a resolution for this owner decision:\n${d}\nRESOLUTION AND REASONING (JSON): ${JSON.stringify(r)}\nDo three things. (1) Check EVERY quotation against the git object at its locator: is it character for character verbatim, at that place? Give the correction where not. (2) Judge the inference: do the verified quotations actually support the resolution, or does it claim more than they say, or ignore a later word of the owner that overrides an earlier one? (3) Search for a quotation of the owner that bears on the decision and was missed, especially one that cuts the other way. If the resolution should change, give the corrected resolution and confidence.`, { label: `verify:D${i + 1}`, phase: 'Verify', schema: VER, effort: 'high' }).then(v => ({ n: i + 1, decision: d, resolution: r, check: v }))
+)
+return { resolutions: out.filter(Boolean), failed: D.length - out.filter(Boolean).length }

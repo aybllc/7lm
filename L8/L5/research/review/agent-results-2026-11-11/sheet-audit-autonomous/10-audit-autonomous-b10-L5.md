@@ -1,0 +1,55 @@
+# audit:autonomous:b10-L5
+
+Agent result, as returned. Workflow: Sheet audit, Autonomous. Run `wf_8e13ec8e-47f`. Phase: Audit.
+
+- **sheets_audited**
+  - L8/L5/0.md
+  - L8/L5/institution/0.md
+  - L8/L5/institution/peers/0.md
+  - L8/L5/institution/undergraduates/0.md
+  - L8/L5/research/0.md
+  - L8/L5/research/findings/0.md
+  - L8/L5/research/lanes/0.md
+  - L8/L5/research/review/0.md
+- **findings**
+  - item 1
+    - **id**: b10-L5-01
+    - **kind**: CONTRADICTION
+    - **sheet**: L8/L5/research/findings/0.md
+    - **line**: 35
+    - **sheet_says**: `[source text withheld from the public copy]_overridability_third_axis.md` — findings whose content fixes L1 dimensions of the autonomy state space (see `L8/L1/0.md`).
+    - **truth**: The findings sheet names five findings as fixing L1 dimensions and points to L8/L1/0.md, but that sheet (and two others) say four, and none of them names FINDING_IEEE_1872.2_does_not_define_autonomy.md. The IEEE 1872.2 finding is a negative finding (the standard does not define autonomy); a grep of it for dimension/state space/axis returns nothing.
+    - **evidence**: git show 8257118:L8/L1/0.md line 107: "The dimensions and admissibility conditions of the autonomy state space are fixed by content inside four L5 findings (`[source text withheld from the public copy].md` ...)". Same sentence at L8/L1/state-space/0.md:37. L8/0.md:137: "`L8/L1/state-space/` empty (its dimensions are fixed by content inside four L5 findings)". git grep -n -i -E 'dimension|state space|axis|axes' on FINDING_IEEE_1872.2_does_not_define_autonomy.md: no hits.
+    - **exact_fix**: Replace line 35 with two bullets: "- `FINDING_autonomy_is_an_edge_property.md`; `FINDING_autonomy_requires_a_human_referent.md`; `FINDING_nasa_per_function_not_weakest_link.md`; `FINDING_overridability_third_axis.md` — the four findings whose content fixes L1 dimensions of the autonomy state space (see `L8/L1/0.md`)." and "- `[source text withheld from the public copy]." (If the owner instead holds that five findings fix L1, the three L1/L8 sheets need "five" and the fifth name.)
+  - item 2
+    - **id**: b10-L5-02
+    - **kind**: WRONG-FACT
+    - **sheet**: L8/L5/research/review/0.md
+    - **line**: 41 (governing sentence) and 45 (the item)
+    - **sheet_says**: Awaiting review at HEAD, placed here on 2026-09-06 from the dissolved queue, none adjudicated: ... - `EVIDENCE_RULES.md` — the nine evidence rules and the evidence-label vocabulary this repository runs under, the owner's text; ...
+    - **truth**: EVIDENCE_RULES.md was not placed on 2026-09-06 and did not come from the dissolved queue. It was carried [source text withheld from the public copy] (record section 11). The other three items in the list (autonomous-theory/, auditon.ott, memories.odt and memories2.odt) do match the 2026-09-06 dissolution table (record section 9, lines 125-127), which has no EVIDENCE_RULES row. It is also the rule text in force that README.md:12 points to, not an item awaiting adjudication.
+    - **evidence**: git show 8257118:L8/L5/research/review/EVIDENCE_RULES.md line 3: "[source text withheld from the public copy] ...)". L8/L6/history/harmonization-2026-09-05.md section 11 ("2026-09-07 — the README is the start, not the documentation") line 152: "[source text withheld from the public copy] | verbatim at `USO/l5/research/review/EVIDENCE_RULES.md`". README.md:12: "[source text withheld from the public copy]`."
+    - **exact_fix**: Take the `EVIDENCE_RULES.md` bullet out of the "Awaiting review ... from the dissolved queue" list and put it after that list as its own paragraph: "`EVIDENCE_RULES.md` — the nine evidence rules and the evidence-label vocabulary this repository runs under, the owner's text, [source text withheld from the public copy]`; not from the dissolved queue and not awaiting review. Research governance at L5, filed here [source text withheld from the public copy] this position in `aybllc/auditonomous`."
+  - item 3
+    - **id**: b10-L5-03
+    - **kind**: CONTRADICTION
+    - **sheet**: L8/L5/0.md
+    - **line**: 80 (against L8/0.md line 137, a sheet outside this batch)
+    - **sheet_says**: L8/L5/0.md:80: "`research/review/` — REVIEW_1…5, AUDIT_L1/L2/L4/L5/L6, AUDIT_OF_PULLED_MATERIAL, EXTERNAL_CHECK_mag_multiplicativity, and the adjudications relocated from `manuscripts/main/` (ASSESSMENT_ebios, ASSESSMENT_nu_algebra…, CLOSED_LOOP_GOVERNANCE, REQUIREMENTS_BY_BODY_IEEE_ISO_NIST, PREMISE_CHECK_standards_lag, EBIOS_RECODE_single_object, RULINGS)." L8/0.md:137: "`L8/L5/research/` (six lanes, seven findings, twelve review and adjudication files)"
+    - **truth**: The L5 sheet is right and the L8/0.md count is the wrong side. L8/L5/0.md enumerates 19 review and adjudication files (5 REVIEW + 5 AUDIT_L + AUDIT_OF_PULLED_MATERIAL + EXTERNAL_CHECK = 12 reviews, plus 7 relocated adjudications), and the tree holds exactly those 19. Twelve is the count of reviews, audits and the external check only. The six lanes and seven findings counts are correct.
+    - **evidence**: git ls-tree -r -l 8257118 L8/L5/research/review: REVIEW_1..5 (5), AUDIT_L1/L2/L4/L5/L6 (5), AUDIT_OF_PULLED_MATERIAL.md, EXTERNAL_CHECK_mag_multiplicativity.md, ASSESSMENT_ebios.md, ASSESSMENT_nu_algebra_cannot_require_architecture.md, CLOSED_LOOP_GOVERNANCE.md, REQUIREMENTS_BY_BODY_IEEE_ISO_NIST.md, PREMISE_CHECK_standards_lag.md, EBIOS_RECODE_single_object.md, RULINGS.md = 19. The directory also holds EVIDENCE_RULES.md, auditon.ott, memories.odt, memories2.odt and autonomous-theory/ (11 files): 35 files in all, excluding 0.md.
+    - **exact_fix**: No change to L8/L5/0.md. In L8/0.md line 137 replace "twelve review and adjudication files" with "twelve reviews, audits and checks and seven adjudication files, with the catch-all's items awaiting review".
+- **clean_sheets**
+  - L8/L5/institution/0.md
+  - L8/L5/institution/peers/0.md
+  - L8/L5/institution/undergraduates/0.md
+  - L8/L5/research/0.md
+  - L8/L5/research/lanes/0.md
+- **could_not_check**
+  - L8/L5/research/lanes/0.md:36 — "`LANE_C_LEVELS.md` (NIST ALFUS; US Government works)": Lane C section 1 is NIST ALFUS, but the file has eight scale sections (NASA, IMO, SAE J3016/ISO 22736, ISO 8373, ISO/IEC 22989, UL 4600 marked COPYRIGHT-BLOCK, ASTM F3269) and nowhere uses the phrase "Government works". Whether the parenthesis is meant as a legal characterisation of the whole lane or of the ALFUS part only cannot be determined.
+  - L8/L5/research/review/0.md:45 — "filed here [source text withheld from the public copy] this position in `aybllc/auditonomous`": a statement about another repository, not readable at the pinned commit.
+  - L8/L5/research/review/0.md:41 — "none adjudicated" for autonomous-theory/, auditon.ott and the memories notes: no record of adjudication was found, but absence cannot be proven from the tree.
+  - L8/L5/research/0.md:40 — "The queue that stood here for one day ... was dissolved that day": the record dates the move into research to 2026-09-05 (section 8) and the dissolution to 2026-09-06 (section 9); the sheet gives no date, so the wording is too loose to test.
+  - L8/L5/research/review/0.md:39 — "the rulings register C-001…C-007, P-001…P-004 as cited throughout": RULINGS.md is confirmed 1 byte (a single newline) and the record (section 5, line 80) gives the same ranges, but the full ranges were not counted across all citing documents.
+  - L8/L5/research/lanes/0.md:41 and L8/L5/research/review/0.md:41 — the PARKED / taken-up workflow: procedural statements; no file in review/ is labelled PARKED and nothing in the tree shows an item having moved between review/ and lanes/.
+- **statements_checked**: 168

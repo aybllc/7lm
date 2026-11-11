@@ -1,6 +1,6 @@
 # read:embodied
 
-Agent result, as returned. Workflow: Manuscript status of 3 November 2026. Run `wf_1cf4205c-c72`. Phase: Read. Checked in 2026-11-11 19:56 UTC.
+Agent result, as returned. Workflow: Manuscript status of 3 November 2026. Run `wf_1cf4205c-c72`. Phase: Read.
 
 - **summary**: The second manuscript thread is "Embodied Auditonomy, LexROM, and the Cabin Model" (self-described "Intake document for eBIOS / EB Carrier repository"), author Eric D. Martin with an assistant doing "[source text withheld from the public copy]", dated 2026-04-28, [source text withheld from the public copy]", Version v0.2, 495 lines / 27,636 bytes (md) plus a 97,790-byte PDF. The corpus cites it as LEX (also EMB); [source text withheld from the public copy] related-noun gloss "Bounded autonomy under mandatory auditability" (LEX:53) used by AUDITONOMOUS_DEFINITION.md. It never contains the word "auditonomous" (0 hits; "auditonomic" 9, "auditonomy" 17). Its self-reference names a nu-algebra commit ea08f59 and a content sha256 7fd260a5… that no local copy reproduces.
 

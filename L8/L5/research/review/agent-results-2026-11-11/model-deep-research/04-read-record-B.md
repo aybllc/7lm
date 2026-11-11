@@ -1,6 +1,6 @@
 # read:record-B
 
-Agent result, as returned. Workflow: The model, read deep. Run `wf_9a60cf50-a5f`. Phase: Read. Checked in 2026-11-11 19:56 UTC.
+Agent result, as returned. Workflow: The model, read deep. Run `wf_9a60cf50-a5f`. Phase: Read.
 
 - **scope**: Read from git objects only: /home/user/7lm@origin/main:L8/L6/history/harmonization-2026-09-04.md lines 295-510 (sections 24-37); /home/user/7lm@origin/main:L8/L6/history/specification-history.md (all 102 lines); and the 10 lines origin/beta/common-contracts-r1-r6 adds to that file. Cross-checks made against the two commits that performed the work (7lm 606d4b3 the restructure, bbb04dd the sweep), the CI workflow on main, the L7 tree on main, and file counts on the two exemplar mains.
 - **summary**: Inside this scope the model of record has not changed since it was last studied: both history files are byte-identical between 2e5a6d6 and origin/main (c9dc061); the only change on main since then is one added proposal file at L8/L6/in/. The beta candidate adds two sections to specification-history.md and nothing to the harmonization record.

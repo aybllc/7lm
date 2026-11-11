@@ -1,0 +1,82 @@
+# audit:autonomous:b05-peering-public-b
+
+Agent result, as returned. Workflow: Sheet audit, Autonomous. Run `wf_8e13ec8e-47f`. Phase: Audit.
+
+- **sheets_audited**
+  - L7/peering/public/ingress/peer-5/0.md
+  - L7/peering/public/ingress/peer-5/object-1/0.md
+  - L7/peering/public/ingress/peer-6/0.md
+  - L7/peering/public/ingress/peer-6/object-1/0.md
+  - L7/peering/public/ingress/peer-7/0.md
+  - L7/peering/public/ingress/peer-7/object-1/0.md
+  - L7/peering/public/ingress/peer-8/0.md
+  - L7/peering/public/ingress/peer-8/object-1/0.md
+  - L7/peering/public/ingress/peer-9/0.md
+  - L7/peering/public/ingress/peer-9/object-1/0.md
+- **findings**
+  - item 1
+    - **id**: b05b-01
+    - **kind**: WRONG-FACT
+    - **sheet**: L7/peering/public/ingress/peer-5/object-1/0.md
+    - **line**: 25
+    - **sheet_says**: `L8/L0/semantics/definitions/AUTONOMOUS.md` §1 row A6 names this binding.
+    - **truth**: Row A6 (line 75 of the L0 object) does not name this binding. Its six cells are the index, the body (NIST), the designation ([source text withheld from the public copy]), the quoted text, the deliverable type (US federal framework) and the label (VERIFIED). None cites this position, a peer number or L7, and the L0 object names no binding anywhere. On the receiving side the bindings are named only collectively, in the sheet L8/L0/semantics/definitions/0.md line 32 ("the ownership tags of eleven peer objects bound at `L7/peering/public/ingress/`"). The row does give the issuer and designation this binding fixes; if that is all 'names' was meant to say, the sentence still reads as saying the row cites the binding, which it does not.
+    - **evidence**: `git -C /home/user/autonomous grep -n -E 'peering|peer-[0-9]|L7/' 8257118 -- L8/L0/semantics/definitions/AUTONOMOUS.md` prints nothing (exit 1). `git -C /home/user/autonomous show 8257118:L8/L0/semantics/definitions/AUTONOMOUS.md | sed -n 75p` begins `| **[source text withheld from the public copy]* |` and ends `| US federal framework | `VERIFIED` |`. The same sentence, each with its own row number, stands at line 25 of all eleven object sheets under L7/peering/public/ingress/ (`git grep -n -F 'names this binding' 8257118`).
+    - **exact_fix**: Replace the first sentence of line 25 with: "`L8/L0/semantics/definitions/AUTONOMOUS.md` §1 row A6 is the row this binding fixes; the row gives the issuing body, the designation, the deliverable type and the evidence label, and does not itself cite this position." The rest of the line stands.
+  - item 2
+    - **id**: b05b-02
+    - **kind**: WRONG-FACT
+    - **sheet**: L7/peering/public/ingress/peer-6/object-1/0.md
+    - **line**: 25
+    - **sheet_says**: `L8/L0/semantics/definitions/AUTONOMOUS.md` §1 row A7 names this binding.
+    - **truth**: Row A7 (line 76 of the L0 object) does not name this binding. Its cells are the index, the body (European Union), the designation ([source text withheld from the public copy] quoted text, the deliverable type ([source text withheld from the public copy]) and the label (VERIFIED). None cites this position, a peer number or L7; the L0 object names no binding anywhere. Same condition and same caveat on the word 'names' as b05b-01.
+    - **evidence**: `git -C /home/user/autonomous grep -n -E 'peering|peer-[0-9]|L7/' 8257118 -- L8/L0/semantics/definitions/AUTONOMOUS.md` prints nothing (exit 1). Line 76 of that file begins `| **[source text withheld from the public copy]** |` and ends `| [source text withheld from the public copy]` |`.
+    - **exact_fix**: Replace the first sentence of line 25 with: "`L8/L0/semantics/definitions/AUTONOMOUS.md` §1 row A7 is the row this binding fixes; the row gives the issuing body, the designation, the deliverable type and the evidence label, and does not itself cite this position." The rest of the line stands.
+  - item 3
+    - **id**: b05b-03
+    - **kind**: WRONG-FACT
+    - **sheet**: L7/peering/public/ingress/peer-7/object-1/0.md
+    - **line**: 25
+    - **sheet_says**: `L8/L0/semantics/definitions/AUTONOMOUS.md` §1 row A8 names this binding.
+    - **truth**: Row A8 (line 77 of the L0 object) does not name this binding. Its cells are the index, the body (US DoD), the designation ([source text withheld from the public copy]), the quoted text, the deliverable type (Directive) and the label (VERIFIED). None cites this position, a peer number or L7; the L0 object names no binding anywhere. Same condition and same caveat on the word 'names' as b05b-01.
+    - **evidence**: `git -C /home/user/autonomous grep -n -E 'peering|peer-[0-9]|L7/' 8257118 -- L8/L0/semantics/definitions/AUTONOMOUS.md` prints nothing (exit 1). Line 77 of that file begins `| **[source text withheld from the public copy]* |` and ends `| Directive | `VERIFIED` |`.
+    - **exact_fix**: Replace the first sentence of line 25 with: "`L8/L0/semantics/definitions/AUTONOMOUS.md` §1 row A8 is the row this binding fixes; the row gives the issuing body, the designation, the deliverable type and the evidence label, and does not itself cite this position." The rest of the line stands.
+  - item 4
+    - **id**: b05b-04
+    - **kind**: WRONG-FACT
+    - **sheet**: L7/peering/public/ingress/peer-8/object-1/0.md
+    - **line**: 25
+    - **sheet_says**: `L8/L0/semantics/definitions/AUTONOMOUS.md` §1 row A9 names this binding.
+    - **truth**: Row A9 (line 78 of the L0 object) does not name this binding. Its cells are the index, the body (EASA), the designation (AI Roadmap 2.0 — autonomy), the quoted fragments, the deliverable type (Non-binding roadmap) and the label (VERIFIED). None cites this position, a peer number or L7; the L0 object names no binding anywhere. Same condition and same caveat on the word 'names' as b05b-01.
+    - **evidence**: `git -C /home/user/autonomous grep -n -E 'peering|peer-[0-9]|L7/' 8257118 -- L8/L0/semantics/definitions/AUTONOMOUS.md` prints nothing (exit 1). Line 78 of that file begins `| **[source text withheld from the public copy]* |` and ends `| Non-binding roadmap | `VERIFIED` |`.
+    - **exact_fix**: Replace the first sentence of line 25 with: "`L8/L0/semantics/definitions/AUTONOMOUS.md` §1 row A9 is the row this binding fixes; the row gives the issuing body, the designation, the deliverable type and the evidence label, and does not itself cite this position." The rest of the line stands.
+  - item 5
+    - **id**: b05b-05
+    - **kind**: WRONG-FACT
+    - **sheet**: L7/peering/public/ingress/peer-9/object-1/0.md
+    - **line**: 25
+    - **sheet_says**: `L8/L0/semantics/definitions/AUTONOMOUS.md` §1 row A10 names this binding.
+    - **truth**: Row A10 (line 79 of the L0 object) does not name this binding. Its cells are the index, the body (ETSI), the designation (GR ENI 007 — autonomic system), the quoted text, the deliverable type (Group Report) and the label ([source text withheld from the public copy]). None cites this position, a peer number or L7; the L0 object names no binding anywhere. Same condition and same caveat on the word 'names' as b05b-01.
+    - **evidence**: `git -C /home/user/autonomous grep -n -E 'peering|peer-[0-9]|L7/' 8257118 -- L8/L0/semantics/definitions/AUTONOMOUS.md` prints nothing (exit 1). Line 79 of that file begins `| **[source text withheld from the public copy]* |` and ends `| [source text withheld from the public copy]** |`.
+    - **exact_fix**: Replace the first sentence of line 25 with: "`L8/L0/semantics/definitions/AUTONOMOUS.md` §1 row A10 is the row this binding fixes; the row gives the issuing body, the designation, the deliverable type and the evidence label, and does not itself cite this position." The rest of the line stands.
+  - item 6
+    - **id**: b05b-06
+    - **kind**: CONTRADICTION
+    - **sheet**: L7/peering/public/ingress/peer-5/object-1/0.md
+    - **line**: 17
+    - **sheet_says**: | Governance | US Government work, redistributable (17 U.S.C. §105) |
+    - **truth**: L7/governance/copyright/0.md line 18 says "So no README, sheet, ledger, or binding record restates a copyright rule; each names this directory, and the next step is stated below, once." and line 37 says "the conditions are stated here once and cited from the records that carry them." (L7/governance/0.md line 32 says the same: "every copyright or licence condition this repository is under is stated there, once".) This binding record states the US-Government-work condition a second time, with its statute and what it permits, and does not name `L7/governance/copyright/`. The condition itself stands at L7/governance/copyright/0.md line 48 ("Free of copyright: NIST, DoD, and NASA documents as US Government works (17 U.S.C. §105)"). The three binding records that carried a licence condition do name the one place: L7/peering/private/ingress/peer-1/object-1/0.md line 17, L7/peering/public/ingress/peer-2/object-2/0.md line 17 and L7/peering/public/ingress/peer-4/object-2/0.md line 17. The sibling record for the other US Government work, L7/peering/public/ingress/peer-7/object-1/0.md line 17, gives only the label "US Government work", also without the pointer. Which of the two sheets gives way is the owner's choice; the fix offered is on the binding-record side.
+    - **evidence**: Among sheets, `git -C /home/user/autonomous grep -n -E 'U\.S\.C\.' 8257118 -- L7/0.md L8/0.md 'L7/**/0.md' 'L8/**/0.md' README.md ':!L8/L6/retired'` gives exactly two hits: L7/governance/copyright/0.md:48 and L7/peering/public/ingress/peer-5/object-1/0.md:17. `git -C /home/user/autonomous grep -l -F 'governance/copyright' 8257118 -- L7/peering` lists only the three records named above; no sheet of this batch names the directory.
+    - **exact_fix**: | Governance | US Government work — see `L7/governance/copyright/`, the one place |
+- **clean_sheets**
+  - L7/peering/public/ingress/peer-5/0.md
+  - L7/peering/public/ingress/peer-6/0.md
+  - L7/peering/public/ingress/peer-7/0.md
+  - L7/peering/public/ingress/peer-8/0.md
+  - L7/peering/public/ingress/peer-9/0.md
+- **could_not_check**
+  - L7/peering/public/ingress/peer-6/object-1/0.md line 17, "(its `consider-l6.md`)": a file of another repository (aybllc/l6), not readable under this audit's rules. That l6 holds the regulation's PDF is corroborated inside this repository by L7/provenance/sources/LEDGER.md row S-014 (`library/standards/eu/eu-regulation-2024-1689-artificial-intelligence-act-2024.pdf`, pinned 7540a9d6951c).
+  - All five object sheets, line 21, "this repository's own contribution is only §6 of the L0 object, labelled INTERNALLY DERIVED": §6 is so headed (AUTONOMOUS.md line 242) and the L0 sheets describe the object the same way (L8/L0/0.md line 93), but AUTONOMOUS.md line 101 (the A11 'PATTERN' note inside §1) also carries the label INTERNALLY DERIVED. Whether 'only' holds depends on what counts as contribution; not reported as a finding.
+  - L7/peering/public/ingress/peer-8/object-1/0.md line 17 "regulator-issued, public" and L7/peering/public/ingress/peer-9/object-1/0.md line 17 "ETSI publication, public": the issuers' own reuse terms are not held in this repository. Its records say only that both documents were obtained free and in full (L7/provenance/sources/staging-records/sources__LEDGER.md rows INST-EASA-ROADMAP-2.0 and STD-ETSI-GR-ENI-007).
+  - Object sheets, line 21 "It fixes … the version", against the Version fields "DoDD 3000.09" (peer-7/object-1 line 13) and "ETSI GR ENI 007" (peer-9/object-1 line 13): the fields give the designation only, while this repository's registers record the editions as 25 January 2023, reissuing and cancelling the 2012 directive (L7/provenance/sources/LEDGER.md rows S-078 and S-079) and V1.1.1 (2019-11) (staging register row STD-ETSI-GR-ENI-007). Nothing written is false, so it is not reported; whether the bare designation is meant to pin the edition could not be determined.
+- **statements_checked**: 299

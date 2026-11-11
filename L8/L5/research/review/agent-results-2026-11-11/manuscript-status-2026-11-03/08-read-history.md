@@ -1,6 +1,6 @@
 # read:history
 
-Agent result, as returned. Workflow: Manuscript status of 3 November 2026. Run `wf_1cf4205c-c72`. Phase: Read. Checked in 2026-11-11 19:56 UTC.
+Agent result, as returned. Workflow: Manuscript status of 3 November 2026. Run `wf_1cf4205c-c72`. Phase: Read.
 
 - **summary**: Source: git history of /home/user/auditonomous (origin/main = 2165144, 147 commits, first fc3b018 2026-07-30; one extra ref origin/claude/book-structure-roadmap-k8ap82 = 9259c18, 5 commits past main, merge-base 2165144, unmerged; no tags/stash). Read-only; no checkout performed.
 

@@ -1,6 +1,6 @@
 # read:sheets-L7
 
-Agent result, as returned. Workflow: The model, read deep. Run `wf_9a60cf50-a5f`. Phase: Read. Checked in 2026-11-11 19:56 UTC.
+Agent result, as returned. Workflow: The model, read deep. Run `wf_9a60cf50-a5f`. Phase: Read.
 
 - **scope**: Every sheet (0.md) under L7 on /home/user/7lm@origin/main (c9dc061): 35 sheets, plus the two non-sheet files under L7 (L7/provenance/sources/source-ledger.md, L7/provenance/prior-art/uha-ommp-exemplar.html); then the diff origin/main..origin/beta/common-contracts-r1-r6 (97314c5) restricted to L7. Read from git objects only. Cross-reference checks made outside scope: .github/workflows/integrity.yml canon list (7lm@origin/main), `git diff --stat` of the other named 7lm branches on L7, and `ls-tree` of L7 directory names on the two exemplar repositories' main and beta refs.
 - **summary**: L7 on 7lm main is 37 files: 35 sheets and two non-sheet files. It is unchanged from the state last studied: nothing between 2e5a6d6 and c9dc061 touches L7. The last L7 commit (2e5a6d6, 2026-10-05) only added the owner's heading about private repositories to L7/0.md.
