@@ -1,0 +1,102 @@
+# verify:autonomous:b06-provenance
+
+Agent result, as returned. Workflow: Sheet audit, Autonomous. Run `wf_8e13ec8e-47f`. Phase: Verify.
+
+- **verdicts**
+  - item 1
+    - **id**: b06-01
+    - **real**: yes
+    - **reasoning**: Sheet line 17 reads exactly as quoted. At 8257118 higham.txt lines 1-11 and higham_flat.txt open with "[source text withheld from the public copy]"; pdftotext of higham.pdf (888,882 bytes, 66 pages) gives the same title page. The book title occurs in higham.txt once, at line 3009, as a bibliography entry. The lane's mims.html is the EPrints page for the same paper ("To appear in Acta Numerica").
+    - **corrected_truth**: The three higham files are Higham and Mary, "[source text withheld from the public copy] EPrint 2021.20 (2021), 66 pages. Higham's book "[source text withheld from the public copy]" is not held; it is only cited inside the paper.
+    - **exact_fix**: - `higham.pdf`, `higham.txt`, `higham_flat.txt` — Higham and Mary, *[source text withheld from the public copy] EPrint 2021.20, 2021.
+  - item 2
+    - **id**: b06-02
+    - **real**: yes
+    - **reasoning**: L7/provenance/0.md:38 says "`lineage/`, `authority/` — empty". ls-tree at 8257118 shows L7/provenance/authority/ holds 0.md and JOURNALS.md (667 bytes, one table row: Reliable Computing, entered 2026-09-04). authority/0.md:32 lists JOURNALS.md under Holdings, so parent and child disagree. lineage/ holds only 0.md, whose Holdings says nothing is filed.
+    - **corrected_truth**: lineage/ holds only its sheet. authority/ holds JOURNALS.md, the enumerated peer-reviewed journals of evidence rule 1, with one entry (Reliable Computing).
+    - **exact_fix**: - `lineage/` — empty; the 2026-08-04/05 transfer `abba-01/autonomous` → `aybllc/autonomous` (SHAs unchanged; cite `aybllc/autonomous`) is recorded at the head of `L8/L6/history/LEDGER.md` and cited from `lineage/0.md`.
+      - `authority/` — `JOURNALS.md`, the enumerated peer-reviewed journals of evidence rule 1 (one entry, *Reliable Computing*).
+  - item 3
+    - **id**: b06-03
+    - **real**: yes
+    - **reasoning**: sources/0.md:54 ends "The ledger has no rows; that is admissible." LEDGER.md at 8257118 has 121 rows beginning `| S-`, IDs S-001…S-121 consecutive with no gap or duplicate. Only the framing "The register" table at the top of LEDGER.md is header-only, and datasets-LEDGER.md is empty ("[source text withheld from the public copy] sentence also contradicts lines 10 and 41 of the same sheet and L7/provenance/0.md:33.
+    - **corrected_truth**: LEDGER.md carries 121 pointer rows (S-001…S-121). The only register in the directory with no rows is datasets-LEDGER.md.
+    - **exact_fix**: Replace the last sentence of line 54, "The ledger has no rows; that is admissible.", with: "`LEDGER.md` has 121 rows (S-001…S-121); `datasets-LEDGER.md` has none, and that is admissible."
+  - item 4
+    - **id**: b06-04
+    - **real**: yes
+    - **reasoning**: sources/0.md:41 says "122 rows". Counting the blob: 121 lines start with `| S-` (25 in Part A, 96 in Part B), each with 6 cells and the l6-commit cell `7540a9d6951c`. `grep -c 7540a9d6951c` gives 122 because the footer sentence at line 189 also names the commit. Line 10 of the same sheet, L7/0.md:232 and peer-1/object-1/0.md:10 all say S-001…S-121.
+    - **corrected_truth**: LEDGER.md has 121 source rows, S-001…S-121; 122 is the number of lines containing the commit id.
+    - **exact_fix**: - `LEDGER.md` — the pointer register into `aybllc/l6` by path and pinned commit (`7540a9d6951c`), 121 rows (S-001…S-121); "This directory holds no source files."
+  - item 5
+    - **id**: b06-05
+    - **real**: yes
+    - **reasoning**: prior-art/0.md:34 lists "Rump 1999/2010 and the Rump index; Wang 2012" among the 30 files. I identified the files from their own first lines and titles: gum (JCGM 100:2008), higham (Higham and Mary 2021), rump_ru99/ru99 (BIT 39(3), 1999), nist (TN 1297), cms, dd and p2195-masson (DDSketch), hll, lossy and lossy2, mims.html (MIMS EPrints page), rc.html (Reliable Computing home page), rump_index.html (Rump homepage), S10P03.pdf (403 page), ieee_arb.html (Xplore failure page). No file is Rump's 2010 Acta Numerica paper and none is by Wang: grep for 'Verification methods', 'Chengpu' and 'Uncertainty-Bearing' over the lane finds nothing, 'Wang' occurs only inside other papers' reference lists, and 'Acta Numerica' only in mims.html about Higham and Mary. Both works sit in aybllc/l6 by pointer (L8/L6/history/LEDGER.md:526-527 lists Rump 2010 and Wang 2012 among l6-held documents). The lane's own sheet lists neither.
+    - **corrected_truth**: The lane holds one Rump paper (1999, BIT 39(3)) plus the Rump homepage index, and no Wang document. Rump 2010 and Wang 2012 are held in aybllc/l6 by pointer, not in this lane.
+    - **exact_fix**: (JCGM GUM; Higham; Rump 1999 and the Rump index; NIST TN 1297; CMS; dd; hll; lossy; P2195 Masson; the IEEE arbitrary-precision page)
+  - item 6
+    - **id**: b06-06
+    - **real**: yes
+    - **reasoning**: L7/provenance/0.md:37 lists "Wang" among the lane's 30 files. Same identification as b06-05: no file in the lane is by Wang. `git grep -c -w Wang` hits only dd.txt, dd_flat.txt, higham.txt, higham_flat.txt and mims.html, all citations inside other papers; rc.html, rump_index.html, S10P03.pdf and ieee_arb.html have none.
+    - **corrected_truth**: No file in prior-art-lane/ is a Wang document; the 30 files are GUM, Higham and Mary, Rump 1999 with the Rump index, NIST TN 1297, CMS, DDSketch, hll, lossy, two web pages (MIMS EPrints, Reliable Computing home) and the two error pages.
+    - **exact_fix**: `prior-art-lane/` (30 files: GUM, Higham, Rump, NIST TN 1297, CMS, dd, hll, lossy, and two error pages under scholarly filenames)
+  - item 7
+    - **id**: b06-07
+    - **real**: yes
+    - **reasoning**: Real, low weight. sources/0.md:18 says the Access and Label columns "carry what this repository may read and what was checked". Splitting the 121 rows: Access is `HELD` in all 121; Label is a document-type class (government-or-institutional-report 36, official-standard 36, blog-or-web-capture 18, peer-reviewed-journal 17, standards-body-draft-or-committee-doc 6, preprint 4, unknown 4). No row carries any access class or evidence label that the ledger's own column rules (lines 28-30) define. The "may read" half is arguable for `HELD`; the "what was checked" half is false for every row, since a document type is not a check status. The sentence describes the column rules, not the rows.
+    - **corrected_truth**: As filled, the Access column reads HELD in every row and the Label column carries a document-type class; neither records a verification or check status.
+    - **exact_fix**: Here, `LEDGER.md` is that register: its `l6 path` and `l6 commit` columns are the pointer; its Access column reads `HELD` in all 121 rows and its Label column carries a document-type class (for example `peer-reviewed-journal`, `official-standard`), not the access classes and evidence labels its own column rules define.
+  - item 8
+    - **id**: b06-08
+    - **real**: yes
+    - **reasoning**: sources/0.md:10 says "relocated in this pass from `uso/l6/LEDGER.md` without rewriting". The record L8/L6/history/harmonization-2026-09-05.md dates the move to the 2026-09-05 event (section 2: "133 paths moved by `git mv`"; section 4 row at line 52: `uso/l6/LEDGER.md` → `L7/provenance/sources/LEDGER.md`). Sections 8 to 14 record later passes, the latest on 2026-11-11, and section 14 lists no such move. "This pass" no longer points at the pass that made the relocation.
+    - **corrected_truth**: The ledger was relocated from uso/l6/LEDGER.md in the 2026-09-05 pass, not in the current one.
+    - **exact_fix**: relocated on 2026-09-05 from `uso/l6/LEDGER.md` without rewriting
+  - item 9
+    - **id**: b06-09
+    - **real**: yes
+    - **reasoning**: prior-art/0.md:34 says the lane's "licence exposure is a `L7/governance/controlled/` matter"; prior-art-lane/0.md:8 says "Their licence exposure is stated at `L7/governance/copyright/`, the one place". The tree agrees with the child: copyright/0.md:46 states the lane's exposure (ten PDFs, Q-6, the GUM bar), while controlled/0.md:32 says "Nothing filed directly ... all of them are stated at `L7/governance/copyright/`, the one place" and governance/0.md:32 says controlled/ points to copyright/.
+    - **corrected_truth**: The lane's licence exposure is stated at L7/governance/copyright/ (0.md:46); controlled/ holds nothing and points to copyright/.
+    - **exact_fix**: The lane is held as it stood; its licence exposure is stated at `L7/governance/copyright/`, the one place
+  - item 10
+    - **id**: b06-10
+    - **real**: yes
+    - **reasoning**: Real, low weight. sources/0.md:16 routes the hold-private condition to `L7/governance/controlled/`. Line 36 of the same sheet sends "copyright, licence, or restriction conditions on the source" to `L7/governance/copyright/`, "the one place"; peer-1/object-1/0.md:17 says "WSU-route items are hold-private — see `L7/governance/copyright/`, the one place". In the tree the condition is stated at copyright/0.md:44 (WSU single-user licence, files do not travel), and controlled/0.md:32 says nothing is filed there and that no restriction that is not copyright-derived exists. Line 16 therefore names a position that three other statements, one in the same sheet, say does not carry the condition.
+    - **corrected_truth**: The hold-private condition on institutional-access items is a licence-derived condition stated at L7/governance/copyright/; nothing is filed at controlled/.
+    - **exact_fix**: items obtained through the owner's institutional access are held private under its IL-001-R2 class-2 rule ("never publish, mirror, or attach"), which is a condition stated at `L7/governance/copyright/`, the one place, not in this directory
+  - item 11
+    - **id**: b06-11
+    - **real**: yes
+    - **reasoning**: ct-lane/0.md:20 says the "verdict belong[s] in a dated search record under `L7/provenance/prior-art/`". prior-art/0.md:27 lists under Does not hold "the comparison, interpretation, or judgment about whether the antecedent anticipates the local work — `L8/L5/research/`", and line 10 says what local research concludes from the comparison does not belong there. L7/provenance/0.md:27 uses the word itself: "comparison, interpretation, or verdict on a source — `L8/L5/research/`". The relocated prior-art/README.md:20 defines the verdict as "[source text withheld from the public copy]", which is exactly that judgment. The two sheets place the verdict at different positions. No search record exists, so the conflict is latent.
+    - **corrected_truth**: Two sheets route the prior-art verdict differently: ct-lane/0.md (following the relocated README) keeps it in the search record under L7/provenance/prior-art/; prior-art/0.md:27 and provenance/0.md:27 send it to L8/L5/research/. Which rule stands is the owner's choice.
+    - **exact_fix**: No search record is filed here; the claim searched against, the queries and what was found belong in a dated search record under `L7/provenance/prior-art/`, and the verdict on whether an antecedent anticipates the local work at `L8/L5/research/`; none has been written. (If the owner keeps the README's rule instead, the lines to change are L7/provenance/prior-art/0.md:27 and L7/provenance/0.md:27.)
+  - item 12
+    - **id**: b06-12
+    - **real**: yes
+    - **reasoning**: The contradiction exists, and the defect is in the peering sheet, not the provenance sheet. peer-1/object-1/0.md:13 reads "[source text withheld from the public copy]` (one row at `8277144`); archive HEAD at this pass `53b28f6`". In LEDGER.md the l6-commit cell is `7540a9d6951c` in all 121 rows. `8277144` occurs once, at line 155, as the tail of a DOI in the citation of row S-097 ("10.1109/IEEESTD.2018.8277144"), whose commit cell is `7540a9d6951c`. sources/0.md lines 10 and 18 are correct.
+    - **corrected_truth**: All 121 rows are pinned to 7540a9d6951c; no row is pinned at 8277144, which is part of a DOI in row S-097.
+    - **exact_fix**: No change in L7/provenance/sources/0.md. In L7/peering/private/ingress/peer-1/object-1/0.md:13 delete " (one row at `8277144`)", leaving: | Version | [source text withheld from the public copy]`; archive HEAD at this pass `53b28f6` |
+  - item 13
+    - **id**: b06-13
+    - **real**: yes
+    - **reasoning**: Real, minor. sources/0.md:42 says "450 verbatim definitions". The ledger counts entries: line 6 "[source text withheld from the public copy]", line 84 "Corpus total: 450 entries". Its preamble says requirement, prohibition, provision and scope passages are recorded too and "[source text withheld from the public copy]." The labelled passages are inside the count: in Domains 2, 3 and 7 the index figures (39, 67, 50) equal the number of `####` headings, and 10, 18 and 4 of those headings are bracket-labelled, so at least 32 counted entries are not plain definitions. The auditor's figure of 44 includes 12 in Domain 4, which I could not confirm as counted because that domain's 132 entries are not one-per-heading; a few bracket labels (for example `[ANNEX D.1]`) are also locators, not not-a-definition labels. Line 10 of the same sheet and L7/provenance/0.md:34 already say "450-entry".
+    - **corrected_truth**: The register holds 450 entries by its own count, of which at least 32 are labelled passages (requirements, provisions, scope statements) that the ledger says may not be cited as definitions.
+    - **exact_fix**: - `LEDGER_OF_DEFINITIONS.md` — 450 verbatim entries from 55 intake documents, with [SOURCE:] adoption chains, TIER labels, and "[source text withheld from the public copy]" flags; "[source text withheld from the public copy]."
+  - item 14
+    - **id**: b06-14
+    - **real**: yes
+    - **reasoning**: Real, minor: the sense is right, the quotation is not. sources/0.md:44 says of the staging tree, "Its README said \"Do not cite anything here\"". __STAGING_README.md line 44 reads "**[source text withheld from the public copy].**" and contains no line "Do not cite anything here". `git grep -F 'Do not cite anything here'` at 8257118 finds the two sheets and L8/L6/retired/layout-2026-08-14/README.md:19, the retired root README's row for `_STAGING_TO_L6/`. The quoted words belong to a different file from the one named.
+    - **corrected_truth**: The staging README's rule reads "[source text withheld from the public copy]."; "Do not cite anything here" is the retired 2026-08-14 root README's wording.
+    - **exact_fix**: Its README said "[source text withheld from the public copy]." pending reconciliation into the l6 register
+  - item 15
+    - **id**: b06-15
+    - **real**: yes
+    - **reasoning**: Real, minor, same as b06-14. staging-records/0.md:8 names the file: "Its own `__STAGING_README.md` said \"Do not cite anything here\"". That file's only such line is line 44, "**[source text withheld from the public copy].**". The quoted words are in L8/L6/retired/layout-2026-08-14/README.md:19.
+    - **corrected_truth**: `__STAGING_README.md` says "[source text withheld from the public copy]."
+    - **exact_fix**: Its own `__STAGING_README.md` said "[source text withheld from the public copy]." pending reconciliation into the l6 register
+  - item 16
+    - **id**: b06-16
+    - **real**: yes
+    - **reasoning**: The observation is factually accurate; the owner's sheets already address it. The file is a dated log: "# [source text withheld from the public copy]", sections Q-1 to Q-6 with "ACTION TAKEN 2026-08-04", "RULING 2026-08-08", "Q-6 UPDATE 2026-08-14". staging-records/0.md:21 calls it "governance; cited from `L7/governance/`" and sources/0.md:44 "a governance record". sources/0.md:36-37 sends restriction conditions to L7/governance/copyright/ and the internal history of a source being adopted, corrected or dropped to L8/L6/history/; governance/0.md:27 sends the history of a condition to L8/L6/history/. By those lists it would belong at L8/L6/history/. Two caveats: staging-records/0.md has no Does-not-hold list of its own (the list is the parent's), and governance/0.md:32 says the log "is the history behind those conditions and stays where it is", so the placement reads as a decided exception within a tree parked intact pending reconciliation.
+    - **corrected_truth**: sources__QUARANTINE_AND_REMEDIATION.md is a dated governance history held inside the parked staging tree; by the parent sheet's Does-not-hold list it would belong at L8/L6/history/, but L7/governance/0.md:32 states that it stays where it is.
+    - **exact_fix**: None required; an observation for the owner. If the file stays, no sheet text needs to change.

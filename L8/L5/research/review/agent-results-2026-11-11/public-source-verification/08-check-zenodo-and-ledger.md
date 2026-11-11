@@ -151,7 +151,7 @@ Agent result, as returned. Workflow: Public sources against their originals. Run
     - **repo_locator**: auditonomous origin/main:L7/provenance/sources/LEDGER.md line 27, row PR-008
     - **repo_text**: [source text withheld from the public copy]).
     - **source_locator**: https://ntrs.nasa.gov/api/citations/20180003358 (fields title, stiType, meetings, publications)
-    - **source_text**: "title": "[source text withheld from the public copy]**"; stiType "CONFERENCE_PAPER"; meeting "International Conference on Space Operations (Space Ops 2018)", Marseille, 2018-05-28 to 2018-06-01; publicationDate 2018-05-28; first author "Winternitz, Luke M. B." (17 authors); distribution PUBLIC
+    - **source_text**: "title": "SEXTANT X-Ray Pulsar Navigation Demonstration: **Additional On-Orbit Results**"; stiType "CONFERENCE_PAPER"; meeting "International Conference on Space Operations (Space Ops 2018)", Marseille, 2018-05-28 to 2018-06-01; publicationDate 2018-05-28; first author "Winternitz, Luke M. B." (17 authors); distribution PUBLIC
     - **note**: The NTRS number, first author and main title are right. The citation drops the subtitle "Additional On-Orbit Results" and gives no year or venue (2018, SpaceOps 2018). The ledger's own column rule asks for a full bibliographic citation. The subtitle is what the official title uses to mark this paper as the follow-on results paper. The NTRS number does identify it uniquely, so this is an incomplete citation, not a wrong document.
 - **could_not_check**
   - item 1

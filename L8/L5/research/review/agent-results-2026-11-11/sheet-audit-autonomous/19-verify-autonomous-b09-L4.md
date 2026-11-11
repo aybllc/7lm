@@ -1,0 +1,61 @@
+# verify:autonomous:b09-L4
+
+Agent result, as returned. Workflow: Sheet audit, Autonomous. Run `wf_8e13ec8e-47f`. Phase: Verify.
+
+- **verdicts**
+  - item 1
+    - **id**: b09-L4-01
+    - **real**: yes
+    - **reasoning**: L8/L4/0.md:122 reads exactly "- `work/computation/`, `work/experiments/` — empty." `git ls-tree -r -l 8257118 L8/L4` lists `38738 L8/L4/work/computation/deep-research-report.md` beside computation/0.md; experiments/ holds only 0.md (4050 bytes). The child sheet L8/L4/work/computation/0.md:38 lists the file in its own Holdings, L8/0.md:137 names `L8/L4/work/computation/deep-research-report.md` as filed by layer on 2026-09-06, and the record (harmonization-2026-09-05.md:128) shows the move `manuscripts/main/deep-research-report.md` -> `USO/l4/work/computation/`. The statement is false for computation/ and true for experiments/.
+    - **corrected_truth**: L8/L4/work/computation/ holds one file besides its sheet, deep-research-report.md (38,738 bytes, titled "[source text withheld from the public copy]). Only L8/L4/work/experiments/ is empty.
+    - **exact_fix**: Replace line 122 with:
+      - `work/computation/deep-research-report.md` — a deep-research run about this object (2026-08-05): model output as run, never evidence.
+      - `work/experiments/` — empty.
+  - item 2
+    - **id**: b09-L4-02
+    - **real**: yes
+    - **reasoning**: L8/L4/0.md:121 enumerates the files of work/writing/ one by one (MANUSCRIPT.tex, .docx, .pdf, branch/README.md) and stops. `git ls-tree -r -l 8257118 L8/L4/work/writing` also shows `49501 L8/L4/work/writing/AUTONOMY_SCALE.md`. `git grep -n -F AUTONOMY_SCALE 8257118 -- L8/L4` matches only L8/L4/work/writing/0.md:35, so the layer sheet does not mention the file anywhere. L8/0.md:137 and harmonization-2026-09-05.md:124 both record it as filed at this position. The observation is factually accurate.
+    - **corrected_truth**: L8/L4/work/writing/ holds AUTONOMY_SCALE.md (49,501 bytes) in addition to the four files line 121 lists; the layer sheet's Holdings does not mention it.
+    - **exact_fix**: Append to line 121, before the final full stop: "; `work/writing/AUTONOMY_SCALE.md` (the A1–A5 autonomy scale as written; INTERNAL ONLY)".
+  - item 3
+    - **id**: b09-L4-03
+    - **real**: no
+    - **reasoning**: The sheet does say "(pandoc build products)" at L8/L4/0.md:121, and the PDF's metadata does name LibreOffice 26.2.4.2 / Writer as producer (confirmed with strings on the object; CreationDate D:20260814152350-07'00' is the same second as the .docx's created stamp 2026-08-14T22:23:50Z). But the tree does not show the sheet's phrase to be false. The repository's own build record, L8/L6/history/LEDGER.md:866-878, states the manuscript build was "`pandoc` + `libreoffice --headless` (manuscript build)" and that `pandoc MANUSCRIPT.tex -o MANUSCRIPT.pdf` failed for want of pdflatex and was "Worked around via `pandoc`->`.docx`->`libreoffice --headless`->`.pdf`". Both files are therefore products of a build that pandoc starts: the .docx is pandoc's direct output and the PDF is exported from that pandoc output. "pandoc build products" is loose (it omits the LibreOffice export step) but not untrue; the difference is one of precision of wording, which is excluded. The auditor's facts about the metadata are right; the conclusion that the sheet states a falsehood is not established.
+    - **corrected_truth**: MANUSCRIPT.docx is pandoc output from MANUSCRIPT.tex; MANUSCRIPT.pdf was exported from that .docx by LibreOffice headless in the same build (LEDGER.md:876-877). The sheet's phrase covers the build chain without naming the second tool.
+  - item 4
+    - **id**: b09-L4-04
+    - **real**: yes
+    - **reasoning**: L8/L4/work/0.md:40 reads exactly "- `work/computation/`, `work/experiments/` — empty." The tree at 8257118 has `38738 L8/L4/work/computation/deep-research-report.md`; experiments/ holds only its 0.md. The sibling sheet L8/L4/work/computation/0.md:38 lists the file, and L8/0.md:137 names it as filed there. Same false statement as b09-L4-01, in the copy of the Holdings block carried by the work/ sheet.
+    - **corrected_truth**: L8/L4/work/computation/ holds deep-research-report.md (38,738 bytes); only L8/L4/work/experiments/ is empty.
+    - **exact_fix**: Replace line 40 with:
+      - `computation/deep-research-report.md` — a deep-research run about this object (2026-08-05): model output as run, never evidence.
+      - `experiments/` — empty.
+  - item 5
+    - **id**: b09-L4-05
+    - **real**: yes
+    - **reasoning**: L8/L4/work/0.md:39-40 name `work/writing/MANUSCRIPT.tex`, `work/writing/branch/README.md`, `work/computation/`, `work/experiments/`. The two lines are byte-identical to L8/L4/0.md:121-122, where `work/...` is relative to the sheet's own directory. The repository's sheets name holdings either root-relative (`L8/...`, `L7/...`) or relative to the sheet's own directory (L8/L5/0.md uses `research/lanes/`, L8/L5/research/0.md uses `lanes/`, L8/L3/engineering-mathematics/0.md uses `uncertainty/...`, L8/L4/work/writing/0.md uses bare filenames). Read either way from L8/L4/work/, the paths do not exist: `git ls-tree -r --name-only 8257118` has no entry beginning `work/` and none beginning `L8/L4/work/work/`. The sheet does not present them as former paths or as another repository's. The same sheet uses full root-relative paths in line 42 and `L8/L4/work/writing/` etc. in line 8, so the Holdings paths are a copy error, not a convention.
+    - **corrected_truth**: From L8/L4/work/ the holdings are at writing/MANUSCRIPT.tex, writing/MANUSCRIPT.docx, writing/MANUSCRIPT.pdf, writing/branch/README.md, computation/ and experiments/ (root-relative: L8/L4/work/writing/..., L8/L4/work/computation/, L8/L4/work/experiments/).
+    - **exact_fix**: Smallest change: delete the leading `work/` from each of the four paths in lines 39-40, giving
+      - `writing/MANUSCRIPT.tex` (source of truth; a placeholder skeleton), `MANUSCRIPT.docx`, `MANUSCRIPT.pdf` (pandoc build products); `writing/branch/README.md`.
+      - `computation/`, `experiments/` — empty.
+      Combined with the fixes for b09-L4-04 and b09-L4-06, lines 39-40 become:
+      - `writing/MANUSCRIPT.tex` (source of truth; a placeholder skeleton), `MANUSCRIPT.docx`, `MANUSCRIPT.pdf` (pandoc build products); `writing/branch/README.md`; `writing/AUTONOMY_SCALE.md` (the A1–A5 autonomy scale as written; INTERNAL ONLY).
+      - `computation/deep-research-report.md` — a deep-research run about this object (2026-08-05): model output as run, never evidence.
+      - `experiments/` — empty.
+  - item 6
+    - **id**: b09-L4-06
+    - **real**: yes
+    - **reasoning**: L8/L4/work/0.md:39 lists the files of writing/ individually and omits AUTONOMY_SCALE.md. The tree has `49501 L8/L4/work/writing/AUTONOMY_SCALE.md`; `git grep -n -F AUTONOMY_SCALE 8257118 -- L8/L4` matches only L8/L4/work/writing/0.md:35, so L8/L4/work/0.md does not mention the file at all. The observation is factually accurate.
+    - **corrected_truth**: L8/L4/work/writing/ holds AUTONOMY_SCALE.md (49,501 bytes) in addition to the files line 39 lists.
+    - **exact_fix**: Append to line 39, before the final full stop: "; `writing/AUTONOMY_SCALE.md` (the A1–A5 autonomy scale as written; INTERNAL ONLY)" (path written relative to the sheet's directory, per b09-L4-05).
+  - item 7
+    - **id**: b09-L4-07
+    - **real**: no
+    - **reasoning**: Same as b09-L4-03. L8/L4/work/0.md:39 does say "(pandoc build products)" and the PDF's producer metadata is LibreOffice Writer, but L8/L6/history/LEDGER.md:866-878 records the manuscript build as `pandoc` + `libreoffice --headless`, with the PDF made by `pandoc`->`.docx`->`libreoffice --headless`->`.pdf` after pandoc's direct PDF route failed (no pdflatex). The PDF is a product of the pandoc-started build, exported from pandoc's .docx in the same second. The phrase is imprecise, not shown false by the tree; a matter of wording.
+    - **corrected_truth**: MANUSCRIPT.docx is pandoc output; MANUSCRIPT.pdf was exported from that .docx by LibreOffice headless as the second step of the same build (LEDGER.md:876-877).
+  - item 8
+    - **id**: b09-L4-08
+    - **real**: yes
+    - **reasoning**: L8/L4/work/computation/0.md:50 reads exactly "- This branch may remain empty. Presence in the agnostic topology establishes admissible capability, not mandatory population; unused now does not mean removed. It is empty at present." The directory at 8257118 holds deep-research-report.md (38,738 bytes), and the same sheet's Holdings at line 38 lists it. "It is empty at present." is untrue and contradicts line 38 of the same sheet; the identical closing sentence is true only in the sibling experiments/0.md:46, from which the wording matches. The first two sentences are the standing boilerplate and are not false.
+    - **corrected_truth**: L8/L4/work/computation/ is not empty at the commit: it holds one file, deep-research-report.md, filed 2026-09-06 (harmonization-2026-09-05.md:128).
+    - **exact_fix**: In line 50 replace "It is empty at present." with "It holds one file at present (`deep-research-report.md`)."

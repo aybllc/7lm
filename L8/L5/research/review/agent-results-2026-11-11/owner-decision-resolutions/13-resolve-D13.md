@@ -1,0 +1,52 @@
+# resolve:D13
+
+Agent result, as returned. Workflow: Resolutions for the 23 owner decisions. Run `wf_3293f65c-a92`. Phase: Resolve.
+
+- **decision**: 13. Whether each exemplar's check (.github/workflows/integrity.yml) must be the scaffold's file byte for byte, and in which form: main's, which still accepts USO/, or the beta's. Facts from the git objects: the scaffold's check is blob f43dd04 (69 lines) on 7lm origin/main and on PR #20, and blob cd39c5b (67 lines) on the beta; the beta's form drops USO/ and the lowercase layer names, requires L8/, and keeps the same 71 positions. Auditonomous PR #28 carries f43dd04, identical to scaffold main; the Auditonomous beta carries cd39c5b, identical to the scaffold beta. Autonomous is identical to neither on any ref: PR #30 (blob 45ad3f7, 97 lines) is scaffold main's file plus a 29-line comment block recording its retired Q-6 step (and minus one blank line); the Autonomous beta (blob 670bd3e) keeps that block and still accepts USO/, so the owner's own three beta candidates do not agree with one another. Both exemplar mains (83dc7b3, 5538d89) still carry the pre-restructure list (L7/publications, L7/governance/restrictions). No main or draft-PR root holds USO/ any more; USO/ roots survive only on older branches, including the two open no-deletion-fix PRs (autonomous #27, auditonomous #25).
+- **resolution**: Keep main's form for now and change nothing further: leave Auditonomous PR #28 byte-identical to the scaffold's main (blob f43dd04) and leave Autonomous PR #30 as the scaffold's same steps plus its recorded Q-6 comment block. Do not adopt the beta's L8-only form in either exemplar until the owner merges the beta into the scaffold's main; then carry it to both exemplars in the same pass. Treat "the same check" as the same steps and the same 71-position list, not byte identity, unless the owner says byte for byte, in which case Autonomous's Q-6 block is first enumerated in its record and then removed.
+- **reasoning**
+  - item 1
+    - **speaker**: owner
+    - **quote**: under autonomous and auidtonomous the root needs to be the same for both and anything we need to discuss shoudl be brough to my atgention with soluitionsw like gitworkflows
+    - **locator**: 7lm@origin/main:L8/L6/history/harmonization-2026-09-04.md:121
+    - **bears**: The owner's only word on the matter requires the same root in both exemplars and asks for solutions such as workflows; it does not say the workflow file must be byte-identical, nor which spellings it must accept.
+  - item 2
+    - **speaker**: owner
+    - **quote**: we need to uipdate the autonomous and auditonomous repos phsyciall; to match first
+    - **locator**: owner's instruction of 11 November 2026, as typed
+    - **bears**: The exemplars are to match the model, so the check each carries should be the model's check in the form the model of record carries; the instruction does not name the beta as the thing to match.
+  - item 3
+    - **speaker**: specification
+    - **quote**: Every 7LM repository has the same root.
+    - **locator**: 7lm@origin/main:L8/L4/work/writing/7lm-harmonized-architecture-specification.md:281
+    - **bears**: The specification's rule is about the root's contents (README.md, L7/, L8/, the one check, .gitignore), which both forms of the check enforce equally on a repository that holds L8/; it sets no rule on the file's bytes.
+  - item 4
+    - **speaker**: record
+    - **quote**: The same workflow, without the exemplar's retired step, added at `.github/workflows/integrity.yml`, so that the scaffold is the example of the root it prescribes.
+    - **locator**: 7lm@origin/main:L8/L6/history/harmonization-2026-09-04.md:123
+    - **bears**: From the day the check was made 'the same in every 7LM repository', 'the same' already meant the same steps and not the same bytes: the scaffold's copy omitted Autonomous's retired-step block, and that pass was merged on the owner's word.
+  - item 5
+    - **speaker**: record
+    - **quote**: The comment block that records this repository's retired Q-6 step is unchanged.
+    - **locator**: autonomous@origin/ccr-9391bd81-f2enmj:L8/L6/history/harmonization-2026-09-05.md:205
+    - **bears**: Autonomous's one departure from the scaffold's file is a recorded comment block and no executable step, so making it byte-identical would remove a piece of that repository's record from where it stands, which is a change the owner has not asked for.
+  - item 6
+    - **speaker**: record
+    - **quote**: The file is now the scaffold's, byte for byte.
+    - **locator**: auditonomous@origin/ccr-9391bd81-f2enmj:L8/L6/history/harmonization-2026-09-05.md:198
+    - **bears**: Auditonomous, which has no block of its own to keep, is already identical to the scaffold's main in the draft PR, so on main's form nothing further needs doing there.
+  - item 7
+    - **speaker**: record
+    - **quote**: This records the checked common-architecture candidate, not a full-beta or release claim
+    - **locator**: 7lm@origin/beta/common-contracts-r1-r6:L8/L6/history/specification-history.md:106
+    - **bears**: The beta's own record says its L8-only check belongs to a candidate and not a release, so it is not yet the scaffold's file of record and the exemplars have nothing merged to copy it from.
+  - item 8
+    - **speaker**: owner
+    - **quote**: Don't change the system unless you ask or are unsure
+    - **locator**: 7lm@origin/main:L8/L6/history/harmonization-2026-09-04.md:482
+    - **bears**: Tightening the check to refuse USO/, or stripping Autonomous's block, changes the system; absent the owner's word the conservative course is to hold main's form and ask.
+- **against**: "The existing integrity workflow now requires L8 and uppercase L0–L6; its 71-position list is unchanged. Targeted replay accepted the current candidate and rejected obsolete USO/lowercase and L8/lowercase variants." (7lm@origin/beta/common-contracts-r1-r6:L8/L6/history/specification-history.md:106). The owner's own candidate calls the USO/ and lowercase variants obsolete, and main's check still says of itself "the interior container (USO/ until the rename pass, L8/ after)" (7lm@origin/main:.github/workflows/integrity.yml:19) although the rename pass was carried out on 12 September 2026; so main's tolerance is a leftover, and the beta's form is where the owner is heading. The Auditonomous record's own sentence "The file is now the scaffold's, byte for byte." (auditonomous@origin/ccr-9391bd81-f2enmj:L8/L6/history/harmonization-2026-09-05.md:198) also shows byte identity being treated as the aim where nothing stands in its way.
+- **alternatives**: (a) Adopt the beta's L8-only form in both exemplars now: this matches where the owner's candidate points, but copies from an unmerged branch, and the Autonomous beta itself still accepts USO/, so the candidates would need reconciling first. (b) Require byte identity in all three: Autonomous's Q-6 comment block must then be enumerated in its record and removed from the workflow, or the block must be added to the scaffold and Auditonomous, where it records nothing of theirs. (c) Define 'the same check' as identical steps with a repository's own recorded comments allowed, and write that sentence into the specification: this is the present practice made explicit, and is a specification change the owner must word.
+- **what_it_costs**: Nothing is changed, so nothing needs reversing. The cost is that main's check keeps accepting a USO/ root that no main carries any longer, that Autonomous stays 28 lines apart from the scaffold's file (comments only), and that a second small pass over both exemplars will be needed when the beta merges. Until then the two exemplar mains still run the older list (L7/publications, L7/governance/restrictions) unless the draft PRs #30 and #28 are merged.
+- **who_acts**: The owner says two things: (1) whether 'the same check' means byte for byte or the same steps with a repository's own recorded comments kept; (2) whether USO/ acceptance is dropped now or when the beta merges to the scaffold's main. Until then no one acts. After the owner's word, whoever carries the mirror (the session holding draft PRs #30 and #28) applies it to the two exemplars and records the scaffold commit copied from.
+- **confidence**: the quotations favour it

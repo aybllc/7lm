@@ -1,0 +1,1350 @@
+# Final return of the workflow: Sheet audit, Auditonomous
+
+As returned. Run `wf_1ec3ea42-dcb`.
+
+- **summary**: Read-only audit of every live sheet of one exemplar repository against the disk, the specification and the other sheets; each finding tested by a skeptic
+- **agentCount**: 20
+- **logs**
+  - auditonomous: sheets audited 83, statements checked 2310, confirmed 64, rejected 0, unverified 0, failed batches 0
+- **result**
+  - **repo**: auditonomous
+  - **commit**: f2d5b37
+  - **batches**
+    - item 1
+      - **batch**: b01-desk-root-allications
+      - **sheets**: 10
+      - **findings**: 6
+      - **clean_sheets**
+        - L7/allications/0.md
+        - L7/allications/applications/0.md
+        - L7/allications/communications/0.md
+        - L7/allications/notifications/0.md
+        - L7/allications/participations/0.md
+        - L7/allications/specifications/0.md
+      - **could_not_check**
+        - README.md:17 — 'the README that carried the documentation until 7 September 2026 is in git history': not tested, because this audit reads only the pinned commit. The record (L8/L6/history/harmonization-2026-09-05.md:137, section 10) says git history keeps it at main `e2199e5`, and the same section does enumerate its sections, which was checked.
+        - L7/0.md:27 — 'Not instantiated in this repository: current research practice remains manual; no directory metadata, automation, or validation is enabled here' (and the bullet 'No automation.' in the Standing of all eight sheets under L7/allications, e.g. L7/allications/0.md:43). No directory-metadata file exists at the commit, so the sentence is true if it speaks only of machine metadata. If it speaks of the repository, it disagrees with README.md:15 ('one CI check'): .github/workflows/integrity.yml runs on every push and pull request and checks every sheet's first line against its path, and the record (section 9, line 131) says the README's own sentence that nothing here is automated was revised when the check was added. Which scope is meant cannot be determined from the text, so it is not reported as a finding.
+        - L7/0.md:232-235 and L7/allications/0.md:42 — statements about other repositories (aybllc/l6 and its accession `e4f0d5c`, aybllc/eb-audit, abba-01/ebios, aybllc/ncf-research, aybllc/autonomous) and about relocations ('relocated from `uso/l6/LEDGER.md`', 'relocated intact', 'moved here from `L7/publications/`') were checked only against this repository's own peering sheets, the ledger file and the record (sections 4a and 13), with which they agree. The other repositories and git history were not read.
+        - L7/allications/0.md:8 — the owner's words of 2026-09-19, 'quoted as written'. They are not presented as the specification's. They agree with the scaffold's records (7lm origin/main:L8/L6/history/specification-history.md:21 and L8/L6/history/harmonization-2026-09-04.md:317), where the owner's sentence continues after 'ally-cations.'; no primary source for the words is in either repository.
+        - Observation outside the listed kinds, not reported as a finding: L7/0.md:237 opens a quotation that is never closed and is cut short — "Everything in this repository is INTERNAL ONLY. — the line holds one quotation mark. The words are from L8/L5/research/review/STATUS_AND_LABEL_DISCIPLINE.md:5 ('[source text withheld from the public copy].'), not from the specification, so MISQUOTE as defined does not apply. A form that would be true: "Everything in this repository is INTERNAL ONLY" (`L8/L5/research/review/STATUS_AND_LABEL_DISCIPLINE.md`).
+        - Two judgment calls, not reported: (i) L7/0.md:241 gives each of the specification's two directions on one line ("Authorized external inspection inward: L7→L6→L5→L4→L3→L2→L1→L0"), where the specification (lines 91-97) sets the label and the arrow sequence as separate paragraphs; the characters are the same and only the line break differs. (ii) L7/allications/publications/0.md:8 quotes the table header as "owns / represents" where the specification (line 741) has 'Owns / represents'; the difference is the capital letter only.
+    - item 2
+      - **batch**: b02-governance
+      - **sheets**: 7
+      - **findings**: 4
+      - **clean_sheets**
+        - L7/governance/access/0.md
+        - L7/governance/licensing/0.md
+        - L7/governance/patents/0.md
+      - **could_not_check**
+        - L7/governance/controlled/0.md:32 — "A restriction that is not copyright-derived would be filed here; none exists." Not determinable without the owner's reading of what counts as a restriction this repository is under. Candidates at the commit that are not copyright-derived: the release-clearance rules at L7/allications/publications/binder/internal/README.md:3 and 19-20 ("not cleared for outside eyes"; "Release is an explicit act") and binder/press-kit/README.md:22 ("[source text withheld from the public copy]"); the third-party PII redaction ordered "for privacy and licence reasons" (L7/provenance/sources/staging-records/standards/SOURCE_LEDGER.md:418-426, carried at copyright/0.md:46); the NO EDIT / NO DELETE contract on peer-owned ingress.
+        - L7/governance/0.md:32 and L7/governance/copyright/0.md:37 — "every copyright or licence condition this repository is under is stated there, once": completeness of a universal could not be established. One recorded licence disposition is not carried into copyright/0.md: SOURCE_LEDGER.md:372 records the two JSTOR copies (Rubin 1976, Stevens 1946; LEDGER rows PR-001 and PR-002, which carry no licence-class label) as "IP-stamped personal access … Lawful to hold; not redistributable". Whether that is a condition this repository is under is the owner's reading.
+        - L7/governance/copyright/0.md:44 — "re-verification against it is open": no file at the commit records a re-verification [source text withheld from the public copy], so nothing contradicts the statement, but whether it has been done in aybllc/l6 or elsewhere cannot be read from this tree.
+        - L7/governance/copyright/0.md:45 — "until it is, it is not cited as held": no live sheet, ledger row or research document cites the numbered Ferreira text as a held source (the LEDGER row PR-020 points to the PDF in l6). The citation export of the 2026-08-05 deep-research run, L8/L4/work/computation/autonomouos-deep-research-auditonomopus-sources.odt, lists the file by its former path among the repository files that run read; whether a dated model-output export counts as citing it is the owner's reading.
+        - L7/governance/copyright/0.md:47 — "Free of copyright: NIST material as a United States Government work." A legal characterization; it agrees with L7/peering/private/ingress/peer-1/object-1/0.md:17 and L8/L4/work/computation/0.md:40 but cannot be verified from the tree.
+        - L7/governance/copyright/0.md:53 — `ACQUIRE.md` in `aybllc/l6` is a path in another repository; it agrees with L7/provenance/sources/LEDGER.md:95 ("[source text withheld from the public copy]`") but cannot be resolved at this commit.
+    - item 3
+      - **batch**: b03-peering-private
+      - **sheets**: 14
+      - **findings**: 9
+      - **clean_sheets**
+        - L7/peering/0.md
+        - L7/peering/private/0.md
+        - L7/peering/private/egress/0.md
+        - L7/peering/private/egress/peer-2/0.md
+        - L7/peering/private/egress/peer-2/object-1/0.md
+        - L7/peering/private/ingress/0.md
+        - L7/peering/private/ingress/peer-2/0.md
+        - L7/peering/private/ingress/peer-3/0.md
+      - **could_not_check**
+        - L7/peering/private/ingress/peer-1/0.md:8 — everything said of the external repository aybllc/l6 (its README sentence "Archival copies of primary literature held for research provenance.", VERIFICATION_LOG.md append-only with PREMIS-style events, ACQUIRE.md never deleting a row, "The integrity check is copyright, not sha256.", HEAD `53b28f6`, 1,368 tracked library files). The peer is not readable under the rules; the same wording at L7/provenance/sources/0.md:16 is agreement between sheets, not verification.
+        - L7/peering/private/ingress/0.md:43 — the two quotations from l6's own `durable/README.md` ("can ONLY create new `.md` files inside `durable/orphan/`"; "CANNOT edit, append to, overwrite, or delete any file once created"). External file; neither string occurs anywhere else at f2d5b37.
+        - L7/peering/private/ingress/peer-1/object-1/0.md:11, :12, :17, :21 — the archive's `ACCESS-ROUTES.md` and licence records, its self-name "USO rail L6 — Provenance", "route and licence are recorded separately, as the archive itself insists", and its `consider-l6.md` (2026-08-16) with paths verified at `e4f0d5c`. All external.
+        - "byte-identical" as identity with the peer's canonical file (L7/peering/private/ingress/0.md:32; .../peer-2/0.md:8; .../peer-2/object-1/0.md:16). Only identity with the retired local duplicate is verifiable and holds (both are blob 99ecb6caa131222cf5cb15f7f52c85d7004d23a1, 8,978 bytes). The mirror's own text (line 12, "[source text withheld from the public copy]"; line 260, "[source text withheld from the public copy]`") reads as an Auditonomous-side record deferring to a fuller canonical file, so identity with the peer's file is doubtful but untestable here.
+        - L7/peering/private/ingress/peer-2/object-1/0.md:21 — the unattributed quotation "L2 or L3, unresolved" said of the protocol's identities. Its only other occurrences at the commit (L8/L2/0.md:76; L8/L6/history/harmonization-2026-09-05.md:92; L8/L6/history/7LM_ROUTING_PLAN_2026-09-05.md:168) attach it to the exact argument of PERPETUITY_QUESTION_ADJUDICATION.md, not to the departure protocol. No source for the phrase as applied to the protocol was found; it is not presented as the specification's.
+        - "relocated verbatim" (L7/peering/private/egress/peer-1/object-1/0.md:16 and :25; L7/peering/private/ingress/peer-2/object-1/0.md:25). The record says the moves were `git mv` with contents untouched (harmonization-2026-09-05.md §4a, lines 52 and 57), and the protocol equals its retired duplicate byte for byte; comparing with the pre-move blobs would need an earlier commit, which the rules exclude.
+        - L7/peering/private/egress/peer-1/object-1/0.md:11 — "the canonical copy of the report lives in `l6/research/`". External; corroborated only by L7/provenance/sources/LEDGER.md:121.
+        - L7/peering/private/egress/peer-2/0.md:8 and :16, .../peer-2/object-1/0.md:15 and :25 — "Nothing has left" / "no transfer has occurred", and aybllc/ncf-research as the destination. The three files are present and item 4 of the 2026-08-16 queue names ncf-research (L8/L6/history/LEDGER_2026-08-16_l6-close-and-normalization.md:49), but whether anything has been sent cannot be seen from here; the held OWNERSHIP_PENDING.md itself names no destination.
+        - L7/peering/0.md:57 — "the old L7/private/ desk". Presented as a former path, so not reported. It is the scaffold's old desk (aybllc/7lm, cut in its commit c0f46e1 per the scaffold's L8/L6/history/harmonization-2026-09-04.md); this repository's own record shows L7/ first instantiated on 2026-09-05 with peering/ already in place. Whether the sentence is meant of this repository cannot be decided from its text.
+        - L7/peering/private/ingress/peer-3/0.md:8 and .../peer-3/object-1/0.md:10–17 — abba-01/ebios as a separate repository read on 2026-07-30, and the manuscript surviving only in a cold backup. External; the sheets agree with the definition file (lines 3–8, 79, 340 and Appendix E).
+    - item 4
+      - **batch**: b04-peering-public
+      - **sheets**: 7
+      - **findings**: 2
+      - **clean_sheets**
+        - L7/peering/public/0.md
+        - L7/peering/public/egress/0.md
+        - L7/peering/public/egress/peer-1/0.md
+        - L7/peering/public/egress/peer-1/object-1/0.md
+        - L7/peering/public/ingress/0.md
+      - **could_not_check**
+        - Statements about the peer repository aybllc/autonomous (L7/peering/public/ingress/peer-1/object-1/0.md:10-13 and :28; L7/peering/public/ingress/peer-1/0.md:8, :20, :22) cannot be tested against this repository's tree. I cross-read them against git objects of the local peer clone /home/user/autonomous at 0504961 (no working tree, nothing written) and they agree: research/definitions/AUTONOMOUS.md, AUTOMATION.md, REGISTER.md and research/review/REVIEW_4_AUTONOMOUS_ADJUDICATION.md exist there; the commit subject is "Update RULINGS.md" and its first child is dated 2026-09-05T02:26Z; README.md:3-4 and research/definitions/README.md:6-7 carry the two quoted sentences; LEDGER.md:3-11 records the 2026-08-04/05 transfer with SHAs unchanged; the object is a plural entry with rows A1-A11 and the section 6 label as quoted. One inexactness, outside the finding kinds because it is about the peer: object-1/0.md:28 says the review "recorded CRITICAL defects in that rule-set", but REVIEW_4 (2026-08-08) records two CRITICAL findings, F1 against the section 1 table's A3 label and F2 against section 6 rule 3, so only one of them is in the rule-set.
+        - L7/peering/public/ingress/peer-1/object-1/0.md:18 "the peer repository belongs to the same owner and is INTERNAL" and L7/peering/public/ingress/0.md:19 "the external peer whose publicly available object enters": repository visibility is in no tree. The peer's own LEDGER.md:3 at 0504961 says "(private)", and this repository binds its other same-owner INTERNAL peers at private ingress. Whether an object from an INTERNAL repository is the "publicly available" object the position describes is the owner's reading; the specification itself places this binding at public ingress.
+        - L7/peering/public/ingress/peer-1/0.md:12, the citation EB:22 "Autonomous Theory and Auditonomous are separate works": the cited corpus file is not in the tree at the commit. The words match the retired README's quotation of EB:22 (L8/L6/retired/layout-2026-08-14/README.md:82-83) and L8/L5/research/review/0.md:42.
+        - L7/peering/public/ingress/peer-1/0.md:22 "Further objects of this peer that this repository references (`research/definitions/AUTOMATION.md`, `research/definitions/REGISTER.md`)": at the commit the only mentions of either file are this sentence and L8/L6/history/7LM_ROUTING_PLAN_2026-09-05.md:69-70, which proposes them as possible further objects. No research file, sheet or ledger cites either one; live files cite only the peer's `definitions/AUTONOMOUS.md`. Whether a mention in the routing plan counts as this repository referencing them I could not settle. The rest of the sentence is true: no object-2/ or object-3/ exists.
+        - L7/peering/public/ingress/peer-1/object-1/0.md:34, the count "Three files": it is the list in section 5 of the record and all three still do so at the commit. Other live files also quote standards' definitions of autonomous directly (L8/L4/work/computation/ieee-requirements-for-autonomouos.md:103 and :984, iso-iec-requirements-for-autonomous.md:75 and :299, and reading captures under L7/provenance/sources/staging-records/). Whether those "take a definition" under the owner's rule is the owner's reading, so I did not test the count beyond the three named.
+        - "No automation" in the Standing of all seven sheets: not reported. I read it as scoped to machine metadata in the layout, as the specification words it ("No directory metadata, no automation in the layout; the one CI check at .github/workflows/integrity.yml"). The repository does run that one workflow, and its G-003 step checks these seven sheets' first lines; whether the phrase should say so is the owner's call.
+    - item 5
+      - **batch**: b05-provenance
+      - **sheets**: 6
+      - **findings**: 15
+      - **clean_sheets**
+        - L7/provenance/authority/0.md
+        - L7/provenance/prior-art/0.md
+      - **could_not_check**
+        - L7/provenance/sources/0.md:16 and :20 — what the archive aybllc/l6 is and holds (1,368 tracked library files; `books/`, `captures/`, `paywall/`; five quotations from its README, VERIFICATION_LOG and ACCESS-ROUTES; "never publish, mirror, or attach"; "USO rail L6 — Provenance"). Another repository, outside the read rule. The statements agree with L7/peering/private/ingress/peer-1/0.md:8 and peer-1/object-1/0.md:12.
+        - L7/provenance/sources/0.md:14 — "pinned here at commit `53b28f6`". The hash agrees with L7/peering/private/ingress/0.md:43, peer-1/0.md:8 and peer-1/object-1/0.md:13 (which calls it "archive HEAD at this pass"); whether it is still the archive's state cannot be told from this repository.
+        - L7/provenance/sources/0.md:18 — the siblings: "`uso/l6/LEDGER.md` in aybllc/autonomous (rows pinned to `7540a9d6951c`) and in aybllc/ommp (empty at `609e4de` ...)". Other repositories, not read. The specification's "Exemplars as instantiated" puts each exemplar's ledger at L7/provenance/sources/LEDGER.md, so the autonomous path may be that repository's former one (possible STALE).
+        - L7/provenance/sources/0.md:45 against :18 — line 45 says `github.com/aybllc/ommp` has "never been read" (carried from the 2026-08-14 README, retired copy lines 133-138), while line 18 reports the state of aybllc/ommp's ledger at `609e4de`. Whether the gap statement is now stale depends on how the line-18 fact was obtained, which the tree does not record. A wording true either way: "had not been read when [source text withheld from the public copy] recorded this gap".
+        - L7/provenance/sources/0.md:45 — "private repositories and organisation enumeration PENDING". The manifest it rests on (`intake/MANIFEST.md`) is not in the tree; whether it is still pending cannot be determined.
+        - L7/provenance/prior-art/0.md:32 and L7/provenance/0.md:36 — "No prior-art search has been run". The cited L8/L5/research/findings/DISTILLATION.md section 5 (line 134) does say "prior-art search **still unrun**", but section 4 (line 109) and section 7 (line 148, "[source text withheld from the public copy]") of the same file record a four-lane prior-art check. Whether that check counts as a prior-art search in the README's sense is the owner's reading.
+        - "Relocated intact", "not edited", "without rewriting" (L7/provenance/sources/0.md:10, :41, :43; staging-records/0.md:8; L7/provenance/0.md:35) — byte identity with the pre-move files was not tested, because earlier commits are outside the read rule. The record says so (harmonization-2026-09-05.md section 3 and lines 58-59), and the 25-file count is right at the commit.
+        - L7/provenance/lineage/0.md:32 — the eb-audit half of "bound to both this repository and `aybllc/eb-audit`". The record's own binding line names `aybllc/eb-audit/research/provenance/...`; that repository was not read.
+    - item 6
+      - **batch**: b06-interior-root-L0
+      - **sheets**: 8
+      - **findings**: 8
+      - **clean_sheets**
+        - L8/L0/epistemic/0.md
+        - L8/L0/pedagogy/0.md
+        - L8/L0/semantics/0.md
+        - L8/L0/universality/0.md
+      - **could_not_check**
+        - L8/0.md:8 "the one CI check's third step reads every zero's first line against its path": the heading check is the step labelled G-003, the third of the three numbered checks but the fourth entry under steps: in .github/workflows/integrity.yml (after actions/checkout, G-001, G-002). True or false depending on whether the checkout step is counted; not reported.
+        - L8/0.md:133, L8/L0/0.md:19, and "No automation." in the Standing of the six L0 sub-sheets: "no directory metadata, automation, or validation is enabled here". No directory metadata file exists in the tree (true). Whether "automation, or validation" is meant to cover the CI check that runs on push and pull_request (which L8/0.md:137 itself names) depends on the sentence's scope. The specification reads the two as compatible ("No directory metadata, no automation in the layout; the one CI check at .github/workflows/integrity.yml"), so it is not reported.
+        - Events that only earlier commits could confirm (only f2d5b37 was read): L8/0.md:137 "retired ... on 2026-09-06" and "on 2026-09-07 deleted from HEAD after enumeration"; L8/L0/semantics/definitions/0.md:32 "restored verbatim per AU-NORM-02". Both agree with the record (sections 8-10) and with L8/L6/history/LEDGER_2026-08-16_l6-close-and-normalization.md:32 at the commit; neither was verified against history.
+        - L8/L0/semantics/definitions/0.md:36, the line locators `:37` and `:51` in Auditonomous_Theory_Master_Archive.md: the file is not in the commit (see b06-07). The retired README carries the same two locators, which is all that could be confirmed.
+        - L8/L0/semantics/definitions/0.md:34 "This file is the local delta over the peer-owned root": a characterisation the specification also uses. The peer's definition is bound by reference and not held here, so the relation could not be compared.
+        - L8/0.md:137 "the root canonical, the same in every 7LM repository": only this repository and the scaffold were read. The scaffold's root at origin/main holds .github, L7, L8 and README.md (no .gitignore), which the check's rule permits; the workflow file is byte-identical in both (blob f43dd04).
+        - Outside the sheets, noted only and not a finding: Appendix E of AUDITONOMOUS_DEFINITION.md (lines 365-370) says [source text withheld from the public copy]/`". No manuscript/ folder or martin_2026 file exists anywhere at the commit. The definitions sheet says the definition is cited as written and does not mention this.
+    - item 7
+      - **batch**: b07-L1-L2-L3
+      - **sheets**: 12
+      - **findings**: 3
+      - **clean_sheets**
+        - L8/L2/0.md
+        - L8/L2/formal-mathematics/0.md
+        - L8/L2/formal-mathematics/operators/0.md
+        - L8/L2/formal-mathematics/proofs/0.md
+        - L8/L2/formal-mathematics/relations/0.md
+        - L8/L3/engineering-mathematics/0.md
+        - L8/L3/engineering-mathematics/approximation/0.md
+        - L8/L3/engineering-mathematics/tolerances/0.md
+        - L8/L3/engineering-mathematics/uncertainty/0.md
+      - **could_not_check**
+        - L8/L1/state-space/0.md:39 — "where Autonomous holds those standards' definitions as bound rows": whether the peer's rows A1–A11 include IEEE 1920.1 and ISO/IEC 22989 cannot be determined from this repository; L7/peering/public/ingress/peer-1/object-1/ holds only its 0.md, which names the issuing bodies (ISO, ISO/IEC, IEEE, NIST, EU, DoD, EASA, ETSI) but not the individual standards.
+        - L8/L3/engineering-mathematics/approximation/0.md:34 — "the scaling and precision reasoning of §7.4 ...; textbook physics analogies there are flagged NOT-CHECKED": ambiguous. §7.4 of the session file (lines 409-442) does hold precision reasoning and one sentence on "Dimensionless scaling", but carries no NOT-CHECKED flag; the NOT-CHECKED textbook flags are at lines 152 (§3.1), 287 (§6.1), 460 (§7.5), 474 (§7.6), 498 (§7.7) and 696. If "there" means the session file the sentence is true; if it means §7.4 it is not. The scaling law itself is §4 (see finding b07-2).
+        - L8/L1/0.md:6, L8/L3/0.md:79-80 and :86 — specification table rows are quoted inside one pair of quotation marks with the row name and the cell joined by an em dash (e.g. "L3 / L2 / L1 technical-possibility bundle — Engineering mathematics, ..."). Each cell is verbatim (spec lines 160, 161, 184); the joining dash is the sheet's rendering of a table row. Not reported as MISQUOTE; left to the owner's reading of 'verbatim'.
+        - L8/L2/0.md:74 — "relocated from `research/formulas/LEDGER.md`": a former path; confirmed only by the history record (harmonization-2026-09-05.md line 55), not independently.
+        - Statements that machine metadata is "not instantiated in this repository" and "No automation" were not tested beyond the batch directories (no metadata files exist in L8/L1, L8/L2, L8/L3).
+    - item 8
+      - **batch**: b08-L4
+      - **sheets**: 8
+      - **findings**: 7
+      - **clean_sheets**
+        - L8/L4/work/experiments/0.md
+        - L8/L4/work/writing/branch/0.md
+        - L8/L4/work/writing/sessions/0.md
+        - L8/L4/work/writing/0.md (no finding of its own; line 34 repeats the chat description reported under b08-L4-05)
+      - **could_not_check**
+        - L8/L4/work/computation/0.md:44 "Source identities for the three belong as rows in `L7/provenance/sources/`; none exists yet": 'the three' is ambiguous (the three extractions, or the deep-research trio). L7/provenance/sources/LEDGER.md does carry rows for underlying standards (e.g. STD-004 IEEE 7001-2021, STD-007 IEEE 7009-2024, STD-025 ISO/IEC 22989:2022) but no row naming the extraction files or the deep-research run; truth depends on which reading is meant.
+        - L8/L4/0.md:125 and L8/L4/work/0.md:43 put "No L4 cut beyond writing, extraction and verification runs exists" in quotation marks with no source named. No file at the commit contains that string; the nearest is L8/L6/history/7LM_ROUTING_PLAN_2026-09-05.md:252 "Does not claim any L4 cut beyond writing, extraction and verification runs: nothing is built." Not attributed to the specification, so not reported as MISQUOTE.
+        - L8/L4/work/writing/sessions/0.md:16 "the §7.4 scaling and precision reasoning (L3)": §7.4 of the session file is "[source text withheld from the public copy]" (precision reasoning; mentions 'Dimensionless scaling'); the scaling results (R ∝ (ρt)^¼, cell size) are in §4.3-4.4 (line 217), not §7.4. Whether 'scaling' is wrong here is a judgment; L8/L3/0.md:92 (outside this batch) more plainly attributes cell sizing and R ∝ (ρt)^¼ to §7.4.
+        - L8/L4/work/writing/0.md:33 calls the three files "the live drafts"; auditnomous-main.docx is by its own header an "Auditonomous Book Material Sourcebook ... extraction corpus" v0.1 (6 August 2026), auditonomouos-important.docx an "Adversarial Scientific Assessment and Research Blueprint", auditonomous-08-03-26.odt a "Book Prospectus v0.1". Whether these are 'drafts' of the manuscript is the owner's designation (quoted from the master ledger); not determinable.
+        - L8/L4/work/computation/0.md:38-40 "by `pdftotext -layout` on held PDFs" / "same method": the files' own Method line says "`[source text withheld from the public copy]"; which rows came by which method was not verified row by row.
+        - Whether the workflow journal `wf_b00a2270-83e` exists (outside the repository).
+    - item 9
+      - **batch**: b09-L5
+      - **sheets**: 8
+      - **findings**: 4
+      - **clean_sheets**
+        - L8/L5/institution/0.md
+        - L8/L5/institution/peers/0.md
+        - L8/L5/institution/undergraduates/0.md
+        - L8/L5/research/findings/0.md
+      - **could_not_check**
+        - L8/L5/research/review/0.md line 42: '#autonomous(1).txt (the 2025 Autonomous Theory draft)' - the file carries no title date; the only dates found inside it are embedded chat-export timestamps of 2025-06-25, which is consistent with but does not establish 'the 2025 draft'.
+        - L8/L5/research/review/0.md line 44 (and the retired README it quotes verbatim): 'three external literature lanes reported' - THEME_LEDGER.md T3 carries three LITERATURE FINDING lanes (law; audit/records/infosec; philosophy) plus a later 'CORRECTION (ISO retrieval lane, 2026-08-02)'; whether that correction counts as a fourth lane is the owner's reading. The sheet's wording matches L8/L6/retired/layout-2026-08-14/README.md verbatim.
+        - L8/L5/research/review/0.md line 35: which rows of CONTRADICTIONS.md compare definitions of autonomy and are 'Autonomous's bounded job' - the sheet itself says this is the owner's reading; not testable from the tree.
+        - L8/L5/research/findings/0.md line 35: DISTILLATION.md described as 'a grandfathered multi-claim import' - the one-claim-per-file rule exists in L8/L6/retired/layout-2026-08-14/research/findings/README.md, but no record of the grandfathering decision was located in the sheets read.
+        - L8/L5/research/review/0.md line 42: the EB:22 quotation 'Autonomous Theory and Auditonomous are separate works' - confirmed only second-hand (L8/L6/retired/layout-2026-08-14/README.md lines 82-83 quote it as EB:22); the EB source file itself is not in this repository.
+    - item 10
+      - **batch**: b10-L6
+      - **sheets**: 3
+      - **findings**: 6
+      - **clean_sheets**: (empty)
+      - **could_not_check**
+        - L8/L6/retired/0.md line 23: the bullet "- In this repository:" under "## Holds" ends in a colon and is followed by nothing (the next line is blank, then "## Does not hold"). No statement is made, so nothing could be tested; the owner may want to complete it (for example "- In this repository: no retired peer binding; two retired layout sets, listed under Holdings.") or remove it. No retired peer binding exists under L8/L6/retired/ at the commit.
+        - L8/L6/history/0.md line 36: "append-only session ledgers" - whether the three ledgers have only ever been appended to was not established (would need the history of each file, not the pinned tree). The four field names (Commands Run / Results / Failures / Next Required Check) are present in all three.
+        - L8/L6/history/0.md line 36: "Item 1 of the 2026-08-16 queue (the authority-interface register) is answered by [source text withheld from the public copy]-1/`" - item 1 of the queue is the authority-interface register (LEDGER_2026-08-16 line 46) and the path exists, but whether the binding record 'answers' it is a judgment; the object-1 sheet does not itself mention the queue item.
+        - L8/L6/history/0.md line 35: "Several rows point to git history or the rescue branch as the only surviving copy" - the rows do say so (LEDGER.md lines 29, 30, 33, 50); whether those copies are in fact the only surviving ones was not determinable.
+        - L8/L6/retired/0.md line 35: "byte-identical to the copy in `aybllc/autonomous`" - confirmed only against the local clone /home/user/autonomous, where blob bbd7c3285cf8d53905693105f754045b05629ada exists at L8/L4/work/computation/deep-research-report.md on some ref (rev-list --all); not checked against the upstream repository or a specific ref. (The peer-2 claim was confirmed inside this repository: both paths are blob 99ecb6caa131222cf5cb15f7f52c85d7004d23a1.)
+        - Verified and found true, for the record: every specification quotation in the three sheets is verbatim in origin/main of the specification and is the cell for this position (L6 information sheet lines ~688-700, tree at 704-706, prose/why rows for L8/L6/, history/, retired/ at 715-717, Git note 721, Author note 725, Analytic-view row 158, OSI row 181, Harmonization Record 973 and 975, directions 93/97/129); every in-repository path named resolves; the tree drawing matches the two sub-folders; README lines 13 and 17 agree with the sheets.
+  - **confirmed**
+    - item 1
+      - **batch**: b01-desk-root-allications
+      - **id**: b01-01
+      - **kind**: WRONG-FACT
+      - **sheet**: L7/0.md
+      - **line**: 232
+      - **sheet_says**: `L7/provenance/sources/LEDGER.md` (the 62-row pointer register into the `aybllc/l6` archive, relocated from `uso/l6/LEDGER.md`)
+      - **truth**: The register in L7/provenance/sources/LEDGER.md has 60 rows (PR-001..020 = 20, STD-001..034 = 34, INST-001..004 = 4, EXC-001..002 = 2), at file lines 20-79. 62 is the count of table lines including the header and delimiter lines. The two EXC rows are held out of l6 and carry no l6 path or commit.
+      - **evidence**: `git -C /home/user/auditonomous show f2d5b37:L7/provenance/sources/LEDGER.md | grep -c -E '^\| (PR|STD|INST|EXC)-[0-9]{3} \|'` returns 60 (PR 20, STD 34, INST 4, EXC 2; file lines 20-79; every ID present once, none skipped). Counting every line that begins with '|' between '## The register' (line 16) and '**Column rules:**' (line 81) returns 62: the 60 rows plus the header (line 18) and the delimiter (line 19). The ledger's own accounting at its lines 124-131 gives the same 60: 19 accessioned rows (STD-026...034, INST-002...004, PR-014...020), 39 already-held rows (PR-001...013, STD-001...025, INST-001; 40 PDFs, STD-010 standing for two staged copies), 2 held out (EXC-001, EXC-002, whose path and commit cells read '—'). The same figure 62 stands in sheets of other batches (L7/provenance/0.md:20 and :33; L7/provenance/sources/0.md:10 and :41; L7/peering/private/ingress/peer-1/0.md:16; L7/peering/private/ingress/peer-1/object-1/0.md:10) and in the specification's account of this repository (specification line 954, '62 pointer rows into l6'), which is the scaffold's text and outside this audit.
+      - **exact_fix**: L7/0.md:232, replace "the 62-row pointer register" with "the 60-row pointer register", giving: `L7/provenance/sources/LEDGER.md` (the 60-row pointer register into the `aybllc/l6` archive, relocated from `uso/l6/LEDGER.md`)
+      - **skeptic**: Sheet words confirmed at L7/0.md:232: "(the 62-row pointer register into the `aybllc/l6` archive, relocated from `uso/l6/LEDGER.md`)". Checked independently on the object f2d5b37:L7/provenance/sources/LEDGER.md: lines matching '^| (PR|STD|INST|EXC)-NNN |' = 60; they occupy file lines 20-79; by prefix PR 20 (001-020), STD 34 (001-034), INST 4 (001-004), EXC 2 (001-002); no duplicate ID. The register table has 62 lines only when the header (line 18) and delimiter (line 19) are counted. The ledger's own closing account (lines 124-131) names the same rows: STD-026...034, INST-002...004, PR-014...020 (19) and PR-001...013, STD-001...025, INST-001 (39), plus EXC-001/002 (2) = 60. Even the history record that gives '62 rows' enumerates '(PR-001..020, STD-001..034, INST-001..004, EXC-001/002)', which sums to 60. It is a count, not wording, and is not among the known items.
+    - item 2
+      - **batch**: b01-desk-root-allications
+      - **id**: b01-02
+      - **kind**: UNLISTED
+      - **sheet**: L7/0.md
+      - **line**: 232
+      - **sheet_says**: - **provenance** — `L7/provenance/sources/LEDGER.md` (the 62-row pointer register into the `aybllc/l6` archive, relocated from `uso/l6/LEDGER.md`), `L7/provenance/sources/datasets-LEDGER.md` (empty), the records-about-sources tree `L7/provenance/sources/staging-records/` (relocated intact), and the prior-art rules at `L7/provenance/prior-art/README.md` (search still unrun).
+      - **truth**: The provenance branch also holds L7/provenance/lineage/2026-08-05-observed-not-observable-session-provenance.md (13,733 bytes; record EBA-PROV-2026-08-05-01), which the Holdings of L7/0.md does not mention.
+      - **evidence**: `git -C /home/user/auditonomous ls-tree -l f2d5b37 L7/provenance/lineage/` lists 0.md (3,450 bytes) and 2026-08-05-observed-not-observable-session-provenance.md (13,733 bytes). L7/provenance/lineage/0.md:32 lists it under Holdings: 'record EBA-PROV-2026-08-05-01, a session-provenance record bound to both this repository and `aybllc/eb-audit`'. `git -C /home/user/auditonomous grep -n -i -E 'lineage|session-provenance|observed-not-observable|EBA-PROV' f2d5b37 -- L7/0.md` returns only lines 31, 58, 100 and 103, all specification text (the owns list, the tree, two table rows). The specification's account of this repository counts the record (line 954): 'Provenance: 62 pointer rows into l6, the staging records about those sources, and one session-provenance record at lineage/.' L8/L6/history/sheets-2026-09-07.md:91 dates the filing: 'filed here 2026-09-06 on the owner's word'. (L7/provenance/0.md:37, another batch, still says '`lineage/`, `authority/` — empty'.)
+      - **exact_fix**: L7/0.md:232, end the provenance bullet: "..., the prior-art rules at `L7/provenance/prior-art/README.md` (search still unrun), and one session-provenance record at `L7/provenance/lineage/2026-08-05-observed-not-observable-session-provenance.md`."
+      - **skeptic**: Observation is factually accurate. `git ls-tree -l f2d5b37 L7/provenance/lineage/` lists 0.md (3,450 bytes) and 2026-08-05-observed-not-observable-session-provenance.md (13,733 bytes); L7/provenance/lineage/0.md:32 lists it under Holdings as record EBA-PROV-2026-08-05-01. In L7/0.md the words lineage / session-provenance / EBA-PROV occur only at lines 31, 58, 100, 103 (specification text: owns list, tree, two table rows), not in the Holdings at 228-235. The Holdings' provenance bullet (line 232) itemises the branch's filed objects (LEDGER.md, datasets-LEDGER.md, staging-records/, prior-art/README.md) and omits this one. I listed every non-sheet file under L7/ at the commit: binder's three files, the peering files under egress peer-1, egress peer-2 and ingress peer-2, the two ledgers, the prior-art README, the 26 files of staging-records/, and this record; this is the only one at a position the Holdings does not name. The specification's own account of this repository (line 954) counts it: 'and one session-provenance record at lineage/'. Not a known item and not a wording matter: it is an omission from an itemised account of what is held.
+    - item 3
+      - **batch**: b01-desk-root-allications
+      - **id**: b01-03
+      - **kind**: STALE
+      - **sheet**: L7/0.md
+      - **line**: 237
+      - **sheet_says**: Every binding is reference-only.
+      - **truth**: The four ingress bindings are reference-only (private ingress peer-2 holds a byte-identical reference copy under NO EDIT and NO DELETE). The pending private egress at L7/peering/private/egress/peer-2/object-1/ holds the Third Power Corpus files themselves (.docx original 33,007 bytes, .md extraction 28,080 bytes, OWNERSHIP_PENDING.md), this repository's own work; the closed private egress at peer-1/object-1/ holds its reconciliation record. Nothing has left through peer-2.
+      - **evidence**: L7/peering/private/egress/peer-2/object-1/0.md:12 '| Source layer | this repository's own work (the author's theory corpus) |', :14 '| Egress binding | this position; exposure private, direction egress |', :16 '| Content held here | `The_Third_Power_Corpus_v3.md` (extraction), `The_Third_Power_Corpus_v3.docx` (original), `OWNERSHIP_PENDING.md` |'. L7/peering/private/egress/0.md:32 '`peer-2/object-1/` is the pending egress of the Third Power Corpus and holds its files'. Sizes from `git -C /home/user/auditonomous ls-tree -l f2d5b37 L7/peering/private/egress/peer-2/object-1/`. Earlier state: L8/L6/history/harmonization-2026-09-05.md:65 '### 4c. Bound (binding records written; nothing copied)' and :72 '(files stay in `common/durable/orphan/third-power/`)'. Change: the same record :118 moves `common/durable/orphan/third-power/` to `L7/peering/private/egress/peer-2/object-1/` on 2026-09-06, and L8/L6/history/sheets-2026-09-07.md:39 '; since 2026-09-06 it holds the corpus files and `OWNERSHIP_PENDING.md`'. Ingress records, lines 15-16 of each: L7/peering/public/ingress/peer-1/object-1/0.md ('bound; reference-only', content 'none'), L7/peering/private/ingress/peer-1/object-1/0.md ('pointer-only', 'none'), peer-2/object-1/0.md ('the reference copy held here is NO EDIT and NO DELETE'), peer-3/object-1/0.md ('reference-only', 'none'). The closed egress at peer-1/object-1 holds RECONCILIATION_FROM_L6_2026-08-16.md, a record of the transfer.
+      - **exact_fix**: L7/0.md:237, replace "Every binding is reference-only." with "Every ingress binding is reference-only; the pending private egress at `L7/peering/private/egress/peer-2/object-1/` holds the Third Power Corpus files themselves, and nothing has left."
+      - **skeptic**: Sheet words confirmed at L7/0.md:237: "Every binding is reference-only." The Holdings directly above it (line 234) lists six bindings including 'private egress ... peer-2: the pending transfer to `aybllc/ncf-research`'. That position holds the object itself: `git ls-tree -r -l f2d5b37 L7/peering/` shows L7/peering/private/egress/peer-2/object-1/ with The_Third_Power_Corpus_v3.docx (33,007 bytes), The_Third_Power_Corpus_v3.md (28,080) and OWNERSHIP_PENDING.md (906). Its binding record says 'Source layer | this repository's own work (the author's theory corpus)', 'Egress binding | this position', 'Content held here | `The_Third_Power_Corpus_v3.md` (extraction), `The_Third_Power_Corpus_v3.docx` (original), `OWNERSHIP_PENDING.md`'; L7/peering/private/egress/0.md:32 says it 'holds its files'; L7/peering/0.md:43 says 'the files wait at `peer-2/object-1/`'. 'Reference-only' is the specification's term for a peer-owned ingress object (spec 805: 'A peer-owned ingress object is bound/reference-only: NO EDIT and NO DELETE'); it cannot describe a position holding the original of the repository's own work. The stale reading is supported inside the pinned commit: record section 4c is headed 'Bound (binding records written; nothing copied)' and says of this binding '(files stay in `common/durable/orphan/third-power/`)'; section 8 records the move of those files to this position on 2026-09-06. The four ingress records do read as reference-only (public peer-1 'reference-only', content none; private peer-1 'pointer-only', none; peer-2 a byte-identical reference copy under NO EDIT/NO DELETE; peer-3 'reference-only', none). The auditor's fix is true; a shorter one suffices.
+    - item 4
+      - **batch**: b01-desk-root-allications
+      - **id**: b01-04
+      - **kind**: WRONG-FACT
+      - **sheet**: README.md
+      - **line**: 5
+      - **sheet_says**: The documentation is the sheets: every directory under `L7/` and `L8/` describes itself in its own `0.md`
+      - **truth**: 84 of the 109 directories at or under L7/ and L8/ carry a 0.md. 25 do not: the twelve folders of filed material already listed in record section 13, and thirteen folders kept verbatim below the roots of the two retired sets (7 under L8/L6/retired/layout-2026-08-14/, 6 under L8/L6/retired/layout-2026-09-06/).
+      - **evidence**: `git -C /home/user/auditonomous ls-tree -r -d --name-only f2d5b37 L7 L8` lists 109 directories (L7 and L8 included); `git -C /home/user/auditonomous ls-tree -r --name-only f2d5b37 L7 L8 | grep -E '(^|/)0\.md$'` lists 84 sheets (L7 43, L8 41); the difference is 25 directories, 12 outside L8/L6/retired/ and 13 below a retired set's root. The twelve are named at L8/L6/history/harmonization-2026-09-05.md:204. This is not a second report of the twelve folders, which are the known item: what is reported is the README's sentence, which section 13 does not mention, and which the thirteen retired-set folders make untrue even if the twelve were given sheets.
+      - **exact_fix**: README.md:5, replace "every directory under `L7/` and `L8/` describes itself in its own `0.md`," with "every directory under `L7/` and `L8/` describes itself in its own `0.md`, except the twelve folders of filed material listed in the record, §13, and the folders kept verbatim below the root of each retired set at `L8/L6/retired/`,"
+      - **skeptic**: Sheet words confirmed at README.md:5: "every directory under `L7/` and `L8/` describes itself in its own `0.md`". Counted independently at f2d5b37: `ls-tree -r -d --name-only L7 L8` gives 109 directories (L7 and L8 included); 84 of them contain a 0.md (matches the record's '84'); 25 do not. Twelve of the 25 are exactly the folders section 13 already lists, and on those alone this would be a re-report of the known item. The other thirteen are independent of it: L8/L6/retired/layout-2026-08-14/{manuscripts, manuscripts/main, research, research/findings, research/lanes, research/ledgers, research/review} (7) and L8/L6/retired/layout-2026-09-06/{common, common/durable, common/durable/orphan, common/durable/orphan/eb-carrier, common/durable/orphan/eb-carrier/eb-audit, intake} (6). These are directories under L8/ that carry no sheet by design (L8/L6/retired/0.md:30 treats anything below a retired set's root as retained prior state), so the README's universal stays false even if the twelve were sheeted. Section 13 does not mention the README sentence. The finding audits the README's claim, not the contents of the retired sets, so the 'not audited below their root' limit is not breached. Low weight, and largely overlapping the known item, but the stated fact is false at the commit and is a count, not wording.
+    - item 5
+      - **batch**: b01-desk-root-allications
+      - **id**: b01-05
+      - **kind**: STALE
+      - **sheet**: L7/allications/publications/binder/0.md
+      - **line**: 8
+      - **sheet_says**: The `binder/` tree as it stood at HEAD before this pass, moved whole to the publications position because its subject is release identity
+      - **truth**: The binder tree stood at the repository root (binder/) in the layout before 2026-09-05, was moved to L7/publications/binder/ on 2026-09-05, and to L7/allications/publications/binder/ on 2026-11-11. 'HEAD before this pass' no longer identifies the root binder/ state.
+      - **evidence**: L8/L6/history/harmonization-2026-09-05.md:35 (section 4a, the 2026-09-05 pass): '`binder/README.md`, `binder/internal/README.md`, `binder/press-kit/README.md` | `L7/publications/binder/…` | release rules and checklist; nothing released'. Same record :182 (section 13, 2026-11-11): '`L7/publications/` is `L7/allications/publications/`: five files, the sheet, the binder's sheet and the binder's three files'. On 2026-09-07 the phrase ' at HEAD of this pass' was pulled out of twenty sheets on the owner's instruction (L8/L6/history/sheets-2026-09-07.md lines 7, 19, 23, 69, 73, 77, 87, 101, 117, 121, 131, 139, 143, 147, 151, 155, 163, 171, 175, 179; record section 11, 'each sheet states its rules and holdings as they stand'); the binder sheet is not among the sheets that file lists and kept its phrase. `git -C /home/user/auditonomous grep -n -E 'this pass|at HEAD' f2d5b37 -- L7/0.md L7/allications README.md` returns this line only. That the earlier layout had a root binder/: L8/L6/retired/layout-2026-08-14/README.md:101 'binder/                      presentation layer — internal/ and press-kit/'.
+      - **exact_fix**: L7/allications/publications/binder/0.md:8, replace "The `binder/` tree as it stood at HEAD before this pass, moved whole to the publications position because its subject is release identity" with "The `binder/` tree of the earlier layout, moved whole from the repository root to the publications position because its subject is release identity"
+      - **skeptic**: Sheet words confirmed at L7/allications/publications/binder/0.md:8: "The `binder/` tree as it stood at HEAD before this pass, moved whole to the publications position because its subject is release identity". 'This pass' is the 2026-09-05 layout pass: record section 4a moves `binder/README.md`, `binder/internal/README.md`, `binder/press-kit/README.md` to `L7/publications/binder/...`. Later passes are recorded in sections 8 to 13, and the pass of the pinned commit (section 13) moved the tree again, L7/publications/ to L7/allications/publications/. Read at f2d5b37 the phrase points at the wrong state. This is the exact kind the brief names as STALE ('this pass', 'at HEAD'). `git grep -n -E 'this pass|at HEAD' f2d5b37 -- L7/0.md L7/allications README.md` returns this line only, and L8/L6/history/sheets-2026-09-07.md (which pulled ' at HEAD of this pass' out of other sheets) has no entry mentioning the binder. The earlier layout did have a root binder/: L8/L6/retired/layout-2026-08-14/README.md:101 'binder/   presentation layer — internal/ and press-kit/'. The auditor's replacement is true and minimal.
+    - item 6
+      - **batch**: b01-desk-root-allications
+      - **id**: b01-06
+      - **kind**: MISFILED
+      - **sheet**: L7/allications/publications/0.md
+      - **line**: 29 (Does not hold) and 33 (Holdings)
+      - **sheet_says**: Line 29, under 'Does not hold': "- drafts stamped internal, empty release slots, and material that has not left: none of these is a released publication object". Line 33, under 'Holdings': "`binder/internal/README.md` (material not cleared for outside eyes), `binder/press-kit/README.md` (release checklist). Nothing has been released."
+      - **truth**: Everything filed beneath L7/allications/publications/ is the binder: its rule text, the internal/ slot (README only) and the press-kit/ release slot (README with an unfilled six-item checklist). No released publication object is held. The sheet's line 29 excludes 'drafts stamped internal, empty release slots, and material that has not left', while its line 33 lists exactly such slots as holdings. The open question for internal/ (publications versus L8/L4/work/writing/) is recorded as the owner's.
+      - **evidence**: `git -C /home/user/auditonomous ls-tree -r -l f2d5b37 L7/allications/publications` lists, besides the two sheets, only binder/README.md (1,854 bytes), binder/internal/README.md (1,010) and binder/press-kit/README.md (1,200). binder/README.md:30-31: '| `[source text withheld from the public copy] |' and '| `[source text withheld from the public copy] |'. binder/press-kit/README.md:18-23: six '- [ ]' items, none ticked. L7/peering/public/egress/0.md:31: 'No released object exists (`L7/allications/publications/binder/press-kit/README.md` is an unfilled checklist).' L7/allications/publications/binder/0.md:27: 'Whether `internal/` belongs instead at `L8/L4/work/writing/` as assembled-but-unreleased work is the owner's decision.' L8/L6/history/harmonization-2026-09-05.md:94 lists '`binder/internal/` at publications versus L4 writing' among owner decisions left open. Specification line 872: '| **allications/publications/** | Directory for released publication objects at the forward face. |'.
+      - **exact_fix**: Nothing to correct unless the owner moves it. If the binder stays, line 29 can be made to agree with line 33 by ending it: "...: none of these is a released publication object; the binder's `internal/` and `press-kit/` slots are held here as the release gate, the owner's decision on `internal/` being recorded at `binder/0.md`."
+      - **skeptic**: Observation is factually accurate. L7/allications/publications/0.md:29 (under 'Does not hold') reads "- drafts stamped internal, empty release slots, and material that has not left: none of these is a released publication object"; line 33 (Holdings) lists `binder/README.md`, `binder/internal/README.md` '(material not cleared for outside eyes)', `binder/press-kit/README.md` '(release checklist)' and 'Nothing has been released.' `git ls-tree -r -l f2d5b37 L7/allications/publications` shows, besides the two sheets, only binder/README.md (1,854 bytes), binder/internal/README.md (1,010) and binder/press-kit/README.md (1,200). binder/README.md:30-31 defines internal/ as '[source text withheld from the public copy]' and press-kit/ as '[source text withheld from the public copy]'; press-kit/README.md:18-23 is six unticked boxes; binder/0.md:16 says both slots 'are otherwise empty'. So what is held is the slot for internal drafts and an empty release slot, which line 29 says the position does not hold, and no released object, which is what the specification's row (line 872, 'Directory for released publication objects at the forward face.') says it is for. Where it would go is partly stated: the sheet's line 23 sends 'the writing as produced work' to `L8/L4/work/writing/`, binder/0.md:27 leaves 'Whether `internal/` belongs instead at `L8/L4/work/writing/`' to the owner, and record section 5 lists '`binder/internal/` at publications versus L4 writing' among open owner decisions; no alternative position is stated for press-kit/ or the rule text. Not a known item (the known item is that the two slots carry no sheet, a different matter). An owner decision, not a defect.
+    - item 7
+      - **batch**: b02-governance
+      - **id**: b02-governance-01
+      - **kind**: WRONG-FACT
+      - **sheet**: L7/governance/copyright/0.md
+      - **line**: 43
+      - **sheet_says**: Every item obtained through the owner's institutional (WSU) access is IL-001-R2 class-2 hold-private: the 31 WSU-licensed IEEE PDFs and their reading captures — "quotations travel; the files do not"; no derivative works; private repositories only (`L7/provenance/sources/staging-records/ieee/README.md`; per-file watermark manifest at `L7/provenance/sources/staging-records/ieee/papers/README.md`).
+      - **truth**: 31 is the size of the ieee/ import manifest only. The register the sheet names (L7/provenance/sources/LEDGER.md) labels 34 rows WSU class-2 / WSU-licensed; 27 of them are among the 31 import files and 7 are not (PR-010, STD-003, STD-023, STD-024, PR-015, PR-016, PR-017). Captures from WSU copies outside the 31 are filed too (interval/DECORATIONS_2026-08-04.md, from IEEE 1788-2015). ieee/papers/README.md is the watermark table of three IEEE papers (two WSU-watermarked, one open access), not of the 31.
+      - **evidence**: (1) git -C /home/user/auditonomous show f2d5b37:L7/provenance/sources/LEDGER.md — register rows at lines 20-79; 34 rows have 'WSU' in the Label cell: PR-010 (line 29, '[source text withheld from the public copy]-003..STD-020 (lines 32-49), STD-023 and STD-024 (52-53), STD-026..STD-032 (59-65), INST-002..INST-004 (68-70), PR-015..PR-017 (72-74), each 'WSU class-2'. (2) L7/provenance/sources/staging-records/ieee/README.md:3 '**31 documents, 85 MB.**'; its Full manifest (lines 47-77) has 31 rows and lists none of IEEE 754-2019, IEEE 1788-2015, IEEE 1788.1-2017, Stephan 1999, the two ICAS papers or Tan & Vandewalle 1988. (3) L7/provenance/sources/staging-records/ieee/papers/README.md:7-8 and 11: a three-row table; two rows carry '[source text withheld from the public copy]'. (4) L7/provenance/sources/staging-records/standards/SOURCE_LEDGER.md:370-371: `IEEE-754-2019_…_WSU-LICENSED.pdf` and `Ewen-Purcell-discovery-21cm-line_WSU-LICENSED.pdf`, 'Lawful to hold … not redistributable'. (5) L7/provenance/sources/staging-records/interval/DECORATIONS_2026-08-04.md:7-10: a capture record from IEEE 1788-2015, '[source text withheld from the public copy].' Side observation for the owner: three of the 31 manifest files (LEDGER rows STD-021, STD-022, INST-001) carry no WSU label in the register although ieee/README.md:85 says '[source text withheld from the public copy]'.
+      - **exact_fix**: In L7/governance/copyright/0.md line 43 make two in-line replacements. (a) Replace "the 31 WSU-licensed IEEE PDFs and their reading captures" with "the WSU-licensed IEEE PDFs (34 rows carry the WSU label in `L7/provenance/sources/LEDGER.md`; the `ieee/` import alone is 31 documents) and the captures taken from them". (b) Replace "per-file watermark manifest at `L7/provenance/sources/staging-records/ieee/papers/README.md`" with "per-file watermark manifest of the three IEEE papers at `L7/provenance/sources/staging-records/ieee/papers/README.md`".
+      - **skeptic**: Sheet text confirmed at L7/governance/copyright/0.md:43: "Every item obtained through the owner's institutional (WSU) access is IL-001-R2 class-2 hold-private: the 31 WSU-licensed IEEE PDFs and their reading captures ... (`.../ieee/README.md`; per-file watermark manifest at `.../ieee/papers/README.md`)". The colon presents the 31 as the whole WSU-route set. Checked at f2d5b37: (1) LEDGER.md register rows (lines 20-79): `sed -n '20,79p' | grep -c WSU` = 34 (PR-010, STD-003..020, STD-023, STD-024, STD-026..032, INST-002..004, PR-015..017). (2) ieee/README.md:3 '**31 documents, 85 MB.**', manifest lines 47-77 = 31 files, which map to 30 register rows of which 27 carry the WSU label (STD-021, STD-022, INST-001 carry none; 60802 appears twice). So 7 WSU-labelled rows (PR-010, STD-003, STD-023, STD-024, PR-015, PR-016, PR-017) are outside the 31. (3) ieee/papers/README.md:5-13 is a three-row table of papers, two WSU-watermarked, one open access - a per-file watermark table of three other papers, not of the 31. (4) SOURCE_LEDGER.md:370-371 lists IEEE-754-2019 and Ewen-Purcell (Stephan 1999) as WSU-LICENSED, not redistributable. (5) interval/DECORATIONS_2026-08-04.md:7-10 is a capture from IEEE 1788-2015, 'WSU IEEE Xplore institutional copy ... [source text withheld from the public copy]', filed outside ieee/reading/. The count is therefore off as a statement of the WSU-route items; 31 is true only of the ieee/ import (as staging-records/0.md:17 correctly scopes it). Not a wording matter: it is a count and an enumeration that the sheet's own named register contradicts.
+    - item 8
+      - **batch**: b02-governance
+      - **id**: b02-governance-02
+      - **kind**: WRONG-FACT
+      - **sheet**: L7/governance/copyright/0.md
+      - **line**: 18
+      - **sheet_says**: So no README, sheet, ledger, or binding record restates a copyright rule; each names this directory, and the next step is stated below, once.
+      - **truth**: A binding record (L7/peering/private/egress/peer-1/object-1/0.md:17), a sheet (L7/provenance/sources/staging-records/0.md:30), the source ledger (L7/provenance/sources/LEDGER.md:144-145), the staging READMEs and SOURCE_LEDGER.md, and the binder README each state the hold-private or cite-only rule in their own words, and none of them names L7/governance/copyright/. Only L7/0.md, README.md, L7/provenance/sources/0.md (lines 20, 36), L7/peering/private/ingress/peer-1/object-1/0.md:17, licensing/0.md and controlled/0.md name it.
+      - **evidence**: Binding record: L7/peering/private/egress/peer-1/object-1/0.md:17 '| Governance | IL-001-R2 discipline: quotations travel, files do not; the repository is private/INTERNAL |'. Sheet: L7/provenance/sources/staging-records/0.md:30 '- WSU-route material is IL-001-R2 class-2 hold-private: quotations travel, files do not (`L7/governance/controlled/`).' Ledger: L7/provenance/sources/LEDGER.md:144-145 '[source text withheld from the public copy].' READMEs: L7/provenance/sources/staging-records/ieee/README.md:15-24 ('[source text withheld from the public copy] … Quotations travel; the files do not.'); …/ieee/papers/README.md:11-13; …/library/README.md:46-48 ('[source text withheld from the public copy]…'); L7/allications/publications/binder/README.md:18-20 ('[source text withheld from the public copy]…'); and the staging ledger …/standards/SOURCE_LEDGER.md:191-207. Counting the string 'governance/copyright' in each of those files at f2d5b37 (git show <file> | grep -c -F) returns 0 for every one of them (it returns 2 for L7/provenance/sources/0.md, 1 for L7/peering/private/ingress/peer-1/object-1/0.md, 1 for README.md, 2 for L7/0.md). The record says the staging records were left as they were: L8/L6/history/harmonization-2026-09-05.md:103 'Not changed: the quarantine and licence records under `L7/provenance/sources/staging-records/`, which are history, and the retired README.'
+      - **exact_fix**: In L7/governance/copyright/0.md line 18 replace the sentence "So no README, sheet, ledger, or binding record restates a copyright rule; each names this directory, and the next step is stated below, once." with: "So no README, sheet, ledger, or binding record needs a copyright rule of its own; the next step is stated below, once. The records kept as written — `L7/provenance/sources/LEDGER.md`, the READMEs and `SOURCE_LEDGER.md` under `L7/provenance/sources/staging-records/`, and `L7/allications/publications/binder/README.md` — still carry the licence notices they were written with, and two sheets restate the hold-private rule in a line without naming this directory (`L7/peering/private/egress/peer-1/object-1/0.md`, `L7/provenance/sources/staging-records/0.md`)." Alternative for the owner, if the live sheets are to name the one place instead: in L7/peering/private/egress/peer-1/object-1/0.md line 17 replace the Governance cell with "IL-001-R2 discipline — see `L7/governance/copyright/`, the one place; the repository is private/INTERNAL", apply the three path replacements under b02-governance-03, and drop the final clause (from ", and two sheets restate" to the closing parenthesis) from the replacement sentence above.
+      - **skeptic**: Sheet text confirmed at L7/governance/copyright/0.md:18: "So no README, sheet, ledger, or binding record restates a copyright rule; each names this directory, and the next step is stated below, once." In this repository the sentence is descriptive (the scaffold's is normative: 'never restates ... it names this directory'), and it is false at f2d5b37. `git grep -n -F 'governance/copyright' f2d5b37 -- . ':!L8/L6'` returns hits only in .github/workflows/integrity.yml, L7/0.md, L7/governance/{controlled,copyright,licensing}/0.md, L7/peering/private/ingress/peer-1/object-1/0.md, L7/provenance/sources/0.md and README.md. None of the following names the directory, and each states the rule in its own words: binding record L7/peering/private/egress/peer-1/object-1/0.md:17 '| Governance | IL-001-R2 discipline: quotations travel, files do not; the repository is private/INTERNAL |'; sheet L7/provenance/sources/staging-records/0.md:30 '- WSU-route material is IL-001-R2 class-2 hold-private: quotations travel, files do not (`L7/governance/controlled/`).'; ledger L7/provenance/sources/LEDGER.md:144-145 '[source text withheld from the public copy]...'; READMEs staging-records/ieee/README.md:15-26 ('[source text withheld from the public copy] ...', 'Quotations travel; the files do not.'), ieee/papers/README.md:11-13, library/README.md:46-48 ('[source text withheld from the public copy] ...'), and L7/allications/publications/binder/README.md rule 4 ('Cite-only where custody is open ...'). The record (harmonization-2026-09-05.md section 7, line 103) confirms the staging records were deliberately left as written, which explains but does not make the universal sentence true; two of the counterexamples are live sheets. Not among the already-recorded items of section 13.
+    - item 9
+      - **batch**: b02-governance
+      - **id**: b02-governance-03
+      - **kind**: CONTRADICTION
+      - **sheet**: L7/governance/controlled/0.md
+      - **line**: 32 (against L7/provenance/sources/0.md:16, L7/provenance/sources/staging-records/0.md:30, L8/L4/work/computation/0.md:38)
+      - **sheet_says**: Nothing filed directly. Every restriction this repository is under derives from a copyright or licence condition, and all of them are stated at `L7/governance/copyright/`, the one place.
+      - **truth**: The WSU class-2 hold-private condition is stated at L7/governance/copyright/ (0.md:43); nothing is filed at L7/governance/controlled/, whose sheet says all restrictions are stated at copyright/. The outliers are L7/provenance/sources/0.md:16, L7/provenance/sources/staging-records/0.md:30 and L8/L4/work/computation/0.md:38.
+      - **evidence**: L7/provenance/sources/0.md:16 'items obtained through the owner's institutional access are held private under its IL-001-R2 class-2 rule ("never publish, mirror, or attach"), which is a condition for `L7/governance/controlled/`, not for this directory.' — while the same sheet at line 20 says 'its licence conditions are at `L7/governance/copyright/`, the one place' and at line 36 'copyright, licence, or restriction conditions on the source — `L7/governance/copyright/`, the one place'. L7/provenance/sources/staging-records/0.md:30 '- WSU-route material is IL-001-R2 class-2 hold-private: quotations travel, files do not (`L7/governance/controlled/`).' L8/L4/work/computation/0.md:38 'The quoted content is peer-owned and WSU-licensed (class-2 hold-private, `L7/governance/controlled/`);'. Against: L7/governance/controlled/0.md:32 (quoted above); L7/governance/0.md:32 '`licensing/` and `controlled/` are admissible positions that point to `copyright/`'; git ls-tree -r f2d5b37 L7/governance/controlled shows only 0.md; specification line 879 'governance/licensing/ and governance/controlled/ point to it rather than restating it.' The three pointers were carried over by the mechanical rename: L8/L6/history/harmonization-2026-09-05.md:194 'the path `L7/governance/restrictions` became `L7/governance/controlled` (14)'.
+      - **exact_fix**: No change to L7/governance/controlled/0.md. In L7/provenance/sources/0.md line 16 replace "which is a condition for `L7/governance/controlled/`, not for this directory" with "which is a condition for `L7/governance/copyright/`, the one place, not for this directory". In L7/provenance/sources/staging-records/0.md line 30 replace "(`L7/governance/controlled/`)" with "(`L7/governance/copyright/`)". In L8/L4/work/computation/0.md line 38 replace "(class-2 hold-private, `L7/governance/controlled/`)" with "(class-2 hold-private, `L7/governance/copyright/`)".
+      - **skeptic**: All quoted lines confirmed at f2d5b37. L7/governance/controlled/0.md:32: "Nothing filed directly. Every restriction this repository is under derives from a copyright or licence condition, and all of them are stated at `L7/governance/copyright/`, the one place. A restriction that is not copyright-derived would be filed here; none exists." Against it, three live sheets locate the WSU class-2 hold-private condition at controlled/: L7/provenance/sources/0.md:16 '... IL-001-R2 class-2 rule ("never publish, mirror, or attach"), which is a condition for `L7/governance/controlled/`, not for this directory.'; L7/provenance/sources/staging-records/0.md:30 '... quotations travel, files do not (`L7/governance/controlled/`).'; L8/L4/work/computation/0.md:38 '... WSU-licensed (class-2 hold-private, `L7/governance/controlled/`)'. For the same rule, L7/peering/private/ingress/peer-1/object-1/0.md:17 says 'see `L7/governance/copyright/`, the one place', and sources/0.md contradicts itself at lines 20 ('its licence conditions are at `L7/governance/copyright/`, the one place') and 36 ('copyright, licence, or restriction conditions on the source — `L7/governance/copyright/`, the one place'). L7/governance/0.md:32, L7/0.md:233, README.md:9 and specification line 879 ('governance/licensing/ and governance/controlled/ point to it rather than restating it') agree with controlled/0.md. `git ls-tree -r f2d5b37 L7/governance/controlled` shows only 0.md. The three pointers were carried by the mechanical path rename recorded in section 13 ('the path `L7/governance/restrictions` became `L7/governance/controlled` (14)'), but the disagreement itself is not one of the two items section 13 records as left for the owner. It is a statement of where a condition is stated, made two ways - a contradiction, not wording.
+    - item 10
+      - **batch**: b02-governance
+      - **id**: b02-governance-04
+      - **kind**: CONTRADICTION
+      - **sheet**: L7/governance/0.md
+      - **line**: 34 (same sentence at L7/governance/permissions/0.md:33; contrary statement at L7/governance/copyright/0.md:55)
+      - **sheet_says**: The tree states no rule about what an intelligence may touch, and nothing about it is filed here — and at L7/governance/permissions/0.md:33: "The tree states no rule about what an intelligence may touch; the session rules that once stood at the root are retired at `L8/L6/retired/layout-2026-09-06/`."
+      - **truth**: The tree states one rule about what a session may touch: L7/governance/copyright/0.md:55, step 5, "Removing anything from git history is the owner's act, never a session's." L7/governance/0.md:34 and L7/governance/permissions/0.md:33 say there is none.
+      - **evidence**: L7/governance/copyright/0.md:55 '5. Removing anything from git history is the owner's act, never a session's.' Specification (origin/main) line 843: '…any number of intelligences at once, a person, an institution, a standards body, another repository, an archive, a model session, an orchestrator…'; line 941: '- No rule in either tree about what a session or any other intelligence may touch. The repository file that would carry such rules is held off.' git -C /home/user/auditonomous grep -n -i -E "session'?s?\b" f2d5b37 -- '*/0.md' README.md (retired sets excluded), filtered for never / may not / must not / only, returns no other sheet line that limits what a session may do; the remaining hits are the peer-object contract (NO EDIT and NO DELETE by the receiving repository), 'the owner's act' / 'owner's call' idiom, and L7/peering/private/ingress/0.md:43, which describes the peer repository's own list.
+      - **exact_fix**: Smallest change: in L7/governance/copyright/0.md replace line 55 with "5. Removing anything from git history is the owner's act." (the two "no rule" sentences then stand as written). If the owner means the session clause to stay, instead replace the opening clause of L7/governance/0.md line 34, "The tree states no rule about what an intelligence may touch, and nothing about it is filed here", with "The tree states one rule about what an intelligence may touch, at `L7/governance/copyright/` (step 5: removing anything from git history is the owner's act, never a session's), and nothing else about it is filed here"; and in L7/governance/permissions/0.md line 33 replace "The tree states no rule about what an intelligence may touch;" with "The tree states one rule about what an intelligence may touch, at `L7/governance/copyright/` (step 5);".
+      - **skeptic**: Lines confirmed at f2d5b37. L7/governance/0.md:34: "The tree states no rule about what an intelligence may touch, and nothing about it is filed here; the session access-control list that once stood at the root is retired at `L8/L6/retired/layout-2026-09-06/`." L7/governance/permissions/0.md:33: "The tree states no rule about what an intelligence may touch; the session rules that once stood at the root are retired at `L8/L6/retired/layout-2026-09-06/`." L7/governance/copyright/0.md:55: "5. Removing anything from git history is the owner's act, never a session's." Step 5 reserves an act on the repository to the owner and bars it to sessions by name; a model session is an intelligence in the specification's own list (origin/main line 843: '... a person, an institution, a standards body, another repository, an archive, a model session, an orchestrator ...'), and the specification says of both exemplars (line 941) 'No rule in either tree about what a session or any other intelligence may touch.' So one live sheet states a rule of exactly the kind two sibling sheets say the tree does not state. I searched live sheets and the README (retired sets and history excluded) for 'session', 'agent', 'claude', 'orchestrator', 'intelligence', "owner's act", 'never a', 'may not', 'must not': no other line limits what a session may do (the rest are the peer-object NO EDIT / NO DELETE contract on the receiving repository, 'the owner's next ledgering session', a description of the peer archive's own list at L7/peering/private/ingress/0.md:43, and L8/L1/0.md:83 'The session rule became: Build whatever the math permits...', which is an epistemic maxim, not an access rule). The finding is narrow but literal, and it is not on the not-a-finding or already-recorded lists.
+    - item 11
+      - **batch**: b03-peering-private
+      - **id**: b03-01
+      - **kind**: WRONG-FACT
+      - **sheet**: L7/peering/private/ingress/peer-1/0.md
+      - **line**: 16
+      - **sheet_says**: - `object-1/` — the library holdings this repository points to, bound by the 62 rows of `L7/provenance/sources/LEDGER.md`; see its binding record.
+      - **truth**: L7/provenance/sources/LEDGER.md holds 60 register rows at f2d5b37 (PR-001..020 = 20, STD-001..034 = 34, INST-001..004 = 4, EXC-001..002 = 2), not 62.
+      - **evidence**: `git -C /home/user/auditonomous grep -c -E '^\| (PR|STD|INST|EXC)-[0-9]+ \|' f2d5b37 -- L7/provenance/sources/LEDGER.md` returns 60; per prefix PR 20, STD 34, INST 4, EXC 2; no duplicate IDs. The register table is LEDGER.md lines 20–79: 60 data rows between the header (line 18) and "**Column rules:**" (line 81). Its `l6 commit` column: 39 rows `b328334`, 19 rows `e4f0d5c`, 2 rows "—". The 62 traces to L8/L6/history/LEDGER_2026-08-16_l6-close-and-normalization.md:30, "62 rows (PR-001..020, STD-001..034, INST-001..004, EXC-001/002)", whose own ranges sum to 60. The same figure stands outside this batch at L7/0.md:232, L7/provenance/0.md:20 and :33, L7/provenance/sources/0.md:10 and :41, while L7/provenance/sources/0.md:55 says "The ledger has no rows".
+      - **exact_fix**: - `object-1/` — the library holdings this repository points to, bound by the 60 rows of `L7/provenance/sources/LEDGER.md`; see its binding record.
+      - **skeptic**: Sheet L7/peering/private/ingress/peer-1/0.md line 16 does read "bound by the 62 rows of `L7/provenance/sources/LEDGER.md`". At f2d5b37 the register table (LEDGER.md lines 20-79, between the header at line 18 and "**Column rules:**" at line 81) has 60 data rows: `grep -c -E '^\| (PR|STD|INST|EXC)-[0-9]+ \|'` on the git object returns 60; per prefix PR 20, STD 34, INST 4, EXC 2; no other ID prefix occurs and no ID is duplicated. The file has one commit in its history at this path (ccc0554) and it also had 60 rows there, so 62 was never true of this file. The 62 comes from history records (LEDGER_2026-08-16_l6-close-and-normalization.md:30, whose own ranges sum to 60; 7LM_ROUTING_PLAN_2026-09-05.md:80). Not a wording matter and not on the already-known list.
+    - item 12
+      - **batch**: b03-peering-private
+      - **id**: b03-02
+      - **kind**: WRONG-FACT
+      - **sheet**: L7/peering/private/ingress/peer-1/object-1/0.md
+      - **line**: 10
+      - **sheet_says**: | Object identity | the `library/` holdings of `aybllc/l6` named row by row in `L7/provenance/sources/LEDGER.md` (62 rows: PR-, STD-, INST-, EXC-) |
+      - **truth**: The register has 60 rows (PR 20, STD 34, INST 4, EXC 2); 58 of them point to an l6 `library/` path and the two EXC rows record items held out of l6.
+      - **evidence**: Same count as b03-01: `git -C /home/user/auditonomous grep -c -E '^\| (PR|STD|INST|EXC)-[0-9]+ \|' f2d5b37 -- L7/provenance/sources/LEDGER.md` returns 60 (LEDGER.md lines 20–79). Rows whose third column begins `library/`: 58. LEDGER.md:78–79 are the EXC rows: "| [source text withheld from the public copy] | ..." and "| [source text withheld from the public copy] | ...".
+      - **exact_fix**: Smallest: replace "62 rows" with "60 rows", giving: | Object identity | the `library/` holdings of `aybllc/l6` named row by row in `L7/provenance/sources/LEDGER.md` (60 rows: PR-, STD-, INST-, EXC-) |  — Optionally, as the auditor proposed, append "; the two EXC- rows record items held out of l6" inside the parenthesis.
+      - **skeptic**: Sheet L7/peering/private/ingress/peer-1/object-1/0.md line 10 reads "(62 rows: PR-, STD-, INST-, EXC-)". Same count as b03-01: 60 rows with those four prefixes (20 + 34 + 4 + 2). I also confirmed the auditor's secondary point: 58 rows have an `l6` path beginning `library/`; the two EXC rows (LEDGER.md:78-79) read "— (HELD OUT of l6)" with commit "—", so they name no library holding. The count is the wrong fact; the EXC clause is an optional precision, not needed to make the count true.
+    - item 13
+      - **batch**: b03-peering-private
+      - **id**: b03-03
+      - **kind**: WRONG-FACT
+      - **sheet**: L7/peering/private/ingress/peer-3/object-1/0.md
+      - **line**: 13
+      - **sheet_says**: | Version | as recorded in the definition's appendices; no commit or manuscript hash is pinned there — the owner's next ledgering session pins them |
+      - **truth**: The definition's appendices record commits (c8c8aca in Appendix A; the v1.0.0-dev tip ff57986 and the coining commits cd24b10, c8c8aca, f3bc098 in Appendix F) and a truncated sha256 for each of the two manuscript files (Appendix E). What they do not record is a commit for the head of einstein-integration, the branch the citations were read on, or a full-length manuscript hash.
+      - **evidence**: `git -C /home/user/auditonomous show f2d5b37:L8/L0/semantics/definitions/AUDITONOMOUS_DEFINITION.md`, lines 369–372 (Appendix E): "- `[source text withheld from the public copy])". Line 391 (Appendix F): "- [source text withheld from the public copy];". Line 404: "(cd24b10, c8c8aca, f3bc098) predate the attempt entirely." Line 87 (Appendix A): "[source text withheld from the public copy]". Line 354 (Appendix D) names the branch read, "[source text withheld from the public copy])", with no commit.
+      - **exact_fix**: | Version | as recorded in the definition's appendices: Appendix F names the tip of `v1.0.0-dev` (`ff57986`) and the coining commits (`cd24b10`, `c8c8aca`, `f3bc098`), and Appendix E gives each manuscript file a truncated sha256 (`6a717c70cb983029…`, `520ada05a1539390…`); no commit is recorded for the head of `einstein-integration`, the branch that was read, and no full-length manuscript hash — the owner's next ledgering session pins them |
+      - **skeptic**: Sheet L7/peering/private/ingress/peer-3/object-1/0.md line 13 reads "as recorded in the definition's appendices; no commit or manuscript hash is pinned there". The appendices of L8/L0/semantics/definitions/AUDITONOMOUS_DEFINITION.md at f2d5b37 do record both kinds of thing: Appendix A line 87 "[source text withheld from the public copy]"; Appendix E lines 369-372 give each manuscript file "(sha256 6a717c70cb983029…, mtime 2026-04-28)" and "(sha256 520ada05a1539390…, mtime 2026-04-28)"; Appendix F line 391 "v1.0.0-dev (tip ff57986, 2025-10-29)" and lines 403-404 "The coining commits (cd24b10, c8c8aca, f3bc098)". A scan of every hex token in the file finds no commit for the head of einstein-integration (the branch Appendix D line 354 says was read) and the two sha256 values are truncated to 16 hex digits. So the flat statement that no commit or manuscript hash is there is false as written; the narrower statement (no commit for the head of the branch read, no full-length hash) is true. There is an interpretive element in the word "pinned", but the sheet's sentence denies the presence of things the appendices plainly contain, so I hold it real, low severity.
+    - item 14
+      - **batch**: b03-peering-private
+      - **id**: b03-04
+      - **kind**: WRONG-FACT
+      - **sheet**: L7/peering/private/ingress/peer-2/object-1/0.md
+      - **line**: 15
+      - **sheet_says**: | Status | bound; the reference copy held here is NO EDIT and NO DELETE; self-labelled RESEARCH / NOT IMPLEMENTED / NO NOVELTY CLAIM |
+      - **truth**: The held file labels itself with four terms: [source text withheld from the public copy].
+      - **evidence**: `git -C /home/user/auditonomous show f2d5b37:L7/peering/private/ingress/peer-2/object-1/auditonomous-departure-protocol.md`, line 4: "**[source text withheld from the public copy]`". The three-term form matches L8/L6/history/7LM_ROUTING_PLAN_2026-09-05.md:81, from which the sheet appears to have taken it.
+      - **exact_fix**: | Status | bound; the reference copy held here is NO EDIT and NO DELETE; self-labelled [source text withheld from the public copy] |
+      - **skeptic**: Sheet L7/peering/private/ingress/peer-2/object-1/0.md line 15 reads "self-labelled RESEARCH / NOT IMPLEMENTED / NO NOVELTY CLAIM". The held file L7/peering/private/ingress/peer-2/object-1/auditonomous-departure-protocol.md line 4 at f2d5b37 reads "**[source text withheld from the public copy]`". The sheet gives the file's self-label in the label's own slash-delimited form and order with the third of four terms missing; the three-term form is the one in L8/L6/history/7LM_ROUTING_PLAN_2026-09-05.md:81. The sheet does not put the label in quotation marks and each term it gives is in the file, so this is the weakest of the WRONG-FACT items; I hold it real because the sheet reports what the file labels itself and the label reported is not the file's label, and the dropped term (INTERNAL ONLY) is the one that bears on a private binding. Low severity.
+    - item 15
+      - **batch**: b03-peering-private
+      - **id**: b03-05
+      - **kind**: STALE
+      - **sheet**: L7/peering/private/ingress/peer-1/0.md
+      - **line**: 8
+      - **sheet_says**: At this pass its HEAD is `53b28f6` and it holds 1,368 tracked library files filed by venue or issuing body.
+      - **truth**: The HEAD `53b28f6` and the count 1,368 are observations made at the 2026-09-05 pass (commit ccc0554), not at the pass of the commit under audit.
+      - **evidence**: L8/L6/history/harmonization-2026-09-05.md:68 (§4c, the 2026-09-05 event): "`L7/peering/private/ingress/peer-1/object-1/` — `aybllc/l6`, the library holdings named in `L7/provenance/sources/LEDGER.md` (rows @ `b328334`; accession `e4f0d5c`; archive HEAD `53b28f6`)." L8/L6/history/sheets-2026-09-07.md:95: "On 2026-09-05 the owner designated `aybllc/l6` (an INTERNAL repository; pinned here at commit `53b28f6`)". The same record shows the phrase "at HEAD of this pass" was pulled out of the sheets on 2026-09-07 as the sheets' past (`git grep -c -F 'at HEAD of this pass' f2d5b37 -- L8/L6/history/sheets-2026-09-07.md` returns 20). harmonization-2026-09-05.md:200 (§13, the 2026-11-11 pass): "No research object, no definition, no ledger row and no manuscript file is touched." `git grep -n -F 'this pass' f2d5b37 -- L7/peering` returns this line, L7/peering/private/ingress/peer-1/object-1/0.md:13 and L7/peering/public/ingress/peer-1/0.md:22.
+      - **exact_fix**: At the 2026-09-05 pass its HEAD was `53b28f6` and it held 1,368 tracked library files filed by venue or issuing body.
+      - **skeptic**: Sheet L7/peering/private/ingress/peer-1/0.md line 8 ends "At this pass its HEAD is `53b28f6` and it holds 1,368 tracked library files filed by venue or issuing body." `git log -S'At this pass its HEAD' f2d5b37 -- <sheet>` shows the sentence entered at ccc0554 (2026-09-05) and the full sentence, including 1,368, is byte-for-byte in ccc0554's version. The sheet has since been carried through commits 595d3b5 (2026-09-07), 3045e07 (2026-09-12) and f2d5b37 (2026-11-11); section 13 of the record says the 2026-11-11 pass touched no ledger row and re-read nothing of the archive. So "this pass" now points at a pass three passes back: exactly the indexical the task names as STALE. L8/L6/history/harmonization-2026-09-05.md:68 confirms "archive HEAD `53b28f6`" as the 2026-09-05 reading. Whether the archive's HEAD or file count has moved since cannot be read from this repository, so the fix dates the observation and does not assert a new value.
+    - item 16
+      - **batch**: b03-peering-private
+      - **id**: b03-06
+      - **kind**: STALE
+      - **sheet**: L7/peering/private/ingress/peer-1/object-1/0.md
+      - **line**: 13
+      - **sheet_says**: | Version | rows pinned to `l6` commit `b328334`; the 2026-08-16 accession at `e4f0d5c`; archive HEAD at this pass `53b28f6` |
+      - **truth**: `53b28f6` is the archive HEAD as read at the 2026-09-05 pass; no ledger row is pinned to it. The first two clauses of the row are correct.
+      - **evidence**: L8/L6/history/harmonization-2026-09-05.md:68 as quoted in b03-05. LEDGER.md `l6 commit` column at f2d5b37: 39 rows `b328334`, 19 rows `e4f0d5c`, 2 rows "—"; `git grep -c -F '53b28f6' f2d5b37 -- L7/provenance/sources/LEDGER.md` returns nothing (0). L7/peering/private/ingress/0.md:43 gives the same commit as "pinned at commit `53b28f6` at the time of this record".
+      - **exact_fix**: | Version | rows pinned to `l6` commit `b328334`; the 2026-08-16 accession at `e4f0d5c`; archive HEAD at the 2026-09-05 pass `53b28f6` |
+      - **skeptic**: Sheet L7/peering/private/ingress/peer-1/object-1/0.md line 13 reads "archive HEAD at this pass `53b28f6`". `git log -S'archive HEAD at this pass'` shows the phrase entered at ccc0554 (2026-09-05); the sheet has been through e0104de, 3045e07 and f2d5b37 since. Same stale indexical as b03-05. I confirmed the rest of the row: the LEDGER's `l6 commit` column carries `b328334` in 39 rows, `e4f0d5c` in 19 and "—" in 2, and `53b28f6` appears in no ledger row. Whether the archive HEAD has moved cannot be checked from here; the fix only dates the reading.
+    - item 17
+      - **batch**: b03-peering-private
+      - **id**: b03-07
+      - **kind**: CONTRADICTION
+      - **sheet**: L7/peering/private/egress/peer-1/object-1/0.md
+      - **line**: 17
+      - **sheet_says**: | Governance | IL-001-R2 discipline: quotations travel, files do not; the repository is private/INTERNAL |
+      - **truth**: One binding record, L7/peering/private/egress/peer-1/object-1/0.md:17, restates the IL-001-R2 rule and does not name L7/governance/copyright/, against L7/governance/copyright/0.md:18.
+      - **evidence**: L7/governance/copyright/0.md:18 as quoted; :43 carries the rule itself: "IL-001-R2 class-2 hold-private: ... — \"quotations travel; the files do not\"". L7/peering/private/ingress/peer-1/object-1/0.md:17: "WSU-route items are IL-001-R2 class-2 hold-private — see `L7/governance/copyright/`, the one place". L8/L6/history/harmonization-2026-09-05.md:103 (§7) lists what was made to name the one place — "the forward-face summary in `L7/0.md`, the sources sheet, the l6 binding record, and the README's tree line" — and the egress record is not among them. "The repository" in the row is aybllc/l6 per the held report, line 5: "l6 repo: `aybllc/l6` (private/INTERNAL)".
+      - **exact_fix**: | Governance | IL-001-R2 — see `L7/governance/copyright/`, the one place; `aybllc/l6` is private/INTERNAL |
+      - **skeptic**: Both locators check. L7/governance/copyright/0.md:18: "So no README, sheet, ledger, or binding record restates a copyright rule; each names this directory, and the next step is stated below, once." The same sheet at :43 carries the rule: "IL-001-R2 class-2 hold-private: ... — \"quotations travel; the files do not\"". L7/peering/private/egress/peer-1/object-1/0.md:17, a binding record: "| Governance | IL-001-R2 discipline: quotations travel, files do not; the repository is private/INTERNAL |". That row restates the rule in near-identical words and the sheet nowhere names `L7/governance/copyright/` (`git grep -F 'governance/copyright' f2d5b37 -- L7/peering` returns only the ingress l6 record, line 17). The egress record was not among the files commit e0104de ("Give copyright one place", 2026-09-05) touched; its history is ccc0554, 3045e07, f2d5b37 only. So the copyright sheet's statement about every binding record is contradicted by this one. It is strictly a universal claim falsified by another sheet, which fits CONTRADICTION; low severity, and it can be cured on either side. "The repository" in the row is aybllc/l6 per the held report line 5 ("l6 repo: `aybllc/l6` (private/INTERNAL)").
+    - item 18
+      - **batch**: b03-peering-private
+      - **id**: b03-08
+      - **kind**: DEAD-PATH
+      - **sheet**: L7/peering/private/egress/peer-1/0.md
+      - **line**: 8
+      - **sheet_says**: on 2026-08-16 the sources parked in this repository's `_STAGING_TO_L6/` were dispositioned by the l6 provenance session
+      - **truth**: `_STAGING_TO_L6/` does not exist at f2d5b37; it was removed on 2026-08-16. The sheet names it as this repository's without marking it former.
+      - **evidence**: `git -C /home/user/auditonomous ls-tree -r --name-only f2d5b37 | grep -c '_STAGING_TO_L6'` returns 0; the root holds only .github, .gitignore, L7, L8, README.md. L8/L6/history/LEDGER_2026-08-16_l6-close-and-normalization.md:23: "`_STAGING_TO_L6/` gone". L8/L6/history/LEDGER.md:40: "Directory removal is staged in this delta (62 `git rm`)". L7/peering/private/egress/peer-1/object-1/0.md:12: "| Source layer | this repository's former `_STAGING_TO_L6/` (removed 2026-08-16) outbound to the archive |".
+      - **exact_fix**: Smallest: insert the word "former", giving: `aybllc/l6` as the receiving side of an outbound transfer: on 2026-08-16 the sources parked in this repository's former `_STAGING_TO_L6/` were dispositioned by the l6 provenance session — 19 PDFs accessioned at `e4f0d5c`, 40 already held, 2 held out, 27 working records "not l6's to take". The transfer is CLOSED.  — The auditor's longer form, adding "(removed 2026-08-16)" after the path as the sibling sheet does, is also true.
+      - **skeptic**: Borderline, held real at low severity. Sheet L7/peering/private/egress/peer-1/0.md line 8 reads "on 2026-08-16 the sources parked in this repository's `_STAGING_TO_L6/` were dispositioned by the l6 provenance session". No path containing `_STAGING_TO_L6` exists at f2d5b37 (ls-tree count 0; root holds .github, .gitignore, L7, L8, README.md). L8/L6/history/LEDGER_2026-08-16_l6-close-and-normalization.md:23 records "`_STAGING_TO_L6/` gone". The sentence is dated and in the past tense, which is the argument against; but it names the folder as "this repository's" and never says it is gone, and it goes on to speak of "27 working records 'not l6's to take'", which a reader could take to be still sitting there (they are in fact at L7/provenance/sources/staging-records/). The exception in the DEAD-PATH rule is for a path the sheet presents as former, and this sheet does not, whereas the sheet one level down does: object-1/0.md:12 "this repository's former `_STAGING_TO_L6/` (removed 2026-08-16)". Nothing else in the sentence is wrong: the held report's sections give 40 already held, 19 accessioned at `e4f0d5c`, 2 held out, and a "Not l6's to take" section.
+    - item 19
+      - **batch**: b03-peering-private
+      - **id**: b03-09
+      - **kind**: MISFILED
+      - **sheet**: L7/peering/private/egress/peer-1/object-1/0.md
+      - **line**: 16, 25
+      - **sheet_says**: | Content held here | `RECONCILIATION_FROM_L6_2026-08-16.md` — the receiving-side copy, relocated verbatim from `research/ledgers/` |
+      - **truth**: The single file held at this egress position is a report produced by the peer (aybllc/l6) and received from it, whose canonical copy is in the peer; by the parent sheet's Does-not-hold list it could sit at L7/peering/private/ingress/peer-1/ as a second object of that peer, or at L8/L6/history/ as the record of the closed binding. The present placement is deliberate and recorded in the 2026-09-05 harmonization record; this is for the owner to decide.
+      - **evidence**: Held file, line 3: "[source text withheld from the public copy]." This sheet, line 11: "the canonical copy of the report lives in `l6/research/`". L7/peering/private/egress/0.md "Does not hold", line 23: "inbound material — L7/peering/private/ingress/"; line 26: "the package's internal memory — L8/L6/". L7/peering/0.md:30: "binding history — L8/L6/". Specification row for private/egress/: "Represents something leaving toward a peer without making it a public release." Deliberate placement: L8/L6/history/harmonization-2026-09-05.md:57, "receiving-side record of the closed egress to aybllc/l6". Two unrewritten records still point at the former location: L7/provenance/sources/LEDGER.md:122 and L7/provenance/sources/staging-records/README.md:5 (`../RECONCILIATION_FROM_L6_2026-08-16.md`).
+      - **exact_fix**: None required if the owner keeps it here. If it is re-filed: line 16 becomes "| Content held here | none; the reconciliation report is at <new position> |", line 25 becomes "The binding record above; the reconciliation report is at <new position>.", and L7/peering/private/egress/0.md:31 and L7/peering/private/egress/peer-1/0.md:16 are changed to match.
+      - **skeptic**: As an observation it is factually accurate; every element checks at f2d5b37. The only non-sheet file at L7/peering/private/egress/peer-1/object-1/ is RECONCILIATION_FROM_L6_2026-08-16.md. Its line 3: "[source text withheld from the public copy]." The sheet's own line 11: "the canonical copy of the report lives in `l6/research/`". So the file held at this egress position is a peer-authored report that came in, not the thing that went out (the 61 staged PDFs, none held here); the 2026-08-16 session ledger even read it at `_STAGING_TO_L6/RECONCILIATION_FROM_L6_2026-08-16.md`, i.e. as delivered by the peer. The parent's Does-not-hold list, L7/peering/private/egress/0.md:23 and :26, reads "inbound material — L7/peering/private/ingress/" and "the package's internal memory — L8/L6/"; L7/peering/0.md:30 reads "binding history — L8/L6/; retirement or supersession of a binding — L8/L6/retired/". The specification's rows (origin/main, lines 865 and 870): private/egress/ "Represents something leaving toward a peer without making it a public release."; */peer-1/object-1/ "one bounded peer-owned or peer-directed object". Two qualifications the owner should weigh: (1) the object-1 sheet itself has no Does-not-hold list, so the observation rests on the parent sheet's list and the specification row; (2) the placement was deliberate and recorded, L8/L6/history/harmonization-2026-09-05.md:57 "receiving-side record of the closed egress to aybllc/l6", and egress/0.md:19 lists "the binding's standing" among what the position holds, which the report evidences. No sheet text is false. The auditor's side note is also accurate: L7/provenance/sources/LEDGER.md:122 (`research/ledgers/RECONCILIATION_FROM_L6_2026-08-16.md`) and L7/provenance/sources/staging-records/README.md:5 (`../RECONCILIATION_FROM_L6_2026-08-16.md`) still point at the former location, both in files kept unrewritten.
+    - item 20
+      - **batch**: b04-peering-public
+      - **id**: b04-01
+      - **kind**: WRONG-FACT
+      - **sheet**: L7/peering/public/ingress/peer-1/object-1/0.md
+      - **line**: 34
+      - **sheet_says**: "`L8/L0/semantics/definitions/AUDITONOMOUS_DEFINITION.md` is the locally authored delta over this root; it names this binding and does not copy the peer definition."
+      - **truth**: AUDITONOMOUS_DEFINITION.md does not name this binding: it contains no reference to L7/peering/public/ingress/peer-1/object-1/, to aybllc/autonomous, to research/definitions/AUTONOMOUS.md or to commit 0504961. It names only the root word *autonomous* (line 18, and Appendix C from line 263). The binding is named by the directory sheet L8/L0/semantics/definitions/0.md (line 34) and by L8/L0/0.md (line 98). The file does not copy the peer definition; that part of the sentence is true.
+      - **evidence**: `git -C /home/user/auditonomous grep -n -E 'L7/|peering|ingress|0504961|aybllc|binding|object-1' f2d5b37 -- L8/L0/semantics/definitions/AUDITONOMOUS_DEFINITION.md` returns no match (exit 1). The file is the 410-line entry of 2026-07-30, "restored verbatim per AU-NORM-02" (L8/L0/semantics/definitions/0.md:32), so it predates the binding of 2026-09-05. Ten distinctive phrases from rows A1-A11 of the bound peer object (for example "ability to perform intended tasks", "select and engage targets", "capacity to make decisions itself") each occur 0 times in the file.
+      - **exact_fix**: In L7/peering/public/ingress/peer-1/object-1/0.md line 34, replace "it names this binding and does not copy the peer definition." with "it does not copy the peer definition; this binding is named by the sheet beside it, `L8/L0/semantics/definitions/0.md`, not by the file."
+      - **skeptic**: Sheet words confirmed at f2d5b37:L7/peering/public/ingress/peer-1/object-1/0.md:34: "`L8/L0/semantics/definitions/AUDITONOMOUS_DEFINITION.md` is the locally authored delta over this root; it names this binding and does not copy the peer definition." The grammatical subject of "names this binding" is the file. I checked the file (410 lines) independently: `git grep -n -i -E 'L7/|peering|ingress|0504961|aybllc|binding|object-1|peer'` on it returns a single hit, line 347, and that is the word "peer-reviewed" in an unrelated sentence about journal anchors. The file has no path into L7, no mention of aybllc/autonomous, of the bound file, of commit 0504961 or of a binding. It is the 2026-07-30 entry (header lines 3-8), which predates the 2026-09-05 binding and was restored verbatim. What it does name is the root word only (line 18: "ETYMOLOGY. Blend of AUDIT + AUTONOMOUS."). The binding is named by sheets, not by the file: L8/L0/semantics/definitions/0.md:34 ("the root is bound at `L7/peering/public/ingress/peer-1/object-1/` and is named, not copied") and L8/L0/0.md:98 ("it is bound at `L7/peering/public/ingress/peer-1/object-1/` and named from here"). The second half of the sentence holds: I read the peer object from the local peer clone's git objects (aybllc/autonomous 0504961:research/definitions/AUTONOMOUS.md, rows A1-A11 at lines 70-80) and six distinctive phrases from those rows ("ability to perform intended tasks", "select and engage targets", "capacity to make decisions itself", "without external intervention", "without human intervention", "modifying its intended domain") each occur 0 times in the definition file. This is a statement of fact about a named file that the tree shows false, not a wording matter, and it is not among the items recorded in section 13.
+    - item 21
+      - **batch**: b04-peering-public
+      - **id**: b04-02
+      - **kind**: CONTRADICTION
+      - **sheet**: L7/peering/public/ingress/peer-1/0.md
+      - **line**: 12
+      - **sheet_says**: Opening of the line: "This peer is the only source for the definition of *autonomous* in this repository: not IEEE, ISO/IEC, NIST, NASA, or IETF directly, not a dictionary or the Greek root". Closing sentence of the line: "Those bodies' definitions reach this repository only as rows already bound inside the peer's L0 object, with the peer's ownership tags."
+      - **truth**: The exclusive-source statement is [source text withheld from the public copy], not the state of the tree. At f2d5b37 definitions of *autonomous* from a dictionary, the Greek root, IEEE and ISO/IEC stand in this repository's own files, quoted from those sources directly and not through the binding: Appendix C of L8/L0/semantics/definitions/AUDITONOMOUS_DEFINITION.md, Q13 of L8/L1/state-space/REQUIREMENTS_OWNERSHIP.md (line 268), [source text withheld from the public copy] (lines 36-37, 56, 175), as object-1/0.md:34 says. IEEE 1920.1 has no row in the bound peer object at all. L7/peering/public/ingress/0.md:34 and :43 state the same thing as a rule and do not conflict.
+      - **evidence**: At f2d5b37: L8/L0/semantics/definitions/AUDITONOMOUS_DEFINITION.md:18 and :281-296 take 'autonomous' from the American Heritage Dictionary and the Greek root from Liddell-Scott via Perseus. L8/L1/state-space/REQUIREMENTS_OWNERSHIP.md:268 (Q13) applies IEEE 1920.1 and ISO/IEC 22989 directly. L8/L5/research/review/CONTRADICTIONS.md:36-37, :56 and :175 quote IEEE 7001-2021, IEEE 1920.1-2022 and ISO/IEC 22989:2022 definitions; its lines 6-7 say "[source text withheld from the public copy]". The same definitions are also quoted directly at L8/L4/work/computation/ieee-requirements-for-autonomouos.md:103 and :984 and iso-iec-requirements-for-autonomous.md:75 and :299. IEEE 1920.1 has no row in the bound peer object (0 matches for "1920" in aybllc/autonomous 0504961:research/definitions/AUTONOMOUS.md, read from the local peer clone's git objects), so that definition cannot have arrived as a bound row. L8/L6/history/harmonization-2026-09-05.md §1 says: "See §5 for where HEAD still departs from the rule."
+      - **exact_fix**: In L7/peering/public/ingress/peer-1/0.md line 12, make two replacements. (1) Replace the opening "This peer is the only source for the definition of *autonomous* in this repository:" with "By the owner's rule this peer is the only source for the definition of *autonomous* in this repository:". (2) Replace the closing sentence "Those bodies' definitions reach this repository only as rows already bound inside the peer's L0 object, with the peer's ownership tags." with "Under that rule those bodies' definitions are to reach this repository only as rows already bound inside the peer's L0 object, with the peer's ownership tags; the [source text withheld from the public copy] elsewhere are named in `object-1/0.md` under "Receiving side"."
+      - **skeptic**: Sheet words confirmed at f2d5b37:L7/peering/public/ingress/peer-1/0.md:12. It opens "This peer is the only source for the definition of *autonomous* in this repository: not IEEE, ISO/IEC, NIST, NASA, or IETF directly, not a dictionary or the Greek root ..." and closes "Those bodies' definitions reach this repository only as rows already bound inside the peer's L0 object, with the peer's ownership tags." Both are put as present fact about this repository, with no "by the owner's rule" qualifier. The sheet one level down states the opposite as present fact, object-1/0.md:34: "Three files at HEAD still take a definition of *autonomous* from somewhere other than this [source text withheld from the public copy]`". So two sheets state the same fact differently, which is the CONTRADICTION kind. The tree sides with object-1: AUDITONOMOUS_DEFINITION.md Appendix C (from line 263) quotes the AHD definition of 'autonomous' and the Liddell-Scott gloss of autonomos directly (lines 281-296); REQUIREMENTS_OWNERSHIP.md:268 (Q13) applies IEEE 1920.1 and ISO/IEC 22989 directly; CONTRADICTIONS.md:36-37, :56 and :175 quote IEEE 7001-2021, IEEE 1920.1-2022 and ISO/IEC 22989:2022 definitions, and its lines 4-7 say every quote is from the standards body's own published text. The closing sentence cannot be true even in principle for IEEE 1920.1: "1920" occurs 0 times in the bound peer object (aybllc/autonomous 0504961:research/definitions/AUTONOMOUS.md), so that definition did not arrive as a bound row. The same definitions are also quoted directly in L8/L4/work/computation/ieee-requirements-for-autonomouos.md:103 and :984 and iso-iec-requirements-for-autonomous.md:75 and :299. I considered whether this is only wording, since line 12 follows the owner's quoted rule at line 10; it is not, because the sibling sheets mark the same statement as a rule (ingress/0.md:34 "By the owner's rule this is the only source", ingress/0.md:43 "The rule:") and the record itself separates rule from state (harmonization-2026-09-05.md section 1: "See §5 for where HEAD still departs from the rule"). Line 12 alone drops that qualifier and adds a descriptive claim about how the definitions reach the repository. Not listed in section 13 as already known. One correction to the auditor's fix: it repeats the count "three files", which the auditor's own evidence shows is not the whole of it (the two L8/L4/work/computation files also quote the definitions directly), so the replacement should point to object-1's list without restating a count.
+    - item 22
+      - **batch**: b05-provenance
+      - **id**: b05-01
+      - **kind**: WRONG-FACT
+      - **sheet**: L7/provenance/0.md
+      - **line**: 37
+      - **sheet_says**: - `lineage/`, `authority/` — empty; authority for each bound peer object is stated in that object's binding record under `L7/peering/`.
+      - **truth**: `L7/provenance/lineage/` is not empty: it holds `2026-08-05-observed-not-observable-session-provenance.md` (13,733 bytes), record EBA-PROV-2026-08-05-01. Only `authority/` holds nothing beyond its sheet.
+      - **evidence**: `git ls-tree -l f2d5b37 L7/provenance/lineage/` lists 0.md (3450) and 2026-08-05-observed-not-observable-session-provenance.md (13733); `git ls-tree -l f2d5b37 L7/provenance/authority/` lists 0.md only. The lineage sheet's own Holdings (L7/provenance/lineage/0.md:32) lists the record, so the two sheets also contradict each other. L7/peering/private/ingress/peer-2/0.md:8 names the record too, and L8/L6/history/harmonization-2026-09-05.md:117 records its move into `L7/provenance/lineage/`.
+      - **exact_fix**: Replace line 37 with two lines:
+        - `lineage/2026-08-05-observed-not-observable-session-provenance.md` — record EBA-PROV-2026-08-05-01, a session-provenance record bound to this repository and `aybllc/eb-audit` (see `L7/provenance/lineage/0.md`).
+        - `authority/` — empty; authority for each bound peer object is stated in that object's binding record under `L7/peering/`.
+      - **skeptic**: L7/provenance/0.md:37 reads "- `lineage/`, `authority/` — empty; authority for each bound peer object is stated in that object's binding record under `L7/peering/`." `git ls-tree -r -l f2d5b37 L7/provenance` shows L7/provenance/lineage/ holds 0.md (3450 bytes) and 2026-08-05-observed-not-observable-session-provenance.md (13733 bytes); L7/provenance/authority/ holds 0.md only. The lineage sheet's own Holdings (L7/provenance/lineage/0.md:32) lists the record, and L8/L6/history/harmonization-2026-09-05.md:117 records its move into `L7/provenance/lineage/`. Not in the already-known list.
+    - item 23
+      - **batch**: b05-provenance
+      - **id**: b05-02
+      - **kind**: WRONG-FACT
+      - **sheet**: L7/provenance/0.md
+      - **line**: 20, 33
+      - **sheet_says**: Line 20: "The source register `L7/provenance/sources/LEDGER.md` (62 pointer rows into the aybllc/l6 archive)". Line 33: "`sources/LEDGER.md` — 62 pointer rows (PR-, STD-, INST-, EXC-) into `aybllc/l6` by path and pinned commit".
+      - **truth**: The register has 60 rows: 58 pointer rows into aybllc/l6 (39 pinned at `b328334`, 19 at `e4f0d5c`) and two EXC rows for items held out of the archive, which carry no path and no commit.
+      - **evidence**: L7/provenance/sources/LEDGER.md at f2d5b37: header line 18, separator line 19, data rows lines 20-79 = 60. `grep -cE '^\| (PR|STD|INST|EXC)-[0-9]+ \|'` on the object gives 60 (PR 20, STD 34, INST 4, EXC 2); no duplicate IDs. Commit column: `b328334` x39, `e4f0d5c` x19, — x2. The figure traces to L8/L6/history/LEDGER_2026-08-16_l6-close-and-normalization.md:30, "62 rows (PR-001..020, STD-001..034, INST-001..004, EXC-001/002)", ranges that sum to 60. The same 62 stands in sheets outside this batch: L7/0.md:232, L7/peering/private/ingress/peer-1/0.md:16, L7/peering/private/ingress/peer-1/object-1/0.md:10.
+      - **exact_fix**: Line 20: replace "(62 pointer rows into the aybllc/l6 archive)" with "(60 rows: 58 pointer rows into the aybllc/l6 archive and two rows for items held out of it)".
+        Line 33: replace "62 pointer rows (PR-, STD-, INST-, EXC-) into `aybllc/l6` by path and pinned commit" with "60 rows (PR-, STD-, INST-, EXC-): 58 pointer rows into `aybllc/l6` by path and pinned commit, and two EXC rows for items held out of the archive".
+      - **skeptic**: L7/provenance/0.md:20 says "(62 pointer rows into the aybllc/l6 archive)" and :33 says "62 pointer rows (PR-, STD-, INST-, EXC-) into `aybllc/l6` by path and pinned commit". In L7/provenance/sources/LEDGER.md at f2d5b37 the register table's header is line 18, separator line 19, data rows lines 20-79. `grep -cE '^\| (PR|STD|INST|EXC)-[0-9]+ \|'` gives 60, no duplicate IDs (PR-001..020 = 20, STD-001..034 = 34, INST-001..004 = 4, EXC-001..002 = 2). Commit column: `b328334` x39, `e4f0d5c` x19, "—" x2; EXC-001 and EXC-002 have path cell "— (HELD OUT of l6)". 62 equals the table's line count including header and separator. The figure also stands in L8/L6/history/LEDGER_2026-08-16_l6-close-and-normalization.md:30 with ranges that sum to 60, and is repeated at L7/0.md:232, L7/peering/private/ingress/peer-1/0.md:16 and L7/peering/private/ingress/peer-1/object-1/0.md:10.
+    - item 24
+      - **batch**: b05-provenance
+      - **id**: b05-03
+      - **kind**: WRONG-FACT
+      - **sheet**: L7/provenance/lineage/0.md
+      - **line**: 32
+      - **sheet_says**: "Its binding lines name the path it was filed from; they are the record's own words and stand."
+      - **truth**: The record's binding lines name `aybllc/auditonomous/manuscripts/main/research/eb-carrier/eb-audit/provenance/`, which is neither this position nor the path it was filed from (`common/durable/orphan/eb-carrier/eb-audit/provenance/`).
+      - **evidence**: The record, lines 7-10 ("**Repository bindings:**" and its two entries). L8/L6/history/harmonization-2026-09-05.md:117 gives the move as `common/durable/orphan/eb-carrier/eb-audit/provenance/2026-08-05-observed-not-observable-session-provenance.md` to `L7/provenance/lineage/`. L8/L6/history/sheets-2026-09-07.md:91 keeps the sheet's earlier words: "filed here 2026-09-06 on the owner's word from `common/durable/orphan/eb-carrier/eb-audit/provenance/`. Its binding lines name the old path".
+      - **exact_fix**: Replace the sentence with: "Its binding lines name `manuscripts/main/research/eb-carrier/eb-audit/provenance/`, which is neither this position nor the path it was filed from (`common/durable/orphan/eb-carrier/eb-audit/provenance/`); they are the record's own words and stand."
+      - **skeptic**: L7/provenance/lineage/0.md:32 says "Its binding lines name the path it was filed from; they are the record's own words and stand." The record's lines 7-10 ("**Repository bindings:**") name `aybllc/eb-audit/research/provenance/...` and `aybllc/auditonomous/manuscripts/main/research/eb-carrier/eb-audit/provenance/2026-08-05-observed-not-observable-session-provenance.md`. L8/L6/history/harmonization-2026-09-05.md:117 gives the path it was filed from as `common/durable/orphan/eb-carrier/eb-audit/provenance/...`, and L8/L6/history/sheets-2026-09-07.md:91 keeps the sheet's earlier wording: "filed here 2026-09-06 on the owner's word from `common/durable/orphan/eb-carrier/eb-audit/provenance/`. Its binding lines name the old path". So the binding lines do not name the path the record was filed from. Low severity. I could not confirm from the pinned commit alone that the record itself ever sat at the `manuscripts/main/research/...` path (only that `manuscripts/main/` existed in the 2026-08-14 layout, per L8/L6/retired/layout-2026-08-14/manuscripts/main/README.md), so the fix below avoids asserting that.
+    - item 25
+      - **batch**: b05-provenance
+      - **id**: b05-04
+      - **kind**: WRONG-FACT
+      - **sheet**: L7/provenance/sources/0.md
+      - **line**: 10, 41
+      - **sheet_says**: Line 10: "62 pointer rows into the `aybllc/l6` archive (ID, citation, `l6` path, `l6` commit, access, label)". Line 41: "62 rows (PR-, STD-, INST-, EXC-), each with citation, `l6` path, `l6` commit (`b328334`; accession rows at `e4f0d5c`), access class, and label."
+      - **truth**: 60 rows, of which 58 (PR-, STD-, INST-) are pointer rows carrying an `l6` path and commit (39 at `b328334`, 19 accession rows at `e4f0d5c`) and two (EXC-001, EXC-002) are items held out of `l6` with neither.
+      - **evidence**: LEDGER.md at f2d5b37, section "The register": 62 lines begin with "|", of which line 18 is the header and line 19 the separator; data rows are lines 20-79 = 60. Rows whose path cell starts with `library/`: 58. Rows without: EXC-001 (line 78), EXC-002 (line 79). Access column: FULL x58, NOT OBTAINED x1, BLOCKED x1. See b05-02 for where the figure 62 came from and the other sheets that repeat it.
+      - **exact_fix**: Line 10: replace "62 pointer rows into the `aybllc/l6` archive" with "60 rows, 58 of them pointer rows into the `aybllc/l6` archive and two (EXC-001, EXC-002) for items held out of it".
+        Line 41, first sentence: "- `LEDGER.md` — the pointer register into `aybllc/l6`: 60 rows (PR-, STD-, INST-, EXC-), each with citation, access class, and label; the 58 PR-, STD- and INST- rows carry an `l6` path and an `l6` commit (`b328334`; accession rows at `e4f0d5c`), and the two EXC- rows, held out of `l6`, carry neither."
+      - **skeptic**: L7/provenance/sources/0.md:10 says "62 pointer rows into the `aybllc/l6` archive (ID, citation, `l6` path, `l6` commit, access, label)" and :41 says "62 rows (PR-, STD-, INST-, EXC-), each with citation, `l6` path, `l6` commit (`b328334`; accession rows at `e4f0d5c`), access class, and label." LEDGER.md at f2d5b37 has 60 data rows (lines 20-79; PR 20, STD 34, INST 4, EXC 2). EXC-001 (line 78) and EXC-002 (line 79) read "— (HELD OUT of l6)" with commit "—", so "each with ... `l6` path, `l6` commit" is also untrue of two rows. Access column: FULL x58, NOT OBTAINED x1, BLOCKED x1. Same root cause as b05-02 but a different sheet.
+    - item 26
+      - **batch**: b05-provenance
+      - **id**: b05-05
+      - **kind**: STALE
+      - **sheet**: L7/provenance/sources/0.md
+      - **line**: 10
+      - **sheet_says**: "relocated in this pass from `uso/l6/LEDGER.md` without rewriting"
+      - **truth**: The ledger was relocated on 2026-09-05, not in the current (2026-11-11) pass.
+      - **evidence**: L8/L6/history/harmonization-2026-09-05.md:22 ("2026-09-05 | This event: canonical topology instantiated; 69 paths moved by `git mv`") and :59 (`uso/l6/LEDGER.md` to `L7/provenance/sources/LEDGER.md`). Section 13 of the same record (line 200) says of the 2026-11-11 pass: "No research object, no definition, no ledger row and no manuscript file is touched." `git show --stat f2d5b37 -- L7/provenance` shows only nine changed lines across the six sheets and no change to LEDGER.md. The same sheet's line 41 already says simply "Relocated from `uso/l6/LEDGER.md`".
+      - **exact_fix**: Replace "relocated in this pass from `uso/l6/LEDGER.md` without rewriting" with "relocated from `uso/l6/LEDGER.md` without rewriting".
+      - **skeptic**: L7/provenance/sources/0.md:10 says "relocated in this pass from `uso/l6/LEDGER.md` without rewriting". The relocation belongs to the 2026-09-05 event (L8/L6/history/harmonization-2026-09-05.md:22 "This event: canonical topology instantiated; 69 paths moved by `git mv`" and the move table row `uso/l6/LEDGER.md` to `L7/provenance/sources/LEDGER.md`). The pinned commit is the 2026-11-11 restructure, whose record (section 13) lists the staging records and ledger among things not changed. "this pass" no longer refers to the pass that produced the tree; the same sheet's line 41 already says only "Relocated from `uso/l6/LEDGER.md`". "this pass" is one of the STALE examples named in the brief.
+    - item 27
+      - **batch**: b05-provenance
+      - **id**: b05-06
+      - **kind**: WRONG-FACT
+      - **sheet**: L7/provenance/sources/0.md
+      - **line**: 55
+      - **sheet_says**: "The ledger has no rows; that is admissible."
+      - **truth**: `LEDGER.md` has 60 rows; only `datasets-LEDGER.md` has none.
+      - **evidence**: LEDGER.md data rows at lines 20-79 (60 rows; see b05-04). datasets-LEDGER.md:8 reads "Currently: **EMPTY** — no datasets held." and its register table (line 16) is one blank row. For context only: the sentence is word for word the scaffold's (7lm origin/main:L7/provenance/sources/0.md:51), where the ledger is header-only.
+      - **exact_fix**: Replace "The ledger has no rows; that is admissible." with "The datasets ledger has no rows; that is admissible."
+      - **skeptic**: L7/provenance/sources/0.md:55 ends "The ledger has no rows; that is admissible." Everywhere else in the sheet "the ledger" / `LEDGER.md` is the source register (lines 10, 28, 41, 51), which has 60 data rows (LEDGER.md lines 20-79). Only `datasets-LEDGER.md` is empty: its line 8 reads "Currently: **EMPTY** — no datasets held." and its register table (line 16) is one blank row. The sentence is identical to the scaffold's (7lm origin/main:L7/provenance/sources/0.md:51), where it is true; it is false here.
+    - item 28
+      - **batch**: b05-provenance
+      - **id**: b05-07
+      - **kind**: DEAD-PATH
+      - **sheet**: L7/provenance/sources/0.md
+      - **line**: 45
+      - **sheet_says**: "no external source was fetched while preparing `AUDITONOMOUS.md`, every external quote in it restated from the corpus's own fetch record"
+      - **truth**: No file `AUDITONOMOUS.md` exists at the commit; it [source text withheld from the public copy] only in git history.
+      - **evidence**: `git ls-tree -r --name-only f2d5b37 | grep -cE '(^|/)AUDITONOMOUS\.md$'` gives 0; the only near name is L8/L0/semantics/definitions/AUDITONOMOUS_DEFINITION.md, a different document. L8/L6/history/harmonization-2026-09-05.md:19: "2026-08-15 | Prune: root `AUDITONOMOUS.md`, `AUTONOMOUS.md`, `FREEZE.*` ... removed from HEAD; survive in git history. | `8c98573`". L8/L6/retired/layout-2026-08-14/README.md:92-93 says the same. L8/L5/research/review/0.md:44 names the file with the note "removed from HEAD at `8c98573`, in git history".
+      - **exact_fix**: Replace "while preparing `AUDITONOMOUS.md`, every external quote" with "while preparing `AUDITONOMOUS.md` (removed from HEAD at `8c98573`, in git history), every external quote".
+      - **skeptic**: L7/provenance/sources/0.md:45 says "no external source was fetched while preparing `AUDITONOMOUS.md`, every external quote in it restated from the corpus's own fetch record". `git ls-tree -r --name-only f2d5b37 | grep -i AUDITONOMOUS` finds no `AUDITONOMOUS.md`; the nearest name is L8/L0/semantics/definitions/AUDITONOMOUS_DEFINITION.md, a different file. L8/L6/history/harmonization-2026-09-05.md:19 records "Prune: root `AUDITONOMOUS.md` ... removed from HEAD; survive in git history. | `8c98573`", and L8/L6/retired/layout-2026-08-14/README.md:92-93 says the same. In the same sentence the sheet marks `common/toolkits/ommp/` as "(removed at HEAD by `8c98573`)" but gives `AUDITONOMOUS.md` no such mark, so it is not presented as a former path; L8/L5/research/review/0.md:44 does annotate it ("removed from HEAD at `8c98573`, in git history"). The past tense "while preparing" does not tell a reader the file is gone.
+    - item 29
+      - **batch**: b05-provenance
+      - **id**: b05-08
+      - **kind**: CONTRADICTION
+      - **sheet**: L7/provenance/sources/0.md
+      - **line**: 16
+      - **sheet_says**: "items obtained through the owner's institutional access are held private under its IL-001-R2 class-2 rule ("never publish, mirror, or attach"), which is a condition for `L7/governance/controlled/`, not for this directory."
+      - **truth**: In this repository the IL-001-R2 class-2 hold-private condition is stated at `L7/governance/copyright/`; `L7/governance/controlled/` holds nothing and says copyright-derived restrictions are not filed there.
+      - **evidence**: L7/governance/controlled/0.md:32: "Nothing filed directly. Every restriction this repository is under derives from a copyright or licence condition, and all of them are stated at `L7/governance/copyright/`, the one place. A restriction that is not copyright-derived would be filed here; none exists." L7/governance/copyright/0.md:43 states the IL-001-R2 class-2 condition, and :18 says each sheet "names this directory". L7/peering/private/ingress/peer-1/object-1/0.md:17: "WSU-route items are IL-001-R2 class-2 hold-private — see `L7/governance/copyright/`, the one place". The pinned commit changed only the folder name in this sentence (restrictions to controlled).
+      - **exact_fix**: Replace "which is a condition for `L7/governance/controlled/`, not for this directory." with "which is a condition stated at `L7/governance/copyright/`, the one place, not in this directory."
+      - **skeptic**: L7/provenance/sources/0.md:16 says the IL-001-R2 class-2 rule "is a condition for `L7/governance/controlled/`, not for this directory." L7/governance/controlled/0.md:32 says "Nothing filed directly. Every restriction this repository is under derives from a copyright or licence condition, and all of them are stated at `L7/governance/copyright/`, the one place. A restriction that is not copyright-derived would be filed here; none exists." L7/governance/copyright/0.md:43 states the IL-001-R2 class-2 hold-private condition. The same sources sheet says at :20 "its licence conditions are at `L7/governance/copyright/`, the one place" and at :36 "copyright, licence, or restriction conditions on the source — `L7/governance/copyright/`, the one place". L7/governance/0.md (Holdings) and README.md (reading order item 1) also name `copyright/` as the one place, and L7/peering/private/ingress/peer-1/object-1/0.md (Governance row) sends the same condition to copyright. The sheet therefore sends the same condition to two different positions; the pinned commit only renamed the folder in this sentence. The word "restrictions" exemption does not apply because the sheet names the folder.
+    - item 30
+      - **batch**: b05-provenance
+      - **id**: b05-09
+      - **kind**: WRONG-FACT
+      - **sheet**: L7/provenance/sources/0.md
+      - **line**: 41
+      - **sheet_says**: "the file is not rewritten, so its title and its "provenance is l6" framing reflect the earlier numbering."
+      - **truth**: The words "provenance is l6" are in the master ledger's row at `L8/L6/history/LEDGER.md:31`, not in `L7/provenance/sources/LEDGER.md`; the register itself carries only the title "L6 SOURCE LEDGER" from the earlier numbering.
+      - **evidence**: `git grep -n -i -F 'provenance is l6' f2d5b37 -- L7/provenance/sources/LEDGER.md` returns nothing. L8/L6/history/LEDGER.md:31 has: ([source text withheld from the public copy]). L8/L6/history/harmonization-2026-09-05.md:26 attributes it correctly: "The earlier layout's `uso/l6/LEDGER.md` called itself "L6 SOURCE LEDGER" and the master ledger's row said "provenance is l6"."
+      - **exact_fix**: Replace "so its title and its "provenance is l6" framing reflect the earlier numbering." with "so its title, "L6 SOURCE LEDGER", reflects the earlier numbering."
+      - **skeptic**: L7/provenance/sources/0.md:41 says "the file is not rewritten, so its title and its "provenance is l6" framing reflect the earlier numbering." `git grep -n -i -F 'provenance is l6' f2d5b37 -- .` finds the phrase only in this sheet, in L8/L6/history/LEDGER.md:31 (the master ledger's `uso/l6/` row: [source text withheld from the public copy]), in L8/L6/history/7LM_ROUTING_PLAN_2026-09-05.md:206 and in L8/L6/history/harmonization-2026-09-05.md:26, which attributes it correctly: "called itself "L6 SOURCE LEDGER" and the master ledger's row said "provenance is l6"". The quoted words are not in `LEDGER.md`; what that file carries from the earlier numbering is its title, "# L6 SOURCE LEDGER" (line 1). This is a quotation attributed to the wrong file, so it is a fact about the file's content, though minor.
+    - item 31
+      - **batch**: b05-provenance
+      - **id**: b05-10
+      - **kind**: WRONG-FACT
+      - **sheet**: L7/provenance/sources/staging-records/0.md
+      - **line**: 8
+      - **sheet_says**: [source text withheld from the public copy]
+      - **truth**: Three of the nine interior directories carry a README (`ieee/`, `ieee/papers/`, `library/`); `ieee/reading/`, `interval/`, `library/reading/`, `library/text/`, `standards/` and `standards/extracted/` carry none.
+      - **evidence**: `git ls-tree -r --name-only f2d5b37 L7/provenance/sources/staging-records | grep README` returns README.md, STAGING_README.md, ieee/README.md, ieee/papers/README.md, library/README.md and nothing else. `git ls-tree -r -d --name-only f2d5b37 L7/provenance/sources/staging-records` lists the nine interior directories.
+      - **exact_fix**: Replace the sentence with: "Three interior directories carry their own READMEs from the earlier layout (`ieee/`, `ieee/papers/`, `library/`); the other six (`ieee/reading/`, `interval/`, `library/reading/`, `library/text/`, `standards/`, `standards/extracted/`) carry none. None is re-gated here."
+      - **skeptic**: L7/provenance/sources/staging-records/0.md:8 says "The interior directories carry their own READMEs from the earlier layout and are not re-gated here." `git ls-tree -r -d --name-only f2d5b37 L7/provenance/sources/staging-records` lists nine interior directories: ieee, ieee/papers, ieee/reading, interval, library, library/reading, library/text, standards, standards/extracted. The file listing shows READMEs only at the root (README.md, STAGING_README.md) and at ieee/README.md, ieee/papers/README.md and library/README.md. Six interior directories carry no README. This is distinct from the already-known item (no 0.md sheets in those nine folders): the sheet's claim about READMEs is itself false for six of them.
+    - item 32
+      - **batch**: b05-provenance
+      - **id**: b05-11
+      - **kind**: CONTRADICTION
+      - **sheet**: L7/provenance/sources/staging-records/0.md
+      - **line**: 30
+      - **sheet_says**: [source text withheld from the public copy]
+      - **truth**: The condition is stated at `L7/governance/copyright/` (line 43 of its sheet), not at `L7/governance/controlled/`, which holds nothing.
+      - **evidence**: L7/governance/controlled/0.md:32: "Nothing filed directly. ... all of them are stated at `L7/governance/copyright/`, the one place." L7/governance/copyright/0.md:43 states the condition ("IL-001-R2 class-2 hold-private: the 31 WSU-licensed IEEE PDFs and their reading captures — "quotations travel; the files do not""), and :18 says "no README, sheet, ledger, or binding record restates a copyright rule; each names this directory". L7/governance/0.md:32 and README.md:9 name `copyright/` as the one place. The pinned commit changed only the folder name in this line (restrictions to controlled).
+      - **exact_fix**: Replace line 30 with: "- WSU-route material is IL-001-R2 class-2 hold-private: quotations travel, files do not (`L7/governance/copyright/`, the one place)."
+      - **skeptic**: L7/provenance/sources/staging-records/0.md:30 says "WSU-route material is IL-001-R2 class-2 hold-private: quotations travel, files do not (`L7/governance/controlled/`)." L7/governance/controlled/0.md:32 says nothing is filed there and that every restriction is stated at `L7/governance/copyright/`, the one place; L7/governance/copyright/0.md:43 is where the condition is stated ("IL-001-R2 class-2 hold-private: the 31 WSU-licensed IEEE PDFs and their reading captures — "quotations travel; the files do not""), and copyright/0.md:18 says each sheet names that directory. The diff of the pinned commit changed only the folder name in this line (restrictions to controlled), so the pointer leads to a position that states nothing. Same contradiction as b05-08, on a different sheet.
+    - item 33
+      - **batch**: b05-provenance
+      - **id**: b05-12
+      - **kind**: MISFILED
+      - **sheet**: L7/provenance/sources/0.md
+      - **line**: 33, 43
+      - **sheet_says**: Does not hold (line 33): "the source text or object itself — when bound, `L7/peering/public/ingress/peer-1/object-1/` or `L7/peering/private/ingress/peer-1/object-1/` (NO EDIT, NO DELETE); otherwise it stays with its owner". Holdings (line 43): "`library/text/Ferreira_break-glass-access-control.numbered.txt` is a full-text copy whose licence status is to be recorded before it is cited as held."
+      - **truth**: A full-text copy of a source (Ferreira et al.) sits under `L7/provenance/sources/staging-records/library/text/`, while the sheet's Does-not-hold list and the specification's author note place source text with its owner (`aybllc/l6`, LEDGER row PR-020) or, if bound, at `L7/peering/private/ingress/peer-1/object-1/`.
+      - **evidence**: First lines of the object: "[source text withheld from the public copy] ...". LEDGER.md:6: "**This directory holds no source files.**" LEDGER.md:77: PR-020 at `library/journals/preprints/how-to-break-access-control-controlled-manner-ferreira.pdf`, commit `e4f0d5c`. The specification's author note: "no source file lives in it". The staging sheet's Object line (staging-records/0.md:3) says "not sources themselves". L7/governance/copyright/0.md:45 calls the file "a full-text copy of a published paper whose licence status is not yet recorded". L8/L6/history/harmonization-2026-09-05.md:94 lists its licence status as an open owner decision.
+      - **exact_fix**: No sheet text to correct; placement is the owner's decision.
+      - **skeptic**: The observation is accurate. L7/provenance/sources/0.md:33 lists under Does not hold "the source text or object itself — when bound, ... `L7/peering/private/ingress/peer-1/object-1/` (NO EDIT, NO DELETE); otherwise it stays with its owner". `staging-records/library/text/Ferreira_break-glass-access-control.numbered.txt` exists at the commit (21,803 bytes, 485 lines); its first lines are "[source text withheld from the public copy] ...", i.e. the text of the paper. LEDGER.md:6 says "**This directory holds no source files.**" and row PR-020 (line 77) points to the paper in `aybllc/l6` at `e4f0d5c`. The specification's author note (line 881) says of a consuming repository "no source file lives in it". The sheet (line 43), L7/governance/copyright/0.md:45 and L8/L6/history/harmonization-2026-09-05.md (open owner decisions) already flag the file's licence status, but none says it sits against the Does-not-hold list. Owner's decision, not a text defect.
+    - item 34
+      - **batch**: b05-provenance
+      - **id**: b05-13
+      - **kind**: MISFILED
+      - **sheet**: L7/provenance/sources/0.md
+      - **line**: 43
+      - **sheet_says**: "`interval/DECORATIONS_2026-08-04.md` is L3 by content (an owner extraction)". The staging sheet says the same at L7/provenance/sources/staging-records/0.md:19: "L3 by content; an owner extraction candidate."
+      - **truth**: By both sheets' own words the file is L3 content held under an L7 provenance position; its candidate home is `L8/L3/engineering-mathematics/uncertainty/`, pending the owner's extraction decision.
+      - **evidence**: The file's title: "[source text withheld from the public copy]"; it maps the standard's decorations onto the corpus's transformation-path obligation. L8/L3/engineering-mathematics/uncertainty/0.md:35: "Candidate (owner's call): `L7/provenance/sources/staging-records/interval/DECORATIONS_2026-08-04.md`." L8/L3/0.md:92 says the same. L8/L6/history/harmonization-2026-09-05.md section 5 lists it under "Extract and register".
+      - **exact_fix**: No sheet text to correct; placement is the owner's decision.
+      - **skeptic**: The observation is accurate. L7/provenance/sources/0.md:43 says "`interval/DECORATIONS_2026-08-04.md` is L3 by content (an owner extraction)" and staging-records/0.md:19 says "L3 by content; an owner extraction candidate." The file's title is "[source text withheld from the public copy]" and it maps the standard's decorations onto the corpus's transformation-path obligation, which is not a source identity or version reference (the specification's row for provenance/sources/, line 852). L8/L3/engineering-mathematics/uncertainty/0.md:35 names it as "Candidate (owner's call)", L8/L3/0.md:92 lists it among candidate L3 objects not yet extracted, and L8/L6/history/harmonization-2026-09-05.md section on open owner decisions lists it under "Extract and register" (L3). Already recorded as open; an observation only.
+    - item 35
+      - **batch**: b05-provenance
+      - **id**: b05-14
+      - **kind**: MISFILED
+      - **sheet**: L7/provenance/sources/0.md
+      - **line**: 36, 37, 43
+      - **sheet_says**: Does not hold (lines 36-37): "copyright, licence, or restriction conditions on the source — `L7/governance/copyright/`, the one place" and "the internal history of when a source was adopted, corrected, or dropped — `L8/L6/history/`". Holdings (line 43): "`ieee/README.md` and `ieee/papers/README.md` are licence standing and watermark manifest (`L7/governance/`) ... `standards/SOURCE_LEDGER.md` carries both licence status (`L7/governance/licensing/`) and the incident chain IL-001..IL-004 (`L8/L6/history/`)".
+      - **truth**: Three files under staging-records carry licence standing and one carries the IL-001..IL-004 incident history, content the sheet's own Does-not-hold list assigns to `L7/governance/copyright/` and `L8/L6/history/`; they are kept in place by design and cited from those positions.
+      - **evidence**: staging-records/ieee/README.md:7: "## [source text withheld from the public copy]". staging-records/ieee/papers/README.md:5 (Watermark column) and :11 ("**Licence:**"). staging-records/standards/SOURCE_LEDGER.md headings at lines 14, 56, 94, 122 (IL-001 to IL-004) and 191 ("LICENCE AND PERSONAL-DATA NOTICE"). They are cited from L7/governance/copyright/0.md:39 and :43 and from L8/L6/0.md:91. L8/L6/history/harmonization-2026-09-05.md:103 says they were deliberately left: "Not changed: the quarantine and licence records under `L7/provenance/sources/staging-records/`, which are history".
+      - **exact_fix**: No sheet text to correct; placement is the owner's decision.
+      - **skeptic**: The observation is accurate. L7/provenance/sources/0.md:36-37 lists under Does not hold "copyright, licence, or restriction conditions on the source — `L7/governance/copyright/`, the one place" and "the internal history of when a source was adopted, corrected, or dropped — `L8/L6/history/`", while its Holdings (line 43) say `ieee/README.md` and `ieee/papers/README.md` are "licence standing and watermark manifest" and `standards/SOURCE_LEDGER.md` "carries both licence status ... and the incident chain IL-001..IL-004". Confirmed in the files: staging-records/ieee/README.md:7 "## [source text withheld from the public copy]"; ieee/papers/README.md:5 (Watermark column) and :11 ("**Licence:**"); standards/SOURCE_LEDGER.md headings at 14 (IL-001), 56 (IL-002), 94 (IL-003), 122 (IL-004), 152 (IL-001-R2) and 191 ("LICENCE AND PERSONAL-DATA NOTICE"). The arrangement is deliberate: L7/governance/copyright/0.md:37 says "Nothing is filed directly; the conditions are stated here once and cited from the records that carry them", and the history record says the quarantine and licence records under staging-records were not changed. Note also that line 43 itself routes SOURCE_LEDGER's licence status to `L7/governance/licensing/` while line 36 says copyright is the one place.
+    - item 36
+      - **batch**: b05-provenance
+      - **id**: b05-15
+      - **kind**: MISFILED
+      - **sheet**: L7/provenance/sources/0.md
+      - **line**: 35, 43
+      - **sheet_says**: Does not hold (line 35): "what the source says in comparison with local work — `L8/L5/research/`". Holdings (line 43) calls `ieee/FINDINGS_2026-08-04.md` and `library/FINDINGS_2026-08-04.md` "reading captures under the reading protocol". The staging sheet (staging-records/0.md:12) says "They are not L5 findings".
+      - **truth**: Both FINDINGS files contain numbered findings that set what the sources say against the corpus's own claims, which line 35 of the sheet assigns to `L8/L5/research/`; the routing plan and the staging sheet deliberately class them as reading provenance instead.
+      - **evidence**: staging-records/library/FINDINGS_2026-08-04.md, FINDING 1: "[source text withheld from the public copy]**". staging-records/library/README.md:25 describes its file as "[source text withheld from the public copy]:189 records the contrary reading ("not L5 findings").
+      - **exact_fix**: No sheet text to correct; placement is the owner's decision.
+      - **skeptic**: The observation is accurate. L7/provenance/sources/0.md:35 lists under Does not hold "what the source says in comparison with local work — `L8/L5/research/`"; its Holdings (line 43) class `ieee/FINDINGS_2026-08-04.md` and `library/FINDINGS_2026-08-04.md` as "reading captures under the reading protocol", and staging-records/0.md:12 says "They are not L5 findings". The files themselves compare sources with the corpus: staging-records/ieee/FINDINGS_2026-08-04.md has "## [source text withheld from the public copy]**"; staging-records/library/README.md describes its FINDINGS file as "[source text withheld from the public copy]". `L8/L5/research/findings/` exists and holds two like-dated files (OVERRIDE_NECESSITY_2026-08-04.md, SEGREGATION_AND_FORGETTING_2026-08-04.md). The contrary classification was made deliberately in L8/L6/history/7LM_ROUTING_PLAN_2026-09-05.md ("provenance of what was read, with "Bears on" fields; not L5 findings"), so this is for the owner.
+    - item 37
+      - **batch**: b06-interior-root-L0
+      - **id**: b06-01
+      - **kind**: STALE
+      - **sheet**: L8/0.md
+      - **line**: 137
+      - **sheet_says**: `L8/L6/` (the master ledger, three session ledgers, the L6 record of this pass, and the retired 2026-08-14 layout). What did not move in that pass: `common/`, `intake/claude/`, and `manuscripts/definitions/README.md` and `REGISTER.md` (0-byte, governed by AU-NORM-01).
+      - **truth**: "this pass" means the instantiation of 2026-09-05; the record so named, `L8/L6/history/harmonization-2026-09-05.md`, has since recorded the passes of 2026-09-06, 2026-09-07, 2026-09-12 and 2026-11-11 (§8-§13). What "did not move" did not move in the 2026-09-05 pass only (record §4d); none of `common/`, `intake/`, `manuscripts/` is in the tree at f2d5b37.
+      - **evidence**: git show f2d5b37:L8/L6/history/harmonization-2026-09-05.md, line 3: "[source text withheld from the public copy] instantiation of the harmonized Seven-Layer Model (7LM) canonical topology in this repository ... 2026-09-05"; its headings: "## 8. 2026-09-06", "## 9. 2026-09-06", "## 10. 2026-09-07", "## 11. 2026-09-07", "## 12. 2026-09-12 — the rename pass", "## 13. 2026-11-11". git ls-tree --name-only f2d5b37 gives .github, .gitignore, L7, L8, README.md only. L8/L6/history/sheets-2026-09-07.md lines 99-101 show the words " at HEAD of this pass" were pulled out of this sheet (then `USO/0.md`) on 2026-09-07 as the sheet's past; these two phrases were left behind.
+      - **exact_fix**: In L8/0.md line 137 replace "the L6 record of this pass" with "the L6 record of the pass of 2026-09-05 and of the passes since, `harmonization-2026-09-05.md`", and replace "What did not move in that pass:" with "What did not move in the pass of 2026-09-05:".
+      - **skeptic**: Checked `git show f2d5b37:L8/0.md` line 137: the words are there exactly ("the L6 record of this pass, and the retired 2026-08-14 layout). What did not move in that pass: `common/`, `intake/claude/`, and `manuscripts/definitions/README.md` and `REGISTER.md`"). No pass is named in the Holdings paragraph before these words; the only pass the sheet names earlier is "the rename pass of 12 September 2026" (line 8). The record `L8/L6/history/harmonization-2026-09-05.md` line 3 says it is "[source text withheld from the public copy] instantiation ... 2026-09-05", and its headings run on to "## 8. 2026-09-06", "## 9", "## 10. 2026-09-07", "## 11", "## 12. 2026-09-12 — the rename pass", "## 13. 2026-11-11". Record §4d (lines 76-81) confirms that `common/`, `intake/claude/` and the two 0-byte files stayed in place in the 2026-09-05 event, so the sentence is true only of that pass; the root at the commit holds only .github, .gitignore, L7, L8, README.md. `sheets-2026-09-07.md` shows " at HEAD of this pass" was pulled out of this sheet (then `USO/0.md`) on 2026-09-07, leaving this deictic behind. "this pass" is the task's own example of STALE. The second clause ("that pass") is not independently false; it becomes correct once the first names its pass.
+    - item 38
+      - **batch**: b06-interior-root-L0
+      - **id**: b06-02
+      - **kind**: UNLISTED
+      - **sheet**: L8/0.md
+      - **line**: 137
+      - **sheet_says**: `L8/L6/` (the master ledger, three session ledgers, the L6 record of this pass, and the retired 2026-08-14 layout)
+      - **truth**: `L8/L6/history/` holds two records, `harmonization-2026-09-05.md` and `sheets-2026-09-07.md`; L8/0.md names only the first. Observation, for the owner to decide.
+      - **evidence**: git ls-tree -r -l f2d5b37 L8/L6/history lists 0.md, 7LM_ROUTING_PLAN_2026-09-05.md, LEDGER.md, LEDGER_2026-08-14_redeploy.md, LEDGER_2026-08-14_reorganisation.md, LEDGER_2026-08-16_l6-close-and-normalization.md, harmonization-2026-09-05.md, sheets-2026-09-07.md (8907). grep -c 'sheets-2026-09-07' on L8/0.md at the commit gives 0. L8/L6/history/0.md:38 lists the file. The specification's line for this repository reads "L6: the master index, three session ledgers, the two records, two retired layouts."
+      - **exact_fix**: In L8/0.md line 137, after "three session ledgers," insert "the record `sheets-2026-09-07.md` of what the sheets carried about their past," (compatible with the b06-01 replacement).
+      - **skeptic**: Factually accurate observation. `git ls-tree -r -l f2d5b37 L8/L6/history` lists `sheets-2026-09-07.md` (8907 bytes), headed "# What the sheets carried about their past". `grep -c -F 'sheets-2026-09-07'` on L8/0.md at the commit gives 0. The sheet's by-layer list for L6 reads "the master ledger, three session ledgers, the L6 record of this pass, and the retired 2026-08-14 layout" (one record, singular); the routing plan and `layout-2026-09-06/` are named later in the same paragraph, this file nowhere. `L8/L6/history/0.md` Holdings lists it, and the specification line 956 for this repository reads "L6: the master index, three session ledgers, the two records, two retired layouts." Caveat for the owner: the file is in `L8/L6/history/`, two levels below the sheet's own directory; it counts here only because this sheet's Holdings enumerates what each layer holds.
+    - item 39
+      - **batch**: b06-interior-root-L0
+      - **id**: b06-03
+      - **kind**: UNLISTED
+      - **sheet**: L8/0.md
+      - **line**: 137
+      - **sheet_says**: `L8/L4/work/` (drafts, chat transcripts, a session record, three requirements extractions)
+      - **truth**: `L8/L4/work/` holds three drafts, two chat transcripts, one session record, the branch-manuscript rules (`writing/branch/README.md`), three requirements extractions, and one deep-research run with its two exports. Observation, for the owner to decide.
+      - **evidence**: git ls-tree -r -l f2d5b37 L8/L4/work (sizes as given). grep -c -i 'deep-research' on L8/0.md at the commit gives 0. L8/L4/work/computation/0.md:41-42 lists the run and its exports; L8/L4/work/writing/0.md:36 lists `branch/README.md`. Record section 8, second table row: "`common/durable/orphan/deep-research-auditonomous.md` and the two `autonomouos-deep-research-*.odt` exports | `USO/l4/work/computation/`". The specification's line for this repository reads "L4: drafts, chat transcripts, a session record, three requirements extractions, and one deep-research run with its exports."
+      - **exact_fix**: In L8/0.md line 137 replace "`L8/L4/work/` (drafts, chat transcripts, a session record, three requirements extractions)" with "`L8/L4/work/` (drafts, chat transcripts, a session record, the branch-manuscript rules, three requirements extractions, and one deep-research run with its two exports)".
+      - **skeptic**: Factually accurate observation. `git ls-tree -r -l f2d5b37 L8/L4/work` shows, besides the three drafts, two chat .docx, one session record and three requirements extractions: `computation/deep-research-auditonomous.md` (46665), `computation/autonomouos-deep-research-auditonomopus-sources.odt` (253111), `computation/autonomouos-deep-research-auditonomous-activity.odt` (74397) and `writing/branch/README.md` (878, the branch-manuscript rules). `grep -c -i 'deep-research'` on L8/0.md gives 0 and the sheet does not mention `branch/`. The sheet's list for L4 is "(drafts, chat transcripts, a session record, three requirements extractions)"; the later sentence says only that files of the dissolved `common/` were filed at `L8/L4/work/computation/`, without saying what they are. `L8/L4/work/computation/0.md` and `L8/L4/work/writing/0.md` Holdings list all four; specification line 956: "L4: drafts, chat transcripts, a session record, three requirements extractions, and one deep-research run with its exports." Same scope caveat as b06-02: the files are in sub-directories of `L8/L4/work/`, enumerated by this sheet.
+    - item 40
+      - **batch**: b06-interior-root-L0
+      - **id**: b06-04
+      - **kind**: WRONG-FACT
+      - **sheet**: L8/L0/ontology/0.md
+      - **line**: 33
+      - **sheet_says**: By reference: `L8/L1/state-space/AUDITON_ENVELOPE.md` §0–0b states the ontological distinctions of the auditon — the maximal envelope (not the minimal unit), platform given versus envelope deliverable, and the "invent nothing" design rule — inside a file whose operative content is L1
+      - **truth**: The maximal-envelope statement (lines 12-16) and the "invent nothing" design rule (line 18) are in the file's unnumbered opening, above "## 0." (line 28); platform given versus envelope deliverable is in §0a (line 51). The same locator is repeated at L8/L0/0.md:96 and L8/L1/state-space/0.md:37.
+      - **evidence**: git show f2d5b37:L8/L1/state-space/AUDITON_ENVELOPE.md, by line: 12 "**[source text withheld from the public copy]"; 13 "It is the **maximal** one"; 18 "**Design rule, binding:** *invent nothing.*"; 28 "## 0. THE SEPARATION PRINCIPLE"; 46 "## 0a."; 51 "**[source text withheld from the public copy].**"; 86 "## 0b."; 117 "## 1. THE COMPARTMENT MAP". grep -n -i 'maximal|minimal|invent' finds no occurrence between lines 28 and 116. The same locator stands at L8/L0/0.md:96 (b06-05) and L8/L1/state-space/0.md:37.
+      - **exact_fix**: In L8/L0/ontology/0.md line 33 replace "`L8/L1/state-space/AUDITON_ENVELOPE.md` §0–0b states the ontological distinctions of the auditon" with "`L8/L1/state-space/AUDITON_ENVELOPE.md`, in its opening statement and §0–0b, states the ontological distinctions of the auditon".
+      - **skeptic**: Sheet words confirmed at L8/L0/ontology/0.md line 33. In `L8/L1/state-space/AUDITON_ENVELOPE.md` at f2d5b37: line 12 "[source text withheld from the public copy]", line 13 "It is the **maximal** one", line 18 "**Design rule, binding:** *invent nothing.*" all stand in the unnumbered opening; the heading "## 0. THE SEPARATION PRINCIPLE" is at line 28, "## 0a." at 46, "## 0b." at 86, "## 1." at 117. A grep for maximal|minimal|invent finds nothing between lines 28 and 116. Only "**[source text withheld from the public copy].**" (line 51, §0a) is inside §0–0b. So two of the three distinctions the sheet attributes to §0–0b are stated before §0 begins; a reader following the locator into §0 finds the separation-principle table instead. Minor, but a determinable false locator and not a matter of wording. All three statements are in the file and "invent nothing" is verbatim.
+    - item 41
+      - **batch**: b06-interior-root-L0
+      - **id**: b06-05
+      - **kind**: WRONG-FACT
+      - **sheet**: L8/L0/0.md
+      - **line**: 96
+      - **sheet_says**: - `ontology/` — empty; the ontological distinctions of the auditon (§0–0b of `L8/L1/state-space/AUDITON_ENVELOPE.md`) are cited, not moved.
+      - **truth**: The cited ontological distinctions stand in the opening statement (lines 12-18) and §0a (line 51) of `L8/L1/state-space/AUDITON_ENVELOPE.md`, not wholly within §0–0b (lines 28-116).
+      - **evidence**: As b06-04: git show f2d5b37:L8/L1/state-space/AUDITON_ENVELOPE.md lines 12, 13, 18 (opening), 28 ("## 0."), 51 (§0a).
+      - **exact_fix**: In L8/L0/0.md line 96 replace "(§0–0b of `L8/L1/state-space/AUDITON_ENVELOPE.md`)" with "(the opening statement and §0–0b of `L8/L1/state-space/AUDITON_ENVELOPE.md`)".
+      - **skeptic**: Sheet words confirmed at L8/L0/0.md line 96: "`ontology/` — empty; the ontological distinctions of the auditon (§0–0b of `L8/L1/state-space/AUDITON_ENVELOPE.md`) are cited, not moved." The distinctions that are cited are the three named at L8/L0/ontology/0.md:33; two of them (maximal not minimal, lines 12-13; "invent nothing", line 18) stand above "## 0." (line 28) of the envelope file, and only one (line 51, §0a) is inside §0–0b. The locator therefore does not cover what is cited. It is the same minor locator error as b06-04, carried into a second sheet; it stands or falls with b06-04 and should be corrected together with it.
+    - item 42
+      - **batch**: b06-interior-root-L0
+      - **id**: b06-06
+      - **kind**: WRONG-FACT
+      - **sheet**: L8/L0/semantics/definitions/0.md
+      - **line**: 34
+      - **sheet_says**: Appendix C's quotations of the root *autonomous* from AHD, Perseus, RFC 4949, NIST CSRC, and the IEEE 7001 scope page are therefore not a definition source for this repository
+      - **truth**: Appendix C quotes the root *autonomous* from AHD and Perseus only (lines 281-296; the same two stand in the entry's ETYMOLOGY paragraph, line 18). NIST CSRC, RFC 4949, [source text withheld from the public copy] IEEE 7001 scope page are quoted for neighbouring concepts ('audit trail', 'security audit trail', 'firmware', accountability and transparency of autonomous systems).
+      - **evidence**: git show f2d5b37:L8/L0/semantics/definitions/AUDITONOMOUS_DEFINITION.md, entry headers by line: 281 "Root 1 — 'autonomous' definition (institutional dictionary)", 285 "Root 1 — 'autonomous' etymology", 289 "Root 1 supplement — the prefix 'auto-'", 293 "Root 1 classical anchor — Greek adjective autonomos", 297/301/305 "Root 2 — 'audit' ...", 309 and 313 "Neighboring established concept — 'audit trail' ..." (NIST CSRC), 317 "... '[source text withheld from the public copy]" (RFC 4949), 321 and 325 (NIST AI 100-1), 329 "... [source text withheld from the public copy]", 333 "... 'firmware'" (RFC 4949). The sheet's sentence descends from the routing plan (L8/L6/history/7LM_ROUTING_PLAN_2026-09-05.md:147), unreviewed model output.
+      - **exact_fix**: In L8/L0/semantics/definitions/0.md line 34 replace "from AHD, Perseus, RFC 4949, NIST CSRC, and the IEEE 7001 scope page" with "from AHD and Perseus". (Smallest change that makes the sentence true; the auditor's longer replacement, which adds a sentence on the neighbouring-concept quotations, is also accurate.)
+      - **skeptic**: Sheet words confirmed at L8/L0/semantics/definitions/0.md line 34: "Appendix C's quotations of the root *autonomous* from AHD, Perseus, RFC 4949, NIST CSRC, and the IEEE 7001 scope page". Appendix C of `AUDITONOMOUS_DEFINITION.md` runs from line 263 to 348. Its entries on the root are "Root 1 — 'autonomous' definition" (281, AHD), "Root 1 — 'autonomous' etymology" (285, AHD), "Root 1 supplement — the prefix 'auto-'" (289, AHD) and "Root 1 classical anchor — Greek adjective autonomos" (293, Perseus / Liddell-Scott). The NIST CSRC entries (309, 313) quote 'audit trail'; RFC 4949 (317, 333) quotes 'security audit trail' and 'firmware'; the IEEE 7001 entry (329) is a "Neighboring established concept" whose quoted scope sentence is about levels of transparency of autonomous systems and does not define the word. Appendix C also quotes NIST AI 100-1 (321, 325), which the sheet does not name. So three of the five sources named are not quotations of the root *autonomous*. The auditor's line numbers and headers are accurate.
+    - item 43
+      - **batch**: b06-interior-root-L0
+      - **id**: b06-07
+      - **kind**: DEAD-PATH
+      - **sheet**: L8/L0/semantics/definitions/0.md
+      - **line**: 36
+      - **sheet_says**: Two statements of the coined concept from the intake corpus ("[source text withheld from the public copy]…", `Auditonomous_Theory_Master_Archive.md:37`, and the one-sentence fusion at `:51`) stand verbatim in [source text withheld from the public copy]
+      - **truth**: `Auditonomous_Theory_Master_Archive.md` is not in the tree at f2d5b37; its former path was `intake/manuscript/Auditonomous_Theory_Master_Archive.md`, in the intake corpus removed from HEAD at `8c98573` (in git history only). Both statements stand verbatim in `L8/L6/retired/layout-2026-08-14/README.md`.
+      - **evidence**: git ls-tree -r --name-only f2d5b37 | grep -c -i 'Master_Archive' gives 0; the only path containing intake/ is L8/L6/retired/layout-2026-09-06/intake/README.md. Record line 19: "2026-08-15 | Prune: root `AUDITONOMOUS.md`, `AUTONOMOUS.md`, `FREEZE.*`, `intake/` corpus, `common/toolkits/ommp/` removed from HEAD; survive in git history. | `8c98573`". L8/L6/history/sheets-2026-09-07.md:127 holds the words pulled out of this sentence on 2026-09-07: "both from the intake corpus retired from HEAD at `8c98573`". Retired README line 10: "— `intake/manuscript/Auditonomous_Theory_Master_Archive.md:37`".
+      - **exact_fix**: In L8/L0/semantics/definitions/0.md line 36 replace "from the intake corpus (" with "from the former intake corpus, removed from HEAD at `8c98573` and in git history only (", and replace "`Auditonomous_Theory_Master_Archive.md:37`" with "formerly `intake/manuscript/Auditonomous_Theory_Master_Archive.md:37`".
+      - **skeptic**: Sheet words confirmed at line 36: the statements are said to be "from the intake corpus", located at `Auditonomous_Theory_Master_Archive.md:37` and `:51`. `git ls-tree -r --name-only f2d5b37 | grep -i -E 'Master_Archive|intake'` returns only `L8/L6/retired/layout-2026-09-06/intake/README.md`; there is no such file and no intake corpus at the commit, and the sheet does not present either as former. The record's chronology (harmonization-2026-09-05.md line 19) says the `intake/` corpus [source text withheld from the public copy]; `sheets-2026-09-07.md` line 127 holds the words "both from the intake corpus retired from HEAD at `8c98573`" that were pulled out of this sentence, which is what left the locator without its qualifier. The rest of the sentence is true: `L8/L6/retired/layout-2026-08-14/README.md` lines 6-8 and 14-16 carry both statements, with the locators at lines 10 ("`intake/manuscript/Auditonomous_Theory_Master_Archive.md:37`") and 18 ("`…Master_Archive.md:51`").
+    - item 44
+      - **batch**: b06-interior-root-L0
+      - **id**: b06-08
+      - **kind**: CONTRADICTION
+      - **sheet**: L8/L0/semantics/definitions/0.md
+      - **line**: 34
+      - **sheet_says**: This sheet, line 34: "the root is bound at `L7/peering/public/ingress/peer-1/object-1/` and is named, not copied. ... whether they remain as etymology of the coinage's second element [source text withheld from the public copy]/0.md:98: "it is bound at `L7/peering/public/ingress/peer-1/object-1/` and named from here." Against L7/peering/public/ingress/peer-1/object-1/0.md:34: "`L8/L0/semantics/definitions/AUDITONOMOUS_DEFINITION.md` is the locally authored delta over this root; it names this binding and does not copy the peer definition."
+      - **truth**: `AUDITONOMOUS_DEFINITION.md` contains no reference to the binding, to L7, to the peer repository or to the peer's AUTONOMOUS.md. The binding is named from the sheets `L8/L0/0.md` (line 98) and `L8/L0/semantics/definitions/0.md` (line 34), not from the definition file.
+      - **evidence**: git show f2d5b37:L8/L0/semantics/definitions/AUDITONOMOUS_DEFINITION.md | grep -n -i -E 'ingress|object-1|peer-1|L7|aybllc|peering|binding|AUTONOMOUS\.md|0504961' returns nothing (exit 1); the word 'peer' does not occur in the file. Line 18 of the file: "[source text withheld from the public copy]\")".
+      - **exact_fix**: In L7/peering/public/ingress/peer-1/object-1/0.md line 34 replace "it names this binding and does not copy the peer definition" with "it does not copy the peer definition and does not itself name this binding; the binding is named from the sheets `L8/L0/0.md` and `L8/L0/semantics/definitions/0.md`".
+      - **skeptic**: The underlying fact is real, but it is a WRONG-FACT in the L7 sheet more than a contradiction between sheets. `L7/peering/public/ingress/peer-1/object-1/0.md` line 34 does say: "`L8/L0/semantics/definitions/AUDITONOMOUS_DEFINITION.md` is the locally authored delta over this root; it names this binding and does not copy the peer definition." A grep of the definition file at f2d5b37 for ingress|object-1|peer-1|L7|aybllc|peering|binding|AUTONOMOUS\.md|0504961 returns nothing; the only occurrence of "peer" is "peer-reviewed" at line 347 (the auditor's side remark that the word does not occur at all is slightly off, immaterial). The file takes its etymology of *autonomous* from AHD and Perseus (line 18). So "it names this binding" is false. The two L0 sheets state nothing false: L8/L0/0.md:98 says the root is "named from here" (the sheet), and definitions/0.md:34 says "named, not copied" without an agent and leaves a citation through the binding as "the owner's edit", which implies the file carries none. The L0 sheets need no change; the auditor's second suggested replacement is a wording clarification, not required. The L7 sheet is outside this batch; the fix belongs there.
+    - item 45
+      - **batch**: b07-L1-L2-L3
+      - **id**: b07-1
+      - **kind**: STALE
+      - **sheet**: L8/L1/0.md
+      - **line**: 54
+      - **sheet_says**: "(The spec prints the four headings below at H2; their depth is reduced here only to nest under this sheet's section. Words are unchanged.)"
+      - **truth**: The current specification prints the four headings at H3 ("###", spec lines 389, 400, 410, 420), the same depth the sheet uses (lines 56, 67, 77, 87). They were H2 only before the specification was normalized in 7lm commit fa584b8 on 2026-09-05. The words under the headings are unchanged (only the two alternatives are numbered 1./2. in the specification and bulleted in the sheet).
+      - **evidence**: Spec at /home/user/7lm origin/main, L8/L4/work/writing/7lm-harmonized-architecture-specification.md: line 389 "### State-space boundary — leaving the declared state space", line 400 "### Mathematical permission is not automatic scientific or engineering permission", line 410 "### No exotic capability gets a free explanatory advantage", line 420 "### Observable science is bounded without forbidding speculation". 7lm commit fa584b8 (2026-09-05) diff shows "-## State-space boundary — leaving the declared state space" / "+### State-space boundary — leaving the declared state space". The sheet's own lines 56, 67, 77, 87 are "###". (The words do match; the only other difference is that the spec's two alternatives at lines 394-395 are numbered "1."/"2." where the sheet's lines 62-63 use "-" bullets.)
+      - **exact_fix**: L8/L1/0.md line 54, replace the whole line with: (The spec prints the four headings below at H3, as here. Words are unchanged.)
+      - **skeptic**: Sheet words confirmed at f2d5b37:L8/L1/0.md line 54: "(The spec prints the four headings below at H2; their depth is reduced here only to nest under this sheet's section. Words are unchanged.)". The sheet's own four headings are at lines 56, 67, 77, 87, all "###". The current specification (7lm origin/main:L8/L4/work/writing/7lm-harmonized-architecture-specification.md) prints the same four headings at lines 389, 400, 410, 420, all "###" (H3). So nothing is reduced; the depths are identical. It is STALE rather than never-true: 7lm commit fa584b8 (2026-09-05, "Normalize the specification into canonical Markdown...") shows "-## State-space boundary..." / "+### State-space boundary..." and the same H2-to-H3 change for the other three headings; every later revision of the specification at its current path (c699e3e, 20ee34f, 3a29c58, 606d4b3, bbb04dd) has them at H3. I compared the body text under the four headings (sheet 56-93 against spec 389-426): the words are identical; the only difference is the list markers (spec lines 395-396 are "1." / "2.", sheet lines 62-63 are "-"), so "Words are unchanged" stands. Not a wording matter: the sentence asserts a checkable fact about the specification's heading depth and that fact is false now.
+    - item 46
+      - **batch**: b07-L1-L2-L3
+      - **id**: b07-2
+      - **kind**: WRONG-FACT
+      - **sheet**: L8/L3/0.md
+      - **line**: 92
+      - **sheet_says**: "§7.4 of `L8/L4/work/writing/sessions/SESSION_2026-08-05_AUDITON_ARCHITECTURE.md` (cell sizing, R ∝ (ρt)^¼, "recoverable, not zero")"
+      - **truth**: In L8/L4/work/writing/sessions/SESSION_2026-08-05_AUDITON_ARCHITECTURE.md at f2d5b37: cell sizing is in §3.1 (line 147), R ∝ (ρt)^¼ is in §4.3 (line 217), and only "recoverable, not zero" is in §7.4 (line 434). §9 (line 542) merely names cell size and the R law again.
+      - **evidence**: git show f2d5b37:L8/L4/work/writing/sessions/SESSION_2026-08-05_AUDITON_ARCHITECTURE.md: §7.4 is lines 409-442 ("### [source text withheld from the public copy]") and contains line 434 "[source text withheld from the public copy]*" but neither a cell-size statement nor the R law. Line 147 (under "### [source text withheld from the public copy]", line 142): "**Sizing the cell to \"one auditon over\"". Line 217 (under "### 4.3 The frogger rate", line 212): "> **[source text withheld from the public copy].**". Line 542 (§9): "`take ≤ give − 1`, cell size, `R ∝ (ρt)^¼`".
+      - **exact_fix**: L8/L3/0.md line 92, replace
+        §7.4 of `L8/L4/work/writing/sessions/SESSION_2026-08-05_AUDITON_ARCHITECTURE.md` (cell sizing, R ∝ (ρt)^¼, "recoverable, not zero")
+        with
+        §3.1 (cell sizing), §4.3 (R ∝ (ρt)^¼) and §7.4 ("recoverable, not zero") of `L8/L4/work/writing/sessions/SESSION_2026-08-05_AUDITON_ARCHITECTURE.md`
+      - **skeptic**: Sheet words confirmed at f2d5b37:L8/L3/0.md line 92: "§7.4 of `L8/L4/work/writing/sessions/SESSION_2026-08-05_AUDITON_ARCHITECTURE.md` (cell sizing, R ∝ (ρt)^¼, "recoverable, not zero")". I read the session file at the commit. §7.4 is lines 409-442 ("### [source text withheld from the public copy]", next heading "### 7.5" at line 443). It is about Goldberg's catastrophic/benign cancellation and contains line 434 "[source text withheld from the public copy]*"; it contains no cell-size statement and no R law (grep for ρt / sizing / cell size finds nothing in 409-442). Cell sizing is at line 147, under "### [source text withheld from the public copy]" (line 142): "**[source text withheld from the public copy] rate law is at line 217, under "### 4.3 The frogger rate" (line 212): "> **[source text withheld from the public copy].**" (also referred back to at line 234 in §4.5). §9 line 542 only lists them ("`take ≤ give − 1`, cell size, `R ∝ (ρt)^¼`"). So two of the three items the sheet locates in §7.4 are not there. This is a wrong locator inside a file of this repository, a checkable fact, not wording.
+    - item 47
+      - **batch**: b07-L1-L2-L3
+      - **id**: b07-3
+      - **kind**: WRONG-FACT
+      - **sheet**: L8/L1/state-space/0.md
+      - **line**: 50
+      - **sheet_says**: "\"origidity; certainty; intolerance\" — Reserved: \"Candidate L1 semantics preserved; topology remains unadjudicated.\" Given no home here; see `L8/L1/0.md`."
+      - **truth**: L8/L1/0.md at f2d5b37 says nothing about the reserved terms "origidity; certainty; intolerance". The reservation is stated only in the specification's reserved-terms row (spec line 989) and in L8/L1/state-space/0.md itself (lines 33 and 50).
+      - **evidence**: git -C /home/user/auditonomous grep -n -F origidity f2d5b37 -- L8/L1 returns only L8/L1/state-space/0.md:33 and :50; no hit in L8/L1/0.md (read in full, 111 lines; also no occurrence of "certainty" or "intolerance" there). Spec line 989: "| origidity; certainty; intolerance | Reserved | Candidate L1 semantics preserved; topology remains unadjudicated. |".
+      - **exact_fix**: L8/L1/state-space/0.md line 50, smallest change: replace "Given no home here; see `L8/L1/0.md`." with "Given no home here." (If a pointer is wanted, the auditor's wording is also true: "Given no home here; the reservation is the specification's own row and is not restated at `L8/L1/0.md`.")
+      - **skeptic**: Sheet words confirmed at f2d5b37:L8/L1/state-space/0.md line 50: "- \"origidity; certainty; intolerance\" — Reserved: \"Candidate L1 semantics preserved; topology remains unadjudicated.\" Given no home here; see `L8/L1/0.md`." The quoted cell is verbatim from the specification's reserved-terms row (spec line 989: "| origidity; certainty; intolerance | Reserved | Candidate L1 semantics preserved; topology remains unadjudicated. |"), so there is no misquote. The pointer, however, leads to nothing: `git grep -n -i -E 'origidity|certainty|intolerance|reserved|unadjudicated' f2d5b37 -- L8/L1` returns, among sheets, only L8/L1/state-space/0.md lines 33 and 50 (the only other hits are the word "uncertainty" in state-space/0.md:28 and in two held files). L8/L1/0.md (113 lines, read in full) has no mention of the three terms, of reservation, or of where they are housed. Across the whole tree outside L8/L6 the string "origidity" occurs only in those two lines of state-space/0.md, and `git log -S origidity` shows the count has not changed since the instantiating commit ccc0554, so L8/L1/0.md never carried it. The path itself exists, so this is not a DEAD-PATH; it is a cross-reference that tells the reader the parent sheet treats the subject when it does not, which is a false statement about what a sheet in this repository holds. (The scaffold's sheet at the same path has the identical sentence, but conformity with the scaffold is not the test.) I consider it real though at the lighter end: it is a pointer defect, not a count or a missing file.
+    - item 48
+      - **batch**: b08-L4
+      - **id**: b08-L4-01
+      - **kind**: WRONG-FACT
+      - **sheet**: L8/L4/work/computation/0.md
+      - **line**: 54
+      - **sheet_says**: "This branch may remain empty. Presence in the agnostic topology establishes admissible capability, not mandatory population; unused now does not mean removed. It is empty at present."
+      - **truth**: L8/L4/work/computation/ is not empty at f2d5b37: it holds six files besides its sheet (three requirements extractions, one deep-research run, and that run's two .odt exports), all six listed in the sheet's own Holdings at lines 38-42.
+      - **evidence**: git ls-tree -r -l f2d5b37 L8/L4/work/computation: autonomouos-deep-research-auditonomopus-sources.odt (253111), autonomouos-deep-research-auditonomous-activity.odt (74397), deep-research-auditonomous.md (46665), ieee-requirements-for-autonomouos.md (129617), iso-iec-requirements-for-autonomous.md (56208), nist-requirements-for-autonomouos.md (57042). Same sheet, lines 38-42, lists them.
+      - **exact_fix**: L8/L4/work/computation/0.md line 54: delete the final sentence "It is empty at present." so the bullet reads: "- This branch may remain empty. Presence in the agnostic topology establishes admissible capability, not mandatory population; unused now does not mean removed."
+      - **skeptic**: Sheet words confirmed at f2d5b37:L8/L4/work/computation/0.md:54: "- This branch may remain empty. Presence in the agnostic topology establishes admissible capability, not mandatory population; unused now does not mean removed. It is empty at present." `git ls-tree -r -l f2d5b37 L8/L4/work/computation` shows six files besides 0.md (the two .odt exports 253111 and 74397 bytes, deep-research-auditonomous.md 46665, and the three requirements extractions 129617 / 56208 / 57042). The same sheet's Holdings (lines 38-42) lists all six, so the sheet contradicts itself. The identical sentence at L8/L4/work/experiments/0.md:46 is true there (only 0.md is in that folder), which shows this one was carried over and not updated when files were filed. Not wording, not a known item.
+    - item 49
+      - **batch**: b08-L4
+      - **id**: b08-L4-02
+      - **kind**: CONTRADICTION
+      - **sheet**: L8/L4/0.md
+      - **line**: 122
+      - **sheet_says**: "- `work/computation/` — three requirements extractions as run."
+      - **truth**: L8/L4/work/computation/ holds six files at f2d5b37: three requirements extractions (IEEE, ISO/IEC, NIST) and one deep-research run (`deep-research-auditonomous.md`) with its citation export and activity log (two .odt files). L8/L4/0.md:122 names only the three extractions; L8/L4/work/computation/0.md:38-42 names all six.
+      - **evidence**: L8/L4/work/computation/0.md:41-42 lists `deep-research-auditonomous.md`, `autonomouos-deep-research-auditonomopus-sources.odt`, `autonomouos-deep-research-auditonomous-activity.odt` in addition to the three extractions at lines 38-40. ls-tree at f2d5b37 confirms six files. L8/0.md:137 says these were filed into `L8/L4/work/computation/` on 2026-09-06; L8/0.md:137 also still says "three requirements extractions" (outside this batch).
+      - **exact_fix**: L8/L4/0.md line 122, replace with: "- `work/computation/` — three requirements extractions as run; one deep-research run with its citation export and activity log."
+      - **skeptic**: Sheet words confirmed at f2d5b37:L8/L4/0.md:122: "- `work/computation/` — three requirements extractions as run." This is the layer sheet's Holdings account of the folder (the sibling lines enumerate writing in full and say experiments is "empty"), so it presents itself as the complete holding. The tree shows six files in L8/L4/work/computation/, and L8/L4/work/computation/0.md:38-42 lists six: the three extractions plus `deep-research-auditonomous.md` and the two `autonomouos-deep-research-*.odt` exports. The record (L8/L6/history/harmonization-2026-09-05.md:114) confirms the deep-research file and its two exports were filed to work/computation/ as "model output as run". Two sheets therefore state the holding of the same folder differently; the child sheet and the tree agree, the parent is short by three files.
+    - item 50
+      - **batch**: b08-L4
+      - **id**: b08-L4-03
+      - **kind**: CONTRADICTION
+      - **sheet**: L8/L4/work/0.md
+      - **line**: 40
+      - **sheet_says**: "- `work/computation/` — three requirements extractions as run."
+      - **truth**: L8/L4/work/computation/ holds six files at f2d5b37: three requirements extractions and one deep-research run with its two .odt exports. L8/L4/work/0.md:40 names only the three extractions; L8/L4/work/computation/0.md:38-42 names all six.
+      - **evidence**: L8/L4/work/computation/0.md:38-42 lists six files; git ls-tree -r --name-only f2d5b37 L8/L4/work/computation shows the six files plus 0.md.
+      - **exact_fix**: L8/L4/work/0.md line 40, replace with: "- `work/computation/` — three requirements extractions as run; one deep-research run with its citation export and activity log."
+      - **skeptic**: Sheet words confirmed at f2d5b37:L8/L4/work/0.md:40: "- `work/computation/` — three requirements extractions as run." Same fact and same evidence as b08-L4-02: the tree and L8/L4/work/computation/0.md:38-42 show six files (three extractions, the deep-research run, its two .odt exports). The Holdings block of work/0.md is a byte-for-byte copy of the block in L8/L4/0.md, so both carry the same undercount. It is a separate sheet and a separate line, so it is a separate real finding.
+    - item 51
+      - **batch**: b08-L4
+      - **id**: b08-L4-04
+      - **kind**: CONTRADICTION
+      - **sheet**: L8/L4/work/computation/0.md
+      - **line**: 38
+      - **sheet_says**: "The quoted content is peer-owned and WSU-licensed (class-2 hold-private, `L7/governance/controlled/`)"
+      - **truth**: The IL-001-R2 class-2 hold-private condition on WSU-route material is stated at L7/governance/copyright/ (0.md line 43), which that sheet and L7/governance/controlled/0.md:32 both call the one place; nothing is filed or stated at L7/governance/controlled/.
+      - **evidence**: L7/governance/controlled/0.md Holdings (line 32): "Nothing filed directly. Every restriction this repository is under derives from a copyright or licence condition, and all of them are stated at `L7/governance/copyright/`, the one place." L7/governance/copyright/0.md:43: "Every item obtained through the owner's institutional (WSU) access is IL-001-R2 class-2 hold-private: the 31 WSU-licensed IEEE PDFs and their reading captures". git grep -i 'class-2|hold-private' on L7/governance/controlled/0.md returns nothing.
+      - **exact_fix**: L8/L4/work/computation/0.md line 38: replace "(class-2 hold-private, `L7/governance/controlled/`)" with "(class-2 hold-private, `L7/governance/copyright/`)".
+      - **skeptic**: Sheet words confirmed at f2d5b37:L8/L4/work/computation/0.md:38: "The quoted content is peer-owned and WSU-licensed (class-2 hold-private, `L7/governance/controlled/`)". The path exists, so this is not a dead path, but the pointer locates the class-2 hold-private condition at a position whose own sheet says it is not there: L7/governance/controlled/0.md:32 "Nothing filed directly. Every restriction this repository is under derives from a copyright or licence condition, and all of them are stated at `L7/governance/copyright/`, the one place." The condition is in fact stated at L7/governance/copyright/0.md:43 ("Every item obtained through the owner's institutional (WSU) access is IL-001-R2 class-2 hold-private ..."), and copyright/0.md:18 says every sheet "names this directory". `git grep -F 'class-2'` over live sheets finds the term in copyright/0.md, the sources LEDGER, peer-1/object-1/0.md (which points to `L7/governance/copyright/`, "the one place") and not in controlled/0.md. So two sheets state where the condition lives differently, and the controlled and copyright sheets agree against the computation sheet. This is a pointer fact, not the allowed use of the word "restrictions" as a kind of condition. Note outside this batch: L7/provenance/sources/staging-records/0.md:30 carries the same pointer to `L7/governance/controlled/`.
+    - item 52
+      - **batch**: b08-L4
+      - **id**: b08-L4-05
+      - **kind**: WRONG-FACT
+      - **sheet**: L8/L4/work/writing/chat/0.md
+      - **line**: 16 (also 3 and 8)
+      - **sheet_says**: "`auditonomous-chat-1.docx`, `auditonomouos-chat-2.docx` — recorded working sessions (chat transcripts) as produced; binary, not read in this pass. They are records of conversation, not arguments"
+      - **truth**: The two .docx files are volumes titled "[source text withheld from the public copy], input source chat.txt) and II (Version 0.1 CHAT-HIST-02, input source chat_history_chunk_02.txt), both with ingestion date 6 August 2026: organized, status-labelled corpora made from supplied chat histories, including manuscript-ready passages and correction registers. They are not the chat transcripts and are not session recordings.
+      - **evidence**: Text extracted from word/document.xml of each object at f2d5b37 (python3 -I, zipfile). auditonomous-chat-1.docx opens: "[source text withheld from the public copy]." then "Status labels", "Input metrics", "[source text withheld from the public copy]". auditonomouos-chat-2.docx opens: "[source text withheld from the public copy]: UHA frame realization, epoch correction, lambda, [source text withheld from the public copy]". No speaker-turn lines (User:/Assistant:) found in chat-1.
+      - **exact_fix**: L8/L4/work/writing/chat/0.md. Line 3: "**Object:** Sourcebook volumes organized from supplied chat histories, as produced." Line 8, first sentence: "Sourcebook volumes organized from supplied chat histories, as produced." (rest of the line unchanged). Line 16: "- `auditonomous-chat-1.docx`, `auditonomouos-chat-2.docx` — "[source text withheld from the public copy] and II (Version 0.1 CHAT-HIST and [source text withheld from the public copy] sources `chat.txt` and `chat_history_chunk_02.txt`): organized corpora made from supplied chat histories, as produced; not the transcripts themselves. Any argument in them belongs at `L8/L5/` only when stated there." To keep the parents consistent: in L8/L4/0.md:121 and L8/L4/work/0.md:39 replace "two chat transcripts" with "two chat-history sourcebook volumes"; in L8/L4/work/writing/0.md:34 replace "two recorded working sessions as produced (`auditonomous-chat-1.docx`, `auditonomouos-chat-2.docx`); recorded conversation, not argument." with "two sourcebook volumes organized from supplied chat histories, as produced (`auditonomous-chat-1.docx`, `auditonomouos-chat-2.docx`)."
+      - **skeptic**: Sheet words confirmed at f2d5b37:L8/L4/work/writing/chat/0.md lines 3 and 8 ("Recorded working sessions (chat transcripts) as produced.") and line 16 ("recorded working sessions (chat transcripts) as produced; binary, not read in this pass. They are records of conversation, not arguments"). I extracted word/document.xml from both git objects (python3 -I, zipfile). Neither is a transcript. auditonomous-chat-1.docx opens "[source text withheld from the public copy] / ... This is a source-faithful organized corpus."; auditonomouos-chat-2.docx opens the same title with "Chat-history ingestion II: UHA frame realization, epoch correction, lambda, [source text withheld from the public copy]-02 / ... Input source: chat_history_chunk_02.txt". Both carry "Status labels", "Input metrics", and a Part structure (chat-1: Parts I-VIII incl. "[source text withheld from the public copy]", "Part VII - Coverage and exclusion ledger"; chat-2: Parts I-IX). 1472 and 1563 non-empty paragraphs; zero speaker-turn lines (User:/Assistant:/You said/ChatGPT said) and zero occurrences of the word "transcript" in either. The chat material appears only as selected attributed quotations inside an organized, labelled corpus whose stated purpose is to "preserve and organize the supplied chat history". The sheet itself admits the description was written without reading the files. This is a statement about what the directory holds that the objects show to be false, not a wording choice. The same wrong characterization is repeated at L8/L4/0.md:121 and L8/L4/work/0.md:39 ("two chat transcripts"), L8/L4/work/writing/0.md:34 ("two recorded working sessions as produced ... recorded conversation, not argument") and L8/0.md:137 ("chat transcripts").
+    - item 53
+      - **batch**: b08-L4
+      - **id**: b08-L4-06
+      - **kind**: STALE
+      - **sheet**: L8/L4/work/writing/chat/0.md
+      - **line**: 16
+      - **sheet_says**: "binary, not read in this pass"
+      - **truth**: "not read in this pass" refers to an earlier pass (the files reached this position in the 2026-09-05 harmonization) and is not a statement about the present state; the files are .docx archives (binary is correct) whose text is extractable and which, when read, are chat-history sourcebook volumes (see b08-L4-05).
+      - **evidence**: L8/L6/history/7LM_ROUTING_PLAN_2026-09-05.md is the pass that relocated the files; f2d5b37 is dated 2026-11-11. word/document.xml of both objects extracts to 1472 and 1563 paragraphs.
+      - **exact_fix**: L8/L4/work/writing/chat/0.md line 16: delete "; binary, not read in this pass" (the replacement line given under b08-L4-05 already omits it). Do not substitute a dated pass unless the owner confirms which pass wrote the sentence.
+      - **skeptic**: Sheet words confirmed at f2d5b37:L8/L4/work/writing/chat/0.md:16: "binary, not read in this pass". "this pass" is the task's own named marker of a STALE statement: it is a deictic that was true of the pass in which the sheet was written and has no referent in a standing sheet at a commit dated 2026-11-11 (`git show -s` gives 2026-11-11T18:34:37+00:00). The files were moved to this position in the 2026-09-05 harmonization (L8/L6/history/harmonization-2026-09-05.md:42: "`manuscripts/main/chat/*.docx` | `USO/l4/work/writing/chat/` | recorded sessions as produced"; routing plan line 156). Two corrections to the auditor's account: (1) "binary" is not false, a .docx is a zip archive, so only the "this pass" clause is stale; that the text extracts cleanly does not contradict "binary". (2) I did not determine from objects at the pinned commit exactly which dated pass wrote the sentence (the 2026-09-05 move or a later sheet pass), so the alternative fix that names "2026-09-05" is not established; deletion is the safe fix. The finding overlaps b08-L4-05, whose replacement line already removes the phrase; if 05 is applied, nothing further is needed here.
+    - item 54
+      - **batch**: b08-L4
+      - **id**: b08-L4-07
+      - **kind**: MISQUOTE
+      - **sheet**: L8/L4/0.md
+      - **line**: 100
+      - **sheet_says**: "The analytic view of this layer in the specification's outline reads: \"L4 realization bay — A whole realized architecture may be contained here and may expand internally according to its own native structure without commandeering 7LM layer numbers.\""
+      - **truth**: The specification has no string "L4 realization bay — A whole realized architecture ...". It has the cell "L4 realization bay" in the Analytic view column and, in the Meaning column, "A whole realized architecture may be contained here and may expand internally according to its own native structure without commandeering 7LM layer numbers." (specification line 159). Both cells are quoted word for word; the em dash joining them inside the quotation marks is not the specification's.
+      - **evidence**: Specification origin/main line 159: "| L4 realization bay | A whole realized architecture may be contained here and may expand internally according to its own native structure without commandeering 7LM layer numbers. |"; grep -F 'L4 realization bay —' on the specification returns nothing.
+      - **exact_fix**: L8/L4/0.md line 100, first sentence, replace with: The analytic view of this layer in the specification's outline, "L4 realization bay", reads: "A whole realized architecture may be contained here and may expand internally according to its own native structure without commandeering 7LM layer numbers." (the rest of the line unchanged).
+      - **skeptic**: Sheet words confirmed at f2d5b37:L8/L4/0.md:100: The analytic view of this layer in the specification's outline reads: "L4 realization bay — A whole realized architecture may be contained here and may expand internally according to its own native structure without commandeering 7LM layer numbers." The current specification (origin/main, line 159) has a two-column table row under the headers "Analytic view" | "Meaning": "| L4 realization bay | A whole realized architecture may be contained here and may expand internally according to its own native structure without commandeering 7LM layer numbers. |". `grep -F 'L4 realization bay —'` on the specification returns nothing: the em dash and the joining of the two cells into one quoted string are the sheet's. By the stated definition (text in quotation marks attributed to the specification that is not verbatim in it) this is a MISQUOTE. It is the smallest possible one: every word of both cells is verbatim and nothing about the specification's content is misrepresented; only the cell boundary is rendered as a dash inside the quotation marks. Elsewhere this repository keeps the row label outside the quotation (for example computation/0.md:50, "Contained architecture (OSI) case: "Operationally, ...""), so the fix follows the repository's own practice. The identical sentence stands in the scaffold's L8/L4/0.md:100, so it was inherited, which does not make it verbatim. Lowest priority.
+    - item 55
+      - **batch**: b09-L5
+      - **id**: b09-L5-01
+      - **kind**: WRONG-FACT
+      - **sheet**: L8/L5/research/lanes/0.md
+      - **line**: 36
+      - **sheet_says**: `THEME_LEDGER.md` — cluster analysis of the theory manuscript corpus (C1–C6) and the named tensions T1–T11, including [source text withheld from the public copy]")
+      - **truth**: THEME_LEDGER.md holds eleven like-theme clusters C1–C11 and sixteen named tensions T1–T16 (T3 is among them, as the sheet says).
+      - **evidence**: git show f2d5b37:L8/L5/research/lanes/THEME_LEDGER.md | grep -n '^#': cluster headings '### C1 — Inversion and the census of heirs' (line 15) through '### [source text withheld from the public copy])' (line 128), including C7 (82), C8 (93), C9 (105), C10 (116). Under '## Dissimilar / tension register' (line 142) the bullet entries run '- **T1 — CLOSED 2026-08-02 ...' through '- **T16 — Embodied manuscript internal defects.' (T12 Block 39's evidence status, T13 coined word's own record, T14 Naming fork, T15 Outline-layer drift, T16).
+      - **exact_fix**: L8/L5/research/lanes/0.md line 36: replace "(C1–C6) and the named tensions T1–T11" with "(C1–C11) and the named tensions T1–T16"; the rest of the line unchanged.
+      - **skeptic**: Sheet L8/L5/research/lanes/0.md line 36 at f2d5b37 reads exactly as quoted: "cluster analysis of the theory manuscript corpus (C1–C6) and the named tensions T1–T11". THEME_LEDGER.md at the same commit has 11 cluster headings ('### C1' at line 15 through '### [source text withheld from the public copy])' at line 128; grep -c '^### C[0-9]+ ' = 11) and 16 tension entries under '## Dissimilar / tension register' ('- **T1' at line 146 through '- **T16 — Embodied manuscript internal defects.' at line 298; grep -c '^- \*\*T[0-9]+ ' = 16). The ledger's own header says its grouping subject is the [source text withheld from the public copy] manuscript) with definitional docs as an adjacent layer, so C7-C11 are part of the same cluster analysis, not a separate one. Both ranges in the sheet are short; this is a count/range error, not wording.
+    - item 56
+      - **batch**: b09-L5
+      - **id**: b09-L5-02
+      - **kind**: WRONG-FACT
+      - **sheet**: L8/L5/research/review/0.md
+      - **line**: 38 (governing lines 40-42; the item concerned is line 41)
+      - **sheet_says**: Placed here on 2026-09-06 from the dissolved `common/durable/`, none adjudicated:  [list follows, whose second item is] `STATUS_AND_LABEL_DISCIPLINE.md` — INTERNAL ONLY, the registry labels, and the two standing rules ...
+      - **truth**: Of the three listed items, `STATUS_LADDER.md` and `autonomous-theory/` were placed on 2026-09-06 from the dissolved `common/durable/`; `STATUS_AND_LABEL_DISCIPLINE.md` was carried [source text withheld from the public copy]` (record section 10), not from `common/durable/`.
+      - **evidence**: git show f2d5b37:L8/L5/research/review/STATUS_AND_LABEL_DISCIPLINE.md line 3: '[source text withheld from the public copy]).' L8/L6/history/sheets-2026-09-07.md line 65: 'STATUS_AND_LABEL_DISCIPLINE.[source text withheld from the public copy]'. The record's section 8 table (harmonization-2026-09-05.md lines 111-123) lists the 2026-09-06 moves out of common/durable/: the two Autonomous Theory files and the status-ladder section only; the label discipline is not among them (it is in section 10, line 144).
+      - **exact_fix**: L8/L5/research/review/0.md line 38: replace the final sentence "Placed here on 2026-09-06 from the dissolved `common/durable/`, none adjudicated:" with "Placed here, none adjudicated; the first and third on 2026-09-06 from the dissolved `common/durable/`, the second [source text withheld from the public copy]`:". Lines 40-42 unchanged.
+      - **skeptic**: Sheet L8/L5/research/review/0.md line 38 ends "Placed here on 2026-09-06 from the dissolved `common/durable/`, none adjudicated:" and the list that follows (lines 40-42) has three items, the second being `STATUS_AND_LABEL_DISCIPLINE.md`. That file's own line 3 at f2d5b37 says: "[source text withheld from the public copy] ...". The record agrees: harmonization-2026-09-05.md section 8 table (lines 111-123) lists the 2026-09-06 moves out of common/durable/ as the two Autonomous Theory files and the status-ladder section only; section 10 (line 144, dated 2026-09-07) places 'Status and label discipline' from the retired README at review/STATUS_AND_LABEL_DISCIPLINE.md; sheets-2026-09-07.md lines 65 and 105 say "[source text withheld from the public copy]". STATUS_LADDER.md line 3 confirms it alone came from common/durable/README.md on 2026-09-06, and autonomous-theory/ came from common/durable/orphan/ that day. So the lead-in is false for the second listed item (wrong date and wrong origin). Line 41 itself does not state an origin, so only line 38 needs to change.
+    - item 57
+      - **batch**: b09-L5
+      - **id**: b09-L5-03
+      - **kind**: STALE
+      - **sheet**: L8/L5/research/0.md
+      - **line**: 38
+      - **sheet_says**: The root trees `common/` and `intake/` were dissolved that day: their files filed by layer, their rule texts retired to `L8/L6/retired/layout-2026-09-06/`, the Autonomous Theory files placed in `review/`.
+      - **truth**: The root trees `common/` and `intake/` were dissolved on 2026-09-06 (record section 8); the sheet names no day for 'that day' to refer to.
+      - **evidence**: git show f2d5b37:L8/L5/research/0.md: no date appears in lines 1-38 before 'that day'. Record L8/L6/history/harmonization-2026-09-05.md line 105: '## 8. 2026-09-06 — the owner dissolves `common/` and `intake/`; `research/review/` is the catch-all' and 'Executed 2026-09-06 by `git mv`'. L8/0.md line 137: 'On 2026-09-06, on the owner's word, `common/` and `intake/` were dissolved'.
+      - **exact_fix**: L8/L5/research/0.md line 38: replace "were dissolved that day:" with "were dissolved on 2026-09-06:"; the rest of the line unchanged.
+      - **skeptic**: Sheet L8/L5/research/0.md line 38 reads as quoted: "The root trees `common/` and `intake/` were dissolved that day: ...". I read the whole sheet at f2d5b37 (49 lines): no date occurs anywhere before or in line 38 (the only dates in the sheet are inside path names such as layout-2026-09-06 and layout-2026-08-14, the first of which comes after 'that day' and is a folder name, not a stated day). 'that day' therefore refers to nothing in the sheet; it is a deictic time reference that has lost its anchor, the same class as the brief's STALE example "this pass". It is not a style point: the sheet asserts a date and the reader cannot recover it. The date is established by the record: harmonization-2026-09-05.md line 105 heading "## 8. 2026-09-06 — the owner dissolves `common/` and `intake/`" and line 109 "Executed 2026-09-06 by `git mv`"; the sibling sheet review/0.md line 38 also gives 2026-09-06. The rest of the sentence checks out: L8/L6/retired/layout-2026-09-06/ holds common/README.md, common/durable/README.md and intake/README.md, and the Autonomous Theory files are at L8/L5/research/review/autonomous-theory/. Caveat on classification: the statement is not false, it is unresolvable; the defect is the dangling date reference, and the one-phrase fix is correct. (The auditor's citation of L8/0.md line 137 is not needed; the record suffices.)
+    - item 58
+      - **batch**: b09-L5
+      - **id**: b09-L5-04
+      - **kind**: UNLISTED
+      - **sheet**: L8/L5/0.md
+      - **line**: 80
+      - **sheet_says**: - `research/review/` — `CONTRADICTIONS.md`, `PERPETUITY_QUESTION_ADJUDICATION.md`.
+      - **truth**: L8/L5/research/review/ holds four files and one sub-folder besides its sheet; the layer sheet's Holdings line names two files and nowhere mentions `STATUS_LADDER.md`, `STATUS_AND_LABEL_DISCIPLINE.md` or `autonomous-theory/` (two files).
+      - **evidence**: git ls-tree -r -l f2d5b37 L8/L5/research/review: 0.md (6194), CONTRADICTIONS.md (20581), PERPETUITY_QUESTION_ADJUDICATION.md (42605), STATUS_AND_LABEL_DISCIPLINE.md (1861), STATUS_LADDER.md (1415), autonomous-theory/#autonomous(1).txt (1060768), autonomous-theory/02_AutonomousTheory(1).pdf (219277). git grep -n -E 'STATUS_LADDER|STATUS_AND_LABEL|autonomous-theory' f2d5b37 -- L8/L5/0.md returns nothing.
+      - **exact_fix**: L8/L5/0.md line 80: replace with "- `research/review/` — `CONTRADICTIONS.md`, `PERPETUITY_QUESTION_ADJUDICATION.md`; in the catch-all: `STATUS_LADDER.md`, `STATUS_AND_LABEL_DISCIPLINE.md`, `autonomous-theory/` (`#autonomous(1).txt`, `02_AutonomousTheory(1).pdf`)."
+      - **skeptic**: Sheet L8/L5/0.md line 80 reads exactly "- `research/review/` — `CONTRADICTIONS.md`, `PERPETUITY_QUESTION_ADJUDICATION.md`.". ls-tree at f2d5b37 shows L8/L5/research/review/ holds, besides 0.md: CONTRADICTIONS.md, PERPETUITY_QUESTION_ADJUDICATION.md, STATUS_AND_LABEL_DISCIPLINE.md, STATUS_LADDER.md, and autonomous-theory/ (#autonomous(1).txt, 02_AutonomousTheory(1).pdf). git grep for STATUS_LADDER|STATUS_AND_LABEL|autonomous-theory in L8/L5/0.md returns nothing; line 83 speaks of the catch-all only generically and names no item. The same Holdings list is complete for lanes/ (2 of 2 files) and findings/ (3 of 3 files), so the review/ line is the only incomplete one. The observation is factually accurate. One correction to the auditor's supporting note: README.md line 12 names only the two STATUS files, not autonomous-theory/; review/0.md lines 40-42 name all three. This is an observation (the files sit one level below the layer sheet's own directory, in a sub-folder whose own sheet does list them), for the owner to decide.
+    - item 59
+      - **batch**: b10-L6
+      - **id**: b10-L6-01
+      - **kind**: WRONG-FACT
+      - **sheet**: L8/L6/history/0.md
+      - **line**: 35
+      - **sheet_says**: `LEDGER.md` — the master ledger: the tree by state, what each area waits on, retired objects, staleness "declared, not silently repaired".
+      - **truth**: L8/L6/history/LEDGER.md at f2d5b37 has no staleness section and does not contain the words "declared, not silently repaired" (nor "stale", "silent", "repair"). The quoted phrase is the heading of a section in aybllc/autonomous's LEDGER.md, not this repository's. What this ledger holds: the current state in one line, the tree by state with what each area waits on (retired objects as struck-through rows with dated notes), standing constraints, and known open items.
+      - **evidence**: `git -C /home/user/auditonomous show f2d5b37:L8/L6/history/LEDGER.md | grep -n -i 'silent\|stale\|repair'` returns nothing. `git grep -n -i -E 'silently repair|declared, not' f2d5b37` finds the phrase only in L8/L6/history/0.md:35 itself (no other file in the tree carries it). Headings from `grep -n '^## '`: lines 14, 25, 44, 57 as listed.
+      - **exact_fix**: In L8/L6/history/0.md line 35 replace `the tree by state, what each area waits on, retired objects, staleness "declared, not silently repaired".` with `the tree by state, what each area waits on, and retired objects (struck through, with a dated note).` The rest of the line is unchanged by this finding.
+      - **skeptic**: Sheet words confirmed at L8/L6/history/0.md:35: `LEDGER.md` — the master ledger: the tree by state, what each area waits on, retired objects, staleness "declared, not silently repaired". Checked f2d5b37:L8/L6/history/LEDGER.md (63 lines): `git grep -n -i -E 'silently|stale|repair|declared, not'` on that file returns nothing; its sections are lines 14 "Current state in one line", 25 "[source text withheld from the public copy]; struck rows at 29, 30, 33), 44 "Standing constraints", 57 "Known open items". Across the whole tree at the commit the phrase occurs only in the sheet itself. The origin is identifiable: the scaffold (7lm origin/main:L8/L6/history/sheets-2026-09-07.md:403) records it as the heading of a section in the SIBLING repository's ledger: "EXEMPLAR AUTO — aybllc/autonomous @ 0504961. The master ledger `LEDGER.md` ... with a \"Known staleness — declared, not silently repaired\" section", while its line for this repository (405) says only "`LEDGER.md` indexes internal state by area, what each area waits on, and which objects are retired". So the sheet attributes a quoted section to a file that does not carry it; this is a false statement about the file, not a wording matter. The auditor's truth is right; the auditor's fix is larger than needed.
+    - item 60
+      - **batch**: b10-L6
+      - **id**: b10-L6-02
+      - **kind**: STALE
+      - **sheet**: L8/L6/history/0.md
+      - **line**: 35
+      - **sheet_says**: git history is not L6, and this clone is shallow.
+      - **truth**: The clone at /home/user/auditonomous is not shallow: 148 commits are reachable from f2d5b37 down to a parentless root, and there is no shallow file. What is missing from this clone is the rescue branch (`rescue/reorg-2026-08-14`) and the first-deployment commit `9aefa6e` that the ledger names as surviving only there.
+      - **evidence**: `git -C /home/user/auditonomous rev-parse --is-shallow-repository` -> `false`; no `.git/shallow` file; `git rev-list --count f2d5b37` -> 148. `git cat-file -e 9aefa6e^{commit}` fails; `git branch -a | grep -i rescue` returns nothing.
+      - **exact_fix**: In L8/L6/history/0.md line 35 replace `git history is not L6, and this clone is shallow.` with `git history is not L6, and a clone may be shallow or lack the rescue branch.`
+      - **skeptic**: Sheet words confirmed at L8/L6/history/0.md:35: "git history is not L6, and this clone is shallow." Checked the audited clone: `git -C /home/user/auditonomous rev-parse --is-shallow-repository` -> false; no .git/shallow; `git rev-list --count f2d5b37` -> 148, and `git rev-list --max-parents=0 f2d5b37` reaches a true root commit (fc3b018), so the full ancestry of the pinned commit is present. The sentence is a present-tense claim about whichever clone the sheet is read in; it was true of the session clone that wrote it and is untrue here, which is the STALE kind. Caveat (the auditor states it too): clone depth [source text withheld from the public copy] tree at the commit, so the evidence is clone state plus the ancestry reachable from the pinned commit; it shows the sentence is not true as a standing statement, not that it was false when written. The side observations also check out: `9aefa6e` is absent, no ref contains "rescue" (17 refs), and ca87bba, 1d83788, 8c98573, 4a1c1db, db426ab, 280226a, d16450a, 55a9886 are present.
+    - item 61
+      - **batch**: b10-L6
+      - **id**: b10-L6-03
+      - **kind**: STALE
+      - **sheet**: L8/L6/history/0.md
+      - **line**: 37
+      - **sheet_says**: `harmonization-2026-09-05.md` — the record of this pass: every path moved, retired, bound, or left in place, and the renumbering of the old `uso/l6/` register to L7; its §8 records the 2026-09-06 dissolution of `common/` and `intake/`, and its §13 the L7 restructure mirrored on 2026-11-11.
+      - **truth**: The record is of the instantiation of the canonical topology on 2026-09-05 (its Standing line), with later dated sections through §13 of 2026-11-11; at the pinned commit "this pass" would denote the 2026-11-11 L7 restructure, which is only the record's §13.
+      - **evidence**: `git show f2d5b37:L8/L6/history/harmonization-2026-09-05.md | grep -n '^#'` -> sections 1-13, §13 headed "2026-11-11 — the L7 restructure mirrored by hand"; line 3 Standing as quoted. L8/L6/0.md:74 already words it without "this": "the L6 record of the instantiation of the canonical topology on 2026-09-05".
+      - **exact_fix**: In L8/L6/history/0.md line 37 replace `the record of this pass:` with `the record of the instantiation of the canonical topology on 2026-09-05:` (rest of the line unchanged). Consistently, line 39's `the routing proposal the pass followed` can read `the routing proposal that instantiation followed`.
+      - **skeptic**: Sheet words confirmed at L8/L6/history/0.md:37: "`harmonization-2026-09-05.md` — the record of this pass: ... its §8 records the 2026-09-06 dissolution of `common/` and `intake/`, and its §13 the L7 restructure mirrored on 2026-11-11." "this pass" is a deictic left from 2026-09-05. At f2d5b37 the record has thirteen sections (headings at lines 7-176), §8-§13 dated 2026-09-06, 2026-09-06, 2026-09-07, 2026-09-07, 2026-09-12, 2026-11-11, and §13 itself uses "This pass" for the 2026-11-11 restructure (lines 180, 206, 207, 211). The record's Standing (line 3) names its event: "[source text withheld from the public copy] instantiation of the harmonized Seven-Layer Model (7LM) canonical topology in this repository". §11 and sheets-2026-09-07.md show that "at HEAD of this pass" was pulled out of other sheets on 2026-09-07 for this very reason. "this pass" is the task's own example of STALE. The same sheet at L8/L6/0.md:74 already states it concretely. The auditor's fix is true; a smaller one suffices.
+    - item 62
+      - **batch**: b10-L6
+      - **id**: b10-L6-04
+      - **kind**: STALE
+      - **sheet**: L8/L6/0.md
+      - **line**: 88
+      - **sheet_says**: `history/harmonization-2026-09-05.md` — the L6 record of this displacement event.
+      - **truth**: harmonization-2026-09-05.md is the L6 record of the instantiation of the canonical topology on 2026-09-05 (with later dated sections §8-§13 through 2026-11-11); it is not the record of an event current at the pinned commit.
+      - **evidence**: L8/L6/0.md:74: "`L8/L6/history/harmonization-2026-09-05.md` — the L6 record of the instantiation of the canonical topology on 2026-09-05." Record headings §8-§13 dated 2026-09-06 to 2026-11-11 (`git show f2d5b37:L8/L6/history/harmonization-2026-09-05.md | grep -n '^## '`).
+      - **exact_fix**: In L8/L6/0.md line 88 replace `the L6 record of this displacement event.` with `the L6 record of the instantiation of the canonical topology on 2026-09-05.`
+      - **skeptic**: Sheet words confirmed at L8/L6/0.md:88: "`history/harmonization-2026-09-05.md` — the L6 record of this displacement event." The Holdings section (lines 86-91) names no event, so "this" is the same leftover deictic as "this pass": written during the 2026-09-05 instantiation, when that was the event under way. At f2d5b37 the event under way is the 2026-11-11 L7 restructure (record §13), and the record's Standing calls its subject "one displacement event: the instantiation of the harmonized Seven-Layer Model (7LM) canonical topology". The same sheet states it without the deictic at line 74: "the L6 record of the instantiation of the canonical topology on 2026-09-05". It [source text withheld from the public copy] deictic findings (line 74, fourteen lines up in another section, could be taken as antecedent), but as written the Holdings line does not identify the event and was true only when written. The auditor's fix is right.
+    - item 63
+      - **batch**: b10-L6
+      - **id**: b10-L6-05
+      - **kind**: UNLISTED
+      - **sheet**: L8/L6/0.md
+      - **line**: 70-75 and 88-89
+      - **sheet_says**: "**In this repository.** Held at this layer:" followed by four bullets (LEDGER.md; the three session ledgers; harmonization-2026-09-05.md; `L8/L6/retired/layout-2026-08-14/`), and "## Holdings" with the same five history files and `retired/layout-2026-08-14/` only.
+      - **truth**: Besides what the sheet lists, the layer holds L8/L6/history/sheets-2026-09-07.md, L8/L6/history/7LM_ROUTING_PLAN_2026-09-05.md and the retired set L8/L6/retired/layout-2026-09-06/ (its sheet and five files).
+      - **evidence**: `git ls-tree -l f2d5b37 L8/L6/history/` shows 7LM_ROUTING_PLAN_2026-09-05.md and sheets-2026-09-07.md; `git ls-tree -r -l f2d5b37 L8/L6/retired/` shows layout-2026-09-06/0.md, common/README.md, common/durable/README.md, common/durable/orphan/deep-research-report.md, common/durable/orphan/eb-carrier/eb-audit/auditonomous-departure-protocol.md, intake/README.md. `git show f2d5b37:L8/L6/0.md | grep -n -F -e 'sheets-2026' -e 'ROUTING' -e '2026-09-06'` returns nothing.
+      - **exact_fix**: After L8/L6/0.md line 74 add: "- `L8/L6/history/sheets-2026-09-07.md` — what the sheets carried about their past until 2026-09-07, pulled out verbatim." and "- `L8/L6/history/7LM_ROUTING_PLAN_2026-09-05.md` — the routing proposal the 2026-09-05 instantiation followed; a decision record."; after line 75 add: "- `L8/L6/retired/layout-2026-09-06/` — the queue's rule texts (`common/README.md`, `common/durable/README.md`, `intake/README.md`) and two duplicate files, verbatim at their old relative paths." In Holdings, append to line 88: "; `history/sheets-2026-09-07.md` — what the sheets carried about their past until 2026-09-07; `history/7LM_ROUTING_PLAN_2026-09-05.md` — the routing proposal the 2026-09-05 instantiation followed." and after line 89 add: "- `retired/layout-2026-09-06/` — the queue's rule texts and two duplicate files, preserved verbatim at their old relative paths."
+      - **skeptic**: Observation is factually accurate. L8/L6/0.md lines 70-75 ("**In this repository.** Held at this layer:") and lines 86-89 ("## Holdings") each enumerate LEDGER.md, the three session ledgers, harmonization-2026-09-05.md and retired/layout-2026-08-14/ and nothing else. `git show f2d5b37:L8/L6/0.md | grep -n -F -e 'sheets-2026' -e 'ROUTING' -e '2026-09-06'` returns nothing. `git ls-tree -r -l f2d5b37 L8/L6/` shows L8/L6/history/sheets-2026-09-07.md (8,907 bytes), L8/L6/history/7LM_ROUTING_PLAN_2026-09-05.md (32,587 bytes) and L8/L6/retired/layout-2026-09-06/ (0.md plus common/README.md, common/durable/README.md, common/durable/orphan/deep-research-report.md, common/durable/orphan/eb-carrier/eb-audit/auditonomous-departure-protocol.md, intake/README.md). The sub-position sheets do list them (L8/L6/history/0.md:38-39; L8/L6/retired/0.md:35). Qualification: the three items sit in sub-directories that have their own sheets, not directly in L8/L6/; the observation holds because the layer sheet's two lists enumerate individual files beneath those sub-directories and read as the whole of what is "held at this layer", yet omit 2 of 7 history files and 1 of 2 retired sets.
+    - item 64
+      - **batch**: b10-L6
+      - **id**: b10-L6-06
+      - **kind**: STALE
+      - **sheet**: L8/L6/retired/0.md
+      - **line**: 34
+      - **sheet_says**: `layout-2026-08-14/` — the layout reorganised on 2026-08-14 as it stood before this pass:
+      - **truth**: The set preserves the 2026-08-14 layout as it stood before the Seven-Layer Model topology was instantiated on 2026-09-05, not before the pass current at the pinned commit (the 2026-11-11 L7 restructure).
+      - **evidence**: L8/L6/retired/layout-2026-08-14/0.md:3: "**Object:** The layout reorganised on 2026-08-14 as it stood before the Seven-Layer Model topology was instantiated, preserved verbatim at its original relative paths." Record §4b (harmonization-2026-09-05.md:61-63) dates the retirement to the 2026-09-05 event. The eight files the line names all exist (`git ls-tree -r f2d5b37 L8/L6/retired/layout-2026-08-14`).
+      - **exact_fix**: In L8/L6/retired/0.md line 34 replace `as it stood before this pass:` with `as it stood before the Seven-Layer Model topology was instantiated on 2026-09-05:`
+      - **skeptic**: Sheet words confirmed at L8/L6/retired/0.md:34: "`layout-2026-08-14/` — the layout reorganised on 2026-08-14 as it stood before this pass:". "this pass" is the leftover deictic for the 2026-09-05 instantiation; at f2d5b37 the pass under way is the 2026-11-11 L7 restructure, and the set does not show the layout as it stood before that (by then the layout had already been through the 2026-09-05, 2026-09-06, 2026-09-07 and 2026-09-12 passes). The set's own sheet says it without the deictic, L8/L6/retired/layout-2026-08-14/0.md:3: "The layout reorganised on 2026-08-14 as it stood before the Seven-Layer Model topology was instantiated, preserved verbatim at its original relative paths." The record files the retirement under the 2026-09-05 event (§4b, harmonization-2026-09-05.md:61-63). The eight files the line names all exist under L8/L6/retired/layout-2026-08-14/ (ls-tree), so only the deictic is stale. "this pass" is the task's own example of STALE. The auditor's fix is right.
+  - **rejected**: (empty)
+  - **unverified**: (empty)
+  - **sheets_audited**: 83
+  - **statements_checked**: 2310
+  - **batches_failed**: (empty)
+- **workflowProgress**
+  - item 1
+    - **type**: workflow_phase
+    - **index**: 1
+    - **title**: Audit
+  - item 2
+    - **type**: workflow_phase
+    - **index**: 2
+    - **title**: Verify
+  - item 3
+    - **type**: workflow_agent
+    - **index**: 1
+    - **label**: audit:auditonomous:b01-desk-root-allications
+    - **phaseIndex**: 1
+    - **phaseTitle**: Audit
+    - **agentId**: a5cd9d0b2c305183c
+    - **model**: claude-fable-5-2
+    - **state**: done
+    - **startedAt**: 1794423724415
+    - **queuedAt**: 1794423724385
+    - **attempt**: 1
+    - **lastToolName**: StructuredOutput
+    - **promptPreview**: You are one agent in a READ-ONLY audit. Nothing may be changed.
+
+      THE REPOSITORY: auditonomous, local clone /home/user/auditonomous, PINNED COMMIT f2d5b37 (read this commit and no other state). It is an "exemplar" of the Seven-Layer Model (7LM). The model's scaffold is /home/user/7lm (model of record = origin/main). The controlling text is the specification: /home/user/7lm origin/main:L8/L4/work/wr…
+    - **promptFramed**: yes
+    - **lastProgressAt**: 1794424977833
+    - **tokens**: 320458
+    - **toolCalls**: 87
+    - **durationMs**: 1253418
+    - **resultPreview**: {"sheets_audited":["README.md","L7/0.md","L7/allications/0.md","L7/allications/applications/0.md","L7/allications/communications/0.md","L7/allications/notifications/0.md","L7/allications/participations/0.md","L7/allications/publications/0.md","L7/allications/publications/binder/0.md","L7/allications/specifications/0.md"],"findings":[{"id":"b01-01","kind":"WRONG-FACT","sheet":"L7/0.md","line":"232"…
+  - item 4
+    - **type**: workflow_agent
+    - **index**: 2
+    - **label**: audit:auditonomous:b02-governance
+    - **phaseIndex**: 1
+    - **phaseTitle**: Audit
+    - **agentId**: ae690f1fcab2e7043
+    - **model**: claude-fable-5-2
+    - **state**: done
+    - **startedAt**: 1794423724415
+    - **queuedAt**: 1794423724385
+    - **attempt**: 1
+    - **lastToolName**: StructuredOutput
+    - **promptPreview**: You are one agent in a READ-ONLY audit. Nothing may be changed.
+
+      THE REPOSITORY: auditonomous, local clone /home/user/auditonomous, PINNED COMMIT f2d5b37 (read this commit and no other state). It is an "exemplar" of the Seven-Layer Model (7LM). The model's scaffold is /home/user/7lm (model of record = origin/main). The controlling text is the specification: /home/user/7lm origin/main:L8/L4/work/wr…
+    - **promptFramed**: yes
+    - **lastProgressAt**: 1794424929634
+    - **tokens**: 336523
+    - **toolCalls**: 73
+    - **durationMs**: 1205216
+    - **resultPreview**: {"sheets_audited":["L7/governance/0.md","L7/governance/access/0.md","L7/governance/controlled/0.md","L7/governance/copyright/0.md","L7/governance/licensing/0.md","L7/governance/patents/0.md","L7/governance/permissions/0.md"],"findings":[{"id":"b02-governance-01","kind":"WRONG-FACT","sheet":"L7/governance/copyright/0.md","line":"43","sheet_says":"Every item obtained through the owner's institutiona…
+  - item 5
+    - **type**: workflow_agent
+    - **index**: 3
+    - **label**: audit:auditonomous:b03-peering-private
+    - **phaseIndex**: 1
+    - **phaseTitle**: Audit
+    - **agentId**: a50e623a52ef72b43
+    - **model**: claude-fable-5-2
+    - **state**: done
+    - **startedAt**: 1794424929639
+    - **queuedAt**: 1794423724386
+    - **attempt**: 1
+    - **lastToolName**: StructuredOutput
+    - **promptPreview**: You are one agent in a READ-ONLY audit. Nothing may be changed.
+
+      THE REPOSITORY: auditonomous, local clone /home/user/auditonomous, PINNED COMMIT f2d5b37 (read this commit and no other state). It is an "exemplar" of the Seven-Layer Model (7LM). The model's scaffold is /home/user/7lm (model of record = origin/main). The controlling text is the specification: /home/user/7lm origin/main:L8/L4/work/wr…
+    - **promptFramed**: yes
+    - **lastProgressAt**: 1794426378338
+    - **tokens**: 369823
+    - **toolCalls**: 73
+    - **durationMs**: 1448698
+    - **resultPreview**: {"sheets_audited":["L7/peering/0.md","L7/peering/private/0.md","L7/peering/private/egress/0.md","L7/peering/private/egress/peer-1/0.md","L7/peering/private/egress/peer-1/object-1/0.md","L7/peering/private/egress/peer-2/0.md","L7/peering/private/egress/peer-2/object-1/0.md","L7/peering/private/ingress/0.md","L7/peering/private/ingress/peer-1/0.md","L7/peering/private/ingress/peer-1/object-1/0.md","…
+  - item 6
+    - **type**: workflow_agent
+    - **index**: 4
+    - **label**: audit:auditonomous:b04-peering-public
+    - **phaseIndex**: 1
+    - **phaseTitle**: Audit
+    - **agentId**: ae670f8cad9478c74
+    - **model**: claude-fable-5-2
+    - **state**: done
+    - **startedAt**: 1794424977837
+    - **queuedAt**: 1794423724386
+    - **attempt**: 1
+    - **lastToolName**: StructuredOutput
+    - **promptPreview**: You are one agent in a READ-ONLY audit. Nothing may be changed.
+
+      THE REPOSITORY: auditonomous, local clone /home/user/auditonomous, PINNED COMMIT f2d5b37 (read this commit and no other state). It is an "exemplar" of the Seven-Layer Model (7LM). The model's scaffold is /home/user/7lm (model of record = origin/main). The controlling text is the specification: /home/user/7lm origin/main:L8/L4/work/wr…
+    - **promptFramed**: yes
+    - **lastProgressAt**: 1794426157657
+    - **tokens**: 323609
+    - **toolCalls**: 82
+    - **durationMs**: 1179819
+    - **resultPreview**: {"sheets_audited":["L7/peering/public/0.md","L7/peering/public/egress/0.md","L7/peering/public/egress/peer-1/0.md","L7/peering/public/egress/peer-1/object-1/0.md","L7/peering/public/ingress/0.md","L7/peering/public/ingress/peer-1/0.md","L7/peering/public/ingress/peer-1/object-1/0.md"],"findings":[{"id":"b04-01","kind":"WRONG-FACT","sheet":"L7/peering/public/ingress/peer-1/object-1/0.md","line":"34…
+  - item 7
+    - **type**: workflow_agent
+    - **index**: 5
+    - **label**: audit:auditonomous:b05-provenance
+    - **phaseIndex**: 1
+    - **phaseTitle**: Audit
+    - **agentId**: ab6c7b82167285c10
+    - **model**: claude-fable-5-2
+    - **state**: done
+    - **startedAt**: 1794426157661
+    - **queuedAt**: 1794423724386
+    - **attempt**: 1
+    - **lastToolName**: StructuredOutput
+    - **promptPreview**: You are one agent in a READ-ONLY audit. Nothing may be changed.
+
+      THE REPOSITORY: auditonomous, local clone /home/user/auditonomous, PINNED COMMIT f2d5b37 (read this commit and no other state). It is an "exemplar" of the Seven-Layer Model (7LM). The model's scaffold is /home/user/7lm (model of record = origin/main). The controlling text is the specification: /home/user/7lm origin/main:L8/L4/work/wr…
+    - **promptFramed**: yes
+    - **lastProgressAt**: 1794427426007
+    - **tokens**: 316673
+    - **toolCalls**: 63
+    - **durationMs**: 1268346
+    - **resultPreview**: {"sheets_audited":["L7/provenance/0.md","L7/provenance/authority/0.md","L7/provenance/lineage/0.md","L7/provenance/prior-art/0.md","L7/provenance/sources/0.md","L7/provenance/sources/staging-records/0.md"],"findings":[{"id":"b05-01","kind":"WRONG-FACT","sheet":"L7/provenance/0.md","line":"37","sheet_says":"- `lineage/`, `authority/` — empty; authority for each bound peer object is stated in that o…
+  - item 8
+    - **type**: workflow_agent
+    - **index**: 6
+    - **label**: audit:auditonomous:b06-interior-root-L0
+    - **phaseIndex**: 1
+    - **phaseTitle**: Audit
+    - **agentId**: af1df831f7ff10544
+    - **model**: claude-fable-5-2
+    - **state**: done
+    - **startedAt**: 1794426378345
+    - **queuedAt**: 1794423724386
+    - **attempt**: 1
+    - **lastToolName**: StructuredOutput
+    - **promptPreview**: You are one agent in a READ-ONLY audit. Nothing may be changed.
+
+      THE REPOSITORY: auditonomous, local clone /home/user/auditonomous, PINNED COMMIT f2d5b37 (read this commit and no other state). It is an "exemplar" of the Seven-Layer Model (7LM). The model's scaffold is /home/user/7lm (model of record = origin/main). The controlling text is the specification: /home/user/7lm origin/main:L8/L4/work/wr…
+    - **promptFramed**: yes
+    - **lastProgressAt**: 1794427805021
+    - **tokens**: 362648
+    - **toolCalls**: 71
+    - **durationMs**: 1426675
+    - **resultPreview**: {"sheets_audited":["L8/0.md","L8/L0/0.md","L8/L0/epistemic/0.md","L8/L0/ontology/0.md","L8/L0/pedagogy/0.md","L8/L0/semantics/0.md","L8/L0/semantics/definitions/0.md","L8/L0/universality/0.md"],"findings":[{"id":"b06-01","kind":"STALE","sheet":"L8/0.md","line":"137","sheet_says":"`L8/L6/` (the master ledger, three session ledgers, the L6 record of this pass, and the retired 2026-08-14 layout). Wha…
+  - item 9
+    - **type**: workflow_agent
+    - **index**: 7
+    - **label**: audit:auditonomous:b07-L1-L2-L3
+    - **phaseIndex**: 1
+    - **phaseTitle**: Audit
+    - **agentId**: a9628c167d989ea8d
+    - **model**: claude-fable-5-2
+    - **state**: done
+    - **startedAt**: 1794427426016
+    - **queuedAt**: 1794423724386
+    - **attempt**: 1
+    - **lastToolName**: StructuredOutput
+    - **promptPreview**: You are one agent in a READ-ONLY audit. Nothing may be changed.
+
+      THE REPOSITORY: auditonomous, local clone /home/user/auditonomous, PINNED COMMIT f2d5b37 (read this commit and no other state). It is an "exemplar" of the Seven-Layer Model (7LM). The model's scaffold is /home/user/7lm (model of record = origin/main). The controlling text is the specification: /home/user/7lm origin/main:L8/L4/work/wr…
+    - **promptFramed**: yes
+    - **lastProgressAt**: 1794427633078
+    - **tokens**: 138857
+    - **toolCalls**: 19
+    - **durationMs**: 207060
+    - **resultPreview**: {"sheets_audited":["L8/L1/0.md","L8/L1/state-space/0.md","L8/L2/0.md","L8/L2/formal-mathematics/0.md","L8/L2/formal-mathematics/operators/0.md","L8/L2/formal-mathematics/proofs/0.md","L8/L2/formal-mathematics/relations/0.md","L8/L3/0.md","L8/L3/engineering-mathematics/0.md","L8/L3/engineering-mathematics/approximation/0.md","L8/L3/engineering-mathematics/tolerances/0.md","L8/L3/engineering-mathema…
+  - item 10
+    - **type**: workflow_agent
+    - **index**: 8
+    - **label**: audit:auditonomous:b08-L4
+    - **phaseIndex**: 1
+    - **phaseTitle**: Audit
+    - **agentId**: a3be51f23483e8baa
+    - **model**: claude-fable-5-2
+    - **state**: done
+    - **startedAt**: 1794427633081
+    - **queuedAt**: 1794423724387
+    - **attempt**: 1
+    - **lastToolName**: StructuredOutput
+    - **promptPreview**: You are one agent in a READ-ONLY audit. Nothing may be changed.
+
+      THE REPOSITORY: auditonomous, local clone /home/user/auditonomous, PINNED COMMIT f2d5b37 (read this commit and no other state). It is an "exemplar" of the Seven-Layer Model (7LM). The model's scaffold is /home/user/7lm (model of record = origin/main). The controlling text is the specification: /home/user/7lm origin/main:L8/L4/work/wr…
+    - **promptFramed**: yes
+    - **lastProgressAt**: 1794427841880
+    - **tokens**: 122861
+    - **toolCalls**: 20
+    - **durationMs**: 208799
+    - **resultPreview**: {"sheets_audited":["L8/L4/0.md","L8/L4/work/0.md","L8/L4/work/computation/0.md","L8/L4/work/experiments/0.md","L8/L4/work/writing/0.md","L8/L4/work/writing/branch/0.md","L8/L4/work/writing/chat/0.md","L8/L4/work/writing/sessions/0.md"],"statements_checked":150,"findings":[{"id":"b08-L4-01","kind":"WRONG-FACT","sheet":"L8/L4/work/computation/0.md","line":"54","sheet_says":"\"This branch may remain …
+  - item 11
+    - **type**: workflow_agent
+    - **index**: 9
+    - **label**: audit:auditonomous:b09-L5
+    - **phaseIndex**: 1
+    - **phaseTitle**: Audit
+    - **agentId**: a5367104cc196b320
+    - **model**: claude-fable-5-2
+    - **state**: done
+    - **startedAt**: 1794427805027
+    - **queuedAt**: 1794423724387
+    - **attempt**: 1
+    - **lastToolName**: StructuredOutput
+    - **promptPreview**: You are one agent in a READ-ONLY audit. Nothing may be changed.
+
+      THE REPOSITORY: auditonomous, local clone /home/user/auditonomous, PINNED COMMIT f2d5b37 (read this commit and no other state). It is an "exemplar" of the Seven-Layer Model (7LM). The model's scaffold is /home/user/7lm (model of record = origin/main). The controlling text is the specification: /home/user/7lm origin/main:L8/L4/work/wr…
+    - **promptFramed**: yes
+    - **lastProgressAt**: 1794427982121
+    - **tokens**: 128114
+    - **toolCalls**: 18
+    - **durationMs**: 177094
+    - **resultPreview**: {"sheets_audited":["L8/L5/0.md","L8/L5/institution/0.md","L8/L5/institution/peers/0.md","L8/L5/institution/undergraduates/0.md","L8/L5/research/0.md","L8/L5/research/findings/0.md","L8/L5/research/lanes/0.md","L8/L5/research/review/0.md"],"statements_checked":96,"clean_sheets":["L8/L5/institution/0.md","L8/L5/institution/peers/0.md","L8/L5/institution/undergraduates/0.md","L8/L5/research/findings/…
+  - item 12
+    - **type**: workflow_agent
+    - **index**: 10
+    - **label**: audit:auditonomous:b10-L6
+    - **phaseIndex**: 1
+    - **phaseTitle**: Audit
+    - **agentId**: a1e4bc6439d9e5800
+    - **model**: claude-fable-5-2
+    - **state**: done
+    - **startedAt**: 1794427841885
+    - **queuedAt**: 1794423724387
+    - **attempt**: 1
+    - **lastToolName**: StructuredOutput
+    - **promptPreview**: You are one agent in a READ-ONLY audit. Nothing may be changed.
+
+      THE REPOSITORY: auditonomous, local clone /home/user/auditonomous, PINNED COMMIT f2d5b37 (read this commit and no other state). It is an "exemplar" of the Seven-Layer Model (7LM). The model's scaffold is /home/user/7lm (model of record = origin/main). The controlling text is the specification: /home/user/7lm origin/main:L8/L4/work/wr…
+    - **promptFramed**: yes
+    - **lastProgressAt**: 1794427992621
+    - **tokens**: 114061
+    - **toolCalls**: 10
+    - **durationMs**: 150736
+    - **resultPreview**: {"sheets_audited":["L8/L6/0.md","L8/L6/history/0.md","L8/L6/retired/0.md"],"statements_checked":96,"clean_sheets":[],"findings":[{"id":"b10-L6-01","kind":"WRONG-FACT","sheet":"L8/L6/history/0.md","line":"35","sheet_says":"`LEDGER.md` — the master ledger: the tree by state, what each area waits on, retired objects, staleness \"declared, not silently repaired\".","truth":"The quoted phrase is not in…
+  - item 13
+    - **type**: workflow_agent
+    - **index**: 11
+    - **label**: verify:auditonomous:b02-governance
+    - **phaseIndex**: 2
+    - **phaseTitle**: Verify
+    - **agentId**: ac260b5cb2718c98c
+    - **model**: claude-fable-5-2
+    - **state**: done
+    - **startedAt**: 1794427982155
+    - **queuedAt**: 1794424929664
+    - **attempt**: 1
+    - **lastToolName**: StructuredOutput
+    - **promptPreview**: You are one agent in a READ-ONLY audit. Nothing may be changed.
+
+      THE REPOSITORY: auditonomous, local clone /home/user/auditonomous, PINNED COMMIT f2d5b37 (read this commit and no other state). It is an "exemplar" of the Seven-Layer Model (7LM). The model's scaffold is /home/user/7lm (model of record = origin/main). The controlling text is the specification: /home/user/7lm origin/main:L8/L4/work/wr…
+    - **promptFramed**: yes
+    - **lastProgressAt**: 1794428176948
+    - **tokens**: 133784
+    - **toolCalls**: 15
+    - **durationMs**: 194793
+    - **resultPreview**: {"verdicts":[{"id":"b02-governance-01","real":true,"reasoning":"Sheet text confirmed at L7/governance/copyright/0.md:43: \"Every item obtained through the owner's institutional (WSU) access is IL-001-R2 class-2 hold-private: the 31 WSU-licensed IEEE PDFs and their reading captures ... (`.../ieee/README.md`; per-file watermark manifest at `.../ieee/papers/README.md`)\". The colon presents the 31 as…
+  - item 14
+    - **type**: workflow_agent
+    - **index**: 12
+    - **label**: verify:auditonomous:b01-desk-root-allications
+    - **phaseIndex**: 2
+    - **phaseTitle**: Verify
+    - **agentId**: a5d5408f2abd91ee0
+    - **model**: claude-fable-5-2
+    - **state**: done
+    - **startedAt**: 1794427992625
+    - **queuedAt**: 1794424977859
+    - **attempt**: 1
+    - **lastToolName**: StructuredOutput
+    - **promptPreview**: You are one agent in a READ-ONLY audit. Nothing may be changed.
+
+      THE REPOSITORY: auditonomous, local clone /home/user/auditonomous, PINNED COMMIT f2d5b37 (read this commit and no other state). It is an "exemplar" of the Seven-Layer Model (7LM). The model's scaffold is /home/user/7lm (model of record = origin/main). The controlling text is the specification: /home/user/7lm origin/main:L8/L4/work/wr…
+    - **promptFramed**: yes
+    - **lastProgressAt**: 1794428161446
+    - **tokens**: 112965
+    - **toolCalls**: 12
+    - **durationMs**: 168820
+    - **resultPreview**: {"verdicts":[{"id":"b01-01","real":true,"reasoning":"Sheet words confirmed at L7/0.md:232: \"(the 62-row pointer register into the `aybllc/l6` archive, relocated from `uso/l6/LEDGER.md`)\". Checked independently on the object f2d5b37:L7/provenance/sources/LEDGER.md: lines matching '^| (PR|STD|INST|EXC)-NNN |' = 60; they occupy file lines 20-79; by prefix PR 20 (001-020), STD 34 (001-034), INST 4 (…
+  - item 15
+    - **type**: workflow_agent
+    - **index**: 13
+    - **label**: verify:auditonomous:b04-peering-public
+    - **phaseIndex**: 2
+    - **phaseTitle**: Verify
+    - **agentId**: a5e7d4994f8544d5a
+    - **model**: claude-fable-5-2
+    - **state**: done
+    - **startedAt**: 1794428161449
+    - **queuedAt**: 1794426157681
+    - **attempt**: 1
+    - **lastToolName**: StructuredOutput
+    - **promptPreview**: You are one agent in a READ-ONLY audit. Nothing may be changed.
+
+      THE REPOSITORY: auditonomous, local clone /home/user/auditonomous, PINNED COMMIT f2d5b37 (read this commit and no other state). It is an "exemplar" of the Seven-Layer Model (7LM). The model's scaffold is /home/user/7lm (model of record = origin/main). The controlling text is the specification: /home/user/7lm origin/main:L8/L4/work/wr…
+    - **promptFramed**: yes
+    - **lastProgressAt**: 1794428250728
+    - **tokens**: 87142
+    - **toolCalls**: 7
+    - **durationMs**: 89278
+    - **resultPreview**: {"verdicts":[{"id":"b04-01","real":true,"reasoning":"Sheet words confirmed at f2d5b37:L7/peering/public/ingress/peer-1/object-1/0.md:34: \"`L8/L0/semantics/definitions/AUDITONOMOUS_DEFINITION.md` is the locally authored delta over this root; it names this binding and does not copy the peer definition.\" The grammatical subject of \"names this binding\" is the file. I checked the file (410 lines) i…
+  - item 16
+    - **type**: workflow_agent
+    - **index**: 14
+    - **label**: verify:auditonomous:b03-peering-private
+    - **phaseIndex**: 2
+    - **phaseTitle**: Verify
+    - **agentId**: a1b02c6f8797a4988
+    - **model**: claude-fable-5-2
+    - **state**: done
+    - **startedAt**: 1794428176952
+    - **queuedAt**: 1794426378372
+    - **attempt**: 1
+    - **lastToolName**: StructuredOutput
+    - **promptPreview**: You are one agent in a READ-ONLY audit. Nothing may be changed.
+
+      THE REPOSITORY: auditonomous, local clone /home/user/auditonomous, PINNED COMMIT f2d5b37 (read this commit and no other state). It is an "exemplar" of the Seven-Layer Model (7LM). The model's scaffold is /home/user/7lm (model of record = origin/main). The controlling text is the specification: /home/user/7lm origin/main:L8/L4/work/wr…
+    - **promptFramed**: yes
+    - **lastProgressAt**: 1794428382493
+    - **tokens**: 119836
+    - **toolCalls**: 11
+    - **durationMs**: 205541
+    - **resultPreview**: {"verdicts":[{"id":"b03-01","real":true,"reasoning":"Sheet L7/peering/private/ingress/peer-1/0.md line 16 does read \"bound by the 62 rows of `L7/provenance/sources/LEDGER.md`\". At f2d5b37 the register table (LEDGER.md lines 20-79, between the header at line 18 and \"**Column rules:**\" at line 81) has 60 data rows: `grep -c -E '^\\| (PR|STD|INST|EXC)-[0-9]+ \\|'` on the git object returns 60; pe…
+  - item 17
+    - **type**: workflow_agent
+    - **index**: 15
+    - **label**: verify:auditonomous:b05-provenance
+    - **phaseIndex**: 2
+    - **phaseTitle**: Verify
+    - **agentId**: aa0ce072a2b074f98
+    - **model**: claude-fable-5-2
+    - **state**: done
+    - **startedAt**: 1794428250731
+    - **queuedAt**: 1794427426046
+    - **attempt**: 1
+    - **lastToolName**: StructuredOutput
+    - **promptPreview**: You are one agent in a READ-ONLY audit. Nothing may be changed.
+
+      THE REPOSITORY: auditonomous, local clone /home/user/auditonomous, PINNED COMMIT f2d5b37 (read this commit and no other state). It is an "exemplar" of the Seven-Layer Model (7LM). The model's scaffold is /home/user/7lm (model of record = origin/main). The controlling text is the specification: /home/user/7lm origin/main:L8/L4/work/wr…
+    - **promptFramed**: yes
+    - **lastProgressAt**: 1794428417273
+    - **tokens**: 124835
+    - **toolCalls**: 11
+    - **durationMs**: 166542
+    - **resultPreview**: {"verdicts":[{"id":"b05-01","real":true,"reasoning":"L7/provenance/0.md:37 reads \"- `lineage/`, `authority/` — empty; authority for each bound peer object is stated in that object's binding record under `L7/peering/`.\" `git ls-tree -r -l f2d5b37 L7/provenance` shows L7/provenance/lineage/ holds 0.md (3450 bytes) and 2026-08-05-observed-not-observable-session-provenance.md (13733 bytes); L7/prove…
+  - item 18
+    - **type**: workflow_agent
+    - **index**: 16
+    - **label**: verify:auditonomous:b07-L1-L2-L3
+    - **phaseIndex**: 2
+    - **phaseTitle**: Verify
+    - **agentId**: a120ef60ac1c9aa09
+    - **model**: claude-fable-5-2
+    - **state**: done
+    - **startedAt**: 1794428382497
+    - **queuedAt**: 1794427633100
+    - **attempt**: 1
+    - **lastToolName**: StructuredOutput
+    - **promptPreview**: You are one agent in a READ-ONLY audit. Nothing may be changed.
+
+      THE REPOSITORY: auditonomous, local clone /home/user/auditonomous, PINNED COMMIT f2d5b37 (read this commit and no other state). It is an "exemplar" of the Seven-Layer Model (7LM). The model's scaffold is /home/user/7lm (model of record = origin/main). The controlling text is the specification: /home/user/7lm origin/main:L8/L4/work/wr…
+    - **promptFramed**: yes
+    - **lastProgressAt**: 1794428449005
+    - **tokens**: 81301
+    - **toolCalls**: 7
+    - **durationMs**: 66507
+    - **resultPreview**: {"verdicts":[{"id":"b07-1","real":true,"reasoning":"Sheet words confirmed at f2d5b37:L8/L1/0.md line 54: \"(The spec prints the four headings below at H2; their depth is reduced here only to nest under this sheet's section. Words are unchanged.)\". The sheet's own four headings are at lines 56, 67, 77, 87, all \"###\". The current specification (7lm origin/main:L8/L4/work/writing/7lm-harmonized-ar…
+  - item 19
+    - **type**: workflow_agent
+    - **index**: 17
+    - **label**: verify:auditonomous:b06-interior-root-L0
+    - **phaseIndex**: 2
+    - **phaseTitle**: Verify
+    - **agentId**: ab90979ebd719a16a
+    - **model**: claude-fable-5-2
+    - **state**: done
+    - **startedAt**: 1794428417279
+    - **queuedAt**: 1794427805049
+    - **attempt**: 1
+    - **lastToolName**: StructuredOutput
+    - **promptPreview**: You are one agent in a READ-ONLY audit. Nothing may be changed.
+
+      THE REPOSITORY: auditonomous, local clone /home/user/auditonomous, PINNED COMMIT f2d5b37 (read this commit and no other state). It is an "exemplar" of the Seven-Layer Model (7LM). The model's scaffold is /home/user/7lm (model of record = origin/main). The controlling text is the specification: /home/user/7lm origin/main:L8/L4/work/wr…
+    - **promptFramed**: yes
+    - **lastProgressAt**: 1794428591688
+    - **tokens**: 112192
+    - **toolCalls**: 11
+    - **durationMs**: 174409
+    - **resultPreview**: {"verdicts":[{"id":"b06-01","real":true,"reasoning":"Checked `git show f2d5b37:L8/0.md` line 137: the words are there exactly (\"the L6 record of this pass, and the retired 2026-08-14 layout). What did not move in that pass: `common/`, `intake/claude/`, and `manuscripts/definitions/README.md` and `REGISTER.md`\"). No pass is named in the Holdings paragraph before these words; the only pass the she…
+  - item 20
+    - **type**: workflow_agent
+    - **index**: 18
+    - **label**: verify:auditonomous:b08-L4
+    - **phaseIndex**: 2
+    - **phaseTitle**: Verify
+    - **agentId**: a9fc5e24847a672ee
+    - **model**: claude-fable-5-2
+    - **state**: done
+    - **startedAt**: 1794428449008
+    - **queuedAt**: 1794427841905
+    - **attempt**: 1
+    - **lastToolName**: StructuredOutput
+    - **promptPreview**: You are one agent in a READ-ONLY audit. Nothing may be changed.
+
+      THE REPOSITORY: auditonomous, local clone /home/user/auditonomous, PINNED COMMIT f2d5b37 (read this commit and no other state). It is an "exemplar" of the Seven-Layer Model (7LM). The model's scaffold is /home/user/7lm (model of record = origin/main). The controlling text is the specification: /home/user/7lm origin/main:L8/L4/work/wr…
+    - **promptFramed**: yes
+    - **lastProgressAt**: 1794428596244
+    - **tokens**: 115843
+    - **toolCalls**: 10
+    - **durationMs**: 147236
+    - **resultPreview**: {"verdicts":[{"id":"b08-L4-01","real":true,"reasoning":"Sheet words confirmed at f2d5b37:L8/L4/work/computation/0.md:54: \"- This branch may remain empty. Presence in the agnostic topology establishes admissible capability, not mandatory population; unused now does not mean removed. It is empty at present.\" `git ls-tree -r -l f2d5b37 L8/L4/work/computation` shows six files besides 0.md (the two .…
+  - item 21
+    - **type**: workflow_agent
+    - **index**: 19
+    - **label**: verify:auditonomous:b09-L5
+    - **phaseIndex**: 2
+    - **phaseTitle**: Verify
+    - **agentId**: a16959dd18cf3f878
+    - **model**: claude-fable-5-2
+    - **state**: done
+    - **startedAt**: 1794428591692
+    - **queuedAt**: 1794427982181
+    - **attempt**: 1
+    - **lastToolName**: StructuredOutput
+    - **promptPreview**: You are one agent in a READ-ONLY audit. Nothing may be changed.
+
+      THE REPOSITORY: auditonomous, local clone /home/user/auditonomous, PINNED COMMIT f2d5b37 (read this commit and no other state). It is an "exemplar" of the Seven-Layer Model (7LM). The model's scaffold is /home/user/7lm (model of record = origin/main). The controlling text is the specification: /home/user/7lm origin/main:L8/L4/work/wr…
+    - **promptFramed**: yes
+    - **lastProgressAt**: 1794428659383
+    - **tokens**: 90452
+    - **toolCalls**: 4
+    - **durationMs**: 67691
+    - **resultPreview**: {"verdicts":[{"id":"b09-L5-01","real":true,"reasoning":"Sheet L8/L5/research/lanes/0.md line 36 at f2d5b37 reads exactly as quoted: \"cluster analysis of the theory manuscript corpus (C1–C6) and the named tensions T1–T11\". THEME_LEDGER.md at the same commit has 11 cluster headings ('### C1' at line 15 through '### [source text withheld from the public copy])' at line …
+  - item 22
+    - **type**: workflow_agent
+    - **index**: 20
+    - **label**: verify:auditonomous:b10-L6
+    - **phaseIndex**: 2
+    - **phaseTitle**: Verify
+    - **agentId**: a277bd1da14dbccb0
+    - **model**: claude-fable-5-2
+    - **state**: done
+    - **startedAt**: 1794428596249
+    - **queuedAt**: 1794427992645
+    - **attempt**: 1
+    - **lastToolName**: StructuredOutput
+    - **promptPreview**: You are one agent in a READ-ONLY audit. Nothing may be changed.
+
+      THE REPOSITORY: auditonomous, local clone /home/user/auditonomous, PINNED COMMIT f2d5b37 (read this commit and no other state). It is an "exemplar" of the Seven-Layer Model (7LM). The model's scaffold is /home/user/7lm (model of record = origin/main). The controlling text is the specification: /home/user/7lm origin/main:L8/L4/work/wr…
+    - **promptFramed**: yes
+    - **lastProgressAt**: 1794428749851
+    - **tokens**: 103988
+    - **toolCalls**: 9
+    - **durationMs**: 153602
+    - **resultPreview**: {"verdicts":[{"id":"b10-L6-01","real":true,"reasoning":"Sheet words confirmed at L8/L6/history/0.md:35: `LEDGER.md` — the master ledger: the tree by state, what each area waits on, retired objects, staleness \"declared, not silently repaired\". Checked f2d5b37:L8/L6/history/LEDGER.md (63 lines): `git grep -n -i -E 'silently|stale|repair|declared, not'` on that file returns nothing; its sections ar…
+- **totalTokens**: 3615965
+- **totalToolCalls**: 613

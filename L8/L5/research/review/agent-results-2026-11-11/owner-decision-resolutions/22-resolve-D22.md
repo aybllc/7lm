@@ -1,0 +1,52 @@
+# resolve:D22
+
+Agent result, as returned. Workflow: Resolutions for the 23 owner decisions. Run `wf_3293f65c-a92`. Phase: Resolve.
+
+- **decision**: 22. Whether the Auditonomous sheets that state 62 ledger rows, against 60 in the register, are corrected now or separately.
+- **resolution**: Correct it separately, not inside the mirror (draft PR #28): put it to the owner as a proposal (file, what is wrong, the exact fix) and, on the owner's word, apply it as one small commit of its own that changes "62" to "60" in the seven statements of the five live sheets and adds a record section. Leave the dated history records that say 62 as they stand, and leave the register itself untouched.
+- **reasoning**
+  - item 1
+    - **speaker**: owner
+    - **quote**: Don't change the system unless you ask or are unsure
+    - **locator**: /home/user/7lm@origin/main:L8/L6/history/harmonization-2026-09-04.md:482
+    - **bears**: The owner's standing rule: a change the owner has not asked for is asked about first, which a count correction in five sheets is.
+  - item 2
+    - **speaker**: record
+    - **quote**: Findings and design verdicts come to the owner as proposals — file, what is wrong, the exact fix — and nothing is applied until the owner says which.
+    - **locator**: /home/user/7lm@origin/main:L8/L6/history/harmonization-2026-09-04.md:484
+    - **bears**: The record's reading of that rule gives the form: the 62/60 finding goes to the owner as a proposal with its exact fix and waits for the owner's word.
+  - item 3
+    - **speaker**: owner
+    - **quote**: we need to uipdate the autonomous and auditonomous repos phsyciall; to match first
+    - **locator**: owner's instructions of 11 November 2026 (also /home/user/auditonomous@origin/ccr-9391bd81-f2enmj:L8/L6/history/harmonization-2026-09-05.md:178)
+    - **bears**: What the owner asked for on 11 November is the physical match to the model; a ledger count is not part of the model's change, so the mirror's mandate does not reach it.
+  - item 4
+    - **speaker**: record
+    - **quote**: No research object, no definition, no ledger row and no manuscript file is touched.
+    - **locator**: /home/user/auditonomous@origin/ccr-9391bd81-f2enmj:L8/L6/history/harmonization-2026-09-05.md:200
+    - **bears**: The mirror's own record states its limit; folding the count correction into PR #28 would make that account of the pass untrue, so the correction belongs in a separate commit with its own record.
+  - item 5
+    - **speaker**: sheet
+    - **quote**: 62 pointer rows (PR-, STD-, INST-, EXC-) into `aybllc/l6` by path and pinned commit
+    - **locator**: /home/user/auditonomous@origin/ccr-9391bd81-f2enmj:L7/provenance/0.md:33
+    - **bears**: The fact: the live sheets state 62 (seven statements: L7/0.md:232, L7/peering/private/ingress/peer-1/0.md:16, peer-1/object-1/0.md:10, L7/provenance/0.md:20 and :33, L7/provenance/sources/0.md:10 and :41), while L7/provenance/sources/LEDGER.md at the same ref holds 60 register rows (PR 20, STD 34, INST 4, EXC 2); main reads the same.
+  - item 6
+    - **speaker**: record
+    - **quote**: 62 rows (PR-001..020, STD-001..034, INST-001..004, EXC-001/002)
+    - **locator**: /home/user/auditonomous@origin/main:L8/L6/history/LEDGER_2026-08-16_l6-close-and-normalization.md:30
+    - **bears**: The origin of the figure: the ranges it lists itself sum to 60 (20+34+4+2), so 62 is an arithmetic slip of 16 August copied into the sheets, not two lost rows; the fix is the number in the sheets, not the register.
+  - item 7
+    - **speaker**: record
+    - **quote**: Corrected current archive guidance to 60 rows and appended the attributable 21-not-22 closeout arithmetic correction. Original dated ledger event bytes remain exact.
+    - **locator**: /home/user/auditonomous@origin/beta/7lm-exemplar-auditonomous:L8/L6/history/AUDITONOMOUS_BETA_HISTORY.md:8
+    - **bears**: The owner's unmerged candidate already makes this correction, as its own recorded item and without altering dated history, which shows both the right figure and the right shape (separate, attributable, history left exact) and that a second fix on the mirror would have to be reconciled with it.
+  - item 8
+    - **speaker**: record
+    - **quote**: It is not corrected here.
+    - **locator**: /home/user/auditonomous@origin/ccr-9391bd81-f2enmj:L8/L6/history/harmonization-2026-09-05.md:205
+    - **bears**: Precedent inside the same pass: a known false sentence in a sheet, unrelated to the restructure, was listed for the owner and left, not fixed in passing.
+- **against**: "read as leave to make the words say what the folders already say and to act on findings verified three ways, and as no leave to change what any position is, holds, or is named." (/home/user/7lm@origin/main:L8/L6/history/harmonization-2026-09-04.md:510), together with the exemplar record's heading "the sheets say what is; the record says what happened" (/home/user/auditonomous@origin/ccr-9391bd81-f2enmj:L8/L6/history/harmonization-2026-09-05.md:156). A count correction changes nothing a position is, holds or is named, the finding is verifiable by counting, and a sheet that says 62 does not say what is; on that reading it could be fixed now, and the mirror branch already edits four of the five sheets concerned. But that leave was given for the scaffold on 20 September, not for this repository on 11 November.
+- **confidence**: the quotations favour it
+- **alternatives**: (a) Fix now inside PR #28: cheapest, but contradicts the mirror record's own "Not changed" paragraph and widens a pass the owner scoped to the model match. (b) Leave it to the beta branch (714480d), which already reads 60 in L7/0.md: no new work, but the fix then waits on a merge the owner has not decided, and main keeps the wrong figure. (c) Do nothing: the sheets keep stating a count the register does not bear out.
+- **what_it_costs**: One short proposal and, once approved, one commit touching five sheets (seven occurrences of 62) plus a record section; reversible by reverting that commit. Until the owner answers, main and the mirror keep the wrong figure. Whichever of this fix and the beta branch lands second needs the wording reconciled in L7/0.md. My search covered the phrasing "62 rows / 62-row / 62 pointer rows"; other phrasings of the count were not searched for.
+- **who_acts**: The owner says whether to apply it (a word such as the earlier "fix them" is enough) and whether it goes on main directly or after PR #28; the session then makes the single commit. The owner should also say whether the beta branch's wording ("the 60-row archive pointer register") is the wording to use.

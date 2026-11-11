@@ -1,0 +1,1793 @@
+# synthesize
+
+Agent result, as returned. Workflow: Handle on the Auditonomous research and manuscript. Run `wf_9c2917a7-7f0`. Phase: Synthesize.
+
+- **report**: # Auditonomous: where the research stands, and what the manuscript can take from it
+
+  Read on 11 November 2026 from git objects only. Nothing was changed.
+
+  **States.** MAIN = origin/main 2165144, unchanged since 11 September 2026. ROADMAP = the closed branch of pull request #27, 9259c18. BETA = origin/beta/7lm-exemplar-auditonomous 714480d, committed 2 November 2026 (Pacific time). HISTORY = commit 1d83788, the tree before the prune of 15 August 2026.
+
+  **Short names.** DEF = L8/L0/semantics/definitions/AUDITONOMOUS_DEFINITION.md. AUDY = L8/L0/semantics/definitions/AUDITONOMY.md. RM = L8/L5/research/review/BOOK_STRUCTURE_AND_ROADMAP_2026-09-13.md. REV/ = L8/L5/research/review/. FIND/ = L8/L5/research/findings/. LANES/ = L8/L5/research/lanes/. SS/ = L8/L1/state-space/. STG/ = L7/provenance/sources/staging-records/. HIST/ = L8/L6/history/. AUT = aybllc/autonomous origin/main.
+
+  Words in capitals inside quotation marks are the repository's own labels. Evidence states in plain capitals are mine. Ids such as X-02 or U-01 point into the open register.
+
+  ## The short answer
+
+  The research is a set of dated working records written between 30 July and 14 September 2026, plus one small computation of 2 November 2026. MAIN holds the definition entry, three state-space documents, an empty formal layer, one engineering proposal, three standards extractions, three findings, the register of seven standards contradictions, the perpetuity adjudication and the source records. The second definition (AUDY), the whole lambda thread, the research docket, the author assertions, four findings, eight numerical probes, the corpus and the roadmap stand only on ROADMAP. BETA adds a 16-case synthetic run and corrections to the records, and holds none of ROADMAP's material. What has been checked against outside sources is narrow: the word's roots, quotations from the standards and papers that were read, the lambda arithmetic against Rump 1999, and the claims sampled by the external audit of 4 August 2026. Nothing has tested a system against the definition, the prior-art search for the coinage was never run, and the search on whether "autonomous" entails auditability was queued on 16 August 2026 and never run. The live contradictions are two definitions with no stated relation, "concealment impossible" against the repository's own reading that records detect and do not prevent, three positions on question Q13, and eleven definitions of "autonomous" with no baseline. The manuscript can draw today on the definition as the author's statement, on verbatim standards quotations within their licence limits, on the two lambda results, and on the contradiction registers as method. It cannot draw on any claim of novelty, conformance or achievement, on any formal statement, or on any number in the first-contact chapters.
+
+  ## The research, from the bottom up
+
+  **L0, the definition.** MAIN holds DEF: 410 lines, dated 30 July 2026, byte-identical since the first commit. It gives three senses, eight criteria, a firmware clause and seven exclusions. It is the "definition of record" by ruling AU-NORM-02 of 16 August 2026; the ruling's own text is held nowhere. ROADMAP adds AUDY, whose header reads "[source text withheld from the public copy])" under the label "CONJECTURE / INTERNAL ONLY". It defines auditonomy by protocol, law, sovereignty and immutable record, with five conditions A to E. MAIN's distillation calls AUDY "governing text" and MAIN's envelope cites its conditions, though MAIN does not hold the file. BETA inserts 16 lines into DEF and adds a scope note. The other four L0 positions are EMPTY. Evidence: word roots EXTERNALLY CHECKED (13 "VERIFIED", 1 "PARTIALLY VERIFIED", fetched 30 July 2026); senses and criteria ASSERTED; sense 3, the firmware clause and line 52 CONTRADICTED; AUDY CONJECTURE; which text governs UNRESOLVED. Verdict: there are two definitions and no document states how they relate.
+
+  **L1, state space.** MAIN: AUDITON_ENVELOPE (twelve compartments, eight supplied by the envelope, three legal freezes), HUMINT_ENCODE (slots H1 to H7) and REQUIREMENTS_OWNERSHIP (113 requirements split 21 / 4 / 6 / 0 / 82). ROADMAP adds AUDITABILITY_REQUIREMENTS and AUDITON_REPLICATOR. BETA adds a two-paragraph admission note. The envelope labels itself "`COMPOSITE OBJECT UNVERIFIED`. Not adversarially reviewed." Evidence: the composition is ASSERTED; the partition arithmetic is INTERNALLY CHECKED for 99 of the 113 rows, and the 14 NASA rows are in no file; "[source text withheld from the public copy]" is CONTRADICTED by the same file's table, which I recounted at fifteen (MAIN:SS/REQUIREMENTS_OWNERSHIP.md:72, 117); the replicator records two of its headline claims refuted and reopens the envelope's root of trust. Verdict: an unreviewed architecture over quoted controls, with counts that must be corrected before print.
+
+  **L2, formal mathematics.** EMPTY on MAIN and ROADMAP. The formulas ledger says "Currently: **EMPTY** — no formulas held." (MAIN:L8/L2/formal-mathematics/FORMULAS_LEDGER.md:10). One four-line isomorphism proof sits in an L4 session file and holds when redone by hand. Two readers reported that no predicate Aud(S,F) exists anywhere. That is wrong. I read the object: the sourcebook states it in LaTeX, as Aud(S,F) if and only if Aut(S,F) and five conditions (ROADMAP:L8/L4/work/writing/sourcebook/Auditonomous_Book_Material_Sourcebook_v0.1.md:116). It is model-written, unratified and unregistered. BETA adds one fixture predicate, which says of itself that it is not a universal definition. Verdict: none of the nine concepts the definition relies on has a formal statement.
+
+  **L3, engineering mathematics.** MAIN holds two documents. The Seal-Gated Interlock reads "Status: PROPOSAL. [source text withheld from the public copy]." It is UNRESOLVED: its attack pass was never folded in, and IEC 61508 and ISO 13849 are "NOT-CHECKED". The external priors record, on the dependency problem and affine arithmetic, is EXTERNALLY CHECKED as recorded, with no URL, fetch date, hash or ledger row. Approximation and tolerances are EMPTY. Verdict: one proposal and one literature note, and no method for any defining criterion.
+
+  **L4, computation and experiments.** Experiments are EMPTY in every state: "No experiment has been executed". MAIN holds three extractions (IEEE 55, ISO/IEC 24 and NIST 20 rows, recounted; EXTERNALLY CHECKED by their own single-pass record) and one deep-research report the repository labels "model output as run, never evidence". ROADMAP holds eight probes and the OMMP codec reconstruction, labelled "NOT CANONICAL". A reader re-ran all eight probes on 11 November 2026 and every compared figure matched the record that cites it. The codec suite passed 65 checks where its README says 66. On BETA, 12 tests passed and the committed result reproduced except for the recorded Python version. Evidence: INTERNALLY CHECKED. Verdict: the arithmetic reproduces, and none of it tests a system.
+
+  **L5, lanes, review, findings.** Lanes (MAIN): a theme ledger of eleven clusters and sixteen tensions, and twelve record-ontology questions, all "OPEN", not worked since 4 August 2026. Review (MAIN): contradictions C1 to C7 (quotes EXTERNALLY CHECKED as recorded, none resolved, every cross-link dead) and the perpetuity adjudication. Review (ROADMAP only): six lambda documents and three dated records, the external audit, the docket (45 entries, 5 closed), author assertions A-001 to A-009c (ASSERTED), source requests SR-01 to SR-24, a census dossier with zero entries verified, the defect ledger on your N/U algebra paper, the cycles review and the Tic Tac adjudication. Findings: three on MAIN, four more on ROADMAP, one on BETA. Each ends "nothing adopted" and none has a recorded review. Institution is EMPTY. Verdict: claims were tested and narrowed, and almost nothing was ruled or adopted.
+
+  **L6, the records.** MAIN holds ten record files and two retired sets, all about custody and layout. Every ledger says "External Sources Checked: NONE". The master ledger describes areas that no longer exist and is CONTRADICTED by the tree. MAIN has no list of what the prune of 15 August 2026 removed; ROADMAP's restore record lists all 318 paths, and a reader confirmed that table exact. HISTORY alone holds the freeze file, the hub ledger and your early drafts. Verdict: sound on custody, stale on the tree.
+
+  **L7, sources, bindings, conditions, release.** The source ledger has 60 rows, not the 62 that MAIN states. Each row points into the private archive aybllc/l6, which no reader could open. The ledger's "VERIFIED" means the file matches the archive copy. Reading is recorded for 14 of the 58 held sources. The definition's own citations have no rows. One binding is pinned and confirmed, to Autonomous at 0504961. Three have no version: eb-audit, ebios with the Martin 2026 manuscript, and the Third Power Corpus. IEEE files obtained through the university are hold-private. The ISO/IEC 22989 captures come from a withdrawn copy and are not re-verified. Nothing is released, and all six checklist boxes are unticked. Verdict: the base supports quotation from the fourteen sources with reading records and clears nothing for release.
+
+  ## What has been checked, and against what
+
+  External checks on record, and what each settled:
+
+  1. Word roots, against American Heritage, Perseus, the NIST glossary, RFC 4949, [source text withheld from the public copy] IEEE 7001 scope page, 30 July 2026. Settled lexical ancestry only (MAIN:DEF:281-347).
+  2. Eleven [source text withheld from the public copy] on 4 August 2026: IEEE 7001, 7007, 7009, 7014 and 3152, ARIES, Haber and Stornetta, Ferreira, FIPS 180-4, RFC 6962 and RFC 9162. A verifier compared the quotes with the PDFs and found no fabrication. Settled: "[source text withheld from the public copy]"; tamper-evidence needs a second party; IEEE 7014 defines auditability for empathic systems only and requires deletion (MAIN:STG/library/FINDINGS_2026-08-04.md:12-36; MAIN:STG/ieee/FINDINGS_2026-08-04.md:18-69).
+  3. Three extractions, 99 rows, clause by clause. Recorded result: the ISO, NASA and NIST rows are definitional, and no body read states a least-function rule.
+  4. C1 to C7. A reader matched C1, C2 and C4 to the extractions, found C2 overstated, and found C4's "Heteronomous" classification listed as unverified in the bound Autonomous entry.
+  5. Lambda, against Rump 1999, Rump 2010, Goldberg 1991 and others, 4 August 2026. Settled: λ = 1 is Rump's midpoint-radius product; the λ = 0 radius is exact for sign-definite operands when the centre is shifted; the "meaningful digit" storage argument is refuted. A reader confirmed the Rump 1999 quotes against the copy held in the Autonomous repository.
+  6. The external audit of 4 August 2026: 27 clusters, "[source text withheld from the public copy]". Settled: the Git sentence and the kilogram sentence in the corpus are wrong, and three recorded blockers were false. Most corrections were never carried into the files they name (R-09).
+  7. The perpetuity question, 2 August 2026. Settled: no theorem says an autonomous system must end; the word has zero occurrences in five scholarly indexes.
+  8. Tension T3, against law and records standards. Settled: ISO 15489-1:2001 clause 7.2.2 lists five acts, and neither "falsify" nor "erase" is among them.
+  9. Cosmology as prior art for lambda, 5 August 2026. Settled: three claims refuted; only the conservation principle has precedent.
+  10. NIST SP 800-53 Rev. 5: 215 control statements transcribed, recounted by a reader.
+
+  Internal checks on record: the partition of the 113; the eight probes; DR-003, proved by substitution; the defect ledger's worked product, (2,1) ⊗ (7,2) = [3,25] against a true [5,27]; the bound definition's bytes, identical at 0504961 and on Autonomous main today; BETA's 16 cases, 32 events and pinned hashes; the restore table.
+
+  None of these checks bears on whether any system is auditonomous, or on whether the definition is new. No reader could re-fetch an outside source, so every EXTERNALLY CHECKED state rests on what the repository recorded.
+
+  ## What is contradicted or open
+
+  **The definition.** X-01: two definitions, no stated relation. X-02: DEF:52 says "auditonomy makes concealment impossible from the start"; the adjudication answers "[source text withheld from the public copy]**"; a third file says audit is not necessarily post hoc. Your remark behind the pending edit: "the udiot is always post hoc." X-03: two senses or three. X-04: what the word blends. X-05: firmware below against an intelligence layer above the ROM. X-07: "immutable" stands after the override finding ruled it unsafe to claim.
+
+  **One reader disagreement, settled.** One reader reported the stop path as non-overridable in the envelope and refusable in AUDY. I read both objects. AUDY records your reversal of 5 August 2026, "NOt refusable", and restores the envelope's wording (ROADMAP:AUDY:42-46). What remains is X-13: MAIN's distillation still quotes "it may refuse or delay", and the file that records the reversal is not on MAIN.
+
+  **State space and findings.** X-08: Q13 has three positions across three states. X-09: packability against autonomy-at-distance. X-10: sixteen against fifteen. X-12: the root of trust. X-15: candidate law L5 against the replicator's own review. X-16: trace-before-release against a one-way carrier.
+
+  **Lambda.** X-14: λ_A = 0 read as "exactly known, zero uncertainty" in the thesis, while the departure protocol says "It does not mean numerical zero, exactness". X-17: the Autonomous finding calls λ = 1 exact.
+
+  **Unrun checks that carry the most weight.** U-01: prior art; AUDY says "**No prior-art search has been run.**" U-02: the entailment search. U-03 and U-04: the auditability extraction, and 78 against 113. U-05: no L1 object has had an adversarial review. U-06: the interlock's attack pass. U-07: ISO/IEC 22989 against the lawful copy. U-20: the λ_A operators, "named, none defined".
+
+  **Missing objects.** M-01: AUDY off MAIN. M-02: the defining manuscript off MAIN and BETA. M-03: abba-01/ebios, the corpus the definition quotes, in no clone. M-04: the NASA rows. M-10: every formal object.
+
+  **Not settled.** Whether IEEE 1788.1-2017 was read: one record says yes, two say no (X-18). Whether BETA was made by Codex: the commit's author is EDM and it carries no generator trailer.
+
+  ## The dependency on Autonomous
+
+  Your rule of 5 September 2026 reads: "Auditonomous gets the definitions of autonomous from Autonomous and nowhere else." [source text withheld from the public copy] commit 0504961 of 14 August 2026 (MAIN:L7/peering/public/ingress/peer-1/object-1/0.md:13). A reader confirmed that the commit exists and that the file is byte-identical on Autonomous main today. Only its path changed. BETA keeps the pin and writes "no rebind".
+
+  What it supplies: eleven codified definitions, A1 to A11, from nine bodies, and five usage rules labelled "[source text withheld from the public copy] entry says "[source text withheld from the public copy]."
+
+  What it does not supply:
+
+  - A consensus baseline. The model's specification asks for one and no file states it.
+  - A reviewed entry. Its review of 8 August 2026 "[source text withheld from the public copy]. None has been made.
+  - IEEE 1920.1, on which Q13 rests. It appears nowhere in Autonomous.
+  - A settled meaning of "auditability". Its register lists the word as "CONTESTED".
+  - A binding for AUTOMATION.md or REGISTER.md.
+
+  BETA's second binding pins a computation at commits that exist only on unmerged beta branches.
+
+  ## The manuscript against the research
+
+  No chapter has text. All 27 chapter files end "Not yet drafted." and exist only on ROADMAP. On MAIN, 73 of the roadmap's 133 feed citations point at files MAIN does not hold. The vocabulary paper's claims table has one wrong row (16), one wrong line reference (3) and one overstated label (6).
+
+  **Closest to usable.** Chapter 2 (the two contradiction registers), 3 and 4 (the eleven definitions and the level scales), 6 (the record-before-act literature), 15 (the lambda checks) and 25 (the perpetuity adjudication). Each still carries an open verification item.
+
+  **Waiting on a ruling.** Chapters 7 to 12 on D3, D4, D5, D6, D13, D18 and D20. Chapter 13 on the counts. Chapter 14 on D10. Chapters 15 to 17 on D11 and the empty L2. Chapters 19 to 24 and 26 on D1, with every external number unchecked.
+
+  **The minimum before the first drafting step.** The roadmap sets that step as Chapters 2 and 19 and puts nine moves before it. None has a record. The chapters' own needs are smaller. Chapter 2 needs a decision on what it presents: the roadmap calls the registers complete, BETA calls several comparisons contested, and the sourcebook withdrew its own seed findings. Chapter 19 needs D1, D21 and D8, four sources that are all "NOT-CHECKED", and a source ledger that today holds no first-contact source.
+
+  **Positions against the model's guidance** (7lm beta 97314c5, 3 November 2026). On ROADMAP the corpus, chapter files, sourcebook and prompts sit at L8/L4/work/writing/, as the guidance asks. MAIN holds no manuscript. The roadmap and spine sit at L5, which agrees. The referee report's criticism is filed at L4 with nothing at L5. The chapter headers copy the L5 roadmap where the guidance says to refer to it. No branch of either repository carries that guidance.
+
+  ## The first ten things to do
+
+  1. **Owner.** Name the model commit both repositories follow: 7lm main c9dc061, the 4ca3edb both betas pin, or the beta tip 97314c5. Your instruction of 11 November 2026 puts this first: "we need to uipdate the autonomous and auditonomous repos phsyciall; to match first". It unblocks every merge. A local session branch of 11 November 2026 (ccr-9391bd81-f2enmj: f2d5b37 here, 8257118 in Autonomous) already mirrors the L7 restructure. I saw its file list only. It is built on MAIN, so it carries neither the restore, nor BETA, nor the 3 November guidance.
+  2. **Owner.** Say whether ROADMAP's restore and BETA join that branch, and in what order. Neither contains the other. Until then MAIN cannot open what its own records cite. Unblocks all work on AUDY, the lambda thread and the corpus.
+  3. **No ruling needed.** Prepare the plain corrections as dated entries for your merge: 60 rows; fifteen, not sixteen; the Aud(S,F) row; the lane sheet's counts; BETA's line 52, now at 54. They would otherwise be printed. Unblocks Chapters 2 and 13.
+  4. **Owner.** Rule which text is the definition, and which version of AUDY. Every later statement hangs on it. Unblocks Chapters 7 to 9 and 12 and any L2 statement.
+  5. **Owner.** Rule the line-52 edit with the cycles review in view, and "immutable" against "apparent". It is the sentence the repository's own reading contradicts. Unblocks Chapters 7 and 8.
+  6. **Owner.** On the Autonomous side: one baseline or plural, the seven fixes, and D22. Unblocks Chapters 3 and 4 and Q13.
+  7. **No ruling needed; network needed.** Run the prior-art search and the entailment search. The word's novelty and its motive rest on them. Unblocks Chapters 5 and 7.
+  8. **No ruling needed.** Reconcile 78 with 113, recover the NASA rows, finish the auditability extraction. Unblocks Chapter 13.
+  9. **Session prepares; owner enters.** The L2 rows: the isomorphism, DR-003, the enclosure regime, conditions A to E, the Aud form. Needs D11 and D14 first. Unblocks Part V.
+  10. **No ruling needed.** Hold an adversarial review, on the record, of the envelope, AUDY and the two September papers. Unblocks Chapter 12 and the first drafting step.
+
+  ## Decisions that are the owner's
+
+  1. Which model commit the two repositories match, and whether ROADMAP and BETA are merged onto it.
+  2. Which text is the definition for the book, and how the 30 July 2026 entry and AUDY relate (D20).
+  3. Whether your ruling of 14 August 2026, "scholarly only", still stands; it settles D1 and Part VI.
+  4. Whether line 52 is reworded (D4), and whether "immutable" gives way to "apparent".
+  5. Whether Autonomous states one baseline, who makes the seven fixes, and whether 0504961 stays (D22).
+  6. Which enclosure regime the book uses (D11).
+  7. Which verb is "the one prohibited act" (D3).
+  8. Trace-before-release, or a pure one-way carrier (D10).
+  9. What stands on Q13.
+  10. The three file splits and the L2 registrations (D14).
+  11. Whether Q9 becomes the dividing line (D5), and the observer and observed definitions.
+  12. The fourth derivation (D6) and the named reader (D13).
+  13. Eight or twelve compartments in print (D18).
+  14. Component repositories: harmonize, create or fold in (D23).
+  15. The home of the Third Power Corpus and of the Autonomous Theory files (D12).
+  16. Whether your own files in history return: the five drafts deleted on 15 August 2026 and the working draft.
+  17. The history purge of the third-party ISO file, the Ferreira licence, and an outbound licence.
+  18. Whether enclosure is the intended contract of the N/U algebra paper.
+  19. Title and press (D2, D16).
+- **claims_register**
+  - item 1
+    - **id**: CR-01
+    - **claim**: “auditonomous” (adj.) is the owner's coinage. The entry dates the word family to 2025-10-20 and the form itself to 2025-10-21, both in the abba-01/ebios repository.
+    - **where_stated**: MAIN:DEF:18, 79, 85-178
+    - **evidence_state**: INTERNALLY CHECKED by the entry's own record (DEF:353-356); not reproducible here, because ebios is in no clone. Absence of the word from five scholarly indexes is EXTERNALLY CHECKED as recorded (MAIN:REV/PERPETUITY_QUESTION_ADJUDICATION.md:89-100). Novelty is UNRESOLVED: no prior-art search has been run, and a 2018 blog titled AUDITONOMY stands as an unchecked lead.
+    - **layer**: L0
+    - **manuscript_use**: Chapter 7 (the coinage); front matter; vocabulary paper row 1.
+    - **what_would_settle_it**: A pinned clone of abba-01/ebios to re-run the attestation; a recorded prior-art search with indexes, queries and dates; a registrar check on the blog and domain leads.
+  - item 2
+    - **id**: CR-02
+    - **claim**: Sense 1 (of a system): it acts [source text withheld from the public copy]”.
+    - **where_stated**: MAIN:DEF:22
+    - **evidence_state**: ASSERTED as the author's definition. The strength of “unable to conceal” is CONTRADICTED by the repository's own adjudication (MAIN:REV/PERPETUITY_QUESTION_ADJUDICATION.md:216) and by the reading findings (detection, not prevention).
+    - **layer**: L0
+    - **manuscript_use**: Chapters 7 and 8; the book's central sentence.
+    - **what_would_settle_it**: The owner's ruling on the line-52 edit, extended to lines 22 and 26; a formal non-concealment property at L2.
+  - item 3
+    - **id**: CR-03
+    - **claim**: Sense 2 (a mode of human and AI working: the agent chooses its approach and keeps its reasoning shown) is the historically first sense. Sense 3 (accountability “secured by construction”) is a third sense built from one collocation.
+    - **where_stated**: MAIN:DEF:24, 26, 30, 79, 117
+    - **evidence_state**: Sense 2 ASSERTED; no later definition carries it forward. Sense 3 CONTRADICTED: one attestation is filed under two senses, and the entry's own labels paragraph counts two senses.
+    - **layer**: L0
+    - **manuscript_use**: Chapter 7; whether the book prints two senses or three.
+    - **what_would_settle_it**: The owner's ruling on the number of senses and on which sense the book defines.
+  - item 4
+    - **id**: CR-04
+    - **claim**: “[source text withheld from the public copy].
+    - **where_stated**: ROADMAP:L8/L4/work/writing/manuscript/Auditonomous_Theory_Master_Archive.md:37; MAIN:DEF:28 (the noun's gloss, without the third clause)
+    - **evidence_state**: ASSERTED. “a [source text withheld from the public copy], the embodied manuscript and the ebios draft (INTERNALLY CHECKED), and a ROADMAP record restates it as parameters “bound before dispatch and frozen, not absent” (ROADMAP:SS/AUDITABILITY_REQUIREMENTS.md:36-40). Which verb is “the one prohibited act” is UNRESOLVED (T3: six claimants).
+    - **layer**: L0
+    - **manuscript_use**: Chapter 8 (the constitution); front matter epigraph.
+    - **what_would_settle_it**: Rulings D3 and D13; a decision whether the third clause stays as written.
+  - item 5
+    - **id**: CR-05
+    - **claim**: Eight criteria define the word for a system: [source text withheld from the public copy] carried, never laundered; failure permitted, concealing it not; accountability by construction; autonomy bounded by a truth envelope; accountability measurable; discretion real.
+    - **where_stated**: MAIN:DEF:36-43
+    - **evidence_state**: ASSERTED. No test of any criterion against any system is recorded. None has a formal statement at L2 or a method at L3. “truth envelope” and “transformation path” are used and not defined.
+    - **layer**: L0 (needs L2 and L3)
+    - **manuscript_use**: Chapters 7 to 9; the test a reader would apply.
+    - **what_would_settle_it**: An L2 statement for each criterion; a measure for “measurable accountability”; one worked test on a real system.
+  - item 6
+    - **id**: CR-06
+    - **claim**: Auditability is “[source text withheld from the public copy]”, resting on the owner's instruction “it is meant to be firmware”.
+    - **where_stated**: MAIN:DEF:22, 47
+    - **evidence_state**: CONTRADICTED. The entry itself reports that no firmware artifact exists and that the corpus places eBIOS above the ROM (DEF:250); the instruction is recorded as “PLAUSIBLE”, not verified; AUDY and BETA carry no firmware requirement.
+    - **layer**: L0
+    - **manuscript_use**: Chapter 11 or 14 if kept; otherwise a stated intent.
+    - **what_would_settle_it**: The owner's ruling whether firmware placement is definitional or intent; access to ebios branch v1.0.0-dev.
+  - item 7
+    - **id**: CR-07
+    - **claim**: Auditonomous is “[source text withheld from the public copy]”.
+    - **where_stated**: MAIN:DEF:52 (line 54 on BETA)
+    - **evidence_state**: CONTRADICTED by MAIN:REV/PERPETUITY_QUESTION_ADJUDICATION.md:216 (“imprecise as written”); that adjudication is itself opposed by ROADMAP:REV/AUTONOMOUS_vs_AUDITONOMOUS_CYCLES.md:136. The recommended edit is UNRESOLVED and unapplied in every state.
+    - **layer**: L0
+    - **manuscript_use**: Chapters 7 and 8.
+    - **what_would_settle_it**: The owner's ruling D4, taken with the cycles review in view.
+  - item 8
+    - **id**: CR-08
+    - **claim**: The definition is “[source text withheld from the public copy]”.
+    - **where_stated**: MAIN:DEF:57, 79; MAIN:REV/STATUS_AND_LABEL_DISCIPLINE.md:5-8
+    - **evidence_state**: ASSERTED, and consistent in every state: experiments are EMPTY (MAIN:L8/L4/work/experiments/0.md:36) and BETA's result sets every achievement flag false.
+    - **layer**: L0 / L4
+    - **manuscript_use**: Chapter 1 (the reader's contract); the limit statement of every chapter.
+    - **what_would_settle_it**: Nothing to settle. It lapses only when a system is built and tested.
+  - item 9
+    - **id**: CR-09
+    - **claim**: “[source text withheld from the public copy].”
+    - **where_stated**: ROADMAP:AUDY:69-70, 134-149 (absent from MAIN and BETA)
+    - **evidence_state**: CONJECTURE by its own label (“CONJECTURE / INTERNAL ONLY”; “Composition not externally reviewed”). Its relation to DEF is UNRESOLVED. The restored bytes are those of Autonomous commit e27ca78; three later versions exist only in Autonomous history.
+    - **layer**: L0
+    - **manuscript_use**: Chapters 8 and 9; vocabulary paper row 5.
+    - **what_would_settle_it**: The owner's ruling which text governs and which version; an adversarial review; the file on the merged state.
+  - item 10
+    - **id**: CR-10
+    - **claim**: [source text withheld from the public copy] if and only if five conditions hold: A attested input, B enclosing bound (λ ≥ 1), C gate, D obligated record, E named reader. “[source text withheld from the public copy]”.
+    - **where_stated**: ROADMAP:AUDY:§2-§5, 207-208; cited from MAIN:SS/AUDITON_ENVELOPE.md:253
+    - **evidence_state**: CONJECTURE (“INTERNALLY DERIVED · CONJECTURE, not externally reviewed”). [source text withheld from the public copy] by the file's own statement; condition B's sources are “both unread” in the restored version; the four falsification conditions are untested.
+    - **layer**: L0, to be stated at L2
+    - **manuscript_use**: Chapter 9; the formal statements of Part V.
+    - **what_would_settle_it**: The later version (9c123b0) restored or rejected; the conditions stated at L2; the falsification conditions run, starting with the prior-art search.
+  - item 11
+    - **id**: CR-11
+    - **claim**: A received stop signal is not refusable; deviation from an ordinary instruction needs provenance, presence and a specific historical memory.
+    - **where_stated**: ROADMAP:AUDY:42-61, 91-96 (owner, 2026-08-05: “NOt refusable”)
+    - **evidence_state**: ASSERTED (the owner's ruling, inside a file labelled CONJECTURE). CONTRADICTED across states: MAIN:FIND/DISTILLATION.md:261-263 still quotes the reversed rule (“it may refuse or delay”), and the earlier conflict record (HISTORY:FREEZE.md:228-262) was never closed. Both objects read by the synthesizer.
+    - **layer**: L0 / L1
+    - **manuscript_use**: Chapters 9 and 11; the envelope's C6 row.
+    - **what_would_settle_it**: AUDY on the merged state; a dated correction in the distillation; the IEEE 7009 R5/R6 classification of the stop and return functions.
+  - item 12
+    - **id**: CR-12
+    - **claim**: The auditon is the maximal envelope: twelve compartments C1 to C12, four supplied by the platform and eight by the envelope. “[source text withheld from the public copy].” It [source text withheld from the public copy].”
+    - **where_stated**: MAIN:SS/AUDITON_ENVELOPE.md:23-24, 51, 122-146
+    - **evidence_state**: ASSERTED. Own label “COMPOSITE OBJECT UNVERIFIED. Not adversarially reviewed.” Four NIST control quotations INTERNALLY CHECKED against the held extraction. CONTRADICTED on the root of trust (C2) and threatened on the platform and envelope split by the ROADMAP replicator.
+    - **layer**: L1
+    - **manuscript_use**: Chapter 12.
+    - **what_would_settle_it**: An adversarial review of the envelope; the owner's choice of C2 option; ruling D18.
+  - item 13
+    - **id**: CR-13
+    - **claim**: “[source text withheld from the public copy].” Where a definition requires a [source text withheld from the public copy].”, and slots H1 to H7 may be substituted.
+    - **where_stated**: MAIN:SS/AUDITON_ENVELOPE.md:102, 150-167; MAIN:SS/HUMINT_ENCODE.md:9-10, 76-84
+    - **evidence_state**: ASSERTED. The files label their quotations “VERIFIED” with no locator to a held copy; one warrant ([source text withheld from the public copy]”; “Nothing in this document is adversarially reviewed.”
+    - **layer**: L1
+    - **manuscript_use**: Chapters 12 and 13.
+    - **what_would_settle_it**: EU AI Act Art. 14 and ISO/IEC 17021-1 re-captured from publisher text; ISO/IEC 22989 re-read from the lawful copy; an adversarial review.
+  - item 14
+    - **id**: CR-14
+    - **claim**: “[source text withheld from the public copy] buildable set is 21, not 113.”
+    - **where_stated**: MAIN:SS/REQUIREMENTS_OWNERSHIP.md:47-54, 71-72
+    - **evidence_state**: INTERNALLY CHECKED for the arithmetic and for 99 of the 113 rows (IEEE 55, ISO 24, NIST 20 recounted). The 14 NASA rows are in no file (UNRESOLVED). The assignment itself is ASSERTED (“INTERNALLY DERIVED”). “[source text withheld from the public copy]” is CONTRADICTED by the file's own table (fifteen, recounted by the synthesizer). The 113 excludes the auditability controls (Q11) and is unreconciled with an earlier run of 78.
+    - **layer**: L1 (from L4 extractions)
+    - **manuscript_use**: Chapter 13, whose title prints 113 and 21.
+    - **what_would_settle_it**: The NASA rows recovered; 78 and 113 reconciled; the Q11 extraction finished; sixteen corrected to fifteen.
+  - item 15
+    - **id**: CR-15
+    - **claim**: “[source text withheld from the public copy]”.
+    - **where_stated**: MAIN:SS/REQUIREMENTS_OWNERSHIP.md:268-271
+    - **evidence_state**: CONTRADICTED. ROADMAP:FIND/AUTONOMY_AT_DISTANCE.md:392-404 withdraws the “scores zero” claim; BETA records the headline as “not adopted as a present conformance finding” and “UNRESOLVED/CONTESTED”. IEEE 1920.1 is not among the bound Autonomous definitions.
+    - **layer**: L1 / L5
+    - **manuscript_use**: Chapters 3, 12 and 18.
+    - **what_would_settle_it**: The owner's ruling on Q13; a decision whether IEEE 1920.1 enters the Autonomous entry; ISO's meaning of “oversight”.
+  - item 16
+    - **id**: CR-16
+    - **claim**: A single auditon cannot be “autonomous” under ISO, IEEE, NASA and NIST at once: “NOT PACKABLE”, with nine irreducible conflicts.
+    - **where_stated**: ROADMAP:FIND/AUDITON_PACKABILITY_2026-08-04.md:15-23 (absent from MAIN and BETA)
+    - **evidence_state**: EXTERNALLY CHECKED in part (the standards sentences are locatable in held records). CONTRADICTED in part by the later autonomy-at-distance finding and softened by C5 (“CONTESTED”). The nine conflicts are not enumerated in the file.
+    - **layer**: L5
+    - **manuscript_use**: Chapters 4 and 12.
+    - **what_would_settle_it**: An enumeration of the nine conflicts; a ruling which reading of “oversight” stands.
+  - item 17
+    - **id**: CR-17
+    - **claim**: The λ = 1 product rule is Rump's midpoint-radius interval product (Rump 1999, BIT 39(3), Def. 2.1, Eq. 5) and always contains the true product.
+    - **where_stated**: ROADMAP:REV/LAMBDA_EXTERNAL_VERIFICATION_2026-08-04.md:16-34
+    - **evidence_state**: EXTERNALLY CHECKED. A reader confirmed the quoted equation and the isotonicity sentence against the Rump 1999 text held at AUT:L7/provenance/prior-art/prior-art-lane/ru99.txt:117, 121.
+    - **layer**: L2 / L3
+    - **manuscript_use**: Chapter 15: cite, do not coin.
+    - **what_would_settle_it**: Settled for the mathematics. What remains is the choice of regime for the book (D11).
+  - item 18
+    - **id**: CR-18
+    - **claim**: For operands that do not cross zero, the λ = 0 radius [source text withheld from the public copy], provided the centre is shifted by α·β.
+    - **where_stated**: ROADMAP:REV/LAMBDA_EXTERNAL_VERIFICATION_2026-08-04.md:38-71 (owner's claim under test: “λ=[source text withheld from the public copy].”)
+    - **evidence_state**: EXTERNALLY CHECKED against Rump 1999, proof case i (reader-confirmed at ru99.txt:165-172). The second confirmation, Rump 2010, is not held. The file's own adversarial pass “was still running” and has no recorded result.
+    - **layer**: L2 / L3
+    - **manuscript_use**: Chapters 15 and 16.
+    - **what_would_settle_it**: A per-operation sign-definiteness check specified as a mechanism; the outcome of the adversarial pass recorded.
+  - item 19
+    - **id**: CR-19
+    - **claim**: λ = 0 as coded in the quoted eb-stack multiplication, with the centre left at a·b, is not an enclosure.
+    - **where_stated**: ROADMAP:REV/EBSTACK_LAMBDA_ANALYSIS.md:60-81; ROADMAP:L8/L4/work/computation/probes/ebstack_lambda_analysis.py
+    - **evidence_state**: INTERNALLY CHECKED (exact-rational probe re-run on 11 November 2026; both worked examples redone by hand). The code line was taken from a prompt and has never been read in eb-stack (“UNVERIFIED”). The 9.49% containment figure is a property of the probe's integer grid.
+    - **layer**: L4, feeding L2
+    - **manuscript_use**: Chapters 15 and 16; decision D11.
+    - **what_would_settle_it**: The eb-stack source read at a pinned commit.
+  - item 20
+    - **id**: CR-20
+    - **claim**: λ_A = 0 names a decomposition state: the usable part of a known prior stays in operation and its unused remainder enters a provenance-preserving accumulator; nothing is pruned; q = k + r.
+    - **where_stated**: ROADMAP:AUDY:361-447 (addendum marked “NOT ADOPTED”); MAIN:L7/peering/private/ingress/peer-2/object-1/auditonomous-departure-protocol.md:66-80; ROADMAP:REV/THESIS_lambda_decomposed_record.md:3-37
+    - **evidence_state**: CONJECTURE. CONTRADICTED between two readings (thesis: “exactly known, zero uncertainty”; protocol: “It does not mean numerical zero, exactness”). Four operators are “named, none defined”; no bound on the accumulator is stated; a same-author ruling says λ_A = 0 must not be identified with λ_EB = 0.
+    - **layer**: L0 / L2
+    - **manuscript_use**: Chapter 16.
+    - **what_would_settle_it**: The owner's ruling which reading governs; definitions of μ, τ, Coherent, Admissible and the update rule; a proof or disproof of a bound on the accumulator.
+  - item 21
+    - **id**: CR-21
+    - **claim**: Whether a term changes any stored bit is decidable; pruning to loss does not compose over a chain; saving the remainder into a running total does.
+    - **where_stated**: ROADMAP:REV/CONJECTURE_bit_exact_pruning.md:29-66, 158-245 (owner: “[source text withheld from the public copy]”)
+    - **evidence_state**: INTERNALLY CHECKED as recorded (two runs, one against exact rationals); the scripts are not in the repository. The owner's own label is “CONJECTURE”. “λ is the fastest such criterion” is UNRESOLVED (“NOT TESTED”); the Kahan and Neumaier attributions are “UNVERIFIED”.
+    - **layer**: L3 / L4
+    - **manuscript_use**: Chapter 16.
+    - **what_would_settle_it**: The scripts filed; Kahan 1965 and Neumaier 1974 obtained; an alternative criterion benchmarked.
+  - item 22
+    - **id**: CR-22
+    - **claim**: Storage can be bounded by a “meaningful digit” budget.
+    - **where_stated**: ROADMAP:REV/LAMBDA_EXTERNAL_VERIFICATION_2026-08-04.md:177-205
+    - **evidence_state**: CONTRADICTED (“REFUTED”): catastrophic cancellation can destroy every significant digit in one subtraction (Goldberg 1991, as recorded; not held).
+    - **layer**: L3
+    - **manuscript_use**: Chapter 15: what not to claim.
+    - **what_would_settle_it**: van Emden 2004, which the file names as the acquisition that would close it properly.
+  - item 23
+    - **id**: CR-23
+    - **claim**: Making an exact decomposition with an enclosed residual the mandatory content of a pre-execution record is new: “no occupant of it was located”.
+    - **where_stated**: ROADMAP:REV/THESIS_lambda_decomposed_record.md:85, 131-133
+    - **evidence_state**: UNRESOLVED. Own label “PARTIALLY CHECKED — negative”. A deep-research run filed on MAIN as model output says the broad record-before-act claim [source text withheld from the public copy]”; its citations cannot be resolved from the repository.
+    - **layer**: L5
+    - **manuscript_use**: Chapters 6 and 16 (“the narrow novelty claimed deliberately”).
+    - **what_would_settle_it**: A recorded prior-art search at the intersection; Dekker 1971 and Ogita, Rump and Oishi 2005 obtained; the ISO/IEC 24970 and prEN 18229-1 collision check.
+  - item 24
+    - **id**: CR-24
+    - **claim**: Codified definitions of autonomy are privative (defined by an absence); the auditonomous layer is constructive (defined by obligations). Six candidate laws L1 to L6 follow.
+    - **where_stated**: MAIN:FIND/DISTILLATION.md:3-5, 14-23, 84-101
+    - **evidence_state**: CONJECTURE by its own label (“INTERNALLY DERIVED · CONJECTURE throughout”). L5 is CONTRADICTED in part by the replicator's accepted refutation (ROADMAP only). The legal and economics quotations of its section 7 appear nowhere else in the repository.
+    - **layer**: L5
+    - **manuscript_use**: Chapters 5, 18 and 25.
+    - **what_would_settle_it**: The search for a constructive codified autonomy definition (it would refute L1); ledger rows and records for the section 7 sources; L5 restated or struck.
+  - item 25
+    - **id**: CR-25
+    - **claim**: “Permit the breach, make it undeniable” is an established, codified pattern; audit and override cannot be one recursive loop; the achievable property is tamper-evidence, not immutability.
+    - **where_stated**: MAIN:FIND/OVERRIDE_NECESSITY_2026-08-04.md:21-31, 319-320
+    - **evidence_state**: EXTERNALLY CHECKED in part (RFC 6962, Haber and Stornetta, FIPS 180-4 and the AC-3(10) and AU-10 control statements are verbatim in held records). Proposition P-D CONTRADICTED by the finding's own refutation pass. The bootstrapping objection is UNRESOLVED. Nine cited authors have no record in the repository.
+    - **layer**: L5
+    - **manuscript_use**: Chapters 9, 11 and 14.
+    - **what_would_settle_it**: Ledger rows for the uncited sources; the owner's ruling on “immutable” against “apparent”; an answer to the bootstrapping objection.
+  - item 26
+    - **id**: CR-26
+    - **claim**: Physical segregation with a one-way carrier is codified but cannot prevent omission, and it collides with the rule that the trace commit precedes actuator release (EB:233). Forgetting as non-recall is supported and not novel.
+    - **where_stated**: MAIN:FIND/SEGREGATION_AND_FORGETTING_2026-08-04.md:59, 83-90, 183-193
+    - **evidence_state**: EXTERNALLY CHECKED in part (ARIES and IEEE 7014 quotations verbatim in the reading records). UNRESOLVED: “[source text withheld from the public copy].” The interlock proposal that answers it is unbuilt.
+    - **layer**: L5 (L3 for the interlock)
+    - **manuscript_use**: Chapters 9 and 14.
+    - **what_would_settle_it**: Ruling D10; the interlock's attack pass; NIST SP 800-88 ledgered for the crypto-erase route.
+  - item 27
+    - **id**: CR-27
+    - **claim**: Hash-chained and logged structures give detection, not prevention, and tamper-evidence needs a second party.
+    - **where_stated**: MAIN:STG/library/FINDINGS_2026-08-04.md:12-36, 57-70
+    - **evidence_state**: EXTERNALLY CHECKED (quotes compared with the primary PDFs under the reading protocol on 4 August 2026; 13 load-bearing quotes independently re-checked, as recorded). The PDFs are in the archive and could not be reopened here.
+    - **layer**: L7 reading, feeding L5
+    - **manuscript_use**: Chapters 6, 8 and 14; it bounds what the definition may claim.
+    - **what_would_settle_it**: Settled as a reading result. Its consequence for DEF lines 22, 26 and 52 is the owner's.
+  - item 28
+    - **id**: CR-28
+    - **claim**: No theorem says an autonomous system must end; “an auditonomous system can be perpetual” cannot be verified as posed; [source text withheld from the public copy]**”.
+    - **where_stated**: MAIN:REV/PERPETUITY_QUESTION_ADJUDICATION.md:25-100, 123-154, 226-252
+    - **evidence_state**: First leg EXTERNALLY CHECKED as recorded (“FAILED CHECK”). Second leg UNRESOLVED (“UNVERIFIABLE AS POSED”). The ratchet reading is CONJECTURE. [source text withheld from the public copy] a ruling whose verbatim wording was not found.
+    - **layer**: L5
+    - **manuscript_use**: Chapter 25.
+    - **what_would_settle_it**: Publisher-of-record captures for the relayed quotes; the bounded-commitment claim checked against the logging literature.
+  - item 29
+    - **id**: CR-29
+    - **claim**: Published standards contradict one another, and themselves, on “autonomous” (C1 to C7).
+    - **where_stated**: MAIN:REV/CONTRADICTIONS.md:32-200
+    - **evidence_state**: EXTERNALLY CHECKED for the quotations as the repository records them (C1, C2 and C4 matched to the extractions by a reader). None is resolved. C2's conclusion is CONTRADICTED by its own source entry; C4's “Heteronomous” classification is listed as unverified in the bound Autonomous entry; BETA calls the comparisons local and contested.
+    - **layer**: L5
+    - **manuscript_use**: Chapter 2 (method) and Chapter 3.
+    - **what_would_settle_it**: The seven publisher re-checks; the IEEE 7009 clause 1.3.2(e) wording from the PDF; ISO/IEC 22989 Table 1 from the lawful copy.
+  - item 30
+    - **id**: CR-30
+    - **claim**: “Autonomous” does not entail auditability: none of the eleven codified definitions contains record, audit, log, trace or account.
+    - **where_stated**: Autonomous branch claude/scholarly-pair-baseline-k8ap82:L8/L4/work/writing/papers/AUTONOMOUS_BASELINE_PAPER_2026-09-14.md:118-122; ROADMAP:L8/L4/work/writing/papers/AUDITONOMOUS_VOCABULARY_PAPER_2026-09-14.md:306
+    - **evidence_state**: The eleven-text finding is INTERNALLY CHECKED (a reader re-ran the string search over rows A1 to A11). The general claim is CONJECTURE. The bounded search queued on 16 August 2026 is UNRESOLVED: it was never run.
+    - **layer**: L5
+    - **manuscript_use**: Chapter 5: the reason the word is needed.
+    - **what_would_settle_it**: The queued search over the declared authority set at a pinned commit, with a clause-level reading and adversarial verification.
+  - item 31
+    - **id**: CR-31
+    - **claim**: Moving the actuator enable to the sealed side makes unrecorded actuation inexpressible. The predicate asks whether an action is recorded, not whether it is permitted, and the proposal claims no prior formulation of it.
+    - **where_stated**: MAIN:L8/L3/engineering-mathematics/PROPOSAL_seal_gated_interlock.md:6-8, 45-46, 93-127
+    - **evidence_state**: UNRESOLVED (a proposal; nothing built; attack-pass result found in no state; IEC 61508 and ISO 13849 “NOT-CHECKED”). The novelty claim is ASSERTED with no recorded search. Its own limit: “[source text withheld from the public copy].”
+    - **layer**: L3
+    - **manuscript_use**: Chapter 14.
+    - **what_would_settle_it**: The attack pass run and folded in; a recorded novelty search; the predicate stated at L2; something built.
+  - item 32
+    - **id**: CR-32
+    - **claim**: For the 16 ordered two-step cases of a fixed-goal fixture, permit equals not-stop, every stopped event halts, the goal never changes, and each event has one digest-chained record.
+    - **where_stated**: BETA:L8/L2/formal-mathematics/relations/AUDITONOMOUS_BETA_PREDICATE.md:3-7; BETA:FIND/AUDITONOMOUS_BETA_FINDINGS.md:7-11
+    - **evidence_state**: INTERNALLY CHECKED (12 tests re-run and passed on 11 November 2026; result reproduced except the recorded Python version; pinned hashes recomputed). Synthetic by its own statement: “[source text withheld from the public copy].”
+    - **layer**: L2 / L4
+    - **manuscript_use**: At most a worked illustration. It supports no claim about the definition.
+    - **what_would_settle_it**: Nothing further for the fixture. It does not bear on any defining criterion.
+  - item 33
+    - **id**: CR-33
+    - **claim**: “Auditonomous gets the definitions of autonomous from Autonomous and nowhere else.” The source is one plural entry of eleven codified definitions, bound at commit 0504961.
+    - **where_stated**: MAIN:L7/peering/public/ingress/peer-1/0.md:10; MAIN:L7/peering/public/ingress/peer-1/object-1/0.md:13; AUT:L8/L0/semantics/definitions/AUTONOMOUS.md:24-25, 70-80
+    - **evidence_state**: INTERNALLY CHECKED for the binding (commit exists; blob ffbdc28 and SHA-256 2756…a12b identical at 0504961 and on Autonomous main). The consensus baseline the model asks for is EMPTY. The entry's own status is CONTRADICTED (banner “NOT ADVERSARIALLY REVIEWED”, status “ADOPTED”, register “Not yet entered”, review “BLOCKS”). Three files on MAIN still take “autonomous” from elsewhere.
+    - **layer**: L7 / L0
+    - **manuscript_use**: Chapters 3 and 4; Appendix A; vocabulary paper section 2.
+    - **what_would_settle_it**: The owner's rulings on the baseline, the seven fixes and D22; a new binding record beside the old one if the pin moves.
+  - item 34
+    - **id**: CR-34
+    - **claim**: Codified autonomy is defined against a human: “[source text withheld from the public copy].”
+    - **where_stated**: AUT:L8/L5/research/findings/FINDING_autonomy_requires_a_human_referent.md:27-28; repeated at MAIN:FIND/DISTILLATION.md:14-15 and in vocabulary paper row 12
+    - **evidence_state**: INTERNALLY CHECKED as a count over held text, but the ten rows counted are not A1 to A11 (two are not A-rows; A3, A9 and A10 are omitted). The inference drawn from it is ASSERTED; prior art for the argument was “Not searched”.
+    - **layer**: L5 (Autonomous)
+    - **manuscript_use**: Chapters 4 and 13 (HUMINT-ENCODE).
+    - **what_would_settle_it**: A recount over the eleven rows; a prior-art search for the argument.
+- **open_register**
+  - item 1
+    - **id**: X-01
+    - **kind**: contradiction
+    - **statement**: Two texts claim to be the definition. DEF is “the active definition of record (AU-NORM-02)”. AUDY's header says “v2 definition governs”. MAIN's distillation calls AUDY “governing text” though MAIN does not hold it. No document states how they relate.
+    - **source**: MAIN:README.md:11; ROADMAP:AUDY:3-5; MAIN:FIND/DISTILLATION.md:21
+    - **who**: owner
+    - **blocks**: Chapters 7 to 9 and 12; every L2 statement; the vocabulary paper.
+  - item 2
+    - **id**: X-02
+    - **kind**: contradiction
+    - **statement**: DEF says a system is “structurally unable to conceal” and that “auditonomy makes concealment impossible from the start”. The adjudication calls line 52 “imprecise as written” on three external quotes. The cycles review holds the opposite on whether audit is post hoc. The edit is recorded and unapplied in every state.
+    - **source**: MAIN:DEF:22, 26, 52; MAIN:REV/PERPETUITY_QUESTION_ADJUDICATION.md:201-222; ROADMAP:REV/AUTONOMOUS_vs_AUDITONOMOUS_CYCLES.md:136
+    - **who**: owner (decision D4)
+    - **blocks**: Chapters 7 and 8.
+  - item 3
+    - **id**: X-03
+    - **kind**: contradiction
+    - **statement**: The entry lists three senses; its labels paragraph and both appendix lists speak of two; one attestation is filed under sense 3 and under the system sense.
+    - **source**: MAIN:DEF:26, 79, 117
+    - **who**: owner
+    - **blocks**: Chapter 7.
+  - item 4
+    - **id**: X-04
+    - **kind**: contradiction
+    - **statement**: The etymology says “Blend of AUDIT + AUTONOMOUS.”; Appendix A says “a blend of AUTONOMOUS + AUDITABLE”, twice. The boundary note that was to resolve it was never written.
+    - **source**: MAIN:DEF:18, 96, 181; MAIN:HIST/LEDGER_2026-08-16_l6-close-and-normalization.md:50
+    - **who**: owner
+    - **blocks**: Chapter 7 (etymology).
+  - item 5
+    - **id**: X-05
+    - **kind**: contradiction
+    - **statement**: Firmware: the definition places auditability at firmware level; the corpus it quotes puts eBIOS above the ROM (“Firmware-below and brain-above coexist unreconciled.”). No firmware artifact exists. AUDY and BETA carry no firmware requirement.
+    - **source**: MAIN:DEF:47, 250, 404
+    - **who**: owner; needs access to ebios
+    - **blocks**: Chapters 11 and 14.
+  - item 6
+    - **id**: X-06
+    - **kind**: contradiction
+    - **statement**: Appendix C says the exact form is “unattested in the searched corpus”; the entry and Appendix A document 24 attestations of it. The two parts searched different corpora and the lines stand unqualified.
+    - **source**: MAIN:DEF:18, 85-178, 280, 339
+    - **who**: work that can be done without the owner (a dated qualifying note for the owner's merge)
+    - **blocks**: Chapter 7.
+  - item 7
+    - **id**: X-07
+    - **kind**: contradiction
+    - **statement**: The override finding lists as not safe to claim “That anything is immutable”; the distillation and AUDY still define by an immutable record.
+    - **source**: MAIN:FIND/OVERRIDE_NECESSITY_2026-08-04.md:319-320; MAIN:FIND/DISTILLATION.md:21-23; ROADMAP:AUDY:63, 69-70
+    - **who**: owner
+    - **blocks**: Chapters 8 and 9.
+  - item 8
+    - **id**: X-08
+    - **kind**: contradiction
+    - **statement**: Q13 has three positions. MAIN: [source text withheld from the public copy]”. ROADMAP: the “scores zero” claim “is withdrawn”. BETA: “not adopted as a present conformance finding”, “UNRESOLVED/CONTESTED”. Q13's own text is unstruck everywhere.
+    - **source**: MAIN:SS/REQUIREMENTS_OWNERSHIP.md:268-271; ROADMAP:FIND/AUTONOMY_AT_DISTANCE.md:392-404; BETA:SS/REQUIREMENTS_OWNERSHIP.md:268
+    - **who**: owner
+    - **blocks**: Chapters 3, 12 and 18.
+  - item 9
+    - **id**: X-09
+    - **kind**: contradiction
+    - **statement**: The packability finding (4 August 2026) reads telemetry and remote logs as oversight and calls the NIST and ISO goal conflict irreducible. The autonomy-at-distance finding (5 August 2026) rejects that reading. C5 calls the same pair “Narrower than fatal”. Neither finding is marked superseded.
+    - **source**: ROADMAP:FIND/AUDITON_PACKABILITY_2026-08-04.md:37, 59-63; ROADMAP:FIND/AUTONOMY_AT_DISTANCE.md:140-144; MAIN:REV/CONTRADICTIONS.md:130-134
+    - **who**: owner
+    - **blocks**: Chapters 4, 12 and 18.
+  - item 10
+    - **id**: X-10
+    - **kind**: contradiction
+    - **statement**: “[source text withheld from the public copy]” (76%) against the same file's “7001 (6) and 7009 (15)” and its 15-row table (71%). The wrong figure is repeated in five other documents. BETA does not correct it.
+    - **source**: MAIN:SS/REQUIREMENTS_OWNERSHIP.md:71-72, 88-110, 117, 263-264; ROADMAP:L7/provenance/sources/STANDARDS_REGISTER.md:344, 492, 495; ROADMAP:REV/SPINE_v0.1_2026-08-14.md:138
+    - **who**: work that can be done without the owner (dated corrections)
+    - **blocks**: Chapter 13.
+  - item 11
+    - **id**: X-11
+    - **kind**: contradiction
+    - **statement**: The status of Q11 differs by state. MAIN: the auditability requirements were never extracted, “blocking”. ROADMAP's Part B: “[source text withheld from the public copy].”, while the restored standards register still marks it blocking. BETA: “Q11 extraction remains open.”
+    - **source**: MAIN:SS/REQUIREMENTS_OWNERSHIP.md:259-261; ROADMAP:SS/AUDITABILITY_REQUIREMENTS.md:236-237; ROADMAP:L7/provenance/sources/STANDARDS_REGISTER.md:347-351; BETA:SS/REQUIREMENTS_OWNERSHIP.md:268
+    - **who**: work that can be done without the owner, after the merge decision
+    - **blocks**: Chapter 13.
+  - item 12
+    - **id**: X-12
+    - **kind**: contradiction
+    - **statement**: Root of trust (C2). The envelope says it “is an INTERFACE” to the base and that no PUF source is held. The replicator, the same day, says “[source text withheld from the public copy]”, gives two codified options and says PUFs are sourced in SR-4(3). The envelope was not amended.
+    - **source**: MAIN:SS/AUDITON_ENVELOPE.md:224-236, 257; ROADMAP:SS/AUDITON_REPLICATOR.md:123-125, 530-547, 599
+    - **who**: owner (which option)
+    - **blocks**: Chapter 12.
+  - item 13
+    - **id**: X-13
+    - **kind**: contradiction
+    - **statement**: Stop rule. AUDY records the owner's reversal of 5 August 2026, “NOt refusable”, restoring the envelope's “non-overridable stop path”. MAIN's distillation still quotes the reversed wording, “it may refuse or delay”. The earlier conflict record is history-only and was never closed. BETA's “no stop latch” is related to neither.
+    - **source**: ROADMAP:AUDY:42-46, 91-92; MAIN:FIND/DISTILLATION.md:261-263; HISTORY:FREEZE.md:228-262; BETA:SS/AUDITONOMOUS_BETA_ADMISSION.md:3
+    - **who**: work that can be done without the owner (a dated correction), once AUDY is on the merged state
+    - **blocks**: Chapters 9 and 11.
+  - item 14
+    - **id**: X-14
+    - **kind**: contradiction
+    - **statement**: λ_A = 0 has two readings. Thesis decode: “λ = 0: exactly known, zero uncertainty”. Departure protocol: “[source text withheld from the public copy]”. The roadmap's label for this tension, CH-01, has no record of its own.
+    - **source**: ROADMAP:REV/THESIS_lambda_decomposed_record.md:10-11; MAIN:L7/peering/private/ingress/peer-2/object-1/auditonomous-departure-protocol.md:76; ROADMAP:RM:257
+    - **who**: owner
+    - **blocks**: Chapter 16.
+  - item 15
+    - **id**: X-15
+    - **kind**: contradiction
+    - **statement**: Candidate law L5 cites the replicator run as showing that drift is caught by a preserved reference in the sealed ledger. The replicator's accepted review says the re-anchored check is “Per-unit, memoryless, no ledger required”. The distillation was not updated.
+    - **source**: MAIN:FIND/DISTILLATION.md:84-91; ROADMAP:SS/AUDITON_REPLICATOR.md:274-279, 314-318
+    - **who**: work that can be done without the owner (a dated narrowing for the owner's merge)
+    - **blocks**: Chapters 5 and 25.
+  - item 16
+    - **id**: X-16
+    - **kind**: contradiction
+    - **statement**: Trace-before-release (EB:233) against a pure one-way carrier: “[source text withheld from the public copy]”. The interlock proposal offers a third arrangement and is unbuilt.
+    - **source**: MAIN:FIND/SEGREGATION_AND_FORGETTING_2026-08-04.md:83-90; MAIN:L8/L3/engineering-mathematics/PROPOSAL_seal_gated_interlock.md:36-46
+    - **who**: owner (decision D10)
+    - **blocks**: Chapters 9 and 14.
+  - item 17
+    - **id**: X-17
+    - **kind**: contradiction
+    - **statement**: The companion finding labels λ = 1 “the **exact** interval product radius”. The outside check says λ = 1 is the midpoint-radius product, which overestimates, and that the exact radius for sign-definite operands is the λ = 0 form at a shifted centre.
+    - **source**: AUT:L8/L5/research/findings/FINDING_lambda_enclosure_boundary.md:31-34; ROADMAP:REV/LAMBDA_EXTERNAL_VERIFICATION_2026-08-04.md:50-56
+    - **who**: work that can be done without the owner (a dated correction in Autonomous)
+    - **blocks**: Chapter 15.
+  - item 18
+    - **id**: X-18
+    - **kind**: contradiction
+    - **statement**: IEEE 1788.1-2017: the session log says it was read and the question closed (“Q6 CLOSED.”); the standards register says “HELD but UNREAD.” and the roadmap “IEEE 1788.1 NOT READ”.
+    - **source**: ROADMAP:L8/L4/work/writing/sessions/SESSION_2026-08-05_VERIFICATION_LOG.md:16; ROADMAP:L7/provenance/sources/STANDARDS_REGISTER.md:130, 367; ROADMAP:RM:248
+    - **who**: work that can be done without the owner (needs the archive copy)
+    - **blocks**: Chapter 15.
+  - item 19
+    - **id**: X-19
+    - **kind**: contradiction
+    - **statement**: IEEE 7001 clause 5.2.2 on recorder independence is tagged “(NORMATIVE)” in the override finding and in the staging findings, and “MIXED” in the reading record, which says the phrase qualifies an external device, not the system's own recorder.
+    - **source**: MAIN:FIND/OVERRIDE_NECESSITY_2026-08-04.md:187-188; MAIN:STG/ieee/reading/IEEE-7001.md:115-119; MAIN:STG/ieee/FINDINGS_2026-08-04.md:103-107
+    - **who**: work that can be done without the owner
+    - **blocks**: Chapters 9 and 14.
+  - item 20
+    - **id**: X-20
+    - **kind**: contradiction
+    - **statement**: CONTRADICTIONS.md overstates in three places: C2 drops the condition its source states (an external authorizer); C4's heading says “identical” where its body says “Near-identical”, and its “Heteronomous” classification is an outstanding attack line in the bound entry; the IEEE 7009 clause 1.3.2(e) quotation is singular where the extraction is plural.
+    - **source**: MAIN:REV/CONTRADICTIONS.md:60-63, 94-101, 198-199; MAIN:L8/L4/work/computation/ieee-requirements-for-autonomouos.md:857, 874, 993; AUT:L8/L0/semantics/definitions/AUTONOMOUS.md:16-17
+    - **who**: work that can be done without the owner (needs the PDFs)
+    - **blocks**: Chapters 2 and 3.
+  - item 21
+    - **id**: X-21
+    - **kind**: contradiction
+    - **statement**: The bound Autonomous entry carries four statuses: banner “NOT ADVERSARIALLY REVIEWED”, status line “ADOPTED”, register “Not yet entered”, and a review of 8 August 2026 that “[source text withheld from the public copy]”.
+    - **source**: AUT:L8/L0/semantics/definitions/AUTONOMOUS.md:3, 24; AUT:L8/L0/semantics/definitions/REGISTER.md:19; AUT:L8/L5/research/review/REVIEW_4_AUTONOMOUS_ADJUDICATION.md:451
+    - **who**: owner
+    - **blocks**: Chapters 3 and 4.
+  - item 22
+    - **id**: X-22
+    - **kind**: contradiction
+    - **statement**: Defects that travel with the bound bytes: row A3 carries two labels; “the ten above” and “A1…A10” over eleven rows; “Six Tier-1 bodies” over nine; rule 2's falsification condition met and the rule unamended; rule 3 refuted [source text withheld from the public copy]. No corrected version exists on any ref.
+    - **source**: AUT:L8/L0/semantics/definitions/AUTONOMOUS.md:39, 72, 244-246, 273-294; AUT:L8/L5/research/review/REVIEW_4_AUTONOMOUS_ADJUDICATION.md:42-43
+    - **who**: owner (the seven fixes, by dated version)
+    - **blocks**: Chapter 3; Appendix A.
+  - item 23
+    - **id**: X-23
+    - **kind**: contradiction
+    - **statement**: The model's specification has Auditonomous consume “the pinned Autonomous consensus baseline”. The bound entry says “[source text withheld from the public copy]”. The Autonomous beta says “[source text withheld from the public copy].” DEF predates the binding and is a delta over nothing.
+    - **source**: MAIN:L8/L0/0.md:79; AUT:L8/L0/semantics/definitions/AUTONOMOUS.md:25; Autonomous beta:L8/L5/research/review/BETA_SOURCE_OVERLAY.md:11
+    - **who**: owner
+    - **blocks**: The “local delta” framing; Chapters 3 and 7.
+  - item 24
+    - **id**: X-24
+    - **kind**: contradiction
+    - **statement**: For Chapter 2 the roadmap calls the registers complete and the chapter “VERIFIED (components)”. BETA calls the same comparisons local, contested or unresolved and re-verifies nothing. The sourcebook's method section withdraws its own seed findings.
+    - **source**: ROADMAP:RM:97-113; BETA:REV/CONTRADICTIONS.md:22-35; ROADMAP:L8/L4/work/writing/sourcebook/Auditonomous_Book_Material_Sourcebook_v0.1.md:1291-1317
+    - **who**: owner
+    - **blocks**: Chapter 2.
+  - item 25
+    - **id**: X-25
+    - **kind**: contradiction
+    - **statement**: The vocabulary paper's row 16, the roadmap's rewording of D20, and two readers of this pass state that no predicate Aud(S,F) occurs in the sourcebook. It does, in LaTeX, at line 116. A literal search for “Aud(” misses it.
+    - **source**: ROADMAP:L8/L4/work/writing/papers/AUDITONOMOUS_VOCABULARY_PAPER_2026-09-14.md:305; ROADMAP:RM:630, 647; ROADMAP:L8/L4/work/writing/sourcebook/Auditonomous_Book_Material_Sourcebook_v0.1.md:113-124
+    - **who**: work that can be done without the owner (corrected in the open, the wrong version kept visible)
+    - **blocks**: Decision D20 as worded; Chapters 7 and 12.
+  - item 26
+    - **id**: X-26
+    - **kind**: contradiction
+    - **statement**: Deletion rule. The status ladder says “Nothing is ever deleted.” The retired sheet says “No-deletion is not a rule enforced here”. The owner's words of 7 September 2026: “we cant enforce integroty by ebforceing no deletion. we can only imply no deletion to enforcer integiortyty”.
+    - **source**: MAIN:REV/STATUS_LADDER.md:25; MAIN:L8/L6/retired/0.md:12; MAIN:HIST/harmonization-2026-09-05.md:152-154
+    - **who**: owner
+    - **blocks**: How corrections and retirements are recorded.
+  - item 27
+    - **id**: X-27
+    - **kind**: contradiction
+    - **statement**: The owner's claim “TO be autonomus it oto be forgetful.” is recorded in the docket as “UNSUPPORTED and contradicted”; a MAIN finding says the layering resolution is “now PARTIALLY VERIFIED”; the lane file still says “PENDING — lane running”.
+    - **source**: MAIN:LANES/RECORD_ONTOLOGY_OPEN_QUESTIONS.md:127-140; ROADMAP:REV/RESEARCH_DOCKET.md:190; MAIN:FIND/SEGREGATION_AND_FORGETTING_2026-08-04.md:142
+    - **who**: work that can be done without the owner to carry the outcomes into the lane file; the claim itself is the owner's
+    - **blocks**: Chapter 9.
+  - item 28
+    - **id**: X-28
+    - **kind**: contradiction
+    - **statement**: Two corpus sentences are contradicted by primary sources: that [source text withheld from the public copy]” (Git gives detection, not prevention), and that the 2019 SI redefinition deleted the kilogram artifact (it was demoted and is conserved). Both stand in the manuscript corpus.
+    - **source**: ROADMAP:REV/EXTERNAL_AUDIT_2026-08-04.md:46-88; ROADMAP:L8/L4/work/writing/manuscript/Auditonomous_Theory_Master_Archive.md:546, 619
+    - **who**: owner (author text)
+    - **blocks**: Chapters 10 and 17; Appendix G.
+  - item 29
+    - **id**: X-29
+    - **kind**: contradiction
+    - **statement**: The fourth derivation (Block 46) is the author's own instrument counted as an independent arrival: “[source text withheld from the public copy].”
+    - **source**: ROADMAP:REV/RESEARCH_DOCKET.md:153; ROADMAP:RM:617
+    - **who**: owner (decision D6)
+    - **blocks**: Chapters 10 and 17.
+  - item 30
+    - **id**: X-30
+    - **kind**: contradiction
+    - **statement**: Owner ruling of 14 August 2026: “[source text withheld from the public copy]”. It survives only in history. The roadmap treats the same question (D1) as open, plans six first-contact chapters and never cites the ruling.
+    - **source**: HISTORY:HUB_LEDGER.md:49-50; ROADMAP:RM:612
+    - **who**: owner
+    - **blocks**: Chapters 19 to 24 and 26.
+  - item 31
+    - **id**: X-31
+    - **kind**: contradiction
+    - **statement**: The owner's N/U algebra paper: its product rule omits the u1·u2 term, so the result has the right width at the wrong centre and does not contain the true product, while its section 9 claims coverage. Worked: (2,1) ⊗ (7,2) = [3,25] against a true [5,27].
+    - **source**: ROADMAP:REV/NASA_PAPER_DEFECT_LEDGER.md:70-177
+    - **who**: owner (is enclosure the intended contract)
+    - **blocks**: Chapters 15 and 16.
+  - item 32
+    - **id**: X-32
+    - **kind**: contradiction
+    - **statement**: Two eBIOS documents give different formulas for composed uncertainty; one reduces to 1 for every input (“FORMULA INCONSISTENCY DETECTED”). It is unregistered at L2, and which formula is canonical is unruled.
+    - **source**: MAIN:DEF:257; ROADMAP:REV/RESEARCH_DOCKET.md:66-68
+    - **who**: owner
+    - **blocks**: The criterion that uncertainty is carried; Chapter 15.
+  - item 33
+    - **id**: X-33
+    - **kind**: contradiction
+    - **statement**: Inside AUDY: “[source text withheld from the public copy]” stands beside rules for a received stop signal; the kernel is “the audit layer alone” and later the stop path rejoins it; bare λ means the enclosure parameter in sections 1 and 2 and the decomposition state in the addendum.
+    - **source**: ROADMAP:AUDY:31-32, 44-45, 74, 91-94, 186, 202, 379
+    - **who**: owner (a dated version)
+    - **blocks**: Chapters 9 and 16.
+  - item 34
+    - **id**: X-34
+    - **kind**: contradiction
+    - **statement**: “8 of 10” definitions reference a human, but the ten rows counted are not A1 to A11. AUDY and MAIN's distillation say “ten” codified definitions; the binding sheet and the table say eleven.
+    - **source**: AUT:L8/L5/research/findings/FINDING_autonomy_requires_a_human_referent.md:16-28; ROADMAP:AUDY:234-235; MAIN:FIND/DISTILLATION.md:14-15; MAIN:L7/peering/public/ingress/peer-1/object-1/0.md:28
+    - **who**: work that can be done without the owner (a recount); the entry's wording is the owner's
+    - **blocks**: Chapters 4 and 13.
+  - item 35
+    - **id**: X-35
+    - **kind**: contradiction
+    - **statement**: Inside the auditability record: AU-10 against AC-24(2), “Unresolved. Not repaired here.”; and AU-6 is classed as not carriable by any object while the envelope's C11 and slot H7 rest on AU-6.
+    - **source**: ROADMAP:SS/AUDITABILITY_REQUIREMENTS.md:143-145, 206-228
+    - **who**: work that can be done without the owner (analysis); the owner adopts
+    - **blocks**: Chapters 12 and 13.
+  - item 36
+    - **id**: X-36
+    - **kind**: contradiction
+    - **statement**: The cycles review's external verdict says continuous audit is established “since 1991” and legally mandated under NIST and the EU AI Act. Later source requests record that the date is contestable, that the 1991 paper says “less-after-the fact”, and that NIST's framework is voluntary. The roadmap cites the verdict as verified.
+    - **source**: ROADMAP:REV/AUTONOMOUS_vs_AUDITONOMOUS_CYCLES.md:136; ROADMAP:REV/SOURCE_REQUESTS.md:180-181; ROADMAP:RM:152
+    - **who**: work that can be done without the owner
+    - **blocks**: Chapter 6.
+  - item 37
+    - **id**: X-37
+    - **kind**: contradiction
+    - **statement**: T3: the ledger states as fixed that the definite article appears twice; the archive has six claimants across all three verbs. The gloss that ISO 15489-1:2001 is the one instrument holding all three is refuted: the clause contains neither “falsify” nor “erase”.
+    - **source**: MAIN:LANES/THEME_LEDGER.md:156-160; ROADMAP:L8/L4/work/writing/manuscript/Auditonomous_Theory_Master_Archive.md:47, 90, 210, 232, 580, 593; ROADMAP:REV/EXTERNAL_AUDIT_2026-08-04.md:175-188
+    - **who**: work that can be done without the owner (the count and the gloss); the ruling is D3
+    - **blocks**: Chapter 8.
+  - item 38
+    - **id**: D1
+    - **kind**: owner decision
+    - **statement**: One academic book with the scenario narrative in a companion volume, or the narrative kept as case files, or two books. The ruling of 14 August 2026 (X-30) bears on it and is not weighed. Whether the Tic Tac adjudication and the census count as contact material is part of the same call.
+    - **source**: ROADMAP:RM:612; HISTORY:HUB_LEDGER.md:49-50
+    - **who**: owner
+    - **blocks**: Chapters 19 to 24 and 26; Appendix I.
+  - item 39
+    - **id**: D2
+    - **kind**: owner decision
+    - **statement**: Title: three candidates stand, in date order.
+    - **source**: ROADMAP:RM:613
+    - **who**: owner
+    - **blocks**: Front matter; the press proposal.
+  - item 40
+    - **id**: D3
+    - **kind**: owner decision
+    - **statement**: [source text withheld from the public copy]): four unranked readings; six claimants in the archive. Status in the lane file: “[source text withheld from the public copy].”
+    - **source**: ROADMAP:RM:614; MAIN:LANES/THEME_LEDGER.md:156-272
+    - **who**: owner
+    - **blocks**: Chapter 8.
+  - item 41
+    - **id**: D4
+    - **kind**: owner decision
+    - **statement**: Whether line 52 of the definition is reworded to contrast record-by-design with record-bolted-on-later. Lines 22 and 26 carry the same wording and are outside the recorded edit.
+    - **source**: ROADMAP:RM:615; MAIN:REV/PERPETUITY_QUESTION_ADJUDICATION.md:222
+    - **who**: owner
+    - **blocks**: Chapters 7 and 8.
+  - item 42
+    - **id**: D5
+    - **kind**: owner decision
+    - **statement**: Whether Q9 (“autonomous ASSUMES state, auditonomous CHECKS state”) becomes the definition's dividing line.
+    - **source**: ROADMAP:RM:616; MAIN:LANES/RECORD_ONTOLOGY_OPEN_QUESTIONS.md:227-242
+    - **who**: owner
+    - **blocks**: Chapter 9.
+  - item 43
+    - **id**: D6
+    - **kind**: owner decision
+    - **statement**: How the fourth derivation is handled (see X-29).
+    - **source**: ROADMAP:RM:617
+    - **who**: owner
+    - **blocks**: Chapters 10 and 17.
+  - item 44
+    - **id**: D7
+    - **kind**: owner decision
+    - **statement**: Record-and-flag (Block 46) against non-formation as correct behaviour (Block 50).
+    - **source**: ROADMAP:RM:618; ROADMAP:REV/RESEARCH_DOCKET.md:162
+    - **who**: owner
+    - **blocks**: Chapters 17 and 24.
+  - item 45
+    - **id**: D8
+    - **kind**: owner decision
+    - **statement**: Where the evidence ranking goes after the cut of Block 36, and where the deep stratum (Blocks 33 and 34) goes. Two surviving blocks still cite the ranking as settled method.
+    - **source**: ROADMAP:RM:619; MAIN:LANES/THEME_LEDGER.md:146-152
+    - **who**: owner
+    - **blocks**: Chapters 1 and 19.
+  - item 46
+    - **id**: D9
+    - **kind**: owner decision
+    - **statement**: Where the reconstitution counter-thesis (Blocks 37 and 38) goes; by its own text it “[source text withheld from the public copy]”.
+    - **source**: ROADMAP:RM:620; MAIN:LANES/THEME_LEDGER.md:105-114, 154
+    - **who**: owner
+    - **blocks**: Chapter 25.
+  - item 47
+    - **id**: D10
+    - **kind**: owner decision
+    - **statement**: Trace-before-release or a pure one-way carrier (X-16); and whether the recall policy must itself be sealed.
+    - **source**: ROADMAP:RM:621; MAIN:FIND/SEGREGATION_AND_FORGETTING_2026-08-04.md:183-193
+    - **who**: owner
+    - **blocks**: Chapters 9 and 14.
+  - item 48
+    - **id**: D11
+    - **kind**: owner decision
+    - **statement**: Enclosure regime for the book: λ = 1 throughout; λ = 0 with the sign-definiteness predicate carried; or both stated. The envelope already prints “λ=1 linear form” for compartment C3.
+    - **source**: ROADMAP:RM:622; MAIN:SS/AUDITON_ENVELOPE.md:126
+    - **who**: owner
+    - **blocks**: Chapters 15 and 16; the L2 rows.
+  - item 49
+    - **id**: D12
+    - **kind**: owner decision
+    - **statement**: Whether the Autonomous Theory files are a source for Part VI, and where that separate work lives.
+    - **source**: ROADMAP:RM:623; MAIN:HIST/harmonization-2026-09-05.md:113
+    - **who**: owner
+    - **blocks**: Chapters 20 and 22.
+  - item 50
+    - **id**: D13
+    - **kind**: owner decision
+    - **statement**: [source text withheld from the public copy]; AUDY names a reader. Design property or omission.
+    - **source**: ROADMAP:RM:624; MAIN:REV/0.md:44
+    - **who**: owner
+    - **blocks**: Chapters 8 and 18.
+  - item 51
+    - **id**: D14
+    - **kind**: owner decision
+    - **statement**: Split or cite three mixed L1 files (the envelope, HUMINT_ENCODE, REQUIREMENTS_OWNERSHIP), and register the candidate objects at L2 and L3. The two restored L1 files have no split record at all.
+    - **source**: ROADMAP:RM:625; MAIN:HIST/harmonization-2026-09-05.md:91-92
+    - **who**: owner
+    - **blocks**: Chapters 12, 13 and 15.
+  - item 52
+    - **id**: D15
+    - **kind**: owner decision
+    - **statement**: Restore from history. Taken as ruled by inference from the instruction “Them setup the Auditonomous repo before research.” The pull request that carried it was closed unmerged on 17 October 2026, and BETA was built without it.
+    - **source**: ROADMAP:RM:626; ROADMAP:HIST/restore-2026-09-14.md:9
+    - **who**: owner
+    - **blocks**: Whether the 116 restored files reach the merged state.
+  - item 53
+    - **id**: D16
+    - **kind**: owner decision
+    - **statement**: Press and series.
+    - **source**: ROADMAP:RM:627
+    - **who**: owner
+    - **blocks**: Length, register, and whether the papers precede the proposal.
+  - item 54
+    - **id**: D18
+    - **kind**: owner decision
+    - **statement**: Eight or twelve compartments in print. Both counts are arithmetically right (12 = 4 + 8).
+    - **source**: ROADMAP:RM:628; MAIN:SS/AUDITON_ENVELOPE.md:137-144
+    - **who**: owner
+    - **blocks**: Chapter 12.
+  - item 55
+    - **id**: D19
+    - **kind**: owner decision
+    - **statement**: Propagate “Responsive” for “Reactive” into Blocks 43 and 44, and correct the Block 51 attribution.
+    - **source**: ROADMAP:RM:629; ROADMAP:REV/RESEARCH_DOCKET.md:158
+    - **who**: owner rules; the propagation needs no further ruling
+    - **blocks**: Chapters 17 and 24.
+  - item 56
+    - **id**: D20
+    - **kind**: owner decision
+    - **statement**: Which framing of auditonomy governs: the five-axis auditon profile, the standards-indexed profile with its Aud(S,F) predicate, or a reconciled new definition. The decision's text misdescribes the sourcebook (X-25).
+    - **source**: ROADMAP:RM:630
+    - **who**: owner
+    - **blocks**: Chapters 7 and 12.
+  - item 57
+    - **id**: D21
+    - **kind**: owner decision
+    - **statement**: The prospectus's four case laboratories or the table of contents' three case files.
+    - **source**: ROADMAP:RM:633
+    - **who**: owner
+    - **blocks**: Chapters 19, 23 and 24.
+  - item 58
+    - **id**: D22
+    - **kind**: owner decision
+    - **statement**: Bind the definition of autonomous to Autonomous main c9076c3, to a tag exemplar-2026-09-14 (never created), or keep 0504961. BETA keeps 0504961 and writes “no rebind”; it does not name D22.
+    - **source**: ROADMAP:RM:631; BETA:L7/provenance/sources/LEDGER.md:153
+    - **who**: owner
+    - **blocks**: Chapters 3 and 4.
+  - item 59
+    - **id**: D23
+    - **kind**: owner decision
+    - **statement**: Component repositories: harmonize each, create clean new ones, or fold them in. Fifteen were surveyed from roots and READMEs only.
+    - **source**: ROADMAP:RM:632, 649-671
+    - **who**: owner
+    - **blocks**: Chapters 6, 9 and 14 to 17.
+  - item 60
+    - **id**: O-01
+    - **kind**: owner decision
+    - **statement**: Which model commit the two repositories match: 7lm main c9dc061 (11 November 2026), the 4ca3edb both betas pin, or the beta tip 97314c5 with the manuscript guidance. The 7lm beta is not an ancestor of 7lm main. Then: whether ROADMAP and BETA are merged onto the session branch of 11 November 2026, and in what order.
+    - **source**: 7lm refs origin/main and origin/beta/common-contracts-r1-r6 (merge-base 2e5a6d6); BETA:L7/peering/public/ingress/peer-1/object-2/binding.json; local branch ccr-9391bd81-f2enmj (f2d5b37, 149ab6c; Autonomous 8257118)
+    - **who**: owner
+    - **blocks**: Every physical change to either repository.
+  - item 61
+    - **id**: O-02
+    - **kind**: owner decision
+    - **statement**: Which version of AUDY the owner means: the bytes restored on ROADMAP (Autonomous commit e27ca78, 462 lines) or the last version in Autonomous history (9c123b0, 475 lines), which adds two-tier stop enforcement and records condition B as grounded.
+    - **source**: ROADMAP:AUDY:202, 272; ROADMAP:HIST/LEDGER_2026-08-14_reorganisation.md:21
+    - **who**: owner
+    - **blocks**: Chapter 9; condition B.
+  - item 62
+    - **id**: O-03
+    - **kind**: owner decision
+    - **statement**: The owner rule on “autonomous”: Appendix C of the definition, Q13, the autonomy rows of CONTRADICTIONS.md and the sourcebook's line 96 take the word from outside the binding. MAIN reserves the edit to the owner; BETA applied dispositions with no recorded ruling.
+    - **source**: MAIN:L8/L0/semantics/definitions/0.md:34; MAIN:L7/peering/public/ingress/peer-1/object-1/0.md:34; BETA:REV/CONTRADICTIONS.md:22-35
+    - **who**: owner
+    - **blocks**: Chapter 3; roadmap step S3.
+  - item 63
+    - **id**: O-04
+    - **kind**: owner decision
+    - **statement**: Findings the reading records reserve: IEEE 7014 requires deletion of affective data, against “cannot erase”; [source text withheld from the public copy]; whether the reader is constitutive.
+    - **source**: MAIN:STG/ieee/FINDINGS_2026-08-04.md:18-69; MAIN:STG/library/FINDINGS_2026-08-04.md:92-108
+    - **who**: owner
+    - **blocks**: Chapter 8.
+  - item 64
+    - **id**: O-05
+    - **kind**: owner decision
+    - **statement**: Whether IEEE 1920.1, IEEE 7007, ISO/IEC 25059 and the second ALFUS volume enter the Autonomous entry as rows or stop being used as definitions here; whether AUTOMATION.md and REGISTER.md are bound.
+    - **source**: MAIN:REV/CONTRADICTIONS.md:52-58, 76, 147, 171; MAIN:L7/peering/public/ingress/peer-1/0.md:20-22
+    - **who**: owner
+    - **blocks**: Q13; rows C2, C3, C6 and C7.
+  - item 65
+    - **id**: O-06
+    - **kind**: owner decision
+    - **statement**: The Third Power Corpus v3: “[source text withheld from the public copy]?”
+    - **source**: MAIN:L7/peering/private/egress/peer-2/object-1/OWNERSHIP_PENDING.md:12-13
+    - **who**: owner
+    - **blocks**: Nothing in the book; a pending transfer.
+  - item 66
+    - **id**: O-07
+    - **kind**: owner decision
+    - **statement**: Unpinned bindings: no commit for eb-audit; no commit for ebios and no hash for the Martin 2026 manuscript; which of its Markdown and PDF is the bound version.
+    - **source**: MAIN:L7/peering/private/ingress/peer-2/object-1/0.md:13; MAIN:L7/peering/private/ingress/peer-3/object-1/0.md:13
+    - **who**: owner (a ledgering act)
+    - **blocks**: Release rule 1; Chapter 7.
+  - item 67
+    - **id**: O-08
+    - **kind**: owner decision
+    - **statement**: The history purge of the third-party ISO/IEC 22989 file (“pending owner execution”); the blob is still reachable in this clone. A rescue branch is recorded as holding pre-redaction personal data.
+    - **source**: MAIN:STG/standards/SOURCE_LEDGER.md:418-434; MAIN:HIST/LEDGER_2026-08-16_l6-close-and-normalization.md:40
+    - **who**: owner
+    - **blocks**: Any change of visibility.
+  - item 68
+    - **id**: O-09
+    - **kind**: owner decision
+    - **statement**: Licence status of the Ferreira full text; how much quotation from IEEE standards a published work may carry; an outbound licence, copyright notice and patent position for the repository's own work.
+    - **source**: MAIN:L7/governance/copyright/0.md:41-55; MAIN:L7/governance/patents/0.md:31
+    - **who**: owner
+    - **blocks**: Any release.
+  - item 69
+    - **id**: O-10
+    - **kind**: owner decision
+    - **statement**: The owner's own files in history only: five Office drafts deleted on 15 August 2026 with “principal's call on their home” open (three are the first files of 30 and 31 July 2026), the working draft auditonomous.odt, and the Deep Research Pro Prompt.
+    - **source**: MAIN:HIST/LEDGER.md:32; ROADMAP:HIST/restore-2026-09-14.md:33, 191-195; manuscript status report of 3 November 2026
+    - **who**: owner
+    - **blocks**: Retention of the manuscript's own history.
+  - item 70
+    - **id**: O-11
+    - **kind**: owner decision
+    - **statement**: Twelve small placement calls left open between 5 and 7 September 2026: the ledger's position, binder/internal, the formulas ledger at L2 or L3, the datasets ledger's name, the eb-audit copy, peer granularity for standards bodies, three review-or-findings placements, the discipline text's home, the retired set's reading, CLAUDE.md.
+    - **source**: MAIN:HIST/harmonization-2026-09-05.md:89-95, 107, 152; MAIN:HIST/7LM_ROUTING_PLAN_2026-09-05.md:157, 169, 172
+    - **who**: owner
+    - **blocks**: Layout only.
+  - item 71
+    - **id**: O-12
+    - **kind**: owner decision
+    - **statement**: Whether ruling AU-NORM-04 (“Definitions remain under manuscripts/definitions/”) is superseded. It exists only in a commit message and was overridden by the move of 5 September 2026.
+    - **source**: MAIN:HIST/LEDGER_2026-08-16_l6-close-and-normalization.md:1; commit 4a1c1db
+    - **who**: owner
+    - **blocks**: The record of rulings.
+  - item 72
+    - **id**: O-13
+    - **kind**: owner decision
+    - **statement**: Record-ontology questions Q1 to Q9 (twelve with Q6a to Q6c), all “OPEN”; above all the separate definitions of observer and observed that the owner ruled on in kind (“[source text withheld from the public copy].”) and that are not written.
+    - **source**: MAIN:LANES/RECORD_ONTOLOGY_OPEN_QUESTIONS.md:4, 35-72
+    - **who**: owner
+    - **blocks**: Chapter 9.
+  - item 73
+    - **id**: O-14
+    - **kind**: owner decision
+    - **statement**: Author assertions awaiting a decision: the narrowing in A-002; the three-step cycle of A-002b; the three-part test of A-003; when engineered non-recoverability is privacy and not concealment (A-008); the propulsion proposal A-009c.
+    - **source**: ROADMAP:REV/AUTHOR_ASSERTIONS.md:68-113, 117-244, 248-317, 395-756, 1020-1136
+    - **who**: owner
+    - **blocks**: Chapters 9 and 11.
+  - item 74
+    - **id**: O-15
+    - **kind**: owner decision
+    - **statement**: Docket items marked for the owner and not covered above: P1 (what the symmetry of physicality ranges over); A1 (whether absorbing u = ∞ is right for an audit trail); F4; G1. DR-001 asks whether to [source text withheld from the public copy].”
+    - **source**: ROADMAP:REV/RESEARCH_DOCKET.md:38-50, 56-64, 160, 172; ROADMAP:REV/dr-001-003/DR-001-uha-half-cell-decode.md:55
+    - **who**: owner
+    - **blocks**: Chapters 15 and 17.
+  - item 75
+    - **id**: O-16
+    - **kind**: owner decision
+    - **statement**: The envelope's map: whether the replicator's direction attribute (C2-in, C2-out) enters it; whether removing C8 makes C8 an envelope concern (“[source text withheld from the public copy]”); whether five more separation controls are cited.
+    - **source**: ROADMAP:SS/AUDITON_REPLICATOR.md:87, 436-449; ROADMAP:SS/AUDITABILITY_REQUIREMENTS.md:238
+    - **who**: owner
+    - **blocks**: Chapter 12.
+  - item 76
+    - **id**: O-17
+    - **kind**: owner decision
+    - **statement**: The ebios core-architecture draft is, by its own statement, not canonical until the owner approves it. Three chapters feed from it.
+    - **source**: MAIN:LANES/THEME_LEDGER.md:128-138; ROADMAP:L8/L4/work/writing/auditonomous_ebios_core_architecture_math_source-535f70d_draft.md
+    - **who**: owner
+    - **blocks**: Chapters 6, 14 and 15.
+  - item 77
+    - **id**: O-18
+    - **kind**: owner decision
+    - **statement**: Corpus housekeeping: which document governs the four cut blocks (the table of contents says cut; the archive still maps them to chapters); whether the fragment at Block_37:18 is intended.
+    - **source**: MAIN:LANES/THEME_LEDGER.md:146-152, 284; ROADMAP:L8/L4/work/writing/manuscript/Auditonomous_Theory_Master_Archive.md:723-728, 748
+    - **who**: owner
+    - **blocks**: Chapters 1 and 25.
+  - item 78
+    - **id**: O-19
+    - **kind**: owner decision
+    - **statement**: Whether the consolidated document of 4 August 2026, history-only by AU-NORM-02, may stand in the tree as a retired object and feed seven chapters.
+    - **source**: ROADMAP:HIST/restore-2026-09-14.md:74; ROADMAP:L8/L6/retired/consolidated-2026-08-04/0.md:8
+    - **who**: owner
+    - **blocks**: Chapters 1, 2, 7, 8, 11 and 18.
+  - item 79
+    - **id**: O-20
+    - **kind**: owner decision
+    - **statement**: Whether the roadmap's full build-first order (nine moves, including eight repository passes) still stands before Chapters 2 and 19, neither of which lists those moves in its own gate.
+    - **source**: ROADMAP:RM:595-604
+    - **who**: owner
+    - **blocks**: The first drafting step.
+  - item 80
+    - **id**: U-01
+    - **kind**: unrun check
+    - **statement**: Prior-art search for the coinage and the definition: “**No prior-art search has been run.**” The prior-art position holds rules only. Scoped checks exist elsewhere (four analogy lanes; lambda cosmology) and are not recorded at the position.
+    - **source**: ROADMAP:AUDY:262-263; MAIN:L7/provenance/prior-art/0.md:32; MAIN:FIND/DISTILLATION.md:134
+    - **who**: work that can be done without the owner (needs network)
+    - **blocks**: Chapter 7; every novelty claim.
+  - item 81
+    - **id**: U-02
+    - **kind**: unrun check
+    - **statement**: The auditability-gap search queued on 16 August 2026: does any codified definition of autonomous, merely by classifying a system autonomous, entail recoverable state and history. No record of a run exists in any state.
+    - **source**: MAIN:HIST/LEDGER_2026-08-16_l6-close-and-normalization.md:48
+    - **who**: work that can be done without the owner (needs network and a pinned Autonomous commit)
+    - **blocks**: Chapter 5.
+  - item 82
+    - **id**: U-03
+    - **kind**: unrun check
+    - **statement**: The auditability extraction (Q11) was run only for SP 800-53 AC and AU, on ROADMAP. It was not run [source text withheld from the public copy], IEC, CCSDS, IETF, COSPAR, or SC-7(13), SC-32 and SI-10(1). About 49 live AC controls have no recorded disposition.
+    - **source**: MAIN:SS/REQUIREMENTS_OWNERSHIP.md:259-261; ROADMAP:SS/AUDITABILITY_REQUIREMENTS.md:166, 172-177, 236
+    - **who**: work that can be done without the owner
+    - **blocks**: Chapter 13.
+  - item 83
+    - **id**: U-04
+    - **kind**: unrun check
+    - **statement**: 78 requirements (one run) against 113 (another run) of 4 August 2026: “unreconciled”. The 14 NASA rows are listed in no file in any state, so 113 cannot be recounted from the tree.
+    - **source**: MAIN:SS/REQUIREMENTS_OWNERSHIP.md:15-21, 244; ROADMAP:FIND/AUDITON_PACKABILITY_2026-08-04.md:15
+    - **who**: work that can be done without the owner (needs the workflow journal, or a fresh NASA extraction)
+    - **blocks**: Chapter 13.
+  - item 84
+    - **id**: U-05
+    - **kind**: unrun check
+    - **statement**: No adversarial review is recorded for the envelope, HUMINT_ENCODE, AUDY, the composition as a whole, any finding, or the two papers of 14 September 2026.
+    - **source**: MAIN:SS/AUDITON_ENVELOPE.md:24; MAIN:SS/HUMINT_ENCODE.md:149; ROADMAP:RM:583
+    - **who**: work that can be done without the owner
+    - **blocks**: Chapter 12; the first drafting step.
+  - item 85
+    - **id**: U-06
+    - **kind**: unrun check
+    - **statement**: The interlock's [source text withheld from the public copy]”; no result exists in any state. IEC 61508 and ISO 13849 are “NOT-CHECKED”. Its trust regress is open: “[source text withheld from the public copy]”.
+    - **source**: MAIN:L8/L3/engineering-mathematics/PROPOSAL_seal_gated_interlock.md:6-8, 166-178
+    - **who**: work that can be done without the owner
+    - **blocks**: Chapter 14.
+  - item 86
+    - **id**: U-07
+    - **kind**: unrun check
+    - **statement**: The ISO/IEC 22989 captures and terms.json were taken from a withdrawn third-party copy; re-verification against the lawful copy STD-025 is open. [source text withheld from the public copy] also barred from reproduction at length.
+    - **source**: MAIN:L7/governance/copyright/0.md:44; MAIN:STG/standards/extracted/ISO-IEC-22989-2022_captures.md:6-7; AUT:L8/L0/semantics/definitions/AUTONOMOUS.md:228-234
+    - **who**: work that can be done without the owner (needs the archive)
+    - **blocks**: Chapters 3, 4 and 13.
+  - item 87
+    - **id**: U-08
+    - **kind**: unrun check
+    - **statement**: The perpetuity adjudication's three next checks: publisher-of-record captures; the relayed quotes (Dyson, the NIST handbook, the PNAS pair) against publisher PDFs; the bounded-commitment claim against the logging literature. None is recorded as done.
+    - **source**: MAIN:REV/PERPETUITY_QUESTION_ADJUDICATION.md:315-327, 348
+    - **who**: work that can be done without the owner (needs network)
+    - **blocks**: Chapter 25.
+  - item 88
+    - **id**: U-09
+    - **kind**: unrun check
+    - **statement**: T3 sources: no citator run on Bronston or Chiarella; Tiersma (1990) not obtained; ISO 15489-1:2016 clause 5.2.2.1 unread.
+    - **source**: MAIN:LANES/THEME_LEDGER.md:189; ROADMAP:REV/SOURCE_REQUESTS.md:51-69, 158-159
+    - **who**: work that can be done without the owner
+    - **blocks**: Chapter 8.
+  - item 89
+    - **id**: U-10
+    - **kind**: unrun check
+    - **statement**: Does u = ∞ survive composition (docket A1), and the propagation table for every operation (A2): “INTERNALLY DERIVED, UNRUN”. No probe exists.
+    - **source**: ROADMAP:REV/RESEARCH_DOCKET.md:56-64
+    - **who**: work that can be done without the owner
+    - **blocks**: Chapter 15.
+  - item 90
+    - **id**: U-11
+    - **kind**: unrun check
+    - **statement**: The IEEE 7009 R5/R6 classification of the corpus's own functions (stop, return) was never performed; the autonomy-at-distance finding says conformance turns on it and that nobody has done it.
+    - **source**: ROADMAP:FIND/AUTONOMY_AT_DISTANCE.md (B6); HISTORY:FREEZE.md:256-260
+    - **who**: work that can be done without the owner for the classification; the design choice is the owner's
+    - **blocks**: Chapters 11 and 18.
+  - item 91
+    - **id**: U-12
+    - **kind**: unrun check
+    - **statement**: The search for a constructive codified definition of autonomy, which would refute candidate law L1, is unrun.
+    - **source**: ROADMAP:RM:141-157
+    - **who**: work that can be done without the owner (needs network)
+    - **blocks**: Chapter 5.
+  - item 92
+    - **id**: U-13
+    - **kind**: unrun check
+    - **statement**: Held and unread: IEEE 1872-2015 and IEEE 7010-2020 (in the archive since 14 August 2026; term T-02 and row A5 wait on the first); IEEE 1788.1-2017 (see X-18).
+    - **source**: ROADMAP:L7/provenance/sources/STANDARDS_REGISTER.md:310-316
+    - **who**: work that can be done without the owner (needs the archive)
+    - **blocks**: Chapters 3 and 15.
+  - item 93
+    - **id**: U-14
+    - **kind**: unrun check
+    - **statement**: Never read: the eb-stack code line under analysis (taken from a prompt); aybllc/ommp and aybllc/broken-zero (the codec here is a reconstruction, “CHOSEN-HERE — verify”); the private-repository sweep for the word.
+    - **source**: ROADMAP:REV/EBSTACK_LAMBDA_ANALYSIS.md:131-132; ROADMAP:L8/L4/work/computation/ommp/README.md:4, 29-32; MAIN:HIST/LEDGER.md:63
+    - **who**: work that can be done without the owner once access is given
+    - **blocks**: Chapters 15 to 17.
+  - item 94
+    - **id**: U-15
+    - **kind**: unrun check
+    - **statement**: Census dossier: “Zero entries are byte-verified.” Its stated cause (an egress block) was disproved the same day; one citation carries an unregistered DOI.
+    - **source**: ROADMAP:REV/CENSUS_SOURCES_DOSSIER.md:3, 114
+    - **who**: work that can be done without the owner (needs network), after D1
+    - **blocks**: Chapter 20.
+  - item 95
+    - **id**: U-16
+    - **kind**: unrun check
+    - **statement**: First-contact sources, none captured: GAO 1995, AARO 2024, ODNI 2021, the Navy's 2020 acknowledgement, NASA UAP IST 2023, Minor Planet Center codes, W3C PROV, the memory-reconstruction literature. The roadmap schedules this session after the chapter it gates.
+    - **source**: ROADMAP:RM:288, 319-335, 603-604
+    - **who**: work that can be done without the owner (needs network), after D1
+    - **blocks**: Chapters 19, 23 and 24.
+  - item 96
+    - **id**: U-17
+    - **kind**: unrun check
+    - **statement**: External facts stated inside the corpus and never checked: NASA distributed autonomy and Starling, the synthetic cell (a rejected preprint labelled verified), NASA CP-2255, SEXTANT, AARO figures, lunar printing.
+    - **source**: MAIN:LANES/THEME_LEDGER.md:344-355; ROADMAP:REV/RESEARCH_DOCKET.md:137-147
+    - **who**: work that can be done without the owner (needs network)
+    - **blocks**: Chapters 10 and 21; Appendix G.
+  - item 97
+    - **id**: U-18
+    - **kind**: unrun check
+    - **statement**: The lambda verification's adversarial refutation pass was still running when the file was written (“Verdicts may move”); no result is recorded, yet the roadmap carries its verdicts as settled.
+    - **source**: ROADMAP:REV/LAMBDA_EXTERNAL_VERIFICATION_2026-08-04.md:232-233; ROADMAP:RM:622
+    - **who**: work that can be done without the owner
+    - **blocks**: Chapter 15.
+  - item 98
+    - **id**: U-19
+    - **kind**: unrun check
+    - **statement**: That λ is the fastest bit-exact criterion: “NOT TESTED”. The names and attributions (stagnation; Kahan; Neumaier) are “UNVERIFIED”.
+    - **source**: ROADMAP:REV/CONJECTURE_bit_exact_pruning.md:182-184, 245
+    - **who**: work that can be done without the owner
+    - **blocks**: Chapter 16.
+  - item 99
+    - **id**: U-20
+    - **kind**: unrun check
+    - **statement**: The λ_A mechanism: “Four operators are named, none defined.”; no bound on the residual accumulator (owner: “[source text withheld from the public copy].”); no adversarial pass.
+    - **source**: ROADMAP:AUDY:400-434
+    - **who**: work that can be done without the owner to draft; the owner adopts
+    - **blocks**: Chapter 16.
+  - item 100
+    - **id**: U-21
+    - **kind**: unrun check
+    - **statement**: Thesis open problems O-a to O-d, including the collision check against ISO/IEC 24970 and prEN 18229-1. Dekker 1971 is not held; the file once named for it is another paper.
+    - **source**: ROADMAP:REV/THESIS_lambda_decomposed_record.md:49-58, 118-133
+    - **who**: work that can be done without the owner
+    - **blocks**: Chapter 16.
+  - item 101
+    - **id**: U-22
+    - **kind**: unrun check
+    - **statement**: The deep-research report of 5 August 2026 rules six repository propositions false or outdated and lists eight register corrections. None is recorded as applied or rejected; its citations are opaque tokens.
+    - **source**: MAIN:L8/L4/work/computation/deep-research-auditonomous.md:23-30, 625-636
+    - **who**: work that can be done without the owner (needs network)
+    - **blocks**: Chapters 6 and 16.
+  - item 102
+    - **id**: U-23
+    - **kind**: unrun check
+    - **statement**: Lanes the docket says were launched, with no report found: P2 against the GUM (Type B evaluation); the reference-monitor lane (B5); the Searle check for the two-tier split.
+    - **source**: ROADMAP:REV/RESEARCH_DOCKET.md:8-50, 88-96
+    - **who**: work that can be done without the owner
+    - **blocks**: Chapter 9.
+  - item 103
+    - **id**: U-24
+    - **kind**: unrun check
+    - **statement**: Embodied manuscript: declared content hash 7fd260a5… against 6a717c70… for the held file (“FAILED CHECK”, reproduced). It can only be settled against nu-algebra commit ea08f59, which is not available.
+    - **source**: MAIN:LANES/THEME_LEDGER.md:346; ROADMAP:L7/peering/private/ingress/peer-3/object-1/martin_2026_embodied_auditonomy_lexrom_cabin_model_v0.2_ea08f59.md:18
+    - **who**: work that can be done without the owner once the repository is attached
+    - **blocks**: The peer-3 pin.
+  - item 104
+    - **id**: U-25
+    - **kind**: unrun check
+    - **statement**: No source pointer could be resolved: aybllc/l6 is on no machine used; commits b328334, e4f0d5c, bccf4e4 and 53b28f6 are unconfirmed. A watermark re-check is required before any change of visibility.
+    - **source**: MAIN:L7/provenance/sources/LEDGER.md:20-79, 111-131
+    - **who**: work that can be done without the owner once the archive is attached
+    - **blocks**: Every citation of a held source.
+  - item 105
+    - **id**: U-26
+    - **kind**: unrun check
+    - **statement**: Chapter 2: “[source text withheld from the public copy]”. The seven are not listed; seven link marks in the register are the blocked-fetch mark.
+    - **source**: ROADMAP:RM:111; MAIN:REV/CONTRADICTIONS.md:10-17
+    - **who**: work that can be done without the owner (needs network)
+    - **blocks**: Chapter 2.
+  - item 106
+    - **id**: U-27
+    - **kind**: unrun check
+    - **statement**: Definition anchors: Cambridge and Oxford are now reachable and were never captured (American Heritage stands as a substitute); the journal anchor “remains NOT-CHECKED”; Lewis and Short is “not byte-re-verified”.
+    - **source**: ROADMAP:REV/EXTERNAL_AUDIT_2026-08-04.md:112-124; MAIN:DEF:308, 341-347
+    - **who**: work that can be done without the owner (needs network)
+    - **blocks**: Chapter 7.
+  - item 107
+    - **id**: U-28
+    - **kind**: unrun check
+    - **statement**: Space-sector standards for Chapter 18 are not held: ECSS-E-ST-70-11C, CCSDS, and the COSPAR classification of return.
+    - **source**: ROADMAP:RM:274-281
+    - **who**: work that can be done without the owner (needs network)
+    - **blocks**: Chapter 18.
+  - item 108
+    - **id**: U-29
+    - **kind**: unrun check
+    - **statement**: HUMINT_ENCODE: the term counts over the SR, CM and SA families and the “38 blocked provisions” cannot be recounted from the tree; whether a composed substitute was ever accepted is “Not searched.”; H4 is “NOT-CHECKED”.
+    - **source**: MAIN:SS/HUMINT_ENCODE.md:141-149, 159-161, 214
+    - **who**: work that can be done without the owner
+    - **blocks**: Chapter 13.
+  - item 109
+    - **id**: U-30
+    - **kind**: unrun check
+    - **statement**: Legal instruments relied on and unread or not held: [source text withheld from the public copy], Art. 26(5)), ISO/IEC 17021-1. The legal sources quoted in the distillation's section 7 have no provenance rows.
+    - **source**: ROADMAP:REV/WALK_ACROSS_repo-instrument-standards_2026-08-05.md:94-135; MAIN:FIND/DISTILLATION.md:151-152
+    - **who**: work that can be done without the owner (needs network)
+    - **blocks**: Chapters 13, 18 and 21.
+  - item 110
+    - **id**: U-31
+    - **kind**: unrun check
+    - **statement**: Quotations labelled “VERIFIED” with no locator to a held copy: the ISO, IEEE, UN R157, NASA and EU quotes in the envelope and HUMINT_ENCODE; the priors record (no URL, date or hash); DR-003's three course pages (URL only).
+    - **source**: MAIN:SS/AUDITON_ENVELOPE.md:23-24; MAIN:L8/L3/engineering-mathematics/uncertainty/PRIORS_EXTERNAL_2026-08-04.md:3-4; ROADMAP:REV/dr-001-003/DR-003-swap-flip-no-left-inverse.md:37-41
+    - **who**: work that can be done without the owner
+    - **blocks**: Chapters 12, 15 and 17.
+  - item 111
+    - **id**: U-32
+    - **kind**: unrun check
+    - **statement**: BETA: the evidence files its history names (T3-red.txt and others) are not in the tree; byte identity of the result under Python 3.14.4 is untested; its fault corrections are fresh rebuilds, true by construction.
+    - **source**: BETA:HIST/AUDITONOMOUS_BETA_HISTORY.md:9-11; BETA:L8/L4/work/computation/auditonomous_beta.py:281-282
+    - **who**: work that can be done without the owner
+    - **blocks**: The beta's own record.
+  - item 112
+    - **id**: U-33
+    - **kind**: unrun check
+    - **statement**: Hypotheses stated and untested: the owner's “MOST IMPORTANT: I THINK DRIFT LIVES HERE! NOT ANYWHERE ELSE...(NEEDS A LOT OF STUDY)” at L0; the L3 working-life boundary; the L0 acceptance check has no recorded run.
+    - **source**: MAIN:L8/L0/0.md:69; MAIN:L8/L3/0.md:63-73
+    - **who**: work that can be done without the owner (a test has to be designed first)
+    - **blocks**: Nothing in the book yet.
+  - item 113
+    - **id**: U-34
+    - **kind**: unrun check
+    - **statement**: Replicator and distance items: revocation at distance and parent compromise “UNVERIFIED” (“No RFC 5280 held.”); correlated process error “NOT-CHECKED”; the storage law's precondition asserted and not shown; the SA-8(9) statement not assessed against the NASA per-function finding.
+    - **source**: ROADMAP:SS/AUDITON_REPLICATOR.md:554-563, 603-617; ROADMAP:FIND/AUTONOMY_AT_DISTANCE.md (B7)
+    - **who**: work that can be done without the owner
+    - **blocks**: Chapters 12 and 18.
+  - item 114
+    - **id**: U-35
+    - **kind**: unrun check
+    - **statement**: The referee report of 3 August 2026 set fourteen research tasks; none has a follow-up anywhere in the repository.
+    - **source**: MAIN:L8/L4/work/writing/auditonomouos-important.docx; manuscript status report of 3 November 2026
+    - **who**: work that can be done without the owner
+    - **blocks**: The adversarial case against the book.
+  - item 115
+    - **id**: M-01
+    - **kind**: missing object
+    - **statement**: AUDY is absent from MAIN and BETA, though MAIN's envelope and distillation cite it (once as “governing text”).
+    - **source**: MAIN:SS/AUDITON_ENVELOPE.md:76, 253; MAIN:FIND/DISTILLATION.md:21, 261
+    - **who**: owner (merge decision)
+    - **blocks**: Chapter 9.
+  - item 116
+    - **id**: M-02
+    - **kind**: missing object
+    - **statement**: The defining manuscript (Martin 2026, embodied auditonomy, v0.2) is absent from MAIN and BETA; DEF says it “now lives beside this entry at `manuscript/`”. On ROADMAP its Markdown and PDF are different texts.
+    - **source**: MAIN:DEF:367; ROADMAP:L7/peering/private/ingress/peer-3/object-1/
+    - **who**: owner (merge decision; pin)
+    - **blocks**: DEF:28; Chapter 7.
+  - item 117
+    - **id**: M-03
+    - **kind**: missing object
+    - **statement**: Repositories no reader could open: abba-01/ebios (every corpus quotation in the definition), aybllc/l6 (every source), eb-stack or ebc, eb-audit, ommp, broken-zero, nua (the N/U paper), nu-algebra.
+    - **source**: MAIN:DEF:83-185; MAIN:L7/provenance/sources/0.md:14-18
+    - **who**: owner (attach or grant access)
+    - **blocks**: Re-checking anything against its source.
+  - item 118
+    - **id**: M-04
+    - **kind**: missing object
+    - **statement**: No NASA extraction file exists in any state; only NASA-R6 and NASA-R10 are named, once.
+    - **source**: MAIN:SS/REQUIREMENTS_OWNERSHIP.md:15, 157
+    - **who**: work that can be done without the owner (re-extract)
+    - **blocks**: Chapter 13.
+  - item 119
+    - **id**: M-05
+    - **kind**: missing object
+    - **statement**: Files that MAIN's records cite and only ROADMAP holds: the Master Archive, the ebios draft (EB:233), RESEARCH_DOCKET, the consolidated AUDITONOMOUS.md, STANDARDS_REGISTER, AUTONOMY_AT_DISTANCE, AUDITON_REPLICATOR, AUDITON_PACKABILITY.
+    - **source**: MAIN:REV/CONTRADICTIONS.md:10, 46; MAIN:FIND/OVERRIDE_NECESSITY_2026-08-04.md:14, 169; MAIN:SS/REQUIREMENTS_OWNERSHIP.md:19; MAIN:REV/0.md:44
+    - **who**: owner (merge decision)
+    - **blocks**: Reading MAIN's own findings.
+  - item 120
+    - **id**: M-06
+    - **kind**: missing object
+    - **statement**: At no current head of either repository: THESIS_auditonomous_override.md, replicator-lane/gen_drift.py, COARSENING_VALIDATION, FINDING_coarsening_as_forgetting, FINDING_lambda_knob_and_retention, BREAK_THE_GLASS_obligated_record, ENCLOSURE_PRIOR_ART_2026-08-06. Some survive in Autonomous history.
+    - **source**: MAIN:FIND/DISTILLATION.md:59, 85; ROADMAP:AUDY:337, 358, 433-434
+    - **who**: work that can be done without the owner (recover from history)
+    - **blocks**: Chapters 9 and 16.
+  - item 121
+    - **id**: M-07
+    - **kind**: missing object
+    - **statement**: In history only: FREEZE.md (the conflict records), HUB_LEDGER.md (the ruling of 14 August 2026), AUTONOMOUS_TERMS.md (the term rows the audit corrects), the definitions register.
+    - **source**: HISTORY:FREEZE.md; HISTORY:HUB_LEDGER.md:49-50; HISTORY:manuscripts/definitions/REGISTER.md:12-17
+    - **who**: owner
+    - **blocks**: Knowing which rulings are in force.
+  - item 122
+    - **id**: M-08
+    - **kind**: missing object
+    - **statement**: Ruling texts not held: AU-NORM-01 to 04 (citations only); “DEAD FOR NOW” (reported, not quoted); rulings C-007 and C-008 (the companion's RULINGS.md is 1 byte).
+    - **source**: MAIN:HIST/LEDGER_2026-08-16_l6-close-and-normalization.md:1, 32; MAIN:REV/PERPETUITY_QUESTION_ADJUDICATION.md:6; AUT:L8/L5/research/review/RULINGS.md
+    - **who**: owner (restate)
+    - **blocks**: The record of what the owner ruled.
+  - item 123
+    - **id**: M-09
+    - **kind**: missing object
+    - **statement**: Registers that do not exist: a definitions register; on MAIN, the register the status ladder says promotions are logged in; a register of contradictions between the repository's own findings; the authority-interface register queued on 16 August 2026.
+    - **source**: MAIN:REV/STATUS_LADDER.md:25; MAIN:HIST/LEDGER_2026-08-16_l6-close-and-normalization.md:46
+    - **who**: work that can be done without the owner (drafts)
+    - **blocks**: Tracking status.
+  - item 124
+    - **id**: M-10
+    - **kind**: missing object
+    - **statement**: Layer 2 holds no relation, operator, proof or proof obligation. Unregistered candidates: the isomorphism, DR-003, the enclosure regime with its sign condition, conditions A to E, the Aud(S,F) form, three stipulated invariants.
+    - **source**: MAIN:L8/L2/formal-mathematics/FORMULAS_LEDGER.md:10; MAIN:L8/L1/0.md:109; ROADMAP:RM:532
+    - **who**: a session prepares rows; entering one is the owner's act
+    - **blocks**: Part V.
+  - item 125
+    - **id**: M-11
+    - **kind**: missing object
+    - **statement**: Evidence kept outside the repository: workflow journal wf_b00a2270-83e; the audit's session journal; the definition's Appendix D agent returns; the bit-exact scripts; the distillation's section 7 session record; the quote audit the theme ledger announces.
+    - **source**: MAIN:DEF:362; MAIN:FIND/DISTILLATION.md:151-152; ROADMAP:REV/CONJECTURE_bit_exact_pruning.md:203-204; MAIN:LANES/THEME_LEDGER.md:7
+    - **who**: work that can be done without the owner, where recoverable
+    - **blocks**: Re-checking the records' own checks.
+  - item 126
+    - **id**: M-12
+    - **kind**: missing object
+    - **statement**: Ledger rows that do not exist: the definition's six external citations; NIST SP 800-53 (extracted, no row); more than thirty works the findings cite; Rump, Kearfott and the other priors; any first-contact source; on MAIN, a row for the bound definition. The “Not held” table is empty.
+    - **source**: MAIN:L7/provenance/sources/LEDGER.md:10-12, 98-100; MAIN:DEF:281-347
+    - **who**: work that can be done without the owner to draft; the ledgering session is the owner's
+    - **blocks**: Release rule 1; every citation.
+  - item 127
+    - **id**: M-13
+    - **kind**: missing object
+    - **statement**: The definitional instrument v0.1 that the walk-across compares both repositories with, and the v0.2 owed thirteen amendments, are in neither repository.
+    - **source**: ROADMAP:REV/WALK_ACROSS_repo-instrument-standards_2026-08-05.md:5, 72-83
+    - **who**: owner (say where it is)
+    - **blocks**: That crosswalk's use.
+  - item 128
+    - **id**: M-14
+    - **kind**: missing object
+    - **statement**: The N/U algebra paper the defect ledger examines (19 pages) is not held; the ledger gives no hash or version.
+    - **source**: ROADMAP:REV/NASA_PAPER_DEFECT_LEDGER.md:3-5
+    - **who**: owner
+    - **blocks**: Chapters 15 and 16.
+  - item 129
+    - **id**: M-15
+    - **kind**: missing object
+    - **statement**: On the Autonomous side: no consensus baseline; no tag exemplar-2026-09-14; the baseline paper and the read-only declaration exist only on the closed branch of pull request #29.
+    - **source**: AUT:L7/peering/public/egress/0.md:37; Autonomous branch claude/scholarly-pair-baseline-k8ap82:L8/L6/history/exemplar-2026-09-14.md:11
+    - **who**: owner
+    - **blocks**: Chapters 3 and 4.
+  - item 130
+    - **id**: M-16
+    - **kind**: missing object
+    - **statement**: Positions with nothing filed: experiments; institution; datasets; the prior-art record; authority; four L0 positions; L3 approximation and tolerances.
+    - **source**: MAIN:L8/L4/work/experiments/0.md:36; MAIN:L8/L5/institution/0.md:38-40; MAIN:L7/provenance/sources/datasets-LEDGER.md:5-16
+    - **who**: no one, until there is something to file
+    - **blocks**: Nothing by itself.
+  - item 131
+    - **id**: M-17
+    - **kind**: missing object
+    - **statement**: The book: no chapter text, an empty bibliography, no appendix files, a build script never run. The script that generated the chapter files is not in the repository.
+    - **source**: ROADMAP:L8/L4/work/writing/book/0.md:8; ROADMAP:L8/L4/work/writing/book/bibliography.md:3
+    - **who**: the writing, after the rulings
+    - **blocks**: Everything in print.
+  - item 132
+    - **id**: M-18
+    - **kind**: missing object
+    - **statement**: MAIN has no enumeration of what the prune of 15 August 2026 removed (commit 8c98573, 214 files changed), against the repository's own rule of enumeration before deletion.
+    - **source**: MAIN:HIST/harmonization-2026-09-05.md:19
+    - **who**: work that can be done without the owner (carry ROADMAP's table), after the merge decision
+    - **blocks**: Reading MAIN's own records.
+  - item 133
+    - **id**: M-19
+    - **kind**: missing object
+    - **statement**: Sources named as needed and not obtained: Beer, Fisk and Rogers 2014 (open access); Dekker 1971; Ogita, Rump and Oishi 2005; Kahan 1965; Neumaier 1974; van Emden 2004; ISO 15489-1:2016; Johnson et al. (ACM TECS); Haerder and Reuter 1983; the GUM; Moore 1966; Shapiro 2011; Birgisson 2014.
+    - **source**: ROADMAP:REV/SOURCE_REQUESTS.md:30-166; ROADMAP:L7/provenance/sources/lists-2026-08-08/PRIMARY.md:9-17
+    - **who**: work that can be done without the owner (needs network; some by purchase or library)
+    - **blocks**: Chapters 3, 8, 15 and 16.
+  - item 134
+    - **id**: M-20
+    - **kind**: missing object
+    - **statement**: The model's manuscript guidance (7lm beta 97314c5) is in no branch of either repository. MAIN and ROADMAP still file L7/publications/ and governance/restrictions/.
+    - **source**: 7lm origin/beta/common-contracts-r1-r6:L8/L4/work/writing/0.md:12-16; MAIN:L7/0.md:14
+    - **who**: owner (O-01)
+    - **blocks**: Where the manuscript and its release sit.
+  - item 135
+    - **id**: M-21
+    - **kind**: missing object
+    - **statement**: No session ledger in the stated format exists after 16 August 2026; the sessions of September and the beta build are recorded in other forms.
+    - **source**: MAIN:L8/L6/retired/layout-2026-08-14/research/ledgers/README.md:46-52
+    - **who**: owner (is the format still required)
+    - **blocks**: The record of sessions.
+  - item 136
+    - **id**: R-01
+    - **kind**: defect
+    - **statement**: MAIN and ROADMAP say the source ledger has 62 rows; it has 60 ([source text withheld from the public copy] close-out says “22 new rows” and lists 21. BETA corrects both.
+    - **source**: MAIN:L7/provenance/0.md:20, 33; MAIN:L7/provenance/sources/LEDGER.md:113; BETA:L7/provenance/sources/LEDGER.md:147-149
+    - **who**: work that can be done without the owner (carry BETA's correction)
+    - **blocks**: Any printed count.
+  - item 137
+    - **id**: R-02
+    - **kind**: defect
+    - **statement**: The master ledger, which the README calls the master index, describes nine areas that no longer exist and contradicts itself in three places.
+    - **source**: MAIN:HIST/LEDGER.md:9-10, 16, 27-40; MAIN:README.md:13
+    - **who**: work that can be done without the owner (a dated successor record; the old one is not rewritten)
+    - **blocks**: Orientation.
+  - item 138
+    - **id**: R-03
+    - **kind**: defect
+    - **statement**: Dead links and retired paths: every cross-link in CONTRADICTIONS.md; the three MAIN L1 objects; the MAIN findings; the formulas ledger (`uso/l6/LEDGER.md`); the release checklist and binder rules; the theme ledger's aliases; AUDY's companion paths.
+    - **source**: MAIN:REV/CONTRADICTIONS.md:10, 15-17; MAIN:L8/L2/formal-mathematics/FORMULAS_LEDGER.md:23; MAIN:L7/publications/binder/press-kit/README.md:18, 23; ROADMAP:AUDY:8, 179, 223
+    - **who**: work that can be done without the owner (a path map; dated notes)
+    - **blocks**: Following any citation.
+  - item 139
+    - **id**: R-04
+    - **kind**: defect
+    - **statement**: Sheets behind their directories: BETA's L1, L2, L3 and peering sheets do not list its new files; the L5 and L6 layer sheets omit holdings; the lane sheet says C1–C6 and T1–T11 where the ledger has C1–C11 and T1–T16; MAIN's L0 sheet says the L0 object defines Autonomous; the computation sheet says “It is empty at present.”
+    - **source**: BETA:SS/0.md:35-39; MAIN:LANES/0.md:36; MAIN:L8/L0/0.md:77; MAIN:L8/L4/work/computation/0.md:54
+    - **who**: work that can be done without the owner
+    - **blocks**: The sheets as a guide.
+  - item 140
+    - **id**: R-05
+    - **kind**: defect
+    - **statement**: BETA's insertion moves the “line 52” clause to line 54 while its own records still cite :52; other DEF line citations shift by 2 to 16. The file is no longer the verbatim 410-line restoration (426 lines).
+    - **source**: BETA:DEF:54; BETA:HIST/LEDGER.md:61; BETA:REV/PERPETUITY_QUESTION_ADJUDICATION.md:216
+    - **who**: work that can be done without the owner
+    - **blocks**: Every DEF line citation after a merge of BETA.
+  - item 141
+    - **id**: R-06
+    - **kind**: defect
+    - **statement**: “C<n>” names five series: envelope compartments C1–C12, standards contradictions C1–C7, internal contradictions C-1 to C-23, criteria C1–C13, rulings C-001 onward. BETA uses C6 and C7 in two senses in one file.
+    - **source**: BETA:FIND/AUDITONOMOUS_BETA_FINDINGS.md:9, 24; MAIN:REV/CONTRADICTIONS.md:32
+    - **who**: work that can be done without the owner (a naming note)
+    - **blocks**: Reading any cross-reference.
+  - item 142
+    - **id**: R-07
+    - **kind**: defect
+    - **statement**: Labels used outside both written vocabularies (CONTESTED, UNVERIFIED, ESTABLISHED, NOT TESTED, UNVERIFIABLE AS POSED, and “INTERNALLY VERIFIED” meaning checked against an outside source). The ledger's VERIFIED means file identity. Relayed quotes are labelled VERIFIED in some places and PARTIALLY VERIFIED in others.
+    - **source**: MAIN:REV/PERPETUITY_QUESTION_ADJUDICATION.md:67, 76, 327, 344; ROADMAP:REV/NASA_PAPER_DEFECT_LEDGER.md:36-56; MAIN:REV/STATUS_AND_LABEL_DISCIPLINE.md:10-13
+    - **who**: owner (the label text changes [source text withheld from the public copy])
+    - **blocks**: What VERIFIED means in print.
+  - item 143
+    - **id**: R-08
+    - **kind**: defect
+    - **statement**: Counts that do not match their own lists: HUMINT_ENCODE (“These three” over five rows; “eleven controls” over thirteen); the auditability record (21 over 22 rows; “approximately 90” for 62); the replicator (8 + 2 of 12); the packability finding (nine conflicts not enumerated; 58 of 78); the adjudication (16 claims over 19 rows); the A-009 tables; “69 paths moved” (68); a ledger sum of 43 for 40.
+    - **source**: MAIN:SS/HUMINT_ENCODE.md:43, 159-161; ROADMAP:SS/AUDITABILITY_REQUIREMENTS.md:172-177; ROADMAP:REV/AUTHOR_ASSERTIONS.md:842-850; MAIN:HIST/harmonization-2026-09-05.md:22
+    - **who**: work that can be done without the owner (dated corrections)
+    - **blocks**: Any figure taken into a chapter.
+  - item 144
+    - **id**: R-09
+    - **kind**: defect
+    - **statement**: External-audit findings of 4 August 2026 never carried into the files they name: the Westby and Conselice volume and DOI; the Tic Tac equals sign and missing Mach altitude; the Morton citation; ommp.py:329; the census dossier's egress paragraph; “VERIFIED on two independent fetches”; the American Heritage substitution.
+    - **source**: ROADMAP:REV/EXTERNAL_AUDIT_2026-08-04.md:94-147, 204-214, 253-300; ROADMAP:REV/CENSUS_SOURCES_DOSSIER.md:28-38, 114; MAIN:LANES/THEME_LEDGER.md:225
+    - **who**: work that can be done without the owner
+    - **blocks**: Chapters 7, 17, 20 and 24.
+  - item 145
+    - **id**: R-10
+    - **kind**: defect
+    - **statement**: Stale statuses: the interlock (“was still running”); lane questions Q5 and Q6c (“PENDING — lane running”); T3's superseded sentences; the replicator's “under review” rows; SOURCE_REQUESTS (five requests met or part-met elsewhere, unamended); the docket's B5, B6 and D3.
+    - **source**: MAIN:LANES/RECORD_ONTOLOGY_OPEN_QUESTIONS.md:140, 195; ROADMAP:REV/SOURCE_REQUESTS.md:43-49, 142-149, 177; ROADMAP:REV/RESEARCH_DOCKET.md:28-29, 128
+    - **who**: work that can be done without the owner (dated amendments)
+    - **blocks**: Knowing what is still open.
+  - item 146
+    - **id**: R-11
+    - **kind**: defect
+    - **statement**: Three nits the definition's own verification found were never applied and are on no pending list: a citation span (:127 for 127-128); an unmarked cut in the RFC 4949 firmware quote; the unflagged constructed pronunciation.
+    - **source**: MAIN:DEF:14, 47, 69, 351
+    - **who**: owner (the definition changes by version)
+    - **blocks**: Chapter 7.
+  - item 147
+    - **id**: R-12
+    - **kind**: defect
+    - **statement**: Corrections made by overwriting, against the rule that the wrong version stays visible: AUDY's fix list; T3's adopted-then-withdrawn definition; the Autonomous beta's deletion of a register row; the thesis's closing line still saying Dekker is held.
+    - **source**: ROADMAP:AUDY:19-20, 42-43; MAIN:LANES/THEME_LEDGER.md:158, 272; ROADMAP:REV/THESIS_lambda_decomposed_record.md:49-58, 143-145
+    - **who**: work that can be done without the owner (restore the earlier wording beside the correction)
+    - **blocks**: The record's own rule.
+  - item 148
+    - **id**: R-13
+    - **kind**: defect
+    - **statement**: The roadmap: chapter gate lines and the decision table disagree in eight places; “three seam joints” lists four; sheets give the decision range as D1–D21; Chapter 22 cites a feed held in no tree; Chapter 19's drafting precedes its own verification session; it counts 62 ledger rows.
+    - **source**: ROADMAP:RM:82-87, 312, 603-604, 612-633; ROADMAP:L8/L4/work/writing/book/0.md:8, 14
+    - **who**: work that can be done without the owner
+    - **blocks**: Using the roadmap as the plan.
+  - item 149
+    - **id**: R-14
+    - **kind**: defect
+    - **statement**: The vocabulary paper's claims table: row 16 is wrong (X-25); row 3 gives Block 3 line 10 where the sentence is at line 1; row 6 says every condition anchors to a VERIFIED control where its source marks condition B's sources “NOT-CHECKED”.
+    - **source**: ROADMAP:L8/L4/work/writing/papers/AUDITONOMOUS_VOCABULARY_PAPER_2026-09-14.md:292, 295, 305
+    - **who**: work that can be done without the owner
+    - **blocks**: The paper's use by Chapters 7 to 9.
+  - item 150
+    - **id**: R-15
+    - **kind**: defect
+    - **statement**: The restore record declines five Office drafts citing the harmonization record's section 8, which exists but names none of them; it misfiles the owner's working draft as packaging of the sourcebook; it says two objects went to L0 and L1 where its table places three.
+    - **source**: ROADMAP:HIST/restore-2026-09-14.md:18, 33, 54-55, 191-195; MAIN:HIST/harmonization-2026-09-05.md:105-125
+    - **who**: work that can be done without the owner (a dated correction)
+    - **blocks**: Decision O-10.
+  - item 151
+    - **id**: R-16
+    - **kind**: defect
+    - **statement**: Personal paths (“/home/eric”) stand in 15 files on MAIN, including the definition; the release checklist forbids them.
+    - **source**: MAIN:DEF:74, 266-278, 340; MAIN:L7/publications/binder/press-kit/README.md:22
+    - **who**: work that can be done without the owner to prepare; the owner approves edits to the definition
+    - **blocks**: Any release.
+  - item 152
+    - **id**: R-17
+    - **kind**: defect
+    - **statement**: Peering records: internal repositories sit under peering/public/; BETA files a computation as object-2 while its unchanged sheet reserves object-2 for AUTOMATION.md; ROADMAP's peer-3 sheet still says the manuscript is absent; MAIN's binding sheet says the definition “names this binding” and it does not.
+    - **source**: MAIN:L7/peering/public/ingress/peer-1/object-1/0.md:18, 34; BETA:L7/peering/public/ingress/peer-1/0.md:20-22; ROADMAP:L7/peering/private/ingress/peer-3/0.md:8, 16
+    - **who**: work that can be done without the owner
+    - **blocks**: The desk.
+  - item 153
+    - **id**: R-18
+    - **kind**: defect
+    - **statement**: Copyright and source records: “the 31 WSU-licensed IEEE PDFs” against 30 + 3 and 34 ledger rows; four stamped rows lack the hold-private tag; STD-025 has no hash; one full-text paper copy is in the tree though the sheet says no source is copied.
+    - **source**: MAIN:L7/governance/copyright/0.md:43, 45; MAIN:L7/provenance/sources/LEDGER.md:50-58
+    - **who**: work that can be done without the owner
+    - **blocks**: The conditions on quotation.
+  - item 154
+    - **id**: R-19
+    - **kind**: defect
+    - **statement**: Quotation fidelity: three SP 800-53 controls quoted in shortened form that drops operative words; the override finding presents a cleaned sentence in quotation marks as the owner's; percentages truncated, not rounded.
+    - **source**: ROADMAP:SS/AUDITABILITY_REQUIREMENTS.md:49-55, 120-122, 193, 202; MAIN:FIND/OVERRIDE_NECESSITY_2026-08-04.md:12-13
+    - **who**: work that can be done without the owner
+    - **blocks**: Any quotation taken from these files.
+  - item 155
+    - **id**: R-20
+    - **kind**: defect
+    - **statement**: Reading records: RFC 9162 says 45 captures and holds 48 (43 compared); FIPS 180-4 says 25 pages and 24; IEEE 3152's verifier input was truncated (six defects stand); 19 items of the IEEE 7007 record were never compared.
+    - **source**: MAIN:STG/library/reading/RFC9162_Certificate-Transparency-v2.md:27; MAIN:STG/ieee/reading/IEEE-3152.md:381-399
+    - **who**: work that can be done without the owner (needs the archive)
+    - **blocks**: Quoting those four sources.
+  - item 156
+    - **id**: R-21
+    - **kind**: defect
+    - **statement**: The Tic Tac adjudication: “VERIFIED arithmetic” with no outside source fetched; “~4 ORDERS OF MAGNITUDE” where its own figure is about 780 times; a Roosevelt attribution no official document carries; the 0.78 s input comes from an unofficial report.
+    - **source**: ROADMAP:REV/TICTAC_PROPULSION_ADJUDICATION.md:40, 52-53, 111, 250, 362
+    - **who**: work that can be done without the owner
+    - **blocks**: Chapters 19 and 24.
+  - item 157
+    - **id**: R-22
+    - **kind**: defect
+    - **statement**: Probe and code notes: the 9.49% containment figure is a property of the probe's integer grid and the roadmap carries it as a property of the operator; the DR-001 probe prints 15/8 beside “the factor of 2”; the OMMP README says 66 where 65 checks run; the lambda probe's docstring keeps a withdrawn claim.
+    - **source**: ROADMAP:REV/EBSTACK_LAMBDA_ANALYSIS.md:72-81; ROADMAP:RM:622; ROADMAP:L8/L4/work/computation/probes/dr001_half_cell.py:39-40; ROADMAP:L8/L4/work/computation/ommp/README.md:257
+    - **who**: work that can be done without the owner
+    - **blocks**: Chapters 15 and 17.
+  - item 158
+    - **id**: R-23
+    - **kind**: defect
+    - **statement**: The interlock proposal cites EB:233, EB:38 and LEX:487 with no key and neither source on MAIN; the same manuscript line is keyed LEX in one record and EMB in another; the sourcebook's only statement of the autonomy profile has a row of “=” where an equals sign belongs.
+    - **source**: MAIN:L8/L3/engineering-mathematics/PROPOSAL_seal_gated_interlock.md:18-20; ROADMAP:L8/L4/work/writing/sourcebook/Auditonomous_Book_Material_Sourcebook_v0.1.md:65-70
+    - **who**: work that can be done without the owner
+    - **blocks**: Chapter 14.
+  - item 159
+    - **id**: R-24
+    - **kind**: defect
+    - **statement**: MAIN's distillation is stale against itself (law L6 “NOT-CHECKED” while its section 7.4 marks the same row verified) and its relative paths resolve nowhere.
+    - **source**: MAIN:FIND/DISTILLATION.md:15, 21, 99-101, 124, 273-285
+    - **who**: work that can be done without the owner (a dated note)
+    - **blocks**: Chapter 5.
+  - item 160
+    - **id**: R-25
+    - **kind**: defect
+    - **statement**: File names are misspelled in the computation directory (autonomouos, auditonomopus) and in the writing directory (auditonomouos-important.docx, auditnomous-main.docx).
+    - **source**: MAIN:L8/L4/work/computation/ (tree listing); MAIN:L8/L4/work/writing/ (tree listing)
+    - **who**: owner (renames are his)
+    - **blocks**: Citations by file name.
+  - item 161
+    - **id**: R-26
+    - **kind**: defect
+    - **statement**: The three Office files on MAIN are labelled “live drafts”; none is a draft of the book (a prospectus, a referee report, an extraction corpus).
+    - **source**: MAIN:L8/L4/work/writing/0.md:33; MAIN:HIST/LEDGER.md:37
+    - **who**: work that can be done without the owner (sheet wording)
+    - **blocks**: What the manuscript directory is taken to hold.
+  - item 162
+    - **id**: Q-01
+    - **kind**: question
+    - **statement**: Does a repository aybllc/eb-stack exist? Two ROADMAP records describe a GitHub read of it on 5 August 2026 (commit c3ec814); the roadmap says “[source text withheld from the public copy]” and that [source text withheld from the public copy].
+    - **source**: ROADMAP:REV/LAMBDA_PRIOR_ART_2026-08-05.md:173-177; ROADMAP:RM:655
+    - **who**: owner (one line settles it)
+    - **blocks**: The homonym ruling; Chapter 15.
+  - item 163
+    - **id**: Q-02
+    - **kind**: question
+    - **statement**: Did the owner rule before BETA applied its dispositions (Appendix C, Q13, C1–C7), and is its “no rebind” his ruling on D22? Was BETA made by Codex? The commit's author is EDM and it has no generator trailer.
+    - **source**: BETA:714480d; BETA:HIST/AUDITONOMOUS_BETA_HISTORY.md:3
+    - **who**: owner
+    - **blocks**: How BETA is merged.
+  - item 164
+    - **id**: Q-03
+    - **kind**: question
+    - **statement**: Are abba-01/ebios and aybllc/ebios one object, and is docs/EINSTEIN_BRANCH.md on branch v1.0.0-dev? If it is on the attempt branch only, the firmware contradiction rests on a branch the owner ruled was only an attempt.
+    - **source**: MAIN:DEF:384-410
+    - **who**: owner, or a session with access
+    - **blocks**: X-05.
+  - item 165
+    - **id**: Q-04
+    - **kind**: question
+    - **statement**: The [source text withheld from the public copy] itself”; of the bootstrapping objection, “[source text withheld from the public copy]”. The walk-across calls it the deepest open problem.
+    - **source**: MAIN:FIND/OVERRIDE_NECESSITY_2026-08-04.md:162; ROADMAP:SS/AUDITON_REPLICATOR.md:488-492; ROADMAP:REV/WALK_ACROSS_repo-instrument-standards_2026-08-05.md:135
+    - **who**: work that can be done without the owner; the owner adopts
+    - **blocks**: Chapters 9, 12 and 14.
+  - item 166
+    - **id**: Q-05
+    - **kind**: question
+    - **statement**: Q10: who is the adopter or assessor for a scout beyond return (“*unresolved*”). Delivery is carriable; readership is not.
+    - **source**: MAIN:SS/REQUIREMENTS_OWNERSHIP.md:254-257
+    - **who**: owner
+    - **blocks**: Chapters 13 and 18.
+  - item 167
+    - **id**: Q-06
+    - **kind**: question
+    - **statement**: The research question the perpetuity adjudication leaves: under what conditions a system can keep a monotone, tamper-evident commitment to its whole history while its operating state stays bounded. “[source text withheld from the public copy].”
+    - **source**: MAIN:REV/PERPETUITY_QUESTION_ADJUDICATION.md:277-285
+    - **who**: work that can be done without the owner
+    - **blocks**: Chapter 25.
+  - item 168
+    - **id**: Q-07
+    - **kind**: question
+    - **statement**: Open technical questions with no check: whether an optimal coupling knob k exists; whether noise-symbol growth is unbounded; whether [source text withheld from the public copy] is new (“UNVERIFIED as novel”).
+    - **source**: ROADMAP:AUDY:347-349; MAIN:L8/L3/engineering-mathematics/uncertainty/PRIORS_EXTERNAL_2026-08-04.md:119-129
+    - **who**: work that can be done without the owner
+    - **blocks**: Chapters 15 and 16.
+  - item 169
+    - **id**: Q-08
+    - **kind**: question
+    - **statement**: What “the source ledger” to be locked with Chapter 19 is (the L7 pointer ledger, the bibliography, or a ledger per chapter), and which seven quotations Chapter 2's re-check means.
+    - **source**: ROADMAP:RM:111, 547
+    - **who**: owner
+    - **blocks**: Chapters 2 and 19.
+  - item 170
+    - **id**: Q-09
+    - **kind**: question
+    - **statement**: Remote state no reader checked (no network): the standing of pull requests #27 and #29, the exemplar tag, branch protection, repository visibility, whether today's session branch is pushed.
+    - **source**: Local refs of the three clones on 11 November 2026
+    - **who**: a session with network, or the owner
+    - **blocks**: Decision O-01.
+  - item 171
+    - **id**: Q-10
+    - **kind**: question
+    - **statement**: Does branch rescue/reorg-2026-08-14 still exist? It is not among the fetched refs; the ledgers say it holds the first deployment and pre-redaction bytes (“never replay”).
+    - **source**: MAIN:HIST/LEDGER_2026-08-14_redeploy.md:7; MAIN:HIST/LEDGER_2026-08-16_l6-close-and-normalization.md:40
+    - **who**: owner
+    - **blocks**: Decision O-08.
+  - item 172
+    - **id**: Q-11
+    - **kind**: question
+    - **statement**: Whether the labels “VERIFIED” given on 2 August 2026 to quotes read from mirrors, relays and index sweeps meet the outside-source rule restated on 8 August 2026.
+    - **source**: MAIN:REV/STATUS_LADDER.md:13-18; MAIN:REV/PERPETUITY_QUESTION_ADJUDICATION.md:327
+    - **who**: owner (the rule is his)
+    - **blocks**: Chapter 25; R-07.
+- **worklist**
+  - item 1
+    - **order**: 1
+    - **action**: Name the model commit both repositories are to match: 7lm main c9dc061 (11 November 2026), the 4ca3edb that both beta exemplars pin, or the beta tip 97314c5 (3 November 2026), which alone carries the manuscript guidance. The 7lm beta is not merged into 7lm main.
+    - **who**: owner
+    - **why**: It is the first step in the owner's instruction of 11 November 2026, and every later change lands on that layout. The session branch of that date (f2d5b37 here, 8257118 in Autonomous) mirrors only the L7 restructure, which all three candidates share.
+    - **unblocks**: Every merge; O-01; M-20.
+  - item 2
+    - **order**: 2
+    - **action**: Decide whether ROADMAP's restore (116 files, decision D15) and BETA (the exemplar, the pinned binding, the ledger corrections) join the chosen branch, and in what order. Neither branch contains the other.
+    - **who**: owner
+    - **why**: The research is split across three branches. MAIN cannot open what its own records cite; 73 of 133 chapter feed citations are missing there.
+    - **unblocks**: M-01, M-02, M-05, M-18; all work on AUDY, the lambda thread, the docket and the corpus.
+  - item 3
+    - **order**: 3
+    - **action**: Prepare, as dated corrections for the owner's merge: 60 ledger rows and 21 new rows (R-01); fifteen for sixteen in six documents (X-10); the Aud(S,F) row, D20's text and the paper's rows 3 and 6 (X-25, R-14); the lane sheet's counts and the other stale sheets (R-04); BETA's line 52 at 54 (R-05).
+    - **who**: work that can be done without the owner
+    - **why**: These are arithmetic and locator facts already confirmed. Left alone they are printed in Chapter 13's title and carried into every later record.
+    - **unblocks**: Chapters 2 and 13; clean citation of the definition by line.
+  - item 4
+    - **order**: 4
+    - **action**: Rule which text is the definition for the book: the entry of 30 July 2026, AUDY v2 of 5 August 2026, or both with a stated relation (X-01, D20); and which version of AUDY (O-02).
+    - **who**: owner
+    - **why**: Chapters 7 to 9 and 12, the L2 statements and the vocabulary paper all state the definition. Two texts now claim to govern.
+    - **unblocks**: D3, D4, D5 and D13 in context; M-10; Chapters 7 to 9 and 12.
+  - item 5
+    - **order**: 5
+    - **action**: Rule the line-52 edit (D4) with the cycles review beside it, say whether lines 22 and 26 follow, and rule “immutable” against “apparent” (X-02, X-07).
+    - **who**: owner
+    - **why**: The repository's own reading of eleven sources found detection, not prevention. This is the sentence a referee tests first.
+    - **unblocks**: Chapters 7 and 8; the three unapplied nits (R-11) can ride on the same version.
+  - item 6
+    - **order**: 6
+    - **action**: On the Autonomous side: say whether a consensus baseline is to be written or the plural entry stands (X-23); have the seven fixes of the review of 8 August 2026 made by dated version (X-22); confirm or replace the pin at 0504961 (D22); decide the extra rows and bindings (O-05).
+    - **who**: owner
+    - **why**: The second half of the word comes only from this object, and it travels with its defects.
+    - **unblocks**: Chapters 3 and 4; Q13 (X-08); O-03.
+  - item 7
+    - **order**: 7
+    - **action**: Run the prior-art search for the coinage and the definition (U-01) and the entailment search queued on 16 August 2026 (U-02), each with indexes, queries, dates and a bounded negative finding. Capture the Cambridge and Oxford entries on the way (U-27).
+    - **who**: work that can be done without the owner (needs network)
+    - **why**: The word's novelty and the reason it is needed both rest on searches that were never run.
+    - **unblocks**: Chapters 5 and 7; AUDY's first falsification condition.
+  - item 8
+    - **order**: 8
+    - **action**: Reconcile the 78-requirement and 113-requirement runs, recover or re-extract the 14 NASA rows, finish the auditability extraction beyond AC and AU, and assign the 49 live AC controls left over (U-03, U-04, X-11).
+    - **who**: work that can be done without the owner
+    - **why**: Chapter 13's numbers cannot be recounted from the tree today.
+    - **unblocks**: Chapter 13; a merged requirement count for the envelope.
+  - item 9
+    - **order**: 9
+    - **action**: Prepare L2 rows for the isomorphism, DR-003, the enclosure regime with its sign condition, conditions A to E and the Aud(S,F) form. The owner rules D11 and D14 and enters the rows (M-10).
+    - **who**: a session prepares; the owner rules and enters
+    - **why**: Nine concepts the definition relies on have no formal statement, and Part V is built on the formal layer.
+    - **unblocks**: Chapters 15 to 17; X-32.
+  - item 10
+    - **order**: 10
+    - **action**: Hold adversarial reviews on the record: the envelope first, then AUDY, then the two papers of 14 September 2026 (U-05).
+    - **who**: work that can be done without the owner
+    - **why**: No L1 object has been reviewed, and the roadmap gates the first drafting step on the papers' review.
+    - **unblocks**: Chapter 12; roadmap step S0; the first drafting step.
+  - item 11
+    - **order**: 11
+    - **action**: Draft ledger rows for the definition's citations, SP 800-53, the works the findings cite and the bound definition; fill the “Not held” table; [source text withheld from the public copy] the lawful copy (M-12, U-07). Needs the archive attached.
+    - **who**: work that can be done without the owner to draft; the ledgering session is the owner's
+    - **why**: The ledger's own rule makes each of these an unledgered citation.
+    - **unblocks**: Release rule 1; Chapters 3 and 4; Appendix A.
+  - item 12
+    - **order**: 12
+    - **action**: Pin the unpinned bindings (eb-audit; ebios and the Martin 2026 manuscript, naming which file is bound) and decide the Third Power Corpus (O-06, O-07).
+    - **who**: owner
+    - **why**: The sources under the definition have no version.
+    - **unblocks**: U-24; release rule 1.
+  - item 13
+    - **order**: 13
+    - **action**: Carry the external audit's corrections into the files they name (R-09), fix the ISO 15489 gloss and the T3 count (X-37), amend the cycles verdict (X-36), and draft replacement wording for the Git and kilogram sentences for the owner (X-28).
+    - **who**: work that can be done without the owner; the owner for the corpus sentences
+    - **why**: The audit of 4 August 2026 found them; the files still carry the errors.
+    - **unblocks**: Chapters 6, 8, 17, 20 and 24.
+  - item 14
+    - **order**: 14
+    - **action**: Reconcile SOURCE_REQUESTS with what is now held; read IEEE 1872-2015, IEEE 7010-2020 and IEEE 1788.1-2017 from the archive; fetch Beer, Fisk and Rogers 2014; list what must be bought (U-13, M-19, R-10, X-18).
+    - **who**: work that can be done without the owner (needs network and the archive)
+    - **why**: At least five requests are met or part-met and still listed open.
+    - **unblocks**: Row A5 and term T-02; Chapters 3, 15 and 16.
+  - item 15
+    - **order**: 15
+    - **action**: Rule the definition-side decisions D3, D5, D6, D13 and D18, the open questions in O-13, and Q13 (X-08).
+    - **who**: owner
+    - **why**: They gate Part III and Chapter 12 once the definition is fixed.
+    - **unblocks**: Chapters 8 to 12.
+  - item 16
+    - **order**: 16
+    - **action**: Rule D10 and D11. Then run the unrun arithmetic (U-10), file the missing scripts, recover gen_drift.py, record the outcome of the lambda adversarial pass (U-18) and draft the λ_A operators (U-20).
+    - **who**: owner, then work that can be done without the owner
+    - **why**: Part V cannot state a regime or a mechanism before these.
+    - **unblocks**: Chapters 14 to 16; X-14, X-16.
+  - item 17
+    - **order**: 17
+    - **action**: Rule D1 with the ruling of 14 August 2026 in view (X-30), then D8, D12 and D21.
+    - **who**: owner
+    - **why**: They decide whether Part VI exists in this book and what Chapter 19 introduces.
+    - **unblocks**: Chapters 19 to 24 and 26; U-15, U-16.
+  - item 18
+    - **order**: 18
+    - **action**: On the chosen branch: enumerate the prune of 15 August 2026 (M-18), write a successor to the master ledger (R-02), repair links with a path map (R-03), and record the owner's decision on his own files in history (O-10).
+    - **who**: work that can be done without the owner; the owner for O-10
+    - **why**: The records should describe the tree that exists, and the manuscript's own history should be retained where the model asks.
+    - **unblocks**: Orientation; the L6 half of the manuscript guidance.
+  - item 19
+    - **order**: 19
+    - **action**: Settle the conditions on release: the history purge (O-08), the Ferreira licence, quotation clearance and an outbound licence (O-09); strip personal paths (R-16); re-point the release checklist (R-03).
+    - **who**: owner; the last two can be prepared without the owner
+    - **why**: No item has been through the checklist, and two of its boxes name paths that do not exist.
+    - **unblocks**: Any release of a paper or of the book.
+  - item 20
+    - **order**: 20
+    - **action**: With network access and after D1: re-fetch the census dossier, capture the official case documents and Chapter 19's four sources, and re-check Chapter 2's seven quotations (U-15, U-16, U-26).
+    - **who**: work that can be done without the owner (needs network)
+    - **why**: Every external number in Part VI is unchecked, and the roadmap placed this session after the chapter it gates.
+    - **unblocks**: Chapters 2, 19, 20, 23 and 24.
+  - item 21
+    - **order**: 21
+    - **action**: Run the interlock's attack pass and check IEC 61508 and ISO 13849 (U-06); work the base-case question (Q-04).
+    - **who**: work that can be done without the owner
+    - **why**: The only method offered for by-construction enforcement is an unbuilt proposal with its likeliest failure unanswered.
+    - **unblocks**: Chapter 14; claim CR-31.
+  - item 22
+    - **order**: 22
+    - **action**: Draft Chapter 2 and Chapter 19.
+    - **who**: the writing, after items 4, 10, 17 and 20, and after the owner says whether the roadmap's build-first order still stands (O-20)
+    - **why**: It is the roadmap's first drafting step. None of its preconditions has a record today.
+    - **unblocks**: Roadmap step S6.
+- **key_claims**
+  - item 1
+    - **id**: KC-01
+    - **claim**: No record in the repository tests any system against the definition, and the definition says so itself. Experiments are empty in MAIN, ROADMAP and BETA. BETA's one computation is a synthetic 16-case fixture whose result sets every achievement flag false.
+    - **evidence**: MAIN:L8/L0/semantics/definitions/AUDITONOMOUS_DEFINITION.md:57 (“[source text withheld from the public copy]”); MAIN:L8/L4/work/experiments/0.md:36 (“No experiment has been executed”), the same blob in all three states; BETA:L8/L4/work/computation/auditonomous_beta_result.json /claims; BETA:L8/L5/research/findings/AUDITONOMOUS_BETA_FINDINGS.md:11. Lines 57 and 36 read by the synthesizer; the result file parsed by two readers.
+  - item 2
+    - **id**: KC-02
+    - **claim**: Two texts claim to be the definition and no document states their relation. The entry of 30 July 2026 is the record by ruling AU-NORM-02 and is on MAIN. AUDITONOMY.md of 5 August 2026 says its v2 definition governs, is labelled conjecture, and is on ROADMAP only, although MAIN's distillation calls it the governing text.
+    - **evidence**: MAIN:README.md:11; ROADMAP:L8/L0/semantics/definitions/AUDITONOMY.md:3-5 (“`[source text withheld from the public copy])**”); MAIN:L8/L5/research/findings/DISTILLATION.md:21 (“`definitions/AUDITONOMY.md`, governing text”). Both lines read by the synthesizer; absence from MAIN and BETA by tree listing (definition reader).
+  - item 3
+    - **id**: KC-03
+    - **claim**: The formal layer is empty on MAIN and ROADMAP: no relation, operator or proof is registered. One formal predicate for the word does exist, unratified and unregistered: Aud(S,F) if and only if Aut(S,F) and five conditions, in the model-written sourcebook. Reports that it does not exist are wrong.
+    - **evidence**: MAIN:L8/L2/formal-mathematics/FORMULAS_LEDGER.md:10 (“Currently: **EMPTY** — no formulas held.”); MAIN:L8/L2/formal-mathematics/relations/0.md:33, operators/0.md:33, proofs/0.md:35; ROADMAP:L8/L4/work/writing/sourcebook/Auditonomous_Book_Material_Sourcebook_v0.1.md:113-124, read by the synthesizer; the contrary row at ROADMAP:L8/L4/work/writing/papers/AUDITONOMOUS_VOCABULARY_PAPER_2026-09-14.md:305.
+  - item 4
+    - **id**: KC-04
+    - **claim**: The lambda results that stand: λ = 1 is Rump's 1999 midpoint-radius product and always encloses; the λ = 0 radius is exact for sign-definite operands only when the centre is shifted; λ = 0 as coded, with the centre unshifted, is not an enclosure. All three records are on ROADMAP only.
+    - **evidence**: ROADMAP:L8/L5/research/review/LAMBDA_EXTERNAL_VERIFICATION_2026-08-04.md:16-71, 213-214; Rump 1999 text held at aybllc/autonomous origin/main:L7/provenance/prior-art/prior-art-lane/ru99.txt:117, 121, 165-172 (re-read by a reader); ROADMAP:L8/L5/research/review/EBSTACK_LAMBDA_ANALYSIS.md:60-81; probe re-run on 11 November 2026 (ROADMAP:L8/L4/work/computation/probes/ebstack_lambda_analysis.py).
+  - item 5
+    - **id**: KC-05
+    - **claim**: Two searches the work depends on were never run: the prior-art search for the coinage and its definition, and the search, queued on 16 August 2026, on whether any codified definition of autonomous entails recoverable records. What exists is a string search over the eleven definitions, which found no record or audit term.
+    - **evidence**: ROADMAP:L8/L0/semantics/definitions/AUDITONOMY.md:263 (“**[source text withheld from the public copy]`.”, read by the synthesizer); MAIN:L7/provenance/prior-art/0.md:32; MAIN:L8/L6/history/LEDGER_2026-08-16_l6-close-and-normalization.md:48 (a search of all three states for the phrase finds only this line); eleven-text search re-run by a reader over aybllc/autonomous origin/main:L8/L0/semantics/definitions/AUTONOMOUS.md:70-80.
+  - item 6
+    - **id**: KC-06
+    - **claim**: The source ledger has 60 rows, not 62, all pointers into a private archive no reader could open. Its label VERIFIED records that a file matches the archive copy, not that a claim was checked. A record of reading exists for 14 of the 58 held sources. The definition's own external citations have no rows.
+    - **evidence**: MAIN:L7/provenance/sources/LEDGER.md:20-79 (rows counted independently by three readers: [source text withheld from the public copy]); BETA:L7/provenance/sources/LEDGER.md:147-149; MAIN:L7/provenance/sources/LEDGER.md:111-131; reading tally against MAIN:L7/provenance/sources/staging-records/ (25 files); MAIN:L8/L0/semantics/definitions/AUDITONOMOUS_DEFINITION.md:281-347 with zero matching ledger rows.
+  - item 7
+    - **id**: KC-07
+    - **claim**: Auditonomous takes “autonomous” from one object: the Autonomous entry at commit 0504961 of 14 August 2026. Its bytes are unchanged on Autonomous main today. It is a plural entry of eleven definitions from nine bodies that declines to state a single definition, its own review blocks its gate pending seven fixes, and no consensus baseline exists.
+    - **evidence**: MAIN:L7/peering/public/ingress/peer-1/0.md:10 and object-1/0.md:13 (read by the synthesizer); blob ffbdc28, SHA-256 2756661749c3…a12b, identical at 0504961 and at aybllc/autonomous origin/main:L8/L0/semantics/definitions/AUTONOMOUS.md (recomputed by four readers); that file lines 24-25 and 70-80; aybllc/autonomous origin/main:L8/L5/research/review/REVIEW_4_AUTONOMOUS_ADJUDICATION.md:451; MAIN:L8/L0/0.md:79.
+  - item 8
+    - **id**: KC-08
+    - **claim**: The research is split across three branches that do not contain one another. MAIN holds 169 files, ROADMAP 328, BETA 186. The second definition, the lambda thread, the docket, the author assertions, four findings, the probes, the corpus and the roadmap are on ROADMAP only, and MAIN's own records cite files MAIN does not hold.
+    - **evidence**: File counts by tree listing of origin/main, origin/claude/book-structure-roadmap-k8ap82 and origin/beta/7lm-exemplar-auditonomous (synthesizer); ancestry: MAIN is an ancestor of both, neither branch of the other (manuscript-map reader); 60 of 133 roadmap feed citations resolve on MAIN; MAIN:L8/L5/research/review/CONTRADICTIONS.md:10, 46; MAIN:L8/L1/state-space/REQUIREMENTS_OWNERSHIP.md:19; MAIN:L8/L5/research/findings/OVERRIDE_NECESSITY_2026-08-04.md:14, 169.
+  - item 9
+    - **id**: KC-09
+    - **claim**: The repository's own outside reading contradicts the definition's strongest sentence. Eleven sources read on 4 August 2026 claim detection, not prevention, and the adjudication of 2 August 2026 calls line 52 imprecise as written. The recommended edit is unapplied in every state, and a third file disputes the adjudication's premise.
+    - **evidence**: MAIN:L7/provenance/sources/staging-records/library/FINDINGS_2026-08-04.md:12-36; MAIN:L8/L5/research/review/PERPETUITY_QUESTION_ADJUDICATION.md:216 and MAIN:L8/L0/semantics/definitions/AUDITONOMOUS_DEFINITION.md:52 (both read by the synthesizer; the bullet is at line 54 on BETA); ROADMAP:L8/L5/research/review/AUTONOMOUS_vs_AUDITONOMOUS_CYCLES.md:136.
+  - item 10
+    - **id**: KC-10
+    - **claim**: Three counts in the record are wrong or cannot be reproduced and would reach print: IEEE 7009 carries fifteen of the 21 envelope obligations, not sixteen; the source ledger has 60 rows, not 62; and the total of 113 requirements cannot be recounted, because the 14 NASA rows are in no file and an earlier run of 78 is unreconciled.
+    - **evidence**: MAIN:L8/L1/state-space/REQUIREMENTS_OWNERSHIP.md:72 (“7001 (6) and 7009 (15)”), 88-110 (table recounted by the synthesizer: 6 and 15), 117 and 263-264 (“Sixteen”, “76%”), 15-21, 244; MAIN:L8/L4/work/computation/ three extraction files (55, 24 and 20 rows, recounted by two readers); ROADMAP:L8/L5/research/findings/AUDITON_PACKABILITY_2026-08-04.md:15.
+  - item 11
+    - **id**: KC-11
+    - **claim**: No chapter of the book has text, and the first drafting step the roadmap names, Chapters 2 and 19, is not ready. Nine moves stand before it with no record of any. Of the 22 decisions, 21 are unruled and the remaining one, D15, was inferred. The roadmap, the chapter files and more than half the chapter feeds exist only on the closed branch.
+    - **evidence**: ROADMAP:L8/L4/work/writing/book/ (27 files ending “Not yet drafted.”, one commit b1ec302); ROADMAP:L8/L5/research/review/BOOK_STRUCTURE_AND_ROADMAP_2026-09-13.md:595-604, 612-633, 626; ROADMAP:L8/L4/work/writing/book/bibliography.md:3; feed check by script (manuscript-map reader: 73 of 133 citations do not resolve on MAIN).
+  - item 12
+    - **id**: KC-12
+    - **claim**: The model has three candidate states and the repositories match none in full. 7lm main (c9dc061, 11 November 2026) has the L7 restructure. The 7lm beta (97314c5, 3 November 2026) adds the R1 to R6 contracts and the manuscript guidance and is not merged into main. Both exemplar betas pin 4ca3edb. A session branch of 11 November 2026 mirrors the L7 restructure on top of MAIN only.
+    - **evidence**: Refs and ancestry in /home/user/7lm checked by the synthesizer (merge-base 2e5a6d6; 4ca3edb not in origin/main; the “Manuscript work” heading present on the beta only); BETA:L7/peering/public/ingress/peer-1/object-2/binding.json; local branch ccr-9391bd81-f2enmj at f2d5b37 and 149ab6c (auditonomous) and 8257118 (autonomous), file lists only: six renames to L7/allications/publications and L7/governance/controlled; no manuscript-guidance heading on that branch.

@@ -1,0 +1,63 @@
+# resolve:D8
+
+Agent result, as returned. Workflow: Resolutions for the 23 owner decisions. Run `wf_3293f65c-a92`. Phase: Resolve.
+
+- **decision**: 8. Whether pull request #20 is merged and, if the beta is too, whether the beta's three guide edits are dropped.
+- **resolution**: Merge pull request #20 into main: it carries out an instruction the owner gave in words, and the owner later said "fix them" and "push them" on its two open items. If the beta is merged as well, drop its three field-guide edits so the retired copy stays byte for byte as it is (blob 0c9626e); the same corrections remain in the specification, the sheets and specification-history.md. Before merging, the owner should know the branch now also carries 219 agent-result files of 11 November under L8/L5/research/review/agent-results-2026-11-11/, which would land on the public main.
+- **reasoning**
+  - item 1
+    - **speaker**: owner
+    - **quote**: Put the field guide into l6 as provenance stale. Deprecated and to be used as an example.
+    - **locator**: /home/user/7lm@origin/ccr-9391bd81-f2enmj:L8/L6/history/harmonization-2026-09-04.md:518
+    - **bears**: The retirement that pull request #20 carries is the owner's own instruction of 17 October 2026, so merging it applies something the owner asked for and is not a change made without asking.
+  - item 2
+    - **speaker**: owner
+    - **quote**: fix them
+    - **locator**: /home/user/7lm@origin/ccr-9391bd81-f2enmj:L8/L6/history/harmonization-2026-09-04.md:530
+    - **bears**: The owner ruled on the two items the retirement left open (the hard rule's home and the rename on the two branches that edit the guide), so the pull request has no open question of its own left.
+  - item 3
+    - **speaker**: record
+    - **quote**: Pushed the same day on the owner's word, quoted as written: "push them"
+    - **locator**: /home/user/7lm@origin/ccr-9391bd81-f2enmj:L8/L6/history/harmonization-2026-09-04.md:534
+    - **bears**: The owner had the retirement pushed onto the PR #19 and audit branches, which shows the owner treats it as standing; main is the only line that still holds the guide as a live source document.
+  - item 4
+    - **speaker**: record
+    - **quote**: That pass's edits to the guide's text are not carried onto the retired copy: its own scope is live text only, nothing under `L8/L6/retired/`, and a retired set is preserved verbatim; they remain in that branch's history.
+    - **locator**: /home/user/7lm@origin/ccr-9391bd81-f2enmj:L8/L6/history/harmonization-2026-09-04.md:536
+    - **bears**: This is the precedent, made under "fix them", for the second half: another branch's edits to the guide were dropped from the retired copy and kept in that branch's history, which is what dropping the beta's three edits would repeat.
+  - item 5
+    - **speaker**: record
+    - **quote**: "Deprecated" is read as: no longer the source an adopter takes, and not maintained.
+    - **locator**: /home/user/7lm@origin/ccr-9391bd81-f2enmj:L8/L6/history/harmonization-2026-09-04.md:520
+    - **bears**: A guide that is not maintained does not take corrections, so applying the beta's three edits to it would contradict the standing the owner gave it.
+  - item 6
+    - **speaker**: specification
+    - **quote**: Implements retirement as preservation rather than deletion
+    - **locator**: /home/user/7lm@origin/main:L8/L4/work/writing/7lm-harmonized-architecture-specification.md:717
+    - **bears**: The specification makes a retired set a preserved prior state; the retired guide is the state of 20 September 2026, and edits dated 2 November would make it something that never stood.
+  - item 7
+    - **speaker**: record
+    - **quote**: The canonical Markdown, relevant local sheets and field guide carry these corrections.
+    - **locator**: /home/user/7lm@origin/beta/common-contracts-r1-r6:L8/L6/history/specification-history.md:106
+    - **bears**: The beta's corrections also stand in the specification and the sheets, so dropping the three guide passages loses no correction; only that sentence of the beta's own record would need "and field guide" corrected.
+  - item 8
+    - **speaker**: owner
+    - **quote**: put them in auditonomous too and the public one its public so you can access it and one other ai right npow
+    - **locator**: owner's instructions of 11 November 2026, as given in the task; also quoted in /home/user/7lm commit 2a8ed8e (message)
+    - **bears**: The owner asked for the agent results to be put in the public repository, which is why the PR #20 branch now holds 219 extra files; the words ask that they be put there and do not say they should reach main.
+  - item 9
+    - **speaker**: owner
+    - **quote**: Don't change the system unless you ask or are unsure
+    - **locator**: /home/user/7lm@origin/main:L8/L6/history/harmonization-2026-09-04.md:482
+    - **bears**: The merge itself is the owner's act: the recommendation is put to the owner and nothing is merged or dropped from here.
+- **against**: "Implemented by Codex, task T1, on 2 November 2026 (America/Los_Angeles), in the bounded common-architecture candidate after the owner's approval of R1–R6." (/home/user/7lm@origin/beta/common-contracts-r1-r6:L8/L6/history/specification-history.md:106). The beta's guide edits were made under an owner approval dated after the retirement, so dropping them sets aside part of something that record says the owner approved. The owner's approval is reported there, not quoted, and no quoted word of the owner says the guide in particular was to be edited after it was deprecated.
+- **confidence**: the quotations favour it
+- **who_acts**: The owner merges pull request #20, or says to. If the beta is also merged, whoever prepares that merge restores the retired guide to blob 0c9626e and corrects the beta's sentence at specification-history.md:106; that step also needs the owner's word.
+- **what_it_costs**: - **Agent results on public main:** merging the branch as it stands lands 219 files (35,176 lines) of 11 November agent results, in three check-in commits. Commit 2a8ed8e says of them "Nothing here is adopted" and that verbatim internal source text is withheld.
+  - **Branch is behind main:** it is two commits behind (the layer lists, PR #21). I did not run a trial merge, because that writes git objects; the background report says it merges without conflict.
+  - **Beta edits follow the rename:** git's rename detection is expected to apply the beta's three edits (guide lines 96, 150, 230) to the retired copy, so dropping them is a deliberate step after the merge, not automatic.
+  - **Reversal:** the merge is undone by one revert commit, and the rename is tracked, so the guide's history follows it either way.
+- **alternatives**: - **Merge only the four retirement commits (574500d to c9638a9):** this keeps the 219 agent-result files off main until the owner rules on them. It is the narrower course if the owner did not mean those results for main.
+  - **Leave pull request #20 open:** main would keep presenting as a live source document a guide the owner called "Deprecated", and the beta's edits would keep landing in it.
+  - **Keep the beta's three edits in the retired copy:** this contradicts "its text unchanged" in the retired set's own sheet and the precedent of section 40.
+  - **Carry the three passages as a separate dated note beside the retired guide:** nothing quoted asks for this.
