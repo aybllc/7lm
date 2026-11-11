@@ -1,0 +1,400 @@
+export const meta = {
+  name: 'auditonomous-research-handle',
+  description: 'Read-only: a quality-assurance handle on the Auditonomous research and manuscript, position by position, with verified evidence',
+  phases: [
+    { title: 'Read', detail: 'fourteen readers by layer position across main, the roadmap branch and the beta candidate' },
+    { title: 'Synthesize', detail: 'the handle: status by layer, claims register, open register, worklist' },
+    { title: 'Verify', detail: 'one skeptic per key claim, and a completeness critic' },
+    { title: 'Final', detail: 'final handle with corrections and gaps worked in' },
+  ],
+}
+
+const SCRATCH = '/tmp/claude-0/-home-user/bfcfd013-a2da-5019-961e-7f46116f08be/scratchpad/wf-handle'
+const PRIOR = '/tmp/claude-0/-home-user/bfcfd013-a2da-5019-961e-7f46116f08be/scratchpad/manuscript'
+const A = '/home/user/auditonomous'
+
+const RULES = `You are one agent in a READ-ONLY quality-assurance workflow over local git clones. Nothing may be changed.
+
+REPOSITORIES (all refs are already fetched; do not fetch; do not use the network)
+- ${A} = aybllc/auditonomous: the research home of "auditonomous" (adj.), a word coined by Eric D. Martin, and of the theory, engineering doctrine and record format built around it. Three states exist:
+    MAIN    = origin/main (2165144, unchanged since 2026-09-11): the only merged state.
+    ROADMAP = origin/claude/book-structure-roadmap-k8ap82 (9259c18; draft PR #27, closed unmerged 2026-10-17): restores much research material from history and adds a book roadmap, 27 empty chapter files and a vocabulary paper.
+    BETA    = origin/beta/7lm-exemplar-auditonomous (714480d, 2026-11-02; the owner's unmerged candidate, made by Codex): an L7 restructure plus a "beta envelope exemplar" (a finite computation, findings, and corrections to ledger arithmetic).
+    HISTORY = commit 1d83788, the last tree before the prune of 2026-08-15.
+- /home/user/autonomous = aybllc/autonomous: the companion repository; Auditonomous binds its definition of "autonomous" from here. origin/main = c9076c3; origin/beta/7lm-exemplar-autonomous = e64b382; origin/claude/scholarly-pair-baseline-k8ap82 = 9b49910 (closed PR #29).
+- /home/user/7lm = aybllc/7lm: the Seven-Layer Model both repositories are organised on. origin/main = c9dc061; origin/beta/common-contracts-r1-r6 = 97314c5.
+
+THE LAYOUT (Seven-Layer Model). L7/ is the desk: provenance (sources, prior-art, lineage, authority), governance (copyright, licensing, patents, permissions, access, restrictions), peering (private|public / ingress|egress / peer-N / object-M), publications. L8/ is the interior: L0 semantics and foundations (definitions live at L8/L0/semantics/definitions/); L1 state space (what is admissible); L2 formal mathematics (relations, operators, proofs); L3 engineering mathematics (approximation, uncertainty, tolerances); L4 work actually made (computation, experiments, writing: the manuscript lives at L8/L4/work/writing/); L5 research (lanes = working lines of inquiry; review = criticism, and the catch-all for anything awaiting the owner; findings = bounded conclusions) and institution; L6 history and retired states. Every directory has a sheet, 0.md.
+
+HARD RULES
+1. READ-ONLY. Never run git checkout, switch, restore, reset, merge, rebase, commit, stash, push, fetch, pull, worktree, clean, gc, or anything that writes inside the repositories.
+2. The working trees are being edited by someone else. NEVER read a file from a working tree. Read only git objects: \`git -C <repo> show <ref>:<path>\`, \`git -C <repo> ls-tree -r --name-only <ref> [path]\`, \`git -C <repo> grep -n -F '<text>' <ref> -- <paths>\`, \`git -C <repo> log ...\`, \`git -C <repo> diff <refA> <refB> -- <paths>\`. Quote paths that contain spaces, '#' or parentheses.
+3. Scratch files go only under ${SCRATCH}/<your label>/ (create it). You may copy a file out of a git object into your scratch directory (git cat-file -p <ref>:<path> > file). Office files (.odt, .docx) are zip archives: extract their text with python3 -I and the zipfile module. PDFs: try pdftotext if it is installed. You may run a pure-Python script or test copied into your scratch directory with python3 -I, with no network and no installs, and only when your task says to.
+4. Evidence. Every item carries a locator <STATE>:<path>:<line or section> and, where it reports what a document says, a short verbatim quote (30 words or fewer). Get line numbers with cat -n or grep -n.
+5. Do not guess and do not smooth over. If a thing is not found, say so and say where you looked. Keep apart: what a document CLAIMS, what label the repository itself puts on it, and what you could CONFIRM by checking.
+6. The owner's words are quoted exactly as written, typos included.
+7. Before your own scope, read two short files so that you use the repository's own labels: MAIN:L8/L5/research/review/STATUS_LADDER.md and MAIN:L8/L5/research/review/STATUS_AND_LABEL_DISCIPLINE.md.
+8. Stay inside your scope, leaving it only to follow a specific cross-reference. Be complete inside it. Work efficiently: read each source once, in large chunks. A file over 300 KB may be sampled; say how you sampled it.
+
+WHAT IS ALREADY KNOWN (do not redo). A pass on 2026-11-03 established where the MANUSCRIPT stands; its report is the file ${PRIOR}/auditonomous-manuscript-status-2026-11-03.md, with detail in ${PRIOR}/report.md and ${PRIOR}/gaps.md (you may read these three files). In short: no chapter of the book is written; the raw material is a 52-block corpus with a Master Archive and an 18-chapter table of contents (ROADMAP only); the planning is a prospectus and a referee report (MAIN), an extraction sourcebook (MAIN as a re-save), a chapter-title spine and a 27-chapter roadmap with 22 unruled decisions D1 to D23 (ROADMAP only).
+
+THE QUESTION NOW. The owner wants a handle on the RESEARCH and the manuscript: what research actually exists, in what state each piece is, what has been checked against what, what is contradicted or open, what the manuscript needs from it, and what to do first.
+
+EVIDENCE STATES to assign (yours, separate from the repository's own label):
+  EXTERNALLY CHECKED  - compared against an identified external source, and the comparison is recorded with a locator
+  INTERNALLY CHECKED  - recomputed, re-read or cross-checked inside the repository, and the check is recorded
+  ASSERTED            - the author's definition or statement; no check recorded or none applicable
+  CONJECTURE          - offered as conjecture or speculation
+  CONTRADICTED        - a record in the repository contradicts it, or two documents disagree
+  UNRESOLVED          - an open question, a pending decision, a failed or unrun check
+  EMPTY               - a position, ledger or file with no content
+`
+
+const ITEMS_SCHEMA = {
+  type: 'object',
+  properties: {
+    scope: { type: 'string' },
+    summary: { type: 'string', description: 'What exists in your scope and what state it is in, 200-350 words, plain English' },
+    items: {
+      type: 'array',
+      items: {
+        type: 'object',
+        properties: {
+          id: { type: 'string' },
+          title: { type: 'string' },
+          path: { type: 'string' },
+          where: { type: 'string', description: 'MAIN, ROADMAP, BETA, HISTORY, or a combination, saying where the thing exists' },
+          what_it_is: { type: 'string' },
+          key_claims: { type: 'array', items: { type: 'string' } },
+          own_label: { type: 'string', description: "the repository's own status label on it, if any, quoted" },
+          evidence_state: { type: 'string' },
+          checked_how: { type: 'string', description: 'what check is recorded or what you confirmed yourself' },
+          depends_on: { type: 'array', items: { type: 'string' } },
+          open_items: { type: 'array', items: { type: 'string' } },
+          locator: { type: 'string' },
+          quote: { type: 'string' },
+        },
+        required: ['id', 'title', 'path', 'where', 'what_it_is', 'evidence_state', 'locator'],
+      },
+    },
+    defects: {
+      type: 'array',
+      items: {
+        type: 'object',
+        properties: { statement: { type: 'string' }, locator: { type: 'string' } },
+        required: ['statement', 'locator'],
+      },
+    },
+    open_questions: { type: 'array', items: { type: 'string' } },
+  },
+  required: ['scope', 'summary', 'items'],
+}
+
+const READERS = [
+  {
+    key: 'definition',
+    prompt: `SCOPE: the definition of record and Layer 0.
+MAIN: L8/L0/semantics/definitions/AUDITONOMOUS_DEFINITION.md (about 70 KB: read all of it), L8/L0/semantics/definitions/0.md, L8/L0/semantics/0.md, L8/L0/0.md, and the sheets of epistemic/, ontology/, universality/, pedagogy/.
+ROADMAP: L8/L0/semantics/definitions/AUDITONOMY.md and whatever the branch changed in the L0 sheets (git -C ${A} diff origin/main origin/claude/book-structure-roadmap-k8ap82 -- L8/L0).
+BETA: the section appended to AUDITONOMOUS_DEFINITION.md ("Receiving semantic reference (2026-11-03 correction)"), L8/L0/semantics/AUDITONOMOUS_BETA_SCOPE.md, and the L0 sheet changes (git -C ${A} diff origin/main origin/beta/7lm-exemplar-auditonomous -- L8/L0).
+REPORT: what exactly is defined (the term, each clause, each invariant or requirement, each appendix); its version and date and what "definition of record (AU-NORM-02)" means; which parts are the author's own definition, which are derived, which are bound from outside (the Autonomous definition: at which commit, and what "no rebind" means); every pending edit (for example the edit to line 52); every term the definition uses but does not define, or defines elsewhere or twice (auditon, auditonomy, lambda_A, Aud(S,F), compartments eight versus twelve); every internal inconsistency you can show with two locators; what the other four L0 positions actually hold (content or only a sheet). One item per defined term or clause group, per pending edit, per inconsistency.`,
+  },
+  {
+    key: 'state-space',
+    prompt: `SCOPE: Layer 1.
+MAIN: L8/L1/0.md, L8/L1/state-space/0.md, and the three objects L8/L1/state-space/AUDITON_ENVELOPE.md, HUMINT_ENCODE.md, REQUIREMENTS_OWNERSHIP.md (read each in full).
+ROADMAP: L8/L1/state-space/AUDITABILITY_REQUIREMENTS.md and AUDITON_REPLICATOR.md, and the sheet changes.
+BETA: L8/L1/state-space/AUDITONOMOUS_BETA_ADMISSION.md and the change to REQUIREMENTS_OWNERSHIP.md (git -C ${A} diff origin/main origin/beta/7lm-exemplar-auditonomous -- L8/L1).
+REPORT, per object: what it states; its own status label and date; whether it is in fact a Layer 1 object (a statement of admissible and excluded states, invariants, identity conditions) or a mixture that the repository's own records say should be split or re-filed (see MAIN:L8/L6/history/harmonization-2026-09-05.md section 5 and the 7LM_ROUTING_PLAN for these three files); what it depends on; every requirement count it gives (for example an extraction of 78 or 113 requirements) and whether the counts agree across documents; every open item. One item per object and per open split or count disagreement.`,
+  },
+  {
+    key: 'formal-engineering',
+    prompt: `SCOPE: Layers 2 and 3.
+MAIN: every file under L8/L2/ and L8/L3/ (sheets, L8/L2/formal-mathematics/FORMULAS_LEDGER.md, L8/L3/engineering-mathematics/PROPOSAL_seal_gated_interlock.md, L8/L3/engineering-mathematics/uncertainty/PRIORS_EXTERNAL_2026-08-04.md).
+BETA: L8/L2/formal-mathematics/relations/AUDITONOMOUS_BETA_PREDICATE.md, L8/L3/engineering-mathematics/AUDITONOMOUS_BETA_METHOD.md.
+ROADMAP: anything it adds or changes under L8/L2 or L8/L3 (git -C ${A} diff --stat origin/main origin/claude/book-structure-roadmap-k8ap82 -- L8/L2 L8/L3).
+REPORT: what is formally stated anywhere (relations, operators, predicates such as Aud(S,F), proofs or proof obligations); whether the formulas ledger has any row; what the seal-gated interlock proposal proposes, its label and what it would need to stop being a proposal; what the external priors file records and from which sources; what the beta predicate and method state and how they qualify themselves. Then the gap: list each concept the definition at L0 relies on that has no formal statement at L2 and no method at L3 (check MAIN:L8/L0/semantics/definitions/AUDITONOMOUS_DEFINITION.md for the formal-looking content it carries itself). One item per formal object, per empty position, per gap.`,
+  },
+  {
+    key: 'computation',
+    prompt: `SCOPE: Layer 4 computation and experiments (not writing).
+MAIN: L8/L4/work/computation/0.md and its six objects: deep-research-auditonomous.md, ieee-requirements-for-autonomouos.md, iso-iec-requirements-for-autonomous.md, nist-requirements-for-autonomouos.md, and the two .odt files (extract their text); L8/L4/work/experiments/0.md.
+BETA: L8/L4/work/computation/auditonomous_beta.py, auditonomous_beta_result.json, test_auditonomous_beta.py, and the sheet change.
+ROADMAP: L8/L4/work/computation/all-research-corpus-auditonomous.md, probes/ (0.md and eight .py files), ommp/ (README, three .py files and a test).
+REPORT, per object: what it is (a model-generated deep-research export, a requirements extraction, a script, a result); who or what produced it and when (look for generator traces, dates, prompts); what it claims; whether its sources are identified well enough to check; whether anything in the repository checked it. For the three requirements files: the counts of requirements each extracts, and whether those counts match what L1 and the beta findings cite (78, 113, Q11). For the code: copy each script and test into your scratch directory and run it with python3 -I (no network, no installs); report exactly what ran, what passed, what failed, and whether the committed result file is reproduced. Is anything filed under experiments/? One item per object; one per run.`,
+  },
+  {
+    key: 'review-core',
+    prompt: `SCOPE: Layer 5 review, the core set.
+MAIN: L8/L5/research/review/0.md (it states what is open), CONTRADICTIONS.md, PERPETUITY_QUESTION_ADJUDICATION.md, STATUS_AND_LABEL_DISCIPLINE.md, STATUS_LADDER.md, and L8/L5/research/0.md and L8/L5/0.md.
+BETA: the section added to CONTRADICTIONS.md ("Current receiving-use dispositions - 2026-11-03") and any other change under L8/L5/research/review (git -C ${A} diff origin/main origin/beta/7lm-exemplar-auditonomous -- L8/L5/research/review).
+REPORT: the label vocabulary and the ladder exactly as written, and whether the documents in this scope use them consistently; every contradiction in CONTRADICTIONS.md by its id (C1 and onward, and any other numbering such as C-1 or the "23 internal contradictions"): the two sides with locators, its recorded status, who must resolve it, and the beta disposition; the perpetuity question: what was asked, what was adjudicated, on what evidence, and what remains; the full list of what review/0.md says is open or parked. Check three contradictions yourself against the documents they cite and say whether each is described accurately. One item per contradiction, per adjudication, per open entry.`,
+  },
+  {
+    key: 'lanes',
+    prompt: `SCOPE: Layer 5 lanes.
+MAIN: L8/L5/research/lanes/0.md, THEME_LEDGER.md (about 62 KB: read all of it), RECORD_ONTOLOGY_OPEN_QUESTIONS.md (about 34 KB: read all of it).
+REPORT: every theme in the theme ledger by its id (T1 and onward): its statement, its recorded status (RESOLVED, CLOSED, OPEN and so on), its date, the evidence cited, and every item marked for the author ([ERIC] or similar); every FAILED CHECK and what failed; every question in the record-ontology file by its id (Q1 and onward): the question, any answer recorded, its status. Note where the ledger refers to files that do not exist on MAIN (the 52 blocks, the Master Archive: they are ROADMAP only) and say which themes cannot be checked on MAIN for that reason. Note any theme whose status was changed twice or whose record admits a misreading. One item per theme and per question.`,
+  },
+  {
+    key: 'findings',
+    prompt: `SCOPE: Layer 5 findings and institution.
+MAIN: L8/L5/research/findings/0.md and the three findings DISTILLATION.md, OVERRIDE_NECESSITY_2026-08-04.md, SEGREGATION_AND_FORGETTING_2026-08-04.md (read each in full); L8/L5/institution/ (three sheets).
+ROADMAP: the four more findings AUDITON_PACKABILITY_2026-08-04.md, AUTONOMY_AT_DISTANCE.md, OMMP_ATTACHMENT_GAP_2026-08-04.md, UHA_AS_MAP_2026-08-04.md.
+BETA: L8/L5/research/findings/AUDITONOMOUS_BETA_FINDINGS.md and the sheet change.
+REPORT, per finding: the conclusion in one or two sentences; the evidence it cites (sources by id, computations, standards clauses) and whether those can be located in the repository; its own label and review status; its stated limitations; what it depends on at lower layers; whether anything contradicts it (check MAIN:L8/L5/research/review/CONTRADICTIONS.md by name). For DISTILLATION.md: what it distils and from what. For the beta findings: exactly what is claimed, what is qualified, and what is said to remain unresolved (Q11, Q13, "78/113", SGI). Pick two findings and check two cited sources each against MAIN:L7/provenance/sources/LEDGER.md and the staging records: are the citations real and the quotations locatable? One item per finding and per check.`,
+  },
+  {
+    key: 'review-lambda',
+    prompt: `SCOPE: the lambda thread and the external checks, which exist on ROADMAP only (restored from history on 2026-09-14).
+ROADMAP: under L8/L5/research/review/: LAMBDA_EXTERNAL_VERIFICATION_2026-08-04.md, LAMBDA_PRIOR_ART_2026-08-05.md, THESIS_lambda_decomposed_record.md, EBSTACK_LAMBDA_ANALYSIS.md, EXTERNAL_AUDIT_2026-08-04.md, CONJECTURE_bit_exact_pruning.md, EB_RECEIPT_RIGOR_SPEC_2026-08-05.md, and the folder dr-001-003/ (REGISTER.md and three DR files). Also ROADMAP:L8/L4/work/computation/probes/ (the scripts these documents cite).
+REPORT: what lambda is in this work (lambda_A against lambda_EB; "two unrelated lambdas"; lambda = 0 against lambda = 1), each definition with its locator; what the external verification checked, against which sources, with what result; what prior art was found and what it does to the novelty claim; what the external audit of 2026-08-04 found, item by item, and which findings were acted on; each DR (DR-001 to DR-003): the defect, its status, and the probe that demonstrates it; what the conjecture and the receipt-rigor specification state and their labels. State plainly what in this thread is established, what is refuted, and what is open. One item per document and per established, refuted or open result.`,
+  },
+  {
+    key: 'review-docket',
+    prompt: `SCOPE: the research docket and the remaining review documents, ROADMAP only.
+ROADMAP: under L8/L5/research/review/: RESEARCH_DOCKET.md, AUTHOR_ASSERTIONS.md, SOURCE_REQUESTS.md, CENSUS_SOURCES_DOSSIER.md, NASA_PAPER_DEFECT_LEDGER.md, WALK_ACROSS_repo-instrument-standards_2026-08-05.md, AUTONOMOUS_vs_AUDITONOMOUS_CYCLES.md, TICTAC_PROPULSION_ADJUDICATION.md.
+REPORT: the docket: every entry by id, what it asks, its priority and status, and who it waits on; the author assertions: each assertion and whether anything has tested it; the source requests: what was requested, obtained, still missing; the census dossier: what it was meant to supply and whether it exists as more than a plan; the NASA paper defect ledger: which paper, each defect, and what follows for the work; the walk-across: what was compared with which standards and the result; the cycles document and the propulsion adjudication: what each concludes, its label, and whether the owner's later ruling "Book register: scholarly only" (HISTORY: HUB_LEDGER.md at commit 3c25633, lines 49-50) bears on it. One item per docket entry (group small ones) and per document.`,
+  },
+  {
+    key: 'sources',
+    prompt: `SCOPE: the source base, L7/provenance.
+MAIN: L7/provenance/0.md; sources/0.md; sources/LEDGER.md (count its rows exactly; list its columns, the access classes and the labels); sources/datasets-LEDGER.md; sources/staging-records/ (every file: the IEEE readings and findings, the library readings, the standards extractions and terms.json, the interval decorations file, the READMEs); prior-art/0.md and README.md; authority/0.md; lineage/0.md and the lineage file of 2026-08-05.
+ROADMAP: L7/provenance/sources/STANDARDS_REGISTER.md and lists-2026-08-08/ (five files).
+BETA: the change to sources/LEDGER.md and to staging-records/0.md (the note that the register has 60 archive rows where a close-out says 62 and "22 new rows" enumerates 21).
+REPORT: how many sources are registered, by class (standards by body, papers, books, government documents); for how many a reading record exists that shows the source was actually read (name them); how each source is held (pointer rows into the private archive aybllc/l6: at which commit; nothing copied in?); what verification the ledger records (hash, date, outcome) and what it does not; whether the prior-art search was ever run; the row-count disagreement, settled by your own count; sources that findings or the definition cite but the ledger lacks, if you find any (spot-check five citations from MAIN:L8/L0/semantics/definitions/AUDITONOMOUS_DEFINITION.md). One item per class of source, per reading record group, per defect.`,
+  },
+  {
+    key: 'peering-governance',
+    prompt: `SCOPE: the rest of the desk: L7/peering, L7/governance, L7/publications, and L7/0.md.
+MAIN: every file under L7/peering/ (all peers and objects, including RECONCILIATION_FROM_L6_2026-08-16.md, OWNERSHIP_PENDING.md, auditonomous-departure-protocol.md; describe the Third Power Corpus only by its sheet and OWNERSHIP_PENDING.md); every sheet under L7/governance/; L7/publications/ (0.md, binder/0.md, the three READMEs); L7/0.md.
+BETA: git -C ${A} diff -M origin/main origin/beta/7lm-exemplar-auditonomous -- L7 (the moves, the new object-2 binding and binding.json, the changed sheets).
+ROADMAP: the peer-3 object (the embodied-auditonomy manuscript and its sheet).
+REPORT: a register of every binding: direction, exposure, peer, object, what is bound, at which commit or version, its recorded status (pinned, pending, closed, reference-only), and whether the cited commit can be confirmed from here (for aybllc/autonomous check that the commit exists in /home/user/autonomous: git cat-file -t <id>); the copyright and licence conditions the repository says it is under and what they forbid (redistribution of standards texts, the IEEE material); what access records exist; the release rules in the publications binder (the checklist items) and which are met today; the statement that nothing has been released. Then: what, on the desk, blocks a first release of any paper or of the book. One item per binding, per governance condition, per release rule.`,
+  },
+  {
+    key: 'records',
+    prompt: `SCOPE: Layer 6, the repository's own records.
+MAIN: L8/L6/0.md, L8/L6/history/0.md, LEDGER.md, LEDGER_2026-08-14_redeploy.md, LEDGER_2026-08-14_reorganisation.md, LEDGER_2026-08-16_l6-close-and-normalization.md, harmonization-2026-09-05.md (read all of it), 7LM_ROUTING_PLAN_2026-09-05.md (read all of it), sheets-2026-09-07.md, L8/L6/retired/0.md and the names of what the two retired sets hold.
+ROADMAP: L8/L6/history/restore-2026-09-14.md (what was restored, what was declined and why), L6_RECONCILIATION_2026-08-14.md, L8/L6/retired/consolidated-2026-08-04/.
+BETA: L8/L6/history/AUDITONOMOUS_BETA_HISTORY.md and the changes to L8/L6/0.md and history/0.md.
+REPORT: a complete register of every decision these records leave to the owner (each "OWNER DECISION", "[ERIC]", "left open", "not decided here", "PARKED"): its id or a short name, the question, where recorded, and whether a later record closed it; every defect or stale statement the records admit or that you can show (a ledger line describing files that are no longer there, a count that does not match the tree: check three such statements against MAIN with ls-tree); the rules of record-keeping this repository states for itself (what must be enumerated before deletion, where history lives, what the sheets may say). One item per open decision and per defect.`,
+  },
+  {
+    key: 'autonomous-dependency',
+    prompt: `SCOPE: what Auditonomous takes from Autonomous, and the state of that source.
+In /home/user/autonomous origin/main: README.md; L8/L0/semantics/definitions/ (AUTONOMOUS.md, DEFINITION_LIST_AUTONOMOUS.md, REGISTER.md and the rest); L8/L5/research/review/EVIDENCE_RULES.md; L8/L5/research/findings/ (list each finding with its one-line conclusion and label); L8/L5/research/lanes/ (the lanes A to F: one line each); L7/peering/public/egress/ (what it offers outward).
+In ${A}: MAIN:L7/peering/public/ingress/peer-1/ (the binding: which commit of aybllc/autonomous, which object, what status); every place on MAIN that states the bound commit (git grep -n -E '0504961|c9076c3|805cd42' origin/main); BETA: the new object-2 binding.json and the "no rebind" statement; ROADMAP: decision D22 in L8/L5/research/review/BOOK_STRUCTURE_AND_ROADMAP_2026-09-13.md.
+Also: closed PR #29 of autonomous (origin/claude/scholarly-pair-baseline-k8ap82): the baseline paper's standing line and its main claims; the autonomous beta (git -C /home/user/autonomous diff --stat origin/main origin/beta/7lm-exemplar-autonomous; read L8/L5/research/findings/BETA_FINDINGS.md and the egress binding.json on that ref).
+REPORT: what the Autonomous definition is (its form: the codified definitions A1 to A11 and their issuing bodies; whether a single consensus baseline is stated or left plural); its own status; exactly which commit Auditonomous is bound to, whether that commit exists in the clone (git -C /home/user/autonomous cat-file -t <id>), and how the bound object differs from autonomous origin/main today (git -C /home/user/autonomous diff --stat <bound commit> origin/main -- L8/L0/semantics/definitions, adjusting for the directory renames of 2026-09-12); what D22 proposed and what the beta kept; what the Auditonomous definition needs from Autonomous that Autonomous does not yet supply. One item per definition object, per binding statement, per mismatch.`,
+  },
+  {
+    key: 'manuscript-map',
+    prompt: `SCOPE: the manuscript against the research, and against the model's guidance for a manuscript project.
+First read the three prior files named under WHAT IS ALREADY KNOWN. Then:
+1. Confirm nothing has changed since 2026-11-03: git -C ${A} log -1 --format='%h %ci' for origin/main, origin/claude/book-structure-roadmap-k8ap82 and origin/beta/7lm-exemplar-auditonomous; and what BETA changed in L8/L4/work/writing/ (git diff origin/main origin/beta/7lm-exemplar-auditonomous -- L8/L4/work/writing L7).
+2. ROADMAP:L8/L5/research/review/BOOK_STRUCTURE_AND_ROADMAP_2026-09-13.md (686 lines: read all of it). For each of the 27 chapters: its part, title, status label (RESEARCHING, CONJECTURE, SPECULATION, VERIFIED), the material that feeds it (blocks, research documents, sources), and the research item or decision it waits on. Build the table chapter -> feeds -> waits on. Then the steps S0 to S6 and their state, and the decisions D1 to D23 with what each blocks.
+3. ROADMAP:L8/L4/work/writing/book/ (0.md, 00-front-matter.md, two or three chapter files, bibliography.md, build.sh): confirm their state.
+4. ROADMAP:L8/L4/work/writing/papers/AUDITONOMOUS_VOCABULARY_PAPER_2026-09-14.md: its claims table (each row: the claim, its label, and whether the label is right where you can check it; the prior pass found the row about Aud(S,F) wrong).
+5. The model's guidance for a manuscript project, as the beta candidate of the scaffold states it: /home/user/7lm origin/beta/common-contracts-r1-r6: L8/0.md (section "Shared housing and local research choices"), L8/L4/0.md and L8/L4/work/writing/0.md (sections "Using this position in a research project" and "Manuscript work"), L8/L5/0.md, L8/L6/0.md, L7/0.md (section "Projects across a research network"). Quote the sentences that say where the manuscript, its argument, its history and its released version belong. Then say, for each manuscript object that exists (corpus, archive, table of contents, prospectus, referee report, sourcebook, chat volumes, spine, roadmap, chapter files, vocabulary paper, prompts), where it sits today (state and path) and whether that position agrees with the guidance.
+6. The minimum the research must supply before the roadmap's first drafting step ("draft Chapter 2 and Chapter 19"): name each prerequisite and its present state.
+One item per chapter group (you may group chapters of one part), per step, per manuscript object, per prerequisite.`,
+  },
+]
+
+const OUTPUT_NOTE = `
+OUTPUT: return the structured object. One item per thing asked for, each self-contained, with its evidence state and locator. Put record-keeping errors under "defects". Put what you could not settle under "open_questions".`
+
+phase('Read')
+const read = await parallel(READERS.map(r => () =>
+  agent(RULES + '\n' + r.prompt + OUTPUT_NOTE, { label: `read:${r.key}`, phase: 'Read', schema: ITEMS_SCHEMA, effort: 'high' })
+    .then(x => (x ? Object.assign({ key: r.key }, x) : null))
+))
+const got = read.filter(Boolean)
+log(`readers returned: ${got.length}/${READERS.length}, items: ${got.reduce((n, r) => n + (r.items ? r.items.length : 0), 0)}, defects: ${got.reduce((n, r) => n + (r.defects ? r.defects.length : 0), 0)}`)
+
+const SYNTH_SCHEMA = {
+  type: 'object',
+  properties: {
+    report: { type: 'string' },
+    claims_register: {
+      type: 'array',
+      items: {
+        type: 'object',
+        properties: {
+          id: { type: 'string' },
+          claim: { type: 'string' },
+          layer: { type: 'string' },
+          where_stated: { type: 'string' },
+          evidence_state: { type: 'string' },
+          what_would_settle_it: { type: 'string' },
+          manuscript_use: { type: 'string' },
+        },
+        required: ['id', 'claim', 'where_stated', 'evidence_state'],
+      },
+    },
+    open_register: {
+      type: 'array',
+      items: {
+        type: 'object',
+        properties: {
+          id: { type: 'string' },
+          kind: { type: 'string', description: 'contradiction, question, owner decision, defect, unrun check, missing object' },
+          statement: { type: 'string' },
+          source: { type: 'string' },
+          who: { type: 'string', description: 'owner, or work that can be done without the owner' },
+          blocks: { type: 'string' },
+        },
+        required: ['id', 'kind', 'statement', 'source', 'who'],
+      },
+    },
+    worklist: {
+      type: 'array',
+      items: {
+        type: 'object',
+        properties: {
+          order: { type: 'integer' },
+          action: { type: 'string' },
+          who: { type: 'string' },
+          why: { type: 'string' },
+          unblocks: { type: 'string' },
+        },
+        required: ['order', 'action', 'who', 'why'],
+      },
+    },
+    key_claims: {
+      type: 'array',
+      items: {
+        type: 'object',
+        properties: { id: { type: 'string' }, claim: { type: 'string' }, evidence: { type: 'string' } },
+        required: ['id', 'claim', 'evidence'],
+      },
+    },
+  },
+  required: ['report', 'claims_register', 'open_register', 'worklist', 'key_claims'],
+}
+
+const SYNTH_PROMPT = RULES + `
+YOU ARE THE SYNTHESIZER. Below are the structured outputs of the readers. You may read git objects to settle a disagreement between readers or fill a small hole. Write for the owner, Eric D. Martin: plain English, short sentences, full dates, no praise, no reassurance. A reader's evidence state is to be carried through, not softened. Quote the owner's words exactly. Where two readers disagree and you cannot settle it, say so.
+
+PRODUCE
+1. "report": Markdown, about 2,600 to 3,400 words, sections in this order:
+   - "The short answer": seven to ten sentences. What research exists; how much of it is on MAIN and how much only on the closed ROADMAP branch or the BETA candidate; what has actually been checked; what is contradicted or open; what the manuscript can and cannot draw on today.
+   - "The research, from the bottom up": L0 the definition; L1 state space; L2 formal mathematics; L3 engineering mathematics; L4 computation and experiments; L5 lanes, review, findings; L6 the records; L7 the source base, the bindings, the conditions, release. For each: what exists and where (MAIN, ROADMAP, BETA, HISTORY), its evidence state, and the plain verdict in one sentence.
+   - "What has been checked, and against what": every recorded external check and internal check, and what each settled.
+   - "What is contradicted or open": the contradictions, the open questions, the failed and unrun checks, consolidated and de-duplicated across documents, by id.
+   - "The dependency on Autonomous": the binding, its commit, what it supplies and what it does not.
+   - "The manuscript against the research": which chapters have material; which wait on what; the minimum the research must supply before the first drafting step; whether each manuscript object sits where the model's guidance puts it.
+   - "The first ten things to do": ordered; for each, who (the owner, or work that needs no ruling), why first, what it unblocks.
+   - "Decisions that are the owner's": numbered, one sentence each, the ones that block the most first.
+2. "claims_register": the 25 to 35 central claims of the Auditonomous work (the definition's core, its invariants or requirements, the lambda results, each finding's conclusion, the dependency on Autonomous), each with where it is stated, its evidence state, what would settle it, and what the manuscript uses it for.
+3. "open_register": every open item, consolidated: contradictions, questions, owner decisions, record defects, unrun checks, missing objects, each with its source and who must act.
+4. "worklist": the ordered work, at least 15 entries.
+5. "key_claims": the 12 statements in your report that the owner would rely on most, self-contained, each with its evidence locators.
+
+READER OUTPUTS (JSON):
+`
+
+phase('Synthesize')
+const synth = await agent(SYNTH_PROMPT + JSON.stringify(got), { label: 'synthesize', phase: 'Synthesize', schema: SYNTH_SCHEMA })
+if (!synth) {
+  return { report: null, error: 'synthesis failed', readers: got }
+}
+
+const VERDICT_SCHEMA = {
+  type: 'object',
+  properties: {
+    id: { type: 'string' },
+    verdict: { type: 'string', enum: ['stands', 'corrected', 'refuted'] },
+    corrected_statement: { type: 'string' },
+    reasoning: { type: 'string' },
+    evidence_checked: { type: 'array', items: { type: 'string' } },
+  },
+  required: ['id', 'verdict', 'reasoning'],
+}
+const CRITIC_SCHEMA = {
+  type: 'object',
+  properties: {
+    gaps: {
+      type: 'array',
+      items: {
+        type: 'object',
+        properties: { gap: { type: 'string' }, finding: { type: 'string' }, severity: { type: 'string' } },
+        required: ['gap', 'finding'],
+      },
+    },
+  },
+  required: ['gaps'],
+}
+
+const claims = (synth.key_claims || []).slice(0, 12)
+const verifyPrompt = c => RULES + `
+YOU ARE A SKEPTIC. Try to REFUTE the claim below by reading the git objects yourself. Check every locator it cites; then look for evidence against it that it does not cite, on MAIN, ROADMAP and BETA. If any part is wrong, imprecise, overstated, or true of a different state than the one it names, return "corrected" with the exact corrected statement. If you cannot confirm it from the objects, return "refuted". Return "stands" only if every part is confirmed.
+CLAIM ${c.id}: ${c.claim}
+EVIDENCE CITED: ${c.evidence}`
+
+const criticPrompt = RULES + `
+YOU ARE THE COMPLETENESS CRITIC. Below are a report on the state of the Auditonomous research and manuscript, and the scopes and summaries of the readers behind it. Find what is missing or wrong, and for each gap DO THE READING and report the finding with locators.
+Look for:
+- a research object on MAIN, ROADMAP or BETA that no reader covered (compare git ls-tree -r --name-only of each state under L7 and L8 with the reader scopes; ignore the manuscript corpus folders, which the prior pass covered);
+- research that exists only in HISTORY (commit 1d83788) and nowhere else, and that the report does not name (compare its tree with ROADMAP);
+- an evidence state the report softens or hardens relative to the reader's;
+- a contradiction, open question or failed check that appears in a source and not in the report;
+- a claim the manuscript roadmap relies on whose research support the report does not assess;
+- an item in "The first ten things to do" that is in the wrong order because it depends on a later one, or that only the owner can do but is assigned to work;
+- an owner decision that is not listed.
+Return up to 15 gaps, most serious first.
+
+REPORT:
+${synth.report}
+
+WORKLIST (JSON): ${JSON.stringify(synth.worklist)}
+READER SCOPES AND SUMMARIES (JSON): ${JSON.stringify(got.map(r => ({ key: r.key, scope: r.scope, summary: r.summary, open_questions: r.open_questions })))}`
+
+phase('Verify')
+const both = await parallel([
+  () => parallel(claims.map(c => () =>
+    agent(verifyPrompt(c), { label: `verify:${c.id}`, phase: 'Verify', schema: VERDICT_SCHEMA, effort: 'high' })
+      .then(v => (v ? Object.assign({ claim: c.claim }, v) : null))
+  )),
+  () => agent(criticPrompt, { label: 'critic', phase: 'Verify', schema: CRITIC_SCHEMA }),
+])
+const verdicts = (both[0] || []).filter(Boolean)
+const critic = both[1] || { gaps: [] }
+const notStanding = verdicts.filter(v => v.verdict !== 'stands')
+log(`claims: ${claims.length}, verdicts: ${verdicts.length}, corrected or refuted: ${notStanding.length}, gaps: ${(critic.gaps || []).length}`)
+
+const FINAL_SCHEMA = {
+  type: 'object',
+  properties: {
+    report: { type: 'string' },
+    worklist: SYNTH_SCHEMA.properties.worklist,
+    owner_decisions: { type: 'array', items: { type: 'string' } },
+  },
+  required: ['report', 'worklist'],
+}
+
+phase('Final')
+const fin = await agent(RULES + `
+YOU ARE THE FINAL EDITOR. Rewrite the report and the worklist below so that every correction from the skeptics is applied and every gap the critic established is worked in where it belongs. Do not add a claim that neither a reader, a skeptic nor the critic established; you may read git objects to settle a conflict. Keep the section order, the plain register, and the owner's words exactly as quoted. Carry evidence states through unsoftened. The report may grow to about 3,800 words. Add nothing about how the report was produced. Return also "owner_decisions": the full numbered list, one sentence each, the ones that block the most first.
+
+DRAFT REPORT:
+${synth.report}
+
+DRAFT WORKLIST (JSON): ${JSON.stringify(synth.worklist)}
+
+SKEPTICS' VERDICTS (JSON): ${JSON.stringify(verdicts)}
+
+CRITIC'S GAPS (JSON): ${JSON.stringify(critic.gaps || [])}`, { label: 'final', phase: 'Final', schema: FINAL_SCHEMA })
+
+return {
+  report: fin ? fin.report : synth.report,
+  worklist: fin ? fin.worklist : synth.worklist,
+  owner_decisions: fin ? fin.owner_decisions : [],
+  claims_register: synth.claims_register,
+  open_register: synth.open_register,
+  claims_total: claims.length,
+  claims_not_standing: notStanding,
+  gaps: critic.gaps || [],
+  readers: got.map(r => ({ key: r.key, items: (r.items || []).length, defects: r.defects || [], open_questions: r.open_questions || [] })),
+}

@@ -1,0 +1,271 @@
+# read:blocks
+
+Agent result, as returned. Workflow: Manuscript status of 3 November 2026. Run `wf_1cf4205c-c72`. Phase: Read. Checked in 2026-11-11 19:51 UTC.
+
+- **summary**: Source: the directory L8/L4/work/writing/manuscript/ on origin/claude/book-structure-roadmap-k8ap82 (abbreviated RM: below; head 9259c18, 2026-09-14), read only with git show / ls-tree; cross-checked against main (HEAD 2165144, 2026-09-11), git history, the restore record RM:L8/L6/history/restore-2026-09-14.md, and commits fc3b018, 5a8d533, 3406bd1, 314ceba, 1d83788, 8c98573, 62d2e3f. It holds 55 files: a 0.md sheet, Auditonomous_Theory_Master_Archive.md (748 lines, 152,366 B), Auditonomous_Theory_TOC.md (112 lines) and 52 block files, four of which (31, 32, 35, 36) are 8-byte "Skipped." stubs. The corpus is the author's "Auditonomous Theory" book material in generation order (thesis prompt / development notes alternating), a "Session record through July 31, 2026" whose TOC outlines 18 chapters in five parts plus Appendices A–F with per-chapter status markers (6 "material drafted", 5 "core argument seeded — to develop", Ch 8 "to develop", Ch 17 "partial", Ch 7 and Ch 12 carrying SKIPPED notes). The skips are the author's own ruling of 2026-08-02 ("[source text withheld from the public copy]", commit 3406bd1): the archive keeps their full prose and still maps them to chapters, while the TOC (as rewritten 2026-08-04 in 314ceba) says they are "cut from the book". What development got to: the corpus was committed 2026-08-02, lightly edited through 2026-08-04, deleted from HEAD with all of intake/ in the prune 8c98573 (2026-08-15), restored byte-identical from 1d83788 (the prune's parent) onto the roadmap branch on 2026-09-14 (62d2e3f) with a new sheet, and that branch (PR #27) was closed unmerged on 2026-10-17. On main none of these files exist and the path never did; main's own sheets still cite ARCH:37 and intake/manuscript/ as dead links. Contradictions found: 0.md says the definition stands at "line 10 of Block 3" but the file on the branch has it at line 1 (314ceba stripped Block 3's header, leaving "## COnsiderations"); 0.md's "fiction"/CONJECTURE register is not used by the manuscript itself and is not stated in the cited STATUS_AND_LABEL_DISCIPLINE.md; archive and TOC disagree on whether blocks 31/32/35/36 remain in the book; 5a8d533 says "55 block/outline files" though there are 52. The five extracted .docx/.odt/chat Markdown files in the scratchpad contain none of the block markers (grep for "MASTER ARCHIVE", "Skipped.", "BLOCK 31", "CHAPTER MAPPING" returned nothing).
+- **facts**
+  - item 1
+    - **claim**: The manuscript directory on the roadmap branch holds exactly 55 files: 0.md (2,689 B), Auditonomous_Theory_Master_Archive.md (152,366 B), Auditonomous_Theory_TOC.md (23,901 B) and 52 block files Block_01_Founding_Premise.md through Block_52_The_Decodability_Requirement.md.
+    - **evidence**: git ls-tree -r -l origin/claude/book-structure-roadmap-k8ap82 -- L8/L4/work/writing/manuscript/ : 55 entries; e.g. '100644 blob 31a0987... 152366 .../Auditonomous_Theory_Master_Archive.md'
+    - **date**: 2026-09-14
+    - **status_label**: 
+  - item 2
+    - **claim**: Blocks 31, 32, 35 and 36 are 8-byte files sharing one blob (2101e1d) whose entire content is the word 'Skipped.' with no trailing newline.
+    - **evidence**: RM:L8/L4/work/writing/manuscript/Block_31_skipped.md:1 'Skipped.' (cat -A shows no $); ls-tree sizes '8' for Block_31/32/35/36_skipped.md
+    - **date**: 2026-08-02
+    - **status_label**: Skipped.
+  - item 3
+    - **claim**: The 0.md sheet defines the directory as the theory manuscript: fifty-two blocks, master archive, and the author's table of contents, restored 2026-09-14 from git 1d83788 (intake/manuscript/) where it stood until the prune of 2026-08-15.
+    - **evidence**: RM:L8/L4/work/writing/manuscript/0.md:3 'The theory manuscript as written: the fifty-two blocks, the master archive that carries them in one file, and the author's table of contents.'; :8 'restored on 2026-09-14 from git `1d83788` (`intake/manuscript/`), where it had stood until the prune of 2026-08-15; the record is `L8/L6/history/restore-2026-09-14.md`'
+    - **date**: 2026-09-14
+    - **status_label**: 
+  - item 4
+    - **claim**: 0.md says four blocks (31, 32, 35, 36) are 'marked skipped: cut by the author', that forty-eight blocks have text, and dates the author's TOC to 2026-08-02.
+    - **evidence**: RM:...manuscript/0.md:8 'four of them — 31, 32, 35, 36 — marked skipped: cut by the author ... the author's table of contents of 2026-08-02'; :16 'forty-eight with text; 31, 32, 35 and 36 skipped'; :18 'the author's table of contents (2026-08-02)'
+    - **date**: 2026-08-02
+    - **status_label**: skipped
+  - item 5
+    - **claim**: 0.md assigns the register: definitional sentences are 'authorial text (INTERNAL ONLY)'; 'the scenario chapters are fiction and carry CONJECTURE for their premises', citing STATUS_AND_LABEL_DISCIPLINE.md; nothing in the directory is released (L7).
+    - **evidence**: RM:...manuscript/0.md:12 'the definitional sentences are authorial text (INTERNAL ONLY); the scenario chapters are fiction and carry CONJECTURE for their premises (`L8/L5/research/review/STATUS_AND_LABEL_DISCIPLINE.md`)'; :20 'nothing here is released (L7)'
+    - **date**: 2026-09-14
+    - **status_label**: INTERNAL ONLY; fiction; CONJECTURE
+  - item 6
+    - **claim**: CONTRADICTION: the words CONJECTURE, INTERNAL ONLY and fiction-as-label occur in the manuscript directory only in 0.md; the archive's single 'fiction' hit is 'fictional or actual' (line 43); the cited STATUS_AND_LABEL_DISCIPLINE.md lists CONJECTURE among registry labels but contains no occurrence of 'fiction' or 'scenario' (case-insensitive grep).
+    - **evidence**: git grep -c on RM over the manuscript dir: 'CONJECTURE' -> 0.md:1 only; 'INTERNAL ONLY' -> 0.md:1 only; archive:43 '[source text withheld from the public copy]'; RM:L8/L5/research/review/STATUS_AND_LABEL_DISCIPLINE.md:11 '`[source text withheld from the public copy]`,' (only match for fiction|scenario|CONJECTURE)
+    - **date**: 
+    - **status_label**: CONJECTURE (label list only)
+  - item 7
+    - **claim**: CONTRADICTION: 0.md says the constitutional sentence stands 'at line 37 of the master archive and at line 10 of Block 3'; line 37 of the archive is correct, but in the Block 3 file on the branch the sentence is line 1 and line 10 is '**II. The permissions triad**'. Line 10 was correct only in the original 5a8d533 version (31 lines), before commit 314ceba (2026-08-04) deleted the header block.
+    - **evidence**: RM:...manuscript/0.md:8 'stands at line 37 of the master archive and at line 10 of Block 3'; RM:...Auditonomous_Theory_Master_Archive.md:37 '> Bounded autonomy, under mandatory auditability...'; RM:...Block_03_The_Definition.md:1 '> Bounded autonomy...' and :10 '**II. The permissions triad**'; 5a8d533:intake/manuscript/Block_03_The_Definition.md:10 '> Bounded autonomy...'; git diff 5a8d533 1d83788 -- Block_03: '-# BLOCK 3 — THE DEFINITION ... -## Outline +## COnsiderations'
+    - **date**: 2026-08-04
+    - **status_label**: 
+  - item 8
+    - **claim**: Block 3 on the branch (blob 2bd725e, 609 B, 22 lines) has no '# BLOCK 3' header, no Type/Feeds/Pairs lines, and a misspelled section head '## COnsiderations'; it is the only block file modified after first commit, changed in 314ceba whose message (about an IEEE standards read) does not mention it.
+    - **evidence**: git log --all --name-status -- intake/manuscript/Block_03_The_Definition.md: '314ceba 2026-08-04 ... M intake/manuscript/Block_03_The_Definition.md'; 314ceba stat 'intake/manuscript/Block_03_The_Definition.md | 11 +---'; grep of 314ceba message for block|manuscript|outline|consideration -> no match
+    - **date**: 2026-08-04
+    - **status_label**: 
+  - item 9
+    - **claim**: The master archive's head: title, '[source text withheld from the public copy].', and '[source text withheld from the public copy].'
+    - **evidence**: RM:...Auditonomous_Theory_Master_Archive.md:1 '# AUDITONOMOUS THEORY — MASTER ARCHIVE'; :2 '### [source text withheld from the public copy].'; :3 '*Session record through July 31, 2026. ...*'
+    - **date**: 2026-07-31
+    - **status_label**: 
+  - item 10
+    - **claim**: Archive structure: 748 lines; 55 headings = title, subtitle, 52 '## BLOCK n' headings (BLOCK 1 at line 7 ... BLOCK 52 at line 663) and '## CHAPTER MAPPING' at line 689; every block heading carries an italic type label.
+    - **evidence**: git show RM:...Master_Archive.md | grep -n '^#' : '7:## [source text withheld from the public copy])*' ... '663:## [source text withheld from the public copy])*', '689:## CHAPTER MAPPING'; heading count 55
+    - **date**: 
+    - **status_label**: 
+  - item 11
+    - **claim**: Archive block type labels tally: 23 '(development notes, full text)', 18 '(session prompt, cleaned)', 3 '(chapter draft material, full text)' (Blocks 6, 8, 10), 2 '(submitted source, verbatim)' (25, 27), 2 "(author's text, verbatim)" (1, 3), 1 '(session prompt, verbatim)' (13), 1 '(session prompt, cleaned; source verified)' (39), 1 '(session prompt, cleaned — SOURCES NOT YET READ)' (43), 1 '(submitted sources, now read and verified)' (45).
+    - **evidence**: grep '^## BLOCK' | grep -o '\*(.*)\*' | sort | uniq -c on RM:...Master_Archive.md; e.g. :524 '## [source text withheld from the public copy])*'; :554 '## BLOCK 45 ... *(submitted sources, now read and verified)*'
+    - **date**: 
+    - **status_label**: SOURCES NOT YET READ; source verified; now read and verified
+  - item 12
+    - **claim**: The archive carries full prose for the four skipped blocks: Block 31 thesis '[source text withheld from the public copy]'; Block 35 '[source text withheld from the public copy]'.
+    - **evidence**: RM:...Master_Archive.md:374 '## [source text withheld from the public copy])*'; :376; :380 '## [source text withheld from the public copy])*'; :416 '## [source text withheld from the public copy]'; :418; :422 '## [source text withheld from the public copy])*'
+    - **date**: 2026-07-31
+    - **status_label**: 
+  - item 13
+    - **claim**: CONTRADICTION between archive and TOC: the archive's chapter mapping still maps Blocks 31, 32, 35, 36 to chapters and its open items still treat 'Blocks 33–36' as a live placement decision, whereas the TOC says 31–32 and 35–36 are 'SKIPPED — cut from the book'. Commit 3406bd1 made this deliberate: 'archive prose is unaffected and complete.'
+    - **evidence**: RM:...Master_Archive.md:723 '| [source text withheld from the public copy] ..., Ch 12 |'; :727 '| [source text withheld from the public copy] |'; :748 '[source text withheld from the public copy]'; TOC:53 '**[source text withheld from the public copy].'; 3406bd1 body 'archive prose is unaffected and complete.'
+    - **date**: 2026-08-02
+    - **status_label**: SKIPPED
+  - item 14
+    - **claim**: Archive line 746 states [source text withheld from the public copy]' (Ch 3, Ch 16, Ch 18 inserted); line 748 lists the open items, including: decide the subtitle; Ch 8 still needs drafting; expand Ch 3, 7, 13, 14, 16, 18; decide placement of Blocks 37–38; re-check SpudCell preprint; verify NASA CP-2255; fix six specification defects in Block 46; four specification changes in priority order; correct the Tic Tac date to November 2004; compile Appendix D; grow Appendix E.
+    - **evidence**: RM:...Master_Archive.md:746 '*([source text withheld from the public copy] ...)*'; :748 '**[source text withheld from the public copy]**'
+    - **date**: 2026-07-31
+    - **status_label**: Open items; Resolved
+  - item 15
+    - **claim**: The archive's own status vocabulary is 'Calibration' paragraphs and disclaimers rather than registry labels: 'fit, not proof', 'silence on 1947', 'the disclaimer holds', and one 'Status flags for the appendix' entry for the synthetic-cell exhibit; the exact strings VERIFIED, DRAFT, PARKED and v0.x [source text withheld from the public copy] manuscript directory.
+    - **evidence**: RM:...Master_Archive.md:192 '[source text withheld from the public copy].'; :320 'says nothing about 1947'; :344 'The exhibit grows; the disclaimer holds.'; :476 '**[source text withheld from the public copy].'; :302 'Verified against the source page.'; git grep -c 'VERIFIED' / 'DRAFT' / 'PARKED' / 'v0\.[0-9]' over RM manuscript dir -> no files
+    - **date**: 
+    - **status_label**: Status flags; Calibration
+  - item 16
+    - **claim**: Archive line 190 is the controlling three-verb text cited by commit 3406bd1 as 'ARCH:190 controls'.
+    - **evidence**: RM:...Master_Archive.md:190 '[source text withheld from the public copy]'; 3406bd1 body 'ARCH:190 controls: erase, conceal, falsify prohibited separately'
+    - **date**: 2026-08-02
+    - **status_label**: 
+  - item 17
+    - **claim**: The TOC's title page leaves the subtitle undecided with three candidates and uses the definition plus the evidence corollary as epigraph.
+    - **evidence**: RM:...Auditonomous_Theory_TOC.md:3 '**Working subtitle — decide one:**'; :4-6 '*[source text withheld from the public copy]*'; :12 '> Bounded autonomy, under mandatory auditability...'; :14 '> Information is evidence, never instruction'
+    - **date**: 2026-08-02
+    - **status_label**: 
+  - item 18
+    - **claim**: The TOC outlines Front Matter (A Note on Method), Part I Ch 1–3, Part II Ch 4–6, Part III Ch 7–10, Part IV Ch 11–14, Part V Ch 15–18, and Back Matter Appendices A–F; the closing line declares the archive the companion that '[source text withheld from the public copy]'.
+    - **evidence**: RM:...TOC.md:18 '## Front Matter'; :24 '## PART I — THE SECRET'; :37 '## PART II — THE MACHINE'; :50 '## PART III — THE RECORDS'; :66 '## PART IV — THE GOVERNMENT'; :82 '## PART V — THE RECKONING'; :98 '## Back Matter'; :108 '**Appendix F.** The Instrument'; :112 '*[source text withheld from the public copy].*'
+    - **date**: 2026-08-02
+    - **status_label**: 
+  - item 19
+    - **claim**: TOC completeness markers (19 'Status:' tags): front matter 'discipline stated; to draft as preface'; Ch 1 'core material drafted'; Ch 2 'ladder complete; analysis drafted'; Ch 3, 13, 14, 16, 18 'core argument seeded — to develop'; Ch 4, 5, 6, 9, 11, 15 'material drafted'; Ch 8 'to develop'; Ch 10 '[source text withheld from the public copy]'; Ch 17 'partial material drafted'; Ch 7 '[source text withheld from the public copy]'; Ch 12 'Blocks 31–32 SKIPPED'.
+    - **evidence**: RM:...TOC.md:20 '*(Status: discipline stated; to draft as preface)*'; :27; :30; :33 '*([source text withheld from the public copy])*'; :56 '*(Status: to develop)*'; :62 '*([source text withheld from the public copy])*'; :91 '*(Status: partial material drafted)*'; grep count 'Status' in TOC = 19
+    - **date**: 2026-07-31
+    - **status_label**: material drafted; core argument seeded — to develop; to develop; partial material drafted; SKIPPED
+  - item 20
+    - **claim**: TOC line 53 (Ch 7) verbatim skip note: Blocks 35–36 cut 2026-08-02, Egyptian material removed, with a NOTE that the evidence-ranking rule from cut Block 36 '[source text withheld from the public copy]' because Blocks 44 and 46 cite it as settled method.
+    - **evidence**: RM:...TOC.md:53 '**[source text withheld from the public copy]'
+    - **date**: 2026-08-02
+    - **status_label**: SKIPPED
+  - item 21
+    - **claim**: TOC line 72 (Ch 12) verbatim skip note: Blocks 31–32 cut 2026-08-02; the negative-census material is removed; what remains of Ch 12 [source text withheld from the public copy].
+    - **evidence**: RM:...TOC.md:72 '*([source text withheld from the public copy].)*'
+    - **date**: 2026-08-02
+    - **status_label**: SKIPPED
+  - item 22
+    - **claim**: The TOC exists in three committed versions: 5a8d533 (2026-08-02 10:29) original; 3406bd1 (2026-08-02 11:24) inserted at lines 53/72 'skipped at the outline layer — no separate outline files, by the author's decision'; 314ceba (2026-08-04 12:55) rewrote both to '[source text withheld from the public copy]', deleted the Egyptian-stratum sentence from Ch 7 and added the removal notes. The blob on the branch (983a5a4) is the 314ceba version, byte-identical to 1d83788.
+    - **evidence**: git diff --word-diff 5a8d533 3406bd1 -- intake/manuscript/Auditonomous_Theory_TOC.md: '{+33–36 in the Master Archive; Blocks 35–36 skipped at the outline layer — no separate outline files, by the author's decision;+}'; git diff --word-diff 3406bd1 314ceba: '[-The Egyptian stratum beneath it: the Eye of Ra as deployable agent ...-]', '[-skipped at the outline layer-] {+SKIPPED+}', '[-no separate outline files,-] {+cut from the book+}'; ls-tree RM TOC blob 983a5a4 = 314ceba index line 'index 7e57704..983a5a4'
+    - **date**: 2026-08-04
+    - **status_label**: skipped at the outline layer -> SKIPPED — cut from the book
+  - item 23
+    - **claim**: TOC Appendix C timeline and Appendix E exhibit dates: '[source text withheld from the public copy])'; Exhibit 2 SpudCells 'July 2026' with [source text withheld from the public copy] printed lunar electronics '(2026)', ISS metal printing '(2024)'; Exhibit 4 SEXTANT/NICER '2017'; Exhibit 6 '2019 SI redefinition'.
+    - **evidence**: RM:...TOC.md:102 '**Appendix C.** Timeline — Trinity 1945 · Recovery 1947 · ... · (continue)'; :104 'Exhibit 2: ... ([source text withheld from the public copy])'
+    - **date**: 2026
+    - **status_label**: preprint pending review
+  - item 24
+    - **claim**: Block 1 (Founding Premise) is typed 'Author's text, verbatim', feeds Ch 1, Ch 2, Ch 13 and Appendix A, pairs with Block 2, and its first section is marked expanded July 31, 2026; it carries the seven-step secrecy-escalation ladder.
+    - **evidence**: RM:...Block_01_Founding_Premise.md:2 '*[source text withheld from the public copy]`.*'; :4 '**Type:** Author's text, verbatim'; :5 '**[source text withheld from the public copy]'; :10 '**[source text withheld from the public copy])*'; :32 '**V. The secrecy-escalation logic (seven steps)**'
+    - **date**: 2026-07-31
+    - **status_label**: Author's text, verbatim
+  - item 25
+    - **claim**: Block 12 (Refusal Doctrine) is 'Development notes', feeds Ch 4, 5, 9, 13, 15, pairs with Block 11, has nine outline sections, proposes the corollary '[source text withheld from the public copy] closes '[source text withheld from the public copy]'.
+    - **evidence**: RM:...Block_12_Refusal_Doctrine.md:4 '**Type:** Development notes'; :5 '**Feeds:** Ch 4 (Auditonomous) · Ch 5 ... · Ch 15 (The Falsifying Species)'; :26 '- [source text withheld from the public copy]."'; :50
+    - **date**: 
+    - **status_label**: Development notes
+  - item 26
+    - **claim**: Block 28 (Tempo Argument) is 'Development notes', feeds Ch 5, 6, 13 and Appendix E, pairs with Block 27, calls itself the 'second independent derivation of bounded autonomy', and its calibration section says 'silence on 1947' and 'The exhibit grows; the disclaimer holds'.
+    - **evidence**: RM:...Block_28_The_Tempo_Argument.md:4 '**Type:** Development notes'; :5 '**[source text withheld from the public copy]'; :14 '**[source text withheld from the public copy])**'; :36 '[source text withheld from the public copy]'; :37
+    - **date**: 
+    - **status_label**: Development notes; Calibration
+  - item 27
+    - **claim**: Block 42 (Closure Problem) feeds Ch 5, 16, 17 and Appendix E, pairs with Block 41, states [source text withheld from the public copy]', dates exhibits (ISS metal printer 2024; printed lunar electronics reported Jan 2026; 2014 wrench file) and flags '[source text withheld from the public copy]'.
+    - **evidence**: RM:...Block_42_The_Closure_Problem.md:5 '**[source text withheld from the public copy]'; :14 '[source text withheld from the public copy])'; :37; :49
+    - **date**: 2026-01
+    - **status_label**: Development notes; Verify
+  - item 28
+    - **claim**: Block 52 (Decodability Requirement) [source text withheld from the public copy]', pairs with Block 51 (correction), asserts '[source text withheld from the public copy]', specifies 'fixed-width, sixty-four bytes', and logs three gaps in descending urgency: frame (highest, a decodability failure), CRC-32 detection-only, and the λ₂₁ invariance assumption.
+    - **evidence**: RM:...Block_52_The_Decodability_Requirement.md:5 '**[source text withheld from the public copy])'; :6 '**Pairs with:** Block 51 (correction)'; :27; :34 'fixed-width, sixty-four bytes, countable'; :53 '**VII. Three gaps, descending urgency**'; :54 '**`[source text withheld from the public copy]**'
+    - **date**: 
+    - **status_label**: Development notes
+  - item 29
+    - **claim**: Commit 3406bd1 (Eric D. Martin, 2026-08-02 11:24:54 -0700) records the author's ruling that blocks 31/32/35/36 are deliberate skips; it changed only intake/MOVE_LOG.md, the TOC and intake/research/THEME_LEDGER.md and says no archive edit was required.
+    - **evidence**: sha 3406bd1cf5c0aab68b764df10b8e0197173c06f6, subject 'Corrections per author ruling: blocks 31/32/35/36 are deliberate skips; T3 defined and bounded'; body '- MOVE_LOG: withdraw F1 (no data loss — the Skipped. stubs are authored placeholders)'; '- TOC: mark Blocks 31-32 and 35-36 skipped at the outline layer (TOC:53, TOC:72); archive prose is unaffected and complete.'; 'No archive edit required.'; stat: 3 files changed
+    - **date**: 2026-08-02
+    - **status_label**: deliberate skips; RESOLVED
+  - item 30
+    - **claim**: The MOVE_LOG diff in 3406bd1 quotes the author verbatim and states why the stubs exist; the struck finding F1 had recorded the stubs' mtime as 2026-08-02 10:09 and that a session-start git status had listed named outline files Block_35_Eye_of_Ra_Thesis.md and Block_36_The_Deployed_Eye.md as untracked (never committed; absent from all history).
+    - **evidence**: git show 3406bd1 -- intake/MOVE_LOG.md: '+> **[source text withheld from the public copy]'; context '[source text withheld from the public copy]**'
+    - **date**: 2026-08-02
+    - **status_label**: WITHDRAWN; authored placeholders
+  - item 31
+    - **claim**: The same commit demotes finding F2 (lexrom manuscript hash mismatch) to a publication-phase note and adopts the rule of no per-file hash checks during intake, declaring everything internal 'UNVERIFIED by default'; THEME_LEDGER T1 is marked 'RESOLVED 2026-08-02 by the author; NOT a defect' and T3 'DEFINED AND BOUNDED 2026-08-02'; T4 notes 'Reactive vs Responsive ... Correction propagation is incomplete' (Block_44 line 11 still says Reactive).
+    - **evidence**: git show 3406bd1 -- intake/MOVE_LOG.md: '+> ### ⚠ F2 IS DEMOTED — phase-inappropriate'; '+> **[source text withheld from the public copy]'; -- intake/research/THEME_LEDGER.md: '+- **T1 — RESOLVED 2026-08-02 by the author; NOT a defect.**'; '+- **T3 — ... DEFINED AND BOUNDED 2026-08-02'; context '- **T4 — Reactive vs Responsive.** ... Correction propagation is incomplete.'
+    - **date**: 2026-08-02
+    - **status_label**: UNVERIFIED by default; DEMOTED; RESOLVED; DEFINED AND BOUNDED
+  - item 32
+    - **claim**: The corpus entered git in 5a8d533 (Eric D. Martin, 2026-08-02 10:29:48 -0700): archive 748 lines, TOC 112, 52 block files (the four stubs 1 line each), 57 files / 3,289 insertions; the message's count '55 block/outline files' matches neither 52 blocks nor 54 (blocks+TOC+archive) nor 56 (with the two Martin files).
+    - **evidence**: sha 5a8d533d8fd5475e240db1881c90e2219342a7a9 'Add Auditonomous Theory manuscript corpus and Third Power source'; body '- manuscript/: Master Archive (52 blocks, full prose), TOC, 55 block/outline files incl. lexrom embodied-auditonomy manuscript (md + pdf)'; stat 'intake/manuscript/Auditonomous_Theory_Master_Archive.md | 748 +++', 'intake/manuscript/Block_31_skipped.md | 1 +', '57 files changed, 3289 insertions(+)'
+    - **date**: 2026-08-02
+    - **status_label**: 
+  - item 33
+    - **claim**: At the first commit fc3b018 (2026-07-30 23:29:50 -0700) intake/manuscript/ held only the two Martin 2026 files (md blob ea85100, 27,636 B; pdf blob 29007fc, 97,790 B); no block files.
+    - **evidence**: git ls-tree -r -l fc3b018 -- intake/manuscript/: 'ea851007... 27636 intake/manuscript/martin_2026_embodied_auditonomy_lexrom_cabin_model_v0.2_ea08f59.md', '29007fc3... 97790 ...v0_2.pdf'; fc3b018 subject 'Initial: auditonomous research home — intake/ with move log, scaffolding (definitions, formulas, manuscripts)'
+    - **date**: 2026-07-30
+    - **status_label**: v0.2 (Martin manuscript filename)
+  - item 34
+    - **claim**: 1d83788 (Eric D. Martin, 2026-08-14 17:40:15 -0700, 'F-005: retire the freeze check on Eric's instruction', 3 files, none in manuscript) is the direct parent of the prune commit 8c98573 and is an ancestor of both main and the roadmap branch; hence 'the last tree before the prune'.
+    - **evidence**: git rev-parse --short 8c98573^ -> 1d83788; git log --oneline 1d83788..8c98573 -> only 8c98573; git merge-base --is-ancestor 1d83788 origin/main -> yes; ... origin/claude/book-structure-roadmap-k8ap82 -> yes; 1d83788 stat '3 files changed, 5 insertions(+), 38 deletions(-)'
+    - **date**: 2026-08-14
+    - **status_label**: 
+  - item 35
+    - **claim**: The manuscript was removed from HEAD by 8c98573 (Eric D. Martin, 2026-08-15 23:28:27 -0700), which retired all of intake/ (131 files) in a manual prune of 2026-08-14/15; all 56 intake/manuscript paths show as D (no rename detected at -M50); commit totals 3 A / 179 D / 6 M / 26 R.
+    - **evidence**: sha 8c9857372843686b9d19452399a51bfd800b28b4 'Reorganize working tree to the shared aybllc model layout'; body 'Eric's manual prune and promotion (2026-08-14/15)'; '- Retire intake/ entirely (131 files)'; '(205 deletions total; all content remains reachable in history)'; git show --name-status -M50 8c98573: 'D intake/manuscript/Auditonomous_Theory_Master_Archive.md' ... 'D intake/manuscript/martin_2026_...v0_2.pdf'
+    - **date**: 2026-08-15
+    - **status_label**: 
+  - item 36
+    - **claim**: git log --diff-filter=D on main for intake/manuscript returns exactly one commit, 8c98573 (2026-08-15), listing all 56 deleted paths; git log -- intake/manuscript on main returns 8c98573, 314ceba (2026-08-04), 3406bd1 (2026-08-02), 5a8d533 (2026-08-02), fc3b018 (2026-07-30).
+    - **evidence**: git log origin/main --diff-filter=D --name-only -- 'intake/manuscript' ...: '8c98573 2026-08-15 23:28:27 -0700 Reorganize working tree...' followed by 'intake/manuscript/Auditonomous_Theory_Master_Archive.md' ... 'intake/manuscript/Block_52_The_Decodability_Requirement.md'; git log origin/main -- 'intake/manuscript': five commits as listed
+    - **date**: 2026-08-15
+    - **status_label**: 
+  - item 37
+    - **claim**: On main (working tree at origin/main = 2165144, 2026-09-11) none of the manuscript files exist: neither L8/L4/work/writing/manuscript/ nor intake/manuscript/ is present; the only tree paths matching manuscript|Block_|Auditonomous_Theory are two READMEs under L8/L6/retired/layout-2026-08-14/manuscripts/; the path L8/L4/work/writing/manuscript has no history on main at all.
+    - **evidence**: ls -la L8/L4/work/writing/manuscript -> 'No such file or directory'; ls -la intake/manuscript -> 'No such file or directory'; git ls-tree -r --name-only origin/main | grep -iE 'manuscript|Block_[0-9]|Auditonomous_Theory' -> 'L8/L6/retired/layout-2026-08-14/manuscripts/README.md', '.../manuscripts/main/README.md' (2 hits); git log origin/main -- L8/L4/work/writing/manuscript/ -> empty
+    - **date**: 2026-09-11
+    - **status_label**: 
+  - item 38
+    - **claim**: Main's own files at HEAD still cite the absent manuscript: the L0 definitions sheet cites 'Auditonomous_Theory_Master_Archive.md:37'; the 2026-09-07 sheets record says the intake corpus was 'retired from HEAD at 8c9…'; the routing plan lists 'intake/manuscript/…' among dead links to repoint; the retired-layout README describes 'intake/manuscript/ — Blocks 1–52, Master Archive, TOC'; THEME_LEDGER defines 'ARCH = manuscript/Auditonomous_Theory_Master_Archive.md'.
+    - **evidence**: main:L8/L0/semantics/definitions/0.md:36 '`Auditonomous_Theory_Master_Archive.md:37`, and the one-sentence fusion at `:51`'; main:L8/L6/history/sheets-2026-09-07.md:127 'both from the intake corpus retired from HEAD at `8c9'; main:L8/L6/history/7LM_ROUTING_PLAN_2026-09-05.md:104 'repoint dead links (... `intake/manuscript/…`) to their `USO/l6/retired/` or git-history locations'; main:L8/L6/retired/layout-2026-08-14/README.md:75 '`intake/manuscript/` — Blocks 1–52, Master Archive, TOC'; main:L8/L5/research/lanes/THEME_LEDGER.md:9
+    - **date**: 2026-09-07
+    - **status_label**: 
+  - item 39
+    - **claim**: The restore record states its standing: files returned from 1d83788 (the last tree before the prune 8c98573) because sheets, [source text withheld from the public copy] them while a reader of HEAD cannot open them; executed by a Claude session on the roadmap branch [source text withheld from the public copy]; nothing overwritten, deleted or changed.
+    - **evidence**: RM:L8/L6/history/restore-2026-09-14.md:3 '[source text withheld from the public copy].'
+    - **date**: 2026-09-14
+    - **status_label**: 
+  - item 40
+    - **claim**: Restore record §1 quotes the owner's instruction verbatim and reads it as the ruling for roadmap [source text withheld from the public copy]' versus 'bind by reference to git only'), reversible by the owner.
+    - **evidence**: RM:...restore-2026-09-14.md:7 '> Consider: make paper bout autonomous ... Them setup the Auditonomous repo before research. ... [source text withheld from the public copy]'; :9 '[source text withheld from the public copy] owner may reverse it'
+    - **date**: 2026-09-14
+    - **status_label**: D15
+  - item 41
+    - **claim**: Restore record §2: the tree at 1d83788 holds 318 paths; 65 byte-identical at HEAD under another path, 16 earlier versions of files at HEAD, 116 returned to the tree, 121 left in history for a stated reason.
+    - **evidence**: RM:...restore-2026-09-14.md:13 '[source text withheld from the public copy].'
+    - **date**: 2026-09-14
+    - **status_label**: 
+  - item 42
+    - **claim**: Restore record §5 places 54 files from intake/manuscript/ (Block_01 … Block_52, archive, TOC) at L8/L4/work/writing/manuscript/ and the two Martin 2026 files at L7/peering/private/ingress/peer-3/object-1/; §9 marks each of the 56 intake/manuscript paths RESTORED with its destination.
+    - **evidence**: RM:...restore-2026-09-14.md:48 '| `[source text withheld from the public copy]` |'; :49; :232 '| `[source text withheld from the public copy]` |' ... :287
+    - **date**: 2026-09-14
+    - **status_label**: RESTORED
+  - item 43
+    - **claim**: Restore record §7 'Left to the owner' lists five items (rebinding the autonomous definition; three files still taking that definition elsewhere; registration at L8/L2; '[source text withheld from the public copy] at L8/L6/retired/); none concerns the 52 blocks.
+    - **evidence**: RM:...restore-2026-09-14.md:70-74, e.g. :73 '- [source text withheld from the public copy].'; :74 '- [source text withheld from the public copy].'
+    - **date**: 2026-09-14
+    - **status_label**: 
+  - item 44
+    - **claim**: Restore method and byte-fidelity verified: §3 says [source text withheld from the public copy]> and no bytes changed; a blob-level comparison of 1d83788:intake/manuscript/ against RM:L8/L4/work/writing/manuscript/ differs only by the added 0.md and the two Martin files relocated to L7 — all 54 manuscript blobs identical.
+    - **evidence**: RM:...restore-2026-09-14.md:19 '[source text withheld from the public copy] ... no file's bytes were changed.'; diff of sorted '<blob> <name>' lists: only '< 29007fc... martin_...v0_2.pdf', '> 829ffb5... 0.md', '< ea85100... martin_...v0.2_ea08f59.md'
+    - **date**: 2026-09-14
+    - **status_label**: 
+  - item 45
+    - **claim**: Restore record §4 notes that the placeholder manuscripts/main/MANUSCRIPT.tex was not restored because '[source text withheld from the public copy]'; that book/ tree on the branch (commit b1ec302) holds 31 files: 0.md, 00-front-matter.md, ch01…ch27, bibliography.md, build.sh — a 27-chapter structure distinct from the TOC's 18 chapters.
+    - **evidence**: RM:...restore-2026-09-14.md:34 '**`[source text withheld from the public copy].'; git ls-tree RM L8/L4/work/writing/book/: 31 entries e.g. 'ch01-the-readers-contract.md', 'ch27-the-acquisition-debt-this-book-is-its-own-subject.md'; b1ec302 2026-09-14 01:48:05 +0000 'Open the manuscript source tree: twenty-seven chapter files with their feeds, labels and gates as headers'
+    - **date**: 2026-09-14
+    - **status_label**: 
+  - item 46
+    - **claim**: The restore commit 62d2e3f (author 'Claude <noreply@anthropic.com>', 2026-09-14 01:42:45 +0000) is the only commit on the roadmap branch touching L8/L4/work/writing/manuscript/; its message names 'the theory manuscript's [source text withheld from the public copy] table of contents' and repeats the 116/65/16/121 counts.
+    - **evidence**: sha 62d2e3f40ce61270834676d1949a86cad7a47810 'Set up the repository before research: the cited-but-absent files returned from 1d83788, with sheets and an L6 record'; body '116 restored, 65 byte-identical at HEAD, 16 superseded by later versions at HEAD, 121 left in history for a stated reason'; git log RM -- L8/L4/work/writing/manuscript/ -> only 62d2e3f
+    - **date**: 2026-09-14
+    - **status_label**: 
+  - item 47
+    - **claim**: The roadmap branch has five commits beyond main's merge-base 2165144: 30a40f1 (2026-09-13 20:37 UTC), 62d2e3f, b1ec302, 4e2c4e4, 9259c18 (2026-09-14 02:04 UTC, head). PR #27 (head claude/book-structure-roadmap-k8ap82 @ 9259c18, base main) was created 2026-09-13T20:39:22Z and closed unmerged on 2026-10-17T08:41:45Z.
+    - **evidence**: git merge-base origin/main RM -> 2165144...; git log origin/main..RM: '9259c18 2026-09-14 02:04:14 +0000 The roadmap re-sequenced...', '30a40f1 2026-09-13 20:37:08 +0000 The book's finished shape and the path to it'; gh api repos/aybllc/auditonomous/pulls/27: '"state":"closed","merged":false,"closed_at":"2026-10-17T08:41:45Z","created_at":"2026-09-13T20:39:22Z","head_sha":"9259c180e5b4..."'
+    - **date**: 2026-10-17
+    - **status_label**: closed, unmerged
+  - item 48
+    - **claim**: 0.md's two cited measuring documents: BOOK_STRUCTURE_PROPOSAL.md exists on the roadmap branch but not on main; it is dated [source text withheld from the public copy]', 'Corpus status: INTERNAL ONLY throughout', and §0 finds the 52 blocks are 'in generation order', with 36 blocks severable from the contact premise (its list includes 31, 32, 35, 36) and 16 premise-bound. STATUS_AND_LABEL_DISCIPLINE.md and AUDITONOMOUS_DEFINITION.md exist on both refs.
+    - **evidence**: git cat-file -e checks: BOOK_STRUCTURE_PROPOSAL.md roadmap:YES main:NO; RM:L8/L5/research/review/BOOK_STRUCTURE_PROPOSAL.md:3 '**Date:** 2026-08-02'; :4 '**Status:** PROPOSAL. Nothing here is adopted.'; :6 '**Corpus status:** INTERNAL ONLY throughout.'; :12 'The 52 blocks are in **generation order**'; :19 '[source text withheld from the public copy], ...'; :22 '**Premise-bound — 16 blocks:**'
+    - **date**: 2026-08-02
+    - **status_label**: PROPOSAL; INTERNAL ONLY
+  - item 49
+    - **claim**: The two Martin 2026 embodied-auditonomy files (filename version 'v0.2', hash tag 'ea08f59') are at L7/peering/private/ingress/peer-3/object-1/ on the roadmap branch and absent from main, as 0.md states.
+    - **evidence**: RM:...manuscript/0.md:20 '[source text withheld from the public copy] are not here: they [source text withheld from the public copy]/`'; git ls-tree -r --name-only RM | grep martin_2026 -> two paths under L7/peering/private/ingress/peer-3/object-1/; same grep on origin/main -> none
+    - **date**: 2026-09-14
+    - **status_label**: v0.2
+  - item 50
+    - **claim**: Version strings in the directory: none (no v0.x); version strings among the restored siblings are SPINE_v0.1_2026-08-14.md, Auditonomous_Book_Material_Sourcebook_v0.1.md, Auditonomous_Coverage_Exclusion_Ledger_v0.1.csv, Auditonomous_Source_Manifest_v0.1.json and the Martin manuscript v0.2.
+    - **evidence**: git grep -c 'v0\.[0-9]' RM -- L8/L4/work/writing/manuscript/ -> no output; restore-2026-09-14.md:46 '`SPINE_v0.1_2026-08-14.md` (from `manuscripts/`)'; :56 '`Auditonomous_Book_Material_Sourcebook_v0.1.md` ... `Auditonomous_Source_Manifest_v0.1.json`'
+    - **date**: 2026-08-14
+    - **status_label**: v0.1; v0.2
+  - item 51
+    - **claim**: The five extracted documents in the scratchpad (auditnomous-main.md 2,326 lines; auditonomouos-important.md 620; auditonomous-08-03-26.md 2,485; auditonomous-chat-1.md 1,925; auditonomouos-chat-2.md 2,054) contain none of the block corpus markers; their relation to the 52-block corpus was not established here.
+    - **evidence**: grep -n -i -E 'MASTER ARCHIVE|Skipped\.|BLOCK 31|BLOCK 52|July 31, 2026|August 2, 2026|2026-08-02|Session record through|CHAPTER MAPPING' over /tmp/claude-0/-home-user/bfcfd013-a2da-5019-961e-7f46116f08be/scratchpad/manuscript/text/*.md -> no matches in any file
+    - **date**: 
+    - **status_label**: 
+- **open_questions**
+  - Was the 314ceba (2026-08-04) edit to Block_03_The_Definition.md intentional? It deleted the '# BLOCK 3' header, Type/Feeds/Pairs lines and '## The text', and renamed '## Outline' to '## COnsiderations', inside a commit about an IEEE standards read whose message never mentions it; 0.md's 'line 10 of Block 3' matches the pre-edit file.
+  - Did outline text for Blocks 35/36 ever exist beyond the archive prose? The struck finding F1 says a session-start git status listed Block_35_Eye_of_Ra_Thesis.md and Block_36_The_Deployed_Eye.md as untracked before the 8-byte stubs appeared (mtime 2026-08-02 10:09); no such files exist in any commit.
+  - Which document governs the book's content for 31/32/35/36: the TOC (as of 314ceba: 'cut from the book', material 'removed') or the archive (still mapping all four to chapters and listing 'Blocks 33–36' as an open placement decision)? The 2026-08-02 TOC wording was 'skipped at the outline layer — no separate outline files'; two days later it became 'cut from the book'.
+  - The 0.md register claim ('the scenario chapters are fiction and carry CONJECTURE for their premises') is attributed to STATUS_AND_LABEL_DISCIPLINE.md, which lists CONJECTURE as a label but contains no 'fiction' or 'scenario' text; where was the fiction/CONJECTURE labelling of the manuscript actually ruled?
+  - Commit 5a8d533 says '55 block/outline files' but committed 52 block files (plus TOC and archive, plus two pre-existing Martin files); the origin of the count is unexplained.
+  - The restore exists only on the closed, unmerged PR #27 branch (closed 2026-10-17). Did the owner reverse D15, or has the restore simply not been merged? Main at 2165144 never received L8/L4/work/writing/manuscript/, and its sheets still cite ARCH:37 and intake/manuscript/ as paths that cannot be opened.
+  - How do the 52 blocks map onto the 27-chapter book tree opened by b1ec302 (L8/L4/work/writing/book/ch01…ch27)? The TOC's 18-chapter structure and the archive's chapter mapping refer to the older numbering; no crosswalk was found in the manuscript directory.
+  - The archive's open items (ARCH:748) include unfinished verification tasks (NASA CP-2255, SpudCell preprint status, AARO documents, the six Block 46 specification defects, the Tic Tac date correction); none of the files in this directory records whether any were later closed, and THEME_LEDGER T4 noted that the Reactive->Responsive correction had not propagated to Block_44 line 11.
+  - The five extracted .docx/.odt/chat Markdown files in the scratchpad show no block-corpus markers; whether they are earlier or later states of the same manuscript, or a different line of development, remains to be established by another step.

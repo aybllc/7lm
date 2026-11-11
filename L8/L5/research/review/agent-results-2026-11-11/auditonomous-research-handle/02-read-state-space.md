@@ -1,0 +1,620 @@
+# read:state-space
+
+Agent result, as returned. Workflow: Handle on the Auditonomous research and manuscript. Run `wf_9c2917a7-7f0`. Phase: Read. Checked in 2026-11-11 19:51 UTC.
+
+- **scope**: Layer 1 (L8/L1/) of aybllc/auditonomous in three states: MAIN (origin/main 2165144), ROADMAP (origin/claude/book-structure-roadmap-k8ap82 9259c18), BETA (origin/beta/7lm-exemplar-auditonomous 714480d). HISTORY (1d83788) has no L8/L1; its predecessors are manuscripts/definitions/ and manuscripts/main/. Read in full from git objects: both sheets, AUDITON_ENVELOPE.md, HUMINT_ENCODE.md, REQUIREMENTS_OWNERSHIP.md (MAIN); AUDITABILITY_REQUIREMENTS.md, AUDITON_REPLICATOR.md and the sheet diffs (ROADMAP); AUDITONOMOUS_BETA_ADMISSION.md and the L8/L1 diff (BETA). Cross-references followed: harmonization-2026-09-05.md sections 4a and 5, 7LM_ROUTING_PLAN rows 148/151/152/173, restore-2026-09-14.md, HISTORY FREEZE.md, ROADMAP STANDARDS_REGISTER.md and AUDITON_PACKABILITY, the roadmap entries for chapters 12-13 and D14/D18/D20, MAIN Part A (SP800-53r5_AC-AU_verbatim.md), the three MAIN extraction files (headings counted), the BETA findings file, and four dependency files in aybllc/autonomous origin/main. No repository script was run; counts were re-done with grep/awk on copies in /tmp/claude-0/-home-user/bfcfd013-a2da-5019-961e-7f46116f08be/scratchpad/wf-handle/L1/.
+- **summary**: Layer 1 holds three objects on MAIN, five on ROADMAP and four on BETA. All were written on 4-5 August 2026 by a model session on the owner's instructions. None has changed in substance since: the MAIN copies differ from the pre-prune tree only in table padding, and the two ROADMAP additions are byte-identical restorations.
+
+  AUDITON_ENVELOPE (twelve compartments, eight delivered, three legal freezes) is labelled [source text withheld from the public copy] has never been adversarially reviewed. HUMINT_ENCODE (slots H1-H7) is INTERNALLY DERIVED over quotations it calls VERIFIED; one of its warrants, [source text withheld from the public copy]. REQUIREMENTS_OWNERSHIP partitions 113 extracted requirements (E 21 / J 4 / X 6 / P 0 / D 82). I recounted ISO 24, IEEE 55 and NIST 20 from the extraction files; NASA 14 cannot be recounted from the repository, and the earlier 78-requirement run is still unreconciled. Its "sixteen of twenty-one are IEEE 7009" is contradicted by its own table (fifteen), and the wrong figure has spread to five other documents.
+
+  None of the five research objects is a pure Layer 1 object. The repository's own records leave three splits to the owner (decision D14, unruled); the two restored files have no split record at all.
+
+  Two ROADMAP-only files change the picture. AUDITABILITY_REQUIREMENTS partly answers the "blocking" question Q11, for SP 800-53 AC and AU only, and its AC counts do not close. AUDITON_REPLICATOR records that two headline claims were refuted and reopens the envelope's C2 root of trust and its platform/envelope split. MAIN and BETA carry neither, so MAIN's envelope cites a demonstration it no longer holds and BETA says Q11 is open.
+
+  BETA adds a small genuine state-space statement (four inputs, sixteen ordered pairs) with no label, date or sheet entry, and re-labels Q13 as UNRESOLVED/CONTESTED instead of a finding.
+
+  To do first: rule D14 and D18, correct sixteen to fifteen, reconcile 78 against 113, and have the envelope adversarially reviewed.
+- **items**
+  - item 1
+    - **id**: L1-01
+    - **title**: Layer sheet L8/L1/0.md
+    - **path**: L8/L1/0.md
+    - **where**: MAIN, ROADMAP (one line changed), BETA (identical to MAIN)
+    - **what_it_is**: The layer sheet. States what Layer 1 owns (admissible and excluded states, invariants, identity conditions), its hard boundary (no operation; formal operation begins at L2), and lists holdings. It also names candidate L1 objects not yet extracted: three stipulated invariants inside a session file.
+    - **own_label**: No status label of its own. On the candidates: "INTERNAL ONLY, not verified against any source"
+    - **evidence_state**: ASSERTED (a sheet); holdings line INTERNALLY CHECKED by me against the tree in each state
+    - **checked_how**: Compared the Holdings line with git ls-tree in each state. MAIN lists the 3 files present. ROADMAP adds the two restored files and they are present. BETA's sheet is the MAIN blob (5d6369f) and does not list AUDITONOMOUS_BETA_ADMISSION.md.
+    - **locator**: MAIN:L8/L1/0.md:105-109; ROADMAP:L8/L1/0.md:107
+    - **quote**: Candidate L1 objects not yet extracted (owner's call): the stipulated invariants of `L8/L4/work/writing/sessions/SESSION_2026-08-05_AUDITON_ARCHITECTURE.md` §1–2 and §9
+    - **key_claims**
+      - L1 output is "An L1 state-space contract defining what L2 may represent and operate upon."
+      - Machine metadata "Not instantiated in this repository"
+      - Reserved terms "origidity; certainty; intolerance" are given no home at L1
+    - **depends_on**
+      - L8/L0/ (the L0 contract)
+      - aybllc/7lm specification (quoted for the layer rules)
+    - **open_items**
+      - Extraction of the three candidate invariants ("take ≤ give − 1", "data ≤ energy + 1", "1 is dimensionless") is the owner's call and not done
+      - BETA sheet not updated for the new BETA file
+  - item 2
+    - **id**: L1-02
+    - **title**: Directory sheet L8/L1/state-space/0.md
+    - **path**: L8/L1/state-space/0.md
+    - **where**: MAIN, ROADMAP (two holdings added), BETA (identical to MAIN)
+    - **what_it_is**: The directory sheet. Describes each holding, says which parts of each file belong to other layers, and records the owner rule of 2026-09-05 on Q13. It is the only place on MAIN that tells a reader the three objects are mixtures.
+    - **own_label**: Per holding: "INTERNALLY DERIVED / COMPOSITE OBJECT UNVERIFIED" (envelope); "Classifications INTERNALLY DERIVED; quotations VERIFIED against held primaries" (HUMINT)
+    - **evidence_state**: INTERNALLY CHECKED by me against the objects it describes
+    - **checked_how**: Read each described object in full. The sheet's descriptions match: twelve compartments, E 21 / J 4 / X 6 / P 0 / D 82, IF-1..IF-8, the unreconciled 78-vs-113. The ROADMAP additions match the restored files: the replicator header's refutations, and Part A's 215 statements (I counted 215 control headings in Part A).
+    - **locator**: MAIN:L8/L1/state-space/0.md:37-39; ROADMAP:L8/L1/state-space/0.md:41-42
+    - **quote**: The [source text withheld from the public copy]'s requirement set (§8, Q11); the 78-vs-113 discrepancy is unreconciled.
+    - **key_claims**
+      - Envelope §0–0b are L0; its C3 row is L3; "Splitting the file is the owner's call."
+      - HUMINT §0 is L0 semantics; its warrants are peer standards text (L7 ingress)
+      - Ownership findings ①–③ and Q10–Q13 are L5
+      - Q13 "resolves through `L7/peering/public/ingress/peer-1/object-1/`" — "the owner's edit"
+    - **depends_on**
+      - L8/L0/ontology/0.md, L8/L0/semantics/0.md, L8/L3/engineering-mathematics/tolerances/0.md, L8/L5/research/findings/0.md (each cites the L1 files by reference; confirmed at MAIN lines 33, 38, 33, 39)
+      - L7/peering/public/ingress/peer-1/object-1/
+    - **open_items**
+      - BETA: AUDITONOMOUS_BETA_ADMISSION.md is not listed
+      - MAIN: the sheet does not say that the envelope's §0b demonstration file (AUDITON_REPLICATOR.md) is absent from MAIN
+  - item 3
+    - **id**: L1-03
+    - **title**: AUDITON_ENVELOPE.md — the twelve-compartment envelope
+    - **path**: L8/L1/state-space/AUDITON_ENVELOPE.md
+    - **where**: MAIN, ROADMAP, BETA (same blob 1cbf0ac); HISTORY at manuscripts/definitions/AUDITON_ENVELOPE.md (blob ceb7108, same words, different whitespace)
+    - **what_it_is**: States the auditon as the maximal envelope: twelve compartments C1–C12, four platform-supplied (C1, C4, C5, C8) and eight [source text withheld from the public copy]). Each row carries a codified requirement, a separation control and a HUMINT slot. It gives three legal freezes (EU AI Act Art. 14(1), ISO/IEC 17021-1 §3.6, DoDD 3000.09) and the one-parameter rule "declare the mission, and the freezes follow". It claims satisfiability by construction, not conformance.
+    - **own_label**: "**[source text withheld from the public copy]." Dated 2026-08-04 (§0a-bis 2026-08-05).
+    - **evidence_state**: ASSERTED for the composition. Four NIST control quotations INTERNALLY CHECKED by me. Two parts CONTRADICTED by other repository records (see CX-01, CX-02). UNRESOLVED on review.
+    - **checked_how**: Compared the §0 quotations of AC-4(7), AU-9(2), AU-9(7) and AC-25 with the repository's verbatim transcription (MAIN Part A lines 307, 1199-1201, 1226-1227, 956-958): the control text matches. The "data diode" phrase is Discussion text, which Part A excludes, so it is not confirmed. The file records no locator for any comparison of the ISO, IEEE, UN R157, NASA or EU quotations. A whitespace-normalised diff against HISTORY shows no word changed.
+    - **locator**: MAIN:L8/L1/state-space/AUDITON_ENVELOPE.md:23-24 (status), :122-146 (map), :150-167 (freezes), :244-259 (open list)
+    - **quote**: **[source text withheld from the public copy].**
+    - **key_claims**
+      - "[source text withheld from the public copy]." (:51)
+      - "[source text withheld from the public copy]." (:102)
+      - "[source text withheld from the public copy]." (:162-163)
+      - C6, C7, C12 "[source text withheld from the public copy]" (:192-195)
+      - [source text withheld from the public copy] (:224)
+    - **depends_on**
+      - HUMINT_ENCODE.md (slots; cited at the stale path definitions/HUMINT_ENCODE.md)
+      - definitions/AUDITONOMY.md conditions A–E (absent from MAIN and BETA; ROADMAP:L8/L0/semantics/definitions/AUDITONOMY.md, labelled CONJECTURE / INTERNAL ONLY)
+      - definitions/AUDITON_REPLICATOR.md (absent from MAIN and BETA; ROADMAP only)
+      - governance/SCOPE_single_object.md, research/NASA_WILL_NOT_BUY_AUTONOMY.md, research/FINDING_nasa_per_function_not_weakest_link.md (all in aybllc/autonomous, now under L8/L0/universality/ and L8/L5/research/findings/)
+      - NIST SP 800-53r5, IEEE 1788, IEEE 7001, IEEE 7009-2024, UN R157, ISO 8373, ALFUS, IEEE 1872, NTRS 20100017272, NASA-STD-8739.8B
+    - **open_items**
+      - "Not adversarially reviewed" (:24); the roadmap's next step for chapter 12 is "adversarial review of the envelope"
+      - "The five conditions A–E are `CONJECTURE`" and [source text withheld from the public copy]" (:253-254)
+      - "[source text withheld from the public copy]`" and the HUMINT warrant partly rests on it (:255-256)
+      - [source text withheld from the public copy]" (:257-259)
+      - "[source text withheld from the public copy]" (:235-236)
+      - The direction attribute proposed by the replicator (C2-in / C2-out) is not in the map
+      - HISTORY FREEZE.md says the envelope form was frozen (F-001) and that AUDITABILITY's five extra separation controls are "a recommendation to Eric, not an edit"; FREEZE.md is not restored in any current state
+  - item 4
+    - **id**: L1-04
+    - **title**: HUMINT_ENCODE.md — [source text withheld from the public copy] stand in
+    - **path**: L8/L1/state-space/HUMINT_ENCODE.md
+    - **where**: MAIN, ROADMAP, BETA (same blob 05b0111); HISTORY at manuscripts/definitions/HUMINT_ENCODE.md (blob 7bc849d, same words)
+    - **what_it_is**: Defines the HUMINT-ENCODE marker. Gives a PERMITTED table (five rows) and a BLOCKED table (three rows), slots H1–H7 with substitutability, proposed substitutes for H1, H2, H3, H7, and a §6 added the same day: term counts over the NIST SR/CM/SA families showing no personhood floor, and 38 blocked provisions in the ILAC/IAF accreditation documents. An addendum moves the trust root from geometry to key material.
+    - **own_label**: "**[source text withheld from the public copy]." Dated 2026-08-04.
+    - **evidence_state**: ASSERTED for the scheme. The quotations are CLAIMED VERIFIED with a dated re-verification statement but no locator to a held copy. One warrant UNRESOLVED (22989 cl. 5.13). One count INTERNALLY CHECKED by me (8 of 10).
+    - **checked_how**: The file records "[source text withheld from the public copy]" (:40) and "[source text withheld from the public copy]" (:264), with no path to the held copy. I confirmed "8 of 10" against aybllc/autonomous origin/main:L8/L5/research/findings/FINDING_autonomy_requires_a_human_referent.md:27. I confirmed that the 22989 item is still not re-verifiable in the companion (AUTONOMOUS.md:72, :228). The SR/CM/SA term counts and the 38 provisions cannot be recounted: those families are not in Part A and the accreditation documents are not in the tree.
+    - **locator**: MAIN:L8/L1/state-space/HUMINT_ENCODE.md:9-10 (status), :35-41, :48-52, :76-84, :141-149, :262-270
+    - **quote**: **[source text withheld from the public copy].**
+    - **key_claims**
+      - "[source text withheld from the public copy]" (:64)
+      - "A substitution is not a conformance claim." (:123)
+      - "[source text withheld from the public copy]." (:161)
+      - "The accreditation corpus carries **38 blocked provisions**" (:214)
+      - Condition A [source text withheld from the public copy]" (:321-322)
+    - **depends_on**
+      - aybllc/autonomous FINDING_autonomy_requires_a_human_referent.md, AUTONOMOUS.md row A3, SCOPE_single_object.md, NASA_WILL_NOT_BUY_AUTONOMY.md, CLOSED_LOOP_GOVERNANCE.md
+      - research/THESIS_auditonomous_override.md (in no current tree of either repository; in aybllc/autonomous history only)
+      - AUDITONOMY condition E (H7)
+      - [source text withheld from the public copy], ISO/IEC 22989, Reg. (EU) 2024/1689, DoDD 3000.09, ISO/IEC 17021-1, ISO/IEC 42001, IAF/ILAC-A2:09/2025, ILAC-P4:06/2022
+    - **open_items**
+      - Decision required first: [source text withheld from the public copy] (:137-139)
+      - H4: [source text withheld from the public copy] — `NOT-CHECKED` (:143)
+      - 22989 cl. 5.13 warrant "**[source text withheld from the public copy]" (:144-146)
+      - [source text withheld from the public copy] — "**Not searched.**" (:147)
+      - "**Nothing in this document is adversarially reviewed.**" (:149)
+      - [source text withheld from the public copy]` (:256-258)
+      - [source text withheld from the public copy]` (:269)
+      - [source text withheld from the public copy]**" (:270)
+      - Key-injection provenance standards (SP 800-193, TCG TPM): "**Neither is held.**" (:328-330)
+      - Printability claims are the owner's and `NOT-CHECKED` (:283-284)
+  - item 5
+    - **id**: L1-05
+    - **title**: REQUIREMENTS_OWNERSHIP.md — the 113 assigned envelope vs platform
+    - **path**: L8/L1/state-space/REQUIREMENTS_OWNERSHIP.md
+    - **where**: MAIN and ROADMAP (blob b603858); BETA (blob 26ced71, one paragraph added — see L1-06); HISTORY at manuscripts/main/REQUIREMENTS_OWNERSHIP.md (blob c83e61d, same words)
+    - **what_it_is**: Assigns each of 113 extracted autonomy requirements to an owner class by the grammatical subject of the requirement: E envelope 21, J joint 4, X external 6, P platform 0, D definitional 82. Lists the 21 E obligations (all IEEE 7001 and 7009), derives a platform interface contract IF-1..IF-8, states that the 113 excludes the auditability controls the envelope is built on, and opens Q10–Q13.
+    - **own_label**: "**[source text withheld from the public copy]`"; §10: "**The assignment is INTERNALLY DERIVED.**" and "**Nothing adopted.**"
+    - **evidence_state**: INTERNALLY CHECKED for the partition arithmetic and three of the four lane counts (by me). ASSERTED for the assignment itself. One internal figure CONTRADICTED (see CT-02). UNRESOLVED for Q10–Q13.
+    - **checked_how**: Arithmetic: 21+4+6+0+82 = 113; D by body 24+20+14+24 = 82; IEEE 21+4+6+24 = 55. I counted requirement headings in the MAIN extraction files: IEEE 55, ISO 24, NIST 20. There is no NASA extraction file in any state, and the journal the file names is outside the repository, so NASA 14 and the per-row E/J/X/D assignment of the ISO, NIST and NASA rows cannot be re-derived from the tree. The §3 table has 6 rows of IEEE 7001 and 15 of IEEE 7009.
+    - **locator**: MAIN:L8/L1/state-space/REQUIREMENTS_OWNERSHIP.md:8-21, :47-54, :88-119, :174-192, :196-219, :236-248, :254-271
+    - **quote**: **① [source text withheld from the public copy].**
+    - **key_claims**
+      - "[source text withheld from the public copy].**" (:15)
+      - "**② The buildable set is 21, not 113.**" (:71)
+      - "**[source text withheld from the public copy].**" (:141)
+      - "**[source text withheld from the public copy].**" (:216)
+      - IF-2 and IF-4 are "the actual portability limit of the envelope" — "**NOT-CHECKED against any real platform.**" (:191-192)
+      - "**[source text withheld from the public copy].**" (:163)
+    - **depends_on**
+      - STANDARDS_REGISTER.md Q2 (absent from MAIN and BETA; ROADMAP:L7/provenance/sources/STANDARDS_REGISTER.md)
+      - The workflow journal wf_b00a2270-83e under ~/.claude/ (not in any repository)
+      - AUDITON_ENVELOPE.md compartment map (cited at ../autonomous/definitions/, a stale cross-repository path)
+      - L8/L4/work/computation/{ieee,iso-iec,nist}-requirements-for-*.md (full verbatim text of 99 of the 113)
+      - intake/research/AUDITON_PACKABILITY_2026-08-04.md:15 (absent from MAIN; ROADMAP:L8/L5/research/findings/)
+      - IEEE 7001-2021, IEEE 7009-2024, ISO/IEC Directives Part 2
+    - **open_items**
+      - Q10 — who is the adopter for a scout beyond return: "*unresolved*" (:254-257)
+      - Q11 — auditability requirements never extracted: "*blocking*" (:259-261)
+      - Q12 — [source text withheld from the public copy] (:263-266)
+      - Q13 — autonomy under IEEE 1920.1 and ISO/IEC 22989; must resolve through the peer-1 binding (owner's edit, not done on MAIN)
+      - 78-vs-113 "is unreconciled" (:244)
+      - Cross-tabulating `single_object_satisfiable` with ownership "is unrun work" (:245-247)
+      - "[source text withheld from the public copy]" (:242)
+      - Finding ① can be falsified by one `shall` addressed to a platform function (:228-229); no such test is recorded
+  - item 6
+    - **id**: L1-06
+    - **title**: BETA change to REQUIREMENTS_OWNERSHIP.md — Q13 receiving-use disposition
+    - **path**: L8/L1/state-space/REQUIREMENTS_OWNERSHIP.md
+    - **where**: BETA only
+    - **what_it_is**: One paragraph inserted above the historical Q13. It routes autonomous-definition propositions through AUT-SOURCE-001 at the peer-1 binding (commit 0504961…, blob ffbdc28…, SHA-256 given), calls the C6/C9 comparison local research, and withdraws the categorical headline as a present finding. Nothing else in Layer 1 changes on BETA.
+    - **own_label**: "**[source text withheld from the public copy]."
+    - **evidence_state**: UNRESOLVED (the disposition re-labels Q13; it does not settle it). The binding identity is INTERNALLY CHECKED by me against MAIN.
+    - **checked_how**: git diff origin/main BETA -- L8/L1 shows +2 lines in this file. The commit id in the paragraph begins 0504961, the same commit the MAIN binding record names (MAIN:L7/peering/public/ingress/peer-1/object-1/0.md, Version row). The BETA findings file repeats the state: "[source text withheld from the public copy]."
+    - **locator**: BETA:L8/L1/state-space/REQUIREMENTS_OWNERSHIP.md:268; BETA:L8/L5/research/findings/AUDITONOMOUS_BETA_FINDINGS.md:24
+    - **quote**: [source text withheld from the public copy].
+    - **key_claims**
+      - "[source text withheld from the public copy]"
+      - "[source text withheld from the public copy]."
+    - **depends_on**
+      - L7/peering/public/ingress/peer-1/object-1/ (AUT-SOURCE-001)
+      - aybllc/autonomous commit 050496161a848ea26492b8468e59afc7e0c07282, path research/definitions/AUTONOMOUS.md
+    - **open_items**
+      - Q13 stays UNRESOLVED/CONTESTED
+      - Q11 stays open on BETA (BETA does not hold AUDITABILITY_REQUIREMENTS.md)
+      - The commit message says the beta corrects "ledger arithmetic"; the sixteen-of-twenty-one figure in this file (:117, :263) is not corrected
+  - item 7
+    - **id**: L1-07
+    - **title**: AUDITABILITY_REQUIREMENTS.md — [source text withheld from the public copy], Part B
+    - **path**: L8/L1/state-space/AUDITABILITY_REQUIREMENTS.md
+    - **where**: ROADMAP only (restored 2026-09-14); HISTORY at manuscripts/main/AUDITABILITY_REQUIREMENTS.md (same blob 27bbb1f)
+    - **what_it_is**: The interpretation over the verbatim Part A. Counts 215 AC and AU control statements (188 live). Classifies all 56 live AU controls as SELF 13 / BIND 22 / HUMAN 11 / ORG 9 / SPLIT 1. Screens AC without assigning all of it. Finds that [source text withheld from the public copy] and restates "a runtime without parameters" as parameters bound before dispatch. Records an AU-10 conflict. Offered as the answer to Q2a/S11 and Q11.
+    - **own_label**: "**Everything in this file is `INTERNALLY DERIVED`.**"; §5 "**LABEL: `CONTESTED`**"; §7 "`COMPOSITE OBJECT UNVERIFIED`" … "Nothing here is adopted." Opened 2026-08-05.
+    - **evidence_state**: INTERNALLY CHECKED for the headline counts (by me, against Part A). ASSERTED for the classification. CONTRADICTED on its AC sub-counts (see CT-04). UNRESOLVED on the AU-10 conflict.
+    - **checked_how**: Recounted Part A (MAIN blob ef187b5, identical in ROADMAP and HISTORY): [source text withheld from the public copy], 14 withdrawn, 132 live; AU 16 + 53 = 69, 13 withdrawn, 56 live; with [Assignment]/[Selection]: AC 96, AU 39. All match. The AU class lists count 13, 22, 11, 9, 1 = 56. Control text for [source text withheld from the public copy]-10 matches Part A. Part A is the repository's own transcription of a PDF identified by URL and SHA-256; I did not see the PDF. The document says its parser and spot-checks were "recorded in the session scratchpad", which is not in the repository.
+    - **locator**: ROADMAP:L8/L1/state-space/AUDITABILITY_REQUIREMENTS.md:8-9, :36-40, :51-55, :81-88, :159-160, :206-228, :234-242, :246-256
+    - **quote**: **[source text withheld from the public copy].**
+    - **key_claims**
+      - "**[source text withheld from the public copy]**" (:159-160)
+      - AU-5(4) [source text withheld from the public copy]" and "**Not cited anywhere in the canon.**" (:124-125)
+      - Envelope separation principle "**Should cite 9.**" (:238)
+      - [source text withheld from the public copy]" (:240)
+      - Q2a / Q11 "**[source text withheld from the public copy].**" (:236)
+    - **depends_on**
+      - Part A: L7/provenance/sources/staging-records/standards/extracted/SP800-53r5_AC-AU_verbatim.md (the file's own link, intake/sources/…, does not resolve)
+      - FREEZE.md P2, P3, F-001 (HISTORY only; not restored)
+      - STANDARDS_REGISTER.md Q2a, S3, S11, V-17
+      - REQUIREMENTS_OWNERSHIP.md Q11 and §5
+      - intake/sources/library/reading/RFC9162_Certificate-Transparency-v2.md:285 (retired path)
+    - **open_items**
+      - AU-10 vs AC-24(2): "Unresolved. Not repaired here." (:227-228)
+      - AC: "I did not assign all 132" (:166)
+      - "`Discussion:` text was not extracted." (:250)
+      - Extraction [source text withheld from the public copy]
+      - Three of the 14 load-bearing controls named in REQUIREMENTS_OWNERSHIP §8 are outside AC and AU (SC-7(13), SC-32, SI-10(1)); CCSDS, IETF and COSPAR are also named there. None appears in the closure statement
+      - AU-6 is classed ORG, "not carriable by any object" (:143-145), while the envelope's C11 and HUMINT's H7 substitute rest on AU-6; the document does not record this
+      - The five extra separation controls are "a recommendation to Eric, not an edit" (:238)
+  - item 8
+    - **id**: L1-08
+    - **title**: AUDITON_REPLICATOR.md — the envelope re-loaded for a self-replicating unit
+    - **path**: L8/L1/state-space/AUDITON_REPLICATOR.md
+    - **where**: ROADMAP only (restored 2026-09-14); HISTORY at manuscripts/definitions/AUDITON_REPLICATOR.md (same blob 224d3a9)
+    - **what_it_is**: Tests the envelope's portability on a replicator. Finds no thirteenth compartment but a missing attribute (direction: C2-in / C2-out). Derives generational drift from C3's algebra and reports a run. Tests minimality (only C8 drops). Then records an adversarial review of 2026-08-04 that refuted the drift/stagnation equivalence and two clauses of the trust-chain claim. The refuted text is kept in place, with §5.2 and §6 governing.
+    - **own_label**: Header: "⚠ [source text withheld from the public copy]". §8 uses `VERIFIED`, `INTERNALLY DERIVED`, `INTERNALLY VALIDATED`, `NOT-CHECKED`, `PARTIALLY VERIFIED`, `FAILED CHECK`, `CONTESTED`, `UNVERIFIED`. Dated 2026-08-04.
+    - **evidence_state**: Mixed, by claim. Drift arithmetic: INTERNALLY CHECKED (reviewer reproduction recorded; figures re-derived by me by hand). Drift ≡ stagnation: CONTRADICTED (refuted in the file). Trust-chain clauses B and C: CONTRADICTED. Direction amendment and minimality: ASSERTED. (P)/(E) threat, revocation, parent compromise: UNRESOLVED.
+    - **checked_how**: The file records that three reviewers ran on 2026-08-04, that quotes were "[source text withheld from the public copy]", and that the reviewer "reproduced all four figures independently" (:269-271). I re-derived by hand: b/√3 = 5.7735e-4; ×√200 = 8.165e-3; 0.003/0.008165 = 0.3674; N·b = 0.2 = 66.7×θ; first N = 4; 0.008134 vs 0.008165 is 0.4%. I did not run the script: gen_drift.py and gen_drift.out are in no current tree of either repository (they were added in aybllc/autonomous history, commit c866842, at research/replicator-lane/).
+    - **locator**: ROADMAP:L8/L1/state-space/AUDITON_REPLICATOR.md:3-22 (header), :75-92, :194-230, :264-383, :387-449, :453-573, :594-617
+    - **quote**: **§[source text withheld from the public copy].
+    - **key_claims**
+      - "[source text withheld from the public copy]." (:87)
+      - "**[source text withheld from the public copy].**" (:242)
+      - "**[source text withheld from the public copy].**" (:412-413)
+      - "**[source text withheld from the public copy]*.**" (:433)
+      - "**[source text withheld from the public copy].**" (:492)
+      - "**[source text withheld from the public copy].**" (:378-379, on the ledger argument)
+    - **depends_on**
+      - AUDITON_ENVELOPE.md (the twelve compartments)
+      - HUMINT_ENCODE.md §6
+      - aybllc/autonomous RULINGS.md C-007 and C-008 (the file there is 1 byte, empty: aybllc/autonomous origin/main:L8/L5/research/review/RULINGS.md)
+      - aybllc/autonomous SCOPE_single_object.md §5.1
+      - research/FINDING_history_channel.md and research/replicator-lane/gen_drift.py (aybllc/autonomous history only)
+      - NIST SP 800-53r5 (SR, SC-17, SA-8(9), SA-8(21), SI-7, CM-2, CM-6), EU 2022/1426, RFC 6962, RFC 9162, Reg. (EC) 765/2008, IEEE 7005-2021
+    - **open_items**
+      - §5 "breaches" the single-object scope ruling and stands only on the owner's later instruction (:152-157)
+      - Three readings of the C8 result, "**Flagged, not resolved.**" (:436-449)
+      - SA-8(9) weakest-link statement to be assessed against the NASA per-function finding — "**Not yet done.**" (:554-558)
+      - Revocation at distance and parent compromise — `UNVERIFIED`, "No RFC 5280 held." (:562-563)
+      - Correlated process error — `NOT-CHECKED` (:603)
+      - "[source text withheld from the public copy].**" (:613)
+      - Acquisition needed: RFC 5280, TCG TPM, NIST SP 800-193, [source text withheld from the public copy] (:615-617)
+      - §7 and the §8 row "[source text withheld from the public copy]**" were never updated, although the header and HUMINT_ENCODE §6 record the outcome
+  - item 9
+    - **id**: L1-09
+    - **title**: AUDITONOMOUS_BETA_ADMISSION.md — selected finite envelope admission, beta v1
+    - **path**: L8/L1/state-space/AUDITONOMOUS_BETA_ADMISSION.md
+    - **where**: BETA only (added in 714480d, committed 2026-11-02 21:08 -0800)
+    - **what_it_is**: Two paragraphs, 983 bytes. Admits one fixed externally declared goal and inputs of exactly {request: act|idle, stop: Boolean}; rejects malformed inputs; bounds the review to the 16 ordered pairs of the four [source text withheld from the public copy] latch. Says the consumer writes one synthetic C7 record per event, and lists what stays unimplemented.
+    - **own_label**: None. No status label, date or author in the file; the title says "beta v1".
+    - **evidence_state**: ASSERTED as a statement of admission. Its counts are INTERNALLY CHECKED by me against the BETA findings file. The applicability it leaves open is UNRESOLVED by its own words.
+    - **checked_how**: 4 inputs give 16 ordered pairs and 32 events. BETA:L8/L5/research/findings/AUDITONOMOUS_BETA_FINDINGS.md:7 reports "16 cases, 32 events, 32 C7 records" and "[source text withheld from the public copy]", which fits stop on the current step with no latch. The file is named in BETA:L8/L4/work/computation/auditonomous_beta.py:33 and auditonomous_beta_result.json:1433. I did not run the script (not in this task).
+    - **locator**: BETA:L8/L1/state-space/AUDITONOMOUS_BETA_ADMISSION.md:3-5
+    - **quote**: [source text withheld from the public copy].
+    - **key_claims**
+      - "[source text withheld from the public copy]."
+      - "[source text withheld from the public copy]."
+      - "[source text withheld from the public copy]"
+    - **depends_on**
+      - The pinned Autonomous producer (commit 805cd42f… per the BETA findings file)
+      - AUDITON_ENVELOPE.md C6 and C7 as motivation only
+      - BETA L8/L3/engineering-mathematics/AUDITONOMOUS_BETA_METHOD.md and L8/L4/work/computation/auditonomous_beta.py
+    - **open_items**
+      - Not listed in either BETA sheet
+      - [source text withheld from the public copy]"
+      - "no stop latch" is a third stop behaviour beside the envelope's "non-overridable stop path" and AUDITONOMY's adjudicated stop (see CX-02); the file does not relate them
+  - item 10
+    - **id**: SP-01
+    - **title**: Open split: AUDITON_ENVELOPE.md (§[source text withheld from the public copy])
+    - **path**: L8/L1/state-space/AUDITON_ENVELOPE.md
+    - **where**: MAIN, ROADMAP, BETA
+    - **what_it_is**: The repository's own records say the envelope file is a mixture. Routing plan: §1–2 and §0b are L1 ("the bulk"); §0–0b ontological distinctions are L0; the C3 "Bound" row is L3. My reading adds parts the records do not name: §3 (NASA finding and Class D inference) and §5 (open list) are L5 material, §4 is an L5 scope correction, and the quoted standards text is L7 ingress.
+    - **own_label**: Routing plan: "MOVE · OWNER DECISION on split". Harmonization §5: "Owner decisions left open (nothing done)". Roadmap D14 (unruled; recommendation "cite in place for the first edition").
+    - **evidence_state**: UNRESOLVED (pending owner decision D14)
+    - **checked_how**: Read the three records. The cite-in-place option was carried out: MAIN:L8/L0/ontology/0.md:33 and MAIN:L8/L3/engineering-mathematics/tolerances/0.md:33 cite the file by reference and are otherwise empty positions. No split exists in any state.
+    - **locator**: MAIN:L8/L6/history/harmonization-2026-09-05.md:91; MAIN:L8/L6/history/7LM_ROUTING_PLAN_2026-09-05.md:148; ROADMAP:L8/L5/research/review/BOOK_STRUCTURE_AND_ROADMAP_2026-09-13.md:625
+    - **quote**: Either split the file or place at L1 with the two citations.
+    - **depends_on**
+      - Owner decision D14
+    - **open_items**
+      - D14 unruled
+      - The records do not classify §3, §4 and §5 of the file
+  - item 11
+    - **id**: SP-02
+    - **title**: Open split: HUMINT_ENCODE.md (§0 to L0 semantics)
+    - **path**: L8/L1/state-space/HUMINT_ENCODE.md
+    - **where**: MAIN, ROADMAP, BETA
+    - **what_it_is**: Routing plan: §1–3 and §6 substitutability states are L1; §0 (the marker, "[source text withheld from the public copy]") is locally authored semantics, L0; the warrants are peer standards text (L7 ingress). My reading adds: §4 ("the honest limit"), §[source text withheld from the public copy]), §6.5–6.7 and the addendum are L5 research judgment. The §6.1 term counts are computation as run (L4).
+    - **own_label**: Routing plan: "MOVE · OWNER DECISION on split". Harmonization §5 lists it as left open.
+    - **evidence_state**: UNRESOLVED (pending owner decision D14)
+    - **checked_how**: MAIN:L8/L0/semantics/0.md:38 cites §0 by reference ("whether to split it is the owner's call"). No split exists in any state.
+    - **locator**: MAIN:L8/L6/history/harmonization-2026-09-05.md:91; MAIN:L8/L6/history/7LM_ROUTING_PLAN_2026-09-05.md:151
+    - **quote**: `HUMINT_ENCODE.md` (§0 → L0 semantics)
+    - **depends_on**
+      - Owner decision D14
+    - **open_items**
+      - D14 unruled
+      - The addendum on printability and the trust root is not addressed by any routing record
+  - item 12
+    - **id**: SP-03
+    - **title**: Open split: REQUIREMENTS_OWNERSHIP.md (findings ①–③ and Q10–Q13 to L5; Q13 under the owner rule)
+    - **path**: L8/L1/state-space/REQUIREMENTS_OWNERSHIP.md
+    - **where**: MAIN, ROADMAP, BETA
+    - **what_it_is**: Routing plan: the E/J/X/P/D partition, IF-1..IF-8 and the Q13 exclusion are L1; findings ①–③ and Q10–Q13 are L5. Separately, Q13 takes definitions of autonomous directly from two standards, against the owner rule of 2026-09-05, and must resolve through the peer-1 binding. My reading adds: the provenance and recovery account (§ Provenance, §9) is L4/L6, and §8 (scope gap) is an L5 finding.
+    - **own_label**: Routing plan: "MOVE · OWNER DECISION on split". Harmonization §5: left open, and separately "Under the owner rule: … Q13 of `REQUIREMENTS_OWNERSHIP.md`".
+    - **evidence_state**: UNRESOLVED. The split is pending (D14). The Q13 re-route is done only on BETA, as an overlay paragraph and not an edit of Q13.
+    - **checked_how**: MAIN:L8/L5/research/findings/0.md:39 cites the findings by reference. MAIN:L7/peering/public/ingress/peer-1/object-1/0.md:34 still lists Q13 among "Three files at HEAD" that take the definition from elsewhere. The BETA line 36 of the same sheet says Q13 now carries an explicit receiving-use disposition.
+    - **locator**: MAIN:L8/L6/history/harmonization-2026-09-05.md:91 and :93; MAIN:L8/L6/history/7LM_ROUTING_PLAN_2026-09-05.md:152; BETA:L8/L1/state-space/REQUIREMENTS_OWNERSHIP.md:268
+    - **quote**: resolving them through this binding is the owner's edit
+    - **depends_on**
+      - Owner decision D14
+      - [source text withheld from the public copy] Autonomous and nowhere else.")
+    - **open_items**
+      - D14 unruled
+      - Q13 unresolved on MAIN and ROADMAP; overlaid, not resolved, on BETA
+  - item 13
+    - **id**: SP-04
+    - **title**: Open extraction: three candidate L1 invariants in the 2026-08-05 session file
+    - **path**: L8/L4/work/writing/sessions/SESSION_2026-08-05_AUDITON_ARCHITECTURE.md
+    - **where**: MAIN, ROADMAP, BETA
+    - **what_it_is**: The layer sheet and the routing plan name three stipulated invariants ("take ≤ give − 1", "data ≤ energy + 1", "1 is dimensionless") in §1–2 and §9 of a session file as candidate L1 objects. Nothing has been extracted. I did not read the session file (outside this scope).
+    - **own_label**: "INTERNAL ONLY, not verified against any source"; "owner's call"; routing plan "Nothing is extracted by this plan."
+    - **evidence_state**: UNRESOLVED (pending owner decision); the invariants themselves are ASSERTED per the sheet
+    - **checked_how**: No file in L8/L1/state-space/ in any state carries these invariants (git ls-tree of all three states).
+    - **locator**: MAIN:L8/L1/0.md:109; MAIN:L8/L6/history/7LM_ROUTING_PLAN_2026-09-05.md:173; MAIN:L8/L6/history/harmonization-2026-09-05.md:92
+    - **quote**: Extract and register: the three candidate objects in `SESSION_2026-08-05_AUDITON_ARCHITECTURE.md` (L1 invariants; L2 isomorphism; L3 scaling)
+    - **depends_on**
+      - Owner decision (grouped under D14 in the roadmap)
+    - **open_items**
+      - Extraction not done
+  - item 14
+    - **id**: SP-05
+    - **title**: No split record for the two restored files (both are mixtures)
+    - **path**: L8/L1/state-space/AUDITON_REPLICATOR.md; L8/L1/state-space/AUDITABILITY_REQUIREMENTS.md
+    - **where**: ROADMAP
+    - **what_it_is**: The restore of 2026-09-14 placed both files at L1 as objects that state a state space. Neither is covered by harmonization §5, the routing plan or D14, which pre-date the restore or name only three files. On my reading both are mixtures. Replicator: profile table, direction attribute and minimality table are L1; drift algebra is L2/L3; the run is L4; the adversarial review and refutations are L5 review. Auditability: the SELF/BIND/HUMAN/ORG/SPLIT partition is L1-like; method and counts are L4; §2, §5 and §6 are L5 findings; Part A is already at L7.
+    - **own_label**: Restore record: "`[source text withheld from the public copy]"
+    - **evidence_state**: UNRESOLVED (no record exists; the classification above is mine)
+    - **checked_how**: Searched harmonization-2026-09-05.md, the routing plan and the roadmap decision table for both file names. They appear only as chapter feeds and as D15 (restore), never with a split or re-file decision.
+    - **locator**: ROADMAP:L8/L6/history/restore-2026-09-14.md:18 and :55
+    - **quote**: `[source text withheld from the public copy]
+    - **depends_on**
+      - An owner decision that does not yet exist
+    - **open_items**
+      - Whether the replicator's review record (§5.2, §6) belongs at L5 review
+      - Whether the auditability file's findings belong at L5 and its counts at L4
+  - item 15
+    - **id**: CT-01
+    - **title**: Count disagreement: 78 requirements vs 113 requirements
+    - **path**: L8/L1/state-space/REQUIREMENTS_OWNERSHIP.md; L8/L5/research/findings/AUDITON_PACKABILITY_2026-08-04.md
+    - **where**: MAIN (statement only); ROADMAP (both documents); BETA (statement only)
+    - **what_it_is**: Two extraction runs on 2026-08-04 report different totals. The packability finding says 78 requirements and 46 definitions. The ownership file says 113 ([source text withheld from the public copy]). The ownership file calls the 78 "a different, smaller run", not a contradiction and not a superseded version. No document gives a per-body breakdown of the 78 or maps one set to the other.
+    - **own_label**: "**[source text withheld from the public copy].**"; sheet: "unreconciled"; BETA findings: "inherited 78/113 extraction reconciliation remain incomplete"; roadmap step [source text withheld from the public copy]"
+    - **evidence_state**: UNRESOLVED (both figures stand; the repository itself says they are not reconciled)
+    - **checked_how**: Read both statements. The 78 is at ROADMAP:L8/L5/research/findings/AUDITON_PACKABILITY_2026-08-04.md:15; that file is absent from MAIN and BETA, so on those states the 78 exists only as a citation. Heading counts of the extraction files confirm 99 of the 113 (IEEE 55, ISO 24, NIST 20).
+    - **locator**: MAIN:L8/L1/state-space/REQUIREMENTS_OWNERSHIP.md:18-21 and :244; ROADMAP:L8/L5/research/findings/AUDITON_PACKABILITY_2026-08-04.md:15
+    - **quote**: **[source text withheld from the public copy].**
+    - **depends_on**
+      - The workflow journals of both runs (outside the repository)
+    - **open_items**
+      - Whether 78 counts requirements net of the 46 definitions (78 + 46 = 124, not 113) or a different lane scope: no document says
+      - The roadmap's chapter 13 prints "113 Requirements, 21 Obligations" in its title
+  - item 16
+    - **id**: CT-02
+    - **title**: Count disagreement: IEEE 7009 carries sixteen of twenty-one (text) vs fifteen (table)
+    - **path**: L8/L1/state-space/REQUIREMENTS_OWNERSHIP.md
+    - **where**: MAIN, ROADMAP, BETA; propagated in ROADMAP and HISTORY
+    - **what_it_is**: The file says in three places that IEEE 7009 carries sixteen of the 21 envelope obligations (76%). The same file says "7001 (6) and 7009 (15)", and its §3 table has 6 rows of 7001 and 15 rows of 7009; 15 of 21 is 71%. Sixteen is the number of Annex A requirements (ASR-001 to ASR-016), which the table groups into 6 rows. The figure sixteen is repeated in the standards register, two source lists, the spine and the retired freeze file.
+    - **evidence_state**: CONTRADICTED (the file disagrees with itself; the table and the extraction file support fifteen)
+    - **checked_how**: Counted the §3 rows by ID: 7001-R3, R5, R6, R7, R8, R9 (6); 7009-R2 to R9, R11 and six ASR rows (15). Checked against MAIN:L8/L4/work/computation/ieee-requirements-for-autonomouos.md, where 7009 has R1–R13 and six ASR headings; R1, R10, R12 are X and R13 is J in the ownership file, leaving 15.
+    - **locator**: MAIN:L8/L1/state-space/REQUIREMENTS_OWNERSHIP.md:71-72 (15) vs :117 and :263-264 (sixteen, 76%); ROADMAP:L7/provenance/sources/STANDARDS_REGISTER.md:344, :492, :495; ROADMAP:L7/provenance/sources/lists-2026-08-08/PRIMARY.md:104; ROADMAP:L7/provenance/sources/lists-2026-08-08/STANDARDS_CITED.md:24; ROADMAP:L8/L5/research/review/SPINE_v0.1_2026-08-14.md:138; HISTORY:FREEZE.md:259
+    - **quote**: [source text withheld from the public copy]
+    - **own_label**: none (the repository has not noticed it; BETA's "ledger arithmetic" corrections do not touch it)
+    - **depends_on**
+      - IEEE 7009-2024 Annex A grouping
+    - **open_items**
+      - Correct by dated overlay (the file is append-and-strike) in the ownership file and the five documents that repeat it
+      - Q12's "76% of the buildable requirement load" becomes 71%
+  - item 17
+    - **id**: CT-03
+    - **title**: Lane counts of the 113: three confirmed, NASA 14 not confirmable
+    - **path**: L8/L4/work/computation/ieee-requirements-for-autonomouos.md; iso-iec-requirements-for-autonomous.md; nist-requirements-for-autonomouos.md
+    - **where**: MAIN, ROADMAP, BETA
+    - **what_it_is**: The ownership file says the lane counts were "verified on recovery" from a workflow journal. Three per-body extraction files hold the full verbatim text and their heading counts match the claimed lane counts. No NASA file exists in any state; the extraction files say [source text withheld from the public copy]`", but neither lists the 14 NASA requirements (only NASA-R6 and NASA-R10 are named).
+    - **own_label**: "Lane counts verified on recovery"; "The register's count is correct."
+    - **evidence_state**: INTERNALLY CHECKED for ISO 24, IEEE 55, NIST 20 (by me); UNRESOLVED for NASA 14 and so for the total 113
+    - **checked_how**: grep of '### ' requirement headings: IEEE 55 (7001: 11 D + 13 R; 7009: 5 D + 13 R + 6 ASR; 7 others), ISO 24 (ISO-R1..R24), NIST 20 (NIST-R1..R20). Searched all four states for a NASA requirements file: none. These files were created after HISTORY (not in 1d83788).
+    - **locator**: MAIN:L8/L4/work/computation/ieee-requirements-for-autonomouos.md:41; MAIN:L8/L4/work/computation/iso-iec-requirements-for-autonomous.md:44; MAIN:L8/L4/work/computation/nist-requirements-for-autonomouos.md:32; MAIN:L8/L1/state-space/REQUIREMENTS_OWNERSHIP.md:15
+    - **quote**: [source text withheld from the public copy]
+    - **depends_on**
+      - Workflow journal wf_b00a2270-83e (outside the repository)
+    - **open_items**
+      - The 14 NASA requirements are listed nowhere in the repository
+      - The ASR rows are grouped (16 requirements in 6 rows), so 113 counts rows, not individual requirements
+  - item 18
+    - **id**: CT-04
+    - **title**: Count disagreement inside AUDITABILITY_REQUIREMENTS.md: the AC screen does not close
+    - **path**: L8/L1/state-space/AUDITABILITY_REQUIREMENTS.md
+    - **where**: ROADMAP (and HISTORY)
+    - **what_it_is**: Three AC figures do not agree with the document's own lists or with Part A. (1) The heading says 21 AC controls bear; the table has 22 rows. (2) The exclusion list is said to be "approximately 90 controls"; summing the list as written gives 62, and Part A gives 61 live controls for those seventeen bases. (3) 132 live AC controls minus 61 excluded minus 22 bearing leaves 49 live AC controls that are neither excluded by the stated list nor listed as bearing (enhancements of AC-3, AC-4, AC-6, AC-16, AC-24).
+    - **own_label**: "**[source text withheld from the public copy].**"; "§4 is a screen, not an assignment."
+    - **evidence_state**: CONTRADICTED (by my recount against the document's own table and Part A)
+    - **checked_how**: Counted the §4 table rows (22). Summed the exclusion list with its stated "+N" enhancements (62). Counted live controls per base in Part A with awk (61; AC-2 has 13 enhancements of which 12 are live). Live totals in Part A: AC-3 14, AC-4 31, AC-6 11, AC-16 11, AC-24 3, AC-25 1.
+    - **locator**: ROADMAP:L8/L1/state-space/AUDITABILITY_REQUIREMENTS.md:172-177 and :248-249; MAIN:L7/provenance/sources/staging-records/standards/extracted/SP800-53r5_AC-AU_verbatim.md (headings)
+    - **quote**: [source text withheld from the public copy]
+    - **depends_on**
+      - Part A
+    - **open_items**
+      - About 49 live AC controls have no recorded disposition
+      - The closure claim for Q11 ("AC screened") rests on this screen
+  - item 19
+    - **id**: CT-05
+    - **title**: Q11 / Q2a status differs by state: blocking, partly closed, open
+    - **path**: L8/L1/state-space/REQUIREMENTS_OWNERSHIP.md; L8/L1/state-space/AUDITABILITY_REQUIREMENTS.md; L7/provenance/sources/STANDARDS_REGISTER.md
+    - **where**: MAIN, ROADMAP, BETA
+    - **what_it_is**: Q11 (the auditability requirements were never extracted) is marked "blocking" in the ownership file in every state. On ROADMAP the restored Part B says it is [source text withheld from the public copy] and that S11 is done, yet the restored register still carries Q2a as blocking and has no amendment recording the closure. MAIN and BETA do not hold Part B, and BETA writes "Q11 extraction remains open." The roadmap also lists "run Q11" as chapter 13's next step while feeding the chapter from the file that says it was run.
+    - **own_label**: Ownership: "← *blocking*"; Part B: "**[source text withheld from the public copy].**"; register Q2a: "← *[source text withheld from the public copy])"; BETA: "Q11 extraction remains open."
+    - **evidence_state**: CONTRADICTED across documents and states; the substance is UNRESOLVED (partial extraction, AC not fully assigned, other standards not done)
+    - **checked_how**: Read the four statements. Searched the ROADMAP register for 'AUDITABILITY_REQUIREMENTS' (no hit) and for an amendment after A-003 that mentions S11 or Q2a (A-004 concerns IEEE 1872 custody only).
+    - **locator**: MAIN:L8/L1/state-space/REQUIREMENTS_OWNERSHIP.md:259-261; ROADMAP:L8/L1/state-space/AUDITABILITY_REQUIREMENTS.md:236-237; ROADMAP:L7/provenance/sources/STANDARDS_REGISTER.md:347-351; BETA:L8/L1/state-space/REQUIREMENTS_OWNERSHIP.md:268; ROADMAP:L8/L5/research/review/BOOK_STRUCTURE_AND_ROADMAP_2026-09-13.md:227 and :519
+    - **quote**: [source text withheld from the public copy]
+    - **depends_on**
+      - Whether ROADMAP's restored files are adopted
+    - **open_items**
+      - Extraction not run [source text withheld from the public copy], IEC, CCSDS, IETF, COSPAR, or for SC-7(13), SC-32 and SI-10(1)
+      - No merged envelope requirement count exists; the register says "[source text withheld from the public copy]" until the sets are merged
+  - item 20
+    - **id**: CT-06
+    - **title**: Envelope counts: twelve / eight / four; ten and two; three freezes on two compartments; four separation controls vs nine
+    - **path**: L8/L1/state-space/AUDITON_ENVELOPE.md
+    - **where**: MAIN, ROADMAP, BETA
+    - **what_it_is**: The file gives twelve compartments, four (P) and eight (E), and says "The envelope is eight compartments." The roadmap carries this as decision D18 (eight versus twelve), with a recommendation that both counts are right and the owner chooses what the book prints. The file also says ten compartments are substitutable or need no human and two (C9, C11) carry freezes, under a heading of three freezes: the third, force, binds no compartment, and slot H6 appears in no compartment row. H4 and H5 are also absent from the map. The separation principle cites four NIST controls; Part B says it should cite nine.
+    - **own_label**: D18: "[source text withheld from the public copy]"
+    - **evidence_state**: INTERNALLY CHECKED for 12 = 4 + 8 and 10 + 2 (by me, from the table); UNRESOLVED for D18 and for the four-versus-nine separation controls
+    - **checked_how**: Counted the §1 table: (P) C1, C4, C5, C8; ([source text withheld from the public copy]. HUMINT cells: H1 at C6, H2 at C9, H3 at C10, H7 at C11. The 4-vs-9 recommendation is at ROADMAP Part B :238; the envelope's C7 row already cites AU-9(1) and AU-9(3), outside the §0 table.
+    - **locator**: MAIN:L8/L1/state-space/AUDITON_ENVELOPE.md:137-146 and :150-159; ROADMAP:L8/L5/research/review/BOOK_STRUCTURE_AND_ROADMAP_2026-09-13.md:628; ROADMAP:L8/L1/state-space/AUDITABILITY_REQUIREMENTS.md:238
+    - **quote**: [source text withheld from the public copy].
+    - **depends_on**
+      - Owner decision D18
+    - **open_items**
+      - D18 unruled
+      - Where the force freeze (H6) attaches in the map
+      - Whether the five extra controls enter the separation principle (owner's edit)
+  - item 21
+    - **id**: CT-07
+    - **title**: HUMINT_ENCODE counts that do not match their own enumerations
+    - **path**: L8/L1/state-space/HUMINT_ENCODE.md
+    - **where**: MAIN, ROADMAP, BETA
+    - **what_it_is**: Two figures in the file disagree with the lists beside them. The PERMITTED table has five rows, followed by "These three are the warrant" and later "one of only three warrants" (two rows were evidently added without updating the sentence). §6.1 is headed "[source text withheld from the public copy]" while the controls enumerated are SR-2 to SR-11, CM-2, CM-3 and SA-10, which is thirteen. The 38 blocked provisions and the term counts cannot be recounted from the repository.
+    - **own_label**: §6.7: "`[source text withheld from the public copy]" for quotations; classifications `INTERNALLY DERIVED`
+    - **evidence_state**: CONTRADICTED internally for the two counts; the 27 enhancements and 38 provisions are ASSERTED (no recount possible here)
+    - **checked_how**: Counted table rows at :37-41 (5). Enumerated SR-2…SR-11 (10) plus CM-2, CM-3, SA-10 (3). Part A covers only AC and AU, so the SR/CM/SA text is not in the tree to recount enhancements.
+    - **locator**: MAIN:L8/L1/state-space/HUMINT_ENCODE.md:37-44, :145-146, :159-161, :214
+    - **quote**: **[source text withheld from the public copy].**
+    - **depends_on**
+      - [source text withheld from the public copy] (held copy not in the tree)
+      - IAF/ILAC accreditation documents (not in the tree)
+    - **open_items**
+      - Which three of the five rows are "the warrant" (one of the five is the NOT RE-VERIFIABLE 22989 row)
+      - Whether "eleven" counts a different control set from the one listed
+  - item 22
+    - **id**: CX-01
+    - **title**: Contradiction: C2 root of trust — "an interface" (envelope) vs reopened with two options (replicator); PUF sourced vs not held
+    - **path**: L8/L1/state-space/AUDITON_ENVELOPE.md; L8/L1/state-space/AUDITON_REPLICATOR.md
+    - **where**: MAIN/BETA carry the envelope only; ROADMAP carries both
+    - **what_it_is**: The envelope says C2's root of trust is settled as an interface to the base. The replicator's review, same day, says [source text withheld from the public copy] and gives two codified options (base-issued, self-rooted). The envelope was not amended. Separately the envelope says no PUF source is held; the replicator says PUFs are now sourced in SR-4(3) and "That item closes".
+    - **own_label**: Replicator §[source text withheld from the public copy]"
+    - **evidence_state**: CONTRADICTED (two L1 documents disagree; the later one is the replicator, by its own text)
+    - **checked_how**: Read both passages. The SR-4(3) quotation names PUFs [source text withheld from the public copy]; it does not address the envelope's question ([source text withheld from the public copy]). The SA-8(21) and SR-4(3) text is not in Part A, so the quotations are not confirmed by me.
+    - **locator**: MAIN:L8/L1/state-space/AUDITON_ENVELOPE.md:224-236 and :257; ROADMAP:L8/L1/state-space/AUDITON_REPLICATOR.md:123-125, :530-547, :599
+    - **quote**: **[source text withheld from the public copy].**
+    - **depends_on**
+      - NIST SP 800-53r5 SA-8(21), SC-17, SR-4(3)
+    - **open_items**
+      - Which C2 option the envelope adopts
+      - Envelope §4 and §5 not updated; on MAIN and BETA the reader sees only the earlier position
+  - item 23
+    - **id**: CX-02
+    - **title**: Contradiction: C6 stop path — non-overridable (envelope) vs adjudicated and refusable (AUDITONOMY v2); BETA uses a third form
+    - **path**: L8/L1/state-space/AUDITON_ENVELOPE.md
+    - **where**: MAIN, ROADMAP, BETA (envelope); the record of the conflict is HISTORY only (FREEZE.md §6c); AUDITONOMY.md is ROADMAP only
+    - **what_it_is**: The envelope encodes slot H1 at C6 as a non-overridable stop path. The retired freeze file records that on 2026-08-05 the definition file changed so that a [source text withheld from the public copy]" and may be refused, that the envelope was not updated, and that the reconciliation is the owner's. It adds a conditional second conflict with IEEE 7009-R3 that depends on a safety classification never run. BETA's admission file states "[source text withheld from the public copy]" without reference to either.
+    - **own_label**: FREEZE.md: "← *Eric's reconciliation*"; conflict 2: "`FORMULA-USE CHECK REQUIRED`" … "← *[source text withheld from the public copy]*"
+    - **evidence_state**: CONTRADICTED (recorded by the repository in a file that is now history-only); the conditional 7009 conflict is UNRESOLVED (check unrun)
+    - **checked_how**: Read HISTORY:FREEZE.md:228-262 and the envelope's C6 row. FREEZE.md was not restored (ROADMAP:L8/L6/history/restore-2026-09-14.md:90, "NOT RESTORED"), so no current state carries this conflict record. I did not read AUDITONOMY.md beyond its status lines.
+    - **locator**: MAIN:L8/L1/state-space/AUDITON_ENVELOPE.md:129; HISTORY:FREEZE.md:230-237 and :256-260; BETA:L8/L1/state-space/AUDITONOMOUS_BETA_ADMISSION.md:3
+    - **quote**: [source text withheld from the public copy]`.**
+    - **depends_on**
+      - ROADMAP:L8/L0/semantics/definitions/AUDITONOMY.md §0 (v2 definition, set by the owner 2026-08-05)
+      - IEEE 7009-2024 cl. 6.2 (IEEE-7009-R3), R4, R5, R6
+    - **open_items**
+      - Owner's reconciliation of the stop path
+      - The 7009-R5/R6 classification of the corpus's own functions has not been performed
+      - The conflict record exists only in history
+  - item 24
+    - **id**: CX-03
+    - **title**: Open threat to the (P)/(E) split: removing C8 makes the minimal auditon non-autonomous under ISO/IEC 22989
+    - **path**: L8/L1/state-space/AUDITON_REPLICATOR.md
+    - **where**: ROADMAP (and HISTORY)
+    - **what_it_is**: The replicator's minimality test drops only C8 Adapt, a platform compartment. Under ISO/IEC 22989 §3.1.5 that leaves a unit that is "fully auditonomous and not autonomous". Three readings are offered and none chosen; reading 2 would make C8 an envelope concern and change the map. The envelope does not record this threat.
+    - **own_label**: "⚠ `[source text withheld from the public copy]"; "**Flagged, not resolved.**"
+    - **evidence_state**: UNRESOLVED
+    - **checked_how**: Read §5.5 and §5.5.1 and the §8 status row; searched the envelope for any mention of the threat (none).
+    - **locator**: ROADMAP:L8/L1/state-space/AUDITON_REPLICATOR.md:420-449 and :612
+    - **quote**: **[source text withheld from the public copy].
+    - **depends_on**
+      - ISO/IEC 22989 §3.1.5
+      - aybllc/autonomous FINDING_autonomy_requires_a_human_referent.md
+    - **open_items**
+      - Whether auditonomy and autonomy are independent axes (reading 1) — bears on the definition and on the roadmap's D20
+      - "[source text withheld from the public copy]"
+  - item 25
+    - **id**: CX-04
+    - **title**: MAIN's envelope cites a demonstration that MAIN does not hold and that was partly refuted
+    - **path**: L8/L1/state-space/AUDITON_ENVELOPE.md
+    - **where**: MAIN, BETA (file absent); ROADMAP (file present)
+    - **what_it_is**: Envelope §0b says the one-system claim was "Demonstrated once, on the hardest available case" in definitions/AUDITON_REPLICATOR.md. That file was removed from MAIN at the prune of 2026-08-15 and is back only on ROADMAP. The part the envelope relies on (no new compartment, a missing direction attribute) is one of the claims the review let stand "with one amendment"; the same document's other headline claims were refuted, and the amendment was never applied to the envelope's map.
+    - **own_label**: Replicator header: "[source text withheld from the public copy])"
+    - **evidence_state**: ASSERTED on MAIN and BETA (the support is not present to check); INTERNALLY CHECKED on ROADMAP (the cited result is there, with the amendment)
+    - **checked_how**: git ls-tree of MAIN and BETA shows no AUDITON_REPLICATOR.md. The ROADMAP sheet records the restoration and the refutations.
+    - **locator**: MAIN:L8/L1/state-space/AUDITON_ENVELOPE.md:110-113; ROADMAP:L8/L1/state-space/AUDITON_REPLICATOR.md:8-14
+    - **quote**: Two instances now share one map.
+    - **depends_on**
+      - AUDITON_REPLICATOR.md
+    - **open_items**
+      - Add the direction attribute to the map, or record why not
+      - On MAIN and BETA the claim has no support in the tree
+  - item 26
+    - **id**: MS-01
+    - **title**: What the manuscript needs from Layer 1 (chapters 12 and 13 of the ROADMAP outline)
+    - **path**: L8/L5/research/review/BOOK_STRUCTURE_AND_ROADMAP_2026-09-13.md
+    - **where**: ROADMAP only
+    - **what_it_is**: The roadmap feeds [source text withheld from the public copy]", labelled CONJECTURE) from the envelope, the replicator and the packability finding, gated by D14, D18, D20. It feeds [source text withheld from the public copy]", labelled RESEARCHING) from the ownership file, HUMINT_ENCODE, the extraction files, the register and Part B, gated by D14. Both chapters have no prose. The roadmap's steps for this part: adversarial review of the envelope; rule eight versus twelve; run Q11; reconcile 78 and 113; resolve Q13 through the binding.
+    - **own_label**: Chapter 12: "**CONJECTURE** · draft: the envelope document … prose none"; chapter 13: "**RESEARCHING** · draft: both instruments exist; prose none"
+    - **evidence_state**: UNRESOLVED (all five steps are open; D14, D18, D20 unruled)
+    - **checked_how**: Read the chapter entries and the steps. Each step corresponds to an open item confirmed above. Chapter 13's "Verify" line also asks for "[source text withheld from the public copy]", the two legal freezes HUMINT_ENCODE and the envelope rest on.
+    - **locator**: ROADMAP:L8/L5/research/review/BOOK_STRUCTURE_AND_ROADMAP_2026-09-13.md:212-228, :518-520, :625, :628, :630
+    - **quote**: [source text withheld from the public copy]
+    - **depends_on**
+      - D14, D18, D20
+      - The ROADMAP-only files (replicator, Part B, register, packability)
+    - **open_items**
+      - The chapter 13 title prints 113 and 21; both are counts of rows routed by the session (HISTORY FREEZE.md:85-87: "[source text withheld from the public copy]"), and the sixteen/fifteen error sits in the spine entry
+      - The roadmap does not mention the C2, C6 or (P)/(E) contradictions as chapter 12 gates
+- **defects**
+  - item 1
+    - **statement**: "[source text withheld from the public copy]" and "76%" contradict the same file's "7001 (6) and 7009 (15)" and its 15-row table (71%). The figure is repeated in STANDARDS_REGISTER.md:344/:492/:495, PRIMARY.md:104 ("Three quarters"), STANDARDS_CITED.md:24 and SPINE_v0.1:138 on ROADMAP, and in FREEZE.md:259 in HISTORY. BETA, whose commit message claims corrected ledger arithmetic, leaves it unchanged.
+    - **locator**: MAIN:L8/L1/state-space/REQUIREMENTS_OWNERSHIP.md:117 and :263-264 vs :71-72
+  - item 2
+    - **statement**: Wrong internal cross-references in REQUIREMENTS_OWNERSHIP.md: "Reconciling them is open work (see §6)" points to §6, which is the D table (the unreconciled note is in §10, line 244); "NEW OPEN QUESTION — see §7/Q10" points to §7, the interface contract (Q10 is in §11, line 254).
+    - **locator**: MAIN:L8/L1/state-space/REQUIREMENTS_OWNERSHIP.md:21 and :146
+  - item 3
+    - **statement**: The three MAIN objects cite files by paths of the retired layouts (definitions/…, research/…, governance/…, intake/…, STANDARDS_REGISTER.md as a sibling link, and `../autonomous/definitions/AUDITON_ENVELOPE.md` for a file that is in this repository). On MAIN and BETA several targets are absent altogether: AUDITONOMY.md, AUDITON_REPLICATOR.md, STANDARDS_REGISTER.md, AUDITON_PACKABILITY_2026-08-04.md. The sheet says where the L0/L3/L5 citations stand but not that these targets are missing.
+    - **locator**: MAIN:L8/L1/state-space/REQUIREMENTS_OWNERSHIP.md:3, :9, :19, :30; MAIN:L8/L1/state-space/AUDITON_ENVELOPE.md:20, :76, :110, :174, :188, :253; MAIN:L8/L1/state-space/HUMINT_ENCODE.md:16, :39, :121, :282, :291-293
+  - item 4
+    - **statement**: The MAIN copies of all three objects are re-saves made at the prune commit 8c98573 (table padding and blank quote lines; no word changed by normalised diff). In the envelope the re-save inserted an empty quote line inside the owner's quoted sentence, splitting it across a heading boundary. The restore record calls the HISTORY versions "SUPERSEDED — a later version stands at HEAD" although they differ only in whitespace.
+    - **locator**: MAIN:L8/L1/state-space/AUDITON_ENVELOPE.md:216-218 vs HISTORY:manuscripts/definitions/AUDITON_ENVELOPE.md:216-217; ROADMAP:L8/L6/history/restore-2026-09-14.md:343, :346, :363
+  - item 5
+    - **statement**: HUMINT_ENCODE.md: "These three are the warrant" follows a five-row table, and §5 repeats "one of only three warrants".
+    - **locator**: MAIN:L8/L1/state-space/HUMINT_ENCODE.md:43 and :145-146 (table at :37-41)
+  - item 6
+    - **statement**: HUMINT_ENCODE.md §6.1 heading says "eleven controls" while the controls enumerated beneath it ([source text withheld from the public copy]) number thirteen.
+    - **locator**: MAIN:L8/L1/state-space/HUMINT_ENCODE.md:159-161
+  - item 7
+    - **statement**: HUMINT_ENCODE.md slot H7 cites "(42006)" as the certification block; ISO/IEC 42006 is introduced nowhere else in the file, whose BLOCKED table cites ISO/IEC 17021-1 §3.6 and ISO/IEC 42001.
+    - **locator**: MAIN:L8/L1/state-space/HUMINT_ENCODE.md:84 vs :52
+  - item 8
+    - **statement**: HUMINT_ENCODE.md cites "SCOPE_single_object.md §11–12" and "§3" for the replication exclusion; the scope ruling has sections 1 to 5 and the exclusion is at its lines 11-12 and §5 item 1 (the replicator cites the same exclusion as "§5.1").
+    - **locator**: MAIN:L8/L1/state-space/HUMINT_ENCODE.md:282; aybllc/autonomous origin/main:L8/L0/universality/SCOPE_single_object.md:11-12 and :127-129; ROADMAP:L8/L1/state-space/AUDITON_REPLICATOR.md:17
+  - item 9
+    - **statement**: AUDITABILITY_REQUIREMENTS.md: heading "The AC controls that do bear — 21" over a 22-row table; exclusion list called "approximately 90 controls" sums to 62 as written and to 61 live controls in Part A; AC-2 is given "+13" enhancements where 12 are live.
+    - **locator**: ROADMAP:L8/L1/state-space/AUDITABILITY_REQUIREMENTS.md:172-177, :181-202, :248
+  - item 10
+    - **statement**: AUDITABILITY_REQUIREMENTS.md: "[source text withheld from the public copy]" under a table with five starred rows (three double-starred).
+    - **locator**: ROADMAP:L8/L1/state-space/AUDITABILITY_REQUIREMENTS.md:94-98 and :108
+  - item 11
+    - **statement**: AUDITABILITY_REQUIREMENTS.md percentages are truncated, not rounded: 96/132 = 72.7% printed 72%; 39/56 = 69.6% printed 69%; 135/188 = 71.8% printed 71% (the 71% is the headline of §2).
+    - **locator**: ROADMAP:L8/L1/state-space/AUDITABILITY_REQUIREMENTS.md:49-55
+  - item 12
+    - **statement**: AUDITABILITY_REQUIREMENTS.md quotes three controls in quotation marks in shortened form that drops operative words present in Part A: AU-5(4) omits "[source text withheld from the public copy]"; AC-3(10) omits "[source text withheld from the public copy]-24(2) is given as "without user or process identity", which is the control's title paraphrased, not its text.
+    - **locator**: ROADMAP:L8/L1/state-space/AUDITABILITY_REQUIREMENTS.md:120-122, :193, :202 vs MAIN:L7/provenance/sources/staging-records/standards/extracted/SP800-53r5_AC-AU_verbatim.md:1079-1082, :231-232, :950-952
+  - item 13
+    - **statement**: AUDITON_REPLICATOR.md: "[source text withheld from the public copy]" accounts for ten of twelve compartments.
+    - **locator**: ROADMAP:L8/L1/state-space/AUDITON_REPLICATOR.md:71
+  - item 14
+    - **statement**: AUDITON_REPLICATOR.md §7 and its §8 status row still say the SR-family HUMINT question is "under review", while the file's own header and HUMINT_ENCODE §6 record that the review concluded. The header says "TWO OF THREE HEADLINE CLAIMS" over a five-row outcome table.
+    - **locator**: ROADMAP:L8/L1/state-space/AUDITON_REPLICATOR.md:577, :589-590, :608 vs :3, :12
+  - item 15
+    - **statement**: AUDITON_REPLICATOR.md rests its scope standing on rulings C-007 and C-008 in governance/RULINGS.md; the rulings register in the companion repository is a 1-byte empty file, as the companion's own records state.
+    - **locator**: ROADMAP:L8/L1/state-space/AUDITON_REPLICATOR.md:17-18, :29; aybllc/autonomous origin/main:L8/L5/research/review/RULINGS.md (1 byte); aybllc/autonomous origin/main:L8/L5/research/review/0.md:39
+  - item 16
+    - **statement**: BETA adds L8/L1/state-space/AUDITONOMOUS_BETA_ADMISSION.md without updating either Layer 1 sheet (both are the MAIN blobs), and the file carries no status label, date or author, against the repository's label discipline.
+    - **locator**: BETA:L8/L1/state-space/0.md:35-39; BETA:L8/L1/0.md:107; BETA:L8/L1/state-space/AUDITONOMOUS_BETA_ADMISSION.md:1-5
+  - item 17
+    - **statement**: BETA inserts its Q13 disposition in the middle of a file whose stated protocol is append-and-strike (between Q12 and Q13); Q13 itself is neither struck nor annotated.
+    - **locator**: BETA:L8/L1/state-space/REQUIREMENTS_OWNERSHIP.md:268-273; protocol at :8-9
+  - item 18
+    - **statement**: The restore record says L0 and L1 received "[source text withheld from the public copy]" but its own table places three files there (AUDITONOMY.md at L0; AUDITON_REPLICATOR.md and AUDITABILITY_REQUIREMENTS.md at L1).
+    - **locator**: ROADMAP:L8/L6/history/restore-2026-09-14.md:18 vs :54-55
+  - item 19
+    - **statement**: The ROADMAP standards register was restored without an amendment recording that Part B answered Q2a/S11 for AC and AU; it still marks Q2a "blocking" and S11 as to be run.
+    - **locator**: ROADMAP:L7/provenance/sources/STANDARDS_REGISTER.md:347-351 and :484-489 vs ROADMAP:L8/L1/state-space/AUDITABILITY_REQUIREMENTS.md:236-237
+  - item 20
+    - **statement**: Label collision in the BETA findings: "C6 stop and C7 record" (envelope compartments) and "[source text withheld from the public copy]" (rows of CONTRADICTIONS.md) appear in the same short file without distinction.
+    - **locator**: BETA:L8/L5/research/findings/AUDITONOMOUS_BETA_FINDINGS.md:9 and :24
+  - item 21
+    - **statement**: The conflict record for the C6 stop path (FREEZE.md §6c, flagged for the owner's reconciliation) exists only in history; FREEZE.md was deliberately not restored and no current sheet carries the conflict.
+    - **locator**: HISTORY:FREEZE.md:228-262; ROADMAP:L8/L6/history/restore-2026-09-14.md:90
+- **open_questions**
+  - NASA 14: the fourteen NASA requirements are listed in no file in any state, and the journal the ownership file names is outside the repository. I could not confirm the total of 113 or any E/J/X/D assignment for the NASA, ISO or NIST rows.
+  - 78 vs 113: no document gives a breakdown of the 78 or says how the two runs relate. I could not tell whether 78 and 46 are disjoint (requirements and definitions) or overlapping.
+  - Why the text says sixteen for IEEE 7009: probably a carry-over from the sixteen Annex A requirements (ASR-001 to ASR-016), but no record says so. If the 113 is meant to count ASR requirements individually, the totals would change (ten more rows), and no document addresses this.
+  - HUMINT_ENCODE §6: the term counts over the SR/CM/SA families, the "eleven controls and twenty-seven enhancements" and the 38 blocked accreditation provisions could not be recounted. Part A covers only AC and AU and the accreditation documents are not in the tree.
+  - Quotations from ISO, IEEE, UN R157, NASA, EU and DoD instruments in the envelope and HUMINT_ENCODE are labelled VERIFIED by the files, but no locator to a held copy is recorded in Layer 1. I did not check the source staging records under L7/provenance (outside this scope), so I cannot say whether a recorded comparison exists there.
+  - The replicator's run: gen_drift.py and gen_drift.out are in no current tree of either repository, only in aybllc/autonomous history (commit c866842). I did not run them. The Monte-Carlo figures (0.008134, 71.0%, 0/20,000) are therefore unreproduced by me; only the closed-form figures were re-derived.
+  - Whether the BETA admission's "no stop latch" is intended to take a side between the envelope's non-overridable stop and AUDITONOMY's adjudicated stop. The file does not say and I did not read the BETA computation.
+  - Whether AU-6 classed ORG ("not carriable by any object") undermines C11 and the H7 substitute, or is consistent because C11 is "external to the unit". The documents do not address it.
+  - Whether the owner regards the ROADMAP restorations (replicator, Part B, register) as part of the research record to be reconciled with BETA. BETA branches from MAIN and holds none of them, so the two candidate states disagree on what exists at Layer 1.
+  - The ISO/IEC 22989 clause 5.13 custody question: still marked NOT RE-VERIFIABLE in the companion (aybllc/autonomous origin/main:L8/L0/semantics/definitions/AUTONOMOUS.md:72 and :228). I did not check the companion's beta branch for a change.

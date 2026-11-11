@@ -1,0 +1,575 @@
+# read:review-core
+
+Agent result, as returned. Workflow: Handle on the Auditonomous research and manuscript. Run `wf_9c2917a7-7f0`. Phase: Read. Checked in 2026-11-11 19:51 UTC.
+
+- **scope**: Layer 5 review, core set, aybllc/auditonomous. Read from git objects only: MAIN (origin/main 2165144) L8/L5/0.md, L8/L5/research/0.md, L8/L5/research/review/{0.md, CONTRADICTIONS.md, PERPETUITY_QUESTION_ADJUDICATION.md, STATUS_LADDER.md, STATUS_AND_LABEL_DISCIPLINE.md}; BETA (714480d) diff under L8/L5/research/review (one file changed: CONTRADICTIONS.md, +15 lines). Cross-references followed: the three per-body extractions and reading records the contradictions cite (MAIN L8/L4/work/computation, L7/provenance/sources/staging-records), the definition's line 52, the bound Autonomous blob ffbdc28 (AUT-SOURCE-001), HISTORY 1d83788:AUDITONOMOUS.md sections 2.8, 6.7, 10, 11, the CYCLES file (ROADMAP/HISTORY), the retired README and routing plan on MAIN. No standard, paper or PDF was read; every "confirmed" below is record-against-record inside the repositories.
+- **summary**: The core review set on MAIN is small: two governance texts (a four-rung status ladder and a fourteen-label registry), one register of seven standards conflicts (C1 to C7), one adjudication (the perpetuity question), and a sheet listing four open author's calls. ROADMAP carries the same four documents byte-identical; BETA changes only CONTRADICTIONS.md.
+
+  C1 to C7 are comparisons of published standards, dated 2026-08-05. None is resolved and none can be by this repository. I checked C1, C2 and C4 against the extractions they cite. C1 is described accurately. C2 overstates: its own full entry makes the conflict conditional on an external authorizer. C4's heading says "identical" where its body says "near-identical", and the bound Autonomous definition lists the "Heteronomous" classification it rests on as still unverified. Every link in the file is dead on MAIN and BETA, because the cited files were renamed or pruned.
+
+  The perpetuity adjudication (2026-08-02) answers the owner's question with "No": the first leg FAILED CHECK, the second UNVERIFIABLE AS POSED, physical perpetuity CONTESTED, stop-then-go not required. What survives is a ratchet reading labelled CONJECTURE and one restated research question. Its recommended edit to the definition's line 52 is unapplied in every state, and a same-dated file (CYCLES, absent from MAIN and BETA) reaches the opposite verdict on whether audit is necessarily post hoc.
+
+  The "23 internal contradictions" (C-1 to C-23) are not in CONTRADICTIONS.md. They live in the consolidated AUDITONOMOUS.md, which exists only in HISTORY and ROADMAP.
+
+  Label use is loose: both review documents use labels in neither vocabulary (CONTESTED, UNVERIFIED, UNVERIFIABLE AS POSED), nothing is labelled PARKED, and the adjudication labels fetch-relayed quotes VERIFIED in some places and PARTIALLY VERIFIED in others.
+
+  The BETA section routes the autonomy side of each row through the bound Autonomous definition without re-verifying anything. That definition does not contain IEEE 1920.1, IEEE 7007, ISO/IEC 25059, ALFUS Volume II, or the two specific clauses C1 and C4 turn on.
+
+  First steps: rule on line 52 with CYCLES in view; rule which rows belong to Autonomous; repair the dead links; re-confirm the relayed quotes.
+- **items**
+  - item 1
+    - **id**: LBL-LADDER
+    - **title**: The status ladder, as written
+    - **path**: L8/L5/research/review/STATUS_LADDER.md
+    - **where**: MAIN, ROADMAP, BETA (same blob fccbb69)
+    - **what_it_is**: Four rungs and two side states for review status, carried verbatim on 2026-09-06 from the retired common/durable/README.md. Rungs: SPECULATION (a thought, no checking), CONJECTURE (a claim with a reason, unchecked), RESEARCHING (being worked, probes exist), VERIFIED (checked against an OUTSIDE source, which is cited). Side states: PARKED (deliberately on ice), [source text withheld from the public copy]).
+    - **own_label**: "Carried verbatim on 2026-09-06 ... Nothing below is edited."
+    - **evidence_state**: ASSERTED
+    - **locator**: MAIN:L8/L5/research/review/STATUS_LADDER.md:7-26
+    - **quote**: SPECULATION  -->  CONJECTURE  -->  RESEARCHING  -->  VERIFIED
+    - **key_claims**
+      - Outside source for VERIFIED: "[source text withheld from the public copy]" (lines 14-16)
+      - "[source text withheld from the public copy]." (lines 16-18)
+      - "[source text withheld from the public copy].**" (line 25)
+    - **checked_how**: Read whole. The rule's cited origin, AUDITONOMOUS.md:1230, is absent from MAIN; HISTORY:AUDITONOMOUS.md:1230 does carry an exclusion rule, worded differently (peer-reviewed journals, society journals, standards organizations, institutional archives). No register exists on MAIN or BETA.
+    - **open_items**
+      - review/0.md:38 says the ladder was placed in the catch-all 'none adjudicated': the owner has not ruled that it governs.
+      - 'the register' it names is not on MAIN or BETA.
+  - item 2
+    - **id**: LBL-REGISTRY
+    - **title**: The registry labels and the two standing rules, as written
+    - **path**: L8/L5/research/review/STATUS_AND_LABEL_DISCIPLINE.md
+    - **where**: MAIN, ROADMAP, BETA (same blob a5cf885); same text at MAIN:L8/L6/retired/layout-2026-08-14/README.md:46-65
+    - **what_it_is**: Fourteen registry labels and two rules, [source text withheld from the public copy]. The labels are listed and not defined.
+    - **own_label**: "[source text withheld from the public copy]."
+    - **evidence_state**: ASSERTED
+    - **locator**: MAIN:L8/L5/research/review/STATUS_AND_LABEL_DISCIPLINE.md:5-22
+    - **quote**: Contradictions are reported, never harmonized.
+    - **key_claims**
+      - "[source text withheld from the public copy]" (lines 5-6)
+      - "[source text withheld from the public copy]." (lines 21-22)
+      - Its pointer "See `AUDITONOMOUS.md` §10" names a file the header itself says was removed from HEAD at 8c98573.
+    - **checked_how**: Read whole; compared by eye with the retired README at MAIN:L8/L6/retired/layout-2026-08-14/README.md:46-65, which carries the same paragraph and label list.
+    - **open_items**
+      - No definition of any label exists in scope; only VERIFIED is defined, and only in the ladder.
+      - Placed 'none adjudicated' (review/0.md:38).
+  - item 3
+    - **id**: LBL-USE
+    - **title**: Whether the scope documents use the two vocabularies consistently
+    - **path**: L8/L5/research/review/
+    - **where**: MAIN, BETA
+    - **what_it_is**: My check of label use. The ladder and the registry overlap only on VERIFIED, CONJECTURE and SUPERSEDED. The ladder's SPECULATION and RESEARCHING are used by no document in scope; PARKED is described as a mechanism but applied to nothing in L8/L5. Both review documents use labels found in neither vocabulary.
+    - **own_label**: none
+    - **evidence_state**: CONTRADICTED (usage departs from both written vocabularies; confirmed by reading and grep)
+    - **locator**: MAIN:L8/L5/research/review/PERPETUITY_QUESTION_ADJUDICATION.md:344
+    - **quote**: **[source text withheld from the public copy].
+    - **key_claims**
+      - Outside both vocabularies in CONTRADICTIONS.md: `CONTESTED` (line 134), `NOT OBTAINED` (line 24).
+      - Outside both in the adjudication: UNVERIFIED, CONTESTED, FORMULA VERIFIED / APPLICATION UNVERIFIED, UNVERIFIABLE AS POSED (line 19), DEAD FOR NOW (line 6), "VERIFIED with caveats" (line 311), "UNVERIFIED — SOURCE QUOTE NOT FOUND" (line 325).
+      - review/0.md:35 repeats "VERIFIED / CONTESTED / PARTIALLY VERIFIED labels" without noting CONTESTED is unregistered.
+      - The adjudication labels fetch-layer-relayed quotes PARTIALLY VERIFIED at lines 67 and 73 but VERIFIED at lines 76, 110 and 197, while line 327 lists all of them as relayed.
+      - BETA's new section uses CONTESTED, PARTIALLY VERIFIED and lowercase 'unresolved', which is not a label.
+    - **checked_how**: git grep -w PARKED over MAIN:L8/L5 returns only the two sheets and the ladder itself. Label inventory taken by reading both documents in full.
+    - **open_items**
+      - Whether the ladder's outside-source rule (restated 2026-08-08) applies retroactively to VERIFIED labels given on 2026-08-02 to quotes read from mirrors, relays and index sweeps.
+  - item 4
+    - **id**: C1
+    - **title**: C1: IEEE 7001-2021 clause 3.1 against clause 4.2 (is "oversight" in the definition)
+    - **path**: L8/L5/research/review/CONTRADICTIONS.md
+    - **where**: MAIN, ROADMAP (same blob), BETA (+15 lines), HISTORY (manuscripts/main/CONTRADICTIONS.md, same text, table spacing differs)
+    - **what_it_is**: Side A: [source text withheld from the public copy]". Side B: cl. 4.2 restates it with "human intervention" only. Recorded status: no label on the entry itself; the file's closing note makes every quote VERIFIED. Who resolves: the text is IEEE's, so only IEEE can; inside the repository, routing the autonomy rows through the Autonomous binding is "the owner's edit" (MAIN:L7/peering/public/ingress/peer-1/object-1/0.md:34). BETA disposition: autonomy [source text withheld from the public copy]"; "clause precedence unresolved".
+    - **own_label**: "Every quote is `VERIFIED`" (MAIN line 214)
+    - **evidence_state**: EXTERNALLY CHECKED for the quotes as the repository records them; UNRESOLVED as to which clause governs
+    - **locator**: MAIN:L8/L5/research/review/CONTRADICTIONS.md:32-48; BETA same file line 28
+    - **quote**: [source text withheld from the public copy].
+    - **key_claims**
+      - "[source text withheld from the public copy]" (lines 46-47)
+    - **checked_how**: MY CHECK 1 of 3. Cl. 3.1 matches the reading record made from the held PDF (MAIN:L7/provenance/sources/staging-records/ieee/reading/IEEE-7001.md:41) and the extraction (MAIN:L8/L4/work/computation/ieee-requirements-for-autonomouos.md:103). Cl. 4.2 matches the extraction only (same file line 117); the reading record does not quote it. Described accurately. One qualifier the entry leaves out: the extraction rates cl. 4.2 INFORMATIVE (line 123).
+    - **open_items**
+      - The bound Autonomous entry carries cl. 3.1 only (row A11); cl. 4.2 is not in it, so the second side of C1 cannot be consumed through AUT-SOURCE-001.
+  - item 5
+    - **id**: C2
+    - **title**: C2: IEEE 1920.1-2022, 7001-2021 and 7009-2024 on intervention
+    - **path**: L8/L5/research/review/CONTRADICTIONS.md
+    - **where**: MAIN, ROADMAP, BETA, HISTORY
+    - **what_it_is**: Side A: 1920.1 [source text withheld from the public copy]". Side B: 7001 cl. 3.1 grades intervention and does not exclude it. Side C: 7009 Annex A (ASR-008, ASR-009) requires means of requesting authorization and of inhibiting when none is available. Recorded status: no label; quotes VERIFIED by the closing note. Who resolves: IEEE for the texts; the owner for row ownership (the routing plan names this row as an autonomy-definition comparison, MAIN:L8/L6/history/7LM_ROUTING_PLAN_2026-09-05.md:157). BETA disposition: "unlike scopes do not justify universal impossibility".
+    - **own_label**: "Every quote is `VERIFIED`" (MAIN line 214)
+    - **evidence_state**: EXTERNALLY CHECKED for the quotes as recorded; the entry's conclusion is CONTRADICTED by its own cited full entry
+    - **locator**: MAIN:L8/L5/research/review/CONTRADICTIONS.md:52-72; BETA same file line 29
+    - **quote**: [source text withheld from the public copy]."
+    - **key_claims**
+      - ""[source text withheld from the public copy]." (lines 62-63)
+      - The entry itself notes 1920.1 is Inactive-Reserved, trial-use, scoped to aerial network communication (lines 66-68).
+    - **checked_how**: MY CHECK 2 of 3. All three quotes match the extraction (MAIN:L8/L4/work/computation/ieee-requirements-for-autonomouos.md:844, 863, 984-985). The description is NOT fully accurate: the extraction rates ASR-008 and ASR-009 CONDITIONAL because "[source text withheld from the public copy]" (line 857), states the conflict only for "[source text withheld from the public copy]" (line 993) and marks it "UNVERIFIED as to IEEE intent" (line 874). C2 drops the condition.
+    - **open_items**
+      - Who the 7009 authorizer is (internal safety kernel or external party): the extraction calls it "the central open question".
+      - BETA's row says the 1920.1 proposition is "in the bound entry"; the bound blob contains no occurrence of 1920.
+  - item 6
+    - **id**: C3
+    - **title**: C3: [source text withheld from the public copy] an engineering sense and a moral sense
+    - **path**: L8/L5/research/review/CONTRADICTIONS.md
+    - **where**: MAIN, ROADMAP, BETA, HISTORY
+    - **what_it_is**: Side A: cl. 3.1 (normative definitions) defines an autonomous system as [source text withheld from the public copy]". Side B: Annex A (informative) defines autonomy as "An Ethical Principle category type". The entry itself says this is one document overloading a headword, not two sources disagreeing. Who resolves: nobody needs to; the instruction is not to conflate. BETA disposition: "[source text withheld from the public copy]."
+    - **own_label**: "Every quote is `VERIFIED`" (MAIN line 214); the entry's table marks Annex A "**informative**, expressly marked so"
+    - **evidence_state**: EXTERNALLY CHECKED for the quotes as recorded; not a contradiction in the file's own sense
+    - **locator**: MAIN:L8/L5/research/review/CONTRADICTIONS.md:76-90; BETA same file line 30
+    - **quote**: [source text withheld from the public copy]
+    - **checked_how**: Cl. 3.1 matches the reading record (MAIN:L7/provenance/sources/staging-records/ieee/reading/IEEE-7007.md:35) and the extraction (ieee-requirements-for-autonomouos.md:927). The Annex A sentence matches the extraction only (line 941); grep finds it nowhere in the reading record.
+    - **open_items**
+      - IEEE 7007 does not appear in the bound Autonomous entry at all (0 occurrences in blob ffbdc28).
+  - item 7
+    - **id**: C4
+    - **title**: C4: ISO 8373:2021 "autonomous mode" against [source text withheld from the public copy] (heteronomous)
+    - **path**: L8/L5/research/review/CONTRADICTIONS.md
+    - **where**: MAIN, ROADMAP, BETA, HISTORY
+    - **what_it_is**: Side A: ISO 8373 cl. [source text withheld from the public copy]". Side B: ISO/IEC 22989 cl. 5.13 Table 1, level 5 Full automation, "[source text withheld from the public copy]. Recorded status: no label; quotes VERIFIED by the closing note; both ISO links marked as not resolved by automated fetch. Who resolves: ISO for the texts; the owner for row ownership (the routing plan names this row). BETA disposition: "[source text withheld from the public copy]".
+    - **own_label**: "Every quote is `VERIFIED`" (MAIN line 214)
+    - **evidence_state**: EXTERNALLY CHECKED for the 22989 wording as recorded; CONTRADICTED on the "Heteronomous" classification by the bound peer entry; UNRESOLVED
+    - **locator**: MAIN:L8/L5/research/review/CONTRADICTIONS.md:94-114; BETA same file line 31
+    - **quote**: [source text withheld from the public copy].
+    - **key_claims**
+      - "[source text withheld from the public copy]" (lines 102-103)
+    - **checked_how**: MY CHECK 3 of 3. The 22989 row matches the capture record (MAIN:L7/provenance/sources/staging-records/standards/extracted/ISO-IEC-22989-2022_captures.md:87). The 8373 quote matches the extraction (MAIN:L8/L4/work/computation/iso-iec-requirements-for-autonomous.md:341) except that the extraction prints "the robot (3.1) function". Not fully accurate in three ways: the heading says "identical" and the body "Near-identical"; the two phrases differ ("direct human" against "external"); and the bound Autonomous entry lists as outstanding "[source text withheld from the public copy]" (blob ffbdc28 lines 16-17).
+    - **open_items**
+      - The entry omits 8373's own [source text withheld from the public copy])" (extraction line 342).
+      - The bound entry carries ISO 8373 cl. 3.2 (autonomy), not cl. 6.13.4 (autonomous mode).
+      - The 22989 capture derives from a copy withdrawn under IL-001; MAIN:L7/provenance/sources/0.md:43 says [source text withheld from the public copy].
+  - item 8
+    - **id**: C5
+    - **title**: C5: ISO/IEC 22989 (self-modified goal) against NIST ALFUS (assigned goal)
+    - **path**: L8/L5/research/review/CONTRADICTIONS.md
+    - **where**: MAIN, ROADMAP, BETA, HISTORY
+    - **what_it_is**: Side A: ISO/IEC 22989 cl. 3.1.5, a system "[source text withheld from the public copy]". Side B: NIST SP 1011-I-2.0 section 2, [source text withheld from the public copy] entry narrows itself: ALFUS admits a non-human assigner [source text withheld from the public copy]. Who resolves: neither standard settles it; the owner for row ownership (the routing plan names this row). BETA disposition: "[source text withheld from the public copy]".
+    - **own_label**: `CONTESTED`
+    - **evidence_state**: EXTERNALLY CHECKED for the quotes as recorded; UNRESOLVED
+    - **locator**: MAIN:L8/L5/research/review/CONTRADICTIONS.md:118-143; BETA same file line 32
+    - **quote**: [source text withheld from the public copy]`.
+    - **key_claims**
+      - "[source text withheld from the public copy]." (line 128)
+      - NIST DOI "[source text withheld from the public copy])" (line 139)
+    - **checked_how**: The 22989 clause matches the capture (ISO-IEC-22989-2022_captures.md:26) and extraction ISO-R1 (iso-iec-requirements-for-autonomous.md:75). The ALFUS clause matches NIST-R2 (nist-requirements-for-autonomouos.md:73) and line 59. Both propositions are in the bound Autonomous entry (rows A2 and A6).
+    - **open_items**
+      - Whether [source text withheld from the public copy] satisfies both.
+  - item 9
+    - **id**: C6
+    - **title**: C6: NIST ALFUS Volume I v2.0 against Volume II v1.0 on where goals come from
+    - **path**: L8/L5/research/review/CONTRADICTIONS.md
+    - **where**: MAIN, ROADMAP, BETA, HISTORY
+    - **what_it_is**: Side A: SP 1011-I-2.0 (October 2008) adds "[source text withheld from the public copy]". Side B: SP 1011-II-1.0 (December 2007) says "[source text withheld from the public copy]." The entry's reading, offered as most probable and not stronger, is that Volume II quotes the superseded Volume I v1.1 and was never updated. Who resolves: anyone who obtains Volume I v1.1 and diffs it; NIST for intent. BETA disposition: "[source text withheld from the public copy]".
+    - **own_label**: `PARTIALLY VERIFIED`
+    - **evidence_state**: EXTERNALLY CHECKED for the two quotes as recorded; UNRESOLVED on the explanation (a check not run: v1.1 not obtained)
+    - **locator**: MAIN:L8/L5/research/review/CONTRADICTIONS.md:147-167; BETA same file line 33
+    - **quote**: [source text withheld from the public copy]`.
+    - **key_claims**
+      - "[source text withheld from the public copy]" (lines 160-161)
+    - **checked_how**: Both quotes match the extraction (nist-requirements-for-autonomouos.md:73 and 328); the extraction records v1.1 as NOT OBTAINED, NOT-CHECKED (lines 27-28).
+    - **open_items**
+      - Volume II is not in the bound Autonomous entry; grep for 'come from the HRI' returns nothing in the autonomous repository on origin/main or its beta.
+  - item 10
+    - **id**: C7
+    - **title**: C7: ISO/IEC 22989 (autonomy as absence of interveners) against ISO/IEC 25059 (intervenability as quality)
+    - **path**: L8/L5/research/review/CONTRADICTIONS.md
+    - **where**: MAIN, ROADMAP, BETA, HISTORY
+    - **what_it_is**: Side A: 22989 cl. 3.1.5, autonomy "[source text withheld from the public copy]". Side B: 25059 cl. 3.2.1 user controllability and cl. 3.2.4 intervenability, the degree to which a user or operator can intervene. 25059 normatively references 22989. This is a trade-off between two characteristics, not two definitions of one word. Who resolves: not resolvable; the entry says to disclose it. BETA disposition: "no validity or universal optimization theorem follows".
+    - **own_label**: "Every quote is `VERIFIED`" (MAIN line 214); both links marked as not resolved by automated fetch
+    - **evidence_state**: EXTERNALLY CHECKED for the quotes as recorded; the consequence drawn is ASSERTED
+    - **locator**: MAIN:L8/L5/research/review/CONTRADICTIONS.md:171-188; BETA same file line 34
+    - **quote**: [source text withheld from the public copy].
+    - **checked_how**: 25059 definitions and the clause 3 preamble match extraction ISO-R24 (iso-iec-requirements-for-autonomous.md:402-407), which says they were retrieved from the ISO OBP by browser on 2026-08-04. No capture record of 25059 is held on MAIN.
+    - **open_items**
+      - ISO/IEC 25059 is not in the bound Autonomous entry (0 occurrences).
+  - item 11
+    - **id**: C-AGREE
+    - **title**: "Where the standards agree": four bodies admit a non-human assigner
+    - **path**: L8/L5/research/review/CONTRADICTIONS.md
+    - **where**: MAIN, ROADMAP, BETA, HISTORY
+    - **what_it_is**: A balance paragraph claiming ISO/IEC 22989, NIST ALFUS, IEEE 7001 cl. 4.2 and IEEE 7009 cl. 1.3.2(e) converge on not requiring a human assigner. It has no C number, but BETA gives it a disposition row: "[source text withheld from the public copy]".
+    - **own_label**: "[source text withheld from the public copy]."
+    - **evidence_state**: CONTRADICTED on one quotation (two repository records give different wording); the convergence claim is ASSERTED
+    - **locator**: MAIN:L8/L5/research/review/CONTRADICTIONS.md:192-200; BETA same file line 35
+    - **quote**: [source text withheld from the public copy].
+    - **checked_how**: The paragraph quotes 7009 [source text withheld from the public copy]"; the extraction gives "[source text withheld from the public copy]" (ieee-requirements-for-autonomouos.md:874 and 1043). The 7001 phrase "receives goals from humans" is in the extraction (line 163), where it is Durst and Gray recited by IEEE and rated INFORMATIVE.
+    - **open_items**
+      - Which wording of 7009 cl. 1.3.2(e) is the standard's: needs the held PDF, which is not in the repository.
+  - item 12
+    - **id**: BETA-DISP
+    - **title**: BETA: "Current receiving-use dispositions — 2026-11-03"
+    - **path**: L8/L5/research/review/CONTRADICTIONS.md
+    - **where**: BETA only
+    - **what_it_is**: The only change under review/ on BETA: 15 lines inserted above the first section, in commit 714480d (author EDM, 2026-11-02 21:08 -0800). A table with one row per C1 to C7 plus the agreement paragraph. Column 2 says which autonomy input is routed through AUT-SOURCE-001 (the Autonomous definition bound at L7/peering/public/ingress/peer-1/object-1/); column 3 says what stays a local comparison and its present limit. It resolves no contradiction.
+    - **own_label**: "routing correction"
+    - **evidence_state**: ASSERTED (a routing statement); CONTRADICTED in part by the bound blob's actual contents
+    - **locator**: BETA:L8/L5/research/review/CONTRADICTIONS.md:22-35
+    - **quote**: [source text withheld from the public copy].
+    - **key_claims**
+      - "[source text withheld from the public copy]" (line 24)
+      - Every row ends in a limit: unresolved, CONTESTED, PARTIALLY VERIFIED, or 'no theorem follows'.
+    - **checked_how**: git diff origin/main..BETA over L8/L5/research/review shows this one hunk. I extracted the bound blob ffbdc28 from the autonomous repository (SHA-256 2756661749c3..., 22,735 bytes, matching the BETA ledger row) and counted mentions: 7001 present (cl. 3.1 only), 8373 present (cl. 3.2 only), 22989 present, ALFUS Volume I present; 1920, 7007 and 25059 absent; no Volume II sentence; 7009 mentioned once, as defining no autonomy term.
+    - **depends_on**
+      - C1
+      - C2
+      - C3
+      - C4
+      - C5
+      - C6
+      - C7
+      - C-AGREE
+    - **open_items**
+      - MAIN reserves this edit to the owner ("resolving them through this binding is the owner's edit", MAIN:L7/peering/public/ingress/peer-1/object-1/0.md:34); whether the owner ruled before the BETA commit is not recorded in scope.
+      - BETA's review/0.md is unchanged and still describes the file as not edited.
+  - item 13
+    - **id**: CINT-REGISTER
+    - **title**: The "23 internal contradictions" C-1 to C-23: not in CONTRADICTIONS.md
+    - **path**: AUDITONOMOUS.md (HISTORY); L8/L6/retired/consolidated-2026-08-04/AUDITONOMOUS.md (ROADMAP)
+    - **where**: HISTORY, ROADMAP; absent from MAIN and BETA
+    - **what_it_is**: A second register, section 11 of [source text withheld from the public copy]: contradictions inside the corpus, both sides quoted, none resolved. By id and recorded verdict: C-1 two clauses or three (NEGATIVE FINDING, not ruled); [source text withheld from the public copy] (INTERNALLY DERIVED); [source text withheld from the public copy] (reserved, same as T3); C-4 asymmetry false of the engineering layer (INTERNALLY DERIVED); C-5 refusal doctrine against a law-update channel ([source text withheld from the public copy] (both stand); C-7 binary or graded (unresolved); C-8 fourth derivation independent and self-built (FAILED CHECK); C-9 audit post hoc (OPEN CONTRADICTION); C-10 concealment's ordinal position (unresolved); C-11 two mottos (UNRESOLVED IN CORPUS); C-12 firmware below or above ROM (UNRESOLVED IN CORPUS); C-13 certification as layer or consumer (FAILED CHECK); C-14 eBIOS diagram against its list (FAILED CHECK); C-15 gate-then-ledger order (FAILED CHECK / OPEN); C-16 EB carrier row (FAILED CHECK); C-17 cabin four-way or three-way (OPEN); C-18 an action can be the prohibited act (INTERNALLY DERIVED); C-19 Reactive against Responsive (RESOLVED by the corpus, old text standing); [source text withheld from the public copy] (NEGATIVE FINDING, OPEN); C-21 gate granularity drift (OPEN); C-22 two senses ([source text withheld from the public copy] (UNRESOLVED IN CORPUS).
+    - **own_label**: "Both sides quoted. None resolved. None ranked."
+    - **evidence_state**: UNRESOLVED (22 of 23 open by the register's own verdicts); INTERNALLY CHECKED where the register records grep counts
+    - **locator**: HISTORY:AUDITONOMOUS.md:1117-1183 (section 11)
+    - **quote**: Both sides quoted. None resolved. None ranked.
+    - **checked_how**: Read section 11 in full from the git object at 1d83788. I did not re-verify the 23 entries against their cited lines; that is outside this scope. git grep over MAIN and BETA for 'internal contradictions' and for C-N ids finds only C-002 in DISTILLATION.md, which is a governance-ruling id.
+    - **open_items**
+      - Who must resolve: section 10 and section 11 reserve them to the author.
+      - On MAIN and BETA a reader of the review directory has no pointer to this register except through T3 and DEF:52 in review/0.md:44.
+  - item 14
+    - **id**: CINT-9
+    - **title**: C-9: the perpetuity file says audit is necessarily post hoc; the CYCLES file says it is not
+    - **path**: L8/L5/research/review/PERPETUITY_QUESTION_ADJUDICATION.md; L8/L5/research/review/AUTONOMOUS_vs_AUDITONOMOUS_CYCLES.md (ROADMAP)
+    - **where**: Side A on MAIN, ROADMAP, BETA, HISTORY; side B on ROADMAP and HISTORY only
+    - **what_it_is**: Two research files dated 2026-08-02 reach opposite verdicts. Side A (adjudication section 6.1): audit, as [source text withheld from the public copy]. Side B (CYCLES verdict ii): "[source text withheld from the public copy]". The register offers, without adopting it, that the two may mean different things by "audit". Who resolves: the author. No BETA disposition.
+    - **own_label**: "[source text withheld from the public copy]." (HISTORY:AUDITONOMOUS.md:1151)
+    - **evidence_state**: CONTRADICTED
+    - **locator**: MAIN:L8/L5/research/review/PERPETUITY_QUESTION_ADJUDICATION.md:208; HISTORY:intake/research/AUTONOMOUS_vs_AUDITONOMOUS_CYCLES.md:136
+    - **quote**: **([source text withheld from the public copy]
+    - **checked_how**: Read both lines from git objects. The CYCLES blob is identical in HISTORY and ROADMAP (d1db75d). ROADMAP:L8/L5/research/review/0.md states the verdict "stands against `PERPETUITY_QUESTION_ADJUDICATION.md` §6.1, both unranked". HISTORY:AUDITONOMOUS.md:689 records that the post-hoc claim carries no label on its own line.
+    - **depends_on**
+      - PERP-6.1
+      - OPEN-DEF52
+    - **open_items**
+      - On MAIN and BETA the counter-file is absent, so the recommendation to edit the definition stands with its recorded opposition out of view.
+  - item 15
+    - **id**: PERP-QUESTION
+    - **title**: Perpetuity: what was asked and the ruling on record
+    - **path**: L8/L5/research/review/PERPETUITY_QUESTION_ADJUDICATION.md
+    - **where**: MAIN, ROADMAP, BETA (same blob a203616); HISTORY (intake/research/, same text, table spacing differs)
+    - **what_it_is**: An external-literature adjudication dated 2026-08-02 of the owner's question, with two follow-ups on stop-then-go and cycles. Method stated: six research agents, external sources only, preprint servers excluded. [source text withheld from the public copy]."
+    - **own_label**: "the theorem candidate is **DEAD FOR NOW**"
+    - **evidence_state**: ASSERTED (the ruling is reported by the file, not quoted in the owner's words)
+    - **locator**: MAIN:L8/L5/research/review/PERPETUITY_QUESTION_ADJUDICATION.md:3-21
+    - **quote**: [source text withheld from the public copy]?
+    - **key_claims**
+      - Follow-up, owner [source text withheld from the public copy]"
+      - Follow-up, owner verbatim: "[source text withheld from the public copy]"
+      - "Ruling on record (Eric, 2026-08-02)": [source text withheld from the public copy]."
+    - **checked_how**: Read whole (348 lines). grep for 'dead for now' across MAIN, ROADMAP and HISTORY text files finds only this file's sentence and documents that repeat it; no verbatim owner statement of the ruling was found. Office files were not searched.
+    - **open_items**
+      - The owner's own words for the ruling are not located.
+  - item 16
+    - **id**: PERP-LEG1
+    - **title**: Perpetuity leg 1: "[source text withheld from the public copy]"
+    - **path**: L8/L5/research/review/PERPETUITY_QUESTION_ADJUDICATION.md
+    - **where**: MAIN, ROADMAP, BETA, HISTORY
+    - **what_it_is**: Adjudicated FAILED CHECK. Evidence recorded: a five-index sweep with a positive control found no such theorem; Bhat and Bernstein (SIAM J. Control Optim. 2000) Prop. 2.1 gives global existence for a bounded autonomous ODE; a linear-growth theorem (Wacker and Schlüter 2020) gives a second route; blow-up (Bull. AMS 1996) shows perpetuity is conditional on boundedness. The file's permanent warning: in this literature "autonomous" means no explicit time dependence, not self-governing machine.
+    - **own_label**: "**FAILED CHECK**"; sub-results VERIFIED; transfer to machines "FORMULA VERIFIED / APPLICATION UNVERIFIED"
+    - **evidence_state**: EXTERNALLY CHECKED (as recorded by the file; sources named, method of reading stated)
+    - **locator**: MAIN:L8/L5/research/review/PERPETUITY_QUESTION_ADJUDICATION.md:25-85
+    - **quote**: **[source text withheld from the public copy]
+    - **key_claims**
+      - "Absence of contradiction is not evidence of support." (line 31)
+      - "Boundedness is what buys perpetuity." (line 61)
+      - The equivocation quote is PARTIALLY VERIFIED, relayed through the fetch layer (line 67).
+    - **checked_how**: I confirmed only the internal arithmetic: X(t) = a/(1 − at) does satisfy x′ = x². No external source was opened (network barred).
+    - **open_items**
+      - Carrying the ODE result to engineered systems is an assumption, by the file's own label.
+  - item 17
+    - **id**: PERP-LEG2
+    - **title**: Perpetuity leg 2: "an auditonomous system can be perpetual"
+    - **path**: L8/L5/research/review/PERPETUITY_QUESTION_ADJUDICATION.md
+    - **where**: MAIN, ROADMAP, BETA, HISTORY
+    - **what_it_is**: Adjudicated UNVERIFIABLE AS POSED: the word and its variants have zero occurrences in SpringerLink, PubMed, Europe PMC, Crossref and Google Scholar, so no external result can be about it. The patent negative is only PARTIALLY VERIFIED (Google Patents only; Espacenet, WIPO and USPTO blocked). Two flags on the coinage: a WordPress blog titled AUDITONOMY from at least 2018, and domain registrations about 2025-10-16; both are from prohibited sources and recorded as leads only.
+    - **own_label**: "**UNVERIFIABLE AS POSED**"; "NEGATIVE FINDING, VERIFIED"
+    - **evidence_state**: EXTERNALLY CHECKED for the absence in indexes (as recorded); UNRESOLVED for the claim itself
+    - **locator**: MAIN:L8/L5/research/review/PERPETUITY_QUESTION_ADJUDICATION.md:89-100
+    - **quote**: [source text withheld from the public copy].
+    - **key_claims**
+      - "[source text withheld from the public copy]" (line 99)
+      - "[source text withheld from the public copy]." (line 95)
+    - **checked_how**: Read; not re-run.
+    - **open_items**
+      - Registrar records for the two domains are named as checkable and not checked.
+      - Three patent offices' own search results unconfirmed.
+  - item 18
+    - **id**: PERP-PHYSICAL
+    - **title**: Perpetuity: physical perpetuity of any information-processing system
+    - **path**: L8/L5/research/review/PERPETUITY_QUESTION_ADJUDICATION.md
+    - **where**: MAIN, ROADMAP, BETA, HISTORY
+    - **what_it_is**: Adjudicated CONTESTED: Dyson (Rev. Mod. Phys. 1979) says life and communication can continue for ever in an open universe; Krauss and Starkman (Astrophys. J. 2000) say life cannot be eternal in an accelerating one. [source text withheld from the public copy] be.
+    - **own_label**: "**PAIR LABEL: CONTESTED.**"
+    - **evidence_state**: EXTERNALLY CHECKED (as recorded); the underlying question is UNRESOLVED in the literature
+    - **locator**: MAIN:L8/L5/research/review/PERPETUITY_QUESTION_ADJUDICATION.md:104-119
+    - **quote**: [source text withheld from the public copy]**.
+    - **checked_how**: Read; not re-run. The Dyson quote is labelled VERIFIED at line 110 but listed at line 327 among quotes relayed through the fetch layer, to be confirmed before publication.
+    - **open_items**
+      - Dyson abstract to be confirmed against the publisher PDF (the file's next required check b).
+  - item 19
+    - **id**: PERP-STOPGO
+    - **title**: Perpetuity: does auditonomy require stop-then-go
+    - **path**: L8/L5/research/review/PERPETUITY_QUESTION_ADJUDICATION.md
+    - **where**: MAIN, ROADMAP, BETA, HISTORY
+    - **what_it_is**: Adjudicated NO. Evidence recorded: Chandy and Lamport 1985 (snapshots run concurrently with the computation), Dijkstra et al. 1978 (on-the-fly garbage collection), Mohan et al. 1992 (ARIES fuzzy checkpoints). The file binds the scope: three studied models, not a universal theorem.
+    - **own_label**: "VERIFIED for three studied models"; mapping onto the internal construct "**COMPOSITE OBJECT UNVERIFIED**"
+    - **evidence_state**: EXTERNALLY CHECKED (as recorded, from archival scans and institutional mirrors, not publisher surfaces)
+    - **locator**: MAIN:L8/L5/research/review/PERPETUITY_QUESTION_ADJUDICATION.md:173-197
+    - **quote**: **VERDICT: stop-then-go is NOT required.**
+    - **checked_how**: Read; not re-run. An ARIES reading record is held on MAIN (L7/provenance/sources/staging-records/library/reading/ARIES_Mohan1992_ACM-TODS.md); I did not compare the quotes against it.
+    - **open_items**
+      - ACM and IEEE publisher-of-record captures still owed (line 319 and next required check a).
+  - item 20
+    - **id**: PERP-5.1
+    - **title**: Perpetuity section 5 and 5.1: the withdrawn conclusion and the correction
+    - **path**: L8/L5/research/review/PERPETUITY_QUESTION_ADJUDICATION.md
+    - **where**: MAIN, ROADMAP, BETA, HISTORY
+    - **what_it_is**: A first draft [source text withheld from the public copy] its perpetuity guarantee. The owner challenged it; the conclusion was withdrawn in the open. Corrected finding: an append-only record at bounded rate leaves every compact set, so Poincaré recurrence is lost, but it meets the linear-growth condition, so global existence is not. The only real constraint left is physical storage.
+    - **own_label**: "**[source text withheld from the public copy]"; section 5 as a whole "INTERNALLY DERIVED / CONJECTURE"
+    - **evidence_state**: INTERNALLY CHECKED (the withdrawal is recorded with the challenge; I re-did the arithmetic)
+    - **locator**: MAIN:L8/L5/research/review/PERPETUITY_QUESTION_ADJUDICATION.md:123-154
+    - **quote**: [source text withheld from the public copy]**.
+    - **key_claims**
+      - Owner'[source text withheld from the public copy]."
+      - "[source text withheld from the public copy]." (line 146)
+    - **checked_how**: My check: ẋ = 1 gives x(t) = t, unbounded and defined for all time; a bounded-rate record [source text withheld from the public copy]. Both steps hold as mathematics. The internal quote it rests on is cited at Block_03_The_Definition.md:10; at HISTORY and ROADMAP that sentence is at line 1.
+    - **open_items**
+      - Routing plan: the exact argument is "L2 or L3, unresolved"; "extract and register only on the owner's call" (MAIN:L8/L6/history/7LM_ROUTING_PLAN_2026-09-05.md:168).
+  - item 21
+    - **id**: PERP-6.1
+    - **title**: Perpetuity section 6.1: the audit is post hoc; recommended edit to the definition
+    - **path**: L8/L5/research/review/PERPETUITY_QUESTION_ADJUDICATION.md
+    - **where**: MAIN, ROADMAP, BETA, HISTORY
+    - **what_it_is**: The file agrees with the owner that audit is always after the event and says the definition's "NOT audited-after-the-fact" bullet is imprecise: what is by design is the record, not the audit. It recommends rewording the bullet to contrast record-by-design with record-bolted-on-later. Evidence: three quotes on after-the-fact detection (Schneier and Kelsey 1998; Crosby and Wallach 2009; Haeberlen et al. 2007).
+    - **own_label**: "[source text withheld from the public copy]."
+    - **evidence_state**: UNRESOLVED (pending decision) and CONTRADICTED (by the CYCLES file, see CINT-9)
+    - **locator**: MAIN:L8/L5/research/review/PERPETUITY_QUESTION_ADJUDICATION.md:201-222
+    - **quote**: [source text withheld from the public copy]**.
+    - **key_claims**
+      - Owner, verbatim: "the udiot is always post hoc."
+      - "**[source text withheld from the public copy].**" (line 203)
+    - **checked_how**: I confirmed the bullet is unamended in all three states: MAIN and ROADMAP at L8/L0/semantics/definitions/AUDITONOMOUS_DEFINITION.md:52; BETA at line 54, because BETA inserted two lines above it. The file's quotation of the bullet matches MAIN line 52.
+    - **depends_on**
+      - CINT-9
+    - **open_items**
+      - Owner's ruling on the rewording.
+      - Roadmap decision D4 covers the same edit (per the 2026-11-03 manuscript report).
+  - item 22
+    - **id**: PERP-RATCHET
+    - **title**: Perpetuity section 7: cycle, forced cycle, or perpetual
+    - **path**: L8/L5/research/review/PERPETUITY_QUESTION_ADJUDICATION.md
+    - **where**: MAIN, ROADMAP, BETA, HISTORY
+    - **what_it_is**: The answer to the owner's trichotomy: neither cycle nor forced cycle; a ratchet. Three engineering routes are priced: unbounded record with an external holder; forced cycle (seal, prune, resume); and bounded commitment with traceability and optional rollback, which the file attributes to the owner and calls the strongest. Route 3 buys detection, not reconstruction.
+    - **own_label**: "**Label: INTERNALLY DERIVED / CONJECTURE**"; ARIES transfer "COMPOSITE OBJECT UNVERIFIED"
+    - **evidence_state**: CONJECTURE
+    - **locator**: MAIN:L8/L5/research/review/PERPETUITY_QUESTION_ADJUDICATION.md:226-252
+    - **quote**: [source text withheld from the public copy]*.
+    - **checked_how**: The two Block 52 quotations match HISTORY:intake/manuscript/Block_52_The_Decodability_Requirement.md:55 and :24. Those block files are not on MAIN or BETA.
+    - **open_items**
+      - The ratchet is what a book chapter would draw on (ROADMAP's roadmap names it for Chapter 25); it has no external check of its own.
+  - item 23
+    - **id**: PERP-PRIORART
+    - **title**: Perpetuity section 8: prior art by facet and a preliminary patent landscape
+    - **path**: L8/L5/research/review/PERPETUITY_QUESTION_ADJUDICATION.md
+    - **where**: MAIN, ROADMAP, BETA, HISTORY
+    - **what_it_is**: Eight facets each matched to a named prior work with a verbatim anchor and what it does not cover, and a list of seven patents. The stated gap: [source text withheld from the public copy] built to outlive the actor.
+    - **own_label**: "Assessments of closeness are **analytic, not sourced**."; "[source text withheld from the public copy]"
+    - **evidence_state**: EXTERNALLY CHECKED for the anchors (as recorded, several by relay); the gap claim is ASSERTED and scope-limited
+    - **locator**: MAIN:L8/L5/research/review/PERPETUITY_QUESTION_ADJUDICATION.md:256-273
+    - **quote**: [source text withheld from the public copy].
+    - **checked_how**: Read; not re-run.
+    - **open_items**
+      - US applications with priority after about February 2025 are unpublished: "[source text withheld from the public copy]" (line 273).
+      - No [source text withheld from the public copy]" (line 325).
+  - item 24
+    - **id**: PERP-REMAINS
+    - **title**: Perpetuity: what remains (section 9, section 11, next required checks)
+    - **path**: L8/L5/research/review/PERPETUITY_QUESTION_ADJUDICATION.md
+    - **where**: MAIN, ROADMAP, BETA, HISTORY
+    - **what_it_is**: The surviving research question: under what conditions a system can keep a monotone, tamper-evident commitment to its whole history while its operational state stays in a compact region, and what the trade is between commitment size, reconstructibility and an external holder. The file also notes the corpus never claimed the theorem, and that mortality and auditability are two axes. Three next checks are listed and none is recorded as done.
+    - **own_label**: none on the question; "**Next Required Check:**" (line 348)
+    - **evidence_state**: UNRESOLVED
+    - **locator**: MAIN:L8/L5/research/review/PERPETUITY_QUESTION_ADJUDICATION.md:277-285, 315-327, 348
+    - **quote**: [source text withheld from the public copy].
+    - **key_claims**
+      - ([source text withheld from the public copy]; (c) [source text withheld from the public copy].
+      - Not checked: von Neumann and Burks 1966; Harris; Athreya and Ney; CPC patent sweep; one NIST quote "UNVERIFIED — SOURCE QUOTE NOT FOUND" (line 325).
+    - **checked_how**: The Master Archive:43 and AUTONOMY_SCALE:58 and :62 quotations match HISTORY (intake/manuscript/Auditonomous_Theory_Master_Archive.md:43; intake/AUTONOMY_SCALE.md:58, 62). AUTONOMY_SCALE.md is no longer in this repository on MAIN; it is in the autonomous repository.
+    - **open_items**
+      - No record in scope that checks (a), (b) or (c) were run after 2026-08-02.
+  - item 25
+    - **id**: OPEN-T3
+    - **title**: Open entry: [source text withheld from the public copy]"
+    - **path**: L8/L5/research/review/0.md
+    - **where**: MAIN, ROADMAP, BETA
+    - **what_it_is**: First of four author's calls listed as open. Two passages attach the definite article to different verbs (falsify, conceal) while a third says erase, conceal and falsify are prohibited separately. Three external literature lanes (law, audit and records management, philosophy of language) have reported; four candidate readings stand unranked. The consolidated document found six claimants, so the option set may be under-specified.
+    - **own_label**: "**[source text withheld from the public copy].**" (MAIN:L8/L5/research/lanes/THEME_LEDGER.md:158)
+    - **evidence_state**: UNRESOLVED
+    - **locator**: MAIN:L8/L5/research/review/0.md:44
+    - **quote**: The author's calls, none decided anywhere in this repository
+    - **checked_how**: Confirmed the status line exists at MAIN:L8/L5/research/lanes/THEME_LEDGER.md:158. Lane detail read from HISTORY:AUDITONOMOUS.md section 10.1 (lines 960-1044), not from the ledger itself.
+    - **open_items**
+      - Same matter as internal contradiction C-3 and roadmap decision D3.
+      - No citator was run on Bronston or Chiarella: NOT-CHECKED (HISTORY:AUDITONOMOUS.md section 10.1).
+  - item 26
+    - **id**: OPEN-Q1-9
+    - **title**: Open entry: record-ontology questions Q1 to Q9
+    - **path**: L8/L5/research/review/0.md
+    - **where**: MAIN, ROADMAP, BETA
+    - **what_it_is**: Nine questions on what the record is of, observer and observed, tense, whether recording can be autonomous, traversal direction, inverted GIGO, and [source text withheld from the public copy]), which its own file flags as possibly the definitional key. Q2 has an owner ruling on kind with the definitions unwritten; Q4 is noted and not researched; Q6, Q7, Q8 and Q9 are NOT-CHECKED.
+    - **own_label**: "**Status:** OPEN throughout. Nothing here is adopted." (MAIN:L8/L5/research/lanes/RECORD_ONTOLOGY_OPEN_QUESTIONS.md:4)
+    - **evidence_state**: UNRESOLVED
+    - **locator**: MAIN:L8/L5/research/review/0.md:44
+    - **quote**: Q9 the state asymmetry that its own file flags as possibly the definitional key
+    - **checked_how**: Confirmed the status line and the Q headings on MAIN (RECORD_ONTOLOGY_OPEN_QUESTIONS.md:4, 9-246; Q4 is placed last, at line 246). Question detail read from HISTORY:AUDITONOMOUS.md section 10.2.
+    - **open_items**
+      - Roadmap decision D5 covers Q9 (per the 2026-11-03 manuscript report).
+  - item 27
+    - **id**: OPEN-DEF52
+    - **title**: Open entry: [source text withheld from the public copy]
+    - **path**: L8/L5/research/review/0.md
+    - **where**: MAIN, ROADMAP, BETA
+    - **what_it_is**: Third author's call: the rewording recommended in the adjudication's section 6.1 is recorded and not applied. See PERP-6.1 for the substance and CINT-9 for the file that contradicts its premise.
+    - **own_label**: "the rewording recorded and not applied"
+    - **evidence_state**: UNRESOLVED
+    - **locator**: MAIN:L8/L5/research/review/0.md:44
+    - **quote**: [source text withheld from the public copy]`, the rewording recorded and not applied
+    - **checked_how**: Line 52 unamended on MAIN and ROADMAP; on BETA the bullet has moved to line 54 and line 52 is blank. The lane file repeats "**pending Eric's ruling**" (MAIN:L8/L5/research/lanes/RECORD_ONTOLOGY_OPEN_QUESTIONS.md:254).
+    - **depends_on**
+      - PERP-6.1
+      - CINT-9
+  - item 28
+    - **id**: OPEN-READER
+    - **title**: Open entry: the reader-agnostic divergence
+    - **path**: L8/L5/research/review/0.md
+    - **where**: MAIN, ROADMAP, BETA (sheet); the analysis only in HISTORY and ROADMAP
+    - **what_it_is**: Fourth author's call: [source text withheld from the public copy]". Whether the [source text withheld from the public copy] undecided. Three readings are set out unranked in the consolidated document's section 2.8. Its origin is an owner remark: "[source text withheld from the public copy]".
+    - **own_label**: "**[source text withheld from the public copy].**" (HISTORY:AUDITONOMOUS.md section 2.8)
+    - **evidence_state**: UNRESOLVED
+    - **locator**: MAIN:L8/L5/research/review/0.md:44; HISTORY:AUDITONOMOUS.md:299-368
+    - **quote**: whether the constitutional sentence's silence on the auditor is a design property or an omission
+    - **checked_how**: Read section 2.8 from the HISTORY object. On MAIN and BETA the cited document exists only in git history; ROADMAP restores it at L8/L6/retired/consolidated-2026-08-04/AUDITONOMOUS.md and its sheet says so.
+    - **open_items**
+      - The IEEE 7001 reading record on MAIN argues against the no-auditor position: its Finding 2 says 7001 names the reader "EMPHATICALLY, AND STRUCTURALLY" (MAIN:L7/provenance/sources/staging-records/ieee/reading/IEEE-7001.md).
+  - item 29
+    - **id**: OPEN-ROWS
+    - **title**: Open: which rows of CONTRADICTIONS.md belong to Autonomous
+    - **path**: L8/L5/research/review/0.md
+    - **where**: MAIN, ROADMAP, BETA
+    - **what_it_is**: The sheet says rows comparing definitions of autonomy across standards are Autonomous's job to record and are consumed here through the peer binding, while rows about auditonomous-subject standards stay local. It leaves the sorting to the owner. The routing plan names three rows by title (C2, C4, C5). MAIN lists the matter among owner decisions left open. BETA assigns every row an autonomy input and a local remainder.
+    - **own_label**: "Which rows are which is the owner's reading; the file is not edited."
+    - **evidence_state**: UNRESOLVED on MAIN; ASSERTED on BETA
+    - **locator**: MAIN:L8/L5/research/review/0.md:35; MAIN:L8/L6/history/harmonization-2026-09-05.md:93
+    - **quote**: Which rows are which is the owner's reading; the file is not edited.
+    - **checked_how**: Read the sheet, MAIN:L8/L6/history/7LM_ROUTING_PLAN_2026-09-05.md:157, the harmonization record section 5 and MAIN:L7/peering/public/ingress/peer-1/object-1/0.md:34. grep of the autonomous repository (origin/main and its beta) finds no copy of the 1920.1 definition, the 7007 Annex A sentence or the ALFUS Volume II sentence.
+    - **depends_on**
+      - BETA-DISP
+    - **open_items**
+      - Autonomous does not currently record the disagreements for C2, C3 and C6, so there is nothing to consume through the binding for those rows.
+  - item 30
+    - **id**: OPEN-AUTTHEORY
+    - **title**: Awaiting the owner: the Autonomous Theory files in review/autonomous-theory/
+    - **path**: L8/L5/research/review/autonomous-theory/
+    - **where**: MAIN, ROADMAP, BETA
+    - **what_it_is**: Two files, "#autonomous(1).txt" (described as the 2025 Autonomous Theory draft) and "02_AutonomousTheory(1).pdf", held in the catch-all as a separate work. They are to leave the repository when the owner names that work's home.
+    - **own_label**: "none adjudicated"
+    - **evidence_state**: UNRESOLVED (placement decision pending)
+    - **locator**: MAIN:L8/L5/research/review/0.md:42
+    - **quote**: they leave this repository once the owner names that work's home
+    - **checked_how**: Both files are present in git ls-tree on MAIN and BETA. I did not read their contents. The EB:22 sentence quoted to justify the separation is not found in any other text file on MAIN by grep; its source draft is not on MAIN.
+    - **open_items**
+      - MAIN:L7/peering/public/ingress/peer-1/0.md:12 bars these files as a source for the definition of autonomous.
+  - item 31
+    - **id**: OPEN-CATCHALL
+    - **title**: The catch-all rule and what is PARKED
+    - **path**: L8/L5/research/review/0.md
+    - **where**: MAIN, BETA (same blob 5b8cde0); ROADMAP differs (adds about twenty restored files and a roadmap entry)
+    - **what_it_is**: The sheet's rule: everything awaiting the owner lands in review/; what the owner sets aside stays labelled PARKED; what the owner takes up moves to lanes/; nothing is deleted. Three things were placed on 2026-09-06 "none adjudicated": the ladder, the label discipline, and the autonomous-theory folder. Nothing in L8/L5 on MAIN or BETA carries the label PARKED.
+    - **own_label**: "none adjudicated"
+    - **evidence_state**: EMPTY (the PARKED set has no members); the rule itself is ASSERTED
+    - **locator**: MAIN:L8/L5/research/review/0.md:38-42
+    - **quote**: what the owner sets aside stays here labelled PARKED
+    - **checked_how**: git grep -w PARKED over MAIN:L8/L5 returns only the rule text and the ladder's definition. The "What is open" sentence is the same on MAIN and BETA; ROADMAP changes only the pointer for section 2.8.
+    - **open_items**
+      - The owner has parked nothing and taken up nothing on the record: no item has moved from review/ to lanes/ since 2026-09-06.
+  - item 32
+    - **id**: L5-SHEETS
+    - **title**: The Layer 5 and research sheets
+    - **path**: L8/L5/0.md; L8/L5/research/0.md
+    - **where**: MAIN, BETA (same blobs); L8/L5/0.md differs on ROADMAP; research/0.md identical in all three
+    - **what_it_is**: Two directory sheets. L8/L5/0.md states the layer's question, hard boundary and holdings: two lane files, two review files, three findings, institution empty, machine metadata not instantiated. research/0.md restates the catch-all rule and records that common/ and intake/ were dissolved. Neither holds a research claim.
+    - **own_label**: "Every claim here is INTERNAL ONLY"
+    - **evidence_state**: ASSERTED
+    - **locator**: MAIN:L8/L5/0.md:77-85; MAIN:L8/L5/research/0.md:34-40
+    - **quote**: Consensus, prose, authority, or usefulness cannot substitute for proof, measurement, or a lower-layer fact.
+    - **key_claims**
+      - "Not instantiated in this repository: current research practice remains manual; no directory metadata, automation, or validation is enabled here." (L8/L5/0.md:17)
+      - "`institution/` — empty." (L8/L5/0.md:82); the tree holds only the three 0.md sheets.
+    - **checked_how**: Read both whole; listed MAIN:L8/L5 with git ls-tree (19 paths).
+    - **open_items**
+      - L8/L5/0.md:80 lists two files under review/; the directory holds four files and one folder.
+- **defects**
+  - item 1
+    - **statement**: Every cross-link in CONTRADICTIONS.md is dead on MAIN and BETA. It links, as same-directory files, to STANDARDS_REGISTER.md, ISO_IEC_REQUIREMENTS.md, IEEE_REQUIREMENTS.md, NIST_REQUIREMENTS.md and AUTONOMY_AT_DISTANCE.md, and cites intake/sources/standards/SOURCE_LEDGER.md. The three extractions survive under other names at L8/L4/work/computation/ (ieee-requirements-for-autonomouos.md, iso-iec-requirements-for-autonomous.md, nist-requirements-for-autonomouos.md); STANDARDS_REGISTER.md and AUTONOMY_AT_DISTANCE.md exist only on ROADMAP and in HISTORY. No sheet maps old names to new.
+    - **locator**: MAIN:L8/L5/research/review/CONTRADICTIONS.md:10, 15-17, 46-48, 71-72, 90, 113-114, 140-143, 167, 188, 209-210
+  - item 2
+    - **statement**: The agreement paragraph quotes IEEE 7009 cl. 1.3.2(e) [source text withheld from the public copy]"; the extraction it draws on reads "[source text withheld from the public copy]". The file says every quote is verbatim and VERIFIED.
+    - **locator**: MAIN:L8/L5/research/review/CONTRADICTIONS.md:198-199 against MAIN:L8/L4/work/computation/ieee-requirements-for-autonomouos.md:874, 1043
+  - item 3
+    - **statement**: C2 states an unconditional incompatibility; the full entry it cites makes it conditional on an external authorizer and labels IEEE's intent UNVERIFIED.
+    - **locator**: MAIN:L8/L5/research/review/CONTRADICTIONS.md:60-63 against MAIN:L8/L4/work/computation/ieee-requirements-for-autonomouos.md:857, 874, 993
+  - item 4
+    - **statement**: C4's heading says "The identical behaviour"; its body says "Near-identical behaviour". Its ISO 8373 quotation also drops the term-number marker "(3.1)" that the extraction prints.
+    - **locator**: MAIN:L8/L5/research/review/CONTRADICTIONS.md:94, 98, 101 against MAIN:L8/L4/work/computation/iso-iec-requirements-for-autonomous.md:341
+  - item 5
+    - **statement**: The link mark for '[source text withheld from the public copy]' is defined and never used in the file.
+    - **locator**: MAIN:L8/L5/research/review/CONTRADICTIONS.md:12
+  - item 6
+    - **statement**: BETA inserts a section at the top of a file that declares itself append-and-strike and that the review sheet and the routing plan describe as not edited; BETA's review/0.md is unchanged and does not mention the new section.
+    - **locator**: BETA:L8/L5/research/review/CONTRADICTIONS.md:9, 22-35; BETA:L8/L5/research/review/0.md:35
+  - item 7
+    - **statement**: BETA's row for C2 routes "[source text withheld from the public copy]"; the bound blob contains no mention of IEEE 1920.1. The same blob lacks IEEE 7007 (row C3), ISO/IEC 25059 (row C7), ALFUS Volume II (row C6), IEEE 7001 cl. 4.2 (row C1) and ISO 8373 cl. 6.13.4 (row C4).
+    - **locator**: BETA:L8/L5/research/review/CONTRADICTIONS.md:28-34 against autonomous blob ffbdc28be7b47a83c9354526ac034596ba7b6e9a (rows A1-A11 at lines 70-80)
+  - item 8
+    - **statement**: The adjudication's ledger says "Claims Evaluated: 16 (see §10)"; the section 10 table has 19 claim rows.
+    - **locator**: MAIN:L8/L5/research/review/PERPETUITY_QUESTION_ADJUDICATION.md:293-311, 341
+  - item 9
+    - **statement**: Two rows of the labels summary (von Neumann constructor architecture; branching dichotomy) have no section in the body. Sources Acta Numerica 19 (2010) and PNAS 120 (2023) appear only in the ledger entry, and Encyclopedia of Mathematics only in the fidelity grading.
+    - **locator**: MAIN:L8/L5/research/review/PERPETUITY_QUESTION_ADJUDICATION.md:310-311, 327, 339
+  - item 10
+    - **statement**: Fetch-layer-relayed quotes are labelled inconsistently: PARTIALLY VERIFIED for the J. Math. Biol. and PNAS quotes, VERIFIED for the NIST handbook, Dyson and Winfield quotes, although the file's own fidelity grading lists all of them as relayed and to be confirmed.
+    - **locator**: MAIN:L8/L5/research/review/PERPETUITY_QUESTION_ADJUDICATION.md:67, 73 against 76, 110, 197; grading at 327
+  - item 11
+    - **statement**: Stale internal locator: the constitutional sentence is cited at manuscript/Block_03_The_Definition.md:10. That was right at commit 5a8d533 (2026-08-02); from 314ceba (2026-08-04) through HISTORY and ROADMAP it is at line 1 and line 10 reads "**II. The permissions triad**". The block files and intake/AUTONOMY_SCALE.md that the file cites are not on MAIN or BETA at all.
+    - **locator**: MAIN:L8/L5/research/review/PERPETUITY_QUESTION_ADJUDICATION.md:135, 246, 252, 285
+  - item 12
+    - **statement**: On BETA the definition's "NOT audited-after-the-fact" bullet is at line 54 and line 52 is blank, so every reference to "AUDITONOMOUS_DEFINITION.md:52" on BETA points at the wrong line.
+    - **locator**: BETA:L8/L0/semantics/definitions/AUDITONOMOUS_DEFINITION.md:52-54; BETA:L8/L5/research/review/0.md:44; BETA:L8/L5/research/review/PERPETUITY_QUESTION_ADJUDICATION.md:216
+  - item 13
+    - **statement**: The MAIN copies of both review documents were reformatted after HISTORY (table padding, blank lines). Text is unchanged, but line numbers moved: the consolidated document's PERP:207 and PERP:221 are lines 208 and 222 on MAIN.
+    - **locator**: MAIN:L8/L5/research/review/PERPETUITY_QUESTION_ADJUDICATION.md:208, 222 against HISTORY:intake/research/PERPETUITY_QUESTION_ADJUDICATION.md:207, 221
+  - item 14
+    - **statement**: The status ladder says promotions are logged in "the register" and cites AUDITONOMOUS.md:1230 for its outside-source rule. Neither a register nor that file exists on MAIN or BETA.
+    - **locator**: MAIN:L8/L5/research/review/STATUS_LADDER.md:14, 25
+  - item 15
+    - **statement**: L8/L5/0.md lists only CONTRADICTIONS.md and PERPETUITY_QUESTION_ADJUDICATION.md as review holdings; the directory also holds STATUS_LADDER.md, STATUS_AND_LABEL_DISCIPLINE.md and autonomous-theory/.
+    - **locator**: MAIN:L8/L5/0.md:80
+  - item 16
+    - **statement**: Four different schemes share the letter C: C1-C7 (standards conflicts), C-1 to C-23 (internal contradictions, HISTORY and ROADMAP), C-1 to C-10 (session corrections in ROADMAP's SESSION_2026-08-05_VERIFICATION_LOG.md) and C-001 onward (governance rulings, cited as C-002 on MAIN). A criteria list numbered C1-C13 also appears in ROADMAP's vocabulary paper.
+    - **locator**: MAIN:L8/L5/research/review/CONTRADICTIONS.md:32; HISTORY:AUDITONOMOUS.md:1123; ROADMAP:L8/L4/work/writing/sessions/SESSION_2026-08-05_VERIFICATION_LOG.md:50; MAIN:L8/L5/research/findings/DISTILLATION.md:67
+- **open_questions**
+  - No standard, paper or PDF was opened. Every quote I call confirmed was matched against another record inside the repositories (reading records, extractions, capture records), never against the publisher's text. The held IEEE PDFs are licensed and not in the repository.
+  - Which wording of IEEE 7009 cl. 1.3.2(e) is correct, singular (CONTRADICTIONS.md) or plural (the extraction)? Only the PDF settles it.
+  - [source text withheld from the public copy] 5 really classed Heteronomous? Auditonomous holds a capture that says so; the bound Autonomous definition lists it as an outstanding attack line (possible inference from a merged cell) and downgrades the Table 1 row to PARTIALLY VERIFIED. C4 depends on it.
+  - Did the owner rule which rows of C1-C7 are Autonomous's before the BETA section was written? MAIN reserves that edit to the owner; no ruling is recorded in scope.
+  - Where does Autonomous record the disagreements this repository is meant to consume? grep of the autonomous repository (origin/main and beta/7lm-exemplar-autonomous) finds no copy of the 1920.1 definition, the 7007 Annex A sentence or the ALFUS Volume II sentence. I searched by exact phrase only.
+  - The owner's own words for the DEAD FOR NOW ruling were not found. I searched text files on MAIN, ROADMAP and HISTORY by grep; I did not search the Office files or chat volumes.
+  - Audit necessarily post hoc (adjudication section 6.1) or not (CYCLES verdict ii): the two files are unranked, and I did not assess their evidence against each other.
+  - Whether the VERIFIED labels in the adjudication meet the ladder's outside-source rule where the text came from institutional mirrors, fetch-layer relays or index sweeps that include Google Scholar. The rule was restated on 2026-08-08, after the file's date.
+  - Whether the three next required checks in the adjudication (publisher-of-record captures; relayed quotes against publisher PDFs; bounded-commitment claim against the logging literature) were ever run. Nothing in scope says so; I did not search ROADMAP's SOURCE_REQUESTS.md or RESEARCH_DOCKET.md.
+  - Whether any of C-1 to C-23 changed status after 2026-08-04. I read the register as it stood at HISTORY and did not trace later rulings or re-verify its 23 entries.

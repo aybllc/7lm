@@ -1,0 +1,270 @@
+# read:ledgers
+
+Agent result, as returned. Workflow: Manuscript status of 3 November 2026. Run `wf_1cf4205c-c72`. Phase: Read. Checked in 2026-11-11 19:51 UTC.
+
+- **summary**: Source: the L6 ledgers and layer sheets of aybllc/auditonomous at origin/main (HEAD 2165144, merge of PR #26, 2026-09-11), plus read-only git history (147 commits reachable from HEAD; first commit fc3b018 of 2026-07-30), cross-checked against the retired 2026-08-14 layout and the 7LM sheets. These are the repository's own records of what happened to the manuscript material, not the drafts themselves.
+
+  What they show: the "manuscript" was never a single growing text in this repository. (1) 2026-07-30: a scaffolding-only `manuscripts/branch/README.md` (one line) and, in `intake/`, the Martin 2026 embodied-auditonomy manuscript v0.2 and a 2026-07-30 lexicographic definition. (2) 2026-08-02: the 52-block "Auditonomous Theory" corpus (Master Archive, TOC, 55 block files, four 1-line "Skipped." blocks the author later ruled CUT) landed in `intake/manuscript/`, and the THEME_LEDGER grouped it (INTERNALLY VALIDATED, corpus INTERNAL ONLY) while recording a FAILED CHECK on the embodied manuscript's self-declared hash and provenance gaps. (3) 2026-08-05 and 2026-08-08: the `.odt`/`.docx` working drafts, chat transcripts, a Sourcebook v0.1 bundle and requirement extractions entered via commits and merge PR #12. (4) 2026-08-14: the book spine v0.1 (chapter titles only, INTERNALLY DERIVED) came in by PR #15; the same day the redeploy e9511f5 created `manuscripts/main/MANUSCRIPT.tex`, explicitly a "STUB — NO CONTENT MIGRATED". (5) 2026-08-15 prune 8c98573 deleted the stub, the spine, the Sourcebook set, chat-3 and most notes; three drafts and two chats survived. (6) 2026-08-16 AU-NORM-01..04 fixed four 0-byte manuscripts READMEs as "do not restore" and restored the definition. (7) 2026-09-05 the 7LM routing moved the survivors to `USO/l4/work/writing/` (renamed `L8/L4/work/writing/` on 2026-09-12); the last 0-byte `manuscripts/` files were deleted 2026-09-07, so no `manuscripts/` directory exists at HEAD.
+
+  Where it got to, per the records: three live drafts, two chats, one session record and the branch rules sit at L4 as "writing as performed work"; nothing is released; "nothing is built". Still pending by the records' own words: a real LaTeX migration (the master LEDGER row is stale against the tree), the prior-art search ("still unrun"), the owner's extraction of three session objects, the split-or-cite decisions, T3, Q1–Q9 and the line-52 edit. A book-structure roadmap exists only on the closed, unmerged branch origin/claude/book-structure-roadmap-k8ap82 (2026-09-13/14).
+- **facts**
+  - item 1
+    - **claim**: Initial commit of the repository is dated 2026-07-30 and names manuscripts scaffolding; the only tracked manuscripts file is a one-line branch README (no tracked definitions/ or formulas/ files exist at that commit, checked with git ls-tree -r fc3b018).
+    - **date**: 2026-07-30
+    - **evidence**: sha fc3b018 (2026-07-30 23:29:50 -0700): "Initial: auditonomous research home — intake/ with move log, scaffolding (definitions, formulas, manuscripts)"; fc3b018:manuscripts/branch/README.md:1 "[source text withheld from the public copy]."; fc3b018:README.md is empty
+    - **status_label**: —
+  - item 2
+    - **claim**: The 2026-07-30 intake move brought the Martin embodied-auditonomy manuscript v0.2 and the definition built that session; MOVE_LOG calls the manuscript the word's defining manuscript.
+    - **date**: 2026-07-30
+    - **evidence**: fc3b018:intake/MOVE_LOG.md:3 "[source text withheld from the public copy]"; :13 "[source text withheld from the public copy] ... The word's defining manuscript."; :11 "[source text withheld from the public copy])"
+    - **status_label**: —
+  - item 3
+    - **claim**: The Auditonomous Theory manuscript corpus (52-block Master Archive, TOC, 55 block/outline files) and the Third Power source were added on 2026-08-02 under intake/; four blocks are 1-line 'skipped' files.
+    - **date**: 2026-08-02
+    - **evidence**: sha 5a8d533 (2026-08-02 10:29:48 -0700): "manuscript/: Master Archive (52 blocks, full prose), TOC, 55 block/outline files incl. lexrom embodied-auditonomy manuscript (md + pdf)"; stat shows Block_31_skipped.md, Block_32_skipped.md, Block_35_skipped.md, Block_36_skipped.md at 1 line each; 57 files changed
+    - **status_label**: INTERNAL ONLY (MOVE_LOG entry: "[source text withheld from the public copy].")
+  - item 4
+    - **claim**: THEME_LEDGER is dated 2026-08-02, groups intake/[source text withheld from the public copy] manuscript), labels the corpus INTERNAL ONLY and itself INTERNALLY VALIDATED, and used ten parallel readers.
+    - **date**: 2026-08-02
+    - **evidence**: L8/L5/research/lanes/THEME_LEDGER.md:3 "[source text withheld from the public copy])"; :5 "corpus INTERNAL ONLY ... This ledger: INTERNALLY VALIDATED"; :7 "[source text withheld from the public copy]"
+    - **status_label**: INTERNAL ONLY; INTERNALLY VALIDATED; NOT-CHECKED (external claims)
+  - item 5
+    - **claim**: THEME_LEDGER cluster C11 registers the embodied manuscript and the intake-root definitional docs as engineering doctrine, all INTERNAL ONLY, several mutually inconsistent, and quotes the embodied doc's own non-canonical status.
+    - **date**: 2026-08-02
+    - **evidence**: THEME_LEDGER.md:128 "### [source text withheld from the public copy])"; :130 "Members: LEX ... [source text withheld from the public copy]."; :131 "[source text withheld from the public copy]."; :137 "[source text withheld from the public copy]); :138 "[source text withheld from the public copy])
+    - **status_label**: INTERNAL ONLY; INTERNALLY VALIDATED; CONJECTURE (SCALE)
+  - item 6
+    - **claim**: The author ruled on 2026-08-02 that Blocks 31, 32, 35, 36 are skipped meaning cut from the book; the assistant's two misreadings are retained as corrections of record.
+    - **date**: 2026-08-02
+    - **evidence**: THEME_LEDGER.md:146 "[source text withheld from the public copy]."; :148 "[source text withheld from the public copy]." ... "\"Skipped\" means cut."
+    - **status_label**: CLOSED; "skipped"; stub
+  - item 7
+    - **claim**: THEME_LEDGER records a FAILED CHECK on the embodied manuscript's self-declared content hash and that the cited naming-policy authority file is missing.
+    - **date**: 2026-08-02
+    - **evidence**: THEME_LEDGER.md:346 "[source text withheld from the public copy] = 6a717c70... ≠ claimed \"7fd260a5...\" ([source text withheld from the public copy]"; :347 "Missing authority document: ... feedback_artifact_hash_naming.md ... was not found under intake/"
+    - **status_label**: FAILED CHECK; NOT-CHECKED
+  - item 8
+    - **claim**: THEME_LEDGER records [source text withheld from the public copy] ~60 untracked manuscript/*.md files is recorded nowhere, and the sweep MANIFEST is PARTIAL by construction.
+    - **date**: 2026-08-02
+    - **evidence**: THEME_LEDGER.md:350 "[source text withheld from the public copy])"; :354 "Uncovered directory: intake/sources/ ... NOT-CHECKED"
+    - **status_label**: NOT-CHECKED; PARTIAL
+  - item 9
+    - **claim**: THEME_LEDGER's T3 lane records a second FAILED CHECK (ISO 15489-1 unreachable) and an open gap on ISO/IEC 27002 with a retrieval lane 'running'; T3 itself remains OPEN with the option set unranked.
+    - **date**: 2026-08-02
+    - **evidence**: THEME_LEDGER.md:221 "[source text withheld from the public copy]."; :156 "[source text withheld from the public copy]"
+    - **status_label**: FAILED CHECK; OPEN; UNREBUTTED; NOT-CHECKED
+  - item 10
+    - **claim**: THEME_LEDGER T9 notes a date contradiction inside the corpus: archive says session record through July 31, 2026 while the four stubs are dated Aug 2; T16 lists internal defects of the embodied manuscript (duplicate §19).
+    - **date**: 2026-08-02
+    - **evidence**: THEME_LEDGER.md:284 "[source text withheld from the public copy]" ... "UNVERIFIED whether intended addition or contamination"; :298 "[source text withheld from the public copy]"
+    - **status_label**: UNVERIFIED
+  - item 11
+    - **claim**: The .odt working drafts (auditonomous.odt, auditonomous-08-03-26.odt and its -prompt/-prompt-brick variants) and the '[source text withheld from the public copy]' first entered the repository on 2026-08-05.
+    - **date**: 2026-08-05
+    - **evidence**: sha 71f75cb (2026-08-05 01:18:48 -0700) "Auditability extraction: SP 800-53r5 AC and AU families, Part A / Part B split" adds manuscripts/main/auditonomous.odt, [source text withheld from the public copy] (git log --all -m --diff-filter=A)
+    - **status_label**: —
+  - item 12
+    - **claim**: The eight 'reference corpus' documents trace by git --follow to 2026-08-05 durable files (e.g. IEEE_REQUIREMENTS.md from 5560b12, CONTRADICTIONS.md from 27ca6f0) and were moved into manuscripts/main/ by the 2026-08-14 redeploy.
+    - **date**: 2026-08-05
+    - **evidence**: git log --follow 1d83788 -- manuscripts/main/IEEE_REQUIREMENTS.md: 5560b12 (2026-08-05 01:59:02 -0700) "Add ISO/IEC, IEEE and NIST requirement lists as separate durable files" → e9511f5; CONTRADICTIONS.md: 27ca6f0 (2026-08-05 02:03:31 -0700) → e9511f5
+    - **status_label**: —
+  - item 13
+    - **claim**: DISTILLATION records a four-lane 'prior-art check' run 2026-08-05 (maritime, agency, lawful-order, mechanism-design) while its §5 says [source text withheld from the public copy] is still unrun — two senses of 'prior art' in one file.
+    - **date**: 2026-08-05
+    - **evidence**: L8/L5/research/findings/DISTILLATION.md:109 "[source text withheld from the public copy]"; :148 "## [source text withheld from the public copy]"; :134 "[source text withheld from the public copy]**)."
+    - **status_label**: VERIFIED / PARTIALLY VERIFIED / NOT LOCATED (§4 rows); "still unrun" (§5)
+  - item 14
+    - **claim**: auditnomous-main.docx, the three chat transcripts (chat-1, chat-2, chat-3) and the Auditonomous_Book_Material_Sourcebook_v0.1 set (.docx, .md, _CHAT-HIST.docx, Extraction_Bundle .zip) first appear in merge commit 077d5de of 2026-08-08 itself; neither parent contains them.
+    - **date**: 2026-08-08
+    - **evidence**: sha 077d5de (2026-08-08 16:13:45 -0700) "Merge pull request #12 from aybllc/claude/define-auditonomous-2z0x5s / Durability layer, sourcing purge, and provenance source lists"; git ls-tree 077d5de^1 and ^2 show only notes/Auditonomy_ ... .docx under manuscripts/; ls-tree 077d5de shows manuscripts/auditnomous-main.docx, auditonomous-chat-1.docx, auditonomouos-chat-2.docx, auditonoomous-chat-3.docx, main/Auditonomous_Book_Material_Sourcebook_v0.1.{docx,md,_CHAT-HIST.docx}
+    - **status_label**: v0.1 (Sourcebook)
+  - item 15
+    - **claim**: PR #15 (merged 2026-08-14) brought the book spine v0.1: chapter titles only, INTERNALLY DERIVED, titles 'offers, not freezes', title decision open, 1947/contact material severed to an appendix.
+    - **date**: 2026-08-14
+    - **evidence**: sha d47ba46 (2026-08-14 13:37:05 -0700) "Merge PR #15: hygiene stabilization, IL-001-R2 restoration, book spine v0.1, hub ledger"; sha f67968b (2026-08-14 19:02:27 +0000) "Book spine v0.1: chapter titles with evidence anchors"; 1d83788:manuscripts/SPINE_v0.1_2026-08-14.md:2 "[source text withheld from the public copy]"; :11 "Titles are offers, not freezes."; :16 "36 of 52 blocks run without it"; :25 "[source text withheld from the public copy]"
+    - **status_label**: v0.1; INTERNALLY DERIVED; decision open
+  - item 16
+    - **claim**: The 2026-08-14 reorganisation (first deployment 9aefa6e) was a structural session of 151 files, not pushed; its F-004 draft was UNREVIEWED MODEL OUTPUT; 9aefa6e is not reachable from HEAD in this clone.
+    - **date**: 2026-08-14
+    - **evidence**: L8/L6/history/LEDGER_2026-08-14_reorganisation.md:12 "[source text withheld from the public copy]"; :26 "[source text withheld from the public copy]."; :29 "[source text withheld from the public copy]"; git log -1 9aefa6e → "fatal: ambiguous argument '9aefa6e': unknown revision"; git branch -r lists only origin/HEAD, origin/claude/book-structure-roadmap-k8ap82, origin/main (no rescue/reorg-2026-08-14)
+    - **status_label**: UNREVIEWED MODEL OUTPUT; NOT pushed
+  - item 17
+    - **claim**: The first deployment was reset away by PRs #15–17 and replayed as a 'fresh redeploy' on ca87bba; the redeploy commit is e9511f5, which created manuscripts/README.md, definitions/{AUDITONOMOUS,AUTONOMOUS,README,REGISTER}.md, main/{8 reference docs, MANUSCRIPT.tex, README.md} and prior-art/README.md.
+    - **date**: 2026-08-14
+    - **evidence**: L8/L6/history/LEDGER_2026-08-14_redeploy.md:6-8 "Fresh redeploy of the reorganisation on `ca87bba` ... [source text withheld from the public copy])"; :28-29 "[source text withheld from the public copy]"; sha e9511f5 (2026-08-14 16:26:40 -0700) "Redeploy the shared repo layout on ca87bba" name-status: A manuscripts/main/MANUSCRIPT.tex, A manuscripts/prior-art/README.md, A manuscripts/definitions/REGISTER.md ...; "HUB_LEDGER.md and manuscripts/SPINE_v0.1 stay where PR #15 put them"
+    - **status_label**: UNREVIEWED MODEL OUTPUT (F-004 draft, L6 reconciliation); NOT pushed
+  - item 18
+    - **claim**: MANUSCRIPT.tex was created 2026-08-14 as an explicit stub with no content migrated; the live drafts were declared to remain the .docx/.odt/.md files.
+    - **date**: 2026-08-14
+    - **evidence**: 1d83788:manuscripts/main/MANUSCRIPT.tex:2 "% [source text withheld from the public copy])"; :5-7 "[source text withheld from the public copy]."; :9 "[source text withheld from the public copy]."; :13-14 "\\title{Auditonomous} \\author{Eric D. Martin}"
+    - **status_label**: STUB
+  - item 19
+    - **claim**: The pre-prune manuscripts READMEs (1d83788) declared .tex the source of truth, the stub status, the unbuilt .docx/.pdf, the eight reference documents moved from root, and the DRAFT — INTERNAL rule.
+    - **date**: 2026-08-14
+    - **evidence**: 1d83788:manuscripts/README.md:19-22 "`.tex` is the source of truth ... ([source text withheld from the public copy].)"; 1d83788:manuscripts/main/README.md:10 "`[source text withheld from the public copy].**"; :11 "`[source text withheld from the public copy]"; :12 "[source text withheld from the public copy]"; :25-29 "[source text withheld from the public copy]`)" listing AUDITABILITY_REQUIREMENTS · AUTONOMY_AT_DISTANCE · CONTRADICTIONS · IEEE_REQUIREMENTS · ISO_IEC_REQUIREMENTS · NIST_REQUIREMENTS · REQUIREMENTS_OWNERSHIP · STANDARDS_REGISTER; :42 "`DRAFT — INTERNAL` until it is not."
+    - **status_label**: STUB; DRAFT — INTERNAL
+  - item 20
+    - **claim**: The pre-prune definitions REGISTER (opened 2026-08-14) listed six entered terms, all coinage/CONJECTURE/INTERNAL ONLY, with 'autonomous' only referenced; its README carried a copy-drift warning for FREEZE-pinned copies.
+    - **date**: 2026-08-14
+    - **evidence**: 1d83788:manuscripts/definitions/REGISTER.md:4 "Opened 2026-08-14 (reorganisation)."; :12 "auditonomous / auditonomy ... Coinage — located in zero held standards ... Entered 2026-08-14"; :14 "auditon (replicator) ... two of three headline claims REFUTED"; :16 "AUDITONOMY.md ... CONJECTURE / INTERNAL ONLY per its own header"; :17 "autonomous (reference copy) ... REFERENCED, not redefined"; :23 "(none pending)"; 1d83788:manuscripts/definitions/README.md:10 "⚠ Copy-drift warning — read before editing"
+    - **status_label**: Coinage; CONJECTURE / INTERNAL ONLY; REFUTED; REFERENCED
+  - item 21
+    - **claim**: The redeploy addendum restored five auditonomy documents at F-003-witnessed bytes into manuscripts/definitions/ and research/findings/; the F-004 manifest was parked, NOT installed.
+    - **date**: 2026-08-14
+    - **evidence**: LEDGER_2026-08-14_redeploy.md:38-43 "[source text withheld from the public copy]."
+    - **status_label**: NOT installed; grandfathered
+  - item 22
+    - **claim**: The freeze was retired by F-005 at commit 1d83788 dated 2026-08-14; the master LEDGER row annotates it '2026-08-16' while its next row and the harmonization chronology give 2026-08-14.
+    - **date**: 2026-08-14
+    - **evidence**: sha 1d83788 (2026-08-14 17:40:15 -0700) "F-005: retire the freeze check on Eric's instruction"; L8/L6/history/LEDGER.md:29 "2026-08-16: freeze retired (F-005, `1d83788`)"; LEDGER.md:30 "retired by F-005 (`1d83788`, 2026-08-14 ...)"; harmonization-2026-09-05.md:18 "2026-08-14 | Freeze F-005 retired on the owner's instruction. | `1d83788`"
+    - **status_label**: RETIRED (F-005)
+  - item 23
+    - **claim**: The 2026-08-15 prune 8c98573 (Eric's manual prune of 2026-08-14/15) deleted MANUSCRIPT.tex, the spine, the Sourcebook v0.1 set, chat-3, auditonomous.odt, notes/, main/research/ and four definitions files; it renamed chat-1/2 to main/chat/, three drafts to main/open-research/ (notes/Auditonomy_ ... .docx became auditonomouos-important.docx), and the requirement extractions to main/auditnomous-model/requirements/.
+    - **date**: 2026-08-15
+    - **evidence**: sha 8c98573 (2026-08-15 23:28:27 -0700) "Reorganize working tree to the shared aybllc model layout": "Eric's manual prune and promotion (2026-08-14/15)" ... "Remove ... the older manuscripts set ... (205 deletions total; all content remains reachable in history)" ... "Add 29 files: ... the auditnomous-model requirements corpus, chat/open-research manuscripts"; name-status: D manuscripts/main/MANUSCRIPT.tex, D manuscripts/SPINE_v0.1_2026-08-14.md, D manuscripts/auditonoomous-chat-3.docx, D main/Auditonomous_Book_Material_Sourcebook_v0.1.docx, R100 [source text withheld from the public copy] → main/open-research/auditonomouos-important.docx, R100 auditnomous-main.docx → main/open-research/, R079 main/IEEE_REQUIREMENTS.md → main/auditnomous-model/requirements/ieee-requirements-for-autonomouos.md
+    - **status_label**: —
+  - item 24
+    - **claim**: After the prune, manuscripts/ held 19 files of which five were 0-byte (README.md, main/README.md, definitions/README.md, definitions/REGISTER.md, definitions/AUDITONOMOUS_DEFINITION.md); MANUSCRIPT.tex exists at 1d83788 but not at 8c98573, 4a1c1db, 280226a or HEAD.
+    - **date**: 2026-08-15
+    - **evidence**: git ls-tree -r -l 8c98573 -- manuscripts/ (19 entries; 0-byte: manuscripts/README.md, manuscripts/main/README.md, manuscripts/definitions/README.md, REGISTER.md, AUDITONOMOUS_DEFINITION.md); grep -c MANUSCRIPT.tex over ls-tree: HEAD 0, 4a1c1db 0, 280226a 0, 8c98573 0, 1d83788 1
+    - **status_label**: —
+  - item 25
+    - **claim**: On 2026-08-16 commit 4a1c1db executed owner rulings AU-NORM-01..04: the four 0-byte manuscripts files are intentional blanks (do not restore), AUDITONOMOUS_DEFINITION.md restored verbatim as the active record (AU-NORM-02), Third Power parked (AU-NORM-03), definitions stay under manuscripts/definitions/ (AU-NORM-04).
+    - **date**: 2026-08-16
+    - **evidence**: sha 4a1c1db (2026-08-16 15:48:01 -0700) "Close the l6 migration; structural normalization under owner rulings AU-NORM-01..04": "manuscripts/definitions/AUDITONOMOUS_DEFINITION.md restored verbatim from 1d83788:intake/AUDITONOMOUS_DEFINITION.md (410 lines; the placeholder was born empty at 8c98573). Active lexicographic record per AU-NORM-02; root AUDITONOMOUS.md stays history-only." ... "The four zero-byte files stand as intentional blanks (AU-NORM-01)." ... "Definitions remain under manuscripts/definitions/ (AU-NORM-04)."; L8/L6/history/LEDGER_2026-08-16_l6-close-and-normalization.md:35 "Intentionally blank (AU-NORM-01, do not restore): `manuscripts/README.md`, `manuscripts/definitions/README.md`, `manuscripts/definitions/REGISTER.md`, `manuscripts/main/README.md`."
+    - **status_label**: AU-NORM-01..04; INTERNAL ONLY; [source text withheld from the public copy] adversarially reviewed; OWNER DECISION; SAFE TO COMMIT; FREEZE RETIRED CLEANLY
+  - item 26
+    - **claim**: The 2026-08-16 ledger's Next Required Check queue lists five items; item 1 (authority-interface register) is later recorded as answered by the peer-1 binding, item 3 (auditability-gap search) and item 5 (two definition ambiguities at lines 18/96/181) are not recorded as done anywhere read.
+    - **date**: 2026-08-16
+    - **evidence**: LEDGER_2026-08-16_l6-close-and-normalization.md:46 "1. **`uso/autonomous/LEDGER.md`** — create the authority-interface register"; :48 "3. **The auditability-gap search** (bounded, cross-repo)"; :50 "5. Two flagged ambiguities inside the definition (etymology-blend phrasing at lines 18/96/181)"; L8/L6/history/0.md:36 "Item 1 of the 2026-08-16 queue (the authority-interface register) is answered by [source text withheld from the public copy]-1/`."
+    - **status_label**: PENDING (queue)
+  - item 27
+    - **claim**: The master LEDGER (opened 2026-08-14) still states that MANUSCRIPT.tex is a stub waiting on a real LaTeX migration and that manuscripts/prior-art/ waits on a first prior-art search; this row contradicts the tree, where MANUSCRIPT.tex was deleted at 8c98573 and manuscripts/ no longer exists.
+    - **date**: 2026-08-14 (row text); unchanged at HEAD
+    - **evidence**: L8/L6/history/LEDGER.md:37 "| `[source text withheld from the public copy] |"; :39 "| `[source text withheld from the public copy] |"; :16 "**Reorganised 2026-08-14**"; L8/L4/work/writing/0.md:33 "The LaTeX `MANUSCRIPT.tex` the master ledger calls a stub does not exist at HEAD."; `ls manuscripts` at HEAD → "No such file or directory"
+    - **status_label**: STUB (stale); waiting on "Real LaTeX migration"
+  - item 28
+    - **claim**: The master LEDGER's definitions row says the README/REGISTER restore is the principal's call, whereas the 2026-08-16 ledger says 'do not restore' (AU-NORM-01); both texts stand at HEAD.
+    - **date**: 2026-08-16
+    - **evidence**: LEDGER.md:38 "`README.md`/`REGISTER.md` remain 0-byte (their `1d83788` predecessors describe pruned files — restore is the principal's call)" ... "| Principal: REGISTER/README restore-or-replace |"; LEDGER_2026-08-16_l6-close-and-normalization.md:35 "Intentionally blank (AU-NORM-01, do not restore)"
+    - **status_label**: AU-NORM-01; principal's call
+  - item 29
+    - **claim**: The master LEDGER carries open items from before the reorganisation: T3, record-ontology Q1–Q9, the unapplied edit to AUDITONOMOUS_DEFINITION.md:52, the reader-agnostic divergence, and the never-read ommp/broken-zero repos with private-repo sweep scope PENDING.
+    - **date**: 2026-08-14
+    - **evidence**: LEDGER.md:59-63 "[source text withheld from the public copy]\""; "Record ontology Q1–Q9"; "[source text withheld from the public copy]."
+    - **status_label**: OPEN; PENDING
+  - item 30
+    - **claim**: The retired 2026-08-14 README's 'four layers' table places the theory/manuscript corpus at intake/manuscript/ (Blocks 1–52, Master Archive, TOC) as [source text withheld from the public copy], the lexicographic entry dated 2026-07-30 as unmodified and not superseded, and the research files as 2026-08-02 onward; every path in it was deleted at HEAD by 8c98573.
+    - **date**: 2026-08-14 (layout); retired 2026-09-05
+    - **evidence**: L8/L6/retired/layout-2026-08-14/README.md:69 "## The four layers"; :75 "**Theory / manuscript** | `intake/manuscript/` — Blocks 1–52, Master Archive, TOC | ... The scenario content [source text withheld from the public copy]**; the definitional sentences are authorial text."; :77 "**Lexicographic** | `intake/AUDITONOMOUS_DEFINITION.md` | The dated dictionary-style entry (2026-07-30) ... **Unmodified and not superseded**"; :78 "**Research** | `intake/research/` | Six files, 2026-08-02 onward, which [source text withheld from the public copy]:8 "the corpus's own register scheme, every path in it deleted at HEAD by `8c98573`"
+    - **status_label**: CONJECTURE; INTERNAL ONLY; RETIRED
+  - item 31
+    - **claim**: The retired README's layout block describes manuscripts/ as main/ with the MANUSCRIPT.tex stub plus drafts plus reference corpus, and lists the registry labels in force.
+    - **date**: 2026-08-14 (as amended 2026-08-16)
+    - **evidence**: L8/L6/retired/layout-2026-08-14/README.md:102-103 "[source text withheld from the public copy]/"; :53-56 "[source text withheld from the public copy]`."; :82-83 "`EB:22` disclaims the connection outright: *\"Autonomous Theory and Auditonomous are separate works.\"*"
+    - **status_label**: label vocabulary as quoted
+  - item 32
+    - **claim**: The retired manuscripts/README.md and manuscripts/main/README.md under layout-2026-08-14 are 0 bytes, i.e. the post-prune blanks, not the 1d83788 texts.
+    - **date**: 2026-09-05 (retired)
+    - **evidence**: wc -c L8/L6/retired/layout-2026-08-14/manuscripts/README.md → 0; wc -c L8/L6/retired/layout-2026-08-14/manuscripts/main/README.md → 0; harmonization-2026-09-05.md:63 "`manuscripts/README.md`; `manuscripts/main/README.md`; ... Their rules are cited from the `0.md` sheets of the positions that absorbed them."
+    - **status_label**: RETIRED; 0-byte
+  - item 33
+    - **claim**: The 7LM routing plan was written 2026-09-05 as UNREVIEWED MODEL OUTPUT against HEAD 280226a, initially blocked on push access, and executed the same day on branch claude/7lm-topology; it is now filed at L6 history as a decision record.
+    - **date**: 2026-09-05
+    - **evidence**: L8/L6/history/7LM_ROUTING_PLAN_2026-09-05.md:3 "**Status:** UNREVIEWED MODEL OUTPUT · INTERNAL ONLY · a proposal, not an adjudication."; :4 "**Executed:** 2026-09-05 on branch `claude/7lm-topology` on the owner's instruction"; :5 "**Written:** 2026-09-05 ... HEAD `280226a`"; :270-271 "**Blocker:** this session holds read-only access ... denied by the permission classifier"; sha 9dec4aa (2026-09-05 00:54 UTC), cb27071 (01:15 UTC), ccc0554 (01:42 UTC) "Instantiate the Seven-Layer Model canonical topology"; L8/L6/history/0.md:39 "(unreviewed model output when written; a decision record now), placed here 2026-09-06"
+    - **status_label**: UNREVIEWED MODEL OUTPUT; INTERNAL ONLY; OWNER DECISION rows
+  - item 34
+    - **claim**: Routing plan §2.5 routed manuscripts/: README/main/README 0-byte RETIRE; definitions README/REGISTER RETIRE · OWNER DECISION; AUDITONOMOUS_DEFINITION.md MOVE to L0; AUDITON_ENVELOPE, HUMINT_ENCODE, REQUIREMENTS_OWNERSHIP MOVE to L1 with OWNER DECISION on split; the three requirement extractions MOVE to L4 computation; the two chats and three live drafts MOVE to L4 writing; CONTRADICTIONS.md MOVE to L5 review; prior-art README MOVE to L7 with the search still unrun.
+    - **date**: 2026-09-05
+    - **evidence**: 7LM_ROUTING_PLAN_2026-09-05.md:145 "`manuscripts/README.md` (0 bytes) | RETIRE"; :147 "`manuscripts/definitions/AUDITONOMOUS_DEFINITION.md` | MOVE | `USO/l0/semantics/definitions/...` | The locally authored L0 object (active record per AU-NORM-02) ... The line-52 pending edit stays pending"; :148 "`AUDITON_ENVELOPE.md` | MOVE · OWNER DECISION on split | `USO/l1/state-space/`"; :149 "`README.md`, `REGISTER.md` (0 bytes; AU-NORM-01 \"do not restore\") | RETIRE · OWNER DECISION"; :156 "`auditonomous-chat-1.docx`, `auditonomouos-chat-2.docx` | MOVE | `USO/l4/work/writing/chat/` | Recorded working sessions as produced. Not arguments."; :158 "`auditnomous-main.docx`, `auditonomouos-important.docx`, `auditonomous-08-03-26.odt` | MOVE | `USO/l4/work/writing/` | Live drafts (\"[source text withheld from the public copy]\"). Their research meaning is L5; nothing is released."; :159 "`manuscripts/prior-art/README.md` | MOVE | `L7/provenance/prior-art/README.md` | Prior-art rules; search still unrun (DISTILLATION §5)."
+    - **status_label**: MOVE; RETIRE; OWNER DECISION; AU-NORM-01; AU-NORM-02; VERIFIED / PARTIALLY VERIFIED
+  - item 35
+    - **claim**: The plan explicitly declined to harmonize, apply the line-52 edit, rank T3, change any label, register any formula, or claim any L4 cut beyond writing/extraction/verification; it also declined to rewrite internal path references.
+    - **date**: 2026-09-05
+    - **evidence**: 7LM_ROUTING_PLAN_2026-09-05.md:246-248 "Does not harmonize a single contradiction (C1–C7 stand), adopt Q9, apply the line-52 pending edit, rank T3's option set, or change any label (VERIFIED, INTERNALLY DERIVED, CONJECTURE, NOT-CHECKED, [source text withheld from the public copy] travel unchanged)."; :250-251 "Does not register any formula ... stay INTERNALLY DERIVED and unregistered until the owner rules."; :252 "Does not claim any L4 cut beyond writing, extraction and verification runs: nothing is built."
+    - **status_label**: INTERNALLY DERIVED; unregistered
+  - item 36
+    - **claim**: The harmonization record of 2026-09-05 states 69 paths moved by git mv with no deletions, lists the manuscripts moves path by path, retires the layout READMEs verbatim, and leaves the two 0-byte definitions files in place under AU-NORM-01.
+    - **date**: 2026-09-05
+    - **evidence**: L8/L6/history/harmonization-2026-09-05.md:22 "69 paths moved by `git mv` (renames, no deletions); `0.md` written for every position"; :36 "`manuscripts/branch/README.md` | `USO/l4/work/writing/branch/README.md` | alternate manuscripts as writing work"; :42 "`manuscripts/main/chat/*.docx` | `USO/l4/work/writing/chat/` | recorded sessions as produced"; :44 "`manuscripts/main/open-research/*.docx`, `*.odt` | `USO/l4/work/writing/` | live drafts"; :45 "`manuscripts/prior-art/README.md` | `L7/provenance/prior-art/README.md`"; :80 "`manuscripts/definitions/README.md` and `REGISTER.md` — 0-byte, governed by AU-NORM-01 (\"do not restore\"); not moved, not retired."
+    - **status_label**: —
+  - item 37
+    - **claim**: The harmonization record §5 lists the owner decisions left open after routing: split-or-cite for three L1 files; extraction and registration of three session objects, the PERPETUITY exact argument (L2 or L3, unresolved) and DECORATIONS (L3); positions/names including binder/internal/ at publications versus L4 writing; everything in common/durable/orphan/.
+    - **date**: 2026-09-05
+    - **evidence**: harmonization-2026-09-05.md:91 "Split or cite: `AUDITON_ENVELOPE.md` ..., `HUMINT_ENCODE.md` ..., `REQUIREMENTS_OWNERSHIP.md`"; :92 "Extract and register: the three candidate objects in `SESSION_2026-08-05_AUDITON_ARCHITECTURE.md` (L1 invariants; L2 isomorphism; L3 scaling); the exact argument in `PERPETUITY_QUESTION_ADJUDICATION.md` (L2 or L3, unresolved); `staging-records/interval/DECORATIONS_2026-08-04.md` (L3)."; :94 "`binder/internal/` at publications versus L4 writing"
+    - **status_label**: OWNER DECISION (open)
+  - item 38
+    - **claim**: On 2026-09-06 the owner dissolved common/ and intake/; the orphan deep-research .md and two .odt exports were filed at L4 computation, Autonomous Theory files parked in the L5 review catch-all pending the owner naming a home, CLAUDE.md held off; the review catch-all rule introduces PARKED.
+    - **date**: 2026-09-06
+    - **evidence**: harmonization-2026-09-05.md:107 owner quotes incl. "research/review/ works as a catch all" and "HOdl off on clude.md"; :109 "what the owner sets aside stays there labelled PARKED"; :113 "`#autonomous(1).txt`, `02_AutonomousTheory(1).pdf` | `USO/l5/research/review/autonomous-theory/` | ... leaves once the owner names its home"; :114 "`deep-research-auditonomous.md` and the two `autonomouos-deep-research-*.odt` exports | `USO/l4/work/computation/` | model output as run"; :125 "Not done, by the owner's word or pending it: `CLAUDE.md` (held off); the Autonomous Theory files' home; the two 0-byte AU-NORM-01 files."; sha 64e3ed2 (2026-09-05 20:12:54 -0700) PR #22
+    - **status_label**: PARKED; held off
+  - item 39
+    - **claim**: On 2026-09-06 the two 0-byte definitions files were retired under the 2026-08-14 layout, and on 2026-09-07 deleted from HEAD after enumeration on the reasoning that 0 bytes preserve nothing and deletion is not restoration; AU-NORM-01 is recorded as still governing.
+    - **date**: 2026-09-06 / 2026-09-07
+    - **evidence**: harmonization-2026-09-05.md:131 "the two 0-byte files `manuscripts/definitions/README.md` and `REGISTER.md` are retired by `git mv` under `USO/l6/retired/layout-2026-08-14/` at manuscripts/definitions/ (deleted 2026-09-07, §10)"; :152 "By the same test the two 0-byte files ... are deleted: 0 bytes preserve nothing, and deletion is not restoration, so AU-NORM-01 (\"do not restore\") is kept, not crossed."; L8/L6/retired/layout-2026-08-14/0.md:25 "deleted from HEAD on 2026-09-07 after enumeration ... AU-NORM-01 still governs: not restored."; sha 7e7f423 (2026-09-07 01:17:55 +0000) "Deleted after enumeration, not retired: the README of 2026-09-05 and the two 0-byte files"
+    - **status_label**: AU-NORM-01; deleted after enumeration
+  - item 40
+    - **claim**: The owner's 2026-09-07 rules: the README is the start not the documentation; integrity is enforced with no-deletion implied; the owner questioned 'nothing deleted?'; sheet histories were pulled into sheets-2026-09-07.md, which contains no manuscript/writing/draft/chat lines (grep returned none).
+    - **date**: 2026-09-07
+    - **evidence**: harmonization-2026-09-05.md:135 "the read me files all need updating. Again. we dont use the reasd me for teh docuemtnation"; :150 "wait, nothing deleted? then your saying nothing is ever deleted?"; :154 "we cant enforce integroty by ebforceing no deletion. we can only imply no deletion to enforcer integiortyty"; :160 pulled into `USO/l6/history/sheets-2026-09-07.md`; grep -i 'manuscript|writing|draft|LaTeX|chat' L8/L6/history/sheets-2026-09-07.md → no output
+    - **status_label**: —
+  - item 41
+    - **claim**: On 2026-09-12 USO/ was renamed L8/ and l0…l6 to L0…L6 by git mv (commit 3045e07); older records keep USO/lN paths, which now stand at L8/LN; the drafts' --follow chain is 8c98573 → ccc0554 → 3045e07.
+    - **date**: 2026-09-12
+    - **evidence**: harmonization-2026-09-05.md:162 "## 12. 2026-09-12 — the rename pass: `USO/` to `L8/`, `l0` … `l6` to `L0` … `L6`"; :172 "a path `USO/lN/…` in a record dated before 2026-09-12 stands at `L8/LN/…` now"; sha 3045e07 (2026-09-12 04:17:49 +0000); git log --follow HEAD -- L8/L4/work/writing/auditnomous-main.docx: R100 at 3045e07, R100 at ccc0554 (2026-09-05), R100 at 8c98573 (2026-08-15)
+    - **status_label**: —
+  - item 42
+    - **claim**: At HEAD the L4 writing position holds the three live drafts, two chats, one session record and the branch rules; computation holds three requirement extractions plus the deep-research outputs; experiments is empty; nothing is built and nothing is released.
+    - **date**: 2026-09-11 (HEAD)
+    - **evidence**: L8/L4/0.md:121-123 "`work/writing/` — three live drafts, two chat transcripts, one recorded session, the branch-manuscript rules. `work/computation/` — three requirements extractions as run. `work/experiments/` — empty."; :125 "\"No L4 cut beyond writing, extraction and verification runs exists\": nothing is built"; L8/L4/work/writing/0.md:36 "`branch/README.md` — the rules for alternate manuscripts; no branch manuscript exists."; :38 "nothing here is released (L7)"; find L8/L4/work: auditnomous-main.docx 69430 B, auditonomouos-important.docx 169494 B, auditonomous-08-03-26.odt 136256 B, chat/auditonomous-chat-1.docx 73264 B, chat/auditonomouos-chat-2.docx 77894 B, sessions/SESSION_2026-08-05_AUDITON_ARCHITECTURE.md 37063 B
+    - **status_label**: —
+  - item 43
+    - **claim**: L8/L4/0.md states the book traversal: L4 owns production of the book artifact, L5 the book's argument, L6 its development history, L7 release and publication of the academic book.
+    - **date**: 2026-09-05 (sheet)
+    - **evidence**: L8/L4/0.md:102 "### Auditonomous academic-book traversal"; :108 "L4 owns the Auditonomous model as made, written, instantiated, or operated, including production of the book artifact."; :109 "L5 owns the book's research argument, interpretation, and teaching."; :111 "L7 owns release and publication of the academic book and the peer binding to the separately owned Autonomous definition."
+    - **status_label**: —
+  - item 44
+    - **claim**: Prior-art search is recorded as unrun at HEAD at three positions; the relocated rules file still carries its old title.
+    - **date**: 2026-09-05 onward
+    - **evidence**: L7/provenance/prior-art/0.md:32 "No prior-art search has been run (\"search still unrun\", `L8/L5/research/findings/DISTILLATION.md` §5); the record is empty."; L7/provenance/0.md:36 "the search itself has not been run"; L7/0.md:220 "(search still unrun)"; L7/provenance/prior-art/README.md:1 "# manuscripts/prior-art/"
+    - **status_label**: unrun; empty
+  - item 45
+    - **claim**: The three session objects of SESSION_2026-08-05 remain unextracted and unregistered, owner's call, at L1, L2 and L3.
+    - **date**: 2026-09-05 onward
+    - **evidence**: L8/L4/work/writing/sessions/0.md:16 "three unregistered candidate objects, each the owner's to extract: §1–2 and §9 invariants (L1); the §7.5 isomorphism (ℝ≥0,+) ≅ ((0,1],×) (L2, with a formulas-ledger row); the §7.4 scaling and precision reasoning (L3)"; L8/L1/0.md:109 "Candidate L1 objects not yet extracted (owner's call) ... INTERNAL ONLY, not verified against any source"; L8/L2/0.md:76 "Candidate exact object not yet extracted or registered (owner's call) ... INTERNALLY DERIVED. \"L2 or L3, unresolved\""; L8/L3/0.md:92 "Candidate L3 objects not yet extracted (owner's call)"
+    - **status_label**: INTERNAL ONLY; INTERNALLY DERIVED; FORMULA VERIFIED / APPLICATION UNVERIFIED; NOT-CHECKED
+  - item 46
+    - **claim**: The L5 review sheet's 'What is open' repeats the four author's calls verbatim from the retired README; the reader-agnostic divergence's source file is only in git history.
+    - **date**: 2026-09-07 (sheet)
+    - **evidence**: L8/L5/research/review/0.md:44 "**What is open.** The author's calls, none decided anywhere in this repository ... T3 ... Q1–Q9 ... [source text withheld from the public copy]`, the rewording recorded and [source text withheld from the public copy], removed from HEAD at `8c98573`, in git history)"
+    - **status_label**: OPEN
+  - item 47
+    - **claim**: The status ladder (SPECULATION → CONJECTURE → RESEARCHING → VERIFIED; PARKED, SUPERSEDED) was carried verbatim to L5 on 2026-09-06, and the label discipline on 2026-09-07; both say INTERNAL ONLY governs everything.
+    - **date**: 2026-09-06 / 2026-09-07
+    - **evidence**: L8/L5/research/review/STATUS_LADDER.md:3 "[source text withheld from the public copy]`"; :8 "SPECULATION  -->  CONJECTURE  -->  RESEARCHING  -->  VERIFIED"; :21-22 "PARKED = deliberately on ice ... SUPERSEDED = replaced by a later entry"; :25 "**Nothing is ever deleted.**"; STATUS_AND_LABEL_DISCIPLINE.md:3 "[source text withheld from the public copy]`"; :5 "Everything in this repository is **INTERNAL ONLY**"
+    - **status_label**: SPECULATION; CONJECTURE; RESEARCHING; VERIFIED; PARKED; SUPERSEDED; INTERNAL ONLY
+  - item 48
+    - **claim**: The L6 history sheet characterises the master LEDGER as declaredly stale and notes that several of its rows point to git history or the rescue branch as the only surviving copy.
+    - **date**: 2026-09-07 (sheet)
+    - **evidence**: L8/L6/history/0.md:35 "`LEDGER.md` — the master ledger: the tree by state, what each area waits on, retired objects, staleness \"declared, not silently repaired\". Several rows point to git history or the rescue branch as the only surviving copy; git history is not L6, and this clone is shallow."
+    - **status_label**: stale (declared)
+  - item 49
+    - **claim**: The routing plan's planned chronology lists 8c98573 before 1d83788, out of date order; the harmonization record's table orders them 1d83788 (2026-08-14) then 8c98573 (2026-08-15).
+    - **date**: 2026-09-05
+    - **evidence**: 7LM_ROUTING_PLAN_2026-09-05.md:266 "chronology 9aefa6e → ca87bba → 8c98573 → 1d83788 → 4a1c1db → this event"; harmonization-2026-09-05.md:18-19 rows "2026-08-14 ... `1d83788`" then "2026-08-15 | Prune ... `8c98573`"; commit dates: 1d83788 2026-08-14 17:40 -0700, 8c98573 2026-08-15 23:28 -0700
+    - **status_label**: —
+  - item 50
+    - **claim**: A book-structure roadmap and the restoration of the pruned manuscript set (chat-3, Sourcebook v0.1 .md, SPINE_v0.1, coverage ledger, source manifest) exist only on origin/claude/book-structure-roadmap-k8ap82 (five commits, 2026-09-13/14), not on main.
+    - **date**: 2026-09-13 / 2026-09-14
+    - **evidence**: git log main..origin/claude/book-structure-roadmap-k8ap82: 30a40f1 (2026-09-13 20:37 UTC) "The book's finished shape and the path to it: a roadmap record in the catch-all"; 62d2e3f (2026-09-14 01:42 UTC) "Set up the repository before research: the cited-but-absent files returned from 1d83788" adding L8/L4/work/writing/chat/auditonoomous-chat-3.docx, L8/L4/work/writing/sourcebook/Auditonomous_Book_Material_Sourcebook_v0.1.md, L8/L5/research/review/SPINE_v0.1_2026-08-14.md; b1ec302 "Open the manuscript source tree: twenty-seven chapter files"; 9259c18 (2026-09-14 02:04 UTC); diff --stat main...branch: "176 files changed, 22883 insertions(+)"; main HEAD 2165144 is the merge of PR #26 (2026-09-11 23:26 -0700)
+    - **status_label**: unmerged (closed PR #27 per task ground rules; branch content not read in this step)
+- **open_questions**
+  - Is the master LEDGER row 37 (MANUSCRIPT.tex stub, waiting on 'Real LaTeX migration') meant to stand as a declared-stale record, or is the LaTeX migration still an intended deliverable now that the stub was deleted at 8c98573 and no .tex exists at HEAD? No record read states that the LaTeX plan was abandoned or superseded.
+  - Which sense of 'prior-art search' governs: DISTILLATION §7 records a four-lane 2026-08-05 check, but §5 and all three L7 sheets say the search for a prior definition of auditonomy is 'still unrun'. Was a definition-level search ever run anywhere?
+  - The 2026-08-16 queue items 3 (auditability-gap search) and 5 (definition ambiguities at lines 18/96/181 via a boundary note) are not recorded as done in any file read; are they still open?
+  - AU-NORM-01 'do not restore' (2026-08-16 ledger) versus LEDGER.md:38 'restore is the principal's call' for manuscripts/definitions README/REGISTER: which text is current, given that both remain at HEAD and the files were deleted 2026-09-07?
+  - Where did auditonoomous-chat-3.docx, the Sourcebook v0.1 set, SPINE_v0.1 and the coverage/source manifests go: deleted at 8c98573 on main, restored only on the closed roadmap branch (62d2e3f); is that restoration still wanted?
+  - The 'rescue/reorg-2026-08-14' branch and commit 9aefa6e named by the ledgers are not present in this clone's remotes; are they still held anywhere?
+  - LEDGER.md:29 dates the freeze retirement '2026-08-16' while the commit 1d83788 and the harmonization table say 2026-08-14; which date is intended by that row?
+  - The THEME_LEDGER's ISO/IEC 27002 'dedicated retrieval lane is running' (line 221) has no recorded report in the files read; did it report?
+  - The owner-decision rows of harmonization §5 (split-or-cite, session-object extraction, binder/internal position, Autonomous Theory home, CLAUDE.md held off) are unrecorded as decided in anything read up to HEAD 2165144; were any decided in the 13–14 September roadmap branch (outside this step)?

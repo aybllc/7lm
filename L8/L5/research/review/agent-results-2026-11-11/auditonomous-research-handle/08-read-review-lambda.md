@@ -1,0 +1,869 @@
+# read:review-lambda
+
+Agent result, as returned. Workflow: Handle on the Auditonomous research and manuscript. Run `wf_9c2917a7-7f0`. Phase: Read. Checked in 2026-11-11 19:51 UTC.
+
+- **scope**: The lambda thread and the external checks. ROADMAP (origin/claude/book-structure-roadmap-k8ap82, 9259c18) under L8/L5/research/review/: LAMBDA_EXTERNAL_VERIFICATION_2026-08-04.md, LAMBDA_PRIOR_ART_2026-08-05.md, THESIS_lambda_decomposed_record.md, EBSTACK_LAMBDA_ANALYSIS.md, EXTERNAL_AUDIT_2026-08-04.md, CONJECTURE_bit_exact_pruning.md, EB_RECEIPT_RIGOR_SPEC_2026-08-05.md, dr-001-003/ (sheet, REGISTER, three DR files); and L8/L4/work/computation/probes/ (the three scripts these cite). All read in full from git objects. Cross-references followed: the lambda_A definitions (ROADMAP L8/L0/semantics/definitions/AUDITONOMY.md; L7 peer-2 departure protocol), book ch16 stub and roadmap D11, SOURCE_REQUESTS SR-21..24, SESSION_2026-08-05_VERIFICATION_LOG, PRIORS_EXTERNAL and DECORATIONS records, the deep-research run, and the held Rump 1999 / GUM text and one lambda finding in /home/user/autonomous origin/main. No probe script was run (the task did not say to); arithmetic was re-done by hand. No network.
+- **summary**: The lambda thread exists only on ROADMAP (and in HISTORY): none of the seven review documents, the DR folder or the probes is on MAIN or BETA. All fourteen files are byte-identical to their 1d83788 originals (blob hashes compared).
+
+  Two different things are called lambda. lambda_EB [source text withheld from the public copy] eb-stack product radius. lambda_A is a "decomposition state" in the auditonomous prior/residual/memory proposal. A same-author ruling says they must not be identified. lambda_A itself has two incompatible definitions (the thesis decode says "exactly known, zero uncertainty"; the departure protocol says it does not mean exactness).
+
+  Established, with outside sources: lambda=1 is Rump 1999's midpoint-radius product (cite, do not coin); the lambda=0 radius is exact for sign-definite operands only if the centre is shifted. I re-read both against the Rump 1999 text held in the companion repository and they match. Established internally: lambda=0 as coded (centre not shifted) is not an enclosure; the swap-flip has no left inverse (DR-003); centre decode halves the bound (DR-001).
+
+  Refuted: the "meaningful digit budget" storage argument; naive bit-exact pruning over a chain; three cosmology prior-art claims; "Dekker 1971 is held".
+
+  Open: which regime the book uses (owner decision D11); the lambda_A mechanism's undefined operators and unbounded accumulator; its novelty (no external source found for the mechanism, and a model-output run in the repository says the broad claim is already occupied); six unobtained sources; whether the quoted eb-stack code line is real.
+
+  The external audit (27 clusters) found 2 failed checks, 3 falsified blockers and citation defects. The OMMP README, the egress withdrawal and the ISO 15489 gloss were acted on; the Westby DOI, the Tic Tac framing defects, the Morton citation and the manuscript's Git and kilogram sentences were not.
+
+  Do first: rule D11; reconcile the two lambda_A definitions; file the missing scripts; fix the record defects listed.
+- **items**
+  - item 1
+    - **id**: DOC-LEV
+    - **title**: LAMBDA_EXTERNAL_VERIFICATION_2026-08-04.md - lambda, precision and O(1) checked against outside sources
+    - **path**: L8/L5/research/review/LAMBDA_EXTERNAL_VERIFICATION_2026-08-04.md
+    - **where**: ROADMAP; HISTORY (1d83788:intake/research/, byte-identical blob). Not on MAIN or BETA.
+    - **what_it_is**: A 240-line session record, written on the author's instruction to verify from outside sources only. Four results, each tied to a named publication: Rump 1999 (BIT 39(3)), Rump 2010 (Acta Numerica 19), Hickey/Ju/van Emden 2001 (JACM 48(5)), JCGM 100:2008 (GUM), Brent and Zimmermann 2010 (CUP), Goldberg 1991 (ACM CSUR 23(1)). It withdraws the agent's own earlier internal checks as evidence.
+    - **evidence_state**: EXTERNALLY CHECKED
+    - **locator**: ROADMAP:L8/L5/research/review/LAMBDA_EXTERNAL_VERIFICATION_2026-08-04.md:1-240
+    - **quote**: [source text withheld from the public copy].
+    - **own_label**: Per result: "ESTABLISHED, externally" (Result 1), "EXTERNALLY VERIFIED for sign-definite operands" (Result 2), "ESTABLISHED" (Result 3), "REFUTED" (Result 4); closing line "Nothing here is adopted."
+    - **key_claims**
+      - Result 1: lambda=1 product is Rump 1999 Def. 2.1 Eq. (5), midpoint-radius interval arithmetic (lines 16-34)
+      - Result 2: lambda=0 radius a*beta+alpha*[source text withheld from the public copy] for sign-definite operands; the centre moves by alpha*beta (lines 38-71)
+      - Result 3: O(1) follows from bounded operand width, not from lambda (lines 148-173)
+      - Result 4: a 'meaningful digit' storage budget is refuted by catastrophic cancellation (lines 177-205)
+      - GUM is a different calculus (statistical, quadrature) and must not be cited against the interval result (lines 121-144)
+      - Operative requirement: [source text withheld from the public copy], cancellation guard on differences (lines 224-228)
+    - **checked_how**: Recorded: quotes from six named publications, with one agent misreading recorded and corrected (lines 92-104). Confirmed by me: the Rump 1999 quotes (isotonicity Eq. 3, Def. 2.1 Eq. 5, Eq. 6, proof case i 'rad(A · B) = aβ + αb') are present in the held copy autonomous origin/main:L7/provenance/prior-art/prior-art-lane/ru99.txt lines 65-70, 111-121, 161-172; the two GUM quotes are in gum.txt lines 1610 and 5750; the worked example [1,3]x[5,9] re-done by hand (lambda=1 gives [1,27], true [5,27], shifted-centre lambda=0 gives [5,27]). Not confirmable here: Rump 2010, Hickey et al., Brent and Zimmermann, Goldberg (no copy held in either repository; no network).
+    - **open_items**
+      - Line 232: "adversarial refutation pass was still running ... Verdicts may move" - no later record of its result found in the scope documents
+      - [source text withheld from the public copy] (line 234)
+      - Rump 1999 <=1.5x overestimation bound: "cited but not read ... NOT-CHECKED" (line 238). I found the bound stated in the held abstract (ru99.txt:9); the repository record has not been updated
+      - Worst-case radius to statistical u transition: NOT-CHECKED (line 144)
+      - IEEE 1788 decoration correspondence: NOT-CHECKED here (line 228); closed later for 1788-2015 in L7/provenance/sources/staging-records/interval/DECORATIONS_2026-08-04.md
+    - **depends_on**
+      - DOC-EBSTACK
+  - item 2
+    - **id**: DOC-LPA
+    - **title**: LAMBDA_PRIOR_ART_2026-08-05.md - cosmological full-likelihood inference as prior art for the lambda mechanism
+    - **path**: L8/L5/research/review/LAMBDA_PRIOR_ART_2026-08-05.md
+    - **where**: ROADMAP; HISTORY (1d83788:intake/research/, byte-identical). Not on MAIN or BETA.
+    - **what_it_is**: A 226-line prior-art search for lambda_A's decomposition / residual-accumulation / memory-formation mechanism. Part A: verbatim quotes from Planck 2018 VI, Riess et al. 2022, Lewis and Bridle 2002 (abstract only), CosmoMC documentation. Part B: analysis. Part C: six structural properties of the 'r×r≥0' carrier tested against [l,u] and against an eb-stack ruling.
+    - **evidence_state**: EXTERNALLY CHECKED
+    - **locator**: ROADMAP:L8/L5/research/review/LAMBDA_PRIOR_ART_2026-08-05.md:1-226
+    - **quote**: [source text withheld from the public copy]**.
+    - **own_label**: Part B: "`INTERNALLY DERIVED` unless otherwise labelled"; C2: "`INTERNAL ONLY`"; closing: "`[source text withheld from the public copy]."
+    - **key_claims**
+      - [source text withheld from the public copy] sigma apart (B1, lines 75-88)
+      - Riess 2022's GLS combination does not match lambda: REFUTED, covariance permits cancellation, lambda forbids it (B2, lines 90-107)
+      - CosmoMC's covariance use does not contradict full-data retention: REFUTED as counter-evidence (B3, lines 109-124)
+      - Holds: cosmological [source text withheld from the public copy] only (B4, lines 126-138)
+      - Not established externally: the four constitutive rules of the lambda mechanism (lines 140-148)
+    - **checked_how**: Recorded: publisher fetch for Riess 2022 (IOP) and CosmoMC docs; Planck value taken from the arXiv abstract page because the publisher returned 403; Lewis and Bridle full text unread. Confirmed by me: the arithmetic sqrt(0.5^2+1.04^2)=1.154, 5.64/1.154=4.89; 1-sigma edges 67.9 and 72.0. Sources themselves not re-readable here.
+    - **open_items**
+      - A3 Lewis and Bridle 2002 full text unread (line 218)
+      - A1 value rests on a preprint route, which STATUS_LADDER lists under NEVER (line 220; the document flags it itself)
+      - B4 table: none of the four mechanism rules found externally (lines 143-148)
+      - Coherent / Admissible undefined (line 214)
+    - **depends_on**
+      - DOC-CONJ
+      - LAM-HOMONYM
+  - item 3
+    - **id**: DOC-THESIS
+    - **title**: THESIS_lambda_decomposed_record.md - the lambda-decomposed pre-execution record (LDR)
+    - **path**: L8/L5/research/review/THESIS_lambda_decomposed_record.md
+    - **where**: ROADMAP; HISTORY (1d83788:intake/claude/, byte-identical). Not on MAIN or BETA.
+    - **what_it_is**: A 147-line formalisation by an assisting agent of one sentence by the owner (2026-08-05): every decision-relevant quantity q is split as q = k + r, k the exactly known lambda=0 part removable only by ledger lookup, r the enclosed residual; the gate tests r only. Lists four conditions LD1-LD4, the prior mechanism (error-free transformations), four open problems and four falsification conditions.
+    - **evidence_state**: CONJECTURE
+    - **locator**: ROADMAP:L8/L5/research/review/THESIS_lambda_decomposed_record.md:3-16
+    - **quote**: [source text withheld from the public copy],
+    - **own_label**: "**Status: `CONJECTURE / INTERNAL ONLY`.**" and "**The decode itself is unratified.**"
+    - **key_claims**
+      - LD1-LD4 (lines 30-35); gate tests residual only: b_F(r) <= theta_F (line 37)
+      - The decomposition mechanism is not new (TwoSum, Dekker 1971, Ogita-Rump-Oishi 2005, Rump 1999); the thesis is the transfer to a pre-execution record (lines 43-76)
+      - "[source text withheld from the public copy]." (line 85)
+      - In-place correction 2026-08-06: Dekker 1971 is NOT held; dd.txt is the DDSketch paper (lines 49-58)
+    - **checked_how**: Recorded: a prior-art sweep at the intersection, own label "`PARTIALLY CHECKED — negative`" (line 133), with DIS 24970 and prEN 18229-1 unexamined. Confirmed by me: dd.txt in autonomous origin/main:L7/provenance/prior-art/prior-art-lane/ opens with "[source text withheld from the public copy]"; ru99.txt is Rump, BIT 39(3) 539-560. No Dekker or Ogita-Rump-Oishi file is in that lane.
+    - **open_items**
+      - Decode unratified by the owner (line 10)
+      - O-a attestation of the k-claim; O-b compositional growth; O-c gate semantics on r; O-d DIS 24970 collision check (lines 118-123)
+      - Dekker 1971 and Ogita-Rump-Oishi 2005 NOT HELD (lines 49-67)
+      - Falsification condition 1 only partially checked (lines 131-133)
+    - **depends_on**
+      - LAM-A-CONFLICT
+      - OPEN-NOVELTY
+  - item 4
+    - **id**: DOC-EBSTACK
+    - **title**: EBSTACK_LAMBDA_ANALYSIS.md - exact-rational recomputation of the eb-stack multiplication operator
+    - **path**: L8/L5/research/review/EBSTACK_LAMBDA_ANALYSIS.md
+    - **where**: ROADMAP; HISTORY (1d83788:intake/research/, byte-identical). Not on MAIN or BETA.
+    - **what_it_is**: A 141-line analysis (2026-08-04) of the function mul(x, y, lam) as quoted in an author-supplied prompt (Lambda_Explainer_Prompt.md section 12), not as read from the eb-stack repository, which could not be cloned. Recomputes every worked figure in exact rationals; adds a containment rate and the direction of failure.
+    - **evidence_state**: INTERNALLY CHECKED
+    - **locator**: ROADMAP:L8/L5/research/review/EBSTACK_LAMBDA_ANALYSIS.md:1-141
+    - **quote**: **[source text withheld from the public copy].**
+    - **own_label**: "**[source text withheld from the public copy])."
+    - **key_claims**
+      - Every figure in the prompt reproduces (table, lines 48-58)
+      - mul never shifts the midpoint, so at lambda=0 the term b1*b2 is struck from the radius and credited nowhere: not an enclosure (lines 60-68)
+      - 20,000 random pairs: lambda=1 contains 20000/20000; lambda=0 contains 1898/20000 = 9.49% (lines 72-81)
+      - The failure end flips with the sign of a*b (lines 87-96)
+      - The shifted-centre form mul_exact_sd is exact on both examples (lines 98-110)
+    - **checked_how**: Recorded: [source text withheld from the public copy]'. Confirmed by me by hand: Ex.1 <2,1>*<7,2>: lambda=1 -> [1,27], lambda=0 -> [3,25], truth [[source text withheld from the public copy]], lambda=1 -> [-28,-2], lambda=0 -> [-26,-4]; conservation 27 and 28. Not re-run: the 20,000-pair sample. By algebra, lambda=0 as coded contains the truth exactly when b1*b2 = 0, which on this integer grid (b in 0..20) has probability 41/441 = 9.30%; 9.49% is consistent with that sample.
+    - **open_items**
+      - Whether the quoted line is eb-stack's current code (lines 131-132)
+      - Private/public status of eb-stack: "`PARTIALLY VERIFIED` — not a settled fact" (line 25)
+      - Which repair to take is "the owner's call" (lines 139-141)
+      - Novelty of the conservation identity: CONJECTURE, "no published statement located" (line 125)
+    - **depends_on**
+      - PRB-EBSTACK
+  - item 5
+    - **id**: DOC-AUDIT
+    - **title**: EXTERNAL_AUDIT_2026-08-04.md - first external verification of the corpus's checkable claims
+    - **path**: L8/L5/research/review/EXTERNAL_AUDIT_2026-08-04.md
+    - **where**: ROADMAP; HISTORY (1d83788:intake/research/, byte-identical). Not on MAIN or BETA.
+    - **what_it_is**: A 317-line report of a 52-agent workflow: 27 claim clusters each checked against non-arXiv primary sources, then attacked by a second agent. Headline: [source text withheld from the public copy] per-finding items are AUD-1.1 to AUD-8 below.
+    - **evidence_state**: EXTERNALLY CHECKED
+    - **locator**: ROADMAP:L8/L5/research/review/EXTERNAL_AUDIT_2026-08-04.md:1-40
+    - **quote**: [source text withheld from the public copy]**.
+    - **own_label**: "**[source text withheld from the public copy]."
+    - **key_claims**
+      - Two claims affirmatively contradicted by primary sources (section 1)
+      - Three recorded blockers falsified (section 2)
+      - Quotation discipline is strong: SEP, NIST, Planck 2018, Avizienis, ISO 8373, ISO/IEC 22989 word-for-word (lines 31-36)
+    - **checked_how**: Recorded: verbatim quotes from named primaries inside the file; the full evidence is said to be "retained in the session journal" (line 316), which is not in the repository. I could not re-fetch any source. I re-did the Tic Tac arithmetic by hand (see AUD-6.1).
+    - **open_items**
+      - Per-cluster verdicts are not tabulated; only 24 of 27 cluster codes appear in the file (A9, B2, C5 absent), so the 10/15/2 count cannot be reconstructed from it
+      - The session journal and workflow transcripts (wf_a73314fa-268) are not held
+  - item 6
+    - **id**: AUD-1.1
+    - **title**: Audit 1.1 - the Git instantiation claim (cluster E2)
+    - **path**: L8/L5/research/review/EXTERNAL_AUDIT_2026-08-04.md
+    - **where**: ROADMAP, HISTORY (finding); the sentence under test is at ROADMAP:L8/L4/work/writing/manuscript/Auditonomous_Theory_Master_Archive.md:546
+    - **what_it_is**: The corpus sentence that [source text withheld from the public copy]' and '[source text withheld from the public copy]' is [source text withheld from the public copy] (Pro Git 7.6, Rewriting History). Git gives [source text withheld from the public copy].
+    - **evidence_state**: CONTRADICTED
+    - **locator**: ROADMAP:L8/L5/research/review/EXTERNAL_AUDIT_2026-08-04.md:46-70
+    - **quote**: **Action: the sentence cannot stand as written.**
+    - **own_label**: "**FAILED CHECK**"
+    - **key_claims**
+      - Mechanism half accurate; inference half false
+      - It is [source text withheld from the public copy]
+    - **checked_how**: Recorded: Pro Git quotes. Acted on? NOT in the manuscript: the sentence still stands at Master Archive:546 and Block_44_Ontology_Free_Classification.md:40. Follow-up reading exists at L7/provenance/sources/staging-records/library/FINDINGS_2026-08-04.md:64 and the FIPS 180-4 and RFC 6962 reading notes, which treat it as 'the Git defect'.
+    - **open_items**
+      - Restate or strike the sentence before any publication
+  - item 7
+    - **id**: AUD-1.2
+    - **title**: Audit 1.2 - 2019 SI kilogram: 'delete the artifact' (cluster E3)
+    - **path**: L8/L5/research/review/EXTERNAL_AUDIT_2026-08-04.md
+    - **where**: ROADMAP, HISTORY (finding); sentence under test at ROADMAP:L8/L4/work/writing/manuscript/Auditonomous_Theory_Master_Archive.md:619
+    - **what_it_is**: The date (20 May 2019) and the fixed Planck constant are confirmed from BIPM texts; the claim that the artifact was deleted or retired is wrong. The prototype and its six copies are conserved; it was demoted from the defining role.
+    - **evidence_state**: CONTRADICTED
+    - **locator**: ROADMAP:L8/L5/research/review/EXTERNAL_AUDIT_2026-08-04.md:72-88
+    - **quote**: **[source text withheld from the public copy].**
+    - **own_label**: "**factually wrong**" (section heading); no ladder label given
+    - **key_claims**
+      - "retired", "destroyed", "deleted" [source text withheld from the public copy].
+      - The argument survives if restated accurately
+    - **checked_how**: Recorded: BIPM mise en pratique 5.2 quote. Acted on? PARTLY: a standing correction is written at ROADMAP:L8/L5/research/findings/UHA_AS_MAP_2026-08-04.md:72-75 and STANDARDS_REGISTER.md:32-39; the manuscript wording is unchanged (Master Archive:619, Block_48:46-47, TOC:104 'the prototype retired').
+    - **open_items**
+      - Restate in the manuscript
+  - item 8
+    - **id**: AUD-2.1
+    - **title**: Audit [source text withheld from the public copy])
+    - **path**: L8/L5/research/review/EXTERNAL_AUDIT_2026-08-04.md
+    - **where**: ROADMAP, HISTORY
+    - **what_it_is**: The census dossier recorded every third-party host at 403 and concluded an organisation egress-policy denial. Re-tested 2026-08-04: the two controls and five science hosts return 200; the 403s were host-level bot filtering.
+    - **evidence_state**: CONTRADICTED
+    - **locator**: ROADMAP:L8/L5/research/review/EXTERNAL_AUDIT_2026-08-04.md:94-110
+    - **quote**: [source text withheld from the public copy].
+    - **own_label**: "**FAILED CHECK on the dossier's premise**"
+    - **key_claims**
+      - example.com and doi.org: 403 then, 200 now
+    - **checked_how**: Recorded: re-test table. Acted on? YES as a withdrawal: ROADMAP:L8/L5/research/review/SOURCE_REQUESTS.md:185-196 ("The standing egress blocker is withdrawn"). NOT in the dossier itself: CENSUS_SOURCES_DOSSIER.md:28-38 still reads "This is an organization egress-policy denial".
+    - **open_items**
+      - Dossier entries remain 'Zero entries are byte-verified' and were not re-fetched
+  - item 9
+    - **id**: AUD-2.2
+    - **title**: Audit [source text withheld from the public copy])
+    - **path**: L8/L5/research/review/EXTERNAL_AUDIT_2026-08-04.md
+    - **where**: ROADMAP, HISTORY (finding); statement under test at ROADMAP:L8/L0/semantics/definitions/AUDITONOMOUS_DEFINITION.md:341-342
+    - **what_it_is**: The definition record says no university-press dictionary was reachable and substituted American Heritage. Cambridge and Oxford now serve full entries; Merriam-Webster and Britannica still blocked.
+    - **evidence_state**: CONTRADICTED
+    - **locator**: ROADMAP:L8/L5/research/review/EXTERNAL_AUDIT_2026-08-04.md:112-124
+    - **quote**: [source text withheld from the public copy].
+    - **own_label**: "**FALSIFIED.**"
+    - **key_claims**
+      - Cause was fetch-client fingerprinting, not egress
+    - **checked_how**: Recorded: re-test result, no captured entry text. Acted on? NO: AUDITONOMOUS_DEFINITION.md:341-342 unchanged, and the vocabulary paper of 2026-09-14 still gives the etymology from American Heritage (L8/L4/work/writing/papers/AUDITONOMOUS_VOCABULARY_PAPER_2026-09-14.md:52).
+    - **open_items**
+      - Capture the Cambridge/Oxford entries and decide whether to replace the AHD citation
+  - item 10
+    - **id**: AUD-2.3
+    - **title**: Audit [source text withheld from the public copy])
+    - **path**: L8/L5/research/review/EXTERNAL_AUDIT_2026-08-04.md
+    - **where**: ROADMAP, HISTORY
+    - **what_it_is**: IEEE's catalogue page states the PDF [source text withheld from the public copy], so the normative clauses recorded as unread are free to obtain.
+    - **evidence_state**: EXTERNALLY CHECKED
+    - **locator**: ROADMAP:L8/L5/research/review/EXTERNAL_AUDIT_2026-08-04.md:126-129
+    - **quote**: [source text withheld from the public copy].
+    - **own_label**: none on the item; listed under "FALSIFIED BLOCKERS"
+    - **checked_how**: Recorded: one catalogue-page quote. Acted on? Acknowledged at ROADMAP:L8/L5/research/review/WALK_ACROSS_repo-instrument-standards_2026-08-05.md:56 ("IEEE 7001 via the GET program"). Whether the standard was then read is outside this scope.
+  - item 11
+    - **id**: AUD-3.1
+    - **title**: Audit 3.1 - Westby and Conselice 2020: volume and DOI wrong, DOI unregistered (cluster C4)
+    - **path**: L8/L5/research/review/EXTERNAL_AUDIT_2026-08-04.md
+    - **where**: ROADMAP, HISTORY
+    - **what_it_is**: The dossier cites ApJ 902:63 with DOI 10.3847/1538-4357/abb6ce. The version of record is ApJ 896:58; the recorded DOI returns 404 from doi.org and Crossref. The paper and its headline result are real.
+    - **evidence_state**: CONTRADICTED
+    - **locator**: ROADMAP:L8/L5/research/review/EXTERNAL_AUDIT_2026-08-04.md:137-147
+    - **quote**: **Every identifier recorded for it is wrong.**
+    - **own_label**: none on the item; section title "CITATION-IDENTIFIER FAILURES"
+    - **checked_how**: Recorded: running-head quote and Crossref result. Acted on? NO: ROADMAP:L8/L5/research/review/CENSUS_SOURCES_DOSSIER.md:114 and :339 still read 902:63 and abb6ce.
+    - **open_items**
+      - Correct both lines of the dossier
+  - item 12
+    - **id**: AUD-3.2
+    - **title**: Audit 3.2 - ISO 8373 cited without edition (cluster B1)
+    - **path**: L8/L5/research/review/EXTERNAL_AUDIT_2026-08-04.md
+    - **where**: ROADMAP, HISTORY
+    - **what_it_is**: The 14-word definition matches ISO 8373:2021 cl. 3.2 character for character, but the record cites bare 'ISO 8373 §3.2'; the clause number is edition-specific.
+    - **evidence_state**: EXTERNALLY CHECKED
+    - **locator**: ROADMAP:L8/L5/research/review/EXTERNAL_AUDIT_2026-08-04.md:149-154
+    - **quote**: Fix: cite ISO 8373:2021.
+    - **checked_how**: Recorded: comparison to ISO OBP text. Acted on? At the register: ROADMAP:L7/provenance/sources/STANDARDS_REGISTER.md:102 cites "ISO 8373:2021". The term ledger the finding names (AUTONOMOUS_TERMS.md, row T-01) is not in the ROADMAP tree, so the row itself could not be checked; SOURCE_REQUESTS.md:142-146 (SR-04) still lists the edition as to be confirmed.
+  - item 13
+    - **id**: AUD-3.3
+    - **title**: Audit 3.3 - [source text withheld from the public copy])
+    - **path**: L8/L5/research/review/EXTERNAL_AUDIT_2026-08-04.md
+    - **where**: ROADMAP, HISTORY
+    - **what_it_is**: Row T-12 quotes auditability with the lead-in 'for a service,' which is a SEVOCAB editorial prefix, not the standard's clause 3.1.8.2. T-13 (IEEE 7014-2024 cl. 3.1) survives.
+    - **evidence_state**: CONTRADICTED
+    - **locator**: ROADMAP:L8/L5/research/review/EXTERNAL_AUDIT_2026-08-04.md:156-163
+    - **quote**: [source text withheld from the public copy].
+    - **checked_how**: Recorded: comparison to ISO OBP. Acted on? Not determinable in ROADMAP: the string 'for a service,' occurs nowhere in the ROADMAP tree outside the audit (grep). In the companion repository it still stands (autonomous origin/main:L8/L5/research/lanes/LANE_B_AUDITABILITY.md:31 and :141).
+    - **open_items**
+      - SOURCE_REQUESTS.md:177 (SR-16) still says the primary 'needs' reading, which disagrees with the audit's settled wording
+  - item 14
+    - **id**: AUD-3.4
+    - **title**: Audit [source text withheld from the public copy])
+    - **path**: L8/L5/research/review/EXTERNAL_AUDIT_2026-08-04.md
+    - **where**: ROADMAP, HISTORY
+    - **what_it_is**: Wording and clause 3.1.15 [source text withheld from the public copy] with no IEEE co-badge.
+    - **evidence_state**: EXTERNALLY CHECKED
+    - **locator**: ROADMAP:L8/L5/research/review/EXTERNAL_AUDIT_2026-08-04.md:165-169
+    - **quote**: [source text withheld from the public copy]**
+    - **checked_how**: Recorded in the audit. The companion repository binds it [source text withheld from the public copy]' (autonomous origin/main:L7/peering/public/ingress/peer-3/object-1/0.md:10). SOURCE_REQUESTS.md:176 (SR-15) says the designation and [source text withheld from the public copy]' - the two records disagree on whether this is settled.
+  - item 15
+    - **id**: AUD-4.1
+    - **title**: Audit [source text withheld from the public copy]: truncation and interpretive overlay (cluster A7)
+    - **path**: L8/L5/research/review/EXTERNAL_AUDIT_2026-08-04.md
+    - **where**: ROADMAP, HISTORY
+    - **what_it_is**: The wording is confirmed from two primary chains, but the corpus quote drops the lead-in '[source text withheld from the public copy],' and maps the clause's five acts onto 'falsify' and 'erase', words the clause does not contain. [source text withheld from the public copy].
+    - **evidence_state**: CONTRADICTED
+    - **locator**: ROADMAP:L8/L5/research/review/EXTERNAL_AUDIT_2026-08-04.md:175-188
+    - **quote**: **[source text withheld from the public copy].**
+    - **checked_how**: Recorded in the audit. Acted on? YES at the registers: SOURCE_REQUESTS.md:59-69 ("fix the 2001 gloss regardless") and STANDARDS_REGISTER.md:442-448 ([source text withheld from the public copy]'"). Whether every use of the gloss was changed is outside this scope.
+    - **open_items**
+      - The 2016 edition is still to be procured (SOURCE_REQUESTS tier 1)
+  - item 16
+    - **id**: AUD-4.2-4.3
+    - **title**: Audit 4.2 and 4.3 - NIST AI 100-1 and NIST SP 1011-I-2.0 (ALFUS): unmarked cuts (clusters A4, B4)
+    - **path**: L8/L5/research/review/EXTERNAL_AUDIT_2026-08-04.md
+    - **where**: ROADMAP, HISTORY
+    - **what_it_is**: Both sources are quoted word for word but cut: the NIST AI 100-1 transparency quote drops a closing clause with no ellipsis; the ALFUS quote's ellipsis removes '[source text withheld from the public copy]', which bears on whether a goal-assigner must be human.
+    - **evidence_state**: EXTERNALLY CHECKED
+    - **locator**: ROADMAP:L8/L5/research/review/EXTERNAL_AUDIT_2026-08-04.md:190-202
+    - **quote**: [source text withheld from the public copy]"***.
+    - **checked_how**: Recorded in the audit. Acted on? ALFUS: YES in later records, which quote the full disjunct (STANDARDS_REGISTER.md:462; L8/L1/state-space/AUDITON_ENVELOPE.md:133; HUMINT_ENCODE.md:37; REQUIREMENTS_OWNERSHIP.md:156). NIST AI 100-1: the dropped clause '[source text withheld from the public copy]' occurs nowhere in ROADMAP outside the audit; the row under test (T-ledger) is not in this tree.
+  - item 17
+    - **id**: AUD-4.4
+    - **title**: Audit 4.4 - SEP 'palter': exact quotes, attribution stripped, an unearned VERIFIED label (cluster A2)
+    - **path**: L8/L5/research/review/EXTERNAL_AUDIT_2026-08-04.md
+    - **where**: ROADMAP, HISTORY (finding); label under test also on MAIN at L8/L5/research/lanes/THEME_LEDGER.md:225
+    - **what_it_is**: Both sentences are exact, but SEP attributes the term to Schauer and Zeckhauser 2009 and offers two rival labels. The corpus's 'VERIFIED on two independent fetches' was two fetches of one URL.
+    - **evidence_state**: EXTERNALLY CHECKED
+    - **locator**: ROADMAP:L8/L5/research/review/EXTERNAL_AUDIT_2026-08-04.md:204-214
+    - **quote**: [source text withheld from the public copy]**
+    - **checked_how**: Recorded in the audit (which says the claim is now verified across three surfaces). Acted on? NO: THEME_LEDGER.md:225 still reads 'VERIFIED on two independent fetches' on MAIN and ROADMAP, and 'Schauer' occurs nowhere outside the audit.
+    - **open_items**
+      - Correct the label wording and add the attribution
+  - item 18
+    - **id**: AUD-5
+    - **title**: Audit 5 - claims that survived intact
+    - **path**: L8/L5/research/review/EXTERNAL_AUDIT_2026-08-04.md
+    - **where**: ROADMAP, HISTORY
+    - **what_it_is**: Seven clusters came back exact: SEP 'epistemic state' (A1), NIST CSRC 'audit trail' (A3), [source text withheld from the public copy]), Avizienis et al. 2004 (A6), Planck 2018 VI age 13.797 ± 0.023 Gyr (C3), [source text withheld from the public copy]), NIST SP 800-53 AU-9 (A8, with one overreach on 'access').
+    - **evidence_state**: EXTERNALLY CHECKED
+    - **locator**: ROADMAP:L8/L5/research/review/EXTERNAL_AUDIT_2026-08-04.md:218-234
+    - **quote**: [source text withheld from the public copy].
+    - **own_label**: section title "CLAIMS THAT SURVIVED INTACT"
+    - **checked_how**: Recorded in the audit; not re-fetchable here.
+    - **open_items**
+      - Whether the corpus's use of 'epistemic state' matches the technical sense: NOT-CHECKED (line 221-222)
+  - item 19
+    - **id**: AUD-6
+    - **title**: Audit 6 - the Tic Tac adjudication (clusters D1, D2, D3)
+    - **path**: L8/L5/research/review/EXTERNAL_AUDIT_2026-08-04.md
+    - **where**: ROADMAP, HISTORY (finding); file under test ROADMAP:L8/L5/research/review/TICTAC_PROPULSION_ADJUDICATION.md
+    - **what_it_is**: Arithmetic correct (8,519 m, 10,922 m/s, 5,711 g, 1,852 m/s = Mach 5.44). Two framing defects: an equality where '<60 s' makes the speed a strict lower bound; Mach quoted without a reference altitude. [source text withheld from the public copy]. The human-tolerance comparison had no source; NASA MEMO 5-19-59E (Eiband 1959) is supplied.
+    - **evidence_state**: EXTERNALLY CHECKED
+    - **locator**: ROADMAP:L8/L5/research/review/EXTERNAL_AUDIT_2026-08-04.md:238-276
+    - **quote**: **No arithmetic error was found.**
+    - **checked_how**: Recorded in the audit. Confirmed by me by hand: 27,950 ft x 0.3048 = 8,519.16 m; /0.78 s = 10,922 m/s; 4d/t^2 / 9.80665 = 5,711 g; 111,120 m / 60 s = 1,852 m/s. Acted on? NO: TICTAC_PROPULSION_ADJUDICATION.md:52 still reads "1,852 m/s = **Mach 5.44**" and :346 "60 nmi/60 s ⟹ Mach 5.44"; 'Eiband' occurs nowhere outside the audit; the Roosevelt lines (:250, :328) stand.
+    - **open_items**
+      - Apply the two framing fixes and add the Eiband source to the adjudication file
+  - item 20
+    - **id**: AUD-7
+    - **title**: Audit 7 - OMMP code audit: two documentation defects, and Morton order uncited (cluster E1)
+    - **path**: L8/L5/research/review/EXTERNAL_AUDIT_2026-08-04.md
+    - **where**: ROADMAP, HISTORY (finding); code at ROADMAP:L8/L4/work/computation/ommp/
+    - **what_it_is**: The test suite ran green (66 PASS, 0 FAIL) while the README claimed 58/58; the README cited ARCH:558 for 'N = bits per axis', which is not at that line. Morton order is used 20+ times and cited nowhere.
+    - **evidence_state**: INTERNALLY CHECKED
+    - **locator**: ROADMAP:L8/L5/research/review/EXTERNAL_AUDIT_2026-08-04.md:280-300
+    - **quote**: **[source text withheld from the public copy].**
+    - **checked_how**: Recorded: suite run in-session. Not re-run by me. Acted on? README: YES, both corrected with the old values left visible (ommp/README.md:227-228 and :257-260). Code comment: NO, ommp.py:329 still cites 'ARCH:558'. Morton citation: NO, 'G. M. Morton' occurs nowhere in ROADMAP outside the audit.
+    - **open_items**
+      - ommp.py:329 line reference
+      - Add the Morton (1966) citation; do not overclaim locality against Hilbert curves
+  - item 21
+    - **id**: AUD-8
+    - **title**: Audit 8 - what the audit did not check
+    - **path**: L8/L5/research/review/EXTERNAL_AUDIT_2026-08-04.md
+    - **where**: ROADMAP, HISTORY
+    - **what_it_is**: Declared exclusions: the corpus's internal consistency beyond spot checks; whether borrowed terms are used in their technical senses; anything reserved to the author; the scenario/theory layer.
+    - **evidence_state**: UNRESOLVED
+    - **locator**: ROADMAP:L8/L5/research/review/EXTERNAL_AUDIT_2026-08-04.md:304-313
+    - **quote**: **[source text withheld from the public copy].
+    - **own_label**: "NOT-CHECKED throughout" (for term senses)
+  - item 22
+    - **id**: DOC-CONJ
+    - **title**: CONJECTURE_bit_exact_pruning.md - bit-exact prior pruning via the lambda term
+    - **path**: L8/L5/research/review/CONJECTURE_bit_exact_pruning.md
+    - **where**: ROADMAP; HISTORY (1d83788:intake/research/, byte-identical). Not on MAIN or BETA.
+    - **what_it_is**: A 254-line record of the owner's claim that priors can only be pruned bit for bit and that lambda is the fastest way, tested in three stages: the [source text withheld from the public copy])); a counterexample showing per-step exactness does not compose; the owner's repair (save the remainder into a running total), and an independent re-run on 2026-08-05 against exact rationals.
+    - **evidence_state**: CONJECTURE
+    - **locator**: ROADMAP:L8/L5/research/review/CONJECTURE_bit_exact_pruning.md:3-9
+    - **quote**: [source text withheld from the public copy]
+    - **own_label**: "**[source text withheld from the public copy].**"; computations "**INTERNALLY DERIVED**"; "**[source text withheld from the public copy].**"
+    - **key_claims**
+      - Criterion is decidable, deterministic, O(1): holds, 200,000 cases, 0 disagreements (lines 29-39)
+      - Naive prune-to-loss does not compose: 25,000 ULP silently shed at N = 100,000 (lines 41-66)
+      - Owner's repair, verbatim: "[source text withheld from the public copy]" (line 101)
+      - Save-the-remainder form matches exact-rational truth at [source text withheld from the public copy] (lines 208-215)
+      - The implemented form is Kahan's unconditional 1965 form, not Neumaier's 1974 refinement (lines 247-254)
+    - **checked_how**: Recorded: two in-session computations and a re-run with fractions.Fraction. Confirmed by me: 100,000 x ULP/4 = 25,000 ULP = 5.55e-12, matching the table. NOT confirmable: neither script is in the repository (the re-run cites `python3 /tmp/.../scratchpad/accum_fix.py`, line 203); no file in L8/L4/work/computation/probes/ belongs to this document.
+    - **open_items**
+      - "Stagnation" and "compensated summation (Kahan)" as the established names: UNVERIFIED (lines 166, 182-183, 245); SR-21 and SR-22 open
+      - "λ is the *fastest* such criterion": NOT TESTED (lines 167, 184)
+      - Scripts not filed
+    - **depends_on**
+      - OPEN-SOURCES
+  - item 23
+    - **id**: DOC-RIGOR
+    - **title**: [source text withheld from the public copy]
+    - **path**: L8/L5/research/review/EB_RECEIPT_RIGOR_SPEC_2026-08-05.md
+    - **where**: ROADMAP; HISTORY (1d83788:intake/research/, byte-identical). Not on MAIN or BETA.
+    - **what_it_is**: A 373-line proposal for a different repository (github.com/abba-01/eb-receipt, receipt-bound authority delegation). Part A quotes eb-receipt's README, paper outline, primitives.py and primer (six axioms A1-A6), and DISTILLATION.md. Part B proposes: no cosmology in that paper; cite laws L4 and L6; each operation as a small finite-state kernel mapped to an envelope compartment; a b-rail that accumulates; negative deltas routed to a second nonnegative rail and subtracted only at read time; accumulator state read-only with respect to authorization.
+    - **evidence_state**: ASSERTED
+    - **locator**: ROADMAP:L8/L5/research/review/EB_RECEIPT_RIGOR_SPEC_2026-08-05.md:1-16
+    - **quote**: **[source text withheld from the public copy].**
+    - **own_label**: B1, B2 "`INTERNALLY DERIVED`"; B6 "`CONJECTURE`, narrowly adopted"; closing "`COMPOSITE OBJECT UNVERIFIED` throughout."
+    - **key_claims**
+      - B0: cosmology is out of scope for eb-receipt by that repository's own statement (lines 133-141)
+      - B5: route negative deltas to b_remove; never drop, take absolute value, zero or null (lines 242-310)
+      - B6: accumulator may never permit an action the Scope would refuse (lines 312-328)
+      - Owner, verbatim: "[source text withheld from the public copy]" (line 221)
+    - **checked_how**: Recorded: eb-receipt files 'fetched 2026-08-05' and quoted; two external citations attempted and failed. I could not read eb-receipt (not among the local clones). DISTILLATION.md and AUDITON_ENVELOPE.md, which it builds on, are present on ROADMAP (L8/L5/research/findings/, L8/L1/state-space/).
+    - **open_items**
+      - SR-23 Shapiro et al. 2011 (PN-Counter name): "`UNVERIFIED — SOURCE QUOTE NOT FOUND`" (lines 113-116)
+      - SR-24 Birgisson et al. 2014 Macaroons ('closest cousin'): unverified (lines 118-123)
+      - Compartment mapping B2 is new and unreviewed (lines 369-371)
+      - Nothing implemented in eb-receipt
+    - **depends_on**
+      - DOC-LPA
+  - item 24
+    - **id**: DOC-DRREG
+    - **title**: dr-001-003/REGISTER.md and sheet 0.md - the index of the three dated research records
+    - **path**: L8/L5/research/review/dr-001-003/REGISTER.md
+    - **where**: ROADMAP (REGISTER and three DR files byte-identical to 1d83788:common/durable/durable/; sheet 0.md new on ROADMAP). Not on MAIN or BETA.
+    - **what_it_is**: One row per record with its ladder status and a promotion log, all dated [source text withheld from the public copy], DR-002 at SPECULATION, DR-003 at VERIFIED. The sheet says the records await the owner's review and that whether DR-003's proof is registered at L8/L2 is the owner's act.
+    - **evidence_state**: ASSERTED
+    - **locator**: ROADMAP:L8/L5/research/review/dr-001-003/REGISTER.md:6-18
+    - **quote**: [source text withheld from the public copy].
+    - **own_label**: "DURABLE REGISTER — the index"
+    - **checked_how**: Read in full; the three statuses in the register match the three record headers. No promotion after 2026-08-08 is logged.
+    - **open_items**
+      - Sheet line 18: "the formulas ledger holds no rows" - DR-003's proof is not registered at L8/L2
+  - item 25
+    - **id**: DR-001
+    - **title**: [source text withheld from the public copy]
+    - **path**: L8/L5/research/review/dr-001-003/DR-001-uha-half-cell-decode.md
+    - **where**: ROADMAP; HISTORY (byte-identical). Not on MAIN or BETA.
+    - **what_it_is**: Not a defect in existing code but an undecided convention. Turning a cell index back into a position at the cell's back edge forces bound b = w; at the centre, b = w/2. The OMMP codec has no quantizer at all, so the convention is undecided, and the obvious default (truncation) would double every spatial bound.
+    - **evidence_state**: INTERNALLY CHECKED
+    - **locator**: ROADMAP:L8/L5/research/review/dr-001-003/DR-001-uha-half-cell-decode.md:3-56
+    - **quote**: [source text withheld from the public copy]
+    - **own_label**: "**Status: RESEARCHING**"
+    - **key_claims**
+      - Settled: [source text withheld from the public copy] (lines 48-50)
+      - The codec takes integers; real-to-index and index-to-real steps "exist **nowhere in code**" (lines 36-40)
+    - **checked_how**: Recorded: probe dr001_half_cell.py. Confirmed by me: the arithmetic (truth in [k·w,(k+1)·w) is at most w from the left edge, at most w/2 from the centre); and that ommp.py:299 declares `declare_spherical(cls, r: int, theta: int, phi: int, N: int, ...)` with no quantizer function in ommp.py or uha.py (grep). Probe not run.
+    - **open_items**
+      - [source text withheld from the public copy]? Corpus search not done (line 53-54)
+      - [source text withheld from the public copy].**" (line 55)
+      - 3. Write the quantizer and inverse [source text withheld from the public copy] (line 56)
+    - **depends_on**
+      - PRB-DR001
+  - item 26
+    - **id**: DR-002
+    - **title**: [source text withheld from the public copy]
+    - **path**: L8/L5/research/review/dr-001-003/DR-002-sigma-address-locality.md
+    - **where**: ROADMAP; HISTORY (byte-identical). Not on MAIN or BETA.
+    - **what_it_is**: Background finding (measured 2026-08-06, chat only): a bound cannot live on the Morton cell address sigma, because [source text withheld from the public copy] and neighbouring addresses are not neighbouring places; bounds belong on r, theta, phi before interleaving. The new thought: sigma is a local name, so its odd geometry costs nothing until something travels between frames.
+    - **evidence_state**: CONJECTURE
+    - **locator**: ROADMAP:L8/L5/research/review/dr-001-003/DR-002-sigma-address-locality.md:3-49
+    - **quote**: [source text withheld from the public copy]
+    - **own_label**: "**Status: SPECULATION** — the author's own grading"
+    - **key_claims**
+      - 17 consecutive addresses [source text withheld from the public copy] = 8 (lines 21-23)
+      - Reading, not adopted: bounds on components always, on addresses never; travel is where the rule is tested (lines 38-43)
+    - **checked_how**: No check recorded and no probe exists for it (the sheet lists probes for DR-001 and DR-003 only). The two measurements are reported from chat; I did not recompute them.
+    - **open_items**
+      - "Everything." (line 47)
+      - Promotion needs an operational statement of 'travelling' and a check of the frame declarations at ARCH:615 (lines 47-49)
+  - item 27
+    - **id**: DR-003
+    - **title**: [source text withheld from the public copy]
+    - **path**: L8/L5/research/review/dr-001-003/DR-003-swap-flip-no-left-inverse.md
+    - **where**: ROADMAP; HISTORY (byte-identical). Not on MAIN or BETA.
+    - **what_it_is**: The operator B(n,u) = (u,|n|) sends (n,u) and (-n,u) to the same point, so it is not injective, so no operator applied afterwards can recover the sign of n. Consequence drawn: [source text withheld from the public copy], which makes chain integrity the whole support of the privacy reading of witness-loss.
+    - **evidence_state**: EXTERNALLY CHECKED
+    - **locator**: ROADMAP:L8/L5/research/review/dr-001-003/DR-003-swap-flip-no-left-inverse.md:3-47
+    - **quote**: [source text withheld from the public copy]
+    - **own_label**: "**[source text withheld from the public copy]"
+    - **key_claims**
+      - B(n,u) = B(-n,u) for all n, u (lines 29-35)
+      - A function has a left inverse iff it is injective; three university course texts cited (lines 37-41)
+      - Census on n in [-6,6], u in [0,6]: 91 points, image 49, 42 collisions, all sign pairs (lines 51-56)
+      - "**Nothing mathematical remains open here.**" (line 73)
+    - **checked_how**: Recorded: two-line proof; outside anchor by URL to UBC, Cornell and MIT course material (no quote or fetch date captured); a wiki citation was replaced and the correction left visible (lines 43-45). Confirmed by me: the substitution, and the census by counting (13 x 7 = 91; image 7 x 7 = 49; collisions = 6 x 7 = 42). The three URLs could not be opened (no network). Probe not run.
+    - **open_items**
+      - Design use of witness-loss is the author's call (line 73-74)
+      - eb-audit's own rigor file says sole-writer chain integrity "is not yet met" (lines 70-72)
+      - Proof not registered at L8/L2 (sheet 0.md:18)
+    - **depends_on**
+      - PRB-DR003
+  - item 28
+    - **id**: PRB-EBSTACK
+    - **title**: probes/ebstack_lambda_analysis.py - script behind EBSTACK_LAMBDA_ANALYSIS.md
+    - **path**: L8/L4/work/computation/probes/ebstack_lambda_analysis.py
+    - **where**: ROADMAP; HISTORY (1d83788:intake/research/, byte-identical). Not on MAIN or BETA.
+    - **what_it_is**: 80 lines of standard-library Python using fractions.Fraction. Implements mul exactly as quoted, the four-corner ground truth, the two worked examples, the lambda=0 trap, the sign-definite exact form with a guard, the conservation identity, and a 20,000-pair randomised containment check (seed 7, e in [-40,40], b in [0,20]).
+    - **evidence_state**: INTERNALLY CHECKED
+    - **locator**: ROADMAP:L8/L4/work/computation/probes/ebstack_lambda_analysis.py:11-13
+    - **quote**: [source text withheld from the public copy])
+    - **own_label**: sheet: "None was re-run in the restoring pass; each is filed as written." (probes/0.md:8)
+    - **checked_how**: Read in full; not run (my task did not authorise running). Its deterministic outputs for the two examples agree with my hand arithmetic.
+    - **open_items**
+      - Not re-run since restore
+  - item 29
+    - **id**: PRB-DR001
+    - **title**: probes/dr001_half_cell.py - probe for DR-001
+    - **path**: L8/L4/work/computation/probes/dr001_half_cell.py
+    - **where**: ROADMAP; HISTORY (1d83788:common/durable/durable/probes/, byte-identical). Not on MAIN or BETA.
+    - **what_it_is**: 46 lines. For N = 8 (256 cells, w = 1) it samples 16 truths per cell and measures the worst miss for back-edge and centre decode, then asserts the sampled worsts sit just under w and w/2.
+    - **evidence_state**: INTERNALLY CHECKED
+    - **locator**: ROADMAP:L8/L4/work/computation/probes/dr001_half_cell.py:22-46
+    - **quote**: print(f"  ratio = {ratio}  (the factor of 2 DR-001 claims)")
+    - **checked_how**: Read in full; not run. By reading: i runs 0..15, so worst_edge = 15/16 w and worst_centre = w/2 exactly (at i = 0); the printed ratio is therefore 15/8, not 2; both asserts pass. The analytic factor of 2 is correct as a supremum.
+    - **open_items**
+      - Printed ratio does not equal the claimed factor; see defects
+  - item 30
+    - **id**: PRB-DR003
+    - **title**: probes/dr003_no_left_inverse.py - probe for DR-003
+    - **path**: L8/L4/work/computation/probes/dr003_no_left_inverse.py
+    - **where**: ROADMAP; HISTORY (byte-identical). Not on MAIN or BETA.
+    - **what_it_is**: 58 lines. Check 1 asserts B(n,u) == B(-n,u) over a 41 x 21 grid. Check 2 reproduces the collision census and asserts image 49, collisions 42, all sign pairs; and that the negation flip F is injective.
+    - **evidence_state**: INTERNALLY CHECKED
+    - **locator**: ROADMAP:L8/L4/work/computation/probes/dr003_no_left_inverse.py:32-58
+    - **quote**: assert len(image) == 49 and len(collisions) == 42 == sign_pairs
+    - **checked_how**: Read in full; not run. The asserted numbers agree with my count (91 / 49 / 42).
+  - item 31
+    - **id**: LAM-EB
+    - **title**: Definition: lambda_EB - [source text withheld from the public copy] of the eb-stack product radius
+    - **path**: L8/L5/research/review/EBSTACK_LAMBDA_ANALYSIS.md
+    - **where**: ROADMAP (this statement); also stated in the companion repository, autonomous origin/main:L8/L5/research/findings/FINDING_lambda_enclosure_boundary.md:24-34
+    - **what_it_is**: In mul(x, y, lam) the result is (x.e·y.e, |x.e|·y.b + |y.e|·x.b + lam·x.b·y.b). lambda = 1 keeps the product of the two bounds in the radius (Rump's midpoint-radius product, always contains the true product). lambda = 0 drops it. The sourcebook grades it: lambda_EB = 0 first-order truncation; < 1 not a hard enclosure; >= 1 enclosure.
+    - **evidence_state**: ASSERTED
+    - **locator**: ROADMAP:L8/L5/research/review/EBSTACK_LAMBDA_ANALYSIS.md:32-35
+    - **quote**: [source text withheld from the public copy])
+    - **own_label**: "**[source text withheld from the public copy].**"
+    - **checked_how**: The definition is the author's (from eb-stack via a prompt). The same line is at ROADMAP:L8/L4/work/writing/prompts/Lambda_Explainer_Prompt.md:261-262. The grading is at ROADMAP:L8/L4/work/writing/sourcebook/Auditonomous_Book_Material_Sourcebook_v0.1.md:665-668. eb-stack itself is not among the local clones.
+    - **open_items**
+      - The line has never been read in eb-stack by any recorded session
+  - item 32
+    - **id**: LAM-A
+    - **title**: Definition: lambda_A - the auditonomous decomposition state (canonical proposal and departure protocol)
+    - **path**: L8/L0/semantics/definitions/AUDITONOMY.md
+    - **where**: ROADMAP only for AUDITONOMY.md; the departure protocol is on MAIN, ROADMAP and BETA at L7/peering/private/ingress/peer-2/object-1/auditonomous-departure-protocol.md
+    - **what_it_is**: lambda_A = 0 names a state, not a number: the usable part of a known prior stays in operation while its unused nonnegative remainder goes to a provenance-preserving accumulator; many remainders form one memory only when [source text withheld from the public copy]. The departure protocol says it is not numerical zero, not exactness, not absence of uncertainty.
+    - **evidence_state**: CONJECTURE
+    - **locator**: ROADMAP:L8/L0/semantics/definitions/AUDITONOMY.md:379-384; MAIN:L7/peering/private/ingress/peer-2/object-1/auditonomous-departure-protocol.md:66-80
+    - **quote**: λ=[source text withheld from the public copy].
+    - **own_label**: AUDITONOMY.md:355 "**Status: `CONJECTURE / INTERNAL ONLY`**" and heading "PROPOSED ... (`NOT ADOPTED`)"; departure protocol line 4 "`[source text withheld from the public copy]`"
+    - **key_claims**
+      - Protocol line 76: "[source text withheld from the public copy]."
+      - Owner's framing recorded but "**not accepted as replacing anything yet**" (AUDITONOMY.md:361-363)
+    - **checked_how**: No external check: AUDITONOMY.md:355-359 says "[source text withheld from the public copy]". LAMBDA_PRIOR_ART found none of its four constitutive rules in the sources it read.
+    - **open_items**
+      - mu, tau, Coherent, Admissible and the update rule A are named, none defined (AUDITONOMY.md:402-405)
+      - No bound on the accumulator U_t (lines 407-413)
+      - Relation to the earlier ledger / working-memory split undeclared (lines 415-421)
+    - **depends_on**
+      - OPEN-MECHANISM
+  - item 33
+    - **id**: LAM-A-CONFLICT
+    - **title**: Two incompatible readings of lambda_A = 0 (the tension the roadmap calls CH-01)
+    - **path**: L8/L5/research/review/THESIS_lambda_decomposed_record.md
+    - **where**: ROADMAP (thesis) against MAIN/ROADMAP/BETA (departure protocol) and ROADMAP (AUDITONOMY.md)
+    - **what_it_is**: The thesis decode reads lambda = 0 as the exactly known part with zero uncertainty. The departure protocol and the canonical proposal say lambda_A = 0 is a decomposition state and explicitly not exactness or absence of uncertainty. The model-output run in the repository adds that exact arithmetic cannot make a prior true.
+    - **evidence_state**: CONTRADICTED
+    - **locator**: ROADMAP:L8/L5/research/review/THESIS_lambda_decomposed_record.md:10-11 vs MAIN:L7/peering/private/ingress/peer-2/object-1/auditonomous-departure-protocol.md:74-76
+    - **quote**: λ ∈ {[source text withheld from the public copy])
+    - **own_label**: Roadmap: "[source text withheld from the public copy]:257)
+    - **checked_how**: Compared the three texts directly. The label 'CH-01' appears only at roadmap:257 and book/ch16...md:18; no document in the ROADMAP tree defines it or states which two definitions it means (grep for 'CH-0'). The pairing above is my reading of the two definitions that are present.
+    - **open_items**
+      - Owner to rule which reading governs; chapter 16's 'done when' requires "[source text withheld from the public copy])" (ch16:22)
+      - Locate or write the CH-01 record
+    - **depends_on**
+      - LAM-A
+      - DOC-THESIS
+  - item 34
+    - **id**: LAM-HOMONYM
+    - **title**: 'Two unrelated lambdas': the cross-corpus homonym ruling, lambda_A=0 is not lambda_EB=0
+    - **path**: L8/L0/semantics/definitions/AUDITONOMY.md
+    - **where**: ROADMAP (AUDITONOMY.md, LAMBDA_PRIOR_ART C2, sourcebook, session log); the typed inequality is also on MAIN and BETA in the departure protocol
+    - **what_it_is**: A governance note in the owner's eb-stack repository (branch agent/auditonomous-lambda0-homonym-register, commit c3ec814) rules that the proposal's lambda=0 and eb-stack's pre-existing lambda=0 (fixed-centre regime, permanently NOT-AN-ENCLOSURE) share only a spelling. No result about one may be carried to the other.
+    - **evidence_state**: ASSERTED
+    - **locator**: ROADMAP:L8/L0/semantics/definitions/AUDITONOMY.md:436-447
+    - **quote**: [source text withheld from the public copy].
+    - **own_label**: LAMBDA_PRIOR_ART.md:178-180: "[source text withheld from the public copy]`"; the ruling's own words: "owner-directed terminology ruling; governance only"
+    - **key_claims**
+      - "[source text withheld from the public copy]`" (AUDITONOMY.md:442)
+      - lambda_A != lambda_EB (departure protocol:79; sourcebook:662)
+      - Unmerged branch, no PR: "[source text withheld from the public copy]" (LAMBDA_PRIOR_ART.md:192-193)
+    - **checked_how**: Recorded: existence and content checked by `gh api` against GitHub on 2026-08-05 (LAMBDA_PRIOR_ART.md:173-177). Not confirmable here: eb-stack is not a local clone. The same session then conflated the two anyway and recorded it (SESSION_2026-08-05_VERIFICATION_LOG.md:92-95, C-6).
+    - **open_items**
+      - Whether the eb-stack branch was ever merged is not recorded
+      - The roadmap says [source text withheld from the public copy] (see open_questions)
+  - item 35
+    - **id**: LAM-D11
+    - **title**: lambda = 0 against lambda = 1: which enclosure regime the book uses (owner decision D11)
+    - **path**: L8/L5/research/review/BOOK_STRUCTURE_AND_ROADMAP_2026-09-13.md
+    - **where**: ROADMAP only
+    - **what_it_is**: The roadmap frames it as eb-stack lambda = 1 against nua (N/U algebra) lambda = 0, with three options: lambda = 1 throughout; lambda = [source text withheld from the public copy]. The session recommends the first for the book with the second as the exact special case. It gates chapters 15 and 16.
+    - **evidence_state**: UNRESOLVED
+    - **locator**: ROADMAP:L8/L5/research/review/BOOK_STRUCTURE_AND_ROADMAP_2026-09-13.md:622
+    - **quote**: [source text withheld from the public copy]).
+    - **own_label**: "Next: owner picks λ (D11)" (line 250); the roadmap as a whole is "PROPOSAL, INTERNAL ONLY, nothing adopted" (review/0.md:43)
+    - **checked_how**: Read the D11 row and the chapter 15/16 blocks. No ruling on D11 found. Note the envelope already prints one choice: ROADMAP and MAIN L8/L1/state-space/AUDITON_ENVELOPE.md:126 gives compartment C3 as "enclosure per IEEE 1788 §12.10.1 ... λ=1 linear form".
+    - **open_items**
+      - Owner ruling on D11
+      - The 9.49% figure is specific to the probe's integer grid (see defects)
+      - Session log [source text withheld from the public copy]" (SESSION_2026-08-05_VERIFICATION_LOG.md:195)
+    - **depends_on**
+      - EST-RUMP
+      - EST-SIGNDEF
+      - EST-NOTENCLOSURE
+  - item 36
+    - **id**: EST-RUMP
+    - **title**: Established: the lambda = 1 product is Rump 1999's midpoint-radius product
+    - **path**: L8/L5/research/review/LAMBDA_EXTERNAL_VERIFICATION_2026-08-04.md
+    - **where**: ROADMAP, HISTORY
+    - **what_it_is**: The lambda = 1 rule is Definition 2.1, Eq. (5) of [source text withheld from the public copy], and carries the isotonicity (containment) guarantee. It is not novel and should be cited, not coined.
+    - **evidence_state**: EXTERNALLY CHECKED
+    - **locator**: ROADMAP:L8/L5/research/review/LAMBDA_EXTERNAL_VERIFICATION_2026-08-04.md:16-34
+    - **quote**: [source text withheld from the public copy].
+    - **own_label**: "**Status: ESTABLISHED, externally.**"
+    - **checked_how**: Confirmed by me against the held text: autonomous origin/main:L7/provenance/prior-art/prior-art-lane/ru99.txt:117 reads "([source text withheld from the public copy] :121 "[source text withheld from the public copy] abstract (ru99.txt:9) states [source text withheld from the public copy]".
+  - item 37
+    - **id**: EST-SIGNDEF
+    - **title**: Established: the lambda = 0 radius is exact for sign-definite operands, provided the centre is shifted
+    - **path**: L8/L5/research/review/LAMBDA_EXTERNAL_VERIFICATION_2026-08-04.md
+    - **where**: ROADMAP, HISTORY
+    - **what_it_is**: For intervals that do not cross zero, the radius of the true product set is a·β + α·b, the lambda = 0 form; the centre of the true product is a·b shifted by α·β. The cross-term is the price of keeping the centre at a·b, not part of the true uncertainty. The condition (sign-definite) must travel with the claim.
+    - **evidence_state**: EXTERNALLY CHECKED
+    - **locator**: ROADMAP:L8/L5/research/review/LAMBDA_EXTERNAL_VERIFICATION_2026-08-04.md:38-71
+    - **quote**: **[source text withheld from the public copy].**
+    - **own_label**: "VERIFIED — the author is right" (table, line 214)
+    - **key_claims**
+      - Owner's claim under test: "λ=[source text withheld from the public copy]." (line 42)
+      - Second confirmation from Rump 2010's worked example [1,3]·[5,9] = [5,27] (lines 75-90)
+    - **checked_how**: Confirmed by me against ru99.txt:165-172: "[source text withheld from the public copy]". Worked example re-done by hand: radius 11, midpoint 16, interval [5,27]. Rump 2010 not held, not confirmable.
+    - **open_items**
+      - Zero-crossing operands are outside the result
+      - A per-operation domain check is required (lines 224-228); not specified anywhere as a mechanism
+  - item 38
+    - **id**: EST-NOTENCLOSURE
+    - **title**: Established internally: lambda = 0 as coded (centre left at a·b) is not an enclosure
+    - **path**: L8/L5/research/review/EBSTACK_LAMBDA_ANALYSIS.md
+    - **where**: ROADMAP, HISTORY
+    - **what_it_is**: Because the quoted mul never shifts the midpoint, dropping the cross-term at lambda = 0 removes it from the radius and credits it nowhere. The result [source text withheld from the public copy] whenever both bounds are nonzero. This is the thing the eb-stack label NOT-AN-ENCLOSURE records.
+    - **evidence_state**: INTERNALLY CHECKED
+    - **locator**: ROADMAP:L8/L5/research/review/EBSTACK_LAMBDA_ANALYSIS.md:60-81
+    - **quote**: [source text withheld from the public copy].**
+    - **own_label**: "INTERNALLY DERIVED"
+    - **checked_how**: Confirmed by hand on both examples ([3,25] against [5,27]; [-26,-4] against [-28,-6]) and by algebra: the true extreme corner exceeds the lambda=0 endpoint by exactly b1·b2. The companion repository gives a third counterexample, (1,1)·(1,1): lambda=0 hull [-1,3] against truth [0,4] (autonomous origin/main:L8/L5/research/findings/FINDING_lambda_enclosure_boundary.md:40-47), which I also re-did.
+    - **depends_on**
+      - LAM-EB
+  - item 39
+    - **id**: EST-O1
+    - **title**: Established per the record: O(1) comes from bounded operand width, not from lambda
+    - **path**: L8/L5/research/review/LAMBDA_EXTERNAL_VERIFICATION_2026-08-04.md
+    - **where**: ROADMAP, HISTORY
+    - **what_it_is**: Using Brent and Zimmermann's cost model, an operation is unit-cost only when operand width is held constant. Two schemes of the same width are in the same complexity class whichever terms they keep, so lambda is not the complexity lever.
+    - **evidence_state**: EXTERNALLY CHECKED
+    - **locator**: ROADMAP:L8/L5/research/review/LAMBDA_EXTERNAL_VERIFICATION_2026-08-04.md:148-173
+    - **quote**: **[source text withheld from the public copy].
+    - **own_label**: "ESTABLISHED" (table, line 215)
+    - **checked_how**: Recorded: three quotes from Modern Computer Arithmetic (CUP 2010) with section numbers. Not confirmable by me: the book is not held in either repository. The conclusion about lambda is the session's inference from the quotes, not a quoted statement.
+  - item 40
+    - **id**: EST-ACCUM
+    - **title**: Established internally: the bit-exact drop test is decidable; 'save the remainder' composes where 'prune to loss' does not
+    - **path**: L8/L5/research/review/CONJECTURE_bit_exact_pruning.md
+    - **where**: ROADMAP, HISTORY
+    - **what_it_is**: Whether a term changes any stored bit is a fact about the representation, not a chosen threshold. Applied naively over a chain it fails silently. Carrying the exact unrepresentable part forward each step (the owner's repair) reproduces the exact-rational total at every N tested up to one million.
+    - **evidence_state**: INTERNALLY CHECKED
+    - **locator**: ROADMAP:L8/L5/research/review/CONJECTURE_bit_exact_pruning.md:158-171 and 195-245
+    - **quote**: **[source text withheld from the public copy]**
+    - **own_label**: "[source text withheld from the public copy]" (line 243)
+    - **checked_how**: Recorded: original run plus an independent re-run on 2026-08-05 (also logged at L8/L4/work/writing/sessions/SESSION_2026-08-05_VERIFICATION_LOG.md:151-168). Only one test configuration (accumulator 1.0, every term ULP/4). Scripts not in the repository, so not reproducible from it. A related outside result exists on MAIN: L8/L3/engineering-mathematics/uncertainty/PRIORS_EXTERNAL_2026-08-04.md:85-103 identifies the owner's aggregation with 'condensing noise variables' (Stolfi and de Figueiredo 1997).
+    - **open_items**
+      - Case where an incoming term exceeds the accumulator is untested (lines 247-254)
+      - Names and attribution UNVERIFIED (SR-21, SR-22)
+  - item 41
+    - **id**: REF-DIGIT
+    - **title**: Refuted: storage bounded by a 'meaningful digit' budget
+    - **path**: L8/L5/research/review/LAMBDA_EXTERNAL_VERIFICATION_2026-08-04.md
+    - **where**: ROADMAP, HISTORY
+    - **what_it_is**: Catastrophic cancellation can destroy every significant digit in one subtraction, exposing error from earlier operations. So [source text withheld from the public copy] has no floor. This does not refute lambda = 0; it refutes the unconditional storage claim.
+    - **evidence_state**: CONTRADICTED
+    - **locator**: ROADMAP:L8/L5/research/review/LAMBDA_EXTERNAL_VERIFICATION_2026-08-04.md:177-205
+    - **quote**: **[source text withheld from the public copy]
+    - **own_label**: "**REFUTED** — no floor under cancellation" (table, line 216)
+    - **checked_how**: Recorded: three quotes from Goldberg 1991; the session log gives the fetch route as docs.oracle.com (SESSION_2026-08-05_VERIFICATION_LOG.md:24, V-29). Goldberg is not held; not confirmable by me.
+    - **open_items**
+      - van Emden 2004 "[source text withheld from the public copy]" (lines 234-237)
+  - item 42
+    - **id**: REF-PRUNE
+    - **title**: Refuted: per-step bit-exact pruning composes over a chain
+    - **path**: L8/L5/research/review/CONJECTURE_bit_exact_pruning.md
+    - **where**: ROADMAP, HISTORY
+    - **what_it_is**: With accumulator 1.0 and every term a quarter of a unit in the last place, each drop is bit-exact, the accumulator never moves, and the discarded mass grows without bound: 25,000 ULP at N = 100,000, with no error raised.
+    - **evidence_state**: CONTRADICTED
+    - **locator**: ROADMAP:L8/L5/research/review/CONJECTURE_bit_exact_pruning.md:41-66
+    - **quote**: **[source text withheld from the public copy].**
+    - **own_label**: "**REFUTED** — stagnation, 25 000 ULP" (line 163)
+    - **checked_how**: Arithmetic confirmed by hand (2^-54 added to 1.0 rounds to 1.0; 100,000 x 2^-54 = 5.55e-12). Script not held.
+  - item 43
+    - **id**: REF-COSMO
+    - **title**: Refuted: three cosmology prior-art claims for the lambda mechanism
+    - **path**: L8/L5/research/review/LAMBDA_PRIOR_ART_2026-08-05.md
+    - **where**: ROADMAP, HISTORY
+    - **what_it_is**: (1) Hubble tension as an example of merging near-identical priors: it is the opposite case, two values 4.9 sigma apart. (2) Riess 2022's generalised least squares as the same mechanism as lambda: it permits cancellation, lambda forbids it by definition. (3) CosmoMC's covariance matrices as evidence against full-data retention: the claim conflated proposal covariance with result representation.
+    - **evidence_state**: CONTRADICTED
+    - **locator**: ROADMAP:L8/L5/research/review/LAMBDA_PRIOR_ART_2026-08-05.md:203-214
+    - **quote**: [source text withheld from the public copy].
+    - **own_label**: "**REFUTED**" on each of the three rows
+    - **key_claims**
+      - What holds: Hubble tension as a cautionary tale against over-coarsening; Riess's 'error floor' as a parallel of the principle only; cosmological inference as prior art for the conservation principle
+    - **checked_how**: Recorded with quotes and arithmetic; arithmetic confirmed by me; sources not re-readable here.
+  - item 44
+    - **id**: REF-WITHDRAWN
+    - **title**: Withdrawn: the session's own earlier claims against lambda = 0, and a second agent's misreading
+    - **path**: L8/L5/research/review/LAMBDA_EXTERNAL_VERIFICATION_2026-08-04.md
+    - **where**: ROADMAP, HISTORY
+    - **what_it_is**: The earlier report that lambda = 0 'falls short' and compounds to 4.41x at N = 200 measured deviation from an unshifted centre and is withdrawn. A verification agent then read Rump's example as excluding the true supremum by computing [14-11, 14+11]; the file records this as the same error (deleting the quadratic term twice). Two earlier internal checks are withdrawn as verification.
+    - **evidence_state**: CONTRADICTED
+    - **locator**: ROADMAP:L8/L5/research/review/LAMBDA_EXTERNAL_VERIFICATION_2026-08-04.md:9-12, 58-63, 92-104
+    - **quote**: **[source text withheld from the public copy].**
+    - **own_label**: "**Withdrawn.**" (line 63); "⚠ AGENT ERROR, RECORDED" (line 92)
+    - **checked_how**: Read; the corrected arithmetic re-done by hand. The file warns the misreading "should be expected to recur" (line 104).
+  - item 45
+    - **id**: OPEN-NOVELTY
+    - **title**: Open: the novelty claim for the lambda-decomposed record
+    - **path**: L8/L5/research/review/THESIS_lambda_decomposed_record.md
+    - **where**: ROADMAP (thesis, prior-art file); MAIN, ROADMAP, BETA (deep-research run at L8/L4/work/computation/deep-research-auditonomous.md)
+    - **what_it_is**: Three statements stand side by side. The thesis: no occupant of the intersection (exact decomposition plus enclosure as mandatory content of a pre-execution record) was located, on a partial sweep. The prior-art file: the lambda mechanism's four constitutive rules were found in no source. A deep-research run filed in the repository as model output: the broad 'record before act' claim is already occupied by 2026 work; only the narrow numeric-content claim still appears open.
+    - **evidence_state**: UNRESOLVED
+    - **locator**: ROADMAP:L8/L5/research/review/THESIS_lambda_decomposed_record.md:85 and 131-133; MAIN:L8/L4/work/computation/deep-research-auditonomous.md:9 and 16
+    - **quote**: [source text withheld from the public copy].
+    - **own_label**: Thesis: "`PARTIALLY CHECKED — negative`"; prior-art file: "`COMPOSITE OBJECT UNVERIFIED`"; deep-research run, per its sheet on BETA: "model output as run, never evidence" (L8/L4/work/computation/0.md:43)
+    - **key_claims**
+      - What prior art does to the novelty claim: lambda = 1 is not novel (Rump 1999); the decomposition mechanism is 'fifty years old' (thesis:64); the conservation principle has cosmological precedent; only the narrow fusion / specific booking mechanism remains a candidate, unverified as novel
+      - PRIORS_EXTERNAL (MAIN) reaches the same shape for pruning: cite affine arithmetic and condensation; the claimable part is "[source text withheld from the public copy]" (line 126-127)
+    - **checked_how**: Compared the three records. The deep-research run's citations are opaque tokens ('citeturn...') with no resolvable source, so its statement that the broad form is occupied cannot be checked from the repository.
+    - **open_items**
+      - Check the 2026 works the run names against real sources
+      - DIS/FDIS 24970 and prEN 18229-1 collision check (thesis O-d)
+      - Chapter 16 'done when': "the narrow novelty claimed deliberately" (ch16:22)
+    - **depends_on**
+      - DOC-THESIS
+      - DOC-LPA
+  - item 46
+    - **id**: OPEN-MECHANISM
+    - **title**: Open: the lambda_A mechanism is a schema, not a checkable mechanism
+    - **path**: L8/L0/semantics/definitions/AUDITONOMY.md
+    - **where**: ROADMAP only
+    - **what_it_is**: The memory-formation rule FormMemory(U_t) iff mu(U_t) >= tau and Coherent(U_t) and Admissible(U_t) uses five undefined symbols. No bound on the residual accumulator is stated, so the overload problem the proposal answers may only have been moved. The prescribed next steps are: define the operators; state and prove or disprove a bound; run an adversarial pass.
+    - **evidence_state**: UNRESOLVED
+    - **locator**: ROADMAP:L8/L0/semantics/definitions/AUDITONOMY.md:400-434
+    - **quote**: [source text withheld from the public copy]`.
+    - **own_label**: "`CONJECTURE / INTERNAL ONLY`, unchanged." (line 462)
+    - **key_claims**
+      - Owner, verbatim: "[source text withheld from the public copy]." (line 408-409)
+      - LAMBDA_PRIOR_ART.md:214: `Coherent`/`Admissible` specified anywhere? "**NO**"
+      - Session log: "named, undefined, flagged three times" (SESSION_2026-08-05_VERIFICATION_LOG.md:188)
+    - **checked_how**: Read. Three files that AUDITONOMY.md:433-434 names as dependents (FINDING_lambda_knob_and_retention.md, COARSENING_VALIDATION.md, FINDING_coarsening_as_forgetting.md) are not in ROADMAP, not in HISTORY 1d83788, and not in autonomous origin/main or its beta (ls-tree search).
+    - **open_items**
+      - Define mu, tau, Coherent, Admissible, A
+      - Bound on U_t
+      - Adversarial pass
+  - item 47
+    - **id**: OPEN-SOURCES
+    - **title**: Open: sources the lambda thread still needs
+    - **path**: L8/L5/research/review/SOURCE_REQUESTS.md
+    - **where**: ROADMAP, HISTORY
+    - **what_it_is**: Unobtained or unread: Dekker 1971 (TwoProduct); Ogita-Rump-Oishi 2005; Kahan 1965 (SR-21); Neumaier 1974 (SR-22); Shapiro et al. 2011 CRDT survey (SR-23); Birgisson et al. 2014 Macaroons (SR-24); van Emden 2004; Lewis and Bridle 2002 full text; ISO/IEC DIS (or FDIS) 24970 and prEN 18229-1.
+    - **evidence_state**: UNRESOLVED
+    - **locator**: ROADMAP:L8/L5/research/review/SOURCE_REQUESTS.md:71-110; ROADMAP:L8/L4/work/writing/sessions/SESSION_2026-08-05_VERIFICATION_LOG.md:172-180
+    - **quote**: **[source text withheld from the public copy].**
+    - **own_label**: SR-21 to SR-24: "**open**"
+    - **checked_how**: Read SOURCE_REQUESTS and the session log status table. The prior-art lane in the companion repository holds Rump 1999, GUM, Higham, NIST TN 1297 and four streaming papers; it holds none of the items above (autonomous origin/main:L7/provenance/prior-art/prior-art-lane/0.md:14-25).
+    - **open_items**
+      - Chapter 16 '[source text withheld from the public copy])" (ch16:18)
+      - Chapter 15 verify line: "van Emden 2004 NOT OBTAINED" (roadmap:248)
+  - item 48
+    - **id**: OPEN-EBSTACK-SOURCE
+    - **title**: Open: the eb-stack code line under analysis has never been read in its repository
+    - **path**: L8/L5/research/review/EBSTACK_LAMBDA_ANALYSIS.md
+    - **where**: ROADMAP, HISTORY
+    - **what_it_is**: The whole lambda_EB analysis rests on a line quoted in an author-supplied prompt. The repository could not be cloned on 2026-08-04. A session on 2026-08-05 read eb-stack's theory/15_lambda_decomposition.md and ledger via the GitHub API, but records no check of code/ebstack/core.py.
+    - **evidence_state**: UNRESOLVED
+    - **locator**: ROADMAP:L8/L5/research/review/EBSTACK_LAMBDA_ANALYSIS.md:8-40, 131-132
+    - **quote**: **[source text withheld from the public copy].
+    - **own_label**: "`UNVERIFIED`" (source line); "`PARTIALLY VERIFIED`" (private/public status)
+    - **checked_how**: Read; cross-read SESSION_2026-08-05_VERIFICATION_LOG.md:27 (V-32), which lists only theory and ledger files. eb-stack is not among the local clones.
+    - **open_items**
+      - Read code/ebstack/core.py at a pinned commit and compare to the quoted line
+  - item 49
+    - **id**: OPEN-FASTEST
+    - **title**: Open: 'lambda is the fastest such criterion' and the established names
+    - **path**: L8/L5/research/review/CONJECTURE_bit_exact_pruning.md
+    - **where**: ROADMAP, HISTORY; the NOT TESTED row is repeated on MAIN at L8/L3/engineering-mathematics/uncertainty/PRIORS_EXTERNAL_2026-08-04.md:120
+    - **what_it_is**: The third limb of the owner's conjecture (lambda is the fastest bit-exact criterion) was never tested: no alternative was benchmarked. The names 'stagnation' and 'compensated summation (Kahan)' were asserted from background knowledge and never checked.
+    - **evidence_state**: UNRESOLVED
+    - **locator**: ROADMAP:L8/L5/research/review/CONJECTURE_bit_exact_pruning.md:182-184, 245
+    - **quote**: λ [source text withheld from the public copy]
+    - **own_label**: "**NOT TESTED**"; "**UNVERIFIED**"
+    - **checked_how**: Read both records; the external pass the file says was 'launched and had not returned' (lines 187-189) did return as PRIORS_EXTERNAL_2026-08-04.md (affine arithmetic, condensation), which does not address either open point.
+  - item 50
+    - **id**: X-1788
+    - **title**: IEEE 1788 follow-up: the 2015 decoration correspondence was closed; the status of 1788.1-2017 is recorded two ways
+    - **path**: L7/provenance/sources/staging-records/interval/DECORATIONS_2026-08-04.md
+    - **where**: MAIN and ROADMAP (DECORATIONS file, STANDARDS_REGISTER); ROADMAP only (session log, roadmap)
+    - **what_it_is**: The verification file left the IEEE 1788 decoration correspondence NOT-CHECKED as 'the next required step'. A separate record read the 2015 standard and closed it. For the active 1788.1-2017, the session log says it was read and all five decorations are retained; the standards register and the roadmap still say held but unread.
+    - **evidence_state**: CONTRADICTED
+    - **locator**: ROADMAP:L8/L4/work/writing/sessions/SESSION_2026-08-05_VERIFICATION_LOG.md:16 vs ROADMAP:L7/provenance/sources/STANDARDS_REGISTER.md:130, 365-367 vs ROADMAP:L8/L5/research/review/BOOK_STRUCTURE_AND_ROADMAP_2026-09-13.md:248
+    - **quote**: [source text withheld from the public copy]
+    - **own_label**: Session log: VERIFIED (V-21). Register: "**HELD but UNREAD.**" Roadmap: "IEEE 1788.1 NOT READ"
+    - **checked_how**: Compared the three records. No IEEE 1788 PDF is in the ROADMAP tree (ls-tree grep), so I could not read the standard.
+    - **open_items**
+      - Update the register and roadmap, or record why V-21 does not count
+  - item 51
+    - **id**: X-AUTFIND
+    - **title**: Companion-repository finding states lambda = 1 is 'the exact interval product radius'
+    - **path**: L8/L5/research/findings/FINDING_lambda_enclosure_boundary.md
+    - **where**: autonomous origin/main and origin/beta/7lm-exemplar-autonomous (not in auditonomous)
+    - **what_it_is**: A 2026-08-04 finding in the autonomous repository defines the carrier and lambda from eb-stack, shows by counterexample that lambda = 0 and the eBIOS root-sum-square rule do not enclose, and labels lambda = 1 'the exact interval product radius'. The later outside check in auditonomous says lambda = 1 is the midpoint-radius product, which overestimates, and that the exact radius for sign-definite operands is the lambda = 0 form at a shifted centre.
+    - **evidence_state**: CONTRADICTED
+    - **locator**: autonomous MAIN:L8/L5/research/findings/FINDING_lambda_enclosure_boundary.md:31-34 vs auditonomous ROADMAP:L8/L5/research/review/LAMBDA_EXTERNAL_VERIFICATION_2026-08-04.md:50-56
+    - **quote**: | **λ = [source text withheld from the public copy] |
+    - **own_label**: "**`INTERNAL ONLY`**"; [source text withheld from the public copy]`" (line 111-113)
+    - **checked_how**: Read lines 1-120 of the finding; its counterexample (1,1)·(1,1) re-done by hand. The same finding quotes eb-stack saying the Warmus shifted-centre product is tighter (lines 99-102), so the 'exact' wording in its own table is loose even on its own evidence.
+    - **open_items**
+      - Bring the companion finding's wording into line with the outside check, or mark it superseded
+- **defects**
+  - item 1
+    - **statement**: The thesis corrects itself in place (Dekker 1971 is NOT held; dd.txt is the DDSketch paper) but its closing Labels paragraph still says "Dekker held as `dd.txt`". The file contradicts itself.
+    - **locator**: ROADMAP:L8/L5/research/review/THESIS_lambda_decomposed_record.md:49-58 vs :143-145
+  - item 2
+    - **statement**: The thesis decode gives the poles as "λ ∈ {0, 1}" and in the same sentence and in LD3 writes the residual as "λ ≥ 1".
+    - **locator**: ROADMAP:L8/L5/research/review/THESIS_lambda_decomposed_record.md:10-11, 34
+  - item 3
+    - **statement**: The probe's docstring still says "Repo itself is PRIVATE/unreachable", a claim the document it serves withdrew as unsafe ("[source text withheld from the public copy]").
+    - **locator**: ROADMAP:L8/L4/work/computation/probes/ebstack_lambda_analysis.py:1-2 vs ROADMAP:L8/L5/research/review/EBSTACK_LAMBDA_ANALYSIS.md:14-20
+  - item 4
+    - **statement**: The 9.49% containment figure is a property of the probe's sampling grid, not of the operator: lambda=0 as coded contains the truth exactly when one bound is zero, and with integer b drawn from 0..20 that happens with probability 41/441 = 9.30%. On continuous inputs the rate would be zero. The roadmap's D11 row carries "9.49 % of random pairs as coded" as if it described the operator.
+    - **locator**: ROADMAP:L8/L5/research/review/EBSTACK_LAMBDA_ANALYSIS.md:72-81; ROADMAP:L8/L5/research/review/BOOK_STRUCTURE_AND_ROADMAP_2026-09-13.md:622
+  - item 5
+    - **statement**: dr001_half_cell.py prints a measured ratio of 15/8 beside the words "the factor of 2 DR-001 claims". Its comment "incl. both ends" is wrong (i runs 0..15, the upper end is never sampled), and its note that the worst cases are "not reachable exactly by a finite sample" is wrong for the centre case, where w/2 is reached at i = 0. (By reading; script not run.)
+    - **locator**: ROADMAP:L8/L4/work/computation/probes/dr001_half_cell.py:24, 39-43
+  - item 6
+    - **statement**: DR-001 and DR-003 link their probes by the relative path `probes/...`, and REGISTER.md links `README.md`; none resolves from dr-001-003/. The sheets acknowledge this and say where the objects now stand, but the links are broken as written. DR-001 also names the codec `tools/ommp`, now at L8/L4/work/computation/ommp/.
+    - **locator**: ROADMAP:L8/L5/research/review/dr-001-003/DR-001-uha-half-cell-decode.md:3, 36; DR-003-swap-flip-no-left-inverse.md:4; REGISTER.md:4; L8/L6/history/restore-2026-09-14.md:66
+  - item 7
+    - **statement**: Rump 2010 is cited as "[source text withheld from the public copy]"; page 44 is outside the stated page range (probably a PDF page of an author copy).
+    - **locator**: ROADMAP:L8/L5/research/review/LAMBDA_EXTERNAL_VERIFICATION_2026-08-04.md:75-76
+  - item 8
+    - **statement**: The lambda verification file records no fetch route, URL or date for any of its six sources, and one (Hickey et al.) was read from an accepted-manuscript copy. The audit's own standard asks for a locator; here only publication, section and equation numbers are given.
+    - **locator**: ROADMAP:L8/L5/research/review/LAMBDA_EXTERNAL_VERIFICATION_2026-08-04.md:18-19, 75-76, 110-112, 150-151, 179-180
+  - item 9
+    - **statement**: The lambda verification file says its adversarial refutation pass "was still running" and "Verdicts may move"; no result is recorded, yet the review sheet and the roadmap carry its verdicts as settled ("The external check settles the mathematics").
+    - **locator**: ROADMAP:L8/L5/research/review/LAMBDA_EXTERNAL_VERIFICATION_2026-08-04.md:232-233; ROADMAP:L8/L5/research/review/BOOK_STRUCTURE_AND_ROADMAP_2026-09-13.md:622
+  - item 10
+    - **statement**: The prior-art file takes the Planck H0 value from the arXiv abstract page and cites Lewis and Bridle by arXiv number. STATUS_LADDER lists arXiv under NEVER for a VERIFIED source. The file flags the route itself. Its header also links `../../FREEZE.md`, which is not in the ROADMAP tree (present only in HISTORY).
+    - **locator**: ROADMAP:L8/L5/research/review/LAMBDA_PRIOR_ART_2026-08-05.md:11, 17-21, 43-44, 220-222; MAIN:L8/L5/research/review/STATUS_LADDER.md:13-18
+  - item 11
+    - **statement**: The receipt-rigor specification speaks of eb-receipt's "five operations" throughout, but its kernel table has six rows ([source text withheld from the public copy], verify_chain).
+    - **locator**: ROADMAP:L8/L5/research/review/EB_RECEIPT_RIGOR_SPEC_2026-08-05.md:172-187, 370
+  - item 12
+    - **statement**: The external audit's headline ([source text withheld from the public copy]) cannot be reconstructed from the file: no per-cluster verdict table; only 24 of 27 cluster codes appear (A9, B2, C5 are absent; A9 and C5 surface only in SOURCE_REQUESTS). It reports "52 agents" for 27 clusters each checked twice (which would be 54). The evidence is said to be in a session journal that is not in the repository.
+    - **locator**: ROADMAP:L8/L5/research/review/EXTERNAL_AUDIT_2026-08-04.md:4-6, 25-29, 315-317; ROADMAP:L8/L5/research/review/SOURCE_REQUESTS.md:178-181
+  - item 13
+    - **statement**: The audit and the source-request list disagree on two clusters. Audit: TR 29119-11:2020 wording and clause "exact"; [source text withheld from the public copy]". SOURCE_REQUESTS: both are a "material discrepancy" that "needs the primary".
+    - **locator**: ROADMAP:L8/L5/research/review/EXTERNAL_AUDIT_2026-08-04.md:162-169 vs ROADMAP:L8/L5/research/review/SOURCE_REQUESTS.md:176-177
+  - item 14
+    - **statement**: Audit findings never carried into the files they name: the Westby and Conselice volume and DOI; the Tic Tac equality sign and missing Eiband source; the code comment citing ARCH:558; the Morton citation; the census dossier's egress-denial paragraph; the 'VERIFIED on two independent fetches' label.
+    - **locator**: ROADMAP:L8/L5/research/review/CENSUS_SOURCES_DOSSIER.md:28-38, 114, 339; TICTAC_PROPULSION_ADJUDICATION.md:52, 346; L8/L4/work/computation/ommp/ommp.py:329; MAIN and ROADMAP:L8/L5/research/lanes/THEME_LEDGER.md:225
+  - item 15
+    - **statement**: The conjecture's two computations cite scripts that were never filed (one at a /tmp scratch path). The probes sheet'[source text withheld from the public copy] numerical claim carries the code that produced its number "or it is a number without a route".
+    - **locator**: ROADMAP:L8/L5/research/review/CONJECTURE_bit_exact_pruning.md:33, 203-204; ROADMAP:L8/L4/work/computation/probes/0.md:12
+  - item 16
+    - **statement**: The conjecture file reads out of time order: the "Status" table at lines 175-191 is the pre-resolution table (it lacks the save-the-remainder row) but sits after the RESOLUTION section and its "Revised status" table.
+    - **locator**: ROADMAP:L8/L5/research/review/CONJECTURE_bit_exact_pruning.md:158-167 vs 175-191
+  - item 17
+    - **statement**: The conjecture's re-run table marks the corrected sum "exact" at N = 10 and speaks of error "0.0 exactly", but the exact total 1 + 2.5 ULP is not a representable double; the match can only be to the rounded value. (My arithmetic; the script is not held.)
+    - **locator**: ROADMAP:L8/L5/research/review/CONJECTURE_bit_exact_pruning.md:208-219
+  - item 18
+    - **statement**: The label "CH-01 (two incompatible λ_A definitions)" is cited as a thing to verify before drafting chapter 16, but no record with that identifier exists anywhere in the ROADMAP tree.
+    - **locator**: ROADMAP:L8/L4/work/writing/book/ch16-the-lambda-decomposed-pre-execution-record.md:18; ROADMAP:L8/L5/research/review/BOOK_STRUCTURE_AND_ROADMAP_2026-09-13.md:257
+  - item 19
+    - **statement**: IEEE 1788.1-2017 is recorded as read and closed in the session log (V-21, Q6 CLOSED) and as "HELD but UNREAD" / "NOT READ" in the standards register and the roadmap.
+    - **locator**: ROADMAP:L8/L4/work/writing/sessions/SESSION_2026-08-05_VERIFICATION_LOG.md:16 vs ROADMAP:L7/provenance/sources/STANDARDS_REGISTER.md:130, 367 and ROADMAP:L8/L5/research/review/BOOK_STRUCTURE_AND_ROADMAP_2026-09-13.md:248
+  - item 20
+    - **statement**: DR-003 carries the top ladder status VERIFIED on three course-page URLs with no captured quote and no fetch date; the audit of four days earlier required verbatim quotes for verification.
+    - **locator**: ROADMAP:L8/L5/research/review/dr-001-003/DR-003-swap-flip-no-left-inverse.md:37-41; ROADMAP:L8/L5/research/review/EXTERNAL_AUDIT_2026-08-04.md:16
+  - item 21
+    - **statement**: AUDITONOMY.md names three research files as dependents (FINDING_lambda_knob_and_retention.md, COARSENING_VALIDATION.md, FINDING_coarsening_as_forgetting.md) that exist in none of the trees searched: ROADMAP, HISTORY 1d83788, autonomous origin/main, autonomous beta.
+    - **locator**: ROADMAP:L8/L0/semantics/definitions/AUDITONOMY.md:337, 358, 433-434
+- **open_questions**
+  - Does a repository named aybllc/eb-stack exist? LAMBDA_PRIOR_ART.md:173-177 and AUDITONOMY.md:438-441 (ROADMAP) record a GitHub API read of repos/aybllc/eb-stack at commit c3ec814 on 2026-08-05; the roadmap (BOOK_STRUCTURE_AND_ROADMAP_2026-09-13.md:655) says "[source text withheld from the public copy]" and that [source text withheld from the public copy]. I could not check either (no network; neither is a local clone). A rename would reconcile them, but no record says so.
+  - Is the mul line quoted in the prompt the code eb-stack actually ships, and was the homonym-ruling branch ever merged? Neither is recorded.
+  - Which two lambda_A definitions does 'CH-01' mean? I paired the thesis decode with the departure protocol because those are the two present; the roadmap does not say.
+  - What did the adversarial refutation pass on the lambda verification conclude? The file says it was still running; I found no later record in the scope documents or the 2026-08-05 session log.
+  - I could not re-read Rump 2010, Hickey et al. 2001, Brent and Zimmermann 2010, Goldberg 1991, Riess 2022, Planck 2018 or the CosmoMC documentation: none is held in either repository. Only the Rump 1999 and GUM quotes were confirmed against held text.
+  - I did not run any probe (the task did not say to). The 1898/20000 sample count, the 66-test OMMP run and the conjecture's 200,000-case and million-step runs are therefore unconfirmed by me; the last two cannot be re-run from the repository at all because their scripts are not filed.
+  - Were the audit's term-ledger corrections (T-01 edition, T-04 elision, T-12 prefix, NIST AI 100-1 truncation) applied? The ledger it names, AUTONOMOUS_TERMS.md, is not in the ROADMAP tree, and I did not find it by that name in autonomous origin/main; 'for a service,' still stands in autonomous origin/main:L8/L5/research/lanes/LANE_B_AUDITABILITY.md:31.
+  - Does the deep-research run's statement that the broad record-as-permission claim is occupied by 2026 literature hold? Its citations are unresolvable tokens, and the repository labels the run as model output, never evidence.
+  - DR-002's two measurements (bound reaching address -1; 17 consecutive addresses scattered across 8,192 cells at N = 8) have no probe and were reported from chat; not recomputed.
+  - The whole thread sits on ROADMAP, whose pull request #27 was closed unmerged. Whether the owner intends these restored files to reach MAIN, and under which layer, is not recorded in the scope documents; BETA does not carry them.

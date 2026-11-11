@@ -1,0 +1,606 @@
+# read:sources
+
+Agent result, as returned. Workflow: Handle on the Auditonomous research and manuscript. Run `wf_9c2917a7-7f0`. Phase: Read. Checked in 2026-11-11 19:51 UTC.
+
+- **scope**: The source base, L7/provenance, of /home/user/auditonomous: MAIN (origin/main 2165144) in full; ROADMAP additions (STANDARDS_REGISTER.md, lists-2026-08-08/); BETA changes (LEDGER.md and the three sheets). Read from git objects only. Cross-references followed: MAIN L8/L0/semantics/definitions/AUDITONOMOUS_DEFINITION.md (citation spot-check), MAIN L8/L5/research/findings/DISTILLATION.md §5/§7, MAIN L8/L6/history/LEDGER_2026-08-16_l6-close-and-normalization.md, MAIN L7/peering/private (row-count and reconciliation record), HISTORY 1d83788 (_STAGING_TO_L6 tree, AUTONOMOUS_TERMS.md), and object checks in /home/user/autonomous for the BETA peer-source row. Working copies of git objects are in /tmp/claude-0/-home-user/bfcfd013-a2da-5019-961e-7f46116f08be/scratchpad/wf-handle/provenance/.
+- **summary**: The source base is one pointer register plus a tree of records about sources. By my own count the register (MAIN L7/provenance/sources/LEDGER.md) has 60 rows, not the 62 the MAIN sheets state: 34 standards (IEEE 29, IETF 2, ISO/IEC 1, ITU-T 1, NIST 1), 20 papers, 4 IEEE institutional documents and 2 exclusions. There are no book rows and no government-document class; the LAW- prefix is unused. Fifty-eight rows are access FULL. Each points into the private archive aybllc/l6, 39 at commit b328334 and 19 at e4f0d5c. No source PDF is in the repository, but one full-text copy of a paper (the Ferreira numbered text) is, with licence status unrecorded. I could not resolve any pointer because l6 is not on this machine.
+
+  What the ledger verifies is file identity between the staged copy and the l6 copy, dated 2026-08-16. It does not record whether a source was read. Reading is shown for 14 of the 58: eleven full reading records (IEEE 7001, 7007, 7009, 7014, 3152; ARIES; Haber-Stornetta; Ferreira; FIPS 180-4; RFC 6962; RFC 9162) and three partial captures (IEEE 1788-2015 decorations, IEEE 1872.2, ISO/IEC 22989 from a withdrawn copy). The other 44 have none, and about 30 are drone, factory and networking standards the repository itself says do not bear on the word.
+
+  The reading produced findings that cut against the corpus and remain reserved to the owner: hash structures detect rather than prevent, tamper-evidence needs an external witness, and IEEE 7014's auditability definition was mis-scoped.
+
+  The prior-art search for the coinage was never run. The datasets ledger and authority position are empty. The definition's own external citations (American Heritage, Perseus, NIST glossary, RFC 4949, NIST AI 100-1) have no ledger rows. A third-party-licensed ISO PDF remains in git history, its purge recorded as pending.
+
+  First steps: adopt BETA's 60-row correction, ledger the definition's citations and SP 800-53, settle the ISO purge and the Ferreira text, re-check the 22989 captures against the lawful copy, then run the prior-art search.
+- **items**
+  - item 1
+    - **id**: SRC-01
+    - **title**: The source register (LEDGER.md): size, columns, access classes, labels
+    - **path**: L7/provenance/sources/LEDGER.md
+    - **where**: MAIN (byte-identical in ROADMAP; BETA appends a correction section and one peer-source row)
+    - **what_it_is**: The single register of sources the repository relies on: a table of pointer rows into the private archive aybllc/l6, plus an empty 'Not held' table, a three-entry search log and a transfer close-out note. Columns: ID, Citation, l6 path, l6 commit, Access, Label.
+    - **own_label**: "# L6 SOURCE LEDGER"; "Transfer COMPLETED 2026-08-16"
+    - **evidence_state**: INTERNALLY CHECKED (row count and class counts recomputed by me; row contents are the repository's own record)
+    - **checked_how**: Copied the git object to scratch and counted table rows matching '| (PR|STD|INST|EXC|LAW)-nnn |' with a script: 60 [source text withheld from the public copy], 0 LAW. Access values: FULL 58, NOT OBTAINED 1, BLOCKED 1. l6 commit values: b328334 x39, e4f0d5c x19, none x2. Leading label word: VERIFIED 37, ACCESSIONED 19, PREPRINT 1, 'Acquired lawfully' 1, EXCLUDED 1, PROHIBITED SOURCE 1.
+    - **key_claims**
+      - Register rows occupy lines 20-79; 60 rows by exact count
+      - Access classes defined: [source text withheld from the public copy]; only FULL, BLOCKED and NOT OBTAINED are used
+      - Labels defined: [source text withheld from the public copy]; 22 rows use labels outside this list
+      - 34 rows carry a WSU hold-private (class-2) marking
+      - 'Not held' table is empty; search log has no entry after 2026-08-16
+    - **open_items**
+      - No column says which claim or chapter a source bears on, so the ledger cannot by itself say what the manuscript needs
+      - No row added since 2026-08-16 in MAIN
+    - **locator**: MAIN:L7/provenance/sources/LEDGER.md:18-89
+    - **quote**: [source text withheld from the public copy].
+  - item 2
+    - **id**: SRC-02
+    - **title**: Class: IEEE standards (29 rows)
+    - **path**: L7/provenance/sources/LEDGER.md
+    - **where**: MAIN
+    - **what_it_is**: STD-003 to STD-024 and STD-026 to STD-032, all pathed library/standards/ieee/ in l6. Includes the five ethics/transparency standards that were read (7001-2021, 7007-2021, 7009-2024, 7014-2024, 3152-2024), interval arithmetic (1788-2015, 1788.1-2017), 754-2019, 1872.2-2021, and about twenty [source text withheld from the public copy] standards. STD-019 is the joint IEC/IEEE 60802-2026.
+    - **own_label**: "[source text withheld from the public copy]" (typical); "ACCESSIONED; sha256 ... verified; WSU class-2" for STD-026 to 032
+    - **evidence_state**: INTERNALLY CHECKED for file identity only; content read for 5 in full-record form and 2 partially (see READ-01, READ-03, READ-04); the rest unread
+    - **checked_how**: Counted rows by l6 path prefix with a script (29). The identity checks themselves (text diff net of watermark, sha256) are the ledger's record of 2026-08-16; I could not repeat them because neither l6 nor the PDFs are available here.
+    - **key_claims**
+      - 17 rows (STD-004 to 020) are labelled same standard with watermark-timestamp-only difference
+      - 4 rows (STD-021 to 024) are labelled content-identical per reconciliation bccf4e4
+      - 7 rows (STD-026 to 032) were accessioned into l6 on 2026-08-16 with a truncated sha256
+      - The staging manifest says most of this set does not bear on the word
+    - **open_items**
+      - STD-005 (7003-2024) and STD-011 (1920.1-2022) are HELD/UNREAD per the ROADMAP register
+      - STD-024 (1788.1-2017) is NOT READ; whether it keeps the decoration system is NOT-CHECKED
+      - STD-021 and STD-022 lack the WSU class-2 tag although the staging manifest says every file carries the WSU stamp
+    - **locator**: MAIN:L7/provenance/sources/LEDGER.md:32-53,59-65
+    - **quote**: [source text withheld from the public copy].
+  - item 3
+    - **id**: SRC-03
+    - **title**: Class: standards from other bodies (IETF 2, ISO/IEC 1, ITU-T 1, NIST 1)
+    - **path**: L7/provenance/sources/LEDGER.md
+    - **where**: MAIN
+    - **what_it_is**: STD-033 RFC 6962 and STD-034 RFC 9162 (IETF); STD-025 ISO/IEC 22989:2022 (lawful full publication); STD-001 ITU-T X.200 (1994); STD-002 NIST FIPS 180-4 (2015).
+    - **own_label**: STD-025: "[source text withheld from the public copy]"; STD-001: "VERIFIED byte-identical"; STD-033/034: "ACCESSIONED; sha256 ... verified"
+    - **evidence_state**: INTERNALLY CHECKED for file identity (4 of 5); STD-025 ASSERTED (no fixity or comparison recorded); content read for FIPS 180-4, RFC 6962, RFC 9162
+    - **checked_how**: Read the rows; counted by l6 path prefix (ietf 2, iso 1, itu 1, nist 1). Compared STD-002's label with the reconciliation record at MAIN:L7/peering/private/egress/peer-1/object-1/RECONCILIATION_FROM_L6_2026-08-16.md:20, which records the staged FIPS file as byte-identical to the library path.
+    - **key_claims**
+      - Both Certificate Transparency RFCs are Experimental, and RFC 6962 is obsoleted by RFC 9162 (recorded in the ROADMAP register, not in the ledger)
+      - STD-025 [source text withheld from the public copy]
+      - X.200 has no reading record; it was identified by title page only
+    - **open_items**
+      - The ISO/IEC 22989 captures in the repository were taken from the withdrawn third-party copy and no record shows them re-checked against STD-025
+      - STD-025 row carries no hash and no verification outcome
+    - **locator**: MAIN:L7/provenance/sources/LEDGER.md:30-31,54,66-67
+    - **quote**: [source text withheld from the public copy]
+  - item 4
+    - **id**: SRC-04
+    - **title**: Class: IEEE institutional documents that are not standards (4 rows)
+    - **path**: L7/provenance/sources/LEDGER.md
+    - **where**: MAIN
+    - **what_it_is**: INST-001 Ethically Aligned Design (First Edition); INST-002 IEEE Finance Playbook v1.0; INST-003 IEEE P2851 WG white paper on dependable machines; INST-004 an IEEE Industry Connections report on cybersecurity for next-generation connectivity.
+    - **own_label**: INST-001: "[source text withheld from the public copy]`"; INST-002 to 004: "ACCESSIONED; sha256 ... verified; WSU class-2"
+    - **evidence_state**: INTERNALLY CHECKED for file identity only; no reading record for any of the four
+    - **checked_how**: Read the rows; searched the staging-records tree listing for a reading file for each and found none.
+    - **key_claims**
+      - All four are filed under library/standards/ieee/ in l6
+      - None is cited in the staging findings as bearing on a claim
+    - **open_items**
+      - INST-001 lacks the WSU class-2 tag although its label reports an Xplore stamp
+    - **locator**: MAIN:L7/provenance/sources/LEDGER.md:58,68-70
+    - **quote**: [source text withheld from the public copy]).
+  - item 5
+    - **id**: SRC-05
+    - **title**: Class: papers (20 rows)
+    - **path**: L7/provenance/sources/LEDGER.md
+    - **where**: MAIN
+    - **what_it_is**: PR-001 to PR-020. By the venue shown: 13 journal articles (Rubin 1976, Stevens 1946, Fixsen 2009, Manchester 2005, Diermaier 2017, Landauer 1961, Stephan 1999, Ewen and Purcell 1951, Bennett 1982, Mishra 2023, Tan and Vandewalle 1988, Mohan et al. 1992 ARIES, Haber and Stornetta 1991); 4 conference papers (Koopman 2004, Winternitz SEXTANT, Bermejo-Alonso 2010, Falco and Gilpin 2021); 3 with no venue or preprint only (Gorski HEALPix arXiv, Payne and Hanek, Ferreira).
+    - **own_label**: "VERIFIED byte-identical" (typical); PR-006: "[source text withheld from the public copy]-002: "image-only content pages, NOT READ"
+    - **evidence_state**: INTERNALLY CHECKED for file identity; content read under protocol for 3 only (PR-018 ARIES, PR-019 Haber-Stornetta, PR-020 Ferreira)
+    - **checked_how**: Counted and classified the 20 rows from their citation and l6 path. Cross-read the intake record at MAIN staging-records/standards/SOURCE_LEDGER.md:316-389 and the papers manifest at ieee/papers/README.md.
+    - **key_claims**
+      - Three image-only scans were recorded as held but not read: Bennett, Ewen and Purcell 1951, Stevens
+      - PR-014, PR-015, PR-016 were searched for vocabulary only, found not to bear on the word, and shelved unread
+      - PR-017 (Tan and Vandewalle) relevance is recorded as not established
+      - Most of PR-001 to PR-013 concern the hydrogen line, pulsars, CMB, CRC and floating point, taken in the 2026-08-06 intake by title-page identification
+    - **open_items**
+      - PR-011 and PR-012 l6 copies are said to have OCR but no reading record exists
+      - PR-013: l6 still seeks the identified complete article
+      - PR-006: published version not obtained
+      - PR-009 (a journal article) is pathed under library/standards/ibm/ in l6
+      - PR-013 lacks the WSU class-2 tag although its label reports an Xplore stamp
+    - **locator**: MAIN:L7/provenance/sources/LEDGER.md:20-29,55-57,71-77
+    - **quote**: [source text withheld from the public copy].
+  - item 6
+    - **id**: SRC-06
+    - **title**: Class: books (none registered)
+    - **path**: L7/provenance/sources/LEDGER.md
+    - **where**: MAIN, ROADMAP, BETA
+    - **what_it_is**: No ledger row is a book. The archive is described as having a books/ area, but no row points into it.
+    - **evidence_state**: EMPTY
+    - **checked_how**: Read all 60 rows; every l6 path begins library/journals/ or library/standards/. Searched the ledger for the dictionaries the definition cites (American Heritage, Liddell, Lewis): 0 hits in MAIN and BETA.
+    - **key_claims**
+      - The definition's etymology rests on three dictionaries, none of which is registered
+    - **open_items**
+      - Moore 1966 Interval Analysis and Gilmore and Black are named elsewhere as blocked or not obtained (ROADMAP STANDARDS_CITED.md:91-94; MAIN DISTILLATION.md:168)
+    - **locator**: MAIN:L7/provenance/sources/0.md:16
+    - **quote**: plus `books/`, `captures/`, and `paywall/`
+  - item 7
+    - **id**: SRC-07
+    - **title**: Class: government documents (no class; two government-issued items sit in other classes)
+    - **path**: L7/provenance/sources/LEDGER.md
+    - **where**: MAIN
+    - **what_it_is**: The ID rule names a LAW- prefix but there are zero LAW- rows. Two rows are government-issued: STD-002 NIST FIPS 180-4 (a US federal standard) and PR-008 the SEXTANT paper (NASA NTRS 20180003358). [source text withheld from the public copy] was extracted into the repository but has no row.
+    - **own_label**: Column rule: "[source text withheld from the public copy]-…`)"
+    - **evidence_state**: EMPTY as a class
+    - **checked_how**: Script count of LAW- rows: 0. Searched the ledger for '800-53', 'CSRC', 'AI 100-1': 0 hits each in MAIN and BETA.
+    - **key_claims**
+      - No statute, regulation or treaty is registered, although MAIN DISTILLATION.md §7 quotes US and UK statutes and IMO and SOLAS texts with VERIFIED labels
+      - The EU AI Act is named in the ROADMAP primary list as [source text withheld from the public copy] corpus and is not held
+    - **open_items**
+      - Legal sources used in L5 findings have no provenance rows
+    - **locator**: MAIN:L7/provenance/sources/LEDGER.md:83
+    - **quote**: [source text withheld from the public copy]-…`)
+  - item 8
+    - **id**: SRC-08
+    - **title**: Class: excluded sources (2 rows)
+    - **path**: L7/provenance/sources/LEDGER.md
+    - **where**: MAIN
+    - **what_it_is**: EXC-001 the iTeh 15-page reseller preview of ISO/IEC 22989 (access NOT OBTAINED, held out of l6); EXC-002 a vendor glossary browser print (access BLOCKED, prohibited source, lead only). Neither has an l6 path or commit.
+    - **own_label**: "[source text withheld from the public copy])"; "PROHIBITED SOURCE — LEAD ONLY"
+    - **evidence_state**: ASSERTED (exclusion rulings; no check applicable)
+    - **checked_how**: Read the two rows and the matching S-2 and S-5 entries in staging-records/standards/SOURCE_LEDGER.md:216,219.
+    - **key_claims**
+      - Both are recoverable in git history only and are not active sources
+      - The EXC- prefix is not in the ledger's own ID rule
+    - **locator**: MAIN:L7/provenance/sources/LEDGER.md:78-79
+    - **quote**: [source text withheld from the public copy]
+  - item 9
+    - **id**: SRC-09
+    - **title**: How sources are held: pointer rows into aybllc/l6, nothing copied in (with one exception)
+    - **path**: L7/provenance/sources/0.md
+    - **where**: MAIN (same in ROADMAP and BETA)
+    - **what_it_is**: Sources are served by pointer: each row names an l6 path and the l6 commit at which it was read. 39 rows are pinned to b328334, 19 to e4f0d5c (the 2026-08-16 accession), 2 exclusions have no pointer. The sheet separately gives the archive's HEAD at the 2026-09-05 pass as 53b28f6.
+    - **own_label**: "How a source is served from it: by a pointer row, never by a copy."
+    - **evidence_state**: INTERNALLY CHECKED that no source PDF is in the tree; pointer targets UNRESOLVED by me; one full-text copy contradicts 'nothing copied'
+    - **checked_how**: Listed L7/provenance at all three states: 0 files ending .pdf, .docx, .odt or .epub (35 files MAIN and BETA, 42 ROADMAP). /home/user holds only 7lm, auditonomous and autonomous, so no l6 clone exists to resolve any pointer. Opened the head of staging-records/library/text/Ferreira_break-glass-access-control.numbered.txt: it is the paper's full text, 485 numbered lines.
+    - **key_claims**
+      - The archive is INTERNAL and is not edited from a consuming repository
+      - WSU-route files are hold-private: quotations travel, files do not
+      - One full-text copy of a published paper is in the repository with licence status not yet recorded
+      - A verbatim extraction of 215 NIST SP 800-53 control statements is also held (US Government work, public domain by its own note)
+    - **open_items**
+      - Whether the pinned paths still exist at b328334, e4f0d5c or 53b28f6 could not be checked here
+      - Ferreira numbered text: licence status to be recorded before it is cited as held (owner's call)
+      - The ISO/IEC 22989 third-party PDF remains in this repository's git history (see INC-01)
+    - **locator**: MAIN:L7/provenance/sources/0.md:14-18,43; MAIN:L7/governance/copyright/0.md:45
+    - **quote**: is a full-text copy of a published paper whose licence status is not yet recorded; until it is, it is not cited as held (owner's call)
+  - item 10
+    - **id**: SRC-10
+    - **title**: What verification the ledger records, and what it does not
+    - **path**: L7/provenance/sources/LEDGER.md
+    - **where**: MAIN
+    - **what_it_is**: The Label column and the search log record a file-identity check between the copy staged in this repository and the copy in l6, done on 2026-08-16. It is not a record that the source was read or that any claim was checked against it.
+    - **own_label**: "[source text withheld from the public copy]"
+    - **evidence_state**: INTERNALLY CHECKED (file identity, recorded with date and outcome); reading and claim-checking not recorded in the ledger
+    - **checked_how**: Classified all 60 labels: 13 byte-identical (sha256), 17 same standard with watermark-timestamp-only difference, 8 resolved per reconciliation bccf4e4, 19 accessioned with a truncated 16-hex sha256, 1 acquired (no check), 2 excluded: total 60. Confirmed the 13 byte-identical set against the reconciliation record (MAIN:L7/peering/private/egress/peer-1/object-1/RECONCILIATION_FROM_L6_2026-08-16.md:12-24).
+    - **key_claims**
+      - Recorded: outcome of identity check; date 2026-08-16 in the search log (in-row only for PR-001, STD-026, and 2026-08-15 for STD-025); truncated hashes for 19 accession rows; close-out states 19/19 accession hashes and 13/13 byte-identical re-verified, 61/61 staged PDFs dispositioned
+      - Not recorded: full digests; any hash for 38 FULL rows beyond the words 'byte-identical' or 'content-identical'; who ran the check; any re-verification after 2026-08-16; whether the source was read; edition currency; which claim depends on the source
+      - The ledger's VERIFIED means the file matches, which is narrower than the status ladder's VERIFIED (a claim checked against an outside source)
+      - Full SHA-256 values do exist elsewhere: in each of the 11 reading records and (12-hex) in the IEEE manifest
+    - **open_items**
+      - For STD-003 the reconciliation record gives the byte-identical l6 file as durable/delete/ieee-754-2019-floating-point-arithmetic.pdf, not the path the row points to
+      - A watermark re-check is required before any change in l6 visibility
+    - **locator**: MAIN:L7/provenance/sources/LEDGER.md:111-131
+    - **quote**: [source text withheld from the public copy]
+  - item 11
+    - **id**: SRC-11
+    - **title**: Row-count disagreement: 62 stated, 60 present; '22 new rows' enumerates 21
+    - **path**: L7/provenance/sources/LEDGER.md
+    - **where**: MAIN and ROADMAP carry the error; BETA corrects it; origin is an L8/L6 history record
+    - **what_it_is**: MAIN sheets and peering records say the register has 62 rows. The register has 60. The close-out search-log entry says '22 new rows' and lists ranges that total 21. The history record that first says 62 lists ranges that total 60.
+    - **own_label**: MAIN: "62 pointer rows (PR-, STD-, INST-, EXC-)"; BETA: "[source text withheld from the public copy]."
+    - **evidence_state**: CONTRADICTED in MAIN and ROADMAP; settled at 60 by my count, which agrees with BETA
+    - **checked_how**: Script count of register rows in the MAIN object: 60 (PR 20, STD 34, INST 4, EXC 2). Arithmetic on the close-out enumeration: STD-026 to 034 = 9, INST-002 to 004 = 3, PR-014 to 020 = 7, EXC-001/002 = 2, total 21. Arithmetic on the history record's ranges: 20 + 34 + 4 + 2 = 60. Grepped all states for '62 rows': present in MAIN and ROADMAP sheets and peering records; in BETA only in the two L8/L6 history files.
+    - **key_claims**
+      - 60 is correct; no row is missing
+      - Likely origin of 62 (my inference, not recorded anywhere): 40 staged PDFs 'already held' plus '22 new rows'; the 40 PDFs map to 39 rows and the 22 is really 21, giving 60
+      - BETA leaves the historical statements standing and adds a dated correction
+    - **open_items**
+      - MAIN and ROADMAP still state 62 in six places
+    - **locator**: MAIN:L7/provenance/0.md:20,33; MAIN:L7/provenance/sources/0.md:10,41; MAIN:L7/peering/private/ingress/peer-1/0.md:16; MAIN:L7/peering/private/ingress/peer-1/object-1/0.md:10; MAIN:L8/L6/history/LEDGER_2026-08-16_l6-close-and-normalization.md:30; MAIN:L7/provenance/sources/LEDGER.md:113
+    - **quote**: [source text withheld from the public copy])
+  - item 12
+    - **id**: SRC-12
+    - **title**: BETA change to the source base: receiving correction, one peer-source row, sheet repairs
+    - **path**: L7/provenance/sources/LEDGER.md
+    - **where**: BETA
+    - **what_it_is**: BETA changes four files under L7/provenance (17 insertions, 9 deletions). LEDGER.md gains a section dated 2026-11-03 stating 60 archive rows and 21 not 22, and a new table with one row, AUT-SOURCE-001, identifying the bound Autonomous definition by commit, blob and SHA-256. The provenance and sources sheets change 62 to 60, replace 'The ledger has no rows', and say lineage holds a record. staging-records/0.md changes only one path (restrictions to controlled); it contains no row-count note.
+    - **own_label**: "## Attributable receiving correction — 2026-11-03"
+    - **evidence_state**: INTERNALLY CHECKED (I re-verified the count and the peer-source fixity)
+    - **checked_how**: git diff origin/main to BETA on L7/provenance. In /home/user/autonomous: blob ffbdc28be7b47a83c9354526ac034596ba7b6e9a exists, is 22,735 bytes, sha256 2756661749c3e322d3c13abc5104cb8d7b4d07203905611c4ec5196b9aa1a12b; it is research/definitions/AUTONOMOUS.md at commit 0504961 and the same blob is L8/L0/semantics/definitions/AUTONOMOUS.md on autonomous origin/main and on its beta branch. All four figures match the row.
+    - **key_claims**
+      - 60 archive rows plus one separately identified peer source makes 61 source records
+      - The correction does not invent a missing source row
+      - BETA renames publications to L7/allications/publications and restrictions to L7/governance/controlled; both directories exist in the BETA tree
+      - BETA peering records also read 60
+    - **open_items**
+      - BETA is unmerged; MAIN and ROADMAP keep the errors
+      - BETA does not add rows for the definition's unledgered citations or for SP 800-53
+    - **locator**: BETA:L7/provenance/sources/LEDGER.md:147-153; BETA:L7/provenance/sources/0.md:55; BETA:L7/provenance/sources/staging-records/0.md:30
+    - **quote**: [source text withheld from the public copy]
+  - item 13
+    - **id**: READ-01
+    - **title**: Reading record group: five IEEE standards (7001, 7014, 7009, 3152, 7007) and their findings
+    - **path**: L7/provenance/sources/staging-records/ieee/
+    - **where**: MAIN (same in ROADMAP and BETA)
+    - **what_it_is**: Five reading records dated 2026-08-04, one per standard, each giving the designation as printed, file SHA-256, pages read, defined terms verbatim, captures with page and clause, recorded absences, and an adversarial verifier's report. FINDINGS_2026-08-04.md draws six findings. Ledger rows: STD-004, STD-008, STD-007, STD-017, STD-006.
+    - **own_label**: "[source text withheld from the public copy]."; captures "VERIFIED as to text"
+    - **evidence_state**: EXTERNALLY CHECKED (quotes compared to the publisher PDFs, comparison recorded per quote); bearing on corpus claims UNRESOLVED, reserved to the owner
+    - **checked_how**: Read FINDINGS in full and each record's header and verification section; counted headings. Table totals check: 170 pages, 118 terms, 144 captures, 9 flags. I could not re-run any quote comparison (PDFs are not available).
+    - **key_claims**
+      - Pages read: 7001 28 of 54; 7014 36 of 51; 7009 37 of 45; 3152 24 of 42; 7007 45 of 119
+      - Verifier results: 7001 43 quotes, 1 defect; 7014 54 quotes, 0; 7009 46 quotes, 0; 3152 40 quotes, 6 defects; 7007 57 quotes, 2 defects; no fabrication found in any
+      - IEEE 7014 defines auditability for empathic systems (EA/IS); the corpus's stored wording dropped the qualifier; the word occurs once in the standard and no requirement invokes it
+      - IEEE 7014 requires deletion of affective data, which collides with the no-erasure clause; recorded OPEN
+      - IEEE 7001 names five reader classes and [source text withheld from the public copy]
+      - 26 of the 7007 quotes come from an informative annex, not normative definitions
+    - **open_items**
+      - 3152: verifier input was truncated, so 40 of 43 items were checked; three unmarked splices and two wrong page citations stand
+      - 7007: record holds 51 terms and 25 captures (76 items); the verifier compared 57
+      - Findings 1 to 3 are reserved to the owner and not adopted
+      - The file the findings correct (intake/imported/AUTONOMOUS_TERMS.md, row T-13) exists only in HISTORY 1d83788, where T-13 is shown corrected
+    - **locator**: MAIN:L7/provenance/sources/staging-records/ieee/FINDINGS_2026-08-04.md:7-14,18-69,189-194; MAIN:L7/provenance/sources/staging-records/ieee/reading/IEEE-3152.md:381-399
+    - **quote**: [source text withheld from the public copy]
+  - item 14
+    - **id**: READ-02
+    - **title**: Reading record group: six library sources (ARIES, Haber-Stornetta, RFC 6962, RFC 9162, FIPS 180-4, Ferreira) and their findings
+    - **path**: L7/provenance/sources/staging-records/library/
+    - **where**: MAIN (same in ROADMAP and BETA)
+    - **what_it_is**: README.md states the owner's reading protocol of 2026-08-04. Six reading records, each with citation as printed, SHA-256, pages read and not read, verbatim captures, recorded absences and a verifier report. FINDINGS_2026-08-04.md draws six findings. Ledger rows: PR-018, PR-019, STD-033, STD-034, STD-002, PR-020.
+    - **own_label**: "[source text withheld from the public copy]."; Finding 1 consequence labelled "CONTESTED"; Finding 5 "PARTIALLY VERIFIED. NOT ADOPTED."
+    - **evidence_state**: EXTERNALLY CHECKED (quotes byte-compared to the primary PDFs, recorded per quote); several corpus claims CONTRADICTED by what was read; rulings UNRESOLVED
+    - **checked_how**: Read README and FINDINGS in full, each record's header and verification section; counted capture headings per record with a script (39, 24, 30, 25, 30, 48 = 196, matching the findings table). Could not re-run quote comparisons.
+    - **key_claims**
+      - Pages read: ARIES 47 of 69; Haber-Stornetta 13 (all); RFC 6962 54 (all); RFC 9162 46 of 62; FIPS 180-4 24 of 36; Ferreira 5 (all); total 189
+      - 26 verifier flags, none a fabrication; defects are page-boundary citations and unmarked splices
+      - No source claims a hash structure prevents alteration; all claim detection, which contests the corpus's Git claim
+      - Tamper-evidence requires a second party; [source text withheld from the public copy] holder
+      - ARIES is recorded as [source text withheld from the public copy] and compensate-rather-than-delete
+      - 13 load-bearing quotes were independently re-checked and confirmed
+    - **open_items**
+      - [source text withheld from the public copy]: recommended to the owner, not adopted
+      - §[source text withheld from the public copy]): still open, owner's ruling
+      - RFC 9162 record says 45 captures in its text but holds 48; verifier compared 43
+      - FIPS 180-4 record says 25 pages read in one place and 24 in another
+      - ARIES page 26 (ROLLBACK pseudocode) could not be read
+    - **locator**: MAIN:L7/provenance/sources/staging-records/library/FINDINGS_2026-08-04.md:12-36,57-70,92-108,230-239
+    - **quote**: [source text withheld from the public copy]
+  - item 15
+    - **id**: READ-03
+    - **title**: Standards extractions: ISO/IEC 22989 captures, IEEE 1872.2 captures, [source text withheld from the public copy]/AU statements, terms.json
+    - **path**: L7/provenance/sources/staging-records/standards/extracted/
+    - **where**: MAIN (same in ROADMAP and BETA)
+    - **what_it_is**: Four capture records. ISO-IEC-22989-2022_captures.md: verbatim clause 3 terms, clause 5.13 with Table 1 (levels 0 to 6) and the NOTE calling 'autonomous' a misnomer, clause 3.5 terms, clause 5.19.5.4 AI auditor. IEEE-1872.2-2021_captures.md: clause 3.1 background and definitions and a negative finding. SP800-53r5_AC-AU_verbatim.md: 215 control statements extracted by program. terms.json: 11 definitions in machine-readable form with status VERIFIED and quote_match EXACT.
+    - **own_label**: "[source text withheld from the public copy]."; terms.json: "[source text withheld from the public copy]."
+    - **evidence_state**: EXTERNALLY CHECKED at capture time against the primary PDFs (22989 against a since-withdrawn third-party copy, cross-checked with a preview and a text extraction); not re-checked against the lawful copy
+    - **checked_how**: Read both captures files in full, the first 45 lines and headings of the SP 800-53 file, and parsed terms.json with a script (keys _meta, definitions (11), iso_22989_clause_5_13, ieee_1872_2_findings).
+    - **key_claims**
+      - ISO/IEC 22989 never uses the string 'auditab'; it defines an AI auditor as an organization or entity
+      - ISO says '[source text withheld from the public copy]
+      - [source text withheld from the public copy]; the expected route was wrong
+      - T-02 [source text withheld from the public copy], which the repository did not hold; it stays UNVERIFIED and its definiendum is contradicted
+      - SP 800-53 extraction: AC 146 and AU 69 statements from a PDF retrieved 2026-08-05, SHA-256 recorded
+    - **open_items**
+      - 22989 captures derive from the IL-001-withdrawn copy (sha 15eb9c7e...); lawful copy is STD-025
+      - Beer, Fisk and Rogers (2014) is the live source request and is not obtained
+      - SP 800-53 Rev. 5 has no ledger row
+      - Page-image fidelity NOT-CHECKED (no OCR; text layer trusted)
+      - Whether the corpus escapes ISO's misnomer objection is recorded OPEN
+    - **locator**: MAIN:L7/provenance/sources/staging-records/standards/extracted/ISO-IEC-22989-2022_captures.md:1-13,98-119,180-184; MAIN:.../IEEE-1872.2-2021_captures.md:16-31,93-115; MAIN:.../SP800-53r5_AC-AU_verbatim.md:7-22
+    - **quote**: [source text withheld from the public copy]
+  - item 16
+    - **id**: READ-04
+    - **title**: Interval decorations record (IEEE 1788-2015, clause 11)
+    - **path**: L7/provenance/sources/staging-records/interval/DECORATIONS_2026-08-04.md
+    - **where**: MAIN (same in ROADMAP and BETA)
+    - **what_it_is**: A partial reading of IEEE Std 1788-2015 (ledger STD-023): the five decoration values at clause 11.2 and the min-rule at clause 11.6, quoted verbatim, with the claim that [source text withheld from the public copy] computation history. The sheet classes it as L3 by content, an owner extraction candidate.
+    - **own_label**: "Closes a NOT-CHECKED item."; "Nothing adopted."
+    - **evidence_state**: EXTERNALLY CHECKED for the two quoted clauses only; no adversarial verifier report in this file; the correspondence to [source text withheld from the public copy] record's own inference
+    - **checked_how**: Read the whole file (115 lines).
+    - **key_claims**
+      - def means [source text withheld from the public copy] the local decoration and all inputs
+      - The corpus should cite this certificate system rather than invent one
+      - 1788-2015 is recorded elsewhere as Inactive-Reserved; 1788.1-2017 is the active standard
+    - **open_items**
+      - [source text withheld from the public copy]
+      - IEEE 1788.1-2017 NOT READ; whether it retains decorations is NOT-CHECKED
+      - Rump 1999 and Rump 2010 are cited as confirming the exact-radius form and have no ledger row
+      - Tan and Vandewalle 1988: relevance not established
+    - **locator**: MAIN:L7/provenance/sources/staging-records/interval/DECORATIONS_2026-08-04.md:1-10,38-49,94-115
+    - **quote**: [source text withheld from the public copy]
+  - item 17
+    - **id**: READ-05
+    - **title**: Tally: registered sources with and without a record that shows reading
+    - **path**: L7/provenance/sources/staging-records/
+    - **where**: MAIN
+    - **what_it_is**: Of 58 rows with access FULL, 14 have a record showing the source was read: 11 full reading records (STD-004 IEEE 7001, STD-006 IEEE 7007, STD-007 IEEE 7009, STD-008 IEEE 7014, STD-017 IEEE 3152, PR-018 ARIES, PR-019 Haber-Stornetta, PR-020 Ferreira, STD-002 FIPS 180-4, STD-033 RFC 6962, STD-034 RFC 9162) and 3 partial capture records (STD-023 IEEE 1788-2015 clause 11; STD-010 IEEE 1872.2-2021; STD-025 ISO/IEC 22989 via the withdrawn copy). The other 44 have none.
+    - **evidence_state**: INTERNALLY CHECKED (my cross-tabulation of ledger rows against the staging-records tree)
+    - **checked_how**: Matched each of the 60 ledger rows against the 25 files in staging-records and against statements of non-reading in the ledger, SOURCE_LEDGER.md, DECORATIONS and ieee/papers/README.md.
+    - **key_claims**
+      - Explicitly unread: PR-002 Stevens, PR-011 Ewen and Purcell 1951, PR-012 Bennett (image-only scans); STD-024 IEEE 1788.1; PR-014, PR-015, PR-016 (shelved after a vocabulary search); PR-017 (relevance not established)
+      - The 2026-08-06 intake items (PR-001, 003 to 010, 013, STD-001, STD-003) were identified from the first page and a quoted title or abstract sentence, not read under the protocol
+      - All 11 full records name pages not read; only Haber-Stornetta, RFC 6962 and Ferreira were read end to end
+      - Total pages read under protocol: 170 (IEEE) + 189 (library) = 359
+    - **open_items**
+      - No reading record for the roughly 20 drone, UAV, factory and networking standards; the manifest says they do not bear on the word, so they may not need one
+      - Sources the findings lean on that are held but unread: IEEE 1788.1-2017, IEEE 1872-2015 (in l6 per the ROADMAP register, no ledger row)
+    - **locator**: MAIN:L7/provenance/sources/staging-records/standards/SOURCE_LEDGER.md:379-394; MAIN:L7/provenance/sources/staging-records/ieee/papers/README.md:41-44
+    - **quote**: [source text withheld from the public copy]
+  - item 18
+    - **id**: INC-01
+    - **title**: The SOURCE_LEDGER incident record (IL-001 to IL-004, IL-001-R2, intake 8526, purge directive)
+    - **path**: L7/provenance/sources/staging-records/standards/SOURCE_LEDGER.md
+    - **where**: MAIN (same in ROADMAP and BETA)
+    - **what_it_is**: A dated record (434 lines) of how five standards files and a later 15-document intake were acquired, with SHA-256 values, licence status and four incidents: IL-001 (two watermarked PDFs committed, then withdrawn from HEAD), IL-002 (originals deleted from the intake directory), IL-003 (watermark scan false negative), IL-004 (a false accusation of fabrication withdrawn). IL-001-R2 separates third-party licences (barred) from the owner's own institutional copies (lawful to hold, not redistributable). It ends with the owner's 2026-08-14 directive to remove the third-party ISO copy and a note that the history purge is pending.
+    - **own_label**: "Pending execution — the history purge."
+    - **evidence_state**: INTERNALLY CHECKED in part (I confirmed the withdrawn blob is still present); the purge itself UNRESOLVED
+    - **checked_how**: Read the file in full. Without opening the content, checked object existence in this clone: blob f5e74bada9c67e10dacc68cbf8295630a4d24422 is present, size 3,225,650 bytes (the size the ledger records), reachable from commits 8660aea and 9a9ab96, which are ancestors of origin/main and the beta and roadmap branches.
+    - **key_claims**
+      - Owner on the third-party copy: "i grabbed it accidentally"; "[source text withheld from the public copy]"; later "remove that copy" and "[source text withheld from the public copy]"
+      - [source text withheld from the public copy] were redacted from the ledger text at HEAD on 2026-08-14; historical versions still contain them
+      - A standing egress blocker recorded earlier was found to be a misdiagnosis and withdrawn
+      - Repository visibility is 'internal', which [source text withheld from the public copy]
+    - **open_items**
+      - History purge of the third-party ISO/IEC 22989 PDF not executed as far as this clone shows; needs the owner (rewrite, force-push, GitHub support request)
+      - [source text withheld from the public copy]
+    - **locator**: MAIN:L7/provenance/sources/staging-records/standards/SOURCE_LEDGER.md:14-55,152-187,418-434
+    - **quote**: [source text withheld from the public copy]
+  - item 19
+    - **id**: STG-01
+    - **title**: Staging READMEs and manifests (README, STAGING_README, ieee/README, ieee/papers/README, library/README) and the staging sheet
+    - **path**: L7/provenance/sources/staging-records/
+    - **where**: MAIN (same in ROADMAP; BETA changes one path in 0.md)
+    - **what_it_is**: 0.md is the sheet for the tree (25 files plus the sheet). README.md records the move of 2026-08-16. [source text withheld from the public copy] the removed _STAGING_TO_L6. ieee/README.md is the licence standing and a 31-row manifest with page counts and 12-hex SHA-256 prefixes. ieee/papers/README.md is a watermark manifest and a recorded negative relevance finding for three papers. library/README.md is the reading protocol.
+    - **own_label**: "[source text withheld from the public copy], and [source text withheld from the public copy]."
+    - **evidence_state**: ASSERTED (descriptive and governance records); the three-paper relevance result is INTERNALLY CHECKED by its own recorded word counts
+    - **checked_how**: Read all six files in full. Counted files in the tree at MAIN: 25 plus 0.md. Compared with HISTORY 1d83788: _STAGING_TO_L6 held 88 files, 61 PDFs and 27 others.
+    - **key_claims**
+      - The reading protocol was [source text withheld from the public copy]: no summarizing, [source text withheld from the public copy]
+      - 33 IEEE source files scanned, all carry the WSU Xplore watermark; two byte-identical duplicates dropped
+      - The three IEEE papers have zero occurrences of audit, traceab, provenance, tamper, epistemic and standalone log
+      - Internal references to intake/sources/ are dated provenance and deliberately not rewritten
+      - The retired charter's [source text withheld from the public copy]' predates the transfer
+    - **open_items**
+      - Many internal references point to files that exist in no current state (intake/imported/AUTONOMOUS_TERMS.md, intake/research/EXTERNAL_AUDIT_2026-08-04.md)
+    - **locator**: MAIN:L7/provenance/sources/staging-records/0.md:8-20; MAIN:.../library/README.md:6-21; MAIN:.../ieee/README.md:79-93; MAIN:.../ieee/papers/README.md:17-48
+    - **quote**: [source text withheld from the public copy]
+  - item 20
+    - **id**: DAT-01
+    - **title**: Datasets ledger
+    - **path**: L7/provenance/sources/datasets-LEDGER.md
+    - **where**: MAIN (same in ROADMAP and BETA)
+    - **what_it_is**: A register for machine-readable data with columns [source text withheld from the public copy], a per-dataset record rule and a change log. Both tables have one blank row.
+    - **own_label**: "Currently: **EMPTY** — no datasets held."
+    - **evidence_state**: EMPTY
+    - **checked_how**: Read the file (48 lines); both tables contain only an empty row.
+    - **key_claims**
+      - No dataset may be used without a row
+      - Its column rule still names the old path uso/l6/LEDGER.md
+    - **open_items**
+      - terms.json is machine-readable data held in the repository and has no dataset row; whether it counts as a dataset is not stated
+    - **locator**: MAIN:L7/provenance/sources/datasets-LEDGER.md:5-16
+    - **quote**: [source text withheld from the public copy].
+  - item 21
+    - **id**: PRI-01
+    - **title**: Prior art: rules only; the search for a prior definition was never run
+    - **path**: L7/provenance/prior-art/
+    - **where**: MAIN, ROADMAP, BETA (two files in each: 0.md and README.md)
+    - **what_it_is**: README.md is the rule text for prior-art searches (what a search records, verdict vocabulary, four rules). The sheet says the record is empty. No search record, precedent record or query log is filed.
+    - **own_label**: "No prior-art search has been run ("search still unrun", `L8/L5/research/findings/DISTILLATION.md` §5); the record is empty."
+    - **evidence_state**: EMPTY as a position; the search for a prior definition of the word is UNRESOLVED (unrun); the sheet's blanket statement is partly CONTRADICTED by scoped checks filed elsewhere
+    - **checked_how**: Listed the directory at all three states (same two files). Confirmed the cross-reference at MAIN:L8/L5/research/findings/DISTILLATION.md:134. Found two scoped prior-art checks outside this position: DISTILLATION.md §7 in MAIN (four lanes: maritime, agency, lawful-order, mechanism design, 2026-08-05) and ROADMAP:L8/L5/research/review/LAMBDA_PRIOR_ART_2026-08-05.md (226 lines, on the lambda mechanism).
+    - **key_claims**
+      - Rule: [source text withheld from the public copy] the work was not first
+      - A search that found nothing establishes only that this search found nothing
+      - The staging findings name external prior art the corpus lacked: ARIES for record-and-flag, IEEE 7001 for the independent recorder
+      - The 2026-07-30 GitHub sweep for the word was public repositories only; private repositories PENDING
+    - **open_items**
+      - Run the search for a prior definition of auditonomy or an equivalent; it is listed as the first thing that would falsify the layer
+      - The two scoped checks are not recorded or pointed to from this position
+    - **locator**: MAIN:L7/provenance/prior-art/0.md:32; MAIN:L7/provenance/prior-art/README.md:5-6,14-30; MAIN:L8/L5/research/findings/DISTILLATION.md:134,148
+    - **quote**: [source text withheld from the public copy]**).
+  - item 22
+    - **id**: AUT-01
+    - **title**: Authority position
+    - **path**: L7/provenance/authority/0.md
+    - **where**: MAIN (same in ROADMAP and BETA)
+    - **what_it_is**: The sheet for records of who owns or speaks for an external object. Nothing is filed; authority for each bound peer object is said to be stated in its binding record under L7/peering/.
+    - **own_label**: "Nothing is filed at this position; the position is admissible and empty."
+    - **evidence_state**: EMPTY
+    - **checked_how**: Read the sheet; the directory holds only 0.md at all three states.
+    - **key_claims**
+      - Disagreement among standards bodies must stay source-tagged and visible
+    - **locator**: MAIN:L7/provenance/authority/0.md:32
+    - **quote**: Nothing is filed at this position; the position is admissible and empty.
+  - item 23
+    - **id**: LIN-01
+    - **title**: Lineage: one session-provenance record (EBA-PROV-2026-08-05-01)
+    - **path**: L7/provenance/lineage/2026-08-05-observed-not-observable-session-provenance.md
+    - **where**: MAIN (same in ROADMAP and BETA)
+    - **what_it_is**: A prompt-by-prompt summary (P01 to P13) of the repository-oriented part of one ChatGPT session, with a correction trail C01 to C04, a formal transcription of an episodic memory record M_t and a governing statement: memory is limited to [source text withheld from the public copy]. Bound to both this repository and aybllc/eb-audit.
+    - **own_label**: "`[source text withheld from the public copy]`"
+    - **evidence_state**: ASSERTED (the owner's position as summarized; the record says it is not a verbatim export, not validation and not a novelty claim)
+    - **checked_how**: Read the whole file (311 lines) and the lineage sheet.
+    - **key_claims**
+      - [source text withheld from the public copy]
+      - Negative facts may be [source text withheld from the public copy]
+      - It sets a correction target for later revision of prior-growth and departure-protocol specifications; it does not itself rewrite them
+      - Prompt wording is normalized, not verbatim
+    - **open_items**
+      - Its binding lines name paths from the earlier layout (manuscripts/main/research/eb-carrier/...); the sheet says they stand as the record's own words
+      - The revisions it calls for are not shown as done in this scope
+      - MAIN provenance sheet says lineage is empty, which is wrong
+    - **locator**: MAIN:L7/provenance/lineage/2026-08-05-observed-not-observable-session-provenance.md:3-25,298-311; MAIN:L7/provenance/lineage/0.md:32
+    - **quote**: [source text withheld from the public copy].
+  - item 24
+    - **id**: RDM-01
+    - **title**: ROADMAP: STANDARDS_REGISTER.md
+    - **path**: L7/provenance/sources/STANDARDS_REGISTER.md
+    - **where**: ROADMAP only (restored 2026-09-14 from HISTORY 1d83788, manuscripts/main/); not in MAIN or BETA
+    - **what_it_is**: A 510-line register of standards bodies the 'auditon envelope' must meet: selection doctrine (§0), amendment protocol, tables for ISO, IEEE, NASA, NIST, IEC, CCSDS, IETF, COSPAR with link and holding status, a verification log V-01 to V-20 of fetches on 2026-08-05, incident IL-005, an amendment log A-001 to A-004, open questions Q1 to Q13 and suggestions S1 to S12.
+    - **own_label**: "**[source text withheld from the public copy]**"; "Nothing here is adopted."
+    - **evidence_state**: EXTERNALLY CHECKED for the 17 logged fetches that succeeded (catalogue pages and status, dated 2026-08-05); the selection doctrine is the author's (INTERNALLY DERIVED by its own label); many rows UNRESOLVED
+    - **checked_how**: Read lines 1-330 and the open questions and suggestions; counted verification entries (20: 17 resolved, 3 returned HTTP 403). Counted the IEEE table: 9 rows HELD or HELD/UNREAD plus 1872-2015, against a coverage summary of 8 held and 2 gaps. Confirmed the companion file is at L8/L1/state-space/REQUIREMENTS_OWNERSHIP.md, not beside the register.
+    - **key_claims**
+      - IEC, CCSDS and COSPAR have no coverage
+      - [source text withheld from the public copy]
+      - 113 requirements extracted; 21 are buildable and 16 of those come from IEEE 7009
+      - The 113 were scoped to autonomy, not auditability; a second extraction is needed (marked blocking)
+      - IEEE 1872-2015 and IEEE 7010-2020 are held in l6 since 2026-08-14 (A-004)
+      - Two constructed IEEE [source text withheld from the public copy] (IL-005)
+    - **open_items**
+      - Q2a/S11: auditability extraction not run
+      - Q4: two formalisations unreconciled, owner's reconciliation required (marked blocking)
+      - Q6: IEEE 1788.1-2017 held but unread
+      - Q8: [source text withheld from the public copy]; a Standards-Track equivalent NOT-CHECKED
+      - Capture paths it names (intake/sources/...) no longer exist, so by its own audit rule the rows need re-pointing
+      - Several OBTAINED rows name no capture location, against its rule 5
+      - Not in the only merged state
+    - **locator**: ROADMAP:L7/provenance/sources/STANDARDS_REGISTER.md:7-9,83-89,101-130,222-235,253-278,310-317,347-351
+    - **quote**: [source text withheld from the public copy]
+  - item 25
+    - **id**: RDM-02
+    - **title**: ROADMAP: lists-2026-08-08 (PRIMARY, ORGANIZATIONS, DATA_SOURCES, STANDARDS_CITED, README, plus the sheet)
+    - **path**: L7/provenance/sources/lists-2026-08-08/
+    - **where**: ROADMAP only (five files restored 2026-09-14 from HISTORY 1d83788, uso/l6/provenance/, plus a new sheet 0.md)
+    - **what_it_is**: Working lists built overnight on 2026-08-08. PRIMARY.md: nine acquisition targets in order (JCGM, IETF, NIST CSRC, ISO OBP, IEC Electropedia, IEEE-SA, EUR-Lex, IANA with IEEE RA, NASA NTRS), each with what breaks without it. ORGANIZATIONS.md: a roster of bodies with relevance tags. DATA_SOURCES.md: open data endpoints by tier. STANDARDS_CITED.md: every standard identifier found by regular expression in the repository on that date.
+    - **own_label**: "**Status:** WORKING LISTS."; "`[source text withheld from the public copy]."
+    - **evidence_state**: ASSERTED leads (NOT-CHECKED by their own headers); STANDARDS_CITED is a machine extraction, not read
+    - **checked_how**: Read 0.md, README.md, PRIMARY.md and STANDARDS_CITED.md in full; read the head and headings of ORGANIZATIONS.md and DATA_SOURCES.md. Summed the raw family counts in STANDARDS_CITED.md: they total 270 against a stated total of 271 distinct identifiers. Compared PRIMARY's named items with the ledger.
+    - **key_claims**
+      - Test for the primary list: something the [source text withheld from the public copy] the source
+      - The GUM (JCGM 100:2008) is called the single highest-value fetch and has never been held
+      - IEEE [source text withheld from the public copy] had never been obtained at that date
+      - The EU AI Act [source text withheld from the public copy] corpus
+      - All eight endpoints tried returned no connection in that environment
+    - **open_items**
+      - Of the items PRIMARY names, the ledger holds RFC 9162, FIPS 180-4 and the IEEE standards; it holds no GUM, VIM, RFC 3161, RFC 4949, RFC 9334, RFC 9171, ALFUS volumes, ISO 8373, AI Act or NTRS 20100017272
+      - PRIMARY lists IEEE 1788, 7009, 7014, 7001 and 1788.1 as paywalled items to get, although staging records show them imported on 2026-08-04; the list was built without sight of them
+      - Named as required and never obtained: IEEE 7010-2020 verbatim, Moore 1966, [source text withheld from the public copy]
+      - Not in the only merged state
+    - **locator**: ROADMAP:L7/provenance/sources/lists-2026-08-08/README.md:3,18-20; ROADMAP:.../PRIMARY.md:9-17,36-47,92-107,158-168; ROADMAP:.../STANDARDS_CITED.md:14-16,86-94
+    - **quote**: [source text withheld from the public copy]
+  - item 26
+    - **id**: GAP-01
+    - **title**: Spot-check: five external citations in the definition that the ledger lacks
+    - **path**: L8/L0/semantics/definitions/AUDITONOMOUS_DEFINITION.md
+    - **where**: MAIN (definition); ledger checked in MAIN and BETA
+    - **what_it_is**: Five external sources the defining entry cites, each labelled VERIFIED or PARTIALLY VERIFIED by a fetch on 2026-07-30, none of which has a row in the source ledger: (1) American Heritage Dictionary, 5th ed., s.v. autonomous, audit, auto-; (2) Liddell-Scott short definition via Perseus, Tufts; (3) NIST CSRC Glossary 'audit trail' (CNSSI 4009-2015; SP 800-37 Rev. 2 and SP 800-53 Rev. 5); (4) IETF RFC 4949; (5) [source text withheld from the public copy]. A sixth, Lewis and Short via Perseus, is PARTIALLY VERIFIED and also unledgered. IEEE 7001-2021 is in the ledger (STD-004), but the definition cites its catalogue page scope text, not the held standard.
+    - **own_label**: Definition: "[source text withheld from the public copy])"; Lewis and Short: "[source text withheld from the public copy]"
+    - **evidence_state**: EXTERNALLY CHECKED by the definition's own record (web fetch, 2026-07-30, byte-checked against a session scratch file that is not in the repository); provenance rows EMPTY
+    - **checked_how**: Read the definition's source list (lines 281-347). Searched LEDGER.md in MAIN and BETA for 'American Heritage', 'Liddell', 'Lewis', '4949', 'AI 100-1', 'CSRC', '800-53': 0 hits each; '7001': 1 hit (STD-004).
+    - **key_claims**
+      - The definition's external anchors are dictionary, glossary and RFC pages fetched from the web, not l6 holdings
+      - Merriam-Webster, Cambridge, Oxford and [source text withheld from the public copy] reached
+      - The fetch layer misquoted RFC 4949 on first pass and was corrected against the downloaded text
+      - No peer-reviewed journal quote anchors accountability or auditability of autonomous systems; a journal anchor remains NOT-CHECKED
+    - **open_items**
+      - Five (six) cited sources have no ledger row, no hash and no retained copy
+      - The byte-check evidence lived in a temporary scratch directory
+      - The definition's IEEE 7001 link uses an opaque numeric path of the kind the ROADMAP register later found unreliable (IL-005); that specific link is not re-verified there
+    - **locator**: MAIN:L8/L0/semantics/definitions/AUDITONOMOUS_DEFINITION.md:282,294,306-308,310-314,318,322,330,341-347
+    - **quote**: [source text withheld from the public copy].
+  - item 27
+    - **id**: GAP-02
+    - **title**: Sources the staging findings and registers rely on that the ledger lacks
+    - **path**: L7/provenance/sources/LEDGER.md
+    - **where**: MAIN (ledger and staging records); ROADMAP (register)
+    - **what_it_is**: Sources named as used, needed or held in the scope's own records without a ledger row: [source text withheld from the public copy] (215 statements extracted); Rump 1999 and Rump 2010 (cited as confirming the exact-radius form); Beer, Fisk and Rogers 2014 (live request, not obtained); IEEE 1872-2015 and IEEE 7010-2020 (held in l6 per the ROADMAP register's A-004); SEVOCAB and ISO/IEC TS 25052-1 (sources of the two stored auditability definitions); Crosby and Wallach 2009 (lead); plus the ROADMAP register's OBTAINED rows (ISO 8373, ISO/IEC 25059, 42001, ISO 15489-1:2001, ALFUS SP 1011, NIST AI 100-1, NASA NTRS reports).
+    - **evidence_state**: UNRESOLVED (unledgered citations); the 'Not held' table that should carry the gaps is EMPTY
+    - **checked_how**: Searched LEDGER.md in MAIN and BETA for '800-53', 'Rump', 'Beer', '1872-2015', '7010', 'Moore', '8373', 'JCGM', 'Crosby', '15489': 0 hits each. Read the 'Not held' table: one blank row.
+    - **key_claims**
+      - The ledger's own rule: a cited source without a row is an unledgered citation
+      - The ledger's 'Not held' section is meant to record gaps and what they block; it records none
+      - The ledger covers what was staged as PDFs on 2026-08-16 and nothing obtained by web fetch or OBP reading
+    - **open_items**
+      - Add rows or 'Not held' entries for these; decide whether web-fetched pages and OBP readings get rows
+      - IEEE 1872-2015: held in l6 but T-02 remains unread and unverified
+    - **locator**: MAIN:L7/provenance/sources/LEDGER.md:10-12,93-100; MAIN:.../staging-records/interval/DECORATIONS_2026-08-04.md:77-78; MAIN:.../staging-records/standards/SOURCE_LEDGER.md:251-253; ROADMAP:L7/provenance/sources/STANDARDS_REGISTER.md:310-317
+    - **quote**: [source text withheld from the public copy]
+- **defects**
+  - item 1
+    - **statement**: MAIN and ROADMAP state the register has 62 rows; it has 60 ([source text withheld from the public copy] history record that first says 62 lists ranges that total 60. Corrected in BETA only.
+    - **locator**: MAIN:L7/provenance/0.md:20,33; MAIN:L7/provenance/sources/0.md:10,41; MAIN:L7/peering/private/ingress/peer-1/0.md:16; MAIN:L7/peering/private/ingress/peer-1/object-1/0.md:10; MAIN:L8/L6/history/LEDGER_2026-08-16_l6-close-and-normalization.md:30
+  - item 2
+    - **statement**: The close-out search-log entry says "22 new rows" and [source text withheld from the public copy]).
+    - **locator**: MAIN:L7/provenance/sources/LEDGER.md:113
+  - item 3
+    - **statement**: The sources sheet says "The ledger has no rows; that is admissible." while the same sheet describes a populated register. Corrected in BETA.
+    - **locator**: MAIN:L7/provenance/sources/0.md:55 against :10
+  - item 4
+    - **statement**: The provenance sheet says "`lineage/`, `authority/` — empty" although lineage holds record EBA-PROV-2026-08-05-01. Corrected in BETA.
+    - **locator**: MAIN:L7/provenance/0.md:37 against MAIN:L7/provenance/lineage/0.md:32
+  - item 5
+    - **statement**: The ledger says "The 27 markdown working records" moved to staging-records. 27 is the count of all non-PDF staged files at HISTORY 1d83788; three of them (two Third Power Corpus files and the clause-3 text) were routed elsewhere or not routed by the same section, so 24 moved. The tree holds 25 files plus the sheet, and two of them (terms.json, the numbered .txt) are not markdown.
+    - **locator**: MAIN:L7/provenance/sources/LEDGER.md:134-142; HISTORY:_STAGING_TO_L6/ (88 files, 61 PDFs)
+  - item 6
+    - **statement**: The 2026-08-16 sweep entry's categories (13 + 17 + 13 + 45 + 3) total 91 against its stated "all 88 staged files", and its 43 held does not match the close-out's 40; the difference is not explained.
+    - **locator**: MAIN:L7/provenance/sources/LEDGER.md:112 against :124-131
+  - item 7
+    - **statement**: Label vocabulary not followed: the column rule lists six labels, but 22 rows use others (ACCESSIONED x19, "Acquired lawfully", EXCLUDED, PROHIBITED SOURCE). The ID rule lists LAW- (no rows) and omits EXC- (two rows).
+    - **locator**: MAIN:L7/provenance/sources/LEDGER.md:83,88-89 against :54,59-79
+  - item 8
+    - **statement**: The 'Not held' table is empty although the scope's own records name sources needed and not obtained (Beer, Fisk and Rogers 2014; the published HEALPix article; the complete Payne-Hanek article).
+    - **locator**: MAIN:L7/provenance/sources/LEDGER.md:98-100 against :25,57 and MAIN:L7/provenance/sources/staging-records/standards/SOURCE_LEDGER.md:251-253
+  - item 9
+    - **statement**: Unledgered citations in the defining entry: American Heritage Dictionary, Liddell-Scott and Lewis and Short via Perseus, NIST CSRC Glossary, RFC 4949 and NIST AI 100-1 have no ledger row, against the ledger's own rule.
+    - **locator**: MAIN:L8/L0/semantics/definitions/AUDITONOMOUS_DEFINITION.md:282-336 against MAIN:L7/provenance/sources/LEDGER.md:10-12
+  - item 10
+    - **statement**: [source text withheld from the public copy] was retrieved, hashed and extracted (215 control statements held in the repository) but has no ledger row.
+    - **locator**: MAIN:L7/provenance/sources/staging-records/standards/extracted/SP800-53r5_AC-AU_verbatim.md:7-20
+  - item 11
+    - **statement**: Four rows whose labels report an IEEE Xplore stamp carry no WSU class-2 hold-private tag (STD-021, STD-022, INST-001, PR-013), while the staging manifest says all 33 IEEE files carry the WSU watermark.
+    - **locator**: MAIN:L7/provenance/sources/LEDGER.md:50,51,57,58 against MAIN:L7/provenance/sources/staging-records/ieee/README.md:85
+  - item 12
+    - **statement**: STD-025 (ISO/IEC 22989 lawful copy) has no hash, date of check or verification outcome, and the repository's 22989 captures cite the withdrawn copy's SHA-256.
+    - **locator**: MAIN:L7/provenance/sources/LEDGER.md:54; MAIN:L7/provenance/sources/staging-records/standards/extracted/ISO-IEC-22989-2022_captures.md:6-7
+  - item 13
+    - **statement**: RFC 9162 reading record says "All 45 captures" but holds 48 capture headings (C1 to C48); the findings table says 48; the verifier compared 43.
+    - **locator**: MAIN:L7/provenance/sources/staging-records/library/reading/RFC9162_Certificate-Transparency-v2.md:27,135-517,549-552
+  - item 14
+    - **statement**: FIPS 180-4 reading record says "[source text withheld from the public copy]" and, twelve lines later, "[source text withheld from the public copy]."
+    - **locator**: MAIN:L7/provenance/sources/staging-records/library/reading/NIST_FIPS-180-4_Secure-Hash-Standard.md:17,29
+  - item 15
+    - **statement**: IEEE 3152 reading record: the verifier's quote list was truncated, so 40 of the record's 43 items (12 terms + 31 captures) were compared; six defects (three unmarked splices, two wrong page citations, one splice across a heading) remain on the record.
+    - **locator**: MAIN:L7/provenance/sources/staging-records/ieee/reading/IEEE-3152.md:381-399
+  - item 16
+    - **statement**: Staging records repeatedly cite intake/imported/AUTONOMOUS_TERMS.md (rows T-02, T-08, T-13 and others) as the thing verified; that file exists in no current state (MAIN, ROADMAP, BETA), only in HISTORY 1d83788. The sheet acknowledges old paths are not rewritten but does not say the target is absent.
+    - **locator**: MAIN:L7/provenance/sources/staging-records/ieee/FINDINGS_2026-08-04.md:27; MAIN:L7/provenance/sources/staging-records/standards/extracted/terms.json:_meta.governing_rule; HISTORY:intake/imported/AUTONOMOUS_TERMS.md:82
+  - item 17
+    - **statement**: The datasets ledger's column rule and the source ledger's upkeep rule still name paths from the earlier layout (uso/l6/LEDGER.md, research/, manuscripts/).
+    - **locator**: MAIN:L7/provenance/sources/datasets-LEDGER.md:21; MAIN:L7/provenance/sources/LEDGER.md:10-12
+  - item 18
+    - **statement**: ROADMAP STANDARDS_REGISTER: capture locations name intake/sources/... paths that no longer exist; several OBTAINED rows name no capture location (against its rule 5); the companion link is relative but the companion is at L8/L1/state-space/; the coverage summary gives IEEE 8 held and 2 gaps where the table shows 9 held or held-unread plus 1872-2015; amendment A-004 (2026-08-14) is not reflected in the header's "Last amendment: 2026-08-05 (A-003)".
+    - **locator**: ROADMAP:L7/provenance/sources/STANDARDS_REGISTER.md:8-9,85,101-109,121-130,227,310
+  - item 19
+    - **statement**: ROADMAP PRIMARY.md (2026-08-08) lists IEEE 1788-2015, 7009-2024, 7014-2024, 7001-2021 and 1788.1-2017 as paywalled items to acquire, although the staging records show them imported and (four of them) read on 2026-08-04.
+    - **locator**: ROADMAP:L7/provenance/sources/lists-2026-08-08/PRIMARY.md:92-97 against MAIN:L7/provenance/sources/staging-records/ieee/README.md:1-5
+  - item 20
+    - **statement**: ROADMAP STANDARDS_CITED.md: the listed raw family counts sum to 270; the file states 271 distinct identifiers.
+    - **locator**: ROADMAP:L7/provenance/sources/lists-2026-08-08/STANDARDS_CITED.md:14-16
+  - item 21
+    - **statement**: The task brief places the row-count note in BETA's staging-records/0.md; in BETA that file changes only one governance path. The note is in BETA's LEDGER.md and the provenance and sources sheets.
+    - **locator**: BETA:L7/provenance/sources/staging-records/0.md:30; BETA:L7/provenance/sources/LEDGER.md:147-149
+- **open_questions**
+  - Do the 58 pointer rows still resolve? aybllc/l6 is not on this machine (/home/user holds only 7lm, auditonomous, autonomous), so no l6 path, commit (b328334, e4f0d5c, 53b28f6) or hash could be checked by me.
+  - Has the history purge of the third-party-licensed ISO/IEC 22989 PDF been carried out on the server? In this clone the blob f5e74bad... (3,225,650 bytes) is still present and reachable from commits 8660aea and 9a9ab96 on main, beta and roadmap. The record says the owner must execute or authorize it.
+  - Do the ISO/IEC 22989 captures and terms.json match the lawful copy STD-025? They were taken from the withdrawn copy; no re-check is recorded.
+  - Has the owner ruled on the findings the reading records reserve to him: the IEEE 7014 erasure collision, §2.8 reading (b), equivocation as a fourth prohibited act, and re-wording 'cannot be altered' to 'apparent' or detectable? All are marked OPEN or NOT ADOPTED in this scope; any later ruling would be outside it.
+  - Does IEEE 1788.1-2017 retain the decoration system (register Q6)? Held, unread.
+  - Has IEEE 1872-2015 been read to settle T-02? The ROADMAP register says it is held in l6 since 2026-08-14; no ledger row and no reading record exist.
+  - What is the licence status of the Ferreira numbered full text held in the repository? Recorded as the owner's call and not yet made.
+  - Which ledger sources does the manuscript actually need? The ledger has no bears-on column, and about 30 of the 60 rows are drone, UAV, factory, networking, pulsar and CMB material that the staging records say belong to the sibling autonomous or uha work.
+  - Should web-fetched dictionary, glossary and RFC pages (the definition's anchors) and ISO OBP readings be given ledger rows, and with what fixity, given that the byte-check copies lived in temporary scratch directories?
+  - Were the 19 items of the IEEE 7007 record that the verifier did not receive (76 items held, 57 compared) and the 5 uncompared RFC 9162 captures ever verified? No record found in this scope.
+  - Why the sweep entry of 2026-08-16 totals 91 against 88 staged files, and where the figure 62 came from; my inference (40 + 22) is not recorded anywhere.
+  - Whether the ROADMAP register and lists (closed, unmerged PR #27) are meant to return to MAIN; until then the standards coverage, verification log and acquisition order exist only on that branch.

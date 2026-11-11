@@ -1,0 +1,290 @@
+# read:chats
+
+Agent result, as returned. Workflow: Manuscript status of 3 November 2026. Run `wf_1cf4205c-c72`. Phase: Read. Checked in 2026-11-11 19:51 UTC.
+
+- **summary**: The two files are not raw chat logs. Each is a python-docx-generated "Chat History Ingestion" volume in the Auditonomous Book Material Sourcebook series. Chat-1 (/tmp/claude-0/-home-user/bfcfd013-a2da-5019-961e-7f46116f08be/scratchpad/manuscript/text/auditonomous-chat-1.md) is "Version 0.1 CHAT-HIST", chat-2 (/tmp/claude-0/-home-user/bfcfd013-a2da-5019-961e-7f46116f08be/scratchpad/manuscript/text/auditonomouos-chat-2.md) is "Version 0.1 CHAT-HIST-02"; both say "Ingestion date: 6 August 2026" and "[source text withheld from the public copy]", and both list that .docx as "Formatting and style template only". Chat-1 ingests chat.txt (58,894 bytes); chat-2 ingests chat_history_chunk_02.txt (62,270 bytes), which opened with a new UHA frame/epoch exchange and then re-supplied the chunk-1 material. Chat-2 labels the repeat as overlap; a Part-numeral-normalized diff confirms its Parts II-IX equal chat-1 Parts I-VIII except for one added UHA passage, renumbering, two ledger rows and expanded source tables. The owner's voice survives only as four short quoted lines ("The full picture."; "[source text withheld from the public copy]?"; "the epoch is given in the UHA"). Everything else is assistant synthesis re-labelled by the ingesting assistant. Produced: a nine-repository program map; the typed ruling λ_A = 0 ≠ λ_EB = 0 with a "manuscript-ready correction"; a 20-class Auditonomous action specification with a 13-conjunct formal test; a segregation architecture (S0-S3 scale, 20 subsystems, 40-row control matrix, 7 trust boundaries, 8 one-way rules); a standards table "Status on 2026-08-06"; a contradiction register CH-01..CH-08; six (chat-2: seven) "manuscript-ready passages"; chat-2's "publication-grade ruling" on UHA reconstruction. Deferred: an authorial ruling on the two λ_A formulations (CH-01), ref-pinned repository re-inspection, acquisition of twelve inventoried attachments, the meaning of S0-S3, clause-level standards mapping, a prior-art search; fourteen architecture components are "not yet established". State left: labelled book material, no chapter prose, nothing verified beyond standards metadata. Repository: the .docx files entered at merge 077d5de (2026-08-08), were moved three times, and sit at L8/L4/work/writing/chat/ on origin/main whose sheet says "binary, not read in this pass"; chat-1 is byte-identical to Auditonomous_Book_Material_Sourcebook_v0.1_CHAT-HIST.docx of the pre-prune tree. The roadmap branch (PR #27) reads them, restores a third volume (CHAT-HIST-03), and cites chat-1/chat-2 as feeds for chapters 9, 14 and 17 and CH-01 as a verify item for chapter 16; all those chapters are "Not yet drafted".
+- **facts**
+  - item 1
+    - **claim**: Chat-1 is the first Sourcebook chat-history ingestion volume: 'Chat History Ingestion I', versioned [source text withheld from the public copy] file chat.txt.
+    - **date**: 2026-08-06
+    - **evidence**: /tmp/claude-0/-home-user/bfcfd013-a2da-5019-961e-7f46116f08be/scratchpad/manuscript/text/auditonomous-chat-1.md:1-13 — '[source text withheld from the public copy]'
+    - **status_label**: Version 0.1 CHAT-HIST
+  - item 2
+    - **claim**: Chat-2 is the second volume ('Chat History Ingestion II'), versioned 0.1 CHAT-HIST-02, same ingestion date, input chat_history_chunk_02.txt; its inner 'Version:' line omits the '-02' (internal inconsistency).
+    - **date**: 2026-08-06
+    - **evidence**: /tmp/claude-0/-home-user/bfcfd013-a2da-5019-961e-7f46116f08be/scratchpad/manuscript/text/auditonomouos-chat-2.md:1 'Version 0.1 CHAT-HIST-02'; :5 'Input source: chat_history_chunk_02.txt'; :11 '# [source text withheld from the public copy]'; :13 'Version: 0.1 CHAT-HIST'
+    - **status_label**: Version 0.1 CHAT-HIST-02 (line 1) vs 'Version: 0.1 CHAT-HIST' (line 13)
+  - item 3
+    - **claim**: Both volumes declare themselves continuations of Sourcebook v0.1 and use that .docx only as a formatting template, not as a source.
+    - **date**: 2026-08-06
+    - **evidence**: chat-1.md:7 '[source text withheld from the public copy]'; chat-1.md:1867 '| **[source text withheld from the public copy] |'; same at chat-2.md:7 and chat-2.md:1990 (paths under /tmp/claude-0/-home-user/bfcfd013-a2da-5019-961e-7f46116f08be/scratchpad/manuscript/text/)
+    - **status_label**: Formatting and style template only
+  - item 4
+    - **claim**: Both volumes disclaim finality and state a controlling rule that later authorial corrections are never silently harmonized with earlier assistant interpretations; external shoulders are limited to [source text withheld from the public copy].
+    - **date**: 2026-08-06
+    - **evidence**: chat-1.md:9 '[source text withheld from the public copy].'; :15 '[source text withheld from the public copy]'; :16 '[source text withheld from the public copy]'; identical at chat-2.md:9,15,16
+    - **status_label**: source-faithful organized corpus
+  - item 5
+    - **claim**: The volumes define a seven-term status vocabulary used throughout.
+    - **date**: 2026-08-06
+    - **evidence**: chat-1.md:22-34 (identical chat-2.md:22-34): 'AUTHORIAL DEFINITION / CORRECTION', 'EXTERNAL STANDARD / VERIFIED SHOULDER', 'PROVISIONAL FORMALIZATION', 'CHAT-PRESERVED REPOSITORY OBSERVATION', 'CONDITIONAL TECHNICAL NOTE', 'OPEN AUTHORIAL TENSION', 'SOURCE DEBT / UNHELD BODY'
+    - **status_label**: status vocabulary
+  - item 6
+    - **claim**: IEEE Std 7001-2021 is treated as a licensed held source quoted only by short excerpt with clause/page pinpoints; unseen attachments are inventoried, not reconstructed.
+    - **date**: 2026-08-06
+    - **evidence**: chat-1.md:38-40 '[source text withheld from the public copy].'; identical chat-2.md:38-40
+    - **status_label**: LIMITED QUOTATION / PARAPHRASE
+  - item 7
+    - **claim**: Input metrics: chat-1 ingested 58,894 bytes / 58,178 chars / 2,418 lines / 1,612 non-empty / ~7,737 words; chat-2 ingested 62,270 bytes / 61,554 chars / 2,518 lines / 1,679 non-empty / ~8,231 words.
+    - **date**: 2026-08-06
+    - **evidence**: chat-1.md:46-50 '| **Input bytes** | 58,894 |' ... '| **Approximate words** | 7,737 |'; chat-2.md:46-50 '| **Input bytes** | 62,270 |' ... '| **Approximate words** | 8,231 |'
+    - **status_label**: Input metrics
+  - item 8
+    - **claim**: The .docx containers in the repository were generated by python-docx; their Office titles are 'Auditonomous Book Material Sourcebook v0.1 - Chat History' / '... Chat History II' / '... Chat History III'; the embedded created/modified timestamps are the python-docx template default (2013-12-23T23:15:00Z) and are not production dates.
+    - **date**: 
+    - **evidence**: docProps/core.xml of origin/main:L8/L4/work/writing/chat/auditonomous-chat-1.docx (extracted to /tmp/claude-0/-home-user/bfcfd013-a2da-5019-961e-7f46116f08be/scratchpad/chatdocx/chat1.docx): '<dc:title>Auditonomous Book Material Sourcebook v0.1 - Chat History</dc:title>', '<dc:creator>python-docx</dc:creator>', '<dc:description>Generated from chat.txt with explicit coverage and correction ledger.</dc:description>', '<dcterms:created ...>2013-12-23T23:15:00Z'; chat2.docx: 'Generated from chat_history_chunk_02.txt with explicit overlap, coverage, and correction ledgers.'
+    - **status_label**: docx metadata
+  - item 9
+    - **claim**: Owner statement 1 (preserved verbatim): 'The full picture.' — the direction that produced the nine-repository program map.
+    - **date**: 
+    - **evidence**: chat-1.md:56-58 '> "[source text withheld from the public copy]'; repeated chat-2.md:170-172
+    - **status_label**: User direction in supplied chat history
+  - item 10
+    - **claim**: Owner statement 2 (normalized only for spelling): '[source text withheld from the public copy].' — the correction that controls the typed separation of lambda_A from lambda_EB.
+    - **date**: 
+    - **evidence**: chat-1.md:60-62 '> "[source text withheld from the public copy]'; coverage row chat-1.md:1832 '[source text withheld from the public copy]'; repeated chat-2.md:174-176
+    - **status_label**: INCLUDED AS AUTHORIAL CORRECTION
+  - item 11
+    - **claim**: Owner statement 3 ([source text withheld from the public copy]?' — the organizing question of the control architecture.
+    - **date**: 
+    - **evidence**: chat-1.md:64-66 quote + 'User research question, normalized only for spelling'; chat-1.md:1836 '[source text withheld from the public copy].'; repeated chat-2.md:178-180
+    - **status_label**: User research question
+  - item 12
+    - **claim**: Owner statement 4 (chat-2 only): 'the epoch is given in the UHA' — corrected the assistant's claim that epoch was missing from UHA.
+    - **date**: 
+    - **evidence**: /tmp/claude-0/-home-user/bfcfd013-a2da-5019-961e-7f46116f08be/scratchpad/manuscript/text/auditonomouos-chat-2.md:90-92 '> "[source text withheld from the public copy]'
+    - **status_label**: User correction in supplied chat history
+  - item 13
+    - **claim**: Beyond those four lines the transcripts reproduce no raw turns; all other content is assistant synthesis as re-organized by the ingesting assistant. The ingestion itself labels the lambda 'correction block' as 'Authorial correction' and the later action specification as 'Provisional formalization', while noting the thesis attachment's body was not re-read.
+    - **date**: 
+    - **evidence**: chat-1.md:232-245 (Part II §7 table) rows '| Correction block | ... | Authorial correction |' and '| Later action specification | ... | Provisional formalization |'; chat-1.md:79 '[source text withheld from the public copy]'
+    - **status_label**: Authorial correction vs Provisional formalization
+  - item 14
+    - **claim**: The ingestion reads the session chronology as four steps: map the research program, correct the lambda interpretation, define the full action lifecycle, identify segregated trust domains and standards shoulders.
+    - **date**: 
+    - **evidence**: chat-1.md:68 '[source text withheld from the public copy]'; chat-2.md:182
+    - **status_label**: 
+  - item 15
+    - **claim**: Chunk 2 re-supplied the chunk-1 material; chat-2 retains it as overlap, not as independent corroboration.
+    - **date**: 2026-08-06
+    - **evidence**: chat-2.md:164 '[source text withheld from the public copy].'; chat-2.md:1946 '[source text withheld from the public copy]'
+    - **status_label**: INCLUDED + OVERLAP-LABELED
+  - item 16
+    - **claim**: Twelve attachments were visible in the chat as file cards and none was ingested: autonomouos-deep-research-auditonomopus-sources.odt, deep-research-auditonomous.md, autonomouos-deep-research-auditonomous-activity.odt, 02_AutonomousTheory(1).pdf, #autonomous(1).txt, THESIS_lambda_decomposed_record.md, Lambda_Explainer_Prompt.md, eb_carrier_memoirs.pdf, #autonomous.txt, The_NASA_Paper_and_Small_Falcon_Algebra.pdf, 02_AutonomousTheory.pdf, eb_carrier_chart_series (1).pdf.
+    - **date**: 2026-08-06
+    - **evidence**: chat-1.md:72-85 attachment inventory, each '[source text withheld from the public copy]'; chat-1.md:93 '[SOURCE-DEBT RULE] ... [source text withheld from the public copy]'; chat-1.md:1828 'C02 ... All twelve visible attachment references are listed'
+    - **status_label**: SOURCE DEBT / UNHELD BODY
+  - item 17
+    - **claim**: The chat produced a nine-lane repository program map (Broken Zero/UHA, [source text withheld from the public copy], EB Audit/eb-receipt), each marked as chat-preserved observation, with NUA downgraded to internal test claims and auditonomous flagged 'Internal-only'.
+    - **date**: 
+    - **evidence**: chat-1.md:104-115; :112 'NUA / N-U Algebra ... [source text withheld from the public copy].'; :114 'auditonomous | Home of the coined term ... | [source text withheld from the public copy].'; :115 '[source text withheld from the public copy]'
+    - **status_label**: CHAT-PRESERVED REPOSITORY OBSERVATION / INTERNAL TEST CLAIM ONLY / AUTHORIAL PROGRAM DESCRIPTION
+  - item 18
+    - **claim**: Decision recorded: the symbol lambda does not transport semantics between Auditonomous and EB arithmetic; λ_A = 0 ≠ λ_EB = 0. The earlier synthesis that used the EB grading variable as the basis of the Auditonomous memory mechanism was rejected.
+    - **date**: 
+    - **evidence**: chat-1.md:125 '[[source text withheld from the public copy].'; chat-1.md:131 'λ_A = 0 ≠ λ_EB = 0'; chat-2.md:239, :245
+    - **status_label**: AUTHORIAL CORRECTION
+  - item 19
+    - **claim**: The correction block formalizes λ_A [source text withheld from the public copy]); 'A remainder is not itself a memory'; nothing is pruned.
+    - **date**: 
+    - **evidence**: chat-1.md Part II §2 (lines 131-228), formulas '[source text withheld from the public copy]}' and '[source text withheld from the public copy])'; coverage row chat-1.md:1833 '[source text withheld from the public copy]'
+    - **status_label**: AUTHORIAL CORRECTION (per ingestion); formulas 'marked authorial/provisional' (C17)
+  - item 20
+    - **claim**: A 'manuscript-ready correction' on λ_A was produced.
+    - **date**: 
+    - **evidence**: chat-1.md:228-230 '> [source text withheld from the public copy].'; chat-2.md:342-344
+    - **status_label**: Manuscript-ready correction
+  - item 21
+    - **claim**: Unresolved: the same chat later gives λ_A a second architecture (λ_A = 0 = outcome-preserving operational decision-tree enclosure, D_BL(T_0) = D_BL(T_1); λ_A = 1 = full-precision mathematical witness). No authorial ruling reconciles the two; the ingestion refuses to select one (register entry CH-01).
+    - **date**: 
+    - **evidence**: chat-1.md:232 '## [source text withheld from the public copy]'; :247 '[[source text withheld from the public copy].'; :399-440 Class 3 '[source text withheld from the public copy])'; :1774 'CH-01 | lambda_A semantics | ... | [source text withheld from the public copy].'
+    - **status_label**: OPEN AUTHORIAL TENSION (CH-01)
+  - item 22
+    - **claim**: Scope narrowing recorded (CH-02): remainders may be stored dormantly but are numerically combined only under compatibility conditions; 'storage proximity alone is not meaning'; relevance filter P(z_t) and Weave W_t = Weave(P(z_t), z_t) introduced.
+    - **date**: 
+    - **evidence**: chat-1.md:255 '## [source text withheld from the public copy]'; :263 '[source text withheld from the public copy].'; :1775 'CH-02 | Residual accumulation and meaning | ... | LATER NARROWING / SCOPE DIVERGENCE'
+    - **status_label**: LATER NARROWING / SCOPE DIVERGENCE (CH-02)
+  - item 23
+    - **claim**: The chat produced an exhaustive 20-class Auditonomous action specification (event/observation, epistemic typing, lambda, remainder storage, relevance filtering, memory formation, black-letter decision, outputs, ordinary, exceptional, pre-action record, sealing/verification, non-bypassable permission, execution, outcome closure, post-action memory, transparency (IEEE 7001 shoulder), integrity/custody, failure rules, prohibited behaviors), explicitly a project construct, not an IEEE/ISO definition.
+    - **date**: 
+    - **evidence**: chat-1.md:265 '# Part III - Exhaustive Auditonomous action specification'; :273 '[[source text withheld from the public copy].'; :283 '> [source text withheld from the public copy].'; Classes at :1149 (Class 19), :1219 (Class 20); coverage row :1834 'C08 | Exhaustive 20-class action specification | INCLUDED'
+    - **status_label**: AUTHOR-DEFINED ARCHITECTURE
+  - item 24
+    - **claim**: Decision-output taxonomy is unsettled (CH-06): seven outputs are listed (PERMIT, DEGRADE, DELAY, REQUEST / ESCALATE, REFUSE, EXCEPTIONAL PERMIT, NO-ACTION) while [source text withheld from the public copy], REFUSE).
+    - **date**: 
+    - **evidence**: chat-1.md:673-685 Class 8 table; :685 '[source text withheld from the public copy] ... the taxonomy remains an authorial choice.'; :1779 'CH-06 | Decision output taxonomy | ... | DEFINITIONAL / TAXONOMIC VARIANCE'
+    - **status_label**: DEFINITIONAL / TAXONOMIC VARIANCE (CH-06)
+  - item 25
+    - **claim**: A 15-row action-class matrix and a 'Minimal formal test' AuditonomousAction(α) ⇔ 13 conjuncts (ActionSpecific ... DecodableForAudit), plus 8 extra conjuncts for exceptional actions, were produced.
+    - **date**: 
+    - **evidence**: chat-1.md:1265 '## Action-class matrix'; :1285-1287 '## Minimal formal test' / 'AuditonomousAction(α) ⇔'; :1835 '[source text withheld from the public copy].'
+    - **status_label**: PROVISIONAL FORMALIZATION
+  - item 26
+    - **claim**: Segregation architecture produced: five-way distinction Ledger ≠ Seal ≠ Governance ≠ Online verifier ≠ Independent auditor; a four-level separation scale S0-S3 (S2 'normal minimum for strong claims', S3 for significant physical harm) marked as not a standards mandate (CH-04).
+    - **date**: 
+    - **evidence**: chat-1.md:1340 'Ledger ≠ Seal ≠ Governance ≠ Online verifier ≠ Independent auditor'; :1352-1372 S0-S3 table; :1367 '[[source text withheld from the public copy].'; :1777 'CH-04 | Separation levels S2 and S3 | ... | PROVISIONAL ARCHITECTURE'
+    - **status_label**: PROVISIONAL SCALE - NOT A STANDARDS MANDATE
+  - item 27
+    - **claim**: Twenty proposed segregated subsystems, a 40-row ledger/seal/governance/audit operation matrix, seven trust boundaries and an eight-rule one-way list were produced; high-volume sensor samples need not be individually signed.
+    - **date**: 
+    - **evidence**: chat-1.md:1375 '## 2. Proposed segregated subsystems' (rows 1-20 at :1379-1398); :1400 '## [source text withheld from the public copy]'; :1447 '[source text withheld from the public copy].'; :1449 '## 4. Required trust boundaries' (4.1-4.7); :1718 '## 8. Mandatory one-way rules'; :1838 'C12 ... All forty listed operation rows preserved.'
+    - **status_label**: INCLUDED WITH STATUS LABEL (C11)
+  - item 28
+    - **claim**: Standards shoulders were re-verified on 2026-08-06 for twelve sources: IEEE 7001-2021 (Active, held), ISO 19011:2026 (Edition 4, May 2026), ISO/IEC 42001:2023, ISO/IEC 27001:2022+Amd1:2024, ISO/IEC 27002:2022, ISO/IEC 27014:2020 (replacement FDIS pending), IEEE 1012-2024 (published 2025-08-22), IEEE 7009-2024, IEEE P7009.1 (Active PAR, 'must not be cited as' published), IEC 61508:2010, IEC 62061:2021+amendments through 2026, ISO 13850:2015.
+    - **date**: 2026-08-06
+    - **evidence**: chat-1.md:1570-1586 table header '| **Source** | **Status on 2026-08-06** | ...'; :1870 '## [source text withheld from the public copy]'; :1780 '[source text withheld from the public copy].'
+    - **status_label**: EXTERNAL STANDARD / VERIFIED SHOULDER; PROVENANCE UPDATE (CH-07)
+  - item 29
+    - **claim**: Repository implementation observations preserved from the chat (not re-opened): eb-receipt's Device.issue_command() builds a signed CommandRecord but execution stays with the caller (not yet a non-bypassable gate) and CommandResult is 'a synthetic unsigned payload'; eBIOS has [source text withheld from the public copy], caller-selectable policy signature verification. All require ref-pinned reinspection before publication.
+    - **date**: 
+    - **evidence**: chat-1.md:1653-1671; :1667 '[source text withheld from the public copy] ... CommandResult is a synthetic unsigned payload ... require direct ref-pinned reinspection before publication.'; :1671 'halt_on_critical defaulting to false'; :1841 'C15 | ... | [source text withheld from the public copy]'
+    - **status_label**: CHAT-PRESERVED REPOSITORY OBSERVATION
+  - item 30
+    - **claim**: Fourteen architecture components are listed [source text withheld from the public copy]; trusted time/sequence service; privacy/redaction gateway.
+    - **date**: 
+    - **evidence**: chat-1.md:1736 '## 9. Components identified as not yet established' through :1764; chat-2.md:1850
+    - **status_label**: not yet established
+  - item 31
+    - **claim**: An eight-row contradiction/open-decision register CH-01..CH-08 was produced (lambda_A semantics; residual accumulation; Merkle vs hash-linked; S2/S3; verifier vs auditor; output taxonomy; standards status; repository vs standards evidence).
+    - **date**: 
+    - **evidence**: chat-1.md:1768 '# [source text withheld from the public copy]'; rows :1774-1781 with relations 'OPEN AUTHORIAL TENSION', 'LATER NARROWING / SCOPE DIVERGENCE', 'PROSE / DESCRIPTION MISMATCH', 'PROVISIONAL ARCHITECTURE', 'LAYER DIVERGENCE', 'DEFINITIONAL / TAXONOMIC VARIANCE', 'PROVENANCE UPDATE', 'EVIDENCE-LAYER SEPARATION'; identical chat-2.md:1882-1895
+    - **status_label**: register CH-01..CH-08
+  - item 32
+    - **claim**: Six 'manuscript-ready passages' exist in chat-1 (typed lambda separation; observation scope; authority and experience; complete action lifecycle; segregation principle; standards relationship); chat-2 has seven, prepending 'Universal reconstruction versus physical frame realization'. They remain tied to the open tensions.
+    - **date**: 
+    - **evidence**: chat-1.md:1783 '# [source text withheld from the public copy]'; :1791-1792 '[[source text withheld from the public copy].'; chat-2.md:1897, :1913-1915 '## 1. Universal reconstruction versus physical frame realization'
+    - **status_label**: EDITORIAL STATUS: manuscript-ready but tied to open tensions
+  - item 33
+    - **claim**: A coverage/exclusion ledger C01-C20 records what was excluded (ChatGPT chrome, 'Worked for …' timing metadata) and included; chat-2 adds C00 and C00A.
+    - **date**: 
+    - **evidence**: chat-1.md:1823-1846; :1827 '[source text withheld from the public copy]'; :1829 'C03 | "Worked for …" timing metadata | EXCLUDED'; :1846 '[source text withheld from the public copy]'; chat-2.md:1945-1946 '[source text withheld from the public copy]'
+    - **status_label**: EXCLUDED / INVENTORIED / INCLUDED / NORMALIZED / NOT INGESTED / SATISFIED AT SEGMENT LEVEL
+  - item 34
+    - **claim**: Held sources: chat-1 lists chat.txt (58,894 bytes), the Sourcebook v0.1 .docx (template only) and the IEEE 7001-2021 PDF; chat-2 adds chat_history_chunk_02.txt (62,270 bytes), 'Formula Stripping and Verification.txt' and the aybllc/broken-zero README [source text withheld from the public copy].
+    - **date**: 2026-08-06
+    - **evidence**: chat-1.md:1862-1868; chat-2.md:1986-1993 '| **[source text withheld from the public copy] ...; not external scientific validation |'
+    - **status_label**: Held locally / Held licensed copy
+  - item 35
+    - **claim**: Chat-2 adds four non-standards external shoulders for the UHA frame question: BIPM SI brochure, IERS ICRF, ATNF pulsar catalogue help, Hobbs et al. TEMPO2 (peer-reviewed), each bounded as not proving the UHA anchor profile.
+    - **date**: 2026-08-06
+    - **evidence**: chat-2.md:114 '## 5. External scientific shoulders for frame realization'; :130 '[SOURCE BOUNDARY] [source text withheld from the public copy].'; :1995-2016 official-source table
+    - **status_label**: SOURCE BOUNDARY
+  - item 36
+    - **claim**: Deferred work: both volumes end with the same nine-item 'Publication work remaining': (1) [source text withheld from the public copy] GitHub repositories at pinned commits; (3) acquire attachment bodies to be cited; (4) define whether S0-S3 is heuristic, conformance profile or risk rule; (5) clause-level standards mapping; ([source text withheld from the public copy]; (7) specify independent outcome observation linked to permit consumption; (8) [source text withheld from the public copy] weaving mechanism; (9) preserve the correction register.
+    - **date**: 2026-08-06
+    - **evidence**: chat-1.md:1903-1921 '## 4. Publication work remaining' items 1-9; chat-2.md:2032-2050 identical; citation rule chat-1.md:1888-1901 incl. 'Recheck standards status at manuscript freeze'
+    - **status_label**: Publication work remaining
+  - item 37
+    - **claim**: End statements claim segment-level completeness, not verification.
+    - **date**: 2026-08-06
+    - **evidence**: chat-1.md:1923-1925 '[source text withheld from the public copy].'; chat-2.md:2052-2054 'This second chat-history volume ... [source text withheld from the public copy]'
+    - **status_label**: End statement
+  - item 38
+    - **claim**: Chat-2's new material: the assistant first ruled '[source text withheld from the public copy]', overstating a frame-registration problem as universal impossibility and wrongly listing epoch as missing; the user corrected it; the Broken Zero repository was then read before the claim was stabilized.
+    - **date**: 2026-08-06
+    - **evidence**: chat-2.md:60-62 '[CORRECTION TRAIL] [source text withheld from the public copy].'; :70-72 assistant claim; :88 '## [source text withheld from the public copy]'
+    - **status_label**: CORRECTION TRAIL
+  - item 39
+    - **claim**: Broken Zero README (current main, 2026-08-06) is quoted as project-definition evidence: [source text withheld from the public copy]; the frame declares origin and axes as a convention, not a vantage; the codec accepts but does not validate the declared epoch; t = count · 2^e · T_21.
+    - **date**: 2026-08-06
+    - **evidence**: chat-2.md:94 '[source text withheld from the public copy].'; :96-98 '> [source text withheld from the public copy]'; :100 't = count · 2^e · T_21'; :108-110 '> [source text withheld from the public copy] a stated convention, not a vantage.'
+    - **status_label**: project-definition evidence
+  - item 40
+    - **claim**: Chat-2's 'publication-grade ruling': [source text withheld from the public copy] realizing the declared frame from mutually available observations and models.
+    - **date**: 2026-08-06
+    - **evidence**: chat-2.md:138-142 '## 6. Publication-grade ruling' / '> [source text withheld from the public copy].'
+    - **status_label**: Publication-grade ruling
+  - item 41
+    - **claim**: Chat-2 leaves six open research questions on UHA anchors (minimum anchor declaration; exact vs measured vs model-dependent parts; uncertainty propagation into candidate cells; validity interval; chained anchors; reporting unresolved frames) and rules that the correct failure result is a typed unresolved-frame state, not a fabricated coordinate.
+    - **date**: 2026-08-06
+    - **evidence**: chat-2.md:146-158 '## 7. Open research questions retained' items 1-6; :160 '[source text withheld from the public copy].'
+    - **status_label**: Open research questions
+  - item 42
+    - **claim**: Verified overlap: after normalizing Part numerals, chat-2 lines 166-2054 and chat-1 lines 52-1925 are identical for the first 1,747 lines of body; only 163 lines differ, all in the manuscript-ready list (added UHA passage, renumbering), the coverage ledger (C00/C00A), the segment map (nine rows vs seven), the held-source and official-source tables, and the end statement.
+    - **date**: 
+    - **evidence**: diff of /tmp/claude-0/-home-user/bfcfd013-a2da-5019-961e-7f46116f08be/scratchpad/chatdocx/c1body.txt vs .../c2body.txt: first hunk '1748c1748,1752' ('## 1. Typed lambda separation' -> '## 1. Universal reconstruction versus physical frame realization'); 163 differing lines in total
+    - **status_label**: overlap confirmed
+  - item 43
+    - **claim**: Chat-2 carries stale cross-references from chat-1: it says 'See Part II' for the lambda tension although that material is Part III in chat-2; its editorial box cites 'Parts II and V' although in chat-2 those are Parts III and VI; row C00A says the repeated body is 'Parts II-V' though the segment map assigns it Parts II-IX.
+    - **date**: 
+    - **evidence**: chat-2.md:515 '[source text withheld from the public copy].' vs :231 '# [source text withheld from the public copy]'; :1906 'open tensions in Parts II and V' vs :1882 '# Part VI - Contradiction ... register'; :1946 'C00A | ... | Parts II-V' vs segment map :1973-1980
+    - **status_label**: internal inconsistency
+  - item 44
+    - **claim**: On origin/main (HEAD 2165144, 2026-09-11) the volumes are filed as binary .docx at L8/L4/work/writing/chat/ (chat-1 73,264 bytes; chat-2 77,894 bytes); the directory sheet says they were not read and are 'records of conversation, not arguments'.
+    - **date**: 2026-09-11
+    - **evidence**: git -C /home/user/auditonomous ls-tree -r origin/main: 'L8/L4/work/writing/chat/auditonomouos-chat-2.docx', 'L8/L4/work/writing/chat/auditonomous-chat-1.docx'; origin/main:L8/L4/work/writing/chat/0.md line 16 'recorded working sessions (chat transcripts) as produced; binary, not read in this pass. They are records of conversation, not arguments; any argument in them belongs at L8/L5/ only when stated there.'
+    - **status_label**: binary, not read in this pass
+  - item 45
+    - **claim**: First commit holding chat-1, chat-2, chat-3 and manuscripts/main/Auditonomous_Book_Material_Sourcebook_v0.1_CHAT-HIST.docx is merge commit 077d5de (2026-08-08 16:13:45 -0700, 'Merge pull request #12 from aybllc/claude/define-auditonomous-2z0x5s'); the files are absent from both parents (f3f7e47, 5c52b12), so they were introduced in the merge itself at manuscripts/.
+    - **date**: 2026-08-08
+    - **evidence**: git -C /home/user/auditonomous log --all -m --diff-filter=A --name-only -- 'manuscripts/auditonomous-chat-1.docx' ... -> 077d5de; cat-file -e on both parents: absent; 077d5de9a54c6961b5ef67ea98e313602a88af14
+    - **status_label**: 
+  - item 46
+    - **claim**: Subsequent moves: 8c98573 (2026-08-15, 'Reorganize working tree to the shared aybllc model layout') moved chat-1/2 to manuscripts/main/chat/ and deleted manuscripts/auditonoomous-chat-3.docx, the CHAT-HIST.docx and intake/prompts/chat.txt; ccc0554 (2026-09-05) moved them to USO/l4/work/writing/chat/; 3045e07 (2026-09-12, 'The rename pass: USO/ is L8/') moved them to L8/L4/work/writing/chat/ and wrote the 25-line sheet.
+    - **date**: 2026-09-12
+    - **evidence**: git log --all --name-status: '8c98573 ... D manuscripts/auditonoomous-chat-3.docx; R100 manuscripts/auditonomouos-chat-2.docx manuscripts/main/chat/...'; 'ccc0554 2026-09-05 Instantiate the Seven-Layer Model canonical topology R100 manuscripts/main/chat/... USO/l4/work/writing/chat/...'; '3045e07 2026-09-12 ... R100 USO/l4/work/writing/chat/... L8/L4/work/writing/chat/...'
+    - **status_label**: 
+  - item 47
+    - **claim**: Chat-1's .docx is byte-identical to the file the pre-prune tree called Auditonomous_Book_Material_Sourcebook_v0.1_CHAT-HIST.docx, i.e. chat-1 is the Sourcebook v0.1 CHAT-HIST volume under another name.
+    - **date**: 2026-09-14
+    - **evidence**: sha256 0b247ebda70154eb15ab9c0638b465155a0b3a898360f878b5307ab816c823d4 for both /tmp/claude-0/-home-user/bfcfd013-a2da-5019-961e-7f46116f08be/scratchpad/chatdocx/chat1.docx and /tmp/claude-0/-home-user/bfcfd013-a2da-5019-961e-7f46116f08be/scratchpad/manuscript/history/Sourcebook_CHAT-HIST.docx; roadmap branch L8/L6/history/restore-2026-09-14.md:354 '| [source text withheld from the public copy] |'
+    - **status_label**: AT HEAD, byte-identical
+  - item 48
+    - **claim**: The chat-1 input file existed in the repository as intake/prompts/chat.txt at 1d83788 with exactly 58,894 bytes (matching 'Input bytes 58,894'); it was deleted at 8c98573 and deliberately not restored on 2026-09-14 as the owner's personal chat export. chat_history_chunk_02.txt never appears anywhere in repository history.
+    - **date**: 2026-09-14
+    - **evidence**: git cat-file -s 1d83788:intake/prompts/chat.txt -> 58894; restore-2026-09-14.md §4 '[source text withheld from the public copy].'; git log --all --name-only -- '*chat_history*' '*chunk_02*' -> no paths
+    - **status_label**: NOT RESTORED (personal material)
+  - item 49
+    - **claim**: The roadmap branch (origin/claude/book-structure-roadmap-k8ap82, PR #27) restores a third volume auditonoomous-chat-3.docx (54,751 bytes) from 1d83788 by commit 62d2e3f and describes it as CHAT-HIST-03 of 6 August 2026; its header reads '[source text withheld from the public copy]' with Parts I-VIII (not read in full for this task).
+    - **date**: 2026-09-14
+    - **evidence**: 62d2e3f 2026-09-14 01:42:45 +0000 'Set up the repository before research...' stat 'L8/L4/work/writing/chat/auditonoomous-chat-3.docx | Bin 0 -> 54751 bytes'; roadmap chat/0.md:17 '"[source text withheld from the public copy]" (CHAT-HIST-03, 6 August 2026) ... the third volume of the ingestion series whose first volume is byte-identical to auditonomous-chat-1.docx'; pandoc text of chat3.docx lines 1-9 in /tmp/claude-0/-home-user/bfcfd013-a2da-5019-961e-7f46116f08be/scratchpad/chatdocx/chat3.txt
+    - **status_label**: Version 0.1 CHAT-HIST-03
+  - item 50
+    - **claim**: The 2026-09-13 roadmap record (revised 2026-09-14) states that the two chat transcripts were extracted and read, and uses them as chapter feeds: chat-1 for Ch 9 ('[source text withheld from the public copy]') and Ch 14 ('[source text withheld from the public copy]'); chat-2 for Ch 17 ('UHA frame realization and epoch ruling'); CH-01 is a verify item for Ch 16; the 20-subsystem architecture and fourteen 'not yet established' components are to be carried 'as the honest inventory'.
+    - **date**: 2026-09-14
+    - **evidence**: roadmap branch L8/L5/research/review/BOOK_STRUCTURE_AND_ROADMAP_2026-09-13.md:5 '[source text withheld from the public copy]'; :183, :232, :263 feeds; :257 '[source text withheld from the public copy])'; :416 'three chat ingestions'; :521 '[source text withheld from the public copy]'; header line 3 'PROPOSAL · INTERNAL ONLY · INTERNALLY DERIVED'
+    - **status_label**: PROPOSAL · INTERNAL ONLY · INTERNALLY DERIVED
+  - item 51
+    - **claim**: The chapter stubs that cite the chats (ch09, ch14, ch17 under L8/L4/work/writing/book/, opened by b1ec302 on 2026-09-14) are all 'CONJECTURE' on the ladder and contain no text.
+    - **date**: 2026-09-14
+    - **evidence**: roadmap branch L8/L4/work/writing/book/ch09-...md, ch14-...md, ch17-...md: '**Status on the ladder:** CONJECTURE'; '## Text\n\n*[source text withheld from the public copy]'; book/0.md 'No chapter has text yet' (writing/0.md roadmap holdings line)
+    - **status_label**: CONJECTURE; Not yet drafted
+  - item 52
+    - **claim**: The roadmap branch's sourcebook sheet binds the chat volumes to the Sourcebook v0.1 series; Sourcebook v0.1 itself is dated 2026-08-06 and INTERNAL ONLY. Its source manifest does not list chat.txt or any chat-history file but shares held inputs with the chat volumes (THESIS_lambda_decomposed_record.md, 'Formula Stripping and Verification.txt', 7001-2021.pdf).
+    - **date**: 2026-08-06
+    - **evidence**: /tmp/claude-0/-home-user/bfcfd013-a2da-5019-961e-7f46116f08be/scratchpad/manuscript/roadmap/sourcebook-0.md:20 'the chat-history ingestion volumes of the same series are at L8/L4/work/writing/chat/'; same file 'the sourcebook (v0.1, 2026-08-06) ... INTERNAL ONLY'; /tmp/claude-0/-home-user/bfcfd013-a2da-5019-961e-7f46116f08be/scratchpad/manuscript/roadmap/Manifest_v0.1.json:23 '"file": "7001-2021.pdf"', :65 '"file": "Formula Stripping and Verification.txt"', :77 '"file": "THESIS_lambda_decomposed_record.md"'; grep -i chat on the manifest: no match
+    - **status_label**: INTERNAL ONLY
+  - item 53
+    - **claim**: None of the other three extracted sources mentions the chat ingestions; the main Sourcebook v0.1 header instead says it extracts 'from the current chat and attached files'.
+    - **date**: 2026-08-06
+    - **evidence**: grep -c 'CHAT-HIST|Chat History Ingestion' -> 0 for /tmp/claude-0/-home-user/bfcfd013-a2da-5019-961e-7f46116f08be/scratchpad/manuscript/text/auditnomous-main.md, auditonomouos-important.md, auditonomous-08-03-26.md; auditnomous-main.md:11 '**[source text withheld from the public copy].'
+    - **status_label**: absent
+  - item 54
+    - **claim**: Part of the attachment source debt listed in the chats is discharged in the roadmap tree: THESIS_lambda_decomposed_record.md (L8/L5/research/review/), Lambda_Explainer_Prompt.md (L8/L4/work/writing/prompts/), 02_AutonomousTheory(1).pdf and #autonomous(1).txt (L8/L5/research/review/autonomous-theory/), deep-research-auditonomous.md and both autonomouos-deep-research-*.odt (L8/L4/work/computation/). Three named attachments never appear anywhere in repository history: eb_carrier_memoirs.pdf, eb_carrier_chart_series (1).pdf, The_NASA_Paper_and_Small_Falcon_Algebra.pdf.
+    - **date**: 2026-09-14
+    - **evidence**: git ls-tree -r origin/claude/book-structure-roadmap-k8ap82 --name-only | grep (listed paths); git log --all --format= --name-only -- '*eb_carrier*' '*NASA_Paper*' -> no paths
+    - **status_label**: SOURCE DEBT partially discharged
+  - item 55
+    - **claim**: State of the manuscript as these transcripts leave it: organized, labelled book material only — no chapter prose, formulas marked authorial/provisional, repository claims unverified at pinned refs, standards used as shoulders only, one unresolved core definition (λ_A), fourteen architecture components not yet established, nine publication tasks open.
+    - **date**: 2026-08-06
+    - **evidence**: chat-1.md:1791-1792 ('[source text withheld from the public copy]'); :1843 'C17 ... equations remain marked authorial/provisional'; :1736-1764; :1903-1921; chat-1.md:1897 '[source text withheld from the public copy].'
+    - **status_label**: book material, not manuscript
+- **open_questions**
+  - Who authored the lambda 'correction block' formulas ([source text withheld from the public copy] ...)? The ingestion labels the block 'Authorial correction' but reproduces only the one-line user correction verbatim and says the attached THESIS_lambda_decomposed_record.md body was 'not independently re-read here'; raw turns are not in these files.
+  - Has the owner ruled on CH-01 (the two incompatible λ_A formulations) since 2026-08-06? Nothing in either volume; the roadmap of 2026-09-13/14 still lists it as a verify item for Chapter 16.
+  - Where is chat_history_chunk_02.txt (62,270 bytes) held? It is cited as 'Held locally' but never appears in repository history, unlike chat.txt (intake/prompts/chat.txt at 1d83788, 58,894 bytes, pruned 2026-08-15 and not restored).
+  - What is the source of the 'four-class formal gate' (PERMIT, OVERRIDE, DEGRADE, REFUSE) that the chat 'also reports' against the seven-output list (CH-06)? The volumes do not identify the document it comes from.
+  - Were the standards statuses verified on 2026-08-06 (ISO 19011:2026 Edition 4 May 2026; IEEE 1012-2024 published 2025-08-22; IEC 62061 amendments through 2026; ISO/IEC 27014 replacement FDIS pending) re-checked at any later date? The volumes require a recheck 'at manuscript freeze'; no later recheck appears in these files.
+  - Was the third volume (CHAT-HIST-03, restored only on the roadmap branch) produced from a third chunk or from the same chat.txt? Its header gives no 'Input source' line in the first 40 lines; it was not read in full for this task.
+  - Were the chat-preserved repository observations (eb-receipt CommandResult unsigned; eBIOS halt_on_critical default false; Merkle-style vs hash-linked chain) ever re-inspected at pinned commits as publication item 2 requires? Not evidenced in these files.
+  - Actual production timestamps of the three .docx volumes are unknown: the embedded dates are the python-docx template default (2013-12-23); the only dates are the self-declared 6 August 2026 and the first git appearance in merge 077d5de on 2026-08-08.

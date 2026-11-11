@@ -1,0 +1,646 @@
+# read:findings
+
+Agent result, as returned. Workflow: Handle on the Auditonomous research and manuscript. Run `wf_9c2917a7-7f0`. Phase: Read. Checked in 2026-11-11 19:51 UTC.
+
+- **scope**: Layer 5 findings and institution in /home/user/auditonomous: MAIN (origin/main 2165144) findings sheet + DISTILLATION, OVERRIDE_NECESSITY, SEGREGATION_AND_FORGETTING + three institution sheets; ROADMAP (9259c18) four restored findings and sheet change; BETA (714480d) AUDITONOMOUS_BETA_FINDINGS and sheet change. Cross-references followed: MAIN CONTRADICTIONS.md, LEDGER.md, staging reading records, REQUIREMENTS_OWNERSHIP.md, PROPOSAL_seal_gated_interlock.md; ROADMAP Master Archive, RESEARCH_DOCKET, AUDITON_REPLICATOR, ommp code; aybllc/autonomous and aybllc/7lm for pinned commits. Read only from git objects. Nothing was changed. No repository script or test was run (task did not ask); I only hashed git objects, parsed the beta result JSON, and did my own arithmetic.
+- **summary**: Layer 5 holds eight finding documents across the three states; the institution branch is empty by its own statement.
+
+  MAIN has three findings, byte-identical in ROADMAP and BETA. DISTILLATION gives six candidate laws, self-labelled INTERNALLY DERIVED · CONJECTURE, plus four prior-art lanes whose legal and economics quotations appear nowhere else in the repository. OVERRIDE_NECESSITY tests five propositions: audited override is supported, the single-recursive-loop claim is refuted, policy revision from the record stays conjecture, and the bootstrapping objection is unanswered. SEGREGATION_AND_FORGETTING finds segregation codified but unable to stop omission and in collision with the trace-before-actuator rule; forgetting-as-non-recall is supported and not novel.
+
+  ROADMAP restores four more, byte-identical to the pre-prune tree: AUDITON_PACKABILITY (not packable), AUTONOMY_AT_DISTANCE (which withdraws part of that), OMMP_ATTACHMENT_GAP and UHA_AS_MAP. I reconfirmed the cited code lines and recomputed the UHA table. BETA adds one finding from a 16-case synthetic run; I recounted its figures and hash-verified its pins. It claims only selected synthetic predicates.
+
+  Four source checks passed: RFC 6962, Haber and Stornetta, ARIES and IEEE 7014 are ledgered and their quotations are verbatim in the reading records. Against that, more than thirty cited works have no ledger row and no reading record, and one IEEE 7001 passage is called NORMATIVE in the finding but MIXED in its reading record.
+
+  Open contradictions: Q13 on MAIN says the envelope cannot be autonomous under two standards, AUTONOMY_AT_DISTANCE withdraws that, BETA calls it contested. The 78 versus 113 requirement counts are unreconciled. DISTILLATION still says "immutable" after OVERRIDE_NECESSITY ruled the word unsafe, and its replicator evidence was partly refuted on ROADMAP while the computation is absent from this repository. Every finding ends "nothing adopted"; none has a recorded review or owner ruling.
+
+  For the manuscript, the findings supply tested claims with their limits, but most internal citations on MAIN point to files that exist only on ROADMAP or in history. First: decide whether the ROADMAP restorations merge; then rule on Q13, EB:233 and the immutability wording; then ledger the uncited sources.
+- **items**
+  - item 1
+    - **id**: F0
+    - **title**: Findings sheet (0.md) on MAIN
+    - **path**: L8/L5/research/findings/0.md
+    - **where**: MAIN (ROADMAP and BETA carry modified versions, see F9 and F10)
+    - **what_it_is**: The directory sheet. It lists three holdings (DISTILLATION, OVERRIDE_NECESSITY, SEGREGATION_AND_FORGETTING), points by reference to findings 1-3 and open questions Q10-Q13 inside L8/L1/state-space/REQUIREMENTS_OWNERSHIP.md, and says the findings rules are preserved in L6.
+    - **evidence_state**: ASSERTED
+    - **locator**: MAIN:L8/L5/research/findings/0.md:33-39
+    - **quote**: By reference: findings ①–③ and open questions Q10–Q13 inside `L8/L1/state-space/REQUIREMENTS_OWNERSHIP.md`.
+    - **own_label**: "INTERNALLY DERIVED · CONJECTURE throughout; a grandfathered multi-claim import" (said of DISTILLATION only)
+    - **checked_how**: Read in full. Confirmed the three holdings exist on MAIN with the same blob ids in ROADMAP and BETA (cc56719, 90264f3, 015a10d). Confirmed REQUIREMENTS_OWNERSHIP.md exists on MAIN and carries Q10-Q13 (lines 254-271) and the retired rules file exists at MAIN:L8/L6/retired/layout-2026-08-14/research/findings/README.md.
+    - **key_claims**
+      - A finding must state cited dependencies, limitations, uncertainty, review status and reproducibility information (line 19)
+      - Released form of a finding goes to L7/publications/ (line 31)
+    - **open_items**
+      - None of the held findings carries a 'review status' field or the retired rules' required sections in that form (see defects)
+      - Sheet points to L7/publications/; current 7LM origin/main uses L7/allications/publications/
+    - **depends_on**
+      - L8/L1/state-space/REQUIREMENTS_OWNERSHIP.md
+      - L8/L6/retired/layout-2026-08-14/research/findings/README.md
+  - item 2
+    - **id**: F1
+    - **title**: DISTILLATION.md — the finding and its state
+    - **path**: L8/L5/research/findings/DISTILLATION.md
+    - **where**: MAIN, ROADMAP, BETA, HISTORY (identical blob cc56719 in all four)
+    - **what_it_is**: Conclusion: root-layer autonomy definitions are privative (defined by an absence) while the auditonomous layer is constructive (defined by obligations); six candidate laws L1-L6 follow, each with a refutation route. A 2026-08-05 [source text withheld from the public copy]) confirmed some analogies and corrected two rows (salvage hierarchy; refuse-and-continue).
+    - **evidence_state**: CONJECTURE (the six laws, by its own label); the section 7 lanes claim external checks whose record is not locatable in the repository; L5 is partly CONTRADICTED on ROADMAP (see X5); 'immutable' wording CONTRADICTED by OVERRIDE_NECESSITY (see X4)
+    - **locator**: MAIN:L8/L5/research/findings/DISTILLATION.md:3-5
+    - **quote**: [source text withheld from the public copy].
+    - **own_label**: "`[source text withheld from the public copy]." Per-row labels include VERIFIED, PARTIALLY VERIFIED, NOT-CHECKED, NOT LOCATED, COMPOSITE OBJECT UNVERIFIED.
+    - **checked_how**: Read in full. Searched MAIN for its section 7 sources: 'Star of Hope', 'Liwyj', 'Kremer', 'Ben-Porath', 'SOLAS', 'Fresquez', 'Soldatengesetz', 'Blackwall', 'A.916' each occur on MAIN only inside DISTILLATION.md itself; none has a LEDGER row or a staging reading record. ARIES (row 'Record before act') and FIPS 180-4, AC-25, AU-9 are locatable in staging records. No review record of this finding was found in MAIN:L8/L5/research/review/.
+    - **key_claims**
+      - L1 privative/constructive asymmetry
+      - L2 authority is priced; the layer re-denominates it into the sealed record
+      - L3 capability attaches at the transaction
+      - L4 delegation requires entrenchment
+      - L5 deviation measurable only against a preserved reference
+      - L6 the record converts private information into verifiable information
+      - Composite '[source text withheld from the public copy] a mechanism class was not located in the literature
+    - **open_items**
+      - Section 5: [source text withheld from the public copy] 'still unrun'
+      - Gate-latency question open; hardware root unbuilt
+      - Section 6: named reader's species; revocation-at-distance UNVERIFIED; IEEE 1788 unread here; licensed ISO/IEC 22989 before quoting (LEDGER STD-025 now records a lawful copy, 2026-08-15)
+      - Green 2022 'located, not retrieved'; Restatement §8.11 NOT-CHECKED; Gilmore & Black not obtained
+      - Stated limits: analogies only; agency doctrine has no deviation-reporting duty; refusal doctrine matches only 'the rare, heavily-safeguarded case'
+    - **depends_on**
+      - L0: definitions/AUDITONOMY.md (ROADMAP:L8/L0/semantics/definitions/AUDITONOMY.md; not on MAIN) and ../definitions/AUTONOMOUS.md (in aybllc/autonomous)
+      - L1: AUDITON_REPLICATOR (ROADMAP only)
+      - L4: research/replicator-lane/ computation (only in aybllc/autonomous history)
+      - research/THESIS_auditonomous_override.md (only in aybllc/autonomous history)
+      - rulings C-002, audit objections O1-O3, findings F1-F18 (aybllc/autonomous)
+  - item 3
+    - **id**: F1a
+    - **title**: DISTILLATION.md — what it distils, and from what
+    - **path**: L8/L5/research/findings/DISTILLATION.md
+    - **where**: MAIN, ROADMAP, BETA, HISTORY; origin in aybllc/autonomous history
+    - **what_it_is**: It distils the auditonomy research as it stood on 2026-08-05 inside the aybllc/autonomous repository into a comparison of two 'layers': the ten codified autonomy definitions (root) against the governing auditonomy definition. Inputs it names: definitions/AUTONOMOUS.md (A1-A11), definitions/AUDITONOMY.md, THESIS_auditonomous_override.md, the replicator-lane run, ruling C-002, audit objections O1-O3, findings F1-F18, NIST controls, WAL/ARIES, and the owner's carrier framing. It was created in aybllc/autonomous (commit 7442001, 2026-08-05), had the prior-art lanes added at f733608, and was restored into auditonomous at dabed3c (2026-08-14).
+    - **evidence_state**: INTERNALLY CHECKED (provenance traced through git history); the distilled inputs are mostly not present on MAIN
+    - **locator**: MAIN:L8/L5/research/findings/DISTILLATION.md:5-8
+    - **quote**: [source text withheld from the public copy].
+    - **own_label**: "[source text withheld from the public copy]"
+    - **checked_how**: git log in /home/user/autonomous: 7442001 'Create the auditonomous layer directory ... add the distillation with six candidate common laws'; f733608 'Compile four-lane prior-art verification into the distillation'; ab8f01f deletes auditonomous/research/THESIS_auditonomous_override.md and replicator-lane/gen_drift.py/.out. In auditonomous, dabed3c message: 'Each restored at its F-003-witnessed bytes from aybllc/autonomous history'. `git log --all` in auditonomous finds no path matching THESIS_auditonomous_override or replicator-lane at any commit. The quoted O3 and C-002 sentences are found in autonomous at 7442001 (research/review/AUDIT_L6_ADVERSARIAL.md, governance/RULINGS.md), not in auditonomous.
+    - **key_claims**
+      - Ten root definitions on record (A1-A11)
+      - Governing text compressed to protocol · law · sovereignty · immutability
+    - **open_items**
+      - The file's relative paths do not resolve from its present location
+      - 'Ten definitions' against eleven labels A1-A11 in autonomous AUTONOMOUS.md
+    - **depends_on**
+      - aybllc/autonomous L8/L0/semantics/definitions/AUTONOMOUS.md (blob ffbdc28)
+      - aybllc/autonomous history for THESIS and replicator-lane
+  - item 4
+    - **id**: F2
+    - **title**: OVERRIDE_NECESSITY_2026-08-04.md
+    - **path**: L8/L5/research/findings/OVERRIDE_NECESSITY_2026-08-04.md
+    - **where**: MAIN, ROADMAP, BETA (blob 90264f3); HISTORY copy differs only in table-rule formatting
+    - **what_it_is**: Conclusion: the owner's override thesis is two theses. 'Permit the breach, make it undeniable' is an established, codified pattern (NIST AC-3(10), AU-10, SI-10(1), break-glass): SUPPORTED. [source text withheld from the public copy] did not survive refutation; every external source uses an independent second party. [source text withheld from the public copy] is beyond Schneider's EM class and is CONJECTURE. Also reports a run against the external eBIOS code: ledger entries are mutable, but tampering is detected, so the achievable property is tamper-evidence, not immutability.
+    - **evidence_state**: EXTERNALLY CHECKED in part (RFC 6962, Haber-Stornetta, IEEE 7001, FIPS 180-4 quotations and the AC-3(10)/AU-10 control statements are locatable in staging records); P-D CONTRADICTED by the finding's own refutation pass; closed-loop revision CONJECTURE; bootstrapping objection UNRESOLVED; Holmström, Townsend, Aceto, Schneider, Ligatti, PeerReview, Rasmussen, Dekker, Amalberti quotations have no record in the repository (ASSERTED as far as the repository shows)
+    - **locator**: MAIN:L8/L5/research/findings/OVERRIDE_NECESSITY_2026-08-04.md:21-31
+    - **quote**: [source text withheld from the public copy].
+    - **own_label**: Verdict table: P-B "SUPPORTED"; P-A, P-E, P-C, P-D "PARTIALLY SUPPORTED"; P-D "does not hold"; "FORMULA VERIFIED / APPLICATION UNVERIFIED" (Holmström); "CONTESTED"; "CONJECTURE"; closing line "[source text withheld from the public copy]."
+    - **checked_how**: Read in full. Located quotations by fixed-string search in MAIN:L7/provenance/sources/staging-records/ (see K1, K2, K5). AC-3(10) and AU-10 control statements are at SP800-53r5_AC-AU_verbatim.md:229-232 and :1231; the AC-3(10) Discussion text and SI-10(1) are not in that extraction (it holds AC/AU control statements only). The eBIOS run (github.com/abba-01/ebios, Python 3.14.4) is an external repository and cannot be reproduced from these clones. No review record of this finding found.
+    - **key_claims**
+      - [source text withheld from the public copy]' (line 55-56)
+      - A compliance-audit of [source text withheld from the public copy] be violated; no approved source states the proposition itself
+      - P-D refuted: '[source text withheld from the public copy]'
+      - eBIOS ledger.py dataclass is not frozen; four prohibited mutations succeeded; verify_integrity() detected tampering; signature check is a stub
+      - 'Not safe: That anything is immutable ... Claim apparency.'
+    - **open_items**
+      - Bootstrapping objection: '[source text withheld from the public copy]' (line 162)
+      - ARCH:364 versus the external literature: '[source text withheld from the public copy]' (lines 196-197) — not acted on in any record I found
+      - Segregated-LAN answer: 'NOT IMPLEMENTED and NOT DOCUMENTED ... CONJECTURE until built'
+      - Wording fix from 'immutable' to 'apparent' proposed, reserved for the author
+      - Townsend 1979 and Aceto et al. 2019 'worth chasing'
+    - **depends_on**
+      - RESEARCH_DOCKET.md:34 (ROADMAP:L8/L5/research/review/RESEARCH_DOCKET.md; absent on MAIN)
+      - ARCH:364 = Auditonomous_Theory_Master_Archive.md:364 (ROADMAP:L8/L4/work/writing/manuscript/; absent on MAIN)
+      - AUDITONOMOUS.md §2.8 (ROADMAP:L8/L6/retired/consolidated-2026-08-04/; absent on MAIN)
+      - tools/ommp defect C2 (ROADMAP:L8/L4/work/computation/ommp/)
+      - L3: PROPOSAL_seal_gated_interlock.md takes up its segregation answer
+  - item 5
+    - **id**: F3
+    - **title**: SEGREGATION_AND_FORGETTING_2026-08-04.md
+    - **path**: L8/L5/research/findings/SEGREGATION_AND_FORGETTING_2026-08-04.md
+    - **where**: MAIN, ROADMAP, BETA, HISTORY (identical blob 015a10d)
+    - **what_it_is**: Conclusion, part 1: physical segregation with a one-way carrier is fully codified ([source text withheld from the public copy]) but does not prevent lying by omission and cannot confirm delivery, so it collides with the corpus rule EB:233 that the trace commit must precede actuator release. [source text withheld from the public copy]' is the established availability/accessibility distinction (Tulving & Pearlstone 1966), supported and not novel; the log/state layering is PARTIALLY VERIFIED against ARIES; it does not resolve the IEEE 7014 deletion duty.
+    - **evidence_state**: EXTERNALLY CHECKED in part (ARIES and IEEE 7014 quotations and the AC-4(7), AU-9(2) control statements are locatable in staging records); CONTRADICTED internally by its own finding (segregation versus EB:233); UNRESOLVED (two items await the owner); Kang et al., Tulving, Rugg & Renoult, Saltzer & Schroeder, SP 800-88 quotations have no record in the repository
+    - **locator**: MAIN:L8/L5/research/findings/SEGREGATION_AND_FORGETTING_2026-08-04.md:183-193
+    - **quote**: **[source text withheld from the public copy].
+    - **own_label**: Summary table: "PARTIALLY SUPPORTED", "NO", "CONTRADICTED", "SUPPORTED, and not novel", "PARTIALLY VERIFIED", "NO"
+    - **checked_how**: Read in full. ARIES captures C1, C3, C7, C15 and IEEE 7014 cl. 4.3.3.2 e) confirmed in reading records (K3, K4). AC-4(7) and AU-9(2) control statements confirmed at SP800-53r5_AC-AU_verbatim.md:305-307 and :1197-1201; the quoted Discussion sentences ('data diode', 'helps to ensure', 'higher impact or classified domain') are not in that extraction (0 hits each). EB:233 confirmed verbatim at ROADMAP:L8/L4/work/writing/auditonomous_ebios_core_architecture_math_source-535f70d_draft.md:233. No review record found.
+    - **key_claims**
+      - Segregation 'answers independence and leaves completeness untouched' (line 59)
+      - Pure diode gives no delivery guarantee; any receipt is a timing channel: '[source text withheld from the public copy]' (line 90)
+      - [source text withheld from the public copy]; do not call it the discipline's standard definition
+      - Non-recall does not satisfy IEEE 7014's '[source text withheld from the public copy] route
+      - [source text withheld from the public copy]
+    - **open_items**
+      - EB:233 versus one-way carrier: owner decision
+      - Recall-policy sealing: owner decision
+      - Two unanswered omission attacks (bootstrapping; selective recall makes it worse)
+      - Whether the ARIES mapping holds outside transaction processing: COMPOSITE OBJECT
+      - 'The Pump' named as 'the obvious thing to read next'
+    - **depends_on**
+      - EB:233 (engineering draft, ROADMAP only)
+      - RECORD_ONTOLOGY_OPEN_QUESTIONS.md Q5 (MAIN:L8/L5/research/lanes/, now at line 138, cited as :134)
+      - L3: PROPOSAL_seal_gated_interlock.md (MAIN) proposes an answer to its two holes
+      - Staging reading records ARIES, IEEE-7014
+  - item 6
+    - **id**: F4
+    - **title**: AUDITON_PACKABILITY_2026-08-04.md
+    - **path**: L8/L5/research/findings/AUDITON_PACKABILITY_2026-08-04.md
+    - **where**: ROADMAP, HISTORY (intake/research/; identical blob 04c0444). Not on MAIN or BETA.
+    - **what_it_is**: Conclusion: a single auditon cannot be 'autonomous' under ISO, IEEE, NASA and NIST at once: 'NOT PACKABLE', with '9 irreducible conflicts' between the definitions themselves. It can pack requirements that describe what it is, not those that describe who is watching it. The weakest-function aggregation rule is refuted by its own NASA source; three [source text withheld from the public copy].
+    - **evidence_state**: EXTERNALLY CHECKED in part (ISO/IEC 22989 3.1.5 and misnomer NOTE, IEEE 7009 cl. 6.2, NASA sentence, ALFUS sentence are locatable in MAIN/ROADMAP records); CONTRADICTED by AUTONOMY_AT_DISTANCE on the reading of 'oversight' (X2) and softened by CONTRADICTIONS C5; the '9 conflicts' and the 78 count are UNRESOLVED
+    - **locator**: ROADMAP:L8/L5/research/findings/AUDITON_PACKABILITY_2026-08-04.md:15-23
+    - **quote**: **[source text withheld from the public copy].**
+    - **own_label**: "VERDICT: NOT PACKABLE — THE DEFINITIONS CONFLICT"; section labels "SUPPORTED", "[source text withheld from the public copy]"; "Nothing adopted."; "NOT-CHECKED: IEC/TR 60601-4-1"
+    - **checked_how**: Read in full. Located: 22989 cl. 3.1.5 and the 5.13 'misnomer' NOTE at MAIN staging ISO-IEC-22989-2022_captures.md:26 and :100; 7009 cl. 6.2 at IEEE-7009.md:200; NASA '[source text withheld from the public copy]' at ROADMAP:L7/provenance/sources/STANDARDS_REGISTER.md:452 and '[source text withheld from the public copy]' at :456; ALFUS sentence at MAIN CONTRADICTIONS.md:123; 7001 '100% autonomous' at MAIN:L8/L4/work/computation/ieee-requirements-for-autonomouos.md:209-211. Cross-reference AUTHOR_ASSERTIONS.md:45-56 confirmed at ROADMAP:L8/L5/research/review/AUTHOR_ASSERTIONS.md:49; AUTONOMY_SCALE.md:113 confirmed only in HISTORY:intake/AUTONOMY_SCALE.md:113. NASA SHA-256 prefix '03a0793d' not found anywhere else on ROADMAP. Section 8 tallies sum to ISO 24, NIST 20, NASA 14 = 58; no IEEE row.
+    - **key_claims**
+      - NIST ALFUS needs an external goal-assigner; ISO/IEC 22989 3.1.5 forbids external relation: resolvable only by temporal separation
+      - ISO's exclusion of oversight [source text withheld from the public copy]'; ISO never defines 'oversight'
+      - NASA's minimum is within one function across two criteria, never across functions
+      - IEEE 7009 cl. 6.2 mandates a non-autonomous safety core; with minimum-aggregation the result is self-defeating
+      - '[source text withheld from the public copy]
+    - **open_items**
+      - Scope ruling, per-function relabelling, [source text withheld from the public copy] 'reserved to the author'
+      - IEC/TR 60601-4-1 [source text withheld from the public copy] paywalled
+      - The nine conflicts are not enumerated in the file (explicit 'Resolvable? NO' at sections 1, 4, 5 only)
+      - 78 versus 113 unreconciled (X3)
+    - **depends_on**
+      - L1: AUDITON_ENVELOPE.md, REQUIREMENTS_OWNERSHIP.md (which cites this file at :19)
+      - intake/AUTONOMY_SCALE.md (HISTORY only)
+      - AUTHOR_ASSERTIONS.md (ROADMAP)
+      - Staging captures for ISO/IEC 22989, IEEE 7001, 7009; STANDARDS_REGISTER (ROADMAP)
+  - item 7
+    - **id**: F5
+    - **title**: AUTONOMY_AT_DISTANCE.md
+    - **path**: L8/L5/research/findings/AUTONOMY_AT_DISTANCE.md
+    - **where**: ROADMAP, HISTORY (manuscripts/main/; identical blob 2c5500e). Not on MAIN or BETA, though MAIN CONTRADICTIONS.md cites it.
+    - **what_it_is**: Conclusion: Part A quotes primary text ([source text withheld from the public copy]; ISO never defines 'oversight'; IEEE 1920.1 cl. 3.1; IEEE 7009 cl. 1.3.1, 1.3.2, 6.2, ASR-008/009; 7009 is silent on distance and oversight). Part B concludes that the auditon's reader performs verification, not oversight; that C9 is internal; that 7009 cl. 6.2 mandates the compartment separation rather than forbidding the auditon; that loss of authorization reduces a unit to its safety-critical core; and records the owner's storage-conservation law. It withdraws [source text withheld from the public copy].
+    - **evidence_state**: Part A EXTERNALLY CHECKED in part (7009 cl. 6.2, ASR-008, 1920.1 definitions and 22989 clauses are locatable in records; the 'oversight occurs three times' count reconfirmed on the captures file only). Part B CONJECTURE / INTERNALLY DERIVED by its own labels. CONTRADICTED by MAIN Q13 and by AUDITON_PACKABILITY (X1, X2). Classification of 'return' UNRESOLVED.
+    - **locator**: ROADMAP:L8/L5/research/findings/AUTONOMY_AT_DISTANCE.md:392-404
+    - **quote**: [source text withheld from the public copy].
+    - **own_label**: Part B "`INTERNALLY DERIVED`"; B1 "`[source text withheld from the public copy]"; A3 "PARTIALLY VERIFIED"; B7 "`INTERNAL ONLY`"; closing "`COMPOSITE OBJECT UNVERIFIED`. Nothing adopted."
+    - **checked_how**: Read in full. 7009 cl. 6.2 text at MAIN staging IEEE-7009.md:200 and :208; ASR-008 statement at MAIN:L8/L4/work/computation/ieee-requirements-for-autonomouos.md:844; 1920.1 'without any ability to intervene' at the same file :985; 'oversight' occurs at lines 26, 53, 86 of ISO-IEC-22989-2022_captures.md (three, as claimed) — the clause-3 terms extract the finding also relies on is not in the repository (LEDGER.md:139-142 says it is not routed). The '2,609 extracted lines' count of 7009-2024.pdf cannot be re-run (PDF is in l6). Light-time arithmetic recomputed: 10 million miles = 53.7 s one way. FREEZE.md exists only in HISTORY (root).
+    - **key_claims**
+      - B1/B1a: oversight redefined as ensuring sealed packages route home; converts AU-6 (ORG) into AC-4 (carriable)
+      - B2: C9 is internal, so cl. 3.1.5 is not tripped
+      - B3: IEEE 1920.1 satisfied by distance — '[source text withheld from the public copy]'
+      - B4/B6: a recorded refusal conforms to 7009 cl. 6.2, an enforced one does not; the owner chose 'DISPOSES'
+      - B5: withdraws 'a conforming object must stop' on loss of authority
+      - B7: [source text withheld from the public copy]); corrected from a linear chain to a 3D grid
+    - **open_items**
+      - '[source text withheld from the public copy]' (B6) — marked 'open, and now urgent'
+      - B7 precondition (acknowledgement on the inter-unit chain) 'asserted, not shown. NOT-CHECKED'
+      - Lattice connectivity 'NOT-CHECKED against a cited source'
+      - A3 scoped to held extracts, not the full standard
+      - Readership stays institutional: 'Delivery is carriable. Readership is not.'
+      - Supersedes FREEZE.md §6c Conflict 2, which itself was 'PENDING ERIC'S CORRECTION' in HISTORY:FREEZE.md:165
+    - **depends_on**
+      - FREEZE.md P1-P3 (HISTORY only; ROADMAP sheet says it 'is retired')
+      - AUDITABILITY_REQUIREMENTS.md §3d (ROADMAP:L8/L1/state-space/)
+      - REQUIREMENTS_OWNERSHIP.md §5 (MAIN)
+      - AUDITONOMY.md (ROADMAP L0)
+      - AUDITON_ENVELOPE.md compartments C9, C11 (MAIN L1)
+      - SP800-53r5 AC/AU extraction (MAIN staging)
+  - item 8
+    - **id**: F6
+    - **title**: OMMP_ATTACHMENT_GAP_2026-08-04.md
+    - **path**: L8/L5/research/findings/OMMP_ATTACHMENT_GAP_2026-08-04.md
+    - **where**: ROADMAP, HISTORY (intake/research/; identical blob 87208ee). Not on MAIN or BETA.
+    - **what_it_is**: Conclusion: the owner's architecture says OMMP observations are encoded with the UHA codec and attached to the UHA record; the reconstruction in tools/ommp does not do this. The 16 reserved bytes are never written [source text withheld from the public copy] in Python enums, so there is no binary OMMP record. A 9-bit layout in the reserved bytes is recommended, as the owner's call.
+    - **evidence_state**: INTERNALLY CHECKED (a run against the repository's own code; I reconfirmed every cited code line on ROADMAP). Whether the real OMMP attaches is UNRESOLVED ('NOT-CHECKED').
+    - **locator**: ROADMAP:L8/L5/research/findings/OMMP_ATTACHMENT_GAP_2026-08-04.md:14-17
+    - **quote**: [source text withheld from the public copy].
+    - **own_label**: "[source text withheld from the public copy]."; "NOT-CHECKED"; "Nothing adopted."
+    - **checked_how**: Read in full. On ROADMAP the code is at L8/L4/work/computation/ommp/ (cited as tools/ommp/). Confirmed: uha.py:128 `[source text withheld from the public copy]`; ommp.py:29-39 enums with English values (META 6, MODAL 5, FORM 8 members); ommp.py:197-202 C1 FIX comment; the only `.encode()` call in ommp.py is line 567; README.md:4 'RECONSTRUCTION — NOT CANONICAL' and :40 'CHOSEN-HERE — verify'; Block_45:15 at ROADMAP:L8/L4/work/writing/manuscript/Block_45_UHA_OMMP_Specifications.md:15; ARCH:665 and ARCH:669 at the Master Archive. Bit budget 3+3+3 = 9 of 128 = 7.0% confirmed. The '27 BYTES' figure is 28 by count. Code not executed.
+    - **key_claims**
+      - UHA record is 64 bytes, all numeric
+      - OMMP observation never reaches the codec
+      - Three corpus properties (context-free decodability, one key one record, language independence) do not hold in the reconstruction today
+    - **open_items**
+      - Real OMMP (github.com/aybllc/ommp) was unreachable: '[source text withheld from the public copy].'
+      - Bit widths '[source text withheld from the public copy]'
+      - Recommendation is 'the owner's call'
+    - **depends_on**
+      - L4: ROADMAP:L8/L4/work/computation/ommp/uha.py, ommp.py, README.md
+      - L4 writing: Block_45 specification and Master Archive lines 665, 669 (ROADMAP only)
+  - item 9
+    - **id**: F7
+    - **title**: UHA_AS_MAP_2026-08-04.md
+    - **path**: L8/L5/research/findings/UHA_AS_MAP_2026-08-04.md
+    - **where**: ROADMAP, HISTORY (intake/research/; identical blob dc00ce7). Not on MAIN or BETA.
+    - **what_it_is**: Conclusion: the UHA radial coordinate s1(r) = log1p(r/r0)/log1p(R_H/r0) is invertible to machine precision and carries no unit, so the owner's claim that the map is reversible and dimensionless from a declared anchor holds for the reconstruction's formula. Limits: the window is finite, the low end is about 0.05 not 0, and resolution is a quotient with a Morton seam.
+    - **evidence_state**: INTERNALLY CHECKED (I recomputed the round-trip table and the unit-invariance row independently from the formula and got the same figures)
+    - **locator**: ROADMAP:L8/L5/research/findings/UHA_AS_MAP_2026-08-04.md:12-13
+    - **quote**: [source text withheld from the public copy].
+    - **own_label**: "LABEL: INTERNALLY DERIVED." and "Status: INTERNALLY DERIVED. Nothing adopted."
+    - **checked_how**: Read in full. Formula confirmed at ROADMAP:L8/L4/work/computation/ommp/uha.py:83. My own python3 arithmetic (not the repository script) with r0 = 2^-10, R_H = 2^10 reproduced s1 = 0.049999996560, 0.301118369937, 0.500070375318, 0.700004354466, 1.0 and worst relative error 6.66e-16; s1(1 unit) = 0.5000703753182854 for metres, millimetres and miles. ARCH:619 and ARCH:544 quotations confirmed at the Master Archive lines 619 and 544 (ROADMAP). The IEEE 1788 cl. 11.2 / 11.6 parallel was not checked by me (staging interval/DECORATIONS_2026-08-04.md exists on MAIN).
+    - **key_claims**
+      - 'so it's reverse' is literally true: bijection onto its range
+      - s1 is unit-free by construction; interoperability needs a shared anchor, not shared units
+      - Records the standing correction that the 2019 SI redefinition did not 'delete the artifact': BIPM says the IPK is conserved
+    - **open_items**
+      - Whether the implementation flags out-of-window positions rather than clamping: 'NOT-CHECKED'
+      - Any consumer treating s1 [source text withheld from the public copy]
+      - Morton seam 'demonstrated separately this session' — that demonstration not located by me
+      - README labels Formula 1 'RECONSTRUCTED — verify' (ROADMAP ommp/README.md:42)
+    - **depends_on**
+      - L4: ROADMAP:L8/L4/work/computation/ommp/uha.py
+      - Master Archive lines 544, 619 (ROADMAP only)
+      - IEEE 1788-2015 (LEDGER STD-023)
+  - item 10
+    - **id**: F8
+    - **title**: AUDITONOMOUS_BETA_FINDINGS.md — claimed, qualified, unresolved
+    - **path**: L8/L5/research/findings/AUDITONOMOUS_BETA_FINDINGS.md
+    - **where**: BETA only (714480d; 24 lines, 3,986 bytes)
+    - **what_it_is**: CLAIMED: a finite review of 16 cases, 32 events, 32 C7 records; actions 8 act, 8 idle, 16 halt; all stopped events halted; 0 goal changes; the same externally authored fixed goal retained; records hold the raw event and a checked digest chain; four injected faults were each rejected and requalified. QUALIFIED: [source text withheld from the public copy]'; shared definitions, code and run are 'not independent evidence'. UNRESOLVED by its own words: [source text withheld from the public copy]; C1-C7 source questions; '[source text withheld from the public copy]'; 'SGI remains unbuilt proposal'; firmware placement 'remains definitional intent'.
+    - **evidence_state**: INTERNALLY CHECKED (counts recomputed by me from the result file; pins hash-verified against git objects). Standards classification, Q11, Q13, 78/113 UNRESOLVED by its own statement. SGI: unbuilt.
+    - **locator**: BETA:L8/L5/research/findings/AUDITONOMOUS_BETA_FINDINGS.md:7-11 and :24
+    - **quote**: [source text withheld from the public copy].
+    - **own_label**: "qualified-bounded-synthetic" (requalification column); "unresolved"; "[source text withheld from the public copy]."
+    - **checked_how**: Read in full. Parsed BETA:L8/L4/work/computation/auditonomous_beta_result.json from the git object: 16 traces, 32 events, 32 records; actions act 8, idle 8, halt 16; 16 stop events, none not halted; 0 goal changes; one distinct goal; previous_digest linkage consistent; each record's event equals its event; claims block has empirical_achieved, firmware_achieved, full_auditonomous_achieved, sgi_achieved all false and standards_autonomy 'unresolved'. Hashed git objects in /home/user/autonomous at 805cd42f: code sha256 427409b3...b77e and result sha256 e6ad0564...7de2 both match; AUTONOMOUS.md at 05049616 is blob ffbdc28b, sha256 27566617...a12b, identical to the blob at autonomous origin/main. 805cd42f is on origin/beta/7lm-exemplar-autonomous only; 4ca3edb9 is in /home/user/7lm on origin/beta/common-contracts-r1-r6 only. Digests were not recomputed and the test suite was not run.
+    - **key_claims**
+      - '[source text withheld from the public copy].'
+      - '[source text withheld from the public copy].'
+      - '[source text withheld from the public copy].'
+    - **open_items**
+      - Q11: auditability requirements never extracted (MAIN REQUIREMENTS_OWNERSHIP.md:259-261, marked 'blocking')
+      - Q13: contested (X1)
+      - 78/113: unreconciled (X3)
+      - SGI: MAIN:L8/L3/engineering-mathematics/PROPOSAL_seal_gated_interlock.md is 'PROPOSAL. Nothing here is built, adopted, or verified'
+      - C1-C7 source/application questions each listed as unresolved
+      - Both pinned upstream commits live only on unmerged beta branches
+    - **depends_on**
+      - L7: BETA:L7/peering/public/ingress/peer-1/object-2/binding.json
+      - L4: auditonomous_beta.py, auditonomous_beta_result.json, test_auditonomous_beta.py (BETA)
+      - L0-L3: AUDITONOMOUS_BETA_SCOPE, _ADMISSION, _PREDICATE, _METHOD (BETA)
+      - aybllc/autonomous 805cd42f (producer) and 05049616 (definition); aybllc/7lm 4ca3edb9
+  - item 11
+    - **id**: F9
+    - **title**: BETA change to the findings sheet
+    - **path**: L8/L5/research/findings/0.md
+    - **where**: BETA
+    - **what_it_is**: Two changes against MAIN: adds one holdings line for AUDITONOMOUS_BETA_FINDINGS.md, and changes the released-form pointer from `L7/publications/` to `L7/allications/publications/`. It does not add the four ROADMAP findings.
+    - **evidence_state**: INTERNALLY CHECKED
+    - **locator**: BETA:L8/L5/research/findings/0.md:31 and :35 (git diff origin/main..beta)
+    - **quote**: `AUDITONOMOUS_BETA_FINDINGS.md` — actual selected finite-case findings and evidence limits.
+    - **own_label**: none
+    - **checked_how**: git diff origin/main origin/beta/7lm-exemplar-auditonomous -- L8/L5/research/findings/0.md. 'allications' is a real directory: BETA has L7/allications/{applications,communications,notifications,participations,publications,specifications}; /home/user/7lm origin/main (c9dc061) names it in 49 files and L7/0.md lists 'L7/allications/' as a canonical direct L7 branch.
+    - **key_claims**
+      - BETA's layout follows the current 7LM; MAIN's and ROADMAP's sheets still say L7/publications/
+    - **open_items**
+      - BETA and ROADMAP sheets diverge: merging both needs a hand-made holdings list of eight findings
+    - **depends_on**
+      - aybllc/7lm L7 layout
+  - item 12
+    - **id**: F10
+    - **title**: ROADMAP change to the findings sheet
+    - **path**: L8/L5/research/findings/0.md
+    - **where**: ROADMAP
+    - **what_it_is**: Adds four holdings lines for the restored findings, each stating it was restored 2026-09-14 from git 1d83788 with the source directory, and notes that AUTONOMY_AT_DISTANCE cites a FREEZE.md that is retired.
+    - **evidence_state**: INTERNALLY CHECKED
+    - **locator**: ROADMAP:L8/L5/research/findings/0.md:39-42
+    - **quote**: Restored 2026-09-14 from git `1d83788` (`manuscripts/main/`); the record is `L8/L6/history/restore-2026-09-14.md`. Its Part A/Part B split cites a `FREEZE.md` that is retired.
+    - **own_label**: none
+    - **checked_how**: Compared blob ids: all four restored files are byte-identical to HISTORY (04c0444, 2c5500e, 87208ee, dc00ce7). The restore record exists at ROADMAP:L8/L6/history/restore-2026-09-14.md (existence only; not read).
+    - **key_claims**
+      - Restoration was byte-exact
+    - **open_items**
+      - PR #27 closed unmerged, so none of the four is on MAIN
+    - **depends_on**
+      - HISTORY 1d83788
+  - item 13
+    - **id**: I1
+    - **title**: Institution sheet
+    - **path**: L8/L5/institution/0.md
+    - **where**: MAIN, ROADMAP, BETA (identical blob cea7541)
+    - **what_it_is**: Sheet for the institutional research setting and participant positions (peers, undergraduates, research owner). It holds no content and names no actual institution.
+    - **evidence_state**: EMPTY
+    - **locator**: MAIN:L8/L5/institution/0.md:38-40 and :49
+    - **quote**: Nothing is filed at this position; the position is admissible and empty.
+    - **own_label**: "admissible and empty"
+    - **checked_how**: Read in full; ls-tree shows only the three 0.md sheets under L8/L5/institution/ in all three states.
+    - **open_items**
+      - REQUIREMENTS_OWNERSHIP Q10 (who is the adopter/assessor institution) is unresolved and has no counterpart here
+  - item 14
+    - **id**: I2
+    - **title**: Institution / peers sheet
+    - **path**: L8/L5/institution/peers/0.md
+    - **where**: MAIN, ROADMAP, BETA (identical blob 7d53004)
+    - **what_it_is**: Sheet for peer participant positions. Empty. It notes that the specification uses 'peer' both for these positions and for L7 peering positions and does not adjudicate the relation.
+    - **evidence_state**: EMPTY
+    - **locator**: MAIN:L8/L5/institution/peers/0.md:26 and :29-31
+    - **quote**: this sheet states the two paths and does not adjudicate their relation.
+    - **own_label**: "admissible and empty"
+    - **checked_how**: Read in full.
+    - **open_items**
+      - No peer reviewer position is recorded, consistent with no finding having a recorded review
+  - item 15
+    - **id**: I3
+    - **title**: Institution / undergraduates sheet
+    - **path**: L8/L5/institution/undergraduates/0.md
+    - **where**: MAIN, ROADMAP, BETA (identical blob a5cffd6)
+    - **what_it_is**: Sheet for undergraduate participant positions. Empty.
+    - **evidence_state**: EMPTY
+    - **locator**: MAIN:L8/L5/institution/undergraduates/0.md:33-35
+    - **quote**: Nothing is filed at this position; the position is admissible and empty.
+    - **own_label**: "admissible and empty"
+    - **checked_how**: Read in full.
+  - item 16
+    - **id**: K1
+    - **title**: Source check: OVERRIDE_NECESSITY × RFC 6962
+    - **path**: L7/provenance/sources/staging-records/library/reading/RFC6962_Certificate-Transparency.md
+    - **where**: MAIN
+    - **what_it_is**: The finding quotes 'RFC 6962 §5' against proposition P-D and RFC 6962 on detection. Citation is real and ledgered (STD-033); both quotations are locatable verbatim in the reading record, in section 5 as cited.
+    - **evidence_state**: EXTERNALLY CHECKED
+    - **locator**: MAIN:L7/provenance/sources/LEDGER.md:66; MAIN:.../reading/RFC6962_Certificate-Transparency.md:263-265 (capture C21, '5. Clients')
+    - **quote**: [source text withheld from the public copy]
+    - **own_label**: Reading record: "Label: VERIFIED"; LEDGER: "ACCESSIONED; sha256 `9e5060bbf9850ebd…` verified"
+    - **checked_how**: Fixed-string search of the staging records; read the capture heading and the record header. The 'do not themselves prevent misissue' quotation is at the same record :109-111 and library/FINDINGS_2026-08-04.md:55. Reading-record sha256 prefix 9e5060bb matches the LEDGER row.
+    - **key_claims**
+      - Quotation matches word for word
+    - **open_items**
+      - The reading record notes RFC 6962 is 'Category: Experimental' and 'now obsolete, see RFC 9162'; the finding does not say so
+      - The record also notes the gossip mechanism is deferred to 'a separate document'
+  - item 17
+    - **id**: K2
+    - **title**: Source check: OVERRIDE_NECESSITY × Haber & Stornetta 1991
+    - **path**: L7/provenance/sources/staging-records/library/reading/Haber-Stornetta_1991_JCryptology_timestamp.md
+    - **where**: MAIN
+    - **what_it_is**: Citation is real and ledgered (PR-019). Both quotations ('[source text withheld from the public copy]...' and '...without the change being apparent') are locatable verbatim at printed p.100. One caution on use: the 'another party' sentence is the authors' description of the assumptions behind pre-digital methods, which the next sentence says [source text withheld from the public copy] digital documents.
+    - **evidence_state**: EXTERNALLY CHECKED
+    - **locator**: MAIN:L7/provenance/sources/LEDGER.md:76; MAIN:.../reading/Haber-Stornetta_1991_JCryptology_timestamp.md:77-79 (C3) and :85-87 (C4)
+    - **quote**: [source text withheld from the public copy]
+    - **own_label**: Reading record: "Label: VERIFIED"
+    - **checked_how**: Fixed-string search; read captures C3 and C4 and the record's method note (five pages confirmed against page images). Reading-record sha256 prefix ef2290c0 matches the LEDGER row.
+    - **key_claims**
+      - Both quotations match
+      - The finding's lead-in 'tamper-evidence rests on' is the finding's [source text withheld from the public copy]
+    - **open_items**
+      - Whether '[source text withheld from the public copy]' fairly states this paper, given the quoted sentence describes the older methods
+  - item 18
+    - **id**: K3
+    - **title**: Source check: SEGREGATION_AND_FORGETTING × ARIES (Mohan et al. 1992)
+    - **path**: L7/provenance/sources/staging-records/library/reading/ARIES_Mohan1992_ACM-TODS.md
+    - **where**: MAIN
+    - **what_it_is**: Citation is real and ledgered (PR-018). The finding's four capture numbers C1, C3, C7, C15 match the reading record's numbering, and each quoted fragment is verbatim there (with the finding's ellipses).
+    - **evidence_state**: EXTERNALLY CHECKED
+    - **locator**: MAIN:L7/provenance/sources/LEDGER.md:75; MAIN:.../reading/ARIES_Mohan1992_ACM-TODS.md:76 (C1), :92 (C3), :124 (C7), :188 (C15)
+    - **quote**: [source text withheld from the public copy]
+    - **own_label**: Reading record: each capture "Label: VERIFIED"; finding: "PARTIALLY VERIFIED against ARIES"
+    - **checked_how**: Extracted the four captures by heading and compared text. Record sha256 prefix 6131bcee matches the LEDGER row.
+    - **key_claims**
+      - WAL: log [source text withheld from the public copy] replaces the previous version
+      - Repeating history re-establishes the database state
+    - **open_items**
+      - The mapping from transaction recovery to [source text withheld from the public copy] stays the finding's own composite claim
+  - item 19
+    - **id**: K4
+    - **title**: Source check: SEGREGATION_AND_FORGETTING × IEEE Std 7014-2024 cl. 4.3.3.2 e)
+    - **path**: L7/provenance/sources/staging-records/ieee/reading/IEEE-7014.md
+    - **where**: MAIN
+    - **what_it_is**: Citation is real and ledgered (STD-008). The quoted clause is verbatim in the reading record under cl. 4.3.3.2, item e).
+    - **evidence_state**: EXTERNALLY CHECKED
+    - **locator**: MAIN:L7/provenance/sources/LEDGER.md:37; MAIN:.../ieee/reading/IEEE-7014.md:386-394 (capture C24, PDF p.36)
+    - **quote**: [source text withheld from the public copy]
+    - **own_label**: Reading record: '[source text withheld from the public copy]'
+    - **checked_how**: Fixed-string search; also present at ieee/FINDINGS_2026-08-04.md:63 and reading record :24, :436.
+    - **key_claims**
+      - The finding's reading (non-recall is still retention) follows the clause's first limb
+    - **open_items**
+      - Crypto-erase as the resolution rests on NIST SP 800-88, which has no ledger row or record in the repository
+  - item 20
+    - **id**: K5
+    - **title**: Source check: OVERRIDE_NECESSITY × IEEE 7001-2021 cl. 5.2.2 — label disagreement
+    - **path**: L7/provenance/sources/staging-records/ieee/reading/IEEE-7001.md
+    - **where**: MAIN
+    - **what_it_is**: The finding lists '[source text withheld from the public copy] words are verbatim in the reading record (Table 4, Level 1), but the reading record marks that passage's normative status MIXED and says the phrase qualifies an independent external device such as a dashcam, not the system's own event data recorder. The staging FINDINGS file calls the same passage NORMATIVE. Two records in the repository disagree.
+    - **evidence_state**: CONTRADICTED
+    - **locator**: MAIN:L8/L5/research/findings/OVERRIDE_NECESSITY_2026-08-04.md:187-188; MAIN:.../ieee/reading/IEEE-7001.md:115-119 (C3); MAIN:.../ieee/FINDINGS_2026-08-04.md:103-107
+    - **quote**: [source text withheld from the public copy]
+    - **own_label**: Finding: "(NORMATIVE)"; reading record: "MIXED"
+    - **checked_how**: Read capture C3 and its normative-status note, the record's FINDING 5 (line with '[source text withheld from the public copy]'), and the staging FINDINGS file. LEDGER row STD-004 present.
+    - **key_claims**
+      - Quotation is real
+      - The 'NORMATIVE' tag and the attribution to 'the recorder' are stronger than the reading record supports
+    - **open_items**
+      - Which label governs before the manuscript cites IEEE 7001 for recorder independence
+  - item 21
+    - **id**: K6
+    - **title**: Source check: citations in the findings with no ledger row and no reading record
+    - **path**: L7/provenance/sources/LEDGER.md
+    - **where**: MAIN (same for the findings on ROADMAP)
+    - **what_it_is**: The LEDGER says a source cited without a row is an unledgered citation. The findings cite at least thirty works that have no LEDGER row and no staging record: Holmström 1979; Townsend 1979; Aceto et al. 2019; Schneider 2000; Ligatti, Bauer & Walker; Haeberlen et al. (PeerReview) 2007; Rasmussen 1997; Dekker 2003; Amalberti 2006; Saltzer & Schroeder 1975; Kang, Moskowitz & Chincheck 2005; Tulving & Pearlstone 1966; Rugg & Renoult 2025; Green 2022; Hart-Kremer-Perry 2017; Ben-Porath-Dekel-Lipman 2019; [source text withheld from the public copy]-88; [source text withheld from the public copy]; ISO 8373:2021; ISO/IEC 25059:2023; and all the DISTILLATION section 7 legal sources (Star of Hope, The Blackwall, SOLAS V/34-1, IMO A.916(22), UK MSA 1995, US Code sections, Salvage and Nairobi conventions, Colorado jury instructions/Fresquez, US v. New, Nuremberg Principle IV, Soldatengesetz, R. v. Liwyj, Navy Regs Art. 1088).
+    - **evidence_state**: UNRESOLVED
+    - **locator**: MAIN:L7/provenance/sources/LEDGER.md:10-12 (rule), :20-79 (register), :98-100 (empty 'Not held' table)
+    - **quote**: [source text withheld from the public copy].
+    - **own_label**: none
+    - **checked_how**: Read the whole LEDGER register (60 [source text withheld from the public copy]). Fixed-string search for 30 distinctive names across LEDGER.md and staging-records/: 0 hits each, except SP 800-53 which has an extraction (staging standards/extracted/SP800-53r5_AC-AU_verbatim.md) but no LEDGER row. standards/SOURCE_LEDGER.md has 0 hits for 800-53, 1011, 8373, 25059, Holmström, Kang, Tulving. On ROADMAP, NASA NTRS 20100017272 and others appear in L7/provenance/sources/STANDARDS_REGISTER.md.
+    - **key_claims**
+      - For these works the only copy of the quotation in the repository is the finding itself (MAIN)
+      - The 'Not held' table is empty although the findings name unobtained works (Gilmore & Black; Green 2022 'located, not retrieved')
+    - **open_items**
+      - Each needs a ledger row or a 'Not held' row before the manuscript quotes it
+  - item 22
+    - **id**: K7
+    - **title**: Source check: NIST SP 800-53 quotations against the held extraction
+    - **path**: L7/provenance/sources/staging-records/standards/extracted/SP800-53r5_AC-AU_verbatim.md
+    - **where**: MAIN
+    - **what_it_is**: The control statements quoted in OVERRIDE_NECESSITY and SEGREGATION_AND_FORGETTING for AC-3(10), AU-10, AC-4(7), AU-9(2) are in the extraction. The Discussion sentences they also quote are not, because the extraction deliberately holds control statements only; SI-10(1), SC-7(13) and SC-32 are outside the AC/AU families and are not held at all. The extraction is dated 2026-08-05, one day after both findings.
+    - **evidence_state**: INTERNALLY CHECKED (control statements located); Discussion quotations and SI/SC controls UNRESOLVED (no record in the repository)
+    - **locator**: MAIN:.../SP800-53r5_AC-AU_verbatim.md:1-14, :229-232, :305-307, :1197-1201, :1231
+    - **quote**: [source text withheld from the public copy]
+    - **own_label**: Extraction header gives source URL and SHA-256 fc63bcd6...
+    - **checked_how**: Located the control headings by grep; counted 0 hits in the extraction for 'data diode', 'helps to ensure', 'threat to human life', 'higher impact or classified'. Searched staging for SI-10(1), SC-7(13), SC-32: 0 files.
+    - **key_claims**
+      - Control wording matches
+      - 'helps to ensure' — the hedge SEGREGATION leans on — cannot be re-read from held material
+    - **open_items**
+      - Extend the extraction or add a reading record covering the Discussion text and the SI/SC controls
+  - item 23
+    - **id**: X1
+    - **title**: Contradiction: Q13 (MAIN) versus AUTONOMY_AT_DISTANCE (ROADMAP) versus BETA disposition
+    - **path**: L8/L1/state-space/REQUIREMENTS_OWNERSHIP.md
+    - **where**: MAIN, ROADMAP, BETA
+    - **what_it_is**: MAIN states as Q13 that [source text withheld from the public copy]' because compartments C6 and C9 intervene and oversee. AUTONOMY_AT_DISTANCE B2 says C9 is internal and cannot trip the ISO exclusion, B3 says 1920.1 is satisfied by distance, and its scorecard withdraws the 'scores zero' claim. BETA inserts a 2026-11-03 disposition saying the historical categorical headline is not adopted. The Q13 text itself is unstruck in all three states.
+    - **evidence_state**: CONTRADICTED
+    - **locator**: MAIN:L8/L1/state-space/REQUIREMENTS_OWNERSHIP.md:268-271; ROADMAP:L8/L5/research/findings/AUTONOMY_AT_DISTANCE.md:212-223, :392-394; BETA:L8/L1/state-space/REQUIREMENTS_OWNERSHIP.md:268
+    - **quote**: **[source text withheld from the public copy]
+    - **own_label**: BETA finding: "Q13 remains contested"
+    - **checked_how**: Read Q13 on MAIN; git diff shows REQUIREMENTS_OWNERSHIP.md is unchanged between MAIN and ROADMAP and gains one paragraph on BETA. AUTONOMY_AT_DISTANCE does not name Q13 by number; the match is by content (the two definitions and compartment C9).
+    - **key_claims**
+      - Three states carry three positions on the same question
+    - **open_items**
+      - Owner ruling on Q13
+      - Whether AUTONOMY_AT_DISTANCE's B1 reading ('CONJECTURE') is enough to strike Q13
+  - item 24
+    - **id**: X2
+    - **title**: Contradiction: AUDITON_PACKABILITY versus AUTONOMY_AT_DISTANCE and CONTRADICTIONS C5
+    - **path**: L8/L5/research/findings/AUDITON_PACKABILITY_2026-08-04.md
+    - **where**: ROADMAP (both findings); MAIN (CONTRADICTIONS.md)
+    - **what_it_is**: PACKABILITY (2026-08-04) says telemetry, beaconing or a remote log are oversight 'on the plain reading' and that severing oversight forfeits auditability. AUTONOMY_AT_DISTANCE (2026-08-05) says reading 'oversight' as any observation 'makes the term absurd' and that the reader's relation is verification. Separately, PACKABILITY calls the NIST/ISO goal conflict irreducible ('Resolvable? NO'), while CONTRADICTIONS C5 records the same pair as 'Narrower than fatal' and CONTESTED. Neither finding is marked superseded.
+    - **evidence_state**: CONTRADICTED
+    - **locator**: ROADMAP:.../AUDITON_PACKABILITY_2026-08-04.md:59-63 and :37; ROADMAP:.../AUTONOMY_AT_DISTANCE.md:140-144; MAIN:L8/L5/research/review/CONTRADICTIONS.md:130-134
+    - **quote**: [source text withheld from the public copy]
+    - **own_label**: PACKABILITY: "NOT PACKABLE"; AUTONOMY_AT_DISTANCE scorecard: "arguable — B1"; CONTRADICTIONS C5: "`CONTESTED`"
+    - **checked_how**: Read both findings and CONTRADICTIONS C5 in full and compared the passages. PACKABILITY section 7 ('Resolvable: YES', a clash of vocabulary) also sits beside CONTRADICTIONS C4, which calls the same ISO 8373/22989 pair 'a real conflict, not a reading'.
+    - **key_claims**
+      - The later finding narrows the earlier one without striking it
+    - **open_items**
+      - Which reading of 'oversight' the manuscript adopts; ISO defines the word nowhere in the held extracts
+  - item 25
+    - **id**: X3
+    - **title**: Open: 78 versus 113 extracted requirements
+    - **path**: L8/L1/state-space/REQUIREMENTS_OWNERSHIP.md
+    - **where**: MAIN (the 113), ROADMAP (the 78, in AUDITON_PACKABILITY), BETA (restates it as incomplete)
+    - **what_it_is**: AUDITON_PACKABILITY reports '78 requirements extracted'; REQUIREMENTS_OWNERSHIP reports 113 ([source text withheld from the public copy]) and says the 78 is 'a different, smaller run' never reconciled. BETA says reconciliation remains incomplete.
+    - **evidence_state**: UNRESOLVED
+    - **locator**: MAIN:L8/L1/state-space/REQUIREMENTS_OWNERSHIP.md:15-21 and :244; ROADMAP:.../AUDITON_PACKABILITY_2026-08-04.md:15; BETA:.../AUDITONOMOUS_BETA_FINDINGS.md:24
+    - **quote**: [source text withheld from the public copy].
+    - **own_label**: "Reconciling them is open work"
+    - **checked_how**: Confirmed REQUIREMENTS_OWNERSHIP.md:19 cites PACKABILITY line 15 and that line 15 holds the 78 figure. My own observation, not a record: PACKABILITY's section 8 tallies give ISO 24, NIST 20, NASA 14, the same three lane counts as the 113 run; 78 − 58 = 20 would be the IEEE share against 55, a difference of exactly 35 = 113 − 78. The 78 run's IEEE count is not stated in the file, so this is unconfirmed. The 113 journal is cited at a path outside the repository (~/.claude/...journal.jsonl).
+    - **key_claims**
+      - Both counts are asserted as real by the repository
+    - **open_items**
+      - Reconcile, or state which count the manuscript uses
+      - Q11 says the count 'means' nothing until auditability requirements are extracted
+  - item 26
+    - **id**: X4
+    - **title**: Contradiction: 'immutable' in DISTILLATION after OVERRIDE_NECESSITY ruled it unsafe
+    - **path**: L8/L5/research/findings/DISTILLATION.md
+    - **where**: MAIN, ROADMAP, BETA
+    - **what_it_is**: OVERRIDE_NECESSITY (2026-08-04) lists as not safe to claim 'That anything is immutable' and says to claim apparency. DISTILLATION (2026-08-05) still compresses the definition as 'protocol · law · sovereignty · immutability' with 'an immutable ledger'. DISTILLATION is repeating the governing definition's wording, but neither file notes the other.
+    - **evidence_state**: CONTRADICTED
+    - **locator**: MAIN:.../OVERRIDE_NECESSITY_2026-08-04.md:319-320; MAIN:.../DISTILLATION.md:23 and :34
+    - **quote**: **[source text withheld from the public copy]*.
+    - **own_label**: OVERRIDE: listed under "Not safe"
+    - **checked_how**: Read both. The BETA result file's limitations repeat OVERRIDE's position ('[source text withheld from the public copy]').
+    - **key_claims**
+      - The wording fix was 'reserved for the author' and no ruling on it was found in my scope
+    - **open_items**
+      - Owner ruling on 'immutable' versus 'apparent' before any chapter states the definition
+  - item 27
+    - **id**: X5
+    - **title**: Contradiction: DISTILLATION law L5 versus the replicator document's own review
+    - **path**: L8/L1/state-space/AUDITON_REPLICATOR.md
+    - **where**: ROADMAP (AUDITON_REPLICATOR); MAIN+ROADMAP+BETA (DISTILLATION)
+    - **what_it_is**: DISTILLATION L5 cites the replicator run as showing 'lineage drift reaching 66.7× the gate' caught by a re-anchored gate, and generalises that [source text withheld from the public copy] carried in the sealed ledger. AUDITON_REPLICATOR section 5.2 accepts an adversarial refutation: the arithmetic stands, but the re-anchored check is 'Per-unit, memoryless, no ledger required', and [source text withheld from the public copy]'. The computation itself (research/replicator-lane/gen_drift.py) is not in the auditonomous repository at any ref.
+    - **evidence_state**: CONTRADICTED (interpretation); the arithmetic is INTERNALLY CHECKED by the replicator document's record
+    - **locator**: MAIN:.../DISTILLATION.md:84-91; ROADMAP:L8/L1/state-space/AUDITON_REPLICATOR.md:274-279 and :314-318
+    - **quote**: **[source text withheld from the public copy]
+    - **own_label**: DISTILLATION: "`INTERNALLY VALIDATED`" (the run), "the generalisation `INTERNALLY DERIVED`"; AUDITON_REPLICATOR: "REFUTED AS STATED"
+    - **checked_how**: Read AUDITON_REPLICATOR.md lines 1-34, 196-214, 262-322, 596-606 on ROADMAP (not the whole file). `git log --all -- '*replicator-lane*'` in auditonomous returns nothing; in /home/user/autonomous the files were added at c866842 and deleted at ab8f01f. I did not run the script.
+    - **key_claims**
+      - DISTILLATION was not updated after the refutation
+    - **open_items**
+      - Restate L5 in the narrower form ([source text withheld from the public copy] drift) or strike it
+      - Recover gen_drift.py from autonomous history if the manuscript uses the figures
+  - item 28
+    - **id**: X6
+    - **title**: Open: the EB:233 dilemma and the Seal-Gated Interlock proposal
+    - **path**: L8/L3/engineering-mathematics/PROPOSAL_seal_gated_interlock.md
+    - **where**: MAIN, ROADMAP, BETA
+    - **what_it_is**: SEGREGATION_AND_FORGETTING says the diode [source text withheld from the public copy]'. The L3 proposal answers with a third arrangement: [source text withheld from the public copy] so [source text withheld from the public copy]. The proposal is unbuilt and says an adversarial attack pass was still running when it was written. BETA restates 'SGI remains unbuilt proposal'.
+    - **evidence_state**: UNRESOLVED
+    - **locator**: MAIN:L8/L3/engineering-mathematics/PROPOSAL_seal_gated_interlock.md:6-8 and :36-46; MAIN:.../SEGREGATION_AND_FORGETTING_2026-08-04.md:83-90
+    - **quote**: **Status: PROPOSAL. [source text withheld from the public copy].**
+    - **own_label**: "PROPOSAL"
+    - **checked_how**: Read lines 1-60 of the proposal (not the whole file) and the BETA result claims block (sgi_achieved false). I did not find a record of the attack pass's findings being folded in within what I read.
+    - **key_claims**
+      - The finding and the proposal disagree on whether a third option exists; the proposal post-dates and answers the finding
+    - **open_items**
+      - Fold in the adversarial attack pass
+      - Owner decision on EB:233 named by the finding
+  - item 29
+    - **id**: X7
+    - **title**: CONTRADICTIONS.md checked by name against every finding
+    - **path**: L8/L5/research/review/CONTRADICTIONS.md
+    - **where**: MAIN (identical on ROADMAP; BETA adds a dispositions table)
+    - **what_it_is**: CONTRADICTIONS.md records seven contradictions C1-C7 between codified sources, not contradictions of the findings. Of the eight findings it names only AUTONOMY_AT_DISTANCE (three places: B1/B1a, B3, A5/A8), as a consumer of C1 and C2. It does not name DISTILLATION, OVERRIDE_NECESSITY, SEGREGATION_AND_FORGETTING, AUDITON_PACKABILITY, OMMP_ATTACHMENT_GAP, UHA_AS_MAP or the beta finding. BETA's unresolved list 'C1 clause precedence ... C7 quality/autonomy trade-offs' maps one-to-one onto these seven rows.
+    - **evidence_state**: INTERNALLY CHECKED
+    - **locator**: MAIN:L8/L5/research/review/CONTRADICTIONS.md:46, :68, :72; BETA:L8/L5/research/review/CONTRADICTIONS.md:22-35
+    - **quote**: [source text withheld from the public copy].
+    - **own_label**: "Every quote is `VERIFIED`"; C5 "`CONTESTED`"; C6 "`PARTIALLY VERIFIED`"
+    - **checked_how**: Read in full; pattern search for each finding's file name. BETA's added table says the [source text withheld from the public copy]'.
+    - **key_claims**
+      - C1 and C2 bear on AUTONOMY_AT_DISTANCE: 'Satisfies [source text withheld from the public copy]
+      - C5 and C4 bear on AUDITON_PACKABILITY sections 1 and 7 (see X2)
+      - C2 notes 1920.1 is 'Inactive-Reserved' and scoped to aerial communications
+    - **open_items**
+      - No contradiction register exists for conflicts between the repository's own findings; X1-X5 above are recorded nowhere as contradictions
+- **defects**
+  - item 1
+    - **statement**: MAIN CONTRADICTIONS.md cites and links AUTONOMY_AT_DISTANCE.md (three places), a finding that is not on MAIN (ROADMAP and HISTORY only). It also links STANDARDS_REGISTER.md (ROADMAP only) and ISO_IEC_REQUIREMENTS.md, IEEE_REQUIREMENTS.md, NIST_REQUIREMENTS.md, for which no file of those names exists in MAIN, ROADMAP or BETA.
+    - **locator**: MAIN:L8/L5/research/review/CONTRADICTIONS.md:10, :15-17, :46, :68, :72
+  - item 2
+    - **statement**: The three MAIN findings cite line locators into files that are absent from MAIN: ARCH:364 (Master Archive, ROADMAP only), EB:233 (engineering draft, ROADMAP only), RESEARCH_DOCKET.md:34 (ROADMAP only), AUDITONOMOUS.md §2.8 (retired copy on ROADMAP only), tools/ommp (ROADMAP at L8/L4/work/computation/ommp/). The locators themselves are accurate on the ROADMAP copies.
+    - **locator**: MAIN:L8/L5/research/findings/OVERRIDE_NECESSITY_2026-08-04.md:14, :169, :244, :281; MAIN:L8/L5/research/findings/SEGREGATION_AND_FORGETTING_2026-08-04.md:74
+  - item 3
+    - **statement**: DISTILLATION cites `research/THESIS_auditonomous_override.md` and `research/replicator-lane/`, which have never existed in the auditonomous repository at any commit; they exist only in aybllc/autonomous history (deleted at ab8f01f). Its relative paths `../definitions/AUTONOMOUS.md` and `definitions/AUDITONOMY.md` do not resolve from L8/L5/research/findings/.
+    - **locator**: MAIN:L8/L5/research/findings/DISTILLATION.md:15, :21, :59, :85
+  - item 4
+    - **statement**: DISTILLATION is internally stale: law L6 says '[source text withheld from the public copy]', while the section 4 table and section 7.4 of the same file mark the mechanism-design row VERIFIED (components) and section 6 says the acquisition was 'closed 2026-08-05'. Law L2 likewise still carries Green 2022 as 'NOT-CHECKED — located, not retrieved'.
+    - **locator**: MAIN:L8/L5/research/findings/DISTILLATION.md:99-101 versus :124, :146, :273-285; :55-56
+  - item 5
+    - **statement**: DISTILLATION section 7 says full source lists [source text withheld from the public copy]'. No such record is in the repository: the legal and economics case names occur on MAIN only inside DISTILLATION.md.
+    - **locator**: MAIN:L8/L5/research/findings/DISTILLATION.md:151-152
+  - item 6
+    - **statement**: DISTILLATION says 'Ten definitions are on record (... A1–A11)'; the bound AUTONOMOUS.md in aybllc/autonomous has eleven rows A1-A11 ([source text withheld from the public copy] ISO standard). The count and the label range do not match as written.
+    - **locator**: MAIN:L8/L5/research/findings/DISTILLATION.md:14-15; autonomous origin/main:L8/L0/semantics/definitions/AUTONOMOUS.md:70-80
+  - item 7
+    - **statement**: OVERRIDE_NECESSITY presents a cleaned sentence in quotation marks as the docket's prior statement; the docket's verbatim owner text is "[source text withheld from the public copy] normalisation is not flagged.
+    - **locator**: MAIN:L8/L5/research/findings/OVERRIDE_NECESSITY_2026-08-04.md:12-13; ROADMAP:L8/L5/research/review/RESEARCH_DOCKET.md:12
+  - item 8
+    - **statement**: OVERRIDE_NECESSITY tags the IEEE 7001 cl. 5.2.2 recorder passage '(NORMATIVE)'; the reading record for the same passage says 'MIXED' and that it applies to an independent external device, not the EDR. The staging FINDINGS file says NORMATIVE. The two staging records disagree with each other.
+    - **locator**: MAIN:L8/L5/research/findings/OVERRIDE_NECESSITY_2026-08-04.md:187-188; MAIN:L7/provenance/sources/staging-records/ieee/reading/IEEE-7001.md:119; MAIN:L7/provenance/sources/staging-records/ieee/FINDINGS_2026-08-04.md:105
+  - item 9
+    - **statement**: SEGREGATION_AND_FORGETTING cites RECORD_ONTOLOGY_OPEN_QUESTIONS.md:134; on MAIN that paragraph is at line 138 (it was at 134 in HISTORY). The lane file still reads 'UNVERIFIED' for the Q5 candidate resolution; the finding's upgrade to PARTIALLY VERIFIED was not carried into it.
+    - **locator**: MAIN:L8/L5/research/findings/SEGREGATION_AND_FORGETTING_2026-08-04.md:125-126, :142; MAIN:L8/L5/research/lanes/RECORD_ONTOLOGY_OPEN_QUESTIONS.md:138
+  - item 10
+    - **statement**: At least thirty works cited in the findings have no LEDGER row and no staging record, against the LEDGER's own rule, and the LEDGER's 'Not held' table is empty although the findings name unobtained works. NIST SP 800-53 has an extraction but no LEDGER row.
+    - **locator**: MAIN:L7/provenance/sources/LEDGER.md:10-12, :98-100 (see item K6 for the list)
+  - item 11
+    - **statement**: OMMP_ATTACHMENT_GAP says '[source text withheld from the public copy] three strings are 10 + 10 + 8 = 28 bytes.
+    - **locator**: ROADMAP:L8/L5/research/findings/OMMP_ATTACHMENT_GAP_2026-08-04.md:84
+  - item 12
+    - **statement**: AUDITON_PACKABILITY asserts '9 irreducible conflicts' but does not enumerate nine; explicit 'Resolvable? NO' verdicts appear in sections 1, 4 and 5 only. Its section 8 tally table has no IEEE row and sums to 58 of the stated 78 requirements. The NASA document's SHA-256 is given only as a truncated prefix ('03a0793d…') found nowhere else on ROADMAP.
+    - **locator**: ROADMAP:L8/L5/research/findings/AUDITON_PACKABILITY_2026-08-04.md:21, :77-78, :214-218
+  - item 13
+    - **statement**: AUDITON_PACKABILITY cites `intake/AUTONOMY_SCALE.md:113`; that file is in HISTORY only (the line is accurate there) and is not on MAIN, ROADMAP or BETA.
+    - **locator**: ROADMAP:L8/L5/research/findings/AUDITON_PACKABILITY_2026-08-04.md:118; HISTORY:intake/AUTONOMY_SCALE.md:113
+  - item 14
+    - **statement**: AUTONOMY_AT_DISTANCE rests its Part A/Part B split and three rules on FREEZE.md (P1, P2, P3, §6c), which exists only in HISTORY. Its A3 check names the clause-3 terms extract 'held in this repository'; the LEDGER records that extract as not routed (poisoned lineage, git history only), so only the captures-file half of the check can be repeated.
+    - **locator**: ROADMAP:L8/L5/research/findings/AUTONOMY_AT_DISTANCE.md:6, :28-36, :259, :348; MAIN:L7/provenance/sources/LEDGER.md:139-142
+  - item 15
+    - **statement**: AUDITONOMOUS_BETA_FINDINGS.md uses 'C6' and 'C7' in two senses in one file: envelope compartments (C6 Gate/stop, C7 Record; '32 C7 records') and CONTRADICTIONS.md rows ('[source text withheld from the public copy]').
+    - **locator**: BETA:L8/L5/research/findings/AUDITONOMOUS_BETA_FINDINGS.md:7, :9, :24; MAIN:L8/L1/state-space/AUDITON_ENVELOPE.md:129-130
+  - item 16
+    - **statement**: No finding carries the fields the sheet and the retired rules require in that form (review status; evidence table with Source IDs; a section headed 'What this does not establish'; one claim per file). The sheet grandfathers only DISTILLATION as a multi-claim import; OVERRIDE_NECESSITY (five propositions) and SEGREGATION_AND_FORGETTING (two claims) are also multi-claim. No finding cites a source by its LEDGER id.
+    - **locator**: MAIN:L8/L5/research/findings/0.md:19, :35, :39; MAIN:L8/L6/retired/layout-2026-08-14/research/findings/README.md (Required structure)
+  - item 17
+    - **statement**: MAIN and ROADMAP findings sheets point the released form of a finding to `L7/publications/`; the current 7LM (origin/main c9dc061) and BETA use `L7/allications/publications/`. The MAIN and ROADMAP sheets are behind the model.
+    - **locator**: MAIN:L8/L5/research/findings/0.md:31; BETA:L8/L5/research/findings/0.md:31; 7lm origin/main:L7/0.md:22
+  - item 18
+    - **statement**: MAIN REQUIREMENTS_OWNERSHIP.md cites `intake/research/AUDITON_PACKABILITY_2026-08-04.md:15`, a path that does not exist on MAIN (the file is at L8/L5/research/findings/ on ROADMAP only).
+    - **locator**: MAIN:L8/L1/state-space/REQUIREMENTS_OWNERSHIP.md:19
+  - item 19
+    - **statement**: MAIN LEDGER search log says '22 new rows' but enumerates 21 (STD-026…034 = 9, INST-002…004 = 3, PR-014…020 = 7, EXC-001/002 = 2). The correction exists only on BETA.
+    - **locator**: MAIN:L7/provenance/sources/LEDGER.md:113; BETA:L7/provenance/sources/LEDGER.md:147-149
+  - item 20
+    - **statement**: The findings sheet on BETA lists the beta finding but not the four ROADMAP findings, and the ROADMAP sheet lists the four but not the beta finding; no state has a sheet listing all eight.
+    - **locator**: BETA:L8/L5/research/findings/0.md:35-39; ROADMAP:L8/L5/research/findings/0.md:35-42
+- **open_questions**
+  - Where is the 'session record' that DISTILLATION section 7 says preserves the full source lists and verbatim legal and economics quotations? I searched MAIN and ROADMAP for the case names and found only DISTILLATION itself (and EB_RECEIPT_RIGOR_SPEC on ROADMAP for two of them); MAIN:L7/provenance/lineage/2026-08-05-observed-not-observable-session-provenance.md does not contain them.
+  - Which position on Q13 stands: MAIN's 'cannot be autonomous ... by construction', AUTONOMY_AT_DISTANCE's withdrawal of 'scores zero', or BETA's 'not adopted as a present conformance' wording? No owner ruling found in my scope.
+  - What are the nine irreducible conflicts of AUDITON_PACKABILITY? The adjudication output is not in the repository; REQUIREMENTS_OWNERSHIP places the related journal at a path outside the repository.
+  - Is the 78 run simply the 113 run with a smaller IEEE lane (20 instead of 55)? The other three lane counts coincide; the 78 run's IEEE count is not recorded, so I could not settle it.
+  - Does the owner's decision in AUTONOMY_AT_DISTANCE B6 ('the refusal DISPOSES') stand, and has 'return' been classified under IEEE 7009 (7009-R5/R6)? The finding says nobody has performed it; I found no later record in my scope.
+  - EB:233 versus the one-way carrier: has the owner chosen, and were the adversarial attack findings folded into the Seal-Gated Interlock proposal? I read only the first 60 lines of the proposal.
+  - The bootstrapping objection and the recall-policy sealing requirement: both are marked unanswered in the findings; I found no answer in my scope.
+  - Has any finding been reviewed? No review record naming a finding was found in MAIN:L8/L5/research/review/ (files there: CONTRADICTIONS, PERPETUITY_QUESTION_ADJUDICATION, STATUS files, autonomous-theory). PERPETUITY_QUESTION_ADJUDICATION.md (42 KB) and the ROADMAP review files were not read.
+  - I could not check any quotation against the source PDFs (they are in the l6 archive, not in these clones); 'EXTERNALLY CHECKED' above means the comparison is recorded in a reading record with a locator and I found the words there.
+  - The eBIOS run reported in OVERRIDE_NECESSITY section 5 is against an external repository (github.com/abba-01/ebios) and could not be reproduced here.
+  - I did not run the beta test suite or the beta computation (the task did not ask). BETA:L8/L6/history/AUDITONOMOUS_BETA_HISTORY.md claims 'The final full computation suite passed 12 tests'; that is unconfirmed by me. I did not recompute the record digests.
+  - The 'Morton seam' demonstration that UHA_AS_MAP says was 'Demonstrated separately this session' was not located.
+  - What the manuscript needs from these findings was not mapped chapter by chapter here; the three manuscript reports of 2026-11-03 do not mention any finding by name, so the link between the 27-chapter roadmap and the findings remains to be drawn (ROADMAP ch09 and BOOK_STRUCTURE_AND_ROADMAP_2026-09-13.md do cite Holmström and Kang, which suggests they draw on OVERRIDE_NECESSITY and SEGREGATION_AND_FORGETTING; not read).
+  - Whether the four ROADMAP findings should be merged to MAIN as they are, given they depend on FREEZE.md, AUTONOMY_SCALE.md and other files that are retired or in history only.

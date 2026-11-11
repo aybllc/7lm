@@ -1,0 +1,468 @@
+# read:exemplar-auditonomous
+
+Agent result, as returned. Workflow: The model, read deep. Run `wf_9a60cf50-a5f`. Phase: Read. Checked in 2026-11-11 19:51 UTC.
+
+- **scope**: /home/user/auditonomous: origin/main (2165144) against the model at /home/user/7lm@origin/main (c9dc061); then origin/beta/7lm-exemplar-auditonomous (714480d); with PR #25 (origin/claude/no-deletion-fix-2026-09-07, f89bf8a) and PR #27 (origin/claude/book-structure-roadmap-k8ap82, 9259c18). Read-only, git objects only. "Live text" = every tracked file except L8/L6/history/, L8/L6/retired/, L8/L6/in/ and quotations of the owner.
+- **summary**: Auditonomous main still has the L7 desk of before 20 September 2026. Of the model's 71 canonical positions, 63 exist with a correctly headed sheet and 8 are missing: L7/governance/controlled and the seven L7/allications positions. The two former positions, L7/publications/ (with binder/ beneath) and L7/governance/restrictions/, still stand. The scaffold's own check, run on this tree, would fail on exactly those 8.
+
+  In live text, 44 files carry a former path or a swept phrase. The largest counts are "peering, and publication state" (38 occurrences in 37 files), L7/publications (26 in 20) and governance/restrictions (16 in 13). Only L7/0.md draws the old branches, in one tree and one table. The README names the fourth branch "publications". The CI file differs from the scaffold's in five places.
+
+  The repository's record is L8/L6/history/harmonization-2026-09-05.md, sections 1 to 12, the last being the rename pass of 2026-09-12. It says nothing about the L7 restructure or about mirroring by hand. By its own convention a new pass is section 13 there.
+
+  The beta candidate does the two moves, creates the six missing sheets and removes every former path. It leaves all 61 swept-phrase occurrences and the README untouched. Its six new sheets and its L7/0.md table rows are its own wording, not the scaffold's. Its CI is not the scaffold main's file. It also edits the L0 definition, Q13 and the contradictions review, which the record leaves to the owner, and it pins unmerged commits of the other two repositories. Of its 56 files, 22 are pure alignment.
+
+  PR #25 is written on USO/ paths and conflicts with main in two files. PR #27 adds four new files that name L7/publications/.
+
+  Main's sheets also say 62 ledger rows where the register holds 60.
+- **facts**
+  - item 1
+    - **id**: M1
+    - **kind**: change
+    - **statement**: The model's L7 restructure: L7/publications/ moved to L7/allications/publications/ and L7/governance/restrictions/ to L7/governance/controlled/, as tracked renames; six sheets were written (five siblings of publications, one for the allications container).
+    - **locator**: 7lm@origin/main:L8/L6/history/harmonization-2026-09-04.md:321 (section 25)
+    - **quote**: both as tracked renames so their history follows them. Five sheets are written beside publications
+  - item 2
+    - **id**: M2
+    - **kind**: rule
+    - **statement**: The model's record states that the exemplars were deliberately not brought into step by the restructure pass and that the divergence is recorded. It counts 21 Auditonomous files naming former paths, 13 with governance/restrictions.
+    - **locator**: 7lm@origin/main:L8/L6/history/harmonization-2026-09-04.md:329 (section 25)
+    - **quote**: They are not brought into step by this pass and now differ from the specification at those names.
+  - item 3
+    - **id**: M3
+    - **kind**: rule
+    - **statement**: The owner's ruling of 2026-09-20 on mirroring, as the model's record quotes it; the record's reading is that the exemplars are mirrored by hand when the owner judges the scaffold close, and not before.
+    - **locator**: 7lm@origin/main:L8/L6/history/harmonization-2026-09-04.md:336 and :346 (section 26)
+    - **quote**: All repos should mirror the 7lm. Manually. We update 7lm and focus on it only. No outside updates until we are sure I'm close.
+  - item 4
+    - **id**: M4
+    - **kind**: procedure
+    - **statement**: The model's prose sweep (section 37) was a scripted pass over live text only, with a count per phrase. Excluded: L8/L6/history/, L8/L6/retired/, L8/L6/in/, the filed exemplar page at L7/provenance/prior-art/, and any quotation of the owner.
+    - **locator**: 7lm@origin/main:L8/L6/history/harmonization-2026-09-04.md:498 (section 37)
+    - **quote**: Live text only — nothing under `L8/L6/history/`, `L8/L6/retired/`, `L8/L6/in/`
+  - item 5
+    - **id**: M5
+    - **kind**: procedure
+    - **statement**: The model's phrase pairs: 'peering, and publication state' -> 'peering, and allications — the outward acts, of which publication is one'; 'the L7 publications branch' -> 'L7/allications/publications/'; 'peering, and publications become addressable' -> 'peering, and allications become addressable'; 'publications and release identity' -> 'allications: the outward acts, of which publication is one'; 'access, restrictions' -> 'access, controlled'; 'access, and restrictions' -> 'access, and controlled conditions'; 'licensing and restrictions folders' -> 'licensing and controlled folders'; `restrictions/` as a folder name -> `controlled/`.
+    - **locator**: 7lm@origin/main:L8/L6/history/harmonization-2026-09-04.md:498 (section 37)
+    - **quote**: "access, restrictions" became "access, controlled" (10); "access, and restrictions" became "access, and controlled conditions" (2)
+  - item 6
+    - **id**: M6
+    - **kind**: rule
+    - **statement**: What the model's sweep leaves alone: the word 'restrictions' where it names a kind of condition, 'execution restrictions' in the L2 machine-metadata cell, the tree, every sheet's first line, the owner's words, and the historical records.
+    - **locator**: 7lm@origin/main:L8/L6/history/harmonization-2026-09-04.md:498 and :508 (section 37)
+    - **quote**: Not changed. The tree. Every sheet's first line. The owner's words, anywhere. The historical records.
+  - item 7
+    - **id**: M7
+    - **kind**: rule
+    - **statement**: The model's specification says of Auditonomous that its desk still carries the former branch names and the restructure is not yet mirrored. It also describes its provenance as 62 pointer rows (line 954).
+    - **locator**: 7lm@origin/main:L8/L4/work/writing/7lm-harmonized-architecture-specification.md:958
+    - **quote**: publications/ as a direct branch and governance/restrictions/; the L7 restructure is not yet mirrored.
+  - item 8
+    - **id**: M8
+    - **kind**: rule
+    - **statement**: The model's check lists 71 canonical positions (lines 47-59) and fails on any without a 0.md; a sheet's first line must equal '# <path>/'. Sheets below the root of a retired set are skipped.
+    - **locator**: 7lm@origin/main:.github/workflows/integrity.yml:40-60
+    - **quote**: for d in $canon; do [ -f "$d/0.md" ] || { echo "canonical position without a sheet: $d/0.md"; fail=1; }; done
+  - item 9
+    - **id**: T1
+    - **kind**: tree
+    - **statement**: On auditonomous origin/main, 63 of the 71 canonical positions exist as directories with a 0.md whose first line is '# <path>/'. Eight are missing as directories: L7/governance/controlled, L7/allications, L7/allications/publications, applications, communications, specifications, notifications, participations. All eight peer-1 and peer-1/object-1 positions and all 37 L8 positions are present.
+    - **locator**: auditonomous@origin/main: ls-tree -r -d, checked against 7lm@origin/main:.github/workflows/integrity.yml:47-59
+  - item 10
+    - **id**: T2
+    - **kind**: tree
+    - **statement**: Two positions stand under former names on main, each with a sheet headed by the former path: L7/governance/restrictions/0.md and L7/publications/0.md. L7/publications/ also holds binder/0.md, binder/README.md, binder/internal/README.md and binder/press-kit/README.md, so the move carries 5 files and the restrictions move 1.
+    - **locator**: auditonomous@origin/main:L7/governance/restrictions/0.md:1; L7/publications/0.md:1; L7/publications/binder/0.md:1
+    - **quote**: # L7/publications/binder/
+  - item 11
+    - **id**: T3
+    - **kind**: tree
+    - **statement**: Main has 78 sheets under L7 and L8 (37 under L7), every one headed by its own path. After alignment by the model's procedure the count is 84 (43 under L7). The scaffold has 35 L7 sheets; the exemplar has more because it carries peer-2, peer-3, staging-records and binder sheets.
+    - **locator**: auditonomous@origin/main: ls-tree -r --name-only, files matching ^(L7|L8)(/.*)?/0\.md$
+  - item 12
+    - **id**: T4
+    - **kind**: tree
+    - **statement**: Twelve directories outside retired sets have no sheet on main: nine under L7/provenance/sources/staging-records/ (ieee, ieee/papers, ieee/reading, interval, library, library/reading, library/text, standards, standards/extracted), L7/publications/binder/internal, L7/publications/binder/press-kit, and L8/L5/research/review/autonomous-theory. The check reports these as notices, not failures.
+    - **locator**: auditonomous@origin/main: ls-tree -r -d L7 L8; see also L8/L6/history/harmonization-2026-09-05.md:131
+  - item 13
+    - **id**: T5
+    - **kind**: tree
+    - **statement**: Thirteen further directories without a sheet lie below the roots of the two retired sets (seven under L8/L6/retired/layout-2026-08-14/, six under L8/L6/retired/layout-2026-09-06/). The check skips them by design.
+    - **locator**: auditonomous@origin/main: ls-tree -r -d L8/L6/retired
+  - item 14
+    - **id**: T6
+    - **kind**: tree
+    - **statement**: The root of main is canonical: .github, .gitignore, L7, L8, README.md and nothing else. There is no L8/L6/in/ directory in this repository.
+    - **locator**: auditonomous@origin/main: ls-tree --name-only
+  - item 15
+    - **id**: W1
+    - **kind**: defect
+    - **statement**: 'L7/publications' occurs 26 times in 20 live files on main: integrity.yml:50; L7/0.md:14,223; governance/0.md:26; access:24; copyright:23; licensing:19; permissions:24; restrictions:24; peering/0.md:8,29; private/egress:25; public/0.md:23; public/egress/0.md:10,24,31; public/egress/peer-1/object-1:22; provenance/0.md:29; publications/0.md:1,4; binder/0.md:1,4; L8/L4/work/0.md:30; L8/L4/work/writing/0.md:27; L8/L5/research/findings/0.md:31; L8/L6/0.md:82.
+    - **locator**: auditonomous@origin/main: git grep -n -F 'L7/publications' with the three exclusions
+  - item 16
+    - **id**: W2
+    - **kind**: defect
+    - **statement**: 'governance/restrictions' occurs 16 times in 13 live files on main: integrity.yml:48; L7/0.md:105; governance/access/0.md:27; licensing:27; patents:19,25; permissions:28; restrictions/0.md:1,4; peering/private/0.md:10,23; private/egress/0.md:24; private/ingress/0.md:24; provenance/sources/0.md:16; provenance/sources/staging-records/0.md:30; L8/L4/work/computation/0.md:38.
+    - **locator**: auditonomous@origin/main: git grep -n -F 'governance/restrictions' with the three exclusions
+  - item 17
+    - **id**: W3
+    - **kind**: defect
+    - **statement**: The canonical-branches sentence ending 'and L7/publications/' stands in two live files on main, both as a quotation of the specification, which now reads 'and L7/allications/'.
+    - **locator**: auditonomous@origin/main:L7/0.md:14; L7/peering/0.md:8
+    - **quote**: Canonical direct L7 branches are L7/provenance/, L7/governance/, L7/peering/, and L7/publications/.
+  - item 18
+    - **id**: W4
+    - **kind**: defect
+    - **statement**: 'peering, and publication state' occurs 38 times in 37 live files on main: twice in L7/0.md (lines 4 and 87) and once in the Boundary / traversal rule of each of the other 36 L7 sheets, including staging-records/0.md:24, publications/0.md:37 and binder/0.md:20.
+    - **locator**: auditonomous@origin/main:L7/0.md:87 (and 36 other L7 sheets)
+    - **quote**: It owns the external relations of the bounded object: provenance, governance, peering, and publication state.
+  - item 19
+    - **id**: W5
+    - **kind**: defect
+    - **statement**: 'the L7 publications branch' occurs 9 times in 6 live files on main: L7/0.md:112,135; L7/peering/0.md:10; L7/peering/public/0.md:10,23; L7/peering/public/egress/0.md:14; L7/peering/public/egress/peer-1/object-1/0.md:8; L7/publications/0.md:10 (twice).
+    - **locator**: auditonomous@origin/main:L7/0.md:135
+    - **quote**: Released publications are represented by the L7 publications branch
+  - item 20
+    - **id**: W6
+    - **kind**: defect
+    - **statement**: Smaller phrase counts on main: 'peering, and publications become addressable' 2 (L7/0.md:6,198); 'publications and release identity' 2 (L7/0.md:34; L7/publications/0.md:8); 'access, restrictions' 8 (L7/0.md:32 and line 8 of governance/0.md, access, copyright, licensing, patents, permissions, restrictions); 'access, and restrictions' 2 (L7/peering/0.md:28; L8/L6/0.md:80); 'licensing and restrictions folders' 0.
+    - **locator**: auditonomous@origin/main: git grep -n -F per phrase with the three exclusions
+  - item 21
+    - **id**: W7
+    - **kind**: defect
+    - **statement**: `restrictions/` as a bare folder name stands at three live places on main: the tree drawing L7/0.md:66 and twice in L7/governance/0.md (line 8, the list of six positions; line 32, Holdings).
+    - **locator**: auditonomous@origin/main:L7/governance/0.md:32
+    - **quote**: `licensing/` and `restrictions/` are admissible positions that point to `copyright/`
+  - item 22
+    - **id**: W8
+    - **kind**: defect
+    - **statement**: Only L7/0.md draws the old desk. Its tree has 'restrictions/0' at line 66 and 'publications/0' as the last branch at line 82; its prose table has the row 'governance/restrictions/' at line 105 and 'publications/' at line 115. The model's sheet has controlled/0, an allications/0 branch with six children, and seven table rows where the one stood.
+    - **locator**: auditonomous@origin/main:L7/0.md:66,82,105,115; compare 7lm@origin/main:L7/0.md:69,85-91,114,124-130
+    - **quote**: └── publications/0
+  - item 23
+    - **id**: W9
+    - **kind**: defect
+    - **statement**: L7/0.md:123 on main still names the four owned external relations the old way. The model's sheet reads 'provenance, governance, peering, and allications — the outward acts, of which publication is one.'
+    - **locator**: auditonomous@origin/main:L7/0.md:123; compare 7lm@origin/main:L7/0.md:138
+    - **quote**: The Surface is organized around four owned external relations: provenance, governance, peering, and publications.
+  - item 24
+    - **id**: W10
+    - **kind**: defect
+    - **statement**: The restrictions sheet quotes two specification cells that the model has retired. The model's controlled sheet reads 'Directory for restrictions and other conditions that constrain external disclosure, use, transfer, or handling.' and 'Keeps what is controlled explicit and machine-addressable without redefining the underlying research.'
+    - **locator**: auditonomous@origin/main:L7/governance/restrictions/0.md:3,8,14; compare 7lm@origin/main:L7/governance/controlled/0.md:3,8,14
+    - **quote**: Keeps restrictions explicit and machine-addressable without redefining the underlying research.
+  - item 25
+    - **id**: W11
+    - **kind**: tree
+    - **statement**: In all, 44 live files on main carry at least one former path or swept phrase: the 37 L7 sheets, .github/workflows/integrity.yml, README.md, L8/L4/work/0.md, L8/L4/work/computation/0.md, L8/L4/work/writing/0.md, L8/L5/research/findings/0.md and L8/L6/0.md.
+    - **locator**: auditonomous@origin/main: union of git grep -l over the phrases in W1-W7, R1, with the three exclusions
+  - item 26
+    - **id**: W12
+    - **kind**: rule
+    - **statement**: Occurrences on main that must not be changed, as records: L8/L6/history/7LM_ROUTING_PLAN_2026-09-05.md (6 lines naming L7/publications or governance/restrictions, e.g. 107, 111, 80, 153, 190, 193) and L8/L6/history/harmonization-2026-09-05.md:35. Nothing under L8/L6/retired/ names either former path.
+    - **locator**: auditonomous@origin/main:L8/L6/history/7LM_ROUTING_PLAN_2026-09-05.md:107; L8/L6/history/harmonization-2026-09-05.md:35
+    - **quote**: ### 2.2 `binder/` → `L7/publications/binder/` (MOVE intact)
+  - item 27
+    - **id**: W13
+    - **kind**: rule
+    - **statement**: Occurrences on main that must not be changed, as the word for a kind of condition: 'apply public/legal permissions and restrictions' (L7/0.md:40 and quoted in governance sheets); 'restrictions on onward disclosure' and the like in the Does-not-hold lists; 'restriction conditions' (L7/provenance/0.md:25; L7/publications/0.md:27); 'execution restrictions' (L8/L2/0.md:17). The model keeps each of these.
+    - **locator**: auditonomous@origin/main:L7/0.md:40; L8/L2/0.md:17; compare 7lm@origin/main:L7/0.md:43
+    - **quote**: apply public/legal permissions and restrictions
+  - item 28
+    - **id**: W14
+    - **kind**: rule
+    - **statement**: Occurrences on main that must not be changed, as source material and filed objects: the staging records beneath L7/provenance/sources/staging-records/ (ieee/, library/, standards/, interval/, README.md, STAGING_README.md), L7/provenance/sources/LEDGER.md, the peer object The_Third_Power_Corpus_v3.md, and L8/L5/research/review/autonomous-theory/. They use 'publication' and 'restriction' as source words and name no former path. Only the sheet staging-records/0.md (lines 24 and 30) is live text to sweep.
+    - **locator**: auditonomous@origin/main:L7/provenance/sources/staging-records/0.md:30
+    - **quote**: [source text withheld from the public copy]
+  - item 29
+    - **id**: W15
+    - **kind**: rule
+    - **statement**: The Object line of L7/0.md, its Function cell, and the quotation of that Object in L8/0.md:99 say 'peering, publications, exposure' and are not swept: the model's own sheets keep the same words. The binder's three README files keep their earlier-layout paths (e.g. `uso/l6/LEDGER.md`) by the binder sheet's own statement.
+    - **locator**: auditonomous@origin/main:L7/0.md:3,23; L8/0.md:99; L7/publications/binder/0.md:8; compare 7lm@origin/main:L7/0.md:3,26
+    - **quote**: The three files are the tree's own gates from the earlier layout and are not rewritten.
+  - item 30
+    - **id**: C1
+    - **kind**: defect
+    - **statement**: The exemplar's check differs from the model's in five places. (1) Line 5 comment: 'USO/l6/history/' against 'L8/L6/history/'. (2) Line 33 comment: 'under l6/retired/' against 'under L6/retired/ (l6/retired/ before the rename pass)'. (3) Line 48: L7/governance/restrictions against L7/governance/controlled. (4) Line 50: 'L7/publications' against the seven L7/allications positions. (5) The model adds a line of eight peer-1 and peer-1/object-1 positions that the exemplar's list lacks. The exemplar lists 57 positions, the model 71.
+    - **locator**: auditonomous@origin/main:.github/workflows/integrity.yml:5,33,48,50; 7lm@origin/main:.github/workflows/integrity.yml:5,33,48,50,51
+  - item 31
+    - **id**: C2
+    - **kind**: tree
+    - **statement**: Run against the tree of auditonomous main, the model's check would fail G-003 on exactly the 8 missing positions of T1; G-001 root and heading tests would pass. Run against the beta tree, all 71 positions are sheeted and all 85 sheets are headed by their paths.
+    - **locator**: auditonomous@origin/main and @origin/beta/7lm-exemplar-auditonomous: position-by-position test with git cat-file / git show
+  - item 32
+    - **id**: R1
+    - **kind**: defect
+    - **statement**: The README's reading order names the desk's fourth branch 'publications'. The model's README reads 'provenance, governance, peering, allications.' The README also names the model as the controlling text held in aybllc/7lm (line 5).
+    - **locator**: auditonomous@origin/main:README.md:9; compare 7lm@origin/main:README.md:9
+    - **quote**: the desk, the forward face: provenance, governance (copyright has one place, `L7/governance/copyright/`), peering, publications.
+  - item 33
+    - **id**: R2
+    - **kind**: rule
+    - **statement**: The README states the root and points to the record as the place for the layout and every decision left to the author.
+    - **locator**: auditonomous@origin/main:README.md:13,15
+    - **quote**: The record of the layout and every decision left to the author: `L8/L6/history/harmonization-2026-09-05.md`; the master index: `L8/L6/history/LEDGER.md`.
+  - item 34
+    - **id**: R3
+    - **kind**: defect
+    - **statement**: L8/L6/0.md, in its list of what is not held at the layer, names the desk's branches the former way in two lines: 'access, and restrictions' (line 80) and the released-publications pointer (line 82).
+    - **locator**: auditonomous@origin/main:L8/L6/0.md:80,82
+    - **quote**: - Released publications — `L7/publications/`.
+  - item 35
+    - **id**: R4
+    - **kind**: defect
+    - **statement**: L7/0.md's Holdings lists the forward face 'by owned relation' with a fourth bullet labelled publications pointing at the former path. Its Owns/represents list has 'access, restrictions' (line 32) and 'publications and release identity' (line 34).
+    - **locator**: auditonomous@origin/main:L7/0.md:218-223, 32, 34
+    - **quote**: - **publications** — `L7/publications/binder/` (rules and an empty press-kit checklist); no released object exists.
+  - item 36
+    - **id**: R5
+    - **kind**: rule
+    - **statement**: Other layer sheets name the desk only in ways the model does not sweep: L8/0.md:99 quotes the L7 Object line; L8/0.md:137 says the root is 'the same in every 7LM repository'; L8/L4/0.md (lines 45, 53, 80, 86, 88, 111) and L8/L5/research/0.md:32 say a released publication belongs to L7 without naming a path. L8/L0, L1, L2, L3 and L5 layer sheets name only L7/peering/ and L7/provenance/.
+    - **locator**: auditonomous@origin/main:L8/0.md:99,137; L8/L4/0.md:45; L8/L5/research/0.md:32
+    - **quote**: the root canonical, the same in every 7LM repository; every sheet headed by its path
+  - item 37
+    - **id**: H1
+    - **kind**: procedure
+    - **statement**: The repository's record is L8/L6/history/harmonization-2026-09-05.md, 174 lines, titled '# Harmonization record — 2026-09-05 — the Seven-Layer Model topology instantiated'. Sections 1 to 7 are numbered and undated (with 4a-4e); from section 8 the heading form is '## N. YYYY-MM-DD — title'. The last is section 12.
+    - **locator**: auditonomous@origin/main:L8/L6/history/harmonization-2026-09-05.md:1,105,127,133,156,162
+    - **quote**: ## 12. 2026-09-12 — the rename pass: `USO/` to `L8/`, `l0` … `l6` to `L0` … `L6`
+  - item 38
+    - **id**: H2
+    - **kind**: procedure
+    - **statement**: Section 12 records the rename pass as one commit by git mv, with every active sheet's heading and every path reference in the active sheets, README and two L5 review files renamed, and nothing deleted.
+    - **locator**: auditonomous@origin/main:L8/L6/history/harmonization-2026-09-05.md:168 (section 12)
+    - **quote**: Done, in one commit (the commit that adds this section), by `git mv`: `USO/` is `L8/`
+  - item 39
+    - **id**: H3
+    - **kind**: rule
+    - **statement**: Section 12 lists what a pass leaves as it was: the records at L8/L6/history/, everything below the root of each retired set, the pinned binding of the Autonomous definition (rebinding being the owner's act), and the dated research records.
+    - **locator**: auditonomous@origin/main:L8/L6/history/harmonization-2026-09-05.md:170 (section 12)
+    - **quote**: rebinding to a current version being the owner's act
+  - item 40
+    - **id**: H4
+    - **kind**: open
+    - **statement**: The record contains no section on the L7 restructure and no statement that the exemplar mirrors the scaffold by hand: 'mirror' occurs only at lines 52 and 78, about peer copies. What it says of the scaffold: the controlling architecture is the specification 'as implemented in `aybllc/7lm`' (line 5); the roots of the two exemplars are made the same and the one CI check added (section 9); the rename rule is taken from the specification of 12 September 2026 (section 12).
+    - **locator**: auditonomous@origin/main:L8/L6/history/harmonization-2026-09-05.md:5,129-131,166
+    - **quote**: The scaffold receives the same file once its open pull request (#8) is merged.
+  - item 41
+    - **id**: H5
+    - **kind**: open
+    - **statement**: Decisions the record leaves to the owner (section 5, 'nothing done'): split-or-cite for three L1 files; extraction of candidate objects; under the owner rule, [source text withheld from the public copy] CONTRADICTIONS.md; positions and names, including binder/internal/ at publications versus L4 writing; the Ferreira text's licence status.
+    - **locator**: auditonomous@origin/main:L8/L6/history/harmonization-2026-09-05.md:89-95 (section 5)
+    - **quote**: Under the owner rule: [source text withheld from the public copy]`.
+  - item 42
+    - **id**: H6
+    - **kind**: open
+    - **statement**: Further decisions the record leaves open: CLAUDE.md is held off and the Autonomous Theory files' home is unnamed (section 8, line 125); the home of the discipline text is the owner's to confirm, and the reading of layout-2026-09-06 before its deletion has not been done (section 10, line 152).
+    - **locator**: auditonomous@origin/main:L8/L6/history/harmonization-2026-09-05.md:125,152
+    - **quote**: The home of the discipline text is the owner's to confirm or change.
+  - item 43
+    - **id**: H7
+    - **kind**: rule
+    - **statement**: Section 12 sets a precedent for the model's side: when the exemplar was brought into step, the matching sentence in the specification's 'Not yet as stated' paragraph for this repository was struck in the same pass.
+    - **locator**: auditonomous@origin/main:L8/L6/history/harmonization-2026-09-05.md:174 (section 12)
+    - **quote**: "The interior is named USO/, not L8/." is struck from it in the same pass
+  - item 44
+    - **id**: H8
+    - **kind**: procedure
+    - **statement**: L8/L6/history/LEDGER.md is the master index opened 2026-08-14. It has unnumbered headings and dated table rows, still describes the pre-topology layout (uso/l6/, common/durable/, binder/), and says nothing about the scaffold or about the rename pass. It is a dated record, not the place for a pass.
+    - **locator**: auditonomous@origin/main:L8/L6/history/LEDGER.md:1-10,25-40
+    - **quote**: [source text withheld from the public copy]
+  - item 45
+    - **id**: H9
+    - **kind**: procedure
+    - **statement**: By the repository's own convention a new pass is recorded as section 13 appended to L8/L6/history/harmonization-2026-09-05.md, in the form '## 13. YYYY-MM-DD — title', with the owner's words quoted as written, then what was done, then what was not changed. The history sheet already describes that file as the record; separate record files in the directory are for separate events (sheets-2026-09-07.md).
+    - **locator**: auditonomous@origin/main:L8/L6/history/0.md:37-38; L8/L6/history/harmonization-2026-09-05.md:162-174
+    - **quote**: `harmonization-2026-09-05.md` — the record of this pass: every path moved, retired, bound, or left in place
+  - item 46
+    - **id**: P1
+    - **kind**: tree
+    - **statement**: PR #25 (f89bf8a, one commit of 2026-09-07, merge-base 2d36b04, four commits behind main) changes three files, all at paths that predate both the rename pass and the L7 restructure: USO/l5/research/0.md, USO/l5/research/review/0.md and USO/l6/0.md. It touches no L7 file. A test merge into main conflicts in L8/L5/research/0.md and L8/L5/research/review/0.md and merges L8/L6/0.md cleanly.
+    - **locator**: auditonomous@origin/claude/no-deletion-fix-2026-09-07: git diff 2d36b04..f89bf8a; git merge-tree --write-tree origin/main
+    - **quote**: What is retired and what is deleted is one rule, stated once at `USO/l6/0.md`.
+  - item 47
+    - **id**: P2
+    - **kind**: tree
+    - **statement**: PR #27 (9259c18, five commits of 2026-09-13 and 14, directly ahead of main) changes 176 files: 159 added, 17 modified. All are on L8/ paths and all predate the L7 restructure of 2026-09-20. None is added under L7/publications/ or L7/governance/restrictions/; it adds 2 files under L7/peering/private/ingress/peer-3/object-1/ and 7 under L7/provenance/sources/ (including a new lists-2026-08-08/ directory), and ten new directories in all.
+    - **locator**: auditonomous@origin/claude/book-structure-roadmap-k8ap82: git diff --name-status origin/main
+  - item 48
+    - **id**: P3
+    - **kind**: defect
+    - **statement**: On the roadmap branch 49 live files carry a former path or swept phrase, against 44 on main. The five new ones: L8/L4/work/writing/book/0.md:25, book/ch01-the-readers-contract.md:11, L8/L4/work/writing/papers/0.md:8 and L8/L5/research/review/BOOK_STRUCTURE_AND_ROADMAP_2026-09-13.md (lines 40, 99, 376, 584, 589, 683), which name the former paths; and L7/provenance/sources/lists-2026-08-08/0.md:24, which carries 'peering, and publication state'. Counts there: L7/publications 34 in 24 files; governance/restrictions 17 in 14; the boundary phrase 39 in 38.
+    - **locator**: auditonomous@origin/claude/book-structure-roadmap-k8ap82:L8/L4/work/writing/book/0.md:25
+    - **quote**: the [source text withheld from the public copy].
+  - item 49
+    - **id**: P4
+    - **kind**: defect
+    - **statement**: Eleven of the roadmap branch's 176 changed files are among the 49: L7/0.md, L7/peering/private/ingress/peer-3/object-1/0.md, L7/provenance/sources/0.md, lists-2026-08-08/0.md, L8/L4/work/computation/0.md, L8/L4/work/writing/0.md, book/0.md, book/ch01, papers/0.md, L8/L5/research/findings/0.md and the roadmap file. A test merge of the roadmap branch with the beta candidate conflicts in L7/0.md, L8/L0/0.md and L8/L0/semantics/definitions/0.md.
+    - **locator**: auditonomous: git merge-tree --write-tree origin/beta/7lm-exemplar-auditonomous origin/claude/book-structure-roadmap-k8ap82
+  - item 50
+    - **id**: B1
+    - **kind**: change
+    - **statement**: The beta candidate is one commit, 714480d, by EDM, 2026-11-02 21:08 -0800, directly on main 2165144: 56 files, 2352 insertions, 86 deletions. Its message names a pinned Autonomous artifact 805cd42 and architecture 4ca3edb. Both are commits on the unmerged beta branches of autonomous and 7lm, and neither is an ancestor of those repositories' main.
+    - **locator**: auditonomous@origin/beta/7lm-exemplar-auditonomous: commit 714480d; 7lm: merge-base --is-ancestor 4ca3edb origin/main (false); autonomous: 805cd42 (false)
+    - **quote**: Construct pinned Auditonomous 7LM beta envelope exemplar
+  - item 51
+    - **id**: B2
+    - **kind**: change
+    - **statement**: Beta files that are pure physical alignment (22): the three binder READMEs (R100) and binder/0.md (lines 1, 4); L7/governance/controlled/0.md (R094; lines 1, 4, 24); governance/0.md (8, 26, 32), access (24, 27), copyright (23), licensing (19, 27), patents (19, 25), permissions (24, 28); peering/0.md (8, 29), private/0.md (10, 23), private/egress/0.md (24-25), private/ingress/0.md (24), public/0.md (23), public/egress/0.md (10, 24, 31), public/egress/peer-1/object-1/0.md (22); staging-records/0.md (30); L8/L4/work/0.md (30); L8/L4/work/writing/0.md (27); L8/L6/0.md (82).
+    - **locator**: auditonomous: git diff -M origin/main origin/beta/7lm-exemplar-auditonomous
+  - item 52
+    - **id**: B3
+    - **kind**: change
+    - **statement**: Beta files mixing alignment with wording change (11). integrity.yml: canon hunks at 48 and 50 align; hunks at 19-20, 23, 27-28, 33, 37, 40, 46, 51-58, 64, 66 remove the USO alternative and hard-code L8. L7/0.md: hunks 14, 66, 82, 223 align; 105, 115 and 123 use beta's own wording; 220 changes '62-row' to '60-row archive'. The six new sheets under L7/allications/. L7/allications/publications/0.md: 1 and 4 align, 43 rewrites Standing. L7/provenance/0.md: 29 aligns; 20, 33, 37 are holdings changes. L7/provenance/sources/0.md: 16 aligns; 10, 41, 55 are holdings changes.
+    - **locator**: auditonomous: git diff -M origin/main origin/beta/7lm-exemplar-auditonomous -- .github L7
+  - item 53
+    - **id**: B4
+    - **kind**: change
+    - **statement**: Beta files that are wording or contract changes only (9): L7/peering/private/ingress/peer-1/0.md:16 and peer-1/object-1/0.md:10 (62 to 60 rows); L7/peering/public/ingress/peer-1/object-1/0.md (hunks 13, 17, 34: the binding record); L7/provenance/sources/LEDGER.md (8 lines appended at 146, 'Attributable receiving correction — 2026-11-03'); L8/L0/0.md (77, 81, 93); L8/L0/semantics/definitions/0.md (32, 34); AUDITONOMOUS_DEFINITION.md (16 lines added: a paragraph at 20 and 14 'Current role' lines in Appendix C); L8/L1/state-space/REQUIREMENTS_OWNERSHIP.md (2 lines at 268); L8/L5/research/review/CONTRADICTIONS.md (15 lines at 22).
+    - **locator**: auditonomous: git diff -M origin/main origin/beta/7lm-exemplar-auditonomous -- L7/peering L7/provenance/sources/LEDGER.md L8/L0 L8/L1 L8/L5/research/review
+  - item 54
+    - **id**: B5
+    - **kind**: change
+    - **statement**: Beta files that are new research objects (11): L7/peering/public/ingress/peer-1/object-2/0.md and binding.json; L8/L0/semantics/AUDITONOMOUS_BETA_SCOPE.md; L8/L1/state-space/AUDITONOMOUS_BETA_ADMISSION.md; L8/L2/formal-mathematics/relations/AUDITONOMOUS_BETA_PREDICATE.md; L8/L3/engineering-mathematics/AUDITONOMOUS_BETA_METHOD.md; L8/L4/work/computation/auditonomous_beta.py (310 lines), test_auditonomous_beta.py (198), auditonomous_beta_result.json (1554); L8/L5/research/findings/AUDITONOMOUS_BETA_FINDINGS.md; L8/L6/history/AUDITONOMOUS_BETA_HISTORY.md. Three sheets list them: L8/L4/work/computation/0.md (38 path aligned, plus listing and Standing at 56), L8/L5/research/findings/0.md (31 aligned, listing at 35), L8/L6/history/0.md (listing at 35).
+    - **locator**: auditonomous@origin/beta/7lm-exemplar-auditonomous: added files; git diff -M origin/main
+  - item 55
+    - **id**: B6
+    - **kind**: defect
+    - **statement**: Beta's physical alignment is complete for paths and incomplete for words. 'L7/publications', 'governance/restrictions' and bare `restrictions/` are at 0 in live text. Unchanged from main: 'peering, and publication state' 38 in 37 files; 'the L7 publications branch' 9 in 6; 'peering, and publications become addressable' 2; 'publications and release identity' 2; 'access, restrictions' 8; 'access, and restrictions' 2. That is 61 occurrences left. README.md is not in the diff, so line 9 still says publications.
+    - **locator**: auditonomous@origin/beta/7lm-exemplar-auditonomous: git grep -F per phrase with the three exclusions; README.md:9
+  - item 56
+    - **id**: B7
+    - **kind**: defect
+    - **statement**: Beta leaves a moved path beside a stale quotation of the specification, and leaves the retired cells in the controlled sheet (Object line 3, prose cell and 'access, restrictions' at line 8, Why cell at line 14) and in the L7/0.md table row.
+    - **locator**: auditonomous@origin/beta/7lm-exemplar-auditonomous:L7/peering/public/0.md:23; L7/governance/controlled/0.md:3,8,14; L7/0.md:111
+    - **quote**: L7/allications/publications/ ("Released publications are represented by the L7 publications branch")
+  - item 57
+    - **id**: B8
+    - **kind**: defect
+    - **statement**: Beta's six new sheets are not the model's. Each is 8 lines, gives 'Layer: L7' without the layer name, calls the positions 'capabilities', and has no Why, Holds, Does-not-hold, Boundary or Standing sections. The model's sheets are 36 to 39 lines and state outward acts. Beta's seven L7/0.md table rows are likewise its own cells, and its line 135 rewrites the specification's sentence as 'four direct branches'.
+    - **locator**: auditonomous@origin/beta/7lm-exemplar-auditonomous:L7/allications/0.md:3-6; L7/0.md:121-127,135; compare 7lm@origin/main:L7/allications/0.md:3-39; L7/0.md:124-130,138
+    - **quote**: **Object:** External engagement capabilities of this internal Auditonomous research object.
+  - item 58
+    - **id**: B9
+    - **kind**: defect
+    - **statement**: Beta's check is not the model's main check: it is byte-identical to the check on 7lm's unmerged beta branch, drops the USO alternative and the ${lower} variable, and hard-codes top=L8. The model's main still carries the dual form.
+    - **locator**: auditonomous@origin/beta/7lm-exemplar-auditonomous:.github/workflows/integrity.yml:19-27,36; compare 7lm@origin/main:.github/workflows/integrity.yml:19-28,37,46 and 7lm@origin/beta/common-contracts-r1-r6:.github/workflows/integrity.yml
+    - **quote**: top=L8
+  - item 59
+    - **id**: B10
+    - **kind**: defect
+    - **statement**: Beta acts on the three items the record leaves to the owner (H5): it adds text inside AUDITONOMOUS_DEFINITION.md (which the definitions sheet says is cited as written; beta changes 'restored verbatim' to 'restored'), adds a Q13 disposition to REQUIREMENTS_OWNERSHIP.md, and adds a dispositions table to CONTRADICTIONS.md. It also edits the pinned binding record that section 12 says was left as it was, keeping the pin and adding a full hash, a provenance row and a convenience locator.
+    - **locator**: auditonomous@origin/beta/7lm-exemplar-auditonomous:L8/L0/semantics/definitions/AUDITONOMOUS_DEFINITION.md:20; L8/L0/semantics/definitions/0.md:34; L7/peering/public/ingress/peer-1/object-1/0.md:13-19
+    - **quote**: **[source text withheld from the public copy]`
+  - item 60
+    - **id**: B11
+    - **kind**: defect
+    - **statement**: Beta changes a sentence in L8/L0/0.md that is the specification's own text carried in the sheet: 'definition of Autonomous' becomes 'definition of Auditonomous; Autonomous remains the bound source-owned input'. The model's specification and its L8/L0/0.md both read 'Autonomous'.
+    - **locator**: auditonomous@origin/beta/7lm-exemplar-auditonomous:L8/L0/0.md:77; compare 7lm@origin/main:L8/L4/work/writing/7lm-harmonized-architecture-specification.md:351
+    - **quote**: In this exemplar, the L0 object is the locally authored semantic definition of Autonomous.
+  - item 61
+    - **id**: B12
+    - **kind**: defect
+    - **statement**: Beta does not record its pass by the repository's convention: harmonization-2026-09-05.md is unchanged (no section 13) and a separate file is added, whose step 2 describes the two moves and refers to a 'private implementation move manifest' that is not in the tree.
+    - **locator**: auditonomous@origin/beta/7lm-exemplar-auditonomous:L8/L6/history/AUDITONOMOUS_BETA_HISTORY.md:6
+    - **quote**: Moved restrictions → controlled and full publications subtree → allications/publications.
+  - item 62
+    - **id**: D1
+    - **kind**: defect
+    - **statement**: Sheet against tree on main: five sheets and the model's specification say the sources register has 62 rows; the register holds 60 rows with PR-, STD-, INST- or EXC- identifiers (20 + 34 + 4 + 2). Beta changes the sheets to 60. This is a holdings correction, not part of the restructure.
+    - **locator**: auditonomous@origin/main:L7/0.md:220; L7/provenance/0.md:20,33; L7/provenance/sources/0.md:10,41; L7/peering/private/ingress/peer-1/0.md:16; peer-1/object-1/0.md:10; register at L7/provenance/sources/LEDGER.md (rows counted by ID prefix)
+    - **quote**: the 62-row pointer register into the `aybllc/l6` archive
+  - item 63
+    - **id**: D2
+    - **kind**: defect
+    - **statement**: Four further sheet statements on main disagree with the tree. The sources sheet's Standing says the ledger has no rows. The provenance sheet says lineage/ is empty, while it holds 2026-08-05-observed-not-observable-session-provenance.md. The computation sheet's Standing says it is empty, while it holds six files. The publications sheet says the harmonized specification is filed at L8/L4/work/writing/, which holds no such file.
+    - **locator**: auditonomous@origin/main:L7/provenance/sources/0.md:55; L7/provenance/0.md:37; L8/L4/work/computation/0.md:54; L7/publications/0.md:43
+    - **quote**: The ledger has no rows; that is admissible.
+- **checklist**
+  - item 1
+    - **step**: 0. Preconditions (the owner's)
+    - **detail**: The model's rule is that the exemplar is mirrored by hand when the owner judges the scaffold close. Work from auditonomous main 2165144 on a new branch. Decide first what happens to PR #25 (USO/ paths, conflicts in two files) and PR #27 (closed; adds 5 more files with former names). Decide whether anything is taken from the beta candidate; this checklist assumes main as the base and the model's main as the target.
+    - **locator**: 7lm@origin/main:L8/L6/history/harmonization-2026-09-04.md:336,346
+  - item 2
+    - **step**: 1. Move the governance position (tracked rename)
+    - **detail**: git mv L7/governance/restrictions L7/governance/controlled. One file: 0.md.
+    - **locator**: 7lm@origin/main:L8/L6/history/harmonization-2026-09-04.md:321
+  - item 3
+    - **step**: 2. Move the publications position (tracked rename)
+    - **detail**: Create L7/allications/ and git mv L7/publications L7/allications/publications. Five files: 0.md, binder/0.md, binder/README.md, binder/internal/README.md, binder/press-kit/README.md. The three binder READMEs move byte for byte and are not edited.
+    - **locator**: auditonomous@origin/main:L7/publications/ (ls-tree)
+  - item 4
+    - **step**: 3. Head the three moved sheets by their new paths
+    - **detail**: Line 1 and the Path field on line 4 of each: '# L7/governance/controlled/'; '# L7/allications/publications/'; '# L7/allications/publications/binder/'. Six lines in three files. These six are among the counts in steps 5 and 6.
+    - **locator**: auditonomous@origin/main:L7/governance/restrictions/0.md:1,4; L7/publications/0.md:1,4; L7/publications/binder/0.md:1,4
+  - item 5
+    - **step**: 4. Write the six missing sheets
+    - **detail**: L7/allications/0.md, L7/allications/applications/0.md, communications/0.md, specifications/0.md, notifications/0.md, participations/0.md, each with first line '# <path>/'. Source: the model's sheets at the same paths (39, 36, 37, 36, 36, 37 lines). One line is scaffold-specific and needs this repository's date and record: allications/0.md:38. Sheets go from 78 to 84; L7 from 37 to 43.
+    - **locator**: 7lm@origin/main:L7/allications/0.md:1-39 (line 38 names harmonization-2026-09-04.md section 25)
+  - item 6
+    - **step**: 5. Propagate the publications path
+    - **detail**: `L7/publications/` -> `L7/allications/publications/`: 23 occurrences in 19 files (W1 less the CI line and the two canonical-branches sentences), including the 4 self-lines of step 3, `L7/publications/binder/` at L7/0.md:223 and the press-kit path at L7/peering/public/egress/0.md:31.
+    - **locator**: auditonomous@origin/main: lines listed in fact W1
+  - item 7
+    - **step**: 6. Propagate the governance path
+    - **detail**: `governance/restrictions` -> `governance/controlled`: 15 occurrences in 12 files (W2 less the CI line), including the 2 self-lines of step 3, the sheet staging-records/0.md:30, L7/provenance/sources/0.md:16 and L8/L4/work/computation/0.md:38. L7/0.md:105 is handled as a whole row in step 8.
+    - **locator**: auditonomous@origin/main: lines listed in fact W2
+  - item 8
+    - **step**: 7. Canonical-branches sentence
+    - **detail**: 'and L7/publications/.' -> 'and L7/allications/.' Two occurrences: L7/0.md:14 and L7/peering/0.md:8.
+    - **locator**: 7lm@origin/main:L7/0.md:16
+  - item 9
+    - **step**: 8. Redraw L7/0.md
+    - **detail**: Tree: line 66 'restrictions/0' -> 'controlled/0'; line 82 'publications/0' -> 'allications/0' with six children (publications, applications, communications, specifications, notifications, participations). Table: row 105 becomes the model's governance/controlled/ row; row 115 becomes the model's seven rows (allications/ and its six). Line 123: 'peering, and publications.' -> 'peering, and allications — the outward acts, of which publication is one.'
+    - **locator**: 7lm@origin/main:L7/0.md:69,85-91,114,124-130,138
+  - item 10
+    - **step**: 9. Folder name in prose
+    - **detail**: `restrictions/` -> `controlled/` in L7/governance/0.md, two occurrences: line 8 (the six positions) and line 32 (Holdings: '`licensing/` and `restrictions/` are admissible positions').
+    - **locator**: auditonomous@origin/main:L7/governance/0.md:8,32
+  - item 11
+    - **step**: 10. Sweep: the boundary sentence
+    - **detail**: 'peering, and publication state' -> 'peering, and allications — the outward acts, of which publication is one': 38 occurrences in 37 files (L7/0.md lines 4 and 87; one in each other L7 sheet).
+    - **locator**: auditonomous@origin/main: fact W4
+  - item 12
+    - **step**: 11. Sweep: the publications branch
+    - **detail**: 'the L7 publications branch' -> 'L7/allications/publications/': 9 occurrences in 6 files (L7/0.md:112,135; peering/0.md:10; peering/public/0.md:10,23; public/egress/0.md:14; public/egress/peer-1/object-1/0.md:8; publications/0.md:10 twice).
+    - **locator**: auditonomous@origin/main: fact W5
+  - item 13
+    - **step**: 12. Sweep: the smaller phrases
+    - **detail**: 'peering, and publications become addressable' -> 'peering, and allications become addressable' (2: L7/0.md:6,198). 'publications and release identity' -> 'allications: the outward acts, of which publication is one' (2: L7/0.md:34; publications/0.md:8). 'access, restrictions' -> 'access, controlled' (8: L7/0.md:32 and line 8 of seven governance sheets). 'access, and restrictions' -> 'access, and controlled conditions' (2: L7/peering/0.md:28; L8/L6/0.md:80). 'licensing and restrictions folders': 0, nothing to do.
+    - **locator**: auditonomous@origin/main: fact W6
+  - item 14
+    - **step**: 13. The controlled sheet's two retired cells
+    - **detail**: In L7/governance/controlled/0.md, line 3 and the quotation on line 8: 'Directory for restrictions and other conditions that constrain external disclosure, use, transfer, or handling.' Line 14 quotation: 'Keeps what is controlled explicit and machine-addressable without redefining the underlying research.'
+    - **locator**: 7lm@origin/main:L7/governance/controlled/0.md:3,8,14
+  - item 15
+    - **step**: 14. README
+    - **detail**: Line 9: 'peering, publications.' -> 'peering, allications.' One occurrence. Nothing else in the README names the desk's branches.
+    - **locator**: auditonomous@origin/main:README.md:9; 7lm@origin/main:README.md:9
+  - item 16
+    - **step**: 15. The one CI check
+    - **detail**: Make .github/workflows/integrity.yml identical to the model's main file. Five differences: line 5 comment (L8/L6/history/); line 33 comment; line 48 controlled; line 50 replaced by the eight peer positions and the seven allications positions. 57 positions become 71. Keep the USO|L8 dual form, as the model's main does.
+    - **locator**: 7lm@origin/main:.github/workflows/integrity.yml:5,33,48,50,51
+  - item 17
+    - **step**: 16. Leave alone
+    - **detail**: Everything under L8/L6/history/ and L8/L6/retired/ (7LM_ROUTING_PLAN 6 lines and the record's line 35 keep the former paths). The owner's words. Every other sheet's first line. 'restrictions' as a kind of condition and 'execution restrictions' at L8/L2/0.md:17. The Object and Function lines of L7/0.md and L8/0.md:99. The staging records beneath staging-records/, the sources LEDGER.md, the binder READMEs, the peer objects, the definition, the pinned binding, the dated research records.
+    - **locator**: 7lm@origin/main:L8/L6/history/harmonization-2026-09-04.md:498,508; auditonomous@origin/main:L8/L6/history/harmonization-2026-09-05.md:170
+  - item 18
+    - **step**: 17. Record the pass
+    - **detail**: Append '## 13. <date> — <title>' to L8/L6/history/harmonization-2026-09-05.md: the owner's words as written, the two moves, the six sheets, each phrase pair with its count, the file total, what was not changed, and how it was checked. Do not edit sections 1 to 12.
+    - **locator**: auditonomous@origin/main:L8/L6/history/harmonization-2026-09-05.md:162-174 (the form of section 12)
+  - item 19
+    - **step**: 18. Verify
+    - **detail**: Expected after the pass: every phrase of steps 5 to 14 greps to 0 in live text; the records still hold their former paths; 84 sheets, each headed by its path; all 71 positions sheeted; root unchanged; 12 unsheeted directories outside retired sets, the two binder ones now under L7/allications/publications/binder/. Files touched: the 44 of fact W11 (three of them renamed), 3 renamed only, 6 new, and the record.
+    - **locator**: 7lm@origin/main:.github/workflows/integrity.yml:13-69
+  - item 20
+    - **step**: 19. Afterwards, on the model's side (the owner's)
+    - **detail**: The specification's paragraph on Auditonomous still says the restructure is not mirrored. The precedent of the rename pass is that the sentence is struck in the same pass; that is an edit to aybllc/7lm, not to this repository.
+    - **locator**: 7lm@origin/main:L8/L4/work/writing/7lm-harmonized-architecture-specification.md:958; auditonomous@origin/main:L8/L6/history/harmonization-2026-09-05.md:174
+- **open_questions**
+  - Are the six new sheets to be the model's text verbatim, or adapted? The exemplar's sheets carry a Holdings section the model's lack, and the model's allications/0.md:38 points at the scaffold's own record and date.
+  - In L7/0.md Holdings (lines 218-223), is the fourth bullet's label 'publications' to become 'allications'? The model has no Holdings section to copy; beta kept 'publications' and changed only the path.
+  - Does this pass carry only the restructure and sweep (model record sections 25 and 37), or also the model's other changes to shared sheets since 2026-09-12? The model's L7/0.md has lines the exemplar lacks (FIRST is 0, the name as design, the packet reading, at lines 13, 14, 18) and section 37 also added an author note and changed the introductory sentence. I did not compare the L8 sheets line by line against the model's.
+  - The model's record (section 25) counts 21 Auditonomous files naming former paths. I count 20 live files for L7/publications (22 with the two records) and 13 for governance/restrictions (14 with one record); the union of the two paths in live text is 26 files. The 13 agrees; I could not reproduce the 21.
+  - Are the five sheet-against-tree statements on main (62 rows against 60; 'the ledger has no rows'; lineage 'empty'; computation 'empty at present'; the specification 'filed' at L8/L4/work/writing/) to be corrected in this pass or separately? They are not part of the restructure, and the model's specification also says 62.
+  - What becomes of the beta candidate's research objects and its edits to the definition, Q13 and CONTRADICTIONS.md? They rest on commits 4ca3edb (7lm beta) and 805cd42 (autonomous beta), which are on neither repository's main, and they act on items the record leaves to the owner.
+  - If PR #27's roadmap material is revived, the sweep extends to 49 files, and four of its new files (book/0.md, ch01, papers/0.md, the roadmap) name L7/publications/ or governance/restrictions. The roadmap file is dated 2026-09-13 and sits in the catch-all: is it live text or a dated record?
+  - PR #25 is still open on USO/ paths. Its L8/L6/0.md clarification merges cleanly, but its two L5 sheets conflict with main. Whether it is rebuilt, closed or superseded is not settled by anything I read.
+  - The date and title of section 13, and the owner's words to quote in it, are the owner's. The request of 2026-11-11 is the only instruction I have seen for this pass.

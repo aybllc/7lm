@@ -1,0 +1,843 @@
+# read:autonomous-dependency
+
+Agent result, as returned. Workflow: Handle on the Auditonomous research and manuscript. Run `wf_9c2917a7-7f0`. Phase: Read. Checked in 2026-11-11 19:51 UTC.
+
+- **scope**: What Auditonomous takes from Autonomous, and the state of that source. Read as git objects only: aybllc/autonomous origin/main (c9076c3), its bound commit 0504961, its beta (e64b382 / 805cd42) and closed PR #29 branch (9b49910); aybllc/auditonomous MAIN (origin/main), BETA (714480d), ROADMAP (9259c18), HISTORY (1d83788); aybllc/7lm origin/main and beta only for the one cross-referenced rule ("consensus baseline") and the architecture commit 4ca3edb. Locator prefixes: MAIN/BETA/ROADMAP/HISTORY = auditonomous; AUT-MAIN, AUT@0504961, AUT-BETA, AUT-PR29 = autonomous; 7LM-MAIN = 7lm. No external source was fetched; no test was run; no quotation was re-verified against a standard.
+- **summary**: Autonomous does not supply one definition of "autonomous". Its L0 object, AUTONOMOUS.md, is a plural entry: eleven codified definitions A1 to A11 from nine issuing bodies (ISO/TC 299, ISO/IEC JTC 1/SC 42, ISO/IEC JTC 1/SC 7, IEEE, [source text withheld from the public copy]), plus five usage rules the entry itself labels INTERNALLY DERIVED. It says "[source text withheld from the public copy]". The Seven-Layer Model specification asks Autonomous to freeze a "consensus baseline"; none is stated anywhere, and the autonomous beta says so explicitly.
+
+  The entry's own status is contradictory: its banner says not adversarially reviewed, its status line says ADOPTED, its register says "not yet entered", and its review of 2026-08-08 (REVIEW_4) blocks the gate pending seven fixes that have not been made (A3 label cell, "A1…A10" for eleven rows, rule 2 unamended, rule 3 refuted on its own table).
+
+  Auditonomous is bound to exactly one object: research/definitions/AUTONOMOUS.md at commit 0504961 (2026-08-14). Every statement of the binding on MAIN agrees (seven places). The commit exists in the clone. I confirmed the bound file is byte-identical to autonomous origin/main today (blob ffbdc28, SHA-256 2756…a12b, 22,735 bytes); only the path changed. So the binding is stale in path, not in content.
+
+  Roadmap decision D22 proposed rebinding (to c9076c3, or to a tag exemplar-2026-09-14, or keeping 0504961) and recommended the tag. No such tag exists in the clone and PR #29 was never merged. The beta kept 0504961, declared "no rebind", added a provenance row, and added a separate object-2 binding to a finite computation at 805cd42; I recomputed both of its hashes and they match.
+
+  What Auditonomous still needs and does not get: a single baseline; the seven fixes; definitions it actually uses that are absent from the bound object (IEEE 1920.1 is nowhere in Autonomous); bindings for AUTOMATION.md and REGISTER.md; a settled meaning of "auditability"; and the unrun search on whether autonomy entails auditability. The baseline paper exists only on the closed PR #29 branch.
+- **items**
+  - item 1
+    - **id**: AUT-01
+    - **title**: Autonomous README: subject statement and reading order
+    - **path**: README.md
+    - **where**: AUTONOMOUS repo: origin/main
+    - **what_it_is**: The 17-line start file. States the subject, points to the sheets (0.md), names the L0 object and the evidence rules. Carries no status label of its own.
+    - **own_label**: none on the file; it calls itself "the start, not the documentation"
+    - **evidence_state**: ASSERTED
+    - **locator**: AUT-MAIN:README.md:3
+    - **quote**: Subject: what "autonomous" means in codified authority, what it requires, and at what unit it attaches.
+    - **key_claims**
+      - The L0 object is L8/L0/semantics/definitions/AUTONOMOUS.md (README.md:11)
+      - Evidence rules are at L8/L5/research/review/EVIDENCE_RULES.md (README.md:12)
+    - **checked_how**: Read in full; the four named paths exist on origin/main (ls-tree).
+  - item 2
+    - **id**: AUT-02
+    - **title**: The L0 object: AUTONOMOUS.md, a plural term entry (the thing Auditonomous binds)
+    - **path**: L8/L0/semantics/definitions/AUTONOMOUS.md
+    - **where**: AUTONOMOUS repo: origin/main, identical at 0504961 and on the beta
+    - **what_it_is**: 315-line term entry: §0 the finding, §1 eleven codified definitions A1-A11 verbatim, §2 what each measures, §[source text withheld from the public copy], §4 terms not to conflate, §5 custody, §6 five adopted-usage rules, §7 what is missing. It adopts all eleven, indexed, and forbids the unqualified word. No single definition is stated.
+    - **own_label**: "[source text withheld from the public copy]" (line 3); "[source text withheld from the public copy]." (line 24)
+    - **evidence_state**: CONTRADICTED
+    - **locator**: AUT-MAIN:L8/L0/semantics/definitions/AUTONOMOUS.md:24-25
+    - **quote**: [source text withheld from the public copy]
+    - **key_claims**
+      - "[source text withheld from the public copy]." (line 38)
+      - "[source text withheld from the public copy]" (line 39) - the table carries nine issuing bodies
+      - Per the owner ("[source text withheld from the public copy]") the entry adopts all, indexed (lines 61-62)
+      - "[source text withheld from the public copy]." (line 21)
+    - **checked_how**: Read in full. Its status is contradicted by three records in the same repository: REGISTER.md:19 lists the term under "Not yet entered"; REVIEW_4 (L8/L5/research/review/REVIEW_4_AUTONOMOUS_ADJUDICATION.md:451) "[source text withheld from the public copy]"; the definitions sheet 0.md:32,35 records both as open.
+    - **open_items**
+      - Six attack lines listed in the banner remain uncommissioned (lines 15-19)
+      - REVIEW_4 seven-item fix set not applied (file unchanged since before 2026-08-14)
+    - **depends_on**
+      - AUT-03
+      - AUT-04
+      - AUT-07
+      - AUT-20
+  - item 3
+    - **id**: AUT-03
+    - **title**: Rows A1-A11: the eleven codified definitions and their issuing bodies
+    - **path**: L8/L0/semantics/definitions/AUTONOMOUS.md
+    - **where**: AUTONOMOUS repo: origin/main (= 0504961)
+    - **what_it_is**: The §1 table. Each row: body, designation and clause, verbatim text, deliverable type, evidence label. These rows are the only route by which any standards body's definition of autonomous may reach Auditonomous.
+    - **own_label**: per row: `VERIFIED` (A1, A2, A4, A6, A7, A8, A9, A10, A11); `PARTIALLY VERIFIED` (A5); A3 carries both `VERIFIED` and [source text withheld from the public copy]`
+    - **evidence_state**: EXTERNALLY CHECKED for A1, A2, A4, A6, A7, A8, A11 (source and reading recorded in the row); A5 partial (two IEEE-RAS decks, standard body unread); A3 CONTRADICTED (two labels in one row, custody open); A9 and A10 fidelity defects recorded by the repository's own review
+    - **locator**: AUT-MAIN:L8/L0/semantics/definitions/AUTONOMOUS.md:70-80
+    - **quote**: [source text withheld from the public copy]
+    - **key_claims**
+      - A1 ISO/TC 299, ISO 8373 3.2, autonomy (line 70)
+      - [source text withheld from the public copy] (line 71)
+      - [source text withheld from the public copy] (line 72)
+      - [source text withheld from the public copy] - a Technical Report (line 73)
+      - [source text withheld from the public copy] - clause unknown, Inactive-Reserved (line 74)
+      - [source text withheld from the public copy] (line 75)
+      - [source text withheld from the public copy] text (line 76)
+      - [source text withheld from the public copy] (line 77)
+      - [source text withheld from the public copy] - cell is a paraphrase (line 78)
+      - [source text withheld from the public copy] - a different word (line 79)
+      - [source text withheld from the public copy] - circular by the entry's own note (lines 80, 84-87)
+    - **checked_how**: Read the table. The nine issuing bodies match the nine ingress peers listed at AUT-MAIN:L7/peering/public/ingress/0.md Holdings. I did not re-verify any quotation against a standard (no network). The repository's REVIEW_4 is reported by the PR #29 paper (line 29) to have matched [source text withheld from the public copy] character-exact against held captures; I did not re-read REVIEW_4 beyond its verdict lines.
+    - **open_items**
+      - [source text withheld from the public copy]" (lines 228-234)
+      - A5: IEEE 1872-2015 body unread; "[source text withheld from the public copy]" (lines 235-238)
+      - Four held VERIFIED-labelled candidates never adjudicated in or out (JSP 936 ¶32, NATO via [source text withheld from the public copy]) - REVIEW_4 F6 as carried by AUT-PR29 paper:49
+  - item 4
+    - **id**: AUT-04
+    - **title**: §6 adopted usage: five rules for using the word (never unqualified; two axes; (system, task) pair; clause 5.13 as the test; record, do not resolve)
+    - **path**: L8/L0/semantics/definitions/AUTONOMOUS.md
+    - **where**: AUTONOMOUS repo: origin/main (= 0504961)
+    - **what_it_is**: The only part of the bound object that is Autonomous's own authorship rather than quoted standards text. Rule 2 (two axes) records its own falsification condition as met: a third codified axis, overridability, exists and the rule was not amended.
+    - **own_label**: `[source text withheld from the public copy].` (line 256)
+    - **evidence_state**: CONTRADICTED
+    - **locator**: AUT-MAIN:L8/L0/semantics/definitions/AUTONOMOUS.md:242-299
+    - **quote**: [source text withheld from the public copy]
+    - **key_claims**
+      - Rule 1: [source text withheld from the public copy])" (line 246) - the table has A11
+      - [source text withheld from the public copy]." (line 258)
+      - [source text withheld from the public copy]" (lines 290-291); not done
+    - **checked_how**: Read. Contradicted inside the file (lines 273-294) and by REVIEW_4 [source text withheld from the public copy]" (AUT-MAIN:L8/L5/research/review/REVIEW_4_AUTONOMOUS_ADJUDICATION.md:43).
+    - **open_items**
+      - [source text withheld from the public copy] to an axis; restate rule 3 narrowly (REVIEW_4 fix set)
+    - **depends_on**
+      - AUT-14
+      - AUT-20
+  - item 5
+    - **id**: AUT-05
+    - **title**: Consensus baseline: stated or left plural? Left plural; none is stated
+    - **path**: L7/peering/public/egress/0.md
+    - **where**: AUTONOMOUS repo: origin/main and beta; rule originates in 7lm origin/main
+    - **what_it_is**: The Seven-Layer Model specification gives Autonomous "one bounded semantic job": freeze the narrowest reasonable agreement among its standards inputs as the Autonomous consensus baseline, which Auditonomous then consumes. The Autonomous egress sheet quotes the rule. No file on any ref states such a baseline; the entry declines to make one, and the beta says none is established.
+    - **own_label**: none; the beta writes "[source text withheld from the public copy]."
+    - **evidence_state**: EMPTY
+    - **locator**: AUT-MAIN:L7/peering/public/egress/0.md:37
+    - **quote**: Autonomous freezes the narrowest reasonable agreement among its exact source-tagged standards inputs as the Autonomous consensus baseline. It must not manufacture consensus where sources materially disagree.
+    - **key_claims**
+      - 7LM spec: "Auditonomous consumes the pinned Autonomous consensus baseline and authors the Auditonomous difference as an explicit local delta." (7LM-MAIN:L8/L4/work/writing/7lm-harmonized-architecture-specification.md:44; also :835)
+      - Entry: "[source text withheld from the public copy]" (AUT-MAIN:AUTONOMOUS.md:25)
+      - Beta: "[source text withheld from the public copy]." (AUT-BETA:L8/L5/research/review/BETA_SOURCE_OVERLAY.md:11)
+      - Auditonomous beta: "[source text withheld from the public copy]" (BETA:L8/L0/semantics/AUDITONOMOUS_BETA_SCOPE.md:3)
+    - **checked_how**: grep -F 'consensus baseline' over 7lm origin/main; read the egress sheet, the entry and the two beta overlays. No file named or described as a baseline exists in L8/L0 of autonomous on main or beta (ls-tree).
+    - **open_items**
+      - Whether a baseline is to be authored (and by which rule of 'narrowest reasonable agreement'), or the spec's wording is to yield to the plural entry, is not ruled anywhere I read
+  - item 6
+    - **id**: AUT-06
+    - **title**: DEFINITION_LIST_AUTONOMOUS.md: [source text withheld from the public copy] file
+    - **path**: L8/L0/semantics/definitions/DEFINITION_LIST_AUTONOMOUS.md
+    - **where**: AUTONOMOUS repo: origin/main (= 0504961); beta adds a two-line overlay note
+    - **what_it_is**: 155-line compilation: A1-A11 again, system-level and sibling definitions (TR 29119-11 3.1.14, UK MoD JSP 936, NATO via JSP 936, IEEE 7010), modes and roles, contrast terms, the DoD three-tier taxonomy, statutory gloss, ten level scales M1-M10, and the refusals and negative findings. Not bound by Auditonomous.
+    - **own_label**: "Class: compilation ... Introduces no evidence" (lines 3-4)
+    - **evidence_state**: ASSERTED
+    - **locator**: AUT-MAIN:L8/L0/semantics/definitions/DEFINITION_LIST_AUTONOMOUS.md:13-15
+    - **quote**: [source text withheld from the public copy]
+    - **key_claims**
+      - Its A3 label is `[source text withheld from the public copy]` (line 25) - differs from the VERIFIED label cell in AUTONOMOUS.md:72
+      - Its A9 is a verbatim EASA glossary sentence and its A10 a fuller ETSI NOTE 2 (lines 31-32) - differ from the cells in AUTONOMOUS.md:78-79
+      - Axes stated as three, including overridability (lines 35-37)
+      - M1 (ISO/IEC 22989 ladder) is "CITE-ONLY — custody open" (line 112)
+    - **checked_how**: Read in full; compared its A-rows with AUTONOMOUS.md §1 by eye. Blob identical at 0504961 and origin/main (735c2ec).
+  - item 7
+    - **id**: AUT-07
+    - **title**: REGISTER.md: the definitions ledger - [source text withheld from the public copy]
+    - **path**: L8/L0/semantics/definitions/REGISTER.md
+    - **where**: AUTONOMOUS repo: origin/main (= 0504961); edited on the beta
+    - **what_it_is**: 45-line ledger of adopted term entries (automation; the auditonomy coinage as a cross-repository reference) and of blocked terms with their blockers (autonomy/autonomous, auditability, heteronomy, five compounds). Not bound by Auditonomous.
+    - **own_label**: "[source text withheld from the public copy]"; autonomy row sits under "Not yet entered — and why"
+    - **evidence_state**: CONTRADICTED
+    - **locator**: AUT-MAIN:L8/L0/semantics/definitions/REGISTER.md:19
+    - **quote**: [source text withheld from the public copy].
+    - **key_claims**
+      - autonomy/autonomous: blocked because [source text withheld from the public copy] (line 19)
+      - [source text withheld from the public copy]." (line 20)
+      - auditonomy/auditonomous: "Coinage — located in no standard"; composition `INTERNAL ONLY · CONJECTURE`; file given as `../auditonomous/definitions/AUDITONOMY.md` §0 (line 13)
+    - **checked_how**: Read in full. Contradicts AUTONOMOUS.md:24 (ADOPTED). The definitions sheet records it: "a recorded inconsistency, carried unchanged" (AUT-MAIN:L8/L0/semantics/definitions/0.md:35). The beta rewrites the register so that the plural entry is "entered" (see AUT-23).
+    - **open_items**
+      - Which of the two statuses stands on main is unruled; only the unmerged beta resolves it
+  - item 8
+    - **id**: AUT-08
+    - **title**: AUTOMATION.md: companion term entry for automation / automated / automatic
+    - **path**: L8/L0/semantics/definitions/AUTOMATION.md
+    - **where**: AUTONOMOUS repo: origin/main (= 0504961)
+    - **what_it_is**: 78-line entry: six codified definitions (ISO/IEC 22989 3.1.7, ISO/IEC 2382:2015, ISO 8373 6.13.2, IEEE 1872-2015 automated robot, two EASA glossary terms), the [source text withheld from the public copy] one ISO standard and autonomy in another, and an adopted use with a mandatory discriminator. Referenced by Auditonomous but not bound.
+    - **own_label**: "[source text withheld from the public copy]." (line 3); §4 `INTERNALLY DERIVED · COMPOSITE OBJECT UNVERIFIED.` (line 53)
+    - **evidence_state**: EXTERNALLY CHECKED for §1-§2 (sources named per row; two quotations recorded as EXACT MATCH by REVIEW_3); §4 adopted use ASSERTED
+    - **locator**: AUT-MAIN:L8/L0/semantics/definitions/AUTOMATION.md:45-46
+    - **quote**: [source text withheld from the public copy]).
+    - **key_claims**
+      - [source text withheld from the public copy] (lines 67-68)
+      - No IEEE definition of automation located; IEEE 2755-2017 `NOT-CHECKED` (lines 72-74)
+      - IEEE 1872-2015 automated-robot row `PARTIALLY VERIFIED` (line 18)
+    - **checked_how**: Read in full. Blob identical at 0504961 and origin/main (fe2e31d). I did not open REVIEW_3 to confirm the EXACT MATCH records it cites (lines 26, 41).
+  - item 9
+    - **id**: AUT-09
+    - **title**: The definitions sheet (0.md): what the directory holds and what Auditonomous binds
+    - **path**: L8/L0/semantics/definitions/0.md
+    - **where**: AUTONOMOUS repo: origin/main (added after the bound commit)
+    - **what_it_is**: 46-line directory sheet. States that the eleven A-rows are not Autonomous's authorship but ingress carried inward with ownership tags, and that this object is what aybllc/auditonomous binds as its only source.
+    - **own_label**: none
+    - **evidence_state**: INTERNALLY CHECKED
+    - **locator**: AUT-MAIN:L8/L0/semantics/definitions/0.md:37
+    - **quote**: This object is what `aybllc/auditonomous` binds, reference-only, as its only source for the definition of *autonomous*
+    - **key_claims**
+      - REVIEW_4 "records CRITICAL defects in §6; [source text withheld from the public copy]_ADVERSARIAL.md` §1.5; both stand open." (line 32)
+      - Register inconsistency "carried unchanged" (line 35)
+    - **checked_how**: Read; its description of the four holdings matches the files; the four files it lists are the whole directory (ls-tree).
+  - item 10
+    - **id**: AUT-10
+    - **title**: EVIDENCE_RULES.md: the nine evidence rules the source runs under
+    - **path**: L8/L5/research/review/EVIDENCE_RULES.md
+    - **where**: AUTONOMOUS repo: origin/main
+    - **what_it_is**: 31 lines. Nine numbered rules (two moved to the copyright sheet) and the label set. Carried from the deleted root README on 2026-09-07; [source text withheld from the public copy].
+    - **own_label**: "[source text withheld from the public copy]." (line 3)
+    - **evidence_state**: ASSERTED
+    - **locator**: AUT-MAIN:L8/L5/research/review/EVIDENCE_RULES.md:21-22
+    - **quote**: [source text withheld from the public copy].
+    - **key_claims**
+      - Codified or enumerated peer-reviewed sources only (lines 5-8)
+      - Never cited as evidence: preprints, [source text withheld from the public copy], AI summaries (lines 9-11)
+      - Verbatim quotes mandatory; without one a definition is `UNVERIFIED` (lines 12-13)
+      - [source text withheld from the public copy] (lines 16-20)
+      - [source text withheld from the public copy]` (lines 24-26)
+    - **checked_how**: Read in full.
+  - item 11
+    - **id**: AUT-11
+    - **title**: [source text withheld from the public copy]
+    - **path**: L8/L5/research/findings/FINDING_IEEE_1872.2_does_not_define_autonomy.md
+    - **where**: AUTONOMOUS repo: origin/main
+    - **what_it_is**: 108 lines. [source text withheld from the public copy] (49 pp.): [source text withheld from the public copy] quotation of Beer, Fisk and [source text withheld from the public copy] only; [source text withheld from the public copy].
+    - **own_label**: quotations `VERIFIED`; "[source text withheld from the public copy]` (lines 102-108)
+    - **evidence_state**: EXTERNALLY CHECKED
+    - **locator**: AUT-MAIN:L8/L5/research/findings/FINDING_IEEE_1872.2_does_not_define_autonomy.md:40-43
+    - **quote**: [source text withheld from the public copy].
+    - **checked_how**: Read lines 1-45 and 98-108. The record states the standard was "read directly ... 49 pp., 2026-08-04" (line 102). Not re-checked by me.
+    - **open_items**
+      - Beer, Fisk & Rogers (2014) [source text withheld from the public copy] (line 107)
+  - item 12
+    - **id**: AUT-12
+    - **title**: [source text withheld from the public copy] (NIST ALFUS), and the auditon as unit
+    - **path**: L8/L5/research/findings/FINDING_autonomy_is_an_edge_property.md
+    - **where**: AUTONOMOUS repo: origin/main
+    - **what_it_is**: 139 lines. ALFUS characterises autonomy as Human Independence, the inverse of the human-robot interface; three bodies index autonomy to a task, a function, an interface. The owner's "least autonomous link" rule is not found in any source.
+    - **own_label**: ALFUS and NPR quotations `VERIFIED`; the minimum rule "`[source text withheld from the public copy]`" (line 74); §3 and §4 `INTERNALLY DERIVED`, not adversarially reviewed (lines 137-139)
+    - **evidence_state**: EXTERNALLY CHECKED for the ALFUS quotations; UNRESOLVED for the minimum-over-edges rule; ASSERTED for §3-§4
+    - **locator**: AUT-MAIN:L8/L5/research/findings/FINDING_autonomy_is_an_edge_property.md:74-77
+    - **quote**: [source text withheld from the public copy].
+    - **key_claims**
+      - "[source text withheld from the public copy]." (line 16)
+      - Aggregation over N edges is "genuinely unoccupied ground" - minimum, maximum or vector, none codified (lines 118-135)
+    - **checked_how**: Read lines 1-45, 72-78, 105-139. Not re-checked against NIST SP 1011-I-2.0.
+    - **open_items**
+      - The aggregation rule (minimum of edges) is the owner's design choice with no source
+  - item 13
+    - **id**: AUT-13
+    - **title**: [source text withheld from the public copy]
+    - **path**: L8/L5/research/findings/FINDING_autonomy_requires_a_human_referent.md
+    - **where**: AUTONOMOUS repo: origin/main
+    - **what_it_is**: 125 lines. A count over ten held definitions: eight reference a human or operator, three admit a non-human referent. Inference: a predicate [source text withheld from the public copy] without X. Consequence drawn for the auditon's condition E.
+    - **own_label**: [source text withheld from the public copy] `INTERNALLY DERIVED` (lines 115-120)
+    - **evidence_state**: INTERNALLY CHECKED for the count (a count over held text); ASSERTED for the inference
+    - **locator**: AUT-MAIN:L8/L5/research/findings/FINDING_autonomy_requires_a_human_referent.md:27-28
+    - **quote**: [source text withheld from the public copy].
+    - **key_claims**
+      - "[source text withheld from the public copy]." (lines 108-109)
+      - "[source text withheld from the public copy]." (line 121)
+    - **checked_how**: Read lines 1-45 and 81-125. The ten rows counted (lines 16-25) are not A1-A11: they include ISO/IEC 22989 3.1.16 (heteronomy) and IEEE 7001 §4.2 and omit A3, A9 and A10 (see defects).
+    - **open_items**
+      - Prior art for the argument not searched
+      - Route 1 (accept the human referent) versus route 2 (22989's 'external') is not chosen
+  - item 14
+    - **id**: AUT-14
+    - **title**: Finding: overridability is a third codified axis (EASA)
+    - **path**: L8/L5/research/findings/FINDING_overridability_third_axis.md
+    - **where**: AUTONOMOUS repo: origin/main
+    - **what_it_is**: 125 lines. EASA's Concept Paper Issue 02 grades its AI levels by whether the end user can still override; this meets the falsification condition of rule 2 of the entry. Also records that an [source text withheld from the public copy]".
+    - **own_label**: `[source text withheld from the public copy]" (line 37); the drift claim `CONTESTED` (line 86)
+    - **evidence_state**: EXTERNALLY CHECKED for the EASA text; UNRESOLVED for the required amendment
+    - **locator**: AUT-MAIN:L8/L5/research/findings/FINDING_overridability_third_axis.md:118-121
+    - **quote**: [source text withheld from the public copy].
+    - **checked_how**: Read lines 1-45, 84-90, 116-125. The entry was not amended (AUTONOMOUS.md blob unchanged since 0504961). The PR #29 paper (line 128) notes the EASA primary's directory was empty in the working copy REVIEW_4 read; not checked by me.
+    - **open_items**
+      - Required fix 1: [source text withheld from the public copy]
+      - Required fix 2: re-check every axis assignment
+      - Required fix [source text withheld from the public copy] for autonomic versus autonomous
+  - item 15
+    - **id**: AUT-15
+    - **title**: [source text withheld from the public copy]"
+    - **path**: L8/L5/research/findings/FINDING_nasa_per_function_not_weakest_link.md
+    - **where**: AUTONOMOUS repo: origin/main
+    - **what_it_is**: 122 lines. NASA JSC (NTRS 20100017272) [source text withheld from the public copy]. The weakest-link rule is the project's own adoption from AUTONOMY_SCALE.md.
+    - **own_label**: NASA statement `VERIFIED`; the weakest-link rule `INTERNAL ONLY / INTERNALLY DERIVED` (line 40)
+    - **evidence_state**: EXTERNALLY CHECKED for the NASA quotation; ASSERTED for the weakest-link rule
+    - **locator**: AUT-MAIN:L8/L5/research/findings/FINDING_nasa_per_function_not_weakest_link.md:19-20
+    - **quote**: [source text withheld from the public copy].
+    - **key_claims**
+      - "[source text withheld from the public copy]" (line 42)
+      - [source text withheld from the public copy]" (line 62)
+    - **checked_how**: Read lines 1-45 and headings. The file records re-verification "character-exact by research/review/REVIEW_3_QUOTE_FIDELITY.md" (lines 16-17); I did not open REVIEW_3.
+  - item 16
+    - **id**: AUT-16
+    - **title**: Finding: what NASA actually buys - "autonomous" appears in neither governing document
+    - **path**: L8/L5/research/findings/NASA_WILL_NOT_BUY_AUTONOMY.md
+    - **where**: AUTONOMOUS repo: origin/main
+    - **what_it_is**: 151 lines. Zero occurrences of autonom* in [source text withheld from the public copy].), with a positive control on "software". NASA gates on software class A-F and safety-criticality.
+    - **own_label**: quotations `VERIFIED`; zero-counts "`[source text withheld from the public copy] `INTERNALLY DERIVED`; other NASA documents `NOT-CHECKED` (lines 149-151)
+    - **evidence_state**: EXTERNALLY CHECKED (bounded to two documents)
+    - **locator**: AUT-MAIN:L8/L5/research/findings/NASA_WILL_NOT_BUY_AUTONOMY.md:12
+    - **quote**: "[source text withheld from the public copy].
+    - **key_claims**
+      - "[source text withheld from the public copy]" (lines 139-140)
+      - [source text withheld from the public copy] and carries no "shall" (lines 144-146)
+    - **checked_how**: Read lines 1-45 and 133-151. The two PDFs are not in the tree I read; counts not recomputed.
+    - **open_items**
+      - NPR 8705.2, NASA-STD-8719.13, NASA-HDBK-2203 and later AI guidance not checked
+  - item 17
+    - **id**: AUT-17
+    - **title**: Finding: lambda is the enclosure boundary (about peer repositories eb-stack and ebios)
+    - **path**: L8/L5/research/findings/FINDING_lambda_enclosure_boundary.md
+    - **where**: AUTONOMOUS repo: origin/main
+    - **what_it_is**: 218 lines. Carrier ℝ×ℝ≥0 and the cross-term coefficient λ as defined in aybllc/eb-stack; λ=1 encloses, λ=0 does not, shown by a computed counterexample; [source text withheld from the public copy]. Not about the definition of autonomous.
+    - **own_label**: `INTERNAL ONLY`; counterexample `RUN`; [source text withheld from the public copy]`; reconciliation `INTERNALLY DERIVED` (lines 132-135)
+    - **evidence_state**: INTERNALLY CHECKED
+    - **locator**: AUT-MAIN:L8/L5/research/findings/FINDING_lambda_enclosure_boundary.md:132-135
+    - **quote**: [source text withheld from the public copy].
+    - **checked_how**: Read lines 1-45 and the label block. Computation not re-run by me (not in my task).
+    - **open_items**
+      - Warmus 1956 and Rump 1999 unread
+  - item 18
+    - **id**: AUT-18
+    - **title**: Lanes A to F: the six lines of inquiry, one line each
+    - **path**: L8/L5/research/lanes/
+    - **where**: AUTONOMOUS repo: origin/main
+    - **what_it_is**: Six retrieval and analysis lanes of 2026-08-03, the captures the A-rows were drawn from.
+    - **own_label**: per lane: A and B `VERIFIED` / `PARTIALLY VERIFIED` per row; C "VERIFIED (retrieval)"; D quotes "[source text withheld from the public copy]"; E item 5 `CONJECTURE`; F "fetcher only"
+    - **evidence_state**: EXTERNALLY CHECKED as retrieval records (surface and date recorded per row); Lane D quotations ASSERTED pending the spot-check it asks for; Lane E's brain-as-network proposition CONJECTURE
+    - **locator**: AUT-MAIN:L8/L5/research/lanes/LANE_C_LEVELS.md:8
+    - **quote**: [source text withheld from the public copy].**
+    - **key_claims**
+      - Lane A (LANE_A_IEEE_DEFINITION.md, 145 lines): IEEE-primary definitions table via SEVOCAB and IEEE-RAS documents; 1872-2015 rows PARTIALLY VERIFIED, standard paywalled (lines 13-32)
+      - Lane B (LANE_B_AUDITABILITY.md, 213 lines): codified definitions of audit and auditability; IEEE 7014-2024 is "[source text withheld from the public copy]" (line 32)
+      - Lane C (LANE_C_LEVELS.md, 663 lines): the level scales; [source text withheld from the public copy] record or audit duty; NASA's scale removes the 'why' at levels 7-8 (line 8)
+      - Lane D (LANE_D_PEER_REVIEWED.md, 265 lines): [source text withheld from the public copy]; Murphy & Woods 2009 PAYWALLED — NOT OBTAINED, quoted via a secondary (lines 15-22)
+      - Lane E (LANE_E_SMALLEST_UNIT_NETWORK.md, 872 lines): biology's smallest unit is the cell ("cell-autonomous", VERIFIED); "[source text withheld from the public copy] (lines 17-32)
+      - Lane F (LANE_F_VERBATIM_CAPTURE.md, 1199 lines): verbatim capture only, no analysis; notes the SEVOCAB endpoint returned 5317 unfiltered results (lines 3, 27-31)
+    - **checked_how**: Read the first 32 lines of each lane (headers, method notes, first table rows); bodies not read. Line counts by wc.
+  - item 19
+    - **id**: AUT-19
+    - **title**: What Autonomous offers outward: public egress, peer-1 (auditonomous), object-1
+    - **path**: L7/peering/public/egress/peer-1/object-1/0.md
+    - **where**: AUTONOMOUS repo: origin/main; beta adds object-2
+    - **what_it_is**: Three sheets. The only outward object on main is the definition of autonomous, exposed to aybllc/auditonomous. No content is held at the position; nothing is released. The sheet itself says the peer bound it at 0504961 and that a later binding on the receiving side names the new path beside the old record.
+    - **own_label**: "Status | exposed; the peer binds it reference-only (NO EDIT, NO DELETE)" (line 15)
+    - **evidence_state**: INTERNALLY CHECKED
+    - **locator**: AUT-MAIN:L7/peering/public/egress/peer-1/object-1/0.md:13
+    - **quote**: bound by the peer at commit `0504961` ("Update RULINGS.md"); after this pass the same object sits at `L8/L0/semantics/definitions/AUTONOMOUS.md`
+    - **key_claims**
+      - "No released object exists; egress toward a peer is not a release." (egress/0.md:31)
+      - "authority ≠ validation; definition import ≠ scientific derivation." (object-1/0.md:21)
+      - Owner's rule quoted: "Auditonomous gets the definitions of autonomous from Autonomous and nowhere else." (peer-1/0.md:10)
+    - **checked_how**: Read all three sheets. Commit 0504961 exists (cat-file: commit, 2026-08-14, "Update RULINGS.md"); the object at both paths is the same blob ffbdc28.
+  - item 20
+    - **id**: AUT-20
+    - **title**: Standing of the source under its own review: REVIEW_4 blocks the gate
+    - **path**: L8/L5/research/review/REVIEW_4_AUTONOMOUS_ADJUDICATION.md
+    - **where**: AUTONOMOUS repo: origin/main
+    - **what_it_is**: The adversarial review of the entry dated 2026-08-08: 15 findings ([source text withheld from the public copy]). It finds the evidence layer sound and every defect in the synthesis or its propagation, [source text withheld from the public copy].
+    - **own_label**: "[source text withheld from the public copy]." (line 451)
+    - **evidence_state**: UNRESOLVED
+    - **locator**: AUT-MAIN:L8/L5/research/review/REVIEW_4_AUTONOMOUS_ADJUDICATION.md:435-466
+    - **quote**: [source text withheld from the public copy].
+    - **key_claims**
+      - [source text withheld from the public copy] its own row (line 42, 99)
+      - [source text withheld from the public copy] (line 43, 243)
+      - [source text withheld from the public copy]" (line 466)
+    - **checked_how**: grep of verdict and severity lines only (42-43, 99, 243, 435, 451, 466, 517-524); body not read. The fix set is as summarised by AUT-PR29 paper:152. AUTONOMOUS.md is unchanged since 0504961, so none of the seven fixes has been applied to the entry.
+    - **open_items**
+      - Seven fixes (F1, F4, F2, F3, F5, F7, F6) are the owner's edits by dated version; none made
+      - The C-001 gate declaration is the owner's
+  - item 21
+    - **id**: AUT-21
+    - **title**: Closed PR #29: the baseline paper on autonomous (standing line and main claims)
+    - **path**: L8/L4/work/writing/papers/AUTONOMOUS_BASELINE_PAPER_2026-09-14.md
+    - **where**: AUTONOMOUS repo: origin/claude/scholarly-pair-baseline-k8ap82 only (9b49910); not on main, not on the beta
+    - **what_it_is**: 212-line draft, first half of the "scholarly pair". Restates the eleven definitions with the review's findings beside each row, three axes, relational predication, one new negative finding, the review standing, an interface list of what the vocabulary paper may take, a 15-row claims table. It adopts no definition and repairs nothing at L0.
+    - **own_label**: "DRAFT of 2026-09-14 · INTERNAL ONLY ... Not itself adversarially reviewed. Nothing released." (line 3)
+    - **evidence_state**: ASSERTED (unreviewed draft on an unmerged branch); its one new negative finding INTERNALLY CHECKED
+    - **locator**: AUT-PR29:L8/L4/work/writing/papers/AUTONOMOUS_BASELINE_PAPER_2026-09-14.md:3
+    - **quote**: [source text withheld from the public copy]
+    - **key_claims**
+      - "[source text withheld from the public copy]." (line 160, under what it does not establish)
+      - Claim 1: eleven codified definitions held verbatim "from nine bodies" (line 188)
+      - Claim 6: [source text withheld from the public copy] - INTERNALLY DERIVED (line 193)
+      - Claim [source text withheld from the public copy] (line 195)
+      - Claim [source text withheld from the public copy] cognates - bounded to the eleven texts (lines 118, 199)
+      - "autonomy does not entail auditability" in general stays CONJECTURE until the queued search runs (line 122)
+      - Claim 15: the [source text withheld from the public copy] gate (line 202)
+      - §12 interface: the vocabulary paper takes rows A1, A2, A5, A6, A11, the three axes, clause 5.13's seven criteria by citation, and three findings (lines 173-182)
+    - **checked_how**: Read in full. I re-ran the negative finding: extracted the eleven Verbatim cells (AUTONOMOUS.md:70-80, column 4) and grepped case-insensitively for record|audit|log|trace|account|explain|transparen|disclos|inspect|verif|evidence|history|memory - no hit (grep exit 1). `git ls-tree` on main and on the beta shows no papers/ directory.
+    - **open_items**
+      - The paper is in neither main nor the beta; whether it is to be carried forward is not recorded
+      - Its own adversarial review is owed (ROADMAP:BOOK_STRUCTURE_AND_ROADMAP_2026-09-13.md:583)
+    - **depends_on**
+      - AUT-02
+      - AUT-20
+  - item 22
+    - **id**: AUT-22
+    - **title**: Closed PR #29: the read-only exemplar declaration and the proposed tag exemplar-2026-09-14
+    - **path**: L8/L6/history/exemplar-2026-09-14.md
+    - **where**: AUTONOMOUS repo: origin/claude/scholarly-pair-baseline-k8ap82 only
+    - **what_it_is**: The record of the declaration filed at L7/governance/restrictions/0.md on that branch: [source text withheld from the public copy]; the proposed pin is a tag at the merge commit. The PR was closed unmerged, so the declaration is not in force on main.
+    - **own_label**: "Nothing at L0 was changed; nothing was deleted; nothing is released." (line 3)
+    - **evidence_state**: UNRESOLVED
+    - **locator**: AUT-PR29:L8/L6/history/exemplar-2026-09-14.md:11
+    - **quote**: the proposed pin is a tag `exemplar-2026-09-14` at the commit that merges the declaration
+    - **key_claims**
+      - Owner's instruction quoted: "[source text withheld from the public copy]." (line 7)
+      - "Correcting a row is a version of the L0 object, the owner's." (line 13)
+    - **checked_how**: Read. `git tag` in the autonomous clone lists no tags. On the beta, L7/governance/restrictions/ is renamed L7/governance/controlled/ and the declaration text is absent (ls-tree; the branch never merged).
+    - **open_items**
+      - The tag D22 recommends as rebinding target does not exist in the clone
+  - item 23
+    - **id**: AUT-23
+    - **title**: Autonomous beta: what changed against main, and its findings
+    - **path**: L8/L5/research/findings/BETA_FINDINGS.md
+    - **where**: AUTONOMOUS repo: origin/beta/7lm-exemplar-autonomous (e64b382; artifact commit 805cd42)
+    - **what_it_is**: Two commits by EDM on 2026-11-02 (Pacific). Diff against main: 65 files, 1930 insertions, 72 deletions. Moves L7/publications/ under L7/allications/ and renames governance/restrictions to governance/controlled; adds a finite synthetic model (autonomous_beta.py, result JSON, tests), a scope file, a source-use overlay, a result egress object-2. AUTONOMOUS.md is untouched; REGISTER.md and DEFINITION_LIST_AUTONOMOUS.md are edited.
+    - **own_label**: "[source text withheld from the public copy]." (line 3)
+    - **evidence_state**: INTERNALLY CHECKED (self-authored tests recorded in the repository; I verified file hashes only and ran nothing)
+    - **locator**: AUT-BETA:L8/L5/research/findings/BETA_FINDINGS.md:5
+    - **quote**: [source text withheld from the public copy].
+    - **key_claims**
+      - "[source text withheld from the public copy]." (line 5)
+      - "[source text withheld from the public copy]." (line 5)
+      - [source text withheld from the public copy]." (line 9)
+      - "[source text withheld from the public copy]" (line 11)
+      - "[source text withheld from the public copy]." (line 11)
+      - REGISTER.md on the beta moves autonomy/autonomous into the entered table: "[source text withheld from the public copy]" (diff of REGISTER.md)
+      - BETA_SOURCE_OVERLAY.md lists six contradictions in the preserved entry and a local disposition for each, without editing the entry (lines 5-12)
+    - **checked_how**: `git diff --stat origin/main origin/beta/7lm-exemplar-autonomous`; read BETA_FINDINGS.md, BETA_SOURCE_OVERLAY.md, BETA_SCOPE.md, BETA_WARRANT.md, BETA_HISTORY.md in full; diffed the definitions directory. AUTONOMOUS.md blob on the beta is ffbdc28, the same as main and as 0504961. The test file on the beta has 15 test methods (grep), matching BETA_HISTORY.md:12 "passed all 15 tests".
+    - **open_items**
+      - No merge or release occurred (BETA_HISTORY.md:14)
+      - The overlay is a local disposition; the six contradictions in the entry itself stay unrepaired
+  - item 24
+    - **id**: AUT-24
+    - **title**: Autonomous beta egress object-2: the RESULT handoff binding
+    - **path**: L7/peering/public/egress/peer-1/object-2/binding.json
+    - **where**: AUTONOMOUS repo: origin/beta/7lm-exemplar-autonomous
+    - **what_it_is**: A 15-line JSON pin of the finite model's code and result (paths and SHA-256), the producer commit 805cd42 and the 7lm architecture commit 4ca3edb. Explicitly separate from the definition egress object-1.
+    - **own_label**: "status": "pinned"; [source text withheld from the public copy]"
+    - **evidence_state**: INTERNALLY CHECKED
+    - **locator**: AUT-BETA:L7/peering/public/egress/peer-1/object-2/binding.json:8
+    - **quote**: "producer_commit": "805cd42f073644177c618bdb18008137b7e7d170"
+    - **checked_how**: I recomputed SHA-256 of both files at 805cd42 (and at e64b382): code 427409b3…b77e and result e6ad0564…7de2, both equal to the binding. 805cd42 exists in the autonomous clone; 4ca3edb exists in the 7lm clone on origin/beta/common-contracts-r1-r6, one commit behind that branch's head 97314c5.
+    - **open_items**
+      - The architecture pin 4ca3edb is not the current head of the 7lm beta branch (97314c5, 2026-11-03)
+  - item 25
+    - **id**: BIND-01
+    - **title**: Binding statement 1 (the record itself): object-1 binding record on MAIN
+    - **path**: L7/peering/public/ingress/peer-1/object-1/0.md
+    - **where**: MAIN and ROADMAP (identical); changed on BETA
+    - **what_it_is**: The binding record. Object: aybllc/autonomous:research/definitions/AUTONOMOUS.md; version: commit 0504961; status bound, reference-only. Holds no file of the peer. Says no provenance row exists yet, and that three files still take a definition of autonomous from elsewhere.
+    - **own_label**: "[source text withheld from the public copy]" (line 15)
+    - **evidence_state**: INTERNALLY CHECKED
+    - **locator**: MAIN:L7/peering/public/ingress/peer-1/object-1/0.md:13
+    - **quote**: [source text withheld from the public copy]
+    - **key_claims**
+      - "Provenance row | none yet at `L7/provenance/sources/`; the owner's next ledgering session adds it" (line 17)
+      - The bound object is "A PLURAL term entry: eleven codified definitions A1–A11" with a rule-set whose review "recorded CRITICAL defects" (line 28)
+      - "definition import ≠ scientific derivation; authority ≠ validation; no scientific-validation inheritance" (line 28)
+      - Three files take autonomous from elsewhere: [source text withheld from the public copy] rows of CONTRADICTIONS.md (line 34)
+    - **checked_how**: `git -C /home/user/autonomous cat-file -t 0504961` = commit (050496161a848ea26492b8468e59afc7e0c07282, 2026-08-14, "Update RULINGS.md"); the path research/definitions/AUTONOMOUS.md exists at that commit; no later commit precedes 2026-09-05 on main's history, consistent with "the HEAD read on 2026-09-05". No aybllc/autonomous row exists under MAIN:L7/provenance (grep).
+    - **open_items**
+      - Provenance row missing on MAIN
+      - The three files unresolved on MAIN
+  - item 26
+    - **id**: BIND-02
+    - **title**: Binding statement 2: the ingress sheet's Holdings and Standing
+    - **path**: L7/peering/public/ingress/0.md
+    - **where**: MAIN, ROADMAP, BETA (identical on all three)
+    - **what_it_is**: The position sheet. Restates the binding and the owner's rule that this is the only source.
+    - **own_label**: none
+    - **evidence_state**: INTERNALLY CHECKED
+    - **locator**: MAIN:L7/peering/public/ingress/0.md:34
+    - **quote**: `peer-1/object-1/` binds `research/definitions/AUTONOMOUS.md` at commit `0504961`, reference-only, NO EDIT and NO DELETE.
+    - **key_claims**
+      - "no standard, dictionary, corpus, or archive is bound directly for it" (line 43)
+    - **checked_how**: Read; agrees with BIND-01. `git diff origin/main BETA` and `origin/main ROADMAP` show no change to this file.
+  - item 27
+    - **id**: BIND-03
+    - **title**: Binding statement 3: the peer sheet (who the peer is; what else would be bound)
+    - **path**: L7/peering/public/ingress/peer-1/0.md
+    - **where**: MAIN, ROADMAP, BETA (identical on all three)
+    - **what_it_is**: Names aybllc/autonomous as the only source, lists what is excluded as a source, and says AUTOMATION.md and REGISTER.md would be object-2 and object-3 on the owner's instruction, none bound.
+    - **own_label**: none
+    - **evidence_state**: INTERNALLY CHECKED on MAIN; CONTRADICTED on BETA (object-2 exists there and is something else)
+    - **locator**: MAIN:L7/peering/public/ingress/peer-1/0.md:20-22
+    - **quote**: would be `object-2/` and `object-3/` on the owner's instruction; none is bound at this pass.
+    - **key_claims**
+      - Owner's rule, dated: "Auditonomous gets the definitions of autonomous from Autonomous and nowhere else. — owner, 2026-09-05" (line 10)
+      - Not a source: "not IEEE, ISO/IEC, NIST, NASA, or IETF directly, not a dictionary or the Greek root, not the Autonomous Theory files" (line 12)
+    - **checked_how**: Read; on MAIN only object-1 exists under peer-1 (ls-tree). On BETA the same sentence stands unchanged while peer-1/object-2/ holds the beta component binding.
+  - item 28
+    - **id**: BIND-04
+    - **title**: Binding statements 4 and 5: the 7LM routing plan of 2026-09-05
+    - **path**: L8/L6/history/7LM_ROUTING_PLAN_2026-09-05.md
+    - **where**: MAIN, ROADMAP, BETA
+    - **what_it_is**: The dated routing proposal; names the object and the version twice.
+    - **own_label**: a dated L6 history record
+    - **evidence_state**: INTERNALLY CHECKED
+    - **locator**: MAIN:L8/L6/history/7LM_ROUTING_PLAN_2026-09-05.md:53
+    - **quote**: object: `research/definitions/AUTONOMOUS.md` at commit `0504961`
+    - **key_claims**
+      - version (`0504961`), ingress binding (this position) (line 57)
+    - **checked_how**: git grep on MAIN; agrees with BIND-01.
+  - item 29
+    - **id**: BIND-05
+    - **title**: Binding statements 6 and 7: the harmonization record, §1 and §4c
+    - **path**: L8/L6/history/harmonization-2026-09-05.md
+    - **where**: MAIN, ROADMAP, BETA
+    - **what_it_is**: The record of why bytes moved. States the owner rule as realized by the binding, and lists the binding among those written.
+    - **own_label**: a dated L6 history record
+    - **evidence_state**: INTERNALLY CHECKED
+    - **locator**: MAIN:L8/L6/history/harmonization-2026-09-05.md:11
+    - **quote**: Realized as `L7/peering/public/ingress/peer-1/object-1/` (`aybllc/autonomous:research/definitions/AUTONOMOUS.md` @ `0504961`).
+    - **key_claims**
+      - §4c repeats it (line 67)
+      - §5 leaves open, under the owner rule: "[source text withheld from the public copy]`." (line 89 onward)
+    - **checked_how**: git grep and read of lines 5-14, 60-80 and §5.
+  - item 30
+    - **id**: BIND-06
+    - **title**: Binding statement 8: the rename pass leaves the pin as it was; rebinding is the owner's act
+    - **path**: L8/L6/history/harmonization-2026-09-05.md
+    - **where**: MAIN, ROADMAP, BETA
+    - **what_it_is**: The record of the 2026-09-12 rename pass. Says the pin was deliberately not changed, and records the peer's current path once.
+    - **own_label**: a dated L6 history record
+    - **evidence_state**: INTERNALLY CHECKED
+    - **locator**: MAIN:L8/L6/history/harmonization-2026-09-05.md:170
+    - **quote**: the peer's path `research/definitions/AUTONOMOUS.md` at commit `0504961`, as it was, rebinding to a current version being the owner's act
+    - **key_claims**
+      - "the peer's current path for the bound definition is `L8/L0/semantics/definitions/AUTONOMOUS.md`" (line 174) - the only place on MAIN that states the new path
+    - **checked_how**: Read lines 165-174. git grep -E '0504961|c9076c3|805cd42' on MAIN returns eight lines in five files, all 0504961; neither c9076c3 nor 805cd42 occurs anywhere on MAIN.
+  - item 31
+    - **id**: BIND-07
+    - **title**: Receiving side on MAIN: the definitions sheet names the rule and the binding
+    - **path**: L8/L0/semantics/definitions/0.md
+    - **where**: MAIN (ROADMAP not compared)
+    - **what_it_is**: The sheet of the Auditonomous definitions directory. Calls the local definition "the local delta over the peer-owned root" and says Appendix C's dictionary quotations are not a definition source.
+    - **own_label**: none; the definition it describes is "Status INTERNAL ONLY"
+    - **evidence_state**: UNRESOLVED
+    - **locator**: MAIN:L8/L0/semantics/definitions/0.md:34
+    - **quote**: whether they remain as etymology of the coinage's second element [source text withheld from the public copy].
+    - **key_claims**
+      - "the root is bound at `L7/peering/public/ingress/peer-1/object-1/` and is named, not copied" (line 34)
+    - **checked_how**: Read lines 28-46. The definition file itself (AUDITONOMOUS_DEFINITION.md, 410 lines on MAIN) contains none of 'peer-1', 'ingress', 'aybllc/autonomous' (grep): the binding is named by the sheet, not by the definition.
+    - **open_items**
+      - The owner's edit on Appendix C is not made on MAIN
+  - item 32
+    - **id**: CHK-01
+    - **title**: Check: does the bound commit exist, and how does the bound object differ from autonomous main today?
+    - **path**: research/definitions/AUTONOMOUS.md (at 0504961) -> L8/L0/semantics/definitions/AUTONOMOUS.md (at c9076c3)
+    - **where**: AUTONOMOUS repo: 0504961 versus origin/main
+    - **what_it_is**: My own comparison. The commit exists. The bound file and today's file are the same bytes. The whole definitions directory moved twice (research/definitions -> USO/l0/semantics/definitions on 2026-09-05 -> L8/L0/semantics/definitions on 2026-09-12) with zero content change in the four term files; the directory README was retired and a sheet 0.md was added.
+    - **own_label**: none (my check)
+    - **evidence_state**: INTERNALLY CHECKED
+    - **locator**: AUT@0504961:research/definitions/AUTONOMOUS.md (blob ffbdc28be7b47a83c9354526ac034596ba7b6e9a) = AUT-MAIN:L8/L0/semantics/definitions/AUTONOMOUS.md
+    - **key_claims**
+      - cat-file -t 0504961 = commit; full id 050496161a848ea26492b8468e59afc7e0c07282; dated 2026-08-14
+      - AUTONOMOUS.md, AUTOMATION.md, DEFINITION_LIST_AUTONOMOUS.md, REGISTER.md: identical blobs at both refs (ffbdc28, fe2e31d, 735c2ec, bb1bf88)
+      - SHA-256 of AUTONOMOUS.md at both refs: 2756661749c3e322d3c13abc5104cb8d7b4d07203905611c4ec5196b9aa1a12b; 22,735 bytes
+      - diff --stat -M 0504961 origin/main over old and new definition paths: four pure renames (0 lines), + L8/L0/semantics/definitions/0.md (46 lines), - research/definitions/README.md (34 lines)
+      - 23 commits lie between 0504961 and origin/main; none changes the content of the four term files
+    - **checked_how**: git cat-file -t; git rev-parse <ref>:<path> for each file at both refs; sha256sum of both blobs; git diff --stat -M; git log --follow on the file.
+    - **open_items**
+      - The path the binding names no longer exists on autonomous origin/main; it resolves only at the bound commit
+  - item 33
+    - **id**: BETA-01
+    - **title**: BETA: object-1 record rewritten with full commit id, exact bytes and a provenance row; path kept
+    - **path**: L7/peering/public/ingress/peer-1/object-1/0.md
+    - **where**: BETA only
+    - **what_it_is**: The beta's edit of the definition binding. The version cell now carries the 40-character id; a provenance row AUT-SOURCE-001 exists; the blob, SHA-256 and byte count are stated; the peer's current path is recorded as a "convenience location" and expressly not as the binding.
+    - **own_label**: "[source text withheld from the public copy]" (unchanged)
+    - **evidence_state**: INTERNALLY CHECKED
+    - **locator**: BETA:L7/peering/public/ingress/peer-1/object-1/0.md:13-19
+    - **quote**: `L8/L0/semantics/definitions/AUTONOMOUS.md`, byte-identical; historical object/path remain the binding
+    - **key_claims**
+      - "no complete consensus-plus-delta result is asserted" (Receiving side paragraph)
+      - "Appendix C preserves lexical ancestry; Q13 and each C1–C7 comparison now carry explicit receiving-use dispositions."
+    - **checked_how**: git diff origin/main BETA on the file; the blob id, SHA-256 and 22,735 bytes it states equal what I computed in CHK-01.
+  - item 34
+    - **id**: BETA-02
+    - **title**: BETA: the "no rebind" statement
+    - **path**: L7/provenance/sources/LEDGER.md
+    - **where**: BETA only
+    - **what_it_is**: The beta's decision on the question D22 raised: keep the pin at 0504961 and the historical path; treat the current path as a locator. Stated in the new provenance row, in the definition's new line 20, and in the scope file.
+    - **own_label**: provenance row AUT-SOURCE-001: "Immutable reference-only definition binding ... plural source collection, not inherited validation."
+    - **evidence_state**: INTERNALLY CHECKED
+    - **locator**: BETA:L7/provenance/sources/LEDGER.md:153
+    - **quote**: [source text withheld from the public copy].
+    - **key_claims**
+      - "[source text withheld from the public copy]." (BETA:L8/L0/semantics/definitions/AUDITONOMOUS_DEFINITION.md:20)
+      - "[source text withheld from the public copy]." (same line)
+      - Autonomous beta, same position: "[source text withheld from the public copy]." (AUT-BETA:L8/L0/semantics/definitions/BETA_SCOPE.md:3)
+      - History: "Preserved semantic object-1 identity ... No universal consensus or standards validity was selec[ted]" (BETA:L8/L6/history/AUDITONOMOUS_BETA_HISTORY.md:7)
+    - **checked_how**: The byte-identity claim is true (CHK-01). The beta is one unmerged commit (714480d, author EDM, 2026-11-02 21:08 -0800); MAIN is unchanged, so on MAIN there is still no provenance row and no decision.
+    - **open_items**
+      - The beta's choice is not the owner's ruling on D22 until merged or ruled
+  - item 35
+    - **id**: BETA-03
+    - **title**: BETA: the new object-2 binding.json (a pinned computation, not a definition)
+    - **path**: L7/peering/public/ingress/peer-1/object-2/binding.json
+    - **where**: BETA only
+    - **what_it_is**: A 14-line JSON binding to the Autonomous beta's finite model: producer commit 805cd42, architecture commit 4ca3edb, code and result paths with SHA-256, model id autonomous:model:finite-task-v1. Its sheet says object-1 remains the unchanged historical definition binding.
+    - **own_label**: "status": "pinned"; [source text withheld from the public copy]"
+    - **evidence_state**: INTERNALLY CHECKED
+    - **locator**: BETA:L7/peering/public/ingress/peer-1/object-2/binding.json:5
+    - **quote**: "producer_commit": "805cd42f073644177c618bdb18008137b7e7d170"
+    - **key_claims**
+      - "Missing dependency or identity mismatch fails closed; no branch-head/default synthesis qualifies." (object-2/0.md:6)
+      - "Private/internal visibility remains unchanged despite the inherited public ingress topology position; no source is published." (object-2/0.md:8)
+      - "Complete Auditonomous meaning, empirical/firmware achievement and SGI implementation remain unproved." (object-2/0.md:10)
+    - **checked_how**: 805cd42 exists in the autonomous clone (commit, 2026-11-02, "Construct bounded Autonomous 7LM beta exemplar"); it is the parent-side artifact commit, not the beta branch head e64b382. I recomputed both SHA-256 values at 805cd42 and they equal the binding; the same values appear in the producer's own egress binding (AUT-24). 4ca3edb exists in the 7lm clone. I did not run the consumer or its tests.
+    - **depends_on**
+      - AUT-24
+  - item 36
+    - **id**: D22
+    - **title**: ROADMAP decision [source text withheld from the public copy]
+    - **path**: L8/L5/research/review/BOOK_STRUCTURE_AND_ROADMAP_2026-09-13.md
+    - **where**: ROADMAP only
+    - **what_it_is**: One of the unruled owner decisions. Three options: bind now to c9076c3; bind to a [source text withheld from the public copy]; keep 0504961. The roadmap recommends the tag. It bears on Chapters 3 and 4 and the vocabulary paper §2.
+    - **own_label**: "D22 and D23 are the owner's." (line 685)
+    - **evidence_state**: UNRESOLVED
+    - **locator**: ROADMAP:L8/L5/research/review/BOOK_STRUCTURE_AND_ROADMAP_2026-09-13.md:631
+    - **quote**: [source text withheld from the public copy].
+    - **key_claims**
+      - Recommendation: "[source text withheld from the public copy]" (line 631)
+      - S3: "[source text withheld from the public copy]" (line 586)
+      - Next step for the owner: "Rule D22 (rebind to the tag)" (line 597); then the session writes "[source text withheld from the public copy]" (line 598)
+      - Chapter 3 is to be drafted "from A1–A11 and C1–C7"; [source text withheld from the public copy]" (line 481, step 3)
+    - **checked_how**: Read lines 476-482, 583-598, 631, 685. What the beta kept: the third option in effect (0504961 retained, full id written, no new binding record for the definition; BETA-02). The tag option has no target: `git tag` in the autonomous clone is empty and PR #29 was closed unmerged. c9076c3 is still autonomous origin/main, so the first option's target is unchanged since 2026-09-14.
+    - **open_items**
+      - Not ruled by the owner on any ref I read
+      - If kept at 0504961, the roadmap's 'four files' resolution is handled on the beta by dispositions rather than by a rebinding
+  - item 37
+    - **id**: GAP-01
+    - **title**: Mismatch: Auditonomous needs one baseline to be a 'delta' over; Autonomous supplies eleven definitions and no baseline
+    - **path**: L8/L0/semantics/definitions/AUDITONOMOUS_DEFINITION.md
+    - **where**: MAIN, BETA (auditonomous); AUTONOMOUS repo main and beta
+    - **what_it_is**: The Auditonomous definition is described as "the locally authored delta over this root". The root is plural; under A2/A3 and under A1/A5 the same system gets opposite verdicts. No file says which rows the word 'autonomous' inside 'auditonomous' is to be read under.
+    - **own_label**: BETA: "no complete consensus-plus-delta result is asserted"
+    - **evidence_state**: UNRESOLVED
+    - **locator**: MAIN:L7/peering/public/ingress/peer-1/object-1/0.md:34
+    - **quote**: is the locally authored delta over this root; it names this binding and does not copy the peer definition.
+    - **key_claims**
+      - "[source text withheld from the public copy]." (AUT-MAIN:AUTONOMOUS.md:128-129)
+      - Auditonomous's own [source text withheld from the public copy]." (MAIN:L8/L1/state-space/REQUIREMENTS_OWNERSHIP.md:268-271)
+      - BETA scope: "a plural collection with unresolved source application" (BETA:L8/L0/semantics/AUDITONOMOUS_BETA_SCOPE.md:3)
+    - **checked_how**: Read the binding record, the entry §2, Q13 and the beta scope.
+    - **open_items**
+      - Which A-rows the coinage's second element is indexed to is stated nowhere on MAIN; the PR #29 paper's §12 (rows A1, A2, A5, A6, A11) is an unmerged draft
+    - **depends_on**
+      - AUT-05
+  - item 38
+    - **id**: GAP-02
+    - **title**: Mismatch: Auditonomous uses definitions of autonomous that are not in the bound object - IEEE 1920.1 is nowhere in Autonomous
+    - **path**: L8/L5/research/review/CONTRADICTIONS.md
+    - **where**: MAIN, ROADMAP, BETA (auditonomous)
+    - **what_it_is**: Auditonomous's contradiction rows C1-C7 and its Q13 quote standards the bound entry does not carry as A-rows: IEEE 1920.1-2022 ("autonomous UAS"), IEEE 7007-2021, IEEE 7009-2024 Annex A, ISO/IEC 25059, ISO 8373 6.13.4, the second ALFUS volume. Under the owner's rule these may reach Auditonomous only through the peer's object.
+    - **own_label**: MAIN binding record: "resolving them through this binding is the owner's edit"
+    - **evidence_state**: CONTRADICTED
+    - **locator**: MAIN:L8/L5/research/review/CONTRADICTIONS.md:52-58
+    - **quote**: [source text withheld from the public copy].
+    - **key_claims**
+      - C2 quotes IEEE 1920.1-2022, 7001-2021 and 7009-2024 (lines 52-58)
+      - C3 IEEE 7007-2021 (line 76); C7 ISO/IEC 25059 (line 171); C6 the two ALFUS volumes (line 147)
+      - Q13 rests on IEEE 1920.1 (MAIN:L8/L1/state-space/REQUIREMENTS_OWNERSHIP.md:268)
+    - **checked_how**: git grep -F on autonomous origin/main: '1920.1' occurs in no file of the repository; '25059' and 'IEEE 7007' occur only in provenance staging records and a retired record, not in L8/L0/semantics/definitions; '7009' occurs in the entry only as a body that defines no autonomy term. On the beta these rows carry "receiving-use dispositions" (BETA-01) rather than new A-rows; I did not read those dispositions.
+    - **open_items**
+      - Either Autonomous admits these as rows (its REVIEW_4 F6 says it has no admission policy) or Auditonomous stops using them as definitions: unruled
+  - item 39
+    - **id**: GAP-03
+    - **title**: Mismatch: Appendix C of the Auditonomous definition takes 'autonomous' from a dictionary
+    - **path**: L8/L0/semantics/definitions/AUDITONOMOUS_DEFINITION.md
+    - **where**: MAIN, ROADMAP; BETA relabels it as lexical ancestry
+    - **what_it_is**: Appendix C "Root 1" quotes the American Heritage Dictionary and Liddell-Scott for autonomous. The owner's rule excludes "a dictionary or the Greek root" as a source of the definition.
+    - **own_label**: `[source text withheld from the public copy])` (line 284)
+    - **evidence_state**: CONTRADICTED on MAIN (against the owner's rule); dispositioned, not removed, on BETA
+    - **locator**: MAIN:L8/L0/semantics/definitions/AUDITONOMOUS_DEFINITION.md:281-288
+    - **quote**: [source text withheld from the public copy].
+    - **key_claims**
+      - Rule: not "a dictionary or the Greek root" (MAIN:L7/peering/public/ingress/peer-1/0.md:12)
+      - BETA: "[source text withheld from the public copy]." (BETA:AUDITONOMOUS_DEFINITION.md:20)
+    - **checked_how**: Read lines 18, 263, 281-290 on MAIN and line 20 on BETA.
+    - **open_items**
+      - On MAIN the owner's edit is not made (MAIN:L8/L0/semantics/definitions/0.md:34)
+  - item 40
+    - **id**: GAP-04
+    - **title**: Mismatch: the bound object's own defects travel with it, and the fixes are not supplied
+    - **path**: L8/L0/semantics/definitions/AUTONOMOUS.md
+    - **where**: AUTONOMOUS repo: 0504961 = origin/main = beta
+    - **what_it_is**: Because the binding is to exact bytes, Auditonomous receives the entry with REVIEW_4's defects in place: the A3 label contradiction, rule 1's "A1…A10", rule 2 unamended, rule 3's refuted universal, the contested A11 drift note. No corrected dated version of the entry exists on any ref.
+    - **own_label**: MAIN binding record: the peer's review "recorded CRITICAL defects in that rule-set. Binding the object changes none of this."
+    - **evidence_state**: UNRESOLVED
+    - **locator**: MAIN:L7/peering/public/ingress/peer-1/object-1/0.md:28
+    - **quote**: [source text withheld from the public copy]
+    - **key_claims**
+      - ROADMAP step: "[source text withheld from the public copy]" (ROADMAP:BOOK_STRUCTURE_AND_ROADMAP_2026-09-13.md:480)
+      - Autonomous beta handles them by an overlay that "does not alter ... the preserved `AUTONOMOUS.md`" (AUT-BETA:L8/L5/research/review/BETA_SOURCE_OVERLAY.md:3)
+    - **checked_how**: AUTONOMOUS.md blob is ffbdc28 at 0504961, origin/main and the beta head: no version of the entry with any fix exists in the clone.
+    - **open_items**
+      - Seven fixes and a delta re-review; then a new binding record on the Auditonomous side
+    - **depends_on**
+      - AUT-20
+  - item 41
+    - **id**: GAP-05
+    - **title**: Mismatch: the two companion objects Auditonomous references are not bound
+    - **path**: L7/peering/public/ingress/peer-1/0.md
+    - **where**: MAIN, ROADMAP, BETA
+    - **what_it_is**: AUTOMATION.md (needed whenever 'automated, not autonomous' is said) and REGISTER.md (which carries the status of autonomy, auditability and the auditonomy coinage) are referenced by Auditonomous but have no binding. On the beta, object-2 was used for the computation instead, and the Autonomous beta edits REGISTER.md.
+    - **own_label**: "none is bound at this pass"
+    - **evidence_state**: EMPTY
+    - **locator**: MAIN:L7/peering/public/ingress/peer-1/0.md:22
+    - **quote**: Further objects of this peer that this repository references (`research/definitions/AUTOMATION.md`, `research/definitions/REGISTER.md`) would be `object-2/` and `object-3/`
+    - **checked_how**: ls-tree of peer-1 on MAIN (object-1 only) and BETA (object-1, object-2 = computation).
+    - **open_items**
+      - If REGISTER.md is ever bound, main and beta versions differ (bb1bf88 versus the beta's edit)
+  - item 42
+    - **id**: GAP-06
+    - **title**: Mismatch: 'auditability' has no settled codified meaning in the source, and the entailment search was never run
+    - **path**: L8/L6/history/LEDGER_2026-08-16_l6-close-and-normalization.md
+    - **where**: MAIN (auditonomous); AUTONOMOUS repo main
+    - **what_it_is**: The coinage means autonomy under mandatory auditability. Autonomous lists auditability as CONTESTED and not entered. The bounded search on whether any codified definition of autonomous entails recoverable records was queued on 2026-08-16 against a pinned commit of Autonomous and has not been run; only a string search over the eleven texts exists, on an unmerged branch.
+    - **own_label**: queue item 3: "a negative finding is bounded to S, never universal"
+    - **evidence_state**: UNRESOLVED
+    - **locator**: MAIN:L8/L6/history/LEDGER_2026-08-16_l6-close-and-normalization.md:48
+    - **quote**: does any, merely by classifying a system autonomous, entail preservation and truthful recoverability of epistemic state and transformation history (Q)?
+    - **key_claims**
+      - auditability `CONTESTED` and unharmonised (AUT-MAIN:REGISTER.md:20)
+      - PR #29 paper: "[source text withheld from the public copy]." (AUT-PR29:AUTONOMOUS_BASELINE_PAPER_2026-09-14.md:122)
+      - Lane C: no level [source text withheld from the public copy] or audit obligation (AUT-MAIN:LANE_C_LEVELS.md:8)
+    - **checked_how**: Read queue lines 46-48; the paper's §8; REGISTER row. I re-ran the eleven-text string search (no hits).
+    - **open_items**
+      - Run the search over the declared authority set at a pinned commit
+      - Adjudicate auditability (access capability versus emission duty)
+  - item 43
+    - **id**: GAP-07
+    - **title**: Mismatch: the authority-interface register was never created; MAIN has no provenance row for the bound object
+    - **path**: L8/L6/history/LEDGER_2026-08-16_l6-close-and-normalization.md
+    - **where**: MAIN (gap); BETA (row added)
+    - **what_it_is**: Queued 2026-08-16: a register with one row per imported definition or authority, a pinned commit per use, a status label per row. On MAIN the binding record stands in for it and has one row for the whole entry, none per A-row. The beta adds one provenance row, AUT-SOURCE-001, still for the whole entry.
+    - **own_label**: MAIN binding record calls the register "never-created"
+    - **evidence_state**: EMPTY on MAIN; INTERNALLY CHECKED on BETA for the single row
+    - **locator**: MAIN:L8/L6/history/LEDGER_2026-08-16_l6-close-and-normalization.md:46
+    - **quote**: one row per imported definition/authority with status label (non-conjectural classes only)
+    - **key_claims**
+      - "Provenance row | none yet" (MAIN:L7/peering/public/ingress/peer-1/object-1/0.md:17)
+      - BETA row AUT-SOURCE-001 (BETA:L7/provenance/sources/LEDGER.md:153)
+    - **checked_how**: grep for aybllc/autonomous under MAIN:L7/provenance returns only the directory sheet; read the beta ledger row.
+    - **open_items**
+      - Per-row use (which A-row, under which label) is still not recorded anywhere on the receiving side
+  - item 44
+    - **id**: GAP-08
+    - **title**: Mismatch: the manuscript may not reproduce the most operational text (A3 and clause 5.13)
+    - **path**: L8/L0/semantics/definitions/AUTONOMOUS.md
+    - **where**: AUTONOMOUS repo: origin/main (= 0504961)
+    - **what_it_is**: The bound entry bars reproduction at length of ISO/IEC 22989 [source text withheld from the public copy], and A3 cannot be re-verified from held material. Rule 4 makes those criteria the test to use. The roadmap makes re-verification against the lawful copy a step before print.
+    - **own_label**: `[source text withheld from the public copy].` (line 232)
+    - **evidence_state**: UNRESOLVED
+    - **locator**: AUT-MAIN:L8/L0/semantics/definitions/AUTONOMOUS.md:231-234
+    - **quote**: [source text withheld from the public copy]
+    - **key_claims**
+      - ROADMAP step 4: "[source text withheld from the public copy]" (ROADMAP:BOOK_STRUCTURE_AND_ROADMAP_2026-09-13.md:482)
+      - Auditonomous MAIN already quotes Table 1 level 5 and the clause 5.13 supervision criterion (MAIN:CONTRADICTIONS.md:98-100; MAIN:L8/L1/state-space/HUMINT_ENCODE.md:39)
+    - **checked_how**: Read entry §5; roadmap lines 476-482. I did not look into aybllc/l6 (not in my clones) to see whether STD-025 is held.
+    - **open_items**
+      - Whether the lawful copy (STD-025 in aybllc/l6) is held and A3 re-verified
+  - item 45
+    - **id**: GAP-09
+    - **title**: Mismatch: Autonomous's register points at an Auditonomous file that is not on MAIN
+    - **path**: L8/L0/semantics/definitions/REGISTER.md
+    - **where**: AUTONOMOUS repo: origin/main and beta; target absent on auditonomous MAIN, present on ROADMAP
+    - **what_it_is**: The reverse reference. Autonomous cites the coinage at `../auditonomous/definitions/AUDITONOMY.md` §0 with a five-condition form. On auditonomous MAIN no AUDITONOMY.md exists; ROADMAP restores one at L8/L0/semantics/definitions/AUDITONOMY.md.
+    - **own_label**: "ADOPTED as coinage"; composition `INTERNAL ONLY · CONJECTURE`
+    - **evidence_state**: CONTRADICTED
+    - **locator**: AUT-MAIN:L8/L0/semantics/definitions/REGISTER.md:13
+    - **quote**: `../auditonomous/definitions/AUDITONOMY.md` §0 (moved 2026-08-05)
+    - **checked_how**: ls-tree: 0 files named AUDITONOMY.md on auditonomous MAIN; one on ROADMAP. The human-referent finding also cites the same path for 'Condition E' (AUT-MAIN:FINDING_autonomy_requires_a_human_referent.md:83).
+    - **open_items**
+      - Which Auditonomous file is the defining one for the noun (AUDITONOMOUS_DEFINITION.md on MAIN, or AUDITONOMY.md on ROADMAP) is for the definitions scope, not settled here
+  - item 46
+    - **id**: HIST-01
+    - **title**: HISTORY: Auditonomous once held its own copy, 'AUTONOMOUS — the counterpart entry'
+    - **path**: AUTONOMOUS.md (also manuscripts/definitions/AUTONOMOUS.md)
+    - **where**: HISTORY only (1d83788); not on MAIN, ROADMAP or BETA
+    - **what_it_is**: A 19,101-byte local entry dated 2026-08-04 that imported every row from abba-01/autonomous at commit f15524e and labelled every quotation UNVERIFIED in this repository ("Verification does not travel"). It was pruned; [source text withheld from the public copy] replaced it with the binding. MAIN still has a relative reference to it.
+    - **own_label**: "[source text withheld from the public copy]*."
+    - **evidence_state**: ASSERTED (superseded by the binding; the commit it names could not be resolved)
+    - **locator**: HISTORY:AUTONOMOUS.md:1-25 (blob 753e6d0dc9bf70b718d3c9ec1067d7b3be46e41d)
+    - **quote**: [source text withheld from the public copy]
+    - **key_claims**
+      - Imported "from abba-01/autonomous at commit `f15524e`" (lines 11-12)
+      - MAIN still reads "[source text withheld from the public copy])" (MAIN:L8/L5/research/findings/DISTILLATION.md:14-15)
+    - **checked_how**: git ls-tree 1d83788; cat-file of the blob; diff against the bound object (641 diff lines: a different document). f15524e is not a valid object in the autonomous clone, which reports itself shallow.
+    - **open_items**
+      - f15524e unresolved
+- **defects**
+  - item 1
+    - **statement**: Row A3 of the bound entry carries two labels at once: [source text withheld from the public copy], the Label cell still reads VERIFIED. (The repository's REVIEW_4 F1 records this; the cell is uncorrected. DEFINITION_LIST_AUTONOMOUS.md:25 gives the downgraded label.)
+    - **locator**: AUT-MAIN:L8/L0/semantics/definitions/AUTONOMOUS.md:72
+  - item 2
+    - **statement**: §6 of the entry says "[source text withheld from the public copy]" and rule 1 says "its index (A1…A10)", but the table has eleven rows, A1 to A11. The compilation says "(A1–A11)".
+    - **locator**: AUT-MAIN:L8/L0/semantics/definitions/AUTONOMOUS.md:244,246 against :80 and DEFINITION_LIST_AUTONOMOUS.md:14
+  - item 3
+    - **statement**: §0 says "[source text withheld from the public copy] §1 table and the repository's own ingress sheet carry nine issuing bodies (peer-1 to peer-9).
+    - **locator**: AUT-MAIN:L8/L0/semantics/definitions/AUTONOMOUS.md:39 against AUT-MAIN:L7/peering/public/ingress/0.md (Holdings)
+  - item 4
+    - **statement**: §3a is headed "[source text withheld from the public copy] criteria".
+    - **locator**: AUT-MAIN:L8/L0/semantics/definitions/AUTONOMOUS.md:179 against :184-196 and :264
+  - item 5
+    - **statement**: The banner says "[source text withheld from the public copy]" and lists them as ([source text withheld from the public copy]): item (3) is skipped in the numbering.
+    - **locator**: AUT-MAIN:L8/L0/semantics/definitions/AUTONOMOUS.md:11,15-19
+  - item 6
+    - **statement**: Status conflict inside one directory: AUTONOMOUS.md says "[source text withheld from the public copy] directory sheet records it as "a recorded inconsistency, carried unchanged". Only the unmerged beta changes the register.
+    - **locator**: AUT-MAIN:L8/L0/semantics/definitions/AUTONOMOUS.md:24 against REGISTER.md:19; sheet 0.md:35
+  - item 7
+    - **statement**: Rows A9 and A10 differ between the two definition objects. AUTONOMOUS.md A9 is a paraphrase attributed to "AI Roadmap 2.0" and A10 is the truncated "[source text withheld from the public copy]"; DEFINITION_LIST gives A9 as a verbatim "EASA glossary" sentence and A10 as "[source text withheld from the public copy]." Both are labelled VERIFIED. A6 likewise drops the source marker "<A.4>" that the list keeps.
+    - **locator**: AUT-MAIN:L8/L0/semantics/definitions/AUTONOMOUS.md:75,78,79 against DEFINITION_LIST_AUTONOMOUS.md:28,31,32
+  - item 8
+    - **statement**: The bound entry and its companions cite internal paths of the layout before 2026-08-14 that no longer exist at those paths (for example `governance/RULINGS.md`, `research/DEFINITION_OF_AUTONOMOUS_v2.md`, `sources/QUARANTINE_AND_REMEDIATION.md`, `research/FINDING_overridability_third_axis.md`, `definitions/AUTOMATION.md`). The v2 file now sits at L8/L6/retired/error-records/. Because the object is pinned, a reader following the binding cannot resolve them on origin/main.
+    - **locator**: AUT-MAIN:L8/L0/semantics/definitions/AUTONOMOUS.md:12,26,30,102,108,234,294; REGISTER.md:12,19-25
+  - item 9
+    - **statement**: The human-referent finding says its count [source text withheld from the public copy]`", but its ten rows include ISO/IEC 22989 3.1.16 (heteronomy) and IEEE 7001 §4.2, which are not A-rows, and omit A3, A9 and A10. "8 of 10" is therefore not a count over A1 to A11. Auditonomous MAIN repeats the figure as "Ten definitions are on record (… A1–A11)".
+    - **locator**: AUT-MAIN:L8/L5/research/findings/FINDING_autonomy_requires_a_human_referent.md:16-28,115 ; MAIN:L8/L5/research/findings/DISTILLATION.md:14-15
+  - item 10
+    - **statement**: The MAIN binding record says the Auditonomous definition "names this binding". The definition file on MAIN contains none of the strings 'peer-1', 'ingress' or 'aybllc/autonomous'; only the directory sheet names the binding. (The beta adds a naming line 20 to the definition.)
+    - **locator**: MAIN:L7/peering/public/ingress/peer-1/object-1/0.md:34 against MAIN:L8/L0/semantics/definitions/AUDITONOMOUS_DEFINITION.md (grep, 0 hits)
+  - item 11
+    - **statement**: MAIN finding file refers to the peer definition by a relative path `../definitions/AUTONOMOUS.md` that resolves to no file on MAIN (the local copy existed only in HISTORY at the repository root and at manuscripts/definitions/).
+    - **locator**: MAIN:L8/L5/research/findings/DISTILLATION.md:15,55
+  - item 12
+    - **statement**: On the beta, the peer sheet still says AUTOMATION.md and REGISTER.md "would be `object-2/` and `object-3/`" and "none is bound at this pass", while peer-1/object-2/ on the same commit holds the beta computation binding. The ingress sheet and the peer sheet's Holdings on the beta also still list object-1 only.
+    - **locator**: BETA:L7/peering/public/ingress/peer-1/0.md:20-22 against BETA:L7/peering/public/ingress/peer-1/object-2/binding.json; BETA:L7/peering/public/ingress/0.md:34
+  - item 13
+    - **statement**: On the autonomous beta, the egress peer sheet's Holdings still list only object-1 and the egress sheet still describes the peer-directed object as object-1 only, although egress/peer-1/object-2/ is added by the same branch (peer-1/0.md is not in the diff; egress/0.md changes only two path strings).
+    - **locator**: AUT-BETA:L7/peering/public/egress/peer-1/0.md (unchanged from main, Holdings) and AUT-BETA:L7/peering/public/egress/0.md:17-18,31
+  - item 14
+    - **statement**: The autonomous beta corrects REGISTER.md by deleting the "Not yet entered" row for autonomy/autonomous and adding an "entered" row, rather than leaving the superseded row visible and marked. The repository'[source text withheld from the public copy]; the old row survives only in git history and in BETA_SOURCE_OVERLAY.md's description.
+    - **locator**: AUT-BETA:L8/L0/semantics/definitions/REGISTER.md (diff against origin/main, hunk at old line 19); rule at MAIN:L8/L5/research/review/STATUS_LADDER.md:25-26
+  - item 15
+    - **statement**: The Autonomous register cites the coinage at `../auditonomous/definitions/AUDITONOMY.md` §0. No file named AUDITONOMY.md exists on auditonomous MAIN.
+    - **locator**: AUT-MAIN:L8/L0/semantics/definitions/REGISTER.md:13
+  - item 16
+    - **statement**: All seven statements of the binding on MAIN give the peer path as `research/definitions/AUTONOMOUS.md` (and the peer sheet gives `research/definitions/AUTOMATION.md`, `research/definitions/REGISTER.md`). Those paths do not exist on autonomous origin/main; they resolve only at the bound commit. This is recorded as deliberate (harmonization-2026-09-05.md:170), but the binding record itself does not state the current path; only an L6 history line does.
+    - **locator**: MAIN:L7/peering/public/ingress/peer-1/object-1/0.md:10,13; MAIN:L8/L6/history/harmonization-2026-09-05.md:170,174
+  - item 17
+    - **statement**: The HISTORY counterpart entry says its rows were imported from abba-01/autonomous at commit `f15524e`, and the MAIN binding record says the transfer to aybllc/autonomous left "commit SHAs unchanged". f15524e is not an object in the autonomous clone.
+    - **locator**: HISTORY:AUTONOMOUS.md:11-12 ; MAIN:L7/peering/public/ingress/peer-1/object-1/0.md:11
+- **open_questions**
+  - D22 is unruled. The beta in effect chose 'keep 0504961, no rebind' and it is byte-safe (the object has not changed). Is that the owner's ruling, or does the owner still want a new binding record naming the current path and commit, written beside the old one?
+  - Is Autonomous to state a single 'consensus baseline' as the 7LM specification says, or does the plural entry stand as the baseline? Every ref I read leaves this open; the beta explicitly declines to create one.
+  - Which A-rows is the 'autonomous' inside 'auditonomous' read under? The only answer on record (rows A1, A2, A5, A6, A11; three axes) is in the unmerged, unreviewed PR #29 paper and the ROADMAP vocabulary paper.
+  - IEEE 1920.1, IEEE 7007, ISO/IEC 25059 and the second ALFUS volume are used by Auditonomous (Q13, C1-C7) but are not A-rows; IEEE 1920.1 is nowhere in the autonomous repository. Should they be admitted to the Autonomous entry (it has no admission policy, REVIEW_4 F6) or dropped as definition sources in Auditonomous? I did not read the beta's per-row 'receiving-use dispositions' for C1-C7 and Q13.
+  - The seven REVIEW_4 fixes: no dated version of AUTONOMOUS.md with any of them exists in the clone. Who makes them and when is not recorded. I read only REVIEW_4's verdict lines, not its body, and did not read AUDIT_L6_ADVERSARIAL.md §1.5 (the contested A11 drift note).
+  - Does the tag exemplar-2026-09-14 exist on the remote? `git tag` in the local autonomous clone is empty; I did not fetch. PR #29 is closed unmerged, so the declaration it would mark is not on main.
+  - Is the baseline paper (PR #29 branch only) to be carried into main or the beta? Neither has a papers/ directory in the autonomous repository.
+  - Commit f15524e (named by the pruned counterpart entry) could not be resolved; the autonomous clone reports itself shallow, so absence here does not show it never existed.
+  - I did not run autonomous_beta.py, its 15 tests, or the Auditonomous consumer; I verified only that the pinned code and result hashes match the bytes at 805cd42. Whether the result JSON says what BETA_FINDINGS.md reports (16 cases, 32 events, 0 goal changes) was not recomputed.
+  - The object-2 binding pins 7lm architecture commit 4ca3edb; the 7lm beta branch head is one commit later (97314c5, 2026-11-03). Whether the pin must move if the model changed again was not examined.
+  - No external quotation in any A-row, finding or lane was re-verified against its standard (no network; the repository's own VERIFIED labels and REVIEW_3/REVIEW_4 records are what stand). Whether the lawful ISO/IEC 22989 copy (STD-025 in aybllc/l6) is held, and A3 re-verified, could not be checked from these clones.
+  - The auditability-gap search queued on 2026-08-16 (does any codified definition of autonomous entail recoverable records?) has no result on any ref I read; I did not search the whole of BETA or ROADMAP for a later run.

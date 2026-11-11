@@ -1,0 +1,477 @@
+# read:spec-B
+
+Agent result, as returned. Workflow: The model, read deep. Run `wf_9a60cf50-a5f`. Phase: Read. Checked in 2026-11-11 19:51 UTC.
+
+- **scope**: The specification at /home/user/7lm@origin/main:L8/L4/work/writing/7lm-harmonized-architecture-specification.md (1003 lines), lines 500-1003 read in full, plus lines 355-499 because the L1, L2 and L3 sheets asked for under (a) start there. Also the diff of that file between origin/main and origin/beta/common-contracts-r1-r6 (all six hunks; two fall inside lines 500+). Cross-reference checks by ls-tree only: scaffold main L8/L1-L6 and L7 directories; exemplar mains and exemplar beta branches for root, L7 names and the paths the specification cites. Read from git objects only; nothing written in any repository.
+- **summary**: The specification itself has NOT changed on main since the state last studied: `git log 2e5a6d6..origin/main` on the file is empty, and it still reads "Version of 20 September 2026". So for the L1-L6 sheets, the cross-layer cases, the Exemplars section and the Harmonization Record, the model of record is what was studied before. Whatever "changed" on main (PR #21) lies outside this file.
+
+  What the specification rules for the manuscript work: writing and manuscript production are L4 (L8/L4/work/writing/); the research argument, claims, findings, review and "manuscript meaning" are L5; internal version, correction and supersession history is L6; the released publication is L7/allications/publications/. L5/research/review/ is the catch-all (PARKED stays there), L5/research/lanes/ the working position, thesis statements go to lanes.
+
+  The specification says both exemplars still carry the pre-20-September L7 names (publications/ direct, governance/restrictions/) and that "the L7 restructure is not yet mirrored". The trees confirm that on both exemplar mains; both exemplar beta branches already carry allications/ and controlled/.
+
+  The unmerged beta changes the file in six places (7 insertions, 5 deletions), all from one commit, 4ca3edb. Two are in my range: the External definition case now lets an exact source-owned reference reach receiving L0, and the scale/ladder Clarification is narrowed and no longer bars L1 values or L2 relations. Beta leaves the Exemplars section and the Harmonization Record untouched.
+
+  Three document defects found: the scaffold tree has L8/L6/in/ which the specification's L6 tree omits; the Exemplars section writes interior paths without the L8/ prefix; the reserved-state rule says "a row above" although its table is below. The specification names the CI check only by file; it does not describe G-001 to G-003 or a count of 71.
+- **facts**
+  - item 1
+    - **id**: S01
+    - **kind**: change
+    - **statement**: The specification file is byte-identical on main between the last-studied state 2e5a6d6 and origin/main c9dc061: `git log 2e5a6d6..origin/main -- <spec>` returns no commits and `git diff --stat 2e5a6d6 origin/main -- <spec>` is empty. The file is 1003 lines and still declares itself the version of 20 September 2026. Any change to 'the model' on main since 2026-10-05 is therefore outside this file.
+    - **locator**: 7lm@origin/main:L8/L4/work/writing/7lm-harmonized-architecture-specification.md:18
+    - **quote**: Version of 20 September 2026. The history of versions and changes, with the owner's words behind each rule, is at L8/L6/history/specification-history.md in the scaffold repository.
+  - item 2
+    - **id**: S02
+    - **kind**: rule
+    - **statement**: L1 STATE SPACE sheet. Core question, Function (freeze the board), Output (a state-space contract for L2) and Hard boundary: no carrying, transition, selection, learning, calculation, propagation or transformation at L1; formal operation begins at L2. Acceptance: every admitted state grounded in L0; changes return to L1 and create a new version.
+    - **locator**: 7lm@origin/main:L8/L4/work/writing/7lm-harmonized-architecture-specification.md:359-369
+    - **quote**: What states and distinctions are possible or admissible under the established L0 contract?
+  - item 3
+    - **id**: S03
+    - **kind**: tree
+    - **statement**: L1 tree per the specification: L8/L1/0 with one child state-space/0. Boundary rule: 'L1 establishes the admissible state space. Formal operation begins at L2.' Prose/why: L8/L1/ = 'Layer 1 container for the admissible state-space representation grounded in L0.' / 'Keeps static possibility separate from the formal operations that begin at L2.'; state-space/ = admissible and excluded states, dimensions, invariants, identity conditions, static compatibility / 'Establishes what may exist or be represented before lawful operation is introduced.' Scaffold tree matches (ls-tree origin/main L8/L1: L8/L1/state-space).
+    - **locator**: 7lm@origin/main:L8/L4/work/writing/7lm-harmonized-architecture-specification.md:373-385
+    - **quote**: Directory for admissible and excluded states, dimensions, invariants, identity conditions, and static compatibility.
+  - item 4
+    - **id**: S04
+    - **kind**: rule
+    - **statement**: L1 claim-boundary cases (under 'In the case of: State-space containment and scientific claim boundaries'): a result outside the declared state space means either the construction is invalid or an explicitly justified extension must be proposed; the model may not silently step outside. Mathematical permission is not engineering or empirical permission: a valid object may stop at L2; feasibility is earned at L3, realized work at L4, interpretation at L5; L7 packaging or publicity never promotes maturity. Author note (line 436): STATE and IMMUTABLE are descriptive/mnemonic; the controlling layer name is State Space.
+    - **locator**: 7lm@origin/main:L8/L4/work/writing/7lm-harmonized-architecture-specification.md:387-436
+    - **quote**: Build whatever the math permits. Claim only what the layer has earned.
+  - item 5
+    - **id**: S05
+    - **kind**: rule
+    - **statement**: L2 FORMAL MATHEMATICS sheet. Core question; Function: define notation, types, relations, operators, constructors, carriers, exact models, derivations, proof obligations; Hard boundary: no engineering tolerance, approximation quality, physical realization, measurement, or empirical truth claimed at L2. Acceptance: every symbol binds to L0 meaning and L1 admissibility; exact results supported by proof/derivation or marked unproved.
+    - **locator**: 7lm@origin/main:L8/L4/work/writing/7lm-harmonized-architecture-specification.md:444-454
+    - **quote**: What follows exactly when lawful operations are defined over L1?
+  - item 6
+    - **id**: S06
+    - **kind**: tree
+    - **statement**: L2 tree: L8/L2/0 > formal-mathematics/0 > relations/0, operators/0, proofs/0. Boundary rule (466): engineering tolerance, numerical approximation and numerical uncertainty belong to L3, not L2. Prose/why: formal-mathematics/ = the exact formal system (symbols, types, models, derivations, obligations); relations/ = exact relations among admitted formal objects; operators/ = exact operators, functions, gates, constructors; proofs/ = proofs, lemmas, derivations and explicit unproved obligations ('Keeps warrant for exact claims inspectable'). Author note (478): '"finite tolerance" is not an L2 ownership rule.' Scaffold tree matches.
+    - **locator**: 7lm@origin/main:L8/L4/work/writing/7lm-harmonized-architecture-specification.md:458-478
+    - **quote**: Engineering tolerance, numerical approximation, and numerical uncertainty belong to L3, not to L2 exact formal ownership.
+  - item 7
+    - **id**: S07
+    - **kind**: rule
+    - **statement**: L3 ENGINEERING MATHEMATICS sheet. Core question; Function: translate formal behavior into implementable numerical/engineering methods with explicit units, precision, approximation, tolerance, uncertainty, complexity, operating regions; Output: an engineering specification telling L4 what can be built/run; Hard boundary: L3 is not the realized L4 output and does not itself create empirical evidence.
+    - **locator**: 7lm@origin/main:L8/L4/work/writing/7lm-harmonized-architecture-specification.md:486-496
+    - **quote**: How can the exact L2 relation be made feasible under declared constraints?
+  - item 8
+    - **id**: S08
+    - **kind**: tree
+    - **statement**: L3 tree: L8/L3/0 > engineering-mathematics/0 > approximation/0, uncertainty/0, tolerances/0. Boundary rule (508): 'L3 owns engineering approximation and feasibility; it does not own the realized L4 output.' Prose/why: engineering-mathematics/ = algorithms, numerical representation, units, precision, feasibility, stability, complexity; approximation/ = approximations and discretizations ('Makes loss or approximation visible instead of letting it appear as exact mathematics.'); uncertainty/ = uncertainty and error characterization; tolerances/ = declared tolerances and admissible engineering bounds, kept separate from the exact L2 relation. Scaffold tree matches.
+    - **locator**: 7lm@origin/main:L8/L4/work/writing/7lm-harmonized-architecture-specification.md:500-518
+    - **quote**: L3 owns engineering approximation and feasibility; it does not own the realized L4 output.
+  - item 9
+    - **id**: S09
+    - **kind**: rule
+    - **statement**: Working life boundary hypothesis (under L3): L2 may formalize exact relations about life but does not mathematically support life; mathematics depending on continuation, tolerance, uncertainty, adaptation, feedback or environmental exchange begins at L3; L4 realizes or records the conversion. Undated Clarification (526): 'This boundary remains a research hypothesis until tested.' Author note (528): INFINITE is retained as a working term for open-ended tolerance/refinement, 'not as permission to move exact L2 objects here.'
+    - **locator**: 7lm@origin/main:L8/L4/work/writing/7lm-harmonized-architecture-specification.md:520-528
+    - **quote**: L2 may formalize exact relations about life, but L2 does not mathematically support life.
+  - item 10
+    - **id**: S10
+    - **kind**: rule
+    - **statement**: L4 — LAYER 4 sheet ('Conversion / realized work / identifiable output'). Core question; Function: own Conversion, any intellectual property to energy or energy to intellectual property; Output: an audit-ready conversion product or recorded failure with traceable inputs, transformations, conditions, tests, results, rework; Hard boundary: L4 does not authorize its own L5 interpretation and cannot flatten lower contracts into a convenience summary. Owns: IP-to-energy realization including 'writing', code execution, experiments; energy-to-IP capture including datasets and failures. Permitted action includes 'record result or failure without converting it into a conclusion'.
+    - **locator**: 7lm@origin/main:L8/L4/work/writing/7lm-harmonized-architecture-specification.md:536-546
+    - **quote**: What conversion between intellectual property and energy, in either direction, was actually made, written, run, measured, instantiated, operated, manufactured, or recorded?
+  - item 11
+    - **id**: S11
+    - **kind**: tree
+    - **statement**: L4 tree: L8/L4/0 > work/0 > writing/0, experiments/0, computation/0. Boundary rule (558): writing belongs to L4 as performed work, its research meaning to L5, a released publication to L7; the complete OSI L1-L7 stack stays inside 7LM L4 when the question is how OSI operates, and OSI L7 is not 7LM L7; an OSI network fault is an L4 operational fault unless shown to affect another layer's owned object. Scaffold tree matches.
+    - **locator**: 7lm@origin/main:L8/L4/work/writing/7lm-harmonized-architecture-specification.md:550-558
+    - **quote**: Writing belongs to L4 as performed work. Its research meaning belongs to L5; a released publication belongs to L7.
+  - item 12
+    - **id**: S12
+    - **kind**: rule
+    - **statement**: L4 positions, prose/why. L8/L4/ = performed and realized work returning an identifiable output or recorded failure ('Keeps the event of making or doing distinct from the later L5 interpretation'). work/ = traceable realized work governed by pinned lower-layer dependencies. writing/ = 'Directory for writing and document production as performed work.' / 'Distinguishes making the document from its L5 research meaning and its L7 released publication.' experiments/ = experiments as actually executed, including observations, measurements, tests, failures. computation/ = computation as actually run, including recorded outputs or failures.
+    - **locator**: 7lm@origin/main:L8/L4/work/writing/7lm-harmonized-architecture-specification.md:562-568
+    - **quote**: Distinguishes making the document from its L5 research meaning and its L7 released publication.
+  - item 13
+    - **id**: S13
+    - **kind**: rule
+    - **statement**: L4 conversion rule: IP to energy = an intellectual object made operative through writing, computation, experiment, integration, transport, deployment, teaching, operation, manufacturing; energy to IP = an event captured as an identifiable intellectual object. Role is decisive: an exact model may be L2, its engineering realization L3, the model as made or operated L4, its research meaning L5. Research Note (580): 'MOST IMPORTANT: THE CUT LIVES HERE'. Clarification 'Standing' (582, undated): the cut is the realization boundary.
+    - **locator**: 7lm@origin/main:L8/L4/work/writing/7lm-harmonized-architecture-specification.md:570-582
+    - **quote**: L4 is where resources are committed and an identifiable work product, measurement, execution, or failure is produced.
+  - item 14
+    - **id**: S14
+    - **kind**: rule
+    - **statement**: Cross-layer case 'Research': L5 owns interpretation/review; L6 preserves internal memory/history; L7 owns external provenance and exposes permitted presentations; L4 performs research work events; lower layers own their specific representations.
+    - **locator**: 7lm@origin/main:L8/L4/work/writing/7lm-harmonized-architecture-specification.md:590
+    - **quote**: L5 owns interpretation/review; L6 preserves internal memory/history; L7 owns external provenance and exposes permitted presentations; L4 performs research work events; lower layers own their specific representations.
+  - item 15
+    - **id**: S15
+    - **kind**: rule
+    - **statement**: Cross-layer case 'Writing' (the rule that governs a manuscript): the act and the file produced are L4; the research argument is L5; internal version and correction history are L6; public provenance, governance and the released publication are L7.
+    - **locator**: 7lm@origin/main:L8/L4/work/writing/7lm-harmonized-architecture-specification.md:591
+    - **quote**: The act/file production is L4. The research argument is L5. Internal version and correction history are L6. Public provenance, governance, and the released publication are L7.
+  - item 16
+    - **id**: S16
+    - **kind**: rule
+    - **statement**: Cross-layer case 'Experiment': executed experiment, observation, measurement and raw work product are L4; engineering method/tolerance L3; exact relations L2; possibilities L1; interpretation/conclusion L5. Case 'Contained architecture (OSI)' (593): operationally the full OSI L1-L7 architecture remains an L4 object; inquiry into its origins or design may be railed through other layers without remapping OSI layers to 7LM layers.
+    - **locator**: 7lm@origin/main:L8/L4/work/writing/7lm-harmonized-architecture-specification.md:592-593
+    - **quote**: Executed experiment, observation, measurement, and raw work product are L4; engineering method/tolerance L3; exact relations L2; possibilities L1; interpretation/conclusion L5.
+  - item 17
+    - **id**: S17
+    - **kind**: rule
+    - **statement**: Cross-layer case 'Code': algorithmic/engineering representation can be L3; formal proof/model L2; execution, deployed bytes, storage, interfaces and operational result L4.
+    - **locator**: 7lm@origin/main:L8/L4/work/writing/7lm-harmonized-architecture-specification.md:594
+    - **quote**: Algorithmic/engineering representation can be L3; formal proof/model L2; execution, deployed bytes, storage, interfaces, and operational result L4.
+  - item 18
+    - **id**: S18
+    - **kind**: rule
+    - **statement**: Cross-layer case 'Data': collected/stored instances and transformations are L4; engineering representation/precision L3; formal encoding may be L2; state categories L1; external source/lineage is L7 provenance; internal development history is L6; interpretation is L5.
+    - **locator**: 7lm@origin/main:L8/L4/work/writing/7lm-harmonized-architecture-specification.md:595
+    - **quote**: external source/lineage is L7 provenance; internal development history is L6; interpretation is L5.
+  - item 19
+    - **id**: S19
+    - **kind**: rule
+    - **statement**: Cross-layer case 'External definition' as it stands on main: owner remains external at L7 peering; source/version/authority/prior-art relation is L7 provenance; legal/access conditions are L7 governance; internal use history is L6; interpretation is L5; and no local L0 object exists unless the bounded thing authors a semantic version. (This last clause sits awkwardly beside lines 736, 811, 825 and 899 of the same file, which let the exact source-owned definition reach the receiving L0; the beta rewords it, see C02.)
+    - **locator**: 7lm@origin/main:L8/L4/work/writing/7lm-harmonized-architecture-specification.md:596
+    - **quote**: no local L0 object exists unless this bounded thing authors a semantic version.
+  - item 20
+    - **id**: S20
+    - **kind**: rule
+    - **statement**: Cross-layer case 'Publication': production is L4; scholarly/research meaning is L5; internal history is L6; provenance, public/legal governance and the released publication object are L7. Author note (599): writing is L4 as work; an exemplar/model/thesis/file is made at L4, its research meaning may be L5 and its released publication may be L7. The case table has exactly eight rows: Research, Writing, Experiment, Contained architecture (OSI), Code, Data, External definition, Publication; there is no separate row for review, findings, claims or history.
+    - **locator**: 7lm@origin/main:L8/L4/work/writing/7lm-harmonized-architecture-specification.md:597-599
+    - **quote**: Production is L4; scholarly/research meaning is L5; internal history is L6; provenance, public/legal governance, and the released publication object are L7.
+  - item 21
+    - **id**: S21
+    - **kind**: exemplar
+    - **statement**: 'Auditonomous academic-book traversal' assigns the book across layers: L0 the locally authored Auditonomous definition; L1 the Auditonomous state space; L2 exact formal relations or proofs only when actually established (not the formulas for life); L3 the project's formulas for life; L4 the model as made/written/operated 'including production of the book artifact'; L5 the book's research argument, interpretation and teaching; L6 reconstructable development, correction, failure and supersession history; L7 release and publication of the academic book and the peer binding to the Autonomous definition. Overlay does not duplicate the whole book at every layer.
+    - **locator**: 7lm@origin/main:L8/L4/work/writing/7lm-harmonized-architecture-specification.md:601-623
+    - **quote**: L4 owns the Auditonomous model as made, written, instantiated, or operated, including production of the book artifact.
+  - item 22
+    - **id**: S22
+    - **kind**: rule
+    - **statement**: L5 — RESEARCH / DISCOURSE sheet ('Interpretation, review, judgment, argument, and teaching'). Core question; Output: a bounded claim/decision with cited dependencies, limitations, review status and reproducibility information for L6 retention and L7 presentation; Hard boundary: consensus, prose, authority or usefulness cannot substitute for proof, measurement or a lower-layer fact. Owns (641): research questions, hypotheses, analyses, interpretations, findings; literature search; claim scope and limitations; 'review, audit, research governance, teaching, manuscript meaning'. Acceptance: claim no broader than evidence/maturity; 'Research meaning is distinguished from L4 writing and L7 release.'
+    - **locator**: 7lm@origin/main:L8/L4/work/writing/7lm-harmonized-architecture-specification.md:631-641
+    - **quote**: What may responsibly be concluded, questioned, taught, compared, or decided from the available work?
+  - item 23
+    - **id**: S23
+    - **kind**: tree
+    - **statement**: L5 tree: L8/L5/0 > research/0 (lanes/0, review/0, findings/0) and institution/0 (peers/0, undergraduates/0). Boundary rule (656): L5 may interpret externally owned definitions, but interpretation does not transfer ownership of the peer definition into L0. Scaffold tree matches (ls-tree origin/main L8/L5).
+    - **locator**: 7lm@origin/main:L8/L4/work/writing/7lm-harmonized-architecture-specification.md:645-656
+    - **quote**: L5 may interpret externally owned definitions, but interpretation does not transfer ownership of the peer definition into L0.
+  - item 24
+    - **id**: S24
+    - **kind**: rule
+    - **statement**: L5 positions, prose/why. research/ = the active research record and discourse. research/lanes/ = 'distinct lines of inquiry within the research record' (prevents separate questions being collapsed into one stream). research/review/ = 'review, criticism, audit, and qualification of research claims' (keeps review distinguishable from the findings reviewed). research/findings/ = 'findings that may responsibly be stated from the available work and evidence' (keeps findings tied to L5 judgment 'rather than treating raw L4 output as a conclusion'). institution/ = institutional research setting and participant positions; institution/peers/ and institution/undergraduates/ = participant positions kept distinct.
+    - **locator**: 7lm@origin/main:L8/L4/work/writing/7lm-harmonized-architecture-specification.md:660-669
+    - **quote**: Keeps stated findings tied to L5 judgment rather than treating raw L4 output as a conclusion.
+  - item 25
+    - **id**: S25
+    - **kind**: rule
+    - **statement**: L5 notes on forums. Research Note (673): forward-facing forums, chat and institutional documentation may let participants operate under a shared institutional identity with access controls separating roles. Clarification 'Standing' (675, undated): a forum or chat interface may be realized at L4 and exposed at L7 while institutional roles, discourse, interpretation, review and research meaning remain L5-owned; L7 governance concerns the external/public legal and access relation, not scientific judgment. Author note (677): external definitions can be interpreted at L5 without transferring ownership into L0.
+    - **locator**: 7lm@origin/main:L8/L4/work/writing/7lm-harmonized-architecture-specification.md:673-677
+    - **quote**: L7 governance concerns the external/public legal and access relation, not scientific judgment.
+  - item 26
+    - **id**: S26
+    - **kind**: rule
+    - **statement**: Clarification 'The catch-all' (undated): research/review/ is where everything awaiting the owner's review lands; what the owner sets aside stays there labelled PARKED; what the owner takes up moves to research/lanes/, the working position, and back if set down; finished work is filed at its layer; nothing is deleted; no other position and no new directory is needed.
+    - **locator**: 7lm@origin/main:L8/L4/work/writing/7lm-harmonized-architecture-specification.md:679
+    - **quote**: What the owner takes up moves to research/lanes/, the working position, and back if set down again. Finished work is filed at its layer. Nothing is deleted.
+  - item 27
+    - **id**: S27
+    - **kind**: rule
+    - **statement**: Clarification on scales and ladders (undated, main wording): a scale, ladder, or vocabulary of levels or statuses is semantics of layer 4 and up; as written it is an L4 object and what it means is L5 discourse; it is not an L1 state space and not L2 mathematics; a ladder of review statuses is research governance at L5, not the L0 epistemic rail.
+    - **locator**: 7lm@origin/main:L8/L4/work/writing/7lm-harmonized-architecture-specification.md:681
+    - **quote**: It is not an L1 state space and not L2 mathematics. A ladder of review statuses is research governance and stands at L5, not at the L0 epistemic rail.
+  - item 28
+    - **id**: S28
+    - **kind**: rule
+    - **statement**: L6 — LIBRARY sheet ('Memory, history, reconstruction, retirement, and query orientation'). Core question; Function: preserve internal memory, prior versions, branch history, corrections, failures, supersession, retirement, ledgers, without re-owning external provenance; Hard boundary: L6 records, preserves and orients, it does not make the L5 research judgment or establish truth. Acceptance: correction does not require deletion of prior state; external source/provenance references resolve back to L7; retirement preserves the record.
+    - **locator**: 7lm@origin/main:L8/L4/work/writing/7lm-harmonized-architecture-specification.md:689-699
+    - **quote**: Can the object's internal history, prior states, failures, corrections, and retirement be reconstructed and correctly oriented for inspection?
+  - item 29
+    - **id**: S29
+    - **kind**: tree
+    - **statement**: L6 tree per the specification: L8/L6/0 with exactly two children, history/0 and retired/0. Boundary rule (709): for an externally encountered object L7 is the boundary and owns external provenance/governance; L6 is the first interior layer. Prose/why: history/ = prior states, branch history, corrections, failures, unresolved paths, development over time ('Preserves how the object changed instead of presenting only the latest state.'); retired/ = retired or superseded internal states and bindings ('Implements retirement as preservation rather than deletion', including history of peer bindings no longer active).
+    - **locator**: 7lm@origin/main:L8/L4/work/writing/7lm-harmonized-architecture-specification.md:703-717
+    - **quote**: Implements retirement as preservation rather than deletion, including the history of peer bindings that are no longer active.
+  - item 30
+    - **id**: S30
+    - **kind**: defect
+    - **statement**: Document versus tree at L6. The specification's L6 tree lists only history/ and retired/, and the string 'L6/in' [source text withheld from the public copy] specification. The scaffold tree on main also has L8/L6/in/ (0.md headed '# L8/L6/in/', plus four files, one added 2026-10-31 by c6d598a: 7lm-layer-lists.md), and the layer sheet L8/L6/0.md lists 'in/0' in its own tree and describes it as optional. L8/L6/in/ already existed at 2e5a6d6. Neither exemplar main has L8/L6/in (ls-tree shows only L8/L6/history and L8/L6/retired).
+    - **locator**: 7lm@origin/main:L8/L6/0.md:38-53
+    - **quote**: The inbox for L6: what belongs to this layer and has not been worked into it yet.
+  - item 31
+    - **id**: S31
+    - **kind**: rule
+    - **statement**: 'Git and scientific memory': Git history can support L6 reconstruction but is not the same object as scientific memory/provenance; Git records repository change events, L6 must preserve scientific relations, decisions, failures, corrections, versions and retirement; external source, authority and prior-art provenance remain L7-owned. Author note (725): when interpretation begins outside the object L7 is met first and L6 is the first interior layer.
+    - **locator**: 7lm@origin/main:L8/L4/work/writing/7lm-harmonized-architecture-specification.md:721-725
+    - **quote**: Git history can support L6 reconstruction, but Git history and scientific memory/provenance are not the same object.
+  - item 32
+    - **id**: S32
+    - **kind**: rule
+    - **statement**: Clarification 'Integrity is enforced; no deletion is implied' (undated): what integrity needs reconstructable is retired, not deleted (the owner's authored documents, rule texts of a prior layout, error records). A superseded file whose every part is enumerated in the record at L8/L6/history/ as standing elsewhere is deleted after that enumeration. Nothing is deleted before it is enumerated, and no no-deletion rule is enforced anywhere.
+    - **locator**: 7lm@origin/main:L8/L4/work/writing/7lm-harmonized-architecture-specification.md:723
+    - **quote**: Nothing is deleted before it is enumerated, and no rule of no deletion is enforced anywhere: the one CI check checks integrity, not the absence of deletion.
+  - item 33
+    - **id**: S33
+    - **kind**: rule
+    - **statement**: How the specification describes the one CI check: only by name and file, in three places. Line 723 says it 'checks integrity, not the absence of deletion'; line 934 names it as 'the one CI check at .github/workflows/integrity.yml' present in both exemplars; line 281 (outside range) concerns the README. The specification contains no occurrence of 'G-001', 'G-002', 'G-003', and does not state the count of 71 sheeted positions (grep for 'CI check|integrity.yml|G-00|workflow' over the whole file returns only lines 281, 637, 723, 934). The file .github/workflows/integrity.yml exists on both exemplar mains.
+    - **locator**: 7lm@origin/main:L8/L4/work/writing/7lm-harmonized-architecture-specification.md:934
+    - **quote**: No directory metadata, no automation in the layout; the one CI check at .github/workflows/integrity.yml, and the same root in both.
+  - item 34
+    - **id**: S34
+    - **kind**: tree
+    - **statement**: L7 tree as the specification states it (in range, lines 747-783): L7/0 with provenance/ (prior-art, sources, lineage, authority), governance/ (copyright, licensing, patents, permissions, access, controlled), peering/ (private|public x ingress|egress, each with peer-1/object-1), and allications/ (publications, applications, communications, specifications, notifications, participations). Boundary rule (785): L7 owns provenance, governance, peering and allications. Scaffold main tree matches (L7/governance/controlled and six L7/allications/* directories present).
+    - **locator**: 7lm@origin/main:L8/L4/work/writing/7lm-harmonized-architecture-specification.md:747-785
+    - **quote**: It owns the external relations of the bounded object: provenance, governance, peering, and allications — the outward acts, of which publication is one.
+  - item 35
+    - **id**: S35
+    - **kind**: rule
+    - **statement**: Where a released publication stands: L7/allications/publications/, not at peering. Public egress handles outward public exchange toward peers; 'the released publication object itself is held by L7/allications/publications/' (868). Row allications/publications/ (872): 'Keeps publication release at L7 while writing remains L4, research meaning remains L5, and internal history remains L6.'
+    - **locator**: 7lm@origin/main:L8/L4/work/writing/7lm-harmonized-architecture-specification.md:803
+    - **quote**: Released publications are represented by L7/allications/publications/, while provenance and public/legal governance remain separately addressable.
+  - item 36
+    - **id**: S36
+    - **kind**: rule
+    - **statement**: The six allications positions, prose (871-877): allications/ = 'the bounded object's outward acts: publications, applications, communications, specifications, notifications, participations'; applications/ = applications made outward for funding, review, admission, or of its method to an outside case; communications/ = statements, correspondence, announcements, answers; specifications/ = specifications issued outward for others to build or check against; notifications/ = notices issued outward; participations/ = participations in external bodies, panels, working groups, collaborations. governance/controlled/ (861) = 'restrictions and other conditions that constrain external disclosure, use, transfer, or handling.'
+    - **locator**: 7lm@origin/main:L8/L4/work/writing/7lm-harmonized-architecture-specification.md:861-877
+    - **quote**: Each is a nominalized outward act that leaves an addressable record. One family, one place, the six senses kept distinct within it.
+  - item 37
+    - **id**: S37
+    - **kind**: rule
+    - **statement**: Peer-object contract (Note, 805): peer-1 identifies the external peer, object-1 the bounded object exposed by that peer (document, database, data endpoint, repository); a peer-owned ingress object is bound/reference-only, NO EDIT and NO DELETE by the receiving repository; retirement or supersession of the binding history is preserved at L8/L6/retired/. Author note (807): the agnostic L7 topology carries capabilities even when unused; branches may stay empty. Author note 'Many intelligences at one face' (843): peer-1 opens an enumeration on all four faces; the peer's 0 is the owner's register, written by a person; the tree does not state what any intelligence may write.
+    - **locator**: 7lm@origin/main:L8/L4/work/writing/7lm-harmonized-architecture-specification.md:805-843
+    - **quote**: A peer-owned ingress object is bound/reference-only: NO EDIT and NO DELETE by the receiving repository.
+  - item 38
+    - **id**: S38
+    - **kind**: exemplar
+    - **statement**: 'Autonomous and Auditonomous: peering without semantic annexation' (813-837): the repositories 'are implementation work in progress; their current layouts do not control this architecture'. Autonomous owns the locally authored definition of Autonomous and may expose an exact version at L7 public egress; Auditonomous L7 public ingress binds it reference-only under NO EDIT and NO DELETE; route is source L0 -> source L7 egress -> receiving L7 ingress -> receiving L0. Declared semantic-deference rule (829). Auditonomous L6 preserves binding history; Auditonomous L5 interprets without ownership. Autonomous freezes the consensus baseline; Auditonomous authors its difference as an explicit local delta. An upstream change creates a new binding.
+    - **locator**: 7lm@origin/main:L8/L4/work/writing/7lm-harmonized-architecture-specification.md:815-837
+    - **quote**: An upstream change creates a new binding; it does not mutate the pinned object. A change to the Autonomous definition returns to the Autonomous owner.
+  - item 39
+    - **id**: S39
+    - **kind**: rule
+    - **statement**: Undated Clarification (839) on the Autonomous/Auditonomous relation: it is not an optional exemplar but the originating boundary test for the agnostic architecture. Also (833): an argument about Autonomous cannot silently stand in for an argument about Auditonomous; any cross-object claim needs an explicit named relation or handoff. Author note (841): public/private and ingress/egress are explicit semantic positions; their presence does not assert every external implementation must use the same filesystem vocabulary.
+    - **locator**: 7lm@origin/main:L8/L4/work/writing/7lm-harmonized-architecture-specification.md:839
+    - **quote**: This is not an optional exemplar. It is the concrete originating boundary test for the agnostic architecture.
+  - item 40
+    - **id**: S40
+    - **kind**: rule
+    - **statement**: Clarification on copyright (879, undated): copyright has one place, governance/copyright/; governance/licensing/ and governance/controlled/ point to it rather than restating it. Author note (881): curated sources are served by pointer; a designated archive repository holds the source files, bound at private ingress and read-only; a consuming repository keeps one ledger row per source at provenance/sources/ with archive path and pinned commit, and no source file lives in it.
+    - **locator**: 7lm@origin/main:L8/L4/work/writing/7lm-harmonized-architecture-specification.md:879-881
+    - **quote**: governance/licensing/ and governance/controlled/ point to it rather than restating it.
+  - item 41
+    - **id**: S41
+    - **kind**: rule
+    - **statement**: Forward-face model and Standing rules (904-922): L7 is the desk; presence on the desk establishes nothing by itself. A definition lives once, at its owner; to change an immutable external object, return to its owner; material crossing outward may lose fidelity and never gains scientific maturity by being exposed; no outsider traverses the USO by default; machine-readable metadata may support automation but automation is not assumed enabled or validated, and current practice may remain manual.
+    - **locator**: 7lm@origin/main:L8/L4/work/writing/7lm-harmonized-architecture-specification.md:914-922
+    - **quote**: Current research practice may remain manual until the metadata contract is tested.
+  - item 42
+    - **id**: E01
+    - **kind**: exemplar
+    - **statement**: 'Exemplars as instantiated' opens by naming four repositories (autonomous, auditonomous, the scaffold 7lm, the curated-source archive l6) and an undated Clarification that architecture and implementation status are separate claims, that the section documents the two exemplars 'as they stand, including what is not yet as this specification states', and that their layouts do not control the architecture.
+    - **locator**: 7lm@origin/main:L8/L4/work/writing/7lm-harmonized-architecture-specification.md:928-930
+    - **quote**: What follows documents the two exemplars as they stand, including what is not yet as this specification states. Their layouts do not control the architecture.
+  - item 43
+    - **id**: E02
+    - **kind**: exemplar
+    - **statement**: 'What both exemplars carry' (1 of 3): the canonical tree under README.md, L7/ and L8/, every directory with a 0.md headed by its path, no directory metadata, one CI check, same root in both; one locally authored L0 definition each: Autonomous owns L0/semantics/definitions/AUTONOMOUS.md ('a plural entry of eleven codified definitions A1–A11 carried in verbatim with their issuing bodies' ownership tags'), Auditonomous owns L0/semantics/definitions/AUDITONOMOUS_DEFINITION.md, 'the local delta over the bound Autonomous root'. Tree check: both files exist on the exemplar mains at L8/L0/semantics/definitions/; both mains have root .github, .gitignore, L7, L8, README.md.
+    - **locator**: 7lm@origin/main:L8/L4/work/writing/7lm-harmonized-architecture-specification.md:934-935
+    - **quote**: Auditonomous owns L0/semantics/definitions/AUDITONOMOUS_DEFINITION.md, the local delta over the bound Autonomous root.
+  - item 44
+    - **id**: E03
+    - **kind**: exemplar
+    - **statement**: 'What both exemplars carry' (2 of 3): the Autonomous definition is bound at Auditonomous's L7/peering/public/ingress/peer-1/object-1/, reference-only, NO EDIT and NO DELETE, under the owner's rule that Auditonomous gets the definitions of autonomous from Autonomous and nowhere else; Autonomous exposes it at its L7/peering/public/egress/peer-1/. Curated sources are served by pointer from aybllc/l6, bound at each L7/peering/private/ingress/peer-1/, with one ledger row per source at L7/provenance/sources/LEDGER.md (file exists on both mains). Copyright is in one place, L7/governance/copyright/, 'with licensing/ and restrictions/ (the position this specification now names controlled/) pointing to it'.
+    - **locator**: 7lm@origin/main:L8/L4/work/writing/7lm-harmonized-architecture-specification.md:936-938
+    - **quote**: Copyright in one place, L7/governance/copyright/, with licensing/ and restrictions/ (the position this specification now names controlled/) pointing to it.
+  - item 45
+    - **id**: E04
+    - **kind**: exemplar
+    - **statement**: 'What both exemplars carry' (3 of 3): L5/research/review/ is the catch-all and L5/research/lanes/ the working position; the former root queue (orphan, foster, results, delete, with its session access rules) is retired at L6/retired/layout-2026-09-06/ in each repository (0.md exists there on both mains); the records at L6/history/ carry the owner's words verbatim and every move, retirement, deletion and binding; no rule in either tree about what a session or other intelligence may touch ('The repository file that would carry such rules is held off.'); the README is a start page; the evidence rules of Autonomous and the status and label discipline of Auditonomous stand verbatim at L5/research/review/.
+    - **locator**: 7lm@origin/main:L8/L4/work/writing/7lm-harmonized-architecture-specification.md:939-942
+    - **quote**: The evidence rules of Autonomous and the status and label discipline of Auditonomous stand verbatim at L5/research/review/.
+  - item 46
+    - **id**: E05
+    - **kind**: exemplar
+    - **statement**: Autonomous, Face (as the specification says): public ingress peer-1 to peer-9 are the issuing bodies (ISO/TC 299, ISO/IEC JTC 1/SC 42, ISO/IEC JTC 1/SC 7, IEEE, NIST, the European Union, US DoD, EASA, ETSI), one object per bound clause; public egress peer-1 = aybllc/auditonomous; private ingress peer-1 aybllc/l6, peer-2 aybllc/eb-stack with abba-01/ebios, peer-3 aybllc/auditonomous ('the coinage, referenced and not adopted'), peer-4 the principal's intake corpus; private egress none; provenance = the pointer ledger into l6 and a 450-entry capture register; 'Publications: a binder; nothing released.'
+    - **locator**: 7lm@origin/main:L8/L4/work/writing/7lm-harmonized-architecture-specification.md:946
+    - **quote**: Provenance: the pointer ledger into l6 and a 450-entry capture register. Publications: a binder; nothing released.
+  - item 47
+    - **id**: E06
+    - **kind**: exemplar
+    - **statement**: Autonomous, Interior (as said): L6 the master ledger, five forensic reconstructions, the two records, two retired layouts, four definition error records; L5 six lanes, the reviews/audits/adjudications, seven findings; L4 the manuscript placeholder, the autonomy scale ('an L4 object by the owner's ruling') and one deep-research run; L3 two engineering-mathematics notes; L2 an empty formulas ledger; L1 empty, 'its dimensions fixed by content inside four L5 findings'; L0 the definition with its companions and a universality scope statement. Tree check: autonomous main L8/L4/work/writing/ holds AUTONOMY_SCALE.md and MANUSCRIPT.docx/.pdf/.tex.
+    - **locator**: 7lm@origin/main:L8/L4/work/writing/7lm-harmonized-architecture-specification.md:948
+    - **quote**: L4: the manuscript placeholder, the autonomy scale (an L4 object by the owner's ruling), and one deep-research run.
+  - item 48
+    - **id**: E07
+    - **kind**: exemplar
+    - **statement**: Autonomous, 'Not yet as stated': the catch-all holds material belonging to other objects (Autonomous Theory, 'one work and not the definition of autonomous, whose home the owner has not named'; a template of the Auditonomous definition; the owner's notes on memory consolidation with conserved uncertainty), each leaving on the owner's word; the provenance rows for the bound issuing bodies are not yet ledgered; the desk still carries the pre-20-September-2026 L7 branch names. Tree check on autonomous origin/main: L7/publications and L7/governance/restrictions exist; no L7/allications, no L7/governance/controlled.
+    - **locator**: 7lm@origin/main:L8/L4/work/writing/7lm-harmonized-architecture-specification.md:950
+    - **quote**: The desk carries the L7 branch names of the version before 20 September 2026, publications/ as a direct branch and governance/restrictions/; the L7 restructure is not yet mirrored.
+  - item 49
+    - **id**: E08
+    - **kind**: exemplar
+    - **statement**: Auditonomous, Face (as said): public ingress peer-1 = aybllc/autonomous, the definition of autonomous, bound at commit 0504961; private ingress peer-1 aybllc/l6, peer-2 aybllc/eb-audit, peer-3 abba-01/ebios with the Martin 2026 manuscript; private egress peer-1 the closed transfer of the source corpus to l6, peer-2 the pending transfer of the Third Power Corpus to aybllc/ncf-research 'whose files wait at object-1'; public egress nothing released; provenance 62 pointer rows into l6, staging records, one session-provenance record at lineage/; 'Publications: presentation rules and an empty press-kit checklist.'
+    - **locator**: 7lm@origin/main:L8/L4/work/writing/7lm-harmonized-architecture-specification.md:954
+    - **quote**: Public egress: nothing released. Provenance: 62 pointer rows into l6, the staging records about those sources, and one session-provenance record at lineage/.
+  - item 50
+    - **id**: E09
+    - **kind**: exemplar
+    - **statement**: Auditonomous, Interior (as said): L6 the master index, three session ledgers, the two records, two retired layouts; L5 two lanes, two reviews and the status ladder carried verbatim, three findings; L4 drafts, chat transcripts, a session record, three requirements extractions, one deep-research run with its exports; L3 a proposal and an external-priors note; L2 an empty formulas ledger; L1 the auditon envelope, the substitutability states, the requirements partition; L0 the one locally authored definition, other rails empty. Tree check: auditonomous main L8/L4/work/writing/ holds auditnomous-main.docx, auditonomouos-important.docx, auditonomous-08-03-26.odt at top level (file names as in the tree).
+    - **locator**: 7lm@origin/main:L8/L4/work/writing/7lm-harmonized-architecture-specification.md:956
+    - **quote**: L4: drafts, chat transcripts, a session record, three requirements extractions, and one deep-research run with its exports.
+  - item 51
+    - **id**: E10
+    - **kind**: exemplar
+    - **statement**: Auditonomous, 'Not yet as stated': [source text withheld from the public copy] research/definitions/AUTONOMOUS.md at 0504961 while the same object now stands at the peer's L0/semantics/definitions/AUTONOMOUS.md, and 'rebinding to a current version is the owner's act'; the binding record says three files still take a definition of autonomous from elsewhere; the catch-all holds two Autonomous Theory files; the L0 epistemic rail is empty, its vocabulary standing at L5 as review status; the desk carries the pre-20-September L7 names. Tree check on auditonomous origin/main: L7/publications and L7/governance/restrictions exist; no allications, no controlled.
+    - **locator**: 7lm@origin/main:L8/L4/work/writing/7lm-harmonized-architecture-specification.md:958
+    - **quote**: The binding record says three files still take a definition of autonomous from somewhere other than the binding.
+  - item 52
+    - **id**: E11
+    - **kind**: exemplar
+    - **statement**: 'What the exemplars show' (four lessons): a second work inside a repository is not the object (Autonomous Theory's place is a repository of its own, met by peering, at the owner's call); position is state ('Three motions and no metadata ... rename, retire, file. Nothing was deleted.'); the desk is not a layer ('Reaching for layer seven hands the reader L6'); the tree's silence on access is deliberate (both repositories ran one day with session rules in the tree, then removed).
+    - **locator**: 7lm@origin/main:L8/L4/work/writing/7lm-harmonized-architecture-specification.md:962-965
+    - **quote**: Position is state. Three motions and no metadata carried the two repositories from a root queue to the catch-all: rename, retire, file. Nothing was deleted.
+  - item 53
+    - **id**: E12
+    - **kind**: tree
+    - **statement**: Tree state of the unmerged exemplar candidates versus what the specification says: origin/beta/7lm-exemplar-autonomous (e64b382) and origin/beta/7lm-exemplar-auditonomous (714480d) both carry L7/allications and L7/governance/controlled and no L7/publications or L7/governance/restrictions at the L7 top two levels, i.e. the L7 restructure IS mirrored on those branches. The specification, on main and on the scaffold beta alike, still says it is not mirrored (the beta diff does not touch lines 926-965).
+    - **locator**: autonomous@origin/beta/7lm-exemplar-autonomous:L7/ (ls-tree -d L7/ L7/governance/); auditonomous@origin/beta/7lm-exemplar-auditonomous:L7/ (same)
+  - item 54
+    - **id**: D01
+    - **kind**: defect
+    - **statement**: In the Exemplars section the specification writes interior paths without the L8/ prefix: 'L0/semantics/definitions/AUTONOMOUS.md', 'L5/research/review/', 'L6/retired/layout-2026-09-06/', 'L6/history/' (lines 935, 939, 940, 942, 958). In both exemplar trees these stand under L8/ (e.g. L8/L0/semantics/definitions/AUTONOMOUS.md, L8/L6/retired/layout-2026-09-06/0.md). Elsewhere the specification writes the full form (L8/L6/history/, L8/L5/research/lanes/).
+    - **locator**: 7lm@origin/main:L8/L4/work/writing/7lm-harmonized-architecture-specification.md:935
+    - **quote**: Autonomous owns L0/semantics/definitions/AUTONOMOUS.md, a plural entry of eleven codified definitions A1–A11 carried in verbatim with their issuing bodies' ownership tags.
+  - item 55
+    - **id**: H01
+    - **kind**: rule
+    - **statement**: Harmonization Record, normative authority and non-erasure rule: the principal L0-L7 sheets and the explicit rules in the record control; harmonization removes stale duplicate contracts but preserves unique research notes, author notes, examples, cases, rationales, hypotheses and inherited terms; a reserved term stays available without manufacturing a directory or layer owner.
+    - **locator**: 7lm@origin/main:L8/L4/work/writing/7lm-harmonized-architecture-specification.md:971
+    - **quote**: A reserved term remains available for research without manufacturing a directory or layer owner.
+  - item 56
+    - **id**: H02
+    - **kind**: exemplar
+    - **statement**: Harmonization Record on implementation status: the canonical topology declares positions even when a repository has not instantiated them; current Autonomous, Auditonomous and agnostic-method layouts are work in progress and do not rewrite the architecture; blank 0.md / status markers are historical implementation evidence at L6. Supporting-evidence disposition (975): external provenance L7-owned, internal reconstructable scientific memory L6-owned.
+    - **locator**: 7lm@origin/main:L8/L4/work/writing/7lm-harmonized-architecture-specification.md:973-975
+    - **quote**: Current Autonomous, Auditonomous, and agnostic-method layouts are implementation work in progress and do not rewrite the architecture.
+  - item 57
+    - **id**: H03
+    - **kind**: defect
+    - **statement**: Controlling reserved-state rule (Clarification, undated): questionable inherited semantics are preserved; unless a row expressly ratifies an owner and path, topology remains unadjudicated; no convenience placement settles an open scientific question. The sentence refers to 'a row above', but the table of rows (lines 983-1001) stands below it.
+    - **locator**: 7lm@origin/main:L8/L4/work/writing/7lm-harmonized-architecture-specification.md:979
+    - **quote**: Unless a row above expressly ratifies an owner and path, topology remains unadjudicated. No convenience placement in this document settles an open scientific question.
+  - item 58
+    - **id**: H04
+    - **kind**: rule
+    - **statement**: Inherited terms, rows 1-4. prior-art: Relocated, to L7/provenance/prior-art/. definitions: Ratified, locally authored definitions at L8/L0/semantics/definitions/, peer definitions arrive as immutable external bindings. semantic-formulas: Split and reserved, semantic reading L0, exact formula L2, applied/tolerant/adaptive/engineering formula L3. thesis-statements: Relocated, to L8/L5/research/lanes/ or the corresponding L5 research artifact.
+    - **locator**: 7lm@origin/main:L8/L4/work/writing/7lm-harmonized-architecture-specification.md:985-988
+    - **quote**: Research claims and thesis statements belong at L8/L5/research/lanes/ or the corresponding L5 research artifact.
+  - item 59
+    - **id**: H05
+    - **kind**: rule
+    - **statement**: Inherited terms, rows 5-8. 'origidity; certainty; intolerance': Reserved, candidate L1 semantics preserved, topology unadjudicated. 'found; caught; naught': Reserved, caught the zero state, found the observer role, naught the empty or settled state, topology unadjudicated. regress: Reserved, a prior unadjudicated holding concept, path and owner unadjudicated. corpus: Split and reserved, released corpus/publication identity at L7/allications/publications/, the broader term reserved.
+    - **locator**: 7lm@origin/main:L8/L4/work/writing/7lm-harmonized-architecture-specification.md:989-992
+    - **quote**: Released corpus/publication identity belongs at L7/allications/publications/; the broader inherited term remains reserved where its exact role is not yet adjudicated.
+  - item 60
+    - **id**: H06
+    - **kind**: rule
+    - **statement**: Inherited terms, rows 9-11. INFRASTRUCTURE: Superseded as L4 name, L4 is Conversion; infrastructure is L4 only when it is the bounded work being made. 'DEVOID; IMMUTABLE; FINITE; INFINITE; IDENTITY BY PROSE; RESEARCH MEMORY; SCIENTIFIC DESKTOP': Descriptive, historical mnemonics or working language, the layer sheets control ownership. L6 provenance: Split, internal reconstructable memory stays L6; external source, authority, prior art and public provenance go to L7/provenance/.
+    - **locator**: 7lm@origin/main:L8/L4/work/writing/7lm-harmonized-architecture-specification.md:993-995
+    - **quote**: Internal reconstructable memory remains L6; external source, authority, prior art, and public provenance belong at L7/provenance/.
+  - item 61
+    - **id**: H07
+    - **kind**: rule
+    - **statement**: Inherited terms, rows 12-15. 'USO/ as the directory name of the interior': Renamed L8/ (USO remains the name of the interior; the directory is L8, 'a count and not a rank'). 'README.md as documentation': Superseded, README is where a reader starts; READMEs carrying documentation were deleted after enumeration, records at L8/L6/history/. 'no deletion as a rule': Superseded, integrity is enforced, deletion after enumeration is the ordinary act. 'l0 … l6 as the interior directory names': Superseded by L0 through L6 under L8.
+    - **locator**: 7lm@origin/main:L8/L4/work/writing/7lm-harmonized-architecture-specification.md:996-999
+    - **quote**: Retirement is for what integrity needs reconstructable; deletion after enumeration is the ordinary act, recorded at L8/L6/history/.
+  - item 62
+    - **id**: H08
+    - **kind**: rule
+    - **statement**: Inherited terms, rows 16-17, and the closing line. 'orphan; foster; results; delete': Retired, the exemplars' queue vocabulary and its access rules retired on the owner's word; L8/L5/research/review/ is the catch-all, L8/L5/research/lanes/ the working position. 'peer-1 / object-1 numbering': Resolved, peers are physical and counted from 1, layers from 0; the owner's ruling of 12 September 2026 (the only dated ruling in lines 500-1003). Line 1003: dated change lists stand at L8/L6/history/specification-history.md. The table has 17 rows; it has no row for publications -> allications/publications or restrictions -> controlled.
+    - **locator**: 7lm@origin/main:L8/L4/work/writing/7lm-harmonized-architecture-specification.md:1000-1003
+    - **quote**: The owner's ruling of 12 September 2026; the words are at L8/L6/history/specification-history.md.
+  - item 63
+    - **id**: N01
+    - **kind**: rule
+    - **statement**: Dating of Clarifications and Notes in lines 500-1003: none of the [Clarification], [Note] or [Research Note] blocks in this range carries its own date. Dates appear only inside text: 20 September 2026 (lines 950, 958, the L7 restructure the exemplars have not mirrored), 12 September 2026 (line 1001, peer numbering ruling), and the layout names 2026-09-06 (line 939). The blocks in range are at lines 526, 528, 580, 582, 599, 673, 675, 677, 679, 681, 723, 725, 805, 807, 839, 841, 843, 879, 881, 930, 979.
+    - **locator**: 7lm@origin/main:L8/L4/work/writing/7lm-harmonized-architecture-specification.md:526-979
+  - item 64
+    - **id**: C01
+    - **kind**: change
+    - **statement**: Shape of the beta diff on this file: one commit, 4ca3edb (2026-11-02, author name 'EDM', 'Apply approved R1–R6 and exercise bounded research objects'), 7 insertions and 5 deletions in six hunks, at main lines 21, 68, 187, after 353, 596 and 681. Beta file is 1005 lines. Because main did not touch the file after the fork point 2e5a6d6 (merge-base), the diff is purely the beta's change. Beta does not change the Version line, the L1-L6 sheet tables or trees, the Exemplars section or the Harmonization Record.
+    - **locator**: 7lm@origin/beta/common-contracts-r1-r6:L8/L4/work/writing/7lm-harmonized-architecture-specification.md (git diff origin/main origin/beta/common-contracts-r1-r6 -- same path)
+  - item 65
+    - **id**: C02
+    - **kind**: change
+    - **statement**: IN RANGE. Case 'External definition', final clause. Before (main 596): 'no local L0 object exists unless this bounded thing authors a semantic version.' After (beta 598): 'an exact source-owned semantic reference may reach receiving L0; a locally authored L0 definition exists only if this bounded thing authors one.' Meaning: the case table no longer says nothing external can stand at L0; it now agrees with the rest of the file (lines 736, 811, 825, 899) that the peer's exact tagged definition may be received at L0, while local authorship still requires the object to author its own. Bears directly on Auditonomous L0, which receives the Autonomous definition.
+    - **locator**: 7lm@origin/beta/common-contracts-r1-r6:L8/L4/work/writing/7lm-harmonized-architecture-specification.md:598
+    - **quote**: an exact source-owned semantic reference may reach receiving L0; a locally authored L0 definition exists only if this bounded thing authors one.
+  - item 66
+    - **id**: C03
+    - **kind**: change
+    - **statement**: IN RANGE. Scale/ladder Clarification. Before (main 681): any 'scale, a ladder, or a vocabulary of levels or statuses is semantics of layer 4 and up ... It is not an L1 state space and not L2 mathematics.' After (beta 683): only 'The autonomy scale or a review-status ladder, considered as a written instrument, is an L4 object; its research or review meaning is L5 discourse', and separately declared admissible values at L1 or exact relations/operators at L2 are expressly not prevented. Meaning: the blanket exclusion from L1/L2 is withdrawn and the rule is narrowed to two named instruments; the review-status ladder stays L5 research governance, not the L0 epistemic rail.
+    - **locator**: 7lm@origin/beta/common-contracts-r1-r6:L8/L4/work/writing/7lm-harmonized-architecture-specification.md:683
+    - **quote**: This does not prevent separately declared admissible values at L1 or exact relations and operators at L2 under their governing contracts.
+  - item 67
+    - **id**: C04
+    - **kind**: change
+    - **statement**: OUTSIDE RANGE, immediately before the L1 heading. Beta inserts a new Clarification (beta line 355) after the L0 section: the named foundational branches do not exhaust the locally authored foundational distinctions a model may need; no new directory or fixed ontology is required; foundational branches, model-attached vertical analytic inquiries and L5 research lanes are three distinct things; output comparison does not permit lateral rail traversal. Meaning: adds a rule, with no tree change, and stops L5 lanes being read as vertical inquiries or as foundational branches.
+    - **locator**: 7lm@origin/beta/common-contracts-r1-r6:L8/L4/work/writing/7lm-harmonized-architecture-specification.md:355
+    - **quote**: These foundational branches, model-attached vertical analytic inquiries, and L5 research lanes are distinct.
+  - item 68
+    - **id**: C05
+    - **kind**: change
+    - **statement**: OUTSIDE RANGE, three further beta hunks. (1) Line 21, self-description rule: directory machine metadata is now conditional ('When machine instructions are enabled, the same directory separately carries machine-readable metadata') plus 'Current manual practice does not imply that such metadata or enforcement has been instantiated.' (2) Line 68, Author note on the byte reading: adds that it 'is an architectural mnemonic, not a theorem that one extra bit detects every possible error'. (3) Line 187, OSI analytic table L0 row: 'bound through L7 rather than copied into L0' becomes 'bound through L7; an exact tagged semantic reference may reach receiving L0 without local authorship or redefinition' (same correction as C02).
+    - **locator**: 7lm@origin/beta/common-contracts-r1-r6:L8/L4/work/writing/7lm-harmonized-architecture-specification.md:21,68,187
+    - **quote**: Current manual practice does not imply that such metadata or enforcement has been instantiated.
+- **checklist**
+  - item 1
+    - **step**: 1. File the manuscript as work at L4
+    - **detail**: Drafts, document files and the production of the book artifact stand at L8/L4/work/writing/ ('Directory for writing and document production as performed work'). The act and the file are L4, nothing more.
+    - **locator**: 7lm@origin/main:L8/L4/work/writing/7lm-harmonized-architecture-specification.md:566, 591, 611
+  - item 2
+    - **step**: 2. File the research argument, claims and thesis statements at L5
+    - **detail**: The research argument and 'manuscript meaning' are L5. Research claims and thesis statements belong at L8/L5/research/lanes/ or the corresponding L5 research artifact. A claim must be no broader than the evidence, and research meaning must be kept distinct from L4 writing and L7 release.
+    - **locator**: 7lm@origin/main:L8/L4/work/writing/7lm-harmonized-architecture-specification.md:591, 641, 988
+  - item 3
+    - **step**: 3. Use review/ as the catch-all and lanes/ as the working position
+    - **detail**: Everything awaiting the owner's review lands at L8/L5/research/review/; set-aside material stays there labelled PARKED; what the owner takes up moves to L8/L5/research/lanes/ and back if set down; finished work is filed at its layer; nothing is deleted; no new directory is made for this.
+    - **locator**: 7lm@origin/main:L8/L4/work/writing/7lm-harmonized-architecture-specification.md:679
+  - item 4
+    - **step**: 4. Keep review and findings apart
+    - **detail**: L8/L5/research/review/ holds review, criticism, audit and qualification of claims; L8/L5/research/findings/ holds findings that may responsibly be stated. Raw L4 output is not a finding.
+    - **locator**: 7lm@origin/main:L8/L4/work/writing/7lm-harmonized-architecture-specification.md:665-666
+  - item 5
+    - **step**: 5. Put experiment, computation, code and data at their layers
+    - **detail**: Executed experiments, raw work product, collected data, executed code and run outputs are L4 (work/experiments/, work/computation/); engineering method, precision and tolerance L3; exact relations and proofs L2; state categories L1; interpretation L5; external source/lineage L7 provenance.
+    - **locator**: 7lm@origin/main:L8/L4/work/writing/7lm-harmonized-architecture-specification.md:592, 594, 595
+  - item 6
+    - **step**: 6. Keep internal history at L6 and never treat git as the record
+    - **detail**: Internal version, correction, failure and supersession history is L8/L6/history/; retired or superseded states and bindings go to L8/L6/retired/. Git records change events; the L6 record must carry the scientific relations and decisions.
+    - **locator**: 7lm@origin/main:L8/L4/work/writing/7lm-harmonized-architecture-specification.md:591, 716-717, 721
+  - item 7
+    - **step**: 7. Enumerate before deleting
+    - **detail**: A superseded file is deleted only after every part of it is enumerated, in the record at L8/L6/history/, as standing elsewhere. What integrity needs reconstructable (the owner's authored documents, prior rule texts, error records) is retired, not deleted.
+    - **locator**: 7lm@origin/main:L8/L4/work/writing/7lm-harmonized-architecture-specification.md:723, 998
+  - item 8
+    - **step**: 8. Release only at the desk
+    - **detail**: A released publication object stands at L7/allications/publications/; provenance and public/legal governance stay separately addressable at L7/provenance/ and L7/governance/. Exposure never raises scientific maturity.
+    - **locator**: 7lm@origin/main:L8/L4/work/writing/7lm-harmonized-architecture-specification.md:803, 872, 918
+  - item 9
+    - **step**: 9. Take the definition of autonomous only through the binding
+    - **detail**: Auditonomous binds the Autonomous definition at L7/peering/public/ingress/peer-1/object-1/, reference-only, NO EDIT and NO DELETE; it authors only its own local delta at L0; an upstream change means a new binding, and rebinding is the owner's act.
+    - **locator**: 7lm@origin/main:L8/L4/work/writing/7lm-harmonized-architecture-specification.md:823-837, 936, 958
+  - item 10
+    - **step**: 10. Mirror the L7 names the specification says the exemplars lack
+    - **detail**: Per the specification, both exemplars still carry publications/ as a direct L7 branch and governance/restrictions/; the model's names are L7/allications/publications/ (with applications, communications, specifications, notifications, participations as siblings) and L7/governance/controlled/. Confirmed against both exemplar mains by ls-tree. The specification does not itself give the order of moves; it only states the target tree.
+    - **locator**: 7lm@origin/main:L8/L4/work/writing/7lm-harmonized-architecture-specification.md:747-783, 950, 958
+  - item 11
+    - **step**: 11. Keep copyright in one place when mirroring
+    - **detail**: governance/copyright/ states every copyright or licence condition once; governance/licensing/ and governance/controlled/ point to it. In the exemplars the pointer currently sits at restrictions/, which the specification says it now names controlled/.
+    - **locator**: 7lm@origin/main:L8/L4/work/writing/7lm-harmonized-architecture-specification.md:879, 938
+  - item 12
+    - **step**: 12. Treat scales and status ladders as written L4 objects with L5 meaning
+    - **detail**: On main: a scale, ladder or status vocabulary as written is L4, its meaning L5, and it is not L1 or L2; a review-status ladder is L5 governance, not the L0 epistemic rail. The unmerged beta narrows this and permits separately declared L1 values and L2 relations, so which wording governs depends on whether the beta is adopted.
+    - **locator**: 7lm@origin/main:L8/L4/work/writing/7lm-harmonized-architecture-specification.md:681; 7lm@origin/beta/common-contracts-r1-r6:same path:683
+- **open_questions**
+  - The specification file did not change on main between 2e5a6d6 and c9dc061. If the owner's 'its changed' refers to main, the change is in other files (PR #21 and whatever else landed), which is outside this scope; if it refers to the unmerged beta R1-R6 corrections, they are not yet the model of record. Which is meant was not settled here.
+  - L8/L6/in/ exists in the scaffold tree and in the L6 layer sheet (described as optional) but is absent from the specification's L6 tree. Whether it is one of the canonical positions the exemplars must carry, or optional and to be left out, is not stated in the specification.
+  - The beta leaves the Exemplars section untouched, so on every scaffold ref the specification still says the exemplars' L7 restructure 'is not yet mirrored'. Once the exemplars are brought into step those two 'Not yet as stated' sentences (lines 950, 958) and the 'restrictions/' wording at line 938 become untrue; who updates them and when is not stated.
+  - The specification's counts for the exemplars (six lanes and seven findings in Autonomous; two lanes, two reviews, three findings, 62 pointer rows in Auditonomous; a 450-entry capture register) were not verified against the exemplar trees; only the existence of the cited paths and the L7 branch names was checked.
+  - The specification says the Auditonomous binding names the peer path research/definitions/AUTONOMOUS.md at commit 0504961 and that three files still take a definition of autonomous from elsewhere. Neither the binding record nor those three files were read here.
+  - The Harmonization Record's inherited-terms table has no row for the 20 September 2026 renames (publications -> allications/publications, restrictions -> controlled). Whether that omission is deliberate (the history file carries it) was not determined; L8/L6/history/specification-history.md was not read in this scope.
+  - The specification does not describe the CI check's three rules (G-001 to G-003) or the count of 71 positions; those must come from .github/workflows/integrity.yml itself, which was not read in this scope.

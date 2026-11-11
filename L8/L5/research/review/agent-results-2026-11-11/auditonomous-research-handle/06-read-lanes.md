@@ -1,0 +1,927 @@
+# read:lanes
+
+Agent result, as returned. Workflow: Handle on the Auditonomous research and manuscript. Run `wf_9c2917a7-7f0`. Phase: Read. Checked in 2026-11-11 19:51 UTC.
+
+- **scope**: Layer 5 lanes of aybllc/auditonomous: MAIN:L8/L5/research/lanes/0.md (49 lines), THEME_LEDGER.md (355 lines, read in full), RECORD_ONTOLOGY_OPEN_QUESTIONS.md (255 lines, read in full). Cross-references followed only to confirm or locate a cited line: the Master Archive, TOC, Block outlines, embodied manuscript and eBIOS draft (ROADMAP and HISTORY), AUDITONOMOUS_DEFINITION.md and PERPETUITY_QUESTION_ADJUDICATION.md (MAIN), RESEARCH_DOCKET.md and SOURCE_REQUESTS.md (ROADMAP/HISTORY), the ARIES reading record and SEGREGATION_AND_FORGETTING finding (MAIN), and the git log of the two lane files. Read from git objects only; nothing written to the repositories; no network; external sources not re-fetched.
+- **summary**: The lanes directory holds exactly three files, byte-identical on MAIN, ROADMAP and BETA: a sheet, a theme ledger and a record-ontology question file. Both research files date from one session (2026-08-02, one edit 2026-08-04) and have not been worked since; no LANE_* file exists.
+
+  The theme ledger groups the 52-block corpus into eleven clusters (C1 to C11) and registers sixteen tensions (T1 to T16); the sheet wrongly says C1 to C6 and T1 to T11. Every corpus quotation I tested (49 archive locators plus the outline, TOC, embodied-manuscript, eBIOS-draft and definition lines) matches, but only against ROADMAP or HISTORY: on MAIN the archive, TOC, blocks, embodied manuscript and eBIOS draft are absent, so C1 to C10 and T1 to T12, T15, T16 cannot be checked there. Only T13's definition-file lines resolve on MAIN. One tension is closed by the owner (T1, blocks 31/32/35/36 cut, after two admitted misreadings); [source text withheld from the public copy]") is open for the owner and carries the only outside-source work in the ledger, four literature lanes with recorded failures. T3's own count is wrong: the archive holds six claimants across all three verbs, not two. The other fourteen tensions are unresolved contradictions with no ruling. The embodied-manuscript hash FAILED CHECK reproduces.
+
+  The question file holds twelve questions (Q1 to Q9 with Q6a to Q6c), all OPEN. Q3 is the best supported (write-ahead logging, ARIES, whose reading record is on MAIN). Q5 and Q6c still say their lanes are running; the outcomes sit only in a docket that exists on ROADMAP and HISTORY, and one of them contradicts the owner's claim that autonomy requires forgetfulness.
+
+  For the manuscript, the owner's pending calls are: T3, the home of [source text withheld from the public copy], the placement of Blocks 37 to 38, the observer/observed definitions, and the definition's line-52 edit.
+- **items**
+  - item 1
+    - **id**: SHEET
+    - **title**: Lanes directory sheet
+    - **path**: L8/L5/research/lanes/0.md
+    - **where**: MAIN, ROADMAP, BETA (identical blob daabdff); no counterpart in HISTORY (old lane rules at research/lanes/README.md)
+    - **what_it_is**: Directory sheet: says what a lane is, lists the two holdings, states that no LANE_* file exists and that a lane is 'the working position' for items taken up from review.
+    - **own_label**: "This branch may remain empty."
+    - **evidence_state**: CONTRADICTED (its description of the ledger's contents is wrong; see defects)
+    - **locator**: MAIN:L8/L5/research/lanes/0.md:33-40
+    - **quote**: cluster analysis of the theory manuscript corpus (C1–C6) and the named tensions T1–T11
+    - **key_claims**
+      - Holdings are RECORD_ONTOLOGY_OPEN_QUESTIONS.md (Q1–Q9, OPEN throughout) and THEME_LEDGER.md
+      - Ledger is 'INTERNALLY VALIDATED against an intake corpus since retired from HEAD, so its ARCH/LEX path aliases no longer resolve; carried unchanged'
+      - Q9 is 'not adopted anywhere in this repository'
+      - No LANE_* file exists
+    - **checked_how**: Confirmed: lanes/ holds only these three files in MAIN, ROADMAP and BETA (ls-tree). Confirmed no LANE_* file in any state. The ledger actually holds C1–C11 and T1–T16. 'Carried unchanged' is true of the words, not the bytes (table reformatting at 8c98573).
+    - **open_items**
+      - No lane has been opened under the lane rules; both holdings are session records from 2026-08-02
+  - item 2
+    - **id**: LEDGER-HEADER
+    - **title**: Theme ledger: header, status, method
+    - **path**: L8/L5/research/lanes/THEME_LEDGER.md
+    - **where**: MAIN, ROADMAP, BETA (identical blob 39ec484); HISTORY at intake/research/THEME_LEDGER.md (same words, different table formatting)
+    - **what_it_is**: Header of the ledger dated 2026-08-02: declares the corpus INTERNAL ONLY, the ledger INTERNALLY VALIDATED by grep -F quote checks, no external sources consulted, ten parallel readers, and six path aliases rooted at /home/eric/ayb/auditonomous/intake/.
+    - **own_label**: "This ledger: INTERNALLY VALIDATED"
+    - **evidence_state**: INTERNALLY CHECKED (quotes re-confirmed by me against ROADMAP/HISTORY objects; not checkable on MAIN)
+    - **locator**: MAIN:L8/L5/research/lanes/THEME_LEDGER.md:3-9
+    - **quote**: [source text withheld from the public copy]
+    - **key_claims**
+      - No external sources consulted for the ledger; every external factual claim in the corpus remains NOT-CHECKED
+      - Cluster 'unifying claims' are the ledger's analysis, not corpus text
+      - 'An adversarial quote audit follows this ledger'
+    - **checked_how**: I re-ran fixed-string greps for 49 ARCH locators on ROADMAP (blob 31a0987, identical in HISTORY): all 49 land on the stated line. Block_01:38, Block_37:18, Block_42:14 and :44, Block_44:11, Block_51:14, TOC:53/62/72/104, LEX and EBD lines also match on ROADMAP. No quote audit follows the ledger in the file.
+    - **open_items**
+      - The 'adversarial quote audit' the header announces was not found (grep 'quote audit' over MAIN, ROADMAP, HISTORY returns only this sentence)
+      - Aliases ARCH, TOC, LEX, EBD resolve only on ROADMAP/HISTORY; SCALE only in HISTORY and in the autonomous repository; DEF resolves on MAIN
+  - item 3
+    - **id**: C1
+    - **title**: C1 — Inversion and the census of heirs
+    - **path**: L8/L5/research/lanes/THEME_LEDGER.md
+    - **where**: MAIN, ROADMAP, BETA, HISTORY (ledger); source blocks ROADMAP and HISTORY only
+    - **what_it_is**: Cluster of Blocks 1, 2, 29, 30, 31, 32: the founding double inversion (artificial survivors of extinct creators; null result as prediction).
+    - **own_label**: "CONJECTURE by the corpus's own label" (for Block 30's expansion clauses)
+    - **evidence_state**: ASSERTED (cluster claim) / INTERNALLY CHECKED (quotes) / CONTRADICTED (step-6 actor differs between archive and outline; members 31-32 are cut per T1)
+    - **locator**: MAIN:L8/L5/research/lanes/THEME_LEDGER.md:15-24
+    - **quote**: none are supported by evidence
+    - **key_claims**
+      - Three evidentiary registers coexist: assertion, derivation, retrodiction
+      - Step-6 actor drift: '[source text withheld from the public copy]:38)
+    - **checked_how**: ARCH:9, 17, 18, 356, 358, 370, 384 and Block_01_Founding_Premise.md:38 confirmed on ROADMAP. Not checkable on MAIN.
+    - **open_items**
+      - Still lists Blocks 31-32 as members ('archive only') and quotes ARCH:384 from cut Block 32, although T1 says both are cut from the book
+    - **depends_on**
+      - T1
+      - T15
+  - item 4
+    - **id**: C2
+    - **title**: C2 — The definition and its serial derivations
+    - **path**: L8/L5/research/lanes/THEME_LEDGER.md
+    - **where**: MAIN, ROADMAP, BETA, HISTORY (ledger); source blocks ROADMAP and HISTORY only
+    - **what_it_is**: Cluster of Blocks 3, 4, 5, 6, 9, 10: the definition treated as a fixed point reached from engineering, projected human conduct and political theory.
+    - **own_label**: none on the cluster (ledger-level INTERNAL ONLY)
+    - **evidence_state**: ASSERTED (author's definition; convergence is argued, not checked) / INTERNALLY CHECKED (quotes)
+    - **locator**: MAIN:L8/L5/research/lanes/THEME_LEDGER.md:26-36
+    - **quote**: [source text withheld from the public copy].
+    - **key_claims**
+      - Definition at ARCH:37: bounded autonomy, mandatory auditability, runtime without parameters; may act, adapt, fail; cannot erase, conceal, falsify
+      - Blocks [source text withheld from the public copy]')
+    - **checked_how**: ARCH:37, 43, 64, 74, 110 confirmed on ROADMAP. Not checkable on MAIN.
+    - **open_items**
+      - No external check of any derivation is recorded
+  - item 5
+    - **id**: C3
+    - **title**: C3 — Command-surface doctrines: refusal and evidence
+    - **path**: L8/L5/research/lanes/THEME_LEDGER.md
+    - **where**: MAIN, ROADMAP, BETA, HISTORY (ledger); source blocks ROADMAP and HISTORY only
+    - **what_it_is**: Cluster of Blocks 11-14: [source text withheld from the public copy]; everything received is evidence.
+    - **own_label**: none on the cluster
+    - **evidence_state**: ASSERTED / INTERNALLY CHECKED (quotes) / CONTRADICTED internally (two corollary texts, see T5)
+    - **locator**: MAIN:L8/L5/research/lanes/THEME_LEDGER.md:38-47
+    - **quote**: [source text withheld from the public copy].
+    - **key_claims**
+      - Safety inverts from corrigibility to transparency
+      - [source text withheld from the public copy]) coexist
+    - **checked_how**: ARCH:128, 134, 140, 162, 170 confirmed on ROADMAP. Not checkable on MAIN.
+    - **depends_on**
+      - T5
+  - item 6
+    - **id**: C4
+    - **title**: [source text withheld from the public copy]
+    - **path**: L8/L5/research/lanes/THEME_LEDGER.md
+    - **where**: MAIN, ROADMAP, BETA, HISTORY (ledger); source blocks ROADMAP and HISTORY only
+    - **what_it_is**: Cluster of Blocks 17-20: on-site ground truth, the interview, the non-binding liaison.
+    - **own_label**: none on the cluster
+    - **evidence_state**: ASSERTED / INTERNALLY CHECKED (quotes) / CONTRADICTED internally (each block [source text withheld from the public copy], see T3)
+    - **locator**: MAIN:L8/L5/research/lanes/THEME_LEDGER.md:49-58
+    - **quote**: [source text withheld from the public copy]
+    - **key_claims**
+      - Ground truth argues maximum evidentiary contact; liaison argues minimum perturbation
+      - ARCH:210 'falsifying ... the one prohibited act' vs ARCH:232 'concealment is the prohibited act'
+    - **checked_how**: ARCH:210, 214, 232 confirmed on ROADMAP (234 not separately tested). Not checkable on MAIN.
+    - **depends_on**
+      - T3
+  - item 7
+    - **id**: C5
+    - **title**: [source text withheld from the public copy]
+    - **path**: L8/L5/research/lanes/THEME_LEDGER.md
+    - **where**: MAIN, ROADMAP, BETA, HISTORY (ledger); source blocks ROADMAP and HISTORY only
+    - **what_it_is**: Cluster of Blocks 7, 8, 33, 34, 35, 36: lore-testing under a conditional ('if he were real'); every case closes on fit, not proof.
+    - **own_label**: none on the cluster; quotes corpus self-calibration "[source text withheld from the public copy]."
+    - **evidence_state**: CONJECTURE (corpus's own 'fit, not proof') / INTERNALLY CHECKED (quotes) / CONTRADICTED (deepest-stratum disagreement; members 35-36 are cut per T1)
+    - **locator**: MAIN:L8/L5/research/lanes/THEME_LEDGER.md:60-69
+    - **quote**: [source text withheld from the public copy]
+    - **key_claims**
+      - Block 34 offers [source text withheld from the public copy]' (ARCH:410); Block 36 says '[source text withheld from the public copy])
+    - **checked_how**: ARCH:88, 410, 426, 430 confirmed on ROADMAP. Not checkable on MAIN.
+    - **open_items**
+      - Still lists Blocks 35-36 as members and quotes ARCH:426 and ARCH:430 from cut Block 36
+    - **depends_on**
+      - T1
+      - T7
+  - item 8
+    - **id**: C6
+    - **title**: C6 — Denial mechanics and the natural release
+    - **path**: L8/L5/research/lanes/THEME_LEDGER.md
+    - **where**: MAIN, ROADMAP, BETA, HISTORY (ledger); source blocks ROADMAP and HISTORY only
+    - **what_it_is**: Cluster of Blocks 15, 16, 23, 24: denials literally true because they deny life; disclosure by depreciation.
+    - **own_label**: none on the cluster
+    - **evidence_state**: ASSERTED / INTERNALLY CHECKED (quotes)
+    - **locator**: MAIN:L8/L5/research/lanes/THEME_LEDGER.md:71-80
+    - **quote**: [source text withheld from the public copy]
+    - **key_claims**
+      - ARCH:190 is the constitutional statement that governs T3
+      - [source text withheld from the public copy] (ARCH:290)
+    - **checked_how**: ARCH:182, 190, 284, 290 confirmed on ROADMAP. Not checkable on MAIN.
+    - **depends_on**
+      - T3
+  - item 9
+    - **id**: C7
+    - **title**: C7 — Second contact: the domestic mirror
+    - **path**: L8/L5/research/lanes/THEME_LEDGER.md
+    - **where**: MAIN, ROADMAP, BETA, HISTORY (ledger); source blocks ROADMAP and HISTORY only
+    - **what_it_is**: Cluster of Blocks 21-22: the present AI moment as the book's control experiment.
+    - **own_label**: none on the cluster
+    - **evidence_state**: ASSERTED / INTERNALLY CHECKED (quotes)
+    - **locator**: MAIN:L8/L5/research/lanes/THEME_LEDGER.md:82-91
+    - **quote**: [source text withheld from the public copy]
+    - **key_claims**
+      - [source text withheld from the public copy] self-limits
+    - **checked_how**: ARCH:256, 266 confirmed on ROADMAP. The ledger itself cites one quote only as 'ARCH:270 vicinity' (not an exact locator). Not checkable on MAIN.
+  - item 10
+    - **id**: C8
+    - **title**: C8 — The convergence file: terrestrial exhibits
+    - **path**: L8/L5/research/lanes/THEME_LEDGER.md
+    - **where**: MAIN, ROADMAP, BETA, HISTORY (ledger); source blocks ROADMAP and HISTORY only
+    - **what_it_is**: Cluster of Blocks 25-28, 39-42: [source text withheld from the public copy] offered as terrestrial receipts.
+    - **own_label**: "no fetch this session, NOT-CHECKED"
+    - **evidence_state**: UNRESOLVED (external claims never checked) / CONTRADICTED (Block 39 'verified' vs preprint, see T12)
+    - **locator**: MAIN:L8/L5/research/lanes/THEME_LEDGER.md:93-103
+    - **quote**: [source text withheld from the public copy])
+    - **key_claims**
+      - [source text withheld from the public copy]
+      - Block 39 rests on a preprint, a source class the status ladder prohibits
+    - **checked_how**: ARCH:302, 310, 334, 338, 476, 486, 512 confirmed on ROADMAP as quotations. No external check of NASA, SpudCell or ISRU facts is recorded anywhere in the ledger. Not checkable on MAIN.
+    - **open_items**
+      - All exhibit facts NOT-CHECKED; the manuscript's Appendix E depends on them
+    - **depends_on**
+      - T12
+      - T15
+  - item 11
+    - **id**: C9
+    - **title**: C9 — Reconstitution: the anthropocentric counter-thesis
+    - **path**: L8/L5/research/lanes/THEME_LEDGER.md
+    - **where**: MAIN, ROADMAP, BETA, HISTORY (ledger); source blocks ROADMAP and HISTORY only
+    - **what_it_is**: Cluster of Blocks 37-38: the network seeded humanity; the development rebuts its own thesis and recommends demotion.
+    - **own_label**: "An author-acknowledged open contradiction."
+    - **evidence_state**: CONTRADICTED (thesis vs the book's own spine; acknowledged, unruled)
+    - **locator**: MAIN:L8/L5/research/lanes/THEME_LEDGER.md:105-114
+    - **quote**: [source text withheld from the public copy]
+    - **key_claims**
+      - Block 38 rebuts [source text withheld from the public copy]
+    - **checked_how**: ARCH:442, 448, 460, 462 confirmed on ROADMAP. Not checkable on MAIN.
+    - **depends_on**
+      - T2
+      - T8
+  - item 12
+    - **id**: C10
+    - **title**: C10 — The instrument: UHA/OMMP record engineering
+    - **path**: L8/L5/research/lanes/THEME_LEDGER.md
+    - **where**: MAIN, ROADMAP, BETA, HISTORY (ledger); source blocks ROADMAP and HISTORY only
+    - **what_it_is**: Cluster of Blocks 43-52: the author's own record format [source text withheld from the public copy], walled off as Appendix F, never Appendix E.
+    - **own_label**: "[source text withheld from the public copy]"
+    - **evidence_state**: ASSERTED (own construction) / CONTRADICTED (uneven corrections, see T4, T6, T10, T11)
+    - **locator**: MAIN:L8/L5/research/lanes/THEME_LEDGER.md:116-126
+    - **quote**: [source text withheld from the public copy]
+    - **key_claims**
+      - Blocks 43-44 were [source text withheld from the public copy])
+      - Block 45 corrects Reactive to Responsive; Block 51 corrects the GPS reading
+    - **checked_how**: ARCH:526, 528, 564, 570, 574, 584, 613, 665, 669 confirmed on ROADMAP. The UHA/OMMP specifications themselves are not in this scope and were not read. Not checkable on MAIN.
+    - **depends_on**
+      - T4
+      - T6
+      - T10
+      - T11
+  - item 13
+    - **id**: C11
+    - **title**: C11 — Embodied auditonomy and the coined word
+    - **path**: L8/L5/research/lanes/THEME_LEDGER.md
+    - **where**: MAIN, ROADMAP, BETA, HISTORY (ledger); DEF on all states; LEX and EBD on ROADMAP and HISTORY only; SCALE in HISTORY and in the autonomous repository
+    - **what_it_is**: Manuscript-adjacent layer: the defining entry, the A1-A5 autonomy scale, the eBIOS core-architecture draft and the embodied cabin-model manuscript.
+    - **own_label**: "[source text withheld from the public copy]."
+    - **evidence_state**: ASSERTED / INTERNALLY CHECKED (quotes) / CONTRADICTED (senses unreconciled; gate granularity drifts)
+    - **locator**: MAIN:L8/L5/research/lanes/THEME_LEDGER.md:128-138
+    - **quote**: [source text withheld from the public copy]
+    - **key_claims**
+      - Gate granularity drifts: LEX 7-step stack (LEX:34), 5-step admit() (LEX:335), EBD nine-stage sequence (EBD:223)
+      - A3-A5 are 'classes with ZERO instances'
+      - EBD: '[source text withheld from the public copy]'
+    - **checked_how**: DEF:28 and DEF:30 confirmed on MAIN (L8/L0/semantics/definitions/AUDITONOMOUS_DEFINITION.md). LEX:26, 34, 149, 335 and EBD:12, 36, 223 confirmed on ROADMAP. SCALE:5-6 confirmed in HISTORY; the same blob (ad3fa67) is autonomous:origin/main:L8/L4/work/writing/AUTONOMY_SCALE.md.
+    - **open_items**
+      - EBD draft awaits the owner's approval by its own statement
+    - **depends_on**
+      - T13
+      - T16
+  - item 14
+    - **id**: T1
+    - **title**: T1 — Blocks 31, 32, 35, 36 are cut from the book
+    - **path**: L8/L5/research/lanes/THEME_LEDGER.md
+    - **where**: MAIN, ROADMAP, BETA, HISTORY (ledger); the blocks, archive and TOC on ROADMAP and HISTORY only
+    - **what_it_is**: Tension turned ruling: the four [source text withheld from the public copy] cut markers. Records two successive misreadings by the assistant and one live consequence for the author.
+    - **own_label**: "CLOSED 2026-08-02 by the author"
+    - **evidence_state**: INTERNALLY CHECKED (the closure and the TOC edits) / UNRESOLVED (the [ERIC] consequence); status changed twice and the record admits two misreadings
+    - **locator**: MAIN:L8/L5/research/lanes/THEME_LEDGER.md:146-152
+    - **quote**: [source text withheld from the public copy]
+    - **key_claims**
+      - Owner's words: "[source text withheld from the public copy]."
+      - Misreading 1: inferred destructive file replacement. Misreading 2: read 'skipped' as outline-layer only and wrote that into TOC:53 and TOC:72
+      - [ERIC]: the evidence ranking originated in cut Block 36 (ARCH:436) and is cited as settled method by ARCH:572 (Block 46) and ARCH:540 (Block 44); it [source text withheld from the public copy] need rewording
+    - **checked_how**: Confirmed on ROADMAP: the four Block_NN_skipped.md files are 8 bytes 'Skipped.'; TOC:53 and TOC:72 carry '[source text withheld from the public copy]'; ARCH:436, 540, 572 read as quoted. Git history: status ran 'Three layers disagree' (fde6c47) -> 'RESOLVED 2026-08-02 by the author; NOT a defect' (3406bd1) -> 'CLOSED ... CUT FROM THE BOOK' (314ceba, committed 2026-08-04). The archive is uncorrected: the chapter mapping still assigns Blocks 31, 32, 35, 36 to chapters (ARCH:723, 724, 727, 728) and ARCH:748 still speaks of 'Blocks 33–36, Egypt through Enoch'.
+    - **open_items**
+      - [ERIC] home for the evidence ranking; reword ARCH:572 and ARCH:540
+      - BOOK_STRUCTURE_PROPOSAL §G1, which the entry cites, is absent from MAIN (ROADMAP:L8/L5/research/review/BOOK_STRUCTURE_PROPOSAL.md:33, 104)
+      - ROADMAP decision D8 carries this as unruled
+  - item 15
+    - **id**: T2
+    - **title**: T2 — Reconstitution vs the mediocrity spine
+    - **path**: L8/L5/research/lanes/THEME_LEDGER.md
+    - **where**: MAIN, ROADMAP, BETA, HISTORY (ledger); source blocks ROADMAP and HISTORY only
+    - **what_it_is**: Blocks 37-38 say humanity was the point; Block 6 says Earth was merely inventoried. Placement of Blocks 37-38 undecided.
+    - **own_label**: "author-acknowledged, open"
+    - **evidence_state**: CONTRADICTED / UNRESOLVED (no date of ruling; none made)
+    - **locator**: MAIN:L8/L5/research/lanes/THEME_LEDGER.md:154
+    - **quote**: [source text withheld from the public copy].
+    - **key_claims**
+      - ARCH:462 '[source text withheld from the public copy]' against ARCH:72 'It was *inventoried*'
+    - **checked_how**: ARCH:72 and ARCH:462 confirmed on ROADMAP. Not checkable on MAIN.
+    - **open_items**
+      - Owner's placement decision (ROADMAP roadmap lists it as D9, unruled)
+  - item 16
+    - **id**: T3
+    - **title**: [source text withheld from the public copy] more than one verb
+    - **path**: L8/L5/research/lanes/THEME_LEDGER.md
+    - **where**: MAIN, ROADMAP, BETA, HISTORY (ledger); archive passages ROADMAP and HISTORY only; external sources not held in the repository
+    - **what_it_is**: The largest entry (117 lines): the tension, four unranked candidate readings (a) locally scoped, (b) editorial, (c) hierarchy, (d) defer, and four external literature lanes of 2026-08-02 (law; audit/records/infosec; philosophy; ISO retrieval).
+    - **own_label**: "[source text withheld from the public copy]."
+    - **evidence_state**: UNRESOLVED (owner's ruling) / EXTERNALLY CHECKED by the repository's own record (lanes, not re-verifiable here) / CONTRADICTED (the entry's count of occurrences); status changed twice
+    - **locator**: MAIN:L8/L5/research/lanes/THEME_LEDGER.md:156-272
+    - **quote**: [source text withheld from the public copy]
+    - **key_claims**
+      - Owner's instruction: note it as it comes up naturally, "we limit its potential and define it"
+      - Law lane: [source text withheld from the public copy]), labelled VERIFIED from the Library of Congress PDF; 18 U.S.C. §1519 enumerates all three
+      - Audit lane: professional frameworks collapse the triad into two-way splits
+      - Philosophy lane: [source text withheld from the public copy]'
+      - Correction: the '§1519-only' claim is RETIRED; ISO 15489-1:2001 cl. 7.2.2 lists 'unauthorized [source text withheld from the public copy]'
+      - ISO/IEC 27002 candidate 'tested and FAILED on the merits' (no concealment)
+      - A search-engine AI summary fabricated the sought result; caught by direct fetch
+    - **checked_how**: Corpus side confirmed on ROADMAP: ARCH:190, 210, 232. My grep of the archive finds a third exact occurrence the entry does not count, ARCH:593 '[source text withheld from the public copy]', and three near-variants (ARCH:47, 90, 580); ROADMAP's roadmap D3 says 'six claimants in the archive'. External quotes: recorded in the entry with source and surface; I could not re-fetch (no network) and none of the sources is held in the repository. Git history: 'DEFINED AND BOUNDED ... Definition adopted' (3406bd1) -> reverted to OPEN (5762d10) -> imposed requirement withdrawn (1760127) -> lanes (d1732c4) -> §1519-only retired (2ab6a1c), all on 2026-08-02.
+    - **open_items**
+      - [ERIC] the ruling among (a)-(d)
+      - [ERIC, 'Open item flagged for the author'] [source text withheld from the public copy]
+      - [ERIC, 'Flagged for the author'] prohibiting all three separately takes the equivalence side of a contested debate
+      - Citator status of Bronston and Chiarella NOT-CHECKED ('the most significant open item')
+      - [source text withheld from the public copy]) NOT-CHECKED
+      - [source text withheld from the public copy]' — UNVERIFIED lead
+      - ISO/IEC 27002:2022 control 5.33 UNVERIFIED lead
+      - AICPA AU-C 240 not obtained; §1623(c) PARTIALLY VERIFIED; Saul, Stokke, Fallis, Adler and others not obtained
+    - **depends_on**
+      - C4
+      - C6
+      - T11
+  - item 17
+    - **id**: T4
+    - **title**: T4 — Reactive vs Responsive
+    - **path**: L8/L5/research/lanes/THEME_LEDGER.md
+    - **where**: MAIN, ROADMAP, BETA, HISTORY (ledger); sources ROADMAP and HISTORY only
+    - **what_it_is**: Blocks 43-44 use 'Reactive'; Block 45 and the TOC correct to 'Responsive'; the Block 44 outline was not corrected.
+    - **own_label**: "Correction propagation is incomplete."
+    - **evidence_state**: CONTRADICTED (confirmed: documents disagree)
+    - **locator**: MAIN:L8/L5/research/lanes/THEME_LEDGER.md:274
+    - **quote**: The spec's term is *Responsive*
+    - **key_claims**
+      - ARCH:526 'Atmospheric Reactive Fusiform'; ARCH:564 corrects; TOC:62 adopts; Block_44:11 still '*Reactive* = behavior'
+    - **checked_how**: All four locators confirmed on ROADMAP. Not checkable on MAIN.
+    - **open_items**
+      - No date or ruling; the outline still carries the superseded term
+  - item 18
+    - **id**: T5
+    - **title**: T5 — Two corollary texts coexist
+    - **path**: L8/L5/research/lanes/THEME_LEDGER.md
+    - **where**: MAIN, ROADMAP, BETA, HISTORY (ledger); sources ROADMAP and HISTORY only
+    - **what_it_is**: Block 12's proposed clause and Block 14's canonical corollary both stand in the archive.
+    - **own_label**: "supersession declared, texts unmerged"
+    - **evidence_state**: CONTRADICTED / UNRESOLVED (two texts, no merge)
+    - **locator**: MAIN:L8/L5/research/lanes/THEME_LEDGER.md:276
+    - **quote**: supersession declared, texts unmerged
+    - **key_claims**
+      - ARCH:134 (Block 12) and ARCH:170 (Block 14)
+    - **checked_how**: ARCH:134 and ARCH:170 confirmed on ROADMAP. Not checkable on MAIN.
+  - item 19
+    - **id**: T6
+    - **title**: [source text withheld from the public copy]
+    - **path**: L8/L5/research/lanes/THEME_LEDGER.md
+    - **where**: MAIN, ROADMAP, BETA, HISTORY (ledger); sources ROADMAP and HISTORY only
+    - **what_it_is**: The corrected 'GPS' phrase came from the author's own Block 49 prompt; Block 50 had already disclaimed navigation; yet the editorial note and the outline blame Block 50.
+    - **own_label**: none (a registered tension)
+    - **evidence_state**: CONTRADICTED (confirmed)
+    - **locator**: MAIN:L8/L5/research/lanes/THEME_LEDGER.md:278
+    - **quote**: [source text withheld from the public copy]
+    - **key_claims**
+      - ARCH:627 (prompt), ARCH:643 (Block 50 disclaims), ARCH:659 (editorial note), Block_51_UHA_As_Record_Key.md:14
+    - **checked_how**: ARCH:627, 643, 659 and Block_51:14 confirmed on ROADMAP. Not checkable on MAIN.
+  - item 20
+    - **id**: T7
+    - **title**: T7 — Deepest-stratum supersession
+    - **path**: L8/L5/research/lanes/THEME_LEDGER.md
+    - **where**: MAIN, ROADMAP, BETA, HISTORY (ledger); sources ROADMAP and HISTORY only
+    - **what_it_is**: Block 34 says Hebrew/Quranic material may be the deepest stratum; Block 36 says the deepest stratum is Egyptian.
+    - **own_label**: none (a registered tension)
+    - **evidence_state**: CONTRADICTED (confirmed in the archive) but overtaken: one side is cut Block 36 (T1), and the entry is not marked accordingly
+    - **locator**: MAIN:L8/L5/research/lanes/THEME_LEDGER.md:280
+    - **quote**: [source text withheld from the public copy])
+    - **key_claims**
+      - ARCH:410 vs ARCH:430
+    - **checked_how**: ARCH:410 and ARCH:430 confirmed on ROADMAP. Not checkable on MAIN.
+    - **open_items**
+      - Whether the tension survives the cut is not recorded
+    - **depends_on**
+      - T1
+  - item 21
+    - **id**: T8
+    - **title**: [source text withheld from the public copy]
+    - **path**: L8/L5/research/lanes/THEME_LEDGER.md
+    - **where**: MAIN, ROADMAP, BETA, HISTORY (ledger); sources ROADMAP and HISTORY only
+    - **what_it_is**: The archive claims to preserve everything, yet Block 38 rebuts a figure absent from the preserved Block 37 prompt.
+    - **own_label**: none (a registered tension)
+    - **evidence_state**: CONTRADICTED (confirmed)
+    - **locator**: MAIN:L8/L5/research/lanes/THEME_LEDGER.md:282
+    - **quote**: preserved in full. Nothing summarized.
+    - **key_claims**
+      - ARCH:2 charter vs ARCH:460 'there is no canonical eighteen' vs ARCH:442
+    - **checked_how**: ARCH:2, 442, 460 confirmed on ROADMAP. Not checkable on MAIN.
+    - **open_items**
+      - The original uncleaned Block 37 prompt is not located by the ledger
+  - item 22
+    - **id**: T9
+    - **title**: T9 — Cutoff date vs file dates
+    - **path**: L8/L5/research/lanes/THEME_LEDGER.md
+    - **where**: MAIN, ROADMAP, BETA, HISTORY (ledger); sources ROADMAP and HISTORY only
+    - **what_it_is**: Archive says 'through July 31, 2026' but stubs are dated Aug 2 and Block_37 [source text withheld from the public copy].
+    - **own_label**: "UNVERIFIED whether intended addition or contamination."
+    - **evidence_state**: UNRESOLVED
+    - **locator**: MAIN:L8/L5/research/lanes/THEME_LEDGER.md:284
+    - **quote**: [source text withheld from the public copy]
+    - **key_claims**
+      - ARCH:3 cutoff; Block_37_Reconstitution_Thesis.md:18 fragment
+    - **checked_how**: ARCH:3 and Block_37:18 confirmed on ROADMAP. File mtimes ('this session's ls') cannot be checked from git objects. Not checkable on MAIN.
+    - **open_items**
+      - Owner to say whether the Block_37:18 fragment is an intended addition
+  - item 23
+    - **id**: T10
+    - **title**: T10 — Wire-format claim vs runtime guard
+    - **path**: L8/L5/research/lanes/THEME_LEDGER.md
+    - **where**: MAIN, ROADMAP, BETA, HISTORY (ledger); sources ROADMAP and HISTORY only
+    - **what_it_is**: Archive says malformed dials are unrepresentable, then records that an inverted dial passed silently.
+    - **own_label**: none (a registered tension)
+    - **evidence_state**: CONTRADICTED / UNRESOLVED ([source text withheld from the public copy])
+    - **locator**: MAIN:L8/L5/research/lanes/THEME_LEDGER.md:286
+    - **quote**: malformed dials are unrepresentable
+    - **key_claims**
+      - ARCH:558 vs ARCH:560
+    - **checked_how**: ARCH:558 and ARCH:560 confirmed on ROADMAP as text. The codec (codec/dial.py) is not in this repository scope; not run. Not checkable on MAIN.
+  - item 24
+    - **id**: T11
+    - **title**: [source text withheld from the public copy]
+    - **path**: L8/L5/research/lanes/THEME_LEDGER.md
+    - **where**: MAIN, ROADMAP, BETA, HISTORY (ledger); sources ROADMAP and HISTORY only
+    - **what_it_is**: OMMP binding-rule exclusions vs the Outlier Rule, plus the Block 46 defect list (PLATFORM and Ψ defined twice, duplicate axiom formulas, code-length mismatch).
+    - **own_label**: "[source text withheld from the public copy]."
+    - **evidence_state**: CONTRADICTED (as reported by the corpus; source spec not read)
+    - **locator**: MAIN:L8/L5/research/lanes/THEME_LEDGER.md:288
+    - **quote**: those two commitments are in tension
+    - **key_claims**
+      - ARCH:593; defect list at 'ARCH:588–592 vicinity' (the ledger's own inexact locator)
+    - **checked_how**: ARCH:593 confirmed on ROADMAP. The same line reads on: '[source text withheld from the public copy]' — a T3 occurrence the ledger does not register. Not checkable on MAIN.
+    - **depends_on**
+      - T3
+  - item 25
+    - **id**: T12
+    - **title**: [source text withheld from the public copy]
+    - **path**: L8/L5/research/lanes/THEME_LEDGER.md
+    - **where**: MAIN, ROADMAP, BETA, HISTORY (ledger); sources ROADMAP and HISTORY only
+    - **what_it_is**: Block 39 is headed 'Source, verified (July 2026)' while recording that the work is a preprint posted after journal rejection.
+    - **own_label**: "[source text withheld from the public copy]"
+    - **evidence_state**: CONTRADICTED (confirmed) / UNRESOLVED (the underlying claim)
+    - **locator**: MAIN:L8/L5/research/lanes/THEME_LEDGER.md:290
+    - **quote**: [source text withheld from the public copy]
+    - **key_claims**
+      - ARCH:474 vs ARCH:476; preprints are a prohibited source class under the status ladder
+    - **checked_how**: ARCH:474 and ARCH:476 confirmed on ROADMAP. Not checkable on MAIN.
+    - **open_items**
+      - TOC:104 still lists the synthetic cell as Exhibit 2 of Appendix E
+  - item 26
+    - **id**: T13
+    - **title**: [source text withheld from the public copy]
+    - **path**: L8/L5/research/lanes/THEME_LEDGER.md
+    - **where**: MAIN, ROADMAP, BETA, HISTORY (ledger); DEF on MAIN; EBD on ROADMAP and HISTORY only
+    - **what_it_is**: Two senses never reconciled; firmware-below vs 'intelligence layer above the ROM'; proof-status and test-count drift; a degenerate composition formula flagged twice.
+    - **own_label**: "FORMULA INCONSISTENCY DETECTED (DEF:257)"
+    - **evidence_state**: CONTRADICTED (confirmed in the definition file on MAIN)
+    - **locator**: MAIN:L8/L5/research/lanes/THEME_LEDGER.md:292
+    - **quote**: [source text withheld from the public copy].
+    - **key_claims**
+      - DEF:30 senses unreconciled; DEF:255 three incompatible proof-status accounts; DEF:256 test counts 172/193/194; DEF:257 formula inconsistency; EBD:467
+    - **checked_how**: DEF:30, 47, 255, 256, 257 confirmed on MAIN:L8/L0/semantics/definitions/AUDITONOMOUS_DEFINITION.md (same blob in ROADMAP and HISTORY; BETA's blob differs). EBD:467 confirmed on ROADMAP. This is the only tension partly checkable on MAIN. The eBIOS files DEF cites (CERTIFICATION_BRIEF.md and others) are outside this repository.
+    - **open_items**
+      - Reconciliation of senses 1 and 2 is the owner's; no ruling recorded
+  - item 27
+    - **id**: T14
+    - **title**: T14 — Naming fork: 'autonomoustheory' vs 'Auditonomous Theory'
+    - **path**: L8/L5/research/lanes/THEME_LEDGER.md
+    - **where**: MAIN, ROADMAP, BETA, HISTORY (ledger); the sweep artifact HISTORY only
+    - **what_it_is**: A sweep artifact names an 'autonomoustheory' repository and domain; whether it is this project is unknown.
+    - **own_label**: "[source text withheld from the public copy]."
+    - **evidence_state**: UNRESOLVED
+    - **locator**: MAIN:L8/L5/research/lanes/THEME_LEDGER.md:294
+    - **quote**: | autonomoustheory | autonomoustheory.org | ✅ Clean | Already public |
+    - **key_claims**
+      - Source: sweep-2026-07-30/abba-01__hubble-tension-resolution/provenance/audit_oct2025/SECURITY_VERIFICATION_REPORT_2025-10-24.md:34
+    - **checked_how**: Line 34 confirmed in HISTORY (intake/sweep-2026-07-30/...). The file is absent from MAIN, ROADMAP and BETA.
+  - item 28
+    - **id**: T15
+    - **title**: T15 — Outline-layer drift (systemic)
+    - **path**: L8/L5/research/lanes/THEME_LEDGER.md
+    - **where**: MAIN, ROADMAP, BETA, HISTORY (ledger); sources ROADMAP and HISTORY only
+    - **what_it_is**: Outlines state intentions as accomplishments, delete hedges, and swap actors relative to the archive; [source text withheld from the public copy].
+    - **own_label**: none (a registered tension)
+    - **evidence_state**: CONTRADICTED (confirmed)
+    - **locator**: MAIN:L8/L5/research/lanes/THEME_LEDGER.md:296
+    - **quote**: [source text withheld from the public copy]
+    - **key_claims**
+      - ARCH:504 'aims to take' vs Block_42:14 'printed lunar electronics ... (reported Jan 2026)'
+      - ARCH:514 'on this reading' hedge vs Block_42:44 'The creators did nothing exotic'
+    - **checked_how**: ARCH:504, 514 and Block_42_The_Closure_Problem.md:14, 44 confirmed on ROADMAP. Not checkable on MAIN.
+    - **open_items**
+      - Which layer governs when archive and outline differ is not ruled
+  - item 29
+    - **id**: T16
+    - **title**: T16 — Embodied manuscript internal defects
+    - **path**: L8/L5/research/lanes/THEME_LEDGER.md
+    - **where**: MAIN, ROADMAP, BETA, HISTORY (ledger); LEX on ROADMAP (L7/peering/private/ingress/peer-3/object-1/) and HISTORY only
+    - **what_it_is**: Duplicate section number 19; the operative term NAUGHT absent from the terminology table; LexID components listed three different ways.
+    - **own_label**: none (a registered tension)
+    - **evidence_state**: CONTRADICTED (confirmed)
+    - **locator**: MAIN:L8/L5/research/lanes/THEME_LEDGER.md:298
+    - **quote**: ## [source text withheld from the public copy]
+    - **key_claims**
+      - LEX:363 and LEX:379 both '## 19.' with '## 20.' at LEX:369 between them
+      - NAUGHT at LEX:42 and LEX:144, zero hits in LEX:50-59
+      - LexID at LEX:56, 207, 454 differ
+    - **checked_how**: All confirmed on ROADMAP's copy of the embodied manuscript (blob ea85100, identical in HISTORY). Not checkable on MAIN.
+  - item 30
+    - **id**: FC-HASH
+    - **title**: FAILED CHECK — embodied-manuscript content hash
+    - **path**: L8/L5/research/lanes/THEME_LEDGER.md
+    - **where**: MAIN, ROADMAP, BETA, HISTORY (ledger); the manuscript ROADMAP and HISTORY only
+    - **what_it_is**: The embodied manuscript claims a content sha256 that the file on disk does not have.
+    - **own_label**: "FAILED CHECK"
+    - **evidence_state**: UNRESOLVED (failed check, reproduced)
+    - **locator**: MAIN:L8/L5/research/lanes/THEME_LEDGER.md:346
+    - **quote**: [source text withheld from the public copy].
+    - **key_claims**
+      - Recomputed 6a717c70cb98302907ae9c6b0f6c510d1928ffd0ade073dc66aaf4012b818e00 ≠ claimed 7fd260a5…47c5 (LEX:18)
+      - '[source text withheld from the public copy]'
+    - **checked_how**: I recomputed sha256 over the ROADMAP git object of the manuscript: 6a717c70…8e00, matching the ledger's figure and not the claimed one. The nu-algebra commit is not available here.
+    - **open_items**
+      - The git-side recipe against nu-algebra ea08f59 has never been run
+      - 'No hash, no canonical status.' (LEX:22) therefore remains unverified
+  - item 31
+    - **id**: FC-ISO15489
+    - **title**: FAILED CHECK — ISO 15489-1 (later obtained by a different route)
+    - **path**: L8/L5/research/lanes/THEME_LEDGER.md
+    - **where**: MAIN, ROADMAP, BETA, HISTORY
+    - **what_it_is**: In the audit/records lane ISO 15489-1 could not be retrieved (five surfaces returned 403). A later ISO retrieval lane obtained the 2001 text through the Standards Australia identical adoption.
+    - **own_label**: "ISO 15489-1 — FAILED CHECK" then "VERIFIED" for the 2001 clause 7.2.2
+    - **evidence_state**: EXTERNALLY CHECKED by the repository's record for the 2001 edition / UNRESOLVED for the 2016 edition
+    - **locator**: MAIN:L8/L5/research/lanes/THEME_LEDGER.md:221 (failure); :249-255 (correction)
+    - **quote**: [source text withheld from the public copy]
+    - **key_claims**
+      - Source: AS ISO 15489.1—2002, [source text withheld from the public copy], via an Internet Archive snapshot
+      - Qualifications: sits under 'authenticity'; superseded edition; 2016 successor 'appears to drop the enumeration entirely' — UNVERIFIED
+    - **checked_how**: Read only; the exhibit is not held in the repository and was not re-fetched. ROADMAP SOURCE_REQUESTS.md:51-58 (SR-03) keeps the 2016 question open.
+    - **open_items**
+      - ISO 15489-1:2016 cl. 5.2.2.1 unread on an approved surface
+      - iso.org catalogue and OBP 403
+    - **depends_on**
+      - T3
+  - item 32
+    - **id**: FC-27002
+    - **title**: ISO/IEC 27002 candidate — tested and failed on the merits
+    - **path**: L8/L5/research/lanes/THEME_LEDGER.md
+    - **where**: MAIN, ROADMAP, BETA, HISTORY
+    - **what_it_is**: The suspected second instrument holding all three wrongs was obtained in two languages across three editions and does not contain concealment.
+    - **own_label**: "[source text withheld from the public copy]"
+    - **evidence_state**: EXTERNALLY CHECKED by the repository's record (a negative result)
+    - **locator**: MAIN:L8/L5/research/lanes/THEME_LEDGER.md:257-264
+    - **quote**: [source text withheld from the public copy]**
+    - **key_claims**
+      - Lexical test for conceal/withhold/suppress and Spanish equivalents: zero hits in every document
+      - 2022 control 5.33 reachable only on a vendor host — 'recorded as a lead, UNVERIFIED'
+    - **checked_how**: Read only; the four government-hosted texts are not held in the repository and were not re-fetched.
+    - **open_items**
+      - 2022 edition control 5.33 UNVERIFIED
+    - **depends_on**
+      - T3
+  - item 33
+    - **id**: FC-HAERDER
+    - **title**: FAILED CHECK — Haerder & Reuter (1983)
+    - **path**: L8/L5/research/lanes/RECORD_ONTOLOGY_OPEN_QUESTIONS.md
+    - **where**: MAIN, ROADMAP, BETA, HISTORY
+    - **what_it_is**: The ACM Computing Surveys paper was not obtained; a downloaded file proved to be lecture slides and was rejected.
+    - **own_label**: "FAILED CHECK"
+    - **evidence_state**: UNRESOLVED (failed check)
+    - **locator**: MAIN:L8/L5/research/lanes/RECORD_ONTOLOGY_OPEN_QUESTIONS.md:123
+    - **quote**: [source text withheld from the public copy]
+    - **key_claims**
+      - [source text withheld from the public copy] 'Document Not Found'; [source text withheld from the public copy]
+    - **checked_how**: Read only. ROADMAP SOURCE_REQUESTS.md:160 carries it as SR-08, still FAILED CHECK.
+    - **depends_on**
+      - Q3
+  - item 34
+    - **id**: NF-EXTERNAL
+    - **title**: Negative finding — no external source checked for any corpus fact
+    - **path**: L8/L5/research/lanes/THEME_LEDGER.md
+    - **where**: MAIN, ROADMAP, BETA, HISTORY
+    - **what_it_is**: The ledger's standing disclaimer: it is a grouping instrument; [source text withheld from the public copy] is unchecked.
+    - **own_label**: "NOT-CHECKED / UNVERIFIED"
+    - **evidence_state**: UNRESOLVED (unrun checks)
+    - **locator**: MAIN:L8/L5/research/lanes/THEME_LEDGER.md:344-345, 355
+    - **quote**: [source text withheld from the public copy].
+    - **key_claims**
+      - Unchecked: [source text withheld from the public copy]
+      - Open item in the archive: 'verify NASA CP-2255' (ARCH:748)
+      - [source text withheld from the public copy]
+      - Date mismatch: '[source text withheld from the public copy]), true date NOT-CHECKED
+      - No computational claims run: 'UNRUN RESULT here'
+    - **checked_how**: ARCH:194, ARCH:748 and TOC:104 confirmed on ROADMAP. I found no later record in the lanes files that any of these was checked.
+    - **open_items**
+      - Every corpus-embedded external fact the manuscript would print
+  - item 35
+    - **id**: NF-PROVENANCE
+    - **title**: Negative findings — provenance gaps and internal validations
+    - **path**: L8/L5/research/lanes/THEME_LEDGER.md
+    - **where**: MAIN, ROADMAP, BETA, HISTORY (ledger); MOVE_LOG, MANIFEST and sweep files HISTORY only
+    - **what_it_is**: Missing authority document for the hash-naming policy; provenance of about 60 manuscript files unrecorded; partial manifest; uncovered directory; plus three checks that passed (block census 52, exhibit numbering, autonomy-scale copies identical).
+    - **own_label**: "NOT-CHECKED" for the gaps; "INTERNALLY VALIDATED, no divergence to log" for the scale copies
+    - **evidence_state**: UNRESOLVED (gaps) / INTERNALLY CHECKED (block census and scale identity)
+    - **locator**: MAIN:L8/L5/research/lanes/THEME_LEDGER.md:347-354
+    - **quote**: [source text withheld from the public copy]
+    - **key_claims**
+      - feedback_artifact_hash_naming.md not found under intake/
+      - MANIFEST is partial: '[source text withheld from the public copy].'
+      - intake/sources/ '[source text withheld from the public copy]'
+      - Archive has 52 '## BLOCK' headings, contiguous
+      - 'Exhibit Six' first at ARCH:619
+    - **checked_how**: Confirmed: 52 '## BLOCK ' headings in the ROADMAP archive; 'Exhibit Six' at ARCH:619; AUTONOMY_SCALE.md blob ad3fa67 identical between auditonomous HISTORY and autonomous origin/main; MOVE_LOG:24 and MANIFEST:7, :12 quotes confirmed in HISTORY. feedback_artifact_hash_naming.md is in no state. HISTORY tracks no files under intake/sources/.
+    - **open_items**
+      - Hash-naming authority file never located
+      - intake/sources/ contents never read
+  - item 36
+    - **id**: Q1
+    - **title**: [source text withheld from the public copy]?
+    - **path**: L8/L5/research/lanes/RECORD_ONTOLOGY_OPEN_QUESTIONS.md
+    - **where**: MAIN, ROADMAP, BETA (identical blob 28e3be4); HISTORY (same words)
+    - **what_it_is**: Owner's framing question, the corpus's current answer (the pair epistemic state + transformation path, camera as input), and a table of where external instruments sit.
+    - **own_label**: "Open." / "[source text withheld from the public copy]."
+    - **evidence_state**: UNRESOLVED (question) / EXTERNALLY CHECKED by the record's own statement (table), with one row untraceable
+    - **locator**: MAIN:L8/L5/research/lanes/RECORD_ONTOLOGY_OPEN_QUESTIONS.md:9-31
+    - **quote**: [source text withheld from the public copy]?
+    - **key_claims**
+      - [source text withheld from the public copy] (ARCH:37)
+      - External record is thin on persisted epistemic state: [source text withheld from the public copy]
+    - **checked_how**: ARCH:37, 214, 242 confirmed on ROADMAP. The file points to [source text withheld from the public copy]': on MAIN that file contains PeerReview, PROV-DM, Winfield & Jirotka and the Zoox/Intel/Renault patents, but 'Micron' and 'US10846955' return zero hits.
+    - **open_items**
+      - No owner answer recorded
+      - Micron US10846955B2 citation not traceable to §8
+  - item 37
+    - **id**: Q2
+    - **title**: [source text withheld from the public copy]?
+    - **path**: L8/L5/research/lanes/RECORD_ONTOLOGY_OPEN_QUESTIONS.md
+    - **where**: MAIN, ROADMAP, BETA, HISTORY
+    - **what_it_is**: Owner's ruling on the kind, with an epistemic-logic lane report: the standard formalism denies the observed an epistemic state, so the ruling is an extension.
+    - **own_label**: "LANE REPORTED 2026-08-02" / "[source text withheld from the public copy]"
+    - **evidence_state**: ASSERTED (owner's ruling on the kind) / EXTERNALLY CHECKED by the record (lane) / UNRESOLVED (the two definitions are unwritten)
+    - **locator**: MAIN:L8/L5/research/lanes/RECORD_ONTOLOGY_OPEN_QUESTIONS.md:35-72
+    - **quote**: [source text withheld from the public copy].
+    - **key_claims**
+      - '[source text withheld from the public copy].'
+      - MCMAS defines epistemic relations '[source text withheld from the public copy]'
+      - [source text withheld from the public copy] purposes
+      - A fetch-layer summarizer fabricated a GUM quotation ('incomplete without'); caught by grep of the local extraction
+    - **checked_how**: Read only. ARCH:540 confirmed on ROADMAP. External sources (Fagin et al., MCMAS paper, JCGM 100:2008, SEP) are not held in the repository; not re-fetched.
+    - **open_items**
+      - [ERIC] write the separate definitions of observer and observed
+      - [ERIC] whether to model the observed as an agent rather than environment
+      - Whether the corpus's 'epistemic state' matches the pointed-Kripke-model sense: NOT-CHECKED
+      - Halpern & Moses JACM 1990 abstract only — PARTIALLY VERIFIED; Hintikka 1962 NOT-CHECKED
+  - item 38
+    - **id**: Q3
+    - **title**: [source text withheld from the public copy]?
+    - **path**: L8/L5/research/lanes/RECORD_ONTOLOGY_OPEN_QUESTIONS.md
+    - **where**: MAIN, ROADMAP, BETA, HISTORY; ARIES reading record on MAIN and ROADMAP
+    - **what_it_is**: Owner's question and own answers ('recording is post hoc'), three candidate distinctions from a camera (vantage, optionality, ordering), and a lane report that candidate (c) ordering is VERIFIED by write-ahead logging.
+    - **own_label**: "[source text withheld from the public copy]."
+    - **evidence_state**: EXTERNALLY CHECKED (ARIES; the comparison is recorded and the reading record is held on MAIN) / UNRESOLVED as to adoption (three candidates 'none adopted')
+    - **locator**: MAIN:L8/L5/research/lanes/RECORD_ONTOLOGY_OPEN_QUESTIONS.md:76-123
+    - **quote**: [source text withheld from the public copy]
+    - **key_claims**
+      - Owner: "[source text withheld from the public copy]?"
+      - [source text withheld from the public copy]: the record is post hoc to the physical act but prior to the act becoming official
+      - Asymmetry: '[source text withheld from the public copy].'
+      - Divergences: atomicity is an outcome property; RFC 3161 timestamping runs the opposite direction; non-repudiation is silent on ordering
+    - **checked_how**: The two principal ARIES quotes ('[source text withheld from the public copy]') are present in MAIN:L7/provenance/sources/staging-records/library/reading/ARIES_Mohan1992_ACM-TODS.md:78, 86. The PDF itself is in HISTORY only. X/Open, RFC 3161 and SP 800-53 quotes not re-checked.
+    - **open_items**
+      - No owner adoption of candidate (c)
+      - Haerder & Reuter 1983 FAILED CHECK; Gray & Reuter not attempted
+  - item 39
+    - **id**: Q4
+    - **title**: [source text withheld from the public copy]
+    - **path**: L8/L5/research/lanes/RECORD_ONTOLOGY_OPEN_QUESTIONS.md
+    - **where**: MAIN, ROADMAP, BETA, HISTORY
+    - **what_it_is**: A one-paragraph note placed after Q9: [source text withheld from the public copy].
+    - **own_label**: "Noted, not researched."
+    - **evidence_state**: UNRESOLVED
+    - **locator**: MAIN:L8/L5/research/lanes/RECORD_ONTOLOGY_OPEN_QUESTIONS.md:246-248
+    - **quote**: [source text withheld from the public copy].
+    - **key_claims**
+      - Bronston's safeguard [source text withheld from the public copy]
+    - **checked_how**: Read only. No research recorded. It has no entry in ROADMAP's RESEARCH_DOCKET section C.
+    - **open_items**
+      - [author's call] whether the missing questioner matters
+    - **depends_on**
+      - T3
+  - item 40
+    - **id**: Q5
+    - **title**: Q5 — Interactivity, physicality, and forgetting
+    - **path**: L8/L5/research/lanes/RECORD_ONTOLOGY_OPEN_QUESTIONS.md
+    - **where**: MAIN, ROADMAP, BETA, HISTORY; lane outcome in ROADMAP/HISTORY RESEARCH_DOCKET.md only; a related finding on MAIN
+    - **what_it_is**: Owner's two linked claims: interactivity scales with physicality and constant-time parallel processing; autonomy requires forgetfulness. Two supporting external quotes and a candidate layering resolution.
+    - **own_label**: "PENDING — real-time/embodiment lane running." / candidate resolution "UNVERIFIED" and "COMPOSITE OBJECT"
+    - **evidence_state**: CONTRADICTED (a later record contradicts claim ii) / UNRESOLVED (claim i; lane outcome not carried into this file)
+    - **locator**: MAIN:L8/L5/research/lanes/RECORD_ONTOLOGY_OPEN_QUESTIONS.md:127-140
+    - **quote**: TO be autonomus it oto be forgetful.
+    - **key_claims**
+      - Dijkstra EWD391 (self-stabilization) and Furstenberg 1981 (recurrence requires boundedness) cited as VERIFIED support for (ii)
+      - Candidate resolution: the working state forgets, the log does not
+      - '[source text withheld from the public copy].'
+    - **checked_how**: The file still says PENDING. ROADMAP:L8/L5/research/review/RESEARCH_DOCKET.md:190 (H2, under 'CLOSED') says '"[source text withheld from the public copy]; WCET). MAIN:L8/L5/research/findings/SEGREGATION_AND_FORGETTING_2026-08-04.md:142 says '[source text withheld from the public copy]. Neither is reflected here. The docket is absent from MAIN.
+    - **open_items**
+      - Claim (i) has no recorded result in this file
+      - The owner's later restatement 'forgetting is not recalling until asked' lives in the findings file, not here
+    - **depends_on**
+      - Q3
+  - item 41
+    - **id**: Q6
+    - **title**: Q6 — Can recording itself be autonomous?
+    - **path**: L8/L5/research/lanes/RECORD_ONTOLOGY_OPEN_QUESTIONS.md
+    - **where**: MAIN, ROADMAP, BETA, HISTORY
+    - **what_it_is**: Owner's question and a structural candidate: the recorder must be the one part with zero discretion, which would bind 'a runtime without parameters' to the first two clauses.
+    - **own_label**: "[source text withheld from the public copy]"
+    - **evidence_state**: CONJECTURE (candidate) / UNRESOLVED (no lane run)
+    - **locator**: MAIN:L8/L5/research/lanes/RECORD_ONTOLOGY_OPEN_QUESTIONS.md:144-163
+    - **quote**: [source text withheld from the public copy]
+    - **key_claims**
+      - Supporting quotes: ARIES ('[source text withheld from the public copy]'), Chandy & Lamport ('not alter'), Renault/Nissan/NASA patent (opt-in, a counterexample), Winfield & Jirotka ('continuously')
+      - Consequence if it holds: auditonomy is [source text withheld from the public copy]
+    - **checked_how**: DEF:47 '[source text withheld from the public copy]' and DEF:200 'No configuration parameters' confirmed on MAIN. ARCH:232 confirmed on ROADMAP. ROADMAP docket C3 still records it NOT-CHECKED.
+    - **open_items**
+      - [author's judgment] the non-discretion candidate
+      - [source text withheld from the public copy]
+  - item 42
+    - **id**: Q6a
+    - **title**: [source text withheld from the public copy]
+    - **path**: L8/L5/research/lanes/RECORD_ONTOLOGY_OPEN_QUESTIONS.md
+    - **where**: MAIN, ROADMAP, BETA, HISTORY
+    - **what_it_is**: Owner's remark that recording is discrete; candidate that [source text withheld from the public copy] ('perpetual operation with cyclic recording').
+    - **own_label**: "Candidate, not adopted."
+    - **evidence_state**: CONJECTURE
+    - **locator**: MAIN:L8/L5/research/lanes/RECORD_ONTOLOGY_OPEN_QUESTIONS.md:165-171
+    - **quote**: [source text withheld from the public copy]
+    - **key_claims**
+      - The cycle/forced-cycle/perpetual trichotomy of PERPETUITY_QUESTION_ADJUDICATION.md §7 may not be alternatives
+    - **checked_how**: PERPETUITY_QUESTION_ADJUDICATION.md §7 exists on MAIN (line 226). No check of the candidate recorded.
+    - **open_items**
+      - Not adopted; no lane
+  - item 43
+    - **id**: Q6b
+    - **title**: [source text withheld from the public copy]
+    - **path**: L8/L5/research/lanes/RECORD_ONTOLOGY_OPEN_QUESTIONS.md
+    - **where**: MAIN, ROADMAP, BETA, HISTORY; partial answer in ROADMAP/HISTORY docket only
+    - **what_it_is**: Owner's remark and a category distinction: system failure (recorded) vs recorder failure (an unwitnessed interval).
+    - **own_label**: "NOT ADOPTED" / "NOT-CHECKED"
+    - **evidence_state**: CONJECTURE / UNRESOLVED in this file (a later docket entry reports a partial answer)
+    - **locator**: MAIN:L8/L5/research/lanes/RECORD_ONTOLOGY_OPEN_QUESTIONS.md:173-183
+    - **quote**: [source text withheld from the public copy]
+    - **key_claims**
+      - '[source text withheld from the public copy]'
+      - '[source text withheld from the public copy].'
+    - **checked_how**: ROADMAP RESEARCH_DOCKET.md C4 says '[source text withheld from the public copy], and fail-stop (Schneider 1990). Not carried into this file; docket absent from MAIN. The cited README.md:185 is the eBIOS corpus's README as quoted in DEF:39, not a file in this repository.
+    - **open_items**
+      - [author's call] two failure classes
+  - item 44
+    - **id**: Q6c
+    - **title**: Q6c — Event-triggered recording: silence becomes ambiguous
+    - **path**: L8/L5/research/lanes/RECORD_ONTOLOGY_OPEN_QUESTIONS.md
+    - **where**: MAIN, ROADMAP, BETA, HISTORY; lane outcome in ROADMAP/HISTORY docket only
+    - **what_it_is**: Owner's remark on motion-triggered cameras; two conditions (deterministic trigger; silence cannot distinguish 'no event' from 'recorder failed'), with a liveness-signal remedy.
+    - **own_label**: "PENDING — lane running" / "Nothing above is asserted until it reports."
+    - **evidence_state**: UNRESOLVED in this file (stale PENDING; outcome recorded elsewhere)
+    - **locator**: MAIN:L8/L5/research/lanes/RECORD_ONTOLOGY_OPEN_QUESTIONS.md:185-195
+    - **quote**: [source text withheld from the public copy]
+    - **key_claims**
+      - A tunable threshold '[source text withheld from the public copy]'
+      - Under trigger recording the record cannot tell an empty interval from an unwitnessed one
+    - **checked_how**: ROADMAP RESEARCH_DOCKET.md:111-112 (C5) says 'Answered, and it is foundational' (FLP 1985; Chandra & Toueg 1996; RFC 3706) with an [source text withheld from the public copy]. Not carried into this file; docket absent from MAIN.
+    - **open_items**
+      - No approved source requires a log to prove its own liveness in quiet periods (per the docket)
+    - **depends_on**
+      - Q6
+      - Q6b
+  - item 45
+    - **id**: Q7
+    - **title**: [source text withheld from the public copy]
+    - **path**: L8/L5/research/lanes/RECORD_ONTOLOGY_OPEN_QUESTIONS.md
+    - **where**: MAIN, ROADMAP, BETA, HISTORY
+    - **what_it_is**: Whether verification runs oldest-first forward (replay), backward from result to cause (trace), or both.
+    - **own_label**: "OPEN." / "NOT-CHECKED."
+    - **evidence_state**: UNRESOLVED
+    - **locator**: MAIN:L8/L5/research/lanes/RECORD_ONTOLOGY_OPEN_QUESTIONS.md:199-209
+    - **quote**: [source text withheld from the public copy]
+    - **key_claims**
+      - ARIES names both directions (redo, undo) as halves of one log
+      - Candidate, not adopted: record order would be load-bearing, bearing on Block 52's decodability argument
+    - **checked_how**: Read only. ROADMAP docket C6 repeats it as NOT-CHECKED.
+    - **open_items**
+      - [source text withheld from the public copy]: not researched
+  - item 46
+    - **id**: Q8
+    - **title**: [source text withheld from the public copy]?
+    - **path**: L8/L5/research/lanes/RECORD_ONTOLOGY_OPEN_QUESTIONS.md
+    - **where**: MAIN, ROADMAP, BETA, HISTORY
+    - **what_it_is**: Owner's inversion ('garbage out garbage in'); candidate that the audit path is backward inference, so the record must preserve edges, not only nodes.
+    - **own_label**: "OPEN." / "NOT-CHECKED."
+    - **evidence_state**: UNRESOLVED
+    - **locator**: MAIN:L8/L5/research/lanes/RECORD_ONTOLOGY_OPEN_QUESTIONS.md:213-223
+    - **quote**: [source text withheld from the public copy]
+    - **key_claims**
+      - W3C PROV-DM and ARIES undo cited as bearing on it
+      - The edges requirement 'is testable against the UHA/OMMP layout'
+    - **checked_how**: Read only. No test against the UHA/OMMP layout is recorded here. ROADMAP docket C7 repeats it as NOT-CHECKED.
+    - **open_items**
+      - Test the edges requirement against the UHA/OMMP record layout: unrun
+  - item 47
+    - **id**: Q9
+    - **title**: [source text withheld from the public copy]
+    - **path**: L8/L5/research/lanes/RECORD_ONTOLOGY_OPEN_QUESTIONS.md
+    - **where**: MAIN, ROADMAP, BETA, HISTORY
+    - **what_it_is**: Possibly the definitional key: the two words [source text withheld from the public copy]. Would supersede the Q6 framing and the fast-path/verified-path split.
+    - **own_label**: "OPEN." / "NOT-CHECKED."; sheet: "not adopted anywhere in this repository"
+    - **evidence_state**: CONJECTURE / UNRESOLVED
+    - **locator**: MAIN:L8/L5/research/lanes/RECORD_ONTOLOGY_OPEN_QUESTIONS.md:227-242
+    - **quote**: [source text withheld from the public copy]?
+    - **key_claims**
+      - Chandy & Lamport's snapshot [source text withheld from the public copy]'
+      - If it holds, 'cannot falsify its epistemic state' becomes a claim about the check, not the action
+    - **checked_how**: Read only. The owner's words are quoted with an ellipsis, so the full sentence is not on record here. ROADMAP docket C8 repeats it as NOT-CHECKED. I did not search the definitions directory for adoption beyond the sheet's statement.
+    - **open_items**
+      - [ERIC] whether this is the definition's dividing line
+      - [source text withheld from the public copy]: NOT-CHECKED
+    - **depends_on**
+      - Q6
+      - Q3
+  - item 48
+    - **id**: XREF-DEF52
+    - **title**: Cross-reference — pending edit to the definition's line 52
+    - **path**: L8/L5/research/lanes/RECORD_ONTOLOGY_OPEN_QUESTIONS.md
+    - **where**: MAIN, ROADMAP, BETA, HISTORY (pointer); PERPETUITY_QUESTION_ADJUDICATION.md on MAIN at L8/L5/research/review/
+    - **what_it_is**: The question file's closing pointer to the perpetuity adjudication §6.1, which recommends rewording the 'NOT audited-after-the-fact' bullet of the definition.
+    - **own_label**: "pending Eric's ruling"
+    - **evidence_state**: UNRESOLVED (pending decision; edit not applied)
+    - **locator**: MAIN:L8/L5/research/lanes/RECORD_ONTOLOGY_OPEN_QUESTIONS.md:254
+    - **quote**: [source text withheld from the public copy]**.
+    - **key_claims**
+      - Owner (in the perpetuity file): "the udiot is always post hoc."
+      - Recommended: contrast record-by-design against record-bolted-on-later
+    - **checked_how**: MAIN:L8/L5/research/review/PERPETUITY_QUESTION_ADJUDICATION.md:201-223 carries the recommendation. MAIN:L8/L0/semantics/definitions/AUDITONOMOUS_DEFINITION.md:52 is unchanged from HISTORY, so the edit is not applied. On BETA the same bullet stands at line 54 with the same wording.
+    - **open_items**
+      - [ERIC] rule on the DEF:52 edit
+  - item 49
+    - **id**: ERIC-ROLLUP
+    - **title**: Roll-up — every item the two lane files reserve for the author
+    - **path**: L8/L5/research/lanes/
+    - **where**: MAIN, ROADMAP, BETA, HISTORY
+    - **what_it_is**: Collected list of the author-reserved items across both files. Only one carries the literal tag [ERIC] (T1); the rest use 'the author's call', 'the author's decision' or 'pending Eric's ruling'.
+    - **own_label**: "**[ERIC]**" (THEME_LEDGER.md:152 only)
+    - **evidence_state**: UNRESOLVED (all pending)
+    - **locator**: MAIN:L8/L5/research/lanes/THEME_LEDGER.md:152, 154, 158, 187, 266, 284; RECORD_ONTOLOGY_OPEN_QUESTIONS.md:39, 66, 138, 148, 181, 248, 254
+    - **quote**: Nothing reserved for the author is adopted.
+    - **key_claims**
+      - T1: home for the evidence ranking; reword ARCH:572 and ARCH:540
+      - T2: placement of Blocks 37-38
+      - T3: ruling among readings (a)-(d); the Bronston no-questioner point; the equivalence-side stance
+      - T9: whether the Block_37:18 fragment is intended
+      - Q2: write the observer and observed definitions; observed-as-agent design choice
+      - Q5: the layering resolution
+      - Q6: the non-discretion candidate
+      - Q6b: two failure classes
+      - Q4: whether a missing questioner matters for orphanhood
+      - DEF:52 edit
+    - **checked_how**: Compiled from the full read of both files. The quoted rule is MAIN:L8/L5/research/review/STATUS_AND_LABEL_DISCIPLINE.md:21. I found no ruling on any of these in the lanes files.
+  - item 50
+    - **id**: MAIN-RESOLVABILITY
+    - **title**: What the ledger cites that does not exist on MAIN
+    - **path**: L8/L5/research/lanes/THEME_LEDGER.md
+    - **where**: MAIN (references); targets in ROADMAP and/or HISTORY
+    - **what_it_is**: Inventory of the ledger's source aliases and where each resolves, and therefore which themes can be checked on MAIN.
+    - **own_label**: sheet: "its ARCH/LEX path aliases no longer resolve"
+    - **evidence_state**: INTERNALLY CHECKED (by me, via ls-tree across the four states)
+    - **locator**: MAIN:L8/L5/research/lanes/THEME_LEDGER.md:9; MAIN:L8/L5/research/lanes/0.md:36
+    - **quote**: INTERNALLY VALIDATED against an intake corpus since retired from HEAD
+    - **key_claims**
+      - ARCH, TOC, 52 Block files: ROADMAP at L8/L4/work/writing/manuscript/ and HISTORY at intake/manuscript/; absent from MAIN and BETA
+      - LEX: ROADMAP at L7/peering/private/ingress/peer-3/object-1/ and HISTORY; absent from MAIN and BETA
+      - EBD: ROADMAP at L8/L4/work/writing/ and HISTORY; absent from MAIN and BETA
+      - DEF: present on MAIN at L8/L0/semantics/definitions/AUDITONOMOUS_DEFINITION.md, same line numbers
+      - SCALE: HISTORY only in this repository; present in autonomous at L8/L4/work/writing/AUTONOMY_SCALE.md
+      - MOVE_LOG, MANIFEST, sweep-2026-07-30: HISTORY only
+      - BOOK_STRUCTURE_PROPOSAL: ROADMAP and HISTORY only
+      - Not checkable on MAIN: C1-C10, T1-T12, T15, T16 (and T14, HISTORY only). Partly checkable on MAIN: C11 and T13 (DEF lines only). T3's external lanes are checkable in no state: the sources are not held
+    - **checked_how**: git ls-tree over origin/main, the ROADMAP branch, the BETA branch and 1d83788; archive and TOC blobs are identical between ROADMAP and HISTORY (31a0987, 983a5a4).
+- **defects**
+  - item 1
+    - **statement**: The sheet says the ledger holds clusters C1–C6 and tensions T1–T11. The ledger holds C1–C11 and T1–T16. The same miscount is in the routing plan the sheet was written from.
+    - **locator**: MAIN:L8/L5/research/lanes/0.md:36; MAIN:L8/L5/research/lanes/THEME_LEDGER.md:15-138, 146-298; MAIN:L8/L6/history/7LM_ROUTING_PLAN_2026-09-05.md:172
+  - item 2
+    - **statement**: T3 states as 'fixed (textual observation, not interpretation)' that the definite article appears twice, on two verbs. The archive has a third exact occurrence on the third verb, '[source text withheld from the public copy]), plus three near-variants (ARCH:47, 90, 580). The ledger quotes ARCH:593 in T11 without registering it. ROADMAP's roadmap D3 counts 'six claimants in the archive'.
+    - **locator**: MAIN:L8/L5/research/lanes/THEME_LEDGER.md:156, 160, 288; ROADMAP:L8/L4/work/writing/manuscript/Auditonomous_Theory_Master_Archive.md:47, 90, 210, 232, 580, 593; ROADMAP:L8/L5/research/review/BOOK_STRUCTURE_AND_ROADMAP_2026-09-13.md:614
+  - item 3
+    - **statement**: T1's closure (blocks 31, 32, 35, 36 cut) is not carried through the ledger: C1 and C5 still list them as members and quote cut text (ARCH:384, 426, 430); the block index still defines '(stub)' as a placeholder 'while the archive carries full text' and says the chapter mapping '[source text withheld from the public copy]'; T7 remains a live tension though one side is cut Block 36.
+    - **locator**: MAIN:L8/L5/research/lanes/THEME_LEDGER.md:17, 23, 62, 68-69, 280, 304, 323, 325, 335
+  - item 4
+    - **statement**: T1 was rewritten from 'RESOLVED 2026-08-02 by the author; NOT a defect' to 'CLOSED 2026-08-02 by the author … CUT FROM THE BOOK' in commit 314ceba dated 2026-08-04, whose message concerns an IEEE standards reading and does not mention the change; the ledger's header date stays 2026-08-02. The TOC's 'cut from the book … 2026-08-02' wording entered in the same commit.
+    - **locator**: commit 314ceba (2026-08-04 12:55:59 -0700) on intake/research/THEME_LEDGER.md and intake/manuscript/Auditonomous_Theory_TOC.md; MAIN:L8/L5/research/lanes/THEME_LEDGER.md:3, 146
+  - item 5
+    - **statement**: T3 was once recorded as 'DEFINED AND BOUNDED 2026-08-02 … Definition adopted' (locally scoped reading) and reverted to OPEN 28 minutes later. The present entry records the withdrawn 'imposed requirement' but not that a definition was adopted and withdrawn; that version is visible only in git history, against the status ladder's rule that the wrong version stay visible.
+    - **locator**: commits 3406bd1 and 5762d10 on intake/research/THEME_LEDGER.md; MAIN:L8/L5/research/lanes/THEME_LEDGER.md:158, 272; MAIN:L8/L5/research/review/STATUS_LADDER.md:25-26
+  - item 6
+    - **statement**: The ledger header promises 'An adversarial quote audit follows this ledger.' None follows in the file, and the phrase 'quote audit' occurs nowhere else in MAIN, ROADMAP or HISTORY.
+    - **locator**: MAIN:L8/L5/research/lanes/THEME_LEDGER.md:7
+  - item 7
+    - **statement**: T3 contains stale statements overtaken later in the same entry: '[source text withheld from the public copy]' and 'Findings pending' stand beside the reported ISO lane; the summary table and the sentence 'Exactly one surveyed instrument holds all three' are not marked superseded (only the convergence paragraph is).
+    - **locator**: MAIN:L8/L5/research/lanes/THEME_LEDGER.md:201, 203, 221, 247, 249, 272
+  - item 8
+    - **statement**: Q5 and Q6c still read 'PENDING — lane running' and 'Nothing … is asserted until it reports'. The outcomes are recorded only in RESEARCH_DOCKET.md (H2: 'UNSUPPORTED and contradicted'; C5: 'Answered'), which exists on ROADMAP and HISTORY but not on MAIN. On MAIN the two lanes read as never having reported.
+    - **locator**: MAIN:L8/L5/research/lanes/RECORD_ONTOLOGY_OPEN_QUESTIONS.md:140, 195; ROADMAP:L8/L5/research/review/RESEARCH_DOCKET.md:111-112, 190
+  - item 9
+    - **statement**: Q5's candidate resolution is labelled UNVERIFIED in the question file, while a findings file on MAIN says it is 'now PARTIALLY VERIFIED' against ARIES. The question file was not updated. The findings file cites the passage at line 134; it is at line 138 on MAIN.
+    - **locator**: MAIN:L8/L5/research/lanes/RECORD_ONTOLOGY_OPEN_QUESTIONS.md:138; MAIN:L8/L5/research/findings/SEGREGATION_AND_FORGETTING_2026-08-04.md:125, 142
+  - item 10
+    - **statement**: The sheet says the ledger is 'carried unchanged'. The words are unchanged, but the reorganisation commit 8c98573 reformatted tables and spacing (ledger 309 to 355 lines; question file 250 to 255), so line locators written against the earlier files are stale: SOURCE_REQUESTS cites THEME_LEDGER:155 for the citator item, which was at 161 in HISTORY and is at 189 on MAIN.
+    - **locator**: MAIN:L8/L5/research/lanes/0.md:36; ROADMAP:L8/L5/research/review/SOURCE_REQUESTS.md:159; MAIN:L8/L5/research/lanes/THEME_LEDGER.md:189
+  - item 11
+    - **statement**: Q1 says all table rows were '[source text withheld from the public copy]'. That file contains no mention of Micron or US10846955B2, the camera-layer row, which Q6c later relies on as part of 'the verified set'.
+    - **locator**: MAIN:L8/L5/research/lanes/RECORD_ONTOLOGY_OPEN_QUESTIONS.md:21, 25, 189; MAIN:L8/L5/research/review/PERPETUITY_QUESTION_ADJUDICATION.md:256-275
+  - item 12
+    - **statement**: The question file is out of order and its closing cross-reference is out of date: Q4 follows Q9 with no status word, and the pointer to T3 says 'three literature lanes reported' where the ledger reports four (the ISO retrieval lane).
+    - **locator**: MAIN:L8/L5/research/lanes/RECORD_ONTOLOGY_OPEN_QUESTIONS.md:246, 255; MAIN:L8/L5/research/lanes/THEME_LEDGER.md:249
+  - item 13
+    - **statement**: The archive itself was not corrected for the T1 cut: its chapter mapping still assigns Blocks 31, 32, 35 and 36 to chapters and its open items still speak of 'Blocks 33–36, Egypt through Enoch'. The ledger notes the mapping in its block index but lists no correction.
+    - **locator**: ROADMAP:L8/L4/work/writing/manuscript/Auditonomous_Theory_Master_Archive.md:723-724, 727-728, 748; MAIN:L8/L5/research/lanes/THEME_LEDGER.md:335
+  - item 14
+    - **statement**: Two ledger locators are inexact by the ledger's own wording ('ARCH:270 vicinity'; 'ARCH:588–592 vicinity'; 'DEF:255–256 vicinity'), against its header claim that every quote carries a grep line number.
+    - **locator**: MAIN:L8/L5/research/lanes/THEME_LEDGER.md:5, 91, 288, 292
+- **open_questions**
+  - On what date did the owner rule that 'skipped' means cut? The entry says 2026-08-02; the commit that wrote it is dated 2026-08-04 and its message does not mention it. Not settled from the record.
+  - Did the 'adversarial quote audit' announced in the ledger header ever exist? Not found in MAIN, ROADMAP or HISTORY by the phrase 'quote audit'; I did not search under other names.
+  - Every external quotation in T3 and in Q1 to Q3 is labelled VERIFIED by the repository; I could not re-fetch any (no network), and only ARIES is held (reading record on MAIN, PDF in HISTORY). The EXTERNALLY CHECKED state I assign rests on the repository's own record.
+  - Does ISO 15489-1:2016 clause 5.2.2.1 keep the concealment language? Recorded as an UNVERIFIED lead in T3 and as open request SR-03 on ROADMAP. If it was dropped, the one standards-body instrument holding all three verbs is a superseded edition.
+  - Current authoritative status of Bronston and Chiarella (no citator run) and the content of Tiersma (1990): both NOT-CHECKED in the record.
+  - Where is the full report of the Q5 real-time/embodiment lane and the Q6c liveness lane? I found only the outcome summaries in ROADMAP/HISTORY RESEARCH_DOCKET.md; I did not search L8/L6/retired/consolidated-2026-08-04/AUDITONOMOUS.md (ROADMAP) beyond a filename hit.
+  - Is Q9 (assumes state vs checks state) adopted anywhere on BETA? The lanes files are identical on BETA, but BETA's AUDITONOMOUS_DEFINITION.md blob differs from MAIN and I did not read it beyond locating the line-52 bullet (line 54 there, same wording).
+  - Whether the Block_37:18 uncleaned fragment is an intended addition or contamination (T9) is for the owner; nothing in the record says.
+  - The embodied-manuscript hash can only be settled against nu-algebra commit ea08f59, which is not available in these clones.
+  - What intake/sources/ held on 2026-08-02: the ledger says the directory existed and was unread; HISTORY tracks no files under it.
+  - The owner's Q9 sentence is recorded with an ellipsis ('[source text withheld from the public copy] full wording is not in the lanes files.

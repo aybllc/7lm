@@ -1,0 +1,457 @@
+# read:layer-lists
+
+Agent result, as returned. Workflow: The model, read deep. Run `wf_9a60cf50-a5f`. Phase: Read. Checked in 2026-11-11 19:51 UTC.
+
+- **scope**: 7lm@origin/main (c9dc061): L8/L6/in/7lm-layer-lists.md (415 lines), L8/L6/7lm-sheet-templates.md, L8/L6/7lm-field-guide.md sections 10-14 (lines 369-622), L8/L6/0.md. Checked against the nine layer sheets (L7/0.md, L8/0.md, L8/L0..L6/0.md), the specification, .github/workflows/integrity.yml and README.md on origin/main; against PR #20 (origin/ccr-9391bd81-f2enmj, c9638a9) and the beta candidate (origin/beta/common-contracts-r1-r6, 97314c5). Read-only; git objects only; the only write was `git merge-tree --write-tree` test merges.
+- **summary**: On main the model itself has not changed since 2e5a6d6. The only difference is one added file, the layer-lists proposal in the L6 inbox. Tree, sheets, specification, guide, templates and CI are identical. Every substantive change sits on unmerged branches: the beta candidate and PR #20.
+
+  The layer lists are nine bullet lists (L0 to L6, L7, L8; 361 bullets). They claim every bullet restates the nine layer sheets or the specification. They add, remove or rename no position and state no count of positions. All 71 canonical positions are present under current names (allications/, controlled/), with in/ listed as optional.
+
+  Fidelity: I hand-checked 102 bullets across all nine lists. 84 match their sheet or specification passage and 18 are flagged; none contradicts a position. The flags are:
+  - statements sourced only from the field guide or the L6 record, not the controlling texts;
+  - two partial owner quotations;
+  - a root statement that omits .gitignore, which the specification and CI admit and both exemplars have;
+  - L8 called a "position" and "not a layer", against the specification's "a count, not a position";
+  - in/ listed under "Canonical positions".
+
+  Several specification rules are omitted, including its sentence that the exemplars' L7 restructure "is not yet mirrored".
+
+  If PR #20 merges, lines 5, 94, 136, 264, 277, 309, 311 and 316 go stale or false, and field-guide-only bullets become "not current" by the retired set's own sheet.
+
+  Against beta, lines 48, 53, 225, 231, 391, 404 and 412 carry wording beta corrects. The lists are silent on beta's new research-housing sections, including its rule that an origin update is not automatic adoption.
+
+  Field guide section 14 states the mirroring rule: by hand, scaffold first, when the owner judges it close. The sheet templates say nothing about exemplars.
+- **facts**
+  - item 1
+    - **id**: F01
+    - **kind**: change
+    - **statement**: Between the state last studied (2e5a6d6) and origin/main (c9dc061) exactly one file changed: L8/L6/in/7lm-layer-lists.md was added (415 lines). No sheet, no position, the specification, the field guide, the templates and the CI are byte-identical to 2e5a6d6 on main. `git diff --stat 2e5a6d6 origin/main` shows 1 file changed, 415 insertions.
+    - **locator**: 7lm@origin/main:L8/L6/in/7lm-layer-lists.md:1-415 (commits c6d598a 2026-10-31, merge c9dc061 2026-11-11)
+    - **quote**: Filed at the inbox for L6 on the owner's word; the tree, every sheet, the guide, the templates, the specification, and the CI are unchanged.
+  - item 2
+    - **id**: F02
+    - **kind**: rule
+    - **statement**: Layer-lists standing sentence: the document is a proposal in the L6 inbox; where it finally sits is the owner's call; it changes nothing else. The record section it cites (section 36) is the standing instruction not to change the system without asking, not a record of this document.
+    - **locator**: 7lm@origin/main:L8/L6/in/7lm-layer-lists.md:5
+    - **quote**: Whether it stays at L6 beside the field guide and the sheet templates, moves, or is withdrawn is the owner's call, HOA.
+  - item 3
+    - **id**: F03
+    - **kind**: rule
+    - **statement**: Layer-lists claim of source: every bullet restates or quotes the nine layer sheets (L7/0.md, L8/0.md, L8/L0/0.md to L8/L6/0.md) and the specification; the specification controls on any difference.
+    - **locator**: 7lm@origin/main:L8/L6/in/7lm-layer-lists.md:3
+    - **quote**: Every bullet restates or quotes the controlling text ... Where this document and the specification differ, the specification controls.
+  - item 4
+    - **id**: F04
+    - **kind**: rule
+    - **statement**: Layer-lists preamble carries two further rules: a reading rule (construction reads L0 to L7 bottom up only as far as dependencies justify; inspection reads L7 to L0) and 'two things hold on every list' (every canonical branch may remain empty; machine metadata is described on every sheet and not instantiated).
+    - **locator**: 7lm@origin/main:L8/L6/in/7lm-layer-lists.md:7,9
+    - **quote**: Every canonical branch may remain empty: presence in the agnostic topology establishes admissible capability, not mandatory population
+  - item 5
+    - **id**: F05
+    - **kind**: tree
+    - **statement**: The nine lists and their line ranges: L0 (13-53, 39 bullets), L1 (57-95, 37), L2 (99-137, 37), L3 (141-178, 36), L4 (182-233, 50), L5 (237-278, 40), L6 (282-321, 38), L7 (325-394, 68), L8 (398-415, 16); 361 bullets in all. Headings: 'L0 — LAYER 0 · Semantic / Foundational', 'L1 — STATE SPACE', 'L2 — FORMAL MATHEMATICS', 'L3 — ENGINEERING MATHEMATICS', 'L4 — LAYER 4 · Conversion / Realization', 'L5 — RESEARCH / DISCOURSE', 'L6 — LIBRARY · Memory', 'L7 — SURFACE / FORWARD FACE · The desk', 'L8 — The interior root · USO · the envelope (a count, not a layer)'.
+    - **locator**: 7lm@origin/main:L8/L6/in/7lm-layer-lists.md:13,57,99,141,182,237,282,325,398
+  - item 6
+    - **id**: F06
+    - **kind**: tree
+    - **statement**: Fields carried by lists L0 to L5: Position, Object, Owner, Core question, Function, Directional inputs, Output, Hard boundary, Machine metadata, Owns / represents, Permitted actions, Acceptance / boundary check, Canonical positions beneath it, Boundary / traversal rule, Direction, Analytic view(s), Standing notes. Extra fields: L1 adds 'State-space and claim boundaries' (85-90); L4 adds 'Conversion rule' (214-217) and 'Cross-layer activity cases' (218-226).
+    - **locator**: 7lm@origin/main:L8/L6/in/7lm-layer-lists.md:15-53,59-95,184-233
+  - item 7
+    - **id**: F07
+    - **kind**: tree
+    - **statement**: Fields of the last three lists. L6: the common fields minus Analytic view, plus 'Held at L6 in this repository as source documents an adopter takes' (311) and 'Git and scientific memory' (314). L7: the common fields, with 'Canonical positions beneath it' split four ways (provenance 352, governance 358, peering 366, allications 372), plus 'Contextual semantic route' (382), 'Standing rules' (383-389), 'Standing notes' (390-394). L8: Position, Object, Owner, Holds, Count rule, Analytic views, Two valid directions, Architecture-wide dependency rules, Self-description, Infrastructure not a layer (400-415).
+    - **locator**: 7lm@origin/main:L8/L6/in/7lm-layer-lists.md:284-321,327-394,400-415
+  - item 8
+    - **id**: F08
+    - **kind**: open
+    - **statement**: The layer lists have no section headed 'open for the owner' (searched the whole file for 'open', 'owner's call', 'HOA'). The one explicit owner's call is where the document sits (line 5). It also reports as unsettled or unbuilt: the L0 drift hypothesis 'retained open' (50), the life boundary hypothesis 'untested' (135, 174), the dependency test 'not written into the specification' (177), the L1 plate brief 'not built' (93), the L6 plate brief 'not built' (320).
+    - **locator**: 7lm@origin/main:L8/L6/in/7lm-layer-lists.md:5,50,93,135,174,177,320
+    - **quote**: is recorded at `L8/L6/history/harmonization-2026-09-04.md` §33 and is not built.
+  - item 9
+    - **id**: F09
+    - **kind**: tree
+    - **statement**: Positions: the layer lists add, remove and rename none. All 71 canonical positions of the CI canon list are present under current names (L7/allications/ with its six children, L7/governance/controlled/); the 12 peering leaf positions are covered by wildcard bullets (368-371). It states no count of positions ('71' and 'seventy' do not occur). The one non-canonical position it lists is the optional in/ under L6.
+    - **locator**: 7lm@origin/main:L8/L6/in/7lm-layer-lists.md:37-43,80-81,122-126,165-169,206-210,261-268,307-310,352-379 vs 7lm@origin/main:.github/workflows/integrity.yml:47-59
+  - item 10
+    - **id**: F10
+    - **kind**: procedure
+    - **statement**: Fidelity test result. Hand-checked 102 bullets against the sheet or specification passage on origin/main (L0 8, L1 8, L2 9, L3 8, L4 12, L5 11, L6 14, L7 18, L8 14): 84 matched, 18 flagged (lines 50, 93, 176, 177, 228, 229, 230, 231, 264, 310, 316, 320, 356, 388, 400, 404, 414, 415). A scripted sentence-level pass over all bullets with a clause of 18+ characters (313 bullets, 547 clauses) found 334 clauses verbatim in the nine sheets or the specification, 25 verbatim only elsewhere (field guide, record, sub-sheets), 188 paraphrased or condensed. No flagged bullet contradicts a position, a path or a layer boundary.
+    - **locator**: 7lm@origin/main:L8/L6/in/7lm-layer-lists.md:13-415 (script: /tmp/claude-0/-home-user/bfcfd013-a2da-5019-961e-7f46116f08be/scratchpad/wf-model/layerlists/chk.py)
+  - item 11
+    - **id**: F11
+    - **kind**: defect
+    - **statement**: Root rule mismatch. Layer-lists line 415 says the root holds README.md, L7/, L8/, .github/ 'and nothing else'. This matches the scaffold's README (line 13) and the scaffold's actual root (ls-tree: .github, L7, L8, README.md). The specification and the CI also admit .gitignore, and both exemplar repositories have .gitignore at their root on origin/main. Read as a rule of the model, line 415 would make the exemplars' roots non-canonical.
+    - **locator**: 7lm@origin/main:L8/L6/in/7lm-layer-lists.md:415 vs 7lm@origin/main:L8/L4/work/writing/7lm-harmonized-architecture-specification.md:281 and .github/workflows/integrity.yml:19-23; autonomous@origin/main and auditonomous@origin/main root ls-tree
+    - **quote**: The root holds README.md, L7/, and L8/, and may hold repository infrastructure that is not a layer: the one CI check ... and .gitignore.
+  - item 12
+    - **id**: F12
+    - **kind**: defect
+    - **statement**: Wording about L8. Line 3 speaks of 'each position of the model: ... and L8, the envelope that is a count and not a layer' and the L8 heading says '(a count, not a layer)'. The specification says L8 is 'a count, not a position' and 'not a ninth position'; it uses 'numbered, not a layer' for L7. Line 400 of the layer lists itself quotes the specification correctly, so lines 3 and 398 disagree with line 400.
+    - **locator**: 7lm@origin/main:L8/L6/in/7lm-layer-lists.md:3,398,400 vs 7lm@origin/main:L8/L4/work/writing/7lm-harmonized-architecture-specification.md:64,72
+    - **quote**: L8 is a count, not a position: the interior's own zero over the seven layer zeros.
+  - item 13
+    - **id**: F13
+    - **kind**: defect
+    - **statement**: in/ is listed under the heading 'Canonical positions beneath it' (307-310) while the same bullet says it is not in the specification's canonical tree and not CI-required. Sources disagree among themselves: the L6 sheet's own directory structure draws in/0, while the specification tree, the L8 sheet tree, the field guide tree and the CI canon list (L6: history, retired only) do not.
+    - **locator**: 7lm@origin/main:L8/L6/in/7lm-layer-lists.md:307-310 vs 7lm@origin/main:L8/L6/0.md:39-42,53; L8/0.md:38-40; .github/workflows/integrity.yml:52; L8/L6/7lm-field-guide.md:416-418
+    - **quote**: Optional; a position may have one or not; it is not drawn in the specification's canonical tree and is not a position the CI requires.
+  - item 14
+    - **id**: F14
+    - **kind**: defect
+    - **statement**: Two owner research notes are quoted in part. Line 50 gives "I THINK DRIFT LIVES HERE!"; the sheet and specification have "MOST IMPORTANT: I THINK DRIFT LIVES HERE! NOT ANYWHERE ELSE...(NEEDS A LOT OF STUDY)". Line 228 gives "THE CUT LIVES HERE." with a full stop inside the quotation marks; the source is "MOST IMPORTANT: THE CUT LIVES HERE" with none.
+    - **locator**: 7lm@origin/main:L8/L6/in/7lm-layer-lists.md:50,228 vs 7lm@origin/main:L8/L0/0.md:69; L8/L4/0.md:69; specification :343,:580
+    - **quote**: MOST IMPORTANT: I THINK DRIFT LIVES HERE! NOT ANYWHERE ELSE...(NEEDS A LOT OF STUDY)
+  - item 15
+    - **id**: F15
+    - **kind**: defect
+    - **statement**: Statements whose wording is found only in the field guide, not in the nine sheets or the specification: line 229 (intellectual property means ideas, FG:194), line 230 (failure a first-class L4 object, FG:210), line 388 ('Egress is not publication', FG:304), line 176 ('A formula divides three ways', FG:182), the clause in line 400 that L8 'counts the eight positions L0 through L7' (FG:84), and the clause in line 404 '0 over 0, an 8, a closed figure' (FG:94). The substance of 230, 388 and 176 is supported by sheets (L8/L4/0.md:27; L7/0.md:118,121; L8/L2/0.md:76); 229, and the two clauses in 400 and 404, have no sheet or specification wording.
+    - **locator**: 7lm@origin/main:L8/L6/in/7lm-layer-lists.md:176,229,230,388,400,404 vs 7lm@origin/main:L8/L6/7lm-field-guide.md:84,94,182,194,210,304
+    - **quote**: The interior's zero over the layers' zeros gives 0 over 0, which forms an 8. An 8 is a closed figure
+  - item 16
+    - **id**: F16
+    - **kind**: defect
+    - **statement**: Statements sourced only from the L6 record, which itself marks them 'Recorded, not applied': line 93 (the L1 plate brief and "State Space is the key!!!", record sections 33-34), line 177 (the dependency test, section 34), line 320 (the L6 plate brief, section 33), and the second sentence of line 356 (lineage takes HOA input only, section 33). The lineage sheet L7/provenance/lineage/0.md does not contain 'HOA'. The layer lists label 93, 177 and 320 as not built or not in the specification; 356 carries no such label and omits the record's open item on lineage.
+    - **locator**: 7lm@origin/main:L8/L6/in/7lm-layer-lists.md:93,177,320,356 vs 7lm@origin/main:L8/L6/history/harmonization-2026-09-04.md:444,448,451-452,459,465
+    - **quote**: Recorded, not applied: the plate is not drawn, the specification is not changed, no term is added.
+  - item 17
+    - **id**: F17
+    - **kind**: defect
+    - **statement**: Line 316 states the hard rule 'the guides share no history' as an L6 standing note. On origin/main that rule appears in no sheet and not in the specification (0 occurrences); it is in the field guide (lines 9, 132, 554) and the record (section 31). PR #20 would place it in L8/L6/0.md.
+    - **locator**: 7lm@origin/main:L8/L6/in/7lm-layer-lists.md:316 vs 7lm@origin/main:L8/L6/7lm-field-guide.md:132; 7lm@origin/ccr-9391bd81-f2enmj:L8/L6/0.md:64-66
+    - **quote**: **The guides share no history.** The owner's hard rule. Each repository's history is its own, kept at its own L6 and nowhere else
+  - item 18
+    - **id**: F18
+    - **kind**: defect
+    - **statement**: Line 414 states the 'two things that are not design choices' and the one-sentence-more recommendation under L8 Self-description. Only its first sentence is from a controlling text (L8/0.md:133). The rest is from the sheet templates (line 3) and the record (section 27, line 352); the specification contains no occurrence of 'design choice'. The three sources count differently: templates say two things about a sheet (it exists; its first line is the path); the layer lists say two things (the tree; a 0.md with the path line); the field guide vocabulary names three (the tree, the first lines, the guides share no history).
+    - **locator**: 7lm@origin/main:L8/L6/in/7lm-layer-lists.md:414 vs 7lm@origin/main:L8/L6/7lm-sheet-templates.md:3; L8/L6/7lm-field-guide.md:554; L8/L6/history/harmonization-2026-09-04.md:352
+    - **quote**: The tree, the sheets' first lines, and the rule that the guides share no history are not.
+  - item 19
+    - **id**: F19
+    - **kind**: defect
+    - **statement**: Line 231 (scale, ladder, status labels) follows the field guide's wording ('never an L1 state space and never L2 mathematics') where the specification says 'not', and it omits the specification's last sentence, that a ladder of review statuses is research governance at L5, not the L0 epistemic rail.
+    - **locator**: 7lm@origin/main:L8/L6/in/7lm-layer-lists.md:231 vs 7lm@origin/main:L8/L4/work/writing/7lm-harmonized-architecture-specification.md:681; L8/L6/7lm-field-guide.md:230
+    - **quote**: A ladder of review statuses is research governance and stands at L5, not at the L0 epistemic rail.
+  - item 20
+    - **id**: F20
+    - **kind**: defect
+    - **statement**: Line 264 attributes the catch-all to 'the field guide's section 9'. The controlling statements are the specification's clarification (line 679) and the review sheet (L8/L5/research/review/0.md:34). The layer lists do not restate the rule itself: PARKED, research/lanes/ as the working position, finished work filed at its layer ('PARKED' and 'working position' do not occur in the file).
+    - **locator**: 7lm@origin/main:L8/L6/in/7lm-layer-lists.md:264 vs 7lm@origin/main:L8/L4/work/writing/7lm-harmonized-architecture-specification.md:679
+    - **quote**: What the owner sets aside stays there labelled PARKED. What the owner takes up moves to research/lanes/, the working position
+  - item 21
+    - **id**: F21
+    - **kind**: defect
+    - **statement**: Specification rules the layer lists omit (none of the search words occurs in the file): (a) the topology states no rule about what any intelligence may touch (spec:287); (b) the controlling reserved-state rule and the inherited terms held reserved (spec:977-981); (c) the specification's exemplar status including 'the L7 restructure is not yet mirrored' (spec:950, 958); (d) the CI's fourth behaviour, reporting any other directory without a sheet (spec:281); (e) the designated curated-source archive bound at private ingress (spec:881); line 355 keeps only 'pointed to, not copied in'.
+    - **locator**: 7lm@origin/main:L8/L4/work/writing/7lm-harmonized-architecture-specification.md:281,287,881,950,958,977-981 (searched layer lists for: touch, eserved, Not yet as stated, mirror, aybllc)
+    - **quote**: The desk carries the L7 branch names of the version before 20 September 2026, publications/ as a direct branch and governance/restrictions/; the L7 restructure is not yet mirrored.
+  - item 22
+    - **id**: F22
+    - **kind**: defect
+    - **statement**: The L6 list has no Analytic view field, although the L6 sheet places L6 with L5 in the upper scientific interior and the L5 list carries that view (line 271). The view is named only in the L8 list (405).
+    - **locator**: 7lm@origin/main:L8/L6/in/7lm-layer-lists.md:284-321 vs 7lm@origin/main:L8/L6/0.md:6
+    - **quote**: Memory/history and research/discourse are the upper scientific interior.
+  - item 23
+    - **id**: F23
+    - **kind**: rule
+    - **statement**: Rules the layer lists carry that are not rules of the nine sheets or the specification (additions relative to the controlling texts): the dependency test (177), lineage HOA-only (356), the guides share no history (316), the two non-design-choices and the sentence recommendation (414), 'Egress is not publication' (388), the gloss on intellectual property (229), failures as first-class objects (230). None changes a position, a path or a count. Counts stated and matching the sources: seven interior layers, L7 the eighth reached in traversal, L8 not a ninth position, six allication senses, four peering faces.
+    - **locator**: 7lm@origin/main:L8/L6/in/7lm-layer-lists.md:177,229,230,316,356,373,388,392,404,414
+  - item 24
+    - **id**: F24
+    - **kind**: defect
+    - **statement**: The scaffold's own L6 does not record the layer lists. L8/L6/0.md line 79 lists three things in the inbox (branch text, slimmed specification, its removal record), not four; L8/L6/in/0.md is the path line and one sentence; the harmonization record on main ends at section 37 and has no entry for PR #21. The tree holds four non-sheet files in L8/L6/in/.
+    - **locator**: 7lm@origin/main:L8/L6/0.md:79; L8/L6/in/0.md:1-3; ls-tree origin/main L8/L6/in
+    - **quote**: the inbox: the text of a branch closed unmerged, an unadopted slimmed rendering of the specification, and that pass's record of what it would have removed
+  - item 25
+    - **id**: F25
+    - **kind**: change
+    - **statement**: PR #20 (c9638a9, four commits dated 2026-10-17, forked at 2e5a6d6) changes nine files relative to its base: renames L8/L6/7lm-field-guide.md to L8/L6/retired/field-guide-2026-09-20/7lm-field-guide.md (text unchanged), adds that set's 0.md, edits L8/L6/0.md, L8/L6/retired/0.md, L8/L6/7lm-sheet-templates.md (one line), L8/L0/pedagogy/0.md, the plate sheet and its generator, and adds record sections 38 (reserved), 39 and 40. The `--stat` against main also shows the layer lists as deleted only because the branch predates PR #21; a test merge with main is clean and the merged tree keeps L8/L6/in/7lm-layer-lists.md.
+    - **locator**: 7lm@origin/ccr-9391bd81-f2enmj: git diff --stat 2e5a6d6..c9638a9; merge-tree origin/main + origin/ccr-9391bd81-f2enmj = tree 7df0bd6 (no conflicts)
+    - **quote**: Put the field guide into l6 as provenance stale. Deprecated and to be used as an example.
+  - item 26
+    - **id**: F26
+    - **kind**: rule
+    - **statement**: PR #20's retired-set sheet sets a rule that bears on the layer lists: nothing in the retired guide is a rule of the model, and a sentence found only there is not current. The field-guide-only bullets of F15 would fall under it.
+    - **locator**: 7lm@origin/ccr-9391bd81-f2enmj:L8/L6/retired/field-guide-2026-09-20/0.md:33
+    - **quote**: Nothing in it is a rule of the model: a sentence found only here, and not in the specification or the sheets, is not current.
+  - item 27
+    - **id**: F27
+    - **kind**: change
+    - **statement**: Layer-lists lines that become stale or false if PR #20 merges: 5 ('beside the field guide and the sheet templates': the guide leaves L6's top level); 94, 136, 277 ('Exemplar snapshot in the field guide': the cited guide is retired and stale); 264 ('The field guide's section 9 also names it the catch-all'); 309 (the list of retired sets omits field-guide-2026-09-20/); 311 (false: 7lm-field-guide.md is no longer held at L6 as a source document an adopter takes); 316 ('the source guide' no longer exists as a source). Lines 94, 136, 277 remain supported in substance by the specification (lines 948, 956).
+    - **locator**: 7lm@origin/main:L8/L6/in/7lm-layer-lists.md:5,94,136,264,277,309,311,316 vs 7lm@origin/ccr-9391bd81-f2enmj:L8/L6/0.md:78,86
+    - **quote**: retired on 2026-10-17: stale, deprecated, kept as an example and not as the source an adopter takes.
+  - item 28
+    - **id**: F28
+    - **kind**: change
+    - **statement**: PR #20 rewrites L8/L6/0.md in three places: adds the section 'The hard rule: the guides share no history' after 'Git and scientific memory'; removes the field guide from the list of what the layer holds and drops 'beside the guide' from the templates entry; adds the retired set field-guide-2026-09-20/ to the list. The inbox entry (line 82 on that branch) still names three things and not the layer lists.
+    - **locator**: 7lm@origin/ccr-9391bd81-f2enmj:L8/L6/0.md:64-66,78,82,86
+    - **quote**: That is what L6 is for; handing that job to anything else breaks away from 7LM.
+  - item 29
+    - **id**: F29
+    - **kind**: change
+    - **statement**: PR #20 changes one line of the sheet templates: the reference to 'section 14 of the guide' becomes a reference to the retired guide. On main the templates still point at the live guide's section 14.
+    - **locator**: 7lm@origin/main:L8/L6/7lm-sheet-templates.md:9 vs 7lm@origin/ccr-9391bd81-f2enmj:L8/L6/7lm-sheet-templates.md:9
+    - **quote**: section 14 of the field guide, now retired at `L8/L6/retired/field-guide-2026-09-20/`, describes the form meant one day; for now everything is HOA.
+  - item 30
+    - **id**: F30
+    - **kind**: change
+    - **statement**: The beta candidate (two commits by EDM, 2026-11-02 and 2026-11-03, forked at 2e5a6d6) does not contain the layer lists. It touches 32 files besides: the CI, 7 L7 sheets, L8/0.md, all seven layer sheets, the specification (.md and .docx), the field guide (3 passages), specification-history.md, 3 sub-sheets, and adds 9 research-probe files under canonical positions. Test merges are clean with main (tree 633c343) and with PR #20 (tree 1b235ad).
+    - **locator**: 7lm@origin/beta/common-contracts-r1-r6: git diff --stat origin/main (33 files incl. the layer lists as absent); L8/L6/history/specification-history.md:103-112
+    - **quote**: The correction set preserves the canonical topology and layer owners.
+  - item 31
+    - **id**: F31
+    - **kind**: change
+    - **statement**: Beta conflict, layer-lists line 225 (External definition case): the layer lists carry main's 'no local L0 object unless this bounded thing authors a semantic version'. Beta replaces it in the L4 sheet and the specification: receiving L0 may reference the exact externally authored definition without becoming its author.
+    - **locator**: 7lm@origin/main:L8/L6/in/7lm-layer-lists.md:225 vs 7lm@origin/beta/common-contracts-r1-r6:L8/L4/0.md:91; specification :598
+    - **quote**: Receiving L0 may reference the exact externally authored definition without becoming its author; a new locally authored semantic version is a separate object.
+  - item 32
+    - **id**: F32
+    - **kind**: change
+    - **statement**: Beta conflict, layer-lists line 231 (scale/ladder): the layer lists say a scale, ladder or set of status labels 'is never an L1 state space and never L2 mathematics'. Beta scopes the rule to the written instrument and allows separately declared L1 values and L2 relations.
+    - **locator**: 7lm@origin/main:L8/L6/in/7lm-layer-lists.md:231 vs 7lm@origin/beta/common-contracts-r1-r6:L8/L4/work/writing/7lm-harmonized-architecture-specification.md:683
+    - **quote**: This does not prevent separately declared admissible values at L1 or exact relations and operators at L2 under their governing contracts.
+  - item 33
+    - **id**: F33
+    - **kind**: change
+    - **statement**: Beta, layer-lists line 404 (byte reading): the layer lists restate 'L8 is the extra bit that carries the semantic, as information needs an extra bit to catch any error' without qualification. Beta adds that this is a mnemonic and no error-detection guarantee, in the specification and in a new 'Analogy boundary' paragraph of L8/0.md.
+    - **locator**: 7lm@origin/main:L8/L6/in/7lm-layer-lists.md:404 vs 7lm@origin/beta/common-contracts-r1-r6:L8/0.md:12; specification :68
+    - **quote**: It is not a guarantee that one extra bit or these directory positions detect every possible error.
+  - item 34
+    - **id**: F34
+    - **kind**: change
+    - **statement**: Beta, layer-lists line 412 (directory metadata): the layer lists say metadata 'may enforce a machine rule'. Beta conditions it on an enabled and tested implementation, and the specification's self-description rule gains 'When machine instructions are enabled'. Layer-lists line 9 ('not instantiated ... remains manual') is consistent with beta.
+    - **locator**: 7lm@origin/main:L8/L6/in/7lm-layer-lists.md:9,412 vs 7lm@origin/beta/common-contracts-r1-r6:L8/0.md:141; specification :21
+    - **quote**: Directory metadata may enforce a machine rule only where a separate implementation is enabled and tested
+  - item 35
+    - **id**: F35
+    - **kind**: change
+    - **statement**: Beta, layer-lists line 48 (the four rails): the layer lists say 'The four rails are Ontological, Semantic, Epistemic, and Universality'. Beta says the four named rails do not exhaust a model's foundational distinctions, and separates foundational branches, model-attached vertical inquiries and L5 lanes; no lateral rail traversal. The layer lists are silent on all of this.
+    - **locator**: 7lm@origin/main:L8/L6/in/7lm-layer-lists.md:48 vs 7lm@origin/beta/common-contracts-r1-r6:L8/L0/0.md:69; specification :355
+    - **quote**: The named foundational branches do not exhaust the locally authored foundational distinctions a model may require.
+  - item 36
+    - **id**: F36
+    - **kind**: change
+    - **statement**: Beta, layer-lists line 53 (OSI-origin inquiry at L0): the layer lists carry main's 'bound through L7 rather than copied into L0'. Beta rewrites the row so an exact tagged semantic reference may reach receiving L0.
+    - **locator**: 7lm@origin/main:L8/L6/in/7lm-layer-lists.md:53 vs 7lm@origin/beta/common-contracts-r1-r6:L8/L4/work/writing/7lm-harmonized-architecture-specification.md:187
+    - **quote**: an exact tagged semantic reference may reach receiving L0 without local authorship or redefinition.
+  - item 37
+    - **id**: F37
+    - **kind**: change
+    - **statement**: Beta, layer-lists line 391 (Autonomous consensus baseline): the layer lists state as fact that 'Autonomous freezes the narrowest reasonable agreement'. Beta rewrites the L7 sheet to an intention and a research obligation, and adds that other projects do not inherit an autonomy theory from the example.
+    - **locator**: 7lm@origin/main:L8/L6/in/7lm-layer-lists.md:391 vs 7lm@origin/beta/common-contracts-r1-r6:L7/0.md:190
+    - **quote**: This is a research obligation, not an assertion that agreement has been established.
+  - item 38
+    - **id**: F38
+    - **kind**: change
+    - **statement**: Beta material on which the layer lists are silent: new sections 'Using this position in a research project' in L8/L1 to L8/L6 sheets (line 8 of each), 'Local choices at this position' (L8/L0/0.md), 'Shared housing and local research choices' (L8/0.md:14), 'Projects across a research network' (L7/0.md:8), 'Shared setup without shared ownership' (L7/peering/0.md), 'Manuscript work' (L8/L4/work/writing/0.md); aybllc/l6 recast as program context, not an instantiated binding (L7/peering/private/ingress/0.md:48); catch-all moves 'delete nothing' with later deletion under the L6 rule (L8/L5/research/review/0.md:36). Beta also states a rule about bringing an existing project into step with changed origin guidance.
+    - **locator**: 7lm@origin/beta/common-contracts-r1-r6:L8/0.md:24; L8/L6/0.md:12; L7/peering/0.md:20
+    - **quote**: compare the changed contracts, retain the project's data and local choices, record any moves, and review affected dependencies before claiming the project has migrated.
+  - item 39
+    - **id**: F39
+    - **kind**: change
+    - **statement**: Beta changes the CI: the root check and the canon list require L8 and uppercase L0 to L6 and no longer accept USO/ or lowercase; .gitignore stays admitted; the 71-position list is unchanged. The layer lists' CI summary (line 415) conflicts with neither version; its omission of .gitignore (F11) stands against both.
+    - **locator**: 7lm@origin/beta/common-contracts-r1-r6:.github/workflows/integrity.yml:19-23 (diff against 2e5a6d6); L8/L6/history/specification-history.md:105
+    - **quote**: The existing integrity workflow now requires L8 and uppercase L0–L6; its 71-position list is unchanged.
+  - item 40
+    - **id**: F40
+    - **kind**: defect
+    - **statement**: On the beta branch the specification's body was changed on 2 November 2026 (six passages) but its header still reads 'Version of 20 September 2026' (lines 12 and 18). The field guide section 14 and the layer lists both cite the specification by that version date.
+    - **locator**: 7lm@origin/beta/common-contracts-r1-r6:L8/L4/work/writing/7lm-harmonized-architecture-specification.md:12,18
+    - **quote**: Version of 20 September 2026.
+  - item 41
+    - **id**: F41
+    - **kind**: rule
+    - **statement**: Layer-lists line 360 (copyright conditions stated once at governance/copyright/, licensing and controlled point there) agrees with main's specification (line 879) and with beta's rewritten licensing and controlled sub-sheets. Line 365 restates the L7 sheet's controlled/ row, which beta does not change.
+    - **locator**: 7lm@origin/main:L8/L6/in/7lm-layer-lists.md:360,365 vs 7lm@origin/main:L8/L4/work/writing/7lm-harmonized-architecture-specification.md:879; L7/0.md:114
+    - **quote**: governance/licensing/ and governance/controlled/ point to it rather than restating it.
+  - item 42
+    - **id**: F42
+    - **kind**: rule
+    - **statement**: Sheets, what is not a design choice: a sheet (0.md) exists in every folder of the tree the scaffold pushes, and its first line is the folder's own path from the root. Keeping the tree and the sheets so is what makes a repository a 7LM repository; dropping either puts it outside the system.
+    - **locator**: 7lm@origin/main:L8/L6/7lm-sheet-templates.md:3; L8/L6/7lm-field-guide.md:455
+    - **quote**: Drop either and it has branched outside the system: the work may be good research, but it is not how this system works
+  - item 43
+    - **id**: F43
+    - **kind**: rule
+    - **statement**: Sheets, what is a design choice: everything after the first line. Recommendation for a layer's own sheet (L8/L0/0.md to L8/L6/0.md): at least one sentence more than the layer's number, stating the space of the folder and what it does. A folder beneath a layer keeps its sheet, but what the sheet says is a design choice 'through and through'.
+    - **locator**: 7lm@origin/main:L8/L6/7lm-sheet-templates.md:3; L8/L6/7lm-field-guide.md:457
+    - **quote**: the recommendation is at least one sentence more than the layer's number: one sentence at L0, two at L1, three at L2, and so on up.
+  - item 44
+    - **id**: F44
+    - **kind**: rule
+    - **statement**: Blank sheets and audit exceptions: a sheet beneath a layer may be blank (first line only). A blank sheet passes the CI, is skipped, and is tagged at the end of the document that collects the sheets as an audit exception for HOA review. That collecting document is 'meant one day' and not built. A missing sheet is different: the folder is outside the system.
+    - **locator**: 7lm@origin/main:L8/L6/7lm-sheet-templates.md:3,39,45; L8/L6/7lm-field-guide.md:457,555,600
+    - **quote**: A blank sheet passes the one CI check, which reads the first line and nothing after it.
+  - item 45
+    - **id**: F45
+    - **kind**: rule
+    - **statement**: The three degrees. Minimal: the path line plus the recommended sentences (blank for a folder beneath a layer). Standard: four headings, 'What this directory is', 'Why it exists', 'Holds', 'Does not hold'. Full: the standard four plus an Object line, a Path/Layer/Owner line, 'Boundary / traversal rule' and 'Standing'; a layer's own sheet takes a different, longer form. A new repository starts at the degree its owner chooses; the scaffold's sheets are the full degree and bind no one else's.
+    - **locator**: 7lm@origin/main:L8/L6/7lm-sheet-templates.md:5,13-15,49-51,99-101; L8/L6/7lm-field-guide.md:457
+    - **quote**: they are complete, detailed, and rigorous — the full degree, every one of them — and they bind no one else's.
+  - item 46
+    - **id**: F46
+    - **kind**: rule
+    - **statement**: Using a template: copy it into the folder as its 0.md, replace the angle-bracketed parts, remove the brackets, keep the first line exact. Where a template and the specification differ, the specification controls. Worked full-degree examples named: L7/allications/notifications/0.md and L8/L0/0.md.
+    - **locator**: 7lm@origin/main:L8/L6/7lm-sheet-templates.md:5,7,136
+    - **quote**: Keep the first line exact.
+  - item 47
+    - **id**: F47
+    - **kind**: rule
+    - **statement**: What a sheet is for: a working document read while filing; it belongs to its folder and moves with it; it is not a support document. 7LM provides no support service.
+    - **locator**: 7lm@origin/main:L8/L6/7lm-field-guide.md:459,557,598
+    - **quote**: It is read while filing, and it belongs to its folder: when the folder moves, the sheet moves with it.
+  - item 48
+    - **id**: F48
+    - **kind**: rule
+    - **statement**: The shared layout (field guide section 10): the root holds README.md, L7/ and L8/, and may hold the one CI workflow under .github/ and a .gitignore; nothing else; every 7LM repository has the same root. The tree drawn at lines 377-451 has the current L7 names (allications/ with six children; governance/controlled/) and L6 with history/ and retired/ only.
+    - **locator**: 7lm@origin/main:L8/L6/7lm-field-guide.md:371,377-451
+    - **quote**: Nothing else belongs at the root, and every 7LM repository has the same one.
+  - item 49
+    - **id**: F49
+    - **kind**: rule
+    - **statement**: The one CI check, as the field guide states it: identical in every 7LM repository; fails on an unresolved conflict marker, a non-standard root, a sheet whose first line is not its path, and a standard-tree folder with no sheet; any other folder missing a sheet is only reported; it moves nothing.
+    - **locator**: 7lm@origin/main:L8/L6/7lm-field-guide.md:463-470
+    - **quote**: There is exactly one automated check, identical in every 7LM repository, living at `.github/workflows/integrity.yml`.
+  - item 50
+    - **id**: F50
+    - **kind**: rule
+    - **statement**: Folders of one's own: allowed under a canonical position, each with a 0.md; a missing sheet is reported, not failed, and leaves the folder outside the system. Not allowed: adding anything at the root, or removing or renaming a canonical folder. The guide says both exemplar repositories add such folders.
+    - **locator**: 7lm@origin/main:L8/L6/7lm-field-guide.md:474,478
+    - **quote**: What you cannot do is add anything at the root, or remove or rename a canonical folder.
+  - item 51
+    - **id**: F51
+    - **kind**: rule
+    - **statement**: in/: the one own-folder with a standard name. It is a position's inbox for what belongs to that position and is not yet worked into it; any position may have one; never required; carries a 0.md. Use it when the owning position is known but not the place inside it; use the catch-all L8/L5/research/review/ when the layer is not known.
+    - **locator**: 7lm@origin/main:L8/L6/7lm-field-guide.md:476,527,572
+    - **quote**: Any position may have one, it is never required, and it carries a `0.md` like every other folder.
+  - item 52
+    - **id**: F52
+    - **kind**: rule
+    - **statement**: Retired sets: a dated set under L8/L6/retired/<name>/ keeps its old files at their old relative paths with headings uncorrected; the set gets its own 0.md at its root; the retirement is recorded in L8/L6/history/. The CI reads the set's own 0.md and nothing beneath. Retire only what integrity needs to rebuild the past; everything else superseded is enumerated in the record and then deleted.
+    - **locator**: 7lm@origin/main:L8/L6/7lm-field-guide.md:480,531-536,592
+    - **quote**: Put the prior files inside it at their old relative paths, unchanged. Do not correct their headings.
+  - item 53
+    - **id**: F53
+    - **kind**: rule
+    - **statement**: How an adopter takes the guide (on main): the guide is an L6 source document, not any repository's L0 pedagogy. A person takes it from L6, applies its updates or leaves them, publishes their own version at their L7 or keeps it at their L6, and secures their L7 surface in the same decision. The step is HOA. Where the adopter's version sits is their design choice. Never a design choice: the guides share no history. PR #20 would end this standing (guide retired, 'not as the source an adopter takes').
+    - **locator**: 7lm@origin/main:L8/L6/7lm-field-guide.md:9,553-554; L8/L6/0.md:74
+    - **quote**: This is the guide before the last one; the last is the one each adopter publishes. The step is taken by a person and by nothing else.
+  - item 54
+    - **id**: F54
+    - **kind**: procedure
+    - **statement**: Starting a new bounded object (field guide section 11): copy the full layout leaving unneeded folders empty; write each sheet at the chosen degree from the templates (keeping the scaffold's full-degree sheets is one choice); write the object's own definition under L8/L0/semantics/definitions/ or leave it empty, never another object's definition; move outward only as each layer settles.
+    - **locator**: 7lm@origin/main:L8/L6/7lm-field-guide.md:494-498
+    - **quote**: Copy the full layout, leaving the folders you do not need empty.
+  - item 55
+    - **id**: F55
+    - **kind**: rule
+    - **statement**: Mirroring, as the field guide section 14 states it: the other repositories mirror the scaffold by hand; the scaffold is updated first and alone; the others are brought into step when the owner judges it close to settled. The owner's words behind it are in record section 26.
+    - **locator**: 7lm@origin/main:L8/L6/7lm-field-guide.md:608; L8/L6/history/harmonization-2026-09-04.md:334-346 (section 26)
+    - **quote**: All repos should mirror the 7lm. Manually. We update 7lm and focus on it only. No outside updates until we are sure I'm close.
+  - item 56
+    - **id**: F56
+    - **kind**: rule
+    - **statement**: The push mechanism described in section 14 is not built. As meant: the scaffold's update arrives pinned to its hashes as an item for HOA review at the adopter's L7/peering/private/; a person follows or edits item by item; the pushed tree is required, taking up everything is not, and declined items are listed in the adopter's HOA record; the push carries the tree and the sheets, never the scaffold's L6. Today every step is by hand.
+    - **locator**: 7lm@origin/main:L8/L6/7lm-field-guide.md:610
+    - **quote**: The push carries the tree and the sheets, never the scaffold's L6; no repository's history moves in either direction.
+  - item 57
+    - **id**: F57
+    - **kind**: exemplar
+    - **statement**: Section 14 on the exemplars: autonomous defines 'autonomous' from codified standards, nine bodies bound at public ingress, the definition exposed at public egress; auditonomous binds that definition at public ingress, reference-only, and writes its local delta; aybllc/l6 is the source archive, not a 7LM repository. The reader is told to read the specification's 'Not yet as stated' before copying anything from either.
+    - **locator**: 7lm@origin/main:L8/L6/7lm-field-guide.md:612-618,622
+    - **quote**: Read that before you copy anything from either one.
+  - item 58
+    - **id**: F58
+    - **kind**: defect
+    - **statement**: The field guide's summary of 'Not yet as stated' (line 620, 'As of the version of 20 September 2026') omits the specification's sentence, present for both exemplars, that their desks carry the former L7 names and the restructure is not yet mirrored. The exemplars' origin/main trees confirm the former names: L7/publications and L7/governance/restrictions exist in both.
+    - **locator**: 7lm@origin/main:L8/L6/7lm-field-guide.md:620 vs 7lm@origin/main:L8/L4/work/writing/7lm-harmonized-architecture-specification.md:950,958; autonomous@origin/main and auditonomous@origin/main ls-tree L7/
+    - **quote**: the L7 restructure is not yet mirrored.
+  - item 59
+    - **id**: F59
+    - **kind**: rule
+    - **statement**: The sheet templates say nothing about the exemplar repositories or about mirroring: the words 'exemplar', 'mirror' and 'adopter' do not occur in the file. Their one outward reference is to section 14 of the guide for the republishing form, with 'for now everything is HOA'.
+    - **locator**: 7lm@origin/main:L8/L6/7lm-sheet-templates.md:9 (whole file searched, 136 lines)
+    - **quote**: section 14 of the guide states what is meant there one day; for now everything is HOA.
+  - item 60
+    - **id**: F60
+    - **kind**: rule
+    - **statement**: Section 12 vocabulary fixes the terms used by these rules: HOA (human-only actions; filing is one; taking the guide from L6 and publishing a version is another); Design choice; Audit exception; Sheet; Inbox; Retire; Enumerate. Section 13 lists as errors: leaving a folder without a sheet, reading a sheet as a support document, reading the README for the layout, deleting a file to tidy up.
+    - **locator**: 7lm@origin/main:L8/L6/7lm-field-guide.md:553-557,572-574,592-600
+    - **quote**: **HOA.** Human-only actions: the owner's marker for a step a person takes and nothing else does.
+  - item 61
+    - **id**: F61
+    - **kind**: rule
+    - **statement**: Section 11 procedures that govern exemplar content at L7 use generic numbering peer-N/object-M: bind an external definition at L7/peering/public/ingress/peer-N/object-M/ with a binding record only; one row at L7/provenance/sources/; rights conditions once at L7/governance/copyright/; a released writing's release identity goes to L7/allications/publications/ (the current name, not L7/publications/).
+    - **locator**: 7lm@origin/main:L8/L6/7lm-field-guide.md:502-506,521
+    - **quote**: If it is released, its release identity goes to `L7/allications/publications/`.
+  - item 62
+    - **id**: F62
+    - **kind**: tree
+    - **statement**: L8/L6/0.md on main: the layer sheet lists, as held at L6, the field guide (as the source an adopter takes), the sheet templates, three history files, the inbox, and three retired sets; its directory structure draws history/, in/ and retired/. It does not state the hard rule that the guides share no history and does not mention mirroring or the exemplars beyond the standard 'Exemplars (by reference)' paragraph.
+    - **locator**: 7lm@origin/main:L8/L6/0.md:39-42,74-82,97-99
+    - **quote**: The exemplars fill in the layers by reference and are not merged into this scaffold; their layouts do not control the architecture.
+- **checklist**
+  - item 1
+    - **step**: 1. Order of work: scaffold first and alone; exemplars follow by hand, when the owner judges the scaffold close
+    - **detail**: The other repositories mirror aybllc/7lm by hand. No automated push exists; every step is HOA (a person's).
+    - **locator**: 7lm@origin/main:L8/L6/7lm-field-guide.md:608,610
+  - item 2
+    - **step**: 2. Root
+    - **detail**: README.md, L7/, L8/; may also hold .github/ (the one CI workflow) and .gitignore; nothing else. The layer lists (line 415) and the scaffold README (line 13) omit .gitignore; the specification (line 281) and the CI admit it, and both exemplars have one.
+    - **locator**: 7lm@origin/main:L8/L6/7lm-field-guide.md:371
+  - item 3
+    - **step**: 3. Keep the whole canonical tree
+    - **detail**: Copy the full layout; folders not needed stay empty. No canonical folder may be removed or renamed; nothing may be added at the root. Current L7 names are allications/ (publications, applications, communications, specifications, notifications, participations) and governance/controlled/.
+    - **locator**: 7lm@origin/main:L8/L6/7lm-field-guide.md:377-451,478,496
+  - item 4
+    - **step**: 4. A sheet in every folder, first line the path
+    - **detail**: Every folder has a 0.md whose first line is the folder's own path from the root, e.g. '# L8/L3/engineering-mathematics/'. These two things are not design choices; dropping either puts the repository outside the system.
+    - **locator**: 7lm@origin/main:L8/L6/7lm-field-guide.md:455; L8/L6/7lm-sheet-templates.md:3
+  - item 5
+    - **step**: 5. Sheet body is the owner's design choice
+    - **detail**: Everything after the first line is a design choice. Recommendation for a layer's own sheet: at least one sentence more than the layer's number. Choose a degree (minimal, standard, full) and use the templates; keep the first line exact. The scaffold's full-degree sheets bind no one else's; keeping them is one choice.
+    - **locator**: 7lm@origin/main:L8/L6/7lm-sheet-templates.md:3,5,7; L8/L6/7lm-field-guide.md:457,496
+  - item 6
+    - **step**: 6. Blank sheets beneath a layer are allowed
+    - **detail**: A sheet beneath a layer may be the first line and nothing else. It passes the CI and is an audit exception for HOA review, listed in a collecting document that is not built yet. A missing sheet is not the same thing: that folder is outside the system.
+    - **locator**: 7lm@origin/main:L8/L6/7lm-sheet-templates.md:39,45; L8/L6/7lm-field-guide.md:457,600
+  - item 7
+    - **step**: 7. Own folders under canonical positions
+    - **detail**: Allowed for the repository's own material; give each a 0.md. The CI reports a missing one without failing.
+    - **locator**: 7lm@origin/main:L8/L6/7lm-field-guide.md:474
+  - item 8
+    - **step**: 8. in/ is optional at any position
+    - **detail**: An inbox for what belongs to a position and is not yet worked into it; never required; carries a 0.md. If the layer itself is unknown, use the catch-all L8/L5/research/review/ instead.
+    - **locator**: 7lm@origin/main:L8/L6/7lm-field-guide.md:476,527
+  - item 9
+    - **step**: 9. Prior states: retire, do not correct
+    - **detail**: Make a dated set under L8/L6/retired/, put prior files at their old relative paths unchanged (headings uncorrected), give the set its own 0.md, record the retirement in L8/L6/history/. The CI checks only the set's own sheet.
+    - **locator**: 7lm@origin/main:L8/L6/7lm-field-guide.md:480,531-534
+  - item 10
+    - **step**: 10. Deletion only after enumeration
+    - **detail**: Retire only what integrity needs to rebuild the past (the owner's authored documents, rule texts of a prior layout, error records). Anything else superseded is enumerated in the record at L8/L6/history/ and then deleted. The CI does not enforce no-deletion.
+    - **locator**: 7lm@origin/main:L8/L6/7lm-field-guide.md:536,592; .github/workflows/integrity.yml:3-5
+  - item 11
+    - **step**: 11. No history crosses between repositories
+    - **detail**: The tree and the sheets travel; the scaffold's L6 never does. Each repository's history stays in its own L6. Any guide an adopter publishes carries the model, not any repository's past.
+    - **locator**: 7lm@origin/main:L8/L6/7lm-field-guide.md:9,554,610
+  - item 12
+    - **step**: 12. One CI check, the same everywhere
+    - **detail**: .github/workflows/integrity.yml: fails on conflict markers, a non-canonical root, a sheet not headed by its path, a canonical position without a sheet; reports other folders without a sheet; moves nothing. Main's version still accepts USO/ or L8/; beta's requires L8 and uppercase L0-L6.
+    - **locator**: 7lm@origin/main:L8/L6/7lm-field-guide.md:463-470; .github/workflows/integrity.yml:17-61
+  - item 13
+    - **step**: 13. Before copying from an exemplar, read the specification's 'Not yet as stated'
+    - **detail**: The specification lists for each exemplar what does not yet match, including that both desks carry the former L7 names (publications/ direct, governance/restrictions/) and the L7 restructure is not yet mirrored. The field guide's own summary at line 620 omits that sentence.
+    - **locator**: 7lm@origin/main:L8/L6/7lm-field-guide.md:618-622; L8/L4/work/writing/7lm-harmonized-architecture-specification.md:950,958
+  - item 14
+    - **step**: 14. Treat the layer lists as a proposal, not a source
+    - **detail**: They sit in the L6 inbox, the specification controls where they differ, and 18 of 102 checked bullets are not plain restatements of the sheets or specification (lines 50, 93, 176, 177, 228, 229, 230, 231, 264, 310, 316, 320, 356, 388, 400, 404, 414, 415). Mirror from the sheets and the specification.
+    - **locator**: 7lm@origin/main:L8/L6/in/7lm-layer-lists.md:3,5
+- **open_questions**
+  - Which state is the model to mirror? On origin/main nothing but the layer-lists file changed since 2e5a6d6; the substantive changes (beta R1-R6 corrections and research-housing guidance, PR #20's field-guide retirement) are unmerged. Mirroring main means mirroring the 2026-09-20 scaffold; the owner has not said in anything I read whether beta or PR #20 is to be merged first.
+  - The layer lists have no section headed 'open for the owner'. If the task expected such a section, it is not found in L8/L6/in/7lm-layer-lists.md on origin/main; the only explicit owner's call there is where the document sits (line 5).
+  - Is .gitignore admitted at the root? The specification (line 281), the CI and the field guide (line 371) say yes; the scaffold README (line 13) and the layer lists (line 415) say the root holds README.md, L7/, L8/, .github/ 'and nothing else'. Both exemplars have a .gitignore on origin/main.
+  - Is in/ a canonical position? L8/L6/0.md draws in/0 in its directory structure and the layer lists file it under 'Canonical positions beneath it'; the specification tree, L8/0.md, the field guide tree and the CI canon list do not include it. Whether the exemplars should gain L8/L6/in/ when mirrored is not settled by these texts (the guide says it is never required).
+  - If PR #20 merges, should the layer lists be re-sourced? Six bullets or clauses rest only on field-guide wording (lines 176, 229, 230, 388, 400, 404), and the retired set's sheet would declare such sentences 'not current'. Nothing I read decides this.
+  - If beta merges, the layer lists carry superseded wording at lines 48, 53, 225, 231, 391, 404, 412. Neither beta nor PR #20 contains or mentions the layer lists, so no branch records how they are to be reconciled.
+  - The record's open item on L7/provenance/lineage/ (record line 448: either the scaffold's own lineage sheet is the one deliberate blank, or the push blanks it on the way out) is unresolved and bears on what an exemplar's lineage sheet should say; the layer lists (line 356) repeat 'HOA input only' without the open item. Auditonomous holds a session-provenance record at lineage/ per the specification (line 954).
+  - The scaffold's L6 has no record entry for PR #21 and L8/L6/0.md line 79 still lists three inbox items, not four. Whether that is deliberate under record section 36 ('Don't change the system unless you ask or are unsure') or an omission to be recorded is the owner's call.
+  - I did not verify beta's research-probe files, the .docx, or the JSON (excluded by the task), nor PR #19 or the audit branch; statements about them here come only from PR #20's record sections 39-40 and beta's specification-history entry.

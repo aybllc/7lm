@@ -1,0 +1,122 @@
+# audit:autonomous:b04-peering-public-a
+
+Agent result, as returned. Workflow: Sheet audit, Autonomous. Run `wf_8e13ec8e-47f`. Phase: Audit. Checked in 2026-11-11 19:51 UTC.
+
+- **sheets_audited**
+  - L7/peering/public/0.md
+  - L7/peering/public/egress/0.md
+  - L7/peering/public/egress/peer-1/0.md
+  - L7/peering/public/egress/peer-1/object-1/0.md
+  - L7/peering/public/ingress/0.md
+  - L7/peering/public/ingress/peer-1/0.md
+  - L7/peering/public/ingress/peer-1/object-1/0.md
+  - L7/peering/public/ingress/peer-2/0.md
+  - L7/peering/public/ingress/peer-2/object-1/0.md
+  - L7/peering/public/ingress/peer-2/object-2/0.md
+  - L7/peering/public/ingress/peer-3/0.md
+  - L7/peering/public/ingress/peer-3/object-1/0.md
+  - L7/peering/public/ingress/peer-4/0.md
+  - L7/peering/public/ingress/peer-4/object-1/0.md
+  - L7/peering/public/ingress/peer-4/object-2/0.md
+- **findings**
+  - item 1
+    - **id**: b04-01
+    - **kind**: CONTRADICTION
+    - **sheet**: L7/peering/public/0.md
+    - **line**: 42
+    - **sheet_says**: "The source side is exemplified at L7/peering/public/egress/; the receiving side at L7/peering/public/ingress/."
+    - **truth**: In this repository only the source side of the originating case is held, at L7/peering/public/egress/peer-1/ (the definition as exposed to aybllc/auditonomous). The receiving side is auditonomous's own L7/peering/public/ingress/peer-1/object-1/. This repository's L7/peering/public/ingress/ holds peers 1-9, the nine issuing bodies, and its own sheet says the receiving side is not here.
+    - **evidence**: L7/peering/public/ingress/0.md:12: "In the specification's originating case the receiving side is auditonomous, not this repository"; :55: "This repository is the Autonomous side of that rule: what enters here are the issuing bodies' codified definitions (peer-1 … peer-9)". L7/peering/public/egress/peer-1/object-1/0.md:15: "the peer binds it reference-only (NO EDIT, NO DELETE) at its `L7/peering/public/ingress/peer-1/object-1/`". Specification line 936: "The binding of the Autonomous definition at Auditonomous's L7/peering/public/ingress/peer-1/object-1/ … Autonomous exposes the definition at its L7/peering/public/egress/peer-1/." `git ls-tree -d --name-only 8257118 L7/peering/public/ingress/` lists peer-1 … peer-9 only. The sentence is the scaffold's generic one (true of the position in the receiving repository); it also stands at L7/peering/0.md:14, outside this batch.
+    - **exact_fix**: Replace the last sentence of line 42 with: "The source side is exemplified here, at L7/peering/public/egress/peer-1/; the receiving side is `aybllc/auditonomous`, at its own L7/peering/public/ingress/peer-1/object-1/. This repository's L7/peering/public/ingress/ binds the issuing bodies' definitions and is not the receiving side of this case."
+  - item 2
+    - **id**: b04-02
+    - **kind**: STALE
+    - **sheet**: L7/peering/public/egress/peer-1/object-1/0.md
+    - **line**: 10, 13
+    - **sheet_says**: Line 10: "(at commit `0504961` and before this pass: `research/definitions/AUTONOMOUS.md`)". Line 13: "after this pass the same object sits at `L8/L0/semantics/definitions/AUTONOMOUS.md`".
+    - **truth**: "This pass" is the topology pass of 2026-09-05, in which the two sentences were written; three later commits have touched the sheet. That pass put the object at USO/l0/semantics/definitions/AUTONOMOUS.md. The L8/L0/ path dates from the rename pass of 2026-09-12, which rewrote the path inside the sentence and left "this pass" standing.
+    - **evidence**: `git log 8257118 --follow --name-status -- L8/L0/semantics/definitions/AUTONOMOUS.md`: b49deb0 2026-09-05 R100 research/definitions/AUTONOMOUS.md -> USO/l0/semantics/definitions/AUTONOMOUS.md; 4e19369 2026-09-12 R100 USO/l0/… -> L8/L0/…. The sheet at b49deb0 read "after this pass the same object sits at `USO/l0/semantics/definitions/AUTONOMOUS.md`"; the diff of 4e19369 changes only the path token on lines 10 and 13. Record L8/L6/history/harmonization-2026-09-05.md:11 ("Because this pass moves the object"), :44 (the move to USO/l0/semantics/definitions/), :175 (USO/ is L8/). The facts beside the phrase hold: 0504961 is "Update RULINGS.md", research/definitions/AUTONOMOUS.md exists there, and its blob ffbdc28 is the blob at 8257118:L8/L0/semantics/definitions/AUTONOMOUS.md.
+    - **exact_fix**: Line 10 value: "[source text withheld from the public copy]` (at the bound commit `0504961`: `research/definitions/AUTONOMOUS.md`)". Line 13 value: "bound by the peer at commit `0504961` ("Update RULINGS.md"); the same object, unchanged, sits at `L8/L0/semantics/definitions/AUTONOMOUS.md` — a later binding on the receiving side names the new path beside its old record; nothing here mutates the bound version".
+  - item 3
+    - **id**: b04-03
+    - **kind**: WRONG-FACT
+    - **sheet**: L7/peering/public/ingress/peer-1/object-1/0.md
+    - **line**: 25
+    - **sheet_says**: "`L8/L0/semantics/definitions/AUTONOMOUS.md` §1 row A1 names this binding."
+    - **truth**: Row A1 does not name this binding or this position. The naming runs one way: this record names row A1 (its Ingress binding field). The row carries the body, the designation and clause, the verbatim text, the deliverable and the label, and no pointer to L7.
+    - **evidence**: Row A1 is line 70 of 8257118:L8/L0/semantics/definitions/AUTONOMOUS.md. The §1 table (header, line 68) has six columns, "# | [source text withheld from the public copy]", none for a binding. `git show 8257118:L8/L0/semantics/definitions/AUTONOMOUS.md | grep -c -i -E 'peering|L7/|ingress|peer-[0-9]|object-[0-9]'` returns 0. The file's blob ffbdc28 is the blob of research/definitions/AUTONOMOUS.md at 0504961 (2026-08-14), unchanged since before the bindings were written (b49deb0, 2026-09-05). The same sentence stands in all eleven public-ingress object sheets (`git grep -c 'names this binding' 8257118` gives 11 files).
+    - **exact_fix**: Replace the first sentence of line 25 with: "`L8/L0/semantics/definitions/AUTONOMOUS.md` §1 row A1 is the receiving side of this binding; the row carries no pointer to this position, and the link is stated here and in `L8/L0/semantics/definitions/0.md`."
+  - item 4
+    - **id**: b04-04
+    - **kind**: WRONG-FACT
+    - **sheet**: L7/peering/public/ingress/peer-2/object-1/0.md
+    - **line**: 25
+    - **sheet_says**: "`L8/L0/semantics/definitions/AUTONOMOUS.md` §1 row A2 names this binding."
+    - **truth**: Row A2 does not name this binding or this position; this record names row A2, not the reverse.
+    - **evidence**: Row A2 is line 71 of the L0 object; six columns, none for a binding. The same grep as b04-03 (peering|L7/|ingress|peer-N|object-N) returns 0 for the whole file; blob ffbdc28 is unchanged since 0504961.
+    - **exact_fix**: Replace the first sentence of line 25 with: "`L8/L0/semantics/definitions/AUTONOMOUS.md` §1 row A2 is the receiving side of this binding; the row carries no pointer to this position, and the link is stated here and in `L8/L0/semantics/definitions/0.md`."
+  - item 5
+    - **id**: b04-05
+    - **kind**: WRONG-FACT
+    - **sheet**: L7/peering/public/ingress/peer-2/object-2/0.md
+    - **line**: 25
+    - **sheet_says**: "`L8/L0/semantics/definitions/AUTONOMOUS.md` §1 row A3 and §3 / §3a names this binding."
+    - **truth**: Neither row A3 nor §3 / §3a names this binding or this position; this record names them, not the reverse.
+    - **evidence**: Row A3 is line 72 of the L0 object, §3 begins at line 134 and §3a at line 179. The same grep as b04-03 returns 0 for the whole file; blob ffbdc28 is unchanged since 0504961.
+    - **exact_fix**: Replace the first sentence of line 25 with: "`L8/L0/semantics/definitions/AUTONOMOUS.md` §1 row A3 and §3 / §3a are the receiving side of this binding; they carry no pointer to this position, and the link is stated here and in `L8/L0/semantics/definitions/0.md`."
+  - item 6
+    - **id**: b04-06
+    - **kind**: WRONG-FACT
+    - **sheet**: L7/peering/public/ingress/peer-3/object-1/0.md
+    - **line**: 25
+    - **sheet_says**: "`L8/L0/semantics/definitions/AUTONOMOUS.md` §1 row A4 names this binding."
+    - **truth**: Row A4 does not name this binding or this position; this record names row A4, not the reverse.
+    - **evidence**: Row A4 is line 73 of the L0 object; six columns, none for a binding. The same grep as b04-03 returns 0 for the whole file; blob ffbdc28 is unchanged since 0504961.
+    - **exact_fix**: Replace the first sentence of line 25 with: "`L8/L0/semantics/definitions/AUTONOMOUS.md` §1 row A4 is the receiving side of this binding; the row carries no pointer to this position, and the link is stated here and in `L8/L0/semantics/definitions/0.md`."
+  - item 7
+    - **id**: b04-07
+    - **kind**: WRONG-FACT
+    - **sheet**: L7/peering/public/ingress/peer-4/object-1/0.md
+    - **line**: 25
+    - **sheet_says**: "`L8/L0/semantics/definitions/AUTONOMOUS.md` §1 row A5 names this binding."
+    - **truth**: Row A5 does not name this binding or this position; this record names row A5, not the reverse.
+    - **evidence**: Row A5 is line 74 of the L0 object; six columns, none for a binding. The same grep as b04-03 returns 0 for the whole file; blob ffbdc28 is unchanged since 0504961.
+    - **exact_fix**: Replace the first sentence of line 25 with: "`L8/L0/semantics/definitions/AUTONOMOUS.md` §1 row A5 is the receiving side of this binding; the row carries no pointer to this position, and the link is stated here and in `L8/L0/semantics/definitions/0.md`."
+  - item 8
+    - **id**: b04-08
+    - **kind**: WRONG-FACT
+    - **sheet**: L7/peering/public/ingress/peer-4/object-2/0.md
+    - **line**: 25
+    - **sheet_says**: "`L8/L0/semantics/definitions/AUTONOMOUS.md` §1 row A11 names this binding."
+    - **truth**: Row A11 does not name this binding or this position; this record names row A11, not the reverse.
+    - **evidence**: Row A11 is line 80 of the L0 object; six columns, none for a binding. The same grep as b04-03 returns 0 for the whole file; blob ffbdc28 is unchanged since 0504961.
+    - **exact_fix**: Replace the first sentence of line 25 with: "`L8/L0/semantics/definitions/AUTONOMOUS.md` §1 row A11 is the receiving side of this binding; the row carries no pointer to this position, and the link is stated here and in `L8/L0/semantics/definitions/0.md`."
+  - item 9
+    - **id**: b04-09
+    - **kind**: WRONG-FACT
+    - **sheet**: L7/peering/public/ingress/peer-4/object-1/0.md
+    - **line**: 21
+    - **sheet_says**: "It fixes which referent row A5 of `L8/L0/semantics/definitions/AUTONOMOUS.md` means: the issuer, the clause, the deliverable type, and the version, so that the verbatim quotation carried in that row can be checked against the same object again."
+    - **truth**: For row A5 no clause is fixed: the clause number is unknown. The quotation was taken from two IEEE-RAS decks and never read from the standard, so there is no earlier check against the standard to repeat. The sentence is the template used in every ingress object record; it holds for the other five records in this batch, which each give a clause.
+    - **evidence**: Same sheet, line 10: Object identity "[source text withheld from the public copy]*" (no clause); line 15: "body paywalled and unread; [source text withheld from the public copy]". L0 object line 74 (row [source text withheld from the public copy]**"; lines 235-236: "[source text withheld from the public copy].**"; line 305: "**[source text withheld from the public copy]`".
+    - **exact_fix**: "It fixes which referent row A5 of `L8/L0/semantics/definitions/AUTONOMOUS.md` means: the issuer, the entry (*fully autonomous robot*; its clause number is unknown), the deliverable type, and the version, so that the quotation carried in that row can be checked against the standard once its body is obtained."
+- **clean_sheets**
+  - L7/peering/public/egress/0.md
+  - L7/peering/public/egress/peer-1/0.md
+  - L7/peering/public/ingress/0.md
+  - L7/peering/public/ingress/peer-1/0.md
+  - L7/peering/public/ingress/peer-2/0.md
+  - L7/peering/public/ingress/peer-3/0.md
+  - L7/peering/public/ingress/peer-4/0.md
+- **could_not_check**
+  - L7/peering/public/egress/peer-1/0.md:8 — the quoted words "relies upon": no source is named, and the words occur nowhere else in this repository at 8257118, in the specification, or in the scaffold at origin/main.
+  - L7/peering/public/egress/peer-1/object-1/0.md:13 — "a later binding on the receiving side names the new path beside its old record": a statement about aybllc/auditonomous, which this audit does not read. The record (L8/L6/history/harmonization-2026-09-05.md:11) words it as future ("will name"), and the specification, line 958, says the peer's binding [source text withheld from the public copy] that "rebinding to a current version is the owner's act".
+  - L7/peering/public/egress/peer-1/object-1/0.md:15 — that the peer binds the object "as its only source for the definition of *autonomous*": the position agrees with the specification (line 936), but the specification, line 958, also says "three files still take a definition of autonomous from somewhere other than the binding"; the peer's tree was not read.
+  - L7/peering/public/egress/peer-1/object-1/0.md:17 — "both repositories INTERNAL": repository visibility is not recorded in the tree.
+  - L7/peering/public/egress/peer-1/object-1/0.md:21 — the unattributed quotation "authority ≠ validation; definition import ≠ scientific derivation.": not in the current specification (which contains no "≠") and nowhere else in this repository at 8257118. The scaffold's record L8/L6/history/sheets-2026-09-07.md:11 gives the words in the other order ("definition import ≠ scientific derivation; authority ≠ validation") as the invariant of auditonomous's `uso/autonomous/LEDGER.md`, a file it says did not exist at auditonomous@280226a. The sheet does not say whose words they are, so it is not reported as a MISQUOTE; every other unattributed quotation in this batch is the specification's, verbatim.
+  - L7/peering/public/ingress/peer-2/object-2/0.md:17 — "`aybllc/l6` now holds the genuine full text as STD-025 … (its `consider-l6.md`)": statements about aybllc/l6. L7/governance/copyright/0.md:43 says the same of STD-025, but the pointer register L7/provenance/sources/LEDGER.md (121 rows, S-001 … S-121) has no row for ISO/IEC 22989 and no ID STD-025, and no file named consider-l6.md exists in this repository or its history.
+  - L7/peering/public/ingress/peer-2/object-2/0.md:15 and :25 — "evidence label as recorded: [source text withheld from the public copy] "The row's label … travels unchanged": row A3 (L0 object line 72) carries two labels, the downgrade in its Designation cell and "`VERIFIED` · custody open, see §5" in its Label cell. Which is the label as recorded is the L0 object's own unresolved inconsistency.
+  - L7/peering/public/ingress/peer-4/0.md:8 — the owner's words "the cleanest version of 7LM trying to define autonomous using ingress IEEE": the phrase is in no record at L8/L6/history/, nowhere else in this repository at 8257118, not in the specification, and not in the scaffold at origin/main.
+  - L7/peering/public/ingress/peer-4/object-1/0.md:12 and peer-4/object-2/0.md:12 — "International Standard (IS)" for the two IEEE deliverables: rows A5 and A11 print only "IS", and no legend in the repository says what the code abbreviates for an IEEE standard.
+  - Line 21 of all six ingress object records — "this repository's own contribution is only §6 of the L0 object, labelled INTERNALLY DERIVED": the L0 object also carries an `INTERNALLY DERIVED` pattern note inside §1 (lines 95-102) and unlabelled analysis in §0, §2 and §3. "Contribution" is not defined, so whether the sentence is exact was not decided.
+- **statements_checked**: 404

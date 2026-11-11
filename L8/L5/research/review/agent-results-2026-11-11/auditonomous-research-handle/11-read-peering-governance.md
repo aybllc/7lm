@@ -1,0 +1,570 @@
+# read:peering-governance
+
+Agent result, as returned. Workflow: Handle on the Auditonomous research and manuscript. Run `wf_9c2917a7-7f0`. Phase: Read. Checked in 2026-11-11 19:51 UTC.
+
+- **scope**: The rest of the desk of aybllc/auditonomous: L7/0.md, L7/peering (all peers and objects), L7/governance (all sheets), L7/publications (sheets and the three binder READMEs) on MAIN (origin/main 2165144); the L7 diff MAIN -> BETA (origin/beta/7lm-exemplar-auditonomous 714480d); the peer-3 object on ROADMAP (origin/claude/book-structure-roadmap-k8ap82 9259c18). Cross-references followed only where a sheet named them: the l6 pointer LEDGER (row and Access tallies), the IEEE staging README and SOURCE_LEDGER rule IL-001-R2, the 2026-08-16 history queue, the autonomous-side egress sheets, and the 7lm model's L7 layout. Read only from git objects; nothing changed. Scratch: /tmp/claude-0/-home-user/bfcfd013-a2da-5019-961e-7f46116f08be/scratchpad/wf-handle/desk/
+- **summary**: The desk holds eight peering positions, one statement of copyright conditions, and a publications binder containing rules only. Nothing has been released in any of the three states: the press-kit and internal folders hold a README each, public egress is empty, and all six release-checklist boxes are unticked.
+
+  Bindings. One binding is pinned to a commit I could confirm: the definition of "autonomous" from aybllc/autonomous at 0504961 (commit exists; the file's bytes are unchanged on that repository's main and beta, at a new path). BETA adds a second pinned object (a finite computation result at autonomous 805cd42, architecture 7lm 4ca3edb); both commits exist and both SHA-256 values match, but both commits live only on unmerged beta branches. The archive binding (aybllc/l6) and the closed transfer to it cite commits that cannot be confirmed here because no l6 clone exists. Three bindings have no version pinned at all: the eb-audit departure protocol, the ebios repository with the Martin 2026 manuscript, and the pending Third Power Corpus transfer, which waits on an owner decision.
+
+  Governance. Every condition is stated once, in the copyright sheet: WSU-licensed IEEE files are hold-private (quotations may travel, files may not), the ISO/IEC 22989 captures derive from a withdrawn third-party copy and are not yet re-verified, and one full-text paper copy has no licence recorded. Licensing, patents, permissions and restrictions hold nothing. No licence instrument is filed.
+
+  Layout against the model. MAIN and ROADMAP still file publications/ and governance/restrictions/; the Seven-Layer Model's own main has used allications/ and governance/controlled/ since 20 September. BETA makes those moves. A local session commit dated today (f2d5b37) also makes them; it is outside the named states.
+
+  Record errors. MAIN says the source ledger has 62 rows; it has 60 (BETA corrects this). MAIN's publications sheet says a harmonized specification is filed in the writing folder; none is. The release checklist names two paths that no longer exist.
+
+  What blocks a first release: no item has been put through the checklist, the checklist's own paths are stale, unpinned bindings sit under the definition, the prior-art search is unrun, and personal paths remain in fifteen files including the definition.
+- **items**
+  - item 1
+    - **id**: D-01
+    - **title**: The desk sheet L7/0.md and its layout against the Seven-Layer Model
+    - **path**: L7/0.md
+    - **where**: MAIN, ROADMAP (old layout); BETA (new layout)
+    - **what_it_is**: The sheet for the whole desk: quotes the model's rules for L7, lists the four branches, and gives a Holdings paragraph naming every binding and saying nothing is released.
+    - **own_label**: "Every binding is reference-only."
+    - **evidence_state**: CONTRADICTED - MAIN and ROADMAP quote and file a layout the model no longer has; BETA matches the model
+    - **checked_how**: Compared directory listings: 7lm origin/main and origin/beta both have L7/allications/{publications,applications,communications,specifications,notifications,participations} and L7/governance/controlled (7lm merge 0d1ec40, 2026-09-20, 'the L7 restructure, allications and controlled'). Auditonomous MAIN and ROADMAP have L7/publications and L7/governance/restrictions. BETA renames both and adds five empty capability sheets. autonomous origin/main is also on the old layout; its beta is on the new one.
+    - **quote**: "Canonical direct L7 branches are L7/provenance/, L7/governance/, L7/peering/, and L7/publications/."
+    - **locator**: MAIN:L7/0.md:14 ; BETA:L7/0.md:14 ; 7lm origin/main:L8/L4/work/writing/7lm-harmonized-architecture-specification.md:46
+    - **key_claims**
+      - MAIN holdings line: public egress 'nothing released'; publications 'no released object exists' (MAIN:L7/0.md:222-223)
+      - Machine metadata 'Not instantiated in this repository' - no automation or validation enabled (MAIN:L7/0.md:27)
+    - **open_items**
+      - MAIN and ROADMAP must move publications/ under allications/ and rename restrictions/ to controlled/ to match the model; BETA already does
+      - Which 7lm commit the layout is to follow is not settled: BETA pins 4ca3edb, 7lm beta head is 97314c5, 7lm main is c9dc061 (2026-11-11)
+    - **depends_on**
+      - B-02
+  - item 2
+    - **id**: B-01
+    - **title**: Binding: public ingress, peer-1 (aybllc/autonomous), object-1 - the definition of 'autonomous'
+    - **path**: L7/peering/public/ingress/peer-1/object-1/0.md
+    - **where**: MAIN, ROADMAP (identical); BETA (amended)
+    - **what_it_is**: Direction ingress, exposure public. Binds aybllc/autonomous:research/definitions/AUTONOMOUS.md at commit 0504961 as the only source for the definition of 'autonomous'. No file of the peer is held.
+    - **own_label**: "bound; reference-[source text withheld from the public copy]"
+    - **evidence_state**: INTERNALLY CHECKED - the pin is confirmed; the definition's content is the peer's and carries the peer's own unverified label
+    - **checked_how**: git cat-file -t 0504961 in /home/user/autonomous returns commit (050496161a84..., 2026-08-14, 'Update RULINGS.md'). The file exists at that commit; its blob ffbdc28 is identical on autonomous origin/main and beta at L8/L0/semantics/definitions/AUTONOMOUS.md. I recomputed SHA-256 2756661749c3... and 22,735 bytes, matching BETA's 'Exact bytes' row. 0504961 is an ancestor of autonomous origin/main (23 commits behind).
+    - **quote**: "Auditonomous gets the definitions of autonomous from Autonomous and nowhere else. — owner, 2026-09-05"
+    - **locator**: MAIN:L7/peering/public/ingress/peer-1/object-1/0.md:13 (version), :24 (owner quote) ; BETA same path :13, :17-19
+    - **key_claims**
+      - The bound object is eleven codified definitions A1-A11 plus a local rule-set labelled '[source text withheld from the public copy]' (MAIN :28)
+      - The peer's own REVIEW_4 (2026-08-08) 'recorded CRITICAL defects in that rule-set' (MAIN :28)
+      - Governance: 'the peer repository belongs to the same owner and is INTERNAL; no public licence question arises' (MAIN :18)
+    - **open_items**
+      - MAIN: 'Provenance row | none yet' (:17) - BETA adds row AUT-SOURCE-001 (BETA:L7/provenance/sources/LEDGER.md:153)
+      - MAIN: 'Three files at HEAD still take a definition of autonomous from somewhere other than this binding' (:34); BETA says they now carry dispositions (:36) - not checked by me, outside scope
+      - The peer has moved the file; the bound path research/definitions/AUTONOMOUS.md no longer exists on autonomous main. BETA records the new path as a 'Convenience location' without rebinding
+    - **depends_on**: (empty)
+  - item 3
+    - **id**: B-02
+    - **title**: Binding: public ingress, peer-1 (aybllc/autonomous), object-2 - finite computation result (BETA only)
+    - **path**: L7/peering/public/ingress/peer-1/object-2/binding.json
+    - **where**: BETA
+    - **what_it_is**: Direction ingress, exposure public (by position only). A machine-readable pin of the Autonomous beta code and result that the Auditonomous beta envelope computation uses: producer commit 805cd42, architecture commit 4ca3edb (aybllc/7lm), two SHA-256 values.
+    - **own_label**: "status": "pinned"
+    - **evidence_state**: INTERNALLY CHECKED - both commits and both hashes confirmed; neither commit is on a merged branch
+    - **checked_how**: 805cd42f0736... exists in /home/user/autonomous (2026-11-02), is an ancestor of origin/beta/7lm-exemplar-autonomous and NOT of autonomous origin/main. I recomputed sha256 of autonomous_beta.py (427409b3...) and autonomous_beta_result.json (e6ad0564...) at 805cd42: both match. 4ca3edb9172c... exists in /home/user/7lm (2026-11-02), is an ancestor of 7lm origin/beta/common-contracts-r1-r6 (one commit behind its head 97314c5) and NOT of 7lm origin/main. The autonomous-side egress binding.json (autonomous beta, L7/peering/public/egress/peer-1/object-2/) carries the same four values.
+    - **quote**: "Private/internal visibility remains unchanged despite the inherited public ingress topology position; no source is published."
+    - **locator**: BETA:L7/peering/public/ingress/peer-1/object-2/binding.json:3-11 ; BETA:L7/peering/public/ingress/peer-1/object-2/0.md:8
+    - **key_claims**
+      - 'All actual dependency bytes are checked before import. Missing dependency or identity mismatch fails closed' (BETA 0.md:6) - a claim about the L4 code, not checked by me
+      - 'Complete Auditonomous meaning, empirical/firmware achievement and SGI implementation remain unproved.' (BETA 0.md:10)
+    - **open_items**
+      - The pin points at two unmerged beta branches; if either beta is rebased or abandoned the pin has no merged home
+      - The architecture pin 4ca3edb is behind 7lm beta head (97314c5) and is not contained in 7lm main (c9dc061)
+    - **depends_on**
+      - B-01
+  - item 4
+    - **id**: B-03
+    - **title**: Not bound: aybllc/autonomous AUTOMATION.md and REGISTER.md
+    - **path**: L7/peering/public/ingress/peer-1/0.md
+    - **where**: MAIN, ROADMAP, BETA (sheet unchanged in all three)
+    - **what_it_is**: The peer sheet says two further objects of the peer that this repository references would be object-2 and object-3 on the owner's instruction, and that neither is bound.
+    - **own_label**: "none is bound at this pass"
+    - **evidence_state**: UNRESOLVED
+    - **checked_how**: Read the sheet in MAIN and BETA. Both files exist in autonomous at 0504961 (research/definitions/AUTOMATION.md, REGISTER.md) and on autonomous main under L8/L0/semantics/definitions/.
+    - **quote**: "would be `object-2/` and `object-3/` on the owner's instruction; none is bound at this pass."
+    - **locator**: MAIN:L7/peering/public/ingress/peer-1/0.md:22 ; BETA same path :22
+    - **open_items**
+      - Owner instruction needed to bind them
+      - In BETA the object-2 number is now taken by a different object (see B-02 and defects)
+    - **depends_on**
+      - B-01
+  - item 5
+    - **id**: B-04
+    - **title**: Binding position: public egress, peer-1, object-1 - empty
+    - **path**: L7/peering/public/egress/peer-1/object-1/0.md
+    - **where**: MAIN, ROADMAP, BETA
+    - **what_it_is**: The position for something this repository exposes publicly to a peer. Nothing is filed.
+    - **own_label**: "Nothing is filed at this position; the position is admissible and empty."
+    - **evidence_state**: EMPTY
+    - **checked_how**: ls-tree of L7/peering/public/egress in all three states shows only 0.md sheets.
+    - **quote**: "No released object exists (`L7/publications/binder/press-kit/README.md` is an unfilled checklist)."
+    - **locator**: MAIN:L7/peering/public/egress/0.md:31 ; MAIN:L7/peering/public/egress/peer-1/object-1/0.md:26
+    - **open_items**
+      - The autonomous repository's matching position is filled (it exposes the definition to this repository); this repository exposes nothing in return
+  - item 6
+    - **id**: B-05
+    - **title**: Binding: private ingress, peer-1 (aybllc/l6), object-1 - the curated source archive
+    - **path**: L7/peering/private/ingress/peer-1/object-1/0.md
+    - **where**: MAIN, ROADMAP; BETA (row count corrected)
+    - **what_it_is**: Direction ingress, exposure private. Binds the library holdings of the aybllc/l6 archive by pointer rows in L7/provenance/sources/LEDGER.md. No source file is held here.
+    - **own_label**: "bound; pointer-only"
+    - **evidence_state**: ASSERTED for the commits (not confirmable here); the row count on MAIN is CONTRADICTED
+    - **checked_how**: Commits b328334, e4f0d5c and 53b28f6 are not objects in any of the three local clones, and there is no l6 clone, so none can be confirmed. I counted the register on MAIN: 60 [source text withheld from the public copy]); 39 pinned to b328334, 19 to e4f0d5c, 2 with no commit. MAIN sheets say 62.
+    - **quote**: "rows pinned to `l6` commit `b328334`; the 2026-08-16 accession at `e4f0d5c`; archive HEAD at this pass `53b28f6`"
+    - **locator**: MAIN:L7/peering/private/ingress/peer-1/object-1/0.md:13 (version), :10 (62 rows) ; BETA same path :10 (60 archive rows)
+    - **key_claims**
+      - 'A source cited anywhere in this repository without a row in L7/provenance/sources/LEDGER.md is an unledgered citation.' (MAIN :21)
+      - Governance: 'WSU-route items are IL-001-R2 class-2 hold-private' (MAIN :17)
+    - **open_items**
+      - The archive's consider-l6.md lists holdings 'this corpus should ledger'; 'ledgering them is the owner's session' (MAIN :21)
+      - The ledger's 'Not held' table is empty (MAIN:L7/provenance/sources/LEDGER.md:98-100)
+    - **depends_on**
+      - G-01
+  - item 7
+    - **id**: B-06
+    - **title**: Binding: private ingress, peer-2 (aybllc/eb-audit), object-1 - the departure protocol
+    - **path**: L7/peering/private/ingress/peer-2/object-1/auditonomous-departure-protocol.md
+    - **where**: MAIN, ROADMAP, BETA (unchanged)
+    - **what_it_is**: Direction ingress, exposure private. A 296-line reference copy of the '[source text withheld from the public copy] AUR-EB-AUDIT-2026-08-05-01), whose canonical home is aybllc/eb-audit. No commit of the peer is pinned.
+    - **own_label**: "[source text withheld from the public copy]"
+    - **evidence_state**: UNRESOLVED - no version pinned; the copy cannot be compared with its source
+    - **checked_how**: The copy here and the retired copy at L8/L6/retired/layout-2026-09-06/common/durable/orphan/eb-carrier/eb-audit/ are the same blob (99ecb6c), so 'byte-identical' holds between the two local copies. No eb-audit clone exists, so identity with the canonical file is not confirmable.
+    - **quote**: "no commit of the peer is pinned in the file — the owner's next ledgering session pins one"
+    - **locator**: MAIN:L7/peering/private/ingress/peer-2/object-1/0.md:13 ; MAIN:L7/peering/private/ingress/peer-2/object-1/auditonomous-departure-protocol.md:4
+    - **key_claims**
+      - Decomposition x_t = f_t + r_t with [source text withheld from the public copy]); lambda_A is not the EB multiplication parameter (protocol :42-44, :79)
+      - '[source text withheld from the public copy].' (protocol :282)
+      - 'Status: `NOT CHECKED` as a novelty claim.' (protocol :292)
+      - Layer placement in this repository: 'L2 or L3, unresolved' (sheet :21)
+    - **open_items**
+      - Pin a commit of aybllc/eb-audit
+      - 'whether it stays or only the binding remains is the owner's decision' (sheet :16)
+      - Novelty conjunction needs 'separate prior-art adjudication' (protocol :288)
+  - item 8
+    - **id**: B-07
+    - **title**: Binding: private ingress, peer-3 (abba-01/ebios and the Martin 2026 manuscript), object-1
+    - **path**: L7/peering/private/ingress/peer-3/object-1/0.md
+    - **where**: MAIN, BETA (nothing held); ROADMAP (two manuscript files held)
+    - **what_it_is**: Direction ingress, exposure private. Binds, by identity only, the two sources the definition of 'auditonomous' names as defining its meaning: the abba-01/ebios repository (read 2026-07-30) and the Martin 2026 embodied-auditonomy manuscript. No commit and no hash is pinned.
+    - **own_label**: "bound by identity; reference-only; the manuscript is "absent from live trees""
+    - **evidence_state**: UNRESOLVED - no version pinned in any state; on MAIN and BETA the defining manuscript is not in the repository
+    - **checked_how**: MAIN and BETA trees contain no file matching embodied_auditonomy. ROADMAP holds two files whose blobs (ea85100, 29007fc) are identical to HISTORY 1d83788:intake/manuscript/. ROADMAP's sheet still says no hash is pinned. abba-01/ebios is held nowhere.
+    - **quote**: "no commit or manuscript hash is pinned there — the owner's next ledgering session pins them"
+    - **locator**: MAIN:L7/peering/private/ingress/peer-3/object-1/0.md:13,15 ; ROADMAP same path :13,15-16
+    - **key_claims**
+      - The binding 'does not validate eBIOS, LexROM, UHA, OMMP, or any implementation as achieving the properties the word defines' (MAIN :21)
+      - ROADMAP: restored 2026-09-14 'from git `1d83788`'; 'The `abba-01/ebios` repository is still not held' (ROADMAP :15-16)
+    - **open_items**
+      - Pin the manuscript hash and the ebios commit (ROADMAP:L8/L6/history/restore-2026-09-14.md:73 lists this as remaining)
+      - The restoration exists only on ROADMAP, a closed unmerged branch; BETA does not carry it
+    - **depends_on**
+      - B-08
+  - item 9
+    - **id**: B-08
+    - **title**: The peer-3 object itself: 'Embodied Auditonomy, LexROM, and the Cabin Model' v0.2 (ROADMAP only)
+    - **path**: L7/peering/private/ingress/peer-3/object-1/martin_2026_embodied_auditonomy_lexrom_cabin_model_v0.2_ea08f59.md
+    - **where**: ROADMAP; HISTORY (at intake/manuscript/)
+    - **what_it_is**: A 495-line Markdown file (4,075 words) and a 14-page PDF (3,465 words, created 2026-04-29). An intake document dated 2026-04-28 for the eBIOS / EB Carrier repository: a concept architecture for an LLM-driven robot acting only inside a bounded, audited, law-gated action space ('the cabin'). [source text withheld from the public copy] related-noun definition of 'auditonomy'.
+    - **own_label**: "[source text withheld from the public copy]"
+    - **evidence_state**: ASSERTED - a concept draft; two citations from the definition were INTERNALLY CHECKED against it
+    - **checked_how**: Extracted both files from the ROADMAP tree. The definition (MAIN:L8/L0/semantics/definitions/AUDITONOMOUS_DEFINITION.md:74 and :278) cites lines 53 and 365; the held file has the quoted 'Auditonomy' table row at line 53 and the authorship statement at line 365. The file's self-declared content sha256 (7fd260a5...) does not equal the sha256 of the held file (6a717c70...); the declared value refers to a commit ea08f59 in another repository (nu-algebra) that is not available here. pdftotext shows the PDF lacks the self-reference table present in the Markdown.
+    - **quote**: "[source text withheld from the public copy]."
+    - **locator**: ROADMAP:L7/peering/private/ingress/peer-3/object-1/martin_2026_embodied_auditonomy_lexrom_cabin_model_v0.2_ea08f59.md:53 (definition), :11 (status), :8 (assistant role), :343-352 (open questions), :365-367 (authorship boundary)
+    - **key_claims**
+      - '[source text withheld from the public copy]' (:8)
+      - '[source text withheld from the public copy]' (:365)
+      - Lines 379-495 are an 'Assistant Addendum' - assistant-originated by the document's own rule at :367
+      - Eight open questions listed at :345-352 (LexID structure, who signs modules, conflict-resolution math, fail-safe mode, and others)
+    - **open_items**
+      - The Markdown and the PDF are not the same text; which one is the bound version is not recorded
+      - The declared content hash cannot be confirmed from here
+      - The document's own six 'Immediate Next Steps' (:356-361) are not recorded as done anywhere on the desk
+    - **depends_on**
+      - B-07
+  - item 10
+    - **id**: B-09
+    - **title**: Binding: private egress, peer-1 (aybllc/l6), object-1 - the closed source transfer of 2026-08-16
+    - **path**: L7/peering/private/egress/peer-1/object-1/RECONCILIATION_FROM_L6_2026-08-16.md
+    - **where**: MAIN, ROADMAP, BETA (unchanged)
+    - **what_it_is**: Direction egress, exposure private. The receiving-side copy of the l6 reconciliation report: 61 staged PDFs dispositioned (40 already held, 19 newly accessioned at e4f0d5c, 2 held out), 27 working records and the Third Power Corpus declared not l6's to take.
+    - **own_label**: "CLOSED 2026-08-16; the record is preserved, not re-run"
+    - **evidence_state**: INTERNALLY CHECKED - the arithmetic and the repository's own close-out check; the l6 commits are not confirmable here
+    - **checked_how**: I counted the report's tables: section A 40 rows (13 byte-identical, 14 stamp-delta, 11 residual-tolerant, 2 scan-level), section B 19 rows, section C 2 rows = 61. The LEDGER search log records the repository's own close-out: '[source text withheld from the public copy]' (MAIN:L7/provenance/sources/LEDGER.md:113). Commits e4f0d5c and bccf4e4 are not in any local clone.
+    - **quote**: "[source text withheld from the public copy]."
+    - **locator**: MAIN:L7/peering/private/egress/peer-1/object-1/RECONCILIATION_FROM_L6_2026-08-16.md:5 ; MAIN:L7/peering/private/egress/peer-1/object-1/0.md:15
+    - **key_claims**
+      - 'An egress binding records that something left toward a peer. It does not make the transferred material public, does not change its licence, and does not release anything.' (sheet :21)
+      - Report section E: '[source text withheld from the public copy]' (:90)
+      - '[source text withheld from the public copy]' and l6 '[source text withheld from the public copy]' (:96-97)
+    - **open_items**
+      - None recorded for the transfer itself; the two consistency notes in section E against ieee/README.md are not recorded as fixed
+    - **depends_on**
+      - G-01
+  - item 11
+    - **id**: B-10
+    - **title**: Binding: private egress, peer-2 (aybllc/ncf-research), object-1 - The Third Power Corpus v3, pending
+    - **path**: L7/peering/private/egress/peer-2/object-1/OWNERSHIP_PENDING.md
+    - **where**: MAIN, ROADMAP, BETA (unchanged)
+    - **what_it_is**: Direction egress, exposure private. A recorded intent to move [source text withheld from the public copy]; a .docx original and a .md extraction) to another repository. Nothing has left. Described here from its sheet and OWNERSHIP_PENDING.md only.
+    - **own_label**: "PENDING — no transfer has occurred; the position records the intent"
+    - **evidence_state**: UNRESOLVED - an owner decision; no version or hash recorded
+    - **checked_how**: Read the two sheets and OWNERSHIP_PENDING.md. Tree listing shows the .docx (33,007 bytes) and .md (28,080 bytes) present in all three states.
+    - **quote**: "[source text withheld from the public copy]?"
+    - **locator**: MAIN:L7/peering/private/egress/peer-2/object-1/OWNERSHIP_PENDING.md:12-13 ; MAIN:L7/peering/private/egress/peer-2/object-1/0.md:13,15,17
+    - **key_claims**
+      - Version: 'as parked; no hash recorded here' (sheet :13)
+      - Governance: 'to be stated when the ownership decision is made' (sheet :17)
+      - The corpus's [source text withheld from the public copy].' (OWNERSHIP_PENDING.md:10)
+      - Queue item 4 of 2026-08-16: 'Third Power → ncf-research reconciliation, on Eric's instruction.' (MAIN:L8/L6/history/LEDGER_2026-08-16_l6-close-and-normalization.md:49)
+    - **open_items**
+      - Owner decides where the corpus belongs
+      - The peer sheet names a destination while the pending record leaves three outcomes open (see defects)
+  - item 12
+    - **id**: G-01
+    - **title**: Condition: WSU-licensed IEEE material is hold-private (rule IL-001-R2)
+    - **path**: L7/governance/copyright/0.md
+    - **where**: MAIN, ROADMAP, BETA
+    - **what_it_is**: The repository's statement that everything obtained through the owner's university (WSU) IEEE Xplore access may be held only in private repositories. It forbids pushing or mirroring the files to a public repository, attaching them to a manuscript or preprint, passing them to non-authorized users, and making derivative works. Short quotations are allowed.
+    - **own_label**: "IL-001-R2 class-2 hold-private"
+    - **evidence_state**: ASSERTED - the repository's own reading of the licence; no licence instrument is filed
+    - **checked_how**: Read the copyright sheet and followed its two cross-references. The rule text is at MAIN:L7/provenance/sources/staging-records/standards/SOURCE_LEDGER.md:152-165. The 'forbids derivative works' statement is sourced in ieee/README.md:21-22 to intake/imported/AUTONOMOUS_TERMS.md:36, a file that exists only in HISTORY (1d83788), where lines 35-37 do say it. L7/governance/licensing/ holds no licence document. I counted 34 ledger rows labelled WSU (27 STD, 4 PR, 3 INST).
+    - **quote**: [source text withheld from the public copy]
+    - **locator**: MAIN:L7/governance/copyright/0.md:43 ; MAIN:L7/provenance/sources/staging-records/standards/SOURCE_LEDGER.md:165 ; MAIN:L7/provenance/sources/staging-records/ieee/README.md:15-26
+    - **key_claims**
+      - '[source text withheld from the public copy]' (SOURCE_LEDGER.md:165)
+      - '[source text withheld from the public copy].' (ieee/README.md:15)
+      - '[source text withheld from the public copy].' (HISTORY:intake/imported/AUTONOMOUS_TERMS.md:37)
+    - **open_items**
+      - How much quotation from IEEE standards a published paper or book may carry is not settled on the desk: the HISTORY note says clearance is required; the copyright sheet says quotation is permitted
+      - The count of WSU items is stated three ways (31; 30 + 3; 34 ledger rows)
+  - item 13
+    - **id**: G-02
+    - **title**: Condition: ISO/IEC 22989 captures derive from a withdrawn third-party copy
+    - **path**: L7/governance/copyright/0.md
+    - **where**: MAIN, ROADMAP, BETA
+    - **what_it_is**: Two working files of quoted ISO/IEC 22989:2022 terms were extracted from a copy licensed to someone else, which was withdrawn. The lawful full text is now in the archive (STD-025), but the extracts have not been re-checked against it.
+    - **own_label**: "re-verification against it is open"
+    - **evidence_state**: UNRESOLVED
+    - **checked_how**: Read the sheet. LEDGER row STD-025 confirms a lawful copy is recorded as acquired (MAIN:L7/provenance/sources/LEDGER.md:54). The history record states the purge of the third-party PDF from git history is 'still "pending owner execution."' (MAIN:L8/L6/history/LEDGER_2026-08-16_l6-close-and-normalization.md:40); I did not check whether it has since been done.
+    - **quote**: "derive from an IL-001-withdrawn third-party copy; [source text withheld from the public copy]`, and re-verification against it is open."
+    - **locator**: MAIN:L7/governance/copyright/0.md:44
+    - **open_items**
+      - Re-verify ISO-IEC-22989-2022_captures.md and terms.json against STD-025
+      - History purge of the third-party PDF: recorded as pending owner execution
+  - item 14
+    - **id**: G-03
+    - **title**: Condition: full-text copy of the Ferreira paper has no licence status recorded
+    - **path**: L7/governance/copyright/0.md
+    - **where**: MAIN, ROADMAP, BETA
+    - **what_it_is**: A numbered full-text copy of a published paper sits in the staging records with no licence status; the sheet says it is not to be cited as held until the owner rules.
+    - **own_label**: "licence status is not yet recorded; until it is, it is not cited as held (owner's call)"
+    - **evidence_state**: UNRESOLVED
+    - **checked_how**: Read the sheet; the file is present on MAIN at L7/provenance/sources/staging-records/library/text/Ferreira_break-glass-access-control.numbered.txt.
+    - **quote**: "is a full-text copy of a published paper whose licence status is not yet recorded"
+    - **locator**: MAIN:L7/governance/copyright/0.md:45
+    - **open_items**
+      - Owner's call on the file's standing
+  - item 15
+    - **id**: G-04
+    - **title**: Condition: withdrawals are binding; personal data is redacted at HEAD; NIST material is free of copyright
+    - **path**: L7/governance/copyright/0.md
+    - **where**: MAIN, ROADMAP, BETA
+    - **what_it_is**: Three standing statements: earlier withdrawals of sources stay in force as amended; personal data of third parties has been redacted in the current tree; NIST publications carry no copyright restriction.
+    - **own_label**: "Withdrawals are binding as amended; PII is redacted at HEAD"
+    - **evidence_state**: ASSERTED
+    - **checked_how**: Read the sheet. SOURCE_LEDGER.md:164 shows a redaction marker dated 2026-08-14. The history record warns that a rescue branch 'holds pre-PII-redaction bytes — never replay' (MAIN:L8/L6/history/LEDGER_2026-08-16_l6-close-and-normalization.md:40). I did not scan for personal data of third parties.
+    - **quote**: "Free of copyright: NIST material as a United States Government work."
+    - **locator**: MAIN:L7/governance/copyright/0.md:46-47
+    - **open_items**
+      - Redaction covers HEAD only; history and the rescue branch are recorded as still holding the earlier bytes
+  - item 16
+    - **id**: G-05
+    - **title**: Condition: the five 'what to do next' rules
+    - **path**: L7/governance/copyright/0.md
+    - **where**: MAIN, ROADMAP, BETA
+    - **what_it_is**: The operating rules that follow from the conditions: quote verbatim and cite; check the Access column and licence class before reproducing at length or publishing; record a blocked source rather than work around it; publish nothing from material found to be under copyright until cleared; only the owner removes anything from git history.
+    - **own_label**: "What to do next."
+    - **evidence_state**: ASSERTED
+    - **checked_how**: Read the sheet. No record on the desk shows any clearance obtained.
+    - **quote**: "A hold-private file does not leave; the quotation may."
+    - **locator**: MAIN:L7/governance/copyright/0.md:49-55
+    - **key_claims**
+      - 'keep the work, record the class and the route, publish nothing from it until clearance exists.' (:54)
+      - 'Removing anything from git history is the owner's act, never a session's.' (:55)
+  - item 17
+    - **id**: G-06
+    - **title**: Access records
+    - **path**: L7/governance/access/0.md
+    - **where**: MAIN, ROADMAP, BETA
+    - **what_it_is**: The access position holds no file. It points to the Access column of the l6 pointer ledger as the record of what the repository may read.
+    - **own_label**: "Nothing is filed directly."
+    - **evidence_state**: INTERNALLY CHECKED - tallied by me from the ledger
+    - **checked_how**: Counted the Access column on MAIN: 58 FULL, 1 NOT OBTAINED (EXC-001, iTeh preview of ISO/IEC 22989), 1 BLOCKED (EXC-002, vendor glossary, 'PROHIBITED SOURCE'). No row is ABSTRACT or TERMS-ONLY. The ledger's 'Not held' table has one blank row. The ledger covers only l6 holdings: it has no row for aybllc/autonomous (MAIN), eb-audit, ebios or the Martin manuscript.
+    - **quote**: "By citation: the Access column of `L7/provenance/sources/LEDGER.md` ([source text withheld from the public copy]) records, per pointed-to source, what this repository may read."
+    - **locator**: MAIN:L7/governance/access/0.md:32 ; MAIN:L7/provenance/sources/LEDGER.md:20-79, :98-100
+    - **open_items**
+      - No access condition is recorded for any object this repository would itself expose
+      - The ledger's label VERIFIED on these rows means the file matches the archive copy, not that a claim was checked against an outside source in the status ladder's sense
+  - item 18
+    - **id**: G-07
+    - **title**: Licensing, patents, permissions, restrictions: nothing filed
+    - **path**: L7/governance/
+    - **where**: MAIN, ROADMAP (restrictions/); BETA (restrictions/ renamed controlled/)
+    - **what_it_is**: Four governance positions that hold only their sheets. Licensing and restrictions point to the copyright sheet; patents and permissions are empty. No licence under which this repository's own work would be released is stated anywhere on the desk.
+    - **own_label**: "Nothing is filed at this position; the position is admissible and empty."
+    - **evidence_state**: EMPTY
+    - **checked_how**: ls-tree shows only 0.md in each of the four directories in all three states. Read each sheet.
+    - **quote**: "This repository files no patent-related representation."
+    - **locator**: MAIN:L7/governance/patents/0.md:31,39 ; MAIN:L7/governance/permissions/0.md:33 ; MAIN:L7/governance/licensing/0.md:32 ; MAIN:L7/governance/restrictions/0.md:32 ; BETA:L7/governance/controlled/0.md
+    - **key_claims**
+      - 'A restriction that is not copyright-derived would be filed here; none exists.' (restrictions :32)
+      - 'The tree states no rule about what an intelligence may touch' (governance/0.md:34)
+    - **open_items**
+      - No outbound licence, no copyright notice for released work, no patent position: each would have to be stated before a release
+  - item 19
+    - **id**: G-08
+    - **title**: Visibility: the repository and its peers are INTERNAL
+    - **path**: L7/peering/public/ingress/peer-1/object-1/0.md
+    - **where**: MAIN, ROADMAP, BETA
+    - **what_it_is**: Several sheets state that this repository, aybllc/autonomous and aybllc/l6 are private or INTERNAL, and that everything here is internal only. The 'public' peering branch is nonetheless used for the autonomous bindings.
+    - **own_label**: "Everything in this repository is **INTERNAL ONLY**"
+    - **evidence_state**: ASSERTED - GitHub visibility cannot be confirmed without the network
+    - **checked_how**: Read the governance rows of each binding. No network access used. BETA object-2 states the mismatch itself.
+    - **quote**: "the peer repository belongs to the same owner and is INTERNAL; no public licence question arises"
+    - **locator**: MAIN:L7/peering/public/ingress/peer-1/object-1/0.md:18 ; MAIN:L8/L5/research/review/STATUS_AND_LABEL_DISCIPLINE.md:5 ; BETA:L7/peering/public/ingress/peer-1/object-2/0.md:8
+    - **open_items**
+      - l6 '[source text withheld from the public copy]' (MAIN:L7/peering/private/egress/peer-1/object-1/RECONCILIATION_FROM_L6_2026-08-16.md:97); the same question arises for this repository if any of it is made public
+  - item 20
+    - **id**: R-01
+    - **title**: Release rule 1: [source text withheld from the public copy] the ledger
+    - **path**: L7/publications/binder/press-kit/README.md
+    - **where**: MAIN, ROADMAP; BETA (moved to L7/allications/publications/, text identical)
+    - **what_it_is**: First box of the release checklist.
+    - **own_label**: "- [ ]" (unticked)
+    - **evidence_state**: UNRESOLVED - not met: never applied to any item, and it names a path that does not exist
+    - **checked_how**: uso/l6/LEDGER.md does not exist in MAIN, ROADMAP or BETA; the ledger is at L7/provenance/sources/LEDGER.md (60 rows). On MAIN the bound definition of 'autonomous' has no ledger row; BETA adds AUT-SOURCE-001. No row exists for eb-audit, ebios or the Martin manuscript.
+    - **quote**: "- [ ] [source text withheld from the public copy]`."
+    - **locator**: MAIN:L7/publications/binder/press-kit/README.md:18
+    - **open_items**
+      - Re-point the rule at the current ledger
+      - Ledger the non-l6 sources a paper would cite
+    - **depends_on**
+      - B-05
+      - B-06
+      - B-07
+  - item 21
+    - **id**: R-02
+    - **title**: Release rule 2: every quote checked verbatim against the source
+    - **path**: L7/publications/binder/press-kit/README.md
+    - **where**: MAIN, ROADMAP, BETA
+    - **what_it_is**: Second box of the release checklist.
+    - **own_label**: "- [ ]" (unticked)
+    - **evidence_state**: UNRESOLVED - not met: no item has been put through it
+    - **checked_how**: No record on the desk of a quote-by-quote check for any release candidate. The ISO/IEC 22989 captures are recorded as not yet re-verified against the lawful copy (G-02). The ledger's VERIFIED labels record file identity, not quote checks.
+    - **quote**: "- [ ] [source text withheld from the public copy]."
+    - **locator**: MAIN:L7/publications/binder/press-kit/README.md:19
+    - **depends_on**
+      - G-02
+  - item 22
+    - **id**: R-03
+    - **title**: Release rule 3: no unchecked or contested claim presented as settled
+    - **path**: L7/publications/binder/press-kit/README.md
+    - **where**: MAIN, ROADMAP, BETA
+    - **what_it_is**: Third box of the release checklist.
+    - **own_label**: "- [ ]" (unticked)
+    - **evidence_state**: UNRESOLVED - not met: no item has been put through it
+    - **checked_how**: No candidate exists to test. The internal/ README sends '[source text withheld from the public copy]' to internal/ (MAIN:L7/publications/binder/internal/README.md:13). The departure protocol carries 'NOT CHECKED' as a novelty claim (B-06).
+    - **quote**: "- [ ] [source text withheld from the public copy]."
+    - **locator**: MAIN:L7/publications/binder/press-kit/README.md:20
+  - item 23
+    - **id**: R-04
+    - **title**: Release rule 4: coinages marked as coinages
+    - **path**: L7/publications/binder/press-kit/README.md
+    - **where**: MAIN, ROADMAP, BETA
+    - **what_it_is**: Fourth box of the release checklist; restated as binder rule 5.
+    - **own_label**: "- [ ]" (unticked)
+    - **evidence_state**: UNRESOLVED - not applied to any item; the definition itself does mark the coinage
+    - **checked_how**: The definition's status line calls the word 'Eric D. Martin's coinage' (MAIN:L8/L0/semantics/definitions/AUDITONOMOUS_DEFINITION.md:79). Binder rule 5 cites manuscripts/definitions/AUDITONOMOUS_DEFINITION.md as the active record; that path does not exist in any state.
+    - **quote**: "- [ ] [source text withheld from the public copy]."
+    - **locator**: MAIN:L7/publications/binder/press-kit/README.md:21 ; MAIN:L7/publications/binder/README.md:21-24
+  - item 24
+    - **id**: R-05
+    - **title**: Release rule 5: nothing internal-only (no personal paths, credentials, unredacted personal material)
+    - **path**: L7/publications/binder/press-kit/README.md
+    - **where**: MAIN, ROADMAP, BETA
+    - **what_it_is**: Fifth box of the release checklist.
+    - **own_label**: "- [ ]" (unticked)
+    - **evidence_state**: UNRESOLVED - not met as the tree stands
+    - **checked_how**: git grep for '/home/eric' on MAIN finds 15 files (5 under L7/provenance/sources, 3 under L8/L6/history, 3 under L8/L4/work, 2 under L8/L5/research, 1 under L7/provenance/lineage, and the definition itself at L8/L0/semantics/definitions/AUDITONOMOUS_DEFINITION.md:74, :266-278, :340). I did not scan for credentials.
+    - **quote**: "- [ ] [source text withheld from the public copy]."
+    - **locator**: MAIN:L7/publications/binder/press-kit/README.md:22
+    - **open_items**
+      - Any release drawn from the definition must strip or replace its personal-path citations
+  - item 25
+    - **id**: R-06
+    - **title**: Release rule 6: adversarially reviewed, with the review on the record
+    - **path**: L7/publications/binder/press-kit/README.md
+    - **where**: MAIN, ROADMAP, BETA
+    - **what_it_is**: Sixth box of the release checklist.
+    - **own_label**: "- [ ]" (unticked)
+    - **evidence_state**: UNRESOLVED - not met: no review of a release candidate is on record, and the named path does not exist
+    - **checked_how**: research/review/ does not exist in any state; the successor L8/L5/research/review/ on MAIN holds CONTRADICTIONS.md, PERPETUITY_QUESTION_ADJUDICATION.md, the two status files and autonomous-theory/. The 2026-11-03 manuscript pass found one referee report (3 August) whose fourteen research tasks were not started, held in the writing folder, not in review.
+    - **quote**: "- [ ] [source text withheld from the public copy]/`."
+    - **locator**: MAIN:L7/publications/binder/press-kit/README.md:23
+  - item 26
+    - **id**: R-07
+    - **title**: Release rules: clearance is per item and dated; release is an explicit act; retractions are published
+    - **path**: L7/publications/binder/press-kit/README.md
+    - **where**: MAIN, ROADMAP, BETA
+    - **what_it_is**: The standing rules beside the checklist, in the press-kit and internal READMEs.
+    - **own_label**: "[source text withheld from the public copy]."
+    - **evidence_state**: ASSERTED - rules stated; no clearance of any item is recorded
+    - **checked_how**: Read both READMEs. No dated clearance record exists anywhere under publications in any state.
+    - **quote**: "[source text withheld from the public copy]."
+    - **locator**: MAIN:L7/publications/binder/press-kit/README.md:27-29 ; MAIN:L7/publications/binder/internal/README.md:19-20
+    - **key_claims**
+      - '[source text withheld from the public copy]' (internal/README.md:19-20)
+      - '[source text withheld from the public copy].' (press-kit/README.md:28)
+    - **open_items**
+      - Who clears, and where the dated clearance is written, is not stated
+      - 'Whether internal/ belongs instead at L8/L4/work/writing/ ... is the owner's decision.' (MAIN:L7/publications/binder/0.md:27)
+  - item 27
+    - **id**: R-08
+    - **title**: Binder rules 1 to 5: the binder arranges the record and never extends it
+    - **path**: L7/publications/binder/README.md
+    - **where**: MAIN, ROADMAP, BETA
+    - **what_it_is**: The five rules for anything reader-facing: introduces no evidence; [source text withheld from the public copy] repository; every fragment keeps its source's label and may only be downgraded; cite-only where custody bars reproduction; coinages are marked.
+    - **own_label**: "[source text withheld from the public copy]."
+    - **evidence_state**: ASSERTED
+    - **checked_how**: Read the README. Rule 1 and rule 5 name paths that do not exist in any state (uso/l6/LEDGER.md, research/, manuscripts/definitions/AUDITONOMOUS_DEFINITION.md).
+    - **quote**: "[source text withheld from the public copy]."
+    - **locator**: MAIN:L7/publications/binder/README.md:10-24
+    - **key_claims**
+      - Rule 4: where a label bars public reproduction the [source text withheld from the public copy]' (:18-20)
+    - **depends_on**
+      - G-01
+  - item 28
+    - **id**: R-09
+    - **title**: The statement that nothing has been released
+    - **path**: L7/publications/0.md
+    - **where**: MAIN, ROADMAP, BETA
+    - **what_it_is**: The publications sheet, the binder sheet, the desk sheet and the public-egress sheets all say no released object exists.
+    - **own_label**: "Nothing has been released."
+    - **evidence_state**: INTERNALLY CHECKED
+    - **checked_how**: ls-tree in all three states: publications holds two sheets and three READMEs and nothing else; press-kit and internal hold one README each; public egress holds only sheets. BETA's five new allications sheets each say no payload is filed. Whether anything was released outside the repository cannot be seen from here.
+    - **quote**: "Nothing in this repository has been released."
+    - **locator**: MAIN:L7/publications/binder/0.md:12 ; MAIN:L7/publications/0.md:33 ; MAIN:L7/0.md:222-223 ; BETA:L7/allications/publications/0.md:43
+  - item 29
+    - **id**: BETA-01
+    - **title**: What BETA changes on the desk
+    - **path**: L7/
+    - **where**: BETA (diff against MAIN, 35 files)
+    - **what_it_is**: Moves L7/publications/ to L7/allications/publications/ (binder READMEs byte-identical); adds allications/ with five empty capability sheets; renames governance/restrictions/ to governance/controlled/; adds object-2 and binding.json; rewrites the object-1 version row to the full commit id with blob, SHA-256 and byte count; corrects '62 rows' to '60'; retracts the harmonized-specification claim; updates path mentions in 20 sheets. Private peering bindings (peer-2, peer-3, egress) are untouched.
+    - **own_label**: "No payload is filed here in this construction; capability presence does not imply operation."
+    - **evidence_state**: INTERNALLY CHECKED - the moves match the model's layout and the corrected numbers match my own counts
+    - **checked_how**: git diff -M origin/main origin/beta/7lm-exemplar-auditonomous -- L7. BETA is a single commit (714480d, 2026-11-02) on top of MAIN. Layout compared with 7lm origin/main. Counts and hashes recomputed (see B-01, B-02, B-05).
+    - **quote**: "The complete pinned tree contains no harmonized-specification writing artifact; the earlier local description of one was inaccurate."
+    - **locator**: BETA:L7/allications/publications/0.md:43 ; BETA:L7/provenance/sources/LEDGER.md:147-153 ; BETA:L7/0.md:232
+    - **open_items**
+      - BETA does not carry ROADMAP's restored peer-3 manuscript or its restored source lists
+      - BETA leaves the unpinned bindings (B-06, B-07, B-10) as they are
+      - BETA leaves the release checklist's stale paths as they are
+    - **depends_on**
+      - D-01
+      - B-02
+  - item 30
+    - **id**: X-01
+    - **title**: What on the desk blocks a first release of any paper or of the book
+    - **path**: L7/
+    - **where**: MAIN, ROADMAP, BETA
+    - **what_it_is**: The conditions on the desk that stand between the present state and any first release, in the order they would bite.
+    - **evidence_state**: UNRESOLVED
+    - **checked_how**: Assembled from the items above; each line names its item.
+    - **locator**: MAIN:L7/publications/binder/press-kit/README.md:14-23 ; MAIN:L7/governance/copyright/0.md:41-55 ; MAIN:L7/0.md:220-223
+    - **key_claims**
+      - 1. The desk layout is behind the model on MAIN: publications/ and restrictions/ against the model's allications/ and controlled/ (D-01). The owner's stated first step.
+      - 2. No item has ever been put through the release checklist; all six boxes are unticked and two of them name paths that no longer exist (R-01, R-06).
+      - 3. The sources under the definition are not pinned: ebios and the Martin manuscript have no commit or hash, eb-audit has no commit, and on MAIN and BETA the defining manuscript is not in the repository (B-06, B-07).
+      - 4. The bound definition of 'autonomous' has no ledger row on MAIN, and the sheet records three files still taking that definition from elsewhere (B-01).
+      - 5. Copyright: IEEE material is hold-private; ISO/IEC 22989 extracts are unverified against the lawful copy; one paper copy has no licence recorded; no clearance of any kind is on record (G-01, G-02, G-03).
+      - 6. No outbound licence, copyright notice or patent position is stated for the repository's own work (G-07).
+      - 7. The prior-art search is 'still unrun' (MAIN:L7/0.md:220), and the departure protocol's novelty conjunction is 'NOT CHECKED' (B-06).
+      - 8. No adversarial review of a release candidate is on record (R-06).
+      - 9. Personal paths remain in 15 files, including the definition (R-05).
+      - 10. The repository labels everything 'INTERNAL ONLY'; a release is an owner act that no record yet authorises (G-08, R-07).
+    - **open_items**
+      - First on the desk: settle which 7lm commit the layout follows, then bring MAIN's L7 to it (BETA or the local commit f2d5b37 already do the moves)
+      - Then: pin the three unpinned bindings, re-point the checklist paths, and decide the Third Power Corpus
+    - **depends_on**
+      - D-01
+      - B-01
+      - B-06
+      - B-07
+      - G-01
+      - G-02
+      - G-03
+      - G-07
+      - R-01
+      - R-05
+      - R-06
+- **defects**
+  - item 1
+    - **statement**: MAIN says the source ledger has 62 rows; it has 60 ([source text withheld from the public copy] same figure is in the 2026-08-16 history record. ROADMAP keeps 62; BETA corrects to 60.
+    - **locator**: MAIN:L7/0.md:220 ; MAIN:L7/peering/private/ingress/peer-1/0.md:16 ; MAIN:L7/peering/private/ingress/peer-1/object-1/0.md:10 ; MAIN:L8/L6/history/LEDGER_2026-08-16_l6-close-and-normalization.md:30
+  - item 2
+    - **statement**: The ledger's close-out search log says '22 new rows' but the rows it names number [source text withheld from the public copy]). BETA records the correction without altering the original line.
+    - **locator**: MAIN:L7/provenance/sources/LEDGER.md:113 ; BETA:L7/provenance/sources/LEDGER.md:149
+  - item 3
+    - **statement**: MAIN's publications sheet says 'The harmonized specification is filed as a produced writing artifact at L8/L4/work/writing/'. No such file exists on MAIN (the folder holds three Office documents, two chat volumes, one session record and sheets). BETA retracts the sentence.
+    - **locator**: MAIN:L7/publications/0.md:43
+  - item 4
+    - **statement**: The release checklist and binder rules name paths that exist in no state: uso/l6/LEDGER.md, research/review/, research/, manuscripts/definitions/AUDITONOMOUS_DEFINITION.md. The current homes are L7/provenance/sources/LEDGER.md, L8/L5/research/review/ and L8/L0/semantics/definitions/AUDITONOMOUS_DEFINITION.md.
+    - **locator**: MAIN:L7/publications/binder/press-kit/README.md:18,23 ; MAIN:L7/publications/binder/README.md:11,23 ; MAIN:L7/publications/binder/internal/README.md:18
+  - item 5
+    - **statement**: OWNERSHIP_PENDING.md says the corpus is '[source text withheld from the public copy]'. The file now sits at an L7 egress position and the durable lifecycle was retired on 2026-09-06.
+    - **locator**: MAIN:L7/peering/private/egress/peer-2/object-1/OWNERSHIP_PENDING.md:13-14
+  - item 6
+    - **statement**: The peer-2 egress sheets name aybllc/ncf-research as 'the intended destination' and call the transfer 'pending', while OWNERSHIP_PENDING.md leaves three outcomes open (Auditonomous, another AYBLLC repository, or a historical artifact). The position presumes an answer the owner has not given.
+    - **locator**: MAIN:L7/peering/private/egress/peer-2/0.md:8 ; MAIN:L7/peering/private/egress/peer-2/object-1/OWNERSHIP_PENDING.md:12-13
+  - item 7
+    - **statement**: The departure protocol's header gives 'Mirror location: manuscripts/main/research/eb-carrier/eb-audit/', a path that no longer exists; the copy is at L7/peering/private/ingress/peer-2/object-1/. The file is peer-owned and marked NO EDIT.
+    - **locator**: MAIN:L7/peering/private/ingress/peer-2/object-1/auditonomous-departure-protocol.md:7
+  - item 8
+    - **statement**: The copyright sheet says 'the 31 WSU-licensed IEEE PDFs'. The reconciliation report says the directory held '30 + 3 papers', and 34 ledger rows carry a WSU label. The sheet also calls ieee/papers/README.md the 'per-file watermark manifest'; that file lists three papers only, and the full manifest is in ieee/README.md.
+    - **locator**: MAIN:L7/governance/copyright/0.md:43 ; MAIN:L7/peering/private/egress/peer-1/object-1/RECONCILIATION_FROM_L6_2026-08-16.md:90
+  - item 9
+    - **statement**: [source text withheld from the public copy]' condition is sourced to intake/imported/AUTONOMOUS_TERMS.md:36, a file that exists only in HISTORY (1d83788), not on MAIN, ROADMAP or BETA.
+    - **locator**: MAIN:L7/provenance/sources/staging-records/ieee/README.md:21-22
+  - item 10
+    - **statement**: BETA files object-2 as the finite computation result, but the unchanged peer sheet in BETA still reserves object-2 and object-3 for AUTOMATION.md and REGISTER.md and says 'none is bound at this pass'. The Holdings paragraphs of the peer sheet, the public-ingress sheet, the peering sheet and L7/0.md in BETA do not mention object-2.
+    - **locator**: BETA:L7/peering/public/ingress/peer-1/0.md:20-22 ; BETA:L7/peering/public/ingress/0.md:34
+  - item 11
+    - **statement**: On ROADMAP the object-1 sheet says the two manuscript files are held, but the peer sheet one level up (unchanged, same blob as MAIN) still says 'Nothing of them is held here; the manuscript path cited in Appendix E does not exist in this repository' and calls the manuscript 'a cold backup, absent from live trees'.
+    - **locator**: ROADMAP:L7/peering/private/ingress/peer-3/0.md:8,16 ; ROADMAP:L7/peering/private/ingress/peer-3/object-1/0.md:15-16
+  - item 12
+    - **statement**: The restored manuscript declares a content sha256 of 7fd260a5...; the held Markdown file hashes to 6a717c70.... The held Markdown and PDF are different texts (4,075 against 3,465 words; the PDF lacks the self-reference table). The Markdown has two sections numbered 19. The sheet's Version row still says no hash is pinned.
+    - **locator**: ROADMAP:L7/peering/private/ingress/peer-3/object-1/martin_2026_embodied_auditonomy_lexrom_cabin_model_v0.2_ea08f59.md:18, :363, :379
+  - item 13
+    - **statement**: The autonomous bindings sit under peering/public/ while their governance rows say the repositories are INTERNAL. BETA states the mismatch in words but keeps the position.
+    - **locator**: MAIN:L7/peering/public/ingress/peer-1/object-1/0.md:14,18 ; BETA:L7/peering/public/ingress/peer-1/object-2/0.md:8
+  - item 14
+    - **statement**: MAIN's desk sheet quotes the model as naming L7/publications/ a canonical direct branch; the model's own text has read L7/allications/ since 2026-09-20.
+    - **locator**: MAIN:L7/0.md:14 ; MAIN:L7/peering/0.md:8
+  - item 15
+    - **statement**: The closing sentence of the Holdings section opens a quotation that is never closed.
+    - **locator**: MAIN:L7/0.md:225
+- **open_questions**
+  - The aybllc/l6 commits b328334, e4f0d5c, bccf4e4 and 53b28f6 could not be confirmed: no l6 clone exists locally and the network was not used.
+  - Whether the departure-protocol copy is byte-identical to the canonical file in aybllc/eb-audit could not be checked; no eb-audit clone exists and no commit is pinned.
+  - abba-01/ebios is held nowhere, and the nu-algebra commit ea08f59 that the Martin manuscript names is not available, so the manuscript's declared content hash could not be confirmed.
+  - Which of the two held manuscript files (Markdown or PDF) is the bound version is not recorded.
+  - Which 7lm commit the two repositories are to match is not settled on the desk: BETA pins 4ca3edb; 7lm beta head is 97314c5 (one commit later); 7lm main is c9dc061, merged 2026-11-11, and does not contain 4ca3edb.
+  - A local commit f2d5b37 ('The L7 restructure mirrored by hand: allications, and controlled; the words match the folders', dated 2026-11-11, author Claude) exists on local branch ccr-9391bd81-f2enmj in /home/user/auditonomous. It is not one of the four named states. I saw only its file list, which shows the same L7 moves as BETA plus edits to more sheets; I did not examine its content.
+  - BETA's statement that Appendix C, Q13 and the C1-C7 comparisons 'now carry explicit receiving-use dispositions' was not checked; those files are outside this scope.
+  - BETA's statement that 'All actual dependency bytes are checked before import' is a claim about the L4 code and was not tested here.
+  - Whether the history purge of the third-party ISO/IEC 22989 PDF, recorded on 2026-08-16 as pending owner execution, has since been carried out was not checked.
+  - GitHub visibility of aybllc/auditonomous, aybllc/autonomous and aybllc/l6 (stated as INTERNAL or private) could not be confirmed.
+  - Whether quotations from IEEE standards may appear in a published paper without clearance is stated two ways (the copyright sheet permits quotation; the HISTORY note requires clearance before publication) and no ruling is on the desk.
+  - Whether binder/internal/ belongs at L8/L4/work/writing/ is recorded as the owner's decision and is unruled.
+  - No scan for credentials or for third-party personal data was made; only the '/home/eric' path count was taken.

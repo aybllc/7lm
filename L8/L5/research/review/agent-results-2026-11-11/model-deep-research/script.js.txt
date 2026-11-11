@@ -1,0 +1,363 @@
+export const meta = {
+  name: 'model-deep-research',
+  description: 'Read-only deep research of the 7LM model as it stands on 2026-11-11 and of the gap to both exemplar repositories',
+  phases: [
+    { title: 'Read', detail: 'ten readers: specification, record, sheets, layer lists, beta candidate, open PRs, both exemplars' },
+    { title: 'Synthesize', detail: 'one model report, change log and migration checklists' },
+    { title: 'Verify', detail: 'one skeptic per key claim, and a completeness critic' },
+    { title: 'Final', detail: 'final report with corrections and gaps worked in' },
+  ],
+}
+
+const SCRATCH = '/tmp/claude-0/-home-user/bfcfd013-a2da-5019-961e-7f46116f08be/scratchpad/wf-model'
+
+const RULES = `You are one agent in a READ-ONLY research workflow over three local git clones. Nothing may be changed.
+
+REPOSITORIES (all refs are already fetched; do not fetch; do not use the network):
+- /home/user/7lm = aybllc/7lm, "the scaffold": the Seven-Layer Model (7LM) itself.
+    origin/main = c9dc061 (the model of record; PR #21 merged 2026-11-11). The state last studied was main at 2e5a6d6 (2026-10-05).
+    origin/beta/common-contracts-r1-r6 = 97314c5 (UNMERGED candidate made for the owner by Codex on 2-3 Nov 2026: "approved R1-R6" corrections, then research-housing guidance; forks from 2e5a6d6).
+    origin/ccr-9391bd81-f2enmj = c9638a9 (open draft PR #20: retires the field guide to L8/L6/retired/field-guide-2026-09-20/).
+    origin/ccr-00099fac-hjosbo = b5c3984 (open draft PR #19: "The public face agnostic").
+    origin/audit/peering-descriptive-reframe-2026-09-20 = 3555866 (the owner's audit branch).
+    origin/copilot/create-error-list, origin/copilot/create-academic-guide-plan, origin/ccr-9a67809a-iwii3n (the branch of merged PR #21).
+- /home/user/autonomous = aybllc/autonomous, exemplar repository.
+    origin/main = c9076c3 (unchanged since 2026-09-11). origin/beta/7lm-exemplar-autonomous = e64b382 (UNMERGED candidate, 2 Nov 2026).
+- /home/user/auditonomous = aybllc/auditonomous, exemplar repository.
+    origin/main = 2165144 (unchanged since 2026-09-11). origin/beta/7lm-exemplar-auditonomous = 714480d (UNMERGED candidate, 2 Nov 2026). origin/claude/book-structure-roadmap-k8ap82 = 9259c18 (draft PR #27, closed unmerged).
+
+HARD RULES
+1. READ-ONLY. Never run git checkout, switch, restore, reset, merge, rebase, commit, stash, push, fetch, pull, worktree, clean, gc, or anything that writes inside those three directories. The single permitted exception is \`git merge-tree --write-tree <refA> <refB>\`, which only tests a merge.
+2. The working trees are being edited by someone else. NEVER read a file from a working tree. Read only git objects: \`git -C <repo> show <ref>:<path>\`, \`git -C <repo> ls-tree -r --name-only <ref> [path]\`, \`git -C <repo> grep -n -F '<text>' <ref> -- <paths>\`, \`git -C <repo> log ...\`, \`git -C <repo> diff <refA> <refB> -- <paths>\`.
+3. Scratch files, if you need any, go only under ${SCRATCH}/<your label>/ (create it).
+4. Evidence. Every fact carries a locator of the form <repo>@<ref>:<path>:<line or section> and, where it is a statement of a document, a short verbatim quote (30 words or fewer). Get line numbers from \`git show ... | cat -n\` or \`grep -n\`.
+5. Do not guess. If something is not found, say "not found" and say where you looked. Keep apart what a document SAYS and what the tree IS (check the tree with ls-tree).
+6. The owner's words are quoted exactly as written, typos included. Never correct them.
+7. Stay inside your assigned scope, leaving it only to check a specific cross-reference. Be complete inside it. Work efficiently: read each source once, in large chunks.
+
+BACKGROUND (established; do not re-derive)
+7LM is a canonical directory topology for a research repository. The root holds README.md, L7/ (the desk, the forward face: provenance, governance, peering, allications), L8/ (the interior: layers L0 to L6), .github/ and .gitignore, and nothing else. Every directory carries a sheet, 0.md, whose first line is "# <path>/". One CI check, .github/workflows/integrity.yml, enforces: no conflict markers (G-001); a canonical root (G-002); every sheet headed by its path and all 71 canonical positions sheeted (G-003). The scaffold keeps its own history at L8/L6/history/harmonization-2026-09-04.md (numbered sections, 1 to 37 on main) and L8/L6/history/specification-history.md. The specification is L8/L4/work/writing/7lm-harmonized-architecture-specification.md.
+On 2026-09-20 the scaffold's L7 was restructured (record section 25): L7/publications/ became L7/allications/publications/ with five new sibling positions (applications, communications, specifications, notifications, participations), and L7/governance/restrictions/ became L7/governance/controlled/. The prose was then swept so the words match the folders (record section 37). The owner ruled the same day that the exemplar repositories mirror the scaffold BY HAND, later, when the owner judges the scaffold close (record section 26). The exemplars' main branches were last brought into step on 2026-09-12 (the rename pass USO/ -> L8/) and still carry the former L7 names.
+On 2026-11-11 the owner asked that the model be re-read "because its changed", and that both exemplar repositories be physically brought into step with it before work on the Auditonomous research and manuscript resumes.
+`
+
+const FACTS_SCHEMA = {
+  type: 'object',
+  properties: {
+    scope: { type: 'string' },
+    summary: { type: 'string', description: 'What you found, 150-300 words, plain English' },
+    facts: {
+      type: 'array',
+      items: {
+        type: 'object',
+        properties: {
+          id: { type: 'string' },
+          kind: { type: 'string', description: 'one of: rule, tree, change, exemplar, open, defect, procedure' },
+          statement: { type: 'string' },
+          locator: { type: 'string' },
+          quote: { type: 'string' },
+        },
+        required: ['id', 'kind', 'statement', 'locator'],
+      },
+    },
+    checklist: {
+      type: 'array',
+      items: {
+        type: 'object',
+        properties: { step: { type: 'string' }, detail: { type: 'string' }, locator: { type: 'string' } },
+        required: ['step', 'detail'],
+      },
+    },
+    open_questions: { type: 'array', items: { type: 'string' } },
+  },
+  required: ['scope', 'summary', 'facts'],
+}
+
+const SPEC = 'L8/L4/work/writing/7lm-harmonized-architecture-specification.md'
+const REC = 'L8/L6/history/harmonization-2026-09-04.md'
+
+const READERS = [
+  {
+    key: 'spec-A',
+    prompt: `SCOPE: the specification, /home/user/7lm@origin/main:${SPEC}, lines 1 to 520. Read all of it (the lines are long): git -C /home/user/7lm show origin/main:${SPEC} | sed -n '1,520p'.
+EXTRACT, as facts:
+(a) the version and date statements, and what the document says controls what;
+(b) every rule that fixes a repository's PHYSICAL form: what the root holds; the names and nesting of positions (both canonical trees as drawn, L7 and L8); the sheet rule (0.md and its first line); the counts (L0 to L8; peers counted from 1); what is said about machine metadata;
+(c) for L7 and every position beneath it, and for L0 and every position beneath it: the prose cell and the "why" cell, verbatim where short;
+(d) every sentence that mentions the exemplar repositories (Autonomous, Auditonomous, "exemplar"), including any "Not yet as stated" paragraph: what the specification says the exemplars carry today;
+(e) every dated Clarification or Note and what it rules.
+THEN run git -C /home/user/7lm diff origin/main origin/beta/common-contracts-r1-r6 -- ${SPEC} and report, as facts of kind "change", each changed passage that falls in this line range: before, after, and what the change does to the meaning.`,
+  },
+  {
+    key: 'spec-B',
+    prompt: `SCOPE: the specification, /home/user/7lm@origin/main:${SPEC}, lines 500 to the end (about 1003). Read all of it: git -C /home/user/7lm show origin/main:${SPEC} | sed -n '500,1100p'.
+EXTRACT, as facts:
+(a) for L1, L2, L3, L4, L5, L6 and every position beneath each: the core question, the prose cell and the "why" cell, verbatim where short; the boundary rules;
+(b) the cross-layer activity cases (Code, Data, External definition, Publication, and the rest) and what each rules about where a thing is filed, with special attention to manuscripts and writing, research claims, review, findings, history;
+(c) the specification's own Harmonization Record: each inherited term and its disposition;
+(d) how the specification describes the one CI check;
+(e) every sentence about the exemplar repositories, including "Not yet as stated" paragraphs: what the exemplars are said to carry today;
+(f) every dated Clarification or Note and what it rules.
+THEN run git -C /home/user/7lm diff origin/main origin/beta/common-contracts-r1-r6 -- ${SPEC} and report, as facts of kind "change", each changed passage in this line range: before, after, and what it does to the meaning.`,
+  },
+  {
+    key: 'record-A',
+    prompt: `SCOPE: the scaffold's record, /home/user/7lm@origin/main:${REC}, lines 1 to 294 (sections 1 to 23), and /home/user/7lm@origin/main:L8/L6/history/sheets-2026-09-07.md.
+EXTRACT, per numbered section: its date; the owner's words it quotes; what was done; what was deliberately not done. Mark each rule it sets as either (i) standing for EVERY 7LM repository or (ii) this repository only, and say why you read it so.
+Give special attention to: section 6 (the copyright rule); 7 (the catch-all, and the tree's silence on access); 8 ("First is always 0"); 10 (the one CI check, "the same in every 7LM repository"); 11 (the README is the start); 13 (the documentation says what is, the record says what happened); 14 (the rename pass: exactly what was renamed, what was propagated, what was left as written, and anything said about the exemplar repositories); 16 (peers from 1); 19 to 23 (the plate sheet and the packet reading).
+PRODUCE a checklist: the rules a repository must satisfy to be in step with the scaffold as of section 23, each with its locator.`,
+  },
+  {
+    key: 'record-B',
+    prompt: `SCOPE: the scaffold's record, /home/user/7lm@origin/main:${REC}, lines 295 to the end (sections 24 to 37); /home/user/7lm@origin/main:L8/L6/history/specification-history.md (all of it); and what the beta candidate adds to that file (git -C /home/user/7lm diff origin/main origin/beta/common-contracts-r1-r6 -- L8/L6/history/specification-history.md).
+EXTRACT precisely:
+- Section 25, the L7 restructure: every directory move; every sheet written; what the specification changed; what was propagated; what was deliberately NOT propagated; what it says about the exemplar repositories (with its counts).
+- Section 37, the prose sweep: EVERY phrase replacement with its verbatim before and after strings and its occurrence count; which trees were excluded from the sweep; what the CI list gained; the corrections it makes to sections 25, 28, 31, 35.
+- Section 26 (the exemplars mirror by hand; what the field guide is and is not); 27 (what is and is not a design choice); 28 to 30 (the sheet templates; blank sheets; audit exceptions); 31 (the hard rule: the guides share no history); 32 to 35 (recorded, NOT applied: list each so that nobody applies it); 36 (the system is not changed without asking; the review workflows); 37 ("1.md" parked).
+- specification-history.md: the version history; point 7 and point 8 of 20 September; and, on beta, the two added sections of 2 November 2026: quote what they claim was done, by whom, against which baseline, and what they say is NOT claimed.
+PRODUCE a checklist: the exact ordered operations by which the scaffold performed the restructure (section 25) and the sweep (section 37), written so that a person could repeat them by hand in another repository: each move, each new sheet, each phrase pair verbatim with its count, the CI change, and the "do not touch" list.`,
+  },
+  {
+    key: 'sheets-L7',
+    prompt: `SCOPE: every sheet (0.md) under L7 on /home/user/7lm@origin/main (list them: git -C /home/user/7lm ls-tree -r --name-only origin/main L7 | grep '/0.md$' ; also L7/0.md), and any non-sheet file under L7.
+EXTRACT, per position: the Object line; its function in one sentence; Holds and Does not hold, condensed; the Standing lines; any mention of the exemplar repositories or of named external repositories.
+Give near-verbatim attention to: L7/0.md (the tree it draws, its prose table, its "In the case of" section, the heading about private repositories); L7/allications/0.md and its six children; L7/governance/controlled/0.md; L7/peering/0.md; the peer-1 and object-1 sheets in all four directions.
+THEN, for the same paths, run git -C /home/user/7lm diff origin/main origin/beta/common-contracts-r1-r6 -- L7 and report every changed sentence as a fact of kind "change".
+PRODUCE a checklist: what a repository's L7 must physically contain, and, for each of the seven allications sheets and for controlled/, what the sheet states (Object line, the four questions, the boundary rule, the standing), precisely enough that a person could write the equivalent sheet in an adopting repository without seeing the scaffold.`,
+  },
+  {
+    key: 'sheets-L8',
+    prompt: `SCOPE: on /home/user/7lm@origin/main: every sheet (0.md) under L8 except those beneath L8/L6/retired/*/ (list: git -C /home/user/7lm ls-tree -r --name-only origin/main L8 | grep '/0.md$' | grep -v 'L8/L6/retired/.*/.*/'); README.md; .github/workflows/integrity.yml (the main version AND the beta version); L8/L6/in/0.md; L8/L0/pedagogy/ (what it holds).
+EXTRACT, per layer sheet (L8/0.md, L8/L0/0.md ... L8/L6/0.md): the core question; what the layer holds; the positions beneath it; the boundary rule. And what the sheets say about: definitions (L0); manuscripts and writing (L4/work/writing); computation and experiments (L4); research lanes, review as the catch-all, and findings (L5); institution (L5); history, in/ and retired/ (L6).
+For the check: state exactly what each step enforces and list the 71 canonical positions; state every difference between the main and beta versions.
+THEN run git -C /home/user/7lm diff origin/main origin/beta/common-contracts-r1-r6 -- L8 ':(exclude)*.json' ':(exclude)*.docx' and report every added or changed passage in the sheets as facts of kind "change", quoting the key sentences of each added section ("Shared housing and local research choices", "Using this position in a research project", "Manuscript work", "Local choices at this position", and so on). Also list the new non-sheet files the beta adds and what each is.
+PRODUCE a checklist: where a research-and-manuscript project files each kind of thing (definition, admissible states, formal relation, method, computation, experiment, manuscript draft, argument, review, finding, history, retired state, source, peer binding, released publication), per main, and what the beta guidance adds to that.`,
+  },
+  {
+    key: 'layer-lists',
+    prompt: `SCOPE: on /home/user/7lm@origin/main: L8/L6/in/7lm-layer-lists.md (415 lines, added by PR #21, merged 2026-11-11); L8/L6/7lm-sheet-templates.md; L8/L6/7lm-field-guide.md sections 10 to 14 (find them with grep -n '^## '); L8/L6/0.md.
+TASKS
+1. Describe the layer-lists document: its standing sentence, its nine lists, the fields each list carries, and its own "open for the owner" items.
+2. Test its fidelity. Take at least 45 bullets spread over all nine lists and check each against the sheet or specification passage it restates (origin/main). Report every mismatch, omission of a canonical position, or statement not found in its source, with both locators. Report the count checked and the count that matched.
+3. Does it add, remove or rename any position, rule or count relative to the sheets and the specification? List each, or state that there is none.
+4. What in it would become stale or false if PR #20 merges (branch origin/ccr-9391bd81-f2enmj moves L8/L6/7lm-field-guide.md to L8/L6/retired/field-guide-2026-09-20/ and rewrites L8/L6/0.md; compare with git diff origin/main origin/ccr-9391bd81-f2enmj --stat and the L8/L6/0.md diff)? Line numbers.
+5. What in it conflicts with, or is silent on, the beta candidate's corrections (git -C /home/user/7lm diff origin/main origin/beta/common-contracts-r1-r6 -- L8 L7 ':(exclude)*.json' ':(exclude)*.docx')?
+6. From the sheet templates and the field guide sections 10 to 14: the rules about sheets (what is and is not a design choice, the three degrees, blank sheets and audit exceptions), about folders of one's own and in/, about how an adopter takes the guide, and everything said about the exemplar repositories mirroring the scaffold.`,
+  },
+  {
+    key: 'beta-and-prs',
+    prompt: `SCOPE: everything on the scaffold that is NOT on main.
+1. The beta candidate, /home/user/7lm origin/beta/common-contracts-r1-r6, both commits (git -C /home/user/7lm log -p --stat origin/main..origin/beta/common-contracts-r1-r6 is not valid because it forks from 2e5a6d6; use git log 2e5a6d6..origin/beta/common-contracts-r1-r6 and git diff 2e5a6d6 origin/beta/common-contracts-r1-r6). For each commit: message, files, and what each hunk does. The record names the corrections only collectively as "R1-R6" ("repairs the remaining peer-authorship instruction; clarifies manual metadata status, non-exhaustive L0 foundations and model-attached vertical inquiries; scopes scale placement to its representation; harmonizes external semantic examples; and qualifies the byte analogy"). Map the six to the hunks that carry them, saying where the mapping is your inference. Describe the new files (beta-research-*.md, beta_boundary_probes.py, test_*.py, beta-boundary-results.json) and what they claim. State explicitly whether the beta changes the tree of directories or the list of 71 canonical positions, and exactly how its integrity.yml differs. Does the beta carry today's PR #21 file? Would the beta merge cleanly into main today (git merge-tree --write-tree origin/main origin/beta/common-contracts-r1-r6)?
+2. Open draft PR #20, branch origin/ccr-9391bd81-f2enmj (diff against origin/main): what it changes; whether it merges cleanly into main today; whether it would conflict with the beta (merge-tree against the beta).
+3. Open draft PR #19, branch origin/ccr-00099fac-hjosbo: what it changes in the model (rules, sheets, files such as .github/release.sh), whether it merges cleanly into main today and against the beta.
+4. origin/audit/peering-descriptive-reframe-2026-09-20: what it changes; same merge tests.
+5. origin/copilot/create-error-list and origin/copilot/create-academic-guide-plan: what each holds beyond main (git log origin/main..<ref> --stat); are they stale?
+6. Is anything on any of these branches a change to the physical model (a position added, removed or renamed) that main does not have? List each or state that there is none.`,
+  },
+  {
+    key: 'exemplar-autonomous',
+    prompt: `SCOPE: /home/user/autonomous, origin/main against the model on /home/user/7lm@origin/main; then its beta candidate origin/beta/7lm-exemplar-autonomous.
+"Live text" below means every tracked file EXCEPT those under L8/L6/history/, L8/L6/retired/, L8/L6/in/ (historical records keep the names that were true when they were written), and except verbatim quotations of the owner's words.
+TASKS
+1. The tree. Take the 71 canonical positions from /home/user/7lm@origin/main:.github/workflows/integrity.yml. For each, does the directory exist on autonomous origin/main, and does it carry a 0.md whose first line is "# <path>/"? List what is missing, what exists under a former name (L7/publications, L7/governance/restrictions), and every directory under L7 or L8 without a sheet.
+2. The words. In live text, list every file and line that names a former path or carries a phrase the scaffold swept on 2026-09-20 (record section 37): "L7/publications", "publications/" as the fourth L7 branch, "governance/restrictions", "restrictions/" as a folder name, "peering, and publication state", "the L7 publications branch", "peering, and publications become addressable", "publications and release identity", "access, restrictions", "access, and restrictions", "licensing and restrictions folders", the canonical-branches sentence ending "and L7/publications/", and the tree drawings and prose tables that draw the old branches. Use git -C /home/user/autonomous grep -n -F '<text>' origin/main -- . ':(exclude)L8/L6/history' ':(exclude)L8/L6/retired' ':(exclude)L8/L6/in'. Give counts per phrase and the file list. Separately list occurrences that must NOT be changed (quotations, records, a word naming a kind of condition and not a position).
+3. The check. Diff autonomous origin/main:.github/workflows/integrity.yml against the scaffold's main version; list each difference and say which are this repository's own history (for example its retired Q-6 comment block).
+4. The README and the layer sheets: every statement that describes the desk's branches or the scaffold.
+5. Its own record: read L8/L6/history/harmonization-2026-09-05.md and L8/L6/history/LEDGER.md. How are sections numbered and dated; what is the last section; what does it say about mirroring the scaffold, about the rename pass of 2026-09-12, and what decisions does it leave to the owner? Where would a record of a new pass belong, by this repository's own convention?
+6. Open PR #27 (branch origin/claude/no-deletion-fix-2026-09-07) and closed PR #29 (origin/claude/scholarly-pair-baseline-k8ap82): which of their paths predate the L7 restructure and would be affected by it?
+7. The beta candidate (git diff -M origin/main origin/beta/7lm-exemplar-autonomous). Classify EVERY changed file as (a) physical alignment with the scaffold, (b) a wording or contract change, (c) a new research object, or a mixture, naming the hunks. Say where its physical alignment is incomplete against record sections 25 and 37 (former phrases left in live text: grep the beta ref the same way), and anything it changed that the scaffold's procedure says to leave alone.
+PRODUCE a checklist: the ordered operations to bring autonomous origin/main physically into step with the scaffold's main by the scaffold's own procedure, with exact paths, phrase pairs and counts.`,
+  },
+  {
+    key: 'exemplar-auditonomous',
+    prompt: `SCOPE: /home/user/auditonomous, origin/main against the model on /home/user/7lm@origin/main; then its beta candidate origin/beta/7lm-exemplar-auditonomous.
+"Live text" below means every tracked file EXCEPT those under L8/L6/history/, L8/L6/retired/, L8/L6/in/ (historical records keep the names that were true when they were written), and except verbatim quotations of the owner's words.
+TASKS
+1. The tree. Take the 71 canonical positions from /home/user/7lm@origin/main:.github/workflows/integrity.yml. For each, does the directory exist on auditonomous origin/main, and does it carry a 0.md whose first line is "# <path>/"? List what is missing, what exists under a former name (L7/publications, L7/governance/restrictions), and every directory under L7 or L8 without a sheet.
+2. The words. In live text, list every file and line that names a former path or carries a phrase the scaffold swept on 2026-09-20 (record section 37): "L7/publications", "publications/" as the fourth L7 branch, "governance/restrictions", "restrictions/" as a folder name, "peering, and publication state", "the L7 publications branch", "peering, and publications become addressable", "publications and release identity", "access, restrictions", "access, and restrictions", "licensing and restrictions folders", the canonical-branches sentence ending "and L7/publications/", and the tree drawings and prose tables that draw the old branches. Use git -C /home/user/auditonomous grep -n -F '<text>' origin/main -- . ':(exclude)L8/L6/history' ':(exclude)L8/L6/retired' ':(exclude)L8/L6/in'. Give counts per phrase and the file list. Separately list occurrences that must NOT be changed (quotations, records, staging records about sources, a word naming a kind of condition and not a position).
+3. The check. Diff auditonomous origin/main:.github/workflows/integrity.yml against the scaffold's main version; list each difference.
+4. The README and the layer sheets: every statement that describes the desk's branches or the scaffold.
+5. Its own record: read L8/L6/history/harmonization-2026-09-05.md and L8/L6/history/LEDGER.md. How are sections numbered and dated; what is the last section; what does it say about mirroring the scaffold, about the rename pass of 2026-09-12, and what decisions does it leave to the owner? Where would a record of a new pass belong, by this repository's own convention?
+6. Open PR #25 (branch origin/claude/no-deletion-fix-2026-09-07) and closed PR #27 (origin/claude/book-structure-roadmap-k8ap82, 176 files): which of their paths predate the L7 restructure, and which files on the roadmap branch name the former paths in live text (count)?
+7. The beta candidate (git diff -M origin/main origin/beta/7lm-exemplar-auditonomous). Classify EVERY changed file as (a) physical alignment with the scaffold, (b) a wording or contract change, (c) a new research object, or a mixture, naming the hunks. Say where its physical alignment is incomplete against record sections 25 and 37 (former phrases left in live text: grep the beta ref the same way), and anything it changed that the scaffold's procedure says to leave alone.
+PRODUCE a checklist: the ordered operations to bring auditonomous origin/main physically into step with the scaffold's main by the scaffold's own procedure, with exact paths, phrase pairs and counts.`,
+  },
+  {
+    key: 'timeline',
+    prompt: `SCOPE: the commit history of all three repositories from 2026-09-11 to 2026-11-11, every branch.
+TASKS
+1. /home/user/7lm: git log --first-parent --since=2026-09-11 --format='%h %ci %an | %s' origin/main, then for each first-parent commit the files it changed (git show --stat). Group the merged pull requests #11 to #21 and the owner's two direct edits ("Update 0.md" at 0738519 and 2e5a6d6: show exactly what each changed). For each, classify the change as: physical (a directory or file moved, added or removed in the canonical tree), words (sheet or specification text), rule (a standing rule), or filed material (a document added without changing the model). State for each whether an adopting repository would have to do anything to stay in step, and what.
+2. Establish exactly when the exemplars were last in step: compare the dates and contents of scaffold PR #11 (merge 67bb795) with autonomous PR #28 (merge c9076c3) and auditonomous PR #26 (merge 2165144). Then say whether scaffold PR #12 (b85d2e0, peers from 1) required anything of the exemplars that they do not already have (check their L7/peering trees and any "peer-0" text on their main).
+3. Every non-main branch of the three repositories created or updated since 2026-09-11 (git for-each-ref --sort=-committerdate refs/remotes/origin): author, date, one line on what it holds, merged or not (git branch -r --merged origin/main).
+4. The three beta branches of 2-3 Nov 2026: who authored and committed them, their dates in order, how each names the others (commit messages and binding.json files cite commit ids: verify each cited id exists and on which branch), and what "common architecture 4ca3edb" refers to.
+PRODUCE a dated timeline (one row per event) of every change to the model and to the exemplars in the period, each row with its locator and its classification.`,
+  },
+]
+
+const OUTPUT_NOTE = `
+OUTPUT: return the structured object. "facts" should be complete for your scope (typically 25 to 70 facts), each self-contained. Put the ordered operations or rules asked for under "checklist". Put what you could not settle under "open_questions".`
+
+phase('Read')
+const read = await parallel(READERS.map(r => () =>
+  agent(RULES + '\n' + r.prompt + OUTPUT_NOTE, { label: `read:${r.key}`, phase: 'Read', schema: FACTS_SCHEMA, effort: 'high' })
+    .then(x => (x ? Object.assign({ key: r.key }, x) : null))
+))
+const got = read.filter(Boolean)
+log(`readers returned: ${got.length}/${READERS.length}, facts: ${got.reduce((n, r) => n + (r.facts ? r.facts.length : 0), 0)}`)
+
+const MIG_ITEM = {
+  type: 'object',
+  properties: {
+    order: { type: 'integer' },
+    operation: { type: 'string' },
+    detail: { type: 'string' },
+    basis: { type: 'string' },
+  },
+  required: ['operation', 'detail', 'basis'],
+}
+const SYNTH_SCHEMA = {
+  type: 'object',
+  properties: {
+    report: { type: 'string' },
+    migration_autonomous: { type: 'array', items: MIG_ITEM },
+    migration_auditonomous: { type: 'array', items: MIG_ITEM },
+    do_not_touch: { type: 'array', items: { type: 'string' } },
+    key_claims: {
+      type: 'array',
+      items: {
+        type: 'object',
+        properties: { id: { type: 'string' }, claim: { type: 'string' }, evidence: { type: 'string' } },
+        required: ['id', 'claim', 'evidence'],
+      },
+    },
+  },
+  required: ['report', 'migration_autonomous', 'migration_auditonomous', 'key_claims'],
+}
+
+const SYNTH_PROMPT = RULES + `
+YOU ARE THE SYNTHESIZER. Below are the structured outputs of the readers. You may read git objects yourself to settle a disagreement between readers or fill a small hole. Write for the owner, Eric D. Martin, who designed the model: plain English, short sentences, full dates, no praise, no hedging beyond what the evidence requires. Quote the owner's words exactly. Say "not verified" where that is the case.
+
+PRODUCE
+1. "report": Markdown, about 2,000 to 2,800 words, with these sections in this order:
+   - "The short answer": six to nine sentences. What the model is today; what changed and where the change lives (main, the beta candidate, an open pull request); what the exemplars lack.
+   - "What changed, in time order": from 12 September 2026, when the exemplars were last brought into step, to 11 November 2026. One entry per change. Mark each as on main / on the beta candidate only / on an open pull request only, and as physical (the tree, names) / words (sheets, specification text) / rule (a standing rule) / recorded and not applied / filed material.
+   - "The model as it stands on main, from the bottom up": L0, L1, L2, L3, L4, L5, L6, then L7 the desk with its four branches and every position, then L8 the envelope, the root, the sheet rule, the one check, and the standing rules (mirror by hand; nothing changed without asking; HOA; sheets as design choices and what is not one; the hard rule that the guides share no history; in/; blank sheets as audit exceptions; what is recorded and not applied).
+   - "Main against the beta candidate": what the candidate changes (R1 to R6, the research-housing guidance, the check), what it leaves alone (say explicitly whether the directory tree and the 71 positions are identical), and what its own record says is not claimed.
+   - "Open pull requests and branches on the scaffold": each one, what it would change, whether it still merges.
+   - "Each exemplar against the model": Autonomous, then Auditonomous: exactly what differs on main (positions, names, words, the check, the README, folders without a sheet); what its beta candidate already did, and what the candidate left undone or did beyond a physical alignment.
+   - "Decisions that are the owner's": numbered, each one sentence.
+2. "migration_autonomous" and "migration_auditonomous": the ordered, concrete operations that bring each exemplar's main physically into step with the scaffold's main, following the scaffold's own procedure in record sections 25 and 37: the moves as tracked renames; the new sheets; the words made to match the folders in live text only, with each phrase pair verbatim and its count in that repository; the check's canonical list; the README; and that repository's own L6 record of the pass (each repository's history is its own). Give the basis (a locator) for each operation.
+3. "do_not_touch": what the pass must leave exactly as it is, and why.
+4. "key_claims": the 12 claims in your report that the owner would rely on most, each self-contained, with its evidence locators. Include the claims about what differs between main and the beta candidate and about what each exemplar lacks.
+
+READER OUTPUTS (JSON):
+`
+
+phase('Synthesize')
+const synth = await agent(SYNTH_PROMPT + JSON.stringify(got), { label: 'synthesize', phase: 'Synthesize', schema: SYNTH_SCHEMA })
+if (!synth) {
+  return { report: null, error: 'synthesis failed', readers: got }
+}
+
+const VERDICT_SCHEMA = {
+  type: 'object',
+  properties: {
+    id: { type: 'string' },
+    verdict: { type: 'string', enum: ['stands', 'corrected', 'refuted'] },
+    corrected_statement: { type: 'string' },
+    reasoning: { type: 'string' },
+    evidence_checked: { type: 'array', items: { type: 'string' } },
+  },
+  required: ['id', 'verdict', 'reasoning'],
+}
+const CRITIC_SCHEMA = {
+  type: 'object',
+  properties: {
+    gaps: {
+      type: 'array',
+      items: {
+        type: 'object',
+        properties: { gap: { type: 'string' }, finding: { type: 'string' }, severity: { type: 'string' } },
+        required: ['gap', 'finding'],
+      },
+    },
+  },
+  required: ['gaps'],
+}
+
+const claims = (synth.key_claims || []).slice(0, 12)
+const verifyPrompt = c => RULES + `
+YOU ARE A SKEPTIC. Try to REFUTE the claim below by reading the git objects yourself. Check every locator it cites; then look for evidence against it that it does not cite. If any part of it is wrong, imprecise, or true of a different ref than the one it names, return "corrected" with the exact corrected statement. If you cannot confirm it from the objects, return "refuted". Return "stands" only if every part is confirmed.
+CLAIM ${c.id}: ${c.claim}
+EVIDENCE CITED: ${c.evidence}`
+
+const criticPrompt = RULES + `
+YOU ARE THE COMPLETENESS CRITIC. Below are a report on the 7LM model, two migration checklists for the exemplar repositories, and the scopes and summaries of the readers behind them. Find what is missing or wrong, and for each gap DO THE READING and report the finding with locators.
+Look for:
+- a source not read, or a branch of any of the three repositories not accounted for (git for-each-ref refs/remotes/origin);
+- a change to the model between 2026-09-12 and 2026-11-11 that the report does not mention (git log on main, the beta, the open branches);
+- a migration operation that is missing. Test it: after the listed operations, would the scaffold's main integrity.yml pass on the exemplar (root, every sheet's first line, all 71 positions)? Would any live file still name a former path or carry a swept phrase (grep origin/main of each exemplar, excluding L8/L6/history, L8/L6/retired, L8/L6/in)? Would any link inside a moved file now point at the wrong place?
+- a migration operation that would wrongly alter a historical record, a retired set, a quotation of the owner, or a word that names a kind of condition and not a position;
+- anything the migration would break in the exemplars' open or closed branches (PR #25 and #27 on auditonomous, #27 and #29 on autonomous) or in their beta candidates;
+- a decision that is the owner's and is not listed.
+Return up to 15 gaps, most serious first.
+
+REPORT:
+${synth.report}
+
+MIGRATION, AUTONOMOUS (JSON): ${JSON.stringify(synth.migration_autonomous)}
+MIGRATION, AUDITONOMOUS (JSON): ${JSON.stringify(synth.migration_auditonomous)}
+DO NOT TOUCH (JSON): ${JSON.stringify(synth.do_not_touch || [])}
+READER SCOPES AND SUMMARIES (JSON): ${JSON.stringify(got.map(r => ({ key: r.key, scope: r.scope, summary: r.summary, open_questions: r.open_questions })))}`
+
+phase('Verify')
+const both = await parallel([
+  () => parallel(claims.map(c => () =>
+    agent(verifyPrompt(c), { label: `verify:${c.id}`, phase: 'Verify', schema: VERDICT_SCHEMA, effort: 'high' })
+      .then(v => (v ? Object.assign({ claim: c.claim }, v) : null))
+  )),
+  () => agent(criticPrompt, { label: 'critic', phase: 'Verify', schema: CRITIC_SCHEMA }),
+])
+const verdicts = (both[0] || []).filter(Boolean)
+const critic = both[1] || { gaps: [] }
+const notStanding = verdicts.filter(v => v.verdict !== 'stands')
+log(`claims: ${claims.length}, verdicts: ${verdicts.length}, corrected or refuted: ${notStanding.length}, gaps: ${(critic.gaps || []).length}`)
+
+const FINAL_SCHEMA = {
+  type: 'object',
+  properties: {
+    report: { type: 'string' },
+    migration_autonomous: { type: 'array', items: MIG_ITEM },
+    migration_auditonomous: { type: 'array', items: MIG_ITEM },
+    do_not_touch: { type: 'array', items: { type: 'string' } },
+    owner_decisions: { type: 'array', items: { type: 'string' } },
+  },
+  required: ['report', 'migration_autonomous', 'migration_auditonomous'],
+}
+
+phase('Final')
+const fin = await agent(RULES + `
+YOU ARE THE FINAL EDITOR. Rewrite the report and the two migration checklists below so that every correction from the skeptics is applied and every gap the critic established is worked in at the place it belongs. Do not add a claim that neither a reader, a skeptic nor the critic established; you may read git objects to settle a conflict. Keep the section order, the plain register and the owner's words exactly as quoted. The report may grow to about 3,200 words. Add nothing about how the report was produced. Return also "owner_decisions": the full numbered list, one sentence each.
+
+DRAFT REPORT:
+${synth.report}
+
+DRAFT MIGRATION, AUTONOMOUS (JSON): ${JSON.stringify(synth.migration_autonomous)}
+DRAFT MIGRATION, AUDITONOMOUS (JSON): ${JSON.stringify(synth.migration_auditonomous)}
+DRAFT DO NOT TOUCH (JSON): ${JSON.stringify(synth.do_not_touch || [])}
+
+SKEPTICS' VERDICTS (JSON): ${JSON.stringify(verdicts)}
+
+CRITIC'S GAPS (JSON): ${JSON.stringify(critic.gaps || [])}`, { label: 'final', phase: 'Final', schema: FINAL_SCHEMA })
+
+return {
+  report: fin ? fin.report : synth.report,
+  migration_autonomous: fin ? fin.migration_autonomous : synth.migration_autonomous,
+  migration_auditonomous: fin ? fin.migration_auditonomous : synth.migration_auditonomous,
+  do_not_touch: fin ? fin.do_not_touch : synth.do_not_touch,
+  owner_decisions: fin ? fin.owner_decisions : [],
+  claims_total: claims.length,
+  claims_not_standing: notStanding,
+  gaps: critic.gaps || [],
+  readers: got.map(r => ({ key: r.key, facts: (r.facts || []).length, checklist: r.checklist || [], open_questions: r.open_questions || [] })),
+}

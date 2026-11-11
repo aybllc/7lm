@@ -1,0 +1,232 @@
+# read:embodied
+
+Agent result, as returned. Workflow: Manuscript status of 3 November 2026. Run `wf_1cf4205c-c72`. Phase: Read. Checked in 2026-11-11 19:51 UTC.
+
+- **summary**: The second manuscript thread is "Embodied Auditonomy, LexROM, and the Cabin Model" (self-described "Intake document for eBIOS / EB Carrier repository"), author Eric D. Martin with an assistant doing "[source text withheld from the public copy]", dated 2026-04-28, [source text withheld from the public copy]", Version v0.2, 495 lines / 27,636 bytes (md) plus a 97,790-byte PDF. The corpus cites it as LEX (also EMB); [source text withheld from the public copy] related-noun gloss "Bounded autonomy under mandatory auditability" (LEX:53) used by AUDITONOMOUS_DEFINITION.md. It never contains the word "auditonomous" (0 hits; "auditonomic" 9, "auditonomy" 17). Its self-reference names a nu-algebra commit ea08f59 and a content sha256 7fd260a5… that no local copy reproduces.
+
+  Location: on origin/main (2165144) the manuscript is ABSENT. peer-3/object-1/0.md says "Content held here | none" and "absent from live trees"; peer-3/0.md says "the manuscript path cited in Appendix E does not exist in this repository"; the Appendix E path (manuscript/ beside the definition) does not exist. In history it was added at fc3b018 (2026-07-30) under intake/manuscript/ (copied [source text withheld from the public copy]/…/embodied-auditonomy/manuscript/) and deleted at 8c98573 (2026-08-15, "Retire intake/ entirely"); 1d83788 is the last tree holding it. On origin/claude/book-structure-roadmap-k8ap82 (head 9259c18, 2026-09-14; the closed, unmerged PR #27) commit 62d2e3f restored both files byte-identically (blobs ea851007/29007fc3) to L7/peering/private/ingress/peer-3/object-1/ and rewrote the object-1 sheet; peer-3/0.md, the definition and THEME_LEDGER were not changed there, so the branch still carries "absent from live trees" and the dead Appendix E path. PR #27 was closed 2026-10-17 without merge ("Merging is the owner's act"; "Nothing is deleted"). No evidence in this repository places the manuscript in the ebios repository; the 2026-07-30 sweep holds no ebios/nu-algebra material, and the roadmap leaves open whether [source text withheld from the public copy].
+
+  Known defects: FAILED CHECK on the self-declared content hash (on-disk 6a717c70… ≠ claimed 7fd260a5…; I recomputed 6a717c70… on the branch blob), filed as MOVE_LOG "F2 — DEMOTED to a publication-phase note", with the ea08f59 provenance line "UNVERIFIED"; missing naming-policy authority file feedback_artifact_hash_naming.md; T16 internal defects (duplicate "## 19." at LEX:363 and LEX:379 with §20 between; NAUGHT absent from the §3 table; LexID components differ at LEX:56/207/454 — all reproduced); gate-granularity drift (7-step vs 5-step vs EBD 9-stage); engineering-layer contradictions C-13/C-15/C-16 and C-1/C-4/C-5 recorded in branch-only review files. Labels everywhere: INTERNAL ONLY, reference-only, bound by identity, hashes unpinned (owner's ledgering act).
+- **facts**
+  - item 1
+    - **claim**: Title and nature of the manuscript: a concept/intake document, not a book draft.
+    - **evidence**: L7/peering/private/ingress/peer-3/object-1/martin_2026_embodied_auditonomy_lexrom_cabin_model_v0.2_ea08f59.md @origin/claude/book-structure-roadmap-k8ap82 :1 "# Embodied Auditonomy, LexROM, and the Cabin Model"; :3 "**Intake document for eBIOS / EB Carrier repository**"
+    - **date**: 2026-04-28
+    - **status_label**: Concept architecture draft
+  - item 2
+    - **claim**: Authorship, assistant role, date, intended destination and self-declared status.
+    - **evidence**: same file (branch) :7 "Author / originator | Eric D. Martin"; :8 "[source text withheld from the public copy]"; :9 "Date | 2026-04-28"; :10 "[source text withheld from the public copy]"; :11 "[source text withheld from the public copy]"
+    - **date**: 2026-04-28
+    - **status_label**: [source text withheld from the public copy]
+  - item 3
+    - **claim**: Version string, bootstrap commit, self-declared content hash with its verification recipe, canonical filename and naming-policy authority.
+    - **evidence**: same file (branch) :16 "Version | v0.2"; :17 "Bootstrap commit (nu-algebra) | `ea08f59`"; :18 "[source text withheld from the public copy]`)"; :19 "Canonical filename | `martin_2026_embodied_auditonomy_lexrom_cabin_model_v0.2_ea08f59.md`"; :20 "Naming-policy authority | `feedback_artifact_hash_naming.md`"; :22 "No hash, no canonical status. No exceptions." (policy "locked, propagating")
+    - **date**: 2026-04-28
+    - **status_label**: v0.2
+  - item 4
+    - **claim**: Size of the two files as held on the branch.
+    - **evidence**: git show origin/claude/book-structure-roadmap-k8ap82:<md> | wc -l -c = 495 lines, 27636 bytes; PDF martin_2026_embodied_auditonomy_lexrom_cabin_model_v0_2.pdf = 97790 bytes
+    - **status_label**: 
+  - item 5
+    - **claim**: The manuscript does not contain the word 'auditonomous' at all; it uses 'auditonomic' and 'auditonomy' only (consistent with the definition's negative finding).
+    - **evidence**: grep -o -i over the branch blob: auditonomous 0, auditonomic 9, auditonomy 17, 'runtime without parameters' 0; L8/L0/semantics/definitions/AUDITONOMOUS_DEFINITION.md:339 "Exact form 'auditonomous' NOT attested anywhere searched ... /[source text withheld from the public copy]."
+    - **status_label**: NEGATIVE FINDING
+  - item 6
+    - **claim**: The manuscript proposes its own placement in a repository under docs/ (a proposal, not evidence of presence anywhere).
+    - **evidence**: same file (branch) :296 "## 15. Proposed Repo Placement"; :300 "`[source text withheld from the public copy]."; :305 "`src/lexrom/` | Future module"
+    - **status_label**: proposal
+  - item 7
+    - **claim**: The manuscript draws its own authorship/provenance boundary and marks later text as assistant-originated.
+    - **evidence**: same file (branch) :363 "## 19. Authorship / Provenance Boundary"; :365 "[source text withheld from the public copy]."; :367 "[source text withheld from the public copy]."
+    - **status_label**: 
+  - item 8
+    - **claim**: On origin/main (2165144, 2026-09-11) the peer-3 binding holds no manuscript: only the two sheets exist.
+    - **evidence**: git ls-tree -r HEAD -- L7/peering/private/ingress/peer-3 → only peer-3/0.md (c35cb94) and peer-3/object-1/0.md (29bae0a); L7/peering/private/ingress/peer-3/object-1/0.md:16 "| Content held here | none |"
+    - **date**: 2026-09-11
+    - **status_label**: none held
+  - item 9
+    - **claim**: Main's binding record states identity, owner, unpinned version, status and governance of the manuscript.
+    - **evidence**: L7/peering/private/ingress/peer-3/object-1/0.md:10 "the `abba-01/ebios` repository (2026-07-30 read) and the Martin 2026 embodied-auditonomy manuscript, as cited in Appendices A, C, and E of the definition"; :11 "Owner | Eric D. Martin"; :13 "no commit or manuscript hash is pinned there — the owner's next ledgering session pins them"; :15 "bound by identity; reference-only; the manuscript is \"absent from live trees\""; :17 "same owner; INTERNAL ONLY"
+    - **status_label**: INTERNAL ONLY; bound by identity; reference-only; absent from live trees
+  - item 10
+    - **claim**: Main's peer sheet calls the manuscript a cold backup absent from live trees and says the Appendix E path does not exist in the repository.
+    - **evidence**: L7/peering/private/ingress/peer-3/0.md:8 "the Martin 2026 embodied-auditonomy manuscript (a cold backup, absent from live trees) ... They are INTERNAL ONLY and validate nothing technical."; :16 "Nothing of them is held here; the manuscript path cited in Appendix E does not exist in this repository."
+    - **status_label**: INTERNAL ONLY
+  - item 11
+    - **claim**: The Appendix E path (manuscript/ beside the definition) does not exist on main.
+    - **evidence**: ls L8/L0/semantics/definitions/manuscript → "No such file or directory"; directory holds only 0.md and AUDITONOMOUS_DEFINITION.md
+    - **status_label**: absent
+  - item 12
+    - **claim**: The routing plan of 2026-09-05 recorded the dead Appendix E path and prescribed binding by identity + version; its BIND disposition says the peer's content is not copied.
+    - **evidence**: L8/L6/history/7LM_ROUTING_PLAN_2026-09-05.md:82 "Manuscript path in Appendix E does not exist here; bind by identity + version, \"absent from live trees\" stated."; :3 "**Status:** UNREVIEWED MODEL OUTPUT · INTERNAL ONLY · a proposal, not an adjudication."; BIND row "a binding record at an L7 peering position (reference-only, NO EDIT, NO DELETE); the peer's content is not copied."
+    - **date**: 2026-09-05
+    - **status_label**: UNREVIEWED MODEL OUTPUT · INTERNAL ONLY
+  - item 13
+    - **claim**: The manuscript entered the repository in the initial commit under intake/manuscript/, copied from Eric's cold backup.
+    - **evidence**: fc3b018 (2026-07-30 23:29:50 -0700) adds intake/manuscript/martin_2026_embodied_auditonomy_lexrom_cabin_model_v0.2_ea08f59.md (blob ea851007…) and …_v0_2.pdf (blob 29007fc3…); intake/MOVE_LOG.md@fc3b018:13 "[source text withheld from the public copy] ... The word's defining manuscript."
+    - **date**: 2026-07-30
+    - **status_label**: 
+  - item 14
+    - **claim**: The manuscript was deleted from HEAD by the 2026-08-15 prune of intake/; 1d83788 (2026-08-14) is the last tree holding it and is an ancestor of main.
+    - **evidence**: 8c98573 (2026-08-15 23:28:27 -0700) "D intake/manuscript/martin_2026_…_v0.2_ea08f59.md", "D …_v0_2.pdf"; message "Retire intake/ entirely (131 files)" and "all content remains reachable in history"; git ls-tree 1d83788 shows the same blobs ea851007/29007fc3; git merge-base --is-ancestor 1d83788 origin/main = yes
+    - **date**: 2026-08-15
+    - **status_label**: in history only (main)
+  - item 15
+    - **claim**: No v0.1 of the manuscript exists in any git ref; Appendix E says v0.1 survives only in the cold backups.
+    - **evidence**: git log --all --name-only | grep -i 'embodied|lexrom' → only the four v0.2 paths (intake/manuscript/… and L7/peering/…/object-1/…); AUDITONOMOUS_DEFINITION.md:377-378 "[source text withheld from the public copy]/`."
+    - **status_label**: absent from git
+  - item 16
+    - **claim**: The hash FAILED CHECK was first filed in MOVE_LOG on 2026-08-02 [source text withheld from the public copy], with two undistinguished explanations and the ea08f59 provenance line marked UNVERIFIED.
+    - **evidence**: git log -S'F2 — DEMOTED' → 3406bd1 (2026-08-02 11:24:54 -0700) adds it, 8c98573 removes the file; intake/MOVE_LOG.md@1d83788:113 "### [source text withheld from the public copy]"; :122-123 measured "6a717c70cb98302907ae9c6b0f6c510d1928ffd0ade073dc66aaf4012b818e00  …_v0.2_ea08f59.md" / "520ada05a1539390cfd62aabb17fb2bba9ae4aa7b649e73cb232afa5bbf261f2  …_v0_2.pdf"; :[source text withheld from the public copy]."; :128-129 "(a) the local copy diverged ... ([source text withheld from the public copy]."; :131-134 "Note the conflicting prior claim ... '[source text withheld from the public copy] ... Reported as found; not reconciled."; :136-137 "[source text withheld from the public copy]**"
+    - **date**: 2026-08-02
+    - **status_label**: FAILED CHECK; UNVERIFIED; DEMOTED to a publication-phase note
+  - item 17
+    - **claim**: THEME_LEDGER (main) records the FAILED CHECK on the content hash and that the nu-algebra commit is not present.
+    - **evidence**: L8/L5/research/lanes/THEME_LEDGER.md:346 "**[source text withheld from the public copy].)"
+    - **date**: 2026-08-02
+    - **status_label**: FAILED CHECK; NOT-CHECKED
+  - item 18
+    - **claim**: THEME_LEDGER records that the naming policy's authority document is missing locally.
+    - **evidence**: L8/L5/research/lanes/THEME_LEDGER.md:347 "**[source text withheld from the public copy]/."
+    - **date**: 2026-08-02
+    - **status_label**: NOT-CHECKED
+  - item 19
+    - **claim**: T16 internal defects of the embodied manuscript, as recorded in THEME_LEDGER.
+    - **evidence**: L8/L5/research/lanes/THEME_LEDGER.md:298 "**[source text withheld from the public copy]."
+    - **date**: 2026-08-02
+    - **status_label**: T16 (tension, reported not harmonized)
+  - item 20
+    - **claim**: T16 reproduces on the branch copy: headings 363/369/379 are '## 19.' / '## 20.' / '## 19.'; NAUGHT count in lines 50-59 is 0; the three LexID lists differ.
+    - **evidence**: branch blob :363 "## 19. Authorship / Provenance Boundary"; :369 "## 20. Compact Summary"; :379 "## [source text withheld from the public copy]"; grep -c NAUGHT on :50-59 = 0 while :42 "Invoke CATCH / NAUGHT" and :144 "Intent claim: NAUGHT unless supported by trace."; :56 "[source text withheld from the public copy]"; :207 "[source text withheld from the public copy]"; :454 "[source text withheld from the public copy]"
+    - **status_label**: CONFIRMED (this session)
+  - item 21
+    - **claim**: Gate-granularity drift between the manuscript's own two gate lists and the eBIOS draft is recorded as an unreconciled dissimilarity.
+    - **evidence**: L8/L5/research/lanes/THEME_LEDGER.md:138 "[source text withheld from the public copy] ... See tensions T13, T16."
+    - **status_label**: unreconciled
+  - item 22
+    - **claim**: THEME_LEDGER places LEX in cluster C11 as engineering doctrine with all content INTERNAL ONLY.
+    - **evidence**: L8/L5/research/lanes/THEME_LEDGER.md:9 "LEX = manuscript/martin_2026_embodied_auditonomy_lexrom_cabin_model_v0.2_ea08f59.md"; :130 "**[source text withheld from the public copy]/) ... Register: engineering doctrine, not book scenario."; :131 "[source text withheld from the public copy]."; :336 "| LEX | Embodied-auditonomy / LexROM cabin manuscript | C11 |"; :5 "**Status:** corpus INTERNAL ONLY ... This ledger: INTERNALLY VALIDATED"
+    - **date**: 2026-08-02
+    - **status_label**: INTERNAL ONLY; INTERNALLY VALIDATED
+  - item 23
+    - **claim**: The definition entry quotes the manuscript as the source of its related-noun gloss and other clauses, citing it as v0.2 lines 53, 54, 149 (and 365 in Appendix C).
+    - **evidence**: L8/L0/semantics/definitions/AUDITONOMOUS_DEFINITION.md:28 "([source text withheld from the public copy])"; :41 "([source text withheld from the public copy]."; :47 "[source text withheld from the public copy]...\""; :56 "(manuscript v0.2:149)"; :278 cold-backup path "...[source text withheld from the public copy])]"
+    - **date**: 2026-07-30
+    - **status_label**: INTERNAL ONLY
+  - item 24
+    - **claim**: The definition's status block names the manuscript as in cold backup and part of the defining corpus.
+    - **evidence**: AUDITONOMOUS_DEFINITION.md:79 "DEFINITION STATUS: INTERNAL ONLY — ... [source text withheld from the public copy]."; :74 "[source text withheld from the public copy]/)"
+    - **date**: 2026-07-30
+    - **status_label**: INTERNAL ONLY
+  - item 25
+    - **claim**: The definition records the manuscript as ABSENT from live trees, with the 2026-06-12 backup manifest naming a path that no longer exists and the cold backups as the only readable copies.
+    - **evidence**: AUDITONOMOUS_DEFINITION.md:340 "[source text withheld from the public copy])."
+    - **date**: 2026-07-30
+    - **status_label**: ABSENT from live trees
+  - item 26
+    - **claim**: Appendix E of the definition records the 2026-07-30 copy from cold backup with hash prefixes and mtimes, and asserts the [source text withheld from the public copy]/'.
+    - **evidence**: AUDITONOMOUS_DEFINITION.md:365 "## [source text withheld from the public copy])"; :367 "[source text withheld from the public copy]/`:"; :369-370 "…[source text withheld from the public copy])"; :371-372 "…[source text withheld from the public copy])"; :374-376 "[source text withheld from the public copy]."; :378-380 "[source text withheld from the public copy]."
+    - **date**: 2026-07-30
+    - **status_label**: 
+  - item 27
+    - **claim**: Appendix D's adversarial check opened the manuscript at the archive cold-backup path and confirmed the cited lines verbatim.
+    - **evidence**: AUDITONOMOUS_DEFINITION.md:351 "OVERALL: SURVIVES ADVERSARIAL REVIEW."; :353 "**CONFIRMED** — Item 1 — ... manuscript v0.2:53,54,149)"; :354 "the manuscript at /home/eric/bak/uha/bak-uha-cold/archive/math/nu-algebra/_inbox/ACTION/likely-belongs-elsewhere/embodied-auditonomy/manuscript/martin_2026_…_v0.2_ea08f59.md. All resolve; ... [source text withheld from the public copy].'"
+    - **date**: 2026-07-30
+    - **status_label**: CONFIRMED
+  - item 28
+    - **claim**: The definition's text at HEAD is byte-identical to the 2026-07-30 original (so Appendix E's relative path has been false since the 2026-08-15 prune); HEAD briefly held a 0-byte copy on 2026-08-15 until 4a1c1db restored the content on 2026-08-16.
+    - **evidence**: git ls-tree: fc3b018 intake/AUDITONOMOUS_DEFINITION.md = blob 8b934b4; HEAD L8/L0/semantics/definitions/AUDITONOMOUS_DEFINITION.md = blob 8b934b4; 8c98573 manuscripts/definitions/AUDITONOMOUS_DEFINITION.md = blob e69de29 (empty); 4a1c1db same path = 8b934b4 ("410 insertions(+)")
+    - **date**: 2026-08-16
+    - **status_label**: 
+  - item 29
+    - **claim**: The roadmap branch restored both manuscript files at the peer-3 binding, byte-identical to the 2026-07-30 intake copies.
+    - **evidence**: git ls-tree -r origin/claude/book-structure-roadmap-k8ap82 -- L7/peering/private/ingress/peer-3 → object-1/martin_2026_…_v0.2_ea08f59.md blob ea851007645a472846f42613ae17d20a43d813cd and …_v0_2.pdf blob 29007fc35bcce496067f7642ab9d68252619dbd9 (same blobs as fc3b018 and 1d83788); commit 62d2e3f (2026-09-14 01:42:45 +0000) "Set up the repository before research: the cited-but-absent files returned from 1d83788, with sheets and an L6 record" — "the Martin 2026 manuscript at its peer-3 binding"; "No file's bytes were changed"
+    - **date**: 2026-09-14
+    - **status_label**: RESTORED (branch only)
+  - item 30
+    - **claim**: Recomputed hashes of the branch blobs match Appendix E's prefixes and the MOVE_LOG/THEME_LEDGER measurements, and do not match the manuscript's internal claim.
+    - **evidence**: sha256sum of branch md blob = 6a717c70cb98302907ae9c6b0f6c510d1928ffd0ade073dc66aaf4012b818e00; of pdf blob = 520ada05a1539390cfd62aabb17fb2bba9ae4aa7b649e73cb232afa5bbf261f2; vs LEX:18 "7fd260a51c2b42ce52d4f50d0107cd92c9c14f5b9f15df50fe4230cc208d47c5"
+    - **date**: 2026-11-03
+    - **status_label**: FAILED CHECK persists (self-hash); copy identity CONFIRMED
+  - item 31
+    - **claim**: The branch's object-1 sheet rewrites the Status, Content-held and Holdings rows; the hash remains unpinned and abba-01/ebios is still not held.
+    - **evidence**: L7/peering/private/ingress/peer-3/object-1/0.md @branch :15 "the manuscript was \"absent from live trees\" until 2026-09-14, when the copy that had stood in the intake until the prune of 2026-08-15 was restored to this position from git `1d83788`"; :16 "Content held here | `martin_2026_…_v0.2_ea08f59.md` and `martin_2026_…_v0_2.pdf` — the Martin 2026 embodied-auditonomy manuscript, v0.2, as the intake held it (the `ea08f59` in the name is the corpus's own hash of it); the corpus cites it as `LEX:`. [source text withheld from the public copy]; the record is `L8/L6/history/restore-2026-09-14.md`. The `abba-01/ebios` repository is still not held"; :13 unchanged "no commit or manuscript hash is pinned there"; :25 "held at this position as bound objects from 2026-09-14"
+    - **date**: 2026-09-14
+    - **status_label**: bound by identity; reference-only; INTERNAL ONLY; NO EDIT / NO DELETE
+  - item 32
+    - **claim**: The branch's L6 restore record documents the manuscript's return, cites the owner's instruction, and leaves hash-pinning to the owner.
+    - **evidence**: L8/L6/history/restore-2026-09-14.md @branch :3 "[source text withheld from the public copy]`)"; :7 owner verbatim "...[source text withheld from the public copy]"; :32 "[source text withheld from the public copy]."; :49 table row "from `intake/manuscript/`"; :73 "[source text withheld from the public copy]." (under "## 7. Left to the owner")
+    - **date**: 2026-09-14
+    - **status_label**: left to the owner (hash pin)
+  - item 33
+    - **claim**: Contradiction on the branch: peer-3/0.md was not updated by the restore and still says the manuscript is absent and nothing is held.
+    - **evidence**: peer-3/0.md blob c35cb94 identical on HEAD and origin/claude/book-structure-roadmap-k8ap82; its :8 "(a cold backup, absent from live trees)" and :16 "Nothing of them is held here; the manuscript path cited in Appendix E does not exist in this repository." stand beside object-1/0.md@branch:16 holding the files; restore-2026-09-14.md:64 lists updated sheets without peer-3/0.md
+    - **date**: 2026-09-14
+    - **status_label**: CONTRADICTION (branch-internal)
+  - item 34
+    - **claim**: The definition and THEME_LEDGER are unchanged on the branch, so Appendix E's dead path and the FAILED CHECK record are carried unchanged there.
+    - **evidence**: git diff HEAD origin/claude/book-structure-roadmap-k8ap82 -- L8/L0/semantics/definitions/AUDITONOMOUS_DEFINITION.md L8/L5/research/lanes/THEME_LEDGER.md → empty
+    - **date**: 2026-09-14
+    - **status_label**: 
+  - item 35
+    - **claim**: Other branch sheets and papers point to the manuscript at the peer-3 binding.
+    - **evidence**: L7/0.md @branch :222 "peer-3: `abba-01/ebios` and the Martin 2026 manuscript (the manuscript's two files held at the binding from 2026-09-14)" (main's L7/0.md:222 lacks the parenthesis); L8/L4/work/writing/manuscript/0.md @branch :20 "[source text withheld from the public copy] are not here: they are held at their binding"; L8/L4/work/writing/papers/AUDITONOMOUS_VOCABULARY_PAPER_2026-09-14.md @branch :66 "[source text withheld from the public copy]/`."; :310 "`L7/peering/private/ingress/peer-3/object-1/martin_2026_…_v0.2_ea08f59.md` (`LEX`)"
+    - **date**: 2026-09-14
+    - **status_label**: DRAFT, INTERNAL ONLY (vocabulary paper)
+  - item 36
+    - **claim**: The branch roadmap records the peer-3 hashes as unpinned, schedules pinning at S5, and leaves open whether [source text withheld from the public copy].
+    - **evidence**: L8/L5/research/review/BOOK_STRUCTURE_AND_ROADMAP_2026-09-13.md @branch :586 "the peer-3 hashes are unpinned"; :601 "pin the peer-3 hashes (S5)"; :663 "`aybllc/ebios` | ... 249 files · 2026-08-08 ... [source text withheld from the public copy]"; :671 "[source text withheld from the public copy]"; :413 "[source text withheld from the public copy]"
+    - **date**: 2026-09-14
+    - **status_label**: PROPOSAL, INTERNAL ONLY, nothing adopted
+  - item 37
+    - **claim**: PR #27 (head = the roadmap branch) was created 2026-09-13 and closed unmerged on 2026-10-17; the branch and its commits remain.
+    - **evidence**: gh api repos/aybllc/auditonomous/pulls/27: created_at 2026-09-13T20:39:22Z, closed_at 2026-10-17T08:41:45Z, merged false, head claude/book-structure-roadmap-k8ap82 @ 9259c180…; close-out comment by abba-01 2026-10-17T08:41:24Z: "State today, 17 October 2026. Draft. Five commits, 176 files, +22,883/−12. Mergeable against `main` at `2165144`"; "Why it is closed rather than merged. Merging is the owner's act in this repository."; "Nothing is deleted. The branch `claude/book-structure-roadmap-k8ap82` stays"; PR body: "the Martin 2026 manuscript at its peer-3 binding"
+    - **date**: 2026-10-17
+    - **status_label**: Draft; closed, not merged
+  - item 38
+    - **claim**: Branch-only (history-only) review documents record engineering-layer contradictions involving the manuscript and its register entry as a self-labelled concept draft.
+    - **evidence**: L8/L6/retired/consolidated-2026-08-04/AUDITONOMOUS.md @branch :32 "| `LEX` | `intake/manuscript/martin_2026_…_[source text withheld from the public copy] |"; :42 "[source text withheld from the public copy]`)"; :1159 "**[source text withheld from the public copy].** ... (`LEX:65`) against ... (`EB:205`) ... **FAILED CHECK — direct conflict.**"; :1163 "**[source text withheld from the public copy]** ... `LEX:40–41` ... **FAILED CHECK / OPEN.**"; :1165 "**[source text withheld from the public copy]` ... `EB:496` ... **FAILED CHECK**"; :1197 hash row "**[source text withheld from the public copy]**"; :544 CATCH/NAUGHT vs Third Power Corpus CAUGHT/NAUGHT "[source text withheld from the public copy].**" (not present on main; ls fails)
+    - **date**: 2026-08-04
+    - **status_label**: INTERNAL ONLY; self-labelled concept draft; FAILED CHECK; OPEN
+  - item 39
+    - **claim**: The eBIOS core-architecture draft (restored on the branch) declares the manuscript's EB-carrier wording noncanonical.
+    - **evidence**: L8/L4/work/writing/auditonomous_ebios_core_architecture_math_source-535f70d_draft.md @branch :496 "[source text withheld from the public copy]"
+    - **status_label**: noncanonical (per EB draft)
+  - item 40
+    - **claim**: The vocabulary paper carries contradictions C-1, C-4, C-5 that cite manuscript lines.
+    - **evidence**: AUDITONOMOUS_VOCABULARY_PAPER_2026-09-14.md @branch :258 "**C-1 — two clauses or three.** ... (`EB:36`, `LEX:53`) ... OPEN"; :261 "**C-4 ...** [source text withheld from the public copy] ... (`LEX:399`)"; :262 "**[source text withheld from the public copy]`)"; branch blob :251 "Encrypted OTA updates: signed law module revisions"
+    - **date**: 2026-09-14
+    - **status_label**: OPEN; contradictions reported, unharmonized
+  - item 41
+    - **claim**: Other main-tree files cite the manuscript only indirectly (open question LEX:487; label discipline; retired layout table).
+    - **evidence**: L8/L3/engineering-mathematics/PROPOSAL_seal_gated_interlock.md:20 "`[source text withheld from the public copy]:7 "[source text withheld from the public copy]:76 "| **Engineering** | ... `intake/manuscript/martin_2026_embodied_auditonomy…v0.2_ea08f59.md` | The same word **stipulated** as buildable doctrine for present hardware. |"
+    - **status_label**: open question; INTERNAL ONLY
+  - item 42
+    - **claim**: The 2026-08-05 provenance file's 'manuscript' lines refer to the Auditonomous manuscript-corpus path (manuscripts/main/research/eb-carrier/eb-audit), not to the embodied manuscript; that manuscripts/ tree no longer exists at HEAD.
+    - **evidence**: L7/provenance/lineage/2026-08-05-observed-not-observable-session-provenance.md:4 "**[source text withheld from the public copy]`"; :10 "`aybllc/auditonomous/manuscripts/main/research/eb-carrier/eb-audit/provenance/2026-08-05-…md`"; :88-92 "### [source text withheld from the public copy]"; ls manuscripts → "No such file or directory" (history: dabed3c, 8c98573, 4a1c1db, ccc0554, 3255451)
+    - **date**: 2026-08-05
+    - **status_label**: [source text withheld from the public copy]
+  - item 43
+    - **claim**: Nothing in this repository places the manuscript in the ebios repository; the only other repository the manuscript names is nu-algebra, and the 2026-07-30 sweep contains no ebios or nu-algebra material.
+    - **evidence**: LEX:17-18 "Bootstrap commit (nu-algebra) | `ea08f59`" / "git show ea08f59:docs/…_v0_2.md"; git ls-tree fc3b018 intake/sweep-2026-07-30/ → abba-01__hubble-bubble, abba-01__hubble-tension-resolution, abba-01__multiresolution-cosmology only; git grep -i 'lexrom|embodied_auditonomy|ea08f59' fc3b018 -- intake/sweep-2026-07-30 intake/MANIFEST.md → no hits; main tree mentions 'abba-01/ebios' 14 times and 'aybllc/ebios' 0 times; the ebios repository itself is not in this container and was not read
+    - **status_label**: NOT-CHECKED (ebios side)
+  - item 44
+    - **claim**: The five extracted documents (the .docx/.odt drafts and two chat transcripts) contain no reference to the embodied manuscript.
+    - **evidence**: grep -i 'embodied|lexrom|cabin|ea08f59|martin_2026|peer-3|LexID|law-rom' over /tmp/claude-0/-home-user/bfcfd013-a2da-5019-961e-7f46116f08be/scratchpad/manuscript/text/*.md → only unrelated hits: auditnomous-main.md:854 "**Architecture record:** AUR-STACK-2026-08-05-v0.2"; auditonomous-chat-1.md:110 and auditonomouos-chat-2.md:224 "GitGap ... NAUGHT -> CAUGHT -> FOUND"
+    - **status_label**: absent
+  - item 45
+    - **claim**: The retired 2026-09-06 intake README records that the prior intake corpus (which held the manuscript) was retired from HEAD by 8c98573 and 'remains in git history'.
+    - **evidence**: L8/L6/retired/layout-2026-09-06/intake/README.md:12-15 "The prior intake corpus (131 files: manifests, the sweep, the manuscript blocks, the research files, the sources) was retired from HEAD by `8c98573` (2026-08-15) ... and everything else remains in git history."
+    - **date**: 2026-09-06
+    - **status_label**: retired; in git history
+- **open_questions**
+  - Does nu-algebra commit ea08f59 exist, and what does `[source text withheld from the public copy]` return? This is the only way to resolve the FAILED CHECK (6a717c70… on disk vs 7fd260a5… declared at LEX:18); MOVE_LOG@1d83788:127-129 leaves the two explanations (local divergence vs wrong declared hash) undistinguished.
+  - Where is feedback_artifact_hash_naming.md, the 'locked' naming-policy authority cited at LEX:20-22? Not found under intake/ (THEME_LEDGER:347); not searched beyond this repository.
+  - Are abba-01/ebios and aybllc/ebios one object (roadmap D-item, BOOK_STRUCTURE:663/671), and does either hold the manuscript? Nothing in this repository says so; the ebios repository was not read here.
+  - Will the owner reopen PR #27 or cherry-pick 62d2e3f onto main? Until then main (2165144) holds no copy and the binding record says 'Content held here | none'.
+  - Who pins [source text withheld from the public copy]? Left to the owner (restore-2026-09-14.md:73; roadmap S5), and the Version row still says 'no commit or manuscript hash is pinned'.
+  - Is holding the two files at a BIND position consistent with the routing plan's BIND rule ('the peer's content is not copied')? The branch justifies it by the peer-2 precedent; no owner ruling is recorded.
+  - On the branch, peer-3/0.md still says 'absent from live trees' and 'Nothing of them is held here' while object-1/0.md holds the files; which sheet is to be corrected is unrecorded.
+  - Appendix E's 'now lives beside this entry at manuscript/' has been false since 8c98573 on both main and the branch; the routing plan says it does not edit the definition — who corrects or annotates Appendix E?
+  - The PDF carries no hash in its filename and no self-claim; whether the PDF is exactly v0.2 of the md (beyond matching Appendix E's 520ada05… prefix) is unverified.
+  - The manuscript's 'Intended destination' is the 'eBIOS / EB Carrier repo intake pipeline' (LEX:10) with a proposed docs/ placement (LEX:300); whether it was ever placed there, or whether peer-3 here is its only live home, is not recorded.

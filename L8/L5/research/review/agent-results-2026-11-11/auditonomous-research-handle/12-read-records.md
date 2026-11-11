@@ -1,0 +1,961 @@
+# read:records
+
+Agent result, as returned. Workflow: Handle on the Auditonomous research and manuscript. Run `wf_9c2917a7-7f0`. Phase: Read. Checked in 2026-11-11 19:51 UTC.
+
+- **scope**: Layer 6 (the repository's own records) of aybllc/auditonomous: MAIN L8/L6/ in full (sheets, master ledger, three session ledgers, harmonization record, routing plan, sheets record, two retired sets); ROADMAP additions (restore-2026-09-14.md, L6_RECONCILIATION_2026-08-14.md, retired/consolidated-2026-08-04/); BETA additions (AUDITONOMOUS_BETA_HISTORY.md and the two sheet edits). Read only from git objects. Cross-references followed only where a record named them (L7 sources LEDGER, the peer-1 binding record, review/0.md 'What is open', aybllc/7lm L7/0.md and specification, aybllc/autonomous blob identity). Scratch files: /tmp/claude-0/-home-user/bfcfd013-a2da-5019-961e-7f46116f08be/scratchpad/wf-handle/L6/
+- **summary**: Layer 6 in MAIN holds ten record files and two retired sets. The seven history files are byte-identical in MAIN, ROADMAP and BETA; ROADMAP adds two records and one retired set, BETA adds one record. None of these records checks a scientific claim: every ledger says "External Sources Checked: NONE". They are custody and layout records.
+
+  What I could confirm by checking: the 2026-08-16 commit counts (107 files, 62 deletions, 26 renames); the definition's 410 lines; both retired sets match their sheets; all 24 sampled move destinations exist in MAIN; ROADMAP's restore table is exact (318 paths; 116 restored byte-identical, 65 at HEAD, 16 superseded, 121 not restored); BETA's six moves and its finite-run numbers match its tree.
+
+  What is wrong or stale: the master ledger, which the README calls the master index, describes the 2026-08-16 layout; none of its areas exist in MAIN and it contradicts itself in three places. The "62 rows" count is really 60. One ledger sum gives 43 where the total is 40. Ruling AU-NORM-04 exists only in a commit message. The harmonization record says 69 paths moved; 68 did. Five owner drafts (.odt) were deleted in the 2026-08-15 prune with their decision still open, and the only later record cites a disposition that does not name them. MAIN has no enumeration of what that prune removed; only unmerged ROADMAP does. The model has since changed (L7/allications/, governance/controlled/): MAIN's L6 sheet still names the old paths, BETA fixes them.
+
+  Decisions: about 50 are recorded as the owner's. Roughly 10 are closed by a later record. The rest are open, including the three files that break the owner's definition rule (BETA claims dispositions, unmerged), the auditability-gap search (never run), the Third Power transfer, the ISO PDF history purge, and T3, Q1–Q9, line 52, §2.8.
+
+  First: decide whether ROADMAP's restore and BETA are merged, because MAIN alone cannot open what its own records cite.
+- **items**
+  - item 1
+    - **id**: REC-01
+    - **title**: L6 layer sheet
+    - **path**: L8/L6/0.md
+    - **where**: MAIN (ROADMAP identical; BETA one line changed)
+    - **what_it_is**: The sheet for Layer 6: states what L6 owns (prior states, decision history, failures, retirement), what it does not own (external provenance is L7; research judgment is L5), and lists holdings.
+    - **evidence_state**: CONTRADICTED
+    - **locator**: MAIN:L8/L6/0.md:70-89
+    - **quote**: Git history can support L6 reconstruction, but Git history and scientific memory/provenance are not the same object.
+    - **own_label**: "Not instantiated in this repository: current research practice remains manual; no directory metadata, automation, or validation is enabled here."
+    - **checked_how**: Compared its two holdings lists against git ls-tree origin/main L8/L6: the lists name 5 history files and one retired set; the tree holds 7 history files and two retired sets (sheets-2026-09-07.md, 7LM_ROUTING_PLAN_2026-09-05.md and retired/layout-2026-09-06/ are missing from the layer sheet; the directory sheets do list them).
+    - **open_items**
+      - Layer sheet holdings incomplete in all three states
+      - Line 82 names L7/publications/, which the current model has moved
+  - item 2
+    - **id**: REC-02
+    - **title**: History directory sheet
+    - **path**: L8/L6/history/0.md
+    - **where**: MAIN; ROADMAP adds 2 holdings lines; BETA adds 1
+    - **what_it_is**: Sheet for L8/L6/history/: what a history record is, what is held, and the rule that git history is not L6.
+    - **evidence_state**: INTERNALLY CHECKED
+    - **locator**: MAIN:L8/L6/history/0.md:31-41
+    - **quote**: Git records repository change events; a commit identifier in a record here is an orientation pointer, not the scientific memory. The memory is the record.
+    - **checked_how**: Its Holdings list matches git ls-tree origin/main L8/L6/history (7 files). ROADMAP's version adds L6_RECONCILIATION_2026-08-14.md and restore-2026-09-14.md; BETA's adds AUDITONOMOUS_BETA_HISTORY.md; each matches its tree. Its description of LEDGER.md is wrong in one phrase (see defects).
+    - **open_items**
+      - Says 'this clone is shallow' and that some ledger rows point to the rescue branch as the only surviving copy
+  - item 3
+    - **id**: REC-03
+    - **title**: Master ledger
+    - **path**: L8/L6/history/LEDGER.md
+    - **where**: MAIN (identical in ROADMAP and BETA)
+    - **what_it_is**: The 'master index of internal state', opened 2026-08-14, last substantively edited 2026-08-16 (commit 4a1c1db; later commits only moved it). A table of the tree by area, what each area waits on, standing constraints, and five known open items.
+    - **evidence_state**: CONTRADICTED
+    - **locator**: MAIN:L8/L6/history/LEDGER.md:27-40
+    - **quote**: [source text withheld from the public copy].
+    - **own_label**: "MASTER LEDGER — /home/eric/ayb/auditonomous"
+    - **checked_how**: git ls-tree -r origin/main for each area the table names (uso/, common/, intake/, research/, binder/, manuscripts/, _STAGING_TO_L6/) and for HUB_LEDGER.md: 0 paths each. The root of MAIN holds only .github, .gitignore, L7, L8, README.md. git log --follow shows the last content edit at 4a1c1db (2026-08-16).
+    - **open_items**
+      - Describes a layout that no longer exists
+      - Internal contradictions at lines 16/40, 31/40, 47-48/40
+      - MAIN README line 13 still sends readers here as 'the master index'
+  - item 4
+    - **id**: REC-04
+    - **title**: Session ledger 2026-08-14, reorganisation
+    - **path**: L8/L6/history/LEDGER_2026-08-14_reorganisation.md
+    - **where**: MAIN (identical in ROADMAP and BETA)
+    - **what_it_is**: Session ledger for the first reorganisation (commit 9aefa6e, 151 files). Records the freeze manifest F-003 check: 3 of 14 pins OK, 11 failed because the sibling repository had moved the paths.
+    - **evidence_state**: ASSERTED
+    - **locator**: MAIN:L8/L6/history/LEDGER_2026-08-14_reorganisation.md:12-22
+    - **quote**: [source text withheld from the public copy].
+    - **own_label**: "[source text withheld from the public copy]."
+    - **checked_how**: Could not be re-checked: commit 9aefa6e is not an object in this clone (git cat-file fails), so '151 files, 123 renames, 25 adds, 1 delete, 2 edits' is unverifiable here. The ledger records its own internal check (sha256sum -c).
+    - **open_items**
+      - Next Required Check items 1, 2, 4 closed later; item 3 (five .odt drafts) never closed
+  - item 5
+    - **id**: REC-05
+    - **title**: Session ledger 2026-08-14, redeploy
+    - **path**: L8/L6/history/LEDGER_2026-08-14_redeploy.md
+    - **where**: MAIN (identical in ROADMAP and BETA)
+    - **what_it_is**: Session ledger for the replay of the reorganisation on ca87bba after main was reset by a parallel cloud session. Records a PII gate by hash and the restoration of five documents deleted by the sibling repository.
+    - **evidence_state**: ASSERTED
+    - **locator**: MAIN:L8/L6/history/LEDGER_2026-08-14_redeploy.md:24-34
+    - **quote**: [source text withheld from the public copy]
+    - **own_label**: "[source text withheld from the public copy]."
+    - **checked_how**: ca87bba exists as a commit in the clone; 73c3ae1 does not. The branch rescue/reorg-2026-08-14 that this ledger says holds everything is not among the fetched origin refs. Counts (124 renames) not re-derived.
+    - **open_items**
+      - Item 5 (should the cloud session's flow adopt the new structure) has no closing record
+  - item 6
+    - **id**: REC-06
+    - **title**: Session ledger 2026-08-16, l6 close and normalization
+    - **path**: L8/L6/history/LEDGER_2026-08-16_l6-close-and-normalization.md
+    - **where**: MAIN (identical in ROADMAP and BETA)
+    - **what_it_is**: Session ledger for commit 4a1c1db: sources moved to the aybllc/l6 archive (61 staged PDFs dispositioned), the active definition restored (AU-NORM-02), four blanks declared intentional (AU-NORM-01), Third Power parked (AU-NORM-03), and a five-item queue for the next session.
+    - **evidence_state**: INTERNALLY CHECKED
+    - **locator**: MAIN:L8/L6/history/LEDGER_2026-08-16_l6-close-and-normalization.md:11-36
+    - **quote**: External Sources Checked: NONE — this was custody/structure work, not claim validation; all verification was hash- and git-based.
+    - **own_label**: "transfer CLOSED and verified; final pre-commit verdict SAFE TO COMMIT (freeze pass: FREEZE RETIRED CLEANLY)"
+    - **checked_how**: Confirmed myself: git show -M --name-status 4a1c1db gives 107 files, D=62, R=26 (as stated); the definition at MAIN:L8/L0/semantics/definitions/AUDITONOMOUS_DEFINITION.md is 410 lines (as stated). Not confirmable here: the l6 commits e4f0d5c and bccf4e4 (another repository). Two numbers in it are wrong (see defects: '62 rows', '17 watermark-delta').
+    - **open_items**
+      - Queue items 3 and 5 never done; item 4 pending
+      - AU-NORM-04 named in the title but not stated in the body
+  - item 7
+    - **id**: REC-07
+    - **title**: Harmonization record 2026-09-05 (sections 1-12, through 2026-09-12)
+    - **path**: L8/L6/history/harmonization-2026-09-05.md
+    - **where**: MAIN (identical in ROADMAP and BETA)
+    - **what_it_is**: The L6 record of the move to the Seven-Layer Model: what moved, what was retired, what was bound, what the owner said (quoted as written), the dissolution of common/ and intake/ (§8), the CI check (§9), the README rule (§10), sheets vs record (§11) and the USO-to-L8 rename (§12). §5 is the list of owner decisions left open. README line 13 calls it 'the record of the layout and every decision left to the author'.
+    - **evidence_state**: INTERNALLY CHECKED
+    - **locator**: MAIN:L8/L6/history/harmonization-2026-09-05.md:3
+    - **quote**: It adjudicates nothing: every row marked OWNER DECISION in the plan is left exactly where it was.
+    - **checked_how**: Confirmed myself: the 24 destination paths I sampled from §4a and §8 (mapped USO/lN to L8/LN per §12) all exist in MAIN; the commit that added the record (ccc0554) has 0 deletions; the 7lm specification on origin/main carries the two rules of 2026-09-07 that §10 said its next version would (lines 723 and 998). Not matching: '69 paths moved' (68 left their old location) and the sentence quoted here (see defects).
+    - **open_items**
+      - §5 open decisions
+      - §8 'Not done'
+      - §10 two items left to the owner
+      - §12 rebinding
+  - item 8
+    - **id**: REC-08
+    - **title**: 7LM routing plan 2026-09-05
+    - **path**: L8/L6/history/7LM_ROUTING_PLAN_2026-09-05.md
+    - **where**: MAIN (identical in ROADMAP and BETA)
+    - **what_it_is**: The proposal the harmonization followed: one row per path at HEAD 280226a with a disposition (MOVE, STAYS, IN TREE, RETIRE, BIND, OWNER DECISION). It is the fullest list of placement questions reserved to the owner; 30-odd rows carry OWNER DECISION.
+    - **evidence_state**: ASSERTED
+    - **locator**: MAIN:L8/L6/history/7LM_ROUTING_PLAN_2026-09-05.md:3-4
+    - **quote**: OWNER DECISION rows were left exactly where they were.
+    - **own_label**: "UNREVIEWED MODEL OUTPUT · INTERNAL ONLY · a proposal, not an adjudication."
+    - **checked_how**: Read in full and compared row by row with harmonization §4-§5 and §8. The history sheet relabels it 'unreviewed model output when written; a decision record now' (MAIN:L8/L6/history/0.md:39). No record of an owner review of the plan itself was found; its own line 139 says it 'does not age into acceptance'.
+    - **open_items**
+      - Three of its OWNER DECISION questions are not carried into harmonization §5
+  - item 9
+    - **id**: REC-09
+    - **title**: What the sheets carried about their past
+    - **path**: L8/L6/history/sheets-2026-09-07.md
+    - **where**: MAIN (identical in ROADMAP and BETA)
+    - **what_it_is**: Verbatim fragments removed from 60-odd sheets on 2026-09-07 so that each sheet states only what stands. Holds the dated owner rules that used to sit in the sheets. Paths are written USO/lN as they stood; §12 of the harmonization record gives the reading rule.
+    - **evidence_state**: ASSERTED
+    - **locator**: MAIN:L8/L6/history/sheets-2026-09-07.md:3
+    - **quote**: Nothing is deleted; this file is L6 memory and controls nothing.
+    - **checked_how**: Read in full. Not re-diffed against the pre-2026-09-07 sheets (commit 595d3b5 is the pass). Many entries are the bare fragment ' at HEAD of this pass'.
+  - item 10
+    - **id**: REC-10
+    - **title**: Retired sets: layout-2026-08-14 and layout-2026-09-06
+    - **path**: L8/L6/retired/
+    - **where**: MAIN (identical in BETA; ROADMAP adds a third set)
+    - **what_it_is**: layout-2026-08-14 holds 0.md plus README.md, manuscripts/README.md, manuscripts/main/README.md, research/README.md, research/findings/README.md, research/lanes/README.md, research/ledgers/README.md, research/review/README.md. layout-2026-09-06 holds 0.md plus common/README.md, common/durable/README.md, common/durable/orphan/deep-research-report.md, common/durable/orphan/eb-carrier/eb-audit/auditonomous-departure-protocol.md, intake/README.md.
+    - **evidence_state**: INTERNALLY CHECKED
+    - **locator**: MAIN:L8/L6/retired/0.md:34-35
+    - **quote**: A superseded file whose every part is enumerated as standing elsewhere is deleted, not retired: git keeps the change event and the record keeps the enumeration
+    - **checked_how**: git ls-tree -r -l origin/main L8/L6/retired: 9 and 6 files, names exactly as the two set sheets list them. manuscripts/README.md and manuscripts/main/README.md are 0 bytes, as the set sheet says.
+    - **open_items**
+      - retired/0.md lines 22-23: 'In this repository:' is followed by nothing
+      - layout-2026-09-06 is marked for a reading that 'has not been done' before it can go
+  - item 11
+    - **id**: REC-11
+    - **title**: Restore record 2026-09-14
+    - **path**: L8/L6/history/restore-2026-09-14.md
+    - **where**: ROADMAP only
+    - **what_it_is**: Records the return of 116 files from the pre-prune tree (1d83788) to 7LM positions, what was declined and why, and a table of every one of the 318 paths at 1d83788. Declined: 61 licensed or third-party PDFs (copyright, one place); 17 rule texts, manifests, freeze files and registers of retired layouts; 12 variant exports of the deep-research run; 9 files of foreign provenance (abba-01 cosmology); 5 files defining 'autonomous' (owner rule); 5 Office files of the dissolved queue; 4 working notes; 3 packagings of the sourcebook; the owner's chat export (personal); a duplicate of the consolidated document; one superseded staging record; the binder rule text; the LaTeX stub.
+    - **evidence_state**: INTERNALLY CHECKED
+    - **locator**: ROADMAP:L8/L6/history/restore-2026-09-14.md:13
+    - **quote**: [source text withheld from the public copy] … 16 are earlier versions … [source text withheld from the public copy].
+    - **checked_how**: Confirmed myself with a script over git ls-tree output for 1d83788, ROADMAP and MAIN: the table has 318 rows covering exactly the 318 paths at 1d83788; counts 116/65/16/121 match; all 116 restored files are blob-identical to their 1d83788 originals and none existed in MAIN; all 65 'AT HEAD' rows are blob-identical; no 'NOT RESTORED' blob is present except the two duplicates the record itself explains. '86 sheets' is true at the restore commit 62d2e3f (the ROADMAP tip has 88).
+    - **open_items**
+      - Rests on an inferred ruling (D15)
+      - §7 leaves five things to the owner
+      - Its reason for the five .odt files cites a disposition that does not name them
+      - Unmerged: PR #27 closed
+  - item 12
+    - **id**: REC-12
+    - **title**: Staging-to-l6 reconciliation sweep 2026-08-14
+    - **path**: L8/L6/history/L6_RECONCILIATION_2026-08-14.md
+    - **where**: ROADMAP only (restored from HISTORY intake/claude/)
+    - **what_it_is**: A hash and standard-number sweep of 86 parked source files against the l6 archive at commit 64ef618: 15 byte-identical, 17 same number with different bytes, 29 absent, 25 working records. Proposes four next steps, none taken.
+    - **evidence_state**: CONTRADICTED
+    - **locator**: ROADMAP:L8/L6/history/L6_RECONCILIATION_2026-08-14.md:16-22
+    - **quote**: [source text withheld from the public copy].
+    - **own_label**: "UNREVIEWED MODEL OUTPUT (intake/claude/ rule)."
+    - **checked_how**: Arithmetic re-done from its own lists and from git ls-tree 1d83788 _STAGING_TO_L6: class C as listed sums to 30 (11+3+3+4+6+2+1), stated 29; the files matching class B's standard numbers number 16 at 1d83788, stated 17; the A+B+C total of 61 holds. The sources ledger marks this sweep 'Superseded by the 2026-08-16 sweep' (MAIN:L7/provenance/sources/LEDGER.md:111).
+    - **open_items**
+      - Caveat 2 (IEEE-754-2019's only byte-identical copy sat in l6's durable/delete/, 'surface to Eric') has no closing record in this repository
+  - item 13
+    - **id**: REC-13
+    - **title**: Consolidated defining document of 2026-08-04, retired
+    - **path**: L8/L6/retired/consolidated-2026-08-04/
+    - **where**: ROADMAP only (file content from HISTORY root AUDITONOMOUS.md)
+    - **what_it_is**: Sheet plus AUDITONOMOUS.md (1,339 lines): the consolidated definition with criteria C1-C13, items reserved for the author, live contradictions C-1 to C-23 and negative findings. History-only by ruling AU-NORM-02; restored so that the documents citing it can be read.
+    - **evidence_state**: INTERNALLY CHECKED
+    - **locator**: ROADMAP:L8/L6/retired/consolidated-2026-08-04/0.md:8
+    - **quote**: It is preserved, not edited, and it defines nothing at HEAD.
+    - **own_label**: "history-only by the ruling of 2026-08-16"
+    - **checked_how**: Blob at ROADMAP equals blob of 1d83788:AUDITONOMOUS.md (script check); diff stat shows 1,339 lines. Absent from MAIN and BETA, where MAIN:L8/L5/research/review/0.md:44 still cites its §2.8 as 'removed from HEAD at `8c98573`, in git history'.
+    - **open_items**
+      - Whether it stays preserved or returns to history is left to the owner
+  - item 14
+    - **id**: REC-14
+    - **title**: Beta construction and correction lineage
+    - **path**: L8/L6/history/AUDITONOMOUS_BETA_HISTORY.md
+    - **where**: BETA only
+    - **what_it_is**: A 14-line record of how the beta candidate was built on MAIN 2165144: two directory moves to follow the changed model (restrictions to controlled; publications to allications/publications), a provenance row for the bound definition, corrections to ledger arithmetic (60 rows; 21 not 22), dispositions for Appendix C, Q13 and C1-C7, and a finite synthetic run (16 cases, 32 events, 32 records, 0 goal changes; 12 tests; 4 fault injections).
+    - **evidence_state**: INTERNALLY CHECKED
+    - **locator**: BETA:L8/L6/history/AUDITONOMOUS_BETA_HISTORY.md:3-14
+    - **quote**: There is no hardware/firmware/SGI realization, universal autonomy adjudication or external compliance result.
+    - **own_label**: "This record concerns the authorized local candidate, not a new source-owner decision or release."
+    - **checked_how**: Confirmed myself: MAIN has 169 blobs (as stated); git diff -M main..beta shows exactly 6 renames with the three binder READMEs byte-identical; auditonomous_beta_result.json in the BETA tree reports cases 16, events 32, records 32, goal_changes 0 and a faults list of 4; test_auditonomous_beta.py has 12 test functions (counted, not run); the bound definition blob ffbdc28 is identical at autonomous 0504961, autonomous origin/main and autonomous beta. Not confirmable: T3-red.txt, T3-integration-wait.txt, T3-review-red.json and the 'private implementation move manifest' are not in the BETA tree.
+    - **open_items**
+      - 'the four saved holdings discrepancies' are not identified
+      - The evidence it cites is held outside the repository
+      - Does not contain ROADMAP's restore record or restored files
+  - item 15
+    - **id**: RULE-01
+    - **title**: Rule: enumerate before deleting; integrity is enforced, no-deletion only implied
+    - **path**: L8/L6/history/harmonization-2026-09-05.md
+    - **where**: MAIN
+    - **what_it_is**: The repository's deletion rule. A file may be deleted once every part of it is enumerated in the L6 record as standing elsewhere. Retirement at L6 is kept for what must stay reconstructable from the repository itself: the owner's authored documents, rule texts of a prior layout, error records. The CI check must not enforce no-deletion.
+    - **evidence_state**: ASSERTED
+    - **locator**: MAIN:L8/L6/history/harmonization-2026-09-05.md:152-154
+    - **quote**: we cant enforce integroty by ebforceing no deletion. we can only imply no deletion to enforcer integiortyty
+    - **checked_how**: Same rule found at MAIN:L8/L6/retired/0.md:12, in the header of .github/workflows/integrity.yml (lines 3-4), and in aybllc/7lm origin/main specification line 723. An earlier owner wording is at harmonization line 107: 'that does nto mean delete over tehre until we enumerate please and thank you'.
+    - **open_items**
+      - STATUS_LADDER.md line 25 still says 'Nothing is ever deleted'
+      - The 2026-08-15 prune predates the rule and is enumerated only in ROADMAP
+  - item 16
+    - **id**: RULE-02
+    - **title**: Rule: where history lives
+    - **path**: L8/L6/0.md
+    - **where**: MAIN
+    - **what_it_is**: Dated records of change live in L8/L6/history/. Retired states live in L8/L6/retired/ under a set named by date, verbatim, at their old relative paths, never edited. External provenance lives at L7 and is not re-owned by L6. Git history is not L6: a commit id in a record is a pointer only. The research judgment on a prior state belongs to L5.
+    - **evidence_state**: ASSERTED
+    - **locator**: MAIN:L8/L6/0.md:56-60
+    - **quote**: Commit identifiers named in an L6 record are orientation pointers to repository change events; the L6 record itself is the scientific memory.
+    - **checked_how**: Read at MAIN:L8/L6/0.md:16,56-60, history/0.md:28-31, retired/0.md:8-12 and :30. Tested against practice: several ledger rows nevertheless name git history or the rescue branch as the only surviving copy, which the history sheet admits (history/0.md:35).
+  - item 17
+    - **id**: RULE-03
+    - **title**: Rule: what the sheets and the README may say
+    - **path**: L8/L6/history/harmonization-2026-09-05.md
+    - **where**: MAIN
+    - **what_it_is**: Sheets (one 0.md per directory) state the directory as it stands: rules and holdings. Their past goes to L6. Dates that belong to objects (captures, verifications, transfers, runs) stay in the sheets. The README is the start and states only the subject, reading order and root. Every sheet is headed by its path (CI step G-003).
+    - **evidence_state**: ASSERTED
+    - **locator**: MAIN:L8/L6/history/harmonization-2026-09-05.md:133-160
+    - **quote**: the read me files all need updating. Again. we dont use the reasd me for teh docuemtnation
+    - **checked_how**: Second owner quote at line 158: 'please pull out historicallyu referndes to the docuejtnation leaving just the historical docuemtnatio that is cirrent and relevant for the purpose of using the thing'. Checked the three L6 sheets against it: they still carry 'this pass' and 'this displacement event' wording (0.md:74,88; history/0.md:37; retired/0.md:34).
+  - item 18
+    - **id**: RULE-04
+    - **title**: Rule: dated records are not rewritten; corrections and reversals are new entries
+    - **path**: L8/L6/history/harmonization-2026-09-05.md
+    - **where**: MAIN
+    - **what_it_is**: Records at L8/L6/history/ quote paths as they stood and are not rewritten. A path USO/lN/ in a record dated before 2026-09-12 now stands at L8/LN/. A reversal of a retirement is a new entry with a successor relation. A changed binding gets a new binding record beside the old one. The owner's words are quoted as written.
+    - **evidence_state**: ASSERTED
+    - **locator**: MAIN:L8/L6/history/harmonization-2026-09-05.md:170-172
+    - **quote**: Reading older records: a path `USO/lN/…` in a record dated before 2026-09-12 stands at `L8/LN/…` now
+    - **checked_how**: Also at harmonization line 148 ('dated records and are not rewritten'), MAIN:L8/L6/retired/layout-2026-08-14/0.md:24 ('a later reversal is a new entry with a successor relation, never an edit here') and the binding record line 30. BETA follows it: it appends an 'Attributable receiving correction' to the sources ledger instead of editing the old line.
+  - item 19
+    - **id**: RULE-05
+    - **title**: Rule: session ledger format (retired rule text, still cited)
+    - **path**: L8/L6/retired/layout-2026-08-14/research/ledgers/README.md
+    - **where**: MAIN
+    - **what_it_is**: One ledger entry per research session, written during the session, with fixed fields including External Sources Checked, Failures and Next Required Check. Ledgers are append-only. [source text withheld from the public copy].
+    - **evidence_state**: ASSERTED
+    - **locator**: MAIN:L8/L6/retired/layout-2026-08-14/research/ledgers/README.md:46-52
+    - **quote**: [source text withheld from the public copy].
+    - **own_label**: Retired: "None of them is a current gate; none is edited." (MAIN:L8/L6/retired/layout-2026-08-14/0.md:8)
+    - **checked_how**: The history sheet cites it as preserved (MAIN:L8/L6/history/0.md:41). In practice no session ledger in this format exists after 2026-08-16; the sessions of 2026-09-05 to 09-14 and the BETA build are recorded as sections of the harmonization record, the restore record and the beta history note.
+    - **open_items**
+      - Whether the session-ledger format is still required is not stated anywhere current
+  - item 20
+    - **id**: RULE-06
+    - **title**: Rule: nothing reserved for the author is adopted; contradictions are reported
+    - **path**: L8/L5/research/review/STATUS_AND_LABEL_DISCIPLINE.md
+    - **where**: MAIN
+    - **what_it_is**: The corpus's two standing rules, which the L6 records apply to themselves: open questions stay open with options unranked; conflicting passages are both quoted. The status ladder adds that promotions are logged in a register with a date.
+    - **evidence_state**: ASSERTED
+    - **locator**: MAIN:L8/L5/research/review/STATUS_AND_LABEL_DISCIPLINE.md:18-22
+    - **quote**: [source text withheld from the public copy].
+    - **checked_how**: Read both label files. The register the ladder refers to (the DR register) is not in MAIN (no REGISTER file in git ls-tree origin/main); ROADMAP restores it at L8/L5/research/review/dr-001-003/REGISTER.md. The discipline text's own home is left 'the owner's to confirm or change' (harmonization line 152).
+  - item 21
+    - **id**: CHK-01
+    - **title**: Check against MAIN: the master ledger's tree table
+    - **path**: L8/L6/history/LEDGER.md
+    - **where**: MAIN
+    - **what_it_is**: First of the three tree checks asked for. The ledger's table 'The tree, by state' lists nine live areas and what each waits on.
+    - **evidence_state**: CONTRADICTED
+    - **locator**: MAIN:L8/L6/history/LEDGER.md:31-40
+    - **quote**: `[source text withheld from the public copy].
+    - **checked_how**: git ls-tree -r --name-only origin/main -- uso common intake research binder manuscripts _STAGING_TO_L6 HUB_LEDGER.md: 0 paths for every one. The material moved to L7/ and L8/ positions on 2026-09-05/06 (harmonization §4a, §8); the ledger was not updated and by rule is not rewritten.
+  - item 22
+    - **id**: CHK-02
+    - **title**: Check against MAIN: '62 rows' in the pointer register
+    - **path**: L8/L6/history/LEDGER_2026-08-16_l6-close-and-normalization.md
+    - **where**: MAIN
+    - **what_it_is**: Second tree check. The 2026-08-16 ledger says the source pointer register has 62 rows and gives the id ranges.
+    - **evidence_state**: CONTRADICTED
+    - **locator**: MAIN:L8/L6/history/LEDGER_2026-08-16_l6-close-and-normalization.md:30
+    - **quote**: 62 rows (PR-001..020, STD-001..034, INST-001..004, EXC-001/002)
+    - **checked_how**: Counted table rows in MAIN:L7/provenance/sources/LEDGER.md by id prefix: PR 20, STD 34, INST 4, EXC 2 = 60. The ranges in the quote also sum to 60. The routing plan repeats '62 rows' (lines 80, 206). BETA records the correction: 'The existing register has **60 archive rows**' (BETA:L7/provenance/sources/LEDGER.md, section 'Attributable receiving correction — 2026-11-03').
+  - item 23
+    - **id**: CHK-03
+    - **title**: Check against MAIN: retired sets and the staging-records count
+    - **path**: L8/L6/retired/0.md
+    - **where**: MAIN
+    - **what_it_is**: Third tree check, two statements that hold. The retired sheet's file lists for both sets, and the harmonization record's '25 files' for the staging records.
+    - **evidence_state**: INTERNALLY CHECKED
+    - **locator**: MAIN:L8/L6/history/harmonization-2026-09-05.md:58
+    - **quote**: `research/ledgers/staging-records/` (25 files) | `L7/provenance/sources/staging-records/` | records about sources, moved intact
+    - **checked_how**: git ls-tree -r origin/main L7/provenance/sources/staging-records gives 26 paths: the 25 moved files plus the sheet 0.md added at the move. git ls-tree -r -l origin/main L8/L6/retired gives exactly the names in the two set sheets. Both statements match the tree.
+  - item 24
+    - **id**: GAP-01
+    - **title**: MAIN has no enumeration of what the prune of 2026-08-15 removed
+    - **path**: L8/L6/history/harmonization-2026-09-05.md
+    - **where**: MAIN (gap); ROADMAP (filled)
+    - **what_it_is**: Commit 8c98573 removed the root AUDITONOMOUS.md, the intake corpus, the freeze files, the OMMP reconstruction and the five .odt drafts. MAIN's records mention the prune in one chronology line and in struck ledger rows. The only path-by-path enumeration of the pre-prune tree is ROADMAP's restore record §9, which is unmerged.
+    - **evidence_state**: UNRESOLVED
+    - **locator**: MAIN:L8/L6/history/harmonization-2026-09-05.md:19
+    - **quote**: Prune: root `AUDITONOMOUS.md`, `AUTONOMOUS.md`, `FREEZE.*`, `intake/` corpus, `common/toolkits/ommp/` removed from HEAD; survive in git history.
+    - **checked_how**: git show --stat 8c98573: 214 files changed, 99,383 deletions. Searched MAIN L8/L6 for an enumeration of those paths: none. The enumeration rule was stated on 2026-09-06, after the prune. MAIN documents (review/0.md:44, LEDGER.md:59-63) cite files that MAIN readers cannot open.
+    - **open_items**
+      - Merge or re-do ROADMAP's enumeration so that MAIN satisfies its own rule
+  - item 25
+    - **id**: OD-01
+    - **title**: Split or cite AUDITON_ENVELOPE.md
+    - **path**: L8/L1/state-space/AUDITON_ENVELOPE.md
+    - **where**: MAIN
+    - **what_it_is**: Open decision. The file sits at L1; its §0-0b are L0 ontology and its C3 'Bound' row is L3. Split the file, or keep it at L1 with two citations?
+    - **evidence_state**: UNRESOLVED
+    - **locator**: MAIN:L8/L6/history/harmonization-2026-09-05.md:91
+    - **quote**: Split or cite: `AUDITON_ENVELOPE.md` (§0–0b → L0 ontology; C3 row → L3)
+    - **own_label**: "MOVE · OWNER DECISION on split" (routing plan line 148)
+    - **checked_how**: No later L6 record in MAIN, ROADMAP or BETA closes it.
+  - item 26
+    - **id**: OD-02
+    - **title**: Split or cite HUMINT_ENCODE.md
+    - **path**: L8/L1/state-space/HUMINT_ENCODE.md
+    - **where**: MAIN
+    - **what_it_is**: Open decision. The file sits at L1; its §0 (the marker, '[source text withheld from the public copy]') is L0 semantics. Split or cite?
+    - **evidence_state**: UNRESOLVED
+    - **locator**: MAIN:L8/L6/history/harmonization-2026-09-05.md:91
+    - **quote**: `HUMINT_ENCODE.md` (§0 → L0 semantics)
+    - **own_label**: "MOVE · OWNER DECISION on split" (routing plan line 151)
+    - **checked_how**: No closing record found in any state.
+  - item 27
+    - **id**: OD-03
+    - **title**: Split or cite REQUIREMENTS_OWNERSHIP.md
+    - **path**: L8/L1/state-space/REQUIREMENTS_OWNERSHIP.md
+    - **where**: MAIN
+    - **what_it_is**: Open decision. The partition of 113 requirements is L1; findings 1-3 and Q10-Q13 are L5. Split or cite?
+    - **evidence_state**: UNRESOLVED
+    - **locator**: MAIN:L8/L6/history/harmonization-2026-09-05.md:91
+    - **quote**: `REQUIREMENTS_OWNERSHIP.md` (findings ①–③, Q10–Q13 → L5)
+    - **own_label**: "MOVE · OWNER DECISION on split" (routing plan line 152)
+    - **checked_how**: No closing record found in any state.
+  - item 28
+    - **id**: OD-04
+    - **title**: Extract and register three candidate objects from the 2026-08-05 session
+    - **path**: L8/L4/work/writing/sessions/SESSION_2026-08-05_AUDITON_ARCHITECTURE.md
+    - **where**: MAIN
+    - **what_it_is**: Open decision. Three unregistered objects sit inside a session record: invariants (L1), an isomorphism via φ(x)=e^(−x) (L2), and scaling/precision laws (L3). Extract and register them or not?
+    - **evidence_state**: UNRESOLVED
+    - **locator**: MAIN:L8/L6/history/harmonization-2026-09-05.md:92
+    - **quote**: the three candidate objects in `SESSION_2026-08-05_AUDITON_ARCHITECTURE.md` (L1 invariants; L2 isomorphism; L3 scaling)
+    - **own_label**: "stay INTERNALLY DERIVED and unregistered until the owner rules" (routing plan lines 250-251)
+    - **checked_how**: ROADMAP restore §7 (line 72) repeats it as still open: the formulas ledger 'still lacks' them. FORMULAS_LEDGER.md exists in MAIN at L8/L2/formal-mathematics/ and the plan calls it EMPTY.
+  - item 29
+    - **id**: OD-05
+    - **title**: Extract the exact argument in the perpetuity adjudication
+    - **path**: L8/L5/research/review/PERPETUITY_QUESTION_ADJUDICATION.md
+    - **where**: MAIN
+    - **what_it_is**: Open decision. The adjudication contains an exact argument resting on transferred theorems; its layer is undecided. Extract and register it, and at L2 or L3?
+    - **evidence_state**: UNRESOLVED
+    - **locator**: MAIN:L8/L6/history/harmonization-2026-09-05.md:92
+    - **quote**: the exact argument in `PERPETUITY_QUESTION_ADJUDICATION.md` (L2 or L3, unresolved)
+    - **own_label**: "FORMULA VERIFIED / APPLICATION UNVERIFIED" (routing plan line 168)
+    - **checked_how**: No closing record found in any state.
+  - item 30
+    - **id**: OD-06
+    - **title**: Extract DECORATIONS_2026-08-04.md to L3
+    - **path**: L7/provenance/sources/staging-records/interval/DECORATIONS_2026-08-04.md
+    - **where**: MAIN
+    - **what_it_is**: Open decision. A mapping of IEEE 1788-2015 decorations to the transformation-path obligation sits among source records; by content it is L3. Extract it?
+    - **evidence_state**: UNRESOLVED
+    - **locator**: MAIN:L8/L6/history/harmonization-2026-09-05.md:92
+    - **quote**: [source text withheld from the public copy]
+    - **own_label**: "IN TREE · OWNER DECISION on extraction"; "Nothing adopted"; "1788.1-2017 NOT READ" (routing plan line 194)
+    - **checked_how**: File still at the L7 position in MAIN (ls-tree). No closing record.
+  - item 31
+    - **id**: OD-07
+    - **title**: Appendix C of the definition under the owner rule
+    - **path**: L8/L0/semantics/definitions/AUDITONOMOUS_DEFINITION.md
+    - **where**: MAIN; BETA claims a disposition
+    - **what_it_is**: Open decision. Appendix C quotes the root 'autonomous' from AHD, Perseus, RFC 4949, NIST CSRC and IEEE 7001, which the owner rule forbids as a definition source. Keep as etymology of the coinage's second element, or replace by citation through the binding?
+    - **evidence_state**: UNRESOLVED
+    - **locator**: MAIN:L8/L6/history/harmonization-2026-09-05.md:93
+    - **quote**: Under the owner rule: [source text withheld from the public copy]`.
+    - **own_label**: "resolving them through this binding is the owner's edit" (MAIN:L7/peering/public/ingress/peer-1/object-1/0.md:34)
+    - **checked_how**: Still open in MAIN and in ROADMAP restore §7 (line 71). BETA's history note line 7 claims 'Appendix C ancestry and neighbor concepts, Q13 and C1–C7 now have explicit current-use dispositions'; BETA is unmerged and I did not inspect the dispositions (outside L6).
+  - item 32
+    - **id**: OD-08
+    - **title**: Q13 of REQUIREMENTS_OWNERSHIP under the owner rule
+    - **path**: L8/L1/state-space/REQUIREMENTS_OWNERSHIP.md
+    - **where**: MAIN; BETA claims a disposition
+    - **what_it_is**: Open decision. Q13 determines '[source text withheld from the public copy]' using definitions taken directly from two standards. Resolve it through the Autonomous binding?
+    - **evidence_state**: UNRESOLVED
+    - **locator**: MAIN:L8/L6/history/7LM_ROUTING_PLAN_2026-09-05.md:152
+    - **quote**: under the owner rule it resolves through `peer-1/object-1` … not through a direct standards binding here.
+    - **checked_how**: Listed open at harmonization line 93 and ROADMAP restore line 71. BETA history line 7 claims a disposition (unmerged, not inspected).
+  - item 33
+    - **id**: OD-09
+    - **title**: Which rows of CONTRADICTIONS.md compare definitions of autonomy
+    - **path**: L8/L5/research/review/CONTRADICTIONS.md
+    - **where**: MAIN; BETA claims a disposition
+    - **what_it_is**: Open decision. Rows comparing definitions of autonomy across standards should be consumed through the Autonomous binding; rows about auditonomous-subject standards stay local. Which rows are which?
+    - **evidence_state**: UNRESOLVED
+    - **locator**: MAIN:L8/L6/history/7LM_ROUTING_PLAN_2026-09-05.md:157
+    - **quote**: Which rows are which is the owner's reading; the file is not edited by this plan.
+    - **checked_how**: Listed open at harmonization line 93. ROADMAP restore line 71 adds a fourth file under the same rule: '[source text withheld from the public copy]'. BETA history line 7 claims dispositions for C1-C7 (unmerged).
+  - item 34
+    - **id**: OD-10
+    - **title**: LEDGER.md: L6 history or root infrastructure
+    - **path**: L8/L6/history/LEDGER.md
+    - **where**: MAIN
+    - **what_it_is**: Open decision. The master ledger was moved to L6 history; the owner may prefer it at the root as infrastructure.
+    - **evidence_state**: UNRESOLVED
+    - **locator**: MAIN:L8/L6/history/harmonization-2026-09-05.md:94
+    - **quote**: Positions and names: `LEDGER.md` at L6 history versus root infrastructure
+    - **own_label**: "MOVE · OWNER DECISION" (routing plan line 105)
+    - **checked_how**: No closing record. The CI rule G-002 (harmonization §9) now allows only README.md, L7/, L8/, .github/, .gitignore at the root, which in effect excludes the root option without a record saying the owner decided.
+  - item 35
+    - **id**: OD-11
+    - **title**: binder/internal/: publications or L4 writing
+    - **path**: L7/publications/binder/internal/README.md
+    - **where**: MAIN (BETA moves it under L7/allications/publications/)
+    - **what_it_is**: Open decision. Unreleased staging material sits under publications; it could instead be L4 writing.
+    - **evidence_state**: UNRESOLVED
+    - **locator**: MAIN:L8/L6/history/harmonization-2026-09-05.md:94
+    - **quote**: `binder/internal/` at publications versus L4 writing
+    - **own_label**: "OWNER DECISION if preferred at `USO/l4/work/writing/`" (routing plan line 112)
+    - **checked_how**: No closing record. BETA renames the parent directory but does not decide the question.
+  - item 36
+    - **id**: OD-12
+    - **title**: FORMULAS_LEDGER.md: L2 or L3
+    - **path**: L8/L2/formal-mathematics/FORMULAS_LEDGER.md
+    - **where**: MAIN
+    - **what_it_is**: Open decision. An empty formulas register sits at L2; the alternative is one ledger at L3.
+    - **evidence_state**: UNRESOLVED
+    - **locator**: MAIN:L8/L6/history/harmonization-2026-09-05.md:94
+    - **quote**: `FORMULAS_LEDGER.md` at L2 versus L3
+    - **own_label**: "empty register (position: owner's decision)" (harmonization line 55)
+    - **checked_how**: File present in MAIN (ls-tree). No closing record.
+  - item 37
+    - **id**: OD-13
+    - **title**: Name of datasets-LEDGER.md
+    - **path**: L7/provenance/sources/datasets-LEDGER.md
+    - **where**: MAIN
+    - **what_it_is**: Open decision. The empty dataset register was renamed on moving; the name is the owner's.
+    - **evidence_state**: UNRESOLVED
+    - **locator**: MAIN:L8/L6/history/harmonization-2026-09-05.md:53
+    - **quote**: empty register (name: owner's decision)
+    - **checked_how**: File present in MAIN. No closing record.
+  - item 38
+    - **id**: OD-14
+    - **title**: eb-audit departure protocol: keep the reference copy or only the binding
+    - **path**: L7/peering/private/ingress/peer-2/object-1/
+    - **where**: MAIN
+    - **what_it_is**: Open decision. A peer-owned file is held as a reference copy at its binding position; keep the copy or hold only the binding?
+    - **evidence_state**: UNRESOLVED
+    - **locator**: MAIN:L8/L6/history/harmonization-2026-09-05.md:94
+    - **quote**: whether the eb-audit reference copy stays or only its binding
+    - **checked_how**: The copy is in MAIN at that position; the second identical copy was retired on 2026-09-06 (harmonization line 116). The question itself has no closing record.
+  - item 39
+    - **id**: OD-15
+    - **title**: Whether intake/ retires
+    - **path**: L8/L6/retired/layout-2026-09-06/intake/README.md
+    - **where**: MAIN
+    - **what_it_is**: Decision listed open on 2026-09-05, closed the next day by the owner's words dissolving common/ and intake/.
+    - **evidence_state**: INTERNALLY CHECKED
+    - **locator**: MAIN:L8/L6/history/harmonization-2026-09-05.md:109
+    - **quote**: The queue idea — orphan, foster, results, delete, and the access rules that came with it — is retired; `common/` and `intake/` are gone
+    - **own_label**: CLOSED by §8
+    - **checked_how**: git ls-tree origin/main -- intake common: 0 paths; intake/README.md stands in the retired set.
+  - item 40
+    - **id**: OD-16
+    - **title**: Licence status of the Ferreira full text
+    - **path**: L7/provenance/sources/staging-records/library/text/Ferreira_break-glass-access-control.numbered.txt
+    - **where**: MAIN
+    - **what_it_is**: Open decision. A numbered full-text copy of a published paper is held; its licence is unrecorded and must be recorded before it is cited as held.
+    - **evidence_state**: UNRESOLVED
+    - **locator**: MAIN:L8/L6/history/harmonization-2026-09-05.md:94
+    - **quote**: [source text withheld from the public copy]
+    - **checked_how**: File present in MAIN (ls-tree). Harmonization §7 (line 103) says the copyright sheet lists 'the unrecorded licence of the Ferreira full text'. No closing record.
+  - item 41
+    - **id**: OD-17
+    - **title**: Peer granularity for the standards bodies
+    - **path**: L7/peering/public/ingress/
+    - **where**: MAIN
+    - **what_it_is**: Open decision. Bind IEEE, ISO/IEC, NIST and the others as one peer-N directory each, or keep only provenance rows until a formal binding is wanted?
+    - **evidence_state**: UNRESOLVED
+    - **locator**: MAIN:L8/L6/history/harmonization-2026-09-05.md:94
+    - **quote**: the peer granularity for the standards bodies (one `peer-N/` per body, or provenance rows only)
+    - **checked_how**: git ls-tree origin/main L7/peering/public/ingress shows only peer-1 (aybllc/autonomous). No closing record.
+  - item 42
+    - **id**: OD-18
+    - **title**: Everything in common/durable/orphan/
+    - **path**: L8/L6/history/harmonization-2026-09-05.md
+    - **where**: MAIN
+    - **what_it_is**: Decision listed open on 2026-09-05; closed file by file on 2026-09-06 (§8 table) except the home of the Autonomous Theory files (OD-19).
+    - **evidence_state**: INTERNALLY CHECKED
+    - **locator**: MAIN:L8/L6/history/harmonization-2026-09-05.md:111-123
+    - **quote**: how about this delete the cannon, teh ideea, the dirs not the data.
+    - **own_label**: CLOSED by §8, one exception
+    - **checked_how**: Each §8 destination checked in MAIN by ls-tree: review/autonomous-theory/ (2 files), L4 computation (3 files), retired/layout-2026-09-06 (2 duplicates), L7/provenance/lineage (1), egress peer-2/object-1 (3). All present.
+  - item 43
+    - **id**: OD-19
+    - **title**: Home of the Autonomous Theory files
+    - **path**: L8/L5/research/review/autonomous-theory/
+    - **where**: MAIN
+    - **what_it_is**: Open decision. '#autonomous(1).txt' and '02_AutonomousTheory(1).pdf' are a separate work parked in the catch-all until the owner names where they go.
+    - **evidence_state**: UNRESOLVED
+    - **locator**: MAIN:L8/L6/history/harmonization-2026-09-05.md:113
+    - **quote**: Autonomous Theory, a separate work (EB:22); leaves once the owner names its home
+    - **own_label**: "Not done, by the owner's word or pending it" (line 125)
+    - **checked_how**: Both files still at that position in MAIN. The 7lm specification on origin/main (line 950) still lists it: 'whose home the owner has not named'.
+  - item 44
+    - **id**: OD-20
+    - **title**: CLAUDE.md held off
+    - **path**: L8/L6/history/harmonization-2026-09-05.md
+    - **where**: MAIN
+    - **what_it_is**: Open decision. The file that would state what an AI session may touch is held off on the owner's word; the tree states no such rule.
+    - **evidence_state**: UNRESOLVED
+    - **locator**: MAIN:L8/L6/history/harmonization-2026-09-05.md:107
+    - **quote**: HOdl off on clude.md. do the other things and mrererge
+    - **own_label**: "`CLAUDE.md` (held off)" (line 125)
+    - **checked_how**: No CLAUDE.md in MAIN, ROADMAP or BETA roots. ROADMAP restore row for the HISTORY CLAUDE.md: NOT RESTORED (rule text of a retired layout). No later word recorded.
+  - item 45
+    - **id**: OD-21
+    - **title**: The two 0-byte AU-NORM-01 files
+    - **path**: L8/L6/retired/layout-2026-08-14/0.md
+    - **where**: MAIN
+    - **what_it_is**: Decision left to the owner on 2026-09-05 and 09-06 (manuscripts/definitions/README.md and REGISTER.md, 'do not restore'); retired on 09-06, then deleted on 09-07 by a session judgment 'made here rather than referred'.
+    - **evidence_state**: INTERNALLY CHECKED
+    - **locator**: MAIN:L8/L6/history/harmonization-2026-09-05.md:152
+    - **quote**: 0 bytes preserve nothing, and deletion is not restoration, so AU-NORM-01 ("do not restore") is kept, not crossed.
+    - **own_label**: CLOSED by §10 (session judgment after the owner's challenge)
+    - **checked_how**: Neither file is in MAIN (ls-tree). The closing was a session's reading of the owner's words, not an explicit owner ruling on these files; the owner's later sentence on integrity is recorded after it (line 154).
+  - item 46
+    - **id**: OD-22
+    - **title**: Home of the status-and-label discipline text
+    - **path**: L8/L5/research/review/STATUS_AND_LABEL_DISCIPLINE.md
+    - **where**: MAIN
+    - **what_it_is**: Open decision. The discipline text was carried from the README to L5 review by a session; whether that is its home is the owner's.
+    - **evidence_state**: UNRESOLVED
+    - **locator**: MAIN:L8/L6/history/harmonization-2026-09-05.md:152
+    - **quote**: The home of the discipline text is the owner's to confirm or change.
+    - **checked_how**: File present in MAIN at L5 review. No confirming record.
+  - item 47
+    - **id**: OD-23
+    - **title**: Retired set layout-2026-09-06: read before it goes
+    - **path**: L8/L6/retired/layout-2026-09-06/
+    - **where**: MAIN
+    - **what_it_is**: Open work with an owner dependency. The set holds the queue's rule texts, which the owner said to delete, and two duplicates. Before deletion someone must carry out whatever in them is the corpus's own rule.
+    - **evidence_state**: UNRESOLVED
+    - **locator**: MAIN:L8/L6/history/harmonization-2026-09-05.md:152
+    - **quote**: what in them is the corpus's own rule and not the queue's has to be carried out, as the ladder was, and that reading has not been done.
+    - **checked_how**: All five files still in MAIN (ls-tree, sizes 482 to 38,738 bytes). No record of the reading in any state.
+  - item 48
+    - **id**: OD-24
+    - **title**: Rebind [source text withheld from the public copy]
+    - **path**: L7/peering/public/ingress/peer-1/object-1/0.md
+    - **where**: MAIN; BETA adds a provenance row and says 'no rebind'
+    - **what_it_is**: Open decision. The binding names the peer's old path research/definitions/AUTONOMOUS.md at commit 0504961; the peer now holds the object at L8/L0/semantics/definitions/AUTONOMOUS.md.
+    - **evidence_state**: UNRESOLVED
+    - **locator**: MAIN:L8/L6/history/harmonization-2026-09-05.md:170
+    - **quote**: rebinding to a current version being the owner's act
+    - **checked_how**: Confirmed myself: git rev-parse in /home/user/autonomous gives the same blob ffbdc28be7b47a83c9354526ac034596ba7b6e9a for 0504961:research/definitions/AUTONOMOUS.md, origin/main:L8/L0/semantics/definitions/AUTONOMOUS.md and the autonomous beta branch. So a rebind today changes the path and commit, not one byte of the definition. Repeated as open in ROADMAP restore line 70 and the 7lm specification line 958.
+    - **open_items**
+      - If the Autonomous definition is revised as part of the current model update, the pin will then differ in content and the rebind becomes substantive
+  - item 49
+    - **id**: OD-25
+    - **title**: CONTRADICTIONS.md: review or findings
+    - **path**: L8/L5/research/review/CONTRADICTIONS.md
+    - **where**: MAIN
+    - **what_it_is**: Open decision recorded only in the routing plan. The cross-standard comparison was placed in review; findings was the alternative.
+    - **evidence_state**: UNRESOLVED
+    - **locator**: MAIN:L8/L6/history/7LM_ROUTING_PLAN_2026-09-05.md:157
+    - **quote**: MOVE · OWNER DECISION review vs findings
+    - **checked_how**: The file was moved to review (harmonization line 43). The question is absent from harmonization §5's list of open decisions. No closing record.
+  - item 50
+    - **id**: OD-26
+    - **title**: PRIORS_EXTERNAL_2026-08-04.md: L3 or L5
+    - **path**: L8/L3/engineering-mathematics/uncertainty/PRIORS_EXTERNAL_2026-08-04.md
+    - **where**: MAIN
+    - **what_it_is**: Open decision recorded only in the routing plan. An external check on interval-arithmetic priors was placed at L3; L5 was the alternative.
+    - **evidence_state**: UNRESOLVED
+    - **locator**: MAIN:L8/L6/history/7LM_ROUTING_PLAN_2026-09-05.md:169
+    - **quote**: MOVE · OWNER DECISION L3 vs L5
+    - **checked_how**: File at the L3 position in MAIN. Absent from harmonization §5. No closing record.
+  - item 51
+    - **id**: OD-27
+    - **title**: THEME_LEDGER.md: lanes or review
+    - **path**: L8/L5/research/lanes/THEME_LEDGER.md
+    - **where**: MAIN
+    - **what_it_is**: Open decision recorded only in the routing plan. The theme ledger (clusters C1-C6, tensions T1-T11) was placed in lanes; review was the alternative.
+    - **evidence_state**: UNRESOLVED
+    - **locator**: MAIN:L8/L6/history/7LM_ROUTING_PLAN_2026-09-05.md:172
+    - **quote**: INTERNALLY VALIDATED against a corpus retired from HEAD — its path aliases no longer resolve; carried unchanged.
+    - **own_label**: "MOVE · OWNER DECISION lanes vs review"
+    - **checked_how**: File at lanes in MAIN. Absent from harmonization §5. ROADMAP's restore returns the corpus it was validated against (L8/L4/work/writing/manuscript/), which would let its aliases be re-resolved; nobody has recorded doing so.
+  - item 52
+    - **id**: OD-28
+    - **title**: Retirement of the five research READMEs
+    - **path**: L8/L6/retired/layout-2026-08-14/research/
+    - **where**: MAIN
+    - **what_it_is**: The plan marked research/README.md and the findings, lanes, ledgers and review READMEs 'RETIRE · OWNER DECISION'. The retirement was carried out on 2026-09-05 without a recorded owner decision on those rows.
+    - **evidence_state**: UNRESOLVED
+    - **locator**: MAIN:L8/L6/history/7LM_ROUTING_PLAN_2026-09-05.md:165
+    - **quote**: RETIRE · OWNER DECISION
+    - **checked_how**: All five are in the retired set in MAIN (harmonization §4b, line 63). The only authority recorded is the general instruction 'grant push access to auditonomous and run the plan' (line 3). Their rules now live only in a set whose sheet says none is a current gate.
+  - item 53
+    - **id**: OD-29
+    - **title**: Bind further objects from aybllc/autonomous
+    - **path**: L7/peering/public/ingress/peer-1/
+    - **where**: MAIN; BETA adds an object-2 binding
+    - **what_it_is**: Open decision. AUTOMATION.md and REGISTER.md of the peer could be bound as object-2 and object-3.
+    - **evidence_state**: UNRESOLVED
+    - **locator**: MAIN:L8/L6/history/7LM_ROUTING_PLAN_2026-09-05.md:69-70
+    - **quote**: would be `object-2/`, `object-3/` if the owner wants them bound.
+    - **checked_how**: MAIN has only object-1. BETA's history note line 11 says a 'separate object-2 binding' was used for the producer artifact 805cd42 and architecture 4ca3edb, a different object from the two the plan named. So the object-2 number is used differently in BETA than the plan anticipated.
+  - item 54
+    - **id**: OD-30
+    - **title**: Third Power Corpus: transfer to aybllc/ncf-research
+    - **path**: L7/peering/private/egress/peer-2/object-1/
+    - **where**: MAIN
+    - **what_it_is**: Open decision. [source text withheld from the public copy], .docx) and OWNERSHIP_PENDING.md wait at an egress position for the owner's ruling on ownership and transfer.
+    - **evidence_state**: UNRESOLVED
+    - **locator**: MAIN:L8/L6/history/LEDGER_2026-08-16_l6-close-and-normalization.md:36
+    - **quote**: Parked for owner decision: Third Power Corpus v3 in `common/durable/orphan/third-power/` (NCF-derived per AU-NORM-03; eventual reconciliation with aybllc/ncf-research).
+    - **own_label**: "Third Power **OWNER DECISION** on cross-repo disposition" (line 20); PARKED
+    - **checked_how**: Three files present at the egress position in MAIN (ls-tree). sheets-2026-09-07.md line 39: 'Nothing has left; the owner decides.' Queue item 4 of the 2026-08-16 ledger (line 49). No closing record.
+  - item 55
+    - **id**: OD-31
+    - **title**: Home of the five .odt drafts
+    - **path**: L8/L6/history/LEDGER.md
+    - **where**: MAIN (decision); HISTORY (files)
+    - **what_it_is**: Open decision that was overtaken without being closed. Five Office drafts (auditonomous-manuscript.odt, auditonomous.odt, autonomous-theory.odt, my-book.odt, stream-eb-carrier-imporotant.odt) were flagged three times as the principal's call. They were deleted from HEAD by the prune 8c98573 and exist only at 1d83788:common/durable/durable/orphan/.
+    - **evidence_state**: UNRESOLVED
+    - **locator**: MAIN:L8/L6/history/LEDGER.md:32
+    - **quote**: `[source text withheld from the public copy]
+    - **checked_how**: git show --name-status 8c98573 lists all five as D. Their blobs are in neither MAIN nor ROADMAP nor BETA (script check). No L6 record in MAIN names them after the prune. ROADMAP's restore record declines them citing harmonization §8, which does not mention them (see defects). Two titles suggest manuscript drafts ('auditonomous-manuscript.odt', 'my-book.odt'); I did not open them.
+    - **open_items**
+      - These may be owner-authored manuscript material that the manuscript pass should look at in HISTORY
+  - item 56
+    - **id**: OD-32
+    - **title**: OMMP reconstruction: restore or not; verify against aybllc/ommp
+    - **path**: L8/L6/history/LEDGER.md
+    - **where**: MAIN (open); ROADMAP (restored)
+    - **what_it_is**: Open decision. The vendored OMMP toolkit was removed at the prune; it was a reconstruction, not canonical, and the real repository aybllc/ommp was never read.
+    - **evidence_state**: UNRESOLVED
+    - **locator**: MAIN:L8/L6/history/LEDGER.md:33
+    - **quote**: Principal's call whether to restore; [source text withheld from the public copy]
+    - **own_label**: "Was [source text withheld from the public copy]"
+    - **checked_how**: Not in MAIN. ROADMAP restores five files to L8/L4/work/computation/ommp/ (restore record line 43; blobs identical to HISTORY) under the inferred D15 ruling. The verification against aybllc/ommp has no record in any state.
+  - item 57
+    - **id**: OD-33
+    - **title**: [source text withheld from the public copy]'
+    - **path**: L8/L5/research/lanes/THEME_LEDGER.md
+    - **where**: MAIN
+    - **what_it_is**: Open question reserved for the author, carried from before the reorganisation.
+    - **evidence_state**: UNRESOLVED
+    - **locator**: MAIN:L8/L6/history/LEDGER.md:59
+    - **quote**: [source text withheld from the public copy]" (`research/THEME_LEDGER.md`).
+    - **own_label**: "The author's calls, none decided anywhere in this repository" (MAIN:L8/L5/research/review/0.md:44)
+    - **checked_how**: Still listed open in MAIN review/0.md line 44 ('the option set unranked'). The ledger's path is the old one; the file is now at L8/L5/research/lanes/.
+  - item 58
+    - **id**: OD-34
+    - **title**: Record ontology questions Q1-Q9
+    - **path**: L8/L5/research/lanes/RECORD_ONTOLOGY_OPEN_QUESTIONS.md
+    - **where**: MAIN
+    - **what_it_is**: Nine open questions reserved for the author. Q9 ('autonomous assumes state, auditonomous checks state') is flagged by its own file as possibly the definitional key.
+    - **evidence_state**: UNRESOLVED
+    - **locator**: MAIN:L8/L6/history/LEDGER.md:60
+    - **quote**: Record ontology Q1–Q9 (`research/RECORD_ONTOLOGY_OPEN_QUESTIONS.md`).
+    - **checked_how**: Still listed open in MAIN review/0.md line 44. The routing plan line 171: Q9 'is not adopted anywhere by this plan'.
+  - item 59
+    - **id**: OD-35
+    - **title**: [source text withheld from the public copy]
+    - **path**: L8/L0/semantics/definitions/AUDITONOMOUS_DEFINITION.md
+    - **where**: MAIN
+    - **what_it_is**: Open decision. A rewording of line 52 of the definition is recorded (perpetuity adjudication §6.1) and not applied.
+    - **evidence_state**: UNRESOLVED
+    - **locator**: MAIN:L8/L6/history/LEDGER.md:61
+    - **quote**: [source text withheld from the public copy].
+    - **checked_how**: Still listed open in MAIN review/0.md line 44 and routing plan line 147 ('The line-52 pending edit stays pending'). I did not diff line 52 across states.
+  - item 60
+    - **id**: OD-36
+    - **title**: Reader-agnostic divergence: the definition names no auditor
+    - **path**: L8/L5/research/review/0.md
+    - **where**: MAIN (cites a file absent from MAIN); ROADMAP (file readable)
+    - **what_it_is**: Open question. Whether the constitutional sentence's silence on the auditor is a design property or an omission. The section that states it (AUDITONOMOUS.md §2.8) is not readable in MAIN.
+    - **evidence_state**: UNRESOLVED
+    - **locator**: MAIN:L8/L6/history/LEDGER.md:62
+    - **quote**: [source text withheld from the public copy]).
+    - **checked_how**: MAIN review/0.md line 44 cites it as 'removed from HEAD at `8c98573`, in git history'. ROADMAP's version of the same line points to L8/L6/retired/consolidated-2026-08-04/.
+  - item 61
+    - **id**: OD-37
+    - **title**: Unread repositories and the private-repo sweep
+    - **path**: L8/L6/history/LEDGER.md
+    - **where**: MAIN
+    - **what_it_is**: Open work. aybllc/ommp and aybllc/broken-zero were never read; the custody sweep covered public repositories only.
+    - **evidence_state**: UNRESOLVED
+    - **locator**: MAIN:L8/L6/history/LEDGER.md:63
+    - **quote**: `[source text withheld from the public copy].
+    - **own_label**: PENDING
+    - **checked_how**: No later L6 record in any state reports either repository read or the sweep extended. The custody files the ledger names (intake/MANIFEST.md, MOVE_LOG.md) are not in MAIN.
+  - item 62
+    - **id**: OD-38
+    - **title**: The master ledger's 'Waiting on' work rows
+    - **path**: L8/L6/history/LEDGER.md
+    - **where**: MAIN
+    - **what_it_is**: Five rows that wait on work, not on a ruling: first l6 search session; first lane; adjudicated material for the binder; real LaTeX migration of the manuscript; first prior-art search.
+    - **evidence_state**: UNRESOLVED
+    - **locator**: MAIN:L8/L6/history/LEDGER.md:31-39
+    - **quote**: `[source text withheld from the public copy]
+    - **checked_how**: The l6 row is contradicted by the same ledger (register populated 2026-08-16). For the others: the routing plan line 159 says 'search still unrun' for prior art; the LaTeX stub was pruned and ROADMAP opens a Markdown source tree at L8/L4/work/writing/book/ (31 files) instead. No record of a first lane or binder content.
+  - item 63
+    - **id**: OD-39
+    - **title**: F-004 freeze re-witness decision
+    - **path**: L8/L6/history/LEDGER_2026-08-14_reorganisation.md
+    - **where**: MAIN
+    - **what_it_is**: Decision asked of the owner on 2026-08-14 (six pins needed his call). Closed: F-004 was executed, then the freeze was retired altogether (F-005).
+    - **evidence_state**: INTERNALLY CHECKED
+    - **locator**: MAIN:L8/L6/history/LEDGER.md:18-21
+    - **quote**: F-004 was executed (`db426ab`), then the freeze was retired on Eric's instruction (F-005, `1d83788`)
+    - **own_label**: CLOSED; "FREEZE RETIRED CLEANLY" (2026-08-16 ledger line 19)
+    - **checked_how**: db426ab and 1d83788 exist as commits in the clone. No FREEZE file in MAIN (ls-tree).
+  - item 64
+    - **id**: OD-40
+    - **title**: Class B/C licence adjudication of the staged PDFs
+    - **path**: L8/L6/history/LEDGER_2026-08-14_redeploy.md
+    - **where**: MAIN
+    - **what_it_is**: Decision asked on 2026-08-14: which same-numbered copies are licensed to whom, and what transfers into l6. Recorded as closed on 2026-08-16 by the l6 accession and adjudication.
+    - **evidence_state**: ASSERTED
+    - **locator**: MAIN:L8/L6/history/LEDGER.md:40
+    - **quote**: 61/61 PDFs dispositioned (19 accessioned, 40 already held, 2 held out)
+    - **own_label**: "RECONCILED 2026-08-16"; "transfer CLOSED and verified"
+    - **checked_how**: The closing rests on commits e4f0d5c and bccf4e4 in aybllc/l6, which is not among the clones given to me; I confirmed only that the PDFs are gone from MAIN and that the register rows exist. The standing hazard remains: WSU-licensed material needs a re-check before any visibility change (2026-08-16 ledger line 41).
+  - item 65
+    - **id**: OD-41
+    - **title**: Push decision
+    - **path**: L8/L6/history/LEDGER_2026-08-14_reorganisation.md
+    - **where**: MAIN
+    - **what_it_is**: Decision asked twice on 2026-08-14 (no push without per-action instruction). Closed 2026-08-16.
+    - **evidence_state**: INTERNALLY CHECKED
+    - **locator**: MAIN:L8/L6/history/LEDGER_2026-08-16_l6-close-and-normalization.md:23
+    - **quote**: commit `4a1c1db` pushed; `main` == `origin/main`; `_STAGING_TO_L6/` gone; register complete.
+    - **own_label**: CLOSED
+    - **checked_how**: 4a1c1db is an ancestor object in the clone fetched from origin.
+  - item 66
+    - **id**: OD-42
+    - **title**: Should the cloud session's flow adopt the new structure
+    - **path**: L8/L6/history/LEDGER_2026-08-14_redeploy.md
+    - **where**: MAIN
+    - **what_it_is**: Open process question raised after two writers collided on one repository and a deployment was reset away.
+    - **evidence_state**: UNRESOLVED
+    - **locator**: MAIN:L8/L6/history/LEDGER_2026-08-14_redeploy.md:33-34
+    - **quote**: [source text withheld from the public copy]).
+    - **checked_how**: No answering record found in L6 in any state. The situation recurs in form today: ROADMAP (a Claude branch) and BETA (a Codex branch) both stand unmerged off the same MAIN with different contents.
+  - item 67
+    - **id**: OD-43
+    - **title**: Authority-interface register and its provenance row
+    - **path**: L7/peering/public/ingress/peer-1/object-1/0.md
+    - **where**: MAIN; BETA adds the row
+    - **what_it_is**: Queue item 1 of 2026-08-16 (create uso/autonomous/LEDGER.md). Recorded as answered by the binding record. One part remains: the binding has no provenance row.
+    - **evidence_state**: INTERNALLY CHECKED
+    - **locator**: MAIN:L8/L6/history/0.md:36
+    - **quote**: Item 1 of the 2026-08-16 queue (the authority-interface register) is answered by [source text withheld from the public copy]-1/`.
+    - **own_label**: CLOSED in part
+    - **checked_how**: Binding record present in MAIN. Its line 17: 'Provenance row | none yet at `L7/provenance/sources/`; the owner's next ledgering session adds it'. BETA adds row AUT-SOURCE-001 with blob ffbdc28 and SHA-256 2756661749c3…, which matches the blob id I computed. The item asked for 'one row per imported definition/authority'; the binding is one record for the whole plural entry.
+    - **open_items**
+      - Provenance row missing in MAIN and ROADMAP
+  - item 68
+    - **id**: OD-44
+    - **title**: Re-point the defining-document references in the README
+    - **path**: L8/L6/history/LEDGER_2026-08-16_l6-close-and-normalization.md
+    - **where**: MAIN
+    - **what_it_is**: Queue item 2 of 2026-08-16, including 'Eric's wording for README's four-layers table'. Overtaken: the README was rewritten on 2026-09-05 and replaced on 2026-09-07; the four-layers table was retired with the old README.
+    - **evidence_state**: INTERNALLY CHECKED
+    - **locator**: MAIN:L8/L6/history/LEDGER_2026-08-16_l6-close-and-normalization.md:47
+    - **quote**: Re-point the defining-document references per AU-NORM-02: `README.md` lines 20/65/127
+    - **own_label**: Overtaken, not explicitly closed
+    - **checked_how**: MAIN README (17 lines) names the active definition at line 11 and has no four-layers table. The owner's wording for that table was never supplied; the table stands only in the retired README.
+  - item 69
+    - **id**: OD-45
+    - **title**: The auditability-gap search
+    - **path**: L8/L6/history/LEDGER_2026-08-16_l6-close-and-normalization.md
+    - **where**: MAIN
+    - **what_it_is**: Queue item 3 of 2026-08-16, the one research task in the L6 queue: does any admissible codified definition of 'autonomous' in aybllc/autonomous, merely by classifying a system autonomous, entail truthful recoverability of state and history? Clause-level reading with adversarial verification; a negative finding bounded to the set read.
+    - **evidence_state**: UNRESOLVED
+    - **locator**: MAIN:L8/L6/history/LEDGER_2026-08-16_l6-close-and-normalization.md:48
+    - **quote**: Existing partial evidence (5 read IEEE standards; the retired F-003 30-PDF sweep) must not be overextended.
+    - **own_label**: Queued, unrun
+    - **checked_how**: git grep -i 'auditability-gap|auditability gap' over MAIN, ROADMAP and BETA: the only hit in each is this ledger line. No record that the search was run.
+    - **open_items**
+      - This is the claim the word's motivation rests on (that 'autonomous' does not entail auditability); it is the natural first research task once the definition binding is settled
+  - item 70
+    - **id**: OD-46
+    - **title**: Etymology-blend ambiguities inside the definition
+    - **path**: L8/L0/semantics/definitions/AUDITONOMOUS_DEFINITION.md
+    - **where**: MAIN
+    - **what_it_is**: Queue item 5 of 2026-08-16. Flagged ambiguities at lines 18, 96 and 181 of the definition were to be resolved by a boundary note in the interface register, never by editing the definition.
+    - **evidence_state**: UNRESOLVED
+    - **locator**: MAIN:L8/L6/history/LEDGER_2026-08-16_l6-close-and-normalization.md:50
+    - **quote**: Two flagged ambiguities inside the definition (etymology-blend phrasing at lines 18/96/181) — resolve via a boundary note in the interface register (item 1), never by editing the definition.
+    - **checked_how**: git grep -i 'etymolog|blend|boundary note' over MAIN L7/peering/public/ingress: no hit. The binding record carries no such note. The ledger says 'two' ambiguities and gives three line numbers.
+  - item 71
+    - **id**: OD-47
+    - **title**: IL-001 history purge of the third-party ISO PDF
+    - **path**: L7/provenance/sources/staging-records/standards/SOURCE_LEDGER.md
+    - **where**: MAIN
+    - **what_it_is**: Pending owner action. A third-party copy of ISO/IEC 22989 was withdrawn from HEAD but remains in git history; the purge is the owner's to execute. Related hazard: the rescue branch holds pre-redaction personal data.
+    - **evidence_state**: UNRESOLVED
+    - **locator**: MAIN:L8/L6/history/LEDGER_2026-08-16_l6-close-and-normalization.md:40
+    - **quote**: [source text withheld from the public copy]
+    - **own_label**: "Standing hazards (unchanged)"
+    - **checked_how**: SOURCE_LEDGER.md in MAIN has a section '[source text withheld from the public copy]"' (line 418). 1d83788 still lists _STAGING_TO_L6/sources/standards/pdf/ISO-IEC-22989-2022_PREVIEW-15pp_iTeh-SIST.pdf in this clone, so history has not been rewritten. No record of execution. This conflicts in spirit with the standing constraint 'History is never rewritten' (LEDGER.md:51) unless the directive is read as the stated exception.
+  - item 72
+    - **id**: OD-48
+    - **title**: Owner rulings AU-NORM-01 to 04
+    - **path**: L8/L6/history/LEDGER_2026-08-16_l6-close-and-normalization.md
+    - **where**: MAIN
+    - **what_it_is**: Four closed owner rulings of 2026-08-16. 01: four 0-byte files are intentional blanks, do not restore. 02: the active definition is AUDITONOMOUS_DEFINITION.md; the root AUDITONOMOUS.md is history-only. 03: Third Power is NCF-derived and parked. 04 is named in the title only.
+    - **evidence_state**: CONTRADICTED
+    - **locator**: MAIN:L8/L6/history/LEDGER_2026-08-16_l6-close-and-normalization.md:1
+    - **quote**: l6 migration close, structural normalization, owner rulings AU-NORM-01..04
+    - **checked_how**: git grep 'AU-NORM-04' over MAIN, ROADMAP and BETA: no hit. Its text exists only in the commit message of 4a1c1db: 'Definitions remain under manuscripts/definitions/ (AU-NORM-04).' The definition was moved to L0 on 2026-09-05 without any record saying AU-NORM-04 was superseded.
+    - **open_items**
+      - Whether the owner regards AU-NORM-04 as superseded by 'run the plan'
+  - item 73
+    - **id**: OD-49
+    - **title**: D15: restore from history, taken as ruled by inference
+    - **path**: L8/L6/history/restore-2026-09-14.md
+    - **where**: ROADMAP only
+    - **what_it_is**: The roadmap put to the owner whether to restore history-only files to 7LM positions or bind them by reference to git. A session took the owner's 2026-09-14 instruction to 'setup the Auditonomous repo before research' as the ruling for restoring, and restored 116 files.
+    - **evidence_state**: UNRESOLVED
+    - **locator**: ROADMAP:L8/L6/history/restore-2026-09-14.md:9
+    - **quote**: [source text withheld from the public copy]
+    - **own_label**: "D15, taken as ruled by the instruction" (ROADMAP:L8/L5/research/review/BOOK_STRUCTURE_AND_ROADMAP_2026-09-13.md:585)
+    - **checked_how**: The owner's instruction as quoted (line 7) does not mention restoring files. The branch's PR #27 was closed unmerged on 2026-10-17 (task brief), and BETA, built later on MAIN, contains none of the restored files. So no state records the owner accepting the restore.
+  - item 74
+    - **id**: OD-50
+    - **title**: Register at L2 [source text withheld from the public copy]
+    - **path**: L8/L2/formal-mathematics/FORMULAS_LEDGER.md
+    - **where**: ROADMAP
+    - **what_it_is**: Open decision. DR-003's impossibility result, [source text withheld from the public copy] and the enclosure regime with its sign condition are unregistered.
+    - **evidence_state**: UNRESOLVED
+    - **locator**: ROADMAP:L8/L6/history/restore-2026-09-14.md:72
+    - **quote**: [source text withheld from the public copy].
+    - **checked_how**: Overlaps OD-04. The master ledger records 'DR-003 VERIFIED' (MAIN:L8/L6/history/LEDGER.md:32) while its record and register are absent from MAIN and present only in ROADMAP.
+  - item 75
+    - **id**: OD-51
+    - **title**: Pin [source text withheld from the public copy]
+    - **path**: L7/peering/private/ingress/peer-3/object-1/
+    - **where**: ROADMAP
+    - **what_it_is**: Open decision. The Martin 2026 embodied-auditonomy manuscript and abba-01/ebios are bound as the defining sources of the coinage, without a pinned hash or commit.
+    - **evidence_state**: UNRESOLVED
+    - **locator**: ROADMAP:L8/L6/history/restore-2026-09-14.md:73
+    - **quote**: [source text withheld from the public copy].
+    - **own_label**: "remains the owner's ledgering act" (line 32)
+    - **checked_how**: ROADMAP holds the two manuscript files at the binding (restore line 49); MAIN does not. The routing plan line 82 had noted 'Manuscript path in Appendix E does not exist here'.
+  - item 76
+    - **id**: OD-52
+    - **title**: Consolidated document: stay preserved or return to history
+    - **path**: L8/L6/retired/consolidated-2026-08-04/AUDITONOMOUS.md
+    - **where**: ROADMAP
+    - **what_it_is**: Open decision. AU-NORM-02 made the consolidated document history-only; ROADMAP returned it to the tree as a retired object so its citations can be read.
+    - **evidence_state**: UNRESOLVED
+    - **locator**: ROADMAP:L8/L6/history/restore-2026-09-14.md:74
+    - **quote**: [source text withheld from the public copy].
+    - **checked_how**: The sheet says: 'Sending the file back to history is the owner's act.' Whether 'history-only by ruling' permits a retired copy in the tree is itself a reading of AU-NORM-02 that only the owner can settle.
+  - item 77
+    - **id**: OD-53
+    - **title**: Merge of the BETA candidate
+    - **path**: L8/L6/history/AUDITONOMOUS_BETA_HISTORY.md
+    - **where**: BETA
+    - **what_it_is**: Open decision. BETA is a local candidate that restructures L7 to the changed model, corrects ledger arithmetic and adds a finite exemplar. Its own record says it is not an owner decision or a release.
+    - **evidence_state**: UNRESOLVED
+    - **locator**: BETA:L8/L6/history/AUDITONOMOUS_BETA_HISTORY.md:3
+    - **quote**: This record concerns the authorized local candidate, not a new source-owner decision or release.
+    - **checked_how**: git log main..beta: one commit, 714480d, author EDM, 2026-11-02 21:08 -0800 (2026-11-03 UTC, matching the record's heading). 17 adds, 33 modifications, 6 renames against MAIN. It and ROADMAP are disjoint: neither contains the other's additions.
+    - **open_items**
+      - BETA and ROADMAP need an explicit order of merge or a statement that one is dropped
+- **defects**
+  - item 1
+    - **statement**: The master ledger's table 'The tree, by state' describes nine areas (uso/l6/, common/durable/, intake/, research/, binder/, manuscripts/main/, manuscripts/definitions/, manuscripts/prior-art/, _STAGING_TO_L6/) and a root HUB_LEDGER.md and intake/MOVE_LOG.md. git ls-tree -r origin/main finds 0 paths under every one. The README of MAIN (line 13) still calls this file 'the master index'.
+    - **locator**: MAIN:L8/L6/history/LEDGER.md:9-10,27-40
+  - item 2
+    - **statement**: The master ledger contradicts itself in three places: line 16 says sources are '[source text withheld from the public copy]' while line 40 says 'RECONCILED 2026-08-16' and the directory removed; line 31 says the uso/l6 register is 'opened (empty — no rows yet)' while line 40 refers readers to it for dispositions and the same-day session ledger calls it complete; lines 47-48 say [source text withheld from the public copy]/`' while line 40 records that directory's removal.
+    - **locator**: MAIN:L8/L6/history/LEDGER.md:16,31,40,47-48
+  - item 3
+    - **statement**: The master ledger row for manuscripts/definitions/ waits on 'Principal: REGISTER/README restore-or-replace', while the session ledger of the same date records ruling AU-NORM-01, 'Intentionally blank (AU-NORM-01, do not restore)'. The two files were then deleted on 2026-09-07.
+    - **locator**: MAIN:L8/L6/history/LEDGER.md:38 against MAIN:L8/L6/history/LEDGER_2026-08-16_l6-close-and-normalization.md:35
+  - item 4
+    - **statement**: The master ledger records statuses '[source text withheld from the public copy]' for records and a register that are not in MAIN (no DR-00x or REGISTER file in git ls-tree origin/main). They exist only at HISTORY and in ROADMAP (L8/L5/research/review/dr-001-003/).
+    - **locator**: MAIN:L8/L6/history/LEDGER.md:32
+  - item 5
+    - **statement**: '62 rows' is wrong: the pointer register in MAIN has 60 rows (PR 20, STD 34, INST 4, EXC 2, counted), and the ranges given in the same sentence sum to 60. The routing plan repeats 62 twice. The register's own close-out line says '22 new rows' and enumerates 21. BETA records both corrections; MAIN and ROADMAP do not.
+    - **locator**: MAIN:L8/L6/history/LEDGER_2026-08-16_l6-close-and-normalization.md:30; MAIN:L8/L6/history/7LM_ROUTING_PLAN_2026-09-05.md:80,206; MAIN:L7/provenance/sources/LEDGER.md:113
+  - item 6
+    - **statement**: The 2026-08-16 session ledger breaks the 'already held' PDFs into 13 byte-identical + 17 watermark-delta + 11 residual-tolerant + 2 scan = 43, but the total it and the master ledger give is 40. The sources ledger's final accounting says '14 Xplore-stamp-delta', which does sum to 40.
+    - **locator**: MAIN:L8/L6/history/LEDGER_2026-08-16_l6-close-and-normalization.md:16 against MAIN:L7/provenance/sources/LEDGER.md:127-128
+  - item 7
+    - **statement**: The 2026-08-16 ledger is titled 'owner rulings AU-NORM-01..04' but states only 01, 02 and 03. AU-NORM-04 ('Definitions remain under manuscripts/definitions/') exists only in the commit message of 4a1c1db, which by the repository's own rule is not L6 memory. The harmonization of 2026-09-05 moved the definition out of manuscripts/definitions/ without recording that it supersedes AU-NORM-04.
+    - **locator**: MAIN:L8/L6/history/LEDGER_2026-08-16_l6-close-and-normalization.md:1; MAIN:L8/L6/history/harmonization-2026-09-05.md:37
+  - item 8
+    - **statement**: The harmonization record says '69 paths moved by `git mv` (renames, no deletions)'. In the commit that added it (ccc0554) 68 paths left their old location (tree comparison of ccc0554^ and ccc0554; git reports R=68, D=0). The 69th is apparently the root README.md, whose retired copy is an addition while the root file was rewritten in place.
+    - **locator**: MAIN:L8/L6/history/harmonization-2026-09-05.md:22
+  - item 9
+    - **statement**: The harmonization record says every OWNER DECISION row of the plan 'is left exactly where it was', but rows the plan marked 'MOVE · OWNER DECISION' were moved (LEDGER.md, PRIORS_EXTERNAL, THEME_LEDGER, CONTRADICTIONS and others) and rows marked 'RETIRE · OWNER DECISION' were retired (five research READMEs). Three of those questions (CONTRADICTIONS review-or-findings, PRIORS L3-or-L5, THEME_LEDGER lanes-or-review) and the README retirements are missing from §5, the record's list of decisions left open, which the README presents as 'every decision left to the author'.
+    - **locator**: MAIN:L8/L6/history/harmonization-2026-09-05.md:3,89-95 against MAIN:L8/L6/history/7LM_ROUTING_PLAN_2026-09-05.md:157,165,169,172,177,179,183,200
+  - item 10
+    - **statement**: The deletion test of §10 ('0 bytes preserve nothing') was applied to two 0-byte files and not to two others: manuscripts/README.md and manuscripts/main/README.md remain in the retired set at 0 bytes (git ls-tree -l).
+    - **locator**: MAIN:L8/L6/history/harmonization-2026-09-05.md:152 against MAIN:L8/L6/retired/layout-2026-08-14/manuscripts/README.md
+  - item 11
+    - **statement**: The L6 layer sheet's two holdings lists omit sheets-2026-09-07.md, 7LM_ROUTING_PLAN_2026-09-05.md and retired/layout-2026-09-06/, all present in the tree. ROADMAP's copy additionally omits its two new records and third retired set; BETA's omits its beta history file.
+    - **locator**: MAIN:L8/L6/0.md:70-75,86-89
+  - item 12
+    - **statement**: The retired sheet's 'Holds' section has the line 'In this repository:' with nothing after it.
+    - **locator**: MAIN:L8/L6/retired/0.md:22-23
+  - item 13
+    - **statement**: The history sheet describes this repository's LEDGER.md with the quotation 'declared, not silently repaired' and 'retired objects'. That phrase is not in this repository's LEDGER.md (git grep over MAIN finds it only in the sheet); it is a section title of the Autonomous repository's master ledger ('Known staleness — declared, not silently repaired', autonomous origin/main:L8/L6/history/0.md:35). The description was carried over from the sibling's sheet.
+    - **locator**: MAIN:L8/L6/history/0.md:35
+  - item 14
+    - **statement**: The history sheet states 'this clone is shallow', a fact about one session's clone, in a sheet that is supposed to state the directory as it stands. The ledgers name rescue/reorg-2026-08-14 as where the first deployment and pre-redaction bytes survive; that branch is not among the origin refs, and commits 9aefa6e and 73c3ae1 named in the ledgers are not objects in the clone. Those pointers cannot be followed from the remote as fetched.
+    - **locator**: MAIN:L8/L6/history/0.md:35; MAIN:L8/L6/history/LEDGER.md:8; MAIN:L8/L6/history/LEDGER_2026-08-14_redeploy.md:7
+  - item 15
+    - **statement**: After the rule of 2026-09-07 that sheets say what is, the three L6 sheets still speak of the past pass: 'the L6 record of this displacement event', 'the record of this pass', 'as it stood before this pass'.
+    - **locator**: MAIN:L8/L6/0.md:74,88; MAIN:L8/L6/history/0.md:37; MAIN:L8/L6/retired/0.md:34
+  - item 16
+    - **statement**: MAIN's L6 sheet names 'Released publications — `L7/publications/`'. The model has changed: aybllc/7lm origin/main states 'Canonical direct L7 branches are L7/provenance/, L7/governance/, L7/peering/, and L7/allications/' (7lm:L7/0.md:16), and governance/restrictions has become governance/controlled. BETA corrects both; MAIN and ROADMAP still carry the old paths.
+    - **locator**: MAIN:L8/L6/0.md:82 against BETA:L8/L6/0.md:82
+  - item 17
+    - **statement**: The status ladder, carried verbatim into MAIN, says 'Nothing is ever deleted' and that promotions 'are logged in the register'. The retired sheet says 'No-deletion is not a rule enforced here or anywhere in the repository', and MAIN holds no register. Two current documents disagree on the deletion rule.
+    - **locator**: MAIN:L8/L5/research/review/STATUS_LADDER.md:25 against MAIN:L8/L6/retired/0.md:12
+  - item 18
+    - **statement**: ROADMAP's restore record declines five .odt files of HISTORY common/durable/durable/orphan/ (auditonomous-manuscript.odt, auditonomous.odt, autonomous-theory.odt, my-book.odt, stream-eb-carrier-imporotant.odt) with the reason that the harmonization §8 dispositions stand. §8 names none of them (git grep of those names over MAIN L8/L6: no hit); it disposes of different files. The five were deleted by the prune 8c98573 while 'principal's call on their home' was open, and no record enumerates where their content stands.
+    - **locator**: ROADMAP:L8/L6/history/restore-2026-09-14.md:33,191-195 against MAIN:L8/L6/history/harmonization-2026-09-05.md:111-123
+  - item 19
+    - **statement**: ROADMAP's reconciliation sweep misstates two class counts: class C as listed is 30 items (11+3+3+4+6+2+1), stated 29; class B's standard numbers match 16 files in the pre-prune tree, stated 17. The overall total of 61 is right. The record is labelled unreviewed model output and was superseded on 2026-08-16.
+    - **locator**: ROADMAP:L8/L6/history/L6_RECONCILIATION_2026-08-14.md:19-20,46-51,59-72
+  - item 20
+    - **statement**: BETA's L6 record cites evidence that is not in the repository: T3-red.txt, T3-integration-wait.txt, T3-review-red.json/.txt and a 'private implementation move manifest' that enumerates the moved blobs. The repository's rule puts the enumeration that precedes a move or deletion in the L6 record; here it is held outside. The record also refers to 'the four saved holdings discrepancies' without saying which they are.
+    - **locator**: BETA:L8/L6/history/AUDITONOMOUS_BETA_HISTORY.md:6,8,9-10
+  - item 21
+    - **statement**: MAIN has no record enumerating what the prune of 2026-08-15 (8c98573: 214 files changed, 99,383 lines deleted) removed. The repository's rule is enumeration before deletion; the only full enumeration is ROADMAP's restore record §9, unmerged. MAIN documents cite files that cannot be opened in MAIN (for example AUDITONOMOUS.md §2.8).
+    - **locator**: MAIN:L8/L6/history/harmonization-2026-09-05.md:19; MAIN:L8/L5/research/review/0.md:44
+  - item 22
+    - **statement**: The 2026-08-16 queue item 5 says 'Two flagged ambiguities' and gives three line numbers (18/96/181); the promised boundary note in the interface register was never written (no match in the binding record).
+    - **locator**: MAIN:L8/L6/history/LEDGER_2026-08-16_l6-close-and-normalization.md:50
+- **open_questions**
+  - Did the owner accept the restore of 2026-09-14? The record infers the ruling (D15) from an instruction that does not mention restoring; PR #27 was closed unmerged and BETA was built without it. I could not read the PR discussion (no network).
+  - ROADMAP and BETA are disjoint candidates on the same MAIN. No record says which is to be merged first or whether one replaces the other. BETA follows the changed model (L7/allications/, governance/controlled/); ROADMAP does not.
+  - What do the five .odt drafts deleted at the prune contain (auditonomous-manuscript.odt, my-book.odt and three others at 1d83788:common/durable/durable/orphan/)? I did not extract them; the names suggest owner-authored manuscript material that no current record accounts for.
+  - Does the branch rescue/reorg-2026-08-14 still exist anywhere? It is not among the fetched origin refs, and commits 9aefa6e and 73c3ae1 are not in the clone. The ledgers say it holds the first deployment and pre-redaction personal data ('never replay').
+  - The custody claims of 2026-08-16 (61/61 PDFs dispositioned, 19 accessions triple-hash verified) rest on commits e4f0d5c and bccf4e4 in aybllc/l6, which I was not given. They are recorded as verified; I could not confirm them.
+  - Was the caveat about IEEE-754-2019 (its only byte-identical copy in l6 sat under durable/delete/, 'surface to Eric before ledgering') ever answered? No record in this repository.
+  - Was the IL-001 purge directive (owner: "remove that copy") executed on the remote? The pre-prune tree in this clone still lists the iTeh ISO/IEC 22989 preview PDF, so history here is not rewritten.
+  - Is AU-NORM-04 ('Definitions remain under manuscripts/definitions/') superseded in the owner's view? It exists only in a commit message and was overridden by the 2026-09-05 move without a record.
+  - What exactly are BETA's dispositions for Appendix C, Q13 and C1-C7, and do they satisfy the owner rule? The L6 note asserts them; the files are outside Layer 6 and I did not inspect them.
+  - Is the session-ledger format (one entry per session, with External Sources Checked and Failures) still required? It lives only in a retired rule text, and no session after 2026-08-16 produced one.
+  - Counts in the two 2026-08-14 ledgers (151 files, 123 and 124 renames) could not be re-derived because their commits are not in the clone.

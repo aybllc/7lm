@@ -1,0 +1,176 @@
+# check:nist-requirements
+
+Agent result, as returned. Workflow: Public sources against their originals. Run `wf_73fbd9d4-516`. Phase: Check. Checked in 2026-11-11 19:51 UTC.
+
+- **check**: nist-requirements: the NIST requirements extraction, auditonomous origin/main (2165144) L8/L4/work/computation/nist-requirements-for-autonomouos.md (blob 89fa56e, 57,042 bytes, 404 lines; identical blob on origin/claude/book-structure-roadmap-k8ap82), tested against SP 1011-I-2.0, SP 1011-II-1.0, AI 100-1 and [source text withheld from the public copy] served by nvlpubs.nist.gov on 2026-11-11
+- **sources**
+  - item 1
+    - **name**: [source text withheld from the public copy]
+    - **official_url**: https://doi.org/10.6028/NIST.sp.1011-I-2.0
+    - **http_status**: 200 (doi.org 302 to nvlpubs.nist.gov)
+    - **final_url**: https://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication1011-I-2.0.pdf
+    - **bytes**: 216691
+    - **sha256**: a7b5c3a37c487ec7a15eeae8f3ffb1df7b84992a03e5eefecb3c4dbff854da84
+    - **saved_at**: /tmp/claude-0/-home-user/bfcfd013-a2da-5019-961e-7f46116f08be/scratchpad/wf-sources/nist-requirements/dl-1/sp1011-I-2.0.pdf
+    - **repo_recorded**: sha256 a7b5c3a37c487ec7a15eeae8f3ffb1df7b84992a03e5eefecb3c4dbff854da84 (line 16); 216,691 bytes, Title field 'Microsoft Word - Terms for ALFUS 55.doc', ModDate 2015-12-11 (line 390); October 2008, 47 pp. (line 15)
+    - **same_as_recorded**: yes: sha256, byte size, Title field, ModDate, title, editor, date and page count all identical (47 PDF pages; printed page N is PDF page N+1, last printed folio 46)
+  - item 2
+    - **name**: [source text withheld from the public copy]
+    - **official_url**: https://doi.org/10.6028/NIST.sp.1011-II-1.0
+    - **http_status**: 200 (doi.org 302 to nvlpubs.nist.gov)
+    - **final_url**: https://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication1011-II-1.0.pdf
+    - **bytes**: 1327094
+    - **sha256**: e594879c77929b47da192748d4379aca00759212d126c4535bd7cf227d3c6ac9
+    - **saved_at**: /tmp/claude-0/-home-user/bfcfd013-a2da-5019-961e-7f46116f08be/scratchpad/wf-sources/nist-requirements/dl-2/sp1011-II-1.0.pdf
+    - **repo_recorded**: no hash or size recorded; DOI, nvlpubs URL, 'December 2007, 73 pp.' (lines 18-19)
+    - **same_as_recorded**: not comparable (no hash recorded); URL, number, title, version, date and page count match (73 PDF pages; printed page equals PDF page)
+  - item 3
+    - **name**: [source text withheld from the public copy]
+    - **official_url**: https://doi.org/10.6028/NIST.AI.100-1
+    - **http_status**: DOI: 302 with Location http://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.100-1.pdf; that plain-http hop failed twice here (curl exit 6, could not resolve host). Same path over https on nvlpubs.nist.gov, the URL the file gives: 200
+    - **final_url**: https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.100-1.pdf
+    - **bytes**: 1946127
+    - **sha256**: 7576edb531d9848825814ee88e28b1795d3a84b435b4b797d3670eafdc4a89f1
+    - **saved_at**: /tmp/claude-0/-home-user/bfcfd013-a2da-5019-961e-7f46116f08be/scratchpad/wf-sources/nist-requirements/dl-3/NIST.AI.100-1.pdf
+    - **repo_recorded**: no hash, size or page count recorded; DOI, nvlpubs URL and 'January 2023' (lines 21-22)
+    - **same_as_recorded**: not comparable (no hash recorded); number, title and date match. File has 48 PDF pages (printed 'Page N' is PDF page N+5), PDF ModDate 2025-06-04
+  - item 4
+    - **name**: NIST SP [source text withheld from the public copy] (September 2020, [source text withheld from the public copy])
+    - **official_url**: https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-53r5.pdf
+    - **http_status**: 200 (https://doi.org/10.6028/NIST.SP.800-53r5 answers 302 to this same URL)
+    - **final_url**: https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-53r5.pdf
+    - **bytes**: 6073678
+    - **sha256**: fc63bcd61715d0181dd8e85998b1e6201ae3515fc6626102101cab1841e11ec6
+    - **saved_at**: /tmp/claude-0/-home-user/bfcfd013-a2da-5019-961e-7f46116f08be/scratchpad/wf-sources/nist-requirements/dl-4/NIST.SP.800-53r5.pdf
+    - **repo_recorded**: not recorded: 'held locally' at a scratch path, with no URL, hash, size, date or page count (line 25). Line 404 calls its text 'pre-existing', although line 384 says every quote came from documents downloaded fresh in that session
+    - **same_as_recorded**: not comparable; title matches. Official file has 492 pages
+  - item 5
+    - **name**: NIST SP 1011 (fetched only to test the NOT OBTAINED statement about the predecessor v1.1): the file served is 'Terminology for Specifying the Autonomy Levels for Unmanned Systems: Version 1.0', January 2004, 33 pages
+    - **official_url**: https://doi.org/10.6028/NIST.SP.1011
+    - **http_status**: 200 (doi.org 302 to nvlpubs.nist.gov)
+    - **final_url**: https://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication1011.pdf
+    - **bytes**: 214126
+    - **sha256**: dddd4fab17a46e8658d01b84fe3fd408dd04f03e69d6fe76a0b735a9ee284cc1
+    - **saved_at**: /tmp/claude-0/-home-user/bfcfd013-a2da-5019-961e-7f46116f08be/scratchpad/wf-sources/nist-requirements/dl-5/sp1011.pdf
+    - **repo_recorded**: not recorded; the file lists '[source text withheld from the public copy])' as NOT OBTAINED (lines 27-28)
+    - **same_as_recorded**: not applicable: this is Version 1.0, not the Version 1.1 (September 2004) the file names
+  - item 6
+    - **name**: ALFUS project web page printed in both volumes (host www.isd.mel.nist.gov, a nist.gov host, official because NIST prints it as the project site)
+    - **official_url**: http://www.isd.mel.nist.gov/projects/autonomy_levels/
+    - **http_status**: no HTTP status: http gave curl exit 6 (could not resolve host; plain http is not routed here); https gave proxy CONNECT 502 on three attempts ('host allowed, but the gateway could not connect to it')
+    - **repo_recorded**: 'is a dead legacy host. NOT-CHECKED' (line 28; repeated line 378)
+    - **same_as_recorded**: consistent with the file's statement, not conclusive
+- **items_total**: 122
+- **confirmed**: 109
+- **problems**
+  - item 1
+    - **id**: nist-requirements-1
+    - **kind**: MISMATCH
+    - **repo_locator**: auditonomous origin/main:L8/L4/work/computation/nist-requirements-for-autonomouos.md line 360 (Absences, second bullet); same claim at line 396 (Notes, item 2) and line 242 (NIST-R13)
+    - **repo_text**: [source text withheld from the public copy]" [...]. || line 396: [source text withheld from the public copy].
+    - **source_locator**: NIST SP 1011-II-1.0, section 6.1 Correlations and Interdependency, printed p. 35 (PDF p. 35)
+    - **source_text**: In many situations, using a weighted average method on the metric scores could provide an adequate indication for the CAC. However, there may well be cases when weighted minimum or maximum values might be more suitable. For example, the MC axis contains metrics for perception and tactical behavior. A low score for the perception capabilities for a UMS implies that it may not be able to support a high-level, complex, autonomous mission behavior. In this situation, the lower score between the perception and tactical behavior should be used as the requirement instead of the average.
+    - **note**: A negative search claim, not a quotation, and the source contradicts it. The same volume names 'weighted minimum' as an aggregation and gives a worked case in which the lower score governs 'instead of the average'. The passage is hedged ('may well be cases', 'might be more suitable') and concerns metric scores on the MC axis, so it does not make weakest-link a general NIST rule; but 'none found', 'The only partial support is (a)...(b)' and 'appears nowhere' are not true of the text. Related: section 2.4, p. 25, lists 'insufficient capability in any of the RACs' as a contributor to (lack of) safety. In Vol II the string 'minim' occurs 8 times; 'weakest' and 'bottleneck' occur 0 times in both volumes. This bears directly on the file's instruction to label belief #1 CONJECTURE and to stop citing ALFUS for it.
+  - item 2
+    - **id**: nist-requirements-2
+    - **kind**: COUNT-WRONG
+    - **repo_locator**: same file, line 364 (Absences, AI 100-1 bullet)
+    - **repo_text**: [source text withheld from the public copy] [...] (2) p.13 [...] ([source text withheld from the public copy]"
+    - **source_locator**: NIST AI 100-1, Appendix C, numbered item 1, Page 40 (PDF p. 45)
+    - **source_text**: [source text withheld from the public copy]. AI systems can autonomously make decisions, defer decision making to a human expert, or be used by a human decision maker as an additional opinion.
+    - **note**: The stem 'autonom' occurs 4 times, not 3: autonomy (Page 1), autonomy (Page 17), autonomous (Page 40), autonomously (Page 40). Three is the number of matching lines (grep -c), because 'autonomous' and 'autonomously' share a line. Same result in -layout, default and -raw extraction, and with line-end hyphens joined. The uncounted fourth occurrence is the only one that describes AI systems acting autonomously. The file's conclusion that AI 100-1 does not define the term still holds.
+  - item 3
+    - **id**: nist-requirements-3
+    - **kind**: MISATTRIBUTED
+    - **repo_locator**: same file, line 364 (Absences, AI 100-1 bullet)
+    - **repo_text**: ([source text withheld from the public copy]..."
+    - **source_locator**: NIST AI 100-1, section 3.6 Privacy-Enhanced, Page 17 (PDF p. 22)
+    - **source_text**: [source text withheld from the public copy], identity, and dignity.
+    - **note**: Words confirmed; page wrong. Printed Page 13 (PDF p. 18), where section 3.1 Valid and Reliable begins, has no occurrence of the stem. The other page references in this bullet (p.1, p.2, p.40) are right. 'p.13' is the page of the SP 800-53 footnote cited in the next bullet.
+  - item 4
+    - **id**: nist-requirements-4
+    - **kind**: MISMATCH
+    - **repo_locator**: same file, lines 262-264 (NIST-R15, block labelled Verbatim)
+    - **repo_text**: • [source text withheld from the public copy] %.
+    - **source_locator**: NIST SP 1011-II-1.0, section [source text withheld from the public copy] p. 29
+    - **source_text**: • [source text withheld from the public copy]. [[Under conditions of mixed-initiative collaboration [67, 68], required by systems necessitating multi-agent interactions [69 , 70 ], this might be described and measured as neglect tolerance [71].]] [source text withheld from the public copy] %.
+    - **note**: The words in double square brackets are in the source and absent from the repository's quotation, with no ellipsis to mark the gap (NIST-R17 does mark its omission with '...'). Every other word of NIST-R15 matches, on pp. 29-30 as cited; with the sentence restored the quotation is contained. The meaning of the three metrics is not changed.
+  - item 5
+    - **id**: nist-requirements-5
+    - **kind**: MISATTRIBUTED
+    - **repo_locator**: same file, line 177 (NIST-R9 Source), quotation at line 173
+    - **repo_text**: [source text withheld from the public copy]
+    - **source_locator**: [source text withheld from the public copy], item A.8: the heading question is on printed p. 41 (PDF p. 42); the quoted words are on printed p. 42 (PDF p. 43)
+    - **source_text**: [source text withheld from the public copy].
+    - **note**: Words, appendix and item confirmed; item A.8 straddles a page break and the quoted definition is on the page after the one cited. Minor.
+  - item 6
+    - **id**: nist-requirements-6
+    - **kind**: MISATTRIBUTED
+    - **repo_locator**: same file, line 318 (NIST-R18 Source), quotation at line 314
+    - **repo_text**: [source text withheld from the public copy].
+    - **source_locator**: NIST SP 1011-II-1.0, section 6.3 Context, printed p. 38 (PDF p. 38)
+    - **source_text**: [source text withheld from the public copy].
+    - **note**: Words and section confirmed. Section 6.3 begins on p. 37, where the opening sentence the entry also quotes ('An issue warranting further development is context...') is correctly placed, but the quoted paragraph is on p. 38. Minor.
+  - item 7
+    - **id**: nist-requirements-7
+    - **kind**: MISATTRIBUTED
+    - **repo_locator**: same file, line 65 (NIST-R1, Normative status)
+    - **repo_text**: [source text withheld from the public copy]."
+    - **source_locator**: NIST SP 1011-II-1.0, section 2.1 B Autonomy, printed p. 17 (PDF p. 17)
+    - **source_text**: [source text withheld from the public copy].
+    - **note**: Words and section confirmed (the inner quotation marks differ only in style). Page 16 carries the heading 'B. Autonomy' and the quoted definition; this sentence is in the first paragraph of p. 17. Minor.
+  - item 8
+    - **id**: nist-requirements-8
+    - **kind**: MISATTRIBUTED
+    - **repo_locator**: same file, line 376 (Absences, '[source text withheld from the public copy]')
+    - **repo_text**: [source text withheld from the public copy]."
+    - **source_locator**: NIST SP 1011-II-1.0, section 2.1 B Autonomy, printed p. 17 (PDF p. 17)
+    - **source_text**: [source text withheld from the public copy].
+    - **note**: Words and section confirmed; the paragraph is on p. 17, not p. 16. Minor. The A.4 reference in the same bullet (Vol I printed p. 41) is right.
+  - item 9
+    - **id**: nist-requirements-9
+    - **kind**: COUNT-WRONG
+    - **repo_locator**: same file, line 358 (Absences, first bullet)
+    - **repo_text**: [source text withheld from the public copy]".
+    - **source_locator**: NIST SP 1011-I-2.0, whole document (47 PDF pages), pdftotext -layout, whole-word and case-insensitive
+    - **source_text**: shall 0; should 11; must 1; may 63 occurrences on 57 lines (62 without the month in 'May 2001', reference 15); can 53 occurrences on 47 lines
+    - **note**: 'shall' 0 (both volumes), 'should' 11 and 'must' 1 are confirmed. '60 may' and '51 can' match neither the occurrence count nor the line count, in -layout, default or -raw extraction. Immaterial to the argument, which rests on the absence of 'shall'.
+  - item 10
+    - **id**: nist-requirements-10
+    - **kind**: MISMATCH
+    - **repo_locator**: same file, line 372 (Absences, '[source text withheld from the public copy]')
+    - **repo_text**: [source text withheld from the public copy].
+    - **source_locator**: NIST SP 1011-I-2.0 section 2, s.v. Mission Planning, printed p. 22 (PDF p. 23); NIST SP 1011-II-1.0 section 4, HI metrics, printed pp. 29-30; Table 1, p. 45
+    - **source_text**: Vol I: Mission Planning — The process of generating tactical goals, a route (general or specific), commanding structure, coordination, and timing for a UMS or a team of UMSs. [...] They can be generated by operators on OCUs or by the onboard software systems in either centralized or distributed ways. || Vol II: [source text withheld from the public copy] || Table 1, HI column: 'UMS informs humans; human provides strategic goals' (levels 7-9), '[source text withheld from the public copy]' (4-6)
+    - **note**: A paraphrase and a negative claim, not a quotation; it overstates the source. The mission is always assigned from outside, as the file says. But the source does describe onboard generation of tactical goals, and its HI scale, which the file itself quotes in NIST-R15, ranks a human who assigns only the mission above one who assigns strategic or tactical goals, and has a separate planning metric. So origination of goals below mission level by the UMS is present and is rewarded; only the origin of the mission is held external. Interpretive; lower weight than problem 1.
+  - item 11
+    - **id**: nist-requirements-11
+    - **kind**: MISMATCH
+    - **repo_locator**: same file, line 195 (NIST-R10, Single-object satisfiable) and line 394 (Notes, item 1)
+    - **repo_text**: [source text withheld from the public copy]. || line 394: §[source text withheld from the public copy]".
+    - **source_locator**: NIST SP 1011-I-2.0 section 2, s.v. Unmanned System (UMS) > Logical UMS (LUMS), printed pp. 28-29 (PDF pp. 29-30); section 6.2 item d, printed p. 35; also NIST SP 1011-II-1.0 section 9.2, p. 57
+    - **source_text**: ([source text withheld from the public copy] [[that either operate as independent entities and interact with their associated UMSs or are integral parts of a UMS in an inclusive context. Includes high-level computer control and management software systems that command and coordinate the low-level UMSs, for example, a shop floor control node in a flexible manufacturing system.]] || [source text withheld from the public copy]]]; || Vol II p. 57: An inherently non-physical and independent entity that interacts with UMSs and is considered an integrated part of the operation [...]
+    - **note**: The quoted words are right, and the entry is on p. 28 running onto p. 29. The problem is the characterisation: the ellipsis cuts sense (B) just before the words in double square brackets, which say these software entities 'operate as independent entities' and 'command and coordinate the low-level UMSs'. 'A MODEL OF a UMS' describes sense (A) only. The Notes also shorten 6.2 d to 'a desktop computer running software', dropping the limit 'that is irrelevant to UMS operations' (the full item is quoted correctly at line 191). Interpretive, but it feeds the file's first-ranked recommendation.
+- **could_not_check**
+  - item 1
+    - **what**: Whether the ALFUS project URL printed in the documents (http://www.isd.mel.nist.gov/projects/autonomy_levels/) is a dead host, as lines 28 and 378 say
+    - **why**: The URL is printed as the file says (Vol I printed pp. 8 and 10; Vol II p. 11). Over http, curl could not resolve the host (exit 6; plain http is not routed in this environment). Over https, the proxy answered CONNECT with 502 on three attempts ('host allowed, but the gateway could not connect to it'). That is consistent with the file's statement, but no HTTP status was ever returned, so it is not conclusive.
+  - item 2
+    - **what**: The text of SP 1011 Version 1.1 (September 2004), which the file lists as NOT OBTAINED and on which its 'deliberate broadening' reading in NIST-R19 depends
+    - **why**: Vol I v2.0 confirms that v1.1 is the published predecessor ('based on Version 1.1, published as NIST Special Publication 1011'; reference 1), and its version history also lists an intermediate Version 1.2. But https://doi.org/10.6028/NIST.SP.1011 resolves (200) to a file that is Version 1.0, January 2004, 33 pages, not 1.1. Eleven other plausible DOI names and five nvlpubs file names returned 404. For what it is worth, Version 1.0 defines Autonomy [source text withheld from the public copy]', with no 'another system' clause, and its Appendix A item 1 asks 'whether external intervention other than HRI should be included in the definition of autonomous'. That agrees with the file's reading but is not Version 1.1.
+  - item 3
+    - **what**: Statements about cached local copies: alfus_v2.pdf and airmf_layout.txt 'byte-identical' to the fresh downloads; a cached PDF with Title field '...version 2.1', 310,071 bytes and ModDate 2026-07-08; the 'held locally' NIST.SP.800-53r5.pdf
+    - **why**: These are scratch files of the earlier session under /tmp/claude-1000/..., not in any repository ref. Only the fresh-download half of each statement could be tested, and it matched.
+  - item 4
+    - **what**: Corpus row T-04 of intake/imported/AUTONOMOUS_TERMS.md, said at lines 79 and 380 to cut the 'or by another system' clause
+    - **why**: That file is not present in any fetched ref of auditonomous, autonomous or 7lm. The ALFUS side of the claim is confirmed: the full clause is on Vol I printed p. 15.
+  - item 5
+    - **what**: 'I found no later version' of ALFUS and 'ALFUS is NIST's only autonomy artefact' (lines 368, 378, 386), which the file itself marks NOT-CHECKED
+    - **why**: This needs a catalogue search, and search engines and non-official hosts are excluded by the owner's rule. Guessed DOI names for later editions (1011-I-2.1, 1011-II-1.1, 1011-II-2.0, 1011-III-1.0) returned 404, which does not prove absence.
+  - item 6
+    - **what**: The doi.org hop for AI 100-1
+    - **why**: https://doi.org/10.6028/NIST.AI.100-1 answers 302 with Location http://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.100-1.pdf (plain http), which curl could not follow here (exit 6, twice). The same path over https on nvlpubs.nist.gov, which is the URL the file gives, returned 200 and was used.
+  - item 7
+    - **what**: The file's characterisation [source text withheld from the public copy] (lines 372 and 400)
+    - **why**: An ISO/IEC document, outside this NIST check; not fetched.
+- **summary**: I tested the NIST requirements file (auditonomous origin/main; the same blob is on the roadmap branch) against the four documents it names, downloaded today from [source text withheld from the public copy], AI 100-1 and SP 800-53 Rev. 5. Titles, numbers, versions, dates and the stated page counts (47 and 73) match, and the one hash the file records (Volume I) is identical. I tested 122 items: 4 document descriptions, the 20 requirements, 64 further quotations and fragments, 18 counts, 14 negative or paraphrase claims and 2 not-obtained statements. 109 were confirmed, 12 have problems (11 entries) and 1 could not be checked. All 20 requirement quotations are in the named document and section and every definitional label holds; 17 are fully confirmed. NIST-R15 drops a sentence without an ellipsis, and NIST-R9 and NIST-R18 cite a page one too low. The most serious problem is a negative claim: the file says neither ALFUS volume has a minimum or weakest-link formulation, but Volume II section 6.1 (page 35) says weighted minimum values may be more suitable and the lower score should be used instead of the average. The AI RMF has the autonomy stem four times, not three, and one page reference there is wrong. Two Volume I word counts are off, and two paraphrases overstate the source. The SP 800-53 negative hypothesis holds: one occurrence, about human autonomy, in footnote 28. The project website did not answer, and the SP 1011 DOI serves Version 1.0, not 1.1.

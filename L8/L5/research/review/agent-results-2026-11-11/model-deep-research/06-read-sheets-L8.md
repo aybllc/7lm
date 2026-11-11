@@ -1,0 +1,707 @@
+# read:sheets-L8
+
+Agent result, as returned. Workflow: The model, read deep. Run `wf_9a60cf50-a5f`. Phase: Read. Checked in 2026-11-11 19:51 UTC.
+
+- **scope**: 7lm@origin/main (c9dc061): README.md; all 40 in-scope L8 sheets (L8/0.md, L0-L6 layer sheets and every sub-sheet, the three retired-set root sheets, L8/L6/in/0.md); what L8/L0/pedagogy/ and L8/L6/in/ hold (tree); .github/workflows/integrity.yml on main and on origin/beta/common-contracts-r1-r6 (97314c5); the diff origin/main..origin/beta/common-contracts-r1-r6 over L8 (json/docx excluded). Read only from git objects. Left scope only for four cross-checks: fork-point attribution (2e5a6d6), a merge-tree test, the head of L8/L6/in/7lm-layer-lists.md, and one grep of each exemplar's own integrity.yml.
+- **summary**: On main the model's interior is unchanged in substance since 2e5a6d6: the only difference is one file added by PR #21, L8/L6/in/7lm-layer-lists.md, a proposal in the L6 inbox. No sheet, no position, and no line of the CI check changed. The 40 in-scope sheets give each layer a core question, an information sheet, a tree, and a boundary rule; all 75 checked sheets on main are headed by their path and all 71 canonical positions are sheeted (simulated from git objects).
+
+  For a research-and-manuscript project, main already fixes the filing: definitions at L8/L0/semantics/definitions/, admissible states at L8/L1/state-space/, exact relations, operators and proofs at L8/L2, methods at L8/L3, manuscript drafts, computation and experiments at L8/L4/work/, argument, review and findings at L8/L5/research/, history and retired states at L8/L6, sources, peer bindings and released publications at L7. L8/L4/0.md carries an explicit "Auditonomous academic-book traversal".
+
+  The unmerged beta (two commits, 2-3 Nov 2026) changes no position either. It adds guidance sections to ten L8 sheets ("Shared housing and local research choices", "Local choices at this position", "Using this position in a research project" on L1-L6, "Manuscript work"), small wording corrections, five specification passages, and eight demonstration files (N/U and Semantic Magnitude probes) at L0-L5. Its CI check drops the USO/ and lowercase-layer alternatives and requires L8/; the 71-position list is identical. Beta test-merges into main without conflict.
+
+  Defects found on main: L8/0.md's tree omits L6/in/; L8/L6/0.md lists three inbox items where the tree has four; README omits .gitignore, which the check allows. On beta, computation/0.md still says "It is empty at present" although beta files three items there.
+- **facts**
+  - item 1
+    - **id**: M01
+    - **kind**: tree
+    - **statement**: Between the last-studied state 2e5a6d6 and origin/main c9dc061 exactly one path changed in the whole repository: L8/L6/in/7lm-layer-lists.md was added (commit c6d598a, merged as PR #21). No sheet, no specification text and no line of integrity.yml differs. The file describes itself as a proposal that changes nothing else.
+    - **locator**: 7lm@origin/main:L8/L6/in/7lm-layer-lists.md:5 (git diff --name-status 2e5a6d6 origin/main = 'A L8/L6/in/7lm-layer-lists.md')
+    - **quote**: Nothing in the tree, any sheet, the guide, the templates, the specification, or the CI changes with it
+  - item 2
+    - **id**: M02
+    - **kind**: rule
+    - **statement**: README says the sheets are the documentation and the specification controls over anything else in the repository.
+    - **locator**: 7lm@origin/main:README.md:5
+    - **quote**: Where anything else in this repository differs from the specification, the specification controls.
+  - item 3
+    - **id**: M03
+    - **kind**: rule
+    - **statement**: README states the reading order (L7/0.md, then L8/0.md, then every 0.md beneath) and the root contents. The tree at origin/main root is exactly .github, L7, L8, README.md (no .gitignore present).
+    - **locator**: 7lm@origin/main:README.md:9-13
+    - **quote**: The root holds `README.md`, `L7/`, `L8/`, and `.github/` (one CI check, repository infrastructure and not a layer), and nothing else.
+  - item 4
+    - **id**: M04
+    - **kind**: defect
+    - **statement**: README's root sentence names four entries and 'nothing else'; the CI check G-002 also admits .gitignore at the root. The scaffold has no .gitignore; both exemplar mains do have one at root. README and check disagree on whether .gitignore is canonical.
+    - **locator**: 7lm@origin/main:.github/workflows/integrity.yml:19-23 versus 7lm@origin/main:README.md:13
+    - **quote**: # .github/, and .gitignore, and nothing else. Every 7LM repository has the same root.
+  - item 5
+    - **id**: M05
+    - **kind**: rule
+    - **statement**: L8/0.md: L8 is the interior root (USO, 'the research packet on the desk'); it holds L0 through L6 as flat siblings; L7 is a sibling of L8 at the root and is not an eighth interior layer.
+    - **locator**: 7lm@origin/main:L8/0.md:20
+    - **quote**: L0 through L6 are the seven interior dependency layers. L7 is the numbered external Surface / Forward Face; it participates in traversal but is not an eighth interior dependency layer.
+  - item 6
+    - **id**: M06
+    - **kind**: tree
+    - **statement**: L8/0.md's canonical interior tree lists 36 positions: L8; L6 (history, retired); L5 (research: lanes, review, findings; institution: peers, undergraduates); L4 (work: writing, experiments, computation); L3 (engineering-mathematics: approximation, uncertainty, tolerances); L2 (formal-mathematics: relations, operators, proofs); L1 (state-space); L0 (universality, pedagogy, epistemic, ontology, semantics/definitions). The tree at origin/main has all of them, plus L8/L6/in/ and three retired-set directories.
+    - **locator**: 7lm@origin/main:L8/0.md:36-73
+    - **quote**: Notation: /0 means the directory carries its local 0.md human-readable semantic description.
+  - item 7
+    - **id**: M07
+    - **kind**: rule
+    - **statement**: Canonical-tree rule: the same complete topology applies to every 7LM repository, the two exemplars named; branches may stay empty.
+    - **locator**: 7lm@origin/main:L8/0.md:75-77
+    - **quote**: Unused now does not mean removed. The same complete topology is available to Autonomous, Auditonomous, OMMP, classroom research, institutional research, and future research repositories.
+  - item 8
+    - **id**: M08
+    - **kind**: rule
+    - **statement**: L8/0.md gives the seven core questions in one table (L0 local distinctions; L1 admissible states; L2 what follows exactly; L3 feasibility under constraints; L4 what conversion was actually made; L5 what may responsibly be concluded; L6 can history be reconstructed).
+    - **locator**: 7lm@origin/main:L8/0.md:93-101
+    - **quote**: What may responsibly be concluded, questioned, taught, compared, or decided from the available work?
+  - item 9
+    - **id**: M09
+    - **kind**: rule
+    - **statement**: Architecture-wide dependency rules in L8/0.md: higher layers do not silently repair lower ones; ownership is local at the lowest layer that can state the representation; change one layer at a time; containment and analytic expansion are different relations.
+    - **locator**: 7lm@origin/main:L8/0.md:119-129
+    - **quote**: Layer ownership is local. A topic may appear at several layers, but each representation belongs at the lowest layer where that representation can be stated correctly.
+  - item 10
+    - **id**: M10
+    - **kind**: rule
+    - **statement**: Two directions: construction outward L0 to L7 only as dependencies are established; inspection inward L7 to L0.
+    - **locator**: 7lm@origin/main:L8/0.md:107-115
+    - **quote**: Description does not become prescription merely because the structure can be traversed.
+  - item 11
+    - **id**: M11
+    - **kind**: rule
+    - **statement**: Sheets and machine metadata are separate; no metadata, automation or validation is instantiated; the one CI check is infrastructure, not a layer, and moves nothing.
+    - **locator**: 7lm@origin/main:L8/0.md:133-137
+    - **quote**: /0 carries human-readable meaning; metadata carries machine-actionable instruction. Neither replaces the other.
+  - item 12
+    - **id**: M12
+    - **kind**: exemplar
+    - **statement**: Every layer sheet (and several sub-sheets) carries the same 'Exemplars (by reference)' paragraph: the exemplar of a position is the sheet at the same path in aybllc/autonomous and aybllc/auditonomous; exemplar layouts do not control the architecture.
+    - **locator**: 7lm@origin/main:L8/0.md:145
+    - **quote**: The exemplars fill in the layers by reference and are not merged into this scaffold; their layouts do not control the architecture.
+  - item 13
+    - **id**: M13
+    - **kind**: defect
+    - **statement**: L8/0.md's tree shows only history/ and retired/ under L6, while L8/L6/0.md's own tree shows history/, in/, retired/. The two sheets disagree on main (and unchanged on beta). in/ is not among the 71 canonical positions.
+    - **locator**: 7lm@origin/main:L8/0.md:38-40 versus 7lm@origin/main:L8/L6/0.md:39-42
+    - **quote**: ├── in/0
+  - item 14
+    - **id**: L0a
+    - **kind**: rule
+    - **statement**: L0 layer sheet. Core question: what local ontological, semantic, epistemic and universality distinctions this object establishes before a state is declared. Holds: the object's locally authored foundational representation plus exact immutable bindings to external semantic inputs. Positions: universality/, pedagogy/, epistemic/, ontology/, semantics/definitions/. Output: an L0 contract sufficient for L1.
+    - **locator**: 7lm@origin/main:L8/L0/0.md:14-19,40-46
+    - **quote**: What local ontological, semantic, epistemic, and universality distinctions does THIS object establish before an admissible state is declared?
+  - item 15
+    - **id**: L0b
+    - **kind**: rule
+    - **statement**: L0 boundary rule (repeated on every L0 sub-sheet) and hard boundary: external definitions are not copied in; L0 owns no prior art, provenance, operator, proof, method, experiment or conclusion.
+    - **locator**: 7lm@origin/main:L8/L0/0.md:49 and :18
+    - **quote**: L0/semantics contains the semantic representation authored by the bounded thing. An externally owned definition is not copied into L0 merely to populate the directory.
+  - item 16
+    - **id**: L0c
+    - **kind**: rule
+    - **statement**: L0 acceptance check: every L1 distinction resolves to local L0 meaning or an exact named external binding; every external binding keeps identity, owner, source layer, version, ingress binding, immutable status; no peer definition redefined; no rail supplies another's meaning.
+    - **locator**: 7lm@origin/main:L8/L0/0.md:32-35
+    - **quote**: No peer definition is locally redefined merely to make L0 look complete.
+  - item 17
+    - **id**: L0d
+    - **kind**: rule
+    - **statement**: Definitions: L8/L0/semantics/definitions/ holds only definitions this object wrote, their versioned prior forms, and statements of unresolved meaning. Peer or standards definitions are bound at L7/peering/ and represented at L7/provenance/; prior art goes to L7/provenance/prior-art/; research claims go to L8/L5/research/lanes/.
+    - **locator**: 7lm@origin/main:L8/L0/semantics/definitions/0.md:10,18-29,126
+    - **quote**: Locally authored definitions belong at L8/L0/semantics/definitions/; peer definitions arrive as immutable external bindings.
+  - item 18
+    - **id**: L0e
+    - **kind**: tree
+    - **statement**: The scaffold's definitions/ holds one locally authored definition file, FIRST_IS_ALWAYS_0.md, and the sheet itself carries two inherited controlled-definitions tables (about 70 rows, e.g. agnostic, USO, claim, pin, supersession) whose status the owner is to decide row by row.
+    - **locator**: 7lm@origin/main:L8/L0/semantics/definitions/0.md:37,41,127
+    - **quote**: The rows are carried, not re-adjudicated; the retired file's other prose is not carried.
+  - item 19
+    - **id**: L0f
+    - **kind**: rule
+    - **statement**: L8/L0/semantics/ holds the object's own semantic representation that is not a definition, and references (not copies) to external semantic inputs. Inherited term semantic-formulas is split: semantic reading L0, exact formula L2, applied formula L3.
+    - **locator**: 7lm@origin/main:L8/L0/semantics/0.md:18-22,41
+    - **quote**: Semantic reading remains L0; an exact formula is L2; an applied, tolerant, adaptive, or engineering formula is L3. The inherited compound term remains searchable.
+  - item 20
+    - **id**: L0g
+    - **kind**: rule
+    - **statement**: The three other rails (epistemic/, ontology/, universality/) each hold locally authored distinctions for that rail, unresolved meaning recorded as unresolved, versioned prior distinctions, and tagged references to external inputs; each may stay sparse or gate-only. An epistemic distinction is not a research conclusion.
+    - **locator**: 7lm@origin/main:L8/L0/epistemic/0.md:10,18-21; L8/L0/ontology/0.md:18-21; L8/L0/universality/0.md:18-21,37
+    - **quote**: A rail may remain sparse or gate-only when no local representation has been authored.
+  - item 21
+    - **id**: L0h
+    - **kind**: tree
+    - **statement**: L8/L0/pedagogy/ on main holds three files: 0.md (4,696 bytes), 7lm-plate-sheet.html (17,740 bytes) and 7lm-plate-sheet.py (16,157 bytes), the generator. The sheet says the directory is for traversal and attachment pedagogy, is not a fifth rail, and that the field guide is NOT here but at L8/L6/7lm-field-guide.md (moved 2026-09-20). Tree confirms the guide is at L8/L6/.
+    - **locator**: 7lm@origin/main:L8/L0/pedagogy/0.md:21,29,37 (git ls-tree -r -l origin/main L8/L0/pedagogy)
+    - **quote**: In this repository: `7lm-plate-sheet.html`, the plate sheet, and `7lm-plate-sheet.py`, the single source it is generated from.
+  - item 22
+    - **id**: L0i
+    - **kind**: exemplar
+    - **statement**: L0 sheet states the two exemplars' semantic jobs: Autonomous freezes the narrowest agreement across independently bound standards definitions; Auditonomous consumes that pinned baseline and authors its difference as a local delta, kept separately owned.
+    - **locator**: 7lm@origin/main:L8/L0/0.md:79
+    - **quote**: Auditonomous consumes the pinned Autonomous consensus baseline and authors the Auditonomous difference as an explicit local delta.
+  - item 23
+    - **id**: L0j
+    - **kind**: open
+    - **statement**: L0 sheet carries the owner's research note on drift, retained as an untested hypothesis (semantic drift originates when the local L0 meaning contract changes or is misapplied).
+    - **locator**: 7lm@origin/main:L8/L0/0.md:69-71
+    - **quote**: MOST IMPORTANT: I THINK DRIFT LIVES HERE! NOT ANYWHERE ELSE...(NEEDS A LOT OF STUDY)
+  - item 24
+    - **id**: L1a
+    - **kind**: rule
+    - **statement**: L1 layer sheet. Core question: what states and distinctions are admissible under the L0 contract. Holds admissible and excluded states, dimensions, domains, ranges, equivalence classes, identity conditions, static invariants. One position: state-space/. Changes return to L1 and create a new version.
+    - **locator**: 7lm@origin/main:L8/L1/0.md:12-17,20-32,38
+    - **quote**: Freeze the board: dimensions, admissible states, invariants, exclusions, equivalence/identity conditions, and static compatibility.
+  - item 25
+    - **id**: L1b
+    - **kind**: rule
+    - **statement**: L1 boundary rule and hard boundary: no operation of any kind at L1.
+    - **locator**: 7lm@origin/main:L8/L1/0.md:16,41
+    - **quote**: No carrying, transition, selection, learning, calculation, propagation, or transformation. Formal operation begins at L2.
+  - item 26
+    - **id**: L1c
+    - **kind**: rule
+    - **statement**: L1 claim-boundary cases: a result outside the declared state space either fails or motivates an explicit revised state space; mathematical permission is not engineering or empirical permission; maturity is earned layer by layer and L7 packaging never promotes it.
+    - **locator**: 7lm@origin/main:L8/L1/0.md:85,99
+    - **quote**: Build whatever the math permits. Claim only what the layer has earned.
+  - item 27
+    - **id**: L1d
+    - **kind**: rule
+    - **statement**: L8/L1/state-space/ holds the state-space contract, its versions, and explicit records of invariant collisions; superseded versions go to L8/L6/; reserved terms 'origidity; certainty; intolerance' have no home there.
+    - **locator**: 7lm@origin/main:L8/L1/state-space/0.md:18-22,31,33,44
+    - **quote**: Candidate L1 semantics preserved; topology remains unadjudicated.
+  - item 28
+    - **id**: L2a
+    - **kind**: rule
+    - **statement**: L2 layer sheet. Core question: what follows exactly when lawful operations are defined over L1. Holds formal symbols and types, relations, operators, constructors, carriers, axioms, lemmas, theorems, derivations, exact formulas. Positions: formal-mathematics/ with relations/, operators/, proofs/.
+    - **locator**: 7lm@origin/main:L8/L2/0.md:12-16,20-22,37-41
+    - **quote**: Exact results are supported by proof/derivation or marked as unproved.
+  - item 29
+    - **id**: L2b
+    - **kind**: rule
+    - **statement**: L2 boundary rule and hard boundary: nothing approximate, tolerant, measured or empirical at L2.
+    - **locator**: 7lm@origin/main:L8/L2/0.md:16,44
+    - **quote**: Engineering tolerance, numerical approximation, and numerical uncertainty belong to L3, not to L2 exact formal ownership.
+  - item 30
+    - **id**: L2c
+    - **kind**: rule
+    - **statement**: L2 children: relations/ holds exact relations (including exact formulas stated as relations) with declared domain and partiality; operators/ holds exact operators, functions, gates, constructors with domain/codomain and closure tests; proofs/ holds proofs, lemmas, derivations and, with equal standing, explicitly unproved or conjectural obligations. A numerical check offered in place of a proof goes to L3; a proof-checking run goes to L8/L4/work/computation/.
+    - **locator**: 7lm@origin/main:L8/L2/formal-mathematics/relations/0.md:18-20; operators/0.md:18-21; proofs/0.md:10,18-21,28-29
+    - **quote**: Marking conjectural or unproved claims explicitly is a permitted action, not a failure
+  - item 31
+    - **id**: L3a
+    - **kind**: rule
+    - **statement**: L3 layer sheet. Core question: how the exact L2 relation is made feasible under declared constraints. Holds algorithms and data-structure choices, units, precision, approximation, discretization, tolerance, error budgets, stability, complexity, simulation, feasibility arguments. Positions: engineering-mathematics/ with approximation/, uncertainty/, tolerances/.
+    - **locator**: 7lm@origin/main:L8/L3/0.md:12-16,20-23,38-42
+    - **quote**: An L3 engineering specification telling L4 what can be built/run and within what conditions.
+  - item 32
+    - **id**: L3b
+    - **kind**: rule
+    - **statement**: L3 boundary rule and hard boundary: L3 specifies and does not realize; measurement design is L3, the measurement is L4.
+    - **locator**: 7lm@origin/main:L8/L3/0.md:16,45
+    - **quote**: L3 is not the realized L4 output and does not itself create empirical evidence.
+  - item 33
+    - **id**: L3c
+    - **kind**: rule
+    - **statement**: L3 children: engineering-mathematics/ itself holds algorithms, units, numerical representation, feasibility, stability, complexity and method comparisons; approximation/ holds approximations and discretizations with valid region; uncertainty/ holds error and uncertainty budgets and how they were obtained; tolerances/ holds declared acceptance bounds. A tolerance is not an uncertainty and is not evidence the bound was met.
+    - **locator**: 7lm@origin/main:L8/L3/engineering-mathematics/0.md:18-24; approximation/0.md:18-21; uncertainty/0.md:18-21; tolerances/0.md:10,18-21
+    - **quote**: A tolerance is a declared acceptance bound; it is not the measured or estimated uncertainty of a result
+  - item 34
+    - **id**: L3d
+    - **kind**: open
+    - **statement**: L3 carries the 'Working life boundary hypothesis' (mathematics depending on continuation, tolerance, uncertainty, adaptation begins at L3), marked untested; and which L3 child holds an applied formula is not adjudicated.
+    - **locator**: 7lm@origin/main:L8/L3/0.md:65-69; L8/L3/engineering-mathematics/approximation/0.md:39
+    - **quote**: This boundary remains a research hypothesis until tested.
+  - item 35
+    - **id**: L4a
+    - **kind**: rule
+    - **statement**: L4 layer sheet. Core question: what conversion between intellectual property and energy was actually made, written, run, measured or recorded. Holds realized work and its identifiable output or recorded failure, with traceable inputs, conditions, results and rework. Positions: work/ with writing/, experiments/, computation/.
+    - **locator**: 7lm@origin/main:L8/L4/0.md:12-16,20-22,38-42
+    - **quote**: An audit-ready conversion product or recorded failure with traceable inputs, transformations, conditions, tests, results, and rework.
+  - item 36
+    - **id**: L4b
+    - **kind**: rule
+    - **statement**: L4 boundary rule and hard boundary: writing is L4 as work, its meaning L5, its release L7; L4 does not interpret itself. The owner's research note places 'the cut' (the realization boundary) here.
+    - **locator**: 7lm@origin/main:L8/L4/0.md:16,45,69
+    - **quote**: Writing belongs to L4 as performed work. Its research meaning belongs to L5; a released publication belongs to L7.
+  - item 37
+    - **id**: L4c
+    - **kind**: rule
+    - **statement**: L4's 'Cross-layer activity cases' table places eight activities across layers: Research, Writing, Experiment, Contained architecture (OSI), Code, Data, External definition, Publication.
+    - **locator**: 7lm@origin/main:L8/L4/0.md:79-86
+    - **quote**: The act/file production is L4. The research argument is L5. Internal version and correction history are L6. Public provenance, governance, and the released publication are L7.
+  - item 38
+    - **id**: L4d
+    - **kind**: exemplar
+    - **statement**: L8/L4/0.md carries an 'Auditonomous academic-book traversal': L0 the locally authored Auditonomous definition; L1 its state space; L2 exact relations or proofs when actually established; L3 the project's formulas for life; L4 the model as made and production of the book artifact; [source text withheld from the public copy] development and supersession history; L7 release, publication and the peer binding to Autonomous.
+    - **locator**: 7lm@origin/main:L8/L4/0.md:102-117
+    - **quote**: L7 owns release and publication of the academic book and the peer binding to the separately owned Autonomous definition.
+  - item 39
+    - **id**: L4e
+    - **kind**: rule
+    - **statement**: The book is not duplicated at each layer: layer-owned representations overlay one subject.
+    - **locator**: 7lm@origin/main:L8/L4/0.md:117
+    - **quote**: Overlay does not collapse ownership or duplicate the whole book at every layer.
+  - item 40
+    - **id**: L4f
+    - **kind**: rule
+    - **statement**: L8/L4/work/writing/ holds manuscripts, exemplars, models, theses and files as made, with their production record, and recorded failures of writing work. It does not hold the argument (L8/L5/), version and correction history (L8/L6/history/), superseded drafts and prior versions (L8/L6/retired/), or the released publication (L7/allications/publications/). Filing asserts production only.
+    - **locator**: 7lm@origin/main:L8/L4/work/writing/0.md:16,20-21,30-32
+    - **quote**: Filing a document here asserts that it was produced; it asserts nothing about its research standing or its release.
+  - item 41
+    - **id**: L4g
+    - **kind**: tree
+    - **statement**: The scaffold's writing/ holds the specification in two files, 7lm-harmonized-architecture-specification.md (canonical, 'version of 20 September 2026') and the .docx generated from it; tree confirms both and nothing else beside 0.md.
+    - **locator**: 7lm@origin/main:L8/L4/work/writing/0.md:22-26,44
+    - **quote**: the canonical Markdown form and the source of the version
+  - item 42
+    - **id**: L4h
+    - **kind**: rule
+    - **statement**: L8/L4/work/computation/ holds computation as actually run: executed processing, deployed bytes, recorded outputs or failures, stored results. Algorithm and method stay at L3, proof and model at L2, interpretation at L5. The sheet says the directory is empty at present (true on main).
+    - **locator**: 7lm@origin/main:L8/L4/work/computation/0.md:8,20-22,44
+    - **quote**: Algorithmic/engineering representation can be L3; formal proof/model L2; execution, deployed bytes, storage, interfaces, and operational result L4.
+  - item 43
+    - **id**: L4i
+    - **kind**: open
+    - **statement**: Where collected or stored data instances go inside L4 is not assigned to a child directory by the sheets.
+    - **locator**: 7lm@origin/main:L8/L4/work/computation/0.md:22
+    - **quote**: The Data case places "Collected/stored instances and transformations" at L4 without naming a child directory; this sheet does not assign them.
+  - item 44
+    - **id**: L4j
+    - **kind**: rule
+    - **statement**: L8/L4/work/experiments/ holds experiments as executed: observations, measurements, tests, failures and raw work product. Design is L3, meaning is L5. Empty at present on main.
+    - **locator**: 7lm@origin/main:L8/L4/work/experiments/0.md:8,16,20-23,42
+    - **quote**: Executed experiment, observation, measurement, and raw work product are L4; engineering method/tolerance L3; exact relations L2; possibilities L1; interpretation/conclusion L5.
+  - item 45
+    - **id**: L5a
+    - **kind**: rule
+    - **statement**: L5 layer sheet. Core question: what may responsibly be concluded, questioned, taught, compared or decided. Holds research questions, hypotheses, analyses, interpretations, findings, literature search, claim scope and limitations, review, audit, research governance, teaching, manuscript meaning. Positions: research/ (lanes, review, findings) and institution/ (peers, undergraduates).
+    - **locator**: 7lm@origin/main:L8/L5/0.md:12-16,20-23,38-45
+    - **quote**: A bounded claim/decision with cited dependencies, limitations, review status, and reproducibility information for L6 retention and L7 presentation.
+  - item 46
+    - **id**: L5b
+    - **kind**: rule
+    - **statement**: L5 hard boundary and boundary rule; acceptance requires the claim be no broader than evidence and that research meaning be kept apart from L4 writing and L7 release.
+    - **locator**: 7lm@origin/main:L8/L5/0.md:16,31-33,48
+    - **quote**: Consensus, prose, authority, or usefulness cannot substitute for proof, measurement, or a lower-layer fact.
+  - item 47
+    - **id**: L5c
+    - **kind**: rule
+    - **statement**: Cross-object rule quoted in the L5 sheet, directly relevant to the two exemplars.
+    - **locator**: 7lm@origin/main:L8/L5/0.md:75
+    - **quote**: An argument about Autonomous cannot silently stand in for an argument about Auditonomous. A cross-object claim requires an explicit named relation or handoff.
+  - item 48
+    - **id**: L5d
+    - **kind**: rule
+    - **statement**: Lanes: L8/L5/research/lanes/ holds one lane per line of inquiry, with its questions, hypotheses, analyses, claims and thesis statements and cited dependencies. It is also 'the working position': where an item goes when the owner takes it up from review/, and back if set down.
+    - **locator**: 7lm@origin/main:L8/L5/research/lanes/0.md:10,18-21,35,39
+    - **quote**: A research claim or thesis statement is filed here (or in the corresponding L5 research artifact) as a claim of the lane that asserts it, with its dependencies cited.
+  - item 49
+    - **id**: L5e
+    - **kind**: rule
+    - **statement**: Review: L8/L5/research/review/ holds review, criticism, audit and qualification of claims (the claim stays where filed; the review names it), and is also the catch-all for everything awaiting the owner's review. Set-aside items stay labelled PARKED; finished work is filed at its layer.
+    - **locator**: 7lm@origin/main:L8/L5/research/review/0.md:8,18-22,36
+    - **quote**: What the owner sets aside stays here labelled PARKED. What the owner takes up moves to `L8/L5/research/lanes/`, and back if set down again.
+  - item 50
+    - **id**: L5f
+    - **kind**: rule
+    - **statement**: The review sheet states that the tree carries no rule about what an intelligence may touch.
+    - **locator**: 7lm@origin/main:L8/L5/research/review/0.md:36
+    - **quote**: The tree states no rule about what an intelligence may or may not touch (owner's direction, 2026-09-06).
+  - item 51
+    - **id**: L5g
+    - **kind**: rule
+    - **statement**: Findings: L8/L5/research/findings/ holds findings as L5 judgments, each with cited dependencies, limitations, uncertainty, review status and reproducibility information, including negative findings. A rejected finding is superseded there and retained at L8/L6/; its released form is at L7/allications/publications/.
+    - **locator**: 7lm@origin/main:L8/L5/research/findings/0.md:10,14,18-20,31
+    - **quote**: A computation run, an experiment performed, or a manuscript written at `L8/L4/work/` becomes a finding only when L5 judges what it supports.
+  - item 52
+    - **id**: L5h
+    - **kind**: rule
+    - **statement**: Institution: L8/L5/institution/ holds the research setting and participant positions only (peers/, undergraduates/), not the research record; a position confers no evidential weight; the sheet names no actual institution. Teaching material as produced writing goes to L8/L4/work/writing/.
+    - **locator**: 7lm@origin/main:L8/L5/institution/0.md:10,18-20,45; L8/L5/institution/undergraduates/0.md:23
+    - **quote**: Who participated, and in what role, is answered here; what was concluded, and on what evidence, is answered at `L8/L5/research/`.
+  - item 53
+    - **id**: L5i
+    - **kind**: open
+    - **statement**: The word 'peer' names two things (L5 participant positions and L7 peering peer-1/object-1 positions) and the sheet declines to adjudicate their relation.
+    - **locator**: 7lm@origin/main:L8/L5/institution/peers/0.md:26
+    - **quote**: this sheet states the two paths and does not adjudicate their relation.
+  - item 54
+    - **id**: L6a
+    - **kind**: rule
+    - **statement**: L6 layer sheet. Core question: can the object's internal history, prior states, failures, corrections and retirement be reconstructed. Holds prior states and versions, branch and decision history, failed paths, corrections, supersession, retirement. Positions in its own tree: history/, in/, retired/.
+    - **locator**: 7lm@origin/main:L8/L6/0.md:12-16,20-23,39-42
+    - **quote**: L6 records, preserves, and orients; it does not make the L5 research judgment or establish truth.
+  - item 55
+    - **id**: L6b
+    - **kind**: rule
+    - **statement**: L6 boundary rule: L7 owns external provenance; L6 is the first interior layer. Git history supports but is not scientific memory; the record is.
+    - **locator**: 7lm@origin/main:L8/L6/0.md:45,58,62
+    - **quote**: Git history can support L6 reconstruction, but Git history and scientific memory/provenance are not the same object.
+  - item 56
+    - **id**: L6c
+    - **kind**: rule
+    - **statement**: History: L8/L6/history/ holds records of prior states, branch and decision history, failed paths, corrections and dated chronologies. On main it holds harmonization-2026-09-04.md, specification-history.md and sheets-2026-09-07.md (tree confirms).
+    - **locator**: 7lm@origin/main:L8/L6/history/0.md:20-27,34
+    - **quote**: Preserves how the object changed instead of presenting only the latest state.
+  - item 57
+    - **id**: L6d
+    - **kind**: rule
+    - **statement**: in/: an optional L6 inbox for material that belongs to the layer and is not yet worked into it. Its own sheet is three lines, heading plus one sentence. It is sheeted but is not one of the 71 canonical positions.
+    - **locator**: 7lm@origin/main:L8/L6/in/0.md:1-3; L8/L6/0.md:53
+    - **quote**: Gives material a place to sit while it is still unfiled, without it having to be misfiled or held outside the layer that owns it. Optional; a position may have one or not.
+  - item 58
+    - **id**: L6e
+    - **kind**: defect
+    - **statement**: L8/L6/0.md describes in/ as holding three things (text of a branch closed unmerged, an unadopted slimmed specification rendering, that pass's record of removals). The tree on main holds four payload files: optimistic-thompson-branch-text.md, 7lm-harmonized-architecture-specification-slim-2026-09-07.docx, specification-removed-2026-09-07.docx and 7lm-layer-lists.md. The layer lists (added by PR #21) are not named on any in-scope sheet.
+    - **locator**: 7lm@origin/main:L8/L6/0.md:79 (git ls-tree -l origin/main L8/L6/in/)
+    - **quote**: the text of a branch closed unmerged, an unadopted slimmed rendering of the specification, and that pass's record of what it would have removed
+  - item 59
+    - **id**: L6f
+    - **kind**: rule
+    - **statement**: Retired: L8/L6/retired/ holds retired or superseded internal states (prior sheets, drafts, scaffolds) and retired peer bindings, preserved not deleted. But no-deletion is not enforced; integrity is. A superseded file fully enumerated as standing elsewhere is deleted rather than retired.
+    - **locator**: 7lm@origin/main:L8/L6/retired/0.md:12,22-23
+    - **quote**: A superseded file whose every part is enumerated as standing elsewhere is deleted, not retired: git keeps the change event and the record keeps the enumeration
+  - item 60
+    - **id**: L6g
+    - **kind**: tree
+    - **statement**: Three retired sets on main, each with a root sheet: scaffold-2026-08-20/ (nineteen prior 0.md gate files under USO/..., plus the owner's README sketch), specification-2026-09-04/ (three files) and specification-draft-2026-09-03/ (PDF and text). A 0.md below a retired set's root is a retained prior state, not a gate, and is not checked by CI.
+    - **locator**: 7lm@origin/main:L8/L6/retired/scaffold-2026-08-20/0.md:8,20-27; specification-2026-09-04/0.md:18-20; specification-draft-2026-09-03/0.md:18-19; L8/L6/retired/0.md:35
+    - **quote**: A `0.md` beneath this directory that is not at the root of a retired set is a retained prior state, not a gate.
+  - item 61
+    - **id**: L6h
+    - **kind**: tree
+    - **statement**: L8/L6/0.md lists two source documents held directly at L6: 7lm-field-guide.md (moved from L8/L0/pedagogy/ on 2026-09-20) and 7lm-sheet-templates.md (minimal, standard, full degrees). Tree confirms both at origin/main. It also lists what L6 does not hold: external provenance, governance, active peer bindings and released publications (all L7).
+    - **locator**: 7lm@origin/main:L8/L6/0.md:74-75,86-89
+    - **quote**: An adopter's sheets start at the degree its owner chooses; this repository's own sheets are complete, detailed, and rigorous, the full degree
+  - item 62
+    - **id**: K01
+    - **kind**: procedure
+    - **statement**: integrity.yml (main) runs on every push and pull_request, one job 'invariants', four steps after checkout. Its header carries the owner's words on why no-deletion is not enforced (split across two comment lines).
+    - **locator**: 7lm@origin/main:.github/workflows/integrity.yml:2-6
+    - **quote**: we cant enforce integroty by ebforceing no deletion. we can only imply no deletion to enforcer integiortyty
+  - item 63
+    - **id**: K02
+    - **kind**: procedure
+    - **statement**: G-001 (main and beta identical): fails if any non-binary file outside .git has a line that is seven '<' followed by a space or end of line, exactly seven '=', or seven '>' followed by a space or end of line.
+    - **locator**: 7lm@origin/main:.github/workflows/integrity.yml:13-15
+    - **quote**: ! grep -rnE '^<{7}( |$)|^={7}$|^>{7}( |$)' . --exclude-dir=.git -I
+  - item 64
+    - **id**: K03
+    - **kind**: procedure
+    - **statement**: G-002 on main: every root entry must be one of README.md, L7, USO, L8, .github, .gitignore; README.md and L7 must exist; exactly one of USO or L8 must exist. .github and .gitignore are allowed, not required.
+    - **locator**: 7lm@origin/main:.github/workflows/integrity.yml:17-29
+    - **quote**: the interior container must be exactly one of USO/ or L8/ (found $n)
+  - item 65
+    - **id**: K04
+    - **kind**: procedure
+    - **statement**: G-003 on main, part 1: every tracked 0.md under L7 or the interior container must have first line exactly '# <its directory path>/', except sheets two or more levels below L6/retired/ (or l6/retired/), which are skipped. A retired set's own root sheet is checked.
+    - **locator**: 7lm@origin/main:.github/workflows/integrity.yml:37-45
+    - **quote**: Retired sets under L6/retired/ (l6/retired/ before the rename pass) keep their prior
+  - item 66
+    - **id**: K05
+    - **kind**: procedure
+    - **statement**: G-003 part 2: each of 71 listed canonical positions must contain a 0.md. On main the interior names are built from $top and a case letter (lowercase l when the container is USO, uppercase L when it is L8). A final fourth step only reports unsheeted directories as notices and never fails.
+    - **locator**: 7lm@origin/main:.github/workflows/integrity.yml:46-69
+    - **quote**: canonical position without a sheet: $d/0.md
+  - item 67
+    - **id**: K06
+    - **kind**: tree
+    - **statement**: The 71 canonical positions. L7 side (35): L7; provenance + prior-art, sources, lineage, authority; governance + copyright, licensing, patents, permissions, access, controlled; peering + private, private/ingress, private/egress, public, public/ingress, public/egress; peer-1 and peer-1/object-1 under each of the four ingress/egress positions (8); allications + publications, applications, communications, specifications, notifications, participations. L8 side (36): L8; L6, L6/history, L6/retired; L5, research, research/lanes, research/review, research/findings, institution, institution/peers, institution/undergraduates; L4, work, work/writing, work/experiments, work/computation; L3, engineering-mathematics + approximation, uncertainty, tolerances; L2, formal-mathematics + relations, operators, proofs; L1, state-space; L0 + universality, pedagogy, epistemic, ontology, semantics, semantics/definitions. L8/L6/in is not in the list.
+    - **locator**: 7lm@origin/main:.github/workflows/integrity.yml:47-59
+    - **quote**: L7/allications L7/allications/publications L7/allications/applications L7/allications/communications L7/allications/specifications L7/allications/notifications L7/allications/participations
+  - item 68
+    - **id**: K07
+    - **kind**: tree
+    - **statement**: Simulating G-003 from git objects: on both origin/main and the beta, 75 sheets are checked, all headed by their path; all 71 canonical positions are sheeted; no directory outside retired sets lacks a sheet. The four sheeted non-canonical directories are L8/L6/in and the three retired-set roots.
+    - **locator**: 7lm@origin/main and 7lm@origin/beta/common-contracts-r1-r6 (ls-tree + first line of each 0.md)
+  - item 69
+    - **id**: K08
+    - **kind**: change
+    - **statement**: integrity.yml main versus beta, every difference: (1) G-002 comment rewritten; (2) root whitelist drops USO; (3) the 'exactly one of USO or L8' count is replaced by a plain 'missing L8/' requirement; (4) G-003 comment drops the l6/retired mention; (5) top is hard-coded to L8 in G-003 and in the report step; (6) the retired-set skip pattern drops */l6/retired/*/*; (7) the 'lower' variable is removed and the interior positions are written literally with uppercase L0-L6. Header, triggers, G-001 and the 35 L7 positions are identical; the 71-position list is the same set.
+    - **locator**: 7lm@origin/beta/common-contracts-r1-r6:.github/workflows/integrity.yml:19-27,36,39,53-59,65,67
+    - **quote**: # Every 7LM repository has the same root; the interior layers are uppercase L0-L6.
+  - item 70
+    - **id**: K09
+    - **kind**: change
+    - **statement**: The integrity.yml change belongs to beta commit 4ca3edb only; main's integrity.yml is byte-identical to 2e5a6d6. Beta's own history entry describes the effect.
+    - **locator**: 7lm@origin/beta/common-contracts-r1-r6:L8/L6/history/specification-history.md:106
+    - **quote**: The existing integrity workflow now requires L8 and uppercase L0–L6; its 71-position list is unchanged.
+  - item 71
+    - **id**: K10
+    - **kind**: exemplar
+    - **statement**: Cross-check only: each exemplar's main carries its own integrity.yml whose canonical list still names the former L7 positions (L7/governance/restriction..., L7/publications) and still accepts USO or L8. So the exemplars are checked against the former names by their own copy, not by the scaffold's list.
+    - **locator**: autonomous@origin/main:.github/workflows/integrity.yml:76,78; auditonomous@origin/main:.github/workflows/integrity.yml:48,50
+    - **quote**: L7/publications
+  - item 72
+    - **id**: B00
+    - **kind**: change
+    - **statement**: Beta is two commits on 2e5a6d6: 4ca3edb (2026-11-02, 'Apply approved R1–R6 and exercise bounded research objects') and 97314c5 (2026-11-03, 'Clarify 7LM research housing in the local guidance sheets'). Within L8 the first touched L0/0.md, the specification, field guide, specification-history and added the eight demonstration files; the second added the guidance sections to ten sheets. A test merge of beta into main (git merge-tree --write-tree) succeeds with no conflict.
+    - **locator**: 7lm@origin/beta/common-contracts-r1-r6 (git log 2e5a6d6..; merge-tree exit 0, tree 633c343)
+  - item 73
+    - **id**: B01
+    - **kind**: change
+    - **statement**: The main-to-beta diff shows L8/L6/in/7lm-layer-lists.md as deleted. That is an artifact of the fork point: beta never had the file (it was added to main after the fork). Beta did not delete it.
+    - **locator**: 7lm (git diff --name-status 2e5a6d6 origin/beta/common-contracts-r1-r6 has no entry for L8/L6/in/)
+  - item 74
+    - **id**: B02
+    - **kind**: change
+    - **statement**: L8/0.md, added paragraph 'Analogy boundary' after the packet reading.
+    - **locator**: 7lm@origin/beta/common-contracts-r1-r6:L8/0.md:12
+    - **quote**: It is not a guarantee that one extra bit or these directory positions detect every possible error.
+  - item 75
+    - **id**: B03
+    - **kind**: change
+    - **statement**: L8/0.md, new section 'Shared housing and local research choices', paragraph 1: 7LM is housing, not a pipeline, and imposes no theory, tool, method or manuscript format.
+    - **locator**: 7lm@origin/beta/common-contracts-r1-r6:L8/0.md:14-16
+    - **quote**: A project uses these positions to make its own research, dependencies and written work findable; the housing is not a required software pipeline.
+  - item 76
+    - **id**: B04
+    - **kind**: change
+    - **statement**: Same section, paragraph 2: what is shared is position ownership; the project authors its local meanings; the local 0.md describes the actual object; payload stays in separate files.
+    - **locator**: 7lm@origin/beta/common-contracts-r1-r6:L8/0.md:18
+    - **quote**: Research payload, observations, arguments and manuscripts remain separate files at their owning positions. A local choice does not silently redefine the common layer or a peer's meaning.
+  - item 77
+    - **id**: B05
+    - **kind**: change
+    - **statement**: Same section, paragraph 3: keep all canonical positions, use only what the inquiry needs; a rail is vertical through one model's layers and is not an L5 lane.
+    - **locator**: 7lm@origin/beta/common-contracts-r1-r6:L8/0.md:20
+    - **quote**: A rail follows that model's applicable layer-owned representations up or down; it is not a lateral connection or an L5 lane.
+  - item 78
+    - **id**: B06
+    - **kind**: change
+    - **statement**: Same section, paragraph 4, the manuscript rule: manuscript at L8/L4/work/writing/, argument at L8/L5/, history at L8/L6/, release at L7/allications/publications/.
+    - **locator**: 7lm@origin/beta/common-contracts-r1-r6:L8/0.md:22
+    - **quote**: Refer to the relevant representations rather than duplicating the whole manuscript in every layer or putting it into the guidance sheets.
+  - item 79
+    - **id**: B07
+    - **kind**: change
+    - **statement**: Same section, paragraph 5, the migration rule for existing projects (directly bears on bringing the exemplars into step).
+    - **locator**: 7lm@origin/beta/common-contracts-r1-r6:L8/0.md:24
+    - **quote**: compare the changed contracts, retain the project's data and local choices, record any moves, and review affected dependencies before claiming the project has migrated.
+  - item 80
+    - **id**: B08
+    - **kind**: change
+    - **statement**: L8/0.md, dependency-rules sentence on directory metadata gains a condition (main line 127: 'Directory metadata may enforce a machine rule, but it does not create...').
+    - **locator**: 7lm@origin/beta/common-contracts-r1-r6:L8/0.md:141
+    - **quote**: Directory metadata may enforce a machine rule only where a separate implementation is enabled and tested
+  - item 81
+    - **id**: B09
+    - **kind**: change
+    - **statement**: L8/L0/0.md, new section 'Local choices at this position': state the meanings the project actually uses; no institution-wide ontology; definitions go in semantics/definitions/.
+    - **locator**: 7lm@origin/beta/common-contracts-r1-r6:L8/L0/0.md:10-14
+    - **quote**: An illustrative exemplar's semantic job is not the scientific definition of every project using 7LM.
+  - item 82
+    - **id**: B10
+    - **kind**: change
+    - **statement**: L8/L0/0.md, rails paragraph rewritten ('The four rails' becomes 'The four named rails'): the named branches are not exhaustive; foundational branches, model-attached vertical inquiries and L5 lanes are three distinct things. The same clarification is added to the specification (beta line 355).
+    - **locator**: 7lm@origin/beta/common-contracts-r1-r6:L8/L0/0.md:69
+    - **quote**: The named foundational branches do not exhaust the locally authored foundational distinctions a model may require.
+  - item 83
+    - **id**: B11
+    - **kind**: change
+    - **statement**: L8/L0/semantics/definitions/0.md, two sentences appended to the inherited-tables paragraph: the inherited rows are preserved, not adopted.
+    - **locator**: 7lm@origin/beta/common-contracts-r1-r6:L8/L0/semantics/definitions/0.md:41
+    - **quote**: Before a project relies on a row, make its active local meaning, historical status or exact external ownership explicit under the responsible contract; do not treat preservation as adoption.
+  - item 84
+    - **id**: B12
+    - **kind**: change
+    - **statement**: L8/L1/0.md, new section 'Using this position in a research project': a corpus inclusion rule is an L1 admissibility rule; the declaration need not be numerical.
+    - **locator**: 7lm@origin/beta/common-contracts-r1-r6:L8/L1/0.md:8-12
+    - **quote**: A corpus inclusion rule belongs here as an admissibility rule; the collected source instances and actual collection work belong at L4, their external identities at L7, and the argument drawn from them at L5.
+  - item 85
+    - **id**: B13
+    - **kind**: change
+    - **statement**: L8/L2/0.md, new section 'Using this position in a research project': exact mathematics about uncertainty is L2; a qualitative inquiry need not invent formal machinery; a manuscript reporting a claim does not prove it.
+    - **locator**: 7lm@origin/beta/common-contracts-r1-r6:L8/L2/0.md:8-12
+    - **quote**: A manuscript can report that boundary, but writing or publishing the claim does not prove it.
+  - item 86
+    - **id**: B14
+    - **kind**: change
+    - **statement**: L8/L3/0.md, new section 'Using this position in a research project': state the chosen method and constraints when needed; leave L3 unused otherwise.
+    - **locator**: 7lm@origin/beta/common-contracts-r1-r6:L8/L3/0.md:8-12
+    - **quote**: Leave this capability unused when the inquiry has no engineering or numerical dependency; shared housing does not require a computational prototype for a manuscript.
+  - item 87
+    - **id**: B15
+    - **kind**: change
+    - **statement**: L8/L4/0.md, new section 'Using this position in a research project': manuscript drafts and source files at work/writing/, experiments at work/experiments/, computation at work/computation/; nothing accumulates in 0.md.
+    - **locator**: 7lm@origin/beta/common-contracts-r1-r6:L8/L4/0.md:8-12
+    - **quote**: Results, data and manuscript text do not accumulate in `0.md`.
+  - item 88
+    - **id**: B16
+    - **kind**: change
+    - **statement**: L8/L4/0.md, 'External definition' row of the cross-layer table rewritten: main ended 'no local L0 object exists unless this bounded thing authors a semantic version'; beta allows receiving L0 to reference the external definition. The specification's corresponding row and its OSI-table L0 row are changed to match (beta spec lines 187, 598).
+    - **locator**: 7lm@origin/beta/common-contracts-r1-r6:L8/L4/0.md:91
+    - **quote**: Receiving L0 may reference the exact externally authored definition without becoming its author; a new locally authored semantic version is a separate object.
+  - item 89
+    - **id**: B17
+    - **kind**: change
+    - **statement**: L8/L4/work/writing/0.md, new section 'Manuscript work', paragraph 1: writing/ is the home of the actual manuscript, its editable source, figures and production materials; the project picks tools and formats.
+    - **locator**: 7lm@origin/beta/common-contracts-r1-r6:L8/L4/work/writing/0.md:12-14
+    - **quote**: For a manuscript project, this is the home of the actual manuscript and its editable source, figures and document-production materials as made.
+  - item 90
+    - **id**: B18
+    - **kind**: change
+    - **statement**: 'Manuscript work', paragraph 2: L5 owns what the claims warrant, L6 the development, L7/allications/publications/ the released version.
+    - **locator**: 7lm@origin/beta/common-contracts-r1-r6:L8/L4/work/writing/0.md:16
+    - **quote**: The manuscript is the writing goal; 7LM is its research housing.
+  - item 91
+    - **id**: B19
+    - **kind**: change
+    - **statement**: Same paragraph, closing sentence.
+    - **locator**: 7lm@origin/beta/common-contracts-r1-r6:L8/L4/work/writing/0.md:16
+    - **quote**: Producing a draft is neither a scientific acceptance nor a publication decision.
+  - item 92
+    - **id**: B20
+    - **kind**: change
+    - **statement**: L8/L5/0.md, new section 'Using this position in a research project': manuscript argument is developed at L5 using lanes/, review/, findings/; L5 lanes are not rails; the manuscript file stays at L4.
+    - **locator**: 7lm@origin/beta/common-contracts-r1-r6:L8/L5/0.md:8-12
+    - **quote**: The produced manuscript file remains at L4 rather than being duplicated here as another whole document.
+  - item 93
+    - **id**: B21
+    - **kind**: change
+    - **statement**: L8/L5/research/lanes/0.md and L8/L5/research/review/0.md: 'nothing is deleted' / 'Nothing is deleted.' replaced so the catch-all moves no longer read as a no-deletion rule.
+    - **locator**: 7lm@origin/beta/common-contracts-r1-r6:L8/L5/research/review/0.md:36; L8/L5/research/lanes/0.md:39
+    - **quote**: These routing moves delete nothing; any later deletion follows the L6 integrity and enumeration rule.
+  - item 94
+    - **id**: B22
+    - **kind**: change
+    - **statement**: L8/L6/0.md, new section 'Using this position in a research project': retain versions, drafts, failed paths; record old and new locations of every move; an origin update does not overwrite local design.
+    - **locator**: 7lm@origin/beta/common-contracts-r1-r6:L8/L6/0.md:8-12
+    - **quote**: Record the old and new locations of a move and the affected dependencies; moving a file does not change what it establishes.
+  - item 95
+    - **id**: B23
+    - **kind**: change
+    - **statement**: Same L6 section, second paragraph.
+    - **locator**: 7lm@origin/beta/common-contracts-r1-r6:L8/L6/0.md:12
+    - **quote**: An origin update is not permission to overwrite every project's local design. Compare versions, adopt the applicable guidance deliberately, and identify work or claims needing requalification.
+  - item 96
+    - **id**: B24
+    - **kind**: change
+    - **statement**: Specification (non-sheet, in the diff): five passages changed. Line 21 metadata rule ('When machine instructions are enabled...'); line 68 byte reading qualified as a mnemonic; line 187 and line 598 external-definition wording; line 355 new clarification on non-exhaustive foundational branches; line 683 the scale ruling narrowed from 'A scale, a ladder, or a vocabulary of levels or statuses' (main line 681) to the autonomy scale or a review-status ladder, now permitting separately declared L1 values and L2 relations.
+    - **locator**: 7lm@origin/beta/common-contracts-r1-r6:L8/L4/work/writing/7lm-harmonized-architecture-specification.md:21,68,187,355,598,683
+    - **quote**: This does not prevent separately declared admissible values at L1 or exact relations and operators at L2 under their governing contracts.
+  - item 97
+    - **id**: B25
+    - **kind**: change
+    - **statement**: Field guide (non-sheet): three matching edits, the byte reading (line 96), the four named rails (line 150), and the scale ruling (line 230; main said 'It is never an L1 state space and never L2 mathematics').
+    - **locator**: 7lm@origin/beta/common-contracts-r1-r6:L8/L6/7lm-field-guide.md:96,150,230
+    - **quote**: Separately declared admissible values may be L1 representations, and exact relations or operators may be L2 representations under their contracts.
+  - item 98
+    - **id**: B26
+    - **kind**: change
+    - **statement**: specification-history.md gains two sections. The first names the implementer (Codex, task T1), the baseline 2e5a6d6 and asserts owner approval of R1-R6; it calls itself a candidate, not a release.
+    - **locator**: 7lm@origin/beta/common-contracts-r1-r6:L8/L6/history/specification-history.md:104-108
+    - **quote**: This records the checked common-architecture candidate, not a full-beta or release claim; publication and other bounded candidate work are separate.
+  - item 99
+    - **id**: B27
+    - **kind**: change
+    - **statement**: Second new history section: the demonstration research objects (N/U and Semantic Magnitude probes) were added at L0-L5 with nine tests; neither source theory was repaired or adopted.
+    - **locator**: 7lm@origin/beta/common-contracts-r1-r6:L8/L6/history/specification-history.md:110-112
+    - **quote**: Neither owner theory was repaired or adopted as a universal foundation.
+  - item 100
+    - **id**: B28
+    - **kind**: change
+    - **statement**: New non-sheet files added by beta under L8 (all in commit 4ca3edb), one per layer as a worked filing example: L8/L0/semantics/beta-research-scope.md (9 lines, scope and meanings of two probe objects); L8/L1/state-space/beta-research-admissibility.md (7 lines, admitted inputs); L8/L2/formal-mathematics/proofs/beta-research-boundaries.md (9 lines, exact relations, counterexample, open obligations); L8/L3/engineering-mathematics/approximation/beta-exact-reference-method.md (7 lines, the method: Python fractions.Fraction); L8/L4/work/computation/beta_boundary_probes.py (131 lines, the executable), test_beta_boundary_probes.py (51 lines, nine unittest cases), beta-boundary-results.json (519 lines, recorded output, format '7lm.beta.demonstration.v1', records python 3.14.4); L8/L5/research/findings/beta-research-boundary-findings.md (11 lines, the findings).
+    - **locator**: 7lm@origin/beta/common-contracts-r1-r6:L8/L5/research/findings/beta-research-boundary-findings.md:3
+    - **quote**: the numerical N/U full-product enclosure claim is rejected on the declared exact rational example, and Semantic Magnitude aggradation remains unresolved at its required L2 bridge.
+  - item 101
+    - **id**: B29
+    - **kind**: defect
+    - **statement**: Beta files three items in L8/L4/work/computation/ but leaves that position's sheet unchanged, so on beta the sheet still says the directory is empty. Likewise the sheets of semantics/, state-space/, proofs/, approximation/ and findings/ are unchanged and do not name the files beta placed there. No sub-sheet under L0 rails, pedagogy, L2, L3, L4/work, experiments, computation, L5/research, findings, institution, history, in or retired was touched by beta.
+    - **locator**: 7lm@origin/beta/common-contracts-r1-r6:L8/L4/work/computation/0.md:44
+    - **quote**: It is empty at present.
+  - item 102
+    - **id**: B30
+    - **kind**: change
+    - **statement**: Outside this scope but in the same beta: seven L7 files also change (L7/0.md, governance/controlled/0.md, governance/licensing/0.md, peering/0.md, peering/private/ingress/0.md, provenance/sources/0.md, provenance/sources/source-ledger.md). None of the guidance headings ('Using this position...', 'Shared housing...', 'Manuscript work', 'Local choices...') appears under L7 or in README on beta. Not read here.
+    - **locator**: 7lm (git diff --name-status 2e5a6d6 origin/beta/common-contracts-r1-r6 -- L7)
+- **checklist**
+  - item 1
+    - **step**: Definition (locally authored)
+    - **detail**: Main: one file per definition in L8/L0/semantics/definitions/; version a changed definition, never rewrite; an external or peer definition is never copied in, only referenced with its tag (identity, owner, source layer, version, ingress binding, immutable). Beta adds: state only meanings the project actually uses; the exemplar's semantic job is not every project's definition; inherited table rows are preserved, not adopted.
+    - **locator**: 7lm@origin/main:L8/L0/semantics/definitions/0.md:8-29; beta L8/L0/0.md:10-14, definitions/0.md:41
+  - item 2
+    - **step**: Other foundational distinctions
+    - **detail**: Main: semantic representation that is not a definition in L8/L0/semantics/; ontological, epistemic, universality distinctions in their own rail directories; traversal and attachment teaching in L8/L0/pedagogy/. Beta adds: the four named rails are not exhaustive; other justified distinctions keep their scope inside the existing topology, no new directory.
+    - **locator**: 7lm@origin/main:L8/L0/0.md:55-63; beta L8/L0/0.md:69
+  - item 3
+    - **step**: Admissible states
+    - **detail**: Main: L8/L1/state-space/ (admitted and excluded states, domains, invariants, identity conditions, versions, explicit invariant collisions). No operations. Beta adds: a corpus or source-selection inclusion rule is filed here; it need not be numerical; keep an unresolved admission question open rather than admitting to finish a manuscript.
+    - **locator**: 7lm@origin/main:L8/L1/state-space/0.md:18-22; beta L8/L1/0.md:10-12
+  - item 4
+    - **step**: Formal relation
+    - **detail**: Main: exact relations in L8/L2/formal-mathematics/relations/; operators and constructors in operators/; proofs, derivations and explicitly unproved obligations in proofs/. Beta adds: exact mathematics about uncertainty is L2; a qualitative inquiry need not invent formal machinery; an unproved relation stays unproved even if the manuscript reports it.
+    - **locator**: 7lm@origin/main:L8/L2/0.md:52-54; beta L8/L2/0.md:10-12
+  - item 5
+    - **step**: Method
+    - **detail**: Main: algorithms, units, numerical representation, feasibility and measurement design in L8/L3/engineering-mathematics/; approximations in approximation/; error budgets in uncertainty/; declared acceptance bounds in tolerances/. Beta adds: state the chosen method and its justification only when the inquiry needs one; leave L3 unused otherwise; no computational prototype is required for a manuscript.
+    - **locator**: 7lm@origin/main:L8/L3/0.md:53-57; beta L8/L3/0.md:10-12
+  - item 6
+    - **step**: Computation
+    - **detail**: Main: what was actually run, with inputs, environment, outputs or failures, in L8/L4/work/computation/; the algorithm stays L3, the proof L2, the interpretation L5. Beta adds: an executable is required only when the research calls for executed computation; beta's own example files there are a script, its tests and a results JSON.
+    - **locator**: 7lm@origin/main:L8/L4/work/computation/0.md:20-24; beta L8/L4/0.md:10
+  - item 7
+    - **step**: Experiment
+    - **detail**: Main: the experiment as executed (observations, measurements, raw work product, failures) in L8/L4/work/experiments/; design at L3; conclusion at L5. Beta adds nothing specific beyond naming 'performed observations or experiments at work/experiments/'.
+    - **locator**: 7lm@origin/main:L8/L4/work/experiments/0.md:20-23; beta L8/L4/0.md:10
+  - item 8
+    - **step**: Manuscript draft
+    - **detail**: Main: the produced document and its production record in L8/L4/work/writing/; filing asserts production only. Beta adds: also its editable source, figures and document-production materials; the project chooses tools, formats and internal organization; cite L0-L5 representations instead of copying them; manuscript text never goes into a 0.md.
+    - **locator**: 7lm@origin/main:L8/L4/work/writing/0.md:20-21; beta L8/L4/work/writing/0.md:12-16
+  - item 9
+    - **step**: Argument
+    - **detail**: Main: research claims and thesis statements in L8/L5/research/lanes/, one lane per line of inquiry, each naming the L4 work and L3-L0 contracts it depends on. Beta adds: the manuscript argument is developed at L5; lanes are not rails; do not duplicate the whole manuscript at L5.
+    - **locator**: 7lm@origin/main:L8/L5/research/lanes/0.md:10,18-21; beta L8/L5/0.md:10-12
+  - item 10
+    - **step**: Review
+    - **detail**: Main: reviews, audits and qualifications in L8/L5/research/review/, each naming the claim reviewed; the same position is the catch-all for anything awaiting the owner's review (PARKED if set aside, moved to lanes/ if taken up). Beta adds: these moves delete nothing; later deletion follows the L6 enumeration rule; reviewer agreement supplies no missing proof.
+    - **locator**: 7lm@origin/main:L8/L5/research/review/0.md:18-22,36; beta review/0.md:36, L8/L5/0.md:12
+  - item 11
+    - **step**: Finding
+    - **detail**: Main: bounded conclusions, including negative ones, in L8/L5/research/findings/, each with dependencies, limits, uncertainty, review status and reproducibility information. Beta adds only the label 'bounded conclusions' and an example file.
+    - **locator**: 7lm@origin/main:L8/L5/research/findings/0.md:18-20; beta L8/L5/0.md:10
+  - item 12
+    - **step**: History
+    - **detail**: Main: dated records of prior states, decisions, corrections and failed paths in L8/L6/history/; unfiled L6 material may wait in the optional L8/L6/in/. Beta adds: when adopting revised origin guidance, record old and new location of every move and the affected dependencies, keep local data and authorship.
+    - **locator**: 7lm@origin/main:L8/L6/history/0.md:20-24, L8/L6/0.md:53; beta L8/L6/0.md:10-12
+  - item 13
+    - **step**: Retired state
+    - **detail**: Main: superseded drafts, prior versions, prior sheets and inactive peer bindings in a named set under L8/L6/retired/<set>/ with a sheet at the set's root; a file whose every part is enumerated as standing elsewhere may be deleted instead. Beta adds nothing to the retired sheets.
+    - **locator**: 7lm@origin/main:L8/L6/retired/0.md:12,22-23
+  - item 14
+    - **step**: Source
+    - **detail**: Main (as stated by the L8 sheets): external source identity, version, authority and lineage at L7/provenance/ (source ledger at L7/provenance/sources/source-ledger.md, prior art at L7/provenance/prior-art/); never re-owned at L6 or copied into L0-L3. Beta adds: collected source instances and collection work are L4, their external identities L7, the argument drawn from them L5.
+    - **locator**: 7lm@origin/main:L8/L6/0.md:86, L8/L5/research/lanes/0.md:30; beta L8/L1/0.md:10
+  - item 15
+    - **step**: Peer binding
+    - **detail**: Main: active bindings at L7/peering/ (the Auditonomous-to-Autonomous binding is named as L7's); the bound definition is referenced, not rewritten, at receiving L0; inactive bindings retire to L8/L6/retired/. Beta adds: another project's material is related through L7/peering/ with owner and version identified; sharing the housing merges nothing; receiving L0 may reference the exact external definition.
+    - **locator**: 7lm@origin/main:L8/L4/0.md:111, L8/L6/0.md:88; beta L8/0.md:24, L8/L4/0.md:91
+  - item 16
+    - **step**: Released publication
+    - **detail**: Main: the released publication object at L7/allications/publications/, with provenance and governance at L7; the released form of a finding likewise. Beta adds: only an authorized released version is represented there; producing a draft is not a publication decision.
+    - **locator**: 7lm@origin/main:L8/L4/work/writing/0.md:32, L8/L5/research/findings/0.md:31; beta L8/L4/work/writing/0.md:16
+  - item 17
+    - **step**: Sheet and check discipline for any repository brought into step
+    - **detail**: Root holds only README.md, L7/, L8/, .github/ (and .gitignore per the check); every 0.md under L7 and L8 begins '# <path>/'; all 71 canonical positions carry a sheet, including L7/allications/* and L7/governance/controlled; retired-set interiors are exempt. Beta's check additionally refuses USO/ and lowercase layer names.
+    - **locator**: 7lm@origin/main:.github/workflows/integrity.yml:17-61; beta same file:19-59
+  - item 18
+    - **step**: Migration of an existing project (beta only)
+    - **detail**: Compare the changed contracts, retain the project's data and local choices, record any moves, review affected dependencies, and only then claim the project has migrated.
+    - **locator**: 7lm@origin/beta/common-contracts-r1-r6:L8/0.md:24
+- **open_questions**
+  - The beta's history entry says the R1-R6 corrections were made 'after the owner's approval of R1–R6'. The owner's approval itself (their words, and what R1 to R6 each are) was not found in the in-scope sheets; looked in all 40 L8 sheets on main and the beta diff over L8. Whether the owner means the beta to become the model of record is unsettled; it is unmerged.
+  - Which model are the exemplars to match: main as it stands (identical in every sheet to 2e5a6d6) or main plus the beta guidance? On main nothing in the interior changed since 2e5a6d6 except the layer-lists proposal in the L6 inbox.
+  - L8/0.md's tree omits L6/in/ while L8/L6/0.md's tree includes it. Should an exemplar carry L8/L6/in/? The sheet calls it optional and it is not one of the 71 positions.
+  - L8/L6/0.md and L8/L6/in/0.md do not name 7lm-layer-lists.md, which PR #21 added to the inbox. Whether the layer lists stay, move beside the field guide, or are withdrawn is stated in the file itself to be the owner's call.
+  - README says the root holds four entries and nothing else; the check also admits .gitignore; both exemplar mains have a .gitignore. Which statement controls was not settled.
+  - Main sheets (L8/L0/pedagogy/0.md:29, L8/L6/0.md:74) name the field guide at L8/L6/7lm-field-guide.md. Open draft PR #20 would retire it; that branch was not read here, so the effect on these two sheets is not established.
+  - Where collected data instances go inside L4 is not assigned to a child directory (L8/L4/work/computation/0.md:22).
+  - The word 'peer' covers both L5 participant positions and L7 peering positions; the relation is expressly not adjudicated (L8/L5/institution/peers/0.md:26).
+  - Status of the roughly 70 inherited controlled-definition rows is left to the owner row by row (definitions/0.md:127); beta adds a caution but decides nothing.
+  - On beta, sheets of the positions that received demonstration files were not updated (computation/0.md still says empty). If beta is adopted, do those sheets need correcting, and do the demonstration files belong in an exemplar at all or only in the scaffold?
+  - Beta's seven L7 file changes and its docx change were not read (outside this scope). The beta JSON records Python 3.14.4 and nine passing tests; the tests were not re-run (read-only workflow).
+  - Each exemplar's own integrity.yml still lists the former L7 names; it was only grepped, not read. Whether bringing the exemplars into step includes replacing their check with the scaffold's main or beta version was not determined here.
