@@ -1,6 +1,6 @@
 # verify:autonomous:MIRROR-4
 
-Agent result, as returned. Workflow: Review of the two commits. Run `wf_26752832-654`. Phase: Verify. Checked in 2026-11-11 19:51 UTC.
+Agent result, as returned. Workflow: Review of the two commits. Run `wf_26752832-654`. Phase: Verify. Checked in 2026-11-11 19:56 UTC.
 
 - **real**: yes
 - **reasoning**: Evidence reproduced from git objects only. (1) autonomous@8257118:L8/L6/history/harmonization-2026-09-05.md:189 reads: "Each states its position as the scaffold's sheet at the same path states it, with this repository's Holdings line added; nothing is filed at any of the five." (2) Diff of 7lm@c9dc061:L7/allications/<p>/0.md against autonomous@8257118:L7/allications/<p>/0.md for the five positions (applications, communications, specifications, notifications, participations) gives exactly one hunk each: the inserted "## Holdings / Nothing is filed at this position; the position is admissible and empty." block. So the sentence is exact for five. (3) Diff of 7lm@c9dc061:L7/allications/0.md against autonomous@8257118:L7/allications/0.md gives two hunks: the inserted Holdings block (exemplar lines 31-34) and a substitution at exemplar line 42: scaffold line 38 "- `publications/` moved here from `L7/publications/` in the pass of 2026-09-20; the record is at `L8/L6/history/harmonization-2026-09-04.md` §25." became "- `publications/` moved here from `L7/publications/` in the pass of 2026-11-11; the record is at `L8/L6/history/harmonization-2026-09-05.md` §14."

@@ -1,6 +1,6 @@
 # read:exemplar-auditonomous
 
-Agent result, as returned. Workflow: The model, read deep. Run `wf_9a60cf50-a5f`. Phase: Read. Checked in 2026-11-11 19:51 UTC.
+Agent result, as returned. Workflow: The model, read deep. Run `wf_9a60cf50-a5f`. Phase: Read. Checked in 2026-11-11 19:56 UTC.
 
 - **scope**: /home/user/auditonomous: origin/main (2165144) against the model at /home/user/7lm@origin/main (c9dc061); then origin/beta/7lm-exemplar-auditonomous (714480d); with PR #25 (origin/claude/no-deletion-fix-2026-09-07, f89bf8a) and PR #27 (origin/claude/book-structure-roadmap-k8ap82, 9259c18). Read-only, git objects only. "Live text" = every tracked file except L8/L6/history/, L8/L6/retired/, L8/L6/in/ and quotations of the owner.
 - **summary**: Auditonomous main still has the L7 desk of before 20 September 2026. Of the model's 71 canonical positions, 63 exist with a correctly headed sheet and 8 are missing: L7/governance/controlled and the seven L7/allications positions. The two former positions, L7/publications/ (with binder/ beneath) and L7/governance/restrictions/, still stand. The scaffold's own check, run on this tree, would fail on exactly those 8.

@@ -1,6 +1,6 @@
 # read:records
 
-Agent result, as returned. Workflow: Handle on the Auditonomous research and manuscript. Run `wf_9c2917a7-7f0`. Phase: Read. Checked in 2026-11-11 19:51 UTC.
+Agent result, as returned. Workflow: Handle on the Auditonomous research and manuscript. Run `wf_9c2917a7-7f0`. Phase: Read. Checked in 2026-11-11 19:56 UTC.
 
 - **scope**: Layer 6 (the repository's own records) of aybllc/auditonomous: MAIN L8/L6/ in full (sheets, master ledger, three session ledgers, harmonization record, routing plan, sheets record, two retired sets); ROADMAP additions (restore-2026-09-14.md, L6_RECONCILIATION_2026-08-14.md, retired/consolidated-2026-08-04/); BETA additions (AUDITONOMOUS_BETA_HISTORY.md and the two sheet edits). Read only from git objects. Cross-references followed only where a record named them (L7 sources LEDGER, the peer-1 binding record, review/0.md 'What is open', aybllc/7lm L7/0.md and specification, aybllc/autonomous blob identity). Scratch files: /tmp/claude-0/-home-user/bfcfd013-a2da-5019-961e-7f46116f08be/scratchpad/wf-handle/L6/
 - **summary**: Layer 6 in MAIN holds ten record files and two retired sets. The seven history files are byte-identical in MAIN, ROADMAP and BETA; ROADMAP adds two records and one retired set, BETA adds one record. None of these records checks a scientific claim: every ledger says "External Sources Checked: NONE". They are custody and layout records.

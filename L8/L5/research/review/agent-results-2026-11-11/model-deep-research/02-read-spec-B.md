@@ -1,6 +1,6 @@
 # read:spec-B
 
-Agent result, as returned. Workflow: The model, read deep. Run `wf_9a60cf50-a5f`. Phase: Read. Checked in 2026-11-11 19:51 UTC.
+Agent result, as returned. Workflow: The model, read deep. Run `wf_9a60cf50-a5f`. Phase: Read. Checked in 2026-11-11 19:56 UTC.
 
 - **scope**: The specification at /home/user/7lm@origin/main:L8/L4/work/writing/7lm-harmonized-architecture-specification.md (1003 lines), lines 500-1003 read in full, plus lines 355-499 because the L1, L2 and L3 sheets asked for under (a) start there. Also the diff of that file between origin/main and origin/beta/common-contracts-r1-r6 (all six hunks; two fall inside lines 500+). Cross-reference checks by ls-tree only: scaffold main L8/L1-L6 and L7 directories; exemplar mains and exemplar beta branches for root, L7 names and the paths the specification cites. Read from git objects only; nothing written in any repository.
 - **summary**: The specification itself has NOT changed on main since the state last studied: `git log 2e5a6d6..origin/main` on the file is empty, and it still reads "Version of 20 September 2026". So for the L1-L6 sheets, the cross-layer cases, the Exemplars section and the Harmonization Record, the model of record is what was studied before. Whatever "changed" on main (PR #21) lies outside this file.

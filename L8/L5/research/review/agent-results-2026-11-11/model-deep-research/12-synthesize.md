@@ -1,6 +1,6 @@
 # synthesize
 
-Agent result, as returned. Workflow: The model, read deep. Run `wf_9a60cf50-a5f`. Phase: Synthesize. Checked in 2026-11-11 19:51 UTC.
+Agent result, as returned. Workflow: The model, read deep. Run `wf_9a60cf50-a5f`. Phase: Synthesize. Checked in 2026-11-11 19:56 UTC.
 
 - **report**: **Locator key.** REC = `7lm@origin/main:L8/L6/history/harmonization-2026-09-04.md`. SPEC = `7lm@origin/main:L8/L4/work/writing/7lm-harmonized-architecture-specification.md`. CHK = `7lm@origin/main:.github/workflows/integrity.yml`. BETA = `7lm@origin/beta/common-contracts-r1-r6`. The number after a colon is a line.
 

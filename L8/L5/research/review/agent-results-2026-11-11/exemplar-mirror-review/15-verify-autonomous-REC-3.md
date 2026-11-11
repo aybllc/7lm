@@ -1,0 +1,20 @@
+# verify:autonomous:REC-3
+
+Agent result, as returned. Workflow: Review of the two commits. Run `wf_26752832-654`. Phase: Verify. Checked in 2026-11-11 19:56 UTC.
+
+- **real**: yes
+- **reasoning**: Checked from git objects only (autonomous@8257118, parent c9076c3).
+
+  1. The sentence is there and is new in this commit: autonomous@8257118:L8/L6/history/harmonization-2026-09-05.md:207 "The dated research records, the staging records and the source texts under `L7/provenance/`, in which \"publications\" and \"restrictions\" are other people's words or parts of addresses." (section 14, added by the commit, so not a pre-existing condition of the parent).
+
+  2. All four cited counter-examples exist at the stated lines and are the records' own prose, not quotations and not addresses: L8/L5/research/review/REQUIREMENTS_BY_BODY_IEEE_ISO_NIST.md:123 "### [source text withheld from the public copy]"; L8/L5/research/lanes/LANE_F_VERBATIM_CAPTURE.md:755 "## TARGET D — NIST free publications"; L7/provenance/sources/staging-records/sources__STANDARDS_INVENTORY.md:860 "[source text withheld from the public copy]."; L8/L5/research/review/AUDIT_L6_ADVERSARIAL.md:532 "...[source text withheld from the public copy]." My own survey (git grep -i for publications|restrictions over L8/L5/research and L7/provenance excluding 0.md: 135 lines in 41 files) finds more of the same kind, e.g. L7/provenance/sources/staging-records/sources__CORPUS_GOVERNMENT.md:470 "[source text withheld from the public copy],", sources__ORGANIZATIONS_ROSTER.md:205 "[source text withheld from the public copy]", L8/L5/research/review/autonomous-theory/autonomouos/FORMULA_peer_review_manuscript_v0.1.md:514 "These restrictions are deliberate." So the record's characterisation is false for a substantial share of the occurrences, not for a stray one.
+
+  3. The operative facts the sentence supports are true: `git diff -M --name-status c9076c3 8257118 -- L8/L5/research L7/provenance` shows no non-sheet file changed, and a pattern scan of all 135 lines finds zero occurrences naming the position (no L7/publications, governance/restrictions, `publications/`, `restrictions/`, "publications branch"); the only path-like hits are URLs (csrc.nist.gov/publications/..., publications.europa.eu, www.gov.uk/government/publications/...), which is what "parts of addresses" covers. So the suggested replacement text is itself accurate.
+
+  4. Not excused by the stated intent: item 5 asks for a new section in the record, and a record's descriptive claim should be true. The next sentence of the paragraph ("The word \"restrictions\" wherever it names a kind of condition and not the position.") partly covers "restrictions" but says nothing of "publications" used as the records' own ordinary word, so the inaccuracy is not cured elsewhere in the paragraph. It is not a style preference: it is a factual statement about the repository that the objects contradict. Severity is correctly minor — no file was wrongly changed or wrongly left; only the reason given in the record is overstated.
+- **corrected_statement**: In the new section 14 of L8/L6/history/harmonization-2026-09-05.md (line 207), the "Not changed" paragraph says that in the untouched research records, staging records and source texts "publications" and "restrictions" are "other people's words or parts of addresses". The files are untouched and no occurrence names a position, but in many of them (at least a dozen lines across the research records and staging records) the word is the record's own ordinary word, neither a quotation nor part of an address, so the stated reason is inaccurate as written.
+- **exact_fix**: In L8/L6/history/harmonization-2026-09-05.md line 207, replace the clause
+  `in which "publications" and "restrictions" are other people's words or parts of addresses.`
+  with
+  `in which "publications" and "restrictions" are ordinary words, other people's words or parts of addresses, and nowhere the name of a position.`
+  Nothing else changes.

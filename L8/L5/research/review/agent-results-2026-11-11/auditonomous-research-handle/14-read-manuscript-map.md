@@ -1,0 +1,1152 @@
+# read:manuscript-map
+
+Agent result, as returned. Workflow: Handle on the Auditonomous research and manuscript. Run `wf_9c2917a7-7f0`. Phase: Read. Checked in 2026-11-11 19:56 UTC.
+
+- **scope**: The manuscript against the research, and against the Seven-Layer Model's guidance for a manuscript project. Read-only, from git objects only. States read: auditonomous MAIN origin/main 2165144, ROADMAP origin/claude/book-structure-roadmap-k8ap82 9259c18, BETA origin/beta/7lm-exemplar-auditonomous 714480d, HISTORY 1d83788; autonomous origin/main c9076c3, origin/beta/7lm-exemplar-autonomous e64b382, origin/claude/scholarly-pair-baseline-k8ap82 9b49910; 7lm origin/beta/common-contracts-r1-r6 97314c5 (called 7LM-BETA below) and origin/main c9dc061. The roadmap (686 lines) and the vocabulary paper's claims table were read in full; the six model sheets were read in the sections named. Working copies of the git objects and the two small check scripts are in /tmp/claude-0/-home-user/bfcfd013-a2da-5019-961e-7f46116f08be/scratchpad/wf-handle/manuscript-vs-research/ (roadmap.md, vocab.md, feeds.py, extract.py, 7lm_*.md, office/). Nothing in any repository was changed. Abbreviation: RM = L8/L5/research/review/BOOK_STRUCTURE_AND_ROADMAP_2026-09-13.md.
+- **summary**: No chapter of the book exists, and nothing about the book has moved on the three named branches since 3 November. The roadmap (closed branch only) plans 27 chapters in eight parts; all 27 chapter files are headers ending "Not yet drafted", the bibliography says "No entry yet", and the build script was never run.
+
+  What the research supplies: every local file the roadmap names as a chapter feed exists on the closed roadmap branch, but on main 73 of the 133 feed citations point at files that are not there, and Chapters 10 and 22 have none. The roadmap's own labels put 11 chapters at RESEARCHING, 10 at CONJECTURE, 4 at SPECULATION and 2 at VERIFIED "(components)"; no external number in the first-contact chapters has been checked.
+
+  Of the seven build-first steps, the session-side halves of S0 to S5 were done on 14 September; every owner-side half (reading the two papers, the adversarial review, the merge and tag in the companion repository, rulings D22 and D23) is unrecorded. All 22 decisions stand unruled except D15.
+
+  The first drafting step, Chapters 2 and 19, is not ready. Chapter 2's register of standards contradictions is called "complete" by the roadmap, but the beta branch now calls several of its comparisons contested or unresolved, and the sourcebook withdrew its own seed findings. Chapter 19 waits on two unruled decisions, four unchecked sources and a source ledger that holds no first-contact source.
+
+  The vocabulary paper's claims table has one wrong row (16), one wrong line reference (3) and one overstated label (6); the other rows I could check hold.
+
+  The model changed after both beta branches were built: its manuscript guidance arrived on 3 November in commit 97314c5, and no branch of either repository carries it. Under that guidance the positions on the roadmap branch mostly agree; main does not hold the manuscript at all.
+- **items**
+  - item 1
+    - **id**: STATE-1
+    - **title**: The three named states have not moved since 2026-11-03
+    - **path**: refs origin/main, origin/claude/book-structure-roadmap-k8ap82, origin/beta/7lm-exemplar-auditonomous
+    - **where**: MAIN, ROADMAP, BETA
+    - **what_it_is**: Step 1 check. MAIN 2165144 (2026-09-11 23:26 -0700), ROADMAP 9259c18 (2026-09-14 02:04 UTC), BETA 714480d (2026-11-02 21:08 -0800), as the prior pass recorded. ROADMAP is five commits ahead of MAIN and is an ancestor of neither MAIN nor BETA; MAIN is an ancestor of BETA. One thing outside the three named states: a local, unpushed commit f2d5b37 of 2026-11-11 18:34 UTC on local branch ccr-9391bd81-f2enmj (parent 2165144, 55 files), titled as an L7 restructure; its only change under L8/L4/work/writing is the same one-line path edit BETA made. A matching local commit 8257118 exists in the autonomous clone.
+    - **evidence_state**: INTERNALLY CHECKED
+    - **own_label**: 
+    - **checked_how**: git log -1 on each ref; git merge-base --is-ancestor; git log --all --since=2026-09-15; git diff --name-status f2d5b37~1 f2d5b37 -- L8/L4/work/writing L8/L5 L8/L6
+    - **locator**: MAIN:refs:origin/main=2165144; ROADMAP:refs:9259c18; BETA:refs:714480d
+    - **quote**: The L7 restructure mirrored by hand: allications, and controlled; the words match the folders
+    - **key_claims**
+      - Tips unchanged: 2165144, 9259c18, 714480d
+      - ROADMAP holds 328 files, MAIN 169, BETA 186
+      - A local commit f2d5b37 (2026-11-11) exists on no remote ref; not part of the three states
+    - **open_items**
+      - Whether the local commit f2d5b37 is the start of the physical update the owner asked for; it was not read beyond its file list and the writing-sheet line
+  - item 2
+    - **id**: STATE-2
+    - **title**: What BETA changed in the writing directory and at L7
+    - **path**: L8/L4/work/writing/0.md; L7/
+    - **where**: BETA
+    - **what_it_is**: In L8/L4/work/writing/ BETA changes one line of one file: the sheet's pointer to the released publication object moves from L7/publications/ to L7/allications/publications/. BETA holds the same eleven writing files as MAIN: no corpus, no book tree, no vocabulary paper, no roadmap. At L7 it renames publications to allications/publications, renames governance/restrictions to governance/controlled, adds five empty allications sheets, pins the autonomous binding by full hash with a provenance row AUT-SOURCE-001, adds a second binding object-2 for the finite beta computation, and adds a ledger arithmetic correction (60 archive rows; a past '22 new rows' enumerates 21).
+    - **evidence_state**: INTERNALLY CHECKED
+    - **own_label**: BETA:L8/L4/work/0.md:39 still carries "three live drafts, two chat transcripts, one recorded session"
+    - **checked_how**: git diff --stat and git diff origin/main origin/beta/7lm-exemplar-auditonomous -- L8/L4/work/writing L7; ls-tree of BETA writing
+    - **locator**: BETA:L8/L4/work/writing/0.md:27; BETA:L7/provenance/sources/LEDGER.md (section "Attributable receiving correction — 2026-11-03")
+    - **quote**: [source text withheld from the public copy].
+    - **key_claims**
+      - 36 files changed under L7 and the writing sheet, 149 insertions, 55 deletions
+      - BETA keeps the binding at 0504961: "[source text withheld from the public copy]."
+      - BETA says Appendix C, Q13 and C1–C7 "now carry explicit receiving-use dispositions"
+    - **open_items**
+      - BETA does not contain any of ROADMAP's book material; taking both needs a merge decision
+  - item 3
+    - **id**: MODEL-1
+    - **title**: The model's guidance for a manuscript project (beta scaffold 97314c5)
+    - **path**: 7lm: L8/0.md, L8/L4/0.md, L8/L4/work/writing/0.md, L8/L5/0.md, L8/L6/0.md, L7/0.md
+    - **where**: 7LM-BETA (origin/beta/common-contracts-r1-r6)
+    - **what_it_is**: The sentences that say where a manuscript, its argument, its history and its released version belong. The manuscript and its editable source are written work at L8/L4/work/writing/; its argument and claim qualification are addressed at L8/L5/; its development history (prior drafts, failed paths, corrections) at L8/L6/; a released version at L7/allications/publications/. The whole manuscript is not duplicated at L5 or copied into guidance sheets. Adopting a changed model in an existing project is a separate, recorded act.
+    - **evidence_state**: ASSERTED
+    - **own_label**: commit subject: "Clarify 7LM research housing in the local guidance sheets" (97314c5, 2026-11-03 08:58 -0800)
+    - **checked_how**: Read the named sections from git objects; line numbers from grep -n on the extracted sheets
+    - **locator**: 7LM-BETA:L8/0.md:22
+    - **quote**: Its argument and claim qualification are addressed at `L8/L5/`, its development history at `L8/L6/`, and any released publication at `L7/allications/publications/`.
+    - **key_claims**
+      - 7LM-BETA:L8/0.md:22 — "For a manuscript project, the manuscript is the written work at `L8/L4/work/writing/`."
+      - 7LM-BETA:L8/0.md:22 — "Refer to the relevant representations rather than duplicating the whole manuscript in every layer or putting it into the guidance sheets."
+      - 7LM-BETA:L8/L4/0.md:10 — "File the work actually produced: manuscript drafts and their source files at `work/writing/`"
+      - 7LM-BETA:L8/L4/0.md:12 — "Keep the manuscript's research argument and qualification addressable at L5, its revision history at L6, and its external release at L7."
+      - 7LM-BETA:L8/L4/work/writing/0.md:14 — "this is the home of the actual manuscript and its editable source, figures and document-production materials as made."
+      - 7LM-BETA:L8/L4/work/writing/0.md:16 — "L5 owns what its claims warrant, L6 preserves its development, and an authorized released version is represented at `L7/allications/publications/`."
+      - 7LM-BETA:L8/L4/work/writing/0.md:16 — "Producing a draft is neither a scientific acceptance nor a publication decision."
+      - 7LM-BETA:L8/L5/0.md:10 — "Develop the research questions, interpretation and manuscript argument here, citing the work and dependencies that support each claim."
+      - 7LM-BETA:L8/L5/0.md:12 — "The produced manuscript file remains at L4 rather than being duplicated here as another whole document."
+      - 7LM-BETA:L8/L6/0.md:10 — "Retain the versions and decisions needed to reconstruct the project's research and manuscript: prior contracts, drafts, failed paths, corrections and supersessions."
+      - 7LM-BETA:L7/0.md:12 — "A manuscript under development stays at `L8/L4/work/writing/`; this face records its external sources, permissions, exchanges and any authorized publication."
+      - 7LM-BETA:L7/0.md:12 — "Filing a draft or binding a source is not a release."
+      - 7LM-BETA:L8/0.md:24 — "compare the changed contracts, retain the project's data and local choices, record any moves, and review affected dependencies before claiming the project has migrated."
+    - **open_items**
+      - This is the beta candidate of the scaffold, not 7lm origin/main; whether it is the model to match is the owner's call
+  - item 4
+    - **id**: MODEL-2
+    - **title**: The model changed after both exemplars were built; no branch of either repository carries the manuscript guidance
+    - **path**: L8/0.md; L8/L4/0.md; L8/L4/work/writing/0.md; L7/0.md in each repository
+    - **where**: MAIN, ROADMAP, BETA (auditonomous); autonomous main and beta; 7lm main
+    - **what_it_is**: The four new sections ("Shared housing and local research choices", "Using this position in a research project", "Manuscript work", "Projects across a research network") entered the scaffold in 97314c5 on 2026-11-03 08:58 -0800. Both beta exemplars were committed the evening before (auditonomous 714480d 21:08, autonomous e64b382 21:05) against architecture commit 4ca3edb, the commit before 97314c5. A count of those section headings returns zero in every auditonomous ref, both autonomous refs, and 7lm origin/main. 7lm's beta branch is not an ancestor of 7lm main.
+    - **evidence_state**: INTERNALLY CHECKED
+    - **own_label**: BETA:L7/peering/public/ingress/peer-1/object-2/binding.json: "architecture_commit": "4ca3edb9172c34e6b0033bd09e2379ed3da76d9d"
+    - **checked_how**: grep -c of each section heading in each ref's sheet; git log origin/main..origin/beta/common-contracts-r1-r6 in 7lm; commit dates
+    - **locator**: 7LM-BETA:L8/L4/work/writing/0.md:12 ("## Manuscript work"); BETA:L8/L4/work/writing/0.md (heading absent)
+    - **quote**: Clarify 7LM research housing in the local guidance sheets
+    - **key_claims**
+      - Section headings present in 7LM-BETA only; count 0 in auditonomous MAIN, ROADMAP, BETA and in autonomous main and beta
+      - BETA already matches the model on two physical renames: L7/allications/publications and L7/governance/controlled
+      - MAIN and ROADMAP still have L7/publications/ and (in autonomous PR #29's branch) L7/governance/restrictions/
+    - **open_items**
+      - Which model commit the two repositories are to match: 4ca3edb (what the betas pin), 97314c5 (beta tip) or 7lm main c9dc061 (2026-11-11)
+  - item 5
+    - **id**: RM-0
+    - **title**: The roadmap record itself
+    - **path**: L8/L5/research/review/BOOK_STRUCTURE_AND_ROADMAP_2026-09-13.md
+    - **where**: ROADMAP
+    - **what_it_is**: A 686-line proposal written by a Claude session on 13 September and revised 14 September: eight parts, 27 chapters, each with a status label, feeds, gate, verification list, done-condition and next step; nine appendices; seven build-first steps S0 to S6; 22 decisions numbered D1 to D23 with no D17. It composes six earlier structures. It is not on MAIN or BETA.
+    - **evidence_state**: ASSERTED
+    - **own_label**: "PROPOSAL · INTERNAL ONLY · INTERNALLY DERIVED" … "Nothing here is adopted."
+    - **checked_how**: Read all 686 lines; recounted the labels (11 RESEARCHING, 10 CONJECTURE, 4 SPECULATION, 2 VERIFIED: matches line 454); checked every backticked feed path against the three trees with a script
+    - **locator**: ROADMAP:RM:3; ROADMAP:RM:454
+    - **quote**: [source text withheld from the public copy].
+    - **key_claims**
+      - All local feed paths resolve on ROADMAP; three feeds are still cited from git history and one from a session scratchpad
+      - On MAIN 60 of 133 feed citations resolve; Ch 10 and Ch 22 have none
+      - "[source text withheld from the public copy]." (RM:24)
+    - **open_items**
+      - PR #27 closed unmerged: the roadmap has no standing on MAIN
+      - The gate lines and the decision table disagree in eight places (see defects)
+  - item 6
+    - **id**: CH-P0
+    - **title**: Part 0 — Method (Ch 1 The Reader's Contract; Ch 2 Contradictions Are Findings)
+    - **path**: L8/L4/work/writing/book/ch01-…md, ch02-…md
+    - **where**: ROADMAP
+    - **what_it_is**: Ch 1: RESEARCHING; fed by the status ladder, the label discipline, the binder README, the consolidated document's front matter and §12.4, the 2 August proposal §G1, prospectus §14 and §21, and [source text withheld from the public copy]); waits on D8 (home of the evidence ranking after the Block 36 cut). Ch 2: VERIFIED (components); fed by CONTRADICTIONS.md C1–C7, the consolidated document §11 (C-1 to C-23), the sourcebook Part VI method, and source-ledger rows IL-001 to IL-004; no gate; waits on a publisher re-check of seven quotations, and by move 9 on the adversarial review of the two papers.
+    - **evidence_state**: EMPTY (no chapter text). Research behind it: Ch 1 ASSERTED rules; Ch 2 CONTRADICTED (the roadmap calls the registers complete and verified; BETA and the sourcebook qualify them)
+    - **own_label**: Ch 1 "RESEARCHING"; Ch 2 "VERIFIED (components)" · "registers complete; chapter prose none"
+    - **checked_how**: Feed paths checked against trees: Ch 1 has 4 of 6 on MAIN, Ch 2 has 3 of 4 (the consolidated document is ROADMAP only). Read ch02 file: 26 lines ending "Not yet drafted." Counted C-1 to C-23 in the consolidated document §11.
+    - **locator**: ROADMAP:RM:97-113
+    - **quote**: [source text withheld from the public copy]
+    - **depends_on**
+      - D8
+      - PRE-CH2-A
+      - PRE-CH2-B
+      - PRE-CH2-C
+      - PRE-CH2-D
+      - PRE-CH2-E
+    - **key_claims**
+      - Ch 1 [source text withheld from the public copy]"
+      - Ch 2 [source text withheld from the public copy]"
+      - Part 0 step [source text withheld from the public copy]." (RM:469)
+    - **open_items**
+      - D8 unruled
+      - Seven publisher re-checks not done
+      - Two claim vocabularies to reconcile into one (Ch 1 done-condition)
+  - item 7
+    - **id**: CH-PI
+    - **title**: Part I — autonomous, the codified root (Ch 3 Eleven Definitions, No Referee; Ch 4 Ladders That Take Things Away)
+    - **path**: L8/L4/work/writing/book/ch03-…md, ch04-…md
+    - **where**: ROADMAP
+    - **what_it_is**: Both RESEARCHING. Ch 3 is fed by the binding to aybllc/autonomous AUTONOMOUS.md at 0504961, CONTRADICTIONS.md, the three requirements extractions (IEEE, ISO/IEC, NIST) and the peer's lanes ("0 of 11 elements TEXT VERIFIED"); gate D14 in its header, D22 in the decision table. Ch 4 is fed by HUMINT_ENCODE §1–3, the NIST extraction, the peer's autonomy scale, the bound object §4 and the packability finding ("NOT PACKABLE: nine irreducible conflicts"); no gate in its header, D22 in the table. Waits on: the three files that [source text withheld from the public copy], the rebinding, re-verification [source text withheld from the public copy], and the EU AI Act recital force (NOT-CHECKED).
+    - **evidence_state**: EMPTY (no chapter text). Research behind it: INTERNALLY CHECKED at the peer for most rows, with the baseline itself UNRESOLVED (the peer's REVIEW_4 blocks its gate)
+    - **own_label**: "RESEARCHING" (both)
+    - **checked_how**: All Ch 3 local feeds exist on MAIN, ROADMAP and BETA; Ch 4 lacks the packability finding on MAIN. Read rows A1–A11 of the bound object at autonomous c9076c3; the A3 row still carries two labels in one row.
+    - **locator**: ROADMAP:RM:119-135; ROADMAP:RM:479-482
+    - **quote**: [source text withheld from the public copy]
+    - **depends_on**
+      - D14
+      - D22
+      - S1
+      - S3
+    - **key_claims**
+      - "[source text withheld from the public copy]." (RM:480)
+      - BETA claims dispositions for Appendix C, Q13 and C1–C7 without re-verifying quotes
+      - IEEE 1872-2015 body unread; clause number unknown
+    - **open_items**
+      - D22 unruled on ROADMAP; BETA keeps 0504961
+      - REVIEW_4's seven-item fix set at the peer is the owner's
+      - [source text withheld from the public copy]
+  - item 8
+    - **id**: CH-PII
+    - **title**: Part II — The defect (Ch 5 Privative Definitions Don't Compose; Ch 6 After-Action Is Too Late)
+    - **path**: L8/L4/work/writing/book/ch05-…md, ch06-…md
+    - **where**: ROADMAP
+    - **what_it_is**: Ch 5: CONJECTURE; fed by DISTILLATION §1 (candidate law L1), the harmonization record, HUB_LEDGER.md (history only) and two dossiers held by the peer; no gate; waits on a search for a constructive codified autonomy definition that would refute L1 ("search unrun"). Ch 6: RESEARCHING; fed by the deep-research run (claim G1 narrowed), record-ontology question Q3, the ebios core-architecture draft (EB:233), the ARIES reading record and the cycles review; no gate; waits on [source text withheld from the public copy] and one more sweep of docket B1/B2. The decision table adds D23 for Ch 6.
+    - **evidence_state**: EMPTY (no chapter text). Research behind it: Ch 5 CONJECTURE; Ch 6 EXTERNALLY CHECKED in part (the deep-research run narrowed the novelty claim)
+    - **own_label**: Ch 5 "CONJECTURE"; Ch 6 "RESEARCHING"
+    - **checked_how**: Feed paths: Ch 5 both local feeds on MAIN; Ch 6 has 3 of 5 on MAIN. Read deep-research-auditonomous.md lines 215 and 245 on MAIN.
+    - **locator**: ROADMAP:RM:141-157; MAIN:L8/L4/work/computation/deep-research-auditonomous.md:245
+    - **quote**: [source text withheld from the public copy].”
+    - **depends_on**
+      - D23
+    - **key_claims**
+      - "[source text withheld from the public copy] … still appears open" (RM:492)
+      - HUB_LEDGER.md is a history-only feed
+    - **open_items**
+      - L1 refutation search unrun
+      - ARIES publisher capture and docket B1/B2 sweep outstanding
+  - item 9
+    - **id**: CH-PIII
+    - **title**: Part III — Auditonomous, the constructive layer (Ch 7 to 11)
+    - **path**: L8/L4/work/writing/book/ch07-…md to ch11-…md
+    - **where**: ROADMAP
+    - **what_it_is**: Ch 7 (RESEARCHING): the 410-line definition entry, consolidated document §7–8, the prior-art README (search unrun), the referee's novelty verdict; gates D4, D20; waits on the prior-art search. Ch 8 (RESEARCHING): Blocks 3–4, consolidated §1–2 and §2.8, AUDITABILITY_REQUIREMENTS §2, perpetuity adjudication §6.1; gates D3, D4, D13; waits on rulings T3, DEF:52, C-1. Ch 9 (CONJECTURE): AUDITONOMY.md Conditions A–E, three findings, question Q9, chat volume I; gates D5, D10, D15. Ch 10 (CONJECTURE): Blocks 5, 6, 9, 10, 18, 27, 28; gate D6; the NASA Starling facts have no verbatim anchor. Ch 11 (RESEARCHING): consolidated §5–6, the interlock proposal, override finding §3, the 5 August session §13, the replicator §6; no gate.
+    - **evidence_state**: EMPTY (no chapter text). Research behind it: ASSERTED definitions; UNRESOLVED on five decisions and the unrun prior-art search; two pieces CONTRADICTED internally (DEF:52 against the cycles review; the fourth derivation)
+    - **own_label**: Ch 7, 8, 11 "RESEARCHING"; Ch 9, 10 "CONJECTURE"; Ch 8 and Ch 10 "draft: drafted"
+    - **checked_how**: Feed paths: Ch 7 3 of 4 on MAIN; Ch 8 1 of 5; Ch 9 5 of 6; Ch 10 0 of 7; Ch 11 4 of 6. Read ch08 file: header says "What exists now: drafted (Blocks 3–4 …)" and text says "Not yet drafted." Read AUDITONOMY.md §0, §2, §4, §6 on ROADMAP.
+    - **locator**: ROADMAP:RM:163-206; ROADMAP:L8/L0/semantics/definitions/AUDITONOMY.md:263
+    - **quote**: **[source text withheld from the public copy]`.
+    - **depends_on**
+      - D3
+      - D4
+      - D5
+      - D6
+      - D10
+      - D13
+      - D15
+      - D20
+    - **key_claims**
+      - Lexical and definitional novelty are both unchecked externally
+      - AUDITONOMY.md: "[source text withheld from the public copy]."
+      - Replicator: "TWO OF THREE HEADLINE CLAIMS WERE REFUTED" (ROADMAP:L8/L1/state-space/AUDITON_REPLICATOR.md:3)
+      - Part III done-condition needs "[source text withheld from the public copy]"
+    - **open_items**
+      - Prior-art search for the coinage (network)
+      - T3, DEF:52, C-1, Q9, the fourth derivation
+      - Adversarial review of the whole part
+  - item 10
+    - **id**: CH-PIV
+    - **title**: Part IV — Auditon, the unit (Ch 12 to 14)
+    - **path**: L8/L4/work/writing/book/ch12-…md to ch14-…md
+    - **where**: ROADMAP
+    - **what_it_is**: Ch 12 (CONJECTURE): the envelope document, the replicator, the ontology sheet, the packability finding; gates D14, D18, D20; waits on an adversarial review of the envelope. Ch 13 (RESEARCHING): the requirements partition, HUMINT-ENCODE, the three extractions, the standards register, AUDITABILITY_REQUIREMENTS; gate D14; waits on the Q11 auditability extraction and re-capture of [source text withheld from the public copy]. Ch 14 (CONJECTURE): the seal-gated interlock proposal, the segregation finding, the ebios draft §6, the departure protocol, chat volume I; gate D10; IEC 61508 and [source text withheld from the public copy].
+    - **evidence_state**: EMPTY (no chapter text). Research behind it: CONJECTURE over externally checked components; UNRESOLVED on Q11, the 78-versus-113 count and the diode dilemma
+    - **own_label**: Envelope: "`[source text withheld from the public copy]."
+    - **checked_how**: Feed paths: Ch 12 2 of 4 on MAIN; Ch 13 3 of 5; Ch 14 4 of 5. Read envelope lines 23-24, 94-144 on ROADMAP. BETA findings confirm Q11 and the 78/113 reconciliation "remain incomplete".
+    - **locator**: ROADMAP:RM:212-237; ROADMAP:L8/L1/state-space/AUDITON_ENVELOPE.md:23-24
+    - **quote**: [source text withheld from the public copy].
+    - **depends_on**
+      - D10
+      - D14
+      - D18
+      - D20
+      - D23
+    - **key_claims**
+      - "[source text withheld from the public copy]" (RM:519)
+      - Interlock: a proposal, "Nothing here is built"
+      - Twelve compartments, eight envelope-supplied (envelope lines 137-144)
+    - **open_items**
+      - Envelope adversarial review not held
+      - Q11 not run
+      - D10, D18 unruled
+  - item 11
+    - **id**: CH-PV
+    - **title**: Part V — The machinery (Ch 15 to 17)
+    - **path**: L8/L4/work/writing/book/ch15-…md to ch17-…md
+    - **where**: ROADMAP
+    - **what_it_is**: Ch 15 (VERIFIED literature · INTERNALLY DERIVED use): the ebios draft §7–9, the external priors check, the decorations record, the λ external verification, the NASA-paper defect ledger, the research corpus §5; gates D11, D14; [source text withheld from the public copy]. Ch 16 (CONJECTURE): the λ-decomposed record thesis, the deep-research run, λ prior art, the bit-exact pruning conjecture, the departure protocol, sourcebook Part IV; gate D11; waits on Dekker 1971 and on tension CH-01 (two incompatible λ_A definitions). Ch 17 (CONJECTURE): Blocks 43–52, DR-001 to 003, the 5 August session, two findings, the OMMP codec, chat volume II; gates D7, D19; aybllc/ommp never read. The whole part waits on the formal layer.
+    - **evidence_state**: EMPTY (no chapter text). Research behind it: λ mathematics EXTERNALLY CHECKED as recorded (Rump 1999); the rest CONJECTURE; the formal layer EMPTY on MAIN and ROADMAP
+    - **own_label**: RM:418 "[source text withheld from the public copy]"
+    - **checked_how**: Feed paths: Ch 15 2 of 6 on MAIN; Ch 16 3 of 6; Ch 17 2 of 6 local. Read LAMBDA_EXTERNAL_VERIFICATION lines 33, 70, 213-214, 238 on ROADMAP. BETA adds one L2 file, a finite beta predicate, not the objects Part V names.
+    - **locator**: ROADMAP:RM:243-268; ROADMAP:L8/L5/research/review/LAMBDA_EXTERNAL_VERIFICATION_2026-08-04.md:213-214
+    - **quote**: | λ=[source text withheld from the public copy]) |
+    - **depends_on**
+      - D7
+      - D11
+      - D14
+      - D19
+      - D23
+    - **key_claims**
+      - "The ledger is EMPTY today." (RM:532)
+      - λ = 0 "[source text withheld from the public copy]" (RM:622)
+      - The same record notes Rump's 1.5× bound was "cited but not read" (line 238)
+      - Ch 17's codec feed still cites git:8c98573^ although the codec stands at ROADMAP:L8/L4/work/computation/ommp/
+    - **open_items**
+      - D11 (enclosure regime) unruled
+      - L2 registrations not made
+      - Dekker 1971 not acquired; IEEE 1788.1 unread; aybllc/ommp unread
+      - CH-01 open
+  - item 12
+    - **id**: CH-PVI-18
+    - **title**: Part VI, Ch 18 — Autonomy at Distance (the hinge, leg A)
+    - **path**: L8/L4/work/writing/book/ch18-…md
+    - **where**: ROADMAP
+    - **what_it_is**: RESEARCHING. Fed by AUTONOMY_AT_DISTANCE.md, DISTILLATION §4 and §[source text withheld from the public copy]), HUMINT-ENCODE H4 and H7, consolidated §2.8. Gate D13 ([source text withheld from the public copy]). Waits on a citator run [source text withheld from the public copy]"), and the COSPAR classification of 'return'.
+    - **evidence_state**: EMPTY (no chapter text). Research behind it: UNRESOLVED (space-sector standards not held; D13 unruled)
+    - **own_label**: "RESEARCHING"
+    - **checked_how**: Feed paths: 2 of 4 on MAIN (AUTONOMY_AT_DISTANCE.md and the consolidated document are ROADMAP only)
+    - **locator**: ROADMAP:RM:274-281
+    - **quote**: [source text withheld from the public copy])
+    - **depends_on**
+      - D13
+    - **key_claims**
+      - Labelled leg A but filed in Part VI, whose heading says leg B
+      - Next: "acquire ECSS/CCSDS; draft"
+    - **open_items**
+      - ECSS, CCSDS, COSPAR not held (standards register: "no coverage")
+  - item 13
+    - **id**: CH-PVI-19
+    - **title**: Part VI, Ch 19 — Evidence Before Explanation (first chapter of leg B; one of the two first drafting targets)
+    - **path**: L8/L4/work/writing/book/ch19-…md
+    - **where**: ROADMAP
+    - **what_it_is**: RESEARCHING (method) with every case number NOT-CHECKED. Fed by the prospectus §[source text withheld from the public copy] and its three-paragraph opening passage; the referee report's chapter blueprint and UAP evidence protocol; the Tic Tac propulsion adjudication; Block 50 (the intake form). Gates D1 and D21 in its header; D8 also names it in the decision table. Verify-before-drafting: NASA UAP IST 2023, [source text withheld from the public copy]. The prospectus's milestone makes this chapter and the source ledger the lock before any case or census conclusion.
+    - **evidence_state**: EMPTY (no chapter text). Research behind it: UNRESOLVED (two gates unruled; four verification sources NOT-CHECKED)
+    - **own_label**: "RESEARCHING (method) · every case number NOT-CHECKED"
+    - **checked_how**: Read the ch19 file (26 lines, "Not yet drafted."). Extracted the prospectus and referee text from the Office containers on MAIN and found the governing sentence (line 45), the opening passage heading (line 441) and the milestone (line 483). Feed paths: 2 of 4 on MAIN.
+    - **locator**: ROADMAP:RM:283-290; MAIN:L8/L4/work/writing/auditonomous-08-03-26.odt:§20-21 (extracted text line 483)
+    - **quote**: [source text withheld from the public copy]
+    - **depends_on**
+      - D1
+      - D8
+      - D21
+      - PRE-CH19-A
+      - PRE-CH19-B
+      - PRE-CH19-C
+      - PRE-CH19-D
+      - PRE-CH19-E
+    - **key_claims**
+      - The prospectus's milestone is "Chapters 1–4"; the roadmap folds those four into its one Ch 19
+      - [source text withheld from the public copy]."
+      - "[source text withheld from the public copy]" (RM:56)
+    - **open_items**
+      - D1, D21 (and D8) unruled
+      - All four verification sources unchecked; they need the network session of move 10, which the order of work places after this chapter's drafting (move 9)
+  - item 14
+    - **id**: CH-PVI-20-22
+    - **title**: Part VI, Ch 20 to 22 — [source text withheld from the public copy]
+    - **path**: L8/L4/work/writing/book/ch20-…md to ch22-…md
+    - **where**: ROADMAP
+    - **what_it_is**: Ch 20 (SPECULATION → CONJECTURE): Blocks 29, 30 §§I–V, 52; the contribution index Parts IV–V; the census sources dossier ("zero byte-verified"); the peer's autonomy scale; prospectus ch. 18; gates D1, D12. Ch 21 (CONJECTURE): Blocks 21, 22, 40, 42 and the deep-research run; no gate in its header though D1's row covers Ch 19–24; waits on EU AI Act text, NIST AI RMF and two located leads. Ch 22 (SPECULATION for the corpus's conjecture, RESEARCHING for the codified counterpart): Blocks 2, 14, 20, 30 §§VI–VII, 44 and a leads table that is in no repository; gate D1 (D12 in the table); the protocol literature is "located, unread".
+    - **evidence_state**: EMPTY (no chapter text). Research behind it: SPECULATION and CONJECTURE by the repository's own labels; every external number UNRESOLVED (unverified)
+    - **own_label**: Ch 20 "SPECULATION → CONJECTURE" · "every external number NOT-CHECKED"; Ch 22 "the protocol literature located, unread"
+    - **checked_how**: Feed paths: Ch 20 1 of 6 local on MAIN; Ch 21 1 of 5; Ch 22 0 of 5, plus `scratchpad/leads/LEADS.md`, which is in no tree
+    - **locator**: ROADMAP:RM:292-317; ROADMAP:RM:548
+    - **quote**: [source text withheld from the public copy])
+    - **depends_on**
+      - D1
+      - D12
+    - **key_claims**
+      - Census dossier: zero entries byte-verified
+      - Blocks 31–32 are cut: "the cut stands" (RM:295)
+      - IAA 1989 and 2010 declarations, Rio 2.0 and the 2022 revision to capture
+    - **open_items**
+      - D1, D12 unruled
+      - Census dossier re-fetch needs a network session
+      - Ch 22 cites a feed held nowhere
+  - item 15
+    - **id**: CH-PVI-23-24
+    - **title**: Part VI, Ch 23 and 24 — the four case laboratories (Roswell, Malmstrom, Phoenix Lights, Nimitz) and the intake form
+    - **path**: L8/L4/work/writing/book/ch23-…md, ch24-…md
+    - **where**: ROADMAP
+    - **what_it_is**: Both SPECULATION as evidence, RESEARCHING as method. Ch 23: prospectus ch. 14–15, §17, §19; the referee's Roswell assessment; Block 8 (as an example of narrative accretion only); Block 16 (the denial-lexicon method only); a history-only note holding the Malmstrom sentence; gates D1, D21; [source text withheld from the public copy]. Ch 24: prospectus ch. 16–17; the Tic Tac adjudication; Blocks 44, 45, 50; the external audit D1–D3; gates D1, D7, D19 (D21 in the table). Both wait on capture of the official documents: GAO 1995, AARO 2024 and the FY reports, ODNI 2021, the Navy's 2020 acknowledgement, NASA UAP IST 2023.
+    - **evidence_state**: EMPTY (no chapter text). Research behind it: SPECULATION as evidence by the repository's own label; official sources UNRESOLVED (none captured)
+    - **own_label**: "SPECULATION (as evidence) · RESEARCHING (as method)"
+    - **checked_how**: Feed paths: Ch 23 2 of 4 local on MAIN; Ch 24 1 of 6. Read the Tic Tac adjudication header and label table on ROADMAP; found the referee's secrecy sentence at extracted line 652.
+    - **locator**: ROADMAP:RM:319-335; ROADMAP:L8/L5/research/review/TICTAC_PROPULSION_ADJUDICATION.md:53
+    - **quote**: [source text withheld from the public copy]
+    - **depends_on**
+      - D1
+      - D7
+      - D19
+      - D21
+    - **key_claims**
+      - The 0.78 s descent figure comes from an unofficial 2004 report, "not an official DoD product"
+      - Phoenix "has a plan only"
+      - Referee: [source text withheld from the public copy]"
+    - **open_items**
+      - D1, D21 unruled
+      - No official document captured
+      - Reactive → Responsive propagation (D19)
+  - item 16
+    - **id**: CH-PVII
+    - **title**: Part VII — The reckoning (Ch 25 to 27)
+    - **path**: L8/L4/work/writing/book/ch25-…md to ch27-…md
+    - **where**: ROADMAP
+    - **what_it_is**: Ch 25 (CONJECTURE with VERIFIED components, leg A): DISTILLATION §3 and §5 and the perpetuity adjudication §7–9; gate D9; Dyson 1979 and Krauss & Starkman 2000 are leads to capture. Ch 26 (CONJECTURE, leg B): prospectus ch. 19–20 and §18–19, the referee's falsification conditions, Blocks 4 §V, 14 §VI, 15, 16, 23, 24; gate D1; the Denial Lexicon must first be compiled verbatim from primary sources. Ch 27 (RESEARCHING, both legs): the copyright sheet, the sources sheet, source requests SR-01 to SR-24, the walk-across §9, the standards register, the harmonization record; no gate; drafted last.
+    - **evidence_state**: EMPTY (no chapter text). Research behind it: CONJECTURE; the perpetuity theorem candidate is recorded dead
+    - **own_label**: Ch 25 "CONJECTURE (with VERIFIED components)"; Ch 26 "CONJECTURE (labelled [C] by the prospectus)"; Ch 27 "RESEARCHING"
+    - **checked_how**: Feed paths: Ch 25 2 of 2 on MAIN (the only chapter besides Ch 3 fully fed on MAIN); Ch 26 2 of 4; Ch 27 3 of 6
+    - **locator**: ROADMAP:RM:341-366; ROADMAP:RM:560
+    - **quote**: [source text withheld from the public copy]
+    - **depends_on**
+      - D1
+      - D9
+    - **key_claims**
+      - Ch 25 next: "draft; no ruling needed" although its gate line names D9
+      - Ch 26 [source text withheld from the public copy]"
+      - Ch 27 prints the acquisition debt as it stands at print
+    - **open_items**
+      - D1, D9 unruled
+      - Denial Lexicon (Appendix F) not compiled
+  - item 17
+    - **id**: BACK
+    - **title**: Back matter — Appendices A to I
+    - **path**: L8/L4/work/writing/book/00-front-matter.md (list only)
+    - **where**: ROADMAP
+    - **what_it_is**: Nine appendices are planned and none has a file: A the A1–A11 register by reference to the binding; B the two contradiction registers; C the autonomy scale; D the standards register; E the glossary; F the Denial Lexicon ("to compile"); G the Convergence File; H the instrument (UHA and OMMP); I the timeline and the companion volume's seam. Appendix B and H still cite git history paths for files the 14 September restore put back in the tree.
+    - **evidence_state**: EMPTY
+    - **own_label**: 
+    - **checked_how**: ls-tree of ROADMAP:L8/L4/work/writing/book/ shows 0.md, front matter, 27 chapter files, bibliography, build.sh and nothing else
+    - **locator**: ROADMAP:RM:368-380; ROADMAP:L8/L4/work/writing/book/00-front-matter.md:77-87
+    - **quote**: [source text withheld from the public copy]
+    - **depends_on**
+      - D1
+    - **open_items**
+      - Appendix I depends on D1 (companion volume)
+      - Appendix A is licence-gated
+  - item 18
+    - **id**: S0
+    - **title**: Step S0 — the scholarly pair (two papers)
+    - **path**: L8/L4/work/writing/papers/AUDITONOMOUS_VOCABULARY_PAPER_2026-09-14.md; autonomous: L8/L4/work/writing/papers/AUTONOMOUS_BASELINE_PAPER_2026-09-14.md
+    - **where**: ROADMAP (vocabulary paper); autonomous branch claude/scholarly-pair-baseline-k8ap82 9b49910 (baseline paper)
+    - **what_it_is**: Both papers were drafted on 2026-09-14. Neither is on a main branch: the vocabulary paper is on the closed PR #27 branch, the baseline paper on the closed PR #29 branch (it is on neither autonomous main nor autonomous beta). The step's gate, [source text withheld from the public copy], has not been met: no REVIEW_ record for either paper exists in any tree read.
+    - **evidence_state**: UNRESOLVED
+    - **own_label**: "[source text withheld from the public copy]"
+    - **checked_how**: grep of BASELINE in autonomous main and beta trees (0 hits each; 1 on the PR #29 branch); grep of REVIEW_ in ROADMAP tree (0) and in the PR #29 branch (only REVIEW_1 to 5, which predate the papers)
+    - **locator**: ROADMAP:RM:583
+    - **quote**: [source text withheld from the public copy]
+    - **depends_on**
+      - VP-0
+    - **key_claims**
+      - Drafting half done; owner's reading and the adversarial review not recorded
+      - The vocabulary paper has a wrong row in its claims table (row 16)
+    - **open_items**
+      - Owner reads both papers (move 1)
+      - Adversarial review of both (move 9)
+  - item 19
+    - **id**: S1
+    - **title**: Step S1 — the autonomous repository as a read-only exemplar
+    - **path**: autonomous: L7/governance/restrictions/0.md; L8/L6/history/exemplar-2026-09-14.md
+    - **where**: autonomous branch claude/scholarly-pair-baseline-k8ap82 only
+    - **what_it_is**: The declaration and its record exist on the PR #29 branch, which was closed unmerged and is an ancestor of neither autonomous main nor autonomous beta. The tag exemplar-2026-09-14 is not in the local clone. The declaration was filed at L7/governance/restrictions/, a position the model has since renamed: autonomous beta has L7/governance/controlled/ and no restrictions/.
+    - **evidence_state**: UNRESOLVED
+    - **own_label**: "[source text withheld from the public copy]" · gate "the owner's merge"
+    - **checked_how**: git merge-base --is-ancestor on the PR #29 branch; git tag -l (empty); ls-tree of L7/governance on the PR #29 branch and on autonomous beta
+    - **locator**: ROADMAP:RM:584; AUTONOMOUS-PR29:L8/L6/history/exemplar-2026-09-14.md:3
+    - **quote**: [source text withheld from the public copy]
+    - **key_claims**
+      - Not merged; no tag in the clone
+      - The declaration's path is stale against the model's rename to controlled
+    - **open_items**
+      - Whether branch protection exists on GitHub was not checked (no network use)
+      - Whether the exemplar declaration is still wanted now that a beta exemplar exists
+  - item 20
+    - **id**: S2
+    - **title**: Step S2 — the repository set up before research (the restore)
+    - **path**: L8/L6/history/restore-2026-09-14.md
+    - **where**: ROADMAP
+    - **what_it_is**: 116 files were returned from the pre-prune tree 1d83788 to model positions, with a record that lists a disposition for every path of that tree. It is the only step the roadmap marks plainly done. It exists on the closed branch only; MAIN and BETA have none of the restored files. D15 was treated as ruled by the owner's instruction of 14 September, not by a recorded ruling on D15 itself.
+    - **evidence_state**: INTERNALLY CHECKED
+    - **own_label**: "[source text withheld from the public copy]"
+    - **checked_how**: Tree sizes: ROADMAP 328 files, MAIN 169. Every local feed path of the roadmap resolves on ROADMAP (script). The restore record's integrity line read ("PASS, 86 sheets checked"); the checks themselves were not re-run.
+    - **locator**: ROADMAP:RM:585; ROADMAP:L8/L6/history/restore-2026-09-14.md:21
+    - **quote**: [source text withheld from the public copy]
+    - **depends_on**
+      - D15
+    - **key_claims**
+      - Prior pass found misfilings in the restore record (the owner's auditonomous.odt, Untitled 2.odt, the chapter-chunk answers)
+      - "121 left in history for stated reasons" (RM:626)
+    - **open_items**
+      - The restore predates the model's L7 restructure of 20 September and the 3 November guidance
+  - item 21
+    - **id**: S3
+    - **title**: Step S3 — peering and the model stable; the rebinding
+    - **path**: L7/peering/public/ingress/peer-1/object-1/0.md
+    - **where**: MAIN, ROADMAP, BETA
+    - **what_it_is**: The roadmap reported the model stable as of the 12 September specification and left the rebinding to the owner (D22). Since then the model changed twice (the L7 restructure of 20 September; the R1–R6 contracts and guidance sheets of 2 and 3 November), so the 'stable' finding no longer describes the present model. BETA keeps the binding at 0504961, pins it by full commit hash, blob and SHA-256, and says of the three files that took autonomous from elsewhere that they now carry dispositions; it does not adopt any D22 option by name.
+    - **evidence_state**: CONTRADICTED (the roadmap's 'stable now' against two later model changes and against BETA's 'no rebind')
+    - **own_label**: "[source text withheld from the public copy]"
+    - **checked_how**: git diff MAIN..BETA on the binding sheet; 7lm log for the dates of the model changes
+    - **locator**: ROADMAP:RM:586; BETA:L7/peering/public/ingress/peer-1/object-1/0.md:13
+    - **quote**: [source text withheld from the public copy]
+    - **depends_on**
+      - D22
+      - MODEL-2
+    - **key_claims**
+      - BETA: "Convenience location | `L8/L0/semantics/definitions/AUTONOMOUS.md`, byte-identical; historical object/path remain the binding"
+      - The fourth file (the restored sourcebook .md, line 96) is not on BETA at all
+      - Peer-3 hashes unpinned (roadmap)
+    - **open_items**
+      - D22 not ruled in words
+      - Peer-3 hashes
+  - item 22
+    - **id**: S4
+    - **title**: Step S4 — the chapters opened
+    - **path**: L8/L4/work/writing/book/
+    - **where**: ROADMAP
+    - **what_it_is**: Twenty-seven chapter files, a front matter file, a bibliography and a build script, added in one commit (b1ec302, 2026-09-14 01:48 UTC) and never touched since. See BOOK-TREE for their confirmed state.
+    - **evidence_state**: EMPTY
+    - **own_label**: "opened 2026-09-14" · "no chapter has text"
+    - **checked_how**: git log on the directory (one commit); last non-blank line of all 27 files
+    - **locator**: ROADMAP:RM:587
+    - **quote**: [source text withheld from the public copy]
+    - **depends_on**
+      - BOOK-TREE
+  - item 23
+    - **id**: S5
+    - **title**: Step S5 — clean component repositories
+    - **path**: RM §9 (survey table)
+    - **where**: ROADMAP
+    - **what_it_is**: Fifteen repositories of the organisation were surveyed from shallow clones on 14 September and none was on the model. The harmonization passes (ebc, eb-carrier, nua, una; then broken-zero, uha, ommp; then ebios, eb-audit) are moves 5 to 7 and wait on D23. Nothing was done beyond the survey. The survey is a reading of roots and READMEs only.
+    - **evidence_state**: UNRESOLVED
+    - **own_label**: "[source text withheld from the public copy])"
+    - **checked_how**: Read RM §9. The fifteen repositories are not among the local clones, so the survey itself could not be re-checked.
+    - **locator**: ROADMAP:RM:588; ROADMAP:RM:649-671
+    - **quote**: [source text withheld from the public copy]
+    - **depends_on**
+      - D23
+    - **key_claims**
+      - "[source text withheld from the public copy]"
+      - Open names: whether [source text withheld from the public copy]
+    - **open_items**
+      - D23 unruled
+      - The pattern to harmonize to has itself changed since the survey
+  - item 24
+    - **id**: S6
+    - **title**: Step S6 — write
+    - **path**: L8/L4/work/writing/book/
+    - **where**: ROADMAP
+    - **what_it_is**: Not begun. Its per-chapter gate is the chapter's feeds at HEAD [source text withheld from the public copy]; and [source text withheld from the public copy]. Its first act is move 9, the drafting of Chapters 2 and 19, after the adversarial review of the two papers. The estimate given is sixty to eighty working sessions.
+    - **evidence_state**: EMPTY
+    - **own_label**: "the writing not begun (S6)"
+    - **checked_how**: All 27 chapter files end "Not yet drafted."; no commit on any ref touches the book tree after b1ec302
+    - **locator**: ROADMAP:RM:589; ROADMAP:RM:603; ROADMAP:RM:645
+    - **quote**: [source text withheld from the public copy]).
+    - **depends_on**
+      - S0
+      - S1
+      - S3
+      - S5
+      - D1
+      - D21
+    - **key_claims**
+      - The 'feeds at HEAD' condition is "[source text withheld from the public copy]" on ROADMAP only; on MAIN 73 of 133 feed citations do not resolve
+      - "[source text withheld from the public copy]."
+    - **open_items**
+      - Every prerequisite listed under PRE-*
+  - item 25
+    - **id**: D-STRUCT
+    - **title**: Decisions on the book's shape and first-contact material: D1, D8, D12, D21
+    - **path**: RM §7
+    - **where**: ROADMAP
+    - **what_it_is**: D1: one academic book with the scenario narrative in a companion volume, or the narrative kept as case files, or two books; blocks Ch 19–24, 26 and Appendix I. D8: where [source text withheld from the public copy] go after the Block 36 cut; blocks Ch 1 and 19. D12: whether the Autonomous Theory files are a source for Part VI; blocks Ch 20 and 22. D21: the prospectus's four case laboratories or the TOC's three case files; blocks Ch 23 and 24. All four unruled. The owner's ruling of 14 August ("scholarly only") bears on D1 and is cited nowhere in the roadmap; it survives only in history.
+    - **evidence_state**: UNRESOLVED
+    - **own_label**: "Nothing below is adopted."
+    - **checked_how**: Read RM:612, 619, 623, 633; found the 14 August ruling at HISTORY:HUB_LEDGER.md:49
+    - **locator**: ROADMAP:RM:612; HISTORY:HUB_LEDGER.md:49
+    - **quote**: [source text withheld from the public copy];
+    - **key_claims**
+      - Roadmap recommends D1(a), D8 worked example in Ch 19, D12 out as a source, D21 the four laboratories
+      - D1 notes [source text withheld from the public copy] severed, which are the instrument blocks: "Reported, not silently fixed."
+      - Move 3: "[source text withheld from the public copy]"
+    - **open_items**
+      - Whether the 14 August ruling already answers D1, and how it squares with the 13 September instruction for a book on "auditbonomy and first contact"
+  - item 26
+    - **id**: D-DEF
+    - **title**: Decisions on the definition: D3, D4, D5, D6, D13, D20
+    - **path**: RM §7
+    - **where**: ROADMAP
+    - **what_it_is**: D3: [source text withheld from the public copy]); blocks Ch 8. D4: the pending edit to line 52 of the definition entry ("NOT audited-after-the-fact"); blocks Ch 7 and 8. D5: whether Q9 ("autonomous assumes state, auditonomous checks state") becomes the definitional key; blocks [source text withheld from the public copy] author's own work counted as independent; blocks Ch 10 and 17. D13: the [source text withheld from the public copy]; blocks Ch 8 and 18. D20: which of three framings of auditonomy governs; blocks Ch 7 and 12. All unruled.
+    - **evidence_state**: UNRESOLVED (D4 and D6 rest on internal contradictions the repository records itself)
+    - **own_label**: D6: "'[source text withheld from the public copy])"
+    - **checked_how**: Read RM:614-617, 624, 630. Confirmed DEF:52 text on ROADMAP and the opposing verdict at AUTONOMOUS_vs_AUDITONOMOUS_CYCLES.md:136.
+    - **locator**: ROADMAP:RM:614-617; ROADMAP:L8/L5/research/review/AUTONOMOUS_vs_AUDITONOMOUS_CYCLES.md:136
+    - **quote**: **([source text withheld from the public copy]
+    - **key_claims**
+      - D20's text carries the wrong statement that no Aud(S,F) predicate occurs in the sourcebook
+      - Roadmap recommends applying D4 by version, keeping Q9 as discourse, disclosing and replacing the fourth derivation
+    - **open_items**
+      - D20 must be re-read against sourcebook line 116 before it is ruled
+  - item 27
+    - **id**: D-ENG
+    - **title**: Decisions on the engineering and formal material: D7, D9, D10, D11, D14, D18, D19
+    - **path**: RM §7
+    - **where**: ROADMAP
+    - **what_it_is**: D7: record-and-flag against non-formation (Block 46 against Block 50); blocks Ch 17, 24. D9: where the reconstitution counter-thesis (Blocks 37–38) goes; blocks Ch 25. D10: trace-before-release (EB:233) against the pure one-way carrier; blocks Ch 9, 14. D11: enclosure regime λ = 1 or λ = 0; blocks Ch 15, 16. D14: three file splits and the registrations at L2; blocks Ch 12, 13, 15. D18: eight or twelve compartments; blocks Ch 12. D19: propagate Reactive → Responsive and the Block 51 mis-attribution; blocks Ch 17, 24. All unruled.
+    - **evidence_state**: UNRESOLVED
+    - **own_label**: D11: "The external check settles the mathematics"
+    - **checked_how**: Read RM:618, 620-622, 625, 628-629; confirmed the envelope's two counts at ROADMAP:L8/L1/state-space/AUDITON_ENVELOPE.md:137-144
+    - **locator**: ROADMAP:RM:618-629
+    - **quote**: [source text withheld from the public copy])
+    - **key_claims**
+      - D18: both counts are right; the owner only says which number the book prints
+      - D10: "[source text withheld from the public copy]"
+      - Move 8 (L2 registration) precedes the first drafting in the order of work
+    - **open_items**
+      - L2 ledger still empty on MAIN and ROADMAP
+  - item 28
+    - **id**: D-PRESS
+    - **title**: Decisions on title and press: D2, D16
+    - **path**: RM §7
+    - **where**: ROADMAP
+    - **what_it_is**: D2: title, three [source text withheld from the public copy]; Auditonomous Theory; Auditon); blocks the front matter and the press proposal. D16: the press and series, which [source text withheld from the public copy]. Neither blocks the first drafting step. Both unruled.
+    - **evidence_state**: UNRESOLVED
+    - **own_label**: D2 recommendation: "[source text withheld from the public copy]"
+    - **checked_how**: Read RM:613, 627 and the front matter file lines 3-7
+    - **locator**: ROADMAP:RM:613; ROADMAP:RM:627
+    - **quote**: [source text withheld from the public copy]
+    - **key_claims**
+      - Done-condition [source text withheld from the public copy]."
+  - item 29
+    - **id**: D15
+    - **title**: Decision D15 — restore from history (the only decision treated as ruled)
+    - **path**: RM §7
+    - **where**: ROADMAP
+    - **what_it_is**: Whether the cited-but-absent files return to the tree. Treated as ruled by the owner's 14 September [source text withheld from the public copy], and executed as step S2. The roadmap records that reversal is the owner's. It blocked every chapter that cited history; after the restore, three feeds and one scratchpad table remain outside the tree.
+    - **evidence_state**: ASSERTED (taken as ruled by inference from an instruction, not by a ruling that names D15)
+    - **own_label**: "[source text withheld from the public copy]"
+    - **checked_how**: Read RM:626 and the instruction as quoted at RM:643
+    - **locator**: ROADMAP:RM:626
+    - **quote**: [source text withheld from the public copy].
+    - **key_claims**
+      - The restore exists only on the closed branch, so on MAIN D15 has no effect
+  - item 30
+    - **id**: D-BUILD
+    - **title**: Decisions added 14 September: D22 (rebind) and D23 (component repositories)
+    - **path**: RM §7
+    - **where**: ROADMAP
+    - **what_it_is**: D22: bind the definition of autonomous to c9076c3, or [source text withheld from the public copy] created, or keep 0504961; blocks Ch 3 and 4, the vocabulary paper §2 and step S3. D23: harmonize each existing component repository, or create new clean ones, or fold the components in; blocks Ch 6, 9, 14–17 and step S5. Both unruled. Move 3 puts them before any drafting. BETA's commit keeps 0504961 and adds a byte-identical 'convenience location', which matches D22's third option in effect without naming D22.
+    - **evidence_state**: UNRESOLVED
+    - **own_label**: "D22 and D23 are the owner's."
+    - **checked_how**: Read RM:631-632, 597; BETA binding sheet diff
+    - **locator**: ROADMAP:RM:631-632; BETA:L7/provenance/sources/LEDGER.md (row AUT-SOURCE-001)
+    - **quote**: [source text withheld from the public copy].
+    - **key_claims**
+      - The owner's words for D23: "[source text withheld from the public copy]"
+      - Chapter headers were not re-gated when D22 and D23 were added
+    - **open_items**
+      - Whether BETA's 'no rebind' is the owner's ruling on D22
+  - item 31
+    - **id**: BOOK-TREE
+    - **title**: The book source tree: sheet, front matter, 27 chapter files, bibliography, build script
+    - **path**: L8/L4/work/writing/book/
+    - **where**: ROADMAP
+    - **what_it_is**: Confirmed state. The sheet says no chapter carries text. The front matter is title candidates, the epigraph, the thesis sentence, the method rule, the two legs, a table of contents and the appendix list. Each of the 27 chapter files is 24 to 29 lines: the roadmap's header for that chapter and a Text section reading "Not yet drafted." The bibliography has no entry and states the rule an entry must meet. The build script is an eight-line pandoc call, never run. One commit, never edited. The files are generated from the roadmap's data by a script that was kept in a session scratchpad and is not in the repository.
+    - **evidence_state**: EMPTY
+    - **own_label**: "No chapter carries text yet; the headers are the built positions the text goes into."
+    - **checked_how**: Read 0.md, 00-front-matter.md, bibliography.md, build.sh, ch02, ch08, ch19 in full; printed line count and last line of all 27 chapter files; git log on the directory
+    - **locator**: ROADMAP:L8/L4/work/writing/book/0.md:8; ROADMAP:L8/L4/work/writing/book/bibliography.md:3; ROADMAP:L8/L4/work/writing/book/build.sh:3
+    - **quote**: [source text withheld from the public copy]
+    - **key_claims**
+      - build.sh: "Not run in the environment that wrote it (pandoc absent there)"
+      - Sheet: "regeneration would overwrite hand edits, so it is not to be re-run once a chapter has text"
+      - Five chapter files say "What exists now: drafted (…)" a few lines above "Not yet drafted."
+    - **open_items**
+      - The generating script and data file are not in the repository
+  - item 32
+    - **id**: VP-0
+    - **title**: The vocabulary paper and its seventeen-row claims table
+    - **path**: L8/L4/work/writing/papers/AUDITONOMOUS_VOCABULARY_PAPER_2026-09-14.md
+    - **where**: ROADMAP
+    - **what_it_is**: A 316-line draft that fixes auditonomous, auditonomy, auditon and HUMINT-ENCODE as quoted strings with locators and labels, lists fourteen contradictions it carries, ten things it does not establish, and a claims table of seventeen rows. No external source was fetched for it. I checked each row I could against the file it cites. Fourteen rows hold as labelled or as recorded; row 16 is wrong; row 3 has a wrong line reference; row 6's label is stronger than its cited source.
+    - **evidence_state**: CONTRADICTED (row 16 by the sourcebook; row 6 by its own cited section); otherwise INTERNALLY CHECKED
+    - **own_label**: "DRAFT of 2026-09-14 · INTERNAL ONLY" … "Not adversarially reviewed. Nothing released."
+    - **checked_how**: Read lines 1-50 and 148-316; checked rows against git objects on ROADMAP and autonomous c9076c3 by grep, sed and md5 of the quoted lines; ran a string search over the eleven definition cells
+    - **locator**: ROADMAP:L8/L4/work/writing/papers/AUDITONOMOUS_VOCABULARY_PAPER_2026-09-14.md:286-306 (§11)
+    - **quote**: | [source text withheld from the public copy] | — |
+    - **key_claims**
+      - Row 1 (coinage, first attested 2025-10-21 at c8c8aca; family 2025-10-20 at cd24b10; INTERNAL ONLY): matches the entry at lines 36, 61, 87. The two commits are not objects in this clone, so the dates rest on the entry alone.
+      - Row 2 (three senses, unreconciled, collaboration-mode first; INTERNAL ONLY): the entry lists three senses, but its note says only "Senses 1 and 2 are never reconciled". Slightly overstated.
+      - Row 3 (constitutional sentence at [source text withheld from the public copy]): identity confirmed by md5 for ARCH:37 and TOC:12 and for Block 3 line 1. Line 10 of Block 3 is "**II. The permissions triad**". Locator wrong.
+      - Row [source text withheld from the public copy] the entry, the embodied manuscript and the ebios draft; NEGATIVE FINDING): confirmed, count 0 in all three on ROADMAP.
+      - Row 5 (canonical definition of auditonomy is the term entry §0, v2 of 2026-08-05; CONJECTURE): confirmed at AUDITONOMY.md:3-4.
+      - Row [source text withheld from the public copy] control; composition unverified): overstated. The term entry's row B reads "[source text withheld from the public copy]`)" and row A "hardware root". Rump is verified in a later record; Warmus 1956 appears in no check I found.
+      - Row 7 (λ = 1 is Rump 1999; λ = 0 exact for sign-definite operands; VERIFIED from outside): matches the recorded external check at lines 213-214.
+      - Row 8 (thesis sentence at sourcebook line 173; auditonomy is the (Q) component): quote confirmed at line 173 and (Q) at line 90. Incomplete: the same sourcebook also states the Aud(S,F) predicate at line 116.
+      - Row 9 (twelve compartments, eight envelope-supplied): confirmed at envelope lines 137-144.
+      - Row 10 (one-parameter architecture): confirmed at envelope line 102. The 'three blockers VERIFIED' part not checked.
+      - Row [source text withheld from the public copy])): the quotation stands at replicator lines 488-489 as a quote of the standard; the standard itself was not opened.
+      - Row [source text withheld from the public copy]): the peer's finding says "[source text withheld from the public copy]." The bound object now has eleven rows; the count is of ten.
+      - Row 13 (thirteen criteria, no combination rule): heading confirmed, consolidated document §[source text withheld from the public copy]".
+      - Row 14 (DEF:52 pending edit; opposite verdicts on post hoc audit): both lines confirmed.
+      - Row 15 (binding at 0504961; the peer's review blocks its gate): binding confirmed on MAIN; REVIEW_4 exists at the peer.
+      - Row 16 (no Aud(S,F) in the sourcebook or the spine): WRONG for the sourcebook, which has "\operatorname{Aud}(S,F)" at line 116. True for the spine.
+      - Row 17 (none of the eleven definitions contains record, audit, log, trace or account): confirmed by string search over rows A1–A11 at autonomous c9076c3.
+    - **open_items**
+      - Adversarial review not held
+      - The paper says its L5 meaning "is not yet anywhere but here"
+  - item 33
+    - **id**: VP-16
+    - **title**: Claims-table row 16 is wrong: the sourcebook does state Aud(S,F)
+    - **path**: L8/L4/work/writing/sourcebook/Auditonomous_Book_Material_Sourcebook_v0.1.md
+    - **where**: ROADMAP
+    - **what_it_is**: The paper's 'verified' negative finding says no predicate Aud(S,F) occurs in the sourcebook. The sourcebook's section 4 gives exactly that predicate as "a compact formalization", in LaTeX, as Aud(S,F) if and only if Aut(S,F) and five conditions I, B, L, N, V. A literal search for the text Aud(S,F) misses it because the LaTeX reads \operatorname{Aud}(S,F). The roadmap's 14 September 'correction' to D20 and its §9 repeat the error, so D20 now misdescribes the standards-indexed framing it asks the owner to choose.
+    - **evidence_state**: CONTRADICTED
+    - **own_label**: "NEGATIVE FINDING, VERIFIED (grep, 2026-09-14)"
+    - **checked_how**: git grep -n -F 'Aud(' on ROADMAP over the sourcebook directory and the spine: one hit, sourcebook line 116; read lines 111-128
+    - **locator**: ROADMAP:L8/L4/work/writing/sourcebook/Auditonomous_Book_Material_Sourcebook_v0.1.md:116
+    - **quote**: \operatorname{Aud}(S,F)
+    - **depends_on**
+      - D20
+    - **key_claims**
+      - Sourcebook line 111: "[source text withheld from the public copy]."
+      - Repeated at ROADMAP:RM:630 and RM:647 and in the paper's §5.2 and §13
+    - **open_items**
+      - Correct row 16, the paper §5.2, RM D20 and RM §9 correction (1) in the open, the wrong version kept visible
+  - item 34
+    - **id**: OBJ-CORPUS
+    - **title**: Manuscript object: the 52-block corpus
+    - **path**: L8/L4/work/writing/manuscript/Block_01… to Block_52….md
+    - **where**: ROADMAP; HISTORY (intake/manuscript/); absent from MAIN and BETA
+    - **what_it_is**: The author's block files, 48 with text and four (31, 32, 35, 36) eight-byte 'Skipped.' markers. On ROADMAP it sits in the writing position as written work, which agrees with the guidance that the manuscript and its source live at L8/L4/work/writing/. On MAIN and BETA the corpus is in no position at all: it is reachable only through git history, which is neither the L4 home nor the L6 retention the guidance asks for.
+    - **evidence_state**: ASSERTED (author text); position INTERNALLY CHECKED
+    - **own_label**: "the theory manuscript as written"; scenario chapters "are fiction and carry CONJECTURE for their premises"
+    - **checked_how**: ls-tree with sizes on ROADMAP; blob id of Block_03 equal on ROADMAP and HISTORY; absence on MAIN and BETA from the tree lists
+    - **locator**: ROADMAP:L8/L4/work/writing/manuscript/0.md:8
+    - **quote**: Fifty-two block files, `Block_01` … `Block_52` (four of them — 31, 32, 35, 36 — marked skipped: cut by the author)
+    - **key_claims**
+      - Agrees with 7LM-BETA:L8/L4/work/writing/0.md:14 on ROADMAP
+      - Does not meet 7LM-BETA:L8/L6/0.md:10 on MAIN or BETA
+    - **open_items**
+      - PR #27 unmerged
+  - item 35
+    - **id**: OBJ-ARCHIVE
+    - **title**: Manuscript object: the Master Archive
+    - **path**: L8/L4/work/writing/manuscript/Auditonomous_Theory_Master_Archive.md
+    - **where**: ROADMAP; HISTORY; absent from MAIN and BETA
+    - **what_it_is**: The blocks in one 152 KB file, whose line numbers the rest of the repository cites as ARCH:. Position on ROADMAP agrees with the guidance (written work at L4). It was never edited after 2 August and, per the prior pass, still maps the four cut blocks to chapters while the table of contents says they are cut. On MAIN and BETA every ARCH: citation points at a file that is not there.
+    - **evidence_state**: CONTRADICTED (against the table of contents on the four cut blocks, per the prior pass); position INTERNALLY CHECKED
+    - **own_label**: "the archive of the blocks in one file; the `ARCH:` line references across the repository resolve here"
+    - **checked_how**: Confirmed ARCH:37 holds the constitutional sentence (md5 equal to TOC:12). The cut-block disagreement is taken from the prior pass and not re-read.
+    - **locator**: ROADMAP:L8/L4/work/writing/manuscript/Auditonomous_Theory_Master_Archive.md:37
+    - **quote**: [source text withheld from the public copy].
+    - **open_items**
+      - Which document governs the four cut blocks
+  - item 36
+    - **id**: OBJ-TOC
+    - **title**: Manuscript object: the 18-chapter table of contents
+    - **path**: L8/L4/work/writing/manuscript/Auditonomous_Theory_TOC.md
+    - **where**: ROADMAP; HISTORY; absent from MAIN and BETA
+    - **what_it_is**: The author's table of contents of 2 August (edited 4 August): five parts, eighteen chapters, a status note per chapter. It is filed beside the blocks in the writing position. As a structure for the book it is also 'manuscript argument', which the guidance places at L5; the roadmap at L5 cites it as one of six prior structures, so its argument is addressable there. Position defensible.
+    - **evidence_state**: ASSERTED; position INTERNALLY CHECKED
+    - **own_label**: "the author's table of contents (2026-08-02)"
+    - **checked_how**: ls-tree; line 12 read (constitutional sentence); the roadmap's table of prior structures at RM:17
+    - **locator**: ROADMAP:L8/L4/work/writing/manuscript/Auditonomous_Theory_TOC.md:12; ROADMAP:RM:17
+    - **quote**: [source text withheld from the public copy]
+    - **key_claims**
+      - The sheet dates it 2 August; the cut wording is of 4 August (prior pass)
+  - item 37
+    - **id**: OBJ-PROSPECTUS
+    - **title**: Manuscript object: the prospectus
+    - **path**: L8/L4/work/writing/auditonomous-08-03-26.odt
+    - **where**: MAIN, ROADMAP, BETA
+    - **what_it_is**: A model-written 'Book Prospectus v0.1' of 3 August (about 10,600 words extracted): five parts, twenty chapters, a claim protocol, a case-chapter workflow, a three-paragraph opening passage. It is a produced document, so the writing position agrees with the guidance. What does not agree is the label: every sheet calls it one of three "live drafts", and it is a plan, not a draft of the book. It feeds Ch 1, 19, 20, 23, 24 and 26.
+    - **evidence_state**: ASSERTED
+    - **own_label**: "the live drafts (\"[source text withheld from the public copy]\")"
+    - **checked_how**: Extracted content.xml with python3 -I; found the governing sentence, the concealment rule, the opening passage heading and the milestone
+    - **locator**: MAIN:L8/L4/work/writing/0.md:33; MAIN:L8/L4/work/writing/auditonomous-08-03-26.odt (extracted text lines 45, 426, 441, 483)
+    - **quote**: [source text withheld from the public copy].
+    - **key_claims**
+      - Position agrees (7LM-BETA:L8/L4/0.md:10); label does not describe it
+  - item 38
+    - **id**: OBJ-REFEREE
+    - **title**: Manuscript object: the referee report
+    - **path**: L8/L4/work/writing/auditonomouos-important.docx
+    - **where**: MAIN, ROADMAP, BETA
+    - **what_it_is**: "Auditonomy: Adversarial Scientific Assessment and Research Blueprint", search date 3 August 2026, about 6,800 words extracted, with fourteen research tasks none of which has a follow-up. As a produced file the writing position is allowed. Its content is criticism and qualification, which the guidance places at L5 research/review; on MAIN and BETA nothing at L5 carries its verdicts or tasks, so its qualification is not addressable where the model says. On ROADMAP the roadmap cites it. Also labelled a "live draft".
+    - **evidence_state**: EXTERNALLY CHECKED in its own terms (a search-based assessment), with its own limit stated; its tasks UNRESOLVED
+    - **own_label**: "[source text withheld from the public copy]"
+    - **checked_how**: Extracted word/document.xml with python3 -I; found the search date (line 13), "[source text withheld from the public copy]" (line 40) and the secrecy sentence (line 652)
+    - **locator**: MAIN:L8/L4/work/writing/auditonomouos-important.docx (extracted text lines 13, 40, 652)
+    - **quote**: [source text withheld from the public copy]
+    - **key_claims**
+      - Position partly agrees: file at L4 is allowed; its review meaning is missing from L5 on MAIN and BETA (7LM-BETA:L8/L5/0.md:10)
+      - Prior pass: "not a completed systematic review"; fourteen tasks with no follow-up
+    - **open_items**
+      - An L5 review record of its verdicts and the state of its fourteen tasks
+  - item 39
+    - **id**: OBJ-SOURCEBOOK
+    - **title**: Manuscript object: the sourcebook
+    - **path**: L8/L4/work/writing/auditnomous-main.docx; L8/L4/work/writing/sourcebook/
+    - **where**: MAIN and BETA (the .docx re-save only); ROADMAP (re-save plus .md, CSV ledger, JSON manifest)
+    - **what_it_is**: The 'Auditonomous Book Material Sourcebook' v0.1 of 6 August, an extraction corpus that says of itself it is not a final manuscript. It holds two 'Manuscript-ready' definitions (lines 94, 134), the thesis sentence (line 173), the Aud(S,F) predicate (line 116), the contradiction-register method (Part VI) with an authorial correction withdrawing its seed findings, a coverage ledger and ten items of work remaining. Position as document-production material agrees with the guidance. On MAIN and BETA only the Office re-save exists and it carries the "live draft" label.
+    - **evidence_state**: ASSERTED (extraction); its definitions UNRESOLVED (unratified)
+    - **own_label**: "[source text withheld from the public copy]."
+    - **checked_how**: Read lines 10, 92-128, 170-175, 1287-1345, 2252 of the .md on ROADMAP; the .docx was not re-extracted (the prior pass found it text-identical)
+    - **locator**: ROADMAP:L8/L4/work/writing/sourcebook/Auditonomous_Book_Material_Sourcebook_v0.1.md:10; :2252
+    - **quote**: [source text withheld from the public copy];
+    - **key_claims**
+      - Its 'Manuscript-ready' definition of autonomous (line 96) is the fourth place that takes autonomous from outside the binding
+      - Part VI: "[source text withheld from the public copy]."
+    - **open_items**
+      - Which definition and thesis sentence is ratified
+  - item 40
+    - **id**: OBJ-CHAT
+    - **title**: Manuscript object: the chat-history volumes
+    - **path**: L8/L4/work/writing/chat/
+    - **where**: MAIN and BETA (volumes I and II); ROADMAP (I, II and III)
+    - **what_it_is**: Three 'Chat History Ingestion' volumes; MAIN's sheet calls the two it holds "recorded working sessions". They are inputs to the writing, which the model's writing sheet allows at L4 ("inputs, conditions, transformations, and rework"). Volume I feeds Ch 9 and 14; volume II feeds Ch 17. Position agrees; volume III is missing from MAIN and BETA.
+    - **evidence_state**: ASSERTED
+    - **own_label**: "two recorded working sessions as produced" … "recorded conversation, not argument"
+    - **checked_how**: ls-tree with sizes on the three refs; contents not re-read (prior pass read them)
+    - **locator**: MAIN:L8/L4/work/writing/0.md:34; ROADMAP:L8/L4/work/writing/chat/auditonoomous-chat-3.docx
+    - **quote**: two recorded working sessions as produced (`auditonomous-chat-1.docx`, `auditonomouos-chat-2.docx`); recorded conversation, not argument.
+    - **key_claims**
+      - All three leave the λ_A definition open (CH-01), per the prior pass
+  - item 41
+    - **id**: OBJ-SPINE
+    - **title**: Manuscript object: the spine (42 chapter titles)
+    - **path**: L8/L5/research/review/SPINE_v0.1_2026-08-14.md
+    - **where**: ROADMAP; HISTORY (manuscripts/); absent from MAIN and BETA
+    - **what_it_is**: Chapter titles only, with the premise-bound material severed to an appendix. On ROADMAP it is filed in the L5 catch-all. A book structure is 'manuscript argument', which the guidance places at L5, so the layer agrees. Within L5 the model reserves research/review/ for "criticism and qualification"; the placement rests on the owner's local rule of 6 September that review works as a catch-all.
+    - **evidence_state**: ASSERTED; position INTERNALLY CHECKED
+    - **own_label**: "chapter titles only · INTERNALLY DERIVED synthesis" (as the prior pass quoted it)
+    - **checked_how**: Tree listing; grep for Aud( in the spine (no hit, 17 lines contain 'Aud'); not re-read otherwise
+    - **locator**: ROADMAP:L8/L5/research/review/SPINE_v0.1_2026-08-14.md
+    - **quote**: [source text withheld from the public copy]
+    - **key_claims**
+      - Layer agrees (7LM-BETA:L8/L5/0.md:10); sub-position rests on the local catch-all rule
+  - item 42
+    - **id**: OBJ-ROADMAP
+    - **title**: Manuscript object: the roadmap
+    - **path**: L8/L5/research/review/BOOK_STRUCTURE_AND_ROADMAP_2026-09-13.md
+    - **where**: ROADMAP only
+    - **what_it_is**: The book's argument structure and work plan, filed at L5 in the catch-all. The layer agrees with the guidance that the manuscript's argument and claim qualification are addressed at L5. It names the release position as L7/publications/, which the model now places at L7/allications/publications/. Its per-chapter content is repeated in the 27 chapter files at L4.
+    - **evidence_state**: ASSERTED; position INTERNALLY CHECKED
+    - **own_label**: "[source text withheld from the public copy]"
+    - **checked_how**: Read in full; path strings L7/publications/ at RM:40 and RM:589 compared with 7LM-BETA:L8/0.md:22
+    - **locator**: ROADMAP:RM:3; ROADMAP:RM:40
+    - **quote**: [source text withheld from the public copy])
+    - **key_claims**
+      - Layer agrees; the release path it names is one model version behind
+  - item 43
+    - **id**: OBJ-CHAPTERS
+    - **title**: Manuscript object: the 27 chapter files
+    - **path**: L8/L4/work/writing/book/
+    - **where**: ROADMAP only
+    - **what_it_is**: The intended home of the manuscript text, and under the guidance the right one. Two things sit less well. Each file's header is a copy of that chapter's L5 roadmap entry (feeds, label, gates, verify, done, next), where the guidance says to cite the L5 argument and not duplicate it. And the sheet names the release position as L7/publications/. No text exists, so nothing has yet been misplaced.
+    - **evidence_state**: EMPTY
+    - **own_label**: "*Not yet drafted.*"
+    - **checked_how**: Read three chapter files in full and the tail of all 27; compared header lines with RM §2
+    - **locator**: ROADMAP:L8/L4/work/writing/book/ch02-contradictions-are-findings-verbatim-collision-registers-as-a-reproducible-method.md:5; :26
+    - **quote**: [source text withheld from the public copy].
+    - **key_claims**
+      - Position agrees (7LM-BETA:L8/L4/work/writing/0.md:14)
+      - Header duplication is in tension with 7LM-BETA:L8/0.md:22 ("Refer to the relevant representations rather than duplicating")
+    - **open_items**
+      - Whether headers stay as copies or become pointers to the L5 record
+  - item 44
+    - **id**: OBJ-VOCAB
+    - **title**: Manuscript object: the vocabulary paper (placement)
+    - **path**: L8/L4/work/writing/papers/AUDITONOMOUS_VOCABULARY_PAPER_2026-09-14.md
+    - **where**: ROADMAP only
+    - **what_it_is**: Filed as produced writing in a papers directory beside the book tree, which agrees with the guidance. Its claim qualification (the claims table, the list of what it does not establish) lives inside the paper and nowhere at L5; the paper says so itself. The guidance asks for that qualification to be addressable at L5, and the roadmap asks for a REVIEW_ record there. Neither exists.
+    - **evidence_state**: UNRESOLVED (no L5 review); position INTERNALLY CHECKED
+    - **own_label**: "[source text withheld from the public copy]."
+    - **checked_how**: Read the papers sheet and the paper's §13; searched the ROADMAP tree for REVIEW_ (none)
+    - **locator**: ROADMAP:L8/L4/work/writing/papers/AUDITONOMOUS_VOCABULARY_PAPER_2026-09-14.md:316
+    - **quote**: [source text withheld from the public copy].
+    - **depends_on**
+      - VP-0
+      - S0
+    - **key_claims**
+      - File position agrees; its L5 half is missing (7LM-BETA:L8/L4/0.md:12)
+  - item 45
+    - **id**: OBJ-PROMPTS
+    - **title**: Manuscript object: the prompts
+    - **path**: L8/L4/work/writing/prompts/
+    - **where**: ROADMAP (three files); HISTORY (the Deep Research Pro Prompt v1.0, not restored); absent from MAIN and BETA
+    - **what_it_is**: Three prompts under which the sourcebook and the λ documentation were produced (the extraction-verification prompt v2 and two λ explainer prompts). As document-production inputs the writing position agrees with the guidance. The prompt that produced the prospectus and the referee report, the owner's 6,312-word Deep Research Pro Prompt v1.0, is in history only, so the production of the two documents MAIN calls live drafts is not traceable from any branch tip.
+    - **evidence_state**: ASSERTED; position INTERNALLY CHECKED
+    - **own_label**: "the prompts under which the sourcebook and the λ documentation were produced"
+    - **checked_how**: ls-tree of the prompts directory on ROADMAP; the history-only prompt is taken from the prior pass
+    - **locator**: ROADMAP:L8/L4/work/writing/0.md:40
+    - **quote**: `prompts/` — the prompts under which the sourcebook and the λ documentation were produced. See its sheet.
+    - **key_claims**
+      - Agrees with 7LM-BETA:L8/L4/work/writing/0.md:10 (inputs that make production traceable)
+    - **open_items**
+      - Whether the Deep Research Pro Prompt v1.0 returns
+  - item 46
+    - **id**: OBJ-HISTORY-RELEASE
+    - **title**: The manuscript's history and its released version, as positions
+    - **path**: L8/L6/history/; L8/L6/retired/; L7/publications/ or L7/allications/publications/
+    - **where**: MAIN, ROADMAP, BETA
+    - **what_it_is**: Released version: nothing has been released on any branch; the position is L7/publications/ on MAIN and ROADMAP and L7/allications/publications/ on BETA, the model's present name. History: MAIN's L6 ledger still describes a LaTeX stub and 'live drafts'; ROADMAP adds the restore record and keeps the consolidated defining document under L6/retired while seven chapters cite it as a live feed. The owner's first three files, the working draft auditonomous.odt, the six-chapter plan and the 14 August 'scholarly only' ruling are at no branch tip, so the guidance's 'prior … drafts, failed paths, corrections' are not retained in any tree.
+    - **evidence_state**: EMPTY (release); UNRESOLVED (history retention)
+    - **own_label**: MAIN:L8/L6/history/LEDGER.md:37 "`[source text withheld from the public copy]."
+    - **checked_how**: ls-tree of L7 publications on the three refs; read MAIN ledger lines 30-38; feed list shows the consolidated document cited by Ch 1, 2, 7, 8, 11, 18 and Appendix B
+    - **locator**: MAIN:L8/L6/history/LEDGER.md:37; ROADMAP:L8/L6/retired/consolidated-2026-08-04/AUDITONOMOUS.md:1
+    - **quote**: `[source text withheld from the public copy].
+    - **key_claims**
+      - Release position agrees with the model on BETA only
+      - History retention does not meet 7LM-BETA:L8/L6/0.md:10 on any ref for the owner's own early files
+    - **open_items**
+      - Whether a document under L6/retired may be a live chapter feed
+  - item 47
+    - **id**: PRE-ORDER
+    - **title**: Prerequisite: the moves the roadmap places before the first drafting step
+    - **path**: RM §6 (the first ten moves)
+    - **where**: ROADMAP
+    - **what_it_is**: By the roadmap's own order, drafting Chapters 2 and 19 is the second half of move 9. Before it stand: (1) the owner reads both papers; (2) the owner merges the autonomous pull request, creates the tag and protects main; (3) the owner rules D22 and D23; (4) the session writes the new binding record; (5–7) eight component repositories are harmonized; (8) the L2 objects are registered; (9, first half) both papers are adversarially reviewed. None of the nine is recorded as done on any ref. Move 10, the network session that the verification needs, comes after.
+    - **evidence_state**: UNRESOLVED
+    - **own_label**: "[source text withheld from the public copy]."
+    - **checked_how**: Read RM:593-604; checked each move's trace: no merge of PR #29's branch, no tag in the clone, no ruling record, no REVIEW_ record, L2 ledger unchanged on MAIN and ROADMAP
+    - **locator**: ROADMAP:RM:595-604
+    - **quote**: *[source text withheld from the public copy].
+    - **depends_on**
+      - S0
+      - S1
+      - S3
+      - S5
+      - D22
+      - D23
+      - D14
+    - **key_claims**
+      - Zero of the nine preceding moves has a record
+      - Moves 5–8 are heavy and not needed by Ch 2 or Ch 19 on those chapters' own gate lines
+    - **open_items**
+      - Whether the owner still wants the whole build-first order before any drafting, given the model has changed
+  - item 48
+    - **id**: PRE-BRANCH
+    - **title**: Prerequisite: the roadmap, the chapter files and half the feeds are on a closed, unmerged branch built on the old model
+    - **path**: refs origin/claude/book-structure-roadmap-k8ap82
+    - **where**: ROADMAP
+    - **what_it_is**: The place the chapters would be written into, the record that defines them, and the restored feeds exist only on the branch of PR #27, closed unmerged on 17 October. That branch predates the model's L7 restructure and the 3 November guidance: it has L7/publications/ where the model has L7/allications/publications/. BETA, the owner's candidate, has the new L7 positions and none of the book material. The owner's stated order is to bring both repositories physically into line with the model first.
+    - **evidence_state**: UNRESOLVED
+    - **own_label**: 
+    - **checked_how**: Ancestry checks; path comparison of L7 on the three refs; MODEL-2
+    - **locator**: ROADMAP:refs:9259c18; BETA:refs:714480d
+    - **quote**: [source text withheld from the public copy].
+    - **depends_on**
+      - MODEL-2
+      - STATE-2
+    - **key_claims**
+      - Owner's instruction of 14 September as quoted at RM:643
+      - Combining ROADMAP's content with BETA's structure is a prerequisite no record yet plans
+    - **open_items**
+      - Merge order: model update, then the restore and book tree, or the reverse
+  - item 49
+    - **id**: PRE-CH2-A
+    - **title**: Prerequisite for Ch 2: the codified register CONTRADICTIONS.md (C1–C7)
+    - **path**: L8/L5/research/review/CONTRADICTIONS.md
+    - **where**: MAIN, ROADMAP (217 lines); BETA (232 lines)
+    - **what_it_is**: Seven contradictions between or within standards, each side quoted. Its own closing note labels every quote VERIFIED; seven of its nineteen link marks are the open-circle mark (canonical ISO link, automated fetch blocked) and C6's reading is PARTIALLY VERIFIED. The roadmap calls the register complete. BETA adds a table that calls the comparisons local, C4 a "local contested reading", C5 CONTESTED, with clause precedence, scopes and missing clauses unresolved, and states that it re-verified nothing. Its relative links to four files point at nothing in its directory.
+    - **evidence_state**: CONTRADICTED (ROADMAP: registers complete and verified; BETA: comparisons contested and unresolved)
+    - **own_label**: "[source text withheld from the public copy]"
+    - **checked_how**: Read MAIN lines 1-60, 147-217; counted link marks (11 check, 7 open circle, 1 arrow); read the fifteen lines BETA adds; searched the trees for the four linked filenames (none in that directory)
+    - **locator**: MAIN:L8/L5/research/review/CONTRADICTIONS.md:213; BETA:L8/L5/research/review/CONTRADICTIONS.md (section "Current receiving-use dispositions — 2026-11-03")
+    - **quote**: [source text withheld from the public copy].
+    - **key_claims**
+      - BETA on C2: "unlike scopes do not justify universal impossibility"
+      - BETA on C4: "[source text withheld from the public copy]"
+      - The seven open-circle marks match in number the roadmap's "seven codified quotations" awaiting publisher re-check; the roadmap does not itemise them
+    - **open_items**
+      - Which reading of C1–C7 Chapter 2 presents: findings, or examples of contested comparison
+  - item 50
+    - **id**: PRE-CH2-B
+    - **title**: Prerequisite for Ch 2: the internal register (C-1 to C-23) in the consolidated defining document
+    - **path**: L8/L6/retired/consolidated-2026-08-04/AUDITONOMOUS.md §11
+    - **where**: ROADMAP; HISTORY (AUDITONOMOUS.md at root); absent from MAIN and BETA
+    - **what_it_is**: Twenty-three internal contradictions, reported and not harmonized, in the consolidated document of 4 August. All 23 identifiers are present. The document's line references are to pre-restore paths (intake/…) and, for Block 3, to line numbers from before the block's header was stripped. It is filed under L6/retired and fetched no external source. It is not on MAIN.
+    - **evidence_state**: INTERNALLY CHECKED (by its own grep discipline, as recorded); not on a merged branch
+    - **own_label**: "**[source text withheld from the public copy].**"
+    - **checked_how**: Listed headings; extracted the distinct C-n identifiers in §11 (C-1 to C-23); compared its Block 3 line references with the block as it stands
+    - **locator**: ROADMAP:L8/L6/retired/consolidated-2026-08-04/AUDITONOMOUS.md:1117 (§11); :72
+    - **quote**: [source text withheld from the public copy]`
+    - **key_claims**
+      - Section heading: "## 11. LIVE CONTRADICTIONS, REPORTED NOT HARMONIZED"
+      - Its Block 3 locators are stale (the sentence is at line 1)
+    - **open_items**
+      - Line references need re-pinning before the register is quoted in a chapter
+  - item 51
+    - **id**: PRE-CH2-C
+    - **title**: Prerequisite for Ch 2: the Contradiction Register Method (sourcebook Part VI)
+    - **path**: L8/L4/work/writing/auditnomous-main.docx Part VI; L8/L4/work/writing/sourcebook/Auditonomous_Book_Material_Sourcebook_v0.1.md:1287
+    - **where**: MAIN, BETA (.docx); ROADMAP (.docx and .md)
+    - **what_it_is**: The method Chapter 2 is to state: a claim-relation register with eight relation types, of which logical contradiction is one. It opens with an authorial correction withdrawing the seed findings that had declared unfinished formulas contradictory, and it sets a completeness test that the C1–C7 register as it stands does not show it meets (modality, same subject and scope, exact relation, custody of both sources, consequence, falsifier, supersession).
+    - **evidence_state**: ASSERTED (an internal method proposal); in tension with PRE-CH2-A
+    - **own_label**: "**[source text withheld from the public copy]" · "**Novelty status:** CANDIDATE CONTRIBUTION."
+    - **checked_how**: Read .md lines 1287-1345 on ROADMAP
+    - **locator**: ROADMAP:L8/L4/work/writing/sourcebook/Auditonomous_Book_Material_Sourcebook_v0.1.md:1291-1317
+    - **quote**: [source text withheld from the public copy].
+    - **key_claims**
+      - "[source text withheld from the public copy]."
+      - "[source text withheld from the public copy]."
+      - The deep-research run of 5 August proposes the paper title and calls it "likely the fastest peer-reviewable output" (MAIN:L8/L4/work/computation/deep-research-auditonomous.md:577-579)
+    - **open_items**
+      - C1–C7 entries are not classified by relation type
+      - No prior-art search for the method
+  - item 52
+    - **id**: PRE-CH2-D
+    - **title**: Prerequisite for Ch 2: source-ledger rows IL-001 to IL-004
+    - **path**: L7/provenance/sources/staging-records/standards/SOURCE_LEDGER.md
+    - **where**: MAIN, ROADMAP, BETA
+    - **what_it_is**: The licence and custody rows the chapter cites for the IEEE and ISO material. Rows IL-001, IL-001-R1, IL-001-R2, IL-002, IL-003, IL-004 and IL-004-R1 are present on MAIN. Present on all three refs; contents not read beyond the row identifiers.
+    - **evidence_state**: INTERNALLY CHECKED (presence only)
+    - **own_label**: 
+    - **checked_how**: grep for the IL- identifiers on MAIN
+    - **locator**: MAIN:L8/L7 n/a — MAIN:L7/provenance/sources/staging-records/standards/SOURCE_LEDGER.md:14, 56, 94, 122
+    - **quote**: [source text withheld from the public copy]
+    - **key_claims**
+      - The quote is the roadmap's description at RM:482, not the ledger's own text
+    - **open_items**
+      - Row contents not verified in this pass
+  - item 53
+    - **id**: PRE-CH2-E
+    - **title**: Prerequisite for Ch 2: [source text withheld from the public copy]
+    - **path**: RM Ch 2 'Verify'
+    - **where**: ROADMAP
+    - **what_it_is**: The one verification the roadmap lists for Chapter 2. It has not been done and cannot be done without access to the publishers' sites: the roadmap records the session's network as refused at the proxy, and ISO as returning 403 to automated fetch. The roadmap words it as needed "before print", while the chapter file prints the same line under the heading "Verify before drafting".
+    - **evidence_state**: UNRESOLVED
+    - **own_label**: "[source text withheld from the public copy]"
+    - **checked_how**: Read RM:111 and ch02:16; no later record of a re-check on any ref
+    - **locator**: ROADMAP:RM:111; ROADMAP:L8/L4/work/writing/book/ch02-contradictions-are-findings-verbatim-collision-registers-as-a-reproducible-method.md:16
+    - **quote**: **[source text withheld from the public copy]
+    - **key_claims**
+      - Not a gate on drafting by the roadmap's wording; a gate on print
+    - **open_items**
+      - Which seven quotations; the roadmap does not list them
+  - item 54
+    - **id**: PRE-CH19-A
+    - **title**: Prerequisite for Ch 19: rulings D1 and D21 (and D8)
+    - **path**: RM §7
+    - **where**: ROADMAP
+    - **what_it_is**: Chapter 19's header gates it on D1 (one book or a companion volume) and D21 (which historical cases). The decision table adds D8, whose recommended answer puts the deep-stratum worked example inside Chapter 19. All three are unruled. Chapter 19 is where the change from the proven leg to the argued leg is announced, so D1 decides what the chapter introduces.
+    - **evidence_state**: UNRESOLVED
+    - **own_label**: "**Gates:** D1, D21"
+    - **checked_how**: Read ch19 header and RM:612, 619, 633; no ruling record on any ref
+    - **locator**: ROADMAP:L8/L4/work/writing/book/ch19-evidence-before-explanation-the-unknown-is-not-a-thing-the-evidence-supply-chain-motion-without-range-technological-hindsight.md:3; ROADMAP:RM:619
+    - **quote**: [source text withheld from the public copy]
+    - **depends_on**
+      - D-STRUCT
+    - **open_items**
+      - The 14 August 'scholarly only' ruling is not weighed in D1
+  - item 55
+    - **id**: PRE-CH19-B
+    - **title**: Prerequisite for Ch 19: the four verification sources
+    - **path**: RM Ch 19 'Verify'
+    - **where**: ROADMAP
+    - **what_it_is**: NASA's 2023 UAP independent study (calibration [source text withheld from the public copy], W3C PROV, and the memory-reconstruction literature. None is held or checked, and the source ledger has no row for any of them. They need the network session that the order of work lists as move 10, after the move that drafts this chapter.
+    - **evidence_state**: UNRESOLVED
+    - **own_label**: "all NOT-CHECKED"
+    - **checked_how**: grep of the source ledger on ROADMAP for UAP, AARO, ODNI, Minor Planet, PROV, GAO: no source rows
+    - **locator**: ROADMAP:RM:288; ROADMAP:RM:604
+    - **quote**: [source text withheld from the public copy]
+    - **key_claims**
+      - The chapter file prints this list under "Verify before drafting"
+      - Move 10 is described as "the verification the writing needs"
+    - **open_items**
+      - A network-enabled session
+  - item 56
+    - **id**: PRE-CH19-C
+    - **title**: Prerequisite for Ch 19: the source ledger to be locked
+    - **path**: L7/provenance/sources/LEDGER.md; L8/L4/work/writing/book/bibliography.md
+    - **where**: MAIN, ROADMAP, BETA (ledger); ROADMAP (bibliography)
+    - **what_it_is**: The prospectus and the roadmap both make locking the source ledger a condition of writing any case or census conclusion. The ledger that exists is a pointer list into the l6 archive for the standards and engineering literature; it holds nothing for the first-contact leg. The book's bibliography is empty. The roadmap calls the ledger 62 rows; BETA's correction says 60 archive rows and that a past count of 22 new rows enumerates 21.
+    - **evidence_state**: EMPTY for the first-contact leg; row count CONTRADICTED (62 in the roadmap, 60 in BETA)
+    - **own_label**: RM:413 "the 62-row source ledger"
+    - **checked_how**: Read the ledger head on ROADMAP; grep for Part VI sources (none); read BETA's added section
+    - **locator**: ROADMAP:RM:547; BETA:L7/provenance/sources/LEDGER.md (section "Attributable receiving correction — 2026-11-03")
+    - **quote**: [source text withheld from the public copy]).
+    - **key_claims**
+      - The prospectus asks for a ledger per chapter: "[source text withheld from the public copy]:" (extracted line 462)
+      - The census dossier has zero byte-verified entries
+    - **open_items**
+      - What 'the source ledger' is for the book: the L7 pointer ledger, the bibliography, or a per-chapter ledger
+  - item 57
+    - **id**: PRE-CH19-D
+    - **title**: Prerequisite for Ch 19: the Tic Tac propulsion adjudication
+    - **path**: L8/L5/research/review/TICTAC_PROPULSION_ADJUDICATION.md
+    - **where**: ROADMAP; HISTORY; absent from MAIN and BETA
+    - **what_it_is**: A 376-line closed-form physics check of 4 August on the owner's question about the Nimitz object. Its outputs are internally derived; its kinematic inputs are unverified, and the 0.78-second descent figure comes from an unofficial report whose provenance is disputed. No external source was fetched. It supplies the chapter's '[source text withheld from the public copy]' argument and the statement that the case rests on the radar record. Its calculation script exists on ROADMAP at a different path from the one the document cites.
+    - **evidence_state**: INTERNALLY CHECKED (calculation, as recorded; not re-run here); its inputs UNRESOLVED
+    - **own_label**: "[source text withheld from the public copy]."
+    - **checked_how**: Read lines 1-22 and the label lines; located the script at ROADMAP:L8/L4/work/computation/probes/tictac_calc.py; the script was not run (not asked for)
+    - **locator**: ROADMAP:L8/L5/research/review/TICTAC_PROPULSION_ADJUDICATION.md:14-22; :364
+    - **quote**: [source text withheld from the public copy].
+    - **key_claims**
+      - "No external sources were fetched this session"
+      - [source text withheld from the public copy]"
+    - **open_items**
+      - Primary-source retrieval for every named result and input
+  - item 58
+    - **id**: PRE-CH19-E
+    - **title**: Prerequisite for Ch 19: Block 50 (the intake form) and the two planning documents
+    - **path**: L8/L4/work/writing/manuscript/Block_50_The_Intake_Form.md; L8/L4/work/writing/auditonomous-08-03-26.odt; L8/L4/work/writing/auditonomouos-important.docx
+    - **where**: ROADMAP (Block 50); MAIN, ROADMAP, BETA (the two Office files)
+    - **what_it_is**: The only author prose feeding the chapter is Block 50 (6.4 KB), used for observer anchoring as a computational precondition; it exists on ROADMAP only. The rest of the chapter's material is model-written: the prospectus's Part I plan and three-paragraph opening passage, and the referee report's chapter tests. The roadmap says of the chapter "prose none".
+    - **evidence_state**: ASSERTED
+    - **own_label**: "[source text withheld from the public copy]"
+    - **checked_how**: ls-tree for Block 50; extracted the prospectus and found the opening-passage heading at line 441
+    - **locator**: ROADMAP:RM:283; ROADMAP:L8/L4/work/writing/manuscript/Block_50_The_Intake_Form.md
+    - **quote**: [source text withheld from the public copy]
+    - **key_claims**
+      - On MAIN 2 of the chapter's 4 feeds exist, both model-written
+    - **open_items**
+      - How much of Chapter 19 is to be the author's own text
+  - item 59
+    - **id**: PRE-L2
+    - **title**: Prerequisite (move 8): the formal layer
+    - **path**: L8/L2/formal-mathematics/FORMULAS_LEDGER.md
+    - **where**: MAIN, ROADMAP (ledger with no rows); BETA (one added file)
+    - **what_it_is**: The roadmap places registration of the L2 objects before the first drafting and calls the ledger empty. On MAIN the L2 tree is six files: five sheets and the ledger. BETA adds one relations file, a finite predicate for the two-step beta fixture, which says of itself that its predicates are conditional fixture predicates and not universal definitions. None of the objects the roadmap names (the proved impossibility DR-003, the isomorphism of the 5 August [source text withheld from the public copy], Conditions A–E as formal statements) is registered on any ref.
+    - **evidence_state**: EMPTY
+    - **own_label**: "The ledger is EMPTY today."
+    - **checked_how**: ls-tree of L8/L2 on MAIN; read the head of BETA's added file
+    - **locator**: ROADMAP:RM:532; BETA:L8/L2/formal-mathematics/relations/AUDITONOMOUS_BETA_PREDICATE.md:3
+    - **quote**: [source text withheld from the public copy].
+    - **depends_on**
+      - D14
+    - **key_claims**
+      - Not needed by Ch 2 or Ch 19 on their own gate lines; needed by Part V
+- **defects**
+  - item 1
+    - **statement**: The vocabulary paper's claims-table row 16 and its §5.2 state as a verified negative finding that no predicate Aud(S,F) occurs in the sourcebook. The sourcebook has it at line 116 in LaTeX (\operatorname{Aud}(S,F)). The roadmap's 14 September rewording of D20 and its §9 correction (1) repeat the error.
+    - **locator**: ROADMAP:L8/L4/work/writing/papers/AUDITONOMOUS_VOCABULARY_PAPER_2026-09-14.md:305 and :154; ROADMAP:RM:630 and :647; against ROADMAP:L8/L4/work/writing/sourcebook/Auditonomous_Book_Material_Sourcebook_v0.1.md:116
+  - item 2
+    - **statement**: Three records give the constitutional sentence's place in Block 3 as line 10. It is at line 1; line 10 reads "**II. The permissions triad**". The reference was inherited from the consolidated document, written before the block's header was removed on 4 August.
+    - **locator**: ROADMAP:L8/L4/work/writing/papers/AUDITONOMOUS_VOCABULARY_PAPER_2026-09-14.md:292; ROADMAP:L8/L4/work/writing/book/00-front-matter.md:9; ROADMAP:L8/L4/work/writing/manuscript/0.md:8; source of the error ROADMAP:L8/L6/retired/consolidated-2026-08-04/AUDITONOMOUS.md:72
+  - item 3
+    - **statement**: Vocabulary paper row 6 says [source text withheld from the public copy] cited section grounds condition B in "[source text withheld from the public copy]`)" and condition A in "hardware root". Rump 1999 is verified in a separate record; Warmus 1956 appears in no check found.
+    - **locator**: ROADMAP:L8/L4/work/writing/papers/AUDITONOMOUS_VOCABULARY_PAPER_2026-09-14.md:295; against ROADMAP:L8/L0/semantics/definitions/AUDITONOMY.md:201-202
+  - item 4
+    - **statement**: The roadmap's chapter gate lines and its decision table's 'Blocks' column disagree in eight places: D1 lists Ch 19–24 but Ch 21's gate is none; D6 lists Ch 17 but Ch 17's gate omits it; D8 lists Ch 19 but Ch 19's gate omits it; D12 lists Ch 22 but Ch 22's gate omits it; D21 lists Ch 24 but Ch 24's gate omits it, while Ch 19's gate names D21 and D21's row does not list Ch 19; D22 lists Ch 3 and 4, whose gates are D14 and none; D23 lists Ch 6, 9, 14–17, none of whose gates name it; Ch 3's gate names D14, whose row does not list Ch 3. The 27 chapter files copy the gate lines.
+    - **locator**: ROADMAP:RM:612-633 against RM:123, 132, 265, 287, 305, 314, 332
+  - item 5
+    - **statement**: The book sheet and the vocabulary paper give the decision range as D1–D21. The roadmap they cite has D22 and D23 (and no D17: 22 decisions numbered to 23).
+    - **locator**: ROADMAP:L8/L4/work/writing/book/0.md:8; ROADMAP:L8/L4/work/writing/papers/AUDITONOMOUS_VOCABULARY_PAPER_2026-09-14.md:12 and :316; against ROADMAP:RM:631-632
+  - item 6
+    - **statement**: The book sheet states the drafting order as Part 0, then Parts II–V, [source text withheld from the public copy]. That is phase P3 of the 13 September order, which the roadmap strikes through as superseded; the order in force starts with Chapter 2 and Chapter 19.
+    - **locator**: ROADMAP:L8/L4/work/writing/book/0.md:14; against ROADMAP:RM:680 and RM:603
+  - item 7
+    - **statement**: The roadmap's §9 says every history-prefixed feed was re-pointed and two remain history-only. Three remain: HUB_LEDGER.md (Ch 5), the Malmstrom note (Ch 23), and the OMMP codec at git:8c98573^ (Ch 17 and Appendix H), which the same branch restored to L8/L4/work/computation/ommp/. Appendix B still cites git:1d83788:AUDITONOMOUS.md §11 although that file was restored.
+    - **locator**: ROADMAP:RM:647; against RM:263, RM:373, RM:379; ROADMAP:L8/L4/work/computation/ommp/0.md
+  - item 8
+    - **statement**: Chapter 22 lists as a feed a leads table in a session scratchpad (scratchpad/leads/LEADS.md). The file is in no tree of the repository; the roadmap's §8 says so of the leads table generally.
+    - **locator**: ROADMAP:RM:312; ROADMAP:RM:637
+  - item 9
+    - **statement**: The roadmap counts the source ledger as 62 rows, twice. BETA's correction of 3 November counts 60 archive rows and finds that a past '22 new rows' statement enumerates 21.
+    - **locator**: ROADMAP:RM:413 and RM:639; against BETA:L7/provenance/sources/LEDGER.md (section "Attributable receiving correction — 2026-11-03")
+  - item 10
+    - **statement**: The roadmap introduces "The three seam joints" and lists four. Its Part VI heading says leg B while Chapter 18 inside it is labelled leg A, and its diagram draws Chapter 18 inside the leg B box. The front matter says "The legs never interleave" while Part VII runs leg A (Ch 25), leg B (Ch 26), both (Ch 27).
+    - **locator**: ROADMAP:RM:82-87; RM:71; RM:270-274; ROADMAP:L8/L4/work/writing/book/00-front-matter.md:21 and :71
+  - item 11
+    - **statement**: Five chapter files (8, 10, 17, 20, 21) say "What exists now: drafted (…)" a few lines above a Text section that says "Not yet drafted." The word is used for source blocks in one place and for chapter text in the other.
+    - **locator**: ROADMAP:L8/L4/work/writing/book/ch08-the-constitution-bounded-autonomy-mandatory-auditability-a-runtime-without-parameters.md:19 and :27
+  - item 12
+    - **statement**: CONTRADICTIONS.md links four files by bare relative name (STANDARDS_REGISTER.md, ISO_IEC_REQUIREMENTS.md, IEEE_REQUIREMENTS.md, NIST_REQUIREMENTS.md). None exists in its directory on any ref; the extractions stand under L8/L4/work/computation/ with different names, and the standards register is on ROADMAP only, under L7. The note also cites the retired path intake/sources/standards/SOURCE_LEDGER.md.
+    - **locator**: MAIN:L8/L5/research/review/CONTRADICTIONS.md:10, 15-17, 207
+  - item 13
+    - **statement**: The Tic Tac adjudication says its numbers reproduce by running tools/ommp/../../research/tictac_calc.py, "committed alongside this file". On ROADMAP the script is at L8/L4/work/computation/probes/tictac_calc.py and the document is at L8/L5/research/review/.
+    - **locator**: ROADMAP:L8/L5/research/review/TICTAC_PROPULSION_ADJUDICATION.md:15-16
+  - item 14
+    - **statement**: The roadmap names the release position as L7/publications/ (done-condition 9 and step S6), as do the book and papers sheets and MAIN's writing sheet. The model's position is L7/allications/publications/, which BETA has.
+    - **locator**: ROADMAP:RM:40 and RM:589; ROADMAP:L8/L4/work/writing/book/0.md:25; MAIN:L8/L4/work/writing/0.md:27; against 7LM-BETA:L8/0.md:22
+  - item 15
+    - **statement**: The roadmap's method paragraph calls the three Office files "the three manuscripts" and the chat volumes "the two chat transcripts"; its own §3 table calls the same files "[source text withheld from the public copy] "live drafts" label persists on MAIN, ROADMAP and BETA sheets (found by the prior pass; BETA repeats it).
+    - **locator**: ROADMAP:RM:5; ROADMAP:RM:416; BETA:L8/L4/work/0.md:39; MAIN:L8/L4/work/writing/0.md:33
+  - item 16
+    - **statement**: The vocabulary paper's row 12 and the peer's finding count 8 of 10 definitions, while the same paper's row 17 and §2 speak of eleven definitions (A1–A11). The term entry AUDITONOMY.md §4 also says "Autonomy has ten codified definitions" and cites the peer file by a bare path, not through the binding.
+    - **locator**: ROADMAP:L8/L4/work/writing/papers/AUDITONOMOUS_VOCABULARY_PAPER_2026-09-14.md:301 and :306; AUTONOMOUS-MAIN:L8/L5/research/findings/FINDING_autonomy_requires_a_human_referent.md:27; ROADMAP:L8/L0/semantics/definitions/AUDITONOMY.md:234-235
+  - item 17
+    - **statement**: The roadmap's order of work places the drafting of Chapter 19 (move 9) before the network session (move 10) that the chapter's own "Verify before drafting" list requires.
+    - **locator**: ROADMAP:RM:603-604; ROADMAP:L8/L4/work/writing/book/ch19-evidence-before-explanation-the-unknown-is-not-a-thing-the-evidence-supply-chain-motion-without-range-technological-hindsight.md:16
+- **open_questions**
+  - Which model commit the two repositories are to be brought into line with: 4ca3edb (what both beta exemplars pin), 97314c5 (the beta scaffold tip, which adds the manuscript guidance) or 7lm origin/main c9dc061 of 2026-11-11, which does not contain the beta branch.
+  - Whether the local unpushed commits of 2026-11-11 (auditonomous f2d5b37, autonomous 8257118) are that update in progress. They were seen in the object store but are outside the three named states and were not read beyond their file lists.
+  - How ROADMAP's content (the restore, the roadmap, the book tree, the vocabulary paper) and BETA's structure are to be combined. Neither contains the other, and no record plans the merge.
+  - Whether BETA's 'no rebind' at 0504961 is the owner's ruling on D22. BETA never names D22.
+  - Whether the owner's 14 August ruling ('scholarly only', history only) already answers D1, and how it stands beside the 13 September instruction for an academic book on 'auditbonomy and first contact'.
+  - Whether the full build-first order (moves 1 to 8, including eight repository harmonizations and the L2 registrations) is still required before Chapters 2 and 19, neither of which lists those items in its own gate.
+  - Which reading of the C1–C7 register Chapter 2 is to present: the roadmap's 'registers complete' and 'VERIFIED (components)', or BETA's 'local contested reading' with unresolved clauses. I did not re-verify any standard's text.
+  - What 'the source ledger' to be locked with Chapter 19 is: the L7 pointer ledger, the book's bibliography, or the per-chapter ledger the prospectus asks for.
+  - Which seven quotations the roadmap means by 'the seven codified quotations'. The number matches the seven open-circle link marks in CONTRADICTIONS.md, but the roadmap does not list them.
+  - Whether a document filed under L8/L6/retired (the consolidated defining document) may serve as a live feed for seven chapters and Appendix B, or should have an active position.
+  - Whether the chapter files keep copies of the L5 roadmap entries as headers or point to the L5 record, given the model's sentence against duplicating.
+  - Not checked in this pass: the contents of source-ledger rows IL-001 to IL-004; the perpetuity adjudication §6.1; the '.docx' sourcebook against its '.md' (the prior pass found them text-identical); the peer's fifteen component repositories (not cloned locally); GitHub-side state such as branch protection, the exemplar tag and pull-request status (no network use).
+  - Not run: the roadmap's integrity checks, the Tic Tac calculation script and the BETA computation. The task did not ask for them.

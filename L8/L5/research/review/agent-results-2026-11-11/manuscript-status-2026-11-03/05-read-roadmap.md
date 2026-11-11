@@ -1,6 +1,6 @@
 # read:roadmap
 
-Agent result, as returned. Workflow: Manuscript status of 3 November 2026. Run `wf_1cf4205c-c72`. Phase: Read. Checked in 2026-11-11 19:51 UTC.
+Agent result, as returned. Workflow: Manuscript status of 3 November 2026. Run `wf_1cf4205c-c72`. Phase: Read. Checked in 2026-11-11 19:56 UTC.
 
 - **summary**: Source: branch origin/claude/book-structure-roadmap-k8ap82 (head 9259c18, 2026-09-14 02:04 UTC; five commits above origin/main 2165144, all authored "Claude <noreply@anthropic.com>"), the head of PR #27. Below, ROADMAP = L8/L5/research/review/BOOK_STRUCTURE_AND_ROADMAP_2026-09-13.md on that branch (686 lines; the first version at 30a40f1 had 635 lines and no §9), and BOOK = L8/L4/work/writing/book/ on that branch. The branch was never merged: `git branch -r --contains` lists only itself, origin/main has zero commits it lacks (merge-base = main's head), GitHub's main is still 2165144 (2026-09-12T06:26Z), and the REST API reports PR #27 created 2026-09-13T20:39Z, closed 2026-10-17T08:41Z, merged=false, with no later PR in the repository. None of the branch's files (ROADMAP, book/, papers/, manuscript/, the restore record, AUDITONOMY.md) exists on origin/main.
 

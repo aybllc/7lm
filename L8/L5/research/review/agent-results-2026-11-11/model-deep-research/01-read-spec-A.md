@@ -1,6 +1,6 @@
 # read:spec-A
 
-Agent result, as returned. Workflow: The model, read deep. Run `wf_9a60cf50-a5f`. Phase: Read. Checked in 2026-11-11 19:51 UTC.
+Agent result, as returned. Workflow: The model, read deep. Run `wf_9a60cf50-a5f`. Phase: Read. Checked in 2026-11-11 19:56 UTC.
 
 - **scope**: The specification /home/user/7lm@origin/main:L8/L4/work/writing/7lm-harmonized-architecture-specification.md, lines 1-520 of 1003 (front matter, outline, canonical topology, L0, L1, L2, L3 sheets), read from git objects only; plus the diff of that file origin/main -> origin/beta/common-contracts-r1-r6 (6 hunks, 4 inside lines 1-520). Cross-checks made outside the range: ls-tree of origin/main, .github/workflows/integrity.yml on origin/main, heading list of the rest of the specification. Abbreviation used in locators: SPEC = L8/L4/work/writing/7lm-harmonized-architecture-specification.md.
 - **summary**: The specification on origin/main still declares itself the "Version of 20 September 2026" and the file is byte-identical to its state at 2e5a6d6: nothing in the specification changed on main between 2026-10-05 and c9dc061. The only difference between 2e5a6d6 and origin/main in the whole repository is one added file, L8/L6/in/7lm-layer-lists.md. The specification text that differs lives only on the unmerged beta branch (commit 4ca3edb, 2026-11-02).

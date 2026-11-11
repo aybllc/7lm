@@ -1,6 +1,6 @@
 # read:timeline
 
-Agent result, as returned. Workflow: The model, read deep. Run `wf_9a60cf50-a5f`. Phase: Read. Checked in 2026-11-11 19:51 UTC.
+Agent result, as returned. Workflow: The model, read deep. Run `wf_9a60cf50-a5f`. Phase: Read. Checked in 2026-11-11 19:56 UTC.
 
 - **scope**: Commit history of /home/user/7lm, /home/user/autonomous and /home/user/auditonomous from 2026-09-11 to 2026-11-11, every remote branch (plus the local-only branches found in the clones), read from git objects only. Covers: scaffold first-parent history (PRs #11-#21 and the owner's two direct edits), when the exemplars were last in step, every non-main branch, and the three beta branches of 2-3 Nov 2026 with their cross-citations.
 - **summary**: Between 11 Sept and 11 Nov 2026 the scaffold's main took eleven first-parent commits (PRs #11-#18, #21 and two owner edits of L7/0.md); the exemplars' main branches took none after the rename-pass merges, made within six seconds of the scaffold's on 2026-09-11 23:25:56-23:26:02 -0700. That is the last moment all three were in step.

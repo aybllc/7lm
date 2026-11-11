@@ -1,6 +1,6 @@
 # check:nist-requirements
 
-Agent result, as returned. Workflow: Public sources against their originals. Run `wf_73fbd9d4-516`. Phase: Check. Checked in 2026-11-11 19:51 UTC.
+Agent result, as returned. Workflow: Public sources against their originals. Run `wf_73fbd9d4-516`. Phase: Check. Checked in 2026-11-11 19:56 UTC.
 
 - **check**: nist-requirements: the NIST requirements extraction, auditonomous origin/main (2165144) L8/L4/work/computation/nist-requirements-for-autonomouos.md (blob 89fa56e, 57,042 bytes, 404 lines; identical blob on origin/claude/book-structure-roadmap-k8ap82), tested against SP 1011-I-2.0, SP 1011-II-1.0, AI 100-1 and [source text withheld from the public copy] served by nvlpubs.nist.gov on 2026-11-11
 - **sources**

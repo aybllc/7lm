@@ -1,6 +1,6 @@
 # read:findings
 
-Agent result, as returned. Workflow: Handle on the Auditonomous research and manuscript. Run `wf_9c2917a7-7f0`. Phase: Read. Checked in 2026-11-11 19:51 UTC.
+Agent result, as returned. Workflow: Handle on the Auditonomous research and manuscript. Run `wf_9c2917a7-7f0`. Phase: Read. Checked in 2026-11-11 19:56 UTC.
 
 - **scope**: Layer 5 findings and institution in /home/user/auditonomous: MAIN (origin/main 2165144) findings sheet + DISTILLATION, OVERRIDE_NECESSITY, SEGREGATION_AND_FORGETTING + three institution sheets; ROADMAP (9259c18) four restored findings and sheet change; BETA (714480d) AUDITONOMOUS_BETA_FINDINGS and sheet change. Cross-references followed: MAIN CONTRADICTIONS.md, LEDGER.md, staging reading records, REQUIREMENTS_OWNERSHIP.md, PROPOSAL_seal_gated_interlock.md; ROADMAP Master Archive, RESEARCH_DOCKET, AUDITON_REPLICATOR, ommp code; aybllc/autonomous and aybllc/7lm for pinned commits. Read only from git objects. Nothing was changed. No repository script or test was run (task did not ask); I only hashed git objects, parsed the beta result JSON, and did my own arithmetic.
 - **summary**: Layer 5 holds eight finding documents across the three states; the institution branch is empty by its own statement.
