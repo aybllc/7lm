@@ -1,8 +1,8 @@
 name: integrity
 # Enforces integrity: no unresolved conflict markers, a canonical root, every sheet headed by its path.
-# It does not enforce no-deletion, and must not. The owner, 2026-09-07, quoted as written: "we cant enforce
-# integroty by ebforceing no deletion. we can only imply no deletion to enforcer integiortyty". A deletion is
-# preceded by its enumeration in the record at L8/L6/history/; git keeps the change event.
+# It does not enforce no-deletion, and must not: integrity is what is enforced; no deletion is implied by it,
+# not made a rule of its own (settled 2026-09-07; record: L8/L6/history/harmonization-2026-09-04.md §11).
+# A deletion is preceded by its enumeration in the record at L8/L6/history/; git keeps the change event.
 on: [push, pull_request]
 jobs:
   invariants:
