@@ -1,0 +1,188 @@
+# resolve:B8-files-licences-sources
+
+Agent result, as returned. Workflow: Best choices: the research and manuscript decisions. Run `wf_b77d2bd0-834`. Phase: Resolve.
+
+- **decisions**
+  - item 1
+    - **id**: RH23
+    - **title**: Do the five drafts deleted on 15 August and the working draft return?
+    - **kind**: process
+    - **status_now**: open
+    - **best_choice**: Say yes: return all six, verbatim, as one retired set under Auditonomous L8/L6/retired/, named for 14 August 2026 (the last tree that held them), at their old paths, with a dated record naming each by blob id; have it prepared as a draft pull request you merge.
+    - **why**: The repository's rule keeps your authored documents reconstructable at L6, not in git alone (harmonization §10; retired/0.md:12, :18). The six were deleted by the prune of 15 August, before that rule, while the master ledger still left their home to you (LEDGER.md:32), and nothing on main enumerates them. The restore record's reason cites harmonization §8, which names none of them, and calls the working draft packaging of the sourcebook, which it is not. A retired set returns them verbatim, does not present them as live manuscript, and changes no canonical position, so the mirror stays exact.
+    - **owner_words**
+      - item 1
+        - **quote**: yes (that does nto mean delete over tehre until we enumerate please and thank you)
+        - **where**: aybllc/auditonomous origin/main (aa30b03), L8/L6/history/harmonization-2026-09-05.md:107
+      - item 2
+        - **quote**: delete the cannon, teh ideea, the dirs not the data.
+        - **where**: aybllc/auditonomous origin/main (aa30b03), L8/L6/history/harmonization-2026-09-05.md:107
+    - **evidence**
+      - item 1
+        - **fact**: Six Office files stand only in Auditonomous history, in the tree of commit 1d83788 (14 August 2026, the parent of the prune): five under common/durable/durable/orphan/ (auditonomous-manuscript.odt, auditonomous.odt, autonomous-theory.odt, my-book.odt, stream-eb-carrier-imporotant.odt) and the working draft manuscripts/main/auditonomous.odt, 742,240 bytes together. None is at the tip of main, the beta branch or the roadmap branch, and neither Autonomous nor the scaffold holds their blobs.
+        - **where**: aybllc/auditonomous: git ls-tree -r -l 1d83788; blobs 9df7538, 893fed3, 397fd20, c2763d6, 321ef71, b57ca33 checked against origin/main aa30b03, 714480d, 9259c18 and the autonomous and 7lm clones
+      - item 2
+        - **fact**: All six were deleted by commit 8c98573 of 15 August 2026 (23:28 −0700), whose message calls it your manual prune and says all content remains reachable in history.
+        - **where**: aybllc/auditonomous commit 8c98573 (git show --name-status)
+      - item 3
+        - **fact**: By their own metadata, autonomous-theory.odt and auditonomous.odt were begun on 30 July 2026, auditonomous-manuscript.odt (a six-chapter plan) on 31 July, my-book.odt on 1 August, the stream file on 8 August, and the working draft on 2 August, last saved 5 August. None has an e-mail address in its text; the stream file holds 73 image files, not inspected.
+        - **where**: meta.xml and content.xml of each blob, extracted to /tmp/claude-0/-home-user/bfcfd013-a2da-5019-961e-7f46116f08be/scratchpad/advice/scratch/B8-files-licences-sources/odt/
+      - item 4
+        - **fact**: On main the master ledger still leaves the five drafts' home to you; the harmonization record lists everything in common/durable/orphan/ as open, its §8 table names none of the five, and no file on main names any of the six.
+        - **where**: aybllc/auditonomous origin/main (aa30b03) L8/L6/history/LEDGER.md:32; L8/L6/history/harmonization-2026-09-05.md:95, :111-123; git grep of the six file names
+      - item 5
+        - **fact**: The restore record declines the five by citing harmonization §8 and classes the working draft as packaging of the sourcebook.
+        - **where**: aybllc/auditonomous origin/claude/book-structure-roadmap-k8ap82 (9259c18) L8/L6/history/restore-2026-09-14.md:33, :191-195, :365
+      - item 6
+        - **fact**: The repository's rule retires the owner's authored documents at L6 so that they stay reconstructable from the repository itself; its retired sheet says deletion would leave a prior state recoverable only from git.
+        - **where**: aybllc/auditonomous origin/main L8/L6/history/harmonization-2026-09-05.md:152; L8/L6/retired/0.md:12, :18
+      - item 7
+        - **fact**: The scaffold's L6 sheet says git records change events while L6 must preserve versions and retirement, and its record calls a dated set under retired/ the established form.
+        - **where**: aybllc/7lm origin/main (6de996b) L8/L6/0.md:58; L8/L6/history/harmonization-2026-09-04.md:524
+    - **on_yes**: A session drafts a pull request on Auditonomous main: the six files copied from 1d83788 into one retired set with its sheet, a Holdings line in retired/0.md, and a dated L6 record naming each file by blob id. You merge it.
+    - **cost_or_risk**: 742,240 bytes of Office files enter the tree; one is a 533,499-byte chat-stream export whose 73 images were not inspected. A later merge of the roadmap branch needs a dated note correcting its restore record.
+    - **confidence**: high
+    - **rejected**: Leaving them in git only: the repository's rule keeps your authored documents reconstructable at L6, and nothing on main enumerates them. Returning them as live drafts at L8/L4/work/writing/: they are early, superseded states, which the model files at L6.
+    - **depends_on**: (empty)
+  - item 2
+    - **id**: RH24
+    - **title**: History purges of the ISO file and chat export; Ferreira, quotation and outbound licences
+    - **kind**: process
+    - **status_now**: open
+    - **best_choice**: Say yes to both purges, as one rewrite you run once PR #28's check-ins stop. First, now: cut the chat export (lines 636–746) from the live file, keep the draft, log it. Record Ferreira as hold-private, like your WSU files. Quotation: as RH33. Outbound licence: none until a release.
+    - **why**: Your order of 14 August narrowed your keep-history instruction for the ISO file; it is unexecuted, since main still contains 8660aea, though the ledger's STD-025 row already calls that copy purged. The export is the same privacy case: lines 636–746 of a live file hold seven e-mail addresses, one yours, the others at .gov, .mil, .edu, .uk, .org and .com domains, and an account identifier; the draft ends at 635. Lifting the rule that history is never rewritten (LEDGER.md:51) for it adds nothing, as the rewrite happens anyway. Ferreira is an IEEE paper you hold through WSU. Nothing is released.
+    - **owner_words**
+      - item 1
+        - **quote**: remove that copy
+        - **where**: aybllc/auditonomous origin/main (aa30b03), L7/provenance/sources/staging-records/standards/SOURCE_LEDGER.md:418
+      - item 2
+        - **quote**: [source text withheld from the public copy].
+        - **where**: aybllc/auditonomous origin/main (aa30b03), L7/provenance/sources/staging-records/standards/SOURCE_LEDGER.md:31-32
+    - **evidence**
+      - item 1
+        - **fact**: The third-party ISO/IEC 22989 PDF (blob f5e74bad, 3,225,650 bytes) is in commits 8660aea and 9a9ab96 of 4 August 2026; all 15 fetched remote branches contain 8660aea, main aa30b03 included, so the purge ordered on 14 August has not been run.
+        - **where**: aybllc/auditonomous: git log --all -- intake/sources/standards/pdf/ISO-IEC-22989-2022_FULL.pdf; git branch -r --contains 8660aea
+      - item 2
+        - **fact**: The order narrows the keep-history instruction for that file only, for privacy and licence reasons, and leaves the rewrite, force-push and GitHub support request to you. Seven earlier texts of the same ledger (commits 1237719, 52ae4fb, 55a9886, 8660aea, 9a9ab96, d720d4f, e9b7a26) still carry the third party's e-mail address.
+        - **where**: aybllc/auditonomous origin/main L7/provenance/sources/staging-records/standards/SOURCE_LEDGER.md:418-434; git show <commit>:intake/sources/standards/SOURCE_LEDGER.md, counted
+      - item 3
+        - **fact**: The source ledger's row for the lawful copy already calls the third-party copy purged; the master ledger keeps the rule that history is never rewritten.
+        - **where**: aybllc/auditonomous origin/main L7/provenance/sources/LEDGER.md:54; L8/L6/history/LEDGER.md:51
+      - item 4
+        - **fact**: The live file #autonomous(1).txt (blob 4e376fd; 746 lines; 1,060,768 bytes) is the 2025 draft in lines 1-635 (36,546 bytes, no address) and a raw chat export in lines 636-746 (1,024,222 bytes) holding 40 occurrences of seven distinct e-mail addresses and an account identifier at lines 649 and 725. It stands at the tips of main, the beta branch and the roadmap branch, and entered at a512737 (5 August 2026).
+        - **where**: aybllc/auditonomous origin/main L8/L5/research/review/autonomous-theory/#autonomous(1).txt, counted
+      - item 5
+        - **fact**: One of the seven addresses signs a draft letter by you; the other six are at .gov, .mil, .edu, .uk, .org and .com domains.
+        - **where**: same file; context at aybllc/auditonomous origin/ccr-9391bd81-f2enmj (33135b7) L8/L5/research/review/agent-results-2026-11-11/manuscript-status-2026-11-03/10-read-catchall.md:74
+      - item 6
+        - **fact**: PR #28's branch, now at 33135b7 after a check-in at 20:11 UTC on 13 November, copies the account identifier into three agent-result files; the scaffold's main and Autonomous's main carry neither the identifier nor any of the seven addresses.
+        - **where**: aybllc/auditonomous origin/ccr-9391bd81-f2enmj L8/L5/research/review/agent-results-2026-11-11/auditonomous-research-handle/16-critic.md, final.md, results.json; git grep on aybllc/7lm and aybllc/autonomous origin/main
+      - item 7
+        - **fact**: The copyright sheet says personal data is redacted at HEAD, which the export makes untrue, and that removing anything from git history is your act, never a session's.
+        - **where**: aybllc/auditonomous origin/main L7/governance/copyright/0.md:46, :55
+      - item 8
+        - **fact**: One rewrite removing both renumbers 129 of the 169 commits on the remote branches; their short ids are cited in 19 files of Auditonomous main, 1 of Autonomous main and 221 of the scaffold's main (4 records, 217 in its public agent results).
+        - **where**: git rev-list --remotes --ancestry-path from 8660aea and a512737 in aybllc/auditonomous; git grep -w on each repository's origin/main
+      - item 9
+        - **fact**: The held Ferreira text (485 lines, cited as Ferreira:NNN) is the clean copy of a paper in the IEEE CBMS'06 proceedings, copyright IEEE 2006; the first copy carried your WSU IEEE Xplore stamp, the class the copyright sheet calls hold-private.
+        - **where**: aybllc/auditonomous origin/main L7/provenance/sources/staging-records/library/reading/Ferreira_break-glass-access-control.md:5, :41-48; SOURCE_LEDGER.md:96-100; L7/governance/copyright/0.md:43, :45
+      - item 10
+        - **fact**: No root of the three repositories holds a licence file, no sheet states an outbound licence, and nothing has been released.
+        - **where**: git ls-tree origin/main in aybllc/7lm, aybllc/autonomous and aybllc/auditonomous; aybllc/auditonomous origin/main L7/allications/publications/binder/0.md:12
+    - **on_yes**: A session drafts a pull request (the cut and its L6 entry; Ferreira's copyright line) and a purge plan: both files, seven old ledger texts. You run it, force-push, drop any rescue branch, ask GitHub to purge, and file old-to-new ids in each repository.
+    - **cost_or_risk**: Renumbers 129 of 169 commits: old ids stay cited in 19 Auditonomous files, one Autonomous file and 221 scaffold files until the lists are filed. Irreversible once GitHub purges.
+    - **confidence**: medium
+    - **rejected**: Never purging: breaks your 14 August order and leaves third parties' addresses readable. Two rewrites: twice the renumbering. Rewriting while check-ins still push to PR #28: they would land on the old history. An outbound licence now: binds nothing and could cross the press contract.
+    - **depends_on**
+      - RH33
+  - item 3
+    - **id**: RH32
+    - **title**: Is AU-NORM-04 superseded, and is IEEE 754-2019 ledgered?
+    - **kind**: process
+    - **status_now**: settled-by-events
+    - **best_choice**: Confirm both as settled: AU-NORM-04 is superseded, and IEEE 754-2019 stays ledgered as STD-003. Then record AU-NORM-04 and what superseded it in one dated L6 entry, and in l6 move the verified 754 copy out of durable/delete/ into the library, noting path and hash on STD-003.
+    - **why**: AU-NORM-04, that definitions remain under manuscripts/definitions/, exists only in the message of commit 4a1c1db; no tree carries it, and the 16 August ledger names four rulings but states three. Your instruction of 5 September to run the plan moved the definition to L0, and your root rule of 6 September left no manuscripts/ folder, so it cannot hold. IEEE 754-2019 has been row STD-003 since 16 August, but its verification rests on the copy in l6's deletion queue while the row points at a different-bytes library copy; the sweep's request to ask you first was never answered on record.
+    - **owner_words**
+      - item 1
+        - **quote**: grant push access to auditonomous and run the plan
+        - **where**: aybllc/auditonomous origin/main (aa30b03), L8/L6/history/harmonization-2026-09-05.md:3
+      - item 2
+        - **quote**: under autonomous and auidtonomous the root needs to be the same for both
+        - **where**: aybllc/auditonomous origin/main (aa30b03), L8/L6/history/harmonization-2026-09-05.md:129
+    - **evidence**
+      - item 1
+        - **fact**: AU-NORM-04's only text is one line of the message of commit 4a1c1db (16 August 2026), saying definitions remain under manuscripts/definitions/. No file on main, the beta branch, the roadmap branch or PR #28's branch carries it outside the agent results.
+        - **where**: aybllc/auditonomous commit 4a1c1db; git grep AU-NORM-04 on each ref
+      - item 2
+        - **fact**: The 16 August ledger's title names rulings 01 to 04; its body states 01, 02 and 03 only.
+        - **where**: aybllc/auditonomous origin/main L8/L6/history/LEDGER_2026-08-16_l6-close-and-normalization.md:1, :32-36
+      - item 3
+        - **fact**: On 5 September the plan moved the definition from manuscripts/definitions/ to USO/l0/semantics/definitions/ (now L8/L0/semantics/definitions/); on 6 September the root was made canonical and the last two files under manuscripts/definitions/ were retired.
+        - **where**: aybllc/auditonomous origin/main L8/L6/history/harmonization-2026-09-05.md:3, :37, :129-131
+      - item 4
+        - **fact**: The repository's L6 rule: a commit identifier in a record is an orientation pointer; the record itself is the memory.
+        - **where**: aybllc/auditonomous origin/main L8/L6/0.md:60
+      - item 5
+        - **fact**: The scaffold leaves the one home for definitions open for you.
+        - **where**: aybllc/7lm origin/main (6de996b) L8/L6/history/harmonization-2026-09-04.md:450
+      - item 6
+        - **fact**: Row STD-003 (IEEE 754-2019) points at l6 library/standards/ieee/754-2019.pdf at b328334 and is labelled VERIFIED because the [source text withheld from the public copy]/ (SHA-256 beginning 8b3b27cd2ca833e9).
+        - **where**: aybllc/auditonomous origin/main L7/provenance/sources/LEDGER.md:32; L7/peering/private/egress/peer-1/object-1/RECONCILIATION_FROM_L6_2026-08-16.md:13
+      - item 7
+        - **fact**: The sweep of 14 August found that l6's library copy has different bytes, ruled that a ledger row must not cite durable/delete/, and asked that you be consulted before ledgering; no record answers it.
+        - **where**: aybllc/auditonomous origin/claude/book-structure-roadmap-k8ap82 (9259c18) L8/L6/history/L6_RECONCILIATION_2026-08-14.md:38, :89-92
+      - item 8
+        - **fact**: The same verified bytes also stand in this repository's history (blob 29bac0c, 3,731,953 bytes, SHA-256 beginning 8b3b27cd2ca833e9, added at e9511f5 and removed at 4a1c1db), so the premise that l6 holds the only copy is wrong.
+        - **where**: aybllc/auditonomous: git ls-tree -r -l 1d83788 -- _STAGING_TO_L6/sources/ieee/pdf/; git log --all on that path
+      - item 9
+        - **fact**: The research handle lists the λ = 1 enclosure under floating-point rounding as unchecked; STD-003 is the floating-point standard the repository holds.
+        - **where**: /tmp/claude-0/-home-user/bfcfd013-a2da-5019-961e-7f46116f08be/scratchpad/research/auditonomous-research-handle-2026-11-11.md:149, :424
+    - **on_yes**: A session drafts the dated L6 entry in Auditonomous (AU-NORM-04's text from 4a1c1db, and what superseded it); you merge. With l6 attached, you move the verified 754 file into its library, and a dated note on STD-003 gives the new path and full hash.
+    - **cost_or_risk**: The 754 move needs the l6 archive, which no reader here could open; until it is made, the row's verified copy sits in a deletion queue. The AU-NORM-04 entry changes nothing else.
+    - **confidence**: high
+    - **rejected**: Leaving AU-NORM-04 unrecorded: the 16 August ledger names a ruling it never states, and commit messages are not L6 memory. Un-ledgering 754: drops the source the λ = 1 rounding check needs. Pointing the row into durable/delete/: the 14 August sweep forbids it.
+    - **depends_on**: (empty)
+  - item 4
+    - **id**: RH33
+    - **title**: Where the binder's internal folder sits, and how much IEEE text may be quoted
+    - **kind**: process
+    - **status_now**: open
+    - **best_choice**: Keep the binder's internal/ folder where it is, under L7/allications/publications/binder/, and close the open line in Auditonomous's binder sheet. On quotation, let the copyright sheet govern: a short verbatim quotation, cited and labelled, needs no clearance; longer IEEE or ISO text waits for the publisher's permission, recorded and dated.
+    - **why**: The report's held-sources wording does not match its source, which asks only whether the binder's internal/ folder moves to L8/L4/work/writing/ (binder/0.md:27). Folders beneath a layer are your design choice, so the record cannot compel either answer. I would keep it; the fact that tips it: Autonomous already keeps its internal/ (fetch list, tooling) in the same L7 binder, and Auditonomous's holds only its README. Held files enter the binder under neither reading. The quotation conflict pits the live sheet against a sentence that stands only in history; your one-place rule settles it.
+    - **owner_words**
+      - item 1
+        - **quote**: THE PLACE TO LOOK FOR COPYRIGHT IS ONLY ONE PLACE, FROM THERE IT SHOULD BE OBVIOUS TO THE OBSERVER THERE WHAT TO DO NEXT.
+        - **where**: aybllc/7lm origin/main (6de996b), L8/L6/history/harmonization-2026-09-04.md:97
+      - item 2
+        - **quote**: I left out sub folders because those are design choices
+        - **where**: aybllc/7lm origin/main (6de996b), L8/L6/history/harmonization-2026-09-04.md:388
+    - **evidence**
+      - item 1
+        - **fact**: The binder sheet leaves to you only whether internal/ belongs at L8/L4/work/writing/ as assembled-but-unreleased work; the routing plan kept it at publications unless you prefer L4.
+        - **where**: aybllc/auditonomous origin/main (aa30b03) L7/allications/publications/binder/0.md:27; L8/L6/history/7LM_ROUTING_PLAN_2026-09-05.md:112
+      - item 2
+        - **fact**: In Auditonomous, internal/ and press-kit/ hold only their READMEs, and nothing has been released.
+        - **where**: aybllc/auditonomous origin/main L7/allications/publications/binder/0.md:12, :16
+      - item 3
+        - **fact**: Autonomous keeps internal/FETCH_LIST.md and internal/tools/ in the same L7 binder, the tooling kept with the binder it checks.
+        - **where**: aybllc/autonomous origin/main (9fa3744) L7/allications/publications/binder/0.md:16, :27
+      - item 4
+        - **fact**: The binder's rule text, kept unrewritten, lists internal/ beside press-kit/ as its subdirectories.
+        - **where**: aybllc/auditonomous origin/main L7/allications/publications/binder/README.md:26-31; binder/0.md:8
+      - item 5
+        - **fact**: The live copyright sheet permits verbatim, cited, labelled quotation and lets the quotation leave where a hold-private file does not; the IEEE staging record calls short definitional and normative quotation ordinary scholarly use.
+        - **where**: aybllc/auditonomous origin/main L7/governance/copyright/0.md:51-52; L7/provenance/sources/staging-records/ieee/README.md:24-26
+      - item 6
+        - **fact**: The contrary sentence, requiring clearance before any such quotation appears in a published manuscript, stands only in history.
+        - **where**: aybllc/auditonomous commit 1d83788, intake/imported/AUTONOMOUS_TERMS.md:35-37
+      - item 7
+        - **fact**: Binder rule 4 withholds a quotation where a label bars reproduction, citing clause and page instead; release clearance is per item and dated.
+        - **where**: aybllc/auditonomous origin/main L7/allications/publications/binder/README.md:18-20; binder/press-kit/README.md:27
+      - item 8
+        - **fact**: Autonomous's copyright sheet lets reproduction at length wait only [source text withheld from the public copy]; the lawful ISO/IEC 22989 copy is now held as STD-025, and the withdrawn ISO Store copy's own licence line barred copying.
+        - **where**: aybllc/autonomous origin/main L7/governance/copyright/0.md:43, :53; aybllc/auditonomous origin/main L7/provenance/sources/LEDGER.md:54; SOURCE_LEDGER.md:53
+    - **on_yes**: A session drafts, for both exemplars, one sentence in each copyright sheet on short quotation and per-item, dated permission (replacing Autonomous's until-a-licensed-copy wording), and closes the open line in Auditonomous's binder sheet. You merge. Nothing moves.
+    - **cost_or_risk**: Keeping internal/ leaves the model's Writing row (production is L4) unapplied to binder drafts; short stays without a number, so each release still needs its own dated judgement.
+    - **confidence**: medium
+    - **rejected**: Moving internal/ to L8/L4/work/writing/: fits the model's Writing row, but for an empty folder it makes the binder's unrewritten rule table wrong and splits the exemplars. Clearance for every quotation: contradicts the one place and the reading records' purpose.
+    - **depends_on**: (empty)

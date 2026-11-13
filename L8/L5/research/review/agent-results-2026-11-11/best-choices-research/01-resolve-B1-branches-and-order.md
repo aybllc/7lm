@@ -1,0 +1,183 @@
+# resolve:B1-branches-and-order
+
+Agent result, as returned. Workflow: Best choices: the research and manuscript decisions. Run `wf_b77d2bd0-834`. Phase: Resolve.
+
+- **decisions**
+  - item 1
+    - **id**: RH2
+    - **title**: Whether ROADMAP's restore and BETA join main, in what order, under which workflow
+    - **kind**: process
+    - **status_now**: open
+    - **best_choice**: Yes to both, ROADMAP first. Merge it into main as main stands (aa30b03): one file conflicts, L7/0.md, resolved as main's text plus ROADMAP's two holdings clauses; main's workflow stays. BETA joins second, only after the 7lm decides its own beta (R1–R6) and Autonomous's beta joins Autonomous main.
+    - **why**: ROADMAP returns 116 files from this repository's own history, deletes nothing, and makes main's own citations true: main's DISTILLATION.md:21 calls the absent AUDITONOMY.md its governing text. It conflicts with main in one file, and the merged tree passes main's integrity checks. Your 11 November words put the exemplars back in work, the judgment your 20 September rule awaited. BETA pins commits found only on unmerged betas and carries the 7lm beta's workflow; joined now, it would run ahead of the scaffold. The base is settled: the mirror is on main. Which defining text governs stays your ruling.
+    - **owner_words**
+      - item 1
+        - **quote**: Them setup the Auditonomous repo before research.
+        - **where**: aybllc/auditonomous, branch claude/book-structure-roadmap-k8ap82 at 9259c18, L8/L6/history/restore-2026-09-14.md:7 (the owner, 14 September 2026; the restore record reads it as your ruling on the restore, decision D15)
+      - item 2
+        - **quote**: All repos should mirror the 7lm. Manually. We update 7lm and focus on it only. No outside updates until we are sure I'm close.
+        - **where**: aybllc/7lm, origin/main at 6de996b, L8/L6/history/harmonization-2026-09-04.md:336 (section 26, the owner, 20 September 2026)
+    - **evidence**
+      - item 1
+        - **fact**: ROADMAP is branch claude/book-structure-roadmap-k8ap82 at 9259c18, the branch of pull request #27, closed unmerged; BETA is beta/7lm-exemplar-auditonomous at 714480d; main is aa30b03 and already carries the hand mirror of the L7 restructure (pull request #29). All three descend from 2165144.
+        - **where**: aybllc/auditonomous clone /home/user/auditonomous: git merge-base and git log on the three refs, 13 November 2026
+      - item 2
+        - **fact**: Against 2165144, ROADMAP adds 159 paths and modifies 17; its restore commit 62d2e3f returns 116 files from the pre-prune tree 1d83788, with 8 new sheets and 17 updated. BETA adds 17 paths, modifies 33 and renames 6. Neither deletes a path.
+        - **where**: git diff --name-status -M 2165144 against each tip; git diff --name-status 62d2e3f^ 62d2e3f, in /home/user/auditonomous
+      - item 3
+        - **fact**: Merging ROADMAP into main conflicts in one file, L7/0.md, at two adjacent holdings lines. Resolved as main's text with ROADMAP's two clauses, the merged tree passes all three checks of main's workflow: 94 sheets headed by their paths, all 71 canonical positions sheeted, and the same 12 unsheeted folders main reports now (main alone has 84 sheets).
+        - **where**: Simulated with git merge-tree in a scratch repository that only reads the clone's objects: /tmp/claude-0/-home-user/bfcfd013-a2da-5019-961e-7f46116f08be/scratchpad/advice/scratch/B1-branches-and-order/rerun/ (m-r.txt, run-integrity.sh, sim/)
+      - item 4
+        - **fact**: BETA conflicts with main in 13 files: the workflow, L7/0.md, six sheets that both sides added under L7/allications/, and five other sheets. After ROADMAP it conflicts in 15, adding L8/L0/0.md and L8/L0/semantics/definitions/0.md.
+        - **where**: /tmp/claude-0/-home-user/bfcfd013-a2da-5019-961e-7f46116f08be/scratchpad/advice/scratch/B1-branches-and-order/rerun/m-b.txt and mr-b.txt
+      - item 5
+        - **fact**: BETA's binding pins Autonomous commit 805cd42, which is only on Autonomous beta/7lm-exemplar-autonomous, and 7lm commit 4ca3edb, which is only on 7lm beta/common-contracts-r1-r6; neither is on a main. BETA also keeps the 0504961 pin with no rebind and applies its own dispositions to comparisons C1 to C7, two calls the record leaves to you.
+        - **where**: aybllc/auditonomous origin/beta/7lm-exemplar-auditonomous: L7/peering/public/ingress/peer-1/object-2/binding.json; L7/provenance/sources/LEDGER.md:153; L8/L5/research/review/CONTRADICTIONS.md:22-35; git merge-base --is-ancestor in /home/user/autonomous and /home/user/7lm
+      - item 6
+        - **fact**: Main's workflow (blob f43dd04) is 7lm main's byte for byte. ROADMAP never changed its copy (5538d89, the check from before the L7 restructure), so a merge keeps main's; run on the merged tree, ROADMAP's copy fails for want of L7/governance/restrictions/0.md and L7/publications/0.md. BETA's copy (cd39c5b) is 7lm 4ca3edb's. Pull request #19 changes only the scaffold's comment (d98049a); Autonomous main differs only by a retired-step comment (45ad3f7).
+        - **where**: .github/workflows/integrity.yml at each ref of the three clones and at /home/user/7lm-pr19 HEAD 38e2ec3; /tmp/claude-0/-home-user/bfcfd013-a2da-5019-961e-7f46116f08be/scratchpad/advice/scratch/B1-branches-and-order/rerun/roadmap-g003.sh
+      - item 7
+        - **fact**: Main's distillation cites definitions/AUDITONOMY.md as its governing text and main's envelope cites it twice, but the file exists only on ROADMAP, which files it at L0 beside the definition of record. The 7lm specification says each exemplar has one locally authored L0 definition.
+        - **where**: aybllc/auditonomous origin/main: L8/L5/research/findings/DISTILLATION.md:21; L8/L1/state-space/AUDITON_ENVELOPE.md:76, :253; ROADMAP: L8/L0/semantics/definitions/AUDITONOMY.md:3; aybllc/7lm origin/main: L8/L4/work/writing/7lm-harmonized-architecture-specification.md:935
+      - item 8
+        - **fact**: The restore took files from this repository's own history only, kept out the Autonomous-owned definitions under your rule of 5 September, restored no staged licensed PDF, and found no e-mail address in its text files; the one restored Word file holds none either.
+        - **where**: ROADMAP: L8/L6/history/restore-2026-09-14.md:3, :21, :25, :27; scratch check of ROADMAP:L8/L4/work/writing/chat/auditonoomous-chat-3.docx
+      - item 9
+        - **fact**: No record states why pull request #27 was closed; the readers of 11 November had no network to see it.
+        - **where**: /tmp/claude-0/-home-user/bfcfd013-a2da-5019-961e-7f46116f08be/scratchpad/research/auditonomous-research-handle-2026-11-11.md:772-773 (Appendix D, D15); /home/user/auditonomous/L8/L5/research/review/agent-results-2026-11-11/auditonomous-research-handle/12-read-records.md:951
+      - item 10
+        - **fact**: The mirror's record says whichever of the mirror and BETA lands second must reconcile BETA's sheets at the six new positions. Open pull request #28 (311 agent-result files) shares no path with ROADMAP or BETA.
+        - **where**: aybllc/auditonomous origin/main L8/L6/history/harmonization-2026-09-05.md:206; git diff origin/main origin/ccr-9391bd81-f2enmj
+      - item 11
+        - **fact**: After the merge, four restored live files name a former L7 path or phrase once each: L7/provenance/sources/lists-2026-08-08/0.md:24, L8/L4/work/writing/book/0.md:25, the Chapter 1 file at line 11, and L8/L4/work/writing/papers/0.md:8. The dated roadmap record names them six times and keeps them as a record.
+        - **where**: git grep on the simulated merged tree in /tmp/claude-0/-home-user/bfcfd013-a2da-5019-961e-7f46116f08be/scratchpad/advice/scratch/B1-branches-and-order/rerun/sim/
+      - item 12
+        - **fact**: On 11 November 2026 you ordered both exemplars updated to match first, then a handle on the Auditonomous research and manuscript; both mirrors were merged on your word of 12 November.
+        - **where**: aybllc/7lm origin/main L8/L6/history/harmonization-2026-09-04.md:543; /tmp/claude-0/-home-user/bfcfd013-a2da-5019-961e-7f46116f08be/scratchpad/reconcile19/owner-words.txt lines 2 and 16
+    - **on_yes**: A session opens a draft pull request merging ROADMAP into main: L7/0.md resolved, four restored files' former L7 names updated as the mirror pass did, a dated record section. You merge it. BETA waits; at its merge it takes 7lm main's workflow.
+    - **cost_or_risk**: PR #27 was closed unmerged for a reason no record states; if that was your rejection, this reverses it. It also puts a second defining text, AUDITONOMY.md, at L0, where the specification says one.
+    - **confidence**: medium
+    - **rejected**: BETA first or both now: BETA pins commits only on unmerged betas and brings the 7lm beta's workflow, running ahead of the scaffold. Binding the files by reference only leaves main citing files it lacks. ROADMAP's own workflow fails today's tree.
+    - **depends_on**
+      - RH1
+      - RH6
+      - RH31
+  - item 2
+    - **id**: RH22
+    - **title**: Whether the component repositories are harmonized in place, created anew, or folded in
+    - **kind**: process
+    - **status_now**: open
+    - **best_choice**: Harmonize the existing component repositories in place, by hand, one pull request each, the roadmap's nine first, in its order; create none, fold none into Auditonomous. Begin when you judge the scaffold close enough for them, as you judged it for the exemplars on 11 November.
+    - **why**: Your later rule, that all repositories mirror the 7lm by hand, is what harmonizing in place does, and the two exemplars came onto the model that way. The specification gives a second work a repository of its own, met by peering; folding in would undo that. New clean repositories would leave each work's history in an archived twin, apart from the new repository's L6. Your 14 September words say create; the roadmap's survey found every needed component already exists. If you meant new repositories literally, choose them instead, archiving the old and deleting none.
+    - **owner_words**
+      - item 1
+        - **quote**: [source text withheld from the public copy]
+        - **where**: aybllc/auditonomous, branch claude/book-structure-roadmap-k8ap82 at 9259c18, L8/L6/history/restore-2026-09-14.md:7 (the owner, 14 September 2026)
+      - item 2
+        - **quote**: All repos should mirror the 7lm. Manually. We update 7lm and focus on it only. No outside updates until we are sure I'm close.
+        - **where**: aybllc/7lm, origin/main at 6de996b, L8/L6/history/harmonization-2026-09-04.md:336 (section 26, the owner, 20 September 2026)
+    - **evidence**
+      - item 1
+        - **fact**: The roadmap gives three options for the component repositories: one harmonization pull request per existing repository and no new ones; new clean repositories beside archived old ones; or folding the components into Auditonomous under L4. It recommends the first. Its survey read fifteen repositories at their roots and READMEs only and found none on the model.
+        - **where**: aybllc/auditonomous origin/claude/book-structure-roadmap-k8ap82: L8/L5/research/review/BOOK_STRUCTURE_AND_ROADMAP_2026-09-13.md:632, :649, :685
+      - item 2
+        - **fact**: The survey finds that every component the chapters need already exists as a repository and that no new one is needed for Parts I to V; it leaves open whether [source text withheld from the public copy] and [source text withheld from the public copy].
+        - **where**: same file, line 671
+      - item 3
+        - **fact**: Moves 5 to 7 name nine repositories to harmonize, in chapter order: ebc, eb-carrier, nua and una; broken-zero, uha and ommp; ebios and eb-audit. The step's own gate is that no repository is created without your word.
+        - **where**: same file, lines 588 and 599-601
+      - item 4
+        - **fact**: The 7lm specification places a second work in a repository of its own, met by peering, and leaves the route to you.
+        - **where**: aybllc/7lm origin/main L8/L4/work/writing/7lm-harmonized-architecture-specification.md:962, the same line on the pull request #19 reconciliation at /home/user/7lm-pr19
+      - item 5
+        - **fact**: On 20 September 2026 you named ebios, uha, ommp and eb audit beside the two exemplars as works the 7LM is the key to.
+        - **where**: aybllc/7lm origin/main L8/L6/history/harmonization-2026-09-04.md:486 (section 36)
+      - item 6
+        - **fact**: The two exemplars came onto the model in place, by pull requests in their own repositories, keeping their history; the record's reading of your hard rule keeps each repository's history at its own L6.
+        - **where**: aybllc/7lm origin/main L8/L6/history/harmonization-2026-09-04.md:121 (section 10) and :406 (section 31); aybllc/auditonomous origin/main L8/L6/history/harmonization-2026-09-05.md:131 (section 9)
+      - item 7
+        - **fact**: Your 20 September hold on outside updates was lifted for the two exemplars by your words of 11 November; nothing since mentions the component repositories.
+        - **where**: aybllc/7lm origin/main L8/L6/history/harmonization-2026-09-04.md:336, :346, :543; /tmp/claude-0/-home-user/bfcfd013-a2da-5019-961e-7f46116f08be/scratchpad/reconcile19/owner-words.txt
+    - **on_yes**: Nothing moves until you lift your 20 September hold for them and settle the roadmap's two open questions: which repository owns the carrier, and whether the two ebios repositories are one. Then a session drafts one pull request per repository, in order; you merge each.
+    - **cost_or_risk**: It reads your 14 September word create as make clean; if you meant new repositories, it is wrong. Nine pull requests, one per repository, stand before the chapters that use the components.
+    - **confidence**: medium
+    - **rejected**: New clean repositories beside archived old ones: doubles the repositories and parts each work from its history. Folding the components into Auditonomous under L4: puts second works inside one object, against the specification's place for them, and ends their peering.
+    - **depends_on**
+      - RH1
+  - item 3
+    - **id**: RH27
+    - **title**: Which branch should be the GitHub default of the owner's eBIOS repository
+    - **kind**: process
+    - **status_now**: open
+    - **best_choice**: Set abba-01/ebios's default branch to v1.0.0-dev in its GitHub settings, renaming, creating and deleting nothing. Then enter a dated line under the definition's open item saying so, and that its citations marked default mean einstein-integration, the default when written.
+    - **why**: The definition records your ruling of 30 July 2026: v1.0.0-dev is the line that matters; einstein-integration was an attempt; the GitHub default, einstein-integration, misrepresents the project, and is your call. Setting dev1 as default applies that ruling, touches no file or history, so your 20 September hold on outside updates is not engaged, and the same setting undoes it. The item concerns abba-01/ebios, not the three repositories; if aybllc/ebios is the same object (open), set it there. No record since 30 July mentions the setting, and this session cannot read that repository: check its settings first.
+    - **owner_words**
+      - item 1
+        - **quote**: [source text withheld from the public copy]").
+        - **where**: aybllc/auditonomous, origin/main at aa30b03, L8/L0/semantics/definitions/AUDITONOMOUS_DEFINITION.md:388 (the definition's record of your ruling of 30 July 2026)
+      - item 2
+        - **quote**: [source text withheld from the public copy].
+        - **where**: aybllc/auditonomous, origin/main at aa30b03, L8/L0/semantics/definitions/AUDITONOMOUS_DEFINITION.md:408-410 (the source's line breaks shown as spaces)
+    - **evidence**
+      - item 1
+        - **fact**: The open item concerns abba-01/ebios, the repository the definition's citations come from; its line 75 says every file and line reference is to that repository's default branch, einstein-integration, unless a branch or commit is named.
+        - **where**: aybllc/auditonomous origin/main (aa30b03) L8/L0/semantics/definitions/AUDITONOMOUS_DEFINITION.md:75 and :408-410
+      - item 2
+        - **fact**: The definition records that v1.0.0-dev, tip ff57986 of 29 October 2025, is wholly contained in einstein-integration, which is dev1 plus 37 later commits of the attempt.
+        - **where**: same file, lines 391-393
+      - item 3
+        - **fact**: Thirteen lines of the definition label their citations as from the default branch: 73, 75, 85, 103, 106, 109, 112, 115, 118, 121, 124, 131 and 134.
+        - **where**: same file, counted on 13 November 2026
+      - item 4
+        - **fact**: No record on any branch of the three repositories mentions the ebios default branch other than the definition.
+        - **where**: git grep over every remote branch of /home/user/auditonomous, /home/user/autonomous and /home/user/7lm, 13 November 2026
+      - item 5
+        - **fact**: This session's read of abba-01/ebios on GitHub was refused (HTTP 403, access not enabled for the session), so today's setting is unverified.
+        - **where**: gh api repos/abba-01/ebios, 13 November 2026
+      - item 6
+        - **fact**: Whether [source text withheld from the public copy] is open in the record.
+        - **where**: /tmp/claude-0/-home-user/bfcfd013-a2da-5019-961e-7f46116f08be/scratchpad/research/auditonomous-research-handle-2026-11-11.md:1116 (Appendix D, Q-03); ROADMAP L8/L5/research/review/BOOK_STRUCTURE_AND_ROADMAP_2026-09-13.md:663
+    - **on_yes**: You change the setting on the repository's settings page; this session cannot reach that repository. A session then drafts the dated line for the definition's open item; you enter it as a dated version, the earlier text kept as written.
+    - **cost_or_risk**: Thirteen citation lines in the definition say default and mean einstein-integration; until the dated line is in, a reader following them on GitHub lands on dev1, whose line numbers may differ.
+    - **confidence**: high
+    - **rejected**: Leaving einstein-integration as default: the repository keeps presenting the attempt as the project, against your ruling. Creating a main branch at dev1's tip and making it default: a second name for the same line, which can drift from v1.0.0-dev, for no gain.
+    - **depends_on**: (empty)
+  - item 4
+    - **id**: RH35
+    - **title**: Whether the roadmap's build-first order still stands before any chapter is drafted
+    - **kind**: process
+    - **status_now**: open
+    - **best_choice**: Yes, as you worded it on 14 September: build the repositories first, then write, Chapters 2 and 19 included. Not the roadmap's nine moves as written: move 2 is moot. When ROADMAP reaches main, a dated revision restates the moves and records that the chapter gates predate the order.
+    - **why**: Your words of 14 September set the order: chapters opened, clean repositories, then writing. Nothing since withdraws it: on 20 September you put the 7lm first; on 11 November you asked for matching, then a handle on research and manuscript, not drafting. The chapter gates omit the order because the chapter files were committed sixteen minutes before the roadmap was re-sequenced, which left them untouched. Move 2's pull request was closed unmerged; its tag is in no clone. It would change if you said a chapter using no component repository may be drafted first.
+    - **owner_words**
+      - item 1
+        - **quote**: [source text withheld from the public copy]
+        - **where**: aybllc/auditonomous, branch claude/book-structure-roadmap-k8ap82 at 9259c18, L8/L6/history/restore-2026-09-14.md:7; repeated at L8/L5/research/review/BOOK_STRUCTURE_AND_ROADMAP_2026-09-13.md:643 (the owner, 14 September 2026)
+      - item 2
+        - **quote**: Get qa hanfle on the research and manuscruipt for Auditonomous but firwst re0ull7lm and deep research the mopdel becuase its chamnged and we need to uipdate the autonomous and auditonomous repos phsyciall; to match first .
+        - **where**: aybllc/7lm, origin/main at 6de996b, L8/L6/history/harmonization-2026-09-04.md:543 (the owner, 11 November 2026)
+    - **evidence**
+      - item 1
+        - **fact**: The roadmap's ten moves put the drafting of Chapters 2 and 19 in move 9, after the review of the two papers and after moves 5 to 7, which harmonize nine component repositories; its step table says eight.
+        - **where**: aybllc/auditonomous origin/claude/book-structure-roadmap-k8ap82: L8/L5/research/review/BOOK_STRUCTURE_AND_ROADMAP_2026-09-13.md:588 and :595-603
+      - item 2
+        - **fact**: Chapter 2's header lists no gates and Chapter 19's lists only D1 and D21. The book folder's sheet names your order to build first, lists gates as decisions only, and repeats the drafting order of 13 September that the roadmap marks superseded.
+        - **where**: same branch: L8/L4/work/writing/book/ch02-contradictions-are-findings-verbatim-collision-registers-as-a-reproducible-method.md:3; L8/L4/work/writing/book/ch19-evidence-before-explanation-the-unknown-is-not-a-thing-the-evidence-supply-chain-motion-without-range-technological-hindsight.md:3; L8/L4/work/writing/book/0.md:8 and :14; roadmap record :680
+      - item 3
+        - **fact**: The chapter files were committed at 01:48:05 UTC on 14 September 2026 (b1ec302); the roadmap was re-sequenced to the build-first order at 02:04:14 UTC (9259c18), a commit that changed only the roadmap record and the review folder's sheet.
+        - **where**: git log and git diff of the ROADMAP commits in /home/user/auditonomous
+      - item 4
+        - **fact**: Move 2 cannot be done as written: the Autonomous pull request it merges (#29, branch claude/scholarly-pair-baseline-k8ap82 at 9b49910) was closed unmerged and is not in Autonomous main, and no tag exemplar-2026-09-14 is in any of the three clones.
+        - **where**: roadmap record :596; git merge-base --is-ancestor in /home/user/autonomous; git for-each-ref refs/tags in the three clones; state file /tmp/claude-0/-home-user/bfcfd013-a2da-5019-961e-7f46116f08be/scratchpad/advice/state-2026-11-13.md:21
+      - item 5
+        - **fact**: Your words of 14 September stand only on two closed branches, Auditonomous claude/book-structure-roadmap-k8ap82 and Autonomous claude/scholarly-pair-baseline-k8ap82, and on no main.
+        - **where**: git grep over every remote branch of the three clones, 13 November 2026
+      - item 6
+        - **fact**: Since then you set the 7LM first on 20 September, holding outside updates until you judge it close, and on 11 November asked for matching first and a handle on the research and manuscript; no word asks for drafting.
+        - **where**: aybllc/7lm origin/main L8/L6/history/harmonization-2026-09-04.md:329, :336, :543; /tmp/claude-0/-home-user/bfcfd013-a2da-5019-961e-7f46116f08be/scratchpad/reconcile19/owner-words.txt
+    - **on_yes**: No chapter is drafted yet. With the ROADMAP merge, a session adds the dated revision to the roadmap record, earlier text kept, and a dated note in the book folder's sheet on the gates; you merge them. Drafting starts on your word.
+    - **cost_or_risk**: Drafting waits behind nine component passes, which wait on your 20 September hold, so no chapter starts until you lift it. Nothing is lost by waiting.
+    - **confidence**: medium
+    - **rejected**: Dropping the order and drafting now: against your words of 14 September, and no word since asks for it. Keeping the nine moves verbatim: move 2 cannot be done as written. Chapters 2 and 19 first: that lifts your order, which is yours to do.
+    - **depends_on**
+      - RH2

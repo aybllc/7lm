@@ -1,0 +1,192 @@
+# resolve:B4-autonomous-dependency
+
+Agent result, as returned. Workflow: Best choices: the research and manuscript decisions. Run `wf_b77d2bd0-834`. Phase: Resolve.
+
+- **decisions**
+  - item 1
+    - **id**: RH6
+    - **title**: Autonomous's definition: plural baseline, the seven review fixes, the pin, and the register
+    - **kind**: authorial
+    - **status_now**: open
+    - **best_choice**: Rule that the indexed plural entry is the consensus baseline; write no single definition. Have a session draft REVIEW_4's seven fixes as one dated version for your merge, old text kept. Keep the pin at 0504961 until that version exists, then bind it beside the old record.
+    - **why**: Your instruction had the entry adopt all eleven, indexed, and your specification of 4 September forbids manufacturing consensus where sources materially disagree; the entry records that they do, so the indexed plural entry is the only baseline that manufactures nothing. What would change it: a clause that all eleven rows actually share. REVIEW_4 calls its seven fixes small: six text edits on held evidence and one reading of the held IEEE 7001 text. Corrections to the entry are your versions. The pinned bytes equal today's, so keeping 0504961 loses nothing, and one rebind after the fixes replaces two.
+    - **owner_words**
+      - item 1
+        - **quote**: [source text withheld from the public copy]
+        - **where**: aybllc/autonomous, origin/main 9fa3744, L8/L0/semantics/definitions/AUTONOMOUS.md:61
+      - item 2
+        - **quote**: [source text withheld from the public copy].
+        - **where**: aybllc/autonomous, branch claude/scholarly-pair-baseline-k8ap82 (9b49910), L8/L6/history/exemplar-2026-09-14.md:7; the same words at aybllc/auditonomous 9259c18, L8/L6/history/restore-2026-09-14.md:7
+    - **evidence**
+      - item 1
+        - **fact**: The bound entry adopts all eleven codified definitions, indexed, on your instruction, says it adopts no single definition and manufactures none, and finds that the eleven [source text withheld from the public copy].
+        - **where**: aybllc/autonomous origin/main 9fa3744, L8/L0/semantics/definitions/AUTONOMOUS.md lines 24-25, 38-41, 61-62
+      - item 2
+        - **fact**: Your specification of 4 September 2026, unchanged on main, bars Autonomous from manufacturing consensus where sources materially disagree, keeps every disagreement source-tagged and visible, and has Auditonomous consume the pinned consensus baseline.
+        - **where**: aybllc/7lm origin/main 6de996b, L8/L4/work/writing/7lm-harmonized-architecture-specification.md lines 42 and 44; the owner's original at L8/L6/retired/specification-2026-09-04/7lm-harmonized-architecture-specification.md lines 48 and 50
+      - item 3
+        - **fact**: REVIEW_4 of 8 August 2026 records 15 findings, 2 of them critical, blocks the C-001 gate, lists seven minimal fixes (six text edits on held evidence, one needing the IEEE 7001 text), says a delta re-review suffices to clear, and leaves the gate to you.
+        - **where**: aybllc/autonomous origin/main, L8/L5/research/review/REVIEW_4_AUTONOMOUS_ADJUDICATION.md lines 435-471
+      - item 4
+        - **fact**: A copy of IEEE 7001-2021 is held, hold-private, in Auditonomous's history, so the one primary reading can be made without fetching anything.
+        - **where**: aybllc/auditonomous commit 1d83788, _STAGING_TO_L6/sources/ieee/pdf/7001-2021.pdf
+      - item 5
+        - **fact**: The bound file is unchanged since the pin: blob ffbdc28, SHA-256 2756...a12b, 22,735 bytes, at 0504961 and at Autonomous main 9fa3744. Main is no longer c9076c3, the roadmap's first rebind target; neither clone has a tag, and pull request #29, which would have made one, closed unmerged.
+        - **where**: /home/user/autonomous: git rev-parse 0504961:research/definitions/AUTONOMOUS.md and origin/main:L8/L0/semantics/definitions/AUTONOMOUS.md; git tag (none); aybllc/auditonomous 9259c18, L8/L5/research/review/BOOK_STRUCTURE_AND_ROADMAP_2026-09-13.md line 631
+      - item 6
+        - **fact**: REGISTER.md keeps autonomy/autonomous under Not yet entered with a blocker pointing at a retired file; its own rule admits a term only when source and label are fixed, and row A3's label contradicts itself.
+        - **where**: aybllc/autonomous origin/main, L8/L0/semantics/definitions/REGISTER.md lines 3 and 19; REVIEW_4_AUTONOMOUS_ADJUDICATION.md line 42
+      - item 7
+        - **fact**: Four files [source text withheld from the public copy] the requirements partition, the autonomy rows of CONTRADICTIONS.md, and the roadmap sourcebook's single synthesized definition.
+        - **where**: aybllc/auditonomous origin/main aa30b03, L7/peering/public/ingress/peer-1/object-1/0.md line 34; 9259c18, L8/L5/research/review/BOOK_STRUCTURE_AND_ROADMAP_2026-09-13.md line 586; 9259c18, L8/L4/work/writing/sourcebook/Auditonomous_Book_Material_Sourcebook_v0.1.md lines 94-98
+      - item 8
+        - **fact**: The pinned commit 0504961, titled Update RULINGS.md (14 August 2026), deleted all 695 lines of RULINGS.md, where the C-001 gate and ruling C-006b stood; fix (vii) asks to close C-006b there.
+        - **where**: aybllc/autonomous, git show --stat 0504961; REVIEW_4_AUTONOMOUS_ADJUDICATION.md lines 463-464
+      - item 9
+        - **fact**: The record makes corrections to the entry your versions: a session proposes a dated version, you merge it.
+        - **where**: aybllc/auditonomous 9259c18, BOOK_STRUCTURE_AND_ROADMAP_2026-09-13.md line 584; aybllc/autonomous 9b49910, L8/L6/history/exemplar-2026-09-14.md lines 11 and 13
+      - item 10
+        - **fact**: With a plural baseline, Auditonomous must name the rows it builds on; the only proposal on record, in the unmerged baseline paper, is rows A1, A2, A5, A6 and A11.
+        - **where**: aybllc/autonomous 9b49910, L8/L4/work/writing/papers/AUTONOMOUS_BASELINE_PAPER_2026-09-14.md line 177
+    - **on_yes**: A session records the ruling and drafts the seven fixes, flagging your two choices (the two-axis rule, the admission policy); you merge; a delta re-review follows. REGISTER.md then enters the term, the new binding stands beside the old, and the four files route through it.
+    - **cost_or_risk**: Edits Autonomous, which your rule against outside updates leaves to your word. Auditonomous must then say which rows it builds on. One fix closes a ruling in RULINGS.md, which the pinned commit emptied.
+    - **confidence**: medium
+    - **rejected**: A single baseline, such as the roadmap sourcebook's synthesized definition, takes sides where the rows disagree, which your specification forbids. Rebinding now binds identical, still-defective bytes and must be redone. The tag has no merge to mark. Entering the register now breaks its own rule.
+    - **depends_on**
+      - RH2
+      - RH31
+  - item 2
+    - **id**: RH7
+    - **title**: Whether the freeze file's contamination rule still binds, and where it returns
+    - **kind**: process
+    - **status_now**: open
+    - **best_choice**: Rule that P1 to P3 still bind: your retirement of 14 August removed the tamper check, not the rule. Return section 3 of the freeze file verbatim as one file at Auditonomous L8/L5/research/review/, beside the label discipline, as a rule on what may be cited, with a dated record.
+    - **why**: The freeze file says P1 to P3, not its hashes, are what binds, and that the rule stays in force. Your words of 14 August removed only the tamper check. The commit closing the freeze on 16 August kept P2 and P3 in three live extraction files as their own discipline. No record rules it out, yet no live sheet carries it, so Chapter 13 and the vocabulary paper can breach it unseen. Research rules here stand at L5, and a rule on what may be cited is not one on what a session may touch, which the specification bars.
+    - **owner_words**
+      - item 1
+        - **quote**: i diotn want tampe fhcekc
+        - **where**: aybllc/auditonomous commit 1d83788, FREEZE.md:359 (amendment F-005, 14 August 2026)
+      - item 2
+        - **quote**: [source text withheld from the public copy].
+        - **where**: aybllc/auditonomous origin/main aa30b03, L8/L4/work/writing/sessions/SESSION_2026-08-05_AUDITON_ARCHITECTURE.md:9-10
+    - **evidence**
+      - item 1
+        - **fact**: Section 3 of the freeze file holds the rule: P1, no coined term enters the definition of a codified term; P2, no codified instrument is [source text withheld from the public copy]; P3, any composition of codified requirements into a coined object is labelled and kept apart from the instrument's own words.
+        - **where**: aybllc/auditonomous commit 1d83788, FREEZE.md lines 58-87
+      - item 2
+        - **fact**: The same file states that P1 to P3, not the hashes, are what binds and that the rule remains in force; its amendment log retires only the tamper check and keeps the file as the record.
+        - **where**: aybllc/auditonomous commit 1d83788, FREEZE.md lines 210-211 and 359
+      - item 3
+        - **fact**: The commit that closed the freeze on 16 August 2026 recast P2 and P3 as self-standing scope rules in the three requirements extraction files; each still says the rule stands as the file's own discipline.
+        - **where**: commit 4a1c1db message; aybllc/auditonomous origin/main aa30b03, L8/L4/work/computation/ieee-requirements-for-autonomouos.md line 7, iso-iec-requirements-for-autonomous.md line 7, nist-requirements-for-autonomouos.md line 7
+      - item 4
+        - **fact**: No live sheet carries P1 to P3: outside the L6 records of the freeze's retirement, only those three scope rules and one staging record mention the freeze file.
+        - **where**: git grep for FREEZE.md and contamination on aybllc/auditonomous aa30b03, the agent results excluded
+      - item 5
+        - **fact**: The roadmap's restore record left the freeze file out on the ground that the sheets and the records carry what it governed; for P1 to P3 they do not.
+        - **where**: aybllc/auditonomous 9259c18, L8/L6/history/restore-2026-09-14.md line 90
+      - item 6
+        - **fact**: Auditonomous keeps its corpus-wide standing rules at L5 review, in the status and label discipline beside the status ladder, and the labels listed there include the ones P3 requires.
+        - **where**: aybllc/auditonomous aa30b03, L8/L5/research/review/STATUS_AND_LABEL_DISCIPLINE.md lines 10-22; aybllc/7lm 6de996b, specification line 942
+      - item 7
+        - **fact**: The specification bars rules about what a session may touch; P1 to P3 govern what the text may claim and cite, not who may write.
+        - **where**: aybllc/7lm origin/main 6de996b, L8/L4/work/writing/7lm-harmonized-architecture-specification.md line 941; aybllc/auditonomous 1d83788, FREEZE.md lines 60-79
+      - item 8
+        - **fact**: The rule bears on Chapter 13's routing of requirements to compartments and on the vocabulary paper's use of IEEE 7009 and the NIST AU controls; the freeze file itself applies P3 to the envelope's count of 21.
+        - **where**: research handle, Appendix A item 12; aybllc/auditonomous 1d83788, FREEZE.md lines 81-87
+    - **on_yes**: A session files the rule with a header giving today's paths, lists it in the review sheet, records it in L8/L6/history/harmonization-2026-09-05.md, then checks Chapter 13 and the vocabulary paper against P2 and P3 and brings findings as proposals; P1 is checked on Autonomous's next version.
+    - **cost_or_risk**: One new file and one record section in Auditonomous, under your word. The checks may relabel parts of the envelope and Chapter 13 as composition. The vocabulary paper stands only on the unmerged roadmap branch.
+    - **confidence**: high
+    - **rejected**: Treating the rule as retired with the freeze: your words named the tamper check only. Relying on the three extraction files: their rule binds only themselves. Filing it at L0 or L7: research rules here stand at L5, and L7 governance is legal, not scientific.
+    - **depends_on**: (empty)
+  - item 3
+    - **id**: RH21
+    - **title**: The homes of the Autonomous Theory files and the Third Power Corpus
+    - **kind**: process
+    - **status_now**: open
+    - **best_choice**: Name aybllc/autonomous-theory, the work's own repository, as the home of every Autonomous Theory file in both exemplars, and aybllc/ncf-research as the home of the Third Power Corpus. Record both now; move the files in one act once you allow writing there, '#autonomous(1).txt' after its purge ruling.
+    - **why**: The record points to both homes. A repository titled for the work, aybllc/autonomous-theory, was surveyed on 14 September with that subject in its README, and the specification says a second work's place is a repository of its own, met by peering. The Third Power Corpus is NCF-derived by your ruling AU-NORM-03, and five sheets name aybllc/ncf-research. The two works do not cite each other, so each gets its own home. Naming moves no file. Moving waits: neither repository is on the model, your rule against outside updates still covers them, and the chat export carries third parties' e-mail addresses.
+    - **owner_words**
+      - item 1
+        - **quote**: [source text withheld from the public copy]
+        - **where**: aybllc/auditonomous, branch claude/book-structure-roadmap-k8ap82 (9259c18), L8/L6/history/restore-2026-09-14.md:7 (the owner, 14 September 2026)
+      - item 2
+        - **quote**: No outside updates until we are sure I'm close.
+        - **where**: aybllc/7lm origin/main 6de996b, L8/L6/history/harmonization-2026-09-04.md:336 (the owner, 20 September 2026)
+    - **evidence**
+      - item 1
+        - **fact**: On 14 September 2026 the roadmap surveyed aybllc/autonomous-theory (148 files, last commit 16 August, its README's subject the Autonomous Theory conjecture, first step your naming it the home) and aybllc/ncf-research (67 files, the pending transfer target); neither had a sheet or the integrity check.
+        - **where**: aybllc/auditonomous 9259c18, L8/L5/research/review/BOOK_STRUCTURE_AND_ROADMAP_2026-09-13.md lines 666-667
+      - item 2
+        - **fact**: The specification says the architecture's place for a second work is a repository of its own, met by peering, and that each exemplar's catch-all holds Autonomous Theory until its home is named; the pull request #19 build keeps this.
+        - **where**: aybllc/7lm origin/main 6de996b, L8/L4/work/writing/7lm-harmonized-architecture-specification.md lines 950, 958, 962; /home/user/7lm-pr19 at 38e2ec3, same lines
+      - item 3
+        - **fact**: The corpus states [source text withheld from the public copy], and Auditonomous's peer sheet excludes the theory files as a source for the definition of autonomous.
+        - **where**: aybllc/auditonomous 9259c18, L8/L4/work/writing/auditonomous_ebios_core_architecture_math_source-535f70d_draft.md line 22; aa30b03, L7/peering/public/ingress/peer-1/0.md line 12
+      - item 4
+        - **fact**: The Third Power Corpus was parked as NCF-derived under ruling AU-NORM-03, with reconciliation into aybllc/ncf-research queued for your instruction; aybllc/l6 refused it as outside its charter; five live sheets name ncf-research as the destination.
+        - **where**: commit 4a1c1db message; aybllc/auditonomous aa30b03, L8/L6/history/LEDGER_2026-08-16_l6-close-and-normalization.md lines 36 and 49; L7/peering/private/egress/peer-2/object-1/OWNERSHIP_PENDING.md lines 3-6; L7/peering/private/egress/peer-2/0.md line 8
+      - item 5
+        - **fact**: The two works do not cite each other: the Third Power Corpus never mentions Autonomous Theory, and the theory draft never mentions NCF.
+        - **where**: git grep counts on aybllc/auditonomous aa30b03: L7/peering/private/egress/peer-2/object-1/The_Third_Power_Corpus_v3.md and L8/L5/research/review/autonomous-theory/#autonomous(1).txt
+      - item 6
+        - **fact**: The theory files number 2 in Auditonomous and 11 in Autonomous, all under L8/L5/research/review/autonomous-theory/; four of those folders are among the 18 the scaffold's record lists as lacking a sheet.
+        - **where**: git ls-tree on aybllc/auditonomous aa30b03 and aybllc/autonomous 9fa3744; aybllc/7lm 6de996b, L8/L6/history/harmonization-2026-09-04.md line 562
+      - item 7
+        - **fact**: #autonomous(1).txt has 746 lines and 1,060,768 bytes; from line 649 it is a raw chat export carrying an account identifier and 7 distinct e-mail addresses.
+        - **where**: aybllc/auditonomous aa30b03, L8/L5/research/review/autonomous-theory/#autonomous(1).txt
+      - item 8
+        - **fact**: aybllc/edm, your general research repository, holds related material under aat/, which the roadmap rules out as a source.
+        - **where**: aybllc/auditonomous 9259c18, BOOK_STRUCTURE_AND_ROADMAP_2026-09-13.md line 669
+      - item 9
+        - **fact**: Whether the theory files are a source for the book is the other half of D12; it turns on your ruling of 14 August that the book is scholarly only, and the roadmap recommends them out as a source. Naming a home does not decide it.
+        - **where**: aybllc/auditonomous 1d83788, HUB_LEDGER.md lines 49-50; 9259c18, BOOK_STRUCTURE_AND_ROADMAP_2026-09-13.md line 623
+      - item 10
+        - **fact**: The autonomy scale sits at Autonomous L4 by your ruling of 6 September and is not among the catch-all files.
+        - **where**: aybllc/7lm origin/main 6de996b, specification line 948
+    - **on_yes**: A session records both homes in each exemplar's record and the sheets that call them unnamed. When you allow writing to those repositories, each work leaves by private egress in one act, and the specification is corrected once. The autonomy scale stays at Autonomous L4.
+    - **cost_or_risk**: The survey of 14 September was not re-checked; confirm both repositories still exist. Four sheetless folders stay until the move. Copying the chat export unpurged would spread third parties' personal data.
+    - **confidence**: medium
+    - **rejected**: Retiring the files at L6 misfiles a live separate work; keeping the corpus here ignores your NCF ruling. aybllc/edm is your general research repository, not the work's own. Moving files inside the exemplars first means correcting the specification twice.
+    - **depends_on**: (empty)
+  - item 4
+    - **id**: RH28
+    - **title**: Whether the L0 epistemic rail takes the status vocabulary held at L5
+    - **kind**: process
+    - **status_now**: settled-by-events
+    - **best_choice**: Leave the vocabulary at L5 and Auditonomous's L8/L0/epistemic/ empty, as your ruling of 6 September settled. Once pull request #19 merges, move the specification's sentence saying the rail is empty out of 'Not yet as stated' into its history file.
+    - **why**: Your words of 6 September made the autonomy scale a layer 4 object and layer 5 discourse; the specification extends that to review statuses, which stand at L5 and not at the L0 epistemic rail, and both exemplars keep the rail empty and the vocabulary at L5. A rail may stay empty until something is authored there. The report raised the question from the Not yet as stated line, and that line is what stays false: it calls the ladder the rail's vocabulary and lists a conforming state as a gap, though the Interior paragraph says the rails are empty.
+    - **owner_words**
+      - item 1
+        - **quote**: Autonomy scale is not math or a state slace. its semantics layer 4 up it wiyuyuld be a layer 4 obkject and layer 5 discourse
+        - **where**: aybllc/7lm origin/main 6de996b, L8/L6/history/specification-history.md:28; also aybllc/auditonomous aa30b03, L8/L6/history/harmonization-2026-09-05.md:107
+      - item 2
+        - **quote**: 0 is where semantics, eptistemic etc define the iupper layers. Its what exists in your ghead first
+        - **where**: aybllc/7lm origin/main 6de996b, L8/L6/history/specification-history.md:38
+    - **evidence**
+      - item 1
+        - **fact**: The specification's clarification under L5 places a ladder of review statuses at L5 as research governance, not at the L0 epistemic rail; it entered on 6 September 2026 in the same commit as the Not yet as stated line, and both stand on main and in the pull request #19 build.
+        - **where**: aybllc/7lm origin/main 6de996b and /home/user/7lm-pr19 at 38e2ec3, L8/L4/work/writing/7lm-harmonized-architecture-specification.md lines 681 and 958; both first added at aba46a2
+      - item 2
+        - **fact**: The specification's L0 output lets a rail remain sparse or gate-only when nothing local has been authored.
+        - **where**: aybllc/7lm origin/main 6de996b, same file, line 307
+      - item 3
+        - **fact**: Auditonomous moved its status ladder to L5 on 6 September 2026 and recorded review status as L5 research governance by your ruling, not L0 rail content.
+        - **where**: aybllc/auditonomous origin/main aa30b03, L8/L6/history/harmonization-2026-09-05.md line 119; L8/L5/research/review/STATUS_LADDER.md line 3
+      - item 4
+        - **fact**: Both exemplars' epistemic sheets record the position as admissible and empty, with the vocabulary standing at L5.
+        - **where**: aybllc/auditonomous aa30b03, L8/L0/epistemic/0.md lines 33 and 41; aybllc/autonomous 9fa3744, L8/L0/epistemic/0.md line 33
+      - item 5
+        - **fact**: The specification's Interior paragraph for Auditonomous already says L0 holds the one definition with the other rails empty, and that L5 holds the status ladder.
+        - **where**: aybllc/7lm origin/main 6de996b, specification line 956
+      - item 6
+        - **fact**: The report's completeness critic cited line 958 and not line 681; the eleven specification proposals of 12 November do not touch this line.
+        - **where**: aybllc/auditonomous origin/ccr-9391bd81-f2enmj (3696894), L8/L5/research/review/agent-results-2026-11-11/auditonomous-research-handle/16-critic.md items 2 and 9; /tmp/claude-0/-home-user/bfcfd013-a2da-5019-961e-7f46116f08be/scratchpad/proposals/spec-exemplar-section-proposals-2026-11-12.md
+      - item 7
+        - **fact**: The pull request #19 merge is built locally, unpushed and under review, and already changes the specification, its .docx and specification-history.md, the three files this correction would touch.
+        - **where**: state file, point 4; /home/user/7lm-pr19 at 38e2ec3, git diff --stat 6de996b HEAD
+    - **on_yes**: Nothing moves in either exemplar. After pull request #19 lands, a session removes the sentence from the specification and its .docx, keeps it in specification-history.md as was done for the sentences removed on 12 November, and dates the version by the record's practice.
+    - **cost_or_risk**: One sentence and a new version date in the public scaffold. Editing now would add a conflict to pull request #19's reconciliation. Whether Auditonomous later authors epistemic distinctions of its own is separate.
+    - **confidence**: high
+    - **rejected**: Moving the ladder or the label discipline to L0 reverses your ruling and the specification's line 681. Leaving the sentence keeps a false gap that the next reader will raise again. Folding the edit into #19 now widens a merge still under review.
+    - **depends_on**: (empty)

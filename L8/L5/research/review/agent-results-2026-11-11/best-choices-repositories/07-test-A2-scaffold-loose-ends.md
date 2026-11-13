@@ -1,0 +1,68 @@
+# test:A2-scaffold-loose-ends
+
+Agent result, as returned. Workflow: Best choices: the scaffold, the exemplars, the eleven proposals. Run `wf_8e87a1b5-8ec`. Phase: Test.
+
+- **verdicts**
+  - item 1
+    - **id**: M19
+    - **quotes_ok**: yes
+    - **state_ok**: yes
+    - **stands**: yes
+    - **final_best_choice**: Keep the layer lists in L8/L6/in/ as an unadopted proposal; do not promote, move or withdraw them. After pull request #19 merges or closes, one commit, with a record section, names them in L8/L6/0.md's inbox entry and updates their lines 5, 309, 311 and 316, written before the guide's retirement.
+    - **final_why**: The owner named in/ the default to-do place and his merge of 11 November filed the lists there; promoting them would put a second restating text, the kind he retired as stale, into pull request #19's release. Since 13 November the lists say the guide is held at L6 (line 311), list three of the four retired sets (309), place themselves beside the guide (5) and call it the source guide (316), while L8/L6/0.md:82 omits them. Waiting avoids a conflict with pull request #19's edits beside line 82 and its section 42.
+    - **final_confidence**: medium
+    - **note**: Quotations verbatim at record lines 297 and 482. Facts check on main (6de996b) and on the reconciled pull request #19 commit, whose hash changed during this review from 38e2ec3 to 8aa66c1 (an amend touching only section 42's text and specification-history.md; the lists blob ab91236, the release script and the record lines cited are unchanged). Corrected: line 316 of the lists (the source guide) also predates the retirement and is added; the release's file selection is at .github/release.sh:34-35, not 35-36. Tested alternative: naming the lists in L8/L6/0.md and leaving their text untouched is smaller but leaves four untrue or stale lines; no standing rule freezes in/ (the sweeps of section 37 and section 38 only left it out of scope), so correcting comes first by the order of preference. The wait is also needed because pull request #19 rewords the lines on both sides of L8/L6/0.md:82.
+  - item 2
+    - **id**: M12
+    - **quotes_ok**: yes
+    - **state_ok**: yes
+    - **stands**: yes
+    - **final_best_choice**: Yes: .gitignore is permitted at a canonical root and not required. Change nothing in any of the three trees; the scaffold keeps its root without one, both exemplars keep theirs, each README describes its own root. Record the answer in the scaffold's next record section.
+    - **final_why**: The specification, which the scaffold README names as controlling, says the root may hold .gitignore; every check on the three mains, the beta and pull request #19 admits it without requiring it; the record says the scaffold has none because there is nothing to ignore. The owner asked that the two exemplar roots match, and they do; his [source text withheld from the public copy] leaves its own-root sentence deciding nothing. Nothing is false today, so recording the reading is the smallest act; removing Autonomous's file would drop what its record calls the owner's file.
+    - **final_confidence**: high
+    - **note**: Quotations verbatim (record lines 121 and 129, origin/main). Specification line 281 identical on main, the beta, the audit branch (line 289) and the reconciled pull request #19 commit (38e2ec3, now 8aa66c1). Corrections: in Autonomous main (45ad3f7) the root rule is at .github/workflows/integrity.yml:51, not :23. The claim that the opposite reading stands only off main misses L8/L6/in/7lm-layer-lists.md:415 on main, which also gives the root without .gitignore; it is an inbox proposal, not rule text, so the pick is unchanged. Added: Autonomous's record calls its .gitignore the owner's file (aybllc/autonomous origin/main, L8/L6/history/harmonization-2026-09-05.md:102). In substance the question is already settled by specification line 281, which README.md:5 says controls.
+  - item 3
+    - **id**: M13
+    - **quotes_ok**: yes
+    - **state_ok**: yes
+    - **stands**: yes
+    - **final_best_choice**: Not byte for byte. Each exemplar's check carries the scaffold main's steps and lines, differing only in the header comment, which points to that repository's own record, and in Autonomous's recorded Q-6 comment block, which stays. Mirror main's form only; the beta's L8-only form follows once it is on main.
+    - **final_why**: The owner's word is to mirror by hand, the scaffold updated first, so an exemplar copies main, never an unmerged beta. From the first day the same check meant the same steps: the scaffold took the exemplar's workflow without its retired step, and Auditonomous's record called its file the same check as Autonomous's while Autonomous kept its Q-6 step. Byte identity would move the retired step's only full text out of the file it explains and, after pull request #19, plant a pointer to a record neither exemplar has. Both already conform; nothing changes now.
+    - **final_confidence**: medium
+    - **note**: Quotations verbatim (record lines 336 and 123, origin/main). Blobs f43dd04 (scaffold and Auditonomous main), 45ad3f7, cd39c5b, 670bd3e and d98049a check, as do exemplar record lines 161/154 and 205/198. Precision: Autonomous's file is the scaffold's with one blank line moved and the 28-line block at lines 16 to 43 added. Added support the colleague did not use: Auditonomous's record describes its first check as the same check as Autonomous's although it lacked the Q-6 block (aybllc/auditonomous origin/main, L8/L6/history/harmonization-2026-09-05.md:131), and Autonomous's record says the step was kept as recorded (aybllc/autonomous origin/main, same file :140). The header exception matters only once pull request #19's header, which names the scaffold's own record, reaches main; today both exemplar headers equal main's.
+  - item 4
+    - **id**: M11
+    - **quotes_ok**: yes
+    - **state_ok**: yes
+    - **stands**: yes
+    - **final_best_choice**: Not adopted, whole or in part: leave the branch exactly as it stands, neither merged nor deleted, and record in the scaffold's next record section, after pull request #19 resolves, that it is not adopted. Any part wanted later is proposed afresh against main.
+    - **final_why**: The branch rewrites the owner's L0 note, refuses the blank sheets he allowed on 20 September, and sets a root rule both exemplars fail; it never touched the .docx, so even its clean merge into main would put its rewrite under the version date of 12 November. Its 118 commits came three hours after Copilot's review and carry out at least eight of its items, which that review says await his adjudication. The beta recorded as made on his approval of R1–R6 keeps the L0 note. Only his word that outside definitions may stand unbound in L0 changes this.
+    - **final_confidence**: high
+    - **note**: Quotations verbatim at both locators (specification :341 on main and the retired 4 September text :317, curly apostrophe kept; record :388). Facts check: 119 ahead (118 plus merge 3555866), all authored and committed as EDM, one file each, 17:27:46 to 17:59:53 −0700; 75 files changed, no .docx; trial merges re-run in a scratch mirror: clean into 6de996b with the 12 November dateline around the rewrite and main's .docx, 20 conflicts with b5c3984, 38e2ec3 and its amended successor 8aa66c1, 12 with 97314c5; GitHub lists pull requests 1 to 21 only, none from this branch. Wording fixed: 'Made in 32 minutes after' is ambiguous; 6609f38 reached main at 13:32 −0700 and the commits ran 32 minutes from 17:27. Added: the branch carries out items 1, 44, 45, 58, 59, 61, 62 and 65 of the error-list review (1e2fe77, three hours earlier), which states that changes to architecture require owner decisions. The colleague's 'retire' is restated plainly as not adopted, branch kept.
+  - item 5
+    - **id**: M8
+    - **quotes_ok**: yes
+    - **state_ok**: yes
+    - **stands**: yes
+    - **final_best_choice**: Drop them. If the beta is merged, the merge commit restores L8/L6/retired/field-guide-2026-09-20/7lm-field-guide.md to blob 0c9626e, undoing the three edits git carries onto it without a conflict, and that merge's record section says the corrections stand in the beta's specification (lines 68, 355, 683), L8/L0/0.md and its history.
+    - **final_why**: The owner retired the guide as stale and deprecated, kept as an example, and its set's sheet promises the text unchanged and verbatim. Section 40 settled the same question for pull request #19 and the audit branch: their guide edits stayed in their own history. Nothing is lost: the beta's specification carries all three corrections and L8/L0/0.md the rails one. The beta's record sentence that the guide carries them is dated 2 November and stays as written, as records here do; the new section answers it.
+    - **final_confidence**: high
+    - **note**: Quotations verbatim (record lines 518 and 536, origin/main). Trial merge of 97314c5 into 6de996b re-run in a scratch mirror: conflicts only in the .docx and specification-history.md; the retired copy becomes blob a82f0c5 without a conflict, carrying the edits at guide lines 96, 150 and 230. Corrections confirmed at the beta's specification lines 68, 355 and 683 and at L8/L0/0.md:69; 4ca3edb is dated 2 November under EDM. The beta's change to L8/L6/0.md is an added section only, so the merged sheet still lists the guide as retired. Keeping the beta's record sentence as written follows section 41's practice that records say what was so when written.
+  - item 6
+    - **id**: CEL
+    - **quotes_ok**: yes
+    - **state_ok**: yes
+    - **stands**: yes
+    - **final_best_choice**: Merge it: after pull request #19 merges or closes, merge copilot/create-error-list into main unchanged, so the 96-item review sits at L8/L5/research/review/ as filed, unadopted and awaiting the owner's adjudication; keep the branch, and name the filing in the next record section.
+    - **final_why**: The owner made research/review/ the catch-all, and its sheet says everything awaiting his review lands there; this file calls itself a review awaiting his adjudication, and the commit that made it, titled as publishing the recommendations, names his account as co-author. On his word of 13 November, pull request #20 put the 11 November agent results at the same catch-all on main. It is one file, merges cleanly into main, the beta and pull request #19, and carries nothing the release refuses. Waiting keeps section 42's counts true.
+    - **final_confidence**: medium
+    - **note**: Quotations verbatim (record line 101; the file's line 3, as a substring after its Status label). Facts check: parent 6609f38; author copilot-swe-agent with a co-author trailer for the owner's account, 21:24:52 UTC on 20 September; 328 lines, 96 numbered items; GitHub lists pull requests 1 to 21, none from this branch; clean trial merges into 6de996b, b5c3984, 38e2ec3, 8aa66c1 (the amended reconciliation) and 97314c5; none of the release's refusal patterns match. Added support: 6de996b, merged under the owner's account on his word, filed the 11 November agent results at the same catch-all on public main. The audit branch carries out several of this review's items; filing the review while that branch stays unadopted keeps every item open for his adjudication.
+  - item 7
+    - **id**: M18
+    - **quotes_ok**: yes
+    - **state_ok**: yes
+    - **stands**: yes
+    - **final_best_choice**: Leave it as written. The sentence is retired text at line 474 of the retired guide, kept verbatim, and record section 41, on main since 13 November, already says it stays. Nothing remains to decide; any merge of the beta must keep that file at blob 0c9626e.
+    - **final_why**: The owner retired the guide as stale and deprecated, to be used as an example, and the merge of pull request #20 on his word brought both the retirement, whose sheet promises the text unchanged and verbatim, and section 41, which keeps this sentence as written. The set's sheet tells readers that a sentence found only in the retired guide is not current, and section 41 names the six and twelve unsheeted folders that make it untrue. Editing it would make the retired file a text that never stood.
+    - **final_confidence**: high
+    - **note**: Quotations verbatim (record lines 518 and 558, origin/main). Blob 0c9626e confirmed on main, b5c3984, 38e2ec3 and 8aa66c1, the audit branch's retired copy, and the live guide at 6609f38 and c9dc061; line 474 holds the sentence. Recounted on the exemplar mains: six folders without a sheet in Autonomous and twelve in Auditonomous, outside the retired sets, as section 41 says. Precision: pull request #20 also brought section 38 (Reserved) to main, not only sections 39 to 41.

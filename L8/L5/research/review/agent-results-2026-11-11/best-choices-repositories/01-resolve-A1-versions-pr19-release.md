@@ -1,0 +1,207 @@
+# resolve:A1-versions-pr19-release
+
+Agent result, as returned. Workflow: Best choices: the scaffold, the exemplars, the eleven proposals. Run `wf_8e87a1b5-8ec`. Phase: Resolve.
+
+- **decisions**
+  - item 1
+    - **id**: V1
+    - **title**: Whether 12 November 2026 stands as the date of the version on main
+    - **kind**: authorial
+    - **status_now**: open
+    - **best_choice**: Confirm 12 November 2026 as the date of the version on main and change nothing: it is the UTC day the corrected text was made, the clock every earlier version took when the two clocks differed.
+    - **why**: The practice, checked at each version's commit, dates a version by the UTC day its text was made. Five of the eight version dates since 4 September were set while the owner's Pacific clock showed the day before (6, 7, 12, 13 September, 12 November); all five took the UTC day. The owner merged the 12 September version at 23:25 on 11 September by that clock. specification-history.md already gives the rule and the merges' 11 November clock, so nothing is false. What would change it: the owner ruling that versions take the owner's own day.
+    - **owner_words**
+      - item 1
+        - **quote**: merge 29 and 30
+        - **where**: aybllc/7lm, main at 6de996b, L8/L6/history/harmonization-2026-09-04.md:543 (said 00:19 UTC on 12 November 2026)
+      - item 2
+        - **quote**: correct the spec sentences in 7lm
+        - **where**: aybllc/7lm, main at 6de996b, L8/L6/history/harmonization-2026-09-04.md:543 (said 01:05 UTC on 12 November 2026)
+    - **evidence**
+      - item 1
+        - **fact**: The correction was committed at 01:18:26 UTC on 12 November 2026 (33c3878), which was 17:18 on 11 November on the owner's Pacific clock (UTC-8).
+        - **where**: aybllc/7lm main, git log -1 33c3878 in /home/user/7lm
+      - item 2
+        - **fact**: The two exemplar merges carry the owner's clock: 9fa3744 at 16:20:07 -08:00 and aa30b03 at 16:20:01 -08:00 on 11 November 2026, which is 00:20 UTC on 12 November.
+        - **where**: git log -1 9fa3744 in /home/user/autonomous; git log -1 aa30b03 in /home/user/auditonomous
+      - item 3
+        - **fact**: Every earlier version set while the owner's clock showed the day before took the UTC day: 6 September at aba46a2 (04:40 UTC), 7 September at a2af3ce (04:09 UTC), 12 September at c699e3e (04:17 UTC), 13 September at 3a29c58 (01:08 UTC). The versions of 20 September (606d4b3), 6 October (5672e6c) and 13 November (38e2ec3) fell on one day on both clocks.
+        - **where**: aybllc/7lm, git log of the specification on main (at USO/l4/work/writing/ before 12 September 2026, L8/L4/work/writing/ after) and on ccr-00099fac-hjosbo
+      - item 4
+        - **fact**: The owner merged pull request #11 (67bb795) at 23:25 -07:00 on 11 September 2026, carrying a specification dated 12 September 2026.
+        - **where**: aybllc/7lm main, git log -1 67bb795; 67bb795:L8/L4/work/writing/7lm-harmonized-architecture-specification.md:2,12
+      - item 5
+        - **fact**: Point 3 of the Changes of 12 November 2026 states the date is that of the change in UTC, as for 12 and 13 September, and that the merges carry 11 November on their own clock; section 41 leaves the date to the owner and lists every place a different date would change.
+        - **where**: aybllc/7lm main 6de996b, L8/L6/history/specification-history.md:112 and L8/L6/history/harmonization-2026-09-04.md:552
+      - item 6
+        - **fact**: Neither exemplar names the current version: their records cite only the versions of 12 and 20 September 2026, so the date touches neither.
+        - **where**: aybllc/autonomous main 9fa3744, L8/L6/history/harmonization-2026-09-05.md:173,187; aybllc/auditonomous main aa30b03, same file :166,180
+    - **on_yes**: Nothing changes in the specification. The session records the owner's yes, quoted as written, in the paragraph closing section 42 on #19's branch, or in the next record section on main if #19 is not merged.
+    - **cost_or_risk**: None on disk. If the owner rules for the Pacific clock instead, 11 November replaces 12 November in every place section 41 lists, on main and on #19's branch; the September versions stay as dated.
+    - **confidence**: high
+    - **rejected**: 11 November 2026, the owner's Pacific day and the merges' date: it would break the practice of every earlier version whose two clocks differed and require a substitution across the specification, its rendering, the writing sheet, the plate and the history, with nothing now false.
+    - **depends_on**: (empty)
+  - item 2
+    - **id**: V2
+    - **title**: Which date the reconciled pull request #19 gives its specification
+    - **kind**: authorial
+    - **status_now**: open
+    - **best_choice**: Keep 13 November 2026 as the date of #19's reconciled specification, and keep it if the merge comes on a later day; move it only if the specification's own text is changed again on a later day before the merge.
+    - **why**: The reconciled text is neither 6 October's draft nor 12 November's version: it differs from main's in 41 lines. The practice section 41 records gives text made on a later day its own date, and 38e2ec3 was made on 13 November on both clocks. 6 October would date text that describes the mirror of 11 November and set main's dateline back. 12 November would put two different texts under one version and make that version's history row false. The 12 November version was merged a day after it was made and kept its date, so merging later changes nothing.
+    - **owner_words**
+      - item 1
+        - **quote**: merge 20 then reconcile 19, give me best choices for 1-4
+        - **where**: aybllc/7lm, unpushed commit 38e2ec3 (worktree /home/user/7lm-pr19), L8/L6/history/harmonization-2026-09-04.md:583 (said 18:02 UTC on 13 November 2026)
+    - **evidence**
+      - item 1
+        - **fact**: On 38e2ec3 the specification reads 13 November 2026 in its header comment, dateline and Version box; 41 of its lines differ from main's.
+        - **where**: /home/user/7lm-pr19 at 38e2ec3, L8/L4/work/writing/7lm-harmonized-architecture-specification.md:2,12,18; git diff --stat origin/main 38e2ec3
+      - item 2
+        - **fact**: The writing sheet, the plate sheet and its generator, and the rendering's footer and description carry 13 November 2026 on 38e2ec3 and 12 November 2026 on main; the rendering's creator property is empty on 38e2ec3.
+        - **where**: 38e2ec3 and main: L8/L4/work/writing/0.md:23 (main :22); L8/L0/pedagogy/7lm-plate-sheet.html:94; L8/L0/pedagogy/7lm-plate-sheet.py:253 (main :252); the .docx members word/footer1.xml and docProps/core.xml
+      - item 3
+        - **fact**: specification-history.md on 38e2ec3 marks 6 October as never the version on main (line 15), 12 November as main at 6de996b (line 16), 13 November as the current version (line 17), and adds Changes of 13 November 2026 (lines 130-135).
+        - **where**: /home/user/7lm-pr19 at 38e2ec3, L8/L6/history/specification-history.md
+      - item 4
+        - **fact**: The merge commit 38e2ec3 was made at 18:11:06 UTC on 13 November 2026, 10:11 on the owner's Pacific clock.
+        - **where**: git log -1 38e2ec3 in /home/user/7lm-pr19
+      - item 5
+        - **fact**: The version of 12 November was made on 12 November (33c3878) and reached main on 13 November with pull request #20 (6de996b, 10:05 -08:00), keeping its date.
+        - **where**: aybllc/7lm main, git log 33c3878 and 6de996b
+      - item 6
+        - **fact**: Main's versions row describes the 12 November version as the 20 September text with only the exemplar section corrected.
+        - **where**: aybllc/7lm main 6de996b, L8/L6/history/specification-history.md:15
+      - item 7
+        - **fact**: Section 42 gives the same reasons for 13 November and leaves the date to the owner.
+        - **where**: 38e2ec3, L8/L6/history/harmonization-2026-09-04.md:590
+    - **on_yes**: Nothing changes: the date already stands in the header comment, dateline, Version box, writing sheet, plate, rendering and history on 38e2ec3. The commit for the agent results and the refusal touches none of them; the owner's yes is recorded with it in section 42.
+    - **cost_or_risk**: Any further change to the specification on main before #19 merges forces another reconciliation and a new date; if the owner answers the first date question differently, this branch takes the same substitution.
+    - **confidence**: high
+    - **rejected**: 6 October 2026: would date text describing the 11 November mirror and set main's dateline back. 12 November 2026: two different texts under one version, and that version's history row, which says only the exemplar section changed, becomes false.
+    - **depends_on**: (empty)
+  - item 3
+    - **id**: P19
+    - **title**: What becomes of pull request #19 once reconciled
+    - **kind**: process
+    - **status_now**: open
+    - **best_choice**: Merge #19 whole, with a merge commit, not a squash, after its branch is pushed with the reconciliation 38e2ec3 and one more commit that keeps the agent results out of the release and makes a refused release say so.
+    - **why**: The owner had #19 reconciled on 17 October and again now. While it waits, each pass on main touching the specification, its rendering or history forces another reconciliation; ten of eleven pending specification proposals would. The sweep serves the scaffold as it is, public: main's live text has Author note in 12 files, the account name in 26. Nothing runs on its own: a release needs the owner's variable, token and dispatch, and carries no history, keeping the hard rule; visibility stays the owner's separate choice. Tree and first lines are unchanged; the exemplars stay in step.
+    - **owner_words**
+      - item 1
+        - **quote**: I didn't want anything automated yet
+        - **where**: aybllc/7lm, main at 6de996b, L8/L6/history/harmonization-2026-09-04.md:518 (owner, 17 October 2026, on another matter)
+      - item 2
+        - **quote**: merge 20 then reconcile 19, give me best choices for 1-4
+        - **where**: aybllc/7lm, unpushed commit 38e2ec3 (worktree /home/user/7lm-pr19), L8/L6/history/harmonization-2026-09-04.md:583 (owner, 13 November 2026)
+    - **evidence**
+      - item 1
+        - **fact**: Main (6de996b) is an ancestor of 38e2ec3, so the merge has no conflict; it changes 46 files on main, 2 added (.github/release.sh, .github/workflows/release.yml) and 44 modified, 34 of them sheets, none in its first line.
+        - **where**: git merge-base --is-ancestor origin/main 38e2ec3 and git diff --name-status origin/main 38e2ec3, in /home/user/7lm-pr19
+      - item 2
+        - **fact**: The workflow's only trigger is workflow_dispatch and its permission is contents: read; without the variable PUBLIC_REPO and the secret PUBLIC_REPO_TOKEN it runs dry, and the script run by hand with no argument is a dry run.
+        - **where**: 38e2ec3, .github/workflows/release.yml:8-11 and 26-31; .github/release.sh:15-18
+      - item 3
+        - **fact**: The automation word was said earlier on 17 October 2026; later that day the owner had this branch reconciled and pushed (b5c3984), with an edit to the release script's comment in that merge.
+        - **where**: aybllc/7lm main 6de996b, L8/L6/history/harmonization-2026-09-04.md:518 and 530-536
+      - item 4
+        - **fact**: Main's live text outside L6's memory and the agent results carries the Author note label in 12 files (30 lines), github.com URLs in 2 files and the account name in 26; its specification has 15 Author note labels and 6 URLs, and its rendering names a person as creator. On 38e2ec3 each is gone.
+        - **where**: git grep on origin/main and on 38e2ec3; the .docx member docProps/core.xml on both
+      - item 5
+        - **fact**: The release takes L6's history/, in/ and retired/ only as their sheets, and the L6 sheet states beside the hard rule that no history of the repository leaves with it.
+        - **where**: 38e2ec3, .github/release.sh:6-9 and 34-35; L8/L6/0.md:64-68
+      - item 6
+        - **fact**: After one pass on main (section 41), #19 conflicted in six files; ten of the eleven pending proposals of 12 November offer edits to the specification, its rendering or the writing sheet, all among those six.
+        - **where**: aybllc/7lm main, L8/L6/history/harmonization-2026-09-04.md:563; /tmp/claude-0/-home-user/bfcfd013-a2da-5019-961e-7f46116f08be/scratchpad/proposals/spec-exemplar-section-proposals-2026-11-12.md, items 1-10
+      - item 7
+        - **fact**: The resolution of 11 November for #19 asked the owner which lands first and how #19 is brought current; both are now settled by events: #20 landed first, and #19 is brought current by one merge commit, as section 40 did.
+        - **where**: /tmp/claude-0/-home-user/bfcfd013-a2da-5019-961e-7f46116f08be/scratchpad/model/owner-decision-resolutions-2026-11-11.md:642-655; 38e2ec3, L8/L6/history/harmonization-2026-09-04.md:583
+      - item 8
+        - **fact**: Both exemplars keep main's line 8 of L7/allications/0.md with its quotation; the resolution of decision 10 runs no agnostic sweep in the exemplars, which are internal, and leaves that line to the owner.
+        - **where**: aybllc/autonomous 9fa3744 and aybllc/auditonomous aa30b03, L7/allications/0.md:8; owner-decision-resolutions-2026-11-11.md:724-741
+      - item 9
+        - **fact**: The CI check's logic is unchanged; only its comment lines 3-5 change, so it stops being byte-identical to Auditonomous's copy (Autonomous's already differs in comments).
+        - **where**: git diff origin/main 38e2ec3 -- .github/workflows/integrity.yml; blobs f43dd04 (main, Auditonomous), d98049a (38e2ec3), 45ad3f7 (Autonomous)
+    - **on_yes**: The session adds that commit and a paragraph closing section 42, reruns the dry run (82 files, exit 0) and the CI check, pushes ccr-00099fac-hjosbo; the owner then merges #19. Nothing leaves until the owner sets PUBLIC_REPO and its token and dispatches.
+    - **cost_or_risk**: One revert undoes it. The beta branch and pending proposals must then take the agnostic wording. If the owner counts dispatch as automation, drop release.yml. PUBLIC_REPO must never name the scaffold: the push is forced.
+    - **confidence**: medium
+    - **rejected**: Hold: a reconciliation per pass on main; attributions stay public. Sweep alone: four sheets and the README rewritten, half the 6 October instruction left without a means. Release alone: refused on main's 30 Author note lines. Close: sets aside work the owner had reconciled twice.
+    - **depends_on**
+      - V2
+      - RES
+      - R141
+  - item 4
+    - **id**: RES
+    - **title**: The agent results the release refuses, and where further check-ins go
+    - **kind**: process
+    - **status_now**: open
+    - **best_choice**: Keep the folder where it is but out of the release: on #19's branch, make .github/release.sh leave out L8/L5/research/review/agent-results-*/ whole, sheet included, and say so in its header comment. Keep further check-ins going to both repositories, source text withheld in the public copy, each in its own dated folder.
+    - **why**: The owner put the folder in the public scaffold on 11 November and said to keep the check-ins going to both repositories; leaving it in place but out of the release keeps those words and the release's checks. Every refused line is in the folder: 88 lines in 45 of its 311 files; the other 82 files pass, and none names the folder. Its quoted commit lines and trailers are repository history, which the release does not carry. One pattern, nothing lost, reversible. Check-ins follow the owner's word until the scaffold is made private, when its stated reason lapses.
+    - **owner_words**
+      - item 1
+        - **quote**: put them in auditonomous too and the public one its public so you can access it and one other ai right npow
+        - **where**: aybllc/7lm, main at 6de996b, L8/L5/research/review/agent-results-2026-11-11/0.md:8 (owner, 11 November 2026)
+      - item 2
+        - **quote**: keep pushing the check-ins to both repos
+        - **where**: the owner's message of 2026-11-11 20:20:48 UTC, held in no repository: /tmp/claude-0/-home-user/bfcfd013-a2da-5019-961e-7f46116f08be/scratchpad/reconcile19/owner-words.txt:9
+    - **evidence**
+      - item 1
+        - **fact**: The release's dry run on 38e2ec3 builds 393 files and refuses 88 lines in 45 files, all 45 inside agent-results-2026-11-11: e-mail addresses (the owner's GitHub no-reply address among them) in 42 lines of 25 files, github.com URLs in 8 lines of 8, co-author trailers in 7 lines of 6, the Author note label in 42 lines of 20. The other 82 files carry none.
+        - **where**: bash .github/release.sh in /home/user/7lm-pr19; offending lines in /tmp/claude-0/-home-user/bfcfd013-a2da-5019-961e-7f46116f08be/scratchpad/advice/scratch/A1-versions-pr19-release/v3-offend.txt
+      - item 2
+        - **fact**: A scratch copy of the script with one exclusion added to the list of what leaves (grep -vE ^L8/L5/research/review/agent-results-[^/]+/) passes three runs of three: exit 0, 82 files would leave.
+        - **where**: /tmp/claude-0/-home-user/bfcfd013-a2da-5019-961e-7f46116f08be/scratchpad/advice/scratch/A1-versions-pr19-release/v3-release-both.sh run in /home/user/7lm-pr19; outputs v3-both-1.out to v3-both-3.out
+      - item 3
+        - **fact**: Only the script's header comment says everything under L7/ and L8/ leaves; no sheet says the agent results leave, and no released file names the folder.
+        - **where**: 38e2ec3, .github/release.sh:6-9; grep of the built release tree
+      - item 4
+        - **fact**: Section 42 names the two ways, leaving the folder out or moving it under L6, and makes neither.
+        - **where**: 38e2ec3, L8/L6/history/harmonization-2026-09-04.md:601
+      - item 5
+        - **fact**: The review sheet keeps everything awaiting the owner's review at L8/L5/research/review/ and sends superseded reviews to L6; it does not yet name the agent-results folder.
+        - **where**: aybllc/7lm main 6de996b, L8/L5/research/review/0.md:22, 31, 36; L8/L5/research/review/agent-results-2026-11-11/0.md:39
+      - item 6
+        - **fact**: The folder's sheet calls its contents unedited, PARKED and not adopted, and says verbatim source text of the internal repositories is withheld from this public copy.
+        - **where**: aybllc/7lm main 6de996b, L8/L5/research/review/agent-results-2026-11-11/0.md:10, 33, 37
+      - item 7
+        - **fact**: The complete copy (311 files) stands in aybllc/auditonomous only on the branch of its draft pull request #28, ccr-9391bd81-f2enmj at 3696894; its main holds none, so the scaffold's public copy is the only one on a main branch.
+        - **where**: git ls-tree origin/main and origin/ccr-9391bd81-f2enmj -- L8/L5/research/review/agent-results-2026-11-11/ in /home/user/auditonomous
+      - item 8
+        - **fact**: Auditonomous's copyright sheet lets quotations travel while hold-private files stay in private repositories, and makes removing anything from git history the owner's act.
+        - **where**: aybllc/auditonomous main aa30b03, L7/governance/copyright/0.md:43, 52, 55
+    - **on_yes**: In one commit with the refusal fix on #19's branch: one grep -vE pattern in the list of what leaves, the header comment's What leaves sentence extended, a closing sentence in section 42. New workflows check in to agent-results-<date>/ in both repositories.
+    - **cost_or_risk**: The public scaffold keeps the folder's e-mail addresses, handles and quoted words while it stays public; only the release is clean. Each public check-in must keep withholding verbatim source text.
+    - **confidence**: high
+    - **rejected**: Moving it under L6 files review still awaiting the owner as L6 memory, against the catch-all sheet. Removing it leaves the results on no main branch, the complete copy being only on Auditonomous's draft #28. Sweeping it edits results its sheet calls unedited, losing evidence.
+    - **depends_on**: (empty)
+  - item 5
+    - **id**: R141
+    - **title**: Whether to fix the release script's exit status 141 on #19's branch now
+    - **kind**: process
+    - **status_now**: open
+    - **best_choice**: Fix it now on #19's branch, before the branch is pushed: end line 57 of .github/release.sh with || true, and close section 42 with a sentence saying so; if the agent-results exclusion is taken, make both in one commit.
+    - **why**: Section 42 gives the file, the fault and the exact fix, the form the owner set for proposals; a yes is the asking. Line 57 pipes grep into head -20 under set -euo pipefail; with more than twenty offending lines grep dies of SIGPIPE and the script exits 141 before line 60 prints release refused: five runs of five. With the fix, five of five exit 1 and say release refused. Nothing leaves either way, but the log never says the release was refused. Leaving the agent results out hides the fault only until more than twenty lines offend.
+    - **owner_words**
+      - item 1
+        - **quote**: Don't change the system unless you ask or are unsure
+        - **where**: aybllc/7lm, main at 6de996b, L8/L6/history/harmonization-2026-09-04.md:482 (owner, 20 September 2026)
+    - **evidence**
+      - item 1
+        - **fact**: Five dry runs of the script as it stands on 38e2ec3 each exited with status 141, printing twenty offending lines and neither the authorship-tags line nor release refused.
+        - **where**: bash .github/release.sh in /home/user/7lm-pr19; outputs /tmp/claude-0/-home-user/bfcfd013-a2da-5019-961e-7f46116f08be/scratchpad/advice/scratch/A1-versions-pr19-release/dry-1.out to dry-5.out
+      - item 2
+        - **fact**: A scratch copy with || true at the end of line 57 exited 1 in five runs of five, printing the twenty lines, the authorship-tags line and release refused; a copy using sed -n 1,20p in place of head -20 did the same, three of three.
+        - **where**: /tmp/claude-0/-home-user/bfcfd013-a2da-5019-961e-7f46116f08be/scratchpad/advice/scratch/A1-versions-pr19-release/v3-release-fix141.sh (outputs v3-fix141-1 to 5) and v3-release-sed.sh (outputs v3-sed-1 to 3)
+      - item 3
+        - **fact**: Line 19 sets -euo pipefail; line 56 decides the refusal with its own grep; line 57 pipes grep into head -20; line 60 prints release refused and exits 1.
+        - **where**: 38e2ec3, .github/release.sh:19, 56, 57, 60
+      - item 4
+        - **fact**: Section 42 names the fault, the five runs and the fix, and leaves it unmade for the owner.
+        - **where**: 38e2ec3, L8/L6/history/harmonization-2026-09-04.md:602
+      - item 5
+        - **fact**: The workflow runs the script directly, so a refused run ends the job with status 141 and no closing words.
+        - **where**: 38e2ec3, .github/workflows/release.yml:26-31
+    - **on_yes**: The session makes the one-line edit, reruns the dry run in a clean clone (exit 0 with the agent results out; exit 1 and release refused on a copy that lets them in), then pushes the branch.
+    - **cost_or_risk**: One line of tooling, no content. The || true could hide a grep error on line 57, but line 56 has already decided the refusal, so a refused tree still cannot leave.
+    - **confidence**: high
+    - **rejected**: Leave it: a refusal with more than twenty offending lines can again end at 141 without saying release refused. Replacing head -20 with sed -n 1,20p also works but departs from the fix section 42 names.
+    - **depends_on**: (empty)

@@ -1,0 +1,392 @@
+# resolve:A4-exemplar-structure
+
+Agent result, as returned. Workflow: Best choices: the scaffold, the exemplars, the eleven proposals. Run `wf_8e87a1b5-8ec`. Phase: Resolve.
+
+- **decisions**
+  - item 1
+    - **id**: M1-3
+    - **title**: Whether the mirror merges of 11 November settle model decisions 1 and 3
+    - **kind**: process
+    - **status_now**: settled-by-events
+    - **best_choice**: Treat both as settled by your word to merge 29 and 30; there is nothing to answer. Leave Auditonomous draft pull request #28, which now differs from main only by the 311 agent-result files, open and unmerged until you say whether those results go on main.
+    - **why**: Decision 1 asked whether the scaffold was close enough for the hand mirror to land; decision 3, whether a session's counted pass is the mirror made manually or a proposal for a person to apply. Your merge word answered both: the pass is the mirror, landed by your act, Autonomous main at 9fa3744 and Auditonomous main at aa30b03, mirror only, and the scaffold's record (section 41) says so. Nothing on either main says otherwise. The merges do not judge the scaffold close for any other outside update; that is the order question, M2. The one leftover is pull request #28.
+    - **owner_words**
+      - item 1
+        - **quote**: merge 29 and 30
+        - **where**: aybllc/7lm origin/main L8/L6/history/harmonization-2026-09-04.md:543 (the owner's message of 12 November 2026, 00:19 UTC)
+      - item 2
+        - **quote**: cut the mirror-only branch for auditonomous
+        - **where**: the owner's message of 11 November 2026, 21:43 UTC; in no repository: /tmp/claude-0/-home-user/bfcfd013-a2da-5019-961e-7f46116f08be/scratchpad/reconcile19/owner-words.txt:14
+    - **evidence**
+      - item 1
+        - **fact**: Autonomous main is 9fa3744, the merge of pull request #30; Auditonomous main is aa30b03, the merge of pull request #29 from the mirror-only branch; both are dated 11 November 2026, 16:20 -08:00.
+        - **where**: git log -1 origin/main in /home/user/autonomous and /home/user/auditonomous
+      - item 2
+        - **fact**: Both mains carry L7/allications/ with its six positions and L7/governance/controlled/; neither carries L7/publications/ or L7/governance/restrictions/.
+        - **where**: git ls-tree -d origin/main L7/ L7/allications/ L7/governance/ in both clones
+      - item 3
+        - **fact**: The scaffold's record states that both merges were made on the owner's word and corrects the specification's exemplar section to match.
+        - **where**: aybllc/7lm origin/main L8/L6/history/harmonization-2026-09-04.md:543-558 (section 41)
+      - item 4
+        - **fact**: The branch of Auditonomous pull request #28, ccr-9391bd81-f2enmj at 3696894, differs from main by 311 added files, every one under L8/L5/research/review/agent-results-2026-11-11/, and by nothing else.
+        - **where**: git diff --name-status origin/main origin/ccr-9391bd81-f2enmj in /home/user/auditonomous
+      - item 5
+        - **fact**: The scaffold's main holds the public copy of the same results, 311 files at the same path; no Autonomous branch holds any.
+        - **where**: git ls-tree -r origin/main in /home/user/7lm; every remote branch in /home/user/autonomous
+      - item 6
+        - **fact**: The record's standing of 20 September reserves to the owner the judgement that the scaffold is close before the exemplars are brought into step.
+        - **where**: aybllc/7lm origin/main L8/L6/history/harmonization-2026-09-04.md:346 (section 26)
+    - **on_yes**: Nothing to do. Pull request #28 stays open; the complete results stay on its branch and their public copy on the scaffold's main. Whether they also go on Auditonomous main is a separate word of yours, whenever you want it.
+    - **cost_or_risk**: None on disk. The complete results stay on an unmerged branch only, so they reach no main until you say.
+    - **confidence**: high
+    - **rejected**: Merging #28 now would put 311 files into Auditonomous's catch-all, which your choice of a mirror-only branch kept off main. Closing #28 would leave the complete results on a branch that no open pull request points at.
+    - **depends_on**: (empty)
+  - item 2
+    - **id**: M2
+    - **title**: Whether the order of 14 September still governs, and when its acts are taken
+    - **kind**: process
+    - **status_now**: open
+    - **best_choice**: Keep the order of 14 September, untaken until you say the scaffold is close, as your rule of 20 September requires. Then take it in its order: the definition's seven review fixes, the read-only declaration re-pathed to L7/governance/controlled/0.md, your merge, tag and protection of main, then the papers' review.
+    - **why**: The order is yours and no later word withdraws it; your instruction of 11 November follows its sequence, model and exemplars first, Auditonomous after. Six days after it, though, you ruled that only the scaffold changes until you are sure it is close, and your word to merge 29 and 30 lifted that for the mirror alone. The acts left in the order change the exemplars, and the scaffold is still moving. Keeping the order loses nothing; taking it now would break the rule and declare Autonomous read-only while its 81 sheet findings and its definition's seven fixes stand open.
+    - **owner_words**
+      - item 1
+        - **quote**: [source text withheld from the public copy].
+        - **where**: aybllc/autonomous origin/claude/scholarly-pair-baseline-k8ap82 L8/L6/history/exemplar-2026-09-14.md:7 (the owner, 14 September 2026)
+      - item 2
+        - **quote**: All repos should mirror the 7lm. Manually. We update 7lm and focus on it only. No outside updates until we are sure I'm close.
+        - **where**: aybllc/7lm origin/main L8/L6/history/harmonization-2026-09-04.md:336 (the owner, 20 September 2026)
+    - **evidence**
+      - item 1
+        - **fact**: The order survives only on two branches whose pull requests were closed unmerged, Autonomous claude/scholarly-pair-baseline-k8ap82 (1 commit ahead of main) and Auditonomous claude/book-structure-roadmap-k8ap82 (5 ahead); no other ref in either clone holds their records.
+        - **where**: aybllc/auditonomous origin/claude/book-structure-roadmap-k8ap82 L8/L6/history/restore-2026-09-14.md:7; git rev-list --count and git ls-tree over every remote branch
+      - item 2
+        - **fact**: The record of that day leaves the merge, the tag and the protection of main to the owner; neither exemplar clone holds any tag.
+        - **where**: aybllc/autonomous origin/claude/scholarly-pair-baseline-k8ap82 L8/L6/history/exemplar-2026-09-14.md:25; git tag -l in both clones
+      - item 3
+        - **fact**: The declaration was filed at L7/governance/restrictions/0.md; on Autonomous main that position is L7/governance/controlled/, whose sheet says that no restriction other than a copyright-derived one exists.
+        - **where**: aybllc/autonomous origin/main L7/governance/controlled/0.md:32
+      - item 4
+        - **fact**: The definition's adversarial review of 8 August 2026 names seven fixes and says a delta re-review of them would clear it; none has been made.
+        - **where**: aybllc/autonomous origin/main L8/L5/research/review/REVIEW_4_AUTONOMOUS_ADJUDICATION.md:458-465
+      - item 5
+        - **fact**: The sheet audit of Autonomous has 81 findings standing after a skeptic, none applied.
+        - **where**: /tmp/claude-0/-home-user/bfcfd013-a2da-5019-961e-7f46116f08be/scratchpad/audits/sheet-audit-autonomous-2026-11-11.md:3
+      - item 6
+        - **fact**: The scaffold is still moving: pull request #19 is being reconciled in an unpushed merge commit, 38e2ec3, that dates the specification 13 November 2026, and the beta and audit branches are unmerged, the audit branch's disposition recorded as the owner's call.
+        - **where**: /home/user/7lm-pr19 HEAD; aybllc/7lm origin/main L8/L6/history/harmonization-2026-09-04.md:537
+    - **on_yes**: Nothing changes now. Once you say the scaffold is close, a session drafts the definition's dated version from the seven fixes, then the re-pathed declaration as a draft pull request; you merge, tag and protect main; the papers go to review; Auditonomous starts.
+    - **cost_or_risk**: Autonomous stays editable and untagged meanwhile, and the Auditonomous writing waits on your word that the scaffold is close, which in practice means pull request #19, the scaffold's beta and the audit branch decided.
+    - **confidence**: medium
+    - **rejected**: Reopening #29 as it stands files the declaration at a path main no longer has. Withdrawing the order: no word of yours does, and it strands the papers and the declaration. Taking its acts now breaks the rule of 20 September.
+    - **depends_on**: (empty)
+  - item 3
+    - **id**: M14
+    - **title**: Sheets at the eighteen unsheeted exemplar folders, or a narrower specification sentence
+    - **kind**: process
+    - **status_now**: open
+    - **best_choice**: Write a blank sheet at each of the 18 folders, its first line '# <path>/' and nothing else, one commit per exemplar (6 Autonomous, 12 Auditonomous), listing them in each record as audit exceptions for your human-only (HOA) review. Leave the specification's sentence as it stands; it becomes true.
+    - **why**: Your rule for folders beneath a layer is this: blank with the location, tagged for human-only review. The record reads it as: the tree and a sheet's first line are not design choices, so a folder without a sheet does not match the model, which your word of 11 November asked to end; the scaffold has none outside its retired sets. A blank sheet adds no third-party text and edits no staging file. Narrowing the sentence would record the gap instead of closing it, leave the specification's every-directory rule unmet, and need a new version beside pending pull request #19.
+    - **owner_words**
+      - item 1
+        - **quote**: I left out sub folders because those are design choices but they should all either be blank with just the location this being skipped and tagged at the end of the doc as an adult xception for HOA review
+        - **where**: aybllc/7lm origin/main L8/L6/history/harmonization-2026-09-04.md:388 (the owner, 20 September 2026)
+      - item 2
+        - **quote**: we need to uipdate the autonomous and auditonomous repos phsyciall; to match first .
+        - **where**: aybllc/7lm origin/main L8/L6/history/harmonization-2026-09-04.md:543 (the owner, 11 November 2026)
+    - **evidence**
+      - item 1
+        - **fact**: Counted on today's mains outside the retired sets: 6 folders without a 0.md in Autonomous, 12 in Auditonomous (9 of them under L7/provenance/sources/staging-records/), none in the scaffold.
+        - **where**: git ls-tree -r origin/main in /home/user/autonomous (9fa3744), /home/user/auditonomous (aa30b03) and /home/user/7lm (6de996b)
+      - item 2
+        - **fact**: The specification's first bullet on what both exemplars carry says every directory has its sheet headed by its path, and its rule at the top says every directory carries a local Layer 0 description.
+        - **where**: aybllc/7lm origin/main L8/L4/work/writing/7lm-harmonized-architecture-specification.md:934 and :21
+      - item 3
+        - **fact**: The scaffold's record lists the same 18 folders as open for the owner and names the two fixes, sheets in the exemplars or a narrowed bullet.
+        - **where**: aybllc/7lm origin/main L8/L6/history/harmonization-2026-09-04.md:562
+      - item 4
+        - **fact**: The record reads the owner's rule as: a folder beneath a layer keeps its sheet, which may be blank, the first line and nothing else; the integrity check passes a blank sheet and, outside the canonical positions, only reports a missing one.
+        - **where**: aybllc/7lm origin/main L8/L6/history/harmonization-2026-09-04.md:390 and :396; .github/workflows/integrity.yml:63-69
+      - item 5
+        - **fact**: The unmerged Autonomous beta e64b382 carries 16-line sheets at the same six Autonomous paths, each headed by its path; the Auditonomous beta carries none at the twelve.
+        - **where**: git show origin/beta/7lm-exemplar-autonomous:<path>/0.md in /home/user/autonomous; same in /home/user/auditonomous
+      - item 6
+        - **fact**: The staging-records sheet says its interior folders keep their own READMEs from the earlier layout and are not re-gated there.
+        - **where**: aybllc/auditonomous origin/main L7/provenance/sources/staging-records/0.md:8
+    - **on_yes**: A session writes the two commits as draft pull requests, each with a record section listing the folders as audit exceptions, the record standing in for the collecting document not yet made; you merge. The check's no-sheet notices outside retired sets fall to none.
+    - **cost_or_risk**: Eighteen one-line files; nine sit in a staging tree whose sheet calls it not re-gated. If the Autonomous beta is ever merged, its six fuller sheets meet these; take its text then.
+    - **confidence**: high
+    - **rejected**: Narrowing the bullet records the gap instead of ending it, leaves the specification's every-directory rule unmet, and costs a new version, rendering and history. Full sheets would describe hold-private staging records, beyond blank with the location.
+    - **depends_on**: (empty)
+  - item 4
+    - **id**: M15
+    - **title**: Whether binder/internal/ stays under publications or moves to L4 writing
+    - **kind**: process
+    - **status_now**: open
+    - **best_choice**: Keep binder/internal/ under L7/allications/publications/binder/ in both exemplars; move nothing. Then make each publications sheet true with a one-line fix to its Does not hold list, saying the binder's unreleased material is held there as the release gate, as the audits of 11 November word it.
+    - **why**: Your words for this branch are inclusive and provisional, and the structure is not to be fixed yet. A move would not make true what is now false: each publications sheet excludes internal drafts, empty release slots and material that has not left, yet after a move it would still hold press-kit/, a draft glossary in Autonomous and an unfilled checklist in Auditonomous. internal/ is the holding side of the binder's clearance gate, and a fetch list and two scripts fit writing poorly. Both your beta candidates keep it there. A one-line sheet fix makes the sheets true.
+    - **owner_words**
+      - item 1
+        - **quote**: whAT DO YOU think of allicatins to hold everything for now
+        - **where**: aybllc/7lm origin/main L8/L6/history/harmonization-2026-09-04.md:317 (the owner, 19 September 2026)
+      - item 2
+        - **quote**: we dont want hard strcuture yet.  we arent sure what goes where ans why so we lkeep the 0.md the cource fo the dir, the dir moveds  so does th e 0.md.
+        - **where**: aybllc/7lm origin/main L8/L6/history/harmonization-2026-09-04.md:297 (the owner, 19 September 2026)
+    - **evidence**
+      - item 1
+        - **fact**: The specification defines allications/publications/ as the directory for released publication objects and writing/ as writing and document production as performed work.
+        - **where**: aybllc/7lm origin/main L8/L4/work/writing/7lm-harmonized-architecture-specification.md:872 and :566
+      - item 2
+        - **fact**: Autonomous's publications sheet excludes internal drafts, empty release slots and material that has not left, then lists as holdings the binder with internal/ and a press-kit glossary stamped DRAFT, INTERNAL.
+        - **where**: aybllc/autonomous origin/main L7/allications/publications/0.md:29 and :33
+      - item 3
+        - **fact**: internal/ holds 4 files in Autonomous (a README, a fetch list, two verification scripts) and 1 in Auditonomous (a README); its README makes release an explicit act of moving material to press-kit/.
+        - **where**: git ls-tree -r origin/main L7/allications/publications/ in both clones; aybllc/autonomous origin/main L7/allications/publications/binder/internal/README.md:19
+      - item 4
+        - **fact**: Both records list the placement as an owner decision left open, and the Auditonomous binder sheet reserves it to the owner.
+        - **where**: aybllc/autonomous origin/main L8/L6/history/harmonization-2026-09-05.md:80; aybllc/auditonomous origin/main same file:94 and L7/allications/publications/binder/0.md:27
+      - item 5
+        - **fact**: The specification describes Autonomous's publications as a binder with nothing released.
+        - **where**: aybllc/7lm origin/main L8/L4/work/writing/7lm-harmonized-architecture-specification.md:946
+      - item 6
+        - **fact**: Both unmerged exemplar betas keep internal/ under L7/allications/publications/binder/.
+        - **where**: git ls-tree -r origin/beta/7lm-exemplar-autonomous and origin/beta/7lm-exemplar-auditonomous
+    - **on_yes**: A dated line in each exemplar's record closes the open item on your word. The sheet line goes in with the sheet-audit corrections: line 29 of L7/allications/publications/0.md in each exemplar, one line each.
+    - **cost_or_risk**: Unreleased material keeps sitting under a position defined for released objects; the sheet says so plainly instead. Reversible: a later move takes internal/ with its sheet.
+    - **confidence**: high
+    - **rejected**: Moving internal/ to L8/L4/work/writing/ leaves the sheet's contradiction standing, splits the gate from press-kit/, and files a queue and two scripts as writing. Moving the whole binder goes beyond the question and against the specification's account.
+    - **depends_on**: (empty)
+  - item 5
+    - **id**: M16
+    - **title**: Whether peering is stable enough to start, and when and where to rebind
+    - **kind**: process
+    - **status_now**: open
+    - **best_choice**: Rule peering stable enough to start: the bound text is byte-identical on Autonomous main. Rebind after, once: to the commit you tag when you merge the read-only declaration and corrected definition (M2), as a new record beside object-1, the specification's two sentences changing with it. Until then 0504961 stands.
+    - **why**: Stable here means the bound object will not shift under the work; it has not: the text at 0504961 and at Autonomous main is one blob. Neither unmerged scaffold candidate unsettles it: the audit branch calls such a binding the exemplar's own handling contract, and the scaffold's beta lets a receiver keep an old binding. Its one shortfall is a path, stated truly in the specification. Rebinding now to 9fa3744 would pin the same bytes, then need a second rebinding once the seven fixes land, with two specification changes; the roadmap's decision D22 preferred one pin at the declaration's tag.
+    - **owner_words**
+      - item 1
+        - **quote**: [source text withheld from the public copy].
+        - **where**: aybllc/autonomous origin/claude/scholarly-pair-baseline-k8ap82 L8/L6/history/exemplar-2026-09-14.md:7 (the owner, 14 September 2026)
+      - item 2
+        - **quote**: Auditonomous gets the definitions of autonomous from Autonomous and nowhere else.
+        - **where**: aybllc/auditonomous origin/main L7/peering/public/ingress/peer-1/object-1/0.md:24 (the owner, 5 September 2026)
+    - **evidence**
+      - item 1
+        - **fact**: The definition is the same blob, ffbdc28, at 0504961:research/definitions/AUTONOMOUS.md and at 9fa3744:L8/L0/semantics/definitions/AUTONOMOUS.md; 0504961 is an ancestor of Autonomous main; no tag exists in either exemplar clone.
+        - **where**: git rev-parse, git merge-base --is-ancestor and git tag -l in /home/user/autonomous
+      - item 2
+        - **fact**: The specification says Auditonomous binds the definition at 0504961 at the peer's former path, that the same object now stands at its L0 path, and that rebinding is the owner's act.
+        - **where**: aybllc/7lm origin/main L8/L4/work/writing/7lm-harmonized-architecture-specification.md:954 and :958
+      - item 3
+        - **fact**: The binding sheet says an upstream change creates a new binding record beside it and never mutates it.
+        - **where**: aybllc/auditonomous origin/main L7/peering/public/ingress/peer-1/object-1/0.md:30
+      - item 4
+        - **fact**: The unmerged audit branch, committed under the owner's name, rewrites the specification to call exact-version, reference-only binding a property of this exemplar's handling contract, not a universal requirement of peering.
+        - **where**: aybllc/7lm origin/audit/peering-descriptive-reframe-2026-09-20 L8/L4/work/writing/7lm-harmonized-architecture-specification.md:40
+      - item 5
+        - **fact**: The roadmap's D22 offered binding now, binding to the tag at the declaration's merge, or keeping 0504961, and recommended the tag so that one pin serves the declaration and the four files together.
+        - **where**: aybllc/auditonomous origin/claude/book-structure-roadmap-k8ap82 L8/L5/research/review/BOOK_STRUCTURE_AND_ROADMAP_2026-09-13.md:631
+      - item 6
+        - **fact**: Three Auditonomous files still take a definition of autonomous [source text withheld from the public copy] sheet calls resolving them the owner's edit.
+        - **where**: aybllc/auditonomous origin/main L7/peering/public/ingress/peer-1/object-1/0.md:34
+      - item 7
+        - **fact**: The unmerged Auditonomous beta keeps 0504961 as the binding and adds the current path as a convenience-location row inside the same record.
+        - **where**: aybllc/auditonomous origin/beta/7lm-exemplar-auditonomous L7/peering/public/ingress/peer-1/object-1/0.md:13 and :19
+      - item 8
+        - **fact**: The scaffold beta's peering sheet lets a receiving project adopt a new binding, retain the old one or mark the dependency unresolved.
+        - **where**: aybllc/7lm origin/beta/common-contracts-r1-r6 L7/peering/0.md:20
+    - **on_yes**: Nothing changes now; starting the writing waits on 7lm (M2). After M2's merge and tag, a session drafts the new binding record pinned to that tag, with the peer-1 sheet's two former peer paths; the specification's lines 954 and 958 change in its next pass.
+    - **cost_or_risk**: The binding keeps naming the pre-7LM path until then. Three Auditonomous files still break your one-source rule; that is your research edit, not resolved by this.
+    - **confidence**: medium
+    - **rejected**: Rebinding now to 9fa3744 pins the same bytes and means two rebindings. Keeping 0504961 for good with a current-path row, as your Auditonomous beta does, edits a record that says it is never mutated. Calling peering unstable: nothing shows the bound object moving.
+    - **depends_on**
+      - M2
+  - item 6
+    - **id**: M17
+    - **title**: Whether the mirror's record sections pin the scaffold commit and list what was declined
+    - **kind**: process
+    - **status_now**: open
+    - **best_choice**: Pin, and list nothing as declined: when each exemplar's record next takes a section, add one sentence saying the pass of 11 November mirrored aybllc/7lm main at c9dc061, the specification's version of 20 September 2026; from then on, every mirror section names the scaffold commit it mirrors.
+    - **why**: Both sections name the scaffold by a version date and a path only. That served while the scaffold stood still; it no longer does. The specification was re-dated on 12 November, and pull request #19 re-dates it and changes the check, after which Auditonomous's claim that its check is the scaffold's byte for byte can be tested only against a named commit. A commit is a pointer, not shared history, so the hard rule holds. A declined list has no ground: its guide is retired on main, your words place it in a future push, and you declined nothing.
+    - **owner_words**
+      - item 1
+        - **quote**: (in the future, pinned hashes push HOA REVIEW inter peering private where decisions are made to follow or edit, dir structure we push is required.
+        - **where**: aybllc/7lm origin/main L8/L6/history/harmonization-2026-09-04.md:350 (the owner, 20 September 2026)
+      - item 2
+        - **quote**: Put the field guide into l6 as provenance stale. Deprecated and to be used as an example.
+        - **where**: aybllc/7lm origin/main L8/L6/history/harmonization-2026-09-04.md:518 (the owner, 17 October 2026)
+    - **evidence**
+      - item 1
+        - **fact**: Autonomous's section 14 and Auditonomous's section 13 identify the scaffold by the specification's version of 20 September 2026 and its path, with no commit, and neither names anything declined.
+        - **where**: aybllc/autonomous origin/main L8/L6/history/harmonization-2026-09-05.md:187; aybllc/auditonomous origin/main same file:180
+      - item 2
+        - **fact**: Auditonomous's section says its check is now the scaffold's byte for byte; its blob f43dd04 equals the scaffold's at c9dc061 and at 6de996b, while pull request #19's head and its reconciliation carry d98049a.
+        - **where**: aybllc/auditonomous origin/main L8/L6/history/harmonization-2026-09-05.md:198; git rev-parse <ref>:.github/workflows/integrity.yml
+      - item 3
+        - **fact**: The scaffold's history places the version of 20 September 2026 at main c9dc061.
+        - **where**: aybllc/7lm origin/main L8/L6/history/specification-history.md:14
+      - item 4
+        - **fact**: The field guide that asked for a declined list is retired on main as stale and deprecated since the merge of 13 November; its sentence conditions the list on a push mechanism that is not built.
+        - **where**: aybllc/7lm origin/main L8/L6/retired/field-guide-2026-09-20/0.md:3 and 7lm-field-guide.md:610
+      - item 5
+        - **fact**: Between bbb04dd and c9dc061 the scaffold changed only L7/0.md (two lines of 5 October), two history files and the layer lists, so the specification and check mirrored are the same at c9dc061 and its parent.
+        - **where**: git diff --stat bbb04dd c9dc061 in /home/user/7lm
+      - item 6
+        - **fact**: Autonomous's check is not the scaffold's blob: it keeps a retired-step comment block.
+        - **where**: git rev-parse origin/main:.github/workflows/integrity.yml in /home/user/autonomous (45ad3f7)
+    - **on_yes**: No commit of its own. The sentence rides with the next commit to each record, for instance the section recording the sheets, the count or the paths; Autonomous's names only the commit, since its check differs from the scaffold's.
+    - **cost_or_risk**: One sentence per record. It fixes c9dc061 as the state mirrored, though no git object shows whether the pass read c9dc061 or its parent; the mirrored files are the same in both.
+    - **confidence**: medium
+    - **rejected**: A declined list now: its source is retired and you declined nothing. A commit of its own for the pin: one more change for a sentence that corrects nothing false today. No pin: the match becomes unverifiable as the scaffold moves.
+    - **depends_on**: (empty)
+  - item 7
+    - **id**: M20
+    - **title**: Which base the Auditonomous research takes, and when the book branch may return
+    - **kind**: process
+    - **status_now**: open
+    - **best_choice**: Take Auditonomous main (aa30b03) as the base. Keep the book branch closed and read only as git objects; findings resting on it alone stay parked. Revive it only after you rule on the restore of 14 September, then as one new draft pull request onto main, not by reopening #27.
+    - **why**: Main is the only state you have merged, and since 11 November it matches the model's tree. The book branch was closed unmerged; its restore returned 116 files that your own prune of 15 August removed, on a session's reading of your words that its record says you may reverse. Your latest act here, the beta of 2 November, took main as base and left the book material out. Reading the branch loses nothing; reviving it first would undo your prune on no word of yours. The mirror has landed, so any revival comes after it.
+    - **owner_words**
+      - item 1
+        - **quote**: [source text withheld from the public copy].
+        - **where**: aybllc/auditonomous origin/claude/book-structure-roadmap-k8ap82 L8/L6/history/restore-2026-09-14.md:7 (the owner, 14 September 2026)
+      - item 2
+        - **quote**: No outside updates until we are sure I'm close.
+        - **where**: aybllc/7lm origin/main L8/L6/history/harmonization-2026-09-04.md:336 (the owner, 20 September 2026)
+    - **evidence**
+      - item 1
+        - **fact**: The book branch, 9259c18, is 5 commits ahead of and 3 behind Auditonomous main; against their common base 2165144 it adds 159 files and changes 17, and 7 of the 17, all sheets, were also changed by the mirror.
+        - **where**: git rev-list --left-right --count and git diff --name-status 2165144 origin/claude/book-structure-roadmap-k8ap82 in /home/user/auditonomous
+      - item 2
+        - **fact**: The branch holds 328 files; main holds 175.
+        - **where**: git ls-tree -r origin/main and origin/claude/book-structure-roadmap-k8ap82 in /home/user/auditonomous
+      - item 3
+        - **fact**: The restore record says 116 files were returned from the tree before the prune of 15 August (8c98573), takes a session's reading of the owner's words as the ruling, and says the owner may reverse it.
+        - **where**: aybllc/auditonomous origin/claude/book-structure-roadmap-k8ap82 L8/L6/history/restore-2026-09-14.md:9 and :13
+      - item 4
+        - **fact**: The prune commit describes itself as the owner's manual prune, committed on his instruction after session review.
+        - **where**: git show -s 8c98573 in /home/user/auditonomous
+      - item 5
+        - **fact**: The mirror's record notes that thirty live files of the book branch name the former L7 paths.
+        - **where**: aybllc/auditonomous origin/main L8/L6/history/harmonization-2026-09-05.md:207
+      - item 6
+        - **fact**: No other Auditonomous ref holds the restore record or the roadmap.
+        - **where**: git ls-tree -r over every remote branch in /home/user/auditonomous
+    - **on_yes**: Nothing moves now. Research and manuscript work stands on main; book-branch findings stay parked. When you rule on the restore, a session brings the five commits forward as one draft pull request, reconciling the 7 shared sheets and the 30 stale paths.
+    - **cost_or_risk**: The material only the book branch holds (159 files: the noun entry, the chapter headers, the vocabulary paper, probes, the roadmap) stays off main until you rule.
+    - **confidence**: high
+    - **rejected**: Reviving now restores 116 files your prune removed, on no word of yours, as an outside update. Basing on the book branch builds on a closed, unmerged state. Enumerating it into L6 and retiring it is premature before your ruling.
+    - **depends_on**: (empty)
+  - item 8
+    - **id**: M21
+    - **title**: What becomes of the no-deletion-fix, research-move and scholarly-pair branches
+    - **kind**: process
+    - **status_now**: open
+    - **best_choice**: Keep all five branches; delete none. Close draft pull requests #27 (Autonomous) and #25 (Auditonomous) unmerged, commenting that they edit USO/ paths renamed on 12 September and that the catch-all's no-deletion sentence changes, if at all, in the scaffold first. Leave both research-move branches and scholarly-pair untouched.
+    - **why**: Your rule is enumeration before any deletion, and keeping a branch loses nothing, so none goes. The two drafts cannot land: they edit three sheets at paths renamed on 12 September, and their change would make the exemplars' catch-all differ from the scaffold's, which still says nothing is deleted; under your rule that all repositories mirror the scaffold, that sentence changes there first and is mirrored. Closing keeps their branches and is undone by reopening. Auditonomous research-move holds 22 file contents found on no other ref; scholarly-pair is the only home of the declaration and the baseline paper.
+    - **owner_words**
+      - item 1
+        - **quote**: yes (that does nto mean delete over tehre until we enumerate please and thank you)
+        - **where**: aybllc/auditonomous origin/main L8/L6/history/harmonization-2026-09-05.md:107 (the owner, 6 September 2026)
+      - item 2
+        - **quote**: All repos should mirror the 7lm. Manually.
+        - **where**: aybllc/7lm origin/main L8/L6/history/harmonization-2026-09-04.md:336 (the owner, 20 September 2026)
+    - **evidence**
+      - item 1
+        - **fact**: Autonomous claude/no-deletion-fix-2026-09-07 (44a2c7c) is 1 commit ahead of and 6 behind main; Auditonomous's (f89bf8a) is 1 ahead and 7 behind; each edits USO/l5/research/0.md, USO/l5/research/review/0.md and USO/l6/0.md.
+        - **where**: git rev-list --left-right --count and git diff --stat origin/main...origin/claude/no-deletion-fix-2026-09-07 in both clones
+      - item 2
+        - **fact**: The scaffold's catch-all sheet still says nothing is deleted, as do both exemplars' catch-all sheets.
+        - **where**: aybllc/7lm origin/main L8/L5/research/review/0.md:36; aybllc/autonomous origin/main L8/L5/research/review/0.md:41; aybllc/auditonomous origin/main L8/L5/research/review/0.md:38
+      - item 3
+        - **fact**: Auditonomous claude/research-move (55541d7) is 1 ahead, 16 behind, 39 files; 22 of its file contents are reachable from no other ref.
+        - **where**: git rev-list --objects over every other remote branch, compared with git diff --raw 55541d7^ 55541d7, in /home/user/auditonomous
+      - item 4
+        - **fact**: Autonomous claude/research-move (07e8ce1) is 0 commits ahead of main: everything in it is on main.
+        - **where**: git rev-list --count origin/main..origin/claude/research-move in /home/user/autonomous
+      - item 5
+        - **fact**: Autonomous claude/scholarly-pair-baseline-k8ap82 (9b49910) is 1 ahead, 3 behind, 9 files, and is the only ref holding the record of 14 September and the baseline paper.
+        - **where**: git ls-tree -r over every remote branch in /home/user/autonomous
+      - item 6
+        - **fact**: The scaffold's precedent for a stale branch on USO/ paths: closed unmerged, enumerated into one combined file, then deleted.
+        - **where**: aybllc/7lm origin/main L8/L6/history/harmonization-2026-09-04.md:301-305
+    - **on_yes**: You, or a session on your word, close the two pull requests with that comment; no tree changes. If you want the no-deletion wording, it goes to the scaffold as its own question, and the exemplars mirror it.
+    - **cost_or_risk**: Five stale refs stay listed, and the exemplars keep the scaffold's no-deletion sentence until the scaffold decides it.
+    - **confidence**: medium
+    - **rejected**: Merging the drafts: they cannot land on L8/ paths and would split exemplars from scaffold. Enumerating and deleting research-move now: no word of yours asks for deletion. Rebasing scholarly-pair: waits on the order of 14 September.
+    - **depends_on**: (empty)
+  - item 9
+    - **id**: M22
+    - **title**: Correct the Auditonomous sheets' 62 ledger rows to 60 now, or later
+    - **kind**: process
+    - **status_now**: open
+    - **best_choice**: Correct now, in one commit of its own on Auditonomous main: the seven statements in five sheets read 60 rows, 58 pointing into l6 and two held out, as the audit of 11 November words them. Leave the ledger, its dated close-out row and the dated records as written.
+    - **why**: Seven live statements give 62; the register holds 60 [source text withheld from the public copy], and the two EXC rows are held out of l6, so the sheets misstate both the number and the kind. The figure began as a slip on 16 August, whose own ranges sum to 60. Inside the mirror is moot now; waiting for the 64-finding pass would hold a sure fix behind findings needing rulings. It is an outside update under your rule of 20 September: lift it here, since a false count is corrected, nothing moves, and one revert undoes it.
+    - **owner_words**
+      - item 1
+        - **quote**: No outside updates until we are sure I'm close.
+        - **where**: aybllc/7lm origin/main L8/L6/history/harmonization-2026-09-04.md:336 (the owner, 20 September 2026)
+      - item 2
+        - **quote**: anything we need to discuss shoudl be brough to my atgention with soluitionsw like gitworkflows
+        - **where**: aybllc/auditonomous origin/main L8/L6/history/harmonization-2026-09-05.md:129 (the owner, 6 September 2026)
+    - **evidence**
+      - item 1
+        - **fact**: The register has 60 rows: PR 20, STD 34, INST 4, EXC 2, at lines 20 to 79; EXC-001 and EXC-002 are held out of l6 and carry no l6 path or commit.
+        - **where**: aybllc/auditonomous origin/main L7/provenance/sources/LEDGER.md:20-79 (rows counted by prefix)
+      - item 2
+        - **fact**: The seven statements of 62 stand at L7/0.md:232, L7/peering/private/ingress/peer-1/0.md:16, L7/peering/private/ingress/peer-1/object-1/0.md:10, L7/provenance/0.md:20 and :33, and L7/provenance/sources/0.md:10 and :41.
+        - **where**: git grep -n 62 origin/main in /home/user/auditonomous, outside L8/L6/history and L8/L6/retired
+      - item 3
+        - **fact**: The figure first appears in the record of 16 August, whose listed ranges sum to 60.
+        - **where**: aybllc/auditonomous origin/main L8/L6/history/LEDGER_2026-08-16_l6-close-and-normalization.md:30
+      - item 4
+        - **fact**: The register's dated close-out row says 22 new rows over a list of 21.
+        - **where**: aybllc/auditonomous origin/main L7/provenance/sources/LEDGER.md:113
+      - item 5
+        - **fact**: The scaffold's specification repeats 62 pointer rows for Auditonomous, and the review of 12 November proposed the corrected sentence.
+        - **where**: aybllc/7lm origin/main L8/L4/work/writing/7lm-harmonized-architecture-specification.md:954; /tmp/claude-0/-home-user/bfcfd013-a2da-5019-961e-7f46116f08be/scratchpad/proposals/spec-exemplar-section-proposals-2026-11-12.md:101-109
+      - item 6
+        - **fact**: The unmerged Auditonomous beta changes the same seven lines to 60 archive pointer rows, still counting the two held-out rows as pointers.
+        - **where**: git grep origin/beta/7lm-exemplar-auditonomous in /home/user/auditonomous
+    - **on_yes**: A session makes the commit with a section in Auditonomous's record, as a draft pull request; you merge. The scaffold's specification takes the matching sentence in its next pass, so the three repositories agree.
+    - **cost_or_risk**: Seven lines change. If the Auditonomous beta is ever merged, its wording meets this on the same seven lines and is reconciled by hand.
+    - **confidence**: high
+    - **rejected**: Leaving it to the beta waits on a merge you have not decided and keeps the two held-out rows counted as pointers. Folding it into the 64-finding pass delays a sure fix. Doing nothing keeps a false count in seven places.
+    - **depends_on**: (empty)
+  - item 10
+    - **id**: M23
+    - **title**: Whether live references to former paths, binder files included, are corrected
+    - **kind**: process
+    - **status_now**: open
+    - **best_choice**: Correct seven lines now, one commit per exemplar: uso/l6/LEDGER.md becomes L7/provenance/sources/LEDGER.md at FORMULAS_LEDGER.md:23 and datasets-LEDGER.md:21 in both, and Autonomous MANUSCRIPT.tex:50 and :79; Auditonomous L7/provenance/sources/0.md:18 names Autonomous's register at that path. Leave the binder, staging and reconciliation files as written.
+    - **why**: One live sheet is false: Auditonomous says Autonomous keeps its register at the old path, while Autonomous's own sheet gives the current one, so the two repositories disagree. Six working lines tell a reader to cite a path that no longer exists, against your word that documentation in use be current. The three binder lines sit in files their sheets keep unrewritten as the earlier layout's gates, and each L6 sheet says where the register went; the staging READMEs and the reconciliation copy are dated records. Lifting your rule of 20 September for seven lines moves nothing.
+    - **owner_words**
+      - item 1
+        - **quote**: thank you please pull out historicallyu referndes to the docuejtnation leaving just the historical docuemtnatio that is cirrent and relevant for the purpose of using the thing
+        - **where**: aybllc/auditonomous origin/main L8/L6/history/harmonization-2026-09-05.md:158 (the owner, 7 September 2026; also aybllc/autonomous origin/main same file:165)
+      - item 2
+        - **quote**: No outside updates until we are sure I'm close.
+        - **where**: aybllc/7lm origin/main L8/L6/history/harmonization-2026-09-04.md:336 (the owner, 20 September 2026)
+    - **evidence**
+      - item 1
+        - **fact**: Outside L8/L6/history and L8/L6/retired, leaving aside lines that say the register was relocated and the mention of another repository, aybllc/ommp, at a pinned commit, uso/l6/LEDGER.md stands on 9 lines in 5 files in Autonomous and on 10 lines in 6 files in Auditonomous, plus Auditonomous's sentence about Autonomous's register.
+        - **where**: git grep -n -F uso/l6/LEDGER.md origin/main in both clones
+      - item 2
+        - **fact**: Auditonomous's sources sheet places Autonomous's register at uso/l6/LEDGER.md; Autonomous's sheet at the same line places Auditonomous's at L7/provenance/sources/LEDGER.md, and its own register stands there.
+        - **where**: aybllc/auditonomous origin/main L7/provenance/sources/0.md:18; aybllc/autonomous origin/main L7/provenance/sources/0.md:18 and :10
+      - item 3
+        - **fact**: The six working lines: FORMULAS_LEDGER.md:23 and datasets-LEDGER.md:21 in each exemplar, and the Autonomous manuscript placeholder at L8/L4/work/writing/MANUSCRIPT.tex:50 and :79.
+        - **where**: aybllc/autonomous and aybllc/auditonomous origin/main, L8/L2/formal-mathematics/FORMULAS_LEDGER.md and L7/provenance/sources/datasets-LEDGER.md
+      - item 4
+        - **fact**: Each binder sheet says the binder's files are the earlier layout's own gates and are not rewritten; the three binder lines are Autonomous press-kit/README.md:18 and Auditonomous binder/README.md:11 and press-kit/README.md:18.
+        - **where**: L7/allications/publications/binder/0.md:8 on both mains
+      - item 5
+        - **fact**: Each exemplar's L6 sheet tells a reader that the register formerly at uso/l6/LEDGER.md is now L7/provenance/sources/LEDGER.md.
+        - **where**: L8/L6/0.md:79 on aybllc/autonomous and aybllc/auditonomous origin/main
+      - item 6
+        - **fact**: Auditonomous's peer-1 sheet also names two of the peer's files at their former paths; they belong with the rebinding.
+        - **where**: aybllc/auditonomous origin/main L7/peering/public/ingress/peer-1/0.md:22
+    - **on_yes**: A session makes one commit in each exemplar with a line in its record, as draft pull requests; you merge. In Auditonomous it can share the count correction's commit. The peering sheet's two former peer paths wait for the rebinding (M16).
+    - **cost_or_risk**: The three binder lines and the dated files keep the dead path, read through the L6 sheet. The Autonomous edit touches your manuscript placeholder, though only its path.
+    - **confidence**: medium
+    - **rejected**: Correcting the binder too, rewording each binder sheet, rewrites gate files their sheets keep as written. Correcting nothing leaves a false sentence about the sibling and six dead instructions. Adding a reading line to the binder sheets fixes nothing that misleads.
+    - **depends_on**: (empty)
