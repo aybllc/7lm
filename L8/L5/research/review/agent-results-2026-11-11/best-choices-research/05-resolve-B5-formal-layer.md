@@ -1,0 +1,188 @@
+# resolve:B5-formal-layer
+
+Agent result, as returned. Workflow: Best choices: the research and manuscript decisions. Run `wf_b77d2bd0-834`. Phase: Resolve.
+
+- **decisions**
+  - item 1
+    - **id**: RH8
+    - **title**: Which enclosure regime the book uses to carry uncertainty
+    - **kind**: authorial
+    - **status_now**: open
+    - **best_choice**: Rule λ = 1 throughout the book: Rump's 1999 midpoint-radius product, cited and not coined, as the rule that carries uncertainty. Print λ = 0 only as its exact special case, stating the sign condition and the shifted centre. This ruling leaves λ_A, the decomposition state, untouched.
+    - **why**: The record settles the mathematics: λ = 1, Rump's product, contains the true product in exact arithmetic; λ = 0 is exact only when no operand crosses zero and the centre moves; λ = 0 as coded, like the N/U paper's Definition 3.1, does not enclose. The envelope's compartment C3 and condition B of the AUDITONOMY term entry already commit to λ = 1, and your own question rejects a bound that understates. Choosing it corrects nothing and keeps λ = 0's exact case. What would change it: a ruling at L1 that no operand ever crosses zero.
+    - **owner_words**
+      - item 1
+        - **quote**: [source text withheld from the public copy]?
+        - **where**: aybllc/auditonomous origin/claude/book-structure-roadmap-k8ap82 (9259c18): L8/L0/semantics/definitions/AUDITONOMY.md:10-11
+      - item 2
+        - **quote**: [source text withheld from the public copy].
+        - **where**: aybllc/auditonomous origin/main (aa30b03): L8/L4/work/writing/sessions/SESSION_2026-08-05_AUDITON_ARCHITECTURE.md:390-391
+    - **evidence**
+      - item 1
+        - **fact**: Rump 1999, Definition 2.1, Equation 5, is the λ = 1 product; the text states that all its operations satisfy isotonicity, the containment property, and its abstract bounds the overestimation by a factor of 1.5 in radius. Held copy, cited by locator only.
+        - **where**: aybllc/autonomous origin/main (9fa3744): L7/provenance/prior-art/prior-art-lane/ru99.txt:9, 117, 121
+      - item 2
+        - **fact**: Rump's proof, case i, gives the radius of the true product of nonnegative intervals in the λ = 0 form; the verification record says the centre moves and the sign condition must travel with the claim.
+        - **where**: aybllc/autonomous origin/main (9fa3744): L7/provenance/prior-art/prior-art-lane/ru99.txt:165-172; aybllc/auditonomous origin/claude/book-structure-roadmap-k8ap82 (9259c18): L8/L5/research/review/LAMBDA_EXTERNAL_VERIFICATION_2026-08-04.md:38-71
+      - item 3
+        - **fact**: λ = 0 as coded, with the centre left at the product of the nominals, is not an enclosure: (2,1) times (7,2) gives [3,25] against the true [5,27]. The N/U paper's Definition 3.1 is the same two-term form.
+        - **where**: aybllc/auditonomous origin/claude/book-structure-roadmap-k8ap82 (9259c18): L8/L5/research/review/EBSTACK_LAMBDA_ANALYSIS.md:60-68; L8/L5/research/review/NASA_PAPER_DEFECT_LEDGER.md:76-91, 118-119
+      - item 4
+        - **fact**: The envelope's compartment C3, Bound, already specifies the λ = 1 linear form, and the L3 tolerances sheet cites that row in place.
+        - **where**: aybllc/auditonomous origin/main (aa30b03): L8/L1/state-space/AUDITON_ENVELOPE.md:126; L8/L3/engineering-mathematics/tolerances/0.md:33
+      - item 5
+        - **fact**: Condition B of the AUDITONOMY term entry requires an enclosing bound, λ at least 1 in the linear form.
+        - **where**: aybllc/auditonomous origin/claude/book-structure-roadmap-k8ap82 (9259c18): L8/L0/semantics/definitions/AUDITONOMY.md:202
+      - item 6
+        - **fact**: The session that recorded your λ = 0 claim scoped it as an enclosure over decisions, not intervals; the departure protocol types λ_A apart from the EB multiplication parameter and says it does not mean multiplication with an omitted cross term.
+        - **where**: aybllc/auditonomous origin/main (aa30b03): L8/L4/work/writing/sessions/SESSION_2026-08-05_AUDITON_ARCHITECTURE.md:396-399; L7/peering/private/ingress/peer-2/object-1/auditonomous-departure-protocol.md:68, 76-79
+      - item 7
+        - **fact**: The roadmap's decision row recommends λ = 1 for the book with λ = 0 [source text withheld from the public copy].
+        - **where**: aybllc/auditonomous origin/claude/book-structure-roadmap-k8ap82 (9259c18): L8/L5/research/review/BOOK_STRUCTURE_AND_ROADMAP_2026-09-13.md:622
+      - item 8
+        - **fact**: The verification's adversarial pass has no recorded result, and containment under floating-point rounding is unchecked. Your own correction, docket item H5, records that enclosure is not a guarantee against overestimation.
+        - **where**: aybllc/auditonomous origin/claude/book-structure-roadmap-k8ap82 (9259c18): L8/L5/research/review/LAMBDA_EXTERNAL_VERIFICATION_2026-08-04.md:232-233; L8/L5/research/review/RESEARCH_DOCKET.md:196
+    - **on_yes**: A session records your ruling by dated entry and drafts, as proposals, the L2 row for Rump's product with its L7 source row and a dated correction of the Autonomous finding calling λ = 1 exact; it then checks λ = 1 under floating-point rounding.
+    - **cost_or_risk**: λ = 1 overstates width; the held abstract bounds the excess at a factor of 1.5 in radius. Containment under floating-point rounding is unchecked, so the book claims it for exact arithmetic until checked.
+    - **confidence**: high
+    - **rejected**: λ = 0 throughout: exact only where no operand crosses zero and the centre moves; as coded it fails to enclose. Both stated without truth-envelope language: drops the definition's truth-envelope criterion and the AUDITONOMY term entry's condition B.
+    - **depends_on**: (empty)
+  - item 2
+    - **id**: RH9
+    - **title**: Where formal statements are registered, whether three L1 files split, which rows enter
+    - **kind**: process
+    - **status_now**: open
+    - **best_choice**: Rule that the scaffold's split governs: an exact, established formula gets a row in FORMULAS_LEDGER.md, which stays at L2 and records each use; an applied formula belongs at L3, cited where it stands. Cite the three L1 files in place. Enter the isomorphism and enclosure rows together, after RH8.
+    - **why**: The scaffold already answers the placement: its Harmonization Record puts an exact formula at L2 and an applied one at L3, its Auditonomous traversal says the same, and your words of 20 September put formal mathematics at L2 and engineering mathematics at L3. The exemplars mirror the scaffold, so they follow it. The ledger's two columns already carry that split, and both exemplars hold the same ledger at L2. Citing in place moves no text, is what the tolerances sheet already does, and keeps the scaffold's description of Auditonomous true. One pass of rows needs one correction to that description.
+    - **owner_words**
+      - item 1
+        - **quote**: L2 is the formal math, l3 is engineering math. L4 is manufacturing
+        - **where**: aybllc/7lm origin/main (6de996b): L8/L6/history/harmonization-2026-09-04.md:457
+      - item 2
+        - **quote**: All repos should mirror the 7lm. Manually. We update 7lm and focus on it only. No outside updates until we are sure I'm close.
+        - **where**: aybllc/7lm origin/main (6de996b): L8/L6/history/harmonization-2026-09-04.md:336
+    - **evidence**
+      - item 1
+        - **fact**: The specification's Harmonization Record splits the inherited term semantic-formulas: the semantic reading at L0, an exact formula at L2, an applied, tolerant, adaptive or engineering formula at L3.
+        - **where**: aybllc/7lm origin/main (6de996b): L8/L4/work/writing/7lm-harmonized-architecture-specification.md:987
+      - item 2
+        - **fact**: The Auditonomous traversal: L2 may own exact relations or proofs when actually established; L3 owns the project's applied formulas. The same lines stand unchanged on the local, unpushed reconciliation of pull request 19.
+        - **where**: aybllc/7lm origin/main (6de996b): L8/L4/work/writing/7lm-harmonized-architecture-specification.md:607-609; local reconciliation /home/user/7lm-pr19 (38e2ec3, not pushed): same file :607-609
+      - item 3
+        - **fact**: Auditonomous's L2 sheet calls the ledger's two columns the L2/L3 split, existence and exactness at L2 and application at L3; entering a row is the owner's act; every operation must declare its domain or partiality.
+        - **where**: aybllc/auditonomous origin/main (aa30b03): L8/L2/0.md:31, 74; L8/L2/formal-mathematics/0.md:39
+      - item 4
+        - **fact**: Both exemplars hold the same ledger at the same position, byte-identical (blob 8affefd), declared empty.
+        - **where**: aybllc/auditonomous origin/main (aa30b03) and aybllc/autonomous origin/main (9fa3744): L8/L2/formal-mathematics/FORMULAS_LEDGER.md:10
+      - item 5
+        - **fact**: The three split-or-cite calls and the ledger's placement at L2 or L3 were left open on 5 September 2026; the roadmap recommends citing in place for the first edition and registering the L2 objects now.
+        - **where**: aybllc/auditonomous origin/main (aa30b03): L8/L6/history/harmonization-2026-09-05.md:91, 94; aybllc/auditonomous origin/claude/book-structure-roadmap-k8ap82 (9259c18): L8/L5/research/review/BOOK_STRUCTURE_AND_ROADMAP_2026-09-13.md:625
+      - item 6
+        - **fact**: The L3 tolerances sheet already cites the envelope's compartment C3 row in place.
+        - **where**: aybllc/auditonomous origin/main (aa30b03): L8/L3/engineering-mathematics/tolerances/0.md:33
+      - item 7
+        - **fact**: The isomorphism's four-line proof is filed at L4, scoped to the magnitude rail; a reader redid it by hand on 11 November 2026 and it holds.
+        - **where**: aybllc/auditonomous origin/main (aa30b03): L8/L4/work/writing/sessions/SESSION_2026-08-05_AUDITON_ARCHITECTURE.md:443-465; aybllc/auditonomous origin/ccr-9391bd81-f2enmj (3696894): L8/L5/research/review/agent-results-2026-11-11/auditonomous-research-handle/03-read-formal-engineering.md:67-75
+      - item 8
+        - **fact**: The swap-flip proof (record DR-003) and the AUDITONOMY term entry, which holds conditions A to E, stand only on the roadmap branch, absent from main and the beta branch; the envelope labels A to E conjecture.
+        - **where**: aybllc/auditonomous origin/claude/book-structure-roadmap-k8ap82 (9259c18): L8/L5/research/review/dr-001-003/DR-003-swap-flip-no-left-inverse.md:1-8; L8/L0/semantics/definitions/AUDITONOMY.md:191-208; aybllc/auditonomous origin/main (aa30b03): L8/L1/state-space/AUDITON_ENVELOPE.md:253
+      - item 9
+        - **fact**: Main's L1 sheet already places the stipulated invariants (take ≤ give − 1, data ≤ energy + 1) at L1, where the roadmap's step lists them for L2. The perpetuity argument, whose theorem candidate you ruled dead for now on 2 August 2026, stays filed at L5.
+        - **where**: aybllc/auditonomous origin/main (aa30b03): L8/L1/0.md:109; L8/L2/0.md:76; L8/L5/research/review/PERPETUITY_QUESTION_ADJUDICATION.md:6; aybllc/auditonomous origin/claude/book-structure-roadmap-k8ap82 (9259c18): L8/L5/research/review/BOOK_STRUCTURE_AND_ROADMAP_2026-09-13.md:532
+      - item 10
+        - **fact**: The scaffold specification describes Auditonomous's L2 as an empty formulas ledger and its other L0 rails as empty; a split would falsify the second, a row the first.
+        - **where**: aybllc/7lm origin/main (6de996b): L8/L4/work/writing/7lm-harmonized-architecture-specification.md:956
+    - **on_yes**: A session records the ruling and drafts the isomorphism row now and, after RH8, the enclosure rows with their declared domains; the swap-flip proof waits for RH2, conditions A to E for RH3. You enter rows in one pass, correcting the scaffold's empty-ledger sentence.
+    - **cost_or_risk**: The three L1 files keep text belonging to L0, L3 and L5, so readers follow the sheets' pointers. Entering rows makes one scaffold sentence untrue until corrected, and that specification is mid-reconciliation.
+    - **confidence**: high
+    - **rejected**: Every formal statement at L2: breaks the scaffold's split, which the exemplars mirror. The ledger moved to L3: parts it from Autonomous's identical ledger. Splitting the files: moves text and makes the scaffold's statement that Auditonomous's other L0 rails are empty untrue.
+    - **depends_on**
+      - RH8
+  - item 3
+    - **id**: RH10
+    - **title**: Trace committed before actuator release, or a pure one-way carrier
+    - **kind**: authorial
+    - **status_now**: open
+    - **best_choice**: Choose trace-before-release: a discretionary action is enabled only after its record commits. Keep the carrier one-way from the compute side, and print the seal-gated interlock, which holds the enable on the sealed side, as a proposal with its open attack pass and trust regress. Rule the recall policy sealed too.
+    - **why**: Trace-before-release is the commitment the definition cannot lose: the ebios architecture draft says that without it auditonomy reduces to after-action logging, condition D of the AUDITONOMY term entry puts the record before the act, and the adjudication says the record, not the audit, is what is made in advance. A pure diode gives no delivery guarantee. The interlock keeps your one-way carrier and the ordering together by moving the enable instead of returning an acknowledgement. It is unbuilt, and its likeliest failure is unanswered. Only a ruling that the record may follow the act would choose the pure carrier.
+    - **owner_words**
+      - item 1
+        - **quote**: [source text withheld from the public copy]
+        - **where**: aybllc/auditonomous origin/main (aa30b03): L8/L5/research/findings/SEGREGATION_AND_FORGETTING_2026-08-04.md:5-6
+      - item 2
+        - **quote**: [source text withheld from the public copy].
+        - **where**: aybllc/auditonomous origin/main (aa30b03): L8/L3/engineering-mathematics/PROPOSAL_seal_gated_interlock.md:3-4
+    - **evidence**
+      - item 1
+        - **fact**: The ebios architecture draft requires, for physical action, that the trace commit before actuator release, else [source text withheld from the public copy] draft is not canonical until you approve it.
+        - **where**: aybllc/auditonomous origin/claude/book-structure-roadmap-k8ap82 (9259c18): L8/L4/work/writing/auditonomous_ebios_core_architecture_math_source-535f70d_draft.md:11-12, 233
+      - item 2
+        - **fact**: The segregation finding: a pure one-way carrier cannot confirm delivery, an acknowledgement is a covert timing channel, the corpus [source text withheld from the public copy].
+        - **where**: aybllc/auditonomous origin/main (aa30b03): L8/L5/research/findings/SEGREGATION_AND_FORGETTING_2026-08-04.md:72-93, 161-170, 187, 192-193
+      - item 3
+        - **fact**: The interlock: compute emits across the one-way carrier and receives nothing; the sealer commits; only then a scoped, expiring enable is asserted; safety-critical actions are never gated.
+        - **where**: aybllc/auditonomous origin/main (aa30b03): L8/L3/engineering-mathematics/PROPOSAL_seal_gated_interlock.md:43-80, 138-155
+      - item 4
+        - **fact**: Its open items: the attack pass was never folded in; IEC 61508 and ISO 13849 are not checked; its own correctness is audited by nothing; nothing is built.
+        - **where**: aybllc/auditonomous origin/main (aa30b03): L8/L3/engineering-mathematics/PROPOSAL_seal_gated_interlock.md:6-8, 166-178
+      - item 5
+        - **fact**: Condition D of the AUDITONOMY term entry: [source text withheld from the public copy].
+        - **where**: aybllc/auditonomous origin/claude/book-structure-roadmap-k8ap82 (9259c18): L8/L0/semantics/definitions/AUDITONOMY.md:204
+      - item 6
+        - **fact**: The adjudication finds that [source text withheld from the public copy] definition's criterion is accountability enforced by construction.
+        - **where**: aybllc/auditonomous origin/main (aa30b03): L8/L5/research/review/PERPETUITY_QUESTION_ADJUDICATION.md:216; L8/L0/semantics/definitions/AUDITONOMOUS_DEFINITION.md:40
+      - item 7
+        - **fact**: The envelope already gates action through the reference-monitor compartment and feeds the record over a one-way diode.
+        - **where**: aybllc/auditonomous origin/main (aa30b03): L8/L1/state-space/AUDITON_ENVELOPE.md:128-130
+      - item 8
+        - **fact**: The roadmap's decision row recommends the interlock as the design, [source text withheld from the public copy].
+        - **where**: aybllc/auditonomous origin/claude/book-structure-roadmap-k8ap82 (9259c18): L8/L5/research/review/BOOK_STRUCTURE_AND_ROADMAP_2026-09-13.md:621
+    - **on_yes**: A session writes the ruling into the Auditonomous record, then runs the interlock's attack pass and the IEC 61508 and ISO 13849 checks, recording each result beside the proposal. Chapter 14 states the interlock only as a proposal until something is built.
+    - **cost_or_risk**: The interlock becomes the most trusted component, audited by nothing, and a slow sealer holds discretionary actions. Its likeliest failure, an acknowledgement reaching compute through its own sensors, stays unanswered until the attack pass runs.
+    - **confidence**: high
+    - **rejected**: A pure diode without delivery guarantee: by the draft's own words reduces auditonomy to after-action logging. Both kept as an open contradiction: the finding says they cannot both stand, and the book would print a known contradiction as its design.
+    - **depends_on**: (empty)
+  - item 4
+    - **id**: RH25
+    - **title**: Whether the N/U paper promises enclosure, and which version the ledger examined
+    - **kind**: authorial
+    - **status_now**: open
+    - **best_choice**: Say yes: enclosure is the paper's contract, as its section 9 states, so the rewrite takes repair A, the three-term product (λ = 1). Then name the PDF you supplied in August 2026, by its DOI version or its aybllc/nua commit, so a session can pin it beside the ledger.
+    - **why**: The paper states its contract twice: u is a nonnegative uncertainty bound, and section 9 promises coverage of all possible outcomes. The ledger searched it for a first-order framing and found one only for the Gaussian comparator, so the text supports enclosure alone, under which repair A, the λ = 1 form RH8 picks, is mandatory. The record cannot give the version: the ledger names a 19-page PDF, an upload is dated 4 August 2026, and neither records a hash, DOI version or commit. Your statement that the paper meant a first-order propagator would change the pick.
+    - **owner_words**
+      - item 1
+        - **quote**: [source text withheld from the public copy].
+        - **where**: the paper's section 9 as quoted in aybllc/auditonomous origin/claude/book-structure-roadmap-k8ap82 (9259c18): L8/L5/research/review/NASA_PAPER_DEFECT_LEDGER.md:160-161 (the bold there is the ledger's)
+      - item 2
+        - **quote**: [source text withheld from the public copy].
+        - **where**: the paper as quoted in aybllc/auditonomous origin/claude/book-structure-roadmap-k8ap82 (9259c18): L8/L5/research/review/AUTHOR_ASSERTIONS.md:675-676
+    - **evidence**
+      - item 1
+        - **fact**: The ledger examines a 19-page PDF supplied to its session, text extracted locally, with no hash, version or DOI; its history runs from 34ede4e (6 August 2026) to be439f3 (8 August 2026); it is absent from main and the beta branch.
+        - **where**: aybllc/auditonomous origin/claude/book-structure-roadmap-k8ap82 (9259c18): L8/L5/research/review/NASA_PAPER_DEFECT_LEDGER.md:3-5; history at intake/research/NASA_PAPER_DEFECT_LEDGER.md (git log --all in /home/user/auditonomous)
+      - item 2
+        - **fact**: The author-assertions record dates an upload of the paper's PDF to 4 August 2026.
+        - **where**: aybllc/auditonomous origin/claude/book-structure-roadmap-k8ap82 (9259c18): L8/L5/research/review/AUTHOR_ASSERTIONS.md:672-676
+      - item 3
+        - **fact**: Definition 3.1 omits the u1·u2 term; on the ledger's sample the product contains the true product in 15.93 per cent of wholly nonnegative cases, so the section 9 claim and the claim of section 7.2.2 that the algebra never underestimates both fail.
+        - **where**: aybllc/auditonomous origin/claude/book-structure-roadmap-k8ap82 (9259c18): L8/L5/research/review/NASA_PAPER_DEFECT_LEDGER.md:70-123, 153-177
+      - item 4
+        - **fact**: The ledger's open question 1 records a search of the paper for a first-order framing; the only hit describes the Gaussian comparator. Its required action: adopt repair A [source text withheld from the public copy].
+        - **where**: aybllc/auditonomous origin/claude/book-structure-roadmap-k8ap82 (9259c18): L8/L5/research/review/NASA_PAPER_DEFECT_LEDGER.md:467-471, 176-177
+      - item 5
+        - **fact**: The roadmap records the paper in aybllc/nua, [source text withheld from the public copy], whose head commit was dated 4 June 2026 when surveyed on 14 September 2026.
+        - **where**: aybllc/auditonomous origin/claude/book-structure-roadmap-k8ap82 (9259c18): L8/L5/research/review/BOOK_STRUCTURE_AND_ROADMAP_2026-09-13.md:657
+      - item 6
+        - **fact**: The published N/U dataset, Zenodo record 17271561 (version 3.0.0, 5 October 2025; latest record 17283314, 7 October 2025), was checked at Zenodo on 11 November 2026; the scaffold's unmerged beta transcribed its product as the two-term form and found (10,1) times (5,1/2) reaches 60 against an exact upper endpoint of 121/2.
+        - **where**: aybllc/7lm origin/main (6de996b): L8/L5/research/review/agent-results-2026-11-11/public-source-verification/08-check-zenodo-and-ledger.md:172; aybllc/7lm origin/beta/common-contracts-r1-r6 (97314c5): L8/L2/formal-mathematics/proofs/beta-research-boundaries.md:3
+      - item 7
+        - **fact**: An Autonomous assessment records that your eBIOS formalization of the N/U pair holds an Enclosure.lean proof file, unread, which suggests enclosure is the property targeted.
+        - **where**: aybllc/autonomous origin/main (9fa3744): L8/L5/research/review/ASSESSMENT_nu_algebra_cannot_require_architecture.md:141-145
+      - item 8
+        - **fact**: No branch of the three repositories holds the paper itself.
+        - **where**: git ls-tree of every origin ref in /home/user/7lm, /home/user/autonomous and /home/user/auditonomous
+    - **on_yes**: A session writes your answer, with the file's SHA-256, as a dated note beside the ledger, wherever RH2 places it. If you cannot name the file, it matches the ledger's quotations of the paper against each version at the DOI and in aybllc/nua.
+    - **cost_or_risk**: Repair A changes Definition 3.1, so associativity and sub-distributivity must be re-derived, and a corrected paper means a new version at its DOI; the published dataset at version 3.0.0 carries the same two-term product.
+    - **confidence**: high
+    - **rejected**: Reading the paper as a first-order propagator: its text never says so, and the section 9 claim would have to be deleted. Repair B, shifting the nominal: encloses 97.13 per cent of the ledger's sample and fails at zero.
+    - **depends_on**: (empty)

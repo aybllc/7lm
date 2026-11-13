@@ -1,0 +1,50 @@
+# test:A1-versions-pr19-release
+
+Agent result, as returned. Workflow: Best choices: the scaffold, the exemplars, the eleven proposals. Run `wf_8e87a1b5-8ec`. Phase: Test.
+
+- **verdicts**
+  - item 1
+    - **id**: V1
+    - **quotes_ok**: yes
+    - **state_ok**: yes
+    - **stands**: yes
+    - **final_best_choice**: Confirm 12 November 2026 as the date of the version on main and change nothing: it is the UTC day the corrected text was made, the clock every earlier version took when the two clocks differed.
+    - **final_why**: Every version whose UTC and Pacific days differed took the UTC day: 6, 7, 12 and 13 September (aba46a2, a2af3ce, c699e3e, 3a29c58), and the owner merged the 12 September version at 23:25 on 11 September by the Pacific clock (67bb795). The correction 33c3878 was made at 01:18 UTC on 12 November. specification-history.md point 3 already states the UTC rule and the merges' 11 November clock, so nothing is false, and the owner's merge of #20 put the date on main. Neither exemplar names this version. Only a ruling for the owner's own day would change it.
+    - **final_confidence**: high
+    - **note**: No correction to the pick. Both quotations are verbatim at line 543 of L8/L6/history/harmonization-2026-09-04.md on main. Every commit time is as stated. Of the eight version dates since 4 September, five were set while the Pacific day was the day before, and all five took the UTC day. Two small points. First, 38e2ec3 is in the worktree /home/user/7lm-pr19 and is not yet on ccr-00099fac-hjosbo, whose remote head is b5c3984. Second, the owner's merge of #20 (6de996b, 10:05 -08:00 on 13 November) already put the date on main, so a yes records what main carries. The beta candidate dates its own work by the Pacific day, 2 November 2026 (America/Los_Angeles) (origin/beta/common-contracts-r1-r6, L8/L6/history/specification-history.md:106). That branch is unmerged and changes no version date, so it does not outweigh the record on main.
+  - item 2
+    - **id**: V2
+    - **quotes_ok**: yes
+    - **state_ok**: yes
+    - **stands**: yes
+    - **final_best_choice**: Keep 13 November 2026 as the date of #19's reconciled specification, and keep it if the merge comes on a later day; move it only if the specification's own text is changed again on a later day before the merge.
+    - **final_why**: The reconciled text is neither the 6 October draft nor the 12 November version: 41 of its lines differ from main's and 6 from the pass's. By the practice section 41 records, text made on a later day takes its own date, and 38e2ec3 was made on 13 November on both clocks. 6 October would set main's dateline back; 12 November would put two texts under one version whose history row says only the exemplar section changed. The 12 November version reached main a day after it was made and kept its date, so a later merge changes nothing.
+    - **final_confidence**: high
+    - **note**: No correction. Checked on 38e2ec3 against main: the specification's three date lines (2, 12, 18); the writing sheet (line 23, main 22); the plate sheet (line 94) and its generator (line 253, main 252); the rendering's footer, description and empty creator property; specification-history.md lines 15 to 17 and 130 to 135. git diff --numstat shows 41 lines differ from main's and 6 from the pass's head b5c3984. 38e2ec3 was authored at 18:11:06 UTC. The quotation is verbatim at line 583 of the record on 38e2ec3.
+  - item 3
+    - **id**: P19
+    - **quotes_ok**: yes
+    - **state_ok**: no
+    - **stands**: yes
+    - **final_best_choice**: Merge #19 whole, by merge commit, not squash, once its branch is pushed with the reconciliation 38e2ec3 and one more commit that keeps the agent results out of the release and makes a refused release say so. This puts #19 ahead of the beta candidate.
+    - **final_why**: The owner had #19 reconciled on 17 October and again on 13 November, and every pass on main touching the specification forces another reconciliation. Nothing runs on its own: the workflow is dispatch-only and dry without the owner's variable and token, fitting the owner's picture of a human-only click that republishes (record line 374) and solutions brought as workflows (line 121). The release carries no history, keeping the hard rule; visibility stays the owner's; tree and first lines are unchanged. Costs: the beta's conflicts rise from 2 files to 7; the definition file's supporting quotations become readings.
+    - **final_confidence**: medium
+    - **note**: The pick stands, but two statements of present state are wrong. First, the merge modifies 33 sheets, not 34: git diff --name-status origin/main 38e2ec3 shows 44 modified files, 33 of them named 0.md, and none changes its first line. Second, the 11 November resolution asked which lands first, the beta or #19 (owner-decision-resolutions-2026-11-11.md:649 and 655). #20 landing first did not settle that, and merging #19 now puts it ahead of the beta. A trial merge that writes nothing (the three-argument git merge-tree) shows origin/beta/common-contracts-r1-r6 conflicting with main in 2 files (specification-history.md and the .docx) and with 38e2ec3 in 7 (six text files with seven hunks, and the .docx). The colleague did not cite two of the owner's words, and both support the pick: record line 121 on main (solutions brought as git workflows, 6 September) and lines 374 and 376 (a click at HOA that republishes, and for now everything is HOA, 20 September). A dispatch is that click. The owner should also know that the merge turns the supporting quotations of L8/L0/semantics/definitions/FIRST_IS_ALWAYS_0.md into readings (38e2ec3, lines 12, 14 and 16). The words stay in the record (38e2ec3, lines 107, 192 and 241) and in specification-history.md, so nothing is lost.
+  - item 4
+    - **id**: RES
+    - **quotes_ok**: yes
+    - **state_ok**: yes
+    - **stands**: yes
+    - **final_best_choice**: Keep the folder public and in place, out of the release: on #19's branch, one pattern in .github/release.sh leaves out L8/L5/research/review/agent-results-*/ whole, sheets included, said in the script's header and in L7/allications/publications/0.md. Keep check-ins going to both repositories, source text withheld from the public copy.
+    - **final_why**: The owner put the folder in the public scaffold on 11 November and said to keep the check-ins going to both repositories. All 88 refused lines lie in 45 of its 311 files; one exclusion makes the dry run pass with 82 files. Its quoted commit lines and trailers are repository history, which the release is built not to carry; naming the exclusion in a sheet keeps the documentation exact. Moving it under L6 misfiles review awaiting the owner; removing it leaves no copy on any main branch; sweeping edits results its sheet calls unedited.
+    - **final_confidence**: high
+    - **note**: The pick stands, tightened. Verified: the release tree built from 38e2ec3 holds 393 files, and 88 offending lines sit in 45 files, all inside the folder. By kind: e-mail addresses in 42 lines of 25 files, URLs in 8 lines of 8, trailers in 7 lines of 6, and the label in 42 lines of 20. The colleague's scratch copy v3-release-both.sh carries two changes, the exclusion and || true, not one. A copy with the exclusion alone also exits 0 with 82 files, three runs of three (/tmp/claude-0/-home-user/bfcfd013-a2da-5019-961e-7f46116f08be/scratchpad/advice/scratch/test-A1-versions-pr19-release/excl-1.out to excl-3.out). The tightening: the folder holds ten sheets, not one, and the sheets are this repository's documentation. Three sheets on 38e2ec3 say the release carries the tree and the sheets (L7/allications/publications/0.md:40, L8/0.md:137, L8/L6/0.md:64), so the exclusion belongs in a sheet as well as in the script's header. The publications sheet already lists what does not leave, so that is where it goes. Releasing the folder's sheets instead would not help: its own sheet carries six account names and a quoted-as-written attribution, tags the pass removed from live text.
+  - item 5
+    - **id**: R141
+    - **quotes_ok**: yes
+    - **state_ok**: yes
+    - **stands**: yes
+    - **final_best_choice**: Fix it now on #19's branch, before the branch is pushed: end line 57 of .github/release.sh with || true, and close section 42 with a sentence saying so; if the agent-results exclusion is taken, make both in one commit.
+    - **final_why**: Section 42 names the file, the fault and the exact fix, the form the owner set for proposals, so a yes is the asking. Under set -euo pipefail, line 57 pipes grep into head -20; when grep still has output after head stops reading, grep dies of SIGPIPE and the script exits 141 before line 60 prints release refused: three runs of three here. With || true it exits 1 and says release refused. Nothing leaves either way, but the log hides the refusal. One line, no content, undoable.
+    - **final_confidence**: high
+    - **note**: The pick stands, but one claim is too broad: more than twenty offending lines is not enough by itself. In a scratch test under set -euo pipefail, 25 short offending lines exited 0, and 25 lines of 20,000 characters each exited 141, three runs of three in each case. The fault needs more matching output than grep can hand over before head stops reading. Here grep prints 6,513,110 bytes for the 88 lines. Reproduced on 38e2ec3, three runs of three: exit 141, twenty lines printed, no closing words. With || true at the end of line 57, also three of three: exit 1 and release refused. The fix covers every case, including the one the colleague's wording leaves out.

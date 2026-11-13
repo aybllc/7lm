@@ -1,0 +1,292 @@
+export const meta = {
+  name: 'best-choices',
+  description: 'A best choice for each decision that waits on the owner: resolvers read the record and the repositories as they stand, a skeptic checks every quotation and tests every pick',
+  phases: [
+    { title: 'Resolve', detail: 'one best choice per decision, grouped by topic' },
+    { title: 'Test', detail: 'a skeptic checks quotations, the stated state, and the pick' },
+  ],
+}
+
+const SP = '/tmp/claude-0/-home-user/bfcfd013-a2da-5019-961e-7f46116f08be/scratchpad'
+const STATE = SP + '/advice/state-2026-11-13.md'
+const SCR = SP + '/advice/scratch'
+const RUN = (args && args.run) || 'A'
+
+const COMMON = `You are advising the owner of three git repositories on the decisions that wait on them. The owner asked, exactly: "give me best choices for 1-4" — one best choice for each open item, so that they can answer yes or no.
+
+READ FIRST, in full: ${STATE} . It says where the three repositories stand today, what has happened since the reports were written, where every report and every clone is, and where the owner's standing rules are written.
+
+READ-ONLY, strictly. Do not modify, create or delete any file under /home/user/7lm, /home/user/7lm-pr19, /home/user/autonomous or /home/user/auditonomous. Run no git command that changes anything (no commit, add, stash, checkout, switch, reset, restore, pull, fetch, push, merge, rebase, gc, clean, worktree); read with git show / git log / git diff / git ls-tree / git grep against origin/<branch> or a commit. Scratch files only under ${SCR}/<your label>/ (create it). Do not use the network unless a decision cannot be judged without it, and then only the official source of the thing in question.
+
+HOW TO CHOOSE.
+1. The owner's own words govern. Read the standing rules at their sources (the state file says where). A choice that breaks one of them is not a best choice unless you name the rule and say why the owner should lift it for this case.
+2. Events may have settled it. Check the state file and the repositories as they stand today. If a decision is already settled, say by what, and name only what remains.
+3. Among choices the rules allow, prefer the one that, in this order: makes a false statement true; loses nothing (retire or keep, do not delete); is the smallest act that unblocks the most; can be undone; keeps the three repositories in step.
+4. Be decisive. "It depends" is not a choice. If two acts are needed, give them in order. If the best act is to wait, say exactly what is waited for and what is done first.
+5. Some decisions are the author's own intellectual rulings (which text is the definition, what a term means, a title). Mark them kind "authorial". Still give the pick that the record held in the repositories best supports, with the record's own evidence, and say what would change it. Do not invent scholarship, do not claim novelty for anything, and cite only what the repositories hold.
+6. Quotations are verbatim, typos included, each with a locator a reader can open: repository, branch or commit, path and line. At most two quotations per decision. Do not reproduce more than a short phrase of any licensed standard or journal text; cite those by locator.
+7. Write plainly for a reader who has not seen the files: full sentences, no shorthand, no labels of your own invention. Every number counted, not estimated.`
+
+const DEC = {
+  type: 'object',
+  properties: { decisions: { type: 'array', items: { type: 'object', properties: {
+    id: { type: 'string' },
+    title: { type: 'string', description: 'the decision in plain words, at most 14 words' },
+    kind: { type: 'string', enum: ['process', 'authorial'] },
+    status_now: { type: 'string', enum: ['settled-by-events', 'open', 'moot'] },
+    best_choice: { type: 'string', description: 'one concrete act, imperative, at most 50 words' },
+    why: { type: 'string', description: 'the reasoning, at most 100 words' },
+    owner_words: { type: 'array', items: { type: 'object', properties: { quote: { type: 'string' }, where: { type: 'string' } }, required: ['quote', 'where'] } },
+    evidence: { type: 'array', items: { type: 'object', properties: { fact: { type: 'string' }, where: { type: 'string' } }, required: ['fact', 'where'] } },
+    on_yes: { type: 'string', description: 'what happens next and who does it, at most 45 words' },
+    cost_or_risk: { type: 'string', description: 'what it costs or risks, at most 35 words' },
+    confidence: { type: 'string', enum: ['high', 'medium', 'low'] },
+    rejected: { type: 'string', description: 'the alternatives and why not, at most 45 words' },
+    depends_on: { type: 'array', items: { type: 'string' }, description: 'ids of decisions that must be settled first, if any' },
+  }, required: ['id', 'title', 'kind', 'status_now', 'best_choice', 'why', 'owner_words', 'evidence', 'on_yes', 'cost_or_risk', 'confidence', 'rejected', 'depends_on'] } } },
+  required: ['decisions'],
+}
+
+const CHK = {
+  type: 'object',
+  properties: { verdicts: { type: 'array', items: { type: 'object', properties: {
+    id: { type: 'string' },
+    quotes_ok: { type: 'boolean', description: 'every quotation is verbatim at its locator' },
+    state_ok: { type: 'boolean', description: 'what the resolver says of the present state is true' },
+    stands: { type: 'boolean', description: 'the best choice survives your test' },
+    final_best_choice: { type: 'string', description: 'the best choice as it should read: the resolver\'s if it stands, yours if not; at most 50 words' },
+    final_why: { type: 'string', description: 'at most 100 words' },
+    final_confidence: { type: 'string', enum: ['high', 'medium', 'low'] },
+    note: { type: 'string', description: 'what you corrected and the evidence, or empty' },
+  }, required: ['id', 'quotes_ok', 'state_ok', 'stands', 'final_best_choice', 'final_why', 'final_confidence', 'note'] } } },
+  required: ['verdicts'],
+}
+
+const TRI = {
+  type: 'object',
+  properties: {
+    findings: { type: 'array', items: { type: 'object', properties: {
+      ref: { type: 'string', description: 'the finding\'s heading in the report, exactly' },
+      category: { type: 'string' },
+      cls: { type: 'string', enum: ['apply', 'owner-chooses', 'leave'] },
+      touches: { type: 'string', description: 'what kind of file the fix edits: live sheet, README, working file, dated record, binder file, staging record, third-party text, definition, ledger, other' },
+      why: { type: 'string', description: 'one sentence' },
+      fix: { type: 'string', description: 'for apply: the exact fix as the report gives it, corrected if needed; for owner-chooses: the options and your pick; for leave: empty' },
+    }, required: ['ref', 'category', 'cls', 'touches', 'why', 'fix'] } },
+    notes: { type: 'string', description: 'anything the owner should know about this batch as a whole' },
+  },
+  required: ['findings', 'notes'],
+}
+
+const TCH = {
+  type: 'object',
+  properties: {
+    checks: { type: 'array', items: { type: 'object', properties: {
+      ref: { type: 'string' }, cls_ok: { type: 'boolean' }, final_cls: { type: 'string', enum: ['apply', 'owner-chooses', 'leave'] }, note: { type: 'string' },
+    }, required: ['ref', 'cls_ok', 'final_cls', 'note'] } },
+    overall: { type: 'string' },
+  },
+  required: ['checks', 'overall'],
+}
+
+const RES = SP + '/model/owner-decision-resolutions-2026-11-11.md'
+const HANDLE = SP + '/research/auditonomous-research-handle-2026-11-11.md'
+const PROPS = SP + '/proposals/spec-exemplar-section-proposals-2026-11-12.md'
+
+const GROUPS_A = [
+  { key: 'A1-versions-pr19-release', body: `YOUR DECISIONS (label: A1-versions-pr19-release). Give one entry for each id.
+
+V1. Is 12 November 2026 the right version date for the specification now on the scaffold's main? It is the UTC date the text was made; the two exemplar merges it records carry 11 November on their own clock; the owner was told the date is theirs to confirm. Read record §41 ("Done, the version") and L8/L6/history/specification-history.md on origin/main of /home/user/7lm.
+
+V2. On the reconciled pull request #19 (worktree /home/user/7lm-pr19, record §42 there, not yet pushed) the specification is dated 13 November 2026. Is that right, or should that branch keep 6 October 2026, or take 12 November 2026?
+
+P19. What becomes of pull request #19 once reconciled: merge it now, hold it, take it in part (the agnostic sweep without the release, or the release without the sweep), or close it? Read its own account (record §38 in the worktree, .github/release.sh and .github/workflows/release.yml there). Weigh: what the pass is for; the owner's words on automation in record §39 against a script that is run by a person and a workflow that runs only on dispatch; the hard rule (§31, and the section in L8/L6/0.md); that the scaffold is public today while the pass's plan is that the repository is made private and the release goes to a public one; whether the exemplars follow the agnostic wording (decision 10 in ${RES}); and that every later pass on main needs the same reconciliation for as long as #19 waits.
+
+RES. The agent-results folder L8/L5/research/review/agent-results-2026-11-11/ in the PUBLIC scaffold (311 files, verbatim source text withheld). It was put there on the owner's words of 11 November (see the owner-words file). It is exactly what the pass's release refuses. Choose among: (a) the release leaves the folder out, one pattern in .github/release.sh; (b) the folder moves under L6, for instance L8/L6/in/, where the release does not look; (c) the folder leaves the public repository and the complete copy stays in aybllc/auditonomous; (d) it stays and is swept of what the release refuses. Say also whether further check-ins of agent results should keep going to the public repository.
+
+R141. The release script's refusal path exits with status 141 and without its closing words when more than twenty lines offend (see §42 in the worktree; you may reproduce it by running bash .github/release.sh with NO argument inside /home/user/7lm-pr19, which is a dry run). Fix it on #19's branch now, or leave it.` },
+
+  { key: 'A2-scaffold-loose-ends', body: `YOUR DECISIONS (label: A2-scaffold-loose-ends). Give one entry for each id. For those that come from the 23 model decisions, read the full resolution with its quotations in ${RES} (section number = decision number) and then test it against today's state.
+
+M19 (model decision 19). Where the layer lists finally sit. They are at L8/L6/in/7lm-layer-lists.md on the scaffold's main (pull request #21, 11 November); their own text calls it the owner's call.
+
+M12 (model decision 12). Whether .gitignore belongs at a canonical root, since the specification and the one CI check admit it and the README does not.
+
+M13 (model decision 13). Whether each exemplar's check (.github/workflows/integrity.yml) must be the scaffold's file byte for byte, and in which form: main's, or the beta's.
+
+M11 (model decision 11). Whether the audit branch (origin/audit/peering-descriptive-reframe-2026-09-20 in /home/user/7lm, 119 commits ahead of main) is adopted, retired, or taken in part. Note it never patched the .docx.
+
+M8 (model decision 8, what remains). Pull request #20 is merged, so the field guide is retired on main. The scaffold's beta candidate carries three edits to the guide at its former path. Are they dropped, or carried somewhere?
+
+CEL. The branch origin/copilot/create-error-list in /home/user/7lm (1e2fe77, one commit of 20 September 2026): read what it adds, then choose merge, keep, or retire.
+
+M18 (model decision 18, what remains). The retired field guide says, at L8/L6/retired/field-guide-2026-09-20/7lm-field-guide.md, "Both exemplar repositories do exactly this." Leave as written, or not? (The specification's sentence that every directory has a sheet is handled by another adviser; do not decide it here.)` },
+
+  { key: 'A3-beta-and-wording', body: `YOUR DECISIONS (label: A3-beta-and-wording). Give one entry for each id. For those that come from the 23 model decisions, read the full resolution with its quotations in ${RES} (section number = decision number) and then test it against today's state: several were written before the mirrors were merged.
+
+M5 (model decision 5). Whether the scaffold's beta candidate (origin/beta/common-contracts-r1-r6 in /home/user/7lm) is merged into main, and whether the approval of R1 to R6 covered its second commit. It now conflicts with main in two files and would bring its text in under the version of 12 November 2026.
+
+RH1 (research decision 1). Name the model commit both exemplars are to match: the scaffold's main (now 6de996b), 4ca3edb (which both exemplar betas pin), or the beta tip 97314c5 (which alone carries the manuscript guidance); and say whether updates are to arrive by the model's item-by-item review at L7/peering/private/.
+
+M4-6 (model decisions 4 and 6, what remains). The mirrors merged on 11 November follow the scaffold's main alone. Each exemplar's beta branch (origin/beta/7lm-exemplar-autonomous, origin/beta/7lm-exemplar-auditonomous) makes the same two moves with different wording and now conflicts with its main. Measure the conflicts today (git merge-tree --write-tree --name-only origin/main origin/beta/...). Which wording stands, and what becomes of the two branches?
+
+M7 (model decision 7). What becomes of the beta exemplars' research objects and their edits to the definitions, Q13, CONTRADICTIONS.md, LEDGER.md, REGISTER.md and the definition list.
+
+M10 (model decision 10). Whether the exemplars follow the agnostic wording of the scaffold's pass of 6 October (pull request #19): each exemplar quotes the owner at L7/allications/0.md, and the record sections of 11 November quote the owner's words.
+
+PR28. Auditonomous pull request #28 (branch origin/ccr-9391bd81-f2enmj in /home/user/auditonomous, head 3696894): the complete copy of the agent results at L8/L5/research/review/agent-results-2026-11-11/ and nothing else. Merge to main, keep as a draft, or close; and where the complete copy of agent results should live.` },
+
+  { key: 'A4-exemplar-structure', body: `YOUR DECISIONS (label: A4-exemplar-structure). Give one entry for each id. Read the full resolution with its quotations in ${RES} (section number = decision number) and then test it against today's state: the mirrors were merged on 11 November.
+
+M1-3 (model decisions 1 and 3). Confirm whether the merges of 11 November settle them, and say what, if anything, remains.
+
+M2 (model decision 2). Whether the order of 14 September 2026 still governs, and with it the merge, tag and protection of Autonomous as a read-only exemplar, the papers' review, and what follows it in that order.
+
+M14 (model decision 14). Eighteen folders carry no sheet: six in Autonomous, twelve in Auditonomous, nine of the twelve holding third-party staging records (they are listed in the scaffold's record §41). Write a sheet at each (blank with the location, or full), or narrow the specification's sentence "Every directory has its 0.md, headed by its path." and name the folders under "Not yet as stated".
+
+M15 (model decision 15). Whether binder/internal/ stays under L7/allications/publications/ or goes to L8/L4/work/writing/.
+
+M16 (model decision 16). Whether peering is stable enough to start, and whether the Autonomous definition (bound in Auditonomous at commit 0504961, at the path the peer used before its own 7LM layout) is rebound before or after, and to which commit.
+
+M17 (model decision 17). Whether each new record section pins the scaffold commit mirrored and lists what was declined.
+
+M20 (model decision 20). Which base the Auditonomous research and manuscript work takes: main, or the closed book branch (origin/claude/book-structure-roadmap-k8ap82, which holds research main does not); and whether that branch is revived before or after.
+
+M21 (model decision 21). What becomes of the other unmerged branches: the two no-deletion-fix branches (open draft pull requests #27 in Autonomous and #25 in Auditonomous, both still on USO/ paths of before 12 September), claude/research-move, and the scholarly-pair branch in Autonomous.
+
+M22 (model decision 22). Auditonomous sheets state 62 ledger rows in seven places; the ledger has 60 rows, 58 of them pointers. Correct now, or separately.
+
+M23 (model decision 23). Live references to uso/l6/LEDGER.md and other paths from before 5 September 2026, three of them in binder files said not to be rewritten.` },
+
+  { key: 'A5-eleven-proposals', body: `YOUR DECISIONS (label: A5-eleven-proposals). The file ${PROPS} holds eleven proposals, each with what is wrong and one or two exact fixes. Give one entry for each, with ids P1 to P11, and two more:
+
+For each of P1 to P11: verify the fact yourself against the exports (the state file says where), then choose: which option (where the file gives an exemplar-side option and a specification-side option), or take / do not take the fix as given, or a better exact wording if the given one is inexact. Remember the standing rules: the exemplars are not edited from the scaffold (an exemplar-side fix is made in that exemplar, under its own record); a retired set is verbatim; a change to the specification's text takes the Word rendering, the specification's history and the record with it.
+
+PSEQ. The order and the grouping: which proposals are made together in one pass, in which repository, in what order; and how many passes in all.
+
+PVER. The version date: the proposals that change the specification's text would be made on a later day than 12 November 2026. By the practice record §41 states, does that pass take a new version date, and should it be made on the scaffold's main or on the reconciled pull request #19, given #19 rewords the same section?` },
+]
+
+const B = (key, items) => ({ key, body: `YOUR DECISIONS (label: ${key}). These come from the Auditonomous research and manuscript handle: ${HANDLE} . Its Appendix B states each decision; its Appendix D (the open register: Contradictions, Owner Decisions, Unrun Checks, Defects, Missing Objects, Questions) gives the source locators behind each; its Appendix C is the claims register. The readers' full results are in the folder the state file names (files 01 to 14, one per part of the research). Read the report's sections that bear on your decisions, then the sources themselves in the repositories at the branches the report names, before choosing. Give one entry for each id below (use the id exactly as written).
+
+${items.join('\n\n')}
+
+These are for a book the owner is writing. Where a decision is the author's own ruling, mark it kind "authorial": give the pick the record best supports and what would change it. Where the record cannot support any pick (a pure preference), say so in the why, and still name the option you would take and the single fact that tips it. Where a decision should wait, say for what, and what is done first.` })
+
+const GROUPS_B = [
+  B('B1-branches-and-order', [
+    'RH2. Decide whether ROADMAP\'s restore and BETA join main, in what order, on which base, and which integrity workflow travels with them.',
+    'RH22. Rule whether the component repositories are harmonized, created anew or folded in (D23).',
+    'RH27. Decide the GitHub default branch, which DEF:408 says "misrepresents the project".',
+    'RH35. Say whether the roadmap\'s build-first order still stands (O-20).',
+  ]),
+  B('B2-definition-and-title', [
+    'RH3. Rule which text is the definition for the book (the entry of 30 July 2026, AUDY v2, the constitutional sentence or the fused form), how they relate where they overlap (D20), which version of AUDY governs, and whether conditions A to E are definitional or "anchor analysis".',
+    'RH4. Say whether the ruling of 14 August 2026, "scholarly only", still stands; it settles D1 and whether Part VI belongs in this book.',
+    'RH26. Choose the adjective form, auditonomous or auditonomic, for which DEF:16 records "no stated rule".',
+    'RH36. Choose the title and the press (D2, D16).',
+  ]),
+  B('B3-the-defining-lines', [
+    'RH5. Rule whether line 52 is reworded (D4), whether senses 1 and 3 follow, and whether "immutable" gives way to "apparent".',
+    'RH11. Rule which verb is "the one prohibited act" (D3), and whether equivocation is a fourth prohibited act, as the library intake recommends.',
+    'RH12. Rule what stands on Q13.',
+    'RH13. Decide whether Q9 becomes the definitional dividing line (D5), and settle the definitions of observer and observed.',
+  ]),
+  B('B4-autonomous-dependency', [
+    'RH6. On Autonomous, rule whether one consensus baseline is written or the plural entry stands, who makes REVIEW_4\'s seven fixes, whether the pin at 0504961 stays (D22), and how REGISTER.md and the files that take "autonomous" from elsewhere are corrected.',
+    'RH7. Say whether the freeze file\'s contamination rule P1 to P3 still binds and, if it does, where it returns in the live tree.',
+    'RH21. Name the home of the Autonomous Theory files, including "#autonomous(1).txt", and of the Third Power Corpus (D12).',
+    'RH28. Say whether the L0 epistemic rail takes the status vocabulary now held at L5, as the scaffold\'s "Not yet as stated" notes.',
+  ]),
+  B('B5-formal-layer', [
+    'RH8. Choose the enclosure regime the book uses (D11).',
+    'RH9. Rule whether formal statements are registered at L2 or, when they are applied formulas, at L3 as the scaffold\'s traversal places them; and decide the three file splits and the L2 registrations (D14).',
+    'RH10. Choose between trace-before-release and a pure one-way carrier (D10).',
+    'RH25. Say whether enclosure is the intended contract of the N/U algebra paper, and which version of the paper the defect ledger examined.',
+  ]),
+  B('B6-derivations-and-states', [
+    'RH14. Decide the fourth derivation (D6); the consolidated register records its independence claim as "FAILED CHECK".',
+    'RH15. Decide whether the reviewer named by the engineering layer is an implementation convenience or constitutive (D13, the reader-agnostic divergence).',
+    'RH16. Say whether the book prints eight compartments or twelve (D18).',
+    'RH17. Rule between record-and-flag and non-formation for malformed states (D7).',
+  ]),
+  B('B7-book-content', [
+    'RH18. Decide whether reconstitution enters as a Part VII theme, enters as a stated objection in Chapter 25, or stays out (D9).',
+    'RH19. Decide whether the change from Reactive to Responsive and the correction of the Block 51 mis-attribution are carried through the archive by dated correction (D19).',
+    'RH20. Decide where the deep stratum and the evidence ranking go (D8), and which historical cases the book uses (D21).',
+    'RH34. Say whether the finding "the refusal DISPOSES, and enforcement is physical" (AUTONOMY_AT_DISTANCE B6) is adopted.',
+  ]),
+  B('B8-files-licences-sources', [
+    'RH23. Say whether the owner\'s own files in history return: the five drafts deleted on 15 August 2026 and the working draft.',
+    'RH24. Rule on the history purge of the third-party ISO file and of the chat export in "#autonomous(1).txt", on the Ferreira licence, on quotation clearance, and on an outbound licence.',
+    'RH32. Say whether AU-NORM-04 is superseded, and whether IEEE 754-2019, whose only byte-identical copy sits in l6\'s durable/delete/, is ledgered.',
+    'RH33. Rule on placing held sources in the binder or keeping them internal, and on the conflict over IEEE quotation clearance.',
+  ]),
+  B('B9-standards-and-model-calls', [
+    'RH29. Rule on the scaffold\'s own open calls: the held-off rules file on what a session or a model may touch, and whether the layer lists stay.',
+    'RH30. Decide how the book treats IEEE 7014\'s deletion requirement against the constitutional sentence\'s "cannot erase, conceal, or falsify".',
+    'RH31. Decide how DEF\'s Appendix C is handled, and whether BETA\'s receiving-use dispositions for the three files are adopted.',
+  ]),
+]
+
+const TRIAGE_RULES = `THIS IS A TRIAGE, not a new audit. Each finding in the report already stood after a skeptic on 11 November 2026, on a commit whose sheets are what main carries today (the only difference since is one record file). Your job is to say, for EVERY finding in your batch, what the best choice is under the owner's rules:
+
+ - "apply": a statement in a live sheet (0.md), a README, or another live working file is false or stale; the report gives an exact fix; the fix changes no path, no sheet's first line and no rule; it takes no side in a decision that is still open; and it edits no dated record, no retired set, no binder file that its own sheet says is not rewritten, no definition's text, no ledger row and no third-party text. On the owner's yes these would be made by hand in one pass per repository, with a section in that repository's record.
+ - "owner-chooses": the fix needs a choice between real alternatives; or it moves, renames or deletes a file; or it touches something an owner's rule protects (a record, a binder file, a definition, a ledger, a source text); or it depends on a decision that is still open. Give the options in one line and your pick.
+ - "leave": the finding is moot today; or it is about a dated record that says what was so when it was written; or the fix costs more than it buys. Say which.
+
+Open the file a finding names (in the export the state file gives) whenever the class depends on what kind of file it is or on whether the text is still there. If a finding's exact fix is itself inexact against the export, correct it in "fix". Use the finding's heading exactly as the report prints it for "ref". Every finding in your batch must appear exactly once.`
+
+const T = (key, report, which, extra) => ({ key, triage: true, body: `YOUR BATCH (label: ${key}). Report: ${report} . Batch: ${which}
+
+${TRIAGE_RULES}${extra ? '\n\n' + extra : ''}` })
+
+const AUT = SP + '/audits/sheet-audit-autonomous-2026-11-11.md'
+const AUD = SP + '/audits/sheet-audit-auditonomous-2026-11-11.md'
+const SRC = SP + '/sources/public-source-check-2026-11-11.md'
+const GROUPS_C = [
+  T('C1-autonomous-wrong-fact', AUT, 'every finding under the heading "## WRONG-FACT (47)" — all 47.', 'One standing question bears on this repository as a whole: whether the order of 14 September 2026 makes Autonomous a read-only exemplar (decision 2 in ' + RES + '). Do not let it turn every finding into owner-chooses: classify each on its own merits and state the dependency once, in notes.'),
+  T('C2-autonomous-other', AUT, 'every finding under the headings CONTRADICTION (16), DEAD-PATH (1), STALE (9), UNLISTED (4) and MISFILED (4) — all 34.', 'One standing question bears on this repository as a whole: whether the order of 14 September 2026 makes Autonomous a read-only exemplar (decision 2 in ' + RES + '). State the dependency once, in notes.'),
+  T('C3-auditonomous-facts', AUD, 'every finding under the headings WRONG-FACT (26) and CONTRADICTION (10) — all 36.', ''),
+  T('C4-auditonomous-other', AUD, 'every finding under the headings DEAD-PATH (3), STALE (13), MISQUOTE (1), UNLISTED (5) and MISFILED (6) — all 28.', ''),
+  T('C5-public-sources', SRC, 'every problem under the heading "## Problems that stood after a skeptic re-tested them" — all 50 (their headings look like "### sp800-53-1 (COUNT-WRONG)").', 'These are differences between the repositories\' copies or citations of public documents and the documents at their issuing bodies. For each, open the file named and say what kind of file it is: a verbatim extraction kept as a staging record, a definition file, a ledger, a sheet, a working note. A verbatim extraction that does not match its source is a false statement of what the source says: decide whether the best choice is to correct the extraction in place with a dated correction note in the file, or to leave the extraction as the dated record it is and file the correction beside it; say which the repository\'s own practice supports (look at how earlier corrections were made in the same folder and in the record), and apply that rule consistently across the batch. The source words needed for a correction come from the issuing body\'s own document.'),
+]
+
+const groups = RUN === 'A' ? GROUPS_A : RUN === 'B' ? GROUPS_B : GROUPS_C
+log(`run ${RUN}: ${groups.length} groups`)
+
+const results = await pipeline(
+  groups,
+  g => agent(COMMON + '\n\n' + g.body, { label: 'resolve:' + g.key, phase: 'Resolve', schema: g.triage ? TRI : DEC }),
+  (out, g) => {
+    if (!out) return { key: g.key, out: null, check: null }
+    if (g.triage) {
+      return agent(COMMON + `
+
+YOUR TASK (label: test-${g.key}): a colleague triaged a batch of audit findings; the batch and the rules were:
+
+${g.body}
+
+Their result is below. Test it. (1) Count: every finding of the batch appears exactly once; name any that is missing or doubled. (2) Re-derive the class of EVERY finding they marked "owner-chooses" or "leave": open the file in the export and decide for yourself. (3) Of those marked "apply", re-check at least fifteen spread across the batch, and every one whose fix edits anything other than a sheet (0.md) or a README: open the file, confirm the sheet says what the report says it says, confirm the exact fix is right against the export and breaks none of the rules. Return one check per finding you examined (ref exactly as given), with the class as it should be. In "overall" give the corrected counts for the whole batch and anything the owner should know.
+
+RESULT:
+${JSON.stringify(out, null, 1)}`, { label: 'test:' + g.key, phase: 'Test', schema: TCH })
+        .then(c => ({ key: g.key, out, check: c }))
+    }
+    return agent(COMMON + `
+
+YOUR TASK (label: test-${g.key}): a colleague produced the best choices below for these decisions:
+
+${g.body}
+
+Test each one, and return one verdict per id. (1) Quotations: open every locator and compare character for character; a quotation that is not verbatim, or not where it is said to be, fails. (2) State: check what is said of the present state against the repositories and the state file. (3) The pick: look for a word of the owner's that the colleague missed and that bears on it (search the records and the owner-words file); test the pick against each standing rule; then argue for the strongest alternative and decide honestly which is better by the order of preference given under HOW TO CHOOSE. If the colleague's pick stands, repeat it in final_best_choice (tightened if it was vague). If not, write the better one. Do not soften a pick into "it depends".
+
+THEIR RESULT:
+${JSON.stringify(out, null, 1)}`, { label: 'test:' + g.key, phase: 'Test', schema: CHK })
+      .then(c => ({ key: g.key, out, check: c }))
+  }
+)
+
+const done = results.filter(Boolean)
+log(`run ${RUN}: ${done.length} of ${groups.length} groups returned`)
+return { run: RUN, groups: done }

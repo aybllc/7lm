@@ -1,0 +1,172 @@
+# resolve:B3-the-defining-lines
+
+Agent result, as returned. Workflow: Best choices: the research and manuscript decisions. Run `wf_b77d2bd0-834`. Phase: Resolve.
+
+- **decisions**
+  - item 1
+    - **id**: RH5
+    - **title**: Line 52, senses 1 and 3, and immutable against apparent in the definition
+    - **kind**: authorial
+    - **status_now**: open
+    - **best_choice**: Rule yes on all three, by a dated version keeping the old text: line 52 contrasts a record built in by design with one bolted on later; senses 1 and 3 say any concealment is apparent, not impossible; immutable gives way to apparent wherever a definition calls its record immutable.
+    - **why**: You said the audit is always post hoc, yet line 52 sets auditonomy against post hoc audit; contrasting a record built in with one added later fits both research files that disagree on it. Senses 1 and 3 claim impossibility, yet none of the six sources read on 4 August 2026 claims a record its holder cannot alter, and the entry's second criterion says tamper-evident; your integrity rule reasons alike. All four candidate texts carry the claim, so the choice among them need not come first. What would change it: a primary source showing a record its holder cannot alter.
+    - **owner_words**
+      - item 1
+        - **quote**: the udiot is always post hoc.
+        - **where**: aybllc/auditonomous origin/main (aa30b03), L8/L5/research/review/PERPETUITY_QUESTION_ADJUDICATION.md:203
+      - item 2
+        - **quote**: we cant enforce integroty by ebforceing no deletion. we can only imply no deletion to enforcer integiortyty
+        - **where**: aybllc/auditonomous origin/main (aa30b03), L8/L6/history/harmonization-2026-09-05.md:154
+    - **evidence**
+      - item 1
+        - **fact**: Line 52 sets auditonomy against post hoc audit itself and says it makes concealment impossible from the start; sense 1 (line 22) calls the system structurally unable to conceal; sense 3 (line 26) says concealment is made impossible. The text is unchanged since 30 July 2026, and the beta branch carries line 52 at line 54.
+        - **where**: aybllc/auditonomous origin/main (aa30b03), L8/L0/semantics/definitions/AUDITONOMOUS_DEFINITION.md:22, :26, :52; origin/beta/7lm-exemplar-auditonomous (714480d), same path:54
+      - item 2
+        - **fact**: The perpetuity adjudication of 2 August 2026 calls line 52 imprecise, says the record and not the audit is what is made by design, and recommends contrasting record-by-design with record-bolted-on-later, pending your ruling; main's definitions sheet still lists the edit as unapplied.
+        - **where**: aybllc/auditonomous origin/main (aa30b03), L8/L5/research/review/PERPETUITY_QUESTION_ADJUDICATION.md:216, :222; L8/L0/semantics/definitions/0.md:32
+      - item 3
+        - **fact**: The adjudication's own proposed replacement still promises that a later audit finds a complete and unfalsified record, a guarantee the detection findings do not support, so the new wording should not copy it.
+        - **where**: aybllc/auditonomous origin/main (aa30b03), L8/L5/research/review/PERPETUITY_QUESTION_ADJUDICATION.md:218
+      - item 4
+        - **fact**: The cycles review holds that audit can also run inside the cycle, with in-cycle recording enabling the later audit; a later source request records that its 1991 source says less after the fact, not never after it, and that the NIST framework is voluntary.
+        - **where**: aybllc/auditonomous origin/claude/book-structure-roadmap-k8ap82 (9259c18), L8/L5/research/review/AUTONOMOUS_vs_AUDITONOMOUS_CYCLES.md:136; L8/L5/research/review/SOURCE_REQUESTS.md:180-181
+      - item 5
+        - **fact**: None of the six primary sources read on 4 August 2026 claims a record its own holder cannot alter; the three hash-based sources all claim detection. The intake proposes the word apparent and leaves it to you, marked NOT ADOPTED.
+        - **where**: aybllc/auditonomous origin/main (aa30b03), L7/provenance/sources/staging-records/library/FINDINGS_2026-08-04.md:62-70, :219-220
+      - item 6
+        - **fact**: The override finding, having weighed IEEE 7001's requirement for [source text withheld from the public copy], lists among claims not safe to make that anything is immutable, and advises claiming apparency.
+        - **where**: aybllc/auditonomous origin/main (aa30b03), L8/L5/research/findings/OVERRIDE_NECESSITY_2026-08-04.md:183-194, :319-320; L7/provenance/sources/staging-records/ieee/FINDINGS_2026-08-04.md:103-122
+      - item 7
+        - **fact**: The entry's own second defining criterion already requires a tamper-evident record, and the entry disclaims that any implementation achieves its properties.
+        - **where**: aybllc/auditonomous origin/main (aa30b03), L8/L0/semantics/definitions/AUDITONOMOUS_DEFINITION.md:37, :57
+      - item 8
+        - **fact**: An immutable record is part of the noun entry's canonical definition (roadmap branch only) and of the distillation on main; your own words of 2 August 2026 also speak of an immutable record. This is the counterweight to the pick.
+        - **where**: aybllc/auditonomous origin/claude/book-structure-roadmap-k8ap82 (9259c18), L8/L0/semantics/definitions/AUDITONOMY.md:63, :69, :77 and L8/L5/research/review/RESEARCH_DOCKET.md:11; origin/main (aa30b03), L8/L5/research/findings/DISTILLATION.md:23, :34
+      - item 9
+        - **fact**: The definitions sheet requires a changed definition to be versioned, not silently rewritten.
+        - **where**: aybllc/auditonomous origin/main (aa30b03), L8/L0/semantics/definitions/0.md:10
+    - **on_yes**: A session drafts exact words for lines 22, 26 and 52 as a proposal, worded as detection without asserting audit timing; on your approval they land on main as a dated version; the distillation gets a dated note; AUDITONOMY.md follows when it reaches main.
+    - **cost_or_risk**: The definition of record changes by a dated version; the book promises detection, not prevention, which sounds weaker but is what the record supports; it retires your own word, immutable. Reversible.
+    - **confidence**: medium
+    - **rejected**: Keeping line 52 with the cycles review as a standing contradiction keeps a contrast your own words reject. Rewording line 52 alone leaves senses 1 and 3 claiming impossibility. Keeping the word immutable with a gloss bends it against its plain meaning.
+    - **depends_on**: (empty)
+  - item 2
+    - **id**: RH11
+    - **title**: Which verb is the one prohibited act, and whether equivocation is a fourth
+    - **kind**: authorial
+    - **status_now**: open
+    - **best_choice**: Rule that no [source text withheld from the public copy] and falsify stay three separate prohibitions, as your definition lists them; equivocation is a form of concealment, not a fourth act. Record it under T3 in THEME_LEDGER.md and write Chapter 8 to it; the archive stays as written.
+    - **why**: Your definition, headed in the archive as your verbatim text, lists erase, conceal and falsify as three coordinate verbs; Block 16 explains why they are prohibited separately. The definite article drifted across ten lines, to all three verbs and to silent failure. The record is split: Block 4 and the research docket make concealment the one unbreakable constraint, but neither is in your own words. Your sentence tips it. The intake calls equivocation a concealment attack, and Block 16 bars concealment whatever the truth value. What would change it: your ruling that the constitution has one unbreakable clause.
+    - **owner_words**
+      - item 1
+        - **quote**: we limit its potential and define it
+        - **where**: aybllc/auditonomous origin/main (aa30b03), L8/L5/research/lanes/THEME_LEDGER.md:158
+      - item 2
+        - **quote**: [source text withheld from the public copy]
+        - **where**: aybllc/auditonomous origin/main (aa30b03), L8/L0/semantics/definitions/AUDITONOMOUS_DEFINITION.md:28 (quoting the Martin 2026 manuscript v0.2, line 53)
+    - **evidence**
+      - item 1
+        - **fact**: The question (T3) has been open since 2 August 2026; the ledger names Block 16's separate prohibition as the governing statement and counts only two definite-article passages.
+        - **where**: aybllc/auditonomous origin/main (aa30b03), L8/L5/research/lanes/THEME_LEDGER.md:156-160
+      - item 2
+        - **fact**: Ten lines give the definite article to one object: six in the Master Archive (concealment at 47 and 232, concealment with falsification at 90, falsification at 210, silent failure at 580, erasure at 593) and four in the table of contents and the block outlines.
+        - **where**: aybllc/auditonomous origin/claude/book-structure-roadmap-k8ap82 (9259c18), L8/L4/work/writing/manuscript/Auditonomous_Theory_Master_Archive.md:47, :90, :210, :232, :580, :593; same folder, Auditonomous_Theory_TOC.md:85, Block_04_Definition_Analysis.md:29, Block_20_Liaison_Doctrine.md:13, Block_46_The_Instrument.md:37
+      - item 3
+        - **fact**: In the Master Archive, Block 3, the definition, is headed as the author's verbatim text; Block 4 (the constitution constrains only concealment) and Block 16 (the three verbs prohibited separately, concealment barred regardless of truth value) are headed as development notes.
+        - **where**: aybllc/auditonomous origin/claude/book-structure-roadmap-k8ap82 (9259c18), L8/L4/work/writing/manuscript/Auditonomous_Theory_Master_Archive.md:35, :41, :43, :180, :190
+      - item 4
+        - **fact**: The library intake of 4 August 2026 calls split-view equivocation a concealment attack the triad does not name, and recommends you consider whether it [source text withheld from the public copy]; marked NOT ADOPTED.
+        - **where**: aybllc/auditonomous origin/main (aa30b03), L7/provenance/sources/staging-records/library/FINDINGS_2026-08-04.md:124-132
+      - item 5
+        - **fact**: The literature searches found criminal statutes listing the acts as coordinate verbs, professional frameworks that each fuse two of them, and no scholarly precedent for the three-way taxonomy; they flag separating all three as a stance in a live debate.
+        - **where**: aybllc/auditonomous origin/main (aa30b03), L8/L5/research/lanes/THEME_LEDGER.md:178-182, :193-203, :237, :266
+      - item 6
+        - **fact**: The external audit refuted the gloss that ISO 15489-1:2001 holds all three verbs: its clause names five acts, and neither falsify nor erase is among them.
+        - **where**: aybllc/auditonomous origin/claude/book-structure-roadmap-k8ap82 (9259c18), L8/L5/research/review/EXTERNAL_AUDIT_2026-08-04.md:183-188
+      - item 7
+        - **fact**: The research docket's two-tier split, derived from your words of 2 August 2026, makes concealment the one constraint that cannot be broken; this is the strongest support for the rejected reading with concealment as root.
+        - **where**: aybllc/auditonomous origin/claude/book-structure-roadmap-k8ap82 (9259c18), L8/L5/research/review/RESEARCH_DOCKET.md:10-25
+    - **on_yes**: On your word, a dated ruling goes under T3 in L8/L5/research/lanes/THEME_LEDGER.md on main, its status changed from open to ruled with the prior text kept, its passage count corrected to ten, the equivocation answer added; Chapter 8 is written to it; the archive is untouched.
+    - **cost_or_risk**: Chapter 8 must defend three separate prohibitions as a stance, since the literature searches found no scholarly source holding that triad; Block 4's reading of concealment as the only constraint stays as a counter-view. Reversible.
+    - **confidence**: medium
+    - **rejected**: Concealment as the root verb has Block 4 and the research docket behind it, but rewrites Block 16 and reinterprets your three-verb sentence. Local scope or deferral leaves the definite article ambiguous. A fourth verb breaks the triad the archive keeps verbatim.
+    - **depends_on**: (empty)
+  - item 3
+    - **id**: RH12
+    - **title**: What stands of Q13, the claim the envelope cannot be autonomous
+    - **kind**: process
+    - **status_now**: open
+    - **best_choice**: Rule that Q13's categorical claim is withdrawn: strike it in place, dated, under the file's append-and-strike rule. What stands: under ISO/IEC 22989, through row A2 of the bound Autonomous entry, whether the envelope is autonomous is an open question; IEEE 1920.1 leaves Q13: the entry has no row for it.
+    - **why**: Your rule of 5 September 2026 takes definitions of autonomous from Autonomous and nowhere else, and main's own binding sheet lists Q13 among three files that break it. IEEE 1920.1 is none of the eleven bound rows, and the finding of 5 August 2026 treats it, a standard for unmanned aircraft, as a wording comparison only. The ISO/IEC 22989 limb rested on counting compartment C9 as external oversight; that finding withdrew it, and the exemplar beta branch declined to adopt the headline. Q13 says to state the claim per standard or not at all. Striking keeps every word visible.
+    - **owner_words**
+      - item 1
+        - **quote**: Auditonomous gets the definitions of autonomous from Autonomous and nowhere else.
+        - **where**: aybllc/auditonomous origin/main (aa30b03), L7/peering/public/ingress/peer-1/0.md:10
+    - **evidence**
+      - item 1
+        - **fact**: Q13 states that [source text withheld from the public copy], because compartments C6 and C9 intervene and oversee, and says [source text withheld from the public copy]; the file's protocol is append-and-strike.
+        - **where**: aybllc/auditonomous origin/main (aa30b03), L8/L1/state-space/REQUIREMENTS_OWNERSHIP.md:8, :268-271
+      - item 2
+        - **fact**: Main's binding sheet lists Q13 among [source text withheld from the public copy], and says resolving them is your edit.
+        - **where**: aybllc/auditonomous origin/main (aa30b03), L7/peering/public/ingress/peer-1/object-1/0.md:34
+      - item 3
+        - **fact**: The bound Autonomous entry has eleven rows, A1 to A11; row A2 is ISO/IEC 22989 clause 3.1.5; no row is IEEE 1920.1.
+        - **where**: aybllc/autonomous origin/main (9fa3744), L8/L0/semantics/definitions/AUTONOMOUS.md:68-80
+      - item 4
+        - **fact**: Main's state-space sheet says Q13 resolves through the binding, where Autonomous holds both standards' definitions as bound rows; that holds for ISO/IEC 22989 only, so the sentence is false as it stands.
+        - **where**: aybllc/auditonomous origin/main (aa30b03), L8/L1/state-space/0.md:39
+      - item 5
+        - **fact**: The autonomy-at-distance finding of 5 August 2026 withdraws the claim that the envelope scores zero under two definitions, because C9 is an internal compartment and oversight had been read as mere observation; it calls its own reading of oversight a reading, not a proof, and limits 1920.1, written for unmanned aircraft, to a wording comparison.
+        - **where**: aybllc/auditonomous origin/claude/book-structure-roadmap-k8ap82 (9259c18), L8/L5/research/findings/AUTONOMY_AT_DISTANCE.md:212-223, :233-237, :392-399
+      - item 6
+        - **fact**: The exemplar beta branch inserts a dated disposition above Q13: the [source text withheld from the public copy] and applicability stays unresolved and contested; Q13 itself is not struck.
+        - **where**: aybllc/auditonomous origin/beta/7lm-exemplar-auditonomous (714480d), L8/L1/state-space/REQUIREMENTS_OWNERSHIP.md:268
+    - **on_yes**: On your word, a session strikes Q13 at L8/L1/state-space/REQUIREMENTS_OWNERSHIP.md:268-271 and appends the dated reason, then corrects L8/L1/state-space/0.md:39, which says both standards are bound rows; only ISO/IEC 22989 is. If the beta branch merges first, the strike sits beside its disposition.
+    - **cost_or_risk**: Chapters 3, 12 and 18 lose the claim that the envelope cannot be autonomous and must print an open question instead. Reversible: the struck words stay visible.
+    - **confidence**: high
+    - **rejected**: Keeping Q13 as written takes autonomous from a standard outside your binding and counts an internal compartment as external oversight. The beta overlay alone leaves Q13 unstruck. Declaring the envelope autonomous under ISO/IEC 22989 rests on a reading the finding calls not proven.
+    - **depends_on**: (empty)
+  - item 4
+    - **id**: RH13
+    - **title**: Q9 as the definition's dividing line, and the definitions of observer and observed
+    - **kind**: authorial
+    - **status_now**: open
+    - **best_choice**: Have observer and observed drafted now for your ruling, as two roles of one kind: observed, the epistemic state of the system a record is about; observer, the epistemic state of whoever made the record, named in it. Keep Q9 open, not the dividing line, until its literature check runs.
+    - **why**: You ruled on 2 August 2026 that observer and observed are epistemic states, to be defined separately; the literature search reported that day. The record draws the line: the observed is the system whose state your definition protects; the observer's state is what the witness knew and recorded, and the record key carries the observer. Q9 differs: its file marks the literature check not done, your method says research first, and it makes the auditonomous system the retrospective checker, while every defining text has that system act. What would change Q9's answer: the check finding the split established.
+    - **owner_words**
+      - item 1
+        - **quote**: [source text withheld from the public copy].
+        - **where**: aybllc/auditonomous origin/main (aa30b03), L8/L5/research/lanes/RECORD_ONTOLOGY_OPEN_QUESTIONS.md:37
+      - item 2
+        - **quote**: [source text withheld from the public copy]?
+        - **where**: aybllc/auditonomous origin/main (aa30b03), L8/L5/research/lanes/RECORD_ONTOLOGY_OPEN_QUESTIONS.md:229
+    - **evidence**
+      - item 1
+        - **fact**: Your ruling on the kind is recorded, and the file says the two definitions are not yet written.
+        - **where**: aybllc/auditonomous origin/main (aa30b03), L8/L5/research/lanes/RECORD_ONTOLOGY_OPEN_QUESTIONS.md:37-39
+      - item 2
+        - **fact**: The ambiguity the ruling answers: one phrase names both the witness's epistemic state (what it knew and recorded) and the observed system's, which the definition's two protected objects cover.
+        - **where**: aybllc/auditonomous origin/main (aa30b03), L8/L5/research/lanes/RECORD_ONTOLOGY_OPEN_QUESTIONS.md:13, :41
+      - item 3
+        - **fact**: The literature search reported on 2 August 2026: per-agent epistemic states exist; the standard formalism gives the observed environment none; modelling the observed as an agent is offered, not adopted; no approved source pairs the two for audit.
+        - **where**: aybllc/auditonomous origin/main (aa30b03), L8/L5/research/lanes/RECORD_ONTOLOGY_OPEN_QUESTIONS.md:43-68
+      - item 4
+        - **fact**: Measurement records carry the observer (the GUM's repeatability conditions, the Minor Planet Center's observatory-code field), and the author's correction in Block 51 makes the record key [source text withheld from the public copy].
+        - **where**: aybllc/auditonomous origin/main (aa30b03), L8/L5/research/lanes/RECORD_ONTOLOGY_OPEN_QUESTIONS.md:57-62; origin/claude/book-structure-roadmap-k8ap82 (9259c18), L8/L4/work/writing/manuscript/Auditonomous_Theory_Master_Archive.md:655-657
+      - item 5
+        - **fact**: Q9 is open and hedged as possibly the definitional key; its literature check is marked not done; main's lanes sheet says it is not adopted anywhere in the repository.
+        - **where**: aybllc/auditonomous origin/main (aa30b03), L8/L5/research/lanes/RECORD_ONTOLOGY_OPEN_QUESTIONS.md:231-242; L8/L5/research/lanes/0.md:35
+      - item 6
+        - **fact**: Your standing method of 2 August 2026: research what others say first; the corpus need say nothing before that check runs.
+        - **where**: aybllc/auditonomous origin/main (aa30b03), L8/L5/research/lanes/RECORD_ONTOLOGY_OPEN_QUESTIONS.md:5
+      - item 7
+        - **fact**: Every defining text has the auditonomous system act (sense 1: acting under its own control; the noun entry: autonomous agency that decides by audit), while Q9 gives the auditonomous side the retrospective checking posture with nothing waiting on it.
+        - **where**: aybllc/auditonomous origin/main (aa30b03), L8/L0/semantics/definitions/AUDITONOMOUS_DEFINITION.md:22 and L8/L5/research/lanes/RECORD_ONTOLOGY_OPEN_QUESTIONS.md:233-234; origin/claude/book-structure-roadmap-k8ap82 (9259c18), L8/L0/semantics/definitions/AUDITONOMY.md:69-70
+      - item 8
+        - **fact**: The roadmap recommends keeping Q9 as discussion for the first edition, since adopting it reopens the definition while the book is written.
+        - **where**: aybllc/auditonomous origin/claude/book-structure-roadmap-k8ap82 (9259c18), L8/L5/research/review/BOOK_STRUCTURE_AND_ROADMAP_2026-09-13.md:616
+    - **on_yes**: A session drafts both definitions as a proposal for L8/L0/semantics/definitions/, citing RECORD_ONTOLOGY_OPEN_QUESTIONS.md:35-68; you rule; they are filed by dated version. A session with network access runs the Q9 check at publishers of record and records it; then you rule on Q9.
+    - **cost_or_risk**: Chapter 9 cannot use the assume-and-check split as more than discussion until the check runs. The two definitions are local terms the book must defend; the literature search found no source pairing them for audit.
+    - **confidence**: high
+    - **rejected**: Adopting Q9 now, as a new definition version, skips the check your method requires and makes the auditonomous system the checker rather than the actor. Leaving observer and observed unwritten leaves your ruling of 2 August 2026 undone.
+    - **depends_on**: (empty)
