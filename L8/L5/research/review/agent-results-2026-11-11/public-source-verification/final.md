@@ -1,0 +1,1831 @@
+# Final return of the workflow: Public sources against their originals
+
+As returned. Run `wf_73fbd9d4-516`.
+
+- **summary**: Verify the research's quotations and identities of PUBLIC primary sources against the issuing body's own host; a skeptic re-tests every problem
+- **agentCount**: 16
+- **logs**
+  - checks returned 8/8; items tested 1126, confirmed 1053; problems confirmed 50, rejected 9, unverified 0
+- **result**
+  - **checks**
+    - item 1
+      - **key**: sp800-53
+      - **items_total**: 220
+      - **confirmed**: 212
+      - **problems_reported**: 8
+      - **sources**
+        - item 1
+          - **name**: NIST [source text withheld from the public copy] (title page: September 2020, includes updates as of 12-10-2020; 492 pages) — the source the file names. GET returns 200; HEAD requests to this URL return 404.
+          - **official_url**: https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-53r5.pdf
+          - **http_status**: 200
+          - **final_url**: https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-53r5.pdf
+          - **bytes**: 6073678
+          - **sha256**: fc63bcd61715d0181dd8e85998b1e6201ae3515fc6626102101cab1841e11ec6
+          - **saved_at**: /tmp/claude-0/-home-user/bfcfd013-a2da-5019-961e-7f46116f08be/scratchpad/wf-sources/sp800-53/dl-1/NIST.SP.800-53r5.pdf
+          - **repo_recorded**: SHA-256 fc63bcd61715d0181dd8e85998b1e6201ae3515fc6626102101cab1841e11ec6, 6,073,678 bytes, 'Retrieved 2026-08-05' — SP800-53r5_AC-AU_verbatim.md lines 9-10 (the only place in origin/main that records them)
+          - **same_as_recorded**: yes — sha256 and byte count identical; server Last-Modified: Wed, 09 Dec 2020 19:43:40 GMT
+        - item 2
+          - **name**: Same PDF, second download through the DOI resolver (doi.org used only as a resolver; it answers 302 to nvlpubs.nist.gov)
+          - **official_url**: https://doi.org/10.6028/NIST.SP.800-53r5
+          - **http_status**: 200 (after one 302)
+          - **final_url**: https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-53r5.pdf
+          - **bytes**: 6073678
+          - **sha256**: fc63bcd61715d0181dd8e85998b1e6201ae3515fc6626102101cab1841e11ec6
+          - **saved_at**: /tmp/claude-0/-home-user/bfcfd013-a2da-5019-961e-7f46116f08be/scratchpad/wf-sources/sp800-53/dl-6/NIST.SP.800-53r5.second-download.pdf
+          - **repo_recorded**: same record as above (SP800-53r5_AC-AU_verbatim.md lines 9-10)
+          - **same_as_recorded**: yes — byte-identical to the first download
+        - item 3
+          - **name**: CSRC publication page for SP 800-53 Rev. 5 (states 'Date Published: September 2020 (includes updates as of Dec. 10, 2020)', gives the same download URL, and carries a planning note of 08/27/2025 on Release 5.2.0)
+          - **official_url**: https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final
+          - **http_status**: 200
+          - **final_url**: https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final
+          - **bytes**: 57064
+          - **sha256**: 0195165b0fdd789753c587f344d0ccb1eb6db0e3959e4f898907fac0a3a7cc16
+          - **saved_at**: /tmp/claude-0/-home-user/bfcfd013-a2da-5019-961e-7f46116f08be/scratchpad/wf-sources/sp800-53/dl-2/csrc_sp800-53r5_upd1_final.html
+          - **repo_recorded**: not recorded
+          - **same_as_recorded**: n/a (dynamic HTML page; hash is of this fetch only)
+        - item 4
+          - **name**: NIST SP 800-53 Rev. 4 PDF (463 pages) — consulted only to establish which AC/AU controls were already withdrawn before Rev. 5 (problem sp800-53-8)
+          - **official_url**: https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-53r4.pdf
+          - **http_status**: 200
+          - **final_url**: https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-53r4.pdf
+          - **bytes**: 5301858
+          - **sha256**: e6f8a1aae41168f4ec9edc5b34aee0a21f2c888c78bf1de33e6ec63a0209db4e
+          - **saved_at**: /tmp/claude-0/-home-user/bfcfd013-a2da-5019-961e-7f46116f08be/scratchpad/wf-sources/sp800-53/dl-3/NIST.SP.800-53r4.pdf
+          - **repo_recorded**: not recorded
+          - **same_as_recorded**: n/a
+        - item 5
+          - **name**: NIST 'Summary of Changes: NIST SP 800-53 Release 5.2.0' (2 pages, August 27, 2025) — linked from the CSRC page; shows no change to any AC/AU control requirement in 5.2.0 (only related-control updates for AU-02, AU-03 and the -01 controls)
+          - **official_url**: https://csrc.nist.gov/files/projects/Risk-Management/800-53%20Comment%20Site/SP800-53-r5.2.0-changes.pdf
+          - **http_status**: 200
+          - **final_url**: https://csrc.nist.gov/files/projects/Risk-Management/800-53%20Comment%20Site/SP800-53-r5.2.0-changes.pdf
+          - **bytes**: 93468
+          - **sha256**: bc4e626745fa4cf48a1bb6d09f552aa4f7a4b945b459119407d08f2e97a89a86
+          - **saved_at**: /tmp/claude-0/-home-user/bfcfd013-a2da-5019-961e-7f46116f08be/scratchpad/wf-sources/sp800-53/dl-4/SP800-53-r5.2.0-changes.pdf
+          - **repo_recorded**: not recorded
+          - **same_as_recorded**: n/a
+        - item 6
+          - **name**: NIST 'Potential Updates' sheet for SP 800-53r5 — linked from the CSRC page; lists the corrections 'Included in SP 800-53 Release 5.1.1 (11/7/23)', among them '[Selection: ' to '[Selection (one):' in AC-02(02), AC-02(07)(a), AC-09(02), AU-05(04) and '[Selection (one or more):' in AC-24
+          - **official_url**: https://csrc.nist.gov/files/pubs/sp/800/53/r5/upd1/final/docs/sp800-53r5-potential-updates.xlsx
+          - **http_status**: 200
+          - **final_url**: https://csrc.nist.gov/files/pubs/sp/800/53/r5/upd1/final/docs/sp800-53r5-potential-updates.xlsx
+          - **bytes**: 22185
+          - **sha256**: 7354865afdf3b22bf059eaab14c3ce6a8b4670df4f8f24509f07cf1322d9a304
+          - **saved_at**: /tmp/claude-0/-home-user/bfcfd013-a2da-5019-961e-7f46116f08be/scratchpad/wf-sources/sp800-53/dl-5/sp800-53r5-potential-updates.xlsx
+          - **repo_recorded**: not recorded
+          - **same_as_recorded**: n/a
+        - item 7
+          - **name**: NIST CPRT export [source text withheld from the public copy] (JSON, doc_identifier SP_800_53_5_2_0) — NIST's structured data, used as a third recount (AC 25 base + 122 enhancements, AU 16 + 53; same 29 withdrawn) and to see which AC/AU statements NIST has reworded since the December 2020 PDF
+          - **official_url**: https://csrc.nist.gov/extensions/nudp/services/json/nudp/framework/version/sp_800_53_5_2_0/export/json?element=all
+          - **http_status**: 200
+          - **final_url**: https://csrc.nist.gov/extensions/nudp/services/json/nudp/framework/version/sp_800_53_5_2_0/export/json?element=all
+          - **bytes**: 14086095
+          - **sha256**: 48d5f7f504ee58fed515e3802eb0e1140f11b158c1c3a393082fce1508128445
+          - **saved_at**: /tmp/claude-0/-home-user/bfcfd013-a2da-5019-961e-7f46116f08be/scratchpad/wf-sources/sp800-53/dl-7/cprt_sp800-53_5_2_0_export.json
+          - **repo_recorded**: not recorded
+          - **same_as_recorded**: n/a
+        - item 8
+          - **name**: Failed attempt, recorded for completeness: a Release 5.1.1 comparison workbook at a path I guessed (it is not linked from the CSRC page). Not found; nothing in this report depends on it.
+          - **official_url**: https://csrc.nist.gov/files/pubs/sp/800/53/r5/upd1/final/docs/sp800-53r5-to-r5.1.1-comparison-workbook.xlsx
+          - **http_status**: 404
+          - **final_url**: https://csrc.nist.gov/files/pubs/sp/800/53/r5/upd1/final/docs/sp800-53r5-to-r5.1.1-comparison-workbook.xlsx
+          - **bytes**: 0
+          - **sha256**: n/a (empty response body)
+          - **saved_at**: not kept (empty file deleted)
+          - **repo_recorded**: not recorded
+          - **same_as_recorded**: n/a
+      - **could_not_check**
+        - item 1
+          - **what**: The retrieval date 'Retrieved 2026-08-05' (file line 9)
+          - **why**: A past retrieval cannot be observed at the source. The PDF served on 2026-11-11 has the recorded hash and a server Last-Modified of 2020-12-09, so the same bytes would have been served on that date.
+        - item 2
+          - **what**: The claim '[source text withheld from the public copy]' (file lines 15-16), as far as the repository's own parser is concerned
+          - **why**: No parser or script is present in origin/main (the tree contains no .py/.sh files), so it could not be run. An independent parser over pdftotext -layout output reproduces 183 of the 187 real statements line for line; the other four, AC-19(3) and the absence of AC-13 are the problems listed.
+        - item 3
+          - **what**: Which patch release (5.1.1 of 11/7/2023 or 5.2.0 of 8/27/2025) introduced each of the seven later rewordings mentioned in the summary
+          - **why**: Only the Release 5.2.0 CPRT export was compared. NIST's potential-updates sheet attributes the five 'Selection' changes (AC-2(2), AC-2(7)(a), AC-9(2), AU-5(4), AC-24) and the leading-zero identifiers to Release 5.1.1; the removal of the stray bracket in AC-4(25) is not listed there. A guessed URL for a 5.1.1 comparison workbook returned HTTP 404. This goes beyond the transcription check; the PDF named by the file is unchanged.
+        - item 4
+          - **what**: The header statement '[source text withheld from the public copy])' (file line 22)
+          - **why**: A legal characterisation, not a quotation of the PDF; outside this check.
+      - **summary**: Checked the file's claim to hold, verbatim, every AC and AU control statement [source text withheld from the public copy] PDF fetched from nvlpubs.nist.gov has exactly the recorded SHA-256 and size (6,073,678 bytes; server Last-Modified 9 Dec 2020), so the source is unchanged. I extracted it with pdftotext -layout, parsed all 216 AC/AU controls and enhancements, and compared each of the file's 215 entries after normalization; boundaries were cross-checked with a second extractor (pdfminer), page images, Appendix C and NIST's CPRT data. Of 220 items tested, 212 are confirmed: 210 entries (183 statements identical word for word, line breaks included; 27 withdrawn entries correctly flagged) plus hash and size. Eight problems: withdrawn base control AC-13 is missing; AC-19(3), withdrawn in the source, shows the title fragment "IDENTIFIABLE OWNER" as its statement; AU-6(8), AU-6(9), AU-9(7) and AU-12(4) have truncated titles whose last words head the statement; the stated counts are wrong (source: AC 25 base, 147 in all, total 216, not 24/146/215); and the marker "[WITHDRAWN in Rev. 5]" sits on 17 controls already withdrawn in Rev. 4 (interpretive). No entry is foreign to the source. Caveat: the PDF is the December 2020 edition; NIST's current Release 5.2.0 (CPRT) words seven of these statements differently: AC-2(2), AC-2(7), AC-4(25), AC-9(2), AC-24, AU-2, AU-5(4).
+    - item 2
+      - **key**: nist-requirements
+      - **items_total**: 122
+      - **confirmed**: 109
+      - **problems_reported**: 11
+      - **sources**
+        - item 1
+          - **name**: [source text withheld from the public copy] Unmanned Systems (ALFUS) [source text withheld from the public copy]
+          - **official_url**: https://doi.org/10.6028/NIST.sp.1011-I-2.0
+          - **http_status**: 200 (doi.org 302 to nvlpubs.nist.gov)
+          - **final_url**: https://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication1011-I-2.0.pdf
+          - **bytes**: 216691
+          - **sha256**: a7b5c3a37c487ec7a15eeae8f3ffb1df7b84992a03e5eefecb3c4dbff854da84
+          - **saved_at**: /tmp/claude-0/-home-user/bfcfd013-a2da-5019-961e-7f46116f08be/scratchpad/wf-sources/nist-requirements/dl-1/sp1011-I-2.0.pdf
+          - **repo_recorded**: sha256 a7b5c3a37c487ec7a15eeae8f3ffb1df7b84992a03e5eefecb3c4dbff854da84 (line 16); 216,691 bytes, Title field 'Microsoft Word - Terms for ALFUS 55.doc', ModDate 2015-12-11 (line 390); October 2008, 47 pp. (line 15)
+          - **same_as_recorded**: yes: sha256, byte size, Title field, ModDate, title, editor, date and page count all identical (47 PDF pages; printed page N is PDF page N+1, last printed folio 46)
+        - item 2
+          - **name**: [source text withheld from the public copy] Unmanned Systems (ALFUS) Framework, [source text withheld from the public copy]
+          - **official_url**: https://doi.org/10.6028/NIST.sp.1011-II-1.0
+          - **http_status**: 200 (doi.org 302 to nvlpubs.nist.gov)
+          - **final_url**: https://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication1011-II-1.0.pdf
+          - **bytes**: 1327094
+          - **sha256**: e594879c77929b47da192748d4379aca00759212d126c4535bd7cf227d3c6ac9
+          - **saved_at**: /tmp/claude-0/-home-user/bfcfd013-a2da-5019-961e-7f46116f08be/scratchpad/wf-sources/nist-requirements/dl-2/sp1011-II-1.0.pdf
+          - **repo_recorded**: no hash or size recorded; DOI, nvlpubs URL, 'December 2007, 73 pp.' (lines 18-19)
+          - **same_as_recorded**: not comparable (no hash recorded); URL, number, title, version, date and page count match (73 PDF pages; printed page equals PDF page)
+        - item 3
+          - **name**: NIST AI 100-1, Artificial Intelligence [source text withheld from the public copy]
+          - **official_url**: https://doi.org/10.6028/NIST.AI.100-1
+          - **http_status**: DOI: 302 with Location http://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.100-1.pdf; that plain-http hop failed twice here (curl exit 6, could not resolve host). Same path over https on nvlpubs.nist.gov, the URL the file gives: 200
+          - **final_url**: https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.100-1.pdf
+          - **bytes**: 1946127
+          - **sha256**: 7576edb531d9848825814ee88e28b1795d3a84b435b4b797d3670eafdc4a89f1
+          - **saved_at**: /tmp/claude-0/-home-user/bfcfd013-a2da-5019-961e-7f46116f08be/scratchpad/wf-sources/nist-requirements/dl-3/NIST.AI.100-1.pdf
+          - **repo_recorded**: no hash, size or page count recorded; DOI, nvlpubs URL and 'January 2023' (lines 21-22)
+          - **same_as_recorded**: not comparable (no hash recorded); number, title and date match. File has 48 PDF pages (printed 'Page N' is PDF page N+5), PDF ModDate 2025-06-04
+        - item 4
+          - **name**: NIST SP 800-53 Revision 5, Security and Privacy Controls for Information Systems and Organizations (September 2020, includes updates as of 12-10-2020)
+          - **official_url**: https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-53r5.pdf
+          - **http_status**: 200 (https://doi.org/10.6028/NIST.SP.800-53r5 answers 302 to this same URL)
+          - **final_url**: https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-53r5.pdf
+          - **bytes**: 6073678
+          - **sha256**: fc63bcd61715d0181dd8e85998b1e6201ae3515fc6626102101cab1841e11ec6
+          - **saved_at**: /tmp/claude-0/-home-user/bfcfd013-a2da-5019-961e-7f46116f08be/scratchpad/wf-sources/nist-requirements/dl-4/NIST.SP.800-53r5.pdf
+          - **repo_recorded**: not recorded: 'held locally' at a scratch path, with no URL, hash, size, date or page count (line 25). Line 404 calls its text 'pre-existing', although line 384 says every quote came from documents downloaded fresh in that session
+          - **same_as_recorded**: not comparable; title matches. Official file has 492 pages
+        - item 5
+          - **name**: NIST SP 1011 (fetched only to test the NOT OBTAINED statement about the predecessor v1.1): the file served is 'Terminology for Specifying the Autonomy Levels for Unmanned Systems: Version 1.0', January 2004, 33 pages
+          - **official_url**: https://doi.org/10.6028/NIST.SP.1011
+          - **http_status**: 200 (doi.org 302 to nvlpubs.nist.gov)
+          - **final_url**: https://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication1011.pdf
+          - **bytes**: 214126
+          - **sha256**: dddd4fab17a46e8658d01b84fe3fd408dd04f03e69d6fe76a0b735a9ee284cc1
+          - **saved_at**: /tmp/claude-0/-home-user/bfcfd013-a2da-5019-961e-7f46116f08be/scratchpad/wf-sources/nist-requirements/dl-5/sp1011.pdf
+          - **repo_recorded**: not recorded; the file lists '[source text withheld from the public copy])' as NOT OBTAINED (lines 27-28)
+          - **same_as_recorded**: not applicable: this is Version 1.0, not the Version 1.1 (September 2004) the file names
+        - item 6
+          - **name**: ALFUS project web page printed in both volumes (host www.isd.mel.nist.gov, a nist.gov host, official because NIST prints it as the project site)
+          - **official_url**: http://www.isd.mel.nist.gov/projects/autonomy_levels/
+          - **http_status**: no HTTP status: http gave curl exit 6 (could not resolve host; plain http is not routed here); https gave proxy CONNECT 502 on three attempts ('host allowed, but the gateway could not connect to it')
+          - **repo_recorded**: 'is a dead legacy host. NOT-CHECKED' (line 28; repeated line 378)
+          - **same_as_recorded**: consistent with the file's statement, not conclusive
+      - **could_not_check**
+        - item 1
+          - **what**: Whether the ALFUS project URL printed in the documents (http://www.isd.mel.nist.gov/projects/autonomy_levels/) is a dead host, as lines 28 and 378 say
+          - **why**: The URL is printed as the file says (Vol I printed pp. 8 and 10; Vol II p. 11). Over http, curl could not resolve the host (exit 6; plain http is not routed in this environment). Over https, the proxy answered CONNECT with 502 on three attempts ('host allowed, but the gateway could not connect to it'). That is consistent with the file's statement, but no HTTP status was ever returned, so it is not conclusive.
+        - item 2
+          - **what**: The text of SP 1011 Version 1.1 (September 2004), which the file lists as NOT OBTAINED and on which its 'deliberate broadening' reading in NIST-R19 depends
+          - **why**: Vol I v2.0 confirms that v1.1 is the published predecessor ('based on Version 1.1, published as NIST Special Publication 1011'; reference 1), and its version history also lists an intermediate Version 1.2. But https://doi.org/10.6028/NIST.SP.1011 resolves (200) to a file that is Version 1.0, January 2004, 33 pages, not 1.1. Eleven other plausible DOI names and five nvlpubs file names returned 404. For what it is worth, Version 1.0 defines Autonomy [source text withheld from the public copy] its [source text withheld from the public copy]', with no 'another system' clause, and its Appendix A item 1 asks 'whether external intervention other than HRI should be included in the definition of autonomous'. That agrees with the file's reading but is not Version 1.1.
+        - item 3
+          - **what**: Statements about cached local copies: alfus_v2.pdf and airmf_layout.txt 'byte-identical' to the fresh downloads; a cached PDF with Title field '...version 2.1', 310,071 bytes and ModDate 2026-07-08; the 'held locally' NIST.SP.800-53r5.pdf
+          - **why**: These are scratch files of the earlier session under /tmp/claude-1000/..., not in any repository ref. Only the fresh-download half of each statement could be tested, and it matched.
+        - item 4
+          - **what**: Corpus row T-04 of intake/imported/AUTONOMOUS_TERMS.md, said at lines 79 and 380 to cut the 'or by another system' clause
+          - **why**: That file is not present in any fetched ref of auditonomous, autonomous or 7lm. The ALFUS side of the claim is confirmed: the full clause is on Vol I printed p. 15.
+        - item 5
+          - **what**: 'I found no later version' of ALFUS and 'ALFUS is NIST's only autonomy artefact' (lines 368, 378, 386), which the file itself marks NOT-CHECKED
+          - **why**: This needs a catalogue search, and search engines and non-official hosts are excluded by the owner's rule. Guessed DOI names for later editions (1011-I-2.1, 1011-II-1.1, 1011-II-2.0, 1011-III-1.0) returned 404, which does not prove absence.
+        - item 6
+          - **what**: The doi.org hop for AI 100-1
+          - **why**: https://doi.org/10.6028/NIST.AI.100-1 answers 302 with Location http://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.100-1.pdf (plain http), which curl could not follow here (exit 6, twice). The same path over https on nvlpubs.nist.gov, which is the URL the file gives, returned 200 and was used.
+        - item 7
+          - **what**: The file's characterisation [source text withheld from the public copy] (lines 372 and 400)
+          - **why**: An ISO/IEC document, outside this NIST check; not fetched.
+      - **summary**: I tested the NIST requirements file (auditonomous origin/main; the same blob is on the roadmap branch) against the four documents it names, downloaded today from [source text withheld from the public copy], AI 100-1 and SP 800-53 Rev. 5. Titles, numbers, versions, dates and the stated page counts (47 and 73) match, and the one hash the file records (Volume I) is identical. I tested 122 items: 4 document descriptions, the 20 requirements, 64 further quotations and fragments, 18 counts, 14 negative or paraphrase claims and 2 not-obtained statements. 109 were confirmed, 12 have problems (11 entries) and 1 could not be checked. All 20 requirement quotations are in the named document and section and every definitional label holds; 17 are fully confirmed. NIST-R15 drops a sentence without an ellipsis, and NIST-R9 and NIST-R18 cite a page one too low. The most serious problem is a negative claim: the file says neither ALFUS volume has a minimum or weakest-link formulation, but Volume II section 6.1 (page 35) says weighted minimum values may be more suitable and the lower score should be used instead of the average. The AI RMF has the autonomy stem four times, not three, and one page reference there is wrong. Two Volume I word counts are off, and two paraphrases overstate the source. The SP 800-53 negative hypothesis holds: one occurrence, about human autonomy, in footnote 28. The project website did not answer, and the SP 1011 DOI serves Version 1.0, not 1.1.
+    - item 3
+      - **key**: rfc6962
+      - **items_total**: 152
+      - **confirmed**: 137
+      - **problems_reported**: 8
+      - **sources**
+        - item 1
+          - **name**: RFC 6962 plain text, the canonical edition (www.rfc-editor.org is the RFC Editor's own host, as the task names)
+          - **official_url**: https://www.rfc-editor.org/rfc/rfc6962.txt
+          - **http_status**: 200
+          - **final_url**: https://www.rfc-editor.org/rfc/rfc6962.txt
+          - **bytes**: 55048
+          - **sha256**: 08fdf31c10b9f20872a65c027a9fe8cee27280f930120784241a57de744752af
+          - **saved_at**: /tmp/claude-0/-home-user/bfcfd013-a2da-5019-961e-7f46116f08be/scratchpad/wf-sources/rfc6962/dl-1/rfc6962.txt
+          - **repo_recorded**: not recorded. Neither repository records a hash, size or retrieval date for this file. Autonomous origin/main holds two copies in L7/provenance/prior-art/ct-lane/: rfc6962-canonical.txt (git blob d760281e, 55,048 bytes) and RFC6962.txt (git blob ee3e4c6c, 85,837 bytes, sha256 cdc9bcecbf8b26b9c00156385d054ba5f9bd09b58242090f4c7f4cc66f77753b). The sheet ct-lane/0.md describes them at lines 3, 8, 16, 18 and 20.
+          - **same_as_recorded**: No recorded hash exists to compare with. A second download (dl-8) gave the same sha256. rfc6962-canonical.txt is byte-identical to the download. RFC6962.txt is not byte-identical: it is a plain-text rendering of a 54-page browser print of https://www.rfc-editor.org/info/rfc6962/ stamped '8/4/26, 8:43 AM'. Every difference: (1) four extra lines at the top ('[source text withheld from the public copy].'); (2) 54 print header lines and 54 print footer lines ('https://www.rfc-editor.org/info/rfc6962/ n/54'); (3) 54 form feeds, one per print page, against 27, and no final newline; (4) every line indented 14 or more extra columns, with indentation scaled; (5) spacing inside 319 of 966 non-blank lines changed: the two-space gap after a full stop is collapsed on 99 lines and gaps are widened on 220 (masthead, RFC page headers and footers, section headings, 37 of 39 tree-diagram lines, some struct, reference and prose lines), so the ASCII trees in section 2.1.3 lose their shape; (6) 701 blank lines against 550, longest line 131 columns against 72. Line endings are LF in both; no CR, tab or non-ASCII byte in either. Nothing differs in the words: each of the 966 non-blank official lines, RFC page headers and footers included, has one capture line with the same tokens, and all 7,259 whitespace-separated tokens appear in order with no substitution, insertion or deletion. Git history shows both blobs unchanged since their first commit (c866842, 2026-08-04) through two 100%-similarity renames.
+        - item 2
+          - **name**: RFC Editor info page for RFC 6962
+          - **official_url**: https://www.rfc-editor.org/info/rfc6962
+          - **http_status**: 200 (after a 301 to the trailing-slash URL on the same host)
+          - **final_url**: https://www.rfc-editor.org/info/rfc6962/
+          - **bytes**: 336904
+          - **sha256**: cb13f16bad77f9405a63299cca12b7c6ee1bd0353d7452be9ad91934cf2d7f52
+          - **saved_at**: /tmp/claude-0/-home-user/bfcfd013-a2da-5019-961e-7f46116f08be/scratchpad/wf-sources/rfc6962/dl-2/info_rfc6962.html
+          - **repo_recorded**: Autonomous ct-lane/0.md lines 8 and 16 call RFC6962.txt an 'RFC Editor page capture, 2026-08-04'. The Auditonomous reading record quotes the page banner at lines 15, 33 and 103. No hash or size of the page is recorded.
+          - **same_as_recorded**: Not comparable byte for byte: the page is generated HTML. Its title ('[source text withheld from the public copy]'), authors, status and [source text withheld from the public copy].') match the capture and the record. Its embedded metadata gives published 2013-06-06, status experimental, 27 pages, stream IETF, obsoleted_by RFC 9162, updates none, updated_by none. The RFC text embedded in the page is token-identical to rfc6962.txt.
+        - item 3
+          - **name**: RFC Index, entry 6962
+          - **official_url**: https://www.rfc-editor.org/rfc-index.txt
+          - **http_status**: 200
+          - **final_url**: https://www.rfc-editor.org/rfc-index.txt
+          - **bytes**: 2028672
+          - **sha256**: 135b00365e5fe88a88e9f55580bb33f7fd1eb07ba43b4cede0f664095c192ca5
+          - **saved_at**: /tmp/claude-0/-home-user/bfcfd013-a2da-5019-961e-7f46116f08be/scratchpad/wf-sources/rfc6962/dl-4/rfc-index.txt
+          - **repo_recorded**: not recorded
+          - **same_as_recorded**: Nothing recorded to compare. Index created 11/10/2026. Entry 6962 reads: 'Certificate Transparency. B. Laurie, A. Langley, E. Kasper. June 2013. (Format: TXT, HTML) (Obsoleted by RFC9162) (Status: EXPERIMENTAL) (DOI: 10.17487/RFC6962)'. It has no 'Updated by' tag. Entry 9162 carries '(Obsoletes RFC6962)'.
+        - item 4
+          - **name**: RFC 6962 metadata record (rfc6962.json)
+          - **official_url**: https://www.rfc-editor.org/rfc/rfc6962.json
+          - **http_status**: 200
+          - **final_url**: https://www.rfc-editor.org/rfc/rfc6962.json
+          - **bytes**: 1275
+          - **sha256**: d8c2a4208bd9aa8cb78fef3192abe65c01c3074326a569bba8f49c990636e2b1
+          - **saved_at**: /tmp/claude-0/-home-user/bfcfd013-a2da-5019-961e-7f46116f08be/scratchpad/wf-sources/rfc6962/dl-3/rfc6962.json
+          - **repo_recorded**: not recorded
+          - **same_as_recorded**: Nothing recorded to compare. It gives title 'Certificate Transparency'; [source text withheld from the public copy]. Kasper; status EXPERIMENTAL; pub_date June 2013; page_count 27; obsoleted_by [RFC9162]; updates []; updated_by []; source 'IETF - NON WORKING GROUP'; doi 10.17487/RFC6962.
+        - item 5
+          - **name**: RFC 6962 HTML rendering (cross-check only)
+          - **official_url**: https://www.rfc-editor.org/rfc/rfc6962.html
+          - **http_status**: 200
+          - **final_url**: https://www.rfc-editor.org/rfc/rfc6962.html
+          - **bytes**: 68207
+          - **sha256**: 1f09313bd14d952683954db8a2c64993c6b0fe4f86122adab7fdd5d20be503f4
+          - **saved_at**: /tmp/claude-0/-home-user/bfcfd013-a2da-5019-961e-7f46116f08be/scratchpad/wf-sources/rfc6962/dl-5/rfc6962.html
+          - **repo_recorded**: not recorded
+          - **same_as_recorded**: Nothing recorded to compare. Its text is token-identical to rfc6962.txt (7,259 tokens, no differences).
+        - item 6
+          - **name**: RFC 6962 PDF rendering of the text (fetched only to test the hash the reading record gives for its PDF)
+          - **official_url**: https://www.rfc-editor.org/rfc/pdfrfc/rfc6962.txt.pdf
+          - **http_status**: 200
+          - **final_url**: https://www.rfc-editor.org/rfc/pdfrfc/rfc6962.txt.pdf
+          - **bytes**: 42139
+          - **sha256**: 5cef85c6b572bc89e0e938c7a9591ef9c111f3d169416370997635faf398dcf7
+          - **saved_at**: /tmp/claude-0/-home-user/bfcfd013-a2da-5019-961e-7f46116f08be/scratchpad/wf-sources/rfc6962/dl-6/rfc6962.txt.pdf
+          - **repo_recorded**: Auditonomous reading record line 3 records sha256 9e5060bbf9850ebd955ff20a67ac35583d3a1dfeffc5d3443044370fa101833e for pdf/RFC6962_Certificate-Transparency.pdf, which line 25 describes as a 54-page [source text withheld from the public copy].
+          - **same_as_recorded**: The hashes differ, but these are different kinds of file, so this is not reported as SOURCE-CHANGED. The official PDF is a 27-page rendering of the text made on 2013-06-06. The record's file is its own 54-page print, which is not in the repository and which no official URL serves. See could_not_check.
+        - item 7
+          - **name**: RFC Editor errata listing for RFC 6962 (supplementary; www.rfc-editor.org redirects to errata.rfc-editor.org, the RFC Editor's own errata host under the same domain)
+          - **official_url**: https://www.rfc-editor.org/errata/rfc6962
+          - **http_status**: 200 (after a 302 from www.rfc-editor.org)
+          - **final_url**: https://errata.rfc-editor.org/search/?rfc_number=6962&presentation=records
+          - **bytes**: 22563
+          - **sha256**: c1f7406a49255e9be75f1c594f0c3f20f0f47da1e663d8b1d2c31e3e9df7c96a
+          - **saved_at**: /tmp/claude-0/-home-user/bfcfd013-a2da-5019-961e-7f46116f08be/scratchpad/wf-sources/rfc6962/dl-7/errata_rfc6962.html
+          - **repo_recorded**: not recorded; neither repository object mentions errata
+          - **same_as_recorded**: Nothing recorded to compare, and no verdict rests on this page. It lists three errata: 3686 (Verified, section 4.2), 4204 (Reported, section 3.1) and 4286 (Reported, section 3). Erratum 4286 proposes 'When a valid certificate or Precertificate is submitted to a log, the log MUST immediately return ...' for a sentence the reading record quotes in capture C14; the record quotes the RFC as published. The other two touch no quoted passage.
+      - **could_not_check**
+        - item 1
+          - **what**: Reading record line 3: SHA-256 9e5060bbf9850ebd955ff20a67ac35583d3a1dfeffc5d3443044370fa101833e recorded for pdf/RFC6962_Certificate-Transparency.pdf
+          - **why**: The PDF is not in aybllc/auditonomous at origin/main or at origin/claude/book-structure-roadmap-k8ap82. The record describes it as a 54-page [source text withheld from the public copy] page, and no official URL serves such a file. The official PDF rendering (https://www.rfc-editor.org/rfc/pdfrfc/rfc6962.txt.pdf, HTTP 200, 42,139 bytes, 27 pages, sha256 5cef85c6...dcf7) is a different file, so its different hash decides nothing.
+        - item 2
+          - **what**: The record's PDF-page locators ('PDF p.N' on 30 captures and about 25 in-prose citations) and the verifier's per-page character counts
+          - **why**: PDF pagination belongs to the repository's own print, not to the official source. As a stand-in I used Autonomous RFC6962.txt, which has the same 54-page layout. All 30 capture page numbers agree with it. The four quotations that straddle two PDF pages and their counts (322 of 390, 54 of 201, 109 of 162, 167 of 244) agree. Converting each in-prose PDF page to a printed page (two PDF pages per printed page) agrees with the official text. This is a repository-to-repository check, not an official-source check, and it is not part of items_total.
+        - item 3
+          - **what**: The capture date 2026-08-04 (Autonomous ct-lane/0.md lines 8 and 16; reading record line 4, 'Read: 2026-08-04')
+          - **why**: The official host cannot attest when a print was made or what the info page showed on that day. The date agrees with the stamp '8/4/26, 8:43 AM' on all 54 print pages of RFC6962.txt and with the first commit of both stored files (c866842, 2026-08-04). Today's info page shows the same title, authors, status and obsolescence banner.
+      - **summary**: RFC 6962 was fetched from www.rfc-editor.org (55,048 bytes, sha256 08fdf31c…52af). The text, the RFC index, the JSON record and the info page agree: Certificate Transparency; B. Laurie, A. Langley, E. Kasper; June 2013; Experimental; 27 pages; obsoleted by RFC 9162; updated by none.
+
+        Autonomous: rfc6962-canonical.txt is byte-identical to the official file. RFC6962.txt is a text rendering of a 54-page browser print of the info page, stamped 8/4/26. It adds 4 site lines and 108 print header and footer lines, has 54 form feeds against 27, and changes indentation and spacing, which distorts the tree diagrams. All 7,259 tokens of the RFC are present, in order and unaltered. The ct-lane sheet's four statements about the two files hold; the capture date rests on the file's own print stamp.
+
+        Auditonomous reading record: 148 items tested, 133 confirmed (152 and 137 with the sheet). All 30 captures are verbatim; 29 have the right section and printed page, and C28 runs onto page 25. Two statements about the RFC do not match it: who bears obligations, and, on its natural reading, what counts as an append-only violation. One absence claim overlooks the word "deleting". Nine in-prose quotations differ only in capital letters. Two internal page counts are wrong. The record's PDF hash could not be checked, because the PDF is not in the repository.
+
+        Working files: /tmp/claude-0/-home-user/bfcfd013-a2da-5019-961e-7f46116f08be/scratchpad/wf-sources/rfc6962/work/tally.out and the other files in that directory.
+    - item 4
+      - **key**: rfc9162
+      - **items_total**: 311
+      - **confirmed**: 296
+      - **problems_reported**: 15
+      - **sources**
+        - item 1
+          - **name**: RFC 9162 plain text as served by the RFC Editor. Host www.rfc-editor.org is the RFC Editor's own site, the publisher of the RFC series; the RFC itself points there for its status and errata.
+          - **official_url**: https://www.rfc-editor.org/rfc/rfc9162.txt
+          - **http_status**: 200
+          - **final_url**: https://www.rfc-editor.org/rfc/rfc9162.txt
+          - **bytes**: 128266
+          - **sha256**: a0e432ce7580c99fcc8faf0cf3f6191f9ce6b4864f949158e020d4ecb295081f
+          - **saved_at**: /tmp/claude-0/-home-user/bfcfd013-a2da-5019-961e-7f46116f08be/scratchpad/wf-sources/rfc9162/dl-1/rfc9162.txt
+          - **repo_recorded**: No hash or size is written down anywhere. The repository holds a stored copy instead: aybllc/autonomous origin/main:L7/provenance/prior-art/ct-lane/rfc9162-canonical.txt (git blob 772637a964c51ec796c0f0b6dfad889bbd88507d, 128,266 bytes, sha256 a0e432ce7580c99fcc8faf0cf3f6191f9ce6b4864f949158e020d4ecb295081f), which ct-lane/0.md line 18 calls one of 'the canonical plain-text editions'.
+          - **same_as_recorded**: Yes. Byte-identical to the stored copy (cmp, sha256 and git blob id all agree). A second download 30 minutes later gave the same hash.
+        - item 2
+          - **name**: RFC Editor info page for RFC 9162 (same official host). Used for title, date, status, authors, relation to RFC 6962, DOI and errata.
+          - **official_url**: https://www.rfc-editor.org/info/rfc9162
+          - **http_status**: 200
+          - **final_url**: https://www.rfc-editor.org/info/rfc9162/
+          - **bytes**: 1334611
+          - **sha256**: bd5e572fd2300891129d0451e57dfb81e47fbd47538b2425e9c9b7d672a66110
+          - **saved_at**: /tmp/claude-0/-home-user/bfcfd013-a2da-5019-961e-7f46116f08be/scratchpad/wf-sources/rfc9162/dl-2/info-rfc9162.html
+          - **repo_recorded**: No hash recorded. ct-lane/0.md line 17 calls aybllc/autonomous origin/main:L7/provenance/prior-art/ct-lane/RFC9162.txt (git blob 0e412402168adf26abe614cb0312df7a754a241a, 150,154 bytes, sha256 c909e1175c0ce3fe19c8845fc075cb7e2577ce930f0f24b4e67e4325a12d4c26) an 'RFC Editor page capture, 2026-08-04'. That file is the text of a browser print of this page; every page of it is stamped '8/4/26, 8:43 AM'.
+          - **same_as_recorded**: Not comparable byte for byte: a live HTML page against text extracted from a print. The page states: title 'Certificate Transparency Version 2.0'; [source text withheld from the public copy]. Stradling; status Experimental; stream IETF; published December 2021 (2021-12-09); 'Obsoletes (1): RFC 6962: Certificate Transparency'; no 'obsoleted by', 'updates' or 'updated by'; DOI 10.17487/RFC9162; one erratum (ID 8670, editorial, held for document update, Section 2.1.3.2), which touches no text the reading record quotes. The stored capture's wording was compared with the official plain text instead; see rfc9162-15.
+        - item 3
+          - **name**: RFC 9162 PDF rendition as served by the RFC Editor (same official host). Downloaded only to test the PDF hash and page count the reading record gives.
+          - **official_url**: https://www.rfc-editor.org/rfc/rfc9162.pdf
+          - **http_status**: 200
+          - **final_url**: https://www.rfc-editor.org/rfc/rfc9162.pdf
+          - **bytes**: 665522
+          - **sha256**: f0fafb9ef6f0555fc9ea5a65fb3552dea5957999aeb04162b2e8d0a748b1a89d
+          - **saved_at**: /tmp/claude-0/-home-user/bfcfd013-a2da-5019-961e-7f46116f08be/scratchpad/wf-sources/rfc9162/dl-3/rfc9162.pdf
+          - **repo_recorded**: aybllc/auditonomous origin/main:L7/provenance/sources/staging-records/library/reading/RFC9162_Certificate-Transparency-v2.md lines 2-3: file 'pdf/RFC9162_Certificate-Transparency-v2.pdf', SHA-256 0b153d1f65c1704253e26c2efd58d90622a70dbe9ece86aa05b57518d5fba802; line 10: 62 pages.
+          - **same_as_recorded**: No, and it was never the same file: the record says its PDF is a 62-page [source text withheld from the public copy]. The official PDF has 53 numbered pages and a different hash. The recorded hash matches no file the official host serves (text a0e432ce..., PDF f0fafb9e...) and could not be tested; see could_not_check.
+      - **could_not_check**
+        - item 1
+          - **what**: The SHA-256 0b153d1f65c1704253e26c2efd58d90622a70dbe9ece86aa05b57518d5fba802 that the Auditonomous reading record gives (lines 2-3) for its file pdf/RFC9162_Certificate-Transparency-v2.pdf
+          - **why**: The PDF is not an object in aybllc/auditonomous at origin/main, the only ref this check was told to use, and it is a private [source text withheld from the public copy] info page, not a file the official host serves. No HTTP request applies. The official renditions have other hashes (text a0e432ce..., PDF f0fafb9e..., 53 pages), so the recorded hash can be neither reproduced nor refuted from the official host.
+        - item 2
+          - **what**: The page numbers 'PDF p.N (printed p.N/62)' of the 48 captures and the page cites in the absences section, against an official source
+          - **why**: The official text is unpaginated and the official PDF has 53 numbered pages; the 62-page numbering exists only in the repository's own print. Pages were checked instead against the Autonomous text of that print (RFC9162.txt, 62 form-feed pages, same '8/4/26, 8:43 AM' stamp), which is a repository object. On that basis 47 of 48 capture pages and all but one inline page cite agree; the two exceptions are rfc9162-4 and rfc9162-5.
+        - item 3
+          - **what**: The capture date 2026-08-04 that ct-lane/0.md (lines 8 and 17) gives for RFC9162.txt
+          - **why**: Only the file's own print stamp ('8/4/26, 8:43 AM', read as month/day/year) and the reading record's 'Read: 2026-08-04' support it. The official host cannot say when a local print was made.
+        - item 4
+          - **what**: What RFC 6962 itself says, where the RFC 9162 record's commentary speaks of it (C7, C8, C9, for example that RFC 6962 '[source text withheld from the public copy]'), and the two RFC 6962 files the ct-lane sheet names
+          - **why**: This check covers RFC 9162 only; RFC 6962 was not downloaded here. RFC 9162 Section 1.3 does say that detailed verification algorithms 'have been added', which is the half of the claim that was confirmed.
+        - item 5
+          - **what**: 29 quoted phrases that the record attributes to the corpus or the assignment (for example '[source text withheld from the public copy]') and the interpretive arguments in the 'Bears on' paragraphs
+          - **why**: They are not statements of what RFC 9162 says, so there is no official source to test them against in this check. Only the factual statements about the RFC inside those paragraphs were tested.
+        - item 6
+          - **what**: The content of Crosby and Wallach, 'Efficient Data Structures for Tamper-Evident Logging' (USENIX Security 2009), which the record names as the peer-reviewed root of the design
+          - **why**: Only its citation in RFC 9162 Section 12.2 was confirmed (verbatim, capture C48). The paper is not part of this check, usenix.org was not consulted, and the record itself says the paper was not read.
+      - **summary**: Tested the Auditonomous RFC 9162 reading record and the two Autonomous ct-lane copies with their sheet against the RFC Editor's own text (www.rfc-editor.org/rfc/rfc9162.txt, 128,266 bytes) and info page. The RFC Editor states: Certificate Transparency Version 2.[source text withheld from the public copy]; December 2021; obsoletes RFC 6962.
+
+        Autonomous: rfc9162-canonical.txt is byte-identical to the official text. RFC9162.txt is the text of a 62-page browser print of the info page; it lacks the RFC header block and table of contents and cuts off seven code tokens, but its words are otherwise the same. What the sheet says about both files is true.
+
+        Auditonomous: all 48 captures are in the sections named and 47 are verbatim (ten drop only list bullets); C14 ends with a full stop where the RFC has a colon. One of 91 headings is truncated. Of 103 inline quotations, 98 are clean; two swap a comma for a full stop, two add capitals, and one cites the wrong page, as does capture C46. The record says no ISSN is printed; the official header prints one. Three commentary claims go beyond the text, one misnumbers sentences, and one says only page 10 of the print is truncated when page 19 is too. All 11 word-count claims and 41 of 46 section or page claims hold.
+
+        Totals: 311 items (including 5 file checks and 7 citation fields), 296 confirmed, 15 problems. Page numbers were checked against the Autonomous print text; the official text is unpaginated.
+    - item 5
+      - **key**: fips180-4
+      - **items_total**: 224
+      - **confirmed**: 221
+      - **problems_reported**: 3
+      - **sources**
+        - item 1
+          - **name**: [source text withheld from the public copy]), August 2015 (PDF)
+          - **official_url**: https://nvlpubs.nist.gov/nistpubs/FIPS/NIST.FIPS.180-4.pdf
+          - **final_url**: https://nvlpubs.nist.gov/nistpubs/FIPS/NIST.FIPS.180-4.pdf
+          - **http_status**: 200
+          - **bytes**: 833315
+          - **sha256**: 0455b406d89648d20cbde375561e19c245b9815e894164c2670772e3d54deb82
+          - **saved_at**: /tmp/claude-0/-home-user/bfcfd013-a2da-5019-961e-7f46116f08be/scratchpad/wf-sources/fips180-4/dl-1/NIST.FIPS.180-4.pdf
+          - **repo_recorded**: SHA-256 0455b406d89648d20cbde375561e19c245b9815e894164c2670772e3d54deb82 (reading record line 3); 36 PDF pages (line 10). LEDGER.md line 31 (STD-002) records only an l6 archive commit `b328334`, no file hash or size.
+          - **same_as_recorded**: yes - sha256 identical; page count 36 identical (pdfinfo)
+        - item 2
+          - **name**: CSRC publication page for FIPS 180-4
+          - **official_url**: https://csrc.nist.gov/pubs/fips/180-4/upd1/final
+          - **final_url**: https://csrc.nist.gov/pubs/fips/180-4/upd1/final
+          - **http_status**: 200
+          - **bytes**: 40642
+          - **sha256**: 7a7e3f8247e0c04b6c22109bc1031527a1928e384da5a878269e7be4b5cf8fc5
+          - **saved_at**: /tmp/claude-0/-home-user/bfcfd013-a2da-5019-961e-7f46116f08be/scratchpad/wf-sources/fips180-4/dl-2/csrc.html
+          - **repo_recorded**: not recorded
+          - **same_as_recorded**: n/a - page shows: FIPS 180-4, Secure Hash Standard (SHS); Date Published August 2015; Supersedes FIPS 180-4 (03/06/2012); Document History 08/04/15: FIPS 180-4 (Final); Planning Note (03/07/2023): NIST has decided to revise FIPS 180-4. Status is Final, not withdrawn. Consistent with the record and with ledger citation '[source text withheld from the public copy].'
+      - **could_not_check**
+        - item 1
+          - **what**: LEDGER.md row STD-002: l6 path `library/standards/nist/nist-fips-180-4-secure-hash-standard-2015.pdf` at l6 commit `b328334`, and the label '[source text withheld from the public copy]'
+          - **why**: The ledger points to the internal aybllc/l6 archive, which is not among the repositories given to me; no PDF of this standard exists in auditonomous at origin/main or at origin/claude/book-structure-roadmap-k8ap82. The ledger row carries no sha256 or size to compare. Only the citation ([source text withheld from the public copy]) could be confirmed. For reference, the git blob id of the official PDF is 5462a6a01d7aa1124d853c5c0f8eade62ffa2603.
+        - item 2
+          - **what**: The record's reading of the Erratum as a change to 't ≤ 79', and its statement that equations such as a ← H0^(i-1) sit behind the garbled text on p24
+          - **why**: The text layer carries these glyphs only as Symbol-font private-use code points (U+F0A3 on p36, U+F03D/U+F02D on p24). I confirmed those code points are present exactly where the record says, but the glyph identity cannot be established from pdftotext output alone.
+        - item 3
+          - **what**: Verifier's measured elision lengths of 148 characters (C13, p24) and 733 characters (C17, p19)
+          - **why**: On my whitespace-collapsed extraction the gaps measure 177 and 730 characters. The measure depends on how whitespace and private-use glyphs are counted, so the difference is not reportable as a mismatch. The other two measures (236 on p4, 246 on p12) reproduce exactly.
+      - **summary**: I tested the FIPS 180-4 reading record and its ledger row against the official PDF from nvlpubs.nist.gov (HTTP 200, 833,315 bytes). Its sha256 is identical to the one the record gives, so the record was made from the same file NIST serves today. The csrc.nist.gov page confirms the title, the number, publication in August 2015 and Final status, with a 2023 note that NIST has decided to revise it.
+
+        Of 224 items tested, 221 were confirmed. All 25 block quotations (29 contiguous segments) are verbatim on the PDF page, printed page and section the record names. All 55 table-of-contents entries match. The title-page and other citation details match, as do the short quotations embedded in the commentary. All 22 keyword counts reproduce over the full 36 pages, including zero for collision, preimage, deprecat, tamper and chain, and "security strength" twice on p8. The structural claims hold: seven glossary entries, three references, "five hash algorithms" followed by seven names, and "FIPS 140-4" as printed.
+
+        Three minor problems, none affecting a block quotation:
+        - **Page counts:** the record says both 25 and 24 pages read and "eleven" unread; its own page list gives 24 and 12.
+        - **Page contents:** it places Sec. 5.1 and 5.3.3-5.3.5 on pp13-17; they are on p18 and p20.
+        - **One word:** commentary quotes "yield" where the source says "yields".
+
+        The ledger's l6 archive commit could not be checked.
+    - item 6
+      - **key**: definition-citations
+      - **items_total**: 80
+      - **confirmed**: 71
+      - **problems_reported**: 9
+      - **sources**
+        - item 1
+          - **name**: NIST SP 800-53 Rev. 5 (PDF)
+          - **official_url**: https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-53r5.pdf
+          - **http_status**: 200
+          - **final_url**: https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-53r5.pdf
+          - **bytes**: 6073678
+          - **sha256**: fc63bcd61715d0181dd8e85998b1e6201ae3515fc6626102101cab1841e11ec6
+          - **saved_at**: /tmp/claude-0/-home-user/bfcfd013-a2da-5019-961e-7f46116f08be/scratchpad/wf-sources/definition-citations/dl-1/NIST.SP.800-53r5.pdf
+          - **repo_recorded**: SHA-256 fc63bcd61715d0181dd8e85998b1e6201ae3515fc6626102101cab1841e11ec6, 6,073,678 bytes (origin/main:L7/provenance/sources/staging-records/standards/extracted/SP800-53r5_AC-AU_verbatim.md:10)
+          - **same_as_recorded**: yes - hash and size identical
+        - item 2
+          - **name**: NIST FIPS 180-4 (PDF)
+          - **official_url**: https://nvlpubs.nist.gov/nistpubs/FIPS/NIST.FIPS.180-4.pdf
+          - **http_status**: 200
+          - **final_url**: https://nvlpubs.nist.gov/nistpubs/FIPS/NIST.FIPS.180-4.pdf
+          - **bytes**: 833315
+          - **sha256**: 0455b406d89648d20cbde375561e19c245b9815e894164c2670772e3d54deb82
+          - **saved_at**: /tmp/claude-0/-home-user/bfcfd013-a2da-5019-961e-7f46116f08be/scratchpad/wf-sources/definition-citations/dl-2/NIST.FIPS.180-4.pdf
+          - **repo_recorded**: SHA-256 0455b406d89648d20cbde375561e19c245b9815e894164c2670772e3d54deb82 (origin/main:L7/provenance/sources/staging-records/library/reading/NIST_FIPS-180-4_Secure-Hash-Standard.md:3); no size recorded there
+          - **same_as_recorded**: yes - hash identical
+        - item 3
+          - **name**: NIST AI 100-1, AI RMF 1.0 (PDF)
+          - **official_url**: https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.100-1.pdf
+          - **http_status**: 200
+          - **final_url**: https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.100-1.pdf
+          - **bytes**: 1946127
+          - **sha256**: 7576edb531d9848825814ee88e28b1795d3a84b435b4b797d3670eafdc4a89f1
+          - **saved_at**: /tmp/claude-0/-home-user/bfcfd013-a2da-5019-961e-7f46116f08be/scratchpad/wf-sources/definition-citations/dl-3/NIST.AI.100-1.pdf
+          - **repo_recorded**: not recorded (URL only, AUDITONOMOUS_DEFINITION.md:322; fetch note without hash at L8/L4/work/computation/nist-requirements-for-autonomouos.md:22)
+          - **same_as_recorded**: not comparable - no hash recorded
+        - item 4
+          - **name**: [source text withheld from the public copy] (PDF, 47 pages)
+          - **official_url**: https://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication1011-I-2.0.pdf
+          - **http_status**: 200
+          - **final_url**: https://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication1011-I-2.0.pdf
+          - **bytes**: 216691
+          - **sha256**: a7b5c3a37c487ec7a15eeae8f3ffb1df7b84992a03e5eefecb3c4dbff854da84
+          - **saved_at**: /tmp/claude-0/-home-user/bfcfd013-a2da-5019-961e-7f46116f08be/scratchpad/wf-sources/definition-citations/dl-4/nistspecialpublication1011-I-2.0.pdf
+          - **repo_recorded**: sha256 a7b5c3a37c487ec7a15eeae8f3ffb1df7b84992a03e5eefecb3c4dbff854da84, 47 pp. (origin/main:L8/L4/work/computation/nist-requirements-for-autonomouos.md:14-16)
+          - **same_as_recorded**: yes - hash and page count identical
+        - item 5
+          - **name**: [source text withheld from the public copy] Framework Models (PDF, 73 pages)
+          - **official_url**: https://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication1011-II-1.0.pdf
+          - **http_status**: 200
+          - **final_url**: https://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication1011-II-1.0.pdf
+          - **bytes**: 1327094
+          - **sha256**: e594879c77929b47da192748d4379aca00759212d126c4535bd7cf227d3c6ac9
+          - **saved_at**: /tmp/claude-0/-home-user/bfcfd013-a2da-5019-961e-7f46116f08be/scratchpad/wf-sources/definition-citations/dl-5/nistspecialpublication1011-II-1.0.pdf
+          - **repo_recorded**: 73 pp., no hash (origin/main:L8/L4/work/computation/nist-requirements-for-autonomouos.md:18-19)
+          - **same_as_recorded**: page count identical (73); no hash recorded
+        - item 6
+          - **name**: RFC 6962 (text)
+          - **official_url**: https://www.rfc-editor.org/rfc/rfc6962.txt
+          - **http_status**: 200
+          - **final_url**: https://www.rfc-editor.org/rfc/rfc6962.txt
+          - **bytes**: 55048
+          - **sha256**: 08fdf31c10b9f20872a65c027a9fe8cee27280f930120784241a57de744752af
+          - **saved_at**: /tmp/claude-0/-home-user/bfcfd013-a2da-5019-961e-7f46116f08be/scratchpad/wf-sources/definition-citations/dl-6/rfc6962.txt
+          - **repo_recorded**: repository holds a PDF rendering, SHA-256 9e5060bbf9850ebd955ff20a67ac35583d3a1dfeffc5d3443044370fa101833e (origin/main:L7/provenance/sources/staging-records/library/reading/RFC6962_Certificate-Transparency.md:3); no hash for the .txt
+          - **same_as_recorded**: not comparable - different file format; rfc-editor's own PDF (https://www.rfc-editor.org/rfc/pdfrfc/rfc6962.txt.pdf, 200, 42139 bytes, sha256 5cef85c6b572bc89e0e938c7a9591ef9c111f3d169416370997635faf398dcf7, saved in dl-11) does not equal 9e5060bb..., but the repository does not say which URL its PDF came from
+        - item 7
+          - **name**: RFC 9162 (text)
+          - **official_url**: https://www.rfc-editor.org/rfc/rfc9162.txt
+          - **http_status**: 200
+          - **final_url**: https://www.rfc-editor.org/rfc/rfc9162.txt
+          - **bytes**: 128266
+          - **sha256**: a0e432ce7580c99fcc8faf0cf3f6191f9ce6b4864f949158e020d4ecb295081f
+          - **saved_at**: /tmp/claude-0/-home-user/bfcfd013-a2da-5019-961e-7f46116f08be/scratchpad/wf-sources/definition-citations/dl-7/rfc9162.txt
+          - **repo_recorded**: not recorded in the seven files checked (they never cite RFC 9162)
+          - **same_as_recorded**: not applicable
+        - item 8
+          - **name**: RFC 4949 (text) - quoted by the definition file
+          - **official_url**: https://www.rfc-editor.org/rfc/rfc4949.txt
+          - **http_status**: 200
+          - **final_url**: https://www.rfc-editor.org/rfc/rfc4949.txt
+          - **bytes**: 867626
+          - **sha256**: 32d1e3837ae5a7d2e99a63f43c6fea3dd350ffc6ac55b3aaadad250546ad7f87
+          - **saved_at**: /tmp/claude-0/-home-user/bfcfd013-a2da-5019-961e-7f46116f08be/scratchpad/wf-sources/definition-citations/dl-8/rfc4949.txt
+          - **repo_recorded**: line numbers 1418-1419, 7287-7292, 14940-14945 (AUDITONOMOUS_DEFINITION.md:318, 334); no hash
+          - **same_as_recorded**: line numbers identical in today's file
+        - item 9
+          - **name**: NIST CSRC Glossary, term 'audit trail' (HTML)
+          - **official_url**: https://csrc.nist.gov/glossary/term/audit_trail
+          - **http_status**: 200
+          - **final_url**: https://csrc.nist.gov/glossary/term/audit_trail
+          - **bytes**: 47390
+          - **sha256**: dce28b9e1e530e18c9cdca5d2cccb4a09a9c8361bfeace9773e5b8fec5aec45c
+          - **saved_at**: /tmp/claude-0/-home-user/bfcfd013-a2da-5019-961e-7f46116f08be/scratchpad/wf-sources/definition-citations/dl-9/audit_trail.html
+          - **repo_recorded**: not recorded ("[source text withheld from the public copy]", no hash; AUDITONOMOUS_DEFINITION.md:310, 314)
+          - **same_as_recorded**: not comparable - no hash; page content differs from what the repository quotes (see definition-citations-1)
+        - item 10
+          - **name**: NIST CSRC Glossary, term 'firmware' (HTML)
+          - **official_url**: https://csrc.nist.gov/glossary/term/firmware
+          - **http_status**: 200
+          - **final_url**: https://csrc.nist.gov/glossary/term/firmware
+          - **bytes**: 68439
+          - **sha256**: b4d9559122238605417d71be801e349cf2cd1c16c6a3bfe3890864f9751bd3ae
+          - **saved_at**: /tmp/claude-0/-home-user/bfcfd013-a2da-5019-961e-7f46116f08be/scratchpad/wf-sources/definition-citations/dl-10/firmware.html
+          - **repo_recorded**: not recorded (AUDITONOMOUS_DEFINITION.md:334)
+          - **same_as_recorded**: not comparable - no hash
+      - **could_not_check**
+        - item 1
+          - **what**: RFC 9162 citations
+          - **why**: None of the seven files cites RFC 9162 (0 hits for '9162'). The document was downloaded (200, sha256 a0e432ce...) but there was nothing to test against it. Likewise no AC-5 or AC-6 citation occurs in these files.
+        - item 2
+          - **what**: Whether the repository's held RFC 6962 PDF (sha256 9e5060bb...) is the same file as the official one
+          - **why**: The repository does not record the URL its PDF came from. rfc-editor's own PDF rendering hashes to 5cef85c6..., which differs, but that may be a different rendering and not a changed source. The two RFC 6962 quotations were compared against the official .txt and are verbatim.
+        - item 3
+          - **what**: NIST SP 800-88 (cryptographic erase as a purge technique) and NIST SP 800-193, mentioned in SEGREGATION_AND_FORGETTING_2026-08-04.md:158,190, AUDITON_ENVELOPE.md:235 and HUMINT_ENCODE.md:329
+          - **why**: Outside the six sources named in this check; not downloaded and not tested.
+        - item 4
+          - **what**: The CSRC attribution of the 'audit trail' definition to SP 800-37 Rev. 2
+          - **why**: SP 800-37 is outside the named sources. The CSRC page does list both SP 800-37 Rev. 2 and [source text withheld from the public copy] sources, and the wording was confirmed in the SP 800-53r5 glossary only.
+        - item 5
+          - **what**: ALFUS 'N1' to 'N9' labels (AUDITON_ENVELOPE.md:124-133, HUMINT_ENCODE.md:37)
+          - **why**: These labels are the repository's own numbering, not SP 1011's. Only the words attached to them were tested; all occur in the SP 1011-I-2.0 definition of Autonomy.
+      - **summary**: I tested 80 items across the seven files: 71 are confirmed against the official documents and 9 have problems, none of which reverses a finding.
+
+        All sources came from nvlpubs.nist.gov, csrc.nist.gov and www.rfc-editor.org with HTTP 200. Three downloads match the hashes the repository recorded (SP 800-53r5, FIPS 180-4, SP 1011-I-2.0), so there is no SOURCE-CHANGED finding.
+
+        Confirmed:
+        - **SP 800-53r5:** every control identifier and title cited exists and says what is attributed to it, including the AC-3(10), AU-10, AC-4(7), AU-9(2), AU-9(7), AC-25, SR-4(3), SR-9, SR-10, SR-11 and AC-14 quotations.
+        - **Other sources:** the AI 100-1 quotations sit on pages 15 and 16 as stated; the FIPS 180-4, RFC 6962 and RFC 4949 quotations are verbatim, and the RFC 4949 line numbers are exact.
+        - **Counts:** SP 1011 contains zero "shall" in both volumes, and the HUMINT term-count table reproduces exactly.
+
+        Problems:
+        - **Dropped words (4):** "Assignment:" is missing from two bracketed quotations, "its" from one ALFUS quotation, and SA-10(7) says "to be included in" where the repository quotes "to be members of".
+        - **Wrong counts (2):** the "eleven controls and twenty-seven enhancements" heading should be 13 and 34 for the set it names, and "only two" uses of "personnel" without "or roles" is an undercount.
+        - **Unsupported attributions (2):** CM-3(5) does not have the "automated mechanisms" form, and SR-5(2) has personnel conducting assessments, which contradicts the "never the actor" claim.
+        - **Not found (1):** the CSRC "audit trail" sentence attributed to CNSSI 4009-2015 is not on the page today.
+
+        RFC 9162 is never cited in these files.
+    - item 7
+      - **key**: autonomous-definitions
+      - **items_total**: 11
+      - **confirmed**: 3
+      - **problems_reported**: 3
+      - **sources**
+        - item 1
+          - **name**: [source text withheld from the public copy], Version 2.0, October 2008), 47 PDF pages
+          - **official_url**: https://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication1011-I-2.0.pdf
+          - **final_url**: https://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication1011-I-2.0.pdf
+          - **http_status**: 200
+          - **bytes**: 216691
+          - **sha256**: a7b5c3a37c487ec7a15eeae8f3ffb1df7b84992a03e5eefecb3c4dbff854da84
+          - **repo_recorded**: sha256 a7b5c3a3...54da84 for NIST-SP-1011-I-2.0.pdf (L7/provenance/sources/staging-records/sources___fulltext___SHA256SUMS.txt)
+          - **same_as_recorded**: yes - sha256 identical
+          - **saved_at**: /tmp/claude-0/-home-user/bfcfd013-a2da-5019-961e-7f46116f08be/scratchpad/wf-sources/autonomous-definitions/dl-1/sp1011.pdf
+        - item 2
+          - **name**: A7 [source text withheld from the public copy]), OJ L 12.7.2024, PDF rendition, 144 pages. eur-lex.europa.eu is the EU's official legal-publication host
+          - **official_url**: https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=OJ:L_202401689
+          - **final_url**: https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=OJ:L_202401689
+          - **http_status**: 200
+          - **bytes**: 2583319
+          - **sha256**: bba630444b3278e881066774002a1d7824308934f49ccfa203e65be43692f55e
+          - **repo_recorded**: sha256 bba63044...692f55e for EU-2024-1689-AI-Act.pdf (sources___fulltext___SHA256SUMS.txt)
+          - **same_as_recorded**: yes - sha256 identical
+          - **saved_at**: /tmp/claude-0/-home-user/bfcfd013-a2da-5019-961e-7f46116f08be/scratchpad/wf-sources/autonomous-definitions/dl-11/aiact.pdf
+        - item 3
+          - **name**: A7 Regulation (EU) 2024/1689, EUR-Lex HTML rendition (second copy used for cross-check)
+          - **official_url**: https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202401689
+          - **final_url**: https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202401689
+          - **http_status**: 200
+          - **bytes**: 1263936
+          - **sha256**: 242b88140ecf85d87fe1f64f8acea82e21b0008e5025825a62114da637d403bb
+          - **repo_recorded**: sha256 8f0b6563...872d721a for EU-2024-1689-AI-Act.xhtml (SHA256SUMS.txt); the repository does not record which URL produced that xhtml
+          - **same_as_recorded**: no - hash differs, but the repository's fetch URL for the xhtml is not recorded, so this may be a different rendition rather than a changed source; not reported as SOURCE-CHANGED. The PDF rendition is byte-identical to the recorded one.
+          - **saved_at**: /tmp/claude-0/-home-user/bfcfd013-a2da-5019-961e-7f46116f08be/scratchpad/wf-sources/autonomous-definitions/dl-2/aiact.html
+        - item 4
+          - **name**: A8 DoD Directive 3000.09 (25 January 2023). www.esd.whs.mil is the DoD Executive Services Directorate issuances host
+          - **official_url**: https://www.esd.whs.mil/Portals/54/Documents/DD/issuances/dodd/300009p.pdf
+          - **final_url**: https://www.esd.whs.mil/Portals/54/Documents/DD/issuances/dodd/300009p.pdf
+          - **http_status**: 403 (twice; Akamai 'Access Denied' HTML, 451 bytes; the issuances index https://www.esd.whs.mil/Directives/issuances/dodd/ also 403)
+          - **bytes**: 451 (error page, not the document)
+          - **sha256**: not obtained (error page only)
+          - **repo_recorded**: sha256 a31f7ed2...4ebc55f2 for DoDD-3000.09.pdf (SHA256SUMS.txt); the repository itself notes [source text withheld from the public copy] (sources__CLICK_LIST_2026-08-08.md:44)
+          - **same_as_recorded**: could not check
+          - **saved_at**: /tmp/claude-0/-home-user/bfcfd013-a2da-5019-961e-7f46116f08be/scratchpad/wf-sources/autonomous-definitions/dl-3/dodd300009.pdf
+        - item 5
+          - **name**: A9 [source text withheld from the public copy], Version 2.0), 36 pages. www.easa.europa.eu is EASA's own site
+          - **official_url**: https://www.easa.europa.eu/sites/default/files/dfu/easa_ai_roadmap_2_0_2023.pdf
+          - **final_url**: https://www.easa.europa.eu/sites/default/files/dfu/easa_ai_roadmap_2_0_2023.pdf
+          - **http_status**: 200
+          - **bytes**: 2836542
+          - **sha256**: 800eb6f8714926db5d812169a1a1a4de630f72ce26b6ec10f7453277d7aba00f
+          - **repo_recorded**: sha256 800eb6f8...d7aba00f, 2836542 bytes, 36 pages (SHA256SUMS.txt and sources___fulltext___dl_lane3_aviation.log)
+          - **same_as_recorded**: yes - sha256 and size identical
+          - **saved_at**: /tmp/claude-0/-home-user/bfcfd013-a2da-5019-961e-7f46116f08be/scratchpad/wf-sources/autonomous-definitions/dl-5/roadmap2.pdf
+        - item 6
+          - **name**: A9 EASA Concept Paper: guidance for Level 1 & 2 machine learning applications, Issue 02, 285 PDF pages
+          - **official_url**: https://www.easa.europa.eu/en/downloads/139504/en
+          - **final_url**: https://www.easa.europa.eu/en/downloads/139504/en
+          - **http_status**: 200
+          - **bytes**: 7770171
+          - **sha256**: daa1525eb50fd31c3bad8928c012324a002cacffb9e4ac52591f7913e0b342ed
+          - **repo_recorded**: sha256 daa1525e...d0b342ed, 7770171 bytes (SHA256SUMS.txt, dl_lane3_aviation.log). Note: L7/provenance/sources/LEDGER.md:112 says 283 pp.; pdfinfo reports 285 pages
+          - **same_as_recorded**: yes - sha256 and size identical
+          - **saved_at**: /tmp/claude-0/-home-user/bfcfd013-a2da-5019-961e-7f46116f08be/scratchpad/wf-sources/autonomous-definitions/dl-6/cp02.pdf
+        - item 7
+          - **name**: A10 ETSI GR ENI 007 V1.1.1 (2019-11), 37 pages. www.etsi.org/deliver is ETSI's own free publication server
+          - **official_url**: https://www.etsi.org/deliver/etsi_gr/ENI/001_099/007/01.01.01_60/gr_ENI007v010101p.pdf
+          - **final_url**: https://www.etsi.org/deliver/etsi_gr/ENI/001_099/007/01.01.01_60/gr_ENI007v010101p.pdf
+          - **http_status**: 200
+          - **bytes**: 586940
+          - **sha256**: 0a38b476ab56e9b5eccfba8af8e9aedaec179eefa8ff6d6e3f5f11097b4c9347
+          - **repo_recorded**: not recorded (no hash or size; only 'official ETSI PDF (etsi.org/deliver)' in sources__LEDGER.md:59)
+          - **same_as_recorded**: not applicable
+          - **saved_at**: /tmp/claude-0/-home-user/bfcfd013-a2da-5019-961e-7f46116f08be/scratchpad/wf-sources/autonomous-definitions/dl-7/eni007.pdf
+        - item 8
+          - **name**: A1 ISO 8373:2021 - ISO Online Browsing Platform (iso.org, ISO's own domain)
+          - **official_url**: https://www.iso.org/obp/ui/#iso:std:iso:8373:ed-3:v1:en
+          - **final_url**: https://www.iso.org/obp/ui/#iso:std:iso:8373:ed-3:v1:en
+          - **http_status**: 403 (bot-challenge page 'Just a moment...', 5348 bytes)
+          - **bytes**: 5348 (challenge page)
+          - **sha256**: 71c652fa09e86dbdb5907c7ec119d9213884e5bebb6769acb2151b08072d9710 (challenge page, not the source)
+          - **repo_recorded**: not recorded (OBP HTML rendering, no hash)
+          - **same_as_recorded**: could not check
+          - **saved_at**: /tmp/claude-0/-home-user/bfcfd013-a2da-5019-961e-7f46116f08be/scratchpad/wf-sources/autonomous-definitions/dl-8/obp8373.html
+        - item 9
+          - **name**: A2/A3 ISO/IEC 22989:2022 - ISO OBP
+          - **official_url**: https://www.iso.org/obp/ui/en/#iso:std:iso-iec:22989:ed-1:v1:en
+          - **final_url**: https://www.iso.org/obp/ui/en/#iso:std:iso-iec:22989:ed-1:v1:en
+          - **http_status**: 403 (bot-challenge page, 5378 bytes)
+          - **bytes**: 5378 (challenge page)
+          - **sha256**: b623dc47478a0da8603125deb36c0f7160dfe47b5c8ec457e048dfbb5b8cec74 (challenge page)
+          - **repo_recorded**: not recorded
+          - **same_as_recorded**: could not check
+          - **saved_at**: /tmp/claude-0/-home-user/bfcfd013-a2da-5019-961e-7f46116f08be/scratchpad/wf-sources/autonomous-definitions/dl-9/obp22989.html
+        - item 10
+          - **name**: A2/A3 ISO/IEC 22989:2022 - ISO Publicly Available Standards (standards.iso.org, ISO's own free-download host)
+          - **official_url**: https://standards.iso.org/ittf/PubliclyAvailableStandards/c074296_ISO_IEC_22989_2022(E).zip
+          - **final_url**: https://standards.iso.org/ittf/PubliclyAvailableStandards/c074296_ISO_IEC_22989_2022(E).zip
+          - **http_status**: 200, but the body is the HTML 'Licence Agreement for Publicly Available Standards' click-through form (6457 bytes), not the zip; the document is released only after accepting ISO's licence by POST, which I did not do on the owner's behalf
+          - **bytes**: 6457 (licence page)
+          - **sha256**: 3f4ae1f3cf1c4f4e5a71ec7c0832c354ea92a2f927917963d4436038333daf8f (licence page)
+          - **repo_recorded**: not recorded; the repository treats clauses 4-7 of 22989 as paywalled (~CHF 180) and does not mention the free ISO PAS listing
+          - **same_as_recorded**: could not check
+          - **saved_at**: /tmp/claude-0/-home-user/bfcfd013-a2da-5019-961e-7f46116f08be/scratchpad/wf-sources/autonomous-definitions/dl-4/iso22989.zip
+        - item 11
+          - **name**: A11 IEEE Std 7001-2021 - IEEE SA product page (standards.ieee.org), reachability only
+          - **official_url**: https://standards.ieee.org/ieee/7001/6929/
+          - **final_url**: https://standards.ieee.org/ieee/7001/6929/
+          - **http_status**: 200 (product page; does not contain the clause 3.1 definition text)
+          - **bytes**: 105583
+          - **sha256**: 5f0d87a68187311e041eb5079b053b8edfb9fd4b4c91be8ed7924b3dae5d9ee9
+          - **repo_recorded**: not recorded
+          - **same_as_recorded**: not applicable
+          - **saved_at**: /tmp/claude-0/-home-user/bfcfd013-a2da-5019-961e-7f46116f08be/scratchpad/wf-sources/autonomous-definitions/dl-12/ieee7001.html
+      - **could_not_check**
+        - item 1
+          - **what**: [source text withheld from the public copy]"
+          - **why**: ISO standard is sold; the free terms view is the ISO Online Browsing Platform on iso.org, which refused with HTTP 403 (bot-challenge page). No substitute source used.
+        - item 2
+          - **what**: [source text withheld from the public copy]
+          - **why**: ISO OBP on iso.org refused with HTTP 403. ISO does list this standard as freely downloadable at standards.iso.org/ittf/PubliclyAvailableStandards (HTTP 200), but the download is gated by a click-through licence agreement that must be accepted by POST; I did not accept a licence on the owner's behalf. The owner can obtain the full official text free there, which would also settle A3.
+        - item 3
+          - **what**: [source text withheld from the public copy] and the clause 5.13 'misnomer' NOTE
+          - **why**: Same as A2: OBP 403; ISO PAS zip behind licence click-through. The repository itself marks this row '[source text withheld from the public copy] believes the body is paywalled (~CHF 180); the standards.iso.org listing suggests a lawful free copy exists.
+        - item 4
+          - **what**: [source text withheld from the public copy]
+          - **why**: ISO/IEC text is sold; ISO OBP returned 403. The repository obtained it via SEVOCAB (pascal.computer.org), which is an IEEE Computer Society host, not the issuing body's host, so it was not consulted.
+        - item 5
+          - **what**: [source text withheld from the public copy]
+          - **why**: Paywalled IEEE standard (Inactive-Reserved); no public definition text on ieee.org. Repository itself has no clause number and sources the wording from two presentation decks.
+        - item 6
+          - **what**: A8 - [source text withheld from the public copy]), Glossary, autonomous weapon system
+          - **why**: Document is public, but the official host www.esd.whs.mil refused: HTTP 403 'Access Denied' on the PDF (two attempts) and on the issuances index. Not substituted.
+        - item 7
+          - **what**: [source text withheld from the public copy]
+          - **why**: Paywalled / login-gated IEEE standard. standards.ieee.org product page is reachable (HTTP 200) but does not show the clause 3.1 definition text.
+      - **summary**: I listed the eleven codified definitions (A1-A11) from AUTONOMOUS.md and DEFINITION_LIST_AUTONOMOUS.md and tried each at its issuing body's own host. Four could be checked: NIST SP 1011-I-2.0 (nvlpubs.nist.gov), the EU AI Act (eur-lex.europa.eu), the EASA AI [source text withheld from the public copy] (www.easa.europa.eu), and ETSI GR ENI 007 (www.etsi.org). The four files for which the repository records a hash (NIST, AI Act PDF, both EASA) are byte-identical to it.
+
+        Three were confirmed verbatim with clause and date: A7 (Recital 12, OJ 12.7.2024), A9 (EASA glossary wording in both documents; Roadmap dated May 2023, Version 2.0) and A10 (clause 4.2.1 NOTE 2, V1.1.1 2019-11). A6 is verbatim in DEFINITION_LIST_AUTONOMOUS.md (printed p. 15, Version 2.0, October 2008), but AUTONOMOUS.md silently drops the source token "<A.4>" from a row headed verbatim. Two supplementary problems sit in the same sources: a wrong page for NIST "Fully Autonomous" (p. 22, not p. 15) and an unmarked truncation of an EASA sentence.
+
+        Seven could not be checked: the DoD host returned 403; ISO's browsing platform returned 403 for A1-A4; IEEE A5 and A11 are paywalled. ISO does offer ISO/IEC 22989:2022 free at standards.iso.org behind a licence click-through, which I did not accept; the repository treats that text as paywalled.
+    - item 8
+      - **key**: zenodo-and-ledger
+      - **items_total**: 6
+      - **confirmed**: 4
+      - **problems_reported**: 2
+      - **sources**
+        - item 1
+          - **name**: Zenodo record 17271561 metadata (API)
+          - **official_url**: https://zenodo.org/api/records/17271561
+          - **http_status**: 200
+          - **final_url**: https://zenodo.org/api/records/17271561
+          - **bytes**: 30954
+          - **sha256**: 2dced70e6dcbe26b30a0a797b2282c1efbcaaa7382e2d3c1572a80e591f785e0
+          - **saved_at**: /tmp/claude-0/-home-user/bfcfd013-a2da-5019-961e-7f46116f08be/scratchpad/wf-sources/zenodo-and-ledger/dl-1/record.json
+          - **repo_recorded**: DOI 10.5281/zenodo.17271561 (7lm origin/beta/common-contracts-r1-r6:L7/provenance/sources/source-ledger.md row NU-17271561)
+          - **same_as_recorded**: yes: API doi = 10.5281/zenodo.17271561
+        - item 2
+          - **name**: nualgebra-main.zip (Zenodo record 17271561 file)
+          - **official_url**: https://zenodo.org/api/records/17271561/files/nualgebra-main.zip/content
+          - **http_status**: 200
+          - **final_url**: https://zenodo.org/api/records/17271561/files/nualgebra-main.zip/content
+          - **bytes**: 519365
+          - **sha256**: 60cccd3222b00965505a6f890f3540639fe976edbd1ab209f4b4bf8497cf6f0e
+          - **saved_at**: /tmp/claude-0/-home-user/bfcfd013-a2da-5019-961e-7f46116f08be/scratchpad/wf-sources/zenodo-and-ledger/dl-11/nualgebra-main.zip
+          - **repo_recorded**: ZIP SHA256 60cccd3222b00965505a6f890f3540639fe976edbd1ab209f4b4bf8497cf6f0e (source-ledger.md row NU-17271561); no size recorded
+          - **same_as_recorded**: yes: sha256 identical; size 519365 and md5 a531972d5c222f44d6624f6a297682b0 also equal the Zenodo API file entry
+        - item 3
+          - **name**: Zenodo latest version of the same concept (record 17283314)
+          - **official_url**: https://zenodo.org/api/records/17271561/versions/latest
+          - **http_status**: 200
+          - **final_url**: https://zenodo.org/api/records/17283314
+          - **bytes**: 7579
+          - **sha256**: 84dc92f929bb8ee774630e733ceadd850086f857cb9cbe7d9b80f531fd1cd74f
+          - **saved_at**: /tmp/claude-0/-home-user/bfcfd013-a2da-5019-961e-7f46116f08be/scratchpad/wf-sources/zenodo-and-ledger/dl-12/latest.json
+          - **repo_recorded**: not recorded
+          - **same_as_recorded**: n/a
+        - item 4
+          - **name**: RFC 6962 metadata (RFC Editor JSON)
+          - **official_url**: https://www.rfc-editor.org/rfc/rfc6962.json
+          - **http_status**: 200
+          - **final_url**: https://www.rfc-editor.org/rfc/rfc6962.json
+          - **bytes**: 1275
+          - **sha256**: d8c2a4208bd9aa8cb78fef3192abe65c01c3074326a569bba8f49c990636e2b1
+          - **saved_at**: /tmp/claude-0/-home-user/bfcfd013-a2da-5019-961e-7f46116f08be/scratchpad/wf-sources/zenodo-and-ledger/dl-2/rfc6962.json
+          - **repo_recorded**: sha256 9e5060bbf9850ebd… of a privately held PDF (LEDGER.md STD-033); not comparable to this record page
+          - **same_as_recorded**: not comparable
+        - item 5
+          - **name**: RFC 9162 metadata (RFC Editor JSON)
+          - **official_url**: https://www.rfc-editor.org/rfc/rfc9162.json
+          - **http_status**: 200
+          - **final_url**: https://www.rfc-editor.org/rfc/rfc9162.json
+          - **bytes**: 1550
+          - **sha256**: 717b83368cf12750e7c34deed30ee4903ef85da6e10d260519cf63166456e0ca
+          - **saved_at**: /tmp/claude-0/-home-user/bfcfd013-a2da-5019-961e-7f46116f08be/scratchpad/wf-sources/zenodo-and-ledger/dl-3/rfc9162.json
+          - **repo_recorded**: sha256 0b153d1f65c17042… of a privately held PDF (LEDGER.md STD-034); not comparable
+          - **same_as_recorded**: not comparable
+        - item 6
+          - **name**: RFC 6962 info page (RFC Editor)
+          - **official_url**: https://www.rfc-editor.org/info/rfc6962
+          - **http_status**: 200
+          - **final_url**: https://www.rfc-editor.org/info/rfc6962/
+          - **bytes**: 336904
+          - **sha256**: cb13f16bad77f9405a63299cca12b7c6ee1bd0353d7452be9ad91934cf2d7f52
+          - **saved_at**: /tmp/claude-0/-home-user/bfcfd013-a2da-5019-961e-7f46116f08be/scratchpad/wf-sources/zenodo-and-ledger/dl-4/info6962.html
+          - **repo_recorded**: not recorded
+          - **same_as_recorded**: n/a
+        - item 7
+          - **name**: RFC 9162 info page (RFC Editor)
+          - **official_url**: https://www.rfc-editor.org/info/rfc9162
+          - **http_status**: 200
+          - **final_url**: https://www.rfc-editor.org/info/rfc9162/
+          - **bytes**: 1334611
+          - **sha256**: bd5e572fd2300891129d0451e57dfb81e47fbd47538b2425e9c9b7d672a66110
+          - **saved_at**: /tmp/claude-0/-home-user/bfcfd013-a2da-5019-961e-7f46116f08be/scratchpad/wf-sources/zenodo-and-ledger/dl-5/info9162.html
+          - **repo_recorded**: not recorded
+          - **same_as_recorded**: n/a
+        - item 8
+          - **name**: NIST CSRC record page for FIPS 180-4
+          - **official_url**: https://csrc.nist.gov/pubs/fips/180-4/upd1/final
+          - **http_status**: 200
+          - **final_url**: https://csrc.nist.gov/pubs/fips/180-4/upd1/final
+          - **bytes**: 40642
+          - **sha256**: d3c9f1d05c643d086b7359b8712a28263740713724145991ae07682b3f2b3f6c
+          - **saved_at**: /tmp/claude-0/-home-user/bfcfd013-a2da-5019-961e-7f46116f08be/scratchpad/wf-sources/zenodo-and-ledger/dl-6/fips1804.html
+          - **repo_recorded**: not recorded (LEDGER.md STD-002 gives no hash)
+          - **same_as_recorded**: n/a
+        - item 9
+          - **name**: NIST FIPS 180-4 PDF (nvlpubs)
+          - **official_url**: https://nvlpubs.nist.gov/nistpubs/FIPS/NIST.FIPS.180-4.pdf
+          - **http_status**: 200
+          - **final_url**: https://nvlpubs.nist.gov/nistpubs/FIPS/NIST.FIPS.180-4.pdf
+          - **bytes**: 833315
+          - **sha256**: 0455b406d89648d20cbde375561e19c245b9815e894164c2670772e3d54deb82
+          - **saved_at**: /tmp/claude-0/-home-user/bfcfd013-a2da-5019-961e-7f46116f08be/scratchpad/wf-sources/zenodo-and-ledger/dl-13/NIST.FIPS.180-4.pdf
+          - **repo_recorded**: no hash or size in LEDGER.md; staging record NIST_FIPS-180-4_Secure-Hash-Standard.md line 10 says 36 PDF pages
+          - **same_as_recorded**: page count matches (pdfinfo: 36 pages); cover reads [source text withheld from the public copy]), August 2015
+        - item 10
+          - **name**: NASA NTRS citation 20180003358 (API)
+          - **official_url**: https://ntrs.nasa.gov/api/citations/20180003358
+          - **http_status**: 200
+          - **final_url**: https://ntrs.nasa.gov/api/citations/20180003358
+          - **bytes**: 7800
+          - **sha256**: 9b6f4f788deb5d19d6f319eb6bc4ee96b5d95b918257fe109de30a65458bb338
+          - **saved_at**: /tmp/claude-0/-home-user/bfcfd013-a2da-5019-961e-7f46116f08be/scratchpad/wf-sources/zenodo-and-ledger/dl-7/ntrs.json
+          - **repo_recorded**: NTRS number 20180003358 (LEDGER.md PR-008); no hash
+          - **same_as_recorded**: number resolves to a SEXTANT paper with Winternitz as first author
+        - item 11
+          - **name**: NASA NTRS citation 20180003358 (HTML page)
+          - **official_url**: https://ntrs.nasa.gov/citations/20180003358
+          - **http_status**: 200
+          - **final_url**: https://ntrs.nasa.gov/citations/20180003358
+          - **bytes**: 121743
+          - **sha256**: 61ee9d430addf8193fb3e97a41da4938b3c28c1faef4e669dfa3a8f3682b4b26
+          - **saved_at**: /tmp/claude-0/-home-user/bfcfd013-a2da-5019-961e-7f46116f08be/scratchpad/wf-sources/zenodo-and-ledger/dl-10/ntrs.html
+          - **repo_recorded**: not recorded
+          - **same_as_recorded**: n/a
+        - item 12
+          - **name**: ITU-T Rec. X.200 (07/94) record page (www.itu.int is ITU's own domain, the issuing body of ITU-T Recommendations)
+          - **official_url**: https://www.itu.int/rec/T-REC-X.200-199407-I/en
+          - **http_status**: 200
+          - **final_url**: https://www.itu.int/rec/T-REC-X.200-199407-I/en
+          - **bytes**: 19423
+          - **sha256**: 9c3f62e3ae7ce44aacb67bb1090d542b0124c72d8f5e07144084be5d98b39d66
+          - **saved_at**: /tmp/claude-0/-home-user/bfcfd013-a2da-5019-961e-7f46116f08be/scratchpad/wf-sources/zenodo-and-ledger/dl-8/x200.html
+          - **repo_recorded**: not recorded (LEDGER.md STD-001 gives no hash)
+          - **same_as_recorded**: n/a
+        - item 13
+          - **name**: ITU-T Rec. X.200 all-editions page
+          - **official_url**: https://www.itu.int/rec/T-REC-X.200/en
+          - **http_status**: 200
+          - **final_url**: https://www.itu.int/rec/T-REC-X.200/en
+          - **bytes**: 10985
+          - **sha256**: ba9bbcebb4ee796549fb56d18c7ebdabc4d8c736dc4f4db2f59e326cf6ef4b1d
+          - **saved_at**: /tmp/claude-0/-home-user/bfcfd013-a2da-5019-961e-7f46116f08be/scratchpad/wf-sources/zenodo-and-ledger/dl-9/x200all.html
+          - **repo_recorded**: not recorded
+          - **same_as_recorded**: n/a
+      - **could_not_check**
+        - item 1
+          - **what**: 7lm source-ledger.md row SM-PDF (Supplied Semantic_Magnitude_Aggradation_Core.docx.pdf, SHA256 b8d36fa37ab68db59825050e4ba1789d915ceab4093bab8a662e3f922829f235)
+          - **why**: Supplied private PDF; not published at any official host, so neither identity nor hash can be tested.
+        - item 2
+          - **what**: auditonomous LEDGER.md: 19 journal, conference and preprint rows (PR-001 to PR-007, PR-009 to PR-020)
+          - **why**: Not checked: no public official text or record in the scope of this check (journal articles, conference papers, preprints).
+        - item 3
+          - **what**: auditonomous LEDGER.md: 29 IEEE standards rows (STD-003 to STD-024, STD-026 to STD-032) and 1 ISO/IEC row (STD-025)
+          - **why**: Not checked: IEEE and ISO standards have no public official text.
+        - item 4
+          - **what**: auditonomous LEDGER.md: 4 IEEE institutional documents (INST-001 to INST-004) and 2 excluded rows (EXC-001 iTeh preview of ISO/IEC 22989, EXC-002 vendor glossary)
+          - **why**: Not checked: outside the issuing bodies named for this check (IEEE publications, a reseller preview and a vendor glossary).
+        - item 5
+          - **what**: Byte identity of the privately held files behind STD-001, STD-002, STD-033, STD-034 and PR-008
+          - **why**: The files are in the private l6 archive. The ledger gives only truncated sha256 prefixes for STD-033/034 (PDF renderings) and no hash for the others, so only the citations were tested, not the bytes.
+      - **summary**: Part 1 (7lm ledger). Row NU-17271561 is true. Zenodo's API gives record 17271561 with DOI 10.5281/zenodo.17271561, title "[source text withheld from the public copy]", creator Martin, Eric D., published 2025-10-05, licence cc-by-4.0, type Dataset, and no version field (the description says v3.0.0). Its only file is nualgebra-main.zip, 519,365 bytes. The downloaded sha256 is 60cccd32...6f0e, identical to the ledger. The archive has 36 entries under one top-level folder, nualgebra-main/. One thing the ledger does not say: this is not the latest version; record 17283314 (2025-10-07, nualgebra-v3.1.0.zip) is. Row SM-PDF could not be checked.
+
+        Part 2 (auditonomous ledger, 60 rows). Five rows have an official public record: STD-001, STD-002, STD-033, STD-034 and PR-008. There are no W3C rows. Three citations are confirmed:
+        - STD-001, ITU-T X.200 (07/94): "Status : In force"; the title is shortened.
+        - STD-002, FIPS 180-4: August 2015, current; CSRC notes "NIST has decided to revise FIPS 180-4".
+        - STD-034, RFC 9162: December 2021, Laurie, Messeri, Stradling; Experimental.
+
+        Two have problems. STD-033 (RFC 6962) is "Obsoleted by RFC 9162" and the row does not say so. PR-008 omits the subtitle "Additional On-Orbit Results", the year and the venue.
+
+        Totals: 6 items tested, 4 confirmed. The other 55 rows were not checked.
+  - **confirmed_problems**
+    - item 1
+      - **check**: sp800-53
+      - **id**: sp800-53-1
+      - **kind**: COUNT-WRONG
+      - **repo_locator**: auditonomous origin/main:L7/provenance/sources/staging-records/standards/extracted/SP800-53r5_AC-AU_verbatim.md — between line 637 (AC-12(3)) and line 642 (AC-14); the file has 24 '### AC-n' headings (AC-1..AC-12, AC-14..AC-25) and no AC-13 anywhere
+      - **repo_text**: [source text withheld from the public copy]
+      - **source_locator**: NIST.SP.800-53r5.pdf, section 3.1, printed page 44 (PDF page 71), first item on the page; also Appendix C, Table C-1, printed page 431
+      - **source_text**: AC-13 SUPERVISION AND REVIEW — ACCESS CONTROL
+        [Withdrawn: Incorporated into AC-2 and AU-6.]
+      - **note**: MISSING ENTRY (the only one). The file says it holds every base control and enhancement of AC and AU and that withdrawn controls appear with a marker, but the withdrawn base control AC-13 is absent; the other two withdrawn base controls (AC-15, AU-15) are present. AC-13 is the only AC/AU base-control heading whose title contains an em dash, which probably defeated the heading pattern of the file's parser. Seen in three renderings of the PDF (pdftotext -layout, pdfminer, page image) and in NIST's CPRT data. No entry of the file is absent from the source, and the order of entries equals the source's order. Cause of the wrong counts in sp800-53-7.
+      - **corrected**: The file omits one entry of the source: the withdrawn base control AC-13. Source words, NIST SP 800-53 Rev. 5 (December 10, 2020 update), section 3.1, printed page 44 (PDF page 71), first item on the page: "AC-13 SUPERVISION AND REVIEW — ACCESS CONTROL [Withdrawn: Incorporated into AC-2 and AU-6.]"; also Appendix C, Table C-1, printed page 431: "AC-13 Supervision and Review-Access Control — W: Incorporated into AC-2 and AU-6." The entry belongs between AC-12(3) (file line 637) and AC-14 (file line 642). It is the only missing entry; no entry of the file is absent from the source.
+      - **skeptic**: Re-downloaded https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-53r5.pdf (HTTP 200, 6,073,678 bytes, sha256 fc63bcd61715d0181dd8e85998b1e6201ae3515fc6626102101cab1841e11ec6) into my own directory; it is byte-identical to the checker's file and to the hash and size the repository records at lines 9-10. Extracted with pdftotext both with and without -layout, and page 71 alone. In all three, the first item on printed page 44 (PDF page 71) is 'AC-13 SUPERVISION AND REVIEW — ACCESS CONTROL' followed by '[Withdrawn: Incorporated into AC-2 and AU-6.]', and Appendix C Table C-1 (printed page 431) has the row 'AC-13 Supervision and Review-Access Control W: Incorporated into AC-2 and AU-6.' The repository file (read from the git object at origin/main) goes from '#### AC-12(3)' at line 637 directly to '### AC-14' at line 642; the string 'AC-13' occurs nowhere in it; it has 24 '### AC-' headings. A set comparison of the file's 215 entry identifiers against the 216 AC/AU rows of Appendix C gives exactly one identifier in the source but not in the file (AC-13) and none in the file but not in the source. The other withdrawn base controls AC-15 and AU-15 are present, so the omission is not a policy of the file. Not an extraction artifact.
+    - item 2
+      - **check**: sp800-53
+      - **id**: sp800-53-2
+      - **kind**: MISATTRIBUTED
+      - **repo_locator**: auditonomous origin/main:L7/provenance/sources/staging-records/standards/extracted/SP800-53r5_AC-AU_verbatim.md lines 830-832
+      - **repo_text**: [source text withheld from the public copy]
+      - **source_locator**: NIST.SP.800-53r5.pdf, section 3.1, AC-19 Control Enhancements, item (3), printed page 52 (PDF page 79); Appendix C, Table C-1, printed page 432 ('W: Incorporated into MP-7.')
+      - **source_text**: (3) ACCESS CONTROL FOR MOBILE DEVICES | USE OF PORTABLE STORAGE DEVICES WITH NO IDENTIFIABLE OWNER
+        [Withdrawn: Incorporated into MP-7.]
+      - **note**: The file gives the words IDENTIFIABLE OWNER as the control statement of AC-19(3). In the source those words are the second line of the enhancement's title; AC-19(3) has no statement at all, it is withdrawn. Three consequences: the title in the heading is truncated (IDENTIFIABLE OWNER missing); a title fragment stands where a statement should be; and the entry lacks the file's own withdrawn marker, so the file flags 13 withdrawn AC enhancements where the source has 14 (27 withdrawn in the file against 29 in the source, counting the absent AC-13). Root cause as in sp800-53-3: the title wraps onto a second line in the PDF.
+      - **corrected**: AC-19(3) is a withdrawn enhancement with no control statement. Source words, section 3.1, AC-19 Control Enhancements, printed page 52 (PDF page 79): "(3) ACCESS CONTROL FOR MOBILE DEVICES | USE OF PORTABLE STORAGE DEVICES WITH NO IDENTIFIABLE OWNER [Withdrawn: Incorporated into MP-7.]" (Appendix C, Table C-1, printed page 432: "AC-19(3) USE OF PORTABLE STORAGE DEVICES WITH NO IDENTIFIABLE OWNER — W: Incorporated into MP-7."). The file's heading at line 830 should carry the full title "USE OF PORTABLE STORAGE DEVICES WITH NO IDENTIFIABLE OWNER"; the words "IDENTIFIABLE OWNER" at line 832 are title words, not a statement; the entry should carry the file's withdrawn marker. With it, the source has 14 withdrawn AC enhancements (the file marks 13).
+      - **skeptic**: Repository lines 830-832 (git object) read '#### AC-19(3) — USE OF PORTABLE STORAGE DEVICES WITH NO' and, as the quoted statement, '> IDENTIFIABLE OWNER'. In the official PDF (same sha256 as recorded), both extractions and the single-page extraction of PDF page 79 (printed page 52) give: '(3) ACCESS CONTROL FOR MOBILE DEVICES | USE OF PORTABLE STORAGE DEVICES WITH NO' / 'IDENTIFIABLE OWNER' / '[Withdrawn: Incorporated into MP-7.]'. Appendix C Table C-1 (printed page 432) gives the full title on one line: 'AC-19(3) USE OF PORTABLE STORAGE DEVICES WITH NO IDENTIFIABLE OWNER W: Incorporated into MP-7.' So 'IDENTIFIABLE OWNER' is the end of the title, not a control statement, and the enhancement has no statement because it is withdrawn. The file therefore attributes title words to the statement, truncates the title, and leaves the entry without its own withdrawn marker: my recount finds 14 withdrawn AC enhancements in the source (catalog text and Appendix C agree) and 13 marked in the file; AC-19(3) and AC-13 are the only two source-withdrawn AC/AU items not marked in the file (27 marked against 29). This is a real error in the words and their attribution, not a line-break artifact, because the file presents line 832 as quoted control text.
+    - item 3
+      - **check**: sp800-53
+      - **id**: sp800-53-3
+      - **kind**: MISMATCH
+      - **repo_locator**: auditonomous origin/main:L7/provenance/sources/staging-records/standards/extracted/SP800-53r5_AC-AU_verbatim.md lines 1137-1141
+      - **repo_text**: [source text withheld from the public copy]
+      - **source_locator**: NIST.SP.800-53r5.pdf, section 3.3, AU-6 Control Enhancements, item (8), printed page 72 (PDF page 99); full title also in Appendix C, Table C-3, printed page 434
+      - **source_text**: (8) AUDIT RECORD REVIEW, ANALYSIS, AND REPORTING | FULL TEXT ANALYSIS OF PRIVILEGED COMMANDS
+        Perform a full text analysis of [source text withheld from the public copy] other system that is dedicated to that analysis.
+      - **note**: Differing word: COMMANDS. It is the last word of the title, wrapped onto a second line in the PDF. The file drops it from the heading (title truncated) and puts it at the start of the statement (one extra word). All other statement words are identical to the source. Root cause: in the source an enhancement has no 'Control:' marker — its statement starts directly after the heading — so a heading that wraps was split after its first line. The same happens in exactly five places in AC/AU (sp800-53-2 to sp800-53-6), which are all the wrapped enhancement titles of the two families.
+      - **corrected**: Source, section 3.3, AU-6 Control Enhancements, printed page 72 (PDF page 99): title "(8) AUDIT RECORD REVIEW, ANALYSIS, AND REPORTING | FULL TEXT ANALYSIS OF PRIVILEGED COMMANDS"; statement "Perform a full text analysis of [source text withheld from the public copy] other system that is dedicated to that analysis." In the file, the word COMMANDS (line 1139) belongs at the end of the heading on line 1137, not at the start of the statement. All other statement words match the source.
+      - **skeptic**: Repository lines 1137-1141: heading '#### AU-6(8) — FULL TEXT ANALYSIS OF PRIVILEGED', statement beginning '> COMMANDS' then 'Perform a full text analysis ...'. Official PDF, PDF page 99 (printed page 72), both extraction modes: '(8) AUDIT RECORD REVIEW, ANALYSIS, AND REPORTING | FULL TEXT ANALYSIS OF PRIVILEGED' / 'COMMANDS' / 'Perform a full text analysis of [source text withheld from the public copy] other system that is dedicated to that analysis.' Appendix C Table C-3 (printed page 434) gives the title on one line: 'AU-6(8) FULL TEXT ANALYSIS OF PRIVILEGED COMMANDS'. After normalization, the repository statement minus the leading word 'COMMANDS' is contained in the source in both extractions; with it, the statement has one word that belongs to the title, and the heading lacks that word. The difference is a word placed in the wrong element (title vs. statement) in a file that presents the block as the verbatim statement, so it is a real word-level mismatch, not a whitespace or line-break difference. My parse of the catalog finds exactly five wrapped enhancement titles in AC/AU (AC-19(3), AU-6(8), AU-6(9), AU-9(7), AU-12(4)), matching the checker.
+    - item 4
+      - **check**: sp800-53
+      - **id**: sp800-53-4
+      - **kind**: MISMATCH
+      - **repo_locator**: auditonomous origin/main:L7/provenance/sources/staging-records/standards/extracted/SP800-53r5_AC-AU_verbatim.md lines 1143-1147
+      - **repo_text**: [source text withheld from the public copy]
+      - **source_locator**: NIST.SP.800-53r5.pdf, section 3.3, AU-6 Control Enhancements, item (9), printed page 72 (PDF page 99); full title also in Appendix C, Table C-3, printed page 434
+      - **source_text**: (9) AUDIT RECORD REVIEW, ANALYSIS, AND REPORTING | CORRELATION WITH INFORMATION FROM NONTECHNICAL SOURCES
+        Correlate information from nontechnical sources with audit record information to enhance organization-wide situational awareness.
+      - **note**: Differing words: NONTECHNICAL SOURCES. They end the title in the source (wrapped line); the file omits them from the heading and prepends them to the statement. The rest of the statement is identical.
+      - **corrected**: Source, section 3.3, AU-6 Control Enhancements, printed page 72 (PDF page 99): title "(9) AUDIT RECORD REVIEW, ANALYSIS, AND REPORTING | CORRELATION WITH INFORMATION FROM NONTECHNICAL SOURCES"; statement "Correlate information from nontechnical sources with audit record information to enhance organization-wide situational awareness." In the file, the words NONTECHNICAL SOURCES (line 1145) belong at the end of the heading on line 1143, not at the start of the statement. All other statement words match the source.
+      - **skeptic**: Repository lines 1143-1147: heading '#### AU-6(9) — CORRELATION WITH INFORMATION FROM', statement beginning '> NONTECHNICAL SOURCES' then 'Correlate information from nontechnical sources ...'. Official PDF, PDF page 99 (printed page 72), both extraction modes: '(9) AUDIT RECORD REVIEW, ANALYSIS, AND REPORTING | CORRELATION WITH INFORMATION FROM' / 'NONTECHNICAL SOURCES' / 'Correlate information from nontechnical sources with audit record information to enhance organization-wide situational awareness.' Appendix C Table C-3 (printed page 434): 'AU-6(9) CORRELATION WITH INFORMATION FROM NONTECHNICAL SOURCES'. The repository statement minus the two leading words is contained in the source after normalization; the two words are the end of the title. Real misplacement of words, same cause as sp800-53-3.
+    - item 5
+      - **check**: sp800-53
+      - **id**: sp800-53-5
+      - **kind**: MISMATCH
+      - **repo_locator**: auditonomous origin/main:L7/provenance/sources/staging-records/standards/extracted/SP800-53r5_AC-AU_verbatim.md lines 1223-1227
+      - **repo_text**: [source text withheld from the public copy]
+      - **source_locator**: NIST.SP.800-53r5.pdf, section 3.3, AU-9 Control Enhancements, item (7), printed page 75 (PDF page 102); full title also in Appendix C, Table C-3, printed page 435
+      - **source_text**: (7) PROTECTION OF AUDIT INFORMATION | STORE ON COMPONENT WITH DIFFERENT OPERATING SYSTEM
+        Store audit information on a component running a different operating system than the system or component being audited.
+      - **note**: Differing word: SYSTEM. It ends the title in the source (wrapped line); the file omits it from the heading and prepends it to the statement. The rest of the statement is identical.
+      - **corrected**: Source, section 3.3, AU-9 Control Enhancements, printed page 75 (PDF page 102): title "(7) PROTECTION OF AUDIT INFORMATION | STORE ON COMPONENT WITH DIFFERENT OPERATING SYSTEM"; statement "Store audit information on a component running a different operating system than the system or component being audited." In the file, the word SYSTEM (line 1225) belongs at the end of the heading on line 1223, not at the start of the statement. All other statement words match the source.
+      - **skeptic**: Repository lines 1223-1227: heading '#### AU-9(7) — STORE ON COMPONENT WITH DIFFERENT OPERATING', statement beginning '> SYSTEM' then 'Store audit information ...'. Official PDF, PDF page 102 (printed page 75), both extraction modes: '(7) PROTECTION OF AUDIT INFORMATION | STORE ON COMPONENT WITH DIFFERENT OPERATING' / 'SYSTEM' / 'Store audit information on a component running a different operating system than the system or component being audited.' Appendix C Table C-3 (printed page 435): 'AU-9(7) STORE ON COMPONENT WITH DIFFERENT OPERATING SYSTEM'. The repository statement minus the leading word 'SYSTEM' is contained in the source after normalization; that word is the end of the title. Real misplacement of a word, same cause as sp800-53-3.
+    - item 6
+      - **check**: sp800-53
+      - **id**: sp800-53-6
+      - **kind**: MISMATCH
+      - **repo_locator**: auditonomous origin/main:L7/provenance/sources/staging-records/standards/extracted/SP800-53r5_AC-AU_verbatim.md lines 1303-1307
+      - **repo_text**: [source text withheld from the public copy]
+      - **source_locator**: NIST.SP.800-53r5.pdf, section 3.3, AU-12 Control Enhancements, item (4), printed page 79 (PDF page 106); full title also in Appendix C, Table C-3, printed page 435
+      - **source_text**: (4) AUDIT RECORD GENERATION | QUERY PARAMETER AUDITS OF PERSONALLY IDENTIFIABLE INFORMATION
+        Provide and implement the capability for auditing the parameters of user query events for data sets containing personally identifiable information.
+      - **note**: Differing word: INFORMATION. It ends the title in the source (wrapped line); the file omits it from the heading and prepends it to the statement. The rest of the statement is identical.
+      - **corrected**: Source, section 3.3, AU-12 Control Enhancements, printed page 79 (PDF page 106): title "(4) AUDIT RECORD GENERATION | QUERY PARAMETER AUDITS OF PERSONALLY IDENTIFIABLE INFORMATION"; statement "Provide and implement the capability for auditing the parameters of user query events for data sets containing personally identifiable information." In the file, the word INFORMATION (line 1305) belongs at the end of the heading on line 1303, not at the start of the statement. All other statement words match the source.
+      - **skeptic**: Repository lines 1303-1307: heading '#### AU-12(4) — QUERY PARAMETER AUDITS OF PERSONALLY IDENTIFIABLE', statement beginning '> INFORMATION' then 'Provide and implement the capability ...'. Official PDF, PDF page 106 (printed page 79), both extraction modes: '(4) AUDIT RECORD GENERATION | QUERY PARAMETER AUDITS OF PERSONALLY IDENTIFIABLE' / 'INFORMATION' / 'Provide and implement the capability for auditing the parameters of user query events for data sets containing personally identifiable information.' Appendix C Table C-3 (printed page 435): 'AU-12(4) QUERY PARAMETER AUDITS OF PERSONALLY IDENTIFIABLE INFORMATION'. The repository statement minus the leading word 'INFORMATION' is contained in the source after normalization; that word is the end of the title. Real misplacement of a word, same cause as sp800-53-3.
+    - item 7
+      - **check**: sp800-53
+      - **id**: sp800-53-7
+      - **kind**: COUNT-WRONG
+      - **repo_locator**: auditonomous origin/main:L7/provenance/sources/staging-records/standards/extracted/SP800-53r5_AC-AU_verbatim.md line 20; the total is repeated as '215 control statements' at origin/main:L8/L4/work/computation/0.md line 44 and origin/main:L8/L6/history/7LM_ROUTING_PLAN_2026-09-05.md line 198
+      - **repo_text**: [source text withheld from the public copy]
+      - **source_locator**: NIST.SP.800-53r5.pdf, section 3.1 (printed pages 18-58) and section 3.3 (printed pages 65-81), recounted from the catalog text; recounted independently from Appendix C, Tables C-1 (from page 429) and C-3 (from page 434); same figures in NIST's CPRT data for Release 5.2.0
+      - **source_text**: AC: 25 base controls (AC-1 to AC-25) + 122 enhancements = 147. AU: 16 base controls + 53 enhancements = 69. Total 216. Withdrawn (29): base AC-13, AC-15, AU-15; AC enhancements (14) AC-2(10), AC-3(1), AC-3(6), AC-4(16), AC-4(18), AC-7(1), AC-14(1), AC-17(5), AC-17(7), AC-17(8), AC-18(2), AC-19(1), AC-19(2), AC-19(3); AU enhancements (12) AU-2(1), AU-2(2), AU-2(3), AU-2(4), AU-3(2), AU-6(2), AU-6(10), AU-7(2), AU-8(1), AU-8(2), AU-10(5), AU-14(2). Carrying a statement: 187 (AC 23 base + 108 enhancements, AU 15 + 41).
+      - **note**: Wrong figures: AC base 24 (source 25), AC subtotal 146 (source 147), total 215 (source 216). Right figures: 122, 16, 53, 69. The stated numbers equal the file's own entry count (it really has 24 + 122 + 16 + 53 = 215 entries), so they inherit the omission of AC-13 (sp800-53-1). The phrase '215 control statements' in the two other files is off twice: the file has 215 entries, of which 27 are withdrawn markers and one (AC-19(3)) is a title fragment, leaving 187 real control statements — the same 187 the source has.
+      - **corrected**: NIST SP 800-53 Rev. 5 (December 10, 2020 update), section 3.1 (printed pages 18-58) and section 3.3 (printed pages 65-81), confirmed against Appendix C Tables C-1 (printed pages 429-433) and C-3 (printed pages 434-435): AC — 25 base controls (AC-1 to AC-25) + 122 enhancements = 147. [source text withheld from the public copy] 216 (not 215). Of these, 29 are withdrawn (base AC-13, AC-15, AU-15; AC enhancements AC-2(10), AC-3(1), AC-3(6), AC-4(16), AC-4(18), AC-7(1), AC-14(1), AC-17(5), AC-17(7), AC-17(8), AC-18(2), AC-19(1), AC-19(2), AC-19(3); AU enhancements AU-2(1), AU-2(2), AU-2(3), AU-2(4), AU-3(2), AU-6(2), AU-6(10), AU-7(2), AU-8(1), AU-8(2), AU-10(5), AU-14(2)), and 187 carry a control statement (AC 23 base + 108 enhancements; AU 15 base + 41 enhancements). The wrong figures on line 20 are '24 base', '= 146' and 'Total 215'. The phrase '215 control statements' in L8/L4/work/computation/0.md line 44 and L8/L6/history/7LM_ROUTING_PLAN_2026-09-05.md line 198 should read 216 entries, of which 187 are control statements (as the file stands: 215 entries, 187 statements).
+      - **skeptic**: Repository line 20 (git object): '[source text withheld from the public copy].' The phrase '215 control statements' is at origin/main:L8/L4/work/computation/0.md line 44 and origin/main:L8/L6/history/7LM_ROUTING_PLAN_2026-09-05.md line 198 (both confirmed with git grep). I recounted the official PDF two independent ways with my own parser: (a) catalog text of sections 3.1 and 3.3 with running headers removed: AC 25 base (AC-1 to AC-25, none missing) + 122 enhancements = 147; [source text withheld from the public copy]; (b) Appendix C Tables C-1 and C-3 rows: AC 25 + 122, AU 16 + 53. Total 216 both ways. Withdrawn: 29 (base AC-13, AC-15, AU-15; 14 AC enhancements; 12 AU enhancements) in both recounts; entries carrying a statement: AC 23 + 108, AU 15 + 41 = 187. The file itself has 24 + 122 + 16 + 53 = 215 headings, so its stated counts equal its own content but not the source: AC base, AC subtotal and the total are each short by one because AC-13 is missing. The figures 122, 16, 53 and 69 are right. '215 control statements' is additionally loose: of the 215 entries, 27 are withdrawn markers and one (AC-19(3)) is a title fragment, leaving 187 statements, which equals the source's 187.
+    - item 8
+      - **check**: nist-requirements
+      - **id**: nist-requirements-1
+      - **kind**: MISMATCH
+      - **repo_locator**: auditonomous origin/main:L8/L4/work/computation/nist-requirements-for-autonomouos.md line 360 (Absences, second bullet); same claim at line 396 (Notes, item 2) and line 242 (NIST-R13)
+      - **repo_text**: [source text withheld from the public copy]" [...]. || line 396: [source text withheld from the public copy].
+      - **source_locator**: NIST SP 1011-II-1.0, section 6.1 Correlations and Interdependency, printed p. 35 (PDF p. 35)
+      - **source_text**: In many situations, using a weighted average method on the metric scores could provide an adequate indication for the CAC. However, there may well be cases when weighted minimum or maximum values might be more suitable. For example, the MC axis contains metrics for perception and tactical behavior. A low score for the perception capabilities for a UMS implies that it may not be able to support a high-level, complex, autonomous mission behavior. In this situation, the lower score between the perception and tactical behavior should be used as the requirement instead of the average.
+      - **note**: A negative search claim, not a quotation, and the source contradicts it. The same volume names 'weighted minimum' as an aggregation and gives a worked case in which the lower score governs 'instead of the average'. The passage is hedged ('may well be cases', 'might be more suitable') and concerns metric scores on the MC axis, so it does not make weakest-link a general NIST rule; but 'none found', 'The only partial support is (a)...(b)' and 'appears nowhere' are not true of the text. Related: section 2.4, p. 25, lists 'insufficient capability in any of the RACs' as a contributor to (lack of) safety. In Vol II the string 'minim' occurs 8 times; 'weakest' and 'bottleneck' occur 0 times in both volumes. This bears directly on the file's instruction to label belief #1 CONJECTURE and to stop citing ALFUS for it.
+      - **corrected**: NIST does name a minimum-type aggregation. SP 1011-II-1.0, section 6.1 Correlations and Interdependency, printed p. 35: "In many situations, using a weighted average method on the metric scores could provide an adequate indication for the CAC. However, there may well be cases when weighted minimum or maximum values might be more suitable. For example, the MC axis contains metrics for perception and tactical behavior. A low score for the perception capabilities for a UMS implies that it may not be able to support a high-level, complex, autonomous mission behavior. In this situation, the lower score between the perception and tactical behavior should be used as the requirement instead of the average." Correct wording for lines 360, 396 and 242: weighted average is NIST's default roll-up, but section 6.1 expressly allows a weighted minimum and gives one case where the lower of two metric scores governs; this is hedged ('may well be cases', 'might be more suitable'), is about metric scores on the MC axis, and is not stated as a general per-function rule. 'None found', 'the only partial support is (a)...(b)' and 'appears nowhere' must be withdrawn; section 6.1 p. 35 (and section 2.4 p. 25, "insufficient capability in any of the RACs [1]") must be added as partial support.
+      - **skeptic**: Re-downloaded SP 1011-II-1.0 from https://doi.org/10.6028/NIST.sp.1011-II-1.0 -> https://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication1011-II-1.0.pdf (HTTP 200, 1,327,094 bytes, sha256 e594879c...3c6ac9, identical to the checker's file). Extracted with pdftotext default, -layout, -raw and with pypdf; all four give the same passage in section 6.1 'Correlations and Interdependency' on printed p. 35 (PDF p. 35; the folio '35' is the last token of the page). It is a continuous single-column paragraph, so no column break, footnote or header intrudes. The repository file (auditonomous origin/main 2165144, L8/L4/work/computation/nist-requirements-for-autonomouos.md) says at line 360 '[source text withheld from the public copy]' and 'The only partial support is (a)... (b)...', and at line 396 'The weakest-link rule appears nowhere'. The file never cites Vol II section 6.1 (its only '6.1' reference, line 304, is Vol I section 6.1). The source names 'weighted minimum' as an alternative aggregation and gives a worked case in which the lower score is used 'instead of the average', so the negative search claim is false as written. Counts I reproduced: 'minim' 8 times in Vol II (pypdf and pdftotext), 'weakest' and 'bottleneck' 0 in both volumes. Section 2.4, p. 25, also lists 'insufficient capability in any of the RACs [1]' as a contributor to level of safety. Limit of the finding: the passage is hedged and concerns metric scores (perception vs tactical behaviour on the MC axis) feeding the CAC; it is not a general rule [source text withheld from the public copy], and the file's statement that weighted average is the named default (section 7.1.1 pp. 40-41, section 2.1 C p. 18) stands.
+    - item 9
+      - **check**: nist-requirements
+      - **id**: nist-requirements-2
+      - **kind**: COUNT-WRONG
+      - **repo_locator**: same file, line 364 (Absences, AI 100-1 bullet)
+      - **repo_text**: [source text withheld from the public copy] [...] (2) p.13 [...] ([source text withheld from the public copy] autonomous to fully manual"
+      - **source_locator**: NIST AI 100-1, Appendix C, numbered item 1, Page 40 (PDF p. 45)
+      - **source_text**: Human-AI configurations can span from fully autonomous to fully manual. AI systems can autonomously make decisions, defer decision making to a human expert, or be used by a human decision maker as an additional opinion.
+      - **note**: The stem 'autonom' occurs 4 times, not 3: autonomy (Page 1), autonomy (Page 17), autonomous (Page 40), autonomously (Page 40). Three is the number of matching lines (grep -c), because 'autonomous' and 'autonomously' share a line. Same result in -layout, default and -raw extraction, and with line-end hyphens joined. The uncounted fourth occurrence is the only one that describes AI systems acting autonomously. The file's conclusion that AI 100-1 does not define the term still holds.
+      - **corrected**: The stem 'autonom' occurs four times in NIST AI 100-1, not three: (1) Page 1, "AI systems are designed to operate with varying levels of autonomy (Adapted from: OECD Recommendation on AI:2019; ISO / IEC 22989:2022)"; (2) Page 17, section 3.6, "safeguard human autonomy, identity, and dignity"; (3) and (4) Appendix C, item 1, Page [source text withheld from the public copy] autonomous to fully manual. AI systems can autonomously make decisions, defer decision making to a human expert, or be used by a human decision maker as an additional opinion." The fourth occurrence ('autonomously') is a use, not a definition.
+      - **skeptic**: Re-downloaded AI 100-1 from https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.100-1.pdf (HTTP 200, 1,946,127 bytes, sha256 7576edb5...4a89f1, identical to the checker's file). Counted the stem 'autonom' case-insensitively in four extractions (pdftotext default, -layout, -raw, and pypdf), and again after joining line-end hyphens and after removing all whitespace: 4 occurrences every time, on 3 lines. They are: autonomy (printed Page 1, PDF p. 6), autonomy (Page 17, PDF p. 22), autonomous and autonomously (both Page 40, PDF p. 45, consecutive sentences of Appendix C item 1). Repository line 364 says 'exactly three occurrences of the stem'. Three is the line count, not the occurrence count. The conclusion the file draws (AI 100-1 [source text withheld from the public copy]) is unaffected; I also reproduced its 'one shall, zero must' count.
+    - item 10
+      - **check**: nist-requirements
+      - **id**: nist-requirements-3
+      - **kind**: MISATTRIBUTED
+      - **repo_locator**: same file, line 364 (Absences, AI 100-1 bullet)
+      - **repo_text**: ([source text withheld from the public copy] practices that help to safeguard human autonomy..."
+      - **source_locator**: NIST AI 100-1, section 3.6 Privacy-Enhanced, Page 17 (PDF p. 22)
+      - **source_text**: Privacy refers generally to the norms and practices that help to safeguard human autonomy, identity, and dignity.
+      - **note**: Words confirmed; page wrong. Printed Page 13 (PDF p. 18), where section 3.1 Valid and Reliable begins, has no occurrence of the stem. The other page references in this bullet (p.1, p.2, p.40) are right. 'p.13' is the page of the SP 800-53 footnote cited in the next bullet.
+      - **corrected**: The sentence is at NIST AI 100-1, section 3.6 Privacy-Enhanced, printed Page 17 (PDF p. 22), not [source text withheld from the public copy] practices that help to safeguard human autonomy, identity, and dignity."
+      - **skeptic**: Same official file (sha256 7576edb5...4a89f1). The sentence is the first sentence of section 3.6 'Privacy-Enhanced' on the page whose footer reads 'Page 17' (PDF p. 22). The page whose footer reads 'Page 13' (PDF p. 18) has zero occurrences of the stem in every extraction. No alternative numbering makes '13' right: PDF p. 13 is printed Page 8 and also has no occurrence. The quoted words themselves are contained exactly. Repository line 364 gives 'p.13'.
+    - item 11
+      - **check**: nist-requirements
+      - **id**: nist-requirements-4
+      - **kind**: MISMATCH
+      - **repo_locator**: same file, lines 262-264 (NIST-R15, block labelled Verbatim)
+      - **repo_text**: • Ratio of Human Intervention Time / Mission Time / o Description: the portion of the time during [source text withheld from the public copy] 0 % through 100 %.
+      - **source_locator**: NIST SP 1011-II-1.0, section [source text withheld from the public copy] p. 29
+      - **source_text**: • Ratio of Human Intervention Time / Mission Time o Description: the portion of the time during which operators are interacting with the UMS. [[Under conditions of mixed-initiative collaboration [67, 68], required by systems necessitating multi-agent interactions [69 , 70 ], this might be described and measured as neglect tolerance [71].]] o Scale/Measure: linear scale from approaching 0 % through 100 %.
+      - **note**: The words in double square brackets are in the source and absent from the repository's quotation, with no ellipsis to mark the gap (NIST-R17 does mark its omission with '...'). Every other word of NIST-R15 matches, on pp. 29-30 as cited; with the sentence restored the quotation is contained. The meaning of the three metrics is not changed.
+      - **corrected**: SP 1011-II-1.0, section 4, printed p. 29, reads: "Ratio of Human Intervention Time / Mission Time o Description: the portion of the time during which operators are interacting with the UMS. Under conditions of mixed-initiative collaboration [67, 68], required by systems necessitating multi-agent interactions [69, 70], this might be described and measured as neglect tolerance [71]. o Scale/Measure: linear scale from approaching 0 % through 100 %." The repository's Verbatim block drops the sentence "Under conditions of mixed-initiative collaboration ... neglect tolerance [71]." without marking the gap; it should either restore it or insert an ellipsis after 'interacting with the UMS.'
+      - **skeptic**: Official Vol II file (sha256 e594879c...3c6ac9). In default, -raw and -layout extraction the bullet on printed p. 29 reads, in order: the heading, the Description sentence, then a second sentence with reference markers, then Scale/Measure. The extra sentence sits inside the Description sub-bullet, between two lines the repository quotes as adjacent (lines 262-264), and the block is labelled 'Verbatim' with no ellipsis; the words 'neglect tolerance' and 'mixed-initiative' occur nowhere in the repository file. This is not an extraction artefact (it is ordinary body text, the same in three extractions). All other words of NIST-R15 match on pp. 29-30. The omission does not change what the three metrics mean.
+    - item 12
+      - **check**: nist-requirements
+      - **id**: nist-requirements-5
+      - **kind**: MISATTRIBUTED
+      - **repo_locator**: same file, line 177 (NIST-R9 Source), quotation at line 173
+      - **repo_text**: [source text withheld from the public copy]
+      - **source_locator**: [source text withheld from the public copy], item A.8: the heading question is on printed p. 41 (PDF p. 42); the quoted words are on printed p. 42 (PDF p. 43)
+      - **source_text**: The machine executes a preloaded or preprogrammed sequence of actions. Does not adapt to changes. May have sensors or interlocks for safety reasons. Is not considered a mode of UMS operations.
+      - **note**: Words, appendix and item confirmed; item A.8 straddles a page break and the quoted definition is on the page after the one cited. Minor.
+      - **corrected**: SP 1011-I-2.0, Appendix A, item A.8, printed pp. 41-42: the question "A.8. Should Scripted Operation, Automation be defined as another mode of UMS operation? Defined as:" is on printed p. 41 (PDF p. 42); the quoted definition "The machine executes a preloaded or preprogrammed sequence of actions. Does not adapt to changes. May have sensors or interlocks for safety reasons. Is not considered a mode of UMS operations." is on printed p. 42 (PDF p. 43).
+      - **skeptic**: Re-downloaded SP 1011-I-2.0 from https://doi.org/10.6028/NIST.sp.1011-I-2.0 -> https://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication1011-I-2.0.pdf (HTTP 200, 216,691 bytes, sha256 a7b5c3a3...54da84, identical to the checker's file and to the hash the repository records). PDF p. 42 (folio 41) ends with 'A.8. Should Scripted Operation, Automation be defined as another mode of UMS operation? Defined as:'. The four quoted sentences open PDF p. 43 (folio 42), directly after the running header. So none of the quoted words is on the page the repository cites (line 177: 'printed p. 41'); only the heading question is. Words, appendix and item are right. Minor page error.
+    - item 13
+      - **check**: nist-requirements
+      - **id**: nist-requirements-6
+      - **kind**: MISATTRIBUTED
+      - **repo_locator**: same file, line 318 (NIST-R18 Source), quotation at line 314
+      - **repo_text**: [source text withheld from the public copy].
+      - **source_locator**: NIST SP 1011-II-1.0, section 6.3 Context, printed p. 38 (PDF p. 38)
+      - **source_text**: Context is important during the application of ALFUS. It would be prudent for a program to specify its LOA requirements once the missions and the performing environments are understood. An ant and a UMS might have the same number indicating the LOA, but the contexts are totally different. Comparisons of CAC among different programs might or might not be feasible.
+      - **note**: Words and section confirmed. Section 6.3 begins on p. 37, where the opening sentence the entry also quotes ('An issue warranting further development is context...') is correctly placed, but the quoted paragraph is on p. 38. Minor.
+      - **corrected**: SP 1011-II-1.0, section 6.3 Context, printed pp. 37-38: the [source text withheld from the public copy]. In other words, should the ALFUS levels be applied in a global reference frame or are the levels relative measures?" is on p. 37; the quoted paragraph "Context is important during the application of ALFUS. ... Comparisons of CAC among different programs might or might not be feasible." is on printed p. 38 (PDF p. 38).
+      - **skeptic**: Official Vol II file. The heading '6.3 Context' and the sentence 'An issue warranting further development is context...' are on printed p. 37; the next heading, 6.4, is on p. 38. The paragraph quoted as NIST-R18 Verbatim (line 314) lies on printed p. 38, after the bulleted list of categorisation schemes and before 'The EC axis has the similar issue.', still inside section 6.3. Same result in default and -layout extraction. Repository line 318 gives only 'printed p. 37'. Section and words are right; the page is that of the section's start, not of the quoted paragraph. Minor.
+    - item 14
+      - **check**: nist-requirements
+      - **id**: nist-requirements-7
+      - **kind**: MISATTRIBUTED
+      - **repo_locator**: same file, line 65 (NIST-R1, Normative status)
+      - **repo_text**: [source text withheld from the public copy] own ability' is independent of human interactions."
+      - **source_locator**: NIST SP 1011-II-1.0, section 2.1 B Autonomy, printed p. 17 (PDF p. 17)
+      - **source_text**: Note that the essence of “UMS’s own ability” is independent of human interactions.
+      - **note**: Words and section confirmed (the inner quotation marks differ only in style). Page 16 carries the heading 'B. Autonomy' and the quoted definition; this sentence is in the first paragraph of p. 17. Minor.
+      - **corrected**: SP 1011-II-1.0, section 2.1 B Autonomy, printed p. 17 (not [source text withheld from the public copy] own ability" is independent of human interactions."
+      - **skeptic**: Official Vol II file. Printed p. 16 ends with the heading 'B. Autonomy' and the quoted definition ('...to achieve its goals as assigned [1]"' followed by the folio 16). The sentence the repository quotes at line 65 is in the first paragraph of printed p. 17 (PDF p. 17), in default and -layout extraction alike. The words match; the inner quotation marks differ only in style (curly double in the source, straight single in the repository), which is not a difference. Minor page error.
+    - item 15
+      - **check**: nist-requirements
+      - **id**: nist-requirements-8
+      - **kind**: MISATTRIBUTED
+      - **repo_locator**: same file, line 376 (Absences, '[source text withheld from the public copy]')
+      - **repo_text**: [source text withheld from the public copy] aspects of learning and world modeling should also be parts of the RACs. They should be resolved in the future workshops and may result in updates to the definition."
+      - **source_locator**: NIST SP 1011-II-1.0, section 2.1 B Autonomy, printed p. 17 (PDF p. 17)
+      - **source_text**: There are also discussions on whether the aspects of learning and world modeling should also be parts of the RACs. They should be resolved in the future workshops and may result in updates to the definition.
+      - **note**: Words and section confirmed; the paragraph is on p. 17, not p. 16. Minor. The A.4 reference in the same bullet (Vol I printed p. 41) is right.
+      - **corrected**: SP 1011-II-1.0, section 2.1 B Autonomy, printed p. 17 (not p. 16): "There are also discussions on whether the aspects of learning and world modeling should also be parts of the RACs. They should be resolved in the future workshops and may result in updates to the definition."
+      - **skeptic**: Official Vol II file. The two sentences follow immediately after the sentence of problem 7, in the same paragraph on printed p. 17 (PDF p. 17), just before the heading 'C. Contextual Autonomous Capability (CAC) Model for Unmanned Systems'. Repository line 376 gives '(p.16)'. Words and section are right. Minor page error.
+    - item 16
+      - **check**: nist-requirements
+      - **id**: nist-requirements-9
+      - **kind**: COUNT-WRONG
+      - **repo_locator**: same file, line 358 (Absences, first bullet)
+      - **repo_text**: [source text withheld from the public copy]".
+      - **source_locator**: NIST SP 1011-I-2.0, whole document (47 PDF pages), pdftotext -layout, whole-word and case-insensitive
+      - **source_text**: shall 0; should 11; must 1; may 63 occurrences on 57 lines (62 without the month in 'May 2001', reference 15); can 53 occurrences on 47 lines
+      - **note**: 'shall' 0 (both volumes), 'should' 11 and 'must' 1 are confirmed. '60 may' and '51 can' match neither the occurrence count nor the line count, in -layout, default or -raw extraction. Immaterial to the argument, which rests on the absence of 'shall'.
+      - **corrected**: NIST SP 1011-I-2.0 (47 PDF pages), whole-word and case-insensitive: "shall" 0, "should" 11, "must" 1, "may" 63 (62 as a modal, excluding the month in reference 15, "May 2001"), "can" 53. By matching lines (grep -ciw) the figures are may 57 and can 47. Neither is 60 or 51.
+      - **skeptic**: Official Vol I file (sha256 a7b5c3a3...54da84, 47 pages). Counted whole words, case-insensitive, in four independent extractions (pdftotext default, -layout, -raw, and pypdf): shall 0, should 11, must 1 in all four, matching the repository. 'may': 63 occurrences on 57 lines (55 lines case-sensitive; one of the 63 is the month in 'May 2001', one is the sentence-initial 'May have sensors'). 'can': 53 occurrences on 47 lines. The repository's '60 may, 51 can' (line 358) matches no occurrence count and no line count under any method I could construct, and no natural page subset. The error is immaterial to the argument, which rests on 'shall' = 0 (also 0 in Vol II).
+    - item 17
+      - **check**: nist-requirements
+      - **id**: nist-requirements-10
+      - **kind**: MISMATCH
+      - **repo_locator**: same file, line 372 (Absences, '[source text withheld from the public copy]')
+      - **repo_text**: [source text withheld from the public copy].
+      - **source_locator**: NIST SP 1011-I-2.0 section 2, s.v. Mission Planning, printed p. 22 (PDF p. 23); NIST SP 1011-II-1.0 section 4, HI metrics, printed pp. 29-30; Table 1, p. 45
+      - **source_text**: Vol I: Mission Planning — The process of generating tactical goals, a route (general or specific), commanding structure, coordination, and timing for a UMS or a team of UMSs. [...] They can be generated by operators on OCUs or by the onboard software systems in either centralized or distributed ways. || Vol II: Level of Human Interaction o Description: the level of authority at which the operator interacts with the UMS o Scale/Measure: From high to low: assign mission, assign strategic goals, assign tactical goals, assign mission tasks, route, auto pilot, servo. || [source text withheld from the public copy] plan that is pre-generated by human || Table 1, HI column: 'UMS informs humans; human provides strategic goals' (levels 7-9), '[source text withheld from the public copy]' (4-6)
+      - **note**: A paraphrase and a negative claim, not a quotation; it overstates the source. The mission is always assigned from outside, as the file says. But the source does describe onboard generation of tactical goals, and its HI scale, which the file itself quotes in NIST-R15, ranks a human who assigns only the mission above one who assigns strategic or tactical goals, and has a separate planning metric. So origination of goals below mission level by the UMS is present and is rewarded; only the origin of the mission is held external. Interpretive; lower weight than problem 1.
+      - **corrected**: ALFUS holds the MISSION externally assigned, but not all goals. SP 1011-I-2.0, section 2, s.v. Mission Planning, printed p. 22: "The process of generating tactical goals, a route (general or specific), commanding structure, coordination, and timing for a UMS or a team of UMSs. The mission plans can be generated either in advance or in real-time. They can be generated by operators on OCUs or by the onboard software systems in either centralized or distributed ways." SP 1011-II-1.0, section 4, printed p. 30: "Level of Human Interaction o Description: the level of authority at which the operator interacts with the UMS o Scale/Measure: From high to low: assign mission, assign strategic goals, assign tactical goals, assign mission tasks, route, auto pilot, servo." and "[source text withheld from the public copy] plan that is pre-generated by human"; Table 1, p. 45, HI column: "UMS informs humans; human provides strategic goals" (levels 7-9), "[source text withheld from the public copy]" (4-6). Correct wording: ALFUS has no criterion for a system changing or originating its own MISSION; it does describe onboard generation of goals below mission level and its HI axis rewards it, and HI measures planning as well as execution. The sentences 'no notion of a system originating ... [source text withheld from the public copy]' and '[source text withheld from the public copy]' should be limited to the mission.
+      - **skeptic**: Interpretive, but the unqualified negatives at line 372 are contradicted by the source's words. Vol I (official file) s.v. Mission Planning, printed p. 22 (PDF p. 23), describes generation of tactical goals 'by the onboard software systems'. Vol II section 4, printed p. 30, HI metric 'Level of Human Interaction' is scaled 'From high to low: assign mission, assign strategic goals, assign tactical goals, assign mission tasks, route, auto pilot, servo', and there is a separate metric '[source text withheld from the public copy] is pre-generated by human'; Table 1, p. 45, HI column, grades levels 7-9 as 'human provides strategic goals' and 4-6 as '[source text withheld from the public copy]'. So a UMS that originates its own strategic and tactical goals under an assigned mission is contemplated and scores higher on HI, and HI is not confined to execution (it has a planning metric). The repository itself quotes that scale in NIST-R15 and reads 'assign mission' as the top of it. What survives a skeptical reading: the mission is always assigned from outside (Vol I p. 15; Vol II p. 16 'Ultimately, the goals assigned to UMS come from the HRI'), I found no text in either volume about a UMS changing or replacing its assigned mission ('own goal', 'subgoal' occur 0 times), and the bullet's heading 'no goal-self-modification criterion' is true at mission level. The same bullet later concedes 'modifying subordinate goals within it', so the fault is the absolute sentences, not the whole argument. Lower weight than problem 1.
+    - item 18
+      - **check**: nist-requirements
+      - **id**: nist-requirements-11
+      - **kind**: MISMATCH
+      - **repo_locator**: same file, line 195 (NIST-R10, Single-object satisfiable) and line 394 (Notes, item 1)
+      - **repo_text**: [source text withheld from the public copy] of a UMS, as in simulation or in other design or analysis tools. (B) [source text withheld from the public copy]. || line 394: §[source text withheld from the public copy]".
+      - **source_locator**: NIST SP 1011-I-2.0 section 2, s.v. Unmanned System (UMS) > Logical UMS (LUMS), printed pp. 28-29 (PDF pp. 29-30); section 6.2 item d, printed p. 35; also NIST SP 1011-II-1.0 section 9.2, p. 57
+      - **source_text**: (B) Inherently non-physical, i.e., software entities [[that either operate as independent entities and interact with their associated UMSs or are integral parts of a UMS in an inclusive context. Includes high-level computer control and management software systems that command and coordinate the low-level UMSs, for example, a shop floor control node in a flexible manufacturing system.]] || d. physical environments to exclude a desktop computer running software [[that is irrelevant to UMS operations]]; || Vol II p. 57: An inherently non-physical and independent entity that interacts with UMSs and is considered an integrated part of the operation [...]
+      - **note**: The quoted words are right, and the entry is on p. 28 running onto p. 29. The problem is the characterisation: the ellipsis cuts sense (B) just before the words in double square brackets, which say these software entities 'operate as independent entities' and 'command and coordinate the low-level UMSs'. 'A MODEL OF a UMS' describes sense (A) only. The Notes also shorten 6.2 d to 'a desktop computer running software', dropping the limit 'that is irrelevant to UMS operations' (the full item is quoted correctly at line 191). Interpretive, but it feeds the file's first-ranked recommendation.
+      - **corrected**: SP 1011-I-2.0, section 2, s.v. Unmanned System (UMS), Associated Term Logical UMS (LUMS), printed pp. 28-29: "(A) A software or otherwise conceptual model of a UMS, as in simulation or in other design or analysis tools. (B) Inherently non-physical, i.e., software entities that either operate as independent entities and interact with their associated UMSs or are integral parts of a UMS in an inclusive context. Includes high-level computer control and management software systems that command and coordinate the low-level UMSs, for example, a shop floor control node in a flexible manufacturing system." Only sense (A) is a model of a UMS; sense (B) is software that operates as an independent entity and commands and coordinates UMSs, though always in relation to associated UMSs (see also SP 1011-II-1.0, section 9.2, p. 57: "An inherently non-physical and independent entity that interacts with UMSs and is considered an integrated part of the operation"). Section 6.2 item d, printed p. 35, reads in full: "d. physical environments to exclude a desktop computer running software that is irrelevant to UMS operations;" - it excludes software irrelevant to UMS operations, not desktop software as such.
+      - **skeptic**: Official Vol I file. The LUMS entry begins on printed p. 28 (PDF p. 29) and sense (B) runs over the page break onto printed p. 29 (PDF p. 30, after the running header). The words the repository quotes at line 195 are exact and it ends them with an ellipsis, so the quotation itself is not wrong and the page cite 'p.28' is acceptable for the entry. What is wrong is the characterisation built on it (lines 195 and 394): 'it is a MODEL OF a UMS'. That is sense (A) only. The words cut by the ellipsis say sense (B) entities 'operate as independent entities', and include software that commands and coordinates UMSs; Vol II section 9.2, printed p. 57, defines LUMS as 'An inherently non-physical and independent entity that interacts with UMSs' and says such software entities 'could be considered LUMSs' in a potential ALFUS application. A skeptical limit: sense (B) entities are still defined by relation to 'their associated UMSs', so 'tied to a physical referent' remains defensible, and 'independent' is not 'autonomous'. Second part: line 394 quotes section 6.2 as excluding "a desktop computer running software" and line 195 says '6.2(d) excludes desktop software'; the source's item d (printed p. 35, PDF p. 36) excludes only software 'that is irrelevant to UMS operations'. The fragment is contained verbatim, but the cut changes the sense; the file quotes the full item correctly at line 191. Interpretive, yet it underlies the file's first-ranked recommendation, so it should be corrected.
+    - item 19
+      - **check**: rfc6962
+      - **id**: rfc6962-1
+      - **kind**: MISMATCH
+      - **repo_locator**: auditonomous origin/main:L7/provenance/sources/staging-records/library/reading/RFC6962_Certificate-Transparency.md line 366 (Recorded absences, fourth bullet)
+      - **repo_text**: [source text withheld from the public copy]
+      - **source_locator**: rfc6962.txt section 3.1 (p.9 lines 488-490; p.10 lines 513-515 and 522-525); section 4.1 (p.17 lines 940-941; p.18 lines 967-970); section 4.6 (p.20 lines 1094-1096 and 1101-1102); section 5.2 (p.22 line 1191); section 5.3 step 3 (p.22 lines 1214-1215)
+      - **source_text**: 3.1: "Each submitted certificate MUST be accompanied by all additional certificates required to verify the certificate chain up to an accepted root certificate." | 3.1: "The Precertificate Signing Certificate MUST be directly certified by the (root or intermediate) CA certificate that will ultimately sign the end-entity TBSCertificate" | 3.1: "the Precertificate submission MUST be accompanied by the Precertificate Signing Certificate, if used, and all additional certificates required to verify the chain up to an accepted root certificate." | 4.1: "A compliant v1 implementation MUST NOT expect this to be 0 (i.e., v1)." | 4.1: "then a v1 client may be unable to verify the signature. It MUST NOT construe this as an error. (Note: Log clients don't need to be able to verify this structure; only TLS clients do." | 4.6: "However, a compliant v1 client MUST NOT construe an unrecognized MerkleLeafType or LogEntryType value as an error." | 4.6: 'The "start" and "end" parameters SHOULD be within the range 0 <= x < "tree_size"' | 5.2: "TLS clients are not directly clients of the log" | 5.3 step 3: "Fetch all the entries in the tree corresponding to the STH (Section 4.6)."
+      - **note**: A claim about the whole document, not a quotation. The second sentence is contradicted by the source: capitalised RFC 2119 keywords also bind submitters and CAs (section 3.1) and log clients (sections 4.1 and 4.6), and the RFC separates log clients from TLS clients (section 5.2). The first sentence is true only by name: no MUST, SHALL or SHOULD sentence has a monitor or auditor as its subject, but the section 4.6 MUST NOT and SHOULD govern whoever calls get-entries, and section 5.3 steps 3 and 7 send monitors to section 4.6. The record itself quotes the 4.6 sentence in capture C19 (line 249). Its conclusion that the RFC does not require any monitor or auditor to exist is not affected. Related: line 211 calls 'Auditors can thus verify that each certificate ... indeed appears in the log.' (section 3, p.9) a 'normative operational sentence'; that sentence contains no RFC 2119 keyword.
+      - **corrected**: No sentence of RFC 6962 that contains a capitalised RFC 2119 keyword names a monitor or an auditor. The obligations do not fall only [source text withheld from the public copy] and TLS servers. They also fall on submitters and CAs: 'Each submitted certificate MUST be accompanied by all additional certificates required to verify the certificate chain up to an accepted root certificate.' (section 3.1, p.9); 'The Precertificate Signing Certificate MUST be directly certified by the (root or intermediate) CA certificate that will ultimately sign the end-entity TBSCertificate' (section 3.1, p.10); 'the Precertificate submission MUST be accompanied by the Precertificate Signing Certificate, if used, and all additional certificates required to verify the chain up to an accepted root certificate.' (section 3.1, p.10). And on log clients: 'A compliant v1 implementation MUST NOT expect this to be 0 (i.e., v1).' and 'It MUST NOT construe this as an error.' (section 4.1, pp.17-18); 'However, a compliant v1 client MUST NOT construe an unrecognized MerkleLeafType or LogEntryType value as an error.' and 'The "start" and "end" parameters SHOULD be within the range 0 <= x < "tree_size"' (section 4.6, p.20). Monitors are sent to section 4.6 by section 5.3 steps 3 and 7 (p.22), so those two rules reach a monitor as a log client. Line 211 should not call the section 3 auditor sentence 'normative': it carries no RFC 2119 keyword.
+      - **skeptic**: Source re-established independently. I downloaded https://www.rfc-editor.org/rfc/rfc6962.txt (HTTP 200, 55,048 bytes, sha256 08fdf31c10b9f20872a65c027a9fe8cee27280f930120784241a57de744752af, identical to the checker's copy and to autonomous origin/main rfc6962-canonical.txt) and, as a second method, https://www.rfc-editor.org/rfc/rfc6962.html (HTTP 200, 68,207 bytes, sha256 1f09313bd14d952683954db8a2c64993c6b0fe4f86122adab7fdd5d20be503f4), stripped of tags. Every sentence the checker cites is present, word for word, in both renderings at the lines given. I listed every capitalised RFC 2119 keyword in the text. The record's second sentence (line 366) is contradicted: section 3.1 puts MUSTs on what a submitter sends and on how a CA certifies a Precertificate Signing Certificate, and sections 4.1 and 4.6 put MUST NOT and SHOULD on log clients, which the RFC distinguishes from TLS clients (4.1 note; 5.2 'TLS clients are not directly clients of the log'). The first sentence holds only by name: no sentence in the RFC contains both a capitalised keyword and the word monitor or auditor (checked by script over all 18 occurrences of those words), but section 5.3 steps 3 and 7 send monitors to section 4.6, whose MUST NOT and SHOULD bind any client of get-entries. The record itself quotes the 4.6 MUST NOT in capture C19 (line 249). The related remark at line 211 is also inaccurate as worded: 'Auditors can thus verify that each certificate for which an SCT has been issued indeed appears in the log.' (section 3, p.9, lines 474-476) has no RFC 2119 keyword. The record's conclusion that the RFC does not require a monitor or auditor to exist is unaffected.
+    - item 20
+      - **check**: rfc6962
+      - **id**: rfc6962-2
+      - **kind**: MISMATCH
+      - **repo_locator**: auditonomous origin/main:L7/provenance/sources/staging-records/library/reading/RFC6962_Certificate-Transparency.md line 323 (capture C27, 'Bears on')
+      - **repo_text**: [source text withheld from the public copy]
+      - **source_locator**: rfc6962.txt section 7.3 Misbehaving Logs, p.24, lines 1324-1328, 1331-1332 and 1340-1341
+      - **source_text**: "A log can misbehave in two ways: (1) by failing to incorporate a certificate with an SCT in the Merkle Tree within the MMD and (2) by violating its append-only property by presenting two different, conflicting views of the Merkle Tree at different times and/or to different parties." [...] "Violation of the MMD contract is detected by log clients requesting a Merkle audit proof for each observed SCT." [...] "Violation of the append-only property is detected by global gossiping"
+      - **note**: A paraphrase, not a quotation, and ambiguous. On its natural reading ('Both' = omission and equivocation) it misstates section 7.3: the RFC ties only way (2) to the append-only property and calls way (1) a violation of 'the MMD contract'. If 'Both' was meant as the two kinds of conflicting view (at different times, to different parties), the statement is correct but the wording does not say so. The verbatim capture C27 directly above it is accurate.
+      - **corrected**: RFC 6962 section 7.3 (p.24) names two ways a log can misbehave and classes only the second as a violation of the append-only property: '(1) by failing to incorporate a certificate with an SCT in the Merkle Tree within the MMD and (2) by violating its append-only property by presenting two different, conflicting views of the Merkle Tree at different times and/or to different parties.' It calls the first 'Violation of the MMD contract' and the second 'Violation of the append-only property'. What the two share in the RFC's words is only 'Both forms of violation will be promptly and publicly detectable.' If the record means that [source text withheld from the public copy] conflicting views to different parties are both append-only violations, it should say so in those terms.
+      - **skeptic**: Re-read section 7.3 in the official text (p.24, lines 1324-1342) and in the HTML rendering; both give the same words. The RFC ties the append-only property only to way (2): '(2) by violating its append-only property by presenting two different, conflicting views'. Way (1) is 'failing to incorporate a certificate with an SCT in the Merkle Tree within the MMD', and the next paragraph names it 'Violation of the MMD contract', in contrast with 'Violation of the append-only property' in the paragraph after. The record's line 323 lists 'omission' and 'equivocation' and then says '[source text withheld from the public copy]'. Grammatically 'Both' refers to those two items, and on that reading the statement misstates the source. The other reading (both kinds of conflicting view, at different times and to different parties) would be correct, and fits the inference the record draws from it, but the sentence does not say that. The verbatim capture C27 above it is accurate (452 non-space characters, all on printed p.24).
+    - item 21
+      - **check**: rfc6962
+      - **id**: rfc6962-3
+      - **kind**: MISATTRIBUTED
+      - **repo_locator**: auditonomous origin/main:L7/provenance/sources/staging-records/library/reading/RFC6962_Certificate-Transparency.md line 329 (heading of capture C28); quotation at line 331
+      - **repo_text**: [source text withheld from the public copy]
+      - **source_locator**: rfc6962.txt section 7.3: p.24 lines 1340-1342 and p.25 lines 1351-1352
+      - **source_text**: Last text line of p.24 (line 1342): "the latest Signed Tree Heads. As soon as two conflicting Signed Tree" | first text lines of p.25 (lines 1351-1352): "Heads for the same log are detected, this is cryptographic proof of that log's misbehavior."
+      - **note**: The words and the section are right; the printed-page locator is incomplete. 167 of the quotation's 244 non-space characters are on printed p.24 and 77 on p.25, so it should read 'printed pp.24-25'. The record notes the PDF-page straddle (48/49, line 333) but not the printed-page one. This [source text withheld from the public copy] 30 captures that crosses a printed-page boundary. Separately, and counted as confirmed: the headings of C12 (line 183, '[source text withheld from the public copy]') and C24 (line 289, '[source text withheld from the public copy]') name a second section that supplies no words to the quotation.
+      - **corrected**: Capture C28 is in section 7.3 on printed pp.24-25 (PDF pp.48-49), not on printed p.24 alone. 'Violation of the append-only property is detected by global gossiping, i.e., everyone auditing logs comparing their versions of the latest Signed Tree Heads. As soon as two conflicting Signed Tree' is on p.24; 'Heads for the same log are detected, this is [source text withheld from the public copy] p.25.
+      - **skeptic**: Confirmed by my own page split of the official text (form feeds as page breaks, running headers and footers removed). The C28 quotation is verbatim and is in section 7.3, but it crosses the break between printed pages 24 and 25: 167 non-space characters (30 words) end p.24 with 'As soon as two conflicting Signed Tree' (line 1342), and 77 characters (15 words) open p.25 with 'Heads for the same log are detected, this is cryptographic proof of that log's misbehavior.' (lines 1351-1352). [source text withheld from the public copy] 28 captures my script could place that crosses a printed-page break; C29 and C30 did not match under my simple normalization and were not examined further. The record's heading (line 329) says only 'printed p.24', while its own note (line 333) records the PDF straddle 48/49, and its own page mapping (line 25) makes PDF p.49 printed p.25. This is a minor locator incompleteness, not a wrong section or wrong words; 'misattributed' is too strong a label for it.
+    - item 22
+      - **check**: rfc6962
+      - **id**: rfc6962-5
+      - **kind**: MISMATCH
+      - **repo_locator**: auditonomous origin/main:L7/provenance/sources/staging-records/library/reading/RFC6962_Certificate-Transparency.md line 139 (capture C6, 'Bears on') and line 366 (Recorded absences, fourth bullet)
+      - **repo_text**: [source text withheld from the public copy]
+      - **source_locator**: rfc6962.txt section 1, p.4 line 185; section 5, p.21 line 1166; section 5.3, p.22 lines 1206 and 1208; section 5.4, p.23 lines 1260-1261
+      - **source_text**: "can be used to show that any particular version" | "some typical clients and how they could function" | "needs to, at least, inspect every new entry" | "should follow these steps" | "might be an integral component of a TLS client"
+      - **note**: Capital letters only, five quotations. The record puts words in upper case for emphasis inside quotation marks; the source has them in lower case. Wording, section and page are otherwise right. It matters most for 'SHOULD', which in upper case is an RFC 2119 keyword. The record does add '(PDF p.43, lowercase, descriptive)' after the two section 5.3 fragments, but says nothing of the kind for SHOW, COULD or MIGHT.
+      - **corrected**: The RFC has these words in lower case: 'can be used to show that any particular version of the log is a superset of any particular previous version' (section 1, p.4); 'We describe here some typical clients and how they could function.' (section 5, p.21); 'A monitor needs to, at least, inspect every [source text withheld from the public copy] 'it should follow these steps for each log:' (section 5.3, p.22); 'An auditor might be an integral component of a TLS client' (section 5.4, p.23). The record's capitals are its own emphasis. It says so for 'NEEDS TO' and 'SHOULD' (line 366, 'lowercase, descriptive') but not for 'SHOW' (line 139), 'COULD' or 'MIGHT' (line 366); those three need 'emphasis added' or lower case.
+      - **skeptic**: Real but minor, and narrower than reported. In both official renderings the five words are lower case: 'can be used to show that any particular version' (section 1, p.4, line 185); 'some typical clients and how they could function' (section 5, p.21, line 1166); 'needs [source text withheld from the public copy]' (section 5.3, p.22, lines 1206 and 1208); 'might be an integral component of a TLS client' (section 5.4, p.23, lines 1260-1261). The strings 'SHOW', 'COULD', 'NEEDS TO', 'MIGHT' and 'SHOULD follow' occur nowhere in the RFC. The record prints them in capitals inside quotation marks (lines 139 and 366) for emphasis. For two of the five the record discloses the source's case itself: the parenthesis '(PDF p.43, lowercase, descriptive)' follows 'NEEDS TO' and 'SHOULD follow these steps', so a reader is not misled about the RFC 2119 keyword. For the other three (SHOW, COULD, MIGHT) nothing marks the emphasis as added. None of those three is an RFC 2119 keyword, and the wording, section and page are otherwise right.
+    - item 23
+      - **check**: rfc6962
+      - **id**: rfc6962-7
+      - **kind**: COUNT-WRONG
+      - **repo_locator**: auditonomous origin/main:L7/provenance/sources/staging-records/library/reading/RFC6962_Certificate-Transparency.md line 29 ('How it was read')
+      - **repo_text**: [source text withheld from the public copy]
+      - **source_locator**: The same record, line 121 (capture C4) and line 390; cross-checked against autonomous origin/main:L7/provenance/prior-art/ct-lane/RFC6962.txt, print pages 5 and 6
+      - **source_text**: Record line 121: "[source text withheld from the public copy]." Record line 390: "[source text withheld from the public copy])". Capture text: print page 5 ends "beyond the scope of this document, but broadly speaking, they can"; print page 6 begins "invoke existing business mechanisms for dealing with misissued".
+      - **note**: An internal count, not a discrepancy with the RFC's words. Four captures straddle a PDF page break (C4, C18, C23, C28), as the record's own C4 note and verifier section say. PDF pagination belongs to the repository's own print, so this was checked against the record itself and the Autonomous capture text, not against the official host. Also internal: five of the 13 verifier-flag blocks are copies placed under a neighbouring capture they do not concern (under C3, C17, C18, C25 and C27), so C3, C25 and C27 look flagged when the verifier flagged only eight quotations.
+      - **corrected**: Four captures, not three, [source text withheld from the public copy]: C4 at PDF 5/6 ('... but broadly speaking, they can' | 'invoke existing business mechanisms for dealing with misissued certificates.'), C18 at PDF 31/32, C23 at PDF 43/44 and C28 at PDF 48/49. Line 29 of the record omits C4, which the record's own line 121 and line 390 include.
+      - **skeptic**: Confirmed as an internal count error. PDF pagination belongs to the repository's own 54-page print, so no official host can settle it; I checked the record against itself and against the print capture in autonomous origin/main:L7/provenance/prior-art/ct-lane/RFC6962.txt (blob ee3e4c6c, 85,837 bytes, sha256 cdc9bcecbf8b26b9c00156385d054ba5f9bd09b58242090f4c7f4cc66f77753b, read from the git object). Locating the captures in that capture by print page, four straddle a page break among the 28 my script could place (C29 and C30 did not match under my normalization and were not examined): C4 (322 non-space characters on p.5, 68 on p.6), C18 (54 on p.31, 147 on p.32), C23 (53 on p.43, 109 on p.44) and C28 (167 on p.48, 77 on p.49). The record's own figures agree: line 121 says C4 '[source text withheld from the public copy]', and line 390 lists '[source text withheld from the public copy]'. Line 29 says three and omits C4. The checker's secondary remark also holds: the record has 13 verifier-flag blocks; five are copies set under a neighbouring capture they do not concern (Q4 under C3, Q18 under C17, Q17 under C18, Q24 under C25, Q26 under C27), and eight quotations are flagged (Q4, Q17, Q18, Q23, Q24, Q26, Q28, Q30).
+    - item 24
+      - **check**: rfc6962
+      - **id**: rfc6962-8
+      - **kind**: COUNT-WRONG
+      - **repo_locator**: auditonomous origin/main:L7/provenance/sources/staging-records/library/reading/RFC6962_Certificate-Transparency.md line 390 (Adversarial verification, class 1)
+      - **repo_text**: [source text withheld from the public copy]
+      - **source_locator**: rfc6962.txt section 3.5, p.16, line 889: the line that the record itself (lines 231 and 243) gives as the last body line of PDF p.31
+      - **source_text**: Each log MUST produce on demand a Signed Tree Head that is no older
+      - **note**: An internal count, not a discrepancy with the RFC's words. That line has 14 words, not 12; it has 54 non-space characters, which is the figure the record gives at line 231. The quotation C18 itself is verbatim.
+      - **corrected**: Q18 has 14 words (54 of 201 non-space characters) on the cited PDF p.31: 'Each log MUST produce on demand a Signed Tree Head that is no older'. The rest, 'than the Maximum Merge Delay. In the unlikely event that it receives no new submissions during an MMD period, the log SHALL sign the same Merkle Tree Hash with a fresh timestamp.', is on PDF p.32 (RFC 6962 section 3.5, printed p.16).
+      - **skeptic**: Confirmed as an internal count error. The line the record itself gives, twice (lines 231 and 243), as the last body line of PDF p.31 [source text withheld from the public copy] Signed Tree Head that is no older'. That is the RFC's wording (section 3.5, p.16, line 889 of the official text, also present in the HTML rendering). It has 14 words (Each, log, MUST, produce, on, demand, a, Signed, Tree, Head, that, is, no, older) and 54 non-space characters. My page split of the print capture in autonomous (RFC6962.txt, read from the git object) puts exactly those 14 words and 54 characters of C18 on print page 31 and the remaining 32 words and 147 characters on page 32. The record's '[source text withheld from the public copy]' at line 231 is right; the '12 words' at line 390 is not. The quotation C18 is verbatim, and the point the record makes (most of the quote, including the whole second sentence, is on p.32) stands.
+    - item 25
+      - **check**: rfc9162
+      - **id**: rfc9162-1
+      - **kind**: MISMATCH
+      - **repo_locator**: aybllc/auditonomous origin/main:L7/provenance/sources/staging-records/library/reading/RFC9162_Certificate-Transparency-v2.md line 241 (capture [source text withheld from the public copy] Proof'), last character of the quotation
+      - **repo_text**: [source text withheld from the public copy]
+      - **source_locator**: https://www.rfc-editor.org/rfc/rfc9162.txt lines 493-503, Section 2.1.4.1 (the differing character is on line 503; the formula it introduces is on line 505)
+      - **source_text**: ... created from the original D_n for which PROOF was requested and the subtree Merkle Tree Hash MTH(D[0:m]) is known)[[:]]  SUBPROOF(m, D_m, true) = {}
+      - **note**: Punctuation only: 1 of 603 characters. The record closes the quotation with a full stop; the RFC has a colon that introduces the displayed formula. The record's own verifier flag (line 247, 'ALTERED_WORDING') reports exactly this, yet the capture still carries the label VERIFIED. Section is right; page 9 is right in the Autonomous text of the print.
+      - **corrected**: RFC 9162, Section 2.1.4.1 (rfc9162.txt lines 498-503): "The subproof for m = n is empty if m is the value for which PROOF was originally requested (meaning that the subtree created from D[0:m] is a complete subtree of the Merkle Tree created from the original D_n for which PROOF was requested and the subtree Merkle Tree Hash MTH(D[0:m]) is known):" The clause ends with a colon and introduces the formula on line 505, "SUBPROOF(m, D_m, true) = {}". The record's quotation ends "is known)." with a full stop.
+      - **skeptic**: Re-downloaded https://www.rfc-editor.org/rfc/rfc9162.txt (HTTP 200, 128,266 bytes, sha256 a0e432ce7580c99fcc8faf0cf3f6191f9ce6b4864f949158e020d4ecb295081f, identical to the checker's file). The record's capture C14 (line 241, 603 characters after whitespace collapse) is not contained in the official text, in the official PDF extracted with or without -layout, or in the Autonomous print text; with the last character changed to a colon it is contained in all four. The only difference is the final character, and it is not an extraction artifact. It counts because the block is a capture the record certifies as character-verbatim (line 17) and labels VERIFIED, while its own flag at line 247 reports the same alteration. Severity: one punctuation character; no word differs.
+    - item 26
+      - **check**: rfc9162
+      - **id**: rfc9162-2
+      - **kind**: MISMATCH
+      - **repo_locator**: aybllc/auditonomous origin/main:L7/provenance/sources/staging-records/library/reading/RFC9162_Certificate-Transparency-v2.md line 76 (table-of-contents list, lines 35-125)
+      - **repo_text**: [source text withheld from the public copy]
+      - **source_locator**: https://www.rfc-editor.org/rfc/rfc9162.txt lines 1544-1545 (section heading) and lines 105-106 (Table of Contents)
+      - **source_text**: 5.5. Retrieve Merkle Inclusion Proof, STH, and Consistency Proof [[by Leaf Hash]]
+      - **note**: Heading truncated: the last three words are missing (in the print the heading wraps onto a second line). The other 90 of the 91 listed headings match the official body headings exactly and in the same order. The official Table of Contents has 87 entries; the record's four extra fourth-level headings (2.1.3.1, 2.1.3.2, 2.1.4.1, 2.1.4.2) are real body headings.
+      - **corrected**: The heading of Section 5.5 is "5.5. Retrieve Merkle Inclusion Proof, STH, and Consistency Proof by Leaf Hash" (rfc9162.txt lines 1544-1545; Table of Contents lines 105-106). The record's line 76 omits "by Leaf Hash".
+      - **skeptic**: Compared the record's 91 listed headings (lines 35-125) with the 91 body headings of the official text by script: 90 are identical and in the same order; line 76 alone is not a body heading. The official heading is wrapped over two lines in the body (lines 1544-1545) and in the Table of Contents (lines 105-106), and the RFC Editor info page gives it as one string ending "by Leaf Hash". The Autonomous print text has the same wrap (lines 1205-1206), so the record dropped the second line. Three words are missing. Also confirmed: the official Table of Contents has 87 entries; the record's four extra entries (2.1.3.1, 2.1.3.2, 2.1.4.1, 2.1.4.2) are real body headings.
+    - item 27
+      - **check**: rfc9162
+      - **id**: rfc9162-3
+      - **kind**: MISMATCH
+      - **repo_locator**: aybllc/auditonomous origin/main:L7/provenance/sources/staging-records/library/reading/RFC9162_Certificate-Transparency-v2.md line 12 ('DOI / ID') and line 543 (Recorded absences)
+      - **repo_text**: [source text withheld from the public copy]
+      - **source_locator**: https://www.rfc-editor.org/rfc/rfc9162.txt lines 5-10 (first-page header). DOI: https://www.rfc-editor.org/info/rfc9162/ ('About this RFC' panel and the citation_doi meta tag)
+      - **source_text**: Request for Comments: 9162 / Obsoletes: 6962 / Category: Experimental / [[ISSN: 2070-1721]] / December 2021. Info page: DOI https://doi.org/10.17487/RFC9162
+      - **note**: True only of the record's browser print, which has no RFC header block (the Autonomous text of that print contains neither 'ISSN' nor 'Request for Comments'). The RFC as issued prints the RFC series ISSN and its own RFC number in the header, in both the official text and the official PDF. The DOI half of the claim holds: the RFC does not print its own DOI; the RFC Editor lists it as 10.17487/RFC9162.
+      - **corrected**: The absence is a property of the browser print, not of RFC 9162. The RFC as issued prints in its first-page header "Request for Comments: 9162 / Obsoletes: 6962 / Category: Experimental / ISSN: 2070-1721 / December 2021" (rfc9162.txt lines 6-10; the official PDF header reads "ISSN: 2070-1721"). It prints no DOI for itself; it gives "https://www.rfc-editor.org/info/rfc9162" (line 49). The RFC Editor info page gives the DOI as 10.17487/RFC9162.
+      - **skeptic**: Real only for the ISSN half, and only as a statement about the RFC as issued. The official text prints "ISSN: 2070-1721" on line 9 of its first-page header, with "Request for Comments: 9162" on line 6; the official PDF (sha256 f0fafb9e..., 53 pages) prints "ISSN: 2070-1721" in its page-1 header. The record's statement is true of the file it read: the Autonomous text of that browser print contains neither "ISSN" nor "Request for Comments", and the RFC Editor info page it was printed from has no ISSN in its HTML either. Line 12 limits itself to "the file", but line 543 says "[source text withheld from the public copy]" and records it as an absence of the source. 2070-1721 is the ISSN of the RFC series, the only ISSN an RFC carries. The DOI half holds: the RFC text contains no "10.17487/RFC9162"; the info page carries it (citation_doi meta tag, three occurrences).
+    - item 28
+      - **check**: rfc9162
+      - **id**: rfc9162-4
+      - **kind**: MISATTRIBUTED
+      - **repo_locator**: aybllc/auditonomous origin/main:L7/provenance/sources/staging-records/library/reading/RFC9162_Certificate-Transparency-v2.md line 501 (heading of capture C46; the quotation is on line 503)
+      - **repo_text**: [source text withheld from the public copy]
+      - **source_locator**: https://www.rfc-editor.org/rfc/rfc9162.txt lines 1769-1779, Section 6.2 (wording and section confirmed). Page checked in aybllc/autonomous origin/main:L7/provenance/prior-art/ct-lane/RFC9162.txt lines 1372-1379, which come after the footer '36/62' (line 1366) and before '37/62' (line 1405)
+      - **source_text**: If a CA and a log collude, it is possible to temporarily hide misissuance from clients. When a TLS client requires SCTs from multiple logs to be provided, it is more difficult to mount this attack. ...  — on page [[37]] of the print
+      - **note**: Wrong page only. The quoted words are on page 37 of the 62-page print; page 36 holds just the '6.2. Multiple SCTs' heading and the start of the first bullet. The official text is unpaginated, so this was checked against the Autonomous text of the same print, which is a repository object and not an official source. C46 is one of five captures (C44-C48) the record's adversarial pass did not cover: that pass handled 43 quotations, line 27 speaks of '45 captures', and the record contains 48.
+      - **corrected**: The words quoted in C46 ("If a CA and a log collude, it is possible to temporarily hide misissuance from clients. ... reduces the probability of the certificate being rejected by TLS clients.") are in RFC 9162 Section 6.2 (rfc9162.txt lines 1769-1779) and fall on page 37 of the 62-page print, not page 36. Page 36 carries only the Section 6.2 heading and the opening of its first bullet. The page was checked against aybllc/autonomous L7/provenance/prior-art/ct-lane/RFC9162.txt, a repository object, not an official source.
+      - **skeptic**: Wording and section confirmed: C46's quotation is in the official text, Section 6.2, lines 1769-1779 (second and third bullets, joined). The page could only be tested against the Autonomous print text, because the record's PDF (sha256 0b153d1f...) is in no repository and the official text is unpaginated. That file is a sound proxy: 62 pages with the same footers, the page-10 truncation the record describes character for character, and by my own script every other capture that can be located on a single page is on the page the record names. C46 is the one exception: page 36 (footer at line 1366) holds only the "6.2. Multiple SCTs" heading (line 1362) and the start of the first bullet; the quoted words are at lines 1372-1379, on page 37. Also confirmed: the record's adversarial pass covered 43 quotations (C1-C43), line 27 says "All 45 captures", and the record holds 48, so C44-C48 were never page-checked. Page number only.
+    - item 29
+      - **check**: rfc9162
+      - **id**: rfc9162-5
+      - **kind**: MISATTRIBUTED
+      - **repo_locator**: aybllc/auditonomous origin/main:L7/provenance/sources/staging-records/library/reading/RFC9162_Certificate-Transparency-v2.md line 533 (Recorded absences, 'immutable')
+      - **repo_text**: [source text withheld from the public copy]
+      - **source_locator**: https://www.rfc-editor.org/rfc/rfc9162.txt lines 2439-2441, Section 10.2.5 (wording and section confirmed). Page checked in aybllc/autonomous origin/main:L7/provenance/prior-art/ct-lane/RFC9162.txt line 1852, which comes after the footer '50/62' (line 1837) and before '51/62' (line 1869)
+      - **source_text**: IANA is asked to reject any request to update a Log ID or Log Base URL in this registry because these fields are immutable (see Section 4.1).  — on page [[51]] of the print
+      - **note**: Wrong page only. The sentence is on page 51 of the print; the '10.2.5. Log IDs' heading is on page 50. The other two 'immutable' locations (p.16 §4.1, p.34 §5.6) and the count of three occurrences are correct. Same caveat as rfc9162-4: checked against the Autonomous text of the print.
+      - **corrected**: RFC 9162 Section 10.2.5 (rfc9162.txt lines 2439-2441): "IANA is asked to reject any request to update a Log ID or Log Base URL in this registry because these fields are immutable (see Section 4.1)." In the 62-page print this sentence is on page 51; only the "10.2.5. Log IDs" heading is on page 50. Checked against the Autonomous text of the print, not an official source.
+      - **skeptic**: Wording, section and the count of three occurrences of "immutable" confirmed in the official text (lines 813, 1660, 2440). In the Autonomous print text the "10.2.5. Log IDs" heading is at line 1822, on page 50 (footer at line 1837), and the sentence containing "these fields are immutable" is at line 1852, on page 51 (footer at line 1869). The record attaches "p.50" to the quoted words and hedges it ("[source text withheld from the public copy]"), so the page it gives is the heading's page, one short of the sentence's page. Page number only; same proxy caveat as rfc9162-4.
+    - item 30
+      - **check**: rfc9162
+      - **id**: rfc9162-6
+      - **kind**: MISMATCH
+      - **repo_locator**: aybllc/auditonomous origin/main:L7/provenance/sources/staging-records/library/reading/RFC9162_Certificate-Transparency-v2.md line 489 ('Bears on' for capture C44)
+      - **repo_text**: [source text withheld from the public copy]
+      - **source_locator**: https://www.rfc-editor.org/rfc/rfc9162.txt line 2588, Section 11.3
+      - **source_text**: A log can misbehave in several ways.  [[Examples include the following:]] failing to incorporate a certificate with an SCT in the Merkle Tree within the MMD; ...
+      - **note**: Commentary, not a quotation. The RFC offers its five items as examples, not as a complete list. The capture itself (line 487) is verbatim and contains the words 'Examples include the following'.
+      - **corrected**: RFC 9162 Section 11.3 (rfc9162.txt lines 2588-2594): "A log can misbehave in several ways. Examples include the following: failing to incorporate a certificate with an SCT in the Merkle Tree within the MMD; presenting different, conflicting views of the Merkle Tree at different times and/or to different parties; issuing STHs too frequently; mutating the signature of a logged certificate; and failing to present a chain containing the certifier of a logged certificate." The RFC gives five examples and does not present them as a complete taxonomy.
+      - **skeptic**: The record's commentary at line 489 says the passage is "[source text withheld from the public copy]". The official text, Section 11.3, line 2588, introduces the five items with "Examples include the following:" (same words in the official PDF by both extractions). The source offers examples, not a complete list. The capture itself (line 487) is verbatim and includes those words; the error is in the commentary's description of what the source says.
+    - item 31
+      - **check**: rfc9162
+      - **id**: rfc9162-7
+      - **kind**: NOT-FOUND
+      - **repo_locator**: aybllc/auditonomous origin/main:L7/provenance/sources/staging-records/library/reading/RFC9162_Certificate-Transparency-v2.md line 301 ('Bears on' for capture C21)
+      - **repo_text**: [source text withheld from the public copy]
+      - **source_locator**: https://www.rfc-editor.org/rfc/rfc9162.txt Sections 4.2, 4.2.1 and 4.2.2 (lines 858-918); Sections 4.1 and 5.7 and every occurrence of 'publish' were also searched
+      - **source_text**: Nearest passages: 'The log SHALL allow retrieval of its list of accepted trust anchors (see Section 5.7)' (lines 870-871); '... then the acceptability of the submission is left to the log's discretion.' (lines 908-909)
+      - **note**: Commentary, not a quotation. Part (b) is in the text. Part (a) is not: no sentence of RFC 9162 requires a log to publish its acceptance criteria. 'Publish' occurs only at lines 36, 1250, 2069-2070, 2085 and 2556 (status boilerplate, the final STH, published tree heads, a logged certificate). The minimum criteria are fixed by the RFC itself (4.2.1); the discretionary ones are left to the log (4.2.2).
+      - **corrected**: RFC 9162 does not require a log to publish its acceptance criteria. What it says: "The log SHALL allow retrieval of its list of accepted trust anchors (see Section 5.7)" (Section 4.2, lines 870-871); the minimum criteria are set by the RFC itself, "the log MUST reject a submission if any of the following conditions are not met" (Section 4.2.1, lines 879-880); beyond those, "the acceptability of the submission is left to the log's discretion" (Section 4.2.2, lines 908-909). The only acceptance limit a log must fix beforehand is the Maximum Chain Length parameter (Section 4.1, lines 841-842, with lines 815-816).
+      - **skeptic**: Searched the official text for "publish", "criteri", "advertis", "in advance" and "policy", and read Sections 4.1, 4.2, 4.2.1 and 4.2.2 in full. No sentence requires a log to publish its acceptance criteria. "Publish" occurs only at lines 36, 1250, 2069, 2070, 2085 and 2556, none about acceptance criteria. Part (b) of the record's sentence is in the text (lines 870-871). One qualification the checker did not make: a single acceptance limit, Maximum Chain Length, is a log parameter (lines 841-842), and parameters "MUST be established before the log operator begins to operate the log" (lines 815-816). That is one parameter established in advance, not a requirement to publish the criteria. The minimum criteria are fixed by the RFC itself (4.2.1) and the rest is "left to the log's discretion" (lines 908-909).
+    - item 32
+      - **check**: rfc9162
+      - **id**: rfc9162-8
+      - **kind**: MISMATCH
+      - **repo_locator**: aybllc/auditonomous origin/main:L7/provenance/sources/staging-records/library/reading/RFC9162_Certificate-Transparency-v2.md line 497 ('Bears on' for capture C45)
+      - **repo_text**: [source text withheld from the public copy]
+      - **source_locator**: https://www.rfc-editor.org/rfc/rfc9162.txt lines 2602-2604 (Section 11.3) and lines 2096-2099 (Section 8.3)
+      - **source_text**: Violation of the append-only property or the STH issuance rate limit [[can be]] detected by multiple clients comparing their instances of the STHs.  |  A monitor (Section 8.2) can audit by verifying the consistency of STHs it receives, ...
+      - **note**: Commentary. The quoted words are verbatim, but 'ONLY' is the record's addition: the RFC says 'can be detected by', and Sections 8.1.5, 8.2 (step 5) and 8.3 also have a single TLS client or monitor verify consistency between tree heads it has itself received. The record's own commentary on C41 (line 463) says three of the four audited [source text withheld from the public copy]'.
+      - **corrected**: RFC 9162 Section 11.3 (rfc9162.txt lines 2602-2604): "Violation of the append-only property or the STH issuance rate limit can be detected by multiple clients comparing their instances of the STHs." The RFC says "can be", not "only". It also has a single party check consistency: "The TLS client SHOULD also verify consistency between the provided STH and an STH it knows about" (Section 8.1.5, lines 1985-1986) and "A monitor (Section 8.2) can audit by verifying the consistency of STHs it receives" (Section 8.3, lines 2096-2097).
+      - **skeptic**: The quoted words are verbatim, but "ONLY" is the record's. Section 11.3 (lines 2602-2604) says "can be detected by multiple clients comparing their instances of the STHs", without "only". The RFC also gives single-party consistency checks: Section 8.1.5 (lines 1985-1986), Section 8.2 step 5 (verify a consistency proof between the new and previous STH) and Section 8.3 (lines 2096-2099). The record's own commentary on C41 (line 463) says three of the four audited [source text withheld from the public copy]".
+    - item 33
+      - **check**: rfc9162
+      - **id**: rfc9162-9
+      - **kind**: MISATTRIBUTED
+      - **repo_locator**: aybllc/auditonomous origin/main:L7/provenance/sources/staging-records/library/reading/RFC9162_Certificate-Transparency-v2.md line 139 ('Bears on' for capture C1)
+      - **repo_text**: [source text withheld from the public copy]
+      - **source_locator**: https://www.rfc-editor.org/rfc/rfc9162.txt lines 159-165, Section 1, first paragraph
+      - **source_text**: (1) Certificate Transparency aims to mitigate the problem of misissued certificates by providing append-only logs of issued certificates.  ([source text withheld from the public copy] prevent misissuance, [source text withheld from the public copy].  (3) Note that this is a general mechanism that could be used for transparently logging any form of binary data, subject to some kind of inclusion criteria.
+      - **note**: Minor. The quoted words are verbatim, but they are in the second and third sentences of the Introduction, not its 'opening' and 'second' sentences (and the document itself opens with the Abstract). 'First paragraph' is right for Section 1.
+      - **corrected**: In RFC 9162 Section 1, first paragraph (rfc9162.txt lines 159-165), "The logs do not themselves prevent misissuance, but they ensure that interested parties (particularly those named in certificates) can detect such misissuance." is the second sentence, and "Note that this is a general mechanism that could be used for transparently logging any form of binary data, [source text withheld from the public copy] the third. The opening sentence is "Certificate Transparency aims to mitigate the problem of misissued certificates by providing append-only logs of issued certificates."
+      - **skeptic**: Minor. In the official text the first paragraph of Section 1 (lines 159-165) runs: sentence 1 "Certificate Transparency aims to mitigate ... append-only logs of issued certificates."; sentence [source text withheld from the public copy] prevent misissuance, but ..."; sentence 3 "Note that this is a general mechanism ...". The record's line 139 places "do not themselves prevent" in the "opening sentence" and the scope claim in the "second sentence"; they are the second and third. The quoted words are verbatim and the record's "first paragraph" is right. Only the sentence ordinals are wrong.
+    - item 34
+      - **check**: rfc9162
+      - **id**: rfc9162-14
+      - **kind**: MISMATCH
+      - **repo_locator**: aybllc/auditonomous origin/main:L7/provenance/sources/staging-records/library/reading/RFC9162_Certificate-Transparency-v2.md line 25 ('[source text withheld from the public copy]')
+      - **repo_text**: [source text withheld from the public copy]
+      - **source_locator**: https://www.rfc-editor.org/rfc/rfc9162.txt lines 974, 987-990 and 992 (Section 4.5), set against aybllc/autonomous origin/main:L7/provenance/prior-art/ct-lane/RFC9162.txt lines 705, 719-722 and 724 (page 19 of the print)
+      - **source_text**: Official: 'consistency_proof_v2(0x0105),' / 'TimestampedCertificateEntryDataV2;' (twice) / 'SignedCertificateTimestampDataV2;' (twice) / 'ConsistencyProofDataV2;'.  Text of the print: 'consistency_proof_v2(0x0' / 'TimestampedCertificateEntryDa' / 'TimestampedCertificateEntr' / 'SignedCertificateTimestampDataV' / 'SignedCertificateTimestampDa' / 'ConsistencyProofDataV2'
+      - **note**: The page-10 truncation is exactly as the record describes (official line 526 ends 'MTH(D[0:k])'). But page 19 of the same print has six more lines cut at the right margin, in the TransItem definition, so 'every other page extracted cleanly' does not hold. The record lists page 19 as not read and quotes nothing from it. This rests on the Autonomous text of the print, which agrees with the record's file on every other test (same print stamp, 62 pages, the page 9, 10, 16 and 25 artifacts the record describes, 47 of 48 capture pages). Three related statements disagree with the record itself rather than with the RFC and are not counted: line 23 says §§5.1, 5.5 and 5.6 were 'read in full', although §5.5 opens on page 32, §5.6 ends on page 35 and §5.1 ends on page 30, pages the same line lists as not read; line 23 says page 19's semantics were 'captured from p.20', but no capture cites page 20; line 17 counts three ellipsis captures where there are four (C36, C41, C43, C48).
+      - **corrected**: In the text of the 62-page print, truncation is not confined to page 10. Page 19 has six more cut lines, which the official text gives in full (rfc9162.txt, Section 4.5): "consistency_proof_v2(0x0105)," (line 974); "case x509_entry_v2: TimestampedCertificateEntryDataV2;" (987); "case precert_entry_v2: TimestampedCertificateEntryDataV2;" (988); "case x509_sct_v2: SignedCertificateTimestampDataV2;" (989); "case precert_sct_v2: SignedCertificateTimestampDataV2;" (990); "case consistency_proof_v2: ConsistencyProofDataV2;" (992). The page-10 formula in full is "SUBPROOF(m, D_n, b) = SUBPROOF(m - k, D[k:n], false) : MTH(D[0:k])" (line 526). Page 19 is a page the record lists as not read.
+      - **skeptic**: Real, with two limits. By my own token-level diff of the official text against the Autonomous print text, exactly seven tokens are cut at the right margin of code blocks: one on page 10 (the one the record reports) and six on page 19, in the TransItem definition of Section 4.5. No other page has a truncated token. So "Every other page extracted cleanly" (line 25) does not hold for page 19. Limit 1: the record's PDF is in no repository, so this rests on the Autonomous text of the print; that file matches the record on page count, footers, the page-10 truncation character for character, and capture pages. Limit 2: the record lists page 19 as not read and quotes nothing from it, so the sentence is wrong only as written, covering all pages; it holds for every page the record says it read. The record's own method line (17) says each extracted page was read in full, which conflicts with its not-read list.
+    - item 35
+      - **check**: rfc9162
+      - **id**: rfc9162-15
+      - **kind**: MISMATCH
+      - **repo_locator**: aybllc/autonomous origin/main:L7/provenance/prior-art/ct-lane/RFC9162.txt (git blob 0e412402168adf26abe614cb0312df7a754a241a, 150,154 bytes, sha256 c909e1175c0ce3fe19c8845fc075cb7e2577ce930f0f24b4e67e4325a12d4c26)
+      - **repo_text**: [source text withheld from the public copy]
+      - **source_locator**: https://www.rfc-editor.org/rfc/rfc9162.txt lines 526, 974, 987-990, 992 and 945-946; also lines 5-10 (header) and 66-155 (Table of Contents)
+      - **source_text**: 'SUBPROOF(m, D_n, b) = SUBPROOF(m - k, D[k:n], false) : MTH(D[[[0:k])]]';  'consistency_proof_v2(0x0[[105),]]';  'TimestampedCertificateEntryDa[[taV2;]]' (twice);  'SignedCertificateTimestampDataV[[2;]]' (twice);  'ConsistencyProofDataV2[[;]]';  'registration form [[(https://pen.iana.org/pen/PenApplication.page)]].'
+      - **note**: Not byte-identical to the official text (128,266 bytes, sha256 a0e432ce...) and not a copy of it: the file is the pdftotext-style text of a 62-page browser print of https://www.rfc-editor.org/info/rfc9162/, stamped '8/4/26, 8:43 AM' on every page. Every difference from the official text: (1) added: 62 print header lines, 62 footer lines 'https://www.rfc-editor.org/info/rfc9162/ N/62', 62 form feeds; (2) the RFC's first-page header (IETF, Request for Comments: 9162, Obsoletes: 6962, Category: Experimental, ISSN: 2070-1721, December 2021, Google, Sectigo) is absent, and in its place stand 'RFC 9162:' before the title and 'B. [source text withheld from the public copy]' after it; (3) the Table of Contents (official lines 66-155) is absent; (4) seven tokens are cut off at the right margin of code blocks, shown above; (5) one URL is absent (it is a hyperlink in the HTML); (6) layout only: no list-bullet markers (85), no table rule lines (115), no table cell bars, aside bars or '*Note:*' asterisks; different indentation and line breaks; 58 tokens split or joined by line wrapping; wrapped table cells read in a different order in the tables of Sections 5.1-5.6 and 10.1.1-10.2.6 (64 places, same words), including three table header rows repeated at page breaks (pages 49, 50, 53). All remaining words are the same and in the same order (15,507 word tokens align one to one). The sheet's description of this file ('RFC Editor page capture, 2026-08-04', ct-lane/0.md line 17) is accurate, and git history shows the four files moved unchanged from manuscripts/prior-art/ct-lane/ (100% renames in commit b49deb0). Because of the truncations, code and formulas should be taken from rfc9162-canonical.txt, which is byte-identical to the official text, not from this file.
+      - **corrected**: aybllc/autonomous L7/provenance/prior-art/ct-lane/RFC9162.txt is not the RFC text as issued. Against https://www.rfc-editor.org/rfc/rfc9162.txt it lacks the first-page header (lines 5-10, including "Request for Comments: 9162", "Obsoletes: 6962", "Category: Experimental", "ISSN: 2070-1721", "December 2021") and the Table of Contents (lines 66-155), and seven code tokens are cut. Official readings: "SUBPROOF(m, D_n, b) = SUBPROOF(m - k, D[k:n], false) : MTH(D[0:k])" (line 526; file line 347 ends "MTH(D["); "consistency_proof_v2(0x0105)," (974); "TimestampedCertificateEntryDataV2;" (987, 988); "SignedCertificateTimestampDataV2;" (989, 990); "ConsistencyProofDataV2;" (992). The official plain text also has "registration form (https://pen.iana.org/pen/PenApplication.page)." (lines 945-946) where the file, like the official PDF, has "registration form." Code and formulas should be taken from rfc9162-canonical.txt (sha256 a0e432ce7580c99fcc8faf0cf3f6191f9ce6b4864f949158e020d4ecb295081f), which equals the official text.
+      - **skeptic**: Confirmed from the git object (blob 0e412402..., 150,154 bytes, sha256 c909e117...) against the official text I downloaded. The file is the text of a browser print: 62 print headers stamped "8/4/26, 8:43 AM", 62 footers "https://www.rfc-editor.org/info/rfc9162/ N/62", 62 form feeds, no RFC header block, no Table of Contents. My token diff found the same seven truncated tokens the checker lists (page 10: one; page 19: six) and no others; the remaining differences are layout, table reading order and line wrapping. I did not reproduce the checker's exact figure of 15,507 aligned tokens; under my tokenization 15,376 of 15,535 match, with the residue being those layout classes. One correction to the checker: the missing URL after "registration form" is not a loss relative to every official rendition. The official PDF and the info page also read "registration form." with the URL as a link; only the plain text spells it out. The sheet (0.md line 17) accurately calls the file an "RFC Editor page capture, 2026-08-04", but the same sheet presents the directory as "canonical texts" and "the specification texts", so the truncations matter. rfc9162-canonical.txt in the same directory is byte-identical to the official text.
+    - item 36
+      - **check**: fips180-4
+      - **id**: fips180-4-1
+      - **kind**: COUNT-WRONG
+      - **repo_locator**: auditonomous origin/main:L7/provenance/sources/staging-records/library/reading/NIST_FIPS-180-4_Secure-Hash-Standard.md lines 17, 21, 29
+      - **repo_text**: [source text withheld from the public copy]
+      - **source_locator**: Official PDF, 36 pages (pdfinfo)
+      - **source_text**: Pages the record itself enumerates as read: 1-5, 6-7, 8, 9-11, 12, 18-19, 21-22, 23-25, 32-36 = 24 pages. Pages it enumerates as not read: 13-17, 20, 26-31 = 12 pages. 24 + 12 = 36.
+      - **note**: The record gives two different read counts (25 and 24) and an unread count (eleven) that does not match its own page list or the 36-page source. 24 read / 12 unread is the figure consistent with the source. The absence claims are unaffected: I re-ran every keyword over all 36 pages.
+      - **corrected**: The official PDF has 36 pages. By the record's own page lists, 24 pages were read (PDF pp1-12, 18-19, 21-25, 32-36) and 12 were not (PDF pp13-17, 20, 26-31). Line 17 should read "I read 24 of the 36 PDF pages" and line 21 "the twelve unread pages"; line 29 ("[source text withheld from the public copy].") is already correct.
+      - **skeptic**: Source identity re-established independently: https://nvlpubs.nist.gov/nistpubs/FIPS/NIST.FIPS.180-4.pdf -> final URL identical, HTTP 200, 833315 bytes, sha256 0455b406d89648d20cbde375561e19c245b9815e894164c2670772e3d54deb82 (identical to the checker's file and to the hash on line 3 of the reading record); pdfinfo reports 36 pages. Saved at /tmp/claude-0/-home-user/bfcfd013-a2da-5019-961e-7f46116f08be/scratchpad/wf-sources/fips180-4-skeptic/dl-1/NIST.FIPS.180-4.pdf. Repository text read from the git object auditonomous origin/main:L7/provenance/sources/staging-records/library/reading/NIST_FIPS-180-4_Secure-Hash-Standard.md. Line 17 says "[source text withheld from the public copy]"; line 21 says "the eleven unread pages"; line 29 says "[source text withheld from the public copy]." The record's own enumeration (lines 19 and 21) of pages read is pp1-5 (5), pp6-7 (2), p8 (1), pp9-11 (3), p12 (1), pp18-19 (2), pp21-22 (2), pp23-25 (3), p32, p33, p34, p35, p36 (5) = 24 pages; its enumeration of pages not read is pp13-17 (5), p20 (1), pp26-31 (6) = 12 pages; 24 + 12 = 36, the true page count. Every page cited by a capture (C1-C25) or by the absence list (pp 2,3,4,5,8,9,12,18,19,21,22,23,24,25,32,33,34,35,36) lies inside the 24-page read set; no 25th page is evidenced anywhere in the record. So the prose pair 25/eleven (which sums to 36 and so looks self-consistent) contradicts both the record's own page lists and its own line 29. This is a count error in the record's words, not an extraction artifact. The 36-page total itself is correct.
+    - item 37
+      - **check**: fips180-4
+      - **id**: fips180-4-2
+      - **kind**: MISATTRIBUTED
+      - **repo_locator**: same reading record, line 21
+      - **repo_text**: "[source text withheld from the public copy])"
+      - **source_locator**: Official PDF pp. 13-20 (printed 8-15)
+      - **source_text**: PDF pp13-14: end of Sec. 3.1 (item 4) and Sec. 3.2; pp15-17: Sec. 4.1 and 4.2 (through 4.2.3). "5. PREPROCESSING" and "5.1 Padding the Message" begin on PDF p18. "5.3.3 SHA-256", "5.3.4 SHA-384" and "5.3.5 SHA-512" are all on PDF p20.
+      - **note**: Section 5.1 and Sections 5.3.3-5.3.5 are not on pp13-17. Section 5.1 is on p18, which the record elsewhere says it read and quotes from (C16); 5.3.3-5.3.5 are on p20, which holds the SHA-256, SHA-384 and SHA-512 initial values, not only SHA-512's. Page-content description error only; no quotation is affected.
+      - **corrected**: PDF pp13-17 (printed 8-12) contain: the end of Sec. 3.1 (item 4), [source text withheld from the public copy], and Sec. 4 Functions and Constants (4.1.1-4.1.3, 4.2.1-4.2.3, the K-constant tables). They contain no part of Section 5. "5. PREPROCESSING" and "5.1 Padding the Message" are on PDF p18 (printed 13), a page the record read. PDF p20 (printed 15) contains the end of the 5.3.2 SHA-224 initial hash value, "5.3.3 SHA-256", "5.3.4 SHA-384" and the start of "5.3.5 SHA-512" (H0 and H1 only; H2-H7 are on p21). The unread-pages sentence should read: pp13-17 (end of Sec. 3.1, [source text withheld from the public copy]), p20 (Sec. 5.3.3-5.3.5: SHA-256, SHA-384 and first SHA-512 IV words).
+      - **skeptic**: Re-extracted every page of the official PDF (sha256 0455b406...deb82, re-downloaded from nvlpubs.nist.gov, HTTP 200, 833315 bytes) two ways, pdftotext -layout and plain pdftotext, per page; both agree. Record line 21 (git object, origin/main) says: "[source text withheld from the public copy])". Actual content: PDF p13 (printed 8) = item 4 of Sec. 3.1 then "3.2 Operations on Words"; p14 (printed 9) = rest of 3.2; p15 (printed 10) = "4. FUNCTIONS AND CONSTANTS", 4.1, 4.1.1, 4.1.2; p16 (printed 11) = 4.1.3, "4.2 Constants", 4.2.1, 4.2.2; p17 (printed 12) = 4.2.3 constants only, ending in the K table. A grep of pp13-17 for 'Padding', 'PREPROCESSING', '5.1' and '5.3.3/5.3.4/5.3.5' returns nothing in either extraction. "5. PREPROCESSING" and "5.1 Padding the Message" open PDF p18 (printed 13), a page the record says it read and quotes in capture C16. "5.3.3 SHA-256", "5.3.4 SHA-384" and "5.3.5 SHA-512" are all on PDF p20 (printed 15), which also carries the last SHA-224 IV word (H7 = befa4fa4) and only the first two SHA-512 IV words (H0, H1); the remaining SHA-512 IV words H2-H7 are on p21, which the record lists as read. So the description of what pp13-17 contain is wrong for Sec. 5.1 and 5.3.3-5.3.5, and the description of p20 as "SHA-512 IV words" is incomplete. It is a page-content description error only: no quotation, and none of the read/unread page numbers, is affected.
+    - item 38
+      - **check**: fips180-4
+      - **id**: fips180-4-3
+      - **kind**: MISMATCH
+      - **repo_locator**: same reading record, line 216 (C14 'Bears on')
+      - **repo_text**: Two DIFFERENT computation paths ... 'yield the same message digest'.
+      - **source_locator**: Official PDF p25 (printed p20), Sec. 6.1.3
+      - **source_text**: "The alternate method that is described in this section [yields] the same message digest as the SHA-1 computation method described in Sec. 6.1.2."
+      - **note**: Differing word: record 'yield', source 'yields'. A grammatical adaptation placed inside quotation marks in commentary; the C14 block quotation itself reproduces 'yields' correctly. Trivial.
+      - **corrected**: Source words, FIPS 180-4 Sec. 6.1.3, PDF p25 (printed p20): "The alternate method that is described in this section yields the same message digest as the SHA-1 computation method described in Sec. 6.1.2." The commentary at line 216 should either quote 'yields the same message digest' exactly, mark the change as 'yield[s] the same message digest', or move the verb outside the quotation marks: two different computation paths yield 'the same message digest'.
+      - **skeptic**: Real but trivial. Official PDF p25 (printed p20), Sec. 6.1.3, extracted both with pdftotext -layout and plain pdftotext, reads identically: "The alternate method that is described in this section yields the same message digest as the SHA-1 computation method described in Sec. 6.1.2." The record's commentary at line 216 (C14 'Bears on', git object origin/main) puts inside quotation marks 'yield the same message digest'. After normalization that string is not contained in the source: the source has "yields" (singular subject 'The alternate method'); the record inflected it to "yield" to agree with its own plural subject ('Two DIFFERENT computation paths'). The word 'yield' occurs in the document only once, on PDF p23 (Sec. 6 preamble: "alternate computation methods that yield identical results"), so the quoted string appears nowhere in the source. This is a one-letter grammatical adaptation inside quotation marks, not a PDF-extraction artifact, so strictly the quoted words differ from the source. It does not change the meaning, and the C14 verbatim block quotation at line 214 reproduces "yields the same message digest" exactly and on the correct page.
+    - item 39
+      - **check**: definition-citations
+      - **id**: definition-citations-1
+      - **kind**: NOT-FOUND
+      - **repo_locator**: origin/main:L8/L0/semantics/definitions/AUDITONOMOUS_DEFINITION.md:310-312
+      - **repo_text**: [source text withheld from the public copy]
+      - **source_locator**: https://csrc.nist.gov/glossary/term/audit_trail (fetched 2026-11-11, sha256 dce28b9e...)
+      - **source_text**: The page now lists three definitions; the CNSS one reads: "A chronological record that reconstructs and examines the sequence of activities surrounding or leading to a specific operation, procedure, or event in a [source text withheld from the public copy]-2022". The string "A record showing who" occurs 0 times in the page.
+      - **note**: The quoted sentence and the CNSSI 4009-2015 attribution are not on the official page today. The page appears to have been updated to CNSSI 4009-2022 since the repository's 2026-07-30 download; the repository recorded no hash, so this cannot be proved either way. This is a CNSS definition hosted by NIST, outside the six sources named in the task; reported because it sits beside them.
+      - **corrected**: As fetched 2026-11-11, https://csrc.nist.gov/glossary/term/audit_trail does not contain "[source text withheld from the public copy]." and does not cite CNSSI 4009-2015. Its CNSS-sourced definition reads: "A chronological record that reconstructs and examines the sequence of activities surrounding or leading to a specific operation, procedure, or event in a [source text withheld from the public copy]-2022". The other two definitions on the page are sourced to "[source text withheld from the public copy]" ("...in a security-relevant transaction from inception to result.") and "NISTIR 7316 under Audit Trail". The access-record quotation should be marked not reproducible at this URL (no hash was recorded for the 2026-07-30 download), not VERIFIED.
+      - **skeptic**: Re-downloaded https://csrc.nist.gov/glossary/term/audit_trail from the official NIST host (200, 47390 bytes, sha256 6d6b20fb844499167374bee01ba093dbf9a4a7d67ce83c9e729834af34ae5008). My bytes differ from the checker's copy (dce28b9e...) only in one line, a per-request Cloudflare email-protection token (cf-cache-status: DYNAMIC); the visible text extracted with an HTML parser is identical in both copies. The page lists three definitions. The strings "A record showing who", "record showing" and "4009-2015" occur 0 times in the raw HTML. The only CNSS attribution on the page is "CNSSI 4009-2022". The repository (origin/main AUDITONOMOUS_DEFINITION.md:310-312) quotes a different sentence, attributes it to CNSSI 4009-2015 at this URL, and marks it VERIFIED / byte-verified 2026-07-30 with no hash. The words and the attribution are therefore not at the cited location today. Whether the page carried them on 2026-07-30 cannot be established (no hash recorded, no Last-Modified header); the most that can be said is NOT-FOUND today, possibly SOURCE-CHANGED. The repository's second quotation from the same page (reconstruction sense, [source text withheld from the public copy]-53 Rev. 5) IS on the page verbatim.
+    - item 40
+      - **check**: definition-citations
+      - **id**: definition-citations-2
+      - **kind**: MISMATCH
+      - **repo_locator**: origin/main:L8/L5/research/findings/OVERRIDE_NECESSITY_2026-08-04.md:53
+      - **repo_text**: SI-10(1) ... (b) Restrict the use [source text withheld from the public copy] use of the manual override capability.
+      - **source_locator**: SP 800-53r5, [source text withheld from the public copy]
+      - **source_text**: (b) Restrict the use of the manual override capability to only [Assignment: [source text withheld from the public copy] use of the manual override capability.
+      - **note**: The word "Assignment:" is dropped inside the bracket without an ellipsis. Title, item (a) (elided with a marked ellipsis) and item (c) are verbatim. Meaning unchanged.
+      - **corrected**: SP 800-53 Rev. 5, [source text withheld from the public copy]: "(a) Provide a manual override capability for input validation of the following information inputs: [Assignment: organization-defined inputs defined in the base control (SI-10)]; (b) Restrict the use of the manual override capability to only [Assignment: [source text withheld from the public copy] use of the manual override capability." The repository omits the word "Assignment:" in (b).
+      - **skeptic**: Official PDF re-downloaded from nvlpubs.nist.gov (200, 6073678 bytes, sha256 fc63bcd6...1ec6, equal to the checker's copy and to the hash the repository records). SI-10(1) extracted with pdftotext both with and without -layout. With -layout the bracket is split by a page footer ("[Assignment: organization-" / footer / "defined authorized individuals]"); without -layout it reads on one line. Both give item (b) as "...to only [Assignment: organization-defined authorized individuals]; and". The repository blockquote at OVERRIDE_NECESSITY_2026-08-04.md:53 has "[organization-defined authorized individuals]": the word "Assignment:" is dropped inside a verbatim blockquote with no ellipsis, while the same blockquote does mark its elision of (a) with an ellipsis. This is a real word difference, not an extraction artifact. It is minor: title, item (c) and meaning are unchanged.
+    - item 41
+      - **check**: definition-citations
+      - **id**: definition-citations-3
+      - **kind**: MISMATCH
+      - **repo_locator**: origin/main:L8/L5/research/findings/OVERRIDE_NECESSITY_2026-08-04.md:133
+      - **repo_text**: [source text withheld from the public copy]]"
+      - **source_locator**: SP 800-53r5, AC-3(10)
+      - **source_text**: by [Assignment: organization-defined roles]
+      - **note**: "Assignment:" dropped inside the quotation marks. The same file quotes the clause correctly at line 42. Meaning unchanged.
+      - **corrected**: [source text withheld from the public copy]) ACCESS ENFORCEMENT | AUDITED OVERRIDE OF ACCESS CONTROL MECHANISMS ends: "by [Assignment: organization-defined roles]." Line 133 should read "by [Assignment: organization-defined roles]".
+      - **skeptic**: AC-3(10) extracted from the official PDF (same sha256 as recorded) in both pdftotext modes: "Employ an audited override of automated access control mechanisms under [Assignment: organization-defined conditions] by [Assignment: organization-defined roles]." The repository at OVERRIDE_NECESSITY_2026-08-04.md:133 puts "by [organization-defined roles]" inside quotation marks, dropping "Assignment:". The same file quotes the clause correctly at line 42. A real but minor word difference inside quotation marks; meaning unchanged.
+    - item 42
+      - **check**: definition-citations
+      - **id**: definition-citations-4
+      - **kind**: MISATTRIBUTED
+      - **repo_locator**: origin/main:L8/L1/state-space/HUMINT_ENCODE.md:41
+      - **repo_text**: "...[source text withheld from the public copy])
+      - **source_locator**: SP 800-53r5, CM-3(5) CONFIGURATION CHANGE CONTROL | AUTOMATED SECURITY RESPONSE
+      - **source_text**: Implement the following security responses automatically if baseline configurations are changed in an unauthorized manner: [Assignment: organization-defined security responses].
+      - **note**: CM-2(2) and CM-3(3) carry the quoted form verbatim; CM-3(1) reads "Use [Assignment: organization-defined automated mechanisms] to:". CM-3(5) does not contain an "automated mechanisms" assignment at all; it only uses the adverb "automatically". The claim holds for three of the four enhancements named.
+      - **corrected**: The assignment "[Assignment: organization-defined automated mechanisms]" appears in SP 800-53 Rev. 5 at CM-2(2) and CM-3(3) (both "...using [Assignment: organization-defined automated mechanisms].") and at CM-3(1) ("Use [Assignment: organization-defined automated mechanisms] to:"). It does not appear at CM-3(5), which reads: "Implement the following security responses automatically if baseline configurations are changed in an unauthorized manner: [Assignment: organization-defined security responses]." CM-3(5) names automation in the normative text only through the word "automatically".
+      - **skeptic**: Extracted CM-2(2), CM-3(1), CM-3(3) and CM-3(5) from the official PDF in both pdftotext modes; the two extractions agree word for word. CM-2(2): "...of the baseline configuration of the system using [Assignment: organization-defined automated mechanisms]." CM-3(3): "...deploy the updated baseline across the installed base using [Assignment: organization-defined automated mechanisms]." CM-3(1): "Use [Assignment: organization-defined automated mechanisms] to:" (same assignment, verb "Use" rather than "using"). CM-3(5): "Implement the following security responses automatically if baseline configurations are changed in an unauthorized manner: [Assignment: organization-defined security responses]." CM-3(5) has no "automated mechanisms" assignment; its only assignment is "security responses" and automation appears only as the adverb "automatically" and in the title AUTOMATED SECURITY RESPONSE. The repository's "[source text withheld from the public copy])" (HUMINT_ENCODE.md:41) is wrong for CM-3(5).
+    - item 43
+      - **check**: definition-citations
+      - **id**: definition-citations-5
+      - **kind**: MISMATCH
+      - **repo_locator**: origin/main:L8/L1/state-space/HUMINT_ENCODE.md:80
+      - **repo_text**: [source text withheld from the public copy])"
+      - **source_locator**: SP 1011-I-2.0, definition of Autonomy (footnote 5 heading), text lines 732-735
+      - **source_text**: to achieve its goals as assigned by its human operator(s) through designed Human-Robot Interface (HRI) or by another system that the UMS communicates with
+      - **note**: The word "its" is dropped inside the quotation marks. The same file quotes the passage correctly at line 37. Meaning unchanged.
+      - **corrected**: NIST SP 1011-I-2.0, definition of [source text withheld from the public copy] its human operator(s) through designed Human-Robot Interface (HRI) or by [source text withheld from the public copy] quoted fragment at line 80 should read "as assigned by its human operator(s)".
+      - **skeptic**: Re-downloaded SP 1011-I-2.0 from nvlpubs.nist.gov (200, 216691 bytes, sha256 a7b5c3a3...da84, equal to the checker's copy and the repository's recorded hash). In both pdftotext modes the Autonomy definition reads "...to achieve its goals as assigned by its human operator(s) through designed Human-Robot Interface (HRI) or by another system that the UMS communicates with." After whitespace normalization, "as assigned by human operator(s)" occurs 0 times and "as assigned by its human operator(s)" occurs once. I also downloaded Vol. II (SP 1011-II-1.0, 200, 1327094 bytes, sha256 e594879c...6ac9) to see whether the shorter wording comes from there: it has no "assigned by" phrase at all (its restatement stops at "to achieve its goals as assigned [1]"). So the quotation at HUMINT_ENCODE.md:80 drops the word "its" inside quotation marks. Real but minor; line 37 of the same file quotes it correctly.
+    - item 44
+      - **check**: definition-citations
+      - **id**: definition-citations-6
+      - **kind**: COUNT-WRONG
+      - **repo_locator**: origin/main:L8/L1/state-space/HUMINT_ENCODE.md:159-161 (heading "[source text withheld from the public copy]" and "[source text withheld from the public copy]")
+      - **repo_text**: [source text withheld from the public copy]
+      - **source_locator**: SP 800-53r5, [source text withheld from the public copy]
+      - **source_text**: SR-2 to SR-11 is 10 base controls; with CM-2, CM-3 and SA-10 the named set is 13 base controls. Enhancements: SR-2(1); SR-3(1)-(3); SR-4(1)-(4); SR-5(1)-(2); SR-6(1); SR-9(1); SR-11(1)-(3) = 15; CM-2(1)-(7) = 7, of which (1), (4), (5) are withdrawn; CM-3(1)-(8) = 8; SA-10(1)-(7) = 7. Total 37 listed, 34 not withdrawn.
+      - **note**: The named set has 13 controls and 34 active enhancements, not 11 and 27. 27 is reproduced only by leaving out SA-10's seven enhancements (15 + 4 + 8). The zero-hit term counts in the table beneath (natural person, human, witness, judgment, signature) do reproduce exactly, including the whole-document figures 0, 41, 0, 2, 45.
+      - **corrected**: In [source text withheld from the public copy] set SR-2 through SR-11, CM-2, CM-3 and SA-10 comprises 13 base controls and 37 listed control enhancements, of which 34 are active and 3 withdrawn (CM-2(1), CM-2(4), CM-2(5)). By control: SR family 15 (SR-2: 1, SR-3: 3, SR-4: 4, SR-5: 2, SR-6: 1, SR-9: 1, SR-11: 3); CM-2: 7 listed, 4 active; CM-3: 8; SA-10: 7. The heading should read "thirteen controls and thirty-four enhancements" (or state explicitly which controls and enhancements are excluded to reach 11 and 27).
+      - **skeptic**: Counted two ways in the official PDF: the Appendix C summary tables (layout extraction) and the enhancement headings in the catalog body (raw extraction). The set the repository names, "[source text withheld from the public copy]", is 10 SR base controls (SR-2 through SR-11) plus 3 = 13 base controls, not 11. Enhancements listed: SR-2(1); SR-3(1)-(3); SR-4(1)-(4); SR-5(1)-(2); SR-6(1); SR-9(1); SR-11(1)-(3) = 15 (SR-7, SR-8 and SR-10 have none); CM-2(1)-(7) = 7, of which (1), (4) and (5) are marked withdrawn ("W: Incorporated into CM-2." / "W: Incorporated into CM-7."); CM-3(1)-(8) = 8; SA-10(1)-(7) = 7. Total 37 listed, 34 not withdrawn. The figure 27 is reached only as 15 + 4 + 8, that is, leaving out all seven SA-10 enhancements, yet section 6.5 of the same file cites SA-10(7), so they are in scope. The figure 11 would need two SR controls dropped from a range written as SR-2 ... SR-11. The repository states no other definition of the set (the phrase occurs only at line 159). Not an extraction artifact.
+    - item 45
+      - **check**: definition-citations
+      - **id**: definition-citations-7
+      - **kind**: MISATTRIBUTED
+      - **repo_locator**: origin/main:L8/L1/state-space/HUMINT_ENCODE.md:180-181
+      - **repo_text**: [source text withheld from the public copy]
+      - **source_locator**: SP 800-53r5, SR-5(2) Discussion; SR-2(1) statement; SR-3a
+      - **source_text**: SR-5(2) Discussion: "Organizational personnel or independent, external entities conduct assessments of systems, components, products, tools, and services to uncover evidence of tampering, unintentional and intentional vulnerabilities..." (first clause verbatim). SR-2(1): "Establish a supply chain risk management team consisting of [Assignment: organization-defined personnel, roles, and responsibilities] to lead and support the following SCRM activities". SR-3a: "in coordination with [Assignment: organization-defined supply chain personnel]".
+      - **note**: Paraphrase, judged on support only. The universal claim is not supported: in SR-5(2) personnel conduct the assessment, in SR-2(1) personnel lead SCRM activities, and in SR-3a they are coordinated with. The narrower statements next to it (SR-4(1) requires personnel to be identified; SR-10 names no inspector; SR-9 has no human terms) are confirmed.
+      - **corrected**: Not [source text withheld from the public copy] of SP 800-53 Rev. 5 makes the person an object. Of 18 occurrences, most do (SR-1 and SR-11b: recipients, "[Assignment: organization-defined personnel or roles]"; SR-4(1): identified; SR-4(3) Discussion, SR-5 Discussion and SR-11(1): trained). Three do not: SR-5(2) Discussion, "Organizational personnel or independent, external entities conduct assessments of systems, components, products, tools, and services to uncover evidence of tampering..."; SR-2(1), "...team consisting of [Assignment: organization-defined personnel, roles, and responsibilities] to lead and support the following SCRM activities"; SR-3a, "...in coordination with [Assignment: organization-defined supply chain personnel]". The claim should be narrowed, for example: no SR control statement requires that a natural person render the judgment, and where the Discussion of SR-5(2) names personnel as assessors it offers "independent, external entities" as an alternative.
+      - **skeptic**: I enumerated [source text withheld from the public copy] body (SR-1 to SR-12) of the official PDF with a section-aware script, in both pdftotext modes: 18 occurrences. The repository's narrower statements hold (SR-4(1) has 5 occurrences, 2 in the statement and 3 in the Discussion; SR-4(2) has 0; SR-9 and SR-10 name no person). But the universal claim at HUMINT_ENCODE.md:180-181 ("[source text withheld from the public copy]") is contradicted by the text. SR-5(2), whose statement is "Assess the system, system component, or system service prior to selection, acceptance, modification, or update", has the Discussion "Organizational personnel or independent, external entities conduct assessments of systems, components, products, tools, and services to uncover evidence of tampering, unintentional and intentional vulnerabilities, or evidence of non-compliance with supply chain controls." There personnel are the ones performing the assessment the control requires (as one of two alternatives). SR-2(1) statement: "Establish a supply chain risk management team consisting of [Assignment: organization-defined personnel, roles, and responsibilities] to lead and support the following SCRM activities" - personnel as actors. SR-3a: "in coordination with [Assignment: organization-defined supply chain personnel]" - neither identified, tracked, trained nor notified. This is a paraphrase whose content the source does not support; the kind is better described as an unsupported universal than a misattribution, but the problem is real.
+    - item 46
+      - **check**: definition-citations
+      - **id**: definition-citations-8
+      - **kind**: MISMATCH
+      - **repo_locator**: origin/main:L8/L1/state-space/HUMINT_ENCODE.md:240-241
+      - **repo_text**: [source text withheld from the public copy] representatives] to be members of..."
+      - **source_locator**: SP 800-53r5, SA-10(7) DEVELOPER CONFIGURATION MANAGEMENT | SECURITY AND PRIVACY REPRESENTATIVES
+      - **source_text**: Require [Assignment: organization-defined security and privacy representatives] to be included in the [Assignment: organization-defined configuration change management and control process].
+      - **note**: The quotation is verbatim for CM-3(4) ("to be members of the [Assignment: organization-defined configuration change control element]"). SA-10(7) says "to be included in", not "to be members of". Both Discussions do name human offices, as the repository says.
+      - **corrected**: CM-3(4): "Require [Assignment: organization-defined security and privacy representatives] to be members of the [Assignment: organization-defined configuration change control element]." [source text withheld from the public copy] representatives] to be included in the [Assignment: organization-defined configuration change management and control process]." The shared quotation should stop at "representatives] to be..." or quote each enhancement separately.
+      - **skeptic**: Extracted CM-3(4) and SA-10(7) from the official PDF in both pdftotext modes; both agree. CM-3(4): "Require [Assignment: organization-defined security and privacy representatives] to be members of the [Assignment: organization-defined configuration change control element]." [source text withheld from the public copy] representatives] to be included in the [Assignment: organization-defined configuration change management and control process]." The repository (HUMINT_ENCODE.md:240-241) gives one quotation, ending "to be members of...", for both. It is verbatim for CM-3(4) only; SA-10(7) says "to be included in". Both Discussions do name human offices (system security officers, senior agency information security officers, senior agency officials for privacy, system privacy officers), so the surrounding claim stands. Real but minor.
+    - item 47
+      - **check**: definition-citations
+      - **id**: definition-citations-9
+      - **kind**: COUNT-WRONG
+      - **repo_locator**: origin/main:L8/L1/state-space/HUMINT_ENCODE.md:243-244
+      - **repo_text**: [source text withheld from the public copy]
+      - **source_locator**: SP 800-53r5, control statements of SR-2..SR-11, CM-2, CM-3, SA-10 and their enhancements
+      - **source_text**: CM-3(1)(f): "Notify [Assignment: organization-defined personnel] when approved changes to the system are completed." SR-4(1): "...supply chain elements, processes, and personnel associated with..." (twice). SA-10(2): "...using organizational personnel in the absence of a dedicated developer configuration management team." SR-2(1): "[Assignment: organization-defined personnel, roles, and responsibilities]".
+      - **note**: There are more than two. CM-3(1)(f) is an assignment of exactly the same form as SA-10e. SR-4(1) (two uses) and SA-10(2) also use "personnel" in the control statement with no "or roles". Only SR-11b and SR-11(1) carry the "personnel or roles" disjunct in this set.
+      - **corrected**: In the control statements of SR-2 to SR-11, CM-2, CM-3, SA-10 and their enhancements, "personnel" appears without an "or roles" alternative at: SR-3a ("[Assignment: organization-defined supply chain personnel]"), SA-10e ("report findings to [Assignment: organization-defined personnel]"), CM-3(1)(f) ("Notify [Assignment: organization-defined personnel] when approved changes to the system are completed."), SA-10(2) ("using organizational personnel in the absence of a dedicated developer configuration management team") and SR-4(1) (twice, "supply chain elements, processes, and personnel associated with..."); SR-2(1) has "[Assignment: organization-defined personnel, roles, and responsibilities]". That is three bare "personnel" assignment parameters (SR-3a, SA-10e, CM-3(1)(f)), not two, plus three non-parameter uses. Only SR-11b and SR-11(1) use "personnel or roles" in this set.
+      - **skeptic**: I listed every occurrence of "personnel" in CM-2, CM-3, SA-10 and the SR family with a section-aware script that separates control statements from Discussion text (raw extraction; CM-3(1) and SA-10 cross-checked in the layout extraction). In control statements of the named set: SR-2(1) "[Assignment: organization-defined personnel, roles, and responsibilities]"; SR-3a "[Assignment: organization-defined supply chain personnel]"; SR-4(1) twice ("supply chain elements, processes, and personnel associated with..."); SR-11b and SR-11(1) "[Assignment: organization-defined personnel or roles]"; CM-3(1)(f) "Notify [Assignment: organization-defined personnel] when approved changes to the system are completed."; SA-10e "...report findings to [Assignment: organization-defined personnel]."; SA-10(2) "...using organizational personnel in the absence of a dedicated developer configuration management team." CM-2 has no occurrence. Only SR-11b and SR-11(1) carry the "personnel or roles" disjunct. So SR-3a and SA-10e are not the only two normative uses without "or roles": CM-3(1)(f) is an assignment of exactly the same form as SA-10e, and SA-10(2) and SR-4(1) (two uses) also lack it; SR-2(1) has "roles" as a conjunct, not an alternative. The repository's count of two (HUMINT_ENCODE.md:243-244) is wrong.
+    - item 48
+      - **check**: autonomous-definitions
+      - **id**: autonomous-definitions-1
+      - **kind**: MISMATCH
+      - **repo_locator**: autonomous origin/main:L8/L0/semantics/definitions/AUTONOMOUS.md, section 1 table, row [source text withheld from the public copy]), under the heading 'THE CODIFIED DEFINITIONS - verbatim'
+      - **repo_text**: [source text withheld from the public copy]
+      - **source_locator**: NIST SP 1011-I-2.0, section 2 Multi-Domain Terms and Definitions, entry 'Autonomy', printed page 15 (PDF page 16)
+      - **source_text**: A UMS's own ability of integrated sensing, perceiving, analyzing, communicating, planning, decision-making, and acting/executing [<A.4>], to achieve its goals as assigned by its human operator(s) through designed Human-Robot Interface (HRI) or by another system that the UMS communicates with.
+      - **note**: The row labelled verbatim silently drops the source's cross-reference token '<A.4>' after 'acting/executing' (no ellipsis), and adds bold not in the source. The same definition in DEFINITION_LIST_AUTONOMOUS.md row A6 and GLOSSARY_AUTONOMOUS.md [4] includes '<A.4>' and is CONFIRMED verbatim at printed p. 15, so the two repository files disagree with each other; only the DEFINITION_LIST form matches NIST. Likely cause: '<A.4>' is swallowed as an HTML tag by markdown, which the glossary itself flags. Version/date (Version 2.0, October 2008) confirmed.
+      - **corrected**: MISMATCH (minor, internal omission). autonomous origin/main:L8/L0/semantics/definitions/AUTONOMOUS.md line 75, row A6, column 'Verbatim', omits the source's inline cross-reference token '<A.4>' without marking the omission. [source text withheld from the public copy].0, October 2008), section 2 'Multi-Domain Terms and Definitions', entry 'Autonomy', printed page 15 (PDF page 16), reads: "A UMS's own ability of integrated sensing, perceiving, analyzing, communicating, planning, decision-making, and acting/executing <A.4>, to achieve its goals as assigned by its human operator(s) through designed Human-Robot Interface (HRI) or by [source text withheld from the public copy] repository row reads '...and acting/executing, to achieve its goals...' (token '<A.4>' absent; bold added on 'as assigned by its human operator(s)' with no emphasis note). All other words match. The form in DEFINITION_LIST_AUTONOMOUS.md line 28 and GLOSSARY_AUTONOMOUS.md [4](a) includes '<A.4>' and matches the source exactly. Source file: nvlpubs.nist.gov, sha256 a7b5c3a3...f854da84, 216691 bytes, identical to the repository's recorded hash.
+      - **skeptic**: Source identity re-established: I re-downloaded https://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication1011-I-2.0.pdf (HTTP 200, final URL identical, 216691 bytes, sha256 a7b5c3a37c487ec7a15eeae8f3ffb1df7b84992a03e5eefecb3c4dbff854da84) - identical to the checker's copy and to the hash the repository records. Title page reads 'NIST Special Publication 1011-I-2.0 ... Volume I: Terminology, Version 2.0 ... October 2008'; 47 PDF pages. I extracted the passage twice (pdftotext with -layout and without) and per page (-f 16 -l 16): both give, on PDF page 16 carrying printed page number 15, entry 'Autonomy' (footnote marker 5 on the headword): "A UMS's own ability of integrated sensing, perceiving, analyzing, communicating, planning, decision-making, and acting/executing <A.4>, to achieve its goals as assigned by its human operator(s) through designed Human-Robot Interface (HRI) or by [source text withheld from the public copy] token '<A.4>' is printed inline text, not an extraction artefact: the document's own notation rule says 'angular brackets, < >, to point to section 6 RATIONALES FOR TERM DEFINITIONS or APPENDIX A ONGOING DISCUSSIONS OR UNRESOLVED ISSUES', and Appendix item 'A.4.' is about this very definition. (The checker's rendering '[<A.4>]' adds square brackets that are not in the source; the source prints '<A.4>'.) Repository text read from the git object autonomous origin/main:L8/L0/semantics/definitions/AUTONOMOUS.md line 75 (section '1. THE CODIFIED DEFINITIONS - verbatim', column 'Verbatim', label VERIFIED): '...and acting/[source text withheld from the public copy] its human operator(s)** through...'. The raw file bytes contain no '<A.4>' (so this is not a markdown rendering effect) and no ellipsis or 'emphasis added' note anywhere in the file. Normalized containment test: the AUTONOMOUS.md string is NOT contained in either extraction; the same string with ' <A.4>' restored (as in DEFINITION_LIST_AUTONOMOUS.md line 28, GLOSSARY_AUTONOMOUS.md [4](a), and the repository's own verify_fragments.py fragment 4) IS contained in both. So the omission is internal to the quoted span, in a column headed Verbatim, and the repository's own files disagree. The added bold is styling, not a word difference, and I do not count it. Severity: minor - one cross-reference token, no change of meaning. The same omission recurs at origin/main:L8/L6/history/HUB_SURVEY_2026-08-14.md:110, L8/L5/research/review/REQUIREMENTS_BY_BODY_IEEE_ISO_NIST.md:101 and L8/L4/work/computation/deep-research-report.md:64.
+    - item 49
+      - **check**: autonomous-definitions
+      - **id**: autonomous-definitions-2
+      - **kind**: MISATTRIBUTED
+      - **repo_locator**: autonomous origin/main:L7/publications/binder/press-kit/GLOSSARY_AUTONOMOUS.md, entry [5] (b) (supplementary item, same NIST document as A6; carried in DEFINITION_LIST_AUTONOMOUS.md section 3)
+      - **repo_text**: [source text withheld from the public copy]
+      - **source_locator**: NIST SP 1011-I-2.0, entry 'Mode of UMS Operation', associated term 'Fully Autonomous', printed page 22 (PDF page 23)
+      - **source_text**: Fully Autonomous A mode of UMS operation wherein the UMS accomplishes its assigned mission, within a defined scope, without human intervention while adapting to operational and environmental conditions.
+      - **note**: Wording is verbatim, but the page is wrong: the definition is on printed p. 22, under 'Mode of UMS Operation'. Printed p. 15 holds only a pointer ('Fully autonomous - See Mode of UMS Operation - Associated terms'). Not one of the eleven; reported because it sits in the same checked source.
+      - **corrected**: MISATTRIBUTED (page). autonomous origin/main:L7/publications/binder/press-kit/GLOSSARY_AUTONOMOUS.md entry [5](b) cites 'Terms and Definitions, p. 15' (and (f) names the slot '..._p15-fully-autonomous') for the 'Fully Autonomous' definition. In NIST SP 1011-I-2.0 (Version 2.0, October 2008) the definition - "Fully Autonomous / A mode of UMS operation wherein the UMS accomplishes its assigned mission, within a defined scope, without human intervention [source text withheld from the public copy] on printed page 22 (PDF page 23), section 2 'Multi-Domain Terms and Definitions', under the entry 'Mode of Operation for Unmanned Systems, Mode of Unmanned System Operations, or Unmanned System Operational Mode <A.8>', 'Associated terms'. Printed page 15 (PDF page 16) holds only the pointer 'Fully autonomous / See Mode of UMS Operation - Associated terms.' under the entry 'Autonomous'; printed page 18 holds a second pointer of the same form. The quoted wording itself is verbatim. Correct citation: 'Terms and Definitions, p. 22'.
+      - **skeptic**: Same official NIST PDF as above (sha256 a7b5c3a3...f854da84, re-downloaded from nvlpubs.nist.gov and matching). Repository text from the git object autonomous origin/main:L7/publications/binder/press-kit/GLOSSARY_AUTONOMOUS.md lines 380-390, entry [5]: (a) quotes 'Fully Autonomous - A mode of UMS operation wherein the UMS accomplishes its assigned mission, within a defined scope, without human intervention while adapting to operational and environmental conditions.' and (b) says 'Terms and Definitions, p. 15.'; (f) names the served slot 'INST-NIST-SP-1011-I-2.0_p15-fully-autonomous'. Wording: contained verbatim after normalization in both pdftotext extractions (layout and raw). Place: per-page extraction shows the definition on PDF page 23, whose printed folio is 22, as the first 'Associated terms' item under the entry 'Mode of Operation for Unmanned Systems, Mode of Unmanned System Operations, or Unmanned System Operational Mode <A.8>'. PDF page 16 (printed 15) contains only, under the entry 'Autonomous' > 'Associated terms': 'Fully autonomous / See Mode of UMS Operation - Associated terms.' PDF page 19 (printed 18) has a second pointer 'Fully Autonomous / See Mode of UMS Operation- Associated terms.' The document's own table of contents agrees: 'Fully Autonomous ... 18' (pointer) and, under Mode of Operation, 'Fully Autonomous ... 22'. So the page citation p. 15 is wrong for the quoted definition; this is not an extraction artefact (page numbers were read from each page's own footer). DEFINITION_LIST_AUTONOMOUS.md line 58 carries the same wording with no page, so only the glossary entry is affected.
+    - item 50
+      - **check**: zenodo-and-ledger
+      - **id**: zenodo-and-ledger-2
+      - **kind**: MISMATCH
+      - **repo_locator**: auditonomous origin/main:L7/provenance/sources/LEDGER.md line 27, row PR-008
+      - **repo_text**: [source text withheld from the public copy]).
+      - **source_locator**: https://ntrs.nasa.gov/api/citations/20180003358 (fields title, stiType, meetings, publications)
+      - **source_text**: "title": "SEXTANT X-Ray Pulsar Navigation Demonstration: **Additional On-Orbit Results**"; stiType "CONFERENCE_PAPER"; meeting "International Conference on Space Operations (Space Ops 2018)", Marseille, 2018-05-28 to 2018-06-01; publicationDate 2018-05-28; first author "Winternitz, Luke M. B." (17 authors); distribution PUBLIC
+      - **note**: The NTRS number, first author and main title are right. The citation drops the subtitle "Additional On-Orbit Results" and gives no year or venue (2018, SpaceOps 2018). The ledger's own column rule asks for a full bibliographic citation. The subtitle is what the official title uses to mark this paper as the follow-on results paper. The NTRS number does identify it uniquely, so this is an incomplete citation, not a wrong document.
+      - **corrected**: The NTRS record 20180003358 and page 1 of the PDF give the title as "SEXTANT X-ray Pulsar Navigation Demonstration: Additional On-Orbit Results" (NTRS spells it "X-Ray"). A full citation for row PR-008 would read: Winternitz, L. M. B., et al. (2018). SEXTANT X-ray pulsar navigation demonstration: Additional on-orbit results. International Conference on Space Operations (SpaceOps 2018), Marseille, France, 28 May - 1 June 2018 (NASA NTRS 20180003358; report no. GSFC-E-DAA-TN54780). Source place: https://ntrs.nasa.gov/api/citations/20180003358 fields title, meetings, publications, otherReportNumbers; PDF https://ntrs.nasa.gov/api/citations/20180003358/downloads/20180003358.pdf page 1, sha256 8e315ab0440aca059879fca13277387a76c46b552bca51398619c3e8123565c2 (matches the repository's recorded hash).
+      - **skeptic**: Real, but minor: an incomplete title and a missing year, not a wrong document. Repository text (git object auditonomous origin/main:L7/provenance/sources/LEDGER.md, line 27): "[source text withheld from the public copy])." Official host: ntrs.nasa.gov, the NASA Technical Reports Server, NASA's own repository and the issuer of the NTRS number. Re-established two ways. (1) Record: https://ntrs.nasa.gov/api/citations/20180003358, HTTP 200, 7800 bytes, sha256 9b6f4f78...b338 (identical to the checker's copy): title "SEXTANT X-Ray Pulsar Navigation Demonstration: Additional On-Orbit Results", stiType CONFERENCE_PAPER, first of 17 authors "Winternitz, Luke M. B.", meeting "International Conference on Space Operations (Space Ops 2018)", Marseille, France, 2018-05-28 to 2018-06-01, publicationDate 2018-05-28, report number GSFC-E-DAA-TN54780. (2) The document itself: https://ntrs.nasa.gov/api/citations/20180003358/downloads/20180003358.pdf, HTTP 200, 9807425 bytes, 10 pages, sha256 8e315ab0440aca059879fca13277387a76c46b552bca51398619c3e8123565c2; page 1 title, extracted with pdftotext both with and without -layout: "SEXTANT X-ray Pulsar Navigation Demonstration: Additional On-Orbit Results", first author "Luke M. B. Winternitz". Recorded identity is CONFIRMED: that sha256 equals the repository's own recorded prefix/suffix for the held file ("8e315ab0440aca05..." in L7/peering/private/egress/peer-1/object-1/RECONCILIATION_FROM_L6_2026-08-16.md line 23; "8e315ab0...65c2" in L7/provenance/sources/staging-records/standards/SOURCE_LEDGER.md line 333), so the NTRS number, first author and held bytes are all right. What is wrong is the title as written: it stops at the colon, drops the subtitle "Additional On-Orbit Results" with no truncation mark (rows PR-005 and PR-006 in the same table mark their shortened titles with an ellipsis), and gives no year, while the ledger's own column rule (LEDGER.md line 84) demands a "full bibliographic citation". The omission matters because the author-plus-title text is not unique: NTRS's own catalogue (https://ntrs.nasa.gov/api/citations/search, phrase query, HTTP 200, 47946 bytes, sha256 54217a06...a6026, 6 hits) lists the same main title with three different subtitles, including another Winternitz-first-author conference paper, NTRS 20160003122 "SEXTANT X-Ray Pulsar Navigation Demonstration: Flight System and Test Results" (2016), plus 20180001252 "...: Initial On-Orbit Results" (Mitchell, 2018). Only the NTRS number tells them apart. The repository itself holds the full title verbatim in SOURCE_LEDGER.md line 333 ("SEXTANT X-ray Pulsar Navigation Demonstration: Additional On-Orbit Results."), so the LEDGER.md row is the shortened one. Note: year and venue come from the NTRS record; the PDF's first page prints neither. The NTRS HTML page hash differs between downloads (dynamic page, same 121743 bytes); the API record is byte-stable.
+  - **rejected_problems**
+    - item 1
+      - **check**: sp800-53
+      - **id**: sp800-53-8
+      - **repo_locator**: auditonomous origin/main:L7/provenance/sources/staging-records/standards/extracted/SP800-53r5_AC-AU_verbatim.md line 18 (definition of the marker) and the 27 marker lines 137, 162, 207, 362, 371, 534, 652, 656, 759, 768, 772, 797, 824, 828, 1001, 1005, 1009, 1013, 1032, 1107, 1151, 1168, 1180, 1184, 1262, 1349, 1358
+      - **why_not**: The facts the checker reports are correct, but they do not make the repository's words, attribution, count or recorded identity wrong. I re-downloaded Rev. 4 from https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-53r4.pdf (HTTP 200, 5,301,858 bytes, sha256 e6f8a1aae41168f4ec9edc5b34aee0a21f2c888c78bf1de33e6ec63a0209db4e, identical to the checker's file) and parsed Appendix F for the AC and AU families: Rev. 4 already shows 19 AC/AU items as withdrawn (e.g. page F-24 'AC-13 SUPERVISION AND REVIEW — ACCESS CONTROL [Withdrawn: Incorporated into AC-2 and AU-6].', page F-25 'AC-15 AUTOMATED MARKING [Withdrawn: Incorporated into MP-3].'). Seventeen of them are among the file's 27 marked entries (AC-3(1), AC-3(6), AC-4(16), AC-7(1), AC-14(1), AC-15, AC-17(5), AC-17(7), AC-17(8), AC-18(2), AC-19(1), AC-19(2), AU-2(1), AU-2(2), AU-2(4), AU-6(2), AU-10(5)); the other two are AC-13 and AC-19(3), which the file does not mark. Ten were not withdrawn in Rev. 4 and are [source text withheld from the public copy](10), AC-4(18), AU-2(3), AU-3(2), AU-6(10), AU-7(2), AU-8(1), AU-8(2), AU-14(2), AU-15. However, '[WITHDRAWN in Rev. 5]' is the file's own notation, declared as such at line 18 ('[source text withheld from the public copy] ...'); it is not offered as a quotation, and the file's stated scope is the Control: statements, which withdrawn controls do not have. Its plain reading in a file about the Rev. 5 document, 'withdrawn in the Rev. 5 text', is true for all 27 marked entries: every one is shown as '[Withdrawn: ...]' in the Rev. 5 PDF, and no marked entry is un-withdrawn in the source. The reading 'first withdrawn by Revision 5' is one the file never states. The checker itself classed this as interpretive and not a transcription error. It is an ambiguity of wording and an omission of the source's destination note, not an error of fact. The two real defects next to it (AC-13 absent, AC-19(3) unmarked) are already covered by sp800-53-1 and sp800-53-2.
+    - item 2
+      - **check**: rfc6962
+      - **id**: rfc6962-4
+      - **repo_locator**: auditonomous origin/main:L7/provenance/sources/staging-records/library/reading/RFC6962_Certificate-Transparency.md line 364 (Recorded absences, second bullet)
+      - **why_not**: The record's statement is literally correct, so this is not an error in the words or the count. In the official text, a case-insensitive search gives zero hits for each of 'rewrite', 'delete', 'erase', 'revert', 'undo', 'immutab', 'backward' and 'reverse' (and also for the stems 'rewrit', 'eras' and 'revers'). I checked the three line-end hyphens in the file (lines 907, 922, 1363); none hides one of these words. The HTML rendering gives the same result. The word 'delete' does not occur; what occurs once is the inflected form 'deleting' (section 3.2, p.12, lines 657-659: 'extracting the TBSCertificate from it and deleting the SCT extension.'), which a search for 'delete' does not match. The checker's observation is accurate, but it is a caveat about search method, not a mismatch. The passage concerns stripping an extension from a certificate, not log entries, so the record's conclusion is unaffected. An optional tightening for the record: say that the stem 'delet' has one hit, 'deleting' in section 3.2, unrelated to log contents.
+    - item 3
+      - **check**: rfc6962
+      - **id**: rfc6962-6
+      - **repo_locator**: auditonomous origin/main:L7/provenance/sources/staging-records/library/reading/RFC6962_Certificate-Transparency.md lines 35, 163, 171 and 371
+      - **why_not**: The facts are as the checker states, but they are not an error in the words. The source has 'and the signatures on the data structures [source text withheld from the public copy], p.21, lines 1168-1169), 'however, its shape is uniquely determined by the number of leaves.' (section 2.1, p.5, line 248) and 'At each step up the tree (towards the root), a node from the audit path is combined' (section 2.1.1, p.5, lines 259-260), confirmed in the text and the HTML rendering. The record changes only the first letter of a quoted fragment to fit its own sentence: a capital when the fragment opens a sentence (lines 35 and 163), lower case when it sits inside one (lines 171 and 371). Every word, the punctuation and the section are the same, and adjusting the initial capital of a fragment is an ordinary quoting convention that changes no meaning. The record's promise that no capital was altered (line 29) is made about the captures, and the captures of these same passages (C9 at line 161, C10 at line 169) and the absence bullets (lines 365 and 371) carry the source's own capitals.
+    - item 4
+      - **check**: rfc9162
+      - **id**: rfc9162-10
+      - **repo_locator**: aybllc/auditonomous origin/main:L7/provenance/sources/staging-records/library/reading/RFC9162_Certificate-Transparency-v2.md line 431 ('Bears on' for capture C37)
+      - **why_not**: The difference exists as described but is below the bar. The official sentence (Section 8.2, lines 2014-2015) is "A monitor MUST at least inspect every new entry in every log it watches, and it MAY also choose to keep copies of entire logs." The record's line 431 quotes the first clause inside its commentary and closes it with a full stop inside the quotation marks. Every word, their order and the attribution are right. The full sentence is given verbatim two lines above in capture C37 (line 429), and the commentary goes on to discuss the rest of the sentence. A terminal stop placed inside the closing quotation mark of a truncated inline quotation is quotation style, not a wording error.
+    - item 5
+      - **check**: rfc9162
+      - **id**: rfc9162-11
+      - **repo_locator**: aybllc/auditonomous origin/main:L7/provenance/sources/staging-records/library/reading/RFC9162_Certificate-Transparency-v2.md line 455 ('Bears on' for capture C40)
+      - **why_not**: Same case as rfc9162-10. The official sentence (Section 8.3, lines 2092-2094) is "The action taken by the auditor, if an audit fails, is not specified, but note that in general, if an audit fails, the auditor is in possession of signed proof of the log's misbehavior." The record's line 455 quotes the first clause with a full stop inside the quotation marks. No word differs; the same paragraph quotes "signed proof of the log's misbehavior"; capture C40 (line 453) has the whole sentence verbatim; line 536 quotes the same clause without the stop. Terminal punctuation of a truncated inline quotation only.
+    - item 6
+      - **check**: rfc9162
+      - **id**: rfc9162-12
+      - **repo_locator**: aybllc/auditonomous origin/main:L7/provenance/sources/staging-records/library/reading/RFC9162_Certificate-Transparency-v2.md line 235 ('Bears on' for capture C13)
+      - **why_not**: Letter case only. The official text (Section 2.1.4, line 479) reads "first m inputs D[0:m] are equal in both trees." The record's line 235 writes 'are equal IN BOTH TREES' in commentary that uses capitals for emphasis throughout. The words, their order and the attribution are right, and capture C13 (line 233) gives the sentence verbatim in lower case. The capitals are emphasis added inside quotation marks without saying so; that is a presentation point, not a wrong word.
+    - item 7
+      - **check**: rfc9162
+      - **id**: rfc9162-13
+      - **repo_locator**: aybllc/auditonomous origin/main:L7/provenance/sources/staging-records/library/reading/RFC9162_Certificate-Transparency-v2.md line 413 ('Bears on' for capture C35)
+      - **why_not**: Letter case only. The official text (Section 8, lines 1896-1897) reads "the signatures on the data structures prevent the log from denying that misbehavior." The record's line 413 writes 'prevent the log from DENYING that misbehavior'. The words, order and attribution are right; the same words appear in lower case in capture C35 (line 411) and at line 541. Emphasis capitals added inside quotation marks without saying so; presentation, not a wrong word.
+    - item 8
+      - **check**: autonomous-definitions
+      - **id**: autonomous-definitions-3
+      - **repo_locator**: autonomous origin/main:L8/L0/semantics/definitions/AUTONOMOUS.md, section 6, boxed 'falsification condition has been met' quote attributed to EASA Concept Paper Issue 02 (supplementary item, same EASA document as A9)
+      - **why_not**: Source identity re-established: re-downloaded https://www.easa.europa.eu/en/downloads/139504/en (HTTP 200, 7770171 bytes, sha256 daa1525eb50fd31c3bad8928c012324a002cacffb9e4ac52591f7913e0b342ed) - identical to the checker's copy and to the repository's recorded hash and size; page header 'EASA Concept Paper: guidance for Level 1 & 2 machine learning applications / Issue 02'. Passage extracted twice (pdftotext -layout and raw) and per page: it is on PDF page 30, footer 'Page 29 of 283', in section C.2.1.4 'Classification of the AI application', and reads: 'A strong prerequisite for level 2 (both for 2A and 2B) is the ability for the end user to intervene in every decision-making and/or action implementation of the AI-based system, whereas in level 3A applications, the ability of the end user to override the authority of the AI-based system is limited to cases where it is necessary to ensure safety of the operations (e.g. an operator supervising a fleet of UAS, terminating the operation of one given UAS upon alerting).' Repository text from the git object autonomous origin/main:L8/L0/semantics/definitions/AUTONOMOUS.md lines 279-283 quotes the same sentence from 'A strong prerequisite' through 'ensure safety of the operations' and closes it with a full stop and closing quotation mark, attributed to 'EASA Concept Paper Issue 02'. Normalized containment: the repository's quotation without its final full stop IS contained in both extractions as one contiguous run; every quoted word is identical and in order; the attribution (document and issue) is correct. The checker's observation is factually accurate and is not an extraction artefact - the source sentence does continue with a 20-word parenthetical example that the repository drops without an ellipsis - but no word, attribution, count or recorded identity is wrong. The only difference is the closing punctuation mark at an end-of-quotation truncation, which does not change the meaning (the dropped example, 'terminating the operation of one given UAS upon alerting', in fact supports the repository's point) and falls under quotation style rather than a wording mismatch. The correct classification is CONFIRMED with a note, not MISMATCH. For the record, the repository's own research file L8/L5/research/findings/FINDING_overridability_third_axis.md lines 28-32 and staging record sources___lane3_aviation.md section 4.3 quote the full sentence including the parenthetical, so the complete text is held and correctly reproduced elsewhere in the same repository. (The only other occurrence of 'override the authority of the AI-based system' in the document is the 'Safeguarded' definition, which has different wording and is not what the repository quotes.)
+    - item 9
+      - **check**: zenodo-and-ledger
+      - **id**: zenodo-and-ledger-1
+      - **repo_locator**: auditonomous origin/main:L7/provenance/sources/LEDGER.md line 66, row STD-033
+      - **why_not**: Not a mismatch: no word, attribution, count or recorded identity in the row is wrong. Repository text (git object auditonomous origin/main:L7/provenance/sources/LEDGER.md, line 66): "[source text withheld from the public copy]." Re-established from www.rfc-editor.org (the RFC Editor's own host), by three independent routes, all HTTP 200: (a) https://www.rfc-editor.org/rfc/rfc6962.json, 1275 bytes, sha256 d8c2a420...e2b1 (identical to the checker's copy): doc_id RFC6962, title "Certificate Transparency", [source text withheld from the public copy]. Kasper, pub_date "June 2013", status EXPERIMENTAL, obsoleted_by ["RFC9162"]; (b) https://www.rfc-editor.org/rfc/rfc6962.txt, 55048 bytes, sha256 08fdf31c...52af: masthead "Request for Comments: 6962 / Category: Experimental / June 2013 / Certificate Transparency", authors Laurie, Langley, Kasper; (c) https://www.rfc-editor.org/info/rfc6962/, 336904 bytes, sha256 cb13f16b...7f52 (identical to the checker's): "Obsoleted by (1) [source text withheld from the public copy].0. Date published June 2013 [source text withheld from the public copy]. Kasper". Cross-check on RFC 9162 (rfc9162.json sha256 717b8336...e0ca; rfc9162.txt 128266 bytes sha256 a0e432ce...081f): header line "Obsoletes: 6962", "Category: Experimental", December 2021. So every element of the row (authors, year, title, RFC number, issuing body) is CONFIRMED. The checker's facts are true (RFC 6962 is obsoleted by RFC 9162; both are Experimental), but the complaint is an omission, and the ledger's own column rules (LEDGER.md lines 83-89) do not ask for it: [source text withheld from the public copy]"; Label = evidence status from a fixed vocabulary that has no currency/obsolescence value; ID = a "[source text withheld from the public copy]-...)", i.e. a shelf class (the file sits in library/standards/ietf/), not an assertion of Standards-Track status. The repository also does record both facts where it reads the document: origin/main:L7/provenance/sources/staging-records/library/reading/RFC6962_Certificate-Transparency.md line 15 ("[source text withheld from the public copy]."), line 17 ("Category: Experimental ... [source text withheld from the public copy]"), lines 33 and 103; and RFC9162_Certificate-Transparency-v2.md line 13 ("Obsoletes RFC 6962"). The recorded sha256 9e5060bbf9850ebd... is of a privately held browser-print PDF and cannot be compared with any RFC Editor file (rfc6962.pdf returns 404; the RFC Editor's own pdfrfc/rfc6962.txt.pdf is a different rendering, sha256 5cef85c6...dcf7), so no SOURCE-CHANGED finding is possible. Optional improvement only, not an error: annotate STD-033 "Experimental; obsoleted by RFC 9162 (STD-034)" and STD-034 "Experimental; obsoletes RFC 6962 (STD-033)".
+  - **unverified_problems**: (empty)
+  - **failed_checks**: (empty)
+- **workflowProgress**
+  - item 1
+    - **type**: workflow_phase
+    - **index**: 1
+    - **title**: Check
+  - item 2
+    - **type**: workflow_phase
+    - **index**: 2
+    - **title**: Verify
+  - item 3
+    - **type**: workflow_agent
+    - **index**: 1
+    - **label**: check:sp800-53
+    - **phaseIndex**: 1
+    - **phaseTitle**: Check
+    - **agentId**: acebbd288731271ea
+    - **model**: claude-fable-5-2
+    - **state**: done
+    - **startedAt**: 1794423892136
+    - **queuedAt**: 1794423892108
+    - **attempt**: 1
+    - **lastToolName**: StructuredOutput
+    - **lastToolSummary**: sp800-53 — transcription [source text withheld from the public copy]…
+    - **promptPreview**: You are one agent in a verification workflow. You compare what two research repositories SAY a public primary source says with what the source ACTUALLY says at its issuing body's own host. The repositories are read-only.
+
+      REPOSITORIES (refs already fetched; do not fetch them)
+      - /home/user/auditonomous = aybllc/auditonomous. Use ref origin/main (2165144). A second state, origin/claude/book-structur…
+    - **promptFramed**: yes
+    - **lastProgressAt**: 1794425301237
+    - **tokens**: 302529
+    - **toolCalls**: 91
+    - **durationMs**: 1409101
+    - **resultPreview**: {"check":"sp800-53 — transcription [source text withheld from the public copy] and AU. Repository file: aybllc/auditonomous origin/main (2165144) L7/provenance/sources/staging-records/standards/extracted/SP800-53r5_AC-AU_verbatim.md (blob ef187b5c, 60,267 bytes, 1,379 lines, 215 entries), read through git objects only. Compared with the PDF at nvlpubs.nist.gov (pdftotext -layout, poppler 24.02.0). Scrip…
+  - item 4
+    - **type**: workflow_agent
+    - **index**: 2
+    - **label**: check:nist-requirements
+    - **phaseIndex**: 1
+    - **phaseTitle**: Check
+    - **agentId**: a4e6617eee51f6acf
+    - **model**: claude-fable-5-2
+    - **state**: done
+    - **startedAt**: 1794423892136
+    - **queuedAt**: 1794423892108
+    - **attempt**: 1
+    - **lastToolName**: StructuredOutput
+    - **lastToolSummary**: nist-requirements: the NIST requirements extraction, audito…
+    - **promptPreview**: You are one agent in a verification workflow. You compare what two research repositories SAY a public primary source says with what the source ACTUALLY says at its issuing body's own host. The repositories are read-only.
+
+      REPOSITORIES (refs already fetched; do not fetch them)
+      - /home/user/auditonomous = aybllc/auditonomous. Use ref origin/main (2165144). A second state, origin/claude/book-structur…
+    - **promptFramed**: yes
+    - **lastProgressAt**: 1794425480892
+    - **tokens**: 381549
+    - **toolCalls**: 66
+    - **durationMs**: 1585756
+    - **resultPreview**: {"check":"nist-requirements: the NIST requirements extraction, auditonomous origin/main (2165144) L8/L4/work/computation/nist-requirements-for-autonomouos.md (blob 89fa56e, 57,042 bytes, 404 lines; identical blob on origin/claude/book-structure-roadmap-k8ap82), tested against SP 1011-I-2.0, SP 1011-II-1.0, AI 100-1 and [source text withheld from the public copy] served by nvlpubs.nist.gov on 2026-11-11","sources":[{"name…
+  - item 5
+    - **type**: workflow_agent
+    - **index**: 3
+    - **label**: check:rfc6962
+    - **phaseIndex**: 1
+    - **phaseTitle**: Check
+    - **agentId**: abbb4ccccb59b5756
+    - **model**: claude-fable-5-2
+    - **state**: done
+    - **startedAt**: 1794425301244
+    - **queuedAt**: 1794423892108
+    - **attempt**: 1
+    - **lastToolName**: StructuredOutput
+    - **lastToolSummary**: RFC 6962, Certificate Transparency (label rfc6962): officia…
+    - **promptPreview**: You are one agent in a verification workflow. You compare what two research repositories SAY a public primary source says with what the source ACTUALLY says at its issuing body's own host. The repositories are read-only.
+
+      REPOSITORIES (refs already fetched; do not fetch them)
+      - /home/user/auditonomous = aybllc/auditonomous. Use ref origin/main (2165144). A second state, origin/claude/book-structur…
+    - **promptFramed**: yes
+    - **lastProgressAt**: 1794427084076
+    - **tokens**: 373256
+    - **toolCalls**: 62
+    - **durationMs**: 1782832
+    - **resultPreview**: {"check":"RFC 6962, Certificate Transparency (label rfc6962): official text and status at www.rfc-editor.org; the two stored copies and the ct-lane sheet in Autonomous; every quotation and section claim in the Auditonomous reading record","sources":[{"name":"RFC 6962 plain text, the canonical edition (www.rfc-editor.org is the RFC Editor's own host, as the task names)","official_url":"https://www.…
+  - item 6
+    - **type**: workflow_agent
+    - **index**: 4
+    - **label**: check:rfc9162
+    - **phaseIndex**: 1
+    - **phaseTitle**: Check
+    - **agentId**: ade5f89dded692c15
+    - **model**: claude-fable-5-2
+    - **state**: done
+    - **startedAt**: 1794425480898
+    - **queuedAt**: 1794423892108
+    - **attempt**: 1
+    - **lastToolName**: StructuredOutput
+    - **lastToolSummary**: rfc9162 — [source text withheld from the public copy].0 (A…
+    - **promptPreview**: You are one agent in a verification workflow. You compare what two research repositories SAY a public primary source says with what the source ACTUALLY says at its issuing body's own host. The repositories are read-only.
+
+      REPOSITORIES (refs already fetched; do not fetch them)
+      - /home/user/auditonomous = aybllc/auditonomous. Use ref origin/main (2165144). A second state, origin/claude/book-structur…
+    - **promptFramed**: yes
+    - **lastProgressAt**: 1794427685394
+    - **tokens**: 424450
+    - **toolCalls**: 89
+    - **durationMs**: 2204495
+    - **resultPreview**: {"check":"rfc9162 — [source text withheld from the public copy].0 (Auditonomous reading record; Autonomous ct-lane stored copies and sheet)","sources":[{"name":"RFC 9162 plain text as served by the RFC Editor. Host www.rfc-editor.org is the RFC Editor's own site, the publisher of the RFC series; the RFC itself points there for its status and errata.","official_url":"https://www.rfc-editor.org/rfc…
+  - item 7
+    - **type**: workflow_agent
+    - **index**: 5
+    - **label**: check:fips180-4
+    - **phaseIndex**: 1
+    - **phaseTitle**: Check
+    - **agentId**: aaf0084f7f50cd44f
+    - **model**: claude-fable-5-2
+    - **state**: done
+    - **startedAt**: 1794427084085
+    - **queuedAt**: 1794423892108
+    - **attempt**: 1
+    - **lastToolName**: StructuredOutput
+    - **lastToolSummary**: FIPS 180-4 Secure Hash Standard: reading record and LEDGER …
+    - **promptPreview**: You are one agent in a verification workflow. You compare what two research repositories SAY a public primary source says with what the source ACTUALLY says at its issuing body's own host. The repositories are read-only.
+
+      REPOSITORIES (refs already fetched; do not fetch them)
+      - /home/user/auditonomous = aybllc/auditonomous. Use ref origin/main (2165144). A second state, origin/claude/book-structur…
+    - **promptFramed**: yes
+    - **lastProgressAt**: 1794427252185
+    - **tokens**: 114153
+    - **toolCalls**: 10
+    - **durationMs**: 168099
+    - **resultPreview**: {"check":"FIPS 180-4 Secure Hash Standard: reading record and LEDGER row STD-002 in aybllc/auditonomous (origin/main 2165144) versus the official NIST PDF and CSRC page","sources":[{"name":"[source text withheld from the public copy]), August 2015 (PDF)","official_url":"https://nvlpubs.nist.gov/nistpubs/FIPS/NIST.FIPS.180-4.pdf","final_url":"https://nvlpubs.nist.gov/nistpubs/FIPS/NIST.FIPS.180-4.pdf…
+  - item 8
+    - **type**: workflow_agent
+    - **index**: 6
+    - **label**: check:definition-citations
+    - **phaseIndex**: 1
+    - **phaseTitle**: Check
+    - **agentId**: a0fcead9981edf24d
+    - **model**: claude-fable-5-2
+    - **state**: done
+    - **startedAt**: 1794427252188
+    - **queuedAt**: 1794423892109
+    - **attempt**: 1
+    - **lastToolName**: StructuredOutput
+    - **lastToolSummary**: definition-citations: public-source quotations, control ide…
+    - **promptPreview**: You are one agent in a verification workflow. You compare what two research repositories SAY a public primary source says with what the source ACTUALLY says at its issuing body's own host. The repositories are read-only.
+
+      REPOSITORIES (refs already fetched; do not fetch them)
+      - /home/user/auditonomous = aybllc/auditonomous. Use ref origin/main (2165144). A second state, origin/claude/book-structur…
+    - **promptFramed**: yes
+    - **lastProgressAt**: 1794427606175
+    - **tokens**: 145957
+    - **toolCalls**: 20
+    - **durationMs**: 353987
+    - **resultPreview**: {"check":"definition-citations: public-source quotations, control identifiers and counts in the Auditonomous definition, findings and state-space files (auditonomous origin/main 2165144) versus NIST SP 800-53 Rev. 5, FIPS 180-4, AI 100-1, SP 1011 (ALFUS) Vol. I and II, RFC 6962, RFC 9162 (plus RFC 4949 and the CSRC glossary, which the definition file also quotes)","sources":[{"name":"NIST SP 800-5…
+  - item 9
+    - **type**: workflow_agent
+    - **index**: 7
+    - **label**: check:autonomous-definitions
+    - **phaseIndex**: 1
+    - **phaseTitle**: Check
+    - **agentId**: a62b25315ae6c964f
+    - **model**: claude-fable-5-2
+    - **state**: done
+    - **startedAt**: 1794427606181
+    - **queuedAt**: 1794423892109
+    - **attempt**: 1
+    - **lastToolName**: StructuredOutput
+    - **lastToolSummary**: autonomous-definitions: codified definitions A1-A11 of "aut…
+    - **promptPreview**: You are one agent in a verification workflow. You compare what two research repositories SAY a public primary source says with what the source ACTUALLY says at its issuing body's own host. The repositories are read-only.
+
+      REPOSITORIES (refs already fetched; do not fetch them)
+      - /home/user/auditonomous = aybllc/auditonomous. Use ref origin/main (2165144). A second state, origin/claude/book-structur…
+    - **promptFramed**: yes
+    - **lastProgressAt**: 1794427806814
+    - **tokens**: 122557
+    - **toolCalls**: 12
+    - **durationMs**: 200633
+    - **resultPreview**: {"check":"autonomous-definitions: codified definitions A1-A11 of \"autonomous/autonomy\" in aybllc/autonomous (origin/main c9076c3), files L8/L0/semantics/definitions/AUTONOMOUS.md section 1, DEFINITION_LIST_AUTONOMOUS.md section 1, with citation detail from L7/publications/binder/press-kit/GLOSSARY_AUTONOMOUS.md, tested against the issuing bodies' own hosts","sources":[{"name":"A6 NIST SP 1011-I-…
+  - item 10
+    - **type**: workflow_agent
+    - **index**: 8
+    - **label**: check:zenodo-and-ledger
+    - **phaseIndex**: 1
+    - **phaseTitle**: Check
+    - **agentId**: a77e72cd42a1a91bf
+    - **model**: claude-fable-5-2
+    - **state**: done
+    - **startedAt**: 1794427685401
+    - **queuedAt**: 1794423892109
+    - **attempt**: 1
+    - **lastToolName**: StructuredOutput
+    - **lastToolSummary**: zenodo-and-ledger: identities of public sources in the 7lm …
+    - **promptPreview**: You are one agent in a verification workflow. You compare what two research repositories SAY a public primary source says with what the source ACTUALLY says at its issuing body's own host. The repositories are read-only.
+
+      REPOSITORIES (refs already fetched; do not fetch them)
+      - /home/user/auditonomous = aybllc/auditonomous. Use ref origin/main (2165144). A second state, origin/claude/book-structur…
+    - **promptFramed**: yes
+    - **lastProgressAt**: 1794427828252
+    - **tokens**: 96773
+    - **toolCalls**: 6
+    - **durationMs**: 142851
+    - **resultPreview**: {"check":"zenodo-and-ledger: identities of public sources in the 7lm source ledger (Zenodo record 17271561) and citation check of the publicly recorded rows of the auditonomous L6 source ledger (NIST, RFC, ITU-T, NASA NTRS)","sources":[{"name":"Zenodo record 17271561 metadata (API)","official_url":"https://zenodo.org/api/records/17271561","http_status":"200","final_url":"https://zenodo.org/api/rec…
+  - item 11
+    - **type**: workflow_agent
+    - **index**: 9
+    - **label**: verify:sp800-53
+    - **phaseIndex**: 2
+    - **phaseTitle**: Verify
+    - **agentId**: acdf9e8834159d223
+    - **model**: claude-fable-5-2
+    - **state**: done
+    - **startedAt**: 1794427806843
+    - **queuedAt**: 1794425301268
+    - **attempt**: 1
+    - **lastToolName**: StructuredOutput
+    - **promptPreview**: You are one agent in a verification workflow. You compare what two research repositories SAY a public primary source says with what the source ACTUALLY says at its issuing body's own host. The repositories are read-only.
+
+      REPOSITORIES (refs already fetched; do not fetch them)
+      - /home/user/auditonomous = aybllc/auditonomous. Use ref origin/main (2165144). A second state, origin/claude/book-structur…
+    - **promptFramed**: yes
+    - **lastProgressAt**: 1794428012459
+    - **tokens**: 106092
+    - **toolCalls**: 13
+    - **durationMs**: 205616
+    - **resultPreview**: {"verdicts":[{"id":"sp800-53-1","real":true,"reasoning":"Re-downloaded https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-53r5.pdf (HTTP 200, 6,073,678 bytes, sha256 fc63bcd61715d0181dd8e85998b1e6201ae3515fc6626102101cab1841e11ec6) into my own directory; it is byte-identical to the checker's file and to the hash and size the repository records at lines 9-10. Extracted with pdftotext…
+  - item 12
+    - **type**: workflow_agent
+    - **index**: 10
+    - **label**: verify:nist-requirements
+    - **phaseIndex**: 2
+    - **phaseTitle**: Verify
+    - **agentId**: a918cc9547dec9f0d
+    - **model**: claude-fable-5-2
+    - **state**: done
+    - **startedAt**: 1794427828258
+    - **queuedAt**: 1794425480918
+    - **attempt**: 1
+    - **lastToolName**: StructuredOutput
+    - **promptPreview**: You are one agent in a verification workflow. You compare what two research repositories SAY a public primary source says with what the source ACTUALLY says at its issuing body's own host. The repositories are read-only.
+
+      REPOSITORIES (refs already fetched; do not fetch them)
+      - /home/user/auditonomous = aybllc/auditonomous. Use ref origin/main (2165144). A second state, origin/claude/book-structur…
+    - **promptFramed**: yes
+    - **lastProgressAt**: 1794428072011
+    - **tokens**: 118630
+    - **toolCalls**: 18
+    - **durationMs**: 243753
+    - **resultPreview**: {"verdicts":[{"id":"nist-requirements-1","real":true,"reasoning":"Re-downloaded SP 1011-II-1.0 from https://doi.org/10.6028/NIST.sp.1011-II-1.0 -> https://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication1011-II-1.0.pdf (HTTP 200, 1,327,094 bytes, sha256 e594879c...3c6ac9, identical to the checker's file). Extracted with pdftotext default, -layout, -raw and with pypdf; all four give the s…
+  - item 13
+    - **type**: workflow_agent
+    - **index**: 11
+    - **label**: verify:rfc6962
+    - **phaseIndex**: 2
+    - **phaseTitle**: Verify
+    - **agentId**: a4294daa05de095a7
+    - **model**: claude-fable-5-2
+    - **state**: done
+    - **startedAt**: 1794428012463
+    - **queuedAt**: 1794427084111
+    - **attempt**: 1
+    - **lastToolName**: StructuredOutput
+    - **promptPreview**: You are one agent in a verification workflow. You compare what two research repositories SAY a public primary source says with what the source ACTUALLY says at its issuing body's own host. The repositories are read-only.
+
+      REPOSITORIES (refs already fetched; do not fetch them)
+      - /home/user/auditonomous = aybllc/auditonomous. Use ref origin/main (2165144). A second state, origin/claude/book-structur…
+    - **promptFramed**: yes
+    - **lastProgressAt**: 1794428232097
+    - **tokens**: 111714
+    - **toolCalls**: 9
+    - **durationMs**: 219634
+    - **resultPreview**: {"verdicts":[{"id":"rfc6962-1","real":true,"reasoning":"Source re-established independently. I downloaded https://www.rfc-editor.org/rfc/rfc6962.txt (HTTP 200, 55,048 bytes, sha256 08fdf31c10b9f20872a65c027a9fe8cee27280f930120784241a57de744752af, identical to the checker's copy and to autonomous origin/main rfc6962-canonical.txt) and, as a second method, https://www.rfc-editor.org/rfc/rfc6962.html…
+  - item 14
+    - **type**: workflow_agent
+    - **index**: 12
+    - **label**: verify:fips180-4
+    - **phaseIndex**: 2
+    - **phaseTitle**: Verify
+    - **agentId**: a6a0bad950c512e72
+    - **model**: claude-fable-5-2
+    - **state**: done
+    - **startedAt**: 1794428072014
+    - **queuedAt**: 1794427252206
+    - **attempt**: 1
+    - **lastToolName**: StructuredOutput
+    - **promptPreview**: You are one agent in a verification workflow. You compare what two research repositories SAY a public primary source says with what the source ACTUALLY says at its issuing body's own host. The repositories are read-only.
+
+      REPOSITORIES (refs already fetched; do not fetch them)
+      - /home/user/auditonomous = aybllc/auditonomous. Use ref origin/main (2165144). A second state, origin/claude/book-structur…
+    - **promptFramed**: yes
+    - **lastProgressAt**: 1794428156177
+    - **tokens**: 91049
+    - **toolCalls**: 8
+    - **durationMs**: 84163
+    - **resultPreview**: {"verdicts":[{"id":"fips180-4-1","real":true,"reasoning":"Source identity re-established independently: https://nvlpubs.nist.gov/nistpubs/FIPS/NIST.FIPS.180-4.pdf -> final URL identical, HTTP 200, 833315 bytes, sha256 0455b406d89648d20cbde375561e19c245b9815e894164c2670772e3d54deb82 (identical to the checker's file and to the hash on line 3 of the reading record); pdfinfo reports 36 pages. Saved at…
+  - item 15
+    - **type**: workflow_agent
+    - **index**: 13
+    - **label**: verify:definition-citations
+    - **phaseIndex**: 2
+    - **phaseTitle**: Verify
+    - **agentId**: aa6421649147604ba
+    - **model**: claude-fable-5-2
+    - **state**: done
+    - **startedAt**: 1794428156180
+    - **queuedAt**: 1794427606203
+    - **attempt**: 1
+    - **lastToolName**: StructuredOutput
+    - **promptPreview**: You are one agent in a verification workflow. You compare what two research repositories SAY a public primary source says with what the source ACTUALLY says at its issuing body's own host. The repositories are read-only.
+
+      REPOSITORIES (refs already fetched; do not fetch them)
+      - /home/user/auditonomous = aybllc/auditonomous. Use ref origin/main (2165144). A second state, origin/claude/book-structur…
+    - **promptFramed**: yes
+    - **lastProgressAt**: 1794428412952
+    - **tokens**: 112455
+    - **toolCalls**: 22
+    - **durationMs**: 256772
+    - **resultPreview**: {"verdicts":[{"id":"definition-citations-1","real":true,"reasoning":"Re-downloaded https://csrc.nist.gov/glossary/term/audit_trail from the official NIST host (200, 47390 bytes, sha256 6d6b20fb844499167374bee01ba093dbf9a4a7d67ce83c9e729834af34ae5008). My bytes differ from the checker's copy (dce28b9e...) only in one line, a per-request Cloudflare email-protection token (cf-cache-status: DYNAMIC); …
+  - item 16
+    - **type**: workflow_agent
+    - **index**: 14
+    - **label**: verify:rfc9162
+    - **phaseIndex**: 2
+    - **phaseTitle**: Verify
+    - **agentId**: a8a70a55758ed207a
+    - **model**: claude-fable-5-2
+    - **state**: done
+    - **startedAt**: 1794428232100
+    - **queuedAt**: 1794427685420
+    - **attempt**: 1
+    - **lastToolName**: StructuredOutput
+    - **promptPreview**: You are one agent in a verification workflow. You compare what two research repositories SAY a public primary source says with what the source ACTUALLY says at its issuing body's own host. The repositories are read-only.
+
+      REPOSITORIES (refs already fetched; do not fetch them)
+      - /home/user/auditonomous = aybllc/auditonomous. Use ref origin/main (2165144). A second state, origin/claude/book-structur…
+    - **promptFramed**: yes
+    - **lastProgressAt**: 1794428595577
+    - **tokens**: 131740
+    - **toolCalls**: 19
+    - **durationMs**: 363477
+    - **resultPreview**: {"verdicts":[{"id":"rfc9162-1","real":true,"reasoning":"Re-downloaded https://www.rfc-editor.org/rfc/rfc9162.txt (HTTP 200, 128,266 bytes, sha256 a0e432ce7580c99fcc8faf0cf3f6191f9ce6b4864f949158e020d4ecb295081f, identical to the checker's file). The record's capture C14 (line 241, 603 characters after whitespace collapse) is not contained in the official text, in the official PDF extracted with or…
+  - item 17
+    - **type**: workflow_agent
+    - **index**: 15
+    - **label**: verify:autonomous-definitions
+    - **phaseIndex**: 2
+    - **phaseTitle**: Verify
+    - **agentId**: a33e6d3b56af088e4
+    - **model**: claude-fable-5-2
+    - **state**: done
+    - **startedAt**: 1794428412955
+    - **queuedAt**: 1794427806864
+    - **attempt**: 1
+    - **lastToolName**: StructuredOutput
+    - **promptPreview**: You are one agent in a verification workflow. You compare what two research repositories SAY a public primary source says with what the source ACTUALLY says at its issuing body's own host. The repositories are read-only.
+
+      REPOSITORIES (refs already fetched; do not fetch them)
+      - /home/user/auditonomous = aybllc/auditonomous. Use ref origin/main (2165144). A second state, origin/claude/book-structur…
+    - **promptFramed**: yes
+    - **lastProgressAt**: 1794428578532
+    - **tokens**: 98291
+    - **toolCalls**: 9
+    - **durationMs**: 165576
+    - **resultPreview**: {"verdicts":[{"id":"autonomous-definitions-1","real":true,"reasoning":"Source identity re-established: I re-downloaded https://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication1011-I-2.0.pdf (HTTP 200, final URL identical, 216691 bytes, sha256 a7b5c3a37c487ec7a15eeae8f3ffb1df7b84992a03e5eefecb3c4dbff854da84) - identical to the checker's copy and to the hash the repository records. Title p…
+  - item 18
+    - **type**: workflow_agent
+    - **index**: 16
+    - **label**: verify:zenodo-and-ledger
+    - **phaseIndex**: 2
+    - **phaseTitle**: Verify
+    - **agentId**: a86b8013e015092f9
+    - **model**: claude-fable-5-2
+    - **state**: done
+    - **startedAt**: 1794428578536
+    - **queuedAt**: 1794427828295
+    - **attempt**: 1
+    - **lastToolName**: StructuredOutput
+    - **promptPreview**: You are one agent in a verification workflow. You compare what two research repositories SAY a public primary source says with what the source ACTUALLY says at its issuing body's own host. The repositories are read-only.
+
+      REPOSITORIES (refs already fetched; do not fetch them)
+      - /home/user/auditonomous = aybllc/auditonomous. Use ref origin/main (2165144). A second state, origin/claude/book-structur…
+    - **promptFramed**: yes
+    - **lastProgressAt**: 1794428708425
+    - **tokens**: 98635
+    - **toolCalls**: 9
+    - **durationMs**: 129889
+    - **resultPreview**: {"verdicts":[{"id":"zenodo-and-ledger-1","real":false,"reasoning":"Not a mismatch: no word, attribution, count or recorded identity in the row is wrong. Repository text (git object auditonomous origin/main:L7/provenance/sources/LEDGER.md, line 66): \"[source text withheld from the public copy].\" Re-established from www.rfc-editor.org (the RFC …
+- **totalTokens**: 2829830
+- **totalToolCalls**: 463

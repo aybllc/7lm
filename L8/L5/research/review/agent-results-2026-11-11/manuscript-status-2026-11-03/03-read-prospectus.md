@@ -1,0 +1,201 @@
+# read:prospectus
+
+Agent result, as returned. Workflow: Manuscript status of 3 November 2026. Run `wf_1cf4205c-c72`. Phase: Read.
+
+- **summary**: Source: L8/L4/work/writing/auditonomous-08-03-26.odt ("Book Prospectus v0.1", [source text withheld from the public copy]), read in full from its Markdown extraction P = /tmp/claude-0/-home-user/bfcfd013-a2da-5019-961e-7f46116f08be/scratchpad/manuscript/text/auditonomous-08-03-26.md (2485 lines; the prospectus proper is P:1-717, followed at P:719-2485 by an appended chat-export block: "Pro thinking", "Worked for 15m 21s", "Files· 1 / Pasted markdown.md", "Web· 239" source list). The .odt metadata dates it 2026-08-03 (created 13:18, last saved 23:29 UTC-less local, LibreOffice 26.2.4.2, 56 pages, 11,795 words, editing-cycles 2); it was first committed 2026-08-05 (71f75cb). It is a second-person AI-produced critique-plus-plan ("[source text withheld from the public copy]") that contains no chapter prose: everything is prescriptive ("should"/"must") except one "Proposed opening passage" (§20). Section 2 says the existing material mixes autonomous-network standards, a post-biological reading of UAP reports, replication/directed-evolution/control claims and applications to Roswell, Malmstrom, Vallée and Dick; it orders the "GPT-Verified" label removed and sets the correction "Observed facts → established engineering → conditional inference → testable conjecture. Never the reverse." [source text withheld from the public copy]." It fixes a 5-part, 20-chapter architecture, [source text withheld from the public copy], a 12-step case workflow, 100,000-115,000 words, and the [source text withheld from the public copy]".
+
+  Repository check: on origin/main (2165144, 2026-09-11) nothing supersedes it — no book tree exists, the word "prospectus" does not occur, and the .odt is listed as a "live draft". On the roadmap branch (origin/claude/book-structure-roadmap-k8ap82, head 9259c18, 2026-09-14; PR #27 opened 2026-09-13, closed unmerged 2026-10-17) the roadmap R = L8/L5/research/review/BOOK_STRUCTURE_AND_ROADMAP_2026-09-13.md (PROPOSAL · INTERNAL ONLY · INTERNALLY DERIVED, "Nothing here is adopted") composes six prior structures into 8 parts (Part 0-VII), 27 chapters and appendices A-I, stating "[source text withheld from the public copy] 27 files under L8/L4/work/writing/book/ are headers only ("Not yet drafted"). The prospectus's Parts I, IV, V are folded into Ch 19-24 and Ch 26 (leg B) and its §14/§21 into Ch 1 and Appendix E; its chapters 12-13 are cited nowhere; its five-axis profile/invariants/R0-R4 framework is relegated to pending owner decision D20 (recommended: appendix or retirement). The part names descend from the author's spine of 2026-08-14, not from the prospectus. So: the twenty-chapter architecture was composed-over and de facto superseded on an unmerged, closed branch, never formally retired, and remains the latest structural document present at origin/main.
+- **facts**
+  - item 1
+    - **claim**: The document's title block reads '[source text withheld from the public copy]', with the book promise that modern technology '[source text withheld from the public copy]'.
+    - **date**: 2026-08-03
+    - **evidence**: P:1 '# Book Prospectus v0.1'; P:3 '## **AUDITONOMY**'; P:5 '[source text withheld from the public copy]'; P:7 '**[source text withheld from the public copy]'
+    - **status_label**: v0.1
+  - item 2
+    - **claim**: The .odt container was created and last saved on 2026-08-03 (creation 13:18:20, dc:date 23:29:59, editing-duration 2h17m34s, 2 editing cycles, LibreOffice 26.2.4.2 Linux); 56 pages, 1366 paragraphs, 11,795 words, 181 images, 5 tables. No date string appears in the document body; the date rests on the filename (08-03-26, US order) and this metadata, consistent with appended web entries dated as late as 'July 20, 2026'.
+    - **date**: 2026-08-03
+    - **evidence**: meta.xml of /home/user/auditonomous/L8/L4/work/writing/auditonomous-08-03-26.odt (blob 6da3713): '<meta:creation-date>2026-08-03T13:18:20.788303448</meta:creation-date><dc:date>2026-08-03T23:29:59.305202161</dc:date><meta:editing-duration>PT2H17M34S</meta:editing-duration><meta:editing-cycles>2</meta:editing-cycles>' ... 'meta:page-count="56" ... meta:word-count="11795"'; web list entry 'July 20, 2026 — Ladder | Life Detection' in P:757-2485
+    - **status_label**: absent in body: no date, no author name
+  - item 3
+    - **claim**: Git history of the file: first added 2026-08-05 by Eric D. Martin at manuscripts/main/notes/auditonomous-08-03-26.odt together with two sibling files auditonomous-08-03-26-prompt.odt and auditonomous-08-03-26-prompt-brick.odt; renamed 2026-08-15 to manuscripts/main/open-research/ (siblings deleted); 2026-09-05 to USO/l4/work/writing/; 2026-09-12 to L8/L4/work/writing/. Content unchanged at each rename (R100).
+    - **date**: 2026-08-05 / 2026-08-15 / 2026-09-05 / 2026-09-12
+    - **evidence**: git log --follow: '71f75cb 2026-08-05 Auditability extraction: SP 800-53r5 AC and AU families, Part A / Part B split' (A manuscripts/main/notes/auditonomous-08-03-26.odt, A ...-prompt.odt, A ...-prompt-brick.odt); '8c98573 2026-08-15' (R100 -> manuscripts/main/open-research/; D both prompt files); 'ccc0554 2026-09-05' (R100 -> USO/l4/work/writing/); '3045e07 2026-09-12 The rename pass: USO/ is L8/' (R100 -> L8/L4/work/writing/)
+    - **status_label**: live draft (origin/main sheet)
+  - item 4
+    - **claim**: The sibling prompt files (history only, commit 71f75cb) are the author's prompts of the same day: -prompt.odt (created 2026-08-03T13:58:41, 6,312 words) begins '[source text withheld from the public copy] ... the gap is auditonomous as a keyword ... givenk the orioginal craft revovery of 1947'; -prompt-brick.odt (created 2026-08-03T14:22:41, 178 words) begins '[source text withheld from the public copy]'.
+    - **date**: 2026-08-03
+    - **evidence**: git show 71f75cb:manuscripts/main/notes/auditonomous-08-03-26-prompt.odt meta.xml 'creation-date>2026-08-03T13:58:41' 'word-count="6312"'; content.xml text '[source text withheld from the public copy]'; -prompt-brick.odt 'creation-date>2026-08-03T14:22:41' 'word-count="178"'
+    - **status_label**: history only (deleted 2026-08-15 at 8c98573)
+  - item 5
+    - **claim**: The prospectus is a saved AI chat output addressed to the author in the second person, with the assistant's reasoning trace and a 239-item web list appended after the project specification; one typo-laden author interjection is embedded mid-text, consistent with hand editing after paste.
+    - **date**: 2026-08-03
+    - **evidence**: P:34 '[source text withheld from the public copy]'; P:719 'Pro thinking'; P:747 'Worked for 15m 21s'; P:751 'Files· 1'; P:755 'Pasted markdown.md'; P:757 'Web· 239'; P:295 '\*\*\*\*[source text withheld from the public copy]'
+    - **status_label**: model-generated draft; not labelled as such in the file
+  - item 6
+    - **claim**: Section 2 'What the existing manuscript material contains' (verbatim substance): the uploaded notes '[source text withheld from the public copy].'
+    - **date**: 2026-08-03
+    - **evidence**: P:32 '## 2. What the existing manuscript material contains'; P:34-39 the four numbered layers quoted
+    - **status_label**: description of pre-existing notes
+  - item 7
+    - **claim**: Section 2 continues: [source text withheld from the public copy]' and 'cannot appear as established conclusions'; directed-evolution and planetary-control material '[source text withheld from the public copy]'.
+    - **date**: 2026-08-03
+    - **evidence**: P:41 '[source text withheld from the public copy]'; P:43 '[source text withheld from the public copy].'; P:45 '[source text withheld from the public copy]'
+    - **status_label**: GPT-Verified (label to be removed)
+  - item 8
+    - **claim**: Section 2 closes with the structural correction: 'Observed facts → established engineering → conditional inference → testable conjecture' — 'Never the reverse.'
+    - **date**: 2026-08-03
+    - **evidence**: P:47-57 LaTeX block '\[source text withheld from the public copy]}'; P:59 'Never the reverse.'
+  - item 9
+    - **claim**: Governing thesis (§3): modern developments '[source text withheld from the public copy]' and allow historical UAP descriptions to be reconsidered 'in engineering terms', legitimate only under the rule that D_historical 'remains fixed even when' H_modern 'expands'; [source text withheld from the public copy]', to '[source text withheld from the public copy]'.
+    - **date**: 2026-08-03
+    - **evidence**: P:61 '# 3. Governing thesis'; P:65 '[source text withheld from the public copy]'; P:78-82 'D_{historical} remains fixed even when H_{modern} expands'; P:87 governing sentence verbatim; P:89 '[source text withheld from the public copy].'
+  - item 10
+    - **claim**: §3 'What the book does not claim' lists seven non-claims (UAPs extraterrestrial; biological occupants; [source text withheld from the public copy]; universe [source text withheld from the public copy]) and cites AARO FY2025: '[source text withheld from the public copy].'
+    - **date**: 2026-08-03
+    - **evidence**: P:91 '## What the book does not claim'; P:95-101 bullets; P:103 '[source text withheld from the public copy]'
+    - **status_label**: external numbers cited to AARO PDF; not independently checked here
+  - item 11
+    - **claim**: Core definitions (§4-5): '[source text withheld from the public copy]'; an auditon is 'a bounded autonomous network' with five capacities, '[source text withheld from the public copy]'; Automation ⊂ Autonomy ⊂ Auditonomy; four classes Proto/Weak/Strong/Closed, '[source text withheld from the public copy].'
+    - **date**: 2026-08-03
+    - **evidence**: P:109 definition of Auditonomy; P:115-125 auditon capacities 1-5; P:123 '[source text withheld from the public copy]'; P:129-133 inclusion chain; P:147-163 classes; P:163 '[source text withheld from the public copy]**.'
+    - **status_label**: conjectural category (closed auditon)
+  - item 12
+    - **claim**: The framework's formal core: five-axis Auditon Profile A=(O,R,G,P,C) (§6, 'a profile, not initially a single score'); six invariants (§7: causal traceability record e_k, lineage continuity, authority conservation Authority(child) ⊆ delegated, versioned governance, provenance-failure rule 'auditon certification is suspended', replication-accountability symmetry); 12-item governance charter (§8, built on NIST AI RMF Govern/Map/Measure/Manage); provenance record fields (§9, W3C PROV); replication levels R0-R4 with 'R4 ... Not demonstrated by the sources reviewed' (§10); technological hindsight with a four-part admissibility test (§11); mission-economy cost model and objective J (§13).
+    - **date**: 2026-08-03
+    - **evidence**: P:165-191 '\mathbf A=(O,R,G,P,C)' '[source text withheld from the public copy]'; P:193-236 invariants; P:226-230 'auditon certification is suspended'; P:238-257 charter items 1-12; P:281-297 R0-R4 table, 'Not demonstrated by the sources reviewed'; P:312-331 '[source text withheld from the public copy]'; P:349-400 'C_{mission}=' and 'J= V_{mission}-C_{mission}-\lambda R_{harm}-\mu R_{loss of control}'
+  - item 13
+    - **claim**: SpudCell correction (§10): the [source text withheld from the public copy]'; the defensible position is that it 'was still a preprint', 'depended on externally supplied molecular machinery', and '[source text withheld from the public copy]'.
+    - **date**: 2026-08-03
+    - **evidence**: P:299 '## SpudCell correction'; P:301 '[source text withheld from the public copy]'; P:305-310 bullets '[source text withheld from the public copy]'
+    - **status_label**: preprint
+  - item 14
+    - **claim**: Claim-control protocol (§14): every substantive claim carries [source text withheld from the public copy].'
+    - **date**: 2026-08-03
+    - **evidence**: P:402 '# 14. Claim-control protocol'; P:406-411 label table; P:413 '[source text withheld from the public copy].'; P:415 '[source text withheld from the public copy].'
+    - **status_label**: [V] [I] [C] [U]
+  - item 15
+    - **claim**: Evidence ladder (§14): '[source text withheld from the public copy]' — 'book-specific' but modelled on life-detection/technosignature confidence frameworks.
+    - **date**: 2026-08-03
+    - **evidence**: P:417 '## Evidence ladder'; P:421-426 rows E0-E5 verbatim; P:428 '[source text withheld from the public copy]'
+    - **status_label**: E0-E5
+  - item 16
+    - **claim**: Ten 'Nonnegotiable rules' (§14), including '[source text withheld from the public copy].', '10. "Could" must never silently become "did."'; hypothesis set H0-H5 for every case (§15) plus H6 secrecy treated separately (§19) as 'self-sealing and scientifically unusable' when used to explain absent evidence.
+    - **date**: 2026-08-03
+    - **evidence**: P:430-441 rules 1-10; P:443-474 'H_0 ... H_5' with 'P(H_i|D) ∝ P(D|H_i)P(H_i)' and '[source text withheld from the public copy])'; P:634-659 '[source text withheld from the public copy].'
+    - **status_label**: H0-H6
+  - item 17
+    - **claim**: Twenty-chapter architecture (§16), 5 parts: Part I Evidence Before Explanation — 1 The Unknown Is Not a Thing; 2 The Evidence Supply Chain; 3 Motion Without Range; 4 Technological Hindsight. Part II The Proven Engineering — 5 From Automation to Autonomy; 6 Autonomous Networks; 7 Swarms, Spacecraft, and Resilience; 8 Replication Is Not One Thing. Part III Auditonomy — 9 The Auditon; 10 The Five-Axis Profile; 11 Constitutional Machine Governance; 12 Provenance Across Generations; 13 The Economy and Failure of Auditons. Part IV Historical Case Laboratories — 14 Roswell, 1947 — Archive Before Mythology; 15 Malmstrom, 1967 — Coupling, Coincidence, and Causation; [source text withheld from the public copy]. Part V Conjecture After the Facts — [source text withheld from the public copy]; 19 The Auditon Hypothesis; 20 What Evidence Would Change the Verdict?
+    - **date**: 2026-08-03
+    - **evidence**: P:476 '# 16. Twenty-chapter book architecture'; part headings P:478, 496, 514, 536, 564; chapter headings P:480-582 (e.g. P:480 '### [source text withheld from the public copy]', P:538 '### Chapter 14: Roswell, 1947 — Archive Before Mythology', P:582 '### [source text withheld from the public copy]?')
+    - **status_label**: planned architecture; 5 parts, 20 chapters
+  - item 18
+    - **claim**: Within the architecture the prospectus flags two required removals from the author's notes and one label: Roswell chapter must keep Project Mogul as 'the baseline institutional finding'; Malmstrom [source text withheld from the public copy]'; Chapter 19's auditon hypothesis 'is designated [C] Conjecture'; Vallée's control-system proposal is given 'more evidentiary weight than its sources support'.
+    - **date**: 2026-08-03
+    - **evidence**: P:540 '[source text withheld from the public copy]'; P:546 '[source text withheld from the public copy]' ... 'must be removed from the factual section'; P:578 'This is designated **\[C\] Conjecture**.'; P:570 '[source text withheld from the public copy].'
+    - **status_label**: [C] Conjecture
+  - item 19
+    - **claim**: Standard case-chapter workflow (§17), 12 ordered steps: exact claim; earliest record; provenance; observation geometry; source independence; ordinary explanations; human-technology explanations; modern engineering analogues; mission economy; auditon test; falsifiers; [source text withheld from the public copy]'). §18 lists eight auditon-specific predictions and seven falsification conditions; '[source text withheld from the public copy].'
+    - **date**: 2026-08-03
+    - **evidence**: P:586 '# 17. Standard case-chapter workflow'; P:590-601 steps 1-12; P:601 '**[source text withheld from the public copy].'; P:605-632 predictions and 'Falsification conditions'; P:632 '[source text withheld from the public copy].'
+  - item 20
+    - **claim**: The only drafted prose in the prospectus is the three-paragraph 'Proposed opening passage' (§20): '[source text withheld from the public copy].' ... 'This book calls that analysis **Auditonomy**.' Everything else is prescriptive ('should', 'must') — e.g. '[source text withheld from the public copy]', 'The book should compare four architectures', '[source text withheld from the public copy]'.
+    - **date**: 2026-08-03
+    - **evidence**: P:661 '# 20. Proposed opening passage'; P:663 '[source text withheld from the public copy].'; P:667 'This book calls that analysis **Auditonomy**.'; P:145 'The manuscript should avoid treating'; P:353 'The book should compare four architectures'; P:404 '[source text withheld from the public copy].'
+    - **status_label**: planned (no chapter prose exists in this file)
+  - item 21
+    - **claim**: Source and editorial policy (§21): six-level evidentiary hierarchy (contemporaneous records; standards; peer-reviewed research; institutional reports; journalism 'never as sole support'; witness statements 'as evidence of reported experience'); excluded as claim-bearing: '[source text withheld from the public copy] to keep a nine-field source ledger.
+    - **date**: 2026-08-03
+    - **evidence**: P:669 '# 21. Source and editorial policy'; P:673-678 hierarchy 1-6; P:680-689 exclusions incl. 'model-generated assertions'; P:691-701 ledger fields 'claim identifier ... current verdict'
+  - item 22
+    - **claim**: [source text withheld from the public copy]'.
+    - **date**: 2026-08-03
+    - **evidence**: P:703 '## Project specification'; P:705 working title; P:707 '- **Structure:** 5 parts, 20 chapters'; P:708 target length; P:709 primary contribution; P:715 '- **[source text withheld from the public copy]'; P:717 '[source text withheld from the public copy].'
+    - **status_label**: milestone: Chapters 1-4 first
+  - item 23
+    - **claim**: Written versus planned, as the prospectus itself states: the 'existing manuscript material' is the author's uploaded notes (autonomy tables with 'GPT-Verified' labels, post-biological/UAP sections, Roswell/Malmstrom applications); no chapter is said to exist; the first thing to be written is Chapters 1-4 and the source ledger. The roadmap later confirms for the prospectus-derived chapters: '[source text withheld from the public copy]'.
+    - **date**: 2026-08-03 / 2026-09-13
+    - **evidence**: P:34-45 (section 2); P:715 milestone; R:283 '[source text withheld from the public copy]'; R:319 '[source text withheld from the public copy])'
+    - **status_label**: prose none
+  - item 24
+    - **claim**: The companion referee document (auditonomouos-important.docx, same date per the roadmap) confirms a twenty-chapter source structure existed on 2026-08-03: '[source text withheld from the public copy]', and describes the uploaded specification as containing 'twenty chapter dossiers'.
+    - **date**: 2026-08-03
+    - **evidence**: /tmp/claude-0/-home-user/bfcfd013-a2da-5019-961e-7f46116f08be/scratchpad/manuscript/text/auditonomouos-important.md:382 '[source text withheld from the public copy]'; :44 'twenty chapter dossiers, historical case reconstructions'
+    - **status_label**: referee blueprint
+  - item 25
+    - **claim**: On origin/main (HEAD 2165144, merge of PR #26, 2026-09-11 23:26 -0700; 147 commits; not shallow) there is no book tree and no chapter file: L8/L4/work/writing/ holds only 0.md, the three Office drafts, branch/, chat/ (two transcripts) and sessions/. The .odt is described as one of 'the live drafts ("[source text withheld from the public copy]")'. The word 'prospectus' occurs nowhere on origin/main.
+    - **date**: 2026-09-11
+    - **evidence**: git ls-tree -r origin/main --name-only | grep L8/L4/work/writing/ (11 paths, no book/); origin/main:L8/L4/work/writing/0.md:33 'auditonomous-08-03-26.odt — the live drafts ("[source text withheld from the public copy]")'; git grep -i prospectus origin/main → no match; origin/main:L8/L6/history/7LM_ROUTING_PLAN_2026-09-05.md:158 'MOVE | USO/l4/work/writing/ | Live drafts'
+    - **status_label**: live draft; nothing released (L7)
+  - item 26
+    - **claim**: The roadmap branch origin/claude/book-structure-roadmap-k8ap82 (head 9259c18, 2026-09-14 02:04 UTC, author 'Claude') carries five commits not on main, branching from origin/main's head (merge-base 2165144): 30a40f1 2026-09-13 roadmap record; 62d2e3f restore of 116 files from 1d83788; b1ec302 'Open the manuscript source tree: twenty-seven chapter files with their feeds, labels and gates as headers'; 4e2c4e4 vocabulary paper; 9259c18 roadmap re-sequenced build-first. 176 files changed vs main.
+    - **date**: 2026-09-13 / 2026-09-14
+    - **evidence**: git log origin/main..origin/claude/book-structure-roadmap-k8ap82: '9259c18 2026-09-14 The roadmap re-sequenced to the owner's build-first order', 'b1ec302 2026-09-14 Open the manuscript source tree: twenty-seven chapter files', '30a40f1 2026-09-13 The book's finished shape and the path to it'; git merge-base = 21651446b1f3f4547b588e6d7122ef7f9f81e9b9; git diff --stat '176 files changed, 22883 insertions(+), 12 deletions(-)'
+    - **status_label**: unmerged branch
+  - item 27
+    - **claim**: PR #27 ('The book roadmap, re-sequenced to build-first: the repository set up, the chapters opened, the vocabulary paper drafted'; head claude/book-structure-roadmap-k8ap82 @ 9259c18 → main) was opened 2026-09-13T20:39:22Z and closed, not merged, on 2026-10-17T08:41:45Z (merged_at null). The task framing 'PR #27 of 13-14 September 2026' matches its commits; its closure is a month later.
+    - **date**: 2026-09-13 opened; 2026-10-17 closed
+    - **evidence**: gh api repos/aybllc/auditonomous/pulls/27: {"state":"closed","created_at":"2026-09-13T20:39:22Z","closed_at":"2026-10-17T08:41:45Z","merged_at":null,"head":"claude/book-structure-roadmap-k8ap82","head_sha":"9259c180e5b47421e3f972434f8ff66e68505629","base":"main"}
+    - **status_label**: closed, unmerged
+  - item 28
+    - **claim**: The roadmap record R (L8/L5/research/review/BOOK_STRUCTURE_AND_ROADMAP_2026-09-13.md on the branch, 686 lines) is labelled 'PROPOSAL · INTERNAL ONLY · INTERNALLY DERIVED', 'Nothing here is adopted', written [source text withheld from the public copy]; revised 2026-09-14 ('[source text withheld from the public copy]'). Its §9 records 'the writing not begun (S6)'.
+    - **date**: 2026-09-13; revised 2026-09-14
+    - **evidence**: R:3 '**Standing.** PROPOSAL · INTERNAL ONLY · INTERNALLY DERIVED ... Nothing here is adopted.'; R:7 '**Revision of 2026-09-14.** ... [source text withheld from the public copy].'; R:645 '[source text withheld from the public copy] writing not begun (S6)'
+    - **status_label**: PROPOSAL · INTERNAL ONLY · INTERNALLY DERIVED
+  - item 29
+    - **claim**: R §0 lists six prior structures and states its relation to them: 'Six structures for this book already exist ... [source text withheld from the public copy]'. The table dates them: 2026-08-02 Auditonomous_Theory_TOC.md '5 parts, 18 chapters'; 2026-08-02 BOOK_STRUCTURE_PROPOSAL.md '28 chapters'; [source text withheld from the public copy]' '5 parts, 20 chapters ... [source text withheld from the public copy]; 2026-08-06 Sourcebook v0.1; 2026-08-14 SPINE_v0.1 '[source text withheld from the public copy]'.
+    - **date**: 2026-09-13
+    - **evidence**: R:13 '[source text withheld from the public copy]'; R:17 '| 2026-08-02 | `Auditonomous_Theory_TOC.md` | ... | 5 parts, 18 chapters'; R:18 '28 chapters'; R:19 '| [source text withheld from the public copy]'; R:22 '| [source text withheld from the public copy]'
+    - **status_label**: composes, not replaces (R's own words)
+  - item 30
+    - **claim**: The prospectus's 5-part architecture was already departed from by the author's spine 11 days later: SPINE_v0.1_2026-08-14.md (history only, at 1d83788) is headed '[source text withheld from the public copy]', assembled '[source text withheld from the public copy]' (it names the 18-chapter TOC, BOOK_STRUCTURE_PROPOSAL, CONTRIBUTION_INDEX_AND_TOC and the sourcebook — not the prospectus), and its parts are Part 0 METHOD, I autonomous, II THE DEFECT, III Auditonomous, IV Auditon, V THE MACHINERY, VI DEEP SPACE, AFTER US, VII THE RECKONING — the same eight part names the 2026-09-13 roadmap uses.
+    - **date**: 2026-08-14
+    - **evidence**: git show 1d83788:manuscripts/SPINE_v0.1_2026-08-14.md lines 1-2 '# [source text withheld from the public copy]**'; lines 4-8 '[source text withheld from the public copy] ..., the reorganized Parts I–V ..., the four-domain spine ..., and the eight-strand map'; headings at lines 35,47,71,90,123,153,178,199 ('## [source text withheld from the public copy])' ... '## Part VII — THE RECKONING')
+    - **status_label**: INTERNALLY DERIVED; history only (1d83788)
+  - item 31
+    - **claim**: The finished shape on the branch is 8 parts (Part 0–VII), 27 chapters, appendices A–I, two 'legs' (A the conditional, B the antecedent) with the leg change '[source text withheld from the public copy]'; the title is an open owner decision D2 with the prospectus's title as one of three candidates.
+    - **date**: 2026-09-13
+    - **evidence**: R:42-58 '## [source text withheld from the public copy])'; R:46 '*[source text withheld from the public copy]'; R:58 '[source text withheld from the public copy]'; B/00-front-matter.md:26-87 table of contents Part 0 ... Part VII and Appendices A-I; B/0.md:8 'Twenty-seven chapter files in eight parts'
+    - **status_label**: OWNER DECISION (D2) open
+  - item 32
+    - **claim**: The 27 chapter files under L8/L4/work/writing/book/ on the branch are ch01-the-readers-contract.md through ch27-the-acquisition-debt-this-book-is-its-own-subject.md (full list in git ls-tree). Each is 24–29 lines / 212–346 words of header only (part, leg, 'Status on the ladder', gates, feeds, prior structures, verify-before-drafting, done-when, next step) and a '## Text' section reading '*Not yet drafted.*'. The directory sheet: 'No chapter carries text yet; the headers are the built positions the text goes into.' build.sh is a pandoc build 'Not run in the environment that wrote it (pandoc absent there)'; bibliography.md is 'empty on purpose'.
+    - **date**: 2026-09-14
+    - **evidence**: git ls-tree -r origin/claude/book-structure-roadmap-k8ap82 --name-only | grep book/ch → 27 paths ch01…ch27; B/ch01-the-readers-contract.md:28 '*[source text withheld from the public copy])'; same sentence at ch19:26, ch23:27, ch24:28, ch26:26; B/0.md:8 'No chapter carries text yet'; B/build.sh:3 'Not run in the environment that wrote it (pandoc absent there)'; B/0.md:20 'bibliography.md — empty on purpose'
+    - **status_label**: Not yet drafted (all 27); [source text withheld from the public copy] by leading label (R:453)
+  - item 33
+    - **claim**: Mapping of the prospectus into the 27-chapter structure, from each chapter's 'In the prior structures' line: §14,§21 → Ch 1; ch.5 → Ch 3; ch.5–6 → Ch 4; ch.9 → Ch 7; ch.11 → Ch 9; ch.9–10 → Ch 12; ch.11 → Ch 14; ch.1–4 → Ch 19 (one chapter for the whole of Part I); ch.18 → Ch 20; ch.7–8 → Ch 21; ch.19 → Ch 22; ch.14,15 → Ch 23; ch.16,17 → Ch 24; ch.19–20 → Ch 26; §14 → Appendix E. Prospectus chapters 12 (Provenance Across Generations) and 13 (The Economy and Failure of Auditons) are cited in no chapter's prior-structures line.
+    - **date**: 2026-09-13
+    - **evidence**: R:100 'prospectus §14, §21'; R:122 'prospectus ch. 5'; R:131 'prospectus ch. 5–6'; R:166 'prospectus ch. 9'; R:184 'prospectus ch. 11'; R:215 'prospectus ch. 9–10'; R:233 'prospectus ch. 11'; R:286 'prospectus ch. 1–4'; R:295 'prospectus ch. 18'; R:304 '[source text withheld from the public copy])'; R:313 'prospectus ch. 19 (the auditon hypothesis, [C])'; R:322 'prospectus ch. 14, 15'; R:331 'prospectus ch. 16, 17'; R:353 'prospectus ch. 19–20'; R:376 Appendix E 'the prospectus's claim and evidence protocols | ... auditonomous-08-03-26.odt §14'; grep -o 'prospectus ch[^;·|]*' R yields no 'ch. 12' or 'ch. 13'
+    - **status_label**: absent: prospectus ch. 12-13 unmapped
+  - item 34
+    - **claim**: The prospectus's four case laboratories, 12-step workflow, H6 treatment, [C] label for the auditon hypothesis, §21 source policy and governing sentence are carried into the branch's chapters 19, 23, 24, 26 and the front matter; the prospectus's milestone is re-targeted from 'Chapters 1–4' to 'Chapter 19' ('[source text withheld from the public copy])').
+    - **date**: 2026-09-13
+    - **evidence**: R:54 '**[source text withheld from the public copy])'; R:33 '[source text withheld from the public copy]'; R:290 '- [source text withheld from the public copy])'; R:547 '[source text withheld from the public copy])'; R:542 '[source text withheld from the public copy])'; R:350 'Ch 26 ... **CONJECTURE (labelled [C] by the prospectus)**'; B/00-front-matter.md:15 governing sentence cited to 'prospectus §3'
+    - **status_label**: carried forward
+  - item 35
+    - **claim**: The prospectus's own framework (five-axis profile, six invariants, R0–R4) is not adopted as governing on the branch: owner decision D20 states '[source text withheld from the public copy])'; the session's recommendation is '[source text withheld from the public copy]', citing the referee's verdict '[source text withheld from the public copy]'. The vocabulary paper calls it 'the third framing; D20 chooses which governs'.
+    - **date**: 2026-09-13 (D20 corrected 2026-09-14)
+    - **evidence**: R:630 '| [source text withheld from the public copy] |'; branch:L8/L4/work/writing/papers/AUDITONOMOUS_VOCABULARY_PAPER_2026-09-14.md:160-162 '### [source text withheld from the public copy]).'
+    - **status_label**: OWNER DECISION D20 open; RECOMMENDED: appendix or retire
+  - item 36
+    - **claim**: Other owner decisions on the branch that bear on the prospectus: D1 (one book or companion) cites '[source text withheld from the public copy]' and recommends the [source text withheld from the public copy]'; D21 asks 'the TOC's three case files ... [source text withheld from the public copy])' and recommends 'the four laboratories'. R §8 reports '[source text withheld from the public copy]' and lists '20 prospectus chapters, 42 spine titles' among the corpus's counts.
+    - **date**: 2026-09-13
+    - **evidence**: R:612 '| D1 | ... [source text withheld from the public copy]'; R:633 '| D21 | ... [source text withheld from the public copy]'; R:639 'its counts (... [source text withheld from the public copy]'
+    - **status_label**: OWNER DECISION D1, D21 open
+  - item 37
+    - **claim**: The roadmap §9 corrects its first version: '[source text withheld from the public copy])'; the Malmstrom note the prospectus says must be removed survives only in history ('git:1d83788:manuscripts/main/notes/audiontiomouns ... [in history only]').
+    - **date**: 2026-09-14
+    - **evidence**: R:647 '([source text withheld from the public copy])'; R:321 '`[source text withheld from the public copy]]'; git ls-tree 1d83788 shows manuscripts/main/notes/audiontiomouns
+    - **status_label**: history only (audiontiomouns)
+  - item 38
+    - **claim**: Contradiction/nuance on supersession: the roadmap's own words deny replacement ('does not replace them; it composes them') and label everything unadopted, while its structure (8 parts, 27 chapters, part names from the 2026-08-14 spine) differs from the prospectus's 5 parts / 20 chapters and compresses prospectus Parts I, IV and V into eight leg-B chapters; and the branch carrying it was closed unmerged. No file on either ref marks the prospectus retired, superseded or PARKED; the only status word applied to it at origin/main is 'live draft'.
+    - **date**: 2026-09-13 → 2026-10-17
+    - **evidence**: R:13 vs B/0.md:8 'Twenty-seven chapter files in eight parts'; P:707 '5 parts, 20 chapters'; gh api PR 27 'merged_at: null, closed_at 2026-10-17'; git grep -i -E 'prospectus|08-03-26' origin/main → only L8/L4/work/writing/0.md:33 and L8/L6/history/7LM_ROUTING_PLAN_2026-09-05.md:158, neither using 'superseded', 'retired' or 'PARKED'
+    - **status_label**: not formally superseded; de facto composed-over on an unmerged branch
+- **open_questions**
+  - Did the owner ever rule D20 (which framing of auditonomy governs) or D21 (four laboratories vs three case files) after PR #27 was closed on 2026-10-17? No ruling is recorded on origin/main as checked out (HEAD 2026-09-11), and the branch itself says 'Nothing here is adopted'.
+  - Why was PR #27 closed without merge (2026-10-17)? The repository as checked out gives no reason; the closure is visible only via the GitHub API. Whether a later main contains any of its content was not checkable from this checkout (origin/main head predates the branch).
+  - Which model/session produced the prospectus? The file is a saved chat export ('Pro thinking', 'Worked for 15m 21s', 239 web sources) with no model name in the text; the sibling '-prompt.odt' (deleted 2026-08-15) holds the author's prompt and may identify the tool.
+  - What were 'the uploaded notes' / 'Pasted markdown.md' the prospectus critiques (the autonomy tables with 'GPT-Verified', the Malmstrom 'logic-gate' sentence)? The roadmap points to git:1d83788:manuscripts/main/notes/audiontiomouns for the Malmstrom sentence; that file was not read in this task.
+  - Prospectus chapters 12 (Provenance Across Generations) and 13 (The Economy and Failure of Auditons) are mapped to no chapter in the 27-chapter structure; whether this omission was deliberate (subsumed by Ch 16-17 / Ch 25) or an oversight is not stated anywhere found.
+  - The .odt was created at 13:18 on 2026-08-03 but the prompt .odt files were created at 13:58 and 14:22 the same day; the prospectus container therefore predates the saved prompts — the sequence of prompt → response → paste is not reconstructible from metadata alone.
+  - The task description called the repository history 'about 1000 commits'; origin/main counts 147 commits (not shallow, first commit fc3b018 2026-07-30). Whether the larger figure counts other refs or an earlier clone was not determined.

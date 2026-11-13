@@ -1,0 +1,52 @@
+# resolve:D9
+
+Agent result, as returned. Workflow: Resolutions for the 23 owner decisions. Run `wf_3293f65c-a92`. Phase: Resolve.
+
+- **decision**: 9. Whether pull request #19 (7lm, branch ccr-00099fac-hjosbo, head b5c3984, "the public face agnostic") is merged, given its conflicts with the beta candidate and its version date of 6 October 2026.
+- **resolution**: Do not merge pull request #19 now, and do not close it: leave it open as a draft, untouched, until the owner has decided the beta candidate (97314c5). If the owner then confirms that the instruction of 6 October 2026 still stands, redo the agnostic sweep as a fresh dated pass on top of whatever main has become, with a new version date and with `.github/release.sh` and `release.yml` left out unless the owner asks for them by name.
+- **reasoning**
+  - item 1
+    - **speaker**: owner
+    - **quote**: Don't change the system unless you ask or are unsure
+    - **locator**: /home/user/7lm@origin/main:L8/L6/history/harmonization-2026-09-04.md:482
+    - **bears**: The standing rule: a merge that rewrites 33 sheets, the specification and its version date is a change to the system, so it waits for the owner's word; holding changes nothing and is fully reversible.
+  - item 2
+    - **speaker**: owner
+    - **quote**: I didn't want anything automated yet
+    - **locator**: /home/user/7lm@origin/ccr-00099fac-hjosbo:L8/L6/history/harmonization-2026-09-04.md:532
+    - **bears**: Said on 17 October 2026, eleven days after the PR #19 pass, it stands against the two files the pull request adds, `.github/release.sh` and `.github/workflows/release.yml`; merging #19 as it stands would put an automated release into main.
+  - item 3
+    - **speaker**: owner
+    - **quote**: No outside updates until we are sure I'm close.
+    - **locator**: /home/user/7lm@origin/main:L8/L6/history/harmonization-2026-09-04.md:336
+    - **bears**: The owner's word of 20 September 2026 against pushing outward; the release half of PR #19 is an outward push (a force-push to a public repository), so that half is not yet licensed by any quoted word.
+  - item 4
+    - **speaker**: record
+    - **quote**: On that doubt the words of this instruction are not quoted here as written; they are in the session's transcript and may be added to this section on the author's word.
+    - **locator**: /home/user/7lm@origin/ccr-00099fac-hjosbo:L8/L6/history/harmonization-2026-09-04.md:514
+    - **bears**: The instruction behind PR #19 exists in the repositories only in indirect speech; no owner quotation orders the sweep or the merge, so the quotations cannot themselves authorise merging.
+  - item 5
+    - **speaker**: record
+    - **quote**: The release is the way, with this repository private; the repository's visibility is the author's setting and not this pass's.
+    - **locator**: /home/user/7lm@origin/ccr-00099fac-hjosbo:L8/L6/history/harmonization-2026-09-04.md:526
+    - **bears**: PR #19's design assumes a private source repository and a separate public release; that premise must be re-checked before the design is adopted.
+  - item 6
+    - **speaker**: owner
+    - **quote**: put them in auditonomous too and the public one its public so you can access it and one other ai right npow
+    - **locator**: owner's instructions of 11 November 2026, as typed (task brief)
+    - **bears**: As of today the scaffold itself is public and the owner is working in it as such, so the premise of the preceding quotation does not hold now; the purpose of #19 needs the owner's fresh word.
+  - item 7
+    - **speaker**: record
+    - **quote**: The audited source baseline is `2e5a6d67b6c590a06ea9761dfd8a98c3ed8ff270`.
+    - **locator**: /home/user/7lm@origin/beta/common-contracts-r1-r6:L8/L6/history/specification-history.md:106
+    - **bears**: The owner's later candidate of 2-3 November 2026 was built from main's state and not from PR #19; its specification still reads "Version of 20 September 2026" with "the owner's words behind each rule" (same ref, specification line 18), and both branches change 20 of the same files including the specification and its .docx, so the two cannot both land without hand reconciliation and a new version date.
+  - item 8
+    - **speaker**: record
+    - **quote**: Findings and design verdicts come to the owner as proposals — file, what is wrong, the exact fix — and nothing is applied until the owner says which.
+    - **locator**: /home/user/7lm@origin/main:L8/L6/history/harmonization-2026-09-04.md:484
+    - **bears**: The record's reading of the standing rule: the order in which the beta and #19 land, and who reconciles them, is to be put to the owner as a proposal and not applied.
+- **against**: "The instruction of 6 October 2026, in indirect speech: the public is to see the sheets and the source documents without authorship tags of any kind, the author's own included, as agnostic as possible; and the public view of diffs and commits is to be removed." (/home/user/7lm@origin/ccr-00099fac-hjosbo:L8/L6/history/harmonization-2026-09-04.md:514). The owner asked for this work, and on 17 October 2026 said "fix them" (same file, line 544) to have the branch reconciled so that it "merges cleanly after this change whichever lands first" (line 546); and the repository is public today with the tags still in main's live text, which is the very state the instruction was meant to end. Holding therefore leaves an owner's request unmet.
+- **confidence**: the quotations do not reach it: the owner must say
+- **alternatives**: (a) Merge #19 into main now (it merges without conflict against main's base) and let the beta be rebased over it: fastest route to the agnostic face, but it brings in the release automation against "I didn't want anything automated yet" and forces the owner's own candidate to be reworked in the specification, the .docx and some 18 sheets. (b) Merge #19 without `.github/release.sh` and `release.yml`: respects the automation word but still collides with the beta and still rests on an unquoted instruction. (c) Close #19 unmerged and file its text in `L8/L6/in/`: tidy, but it discards an owner-requested pass on no quoted word. (d) Recommended: hold as draft, decide the beta first, then re-run the sweep fresh.
+- **what_it_costs**: Main's live text keeps its authorship attributions while the repository is public (main's specification has "the owner" 25 times and "Author note" 15 times; the #19 branch has 11 and 0), for as long as the hold lasts. The twelve-pass sweep of 6 October will have to be repeated over the beta's new wording if the beta lands first, and the patched .docx regenerated; the version date "6 October 2026" will be superseded by a later one. Nothing is lost: the branch, its record sections 38-40 and its history stay as they are.
+- **who_acts**: The owner says three things: (1) whether the instruction of 6 October 2026 still stands now that the scaffold is public and the beta keeps the attributions; (2) whether the release script and workflow are wanted, given "I didn't want anything automated yet"; (3) which lands first, the beta or #19. Until then nobody acts on the branch. Facts verified read-only from git objects: #19 = 8 commits over merge base 2e5a6d6 (6 and 17 October 2026), 48 files changed; it and the beta both change 20 of the same files; a no-write three-way merge-tree of the two shows 7 conflict hunks plus the unmergeable binary .docx.

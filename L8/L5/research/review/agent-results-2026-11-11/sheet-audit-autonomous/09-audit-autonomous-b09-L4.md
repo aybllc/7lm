@@ -1,0 +1,97 @@
+# audit:autonomous:b09-L4
+
+Agent result, as returned. Workflow: Sheet audit, Autonomous. Run `wf_8e13ec8e-47f`. Phase: Audit.
+
+- **sheets_audited**
+  - L8/L4/0.md
+  - L8/L4/work/0.md
+  - L8/L4/work/computation/0.md
+  - L8/L4/work/experiments/0.md
+  - L8/L4/work/writing/0.md
+  - L8/L4/work/writing/branch/0.md
+- **findings**
+  - item 1
+    - **id**: b09-L4-01
+    - **kind**: WRONG-FACT
+    - **sheet**: L8/L4/0.md
+    - **line**: 122
+    - **sheet_says**: - `work/computation/`, `work/experiments/` — empty.
+    - **truth**: work/computation/ is not empty: it holds deep-research-report.md (38,738 bytes). Only work/experiments/ is empty (0.md only). The statement predates the 2026-09-06 filing of the report (stale). It also contradicts L8/L4/work/computation/0.md:38 ("`deep-research-report.md` — ... a deep-research run about this object") and L8/0.md:137 (files "`L8/L4/work/computation/deep-research-re...`" filed by layer).
+    - **evidence**: `git -C /home/user/autonomous ls-tree -r -l 8257118 L8/L4` lists `38738 L8/L4/work/computation/deep-research-report.md`; L8/L4/work/experiments/ contains only 0.md (4050 bytes). L8/L6/history/harmonization-2026-09-05.md:128 records `manuscripts/main/deep-research-report.md` -> `USO/l4/work/computation/`.
+    - **exact_fix**: - `work/computation/deep-research-report.md` — a deep-research run about this object (2026-08-05): model output as run, never evidence.
+      - `work/experiments/` — empty.
+  - item 2
+    - **id**: b09-L4-02
+    - **kind**: UNLISTED
+    - **sheet**: L8/L4/0.md
+    - **line**: 121
+    - **sheet_says**: - `work/writing/MANUSCRIPT.tex` (source of truth; a placeholder skeleton), `MANUSCRIPT.docx`, `MANUSCRIPT.pdf` (pandoc build products); `work/writing/branch/README.md`.
+    - **truth**: The layer's Holdings list of work/writing/ omits AUTONOMY_SCALE.md (49,501 bytes), which is filed there and is listed by the child sheet L8/L4/work/writing/0.md:35.
+    - **evidence**: ls-tree at 8257118: `49501 L8/L4/work/writing/AUTONOMY_SCALE.md`; `git grep -n -F AUTONOMY_SCALE 8257118 -- L8/L4/0.md` returns nothing.
+    - **exact_fix**: Append to line 121: "; `work/writing/AUTONOMY_SCALE.md` (the A1–A5 autonomy scale as written; INTERNAL ONLY)."
+  - item 3
+    - **id**: b09-L4-03
+    - **kind**: WRONG-FACT
+    - **sheet**: L8/L4/0.md
+    - **line**: 121
+    - **sheet_says**: `MANUSCRIPT.docx`, `MANUSCRIPT.pdf` (pandoc build products)
+    - **truth**: The PDF's own metadata names LibreOffice Writer, not pandoc, as its producer. The .docx is consistent with pandoc output (pandoc-style docProps, created 2026-08-14T22:23:50Z); the PDF was produced by LibreOffice at the same second (CreationDate D:20260814152350-07'00'), i.e. exported from the .docx, not built by pandoc with a LaTeX engine as the retired manuscripts/main/README.md prescribed. The child sheet L8/L4/work/writing/0.md:33 says only "build products", which is true.
+    - **evidence**: `strings` on the object 8257118:L8/L4/work/writing/MANUSCRIPT.pdf: `<pdf:Producer>LibreOffice 26.2.4.2 (X86_64)</pdf:Producer>`, `<xmp:CreatorTool>Writer</xmp:CreatorTool>`. docProps/core.xml of MANUSCRIPT.docx: created 2026-08-14T22:23:50Z.
+    - **exact_fix**: `MANUSCRIPT.docx`, `MANUSCRIPT.pdf` (build products; the PDF's metadata names LibreOffice Writer as producer)
+  - item 4
+    - **id**: b09-L4-04
+    - **kind**: WRONG-FACT
+    - **sheet**: L8/L4/work/0.md
+    - **line**: 40
+    - **sheet_says**: - `work/computation/`, `work/experiments/` — empty.
+    - **truth**: computation/ holds deep-research-report.md (38,738 bytes); only experiments/ is empty. Stale since the 2026-09-06 filing. Contradicts L8/L4/work/computation/0.md:38 and L8/0.md:137.
+    - **evidence**: ls-tree at 8257118: `38738 L8/L4/work/computation/deep-research-report.md`; L8/L4/work/experiments/ holds only 0.md.
+    - **exact_fix**: - `computation/deep-research-report.md` — a deep-research run about this object (2026-08-05): model output as run, never evidence.
+      - `experiments/` — empty.
+  - item 5
+    - **id**: b09-L4-05
+    - **kind**: DEAD-PATH
+    - **sheet**: L8/L4/work/0.md
+    - **line**: 39-40
+    - **sheet_says**: `work/writing/MANUSCRIPT.tex` ... `work/writing/branch/README.md` ... `work/computation/`, `work/experiments/`
+    - **truth**: The Holdings block was copied from the parent sheet L8/L4/0.md, where `work/...` is relative to L8/L4/. In this sheet (L8/L4/work/) the paths resolve neither from the repository root (no top-level work/) nor from the sheet's own directory (no L8/L4/work/work/). The real paths are L8/L4/work/writing/..., L8/L4/work/computation/, L8/L4/work/experiments/.
+    - **evidence**: `git ls-tree -r --name-only 8257118` has no entry beginning `work/` and none beginning `L8/L4/work/work/`.
+    - **exact_fix**: - `writing/MANUSCRIPT.tex` (source of truth; a placeholder skeleton), `writing/MANUSCRIPT.docx`, `writing/MANUSCRIPT.pdf` (build products); `writing/branch/README.md`; `writing/AUTONOMY_SCALE.md`.
+      - `computation/deep-research-report.md`; `experiments/` — empty.
+  - item 6
+    - **id**: b09-L4-06
+    - **kind**: UNLISTED
+    - **sheet**: L8/L4/work/0.md
+    - **line**: 39
+    - **sheet_says**: - `work/writing/MANUSCRIPT.tex` (source of truth; a placeholder skeleton), `MANUSCRIPT.docx`, `MANUSCRIPT.pdf` (pandoc build products); `work/writing/branch/README.md`.
+    - **truth**: Holdings omit L8/L4/work/writing/AUTONOMY_SCALE.md (49,501 bytes), listed by L8/L4/work/writing/0.md:35.
+    - **evidence**: ls-tree at 8257118: `49501 L8/L4/work/writing/AUTONOMY_SCALE.md`; no occurrence of AUTONOMY_SCALE in L8/L4/work/0.md.
+    - **exact_fix**: Add "`writing/AUTONOMY_SCALE.md` (the A1–A5 autonomy scale as written; INTERNAL ONLY)" to the first Holdings bullet (see b09-L4-05).
+  - item 7
+    - **id**: b09-L4-07
+    - **kind**: WRONG-FACT
+    - **sheet**: L8/L4/work/0.md
+    - **line**: 39
+    - **sheet_says**: `MANUSCRIPT.docx`, `MANUSCRIPT.pdf` (pandoc build products)
+    - **truth**: Same as b09-L4-03: MANUSCRIPT.pdf's metadata names LibreOffice Writer as producer, not pandoc.
+    - **evidence**: `<pdf:Producer>LibreOffice 26.2.4.2 (X86_64)</pdf:Producer>`, `<xmp:CreatorTool>Writer</xmp:CreatorTool>` in 8257118:L8/L4/work/writing/MANUSCRIPT.pdf.
+    - **exact_fix**: `MANUSCRIPT.docx`, `MANUSCRIPT.pdf` (build products; the PDF's metadata names LibreOffice Writer as producer)
+  - item 8
+    - **id**: b09-L4-08
+    - **kind**: STALE
+    - **sheet**: L8/L4/work/computation/0.md
+    - **line**: 50
+    - **sheet_says**: This branch may remain empty. Presence in the agnostic topology establishes admissible capability, not mandatory population; unused now does not mean removed. It is empty at present.
+    - **truth**: The directory is not empty: it holds deep-research-report.md (38,738 bytes), which the same sheet lists in its own Holdings at line 38. The sentence "It is empty at present." predates the filing and contradicts line 38.
+    - **evidence**: ls-tree at 8257118: `38738 L8/L4/work/computation/deep-research-report.md`; L8/L4/work/computation/0.md:38 "- `deep-research-report.md` — ...".
+    - **exact_fix**: - This branch may remain empty. Presence in the agnostic topology establishes admissible capability, not mandatory population; unused now does not mean removed. It holds one file at present (`deep-research-report.md`).
+- **clean_sheets**
+  - L8/L4/work/experiments/0.md
+  - L8/L4/work/writing/0.md
+  - L8/L4/work/writing/branch/0.md
+- **could_not_check**
+  - L8/L4/work/writing/0.md:35 'built 2026-07-30 on the owner's instruction': AUTONOMY_SCALE.md's header says '[source text withheld from the public copy]' and 'Built by a 3-agent ... workflow' without a build date; the build date itself is not determinable from the file.
+  - L8/L4/0.md:121 and L8/L4/work/0.md:39 'pandoc' as applied to MANUSCRIPT.docx: the docx metadata is consistent with pandoc output but does not name pandoc; only the PDF's producer (LibreOffice Writer) is positively established.
+  - L8/L4/0.md:100 presents the specification's outline table row as one quoted string joined by an em dash ("L4 realization bay — A whole realized architecture ..."); both cells are verbatim at specification line 159 but the joined string is not; not reported as MISQUOTE, left to the owner's reading.
+  - L8/L4/work/computation/0.md:31 and L8/L4/work/writing/0.md:28 close a quotation with a full stop where the specification's sentence continues ("... and cannot flatten lower contracts ..."; "...; internal use history is L6; ..."); the quoted words are verbatim, truncation not reported.
+- **statements_checked**: 118

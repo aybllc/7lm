@@ -1,0 +1,50 @@
+# verify:D22
+
+Agent result, as returned. Workflow: Resolutions for the 23 owner decisions. Run `wf_3293f65c-a92`. Phase: Verify.
+
+- **quotes**
+  - item 1
+    - **locator**: /home/user/7lm@origin/main:L8/L6/history/harmonization-2026-09-04.md:482
+    - **verbatim**: yes
+    - **correction**: Verbatim at line 482. Note it is the owner's word of 20 September about the scaffold (aybllc/7lm), not about Auditonomous.
+  - item 2
+    - **locator**: /home/user/7lm@origin/main:L8/L6/history/harmonization-2026-09-04.md:484
+    - **verbatim**: yes
+    - **correction**: Verbatim at line 484 (the record's reading, not the owner's words).
+  - item 3
+    - **locator**: owner's instructions of 11 November 2026 (also /home/user/auditonomous@origin/ccr-9391bd81-f2enmj:L8/L6/history/harmonization-2026-09-05.md:178)
+    - **verbatim**: yes
+    - **correction**: Verbatim substring of the instruction as typed and of line 178 (identical at 294c843 and at the branch tip, which has since advanced to 428bbaf by check-in commits).
+  - item 4
+    - **locator**: /home/user/auditonomous@origin/ccr-9391bd81-f2enmj:L8/L6/history/harmonization-2026-09-05.md:200
+    - **verbatim**: yes
+    - **correction**: Verbatim at line 200, but it does not bear as claimed: changing "62" in sheets touches no ledger row, so this sentence would stay true. The sentence of the same line that the fix would falsify is: "Every other sentence of every sheet, but for that one clause in `L8/L6/history/0.md`: the scaffold's sheets say things these sheets do not, these say things the scaffold's do not, and none of that is touched here."
+  - item 5
+    - **locator**: /home/user/auditonomous@origin/ccr-9391bd81-f2enmj:L7/provenance/0.md:33
+    - **verbatim**: yes
+    - **correction**: Verbatim at line 33. The seven statements in five sheets are confirmed at this ref (L7/0.md:232; peer-1/0.md:16; peer-1/object-1/0.md:10; provenance/0.md:20 and :33; provenance/sources/0.md:10 and :41); on main the same seven, with L7/0.md at line 220. The register counts 60 rows (PR 20, STD 34, INST 4, EXC 2) and is identical on main and the mirror.
+  - item 6
+    - **locator**: /home/user/auditonomous@origin/main:L8/L6/history/LEDGER_2026-08-16_l6-close-and-normalization.md:30
+    - **verbatim**: yes
+    - **correction**: Verbatim at line 30. The bearing is incomplete: the miscount also stands inside the register file itself, in its close-out search-log row, /home/user/auditonomous@origin/main:L7/provenance/sources/LEDGER.md:113: "[source text withheld from the public copy])", which enumerates 21.
+  - item 7
+    - **locator**: /home/user/auditonomous@origin/beta/7lm-exemplar-auditonomous:L8/L6/history/AUDITONOMOUS_BETA_HISTORY.md:8
+    - **verbatim**: yes
+    - **correction**: Verbatim at line 8. This is Codex's record on the candidate, not the owner's words. The candidate does not leave the register file untouched: it appends a correction section at L7/provenance/sources/LEDGER.md:147-149 ("[source text withheld from the public copy].").
+  - item 8
+    - **locator**: /home/user/auditonomous@origin/ccr-9391bd81-f2enmj:L8/L6/history/harmonization-2026-09-05.md:205
+    - **verbatim**: yes
+    - **correction**: Verbatim at line 205.
+  - item 9
+    - **locator**: /home/user/7lm@origin/main:L8/L6/history/harmonization-2026-09-04.md:510 (the 'against' quotation)
+    - **verbatim**: yes
+    - **correction**: Verbatim at line 510.
+  - item 10
+    - **locator**: /home/user/auditonomous@origin/ccr-9391bd81-f2enmj:L8/L6/history/harmonization-2026-09-05.md:156 (the 'against' heading)
+    - **verbatim**: yes
+    - **correction**: Verbatim substring of the heading at line 156. One fact in the 'against' paragraph is wrong: the mirror edits all five of the sheets concerned, not four (git diff --stat origin/main..mirror lists all five); none of the seven lines that say 62 is among the changed lines.
+- **inference_holds**: yes
+- **objection**: All ten quotations are character for character at their locators. The resolution (separately, as a proposal, applied on the owner's word) follows from them, with four weaknesses. (1) Inconsistent footing: the lead owner quotation is the 20 September word about the scaffold, yet the 'against' quotation of the same evening is dismissed because it "was given for the scaffold ... not for this repository". The same objection applies to the lead quotation. The gap is closed by an owner word in the Auditonomous record itself that was missed (below). (2) The quotation at :200 ("no ledger row ... is touched") does not carry the point made from it; a sheet count is not a ledger row. The sentence that a fold-in would falsify is the neighbouring one, "Every other sentence of every sheet, but for that one clause in `L8/L6/history/0.md`: ... none of that is touched here." (3) "Leave the register itself untouched" passes over the fact that the register file carries the source of the slip in its own close-out log row (LEDGER.md:113, "22 new rows" over a list of 21), and that the candidate branch appends a correction there (LEDGER.md:147-149). That dated row should stay as written, but the proposal should name it and ask whether a correction note is appended. (4) "Four of the five sheets" should read five of five. The stronger ground for "separately" is the owner's own ordering of 11 November, which the resolver quoted only in its second half: the first half, "Get qa hanfle on the research and manuscruipt for Auditonomous but firwst", makes a ledger-count finding part of the QA handle that comes after the match, not part of the match. No later word of the owner overrides this. "fix them" (/home/user/7lm@origin/ccr-9391bd81-f2enmj:L8/L6/history/harmonization-2026-09-04.md:530, 17 October) was given for two named items after they were put to the owner, which is the same pattern, not a standing leave. I found no owner quotation that gives leave to correct a sheet's factual error unasked in this repository. The nearest that cuts the other way is the owner's rule that integrity is what is enforced ("we cant enforce integroty by ebforceing no deletion. we can only imply no deletion to enforcer integiortyty", auditonomous record :154), which says the count should be right but not when or by whom. Not searched: the 62 figure also stands at BOOK_STRUCTURE_AND_ROADMAP_2026-09-13.md:413 and :665 on the closed PR #27 branch ("the 62-row source ledger"; "this repository's 62 rows"), which will need the same correction if that branch is ever revived.
+- **missed_quotation**: "under autonomous and auidtonomous the root needs to be the same for both and anything we need to discuss shoudl be brough to my atgention with soluitionsw like gitworkflows" — /home/user/auditonomous@origin/main:L8/L6/history/harmonization-2026-09-05.md:129 (same line at origin/ccr-9391bd81-f2enmj). The owner's own word for this repository and Autonomous, 6 September 2026: a matter to discuss is brought to the owner with its solution. It supports the resolution and supplies the Auditonomous footing the scaffold quotation lacks. Also unused: the first half of the 11 November instruction, "Get qa hanfle on the research and manuscruipt for Auditonomous but firwst", which places a ledger-count finding in the QA handle that follows the match.
+- **corrected_resolution**: Unchanged in substance, tightened in three places. Correct it separately, not inside the mirror (draft PR #28), as a finding of the QA handle the owner ordered to follow the match. Put it to the owner as a proposal with its exact fix: "62" becomes "60" in the seven statements of the five live sheets (L7/0.md; L7/peering/private/ingress/peer-1/0.md; peer-1/object-1/0.md; L7/provenance/0.md twice; L7/provenance/sources/0.md twice), one commit of its own with a record section, applied on the owner's word. The proposal must also name the source of the slip inside the register file, the close-out log row at L7/provenance/sources/LEDGER.md:113 ("22 new rows" over a list of 21), and ask the owner whether that dated row is left as written with nothing added, or left as written with a dated correction note appended as the candidate branch does at LEDGER.md:147-149. The 60 register rows themselves and the dated history records that say 62 stay as they are. Since PR #28 edits all five sheets (though none of the seven lines), the fix is made on top of the mirror or after it lands, and the wording is reconciled with the candidate branch's "60 archive rows" whichever lands second. Ground it on the owner's word for this repository (auditonomous record :129) and the 11 November ordering, with the scaffold's 20 September rule as supporting analogy only.
+- **corrected_confidence**: the quotations favour it (unchanged). No owner word decides this count directly. The owner's word for this repository (bring it with a solution) and the 11 November ordering (match first, QA after) both point to a separate, asked-for correction, and nothing later overrides them.

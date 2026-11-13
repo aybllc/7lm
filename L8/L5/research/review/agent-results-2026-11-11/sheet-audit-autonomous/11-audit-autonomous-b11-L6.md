@@ -1,0 +1,63 @@
+# audit:autonomous:b11-L6
+
+Agent result, as returned. Workflow: Sheet audit, Autonomous. Run `wf_8e13ec8e-47f`. Phase: Audit.
+
+- **sheets_audited**
+  - L8/L6/0.md
+  - L8/L6/history/0.md
+  - L8/L6/retired/0.md
+- **statements_checked**: 96
+- **findings**
+  - item 1
+    - **id**: b11-L6-01
+    - **kind**: WRONG-FACT
+    - **sheet**: L8/L6/history/0.md
+    - **line**: 35
+    - **sheet_says**: "findings F1–F22 with REFUTED strikes retained"
+    - **truth**: The findings tables in LEDGER.md run to F23. Row ids present: F1–F12, F13–F17, F18a–F18d, F19–F22, F22a, F22b, F23 (plus a closing F18 row). The REFUTED strikes on F1 and F5 are retained as stated.
+    - **evidence**: git show 8257118:L8/L6/history/LEDGER.md, section "## Findings on the record" (line 162). Line 202 begins "| F23 | **Capability envelope, binding F19–F22b: primary retrieval was impossible; search was locate-only.**". grep -o -E '^\| *(~~)?F[0-9]+[a-z]?(~~)? *\|' lists rows at lines 166–177, 183–191, 196–202, 204.
+    - **exact_fix**: findings F1–F23 with REFUTED strikes retained
+  - item 2
+    - **id**: b11-L6-02
+    - **kind**: UNLISTED
+    - **sheet**: L8/L6/0.md
+    - **line**: 73-75 and 88-89
+    - **sheet_says**: Line 75: "`L8/L6/retired/layout-2026-08-14/` and `L8/L6/retired/error-records/` — the retired layout and the superseded definition documents, verbatim." Line 89: "`retired/layout-2026-08-14/` — the pre-pass README and directory READMEs, verbatim; `retired/error-records/` — the four superseded definition documents retained unaltered as error records." Lines 73-74 and 88 list seven files under history/ (LEDGER.md, the five forensic reconstructions, harmonization-2026-09-05.md).
+    - **truth**: The layer holds a third retired set and two further history records that neither the "In this repository" list nor the "Holdings" section mentions: L8/L6/retired/layout-2026-09-06/ (0.md, durable/README.md, intake/README.md, intake/claude/README.md, manuscripts/main/autonomouos-deep-research-auditonomopus-sources.odt), L8/L6/history/sheets-2026-09-07.md (6798 bytes) and L8/L6/history/7LM_ROUTING_PLAN_2026-09-05.md (12115 bytes). The two child sheets do list them (L8/L6/retired/0.md line 35; L8/L6/history/0.md lines 42-43).
+    - **evidence**: git ls-tree -l 8257118 L8/L6/history/ shows 9 record files plus 0.md; git ls-tree -r -l 8257118 L8/L6/retired shows three sets: error-records, layout-2026-08-14, layout-2026-09-06.
+    - **exact_fix**: Line 88, append before the final period: "; `history/sheets-2026-09-07.md` — what the sheets carried about their past until 2026-09-07; `history/7LM_ROUTING_PLAN_2026-09-05.md` — the routing proposal the pass followed". Line 89, insert after the layout-2026-08-14 clause: "`retired/layout-2026-09-06/` — the one-day queue's rule texts and one duplicate `.odt`, verbatim; ". Make the same two additions at lines 74-75.
+  - item 3
+    - **id**: b11-L6-03
+    - **kind**: STALE
+    - **sheet**: L8/L6/0.md
+    - **line**: 88
+    - **sheet_says**: "`history/harmonization-2026-09-05.md` — the record of this pass."
+    - **truth**: There is no current "this pass". The file is the record of the 2026-09-05 instantiation and now carries fourteen sections dated through 2026-11-11 (§8 2026-09-05, §9-§10 2026-09-06, §11-§12 2026-09-07, §13 2026-09-12, §14 2026-11-11). The same sheet, line 74, already states it without the deictic: "the record of the instantiation of the canonical topology on 2026-09-05". §12 of the record says such phrases were pulled out of the sheets on 2026-09-07 (sheets-2026-09-07.md lists " at HEAD of this pass" as removed from L7/0.md).
+    - **evidence**: git show 8257118:L8/L6/history/harmonization-2026-09-05.md | grep -n '^## ' gives headings 1-14, the last "## 14. 2026-11-11 — the L7 restructure mirrored by hand". L8/L6/0.md line 74 versus line 88.
+    - **exact_fix**: `history/harmonization-2026-09-05.md` — the record of the instantiation of the canonical topology on 2026-09-05 and of the layout decisions since (§8–§14, through 2026-11-11).
+  - item 4
+    - **id**: b11-L6-04
+    - **kind**: STALE
+    - **sheet**: L8/L6/history/0.md
+    - **line**: 41
+    - **sheet_says**: "`harmonization-2026-09-05.md` — the record of this pass; its §9 records the 2026-09-06 dissolution of the one-day queue, and its §14 the L7 restructure mirrored on 2026-11-11."
+    - **truth**: Same as b11-L6-03: "this pass" was the 2026-09-05 instantiation; the sentence itself goes on to cite sections from 2026-09-06 and 2026-11-11, so the record is no longer of one present pass. The §9 and §14 pointers are correct.
+    - **evidence**: harmonization-2026-09-05.md line 1: "# Harmonization record — 2026-09-05 — the Seven-Layer Model topology instantiated"; line 116 "## 9. 2026-09-06 — the owner dissolves the queue"; line 183 "## 14. 2026-11-11 — the L7 restructure mirrored by hand".
+    - **exact_fix**: `harmonization-2026-09-05.md` — the record of the instantiation of the canonical topology on 2026-09-05; its §9 records the 2026-09-06 dissolution of the one-day queue, and its §14 the L7 restructure mirrored on 2026-11-11.
+  - item 5
+    - **id**: b11-L6-05
+    - **kind**: CONTRADICTION
+    - **sheet**: L8/L6/0.md
+    - **line**: 17
+    - **sheet_says**: "Not instantiated in this repository: current research practice remains manual; no directory metadata, automation, or validation is enabled here." (Also L8/L6/history/0.md line 54 and L8/L6/retired/0.md line 46: "No automation.")
+    - **truth**: One automated validation is enabled in this repository and it validates the directories' sheets. L8/L6/retired/0.md line 12 says integrity is enforced "by the one CI check"; README.md line 15 says "`.github/` (one CI check, repository infrastructure and not a layer)". The sentence is consistent only if read as limited to machine metadata; as written ("no ... automation, or validation is enabled here") it disagrees with those two statements. The specification's own wording for the exemplars (line 934) is narrower: "No directory metadata, no automation in the layout; the one CI check at .github/workflows/integrity.yml". The same sentence stands at L7/0.md line 27 and L8/0.md line 133 (outside this batch).
+    - **evidence**: git show 8257118:.github/workflows/integrity.yml: "on: [push, pull_request]" with steps G-001 (no conflict markers), G-002 ("The root is canonical"), G-003 ("Every sheet is headed by its path, and every canonical position has a sheet"). README.md line 15. L8/L6/retired/0.md line 12.
+    - **exact_fix**: Not instantiated in this repository: current research practice remains manual; no directory metadata and no automation in the layout; the one CI check at `.github/workflows/integrity.yml` is repository infrastructure and checks integrity, not metadata.
+- **clean_sheets**
+  - L8/L6/retired/0.md
+- **could_not_check**
+  - L8/L6/retired/0.md line 23: the Holds bullet "- In this repository:" ends at the colon with nothing after it (the next line is the "## Does not hold" heading). There is no statement to test; noted as an unfinished line, the actual holdings being given correctly under "## Holdings" (lines 34-36).
+  - L8/L6/0.md line 91: "this clone is shallow" is a statement about a clone, not about the tree at the commit. `git rev-parse --is-shallow-repository` in /home/user/autonomous returns true, but that cannot be established for any other clone.
+  - L8/L6/retired/0.md line 35: "byte-identical to the copy in `aybllc/auditonomous`". The blob 1ae82b4cdcbd5318855c97835fce3647148b5d09 does occur in the local /home/user/auditonomous object store (as L8/L4/work/computation/autonomouos-deep-research-auditonomopus-sources.odt in some reachable commit), which supports the claim, but which ref of the other repository is its state of record was not determined.
+  - L8/L6/retired/0.md line 36: the quoted phrase "do NOT cite as current" is not attributed; its source is the retired README (L8/L6/retired/layout-2026-08-14/README.md line 61), not the four error-record files themselves, whose headers read "do not cite as it stands". Not reported because the sheet does not say whose words they are.
+  - L8/L6/history/0.md line 37: "the 2026-08-08 merge storm reconstructed". The dossier itself (line 60) says the damage was not a single "merge storm" but two independent injections 91 seconds apart; whether the sheet's shorthand misdescribes the file is a matter of wording, not tested as fact. The counts (45 hunks, 10 files, supersession pairs) are correct.

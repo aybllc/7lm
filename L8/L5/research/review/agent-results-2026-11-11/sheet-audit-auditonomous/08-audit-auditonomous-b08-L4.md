@@ -1,0 +1,90 @@
+# audit:auditonomous:b08-L4
+
+Agent result, as returned. Workflow: Sheet audit, Auditonomous. Run `wf_1ec3ea42-dcb`. Phase: Audit.
+
+- **sheets_audited**
+  - L8/L4/0.md
+  - L8/L4/work/0.md
+  - L8/L4/work/computation/0.md
+  - L8/L4/work/experiments/0.md
+  - L8/L4/work/writing/0.md
+  - L8/L4/work/writing/branch/0.md
+  - L8/L4/work/writing/chat/0.md
+  - L8/L4/work/writing/sessions/0.md
+- **statements_checked**: 150
+- **findings**
+  - item 1
+    - **id**: b08-L4-01
+    - **kind**: WRONG-FACT
+    - **sheet**: L8/L4/work/computation/0.md
+    - **line**: 54
+    - **sheet_says**: "This branch may remain empty. Presence in the agnostic topology establishes admissible capability, not mandatory population; unused now does not mean removed. It is empty at present."
+    - **truth**: The directory is not empty. It holds six files besides the sheet, and the same sheet's Holdings (lines 38-42) lists all six.
+    - **evidence**: git ls-tree -r -l f2d5b37 L8/L4/work/computation: autonomouos-deep-research-auditonomopus-sources.odt (253111), autonomouos-deep-research-auditonomous-activity.odt (74397), deep-research-auditonomous.md (46665), ieee-requirements-for-autonomouos.md (129617), iso-iec-requirements-for-autonomous.md (56208), nist-requirements-for-autonomouos.md (57042). Same sheet, lines 38-42, lists them.
+    - **exact_fix**: Line 54: delete the sentence "It is empty at present." so the bullet reads: "- This branch may remain empty. Presence in the agnostic topology establishes admissible capability, not mandatory population; unused now does not mean removed."
+  - item 2
+    - **id**: b08-L4-02
+    - **kind**: CONTRADICTION
+    - **sheet**: L8/L4/0.md
+    - **line**: 122
+    - **sheet_says**: "- `work/computation/` — three requirements extractions as run."
+    - **truth**: work/computation/ holds six files: the three requirements extractions, plus a deep-research run (deep-research-auditonomous.md) and its two exports (.odt). The computation sheet lists all six.
+    - **evidence**: L8/L4/work/computation/0.md:41-42 lists `deep-research-auditonomous.md`, `autonomouos-deep-research-auditonomopus-sources.odt`, `autonomouos-deep-research-auditonomous-activity.odt` in addition to the three extractions at lines 38-40. ls-tree at f2d5b37 confirms six files. L8/0.md:137 says these were filed into `L8/L4/work/computation/` on 2026-09-06; L8/0.md:137 also still says "three requirements extractions" (outside this batch).
+    - **exact_fix**: - `work/computation/` — three requirements extractions as run; one deep-research run with its citation export and activity log.
+  - item 3
+    - **id**: b08-L4-03
+    - **kind**: CONTRADICTION
+    - **sheet**: L8/L4/work/0.md
+    - **line**: 40
+    - **sheet_says**: "- `work/computation/` — three requirements extractions as run."
+    - **truth**: Same as b08-L4-02: work/computation/ holds six files, three of which (the deep-research run and its two exports) this line does not count.
+    - **evidence**: L8/L4/work/computation/0.md:38-42 lists six files; git ls-tree -r --name-only f2d5b37 L8/L4/work/computation shows the six files plus 0.md.
+    - **exact_fix**: - `work/computation/` — three requirements extractions as run; one deep-research run with its citation export and activity log.
+  - item 4
+    - **id**: b08-L4-04
+    - **kind**: CONTRADICTION
+    - **sheet**: L8/L4/work/computation/0.md
+    - **line**: 38
+    - **sheet_says**: "The quoted content is peer-owned and WSU-licensed (class-2 hold-private, `L7/governance/controlled/`)"
+    - **truth**: The class-2 hold-private condition is stated at L7/governance/copyright/, not at L7/governance/controlled/. The controlled sheet says nothing is filed there and that all restrictions are stated at copyright.
+    - **evidence**: L7/governance/controlled/0.md Holdings (line 32): "Nothing filed directly. Every restriction this repository is under derives from a copyright or licence condition, and all of them are stated at `L7/governance/copyright/`, the one place." L7/governance/copyright/0.md:43: "Every item obtained through the owner's institutional (WSU) access is IL-001-R2 class-2 hold-private: the 31 WSU-licensed IEEE PDFs and their reading captures". git grep -i 'class-2|hold-private' on L7/governance/controlled/0.md returns nothing.
+    - **exact_fix**: The quoted content is peer-owned and WSU-licensed (class-2 hold-private, `L7/governance/copyright/`)
+  - item 5
+    - **id**: b08-L4-05
+    - **kind**: WRONG-FACT
+    - **sheet**: L8/L4/work/writing/chat/0.md
+    - **line**: 16 (also 3 and 8)
+    - **sheet_says**: "`auditonomous-chat-1.docx`, `auditonomouos-chat-2.docx` — recorded working sessions (chat transcripts) as produced; binary, not read in this pass. They are records of conversation, not arguments"
+    - **truth**: By their own headers the two files are not chat transcripts. They are sourcebook volumes that ingest and reorganize a supplied chat history: titled "Auditonomous Book Material Sourcebook", subtitled "Chat-history ingestion I" / "II", with status labels, input metrics and a part structure. The same description is repeated at L8/L4/work/writing/0.md:34 ("two recorded working sessions as produced ... recorded conversation, not argument"), L8/L4/0.md:121 and L8/L4/work/0.md:39 ("two chat transcripts").
+    - **evidence**: Text extracted from word/document.xml of each object at f2d5b37 (python3 -I, zipfile). auditonomous-chat-1.docx opens: "[source text withheld from the public copy]." then "Status labels", "Input metrics", "[source text withheld from the public copy]". auditonomouos-chat-2.docx opens: "[source text withheld from the public copy]: UHA frame realization, epoch correction, lambda, [source text withheld from the public copy]". No speaker-turn lines (User:/Assistant:) found in chat-1.
+    - **exact_fix**: - `auditonomous-chat-1.docx`, `auditonomouos-chat-2.docx` — "Auditonomous Book Material Sourcebook" v0.1, Chat-history ingestion I and II (ingestion date 6 August 2026; inputs `chat.txt` and `chat_history_chunk_02.txt`): organized corpora made from supplied chat histories, as produced, not the transcripts themselves. They organize recorded conversation and are not arguments; any argument in them belongs at `L8/L5/` only when stated there.
+  - item 6
+    - **id**: b08-L4-06
+    - **kind**: STALE
+    - **sheet**: L8/L4/work/writing/chat/0.md
+    - **line**: 16
+    - **sheet_says**: "binary, not read in this pass"
+    - **truth**: "this pass" refers to the 2026-09-05 routing pass, not to the present state of the sheet (the commit is dated 2026-11-11 and the sheet has been through later passes). The files are readable: both are ordinary .docx archives whose text extracts cleanly (see b08-L4-05).
+    - **evidence**: L8/L6/history/7LM_ROUTING_PLAN_2026-09-05.md is the pass that relocated the files; f2d5b37 is dated 2026-11-11. word/document.xml of both objects extracts to 1472 and 1563 paragraphs.
+    - **exact_fix**: Delete "binary, not read in this pass" (the replacement line in b08-L4-05 omits it); or, if the owner wants the fact kept: "binary; not read in the 2026-09-05 routing pass".
+  - item 7
+    - **id**: b08-L4-07
+    - **kind**: MISQUOTE
+    - **sheet**: L8/L4/0.md
+    - **line**: 100
+    - **sheet_says**: "The analytic view of this layer in the specification's outline reads: \"L4 realization bay — A whole realized architecture may be contained here and may expand internally according to its own native structure without commandeering 7LM layer numbers.\""
+    - **truth**: The string inside the quotation marks is not verbatim in the specification. The specification has two table cells, "L4 realization bay" (Analytic view) and the sentence (Meaning); the em dash joining them is the sheet's. The sentence itself is verbatim. Minor.
+    - **evidence**: Specification origin/main line 159: "| L4 realization bay | A whole realized architecture may be contained here and may expand internally according to its own native structure without commandeering 7LM layer numbers. |"; grep -F 'L4 realization bay —' on the specification returns nothing.
+    - **exact_fix**: The analytic view of this layer in the specification's outline, "L4 realization bay", reads: "A whole realized architecture may be contained here and may expand internally according to its own native structure without commandeering 7LM layer numbers."
+- **clean_sheets**
+  - L8/L4/work/experiments/0.md
+  - L8/L4/work/writing/branch/0.md
+  - L8/L4/work/writing/sessions/0.md
+  - L8/L4/work/writing/0.md (no finding of its own; line 34 repeats the chat description reported under b08-L4-05)
+- **could_not_check**
+  - L8/L4/work/computation/0.md:44 "Source identities for the three belong as rows in `L7/provenance/sources/`; none exists yet": 'the three' is ambiguous (the three extractions, or the deep-research trio). L7/provenance/sources/LEDGER.md does carry rows for underlying standards (e.g. STD-004 IEEE 7001-2021, STD-007 IEEE 7009-2024, STD-025 ISO/IEC 22989:2022) but no row naming the extraction files or the deep-research run; truth depends on which reading is meant.
+  - L8/L4/0.md:125 and L8/L4/work/0.md:43 put "No L4 cut beyond writing, extraction and verification runs exists" in quotation marks with no source named. No file at the commit contains that string; the nearest is L8/L6/history/7LM_ROUTING_PLAN_2026-09-05.md:252 "Does not claim any L4 cut beyond writing, extraction and verification runs: nothing is built." Not attributed to the specification, so not reported as MISQUOTE.
+  - L8/L4/work/writing/sessions/0.md:16 "the §7.4 scaling and precision reasoning (L3)": §7.4 of the session file is "[source text withheld from the public copy]" (precision reasoning; mentions 'Dimensionless scaling'); the scaling results (R ∝ (ρt)^¼, cell size) are in §4.3-4.4 (line 217), not §7.4. Whether 'scaling' is wrong here is a judgment; L8/L3/0.md:92 (outside this batch) more plainly attributes cell sizing and R ∝ (ρt)^¼ to §7.4.
+  - L8/L4/work/writing/0.md:33 calls the three files "the live drafts"; auditnomous-main.docx is by its own header an "Auditonomous Book Material Sourcebook ... extraction corpus" v0.1 (6 August 2026), auditonomouos-important.docx an "Adversarial Scientific Assessment and Research Blueprint", auditonomous-08-03-26.odt a "Book Prospectus v0.1". Whether these are 'drafts' of the manuscript is the owner's designation (quoted from the master ledger); not determinable.
+  - L8/L4/work/computation/0.md:38-40 "by `pdftotext -layout` on held PDFs" / "same method": the files' own Method line says "`[source text withheld from the public copy]"; which rows came by which method was not verified row by row.
+  - Whether the workflow journal `wf_b00a2270-83e` exists (outside the repository).

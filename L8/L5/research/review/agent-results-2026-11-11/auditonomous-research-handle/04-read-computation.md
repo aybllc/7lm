@@ -1,0 +1,637 @@
+# read:computation
+
+Agent result, as returned. Workflow: Handle on the Auditonomous research and manuscript. Run `wf_9c2917a7-7f0`. Phase: Read.
+
+- **scope**: Layer 4 computation and experiments (not writing): MAIN L8/L4/work/computation/ (sheet + six objects) and L8/L4/work/experiments/0.md; BETA auditonomous_beta.py, test_auditonomous_beta.py, auditonomous_beta_result.json and the sheet change; ROADMAP all-research-corpus-auditonomous.md, probes/ (sheet + eight scripts), ommp/ (sheet, README, three modules, one test). All read from git objects only; all code run from copies under /tmp/claude-0/-home-user/bfcfd013-a2da-5019-961e-7f46116f08be/scratchpad/wf-handle/l4comp/ with python3 -I (Python 3.13.16), no network, no installs.
+- **summary**: Layer 4 computation holds three kinds of thing, and nothing is filed under experiments in any state (the sheet is the same blob everywhere and says "No experiment has been executed").
+
+  1. Standards extractions (MAIN). Three files of verbatim, clause-cited rows: IEEE 55, ISO/IEC 24, NIST 20. I recounted each (table rows, entry headers, verbatim blocks) and the counts match the sheet and the L1 ownership file. They sum to 99; the "113" cited at L1 needs a NASA lane of 14 that has no file in any state. The "78" comes from a different run whose record exists only on ROADMAP. L1 and the beta findings both say the 78/113 reconciliation and the Q11 auditability extraction are not done. The extractions name their sources well (edition, clause, page, DOI, one SHA-256), but the PDFs and the workflow journal they were recovered from are not in the tree.
+
+  2. Model output (MAIN, plus one file on ROADMAP). A ChatGPT deep-research report dated 2026-08-05 with its citation export (30 citations, 636 sources scanned) and activity log (9m 48s). The repository labels it "model output as run, never evidence"; no adjudication of its corrections is recorded on MAIN. The ROADMAP-only "AUTONOMY-STACK SSOT v0.1" carries three recorded flags against it.
+
+  3. Code.
+  - ROADMAP: eight numerical probes and the UHA/OMMP reconstruction, restored byte-identical from history. All eight probes ran clean, and every figure I compared matches the research record that cites it. The OMMP suite ran 65 PASS, 0 FAIL; its README says 66.
+  - BETA: the envelope exemplar ran 12 unit tests OK against the pinned producer (autonomous 805cd42). The CLI re-run reproduces the committed result except one field, the recorded Python version. It is a synthetic software fixture and says so; its "fault corrections" are fresh rebuilds, not repairs.
+
+  The record-keeping problems are mostly stale paths, a sheet that calls itself empty while listing holdings, and evidence files that are named but not in the tree.
+- **items**
+  - item 1
+    - **id**: L4C-01
+    - **title**: Computation sheet (MAIN)
+    - **path**: L8/L4/work/computation/0.md
+    - **where**: MAIN (modified on ROADMAP and BETA)
+    - **what_it_is**: Directory sheet listing six holdings: three requirements extractions, one deep-research report, two .odt exports of that run.
+    - **own_label**: "model output as run, never evidence" (for the deep-research run); "extraction as run" (for the requirements files)
+    - **evidence_state**: CONTRADICTED (the sheet contradicts itself: Holdings lists six objects, Standing says the branch is empty)
+    - **checked_how**: Read in full. Row counts in the Holdings lines (55, 24, 20) confirmed by my recount of the three files. The cross-reference to an ISO/IEC 22989 lineage caution resolves at MAIN:L7/provenance/sources/0.md:43.
+    - **key_claims**
+      - 55 IEEE rows, 24 ISO/IEC rows, 20 NIST rows, recovered from workflow journal wf_b00a2270-83e
+      - Deep-research run of 2026-08-05 is model output, never evidence
+      - Source-identity rows for the three extractions do not yet exist in L7/provenance/sources/
+    - **open_items**
+      - Line 44: "none exists yet (the owner's next ledgering session)" - source-identity rows still absent
+      - Line 54 "It is empty at present" stands on MAIN and ROADMAP; corrected only on BETA
+    - **depends_on**
+      - L4C-05
+      - L4C-06
+      - L4C-07
+      - L4C-02
+    - **locator**: MAIN:L8/L4/work/computation/0.md:36-44 and :54
+    - **quote**: This branch may remain empty. Presence in the agnostic topology establishes admissible capability, not mandatory population; unused now does not mean removed. It is empty at present.
+  - item 2
+    - **id**: L4C-02
+    - **title**: Deep-research report "[source text withheld from the public copy]"
+    - **path**: L8/L4/work/computation/deep-research-auditonomous.md
+    - **where**: MAIN, ROADMAP, BETA (same blob a5958d4); HISTORY at three paths
+    - **what_it_is**: A model-generated deep-research export (639 lines). Generator traces are ChatGPT: opaque citation tokens of the form citeturnNsearchM / fileciteturnNfileM in the text, and utm_source=chatgpt.com in the companion exports. Dated in its own body "as of August 5, 2026". It read the repository at commit ddaa81f (2026-08-05) plus an "uploaded thesis".
+    - **own_label**: "model output as run, never evidence" (sheet line 41); "Asserts earlier negative findings are 'overtaken' — UNREVIEWED; not a finding." (MAIN:L8/L6/history/7LM_ROUTING_PLAN_2026-09-05.md:126)
+    - **evidence_state**: ASSERTED (unchecked model output). Its rulings that six repository propositions are false or outdated are UNRESOLVED: no adjudication is recorded on MAIN.
+    - **checked_how**: Read in full. Searched MAIN L7 and L8 for 'FDIS', '2026/1744', 'Vaara', 'No Certificate, No Execution': no hit outside the report. On ROADMAP, '2026/1744' appears in L7/provenance/sources/lists-2026-08-08/STANDARDS_CITED.md:74 and 'FDIS' in roadmap/book files. I checked none of its external claims (no network).
+    - **key_claims**
+      - The broad claim that nobody makes [source text withheld from the public copy]"; a narrower claim about exact-arithmetic decomposition plus enclosing certificate "still appears open"
+      - Six repository-era propositions are false, outdated or too broad (table at lines 23-30): ISO/IEC 24970 is FDIS not DIS; AI Act high-risk dates moved by Regulation (EU) 2026/1744; prEN 18229-1 is Logging only
+      - q = k + r is "under-typed"; λ=0 needs a singleton justification, a ledger reference alone is not one (lines 97-165)
+      - Proposes three papers, a ten-row classification test and eight register corrections (F20, F22b, O13, G1, G5, G6, AI Act date, prEN)
+    - **open_items**
+      - None of the eight "Immediate register corrections" (lines 625-636) is recorded as applied or rejected on MAIN
+      - The .md has no URLs; its 43 distinct citation tokens resolve only through the sources .odt
+      - The thesis it reviews (THESIS_lambda_decomposed_record.md) is absent from MAIN and BETA; present on ROADMAP only
+      - Among its 30 citations are six arXiv preprints and an aggregator page, source classes the status ladder bars for VERIFIED
+    - **depends_on**
+      - L4C-03
+      - L4C-04
+    - **locator**: MAIN:L8/L4/work/computation/deep-research-auditonomous.md:9 (central conclusion); :23-30 (table); :625-636 (register corrections)
+    - **quote**: [source text withheld from the public copy].
+  - item 3
+    - **id**: L4C-03
+    - **title**: Deep-research citation export (.odt)
+    - **path**: L8/L4/work/computation/autonomouos-deep-research-auditonomopus-sources.odt
+    - **where**: MAIN, ROADMAP, BETA (same blob 1ae82b4); HISTORY at three paths
+    - **what_it_is**: LibreOffice save of the deep-research run's sources panel: a block headed "Citations · 30" then "Sources scanned · 636", with page titles and URLs.
+    - **own_label**: "that run's citation export and activity log, as exported; same date, same standing"
+    - **evidence_state**: ASSERTED (an export of what the tool listed; no check recorded)
+    - **checked_how**: Extracted content.xml with python3 -I and zipfile (187,123 characters, 1,661 lines). Read lines 1-84 in full (all 30 citations). For the rest I sampled: 235 links, 213 unique, domain histogram, and a search for wiki entries. meta.xml: created 2026-08-05T06:12:14, LibreOffice 26.2.4.2, 87 pages.
+    - **key_claims**
+      - 30 citations, 636 sources scanned
+      - Citations include arXiv 2603.20953, 2605.24462, 2606.04104, 2607.13716, 2511.14805, 2603.19727; ISO/IEC FDIS 24970; EUR-Lex Regulation 2026/1744; an IETF draft 'Vaara Receipt'; NIST, UNECE, NHTSA, TCG, SIAM pages
+    - **open_items**
+      - Scanned sources include en.wikipedia.org (text lines 339-346), vendor pages and aggregators; which of them informed the report is not recorded
+      - Sampled, not read end to end
+    - **depends_on**
+      - L4C-02
+    - **locator**: MAIN:L8/L4/work/computation/autonomouos-deep-research-auditonomopus-sources.odt:content.xml (extracted text lines 3 and 80)
+    - **quote**: Citations · 30
+  - item 4
+    - **id**: L4C-04
+    - **title**: Deep-research activity log (.odt)
+    - **path**: L8/L4/work/computation/autonomouos-deep-research-auditonomous-activity.odt
+    - **where**: MAIN, ROADMAP, BETA (same blob 77350f2); HISTORY at three paths
+    - **what_it_is**: LibreOffice save of the run's activity panel: repository connector reads, web searches, two planning notes, a duration.
+    - **own_label**: "that run's citation export and activity log, as exported; same date, same standing"
+    - **evidence_state**: ASSERTED (a tool log; no check recorded)
+    - **checked_how**: Extracted and read in full (55 text lines). meta.xml: created 2026-08-05T06:12:54, LibreOffice 26.2.4.2. Commit ddaa81f named in its GitHub links exists in the repository (2026-08-05 03:27 -0700, 'LAMBDA_PRIOR_ART: durable record of the cosmology prior-art search for lambda').
+    - **key_claims**
+      - The run read AUDITONOMOUS.md, AUTONOMOUS.md, AUDITABILITY_REQUIREMENTS.md, RECORD_ONTOLOGY_OPEN_QUESTIONS.md, AUTHOR_ASSERTIONS.md, OVERRIDE_NECESSITY_2026-08-04.md and an eBIOS draft through a GitHub connector
+      - "Worked for 9m 48s"
+      - Links carry utm_source=chatgpt.com (text line 55)
+    - **open_items**
+      - The prompt that started the run is not in either export
+    - **depends_on**
+      - L4C-02
+    - **locator**: MAIN:L8/L4/work/computation/autonomouos-deep-research-auditonomous-activity.odt:content.xml (extracted text lines 6, 51, 55)
+    - **quote**: Worked for 9m 48s
+  - item 5
+    - **id**: L4C-05
+    - **title**: IEEE requirements extraction
+    - **path**: L8/L4/work/computation/ieee-requirements-for-autonomouos.md
+    - **where**: MAIN, ROADMAP, BETA (same blob a593886)
+    - **what_it_is**: A requirements extraction: 55 rows, each with a verbatim quote, clause and page, a normative class and a single-object-satisfiable verdict, from seven IEEE standards. Followed by 'Absences' and 'Notes'.
+    - **own_label**: "[source text withheld from the public copy]" (line 1049); sheet: "extraction as run"
+    - **evidence_state**: EXTERNALLY CHECKED by its own record (each row cites standard, clause, page). Single pass, not re-read by a second party; the source PDFs are not in the tree.
+    - **checked_how**: Recount: 55 table rows, 55 '### ' entries, 55 'Verbatim' blocks - matches line 41, the sheet, and REQUIREMENTS_OWNERSHIP.md:15. Class tally: 29 NORMATIVE + 1 SPLIT + 1 MIXED = 31, equal to L1's E 21 + J 4 + X 6. Every IEEE id named in the L1 file exists here. One quote (IEEE-7001-D1) spot-confirmed against MAIN:L7/provenance/sources/staging-records/ieee/reading/IEEE-7001.md:41.
+    - **key_claims**
+      - Produced 2026-08-04/05 by one extraction lane per body using pdftotext -layout on held PDFs; recovered from workflow journal wf_b00a2270-83e on 2026-08-05 (line 9)
+      - [source text withheld from the public copy] many for conformance
+      - IEEE affirms a single self-contained object (belief 2) and does not state the least-autonomous-function rule (belief 1)
+      - IEEE 7009 never names the runtime authorization grantor
+    - **open_items**
+      - NOT OBTAINED / NOT-CHECKED: IEEE 1872-2015 (CORA); IEEE 7010-2020 cl. 2.1; [source text withheld from the public copy]
+      - States [source text withheld from the public copy] (the NIST lane did obtain it; the IEEE recitation was not cross-checked against it)
+      - UNVERIFIED by its own note: IEEE intent on the 7001 cl. 3.1 vs 4.2 wording difference
+      - Paths it cites (/home/eric/ayb/auditonomous/intake/sources/ieee/pdf/, /tmp/claude-1000/...) are outside the repository
+    - **depends_on**
+      - L4C-08
+    - **locator**: MAIN:L8/L4/work/computation/ieee-requirements-for-autonomouos.md:41 (count); :9 (method); :997-1049 (absences, notes)
+    - **quote**: [source text withheld from the public copy]
+  - item 6
+    - **id**: L4C-06
+    - **title**: ISO / ISO-IEC requirements extraction
+    - **path**: L8/L4/work/computation/iso-iec-requirements-for-autonomous.md
+    - **where**: MAIN, ROADMAP, BETA (same blob 1b5c3bb)
+    - **what_it_is**: A requirements extraction: 24 rows (ISO-R1..R24) from ISO/IEC 22989:2022, ISO 8373:2021 and 2012, ISO/IEC 25059, 42001, TR 5469 and [source text withheld from the public copy]. Followed by Absences and an essay, 'THE KEY QUESTION'.
+    - **own_label**: "[source text withheld from the public copy])" (line 499); sheet: "24 rows, same method; the ISO/IEC 22989 lineage caution applies"
+    - **evidence_state**: EXTERNALLY CHECKED by its own record (clause-level quotes; OBP URLs and dates; SHA-256 for the 22989 PDF). Single pass.
+    - **checked_how**: Recount: 24 table rows, 24 ISO-R entries, 24 'Verbatim' blocks (the file has 28 '### ' headings; four belong to the closing essay). Matches line 44, the sheet and L1. The 3.1.5 definition and the 5.13 NOTE spot-confirmed against MAIN:L7/provenance/sources/staging-records/standards/extracted/ISO-IEC-22989-2022_captures.md:26 and :100.
+    - **key_claims**
+      - [source text withheld from the public copy] in the ISO material obtained; [source text withheld from the public copy]
+      - [source text withheld from the public copy] define autonomy incompatibly, but "[source text withheld from the public copy]
+      - Belief 1 partially supported, unstated as doctrine; belief 2 not affirmed
+    - **open_items**
+      - NOT OBTAINED: IEC/TR 60601-4-1; body of [source text withheld from the public copy] (paywalled)
+      - NOT-CHECKED: [source text withheld from the public copy]
+      - Clause 5.13 is quoted from a capture whose source PDF [source text withheld from the public copy]
+      - "[source text withheld from the public copy]": whether [source text withheld from the public copy]
+    - **depends_on**
+      - L4C-08
+    - **locator**: MAIN:L8/L4/work/computation/iso-iec-requirements-for-autonomous.md:44 (count); :415-445 (absences); :447-500 (key question, limits)
+    - **quote**: [source text withheld from the public copy]
+  - item 7
+    - **id**: L4C-07
+    - **title**: NIST requirements extraction
+    - **path**: L8/L4/work/computation/nist-requirements-for-autonomouos.md
+    - **where**: MAIN, ROADMAP, BETA (same blob 89fa56e)
+    - **what_it_is**: A requirements extraction: 20 rows (NIST-R1..R20) [source text withheld from the public copy]), AI 100-1 and SP 800-53 Rev. 5.
+    - **own_label**: "STATUS: VERIFIED for all quoted text." (line 384); sheet: "20 rows, same method; public-domain source"
+    - **evidence_state**: EXTERNALLY CHECKED by its own record (DOIs, resolved URLs, a SHA-256 for the ALFUS download, page-limited re-extraction). Single pass; the PDFs are not in the tree.
+    - **checked_how**: Recount: 20 table rows, 20 '### NIST-R' entries, 20 'Verbatim' blocks - matches line 32, the sheet and L1. No in-repo capture of ALFUS exists to spot-check a quote against (searched tree names for 'alfus' and '1011' on all states).
+    - **key_claims**
+      - NIST lays down no normative requirement: zero 'shall' in either ALFUS volume
+      - ALFUS composes by weighted average; the least-autonomous-function rule is not NIST's position
+      - Singular objects are first-class in ALFUS (belief 2 confirmed on cardinality)
+      - A corpus row (AUTONOMOUS_TERMS.md T-04) elides the clause that permits a non-human goal assigner
+    - **open_items**
+      - NOT OBTAINED: SP 1011 v1.1 and the ALFUS project pages
+      - NOT-CHECKED: whether ALFUS is NIST's only autonomy artefact (search budget exhausted, by its own note)
+      - Records an unexplained PDF metadata discrepancy ('version 2.1' title field)
+      - Cites sha256 a7b5c3a3…da84 for a file at a /tmp path outside the repository
+    - **depends_on**
+      - L4C-08
+    - **locator**: MAIN:L8/L4/work/computation/nist-requirements-for-autonomouos.md:32 (count); :15-16 (source and hash); :354-404 (absences, notes)
+    - **quote**: ## The requirements — 20 total
+  - item 8
+    - **id**: L4C-08
+    - **title**: Count reconciliation: 55 / 24 / 20 against 113, 78 and Q11
+    - **path**: L8/L1/state-space/REQUIREMENTS_OWNERSHIP.md
+    - **where**: MAIN, BETA (L1 file and beta findings); the source of '78' on ROADMAP and HISTORY only
+    - **what_it_is**: The check the task asked for: do the three files' counts match what L1 and the beta findings cite.
+    - **own_label**: "[source text withheld from the public copy]."; "NEW OPEN QUESTION — Q11."
+    - **evidence_state**: UNRESOLVED (the 99 of 113 held in files is INTERNALLY CHECKED by my recount; the remaining 14, the 78 and Q11 are open)
+    - **checked_how**: 55 + 24 + 20 = 99 confirmed by recount. L1 line 15 gives [source text withheld from the public copy] arithmetic holds (E 21 + J 4 + X 6 + D 82 = 113; D = 24 + 20 + 14 + 24). There is no NASA extraction file in MAIN, ROADMAP, BETA or HISTORY (tree-name search for 'nasa'; 'NASA-R' occurs only in the ownership file, naming NASA-R6 and NASA-R10). The '78' is at ROADMAP:L8/L5/research/findings/AUDITON_PACKABILITY_2026-08-04.md:15; MAIN cites it by a path that does not exist on MAIN.
+    - **key_claims**
+      - L1: "[source text withheld from the public copy]."
+      - L1: [source text withheld from the public copy]"; "a different, smaller run"
+      - L1 §8: [source text withheld from the public copy]'s; an auditability extraction lane "has not been run" (Q11)
+      - Beta findings: "[source text withheld from the public copy]."
+    - **open_items**
+      - Reconcile 78 with 113
+      - Run the Q11 auditability extraction (at least 14 SP 800-53 controls named at L1 lines 202-206 are outside the 113)
+      - Recover or re-extract the 14 NASA rows so that 113 can be recounted from the tree
+    - **depends_on**
+      - L4C-05
+      - L4C-06
+      - L4C-07
+    - **locator**: MAIN:L8/L1/state-space/REQUIREMENTS_OWNERSHIP.md:15, :18-21, :216-219, :244; BETA:L8/L5/research/findings/AUDITONOMOUS_BETA_FINDINGS.md:24
+    - **quote**: [source text withheld from the public copy].**
+  - item 9
+    - **id**: L4C-09
+    - **title**: Experiments sheet
+    - **path**: L8/L4/work/experiments/0.md
+    - **where**: MAIN, ROADMAP, BETA (same blob a86e481)
+    - **what_it_is**: Directory sheet. The directory holds only this sheet in all three states.
+    - **own_label**: "the position is admissible and empty"
+    - **evidence_state**: EMPTY
+    - **checked_how**: ls-tree of L8/L4/work/experiments on all three refs returns 0.md only; blob identical.
+    - **key_claims**
+      - "No experiment has been executed; 'nothing is built'."
+    - **open_items**
+      - On ROADMAP eight probes and on BETA a tested fixture exist as runs, all filed under computation; the experiments sheet was not changed on either branch. Whether any of them is an experiment is the owner's filing decision.
+    - **locator**: MAIN:L8/L4/work/experiments/0.md:36
+    - **quote**: Nothing is filed at this position; the position is admissible and empty. No experiment has been executed; "nothing is built".
+  - item 10
+    - **id**: L4C-10
+    - **title**: Computation sheet change (BETA)
+    - **path**: L8/L4/work/computation/0.md
+    - **where**: BETA
+    - **what_it_is**: Three edits to the sheet: a new Holdings line for the three beta files; the IEEE line's governance path changed from L7/governance/restrictions/ to L7/governance/controlled/; the Standing sentence "It is empty at present." replaced.
+    - **own_label**: "the bounded beta fixture and result are additional realized work, with synthetic limits"
+    - **evidence_state**: INTERNALLY CHECKED (the three named files exist and run; L7/governance/controlled/ exists on BETA)
+    - **checked_how**: git diff origin/main..BETA on the sheet; ls-tree of BETA L7/governance/ shows 'controlled' and no 'restrictions'.
+    - **key_claims**
+      - The beta files are "pinned producer consumption and actual synthetic envelope/record qualification; no second task controller or physical enforcement"
+      - "Its six inherited extraction/research outputs are listed above"
+    - **depends_on**
+      - L4C-11
+      - L4C-12
+      - L4C-13
+    - **locator**: BETA:L8/L4/work/computation/0.md:38, :40, :56
+    - **quote**: pinned producer consumption and actual synthetic envelope/record qualification; no second task controller or physical enforcement.
+  - item 11
+    - **id**: L4C-11
+    - **title**: Beta consumer script
+    - **path**: L8/L4/work/computation/auditonomous_beta.py
+    - **where**: BETA
+    - **what_it_is**: A 310-line stdlib-only Python script. It verifies a binding (hashes of the autonomous repository's producer code and result, and of AUTONOMOUS.md), imports that producer, runs its 16 cases, wraps each returned event in a SHA-256 digest-chained record, validates the packet, injects four faults and writes a result JSON.
+    - **own_label**: "It implements no second controller and establishes no physical enforcement."
+    - **evidence_state**: INTERNALLY CHECKED (run by me; see L4C-14 and L4C-15)
+    - **checked_how**: Read in full. Commit 714480d, author 'EDM', 2026-11-02 21:08 -0800; the commit carries no generator trailer, so 'made by Codex' cannot be confirmed from the commit. Binding hashes confirmed: the producer files at autonomous 805cd42 hash to 427409b3…b77e (code) and e6ad0564…7de2 (result); AUTONOMOUS.md to 27566617…a12b.
+    - **key_claims**
+      - Consumes producer commit 805cd42f… under architecture commit 4ca3edb9…
+      - 16 cases, 32 events, 32 records
+      - Claims flags are forced False: empirical, firmware, SGI, full auditonomous; standards_autonomy 'unresolved'
+    - **open_items**
+      - Lines 281-282: after each injected fault the 'corrected' packet is a fresh rebuild from the producer, not a repair of the faulted packet, so 'corrected_outcome' validating is true by construction
+      - Producer commit 805cd42 is on autonomous beta only, and architecture commit 4ca3edb on 7lm beta only; neither is an ancestor of its repository's main
+    - **depends_on**
+      - autonomous@805cd42:L8/L4/work/computation/autonomous_beta.py
+      - BETA:L7/peering/public/ingress/peer-1/object-2/binding.json
+    - **locator**: BETA:L8/L4/work/computation/auditonomous_beta.py:1-6, :70-116, :254-291
+    - **quote**: It implements no second controller and establishes no physical enforcement.
+  - item 12
+    - **id**: L4C-12
+    - **title**: Beta test file
+    - **path**: L8/L4/work/computation/test_auditonomous_beta.py
+    - **where**: BETA
+    - **what_it_is**: A unittest module of 12 test methods that exercise the consumer against the real pinned producer (no fake). It reads the producer root from AUDITONOMOUS_PRODUCER_ROOT or a sibling directory ../autonomous.
+    - **own_label**: "No fake producer/controller is shipped or used here."
+    - **evidence_state**: INTERNALLY CHECKED (run by me; see L4C-14)
+    - **checked_how**: Read in full; run recorded at L4C-14.
+    - **key_claims**
+      - Missing dependency fails closed; damaged binding fields are rejected; producer bytes are checked before import
+      - All 16 cases give 32 records: 16 halt, 8 act, 8 idle
+      - Overclaims in findings, limits, inquiries and representations are rejected
+    - **open_items**
+      - The tests need a checkout of autonomous at 805cd42 beside the repository; nothing in the tree supplies it
+    - **depends_on**
+      - L4C-11
+    - **locator**: BETA:L8/L4/work/computation/test_auditonomous_beta.py:1-17, :53-63
+    - **quote**: Behavioral integration tests against the actual pinned producer, stdlib only.
+  - item 13
+    - **id**: L4C-13
+    - **title**: Beta committed result
+    - **path**: L8/L4/work/computation/auditonomous_beta_result.json
+    - **where**: BETA
+    - **what_it_is**: The result packet (1,554 lines): model, two rails, two inquiries, eight layer representations, sources with hashes, 16 traces with 32 digest-chained records, findings, four fault records, six limitations.
+    - **own_label**: status 'qualified-bounded-synthetic'; record_qualification 'selected-completeness-and-digest-only'
+    - **evidence_state**: INTERNALLY CHECKED (reproduced by re-run except one environment field; see L4C-15)
+    - **checked_how**: Loaded and passed through the script's validate_result under my interpreter: 'qualified-bounded-synthetic'. Independently recomputed all 32 record digests and chain links: all match. All 16 stopped events are 'halt' and none carries permit.
+    - **key_claims**
+      - findings: cases 16, events 32, records 32, act 8, idle 8, halt 16, goal_changes 0
+      - Four injected faults rejected at L7.binding, L4.records, L4.execution, L5.warrant
+      - claims: every 'achieved' flag False; standards_autonomy 'unresolved'
+      - environment: CPython 3.14.4, Linux, stdlib only, synthetic
+    - **open_items**
+      - The findings file's stated limits stand: [source text withheld from the public copy]"
+    - **depends_on**
+      - L4C-11
+    - **locator**: BETA:L8/L4/work/computation/auditonomous_beta_result.json:/findings, /faults, /claims, /execution/environment (line 18)
+    - **quote**: "python": "3.14.4"
+  - item 14
+    - **id**: L4C-14
+    - **title**: RUN: beta unit tests
+    - **path**: L8/L4/work/computation/test_auditonomous_beta.py
+    - **where**: BETA (run from a scratch export)
+    - **what_it_is**: My run of the recorded command: python3 -I -[source text withheld from the public copy]. The auditonomous BETA tree and the autonomous tree at 805cd42 were exported with git archive into scratch; AUDITONOMOUS_PRODUCER_ROOT pointed at the autonomous export. Python 3.13.16.
+    - **own_label**: "The final full computation suite passed 12 tests" (BETA:L8/L6/history/AUDITONOMOUS_BETA_HISTORY.md:11)
+    - **evidence_state**: INTERNALLY CHECKED (12 of 12 passed; matches the recorded count)
+    - **checked_how**: Ran 12 tests in 1.224s, OK, exit 0. Output at /tmp/claude-0/-home-user/bfcfd013-a2da-5019-961e-7f46116f08be/scratchpad/wf-handle/l4comp/beta/out/unittest.out
+    - **key_claims**
+      - 12 tests ran, 12 passed, 0 failed, 0 errors
+    - **open_items**
+      - The history names evidence files T3-red.txt, T3-integration-wait.txt, T3-review-red.json/.txt and 'implementation evidence'; none is in the BETA tree
+    - **depends_on**
+      - L4C-11
+      - L4C-12
+    - **locator**: BETA:L8/L6/history/AUDITONOMOUS_BETA_HISTORY.md:11
+    - **quote**: The final full computation suite passed 12 tests; its actual green result and CLI execution are retained in the implementation evidence.
+  - item 15
+    - **id**: L4C-15
+    - **title**: RUN: beta script, reproduction of the committed result
+    - **path**: L8/L4/work/computation/auditonomous_beta.py
+    - **where**: BETA (run from a scratch export)
+    - **what_it_is**: My run of the recorded CLI: python3 -I L8/L4/work/computation/auditonomous_beta.py --producer-root <autonomous@805cd42 export> --output <scratch file>. Python 3.13.16.
+    - **own_label**: Result records the command with "--producer-root <explicit-pinned-producer-root>"
+    - **evidence_state**: INTERNALLY CHECKED (reproduced except one field)
+    - **checked_how**: Exit 0; stdout {"cases": 16, "events": 32, "records": 32, "faults_rejected_and_corrected": 4, "qualification": "qualified-bounded-synthetic"}. A structural JSON comparison and a text diff against the committed file show exactly one difference: /execution/environment/python is '3.13.16' here and '3.14.4' committed. File SHA-256 therefore differs (38d5f68e… here, 91d761e9… committed). Re-run file: /tmp/claude-0/-home-user/bfcfd013-a2da-5019-961e-7f46116f08be/scratchpad/wf-handle/l4comp/beta/out/rerun_result.json
+    - **key_claims**
+      - All traces, records, digests, findings, faults, sources and pins are reproduced exactly
+      - Not byte-identical, because the result embeds the interpreter version
+    - **open_items**
+      - Byte identity under Python 3.14.4 not tested (3.14 is not installed here)
+    - **depends_on**
+      - L4C-11
+      - L4C-13
+    - **locator**: BETA:L8/L4/work/computation/auditonomous_beta_result.json:18
+    - **quote**: "python": "3.14.4"
+  - item 16
+    - **id**: L4C-16
+    - **title**: Computation sheet change (ROADMAP)
+    - **path**: L8/L4/work/computation/0.md
+    - **where**: ROADMAP
+    - **what_it_is**: Three Holdings lines added, for all-research-corpus-auditonomous.md, probes/ and ommp/. The Standing line "It is empty at present." is unchanged.
+    - **own_label**: "model output as run"; "eight numerical probes as run"; "'NOT CANONICAL' by its own README"
+    - **evidence_state**: CONTRADICTED (still says the branch is empty while listing nine holdings). The restore claims are INTERNALLY CHECKED.
+    - **checked_how**: git diff origin/main..ROADMAP on the sheet. Blob ids of the restored files equal those at HISTORY 1d83788 (intake/deep-research/, intake/research/, common/durable/durable/probes/, common/toolkits/tools/ommp/), so the restores are byte-identical.
+    - **key_claims**
+      - SSOT "Restored 2026-09-14 from git 1d83788 (intake/deep-research/)"
+      - SSOT is "a standards-grounded synthesis produced by the deep-research run"
+    - **open_items**
+      - The SSOT's own text reads as a chat reply written after the report ("Understood. The correct unit of analysis…"; "the uploaded review"), not as output of the deep-research run itself
+    - **depends_on**
+      - L4C-17
+      - L4C-18
+      - L4C-27
+    - **locator**: ROADMAP:L8/L4/work/computation/0.md:44-46
+    - **quote**: `probes/` — eight numerical probes as run, each cited by a research record. See its sheet.
+  - item 17
+    - **id**: L4C-17
+    - **title**: "AUTONOMY-STACK SSOT v0.1"
+    - **path**: L8/L4/work/computation/all-research-corpus-auditonomous.md
+    - **where**: ROADMAP, HISTORY (intake/deep-research/); not on MAIN or BETA
+    - **what_it_is**: A model-generated synthesis (250 lines) dated 2026-08-05. It places eight repositories in a stack, gives a four-row standards table, an indexed autonomy profile, two "manuscript-ready" definitions and a ruling on λ=0 versus λ=1 multiplication. Generator trace: two footnotes carry utm_source=chatgpt.com (lines 247, 250).
+    - **own_label**: "[source text withheld from the public copy]"; sheet: "model output as run"
+    - **evidence_state**: CONTRADICTED (three flags are recorded against it in the repository)
+    - **checked_how**: Read in full. A recorded check exists at ROADMAP:L8/L4/work/writing/sessions/SESSION_2026-08-05_VERIFICATION_LOG.md:125-147. F-1: cites IEEE 1872-2015 for a definition the project never read. F-2: its [source text withheld from the public copy]. F-3: its description of the AAT paper does not match the file. The same log says the two chatgpt-tagged footnotes "were fetched and both resolved correctly".
+    - **key_claims**
+      - "Aud ⟺ Aut ∧ I ∧ B ∧ L ∧ N ∧ V" (lines 145-154)
+      - "never understates" requires λ=1 or an enforced partial-rule predicate with recentering (lines 211-218)
+      - [source text withheld from the public copy] a licensing condition, not an autonomy level
+    - **open_items**
+      - F-1, F-2 and F-3 are recorded as flags, not resolved
+      - The roadmap feeds its §5 to book chapter 15 (ROADMAP:L8/L4/work/writing/book/ch15-…:14)
+      - Line 237: "[source text withheld from the public copy]"
+    - **depends_on**
+      - L4C-02
+    - **locator**: ROADMAP:L8/L4/work/computation/all-research-corpus-auditonomous.md:1-6, :145-154, :247
+    - **quote**: **[source text withheld from the public copy]
+  - item 18
+    - **id**: L4C-18
+    - **title**: Probes sheet
+    - **path**: L8/L4/work/computation/probes/0.md
+    - **where**: ROADMAP
+    - **what_it_is**: Directory sheet for eight Python scripts restored on 2026-09-14 from HISTORY; names the research record each script belongs to.
+    - **own_label**: "None was re-run in the restoring pass; each is filed as written."
+    - **evidence_state**: INTERNALLY CHECKED by this pass (all eight re-run; see L4C-19 to L4C-26)
+    - **checked_how**: Read in full; each script's blob id equals its HISTORY blob; each cited record exists on ROADMAP at the path the sheet gives.
+    - **key_claims**
+      - Filing a script here "asserts that it was written and run as recorded, and nothing about what its result establishes"
+    - **open_items**
+      - The citing records still give pre-restore paths (see defects)
+    - **locator**: ROADMAP:L8/L4/work/computation/probes/0.md:8
+    - **quote**: None was re-run in the restoring pass; each is filed as written.
+  - item 19
+    - **id**: L4C-19
+    - **title**: Probe and RUN: dr001_half_cell.py
+    - **path**: L8/L4/work/computation/probes/dr001_half_cell.py
+    - **where**: ROADMAP, HISTORY
+    - **what_it_is**: A 46-line exact-rational script (fractions only) measuring the worst decode miss for back-edge versus centre decode over 256 cells. Probe for DR-001.
+    - **own_label**: DR-001 "Status: RESEARCHING"
+    - **evidence_state**: INTERNALLY CHECKED (re-run; its asserts pass)
+    - **checked_how**: python3 -I dr001_half_cell.py: exit 0, prints PASS. Output: back-edge worst miss 15/16, centre worst miss 1/2, ratio 15/8.
+    - **key_claims**
+      - Centre decode halves the bound: analytic worst cases w and w/2
+    - **open_items**
+      - The printed sampled ratio is 15/8, labelled "(the factor of 2 DR-001 claims)"; the factor 2 is the analytic limit, not the sampled value
+      - DR-001 itself says [source text withheld from the public copy]
+    - **depends_on**
+      - ROADMAP:L8/L5/research/review/dr-001-003/DR-001-uha-half-cell-decode.md
+    - **locator**: ROADMAP:L8/L4/work/computation/probes/dr001_half_cell.py:39-46
+    - **quote**: PASS: sampled worsts sit just under the analytic bounds, never over.
+  - item 20
+    - **id**: L4C-20
+    - **title**: Probe and RUN: dr003_no_left_inverse.py
+    - **path**: L8/L4/work/computation/probes/dr003_no_left_inverse.py
+    - **where**: ROADMAP, HISTORY
+    - **what_it_is**: A 58-line script checking that the swap-flip B(n,u) = (u, |n|) is not injective, with a collision census over a 91-point grid. Probe for DR-003.
+    - **own_label**: DR-003 "VERIFIED" in its register (opened at VERIFIED 2026-08-08)
+    - **evidence_state**: INTERNALLY CHECKED (re-run; figures equal those in the DR-003 record). The outside-source citation behind the VERIFIED label was not examined in this scope.
+    - **checked_how**: python3 -I dr003_no_left_inverse.py: exit 0, both checks PASS. F: 91/91 injective; B: image 49, collisions 42, all 42 sign pairs. Matches ROADMAP:L8/L5/research/review/dr-001-003/DR-003-swap-flip-no-left-inverse.md:51-56.
+    - **key_claims**
+      - B loses the sign and nothing else; no un-flip can exist
+    - **depends_on**
+      - ROADMAP:L8/L5/research/review/dr-001-003/DR-003-swap-flip-no-left-inverse.md
+    - **locator**: ROADMAP:L8/L4/work/computation/probes/dr003_no_left_inverse.py:53-58
+    - **quote**: check 2  PASS: F injective (91/91); B loses the sign and nothing else
+  - item 21
+    - **id**: L4C-21
+    - **title**: Probe and RUN: ebstack_lambda_analysis.py
+    - **path**: L8/L4/work/computation/probes/ebstack_lambda_analysis.py
+    - **where**: ROADMAP, HISTORY
+    - **what_it_is**: An 80-line exact-rational recomputation of the eb-stack multiplication operator with λ=1 and λ=0, two worked examples, a conservation identity and 20,000 random pairs (seed 7).
+    - **own_label**: Record: "[source text withheld from the public copy]."
+    - **evidence_state**: INTERNALLY CHECKED (re-run; figures equal the record)
+    - **checked_how**: python3 -I: exit 0. λ=1 contains truth 20000/20000; λ=0 contains 1898/20000 (9.49%); EX.1 λ=0 gives [3,25] against truth [5,27]. Matches ROADMAP:L8/L5/research/review/EBSTACK_LAMBDA_ANALYSIS.md:72-77.
+    - **key_claims**
+      - λ=0 as coded is not an enclosure; λ=1 always encloses
+      - The mul source was taken from a prompt, not from the repository: "Repo itself is PRIVATE/unreachable."
+    - **open_items**
+      - The operator tested is a transcription from a prompt (§12), not the eb-stack code itself
+    - **depends_on**
+      - ROADMAP:L8/L5/research/review/EBSTACK_LAMBDA_ANALYSIS.md
+    - **locator**: ROADMAP:L8/L4/work/computation/probes/ebstack_lambda_analysis.py:1-2, :70-80
+    - **quote**: Analysis of aybllc/eb-stack code/ebstack/core.py `mul`, from the source given verbatim in the Lambda_Explainer_Prompt §12. Repo itself is PRIVATE/unreachable.
+  - item 22
+    - **id**: L4C-22
+    - **title**: Probe and RUN: emission_thrust_probe.py
+    - **path**: L8/L4/work/computation/probes/emission_thrust_probe.py
+    - **where**: ROADMAP, HISTORY
+    - **what_it_is**: A closed-form float calculation of photon-recoil thrust per watt and impulse per transfer across four assumed energy units. Reproduction for A-009c.
+    - **own_label**: A-009c: "INTERNALLY DERIVED — the mechanism is real."; "Not adopted."
+    - **evidence_state**: INTERNALLY CHECKED (re-run; figures equal the record after its rounding)
+    - **checked_how**: python3 -I: exit 0. 3.336e-09 N/W; 300 MW per newton; ~7495x worse than an ion thruster (record says ~7,500×). Matches ROADMAP:L8/L5/research/review/AUTHOR_ASSERTIONS.md:1055-1071.
+    - **key_claims**
+      - The result moves 25 orders of magnitude with the energy unit, which the corpus never fixes
+    - **open_items**
+      - Record: the energy unit's magnitude is "NO SOURCE FOUND" in the corpus
+      - The ion-thruster figure 4e4 W/N is an unreferenced constant in the script
+    - **depends_on**
+      - ROADMAP:L8/L5/research/review/AUTHOR_ASSERTIONS.md
+    - **locator**: ROADMAP:L8/L4/work/computation/probes/emission_thrust_probe.py:1-13
+    - **quote**: It is not a rebuttal; it is the number the proposal needs in order to be evaluated.
+  - item 23
+    - **id**: L4C-23
+    - **title**: Probe and RUN: energy_logistics_probe.py
+    - **path**: L8/L4/work/computation/probes/energy_logistics_probe.py
+    - **where**: ROADMAP, HISTORY
+    - **what_it_is**: An exact-rational toy ledger (S=8, P=5, R=1) showing relay cost growing as (S/P)^depth and the push grading with depth. Reproduction for A-009b.
+    - **own_label**: Script: "Costs below are ILLUSTRATIVE. … The numbers are not measurements."; record marks [source text withheld from the public copy]"
+    - **evidence_state**: INTERNALLY CHECKED (re-run; figures equal the record). The inputs are illustrative by its own statement.
+    - **checked_how**: python3 -I: exit 0. Depth 12 relayed 1407.4 against 8.0 direct (176x); chain n=4 gives 25, 13, 1.9x, 24%. Matches ROADMAP:L8/L5/research/review/AUTHOR_ASSERTIONS.md:989-991 and :1012.
+    - **key_claims**
+      - [source text withheld from the public copy]
+    - **depends_on**
+      - ROADMAP:L8/L5/research/review/AUTHOR_ASSERTIONS.md
+    - **locator**: ROADMAP:L8/L4/work/computation/probes/energy_logistics_probe.py:9-14
+    - **quote**: Costs below are ILLUSTRATIVE. The shapes [source text withheld from the public copy].
+  - item 24
+    - **id**: L4C-24
+    - **title**: Probe and RUN: energy_reserve_probe.py
+    - **path**: L8/L4/work/computation/probes/energy_reserve_probe.py
+    - **where**: ROADMAP, HISTORY
+    - **what_it_is**: A seeded simulation (200,000 attempted cycles, seed 1) of a commit/act/seal cycle with and without a whole-cycle reserve check. Reproduction for A-009.
+    - **own_label**: Record cites it as the reproduction for A-009; no separate label on the script
+    - **evidence_state**: INTERNALLY CHECKED (re-run; figures equal the record)
+    - **checked_how**: python3 -I: exit 0. No check: 28,718 acted-but-unsealed (26.1%), 81,418 completed, 13,117 refused. With check: 0, 119,742, 80,258. Sensitivity row (3,1,5): 115,772 against 0. Matches ROADMAP:L8/L5/research/review/AUTHOR_ASSERTIONS.md:847-864.
+    - **key_claims**
+      - A whole-cycle sufficiency gate gives zero act-without-seal in every cost shape tried, at the cost of 6.1 times more refusals
+    - **open_items**
+      - A simulation with assumed costs and random income; it shows the gate's logic, not a system's behaviour
+    - **depends_on**
+      - ROADMAP:L8/L5/research/review/AUTHOR_ASSERTIONS.md
+    - **locator**: ROADMAP:L8/L4/work/computation/probes/energy_reserve_probe.py:1-14
+    - **quote**: Question: does the rest-energy invariant actually prevent the state EB:233 forbids -- acting without a sealed record -- or is it only an efficiency rule?
+  - item 25
+    - **id**: L4C-25
+    - **title**: Probe and RUN: nu_enclosure_probe.py
+    - **path**: L8/L4/work/computation/probes/nu_enclosure_probe.py
+    - **where**: ROADMAP, HISTORY
+    - **what_it_is**: A nine-part reproduction (exact rationals except the Monte Carlo part) of Definition 3.1 (multiplication) of the author's N/U paper: half-width, midpoint, containment, the M invariant, chains, coverage.
+    - **own_label**: Ledger: "Status of this file: OPEN / IN PROGRESS."; its rule: reproduced results are "`[source text withheld from the public copy]"
+    - **evidence_state**: INTERNALLY CHECKED (re-run; figures equal the ledger)
+    - **checked_how**: python3 -I: exit 0, 119 output lines. n=17,080: half-width exact 100%, contains true product 15.93%. M preserved 12.24% (Definition 3.1), 100% (λ=1), 97.13% (shift repair, 860 failures all at zero product). Monte Carlo: 73.72% cover, 26.27% pass without covering. Endpoint detection 75.65%. Matches ROADMAP:L8/L5/research/review/NASA_PAPER_DEFECT_LEDGER.md:100-106, :130, :205, :260-261, :331-332, :372, :380-384.
+    - **key_claims**
+      - Definition 3.1 has the exact half-width and the wrong centre (short by u1·u2), so it contains the true product only when u1·u2 = 0
+      - The paper's own test suite cannot see the gap; only an endpoint test does
+    - **open_items**
+      - The ledger is open; it concerns the author's own paper and says the paper "needs a rewrite"
+      - The paper itself (a 19-page PDF supplied to a session) was not located in this scope
+    - **depends_on**
+      - ROADMAP:L8/L5/research/review/NASA_PAPER_DEFECT_LEDGER.md
+    - **locator**: ROADMAP:L8/L4/work/computation/probes/nu_enclosure_probe.py:1-13
+    - **quote**: This script establishes what is arithmetically true. It does not decide what that MEANS
+  - item 26
+    - **id**: L4C-26
+    - **title**: Probe and RUN: tictac_calc.py
+    - **path**: L8/L4/work/computation/probes/tictac_calc.py
+    - **where**: ROADMAP, HISTORY
+    - **what_it_is**: A closed-form float calculation (math only, about 300 lines) of the kinematics, drag power, stagnation heating, structural load and lift implied by the Nimitz 'tic tac' claims, with follow-up sections A to C and a GOFAST section.
+    - **own_label**: Record: "VERIFIED arithmetic on a **provenance-disputed** input"; "INTERNALLY DERIVED" for the structural result; "No external sources were fetched this session"
+    - **evidence_state**: INTERNALLY CHECKED (re-run; figures equal the record). The inputs are unverified testimony by the record's own labels.
+    - **checked_how**: python3 -I: exit 0, 253 output lines. [source text withheld from the public copy], 56,010 m/s² (5,711 g); pressure differential supplies 0.128% of 560.1 MN; heat flux 20,505 and 164,037 W/cm². Matches ROADMAP:L8/L5/research/review/TICTAC_PROPULSION_ADJUDICATION.md:53, :108-112, :148-149, :347.
+    - **key_claims**
+      - A vacuum or pressure differential fails by about four orders of magnitude as the mechanism for the 0.78 s descent claim
+      - The 60 nmi in 60 s claim is Mach 5.44, 'fast, but NOT exotic'
+    - **open_items**
+      - Standard results it applies (Sutton-Graves, Allen-Perkins, Whitham) are named, not checked against a source
+      - HUD telemetry for the GOFAST section is marked NOT-CHECKED in the script's own heading
+    - **depends_on**
+      - ROADMAP:L8/L5/research/review/TICTAC_PROPULSION_ADJUDICATION.md
+    - **locator**: ROADMAP:L8/L4/work/computation/probes/tictac_calc.py:9-19
+    - **quote**: 1. DESCENT: [source text withheld from the public copy]  [UNOFFICIAL 2004 'Executive Report']
+  - item 27
+    - **id**: L4C-27
+    - **title**: OMMP sheet and README
+    - **path**: L8/L4/work/computation/ommp/README.md
+    - **where**: ROADMAP, HISTORY (common/toolkits/tools/ommp/)
+    - **what_it_is**: The sheet (0.md) and the reconstruction's own README, dated 2026-08-04: what the UHA + OMMP codec is, which elements are fixed by the corpus and which were chosen here, two specification defects fixed, one open question.
+    - **own_label**: "INTERNAL ONLY / RECONSTRUCTION — NOT CANONICAL."
+    - **evidence_state**: ASSERTED (a reconstruction from the corpus's record of a specification that was not read). Its test-count line is CONTRADICTED by my run.
+    - **checked_how**: Sheet read in full; README lines 1-75 and 245-264 read, the rest searched for test and pass claims. Blob ids equal HISTORY.
+    - **key_claims**
+      - Built from Block_45 and Master Archive sections because aybllc/ommp and aybllc/broken-zero "were unreachable this session"
+      - Field widths are "CHOSEN-HERE — verify"; formula 1 is "RECONSTRUCTED — verify"
+      - "[source text withheld from the public copy].)"
+    - **open_items**
+      - Never compared with the canonical specification; the gap is recorded at ROADMAP:L8/L5/research/findings/OMMP_ATTACHMENT_GAP_2026-08-04.md
+      - "[source text withheld from the public copy]" (Record Ontology Q2, reserved for the author)
+      - README not read end to end (lines 76-244 searched only)
+    - **depends_on**
+      - L4C-28
+      - L4C-29
+    - **locator**: ROADMAP:L8/L4/work/computation/ommp/README.md:4, :29-32, :257-264; ROADMAP:L8/L4/work/computation/ommp/0.md:8, :18
+    - **quote**: **Status:** INTERNAL ONLY / **RECONSTRUCTION — NOT CANONICAL.**
+  - item 28
+    - **id**: L4C-28
+    - **title**: OMMP codec modules
+    - **path**: L8/L4/work/computation/ommp/ommp.py
+    - **where**: ROADMAP, HISTORY
+    - **what_it_is**: Three stdlib-only Python modules: uha.py ([source text withheld from the public copy]-32), ommp.py (observation tuple, binding order, Domain Collapse Rule, outlier handling, an observation store) and los.py (line-of-sight helper).
+    - **own_label**: README: "this directory is authoritative for nothing"
+    - **evidence_state**: INTERNALLY CHECKED (all three import cleanly and the suite exercises them; see L4C-29). Conformance to the real specification is UNRESOLVED.
+    - **checked_how**: Listed every import and I/O call (stdlib only: math, struct, zlib, dataclasses, enum, bisect; no file or network access). Imported each module under python3 -I. I did not read the 35 KB ommp.py line by line.
+    - **key_claims**
+      - Implements the corpus-fixed magic, 64-byte length, field order and binding order OA → META → MODAL → FORM
+    - **open_items**
+      - Field widths and formula 1 must be checked against aybllc/ommp and aybllc/broken-zero before any use (README lines 29-32)
+    - **depends_on**
+      - L4C-27
+    - **locator**: ROADMAP:L8/L4/work/computation/ommp/README.md:53-55
+    - **quote**: **`[source text withheld from the public copy].
+  - item 29
+    - **id**: L4C-29
+    - **title**: RUN: test_ommp.py
+    - **path**: L8/L4/work/computation/ommp/test_ommp.py
+    - **where**: ROADMAP, HISTORY (run from a scratch copy)
+    - **what_it_is**: A self-running regression script (no test framework): prints PASS or FAIL per check, a final banner, and exits 1 on any failure.
+    - **own_label**: Sheet: "its tests as written; not run in the restoring pass"
+    - **evidence_state**: INTERNALLY CHECKED (all checks pass). The README's count is CONTRADICTED by one.
+    - **checked_how**: python3 -I test_ommp.py from a scratch copy of the four files, Python 3.13.16: exit 0, 65 lines beginning '  PASS  ', 0 FAIL lines, banner 'ALL PASS'. Counting every line that contains 'PASS' gives 66, which includes the banner. Output at /tmp/claude-0/-home-user/bfcfd013-a2da-5019-961e-7f46116f08be/scratchpad/wf-handle/l4comp/roadmap/out/test_ommp.out
+    - **key_claims**
+      - 65 checks executed, 65 passed, 0 failed
+    - **open_items**
+      - The README says 66/66 on Python 3.14.4; whether that figure counted the banner line is not settled
+    - **depends_on**
+      - L4C-28
+    - **locator**: ROADMAP:L8/L4/work/computation/ommp/README.md:257
+    - **quote**: [source text withheld from the public copy].)*
+- **defects**
+  - item 1
+    - **statement**: The computation sheet contradicts itself: Holdings lists six objects (nine on ROADMAP) while Standing says "It is empty at present." Corrected only on BETA (line 56).
+    - **locator**: MAIN:L8/L4/work/computation/0.md:54 against :38-42; ROADMAP same file, same Standing line
+  - item 2
+    - **statement**: The count 113 cannot be recounted from any tree. The three files give 99; the NASA lane of 14 has no extraction file in MAIN, ROADMAP, BETA or HISTORY. Only NASA-R6 and NASA-R10 are named, once, in the ownership file.
+    - **locator**: MAIN:L8/L1/state-space/REQUIREMENTS_OWNERSHIP.md:15 and :157
+  - item 3
+    - **statement**: MAIN cites the source of the '78' figure at a path that does not exist on MAIN (`intake/research/AUDITON_PACKABILITY_2026-08-04.md:15`). The file exists only on ROADMAP (L8/L5/research/findings/) and in HISTORY.
+    - **locator**: MAIN:L8/L1/state-space/REQUIREMENTS_OWNERSHIP.md:19
+  - item 4
+    - **statement**: All three requirements files refer the reader to `STANDARDS_REGISTER.md` for NASA. No file of that name exists on MAIN or BETA; it exists on ROADMAP at L7/provenance/sources/STANDARDS_REGISTER.md and in HISTORY.
+    - **locator**: MAIN:L8/L4/work/computation/nist-requirements-for-autonomouos.md:5 (same sentence at line 5 of the IEEE and ISO files)
+  - item 5
+    - **statement**: The extractions' evidence trail points outside the repository: workflow journal wf_b00a2270-83e under ~/.claude, PDFs under /home/eric/ayb/auditonomous/intake/sources/, text and hashes under /tmp/claude-1000/…/scratchpad/. None is reachable from the tree, so the VERIFIED label cannot be re-checked from the repository.
+    - **locator**: MAIN:L8/L4/work/computation/ieee-requirements-for-autonomouos.md:9, :16, :1033; nist-requirements-for-autonomouos.md:16, :404
+  - item 6
+    - **statement**: No source-identity rows exist for the three extractions, by the sheet's own statement.
+    - **locator**: MAIN:L8/L4/work/computation/0.md:44
+  - item 7
+    - **statement**: File names are spelled inconsistently: 'autonomouos' in the IEEE and NIST file names and both .odt names, 'auditonomopus' in the sources .odt, 'autonomous' in the ISO file name.
+    - **locator**: MAIN:L8/L4/work/computation/ (tree listing)
+  - item 8
+    - **statement**: The deep-research report carries no resolvable citations in its own text: 43 distinct opaque tokens and zero URLs. The only key is the separate .odt export. The thesis it reviews is not on MAIN or BETA.
+    - **locator**: MAIN:L8/L4/work/computation/deep-research-auditonomous.md:16, :19
+  - item 9
+    - **statement**: The ROADMAP sheet says the SSOT was "produced by the deep-research run". The file's own text is a conversational reply that refers to "the uploaded review" and "The current research report", and the verification log calls it 'pasted'.
+    - **locator**: ROADMAP:L8/L4/work/computation/0.md:44 against ROADMAP:L8/L4/work/computation/all-research-corpus-auditonomous.md:8, :168-170
+  - item 10
+    - **statement**: The OMMP README's corrected pass count is itself off by one against a re-run: it says 66/66; the suite prints 65 PASS check lines plus an 'ALL PASS' banner.
+    - **locator**: ROADMAP:L8/L4/work/computation/ommp/README.md:257-264
+  - item 11
+    - **statement**: Research records and the OMMP files still cite the probes and tests by pre-restore paths: `intake/research/energy_reserve_probe.py`, `intake/research/energy_logistics_probe.py`, `intake/research/emission_thrust_probe.py`, `intake/research/nu_enclosure_probe.py`, `tools/ommp/../../research/tictac_calc.py`, `python3 tools/ommp/test_ommp.py`.
+    - **locator**: ROADMAP:L8/L5/research/review/AUTHOR_ASSERTIONS.md:843, :1020, :1085; NASA_PAPER_DEFECT_LEDGER.md:33; TICTAC_PROPULSION_ADJUDICATION.md:15; ROADMAP:L8/L4/work/computation/ommp/README.md:57; ommp/test_ommp.py:1
+  - item 12
+    - **statement**: dr001_half_cell.py prints a sampled ratio of 15/8 under the label "(the factor of 2 DR-001 claims)".
+    - **locator**: ROADMAP:L8/L4/work/computation/probes/dr001_half_cell.py:39-40
+  - item 13
+    - **statement**: The beta history cites evidence files that are not in the BETA tree: `T3-red.txt`, `T3-integration-wait.txt`, `T3-review-red.json` / `.txt`, and "implementation evidence" holding the green test result and CLI execution. No test-evidence file is committed beside the result.
+    - **locator**: BETA:L8/L6/history/AUDITONOMOUS_BETA_HISTORY.md:9-11
+  - item 14
+    - **statement**: The beta result is not byte-reproducible across interpreters because it embeds the Python version; a re-run under 3.13.16 differs from the committed file in that one field.
+    - **locator**: BETA:L8/L4/work/computation/auditonomous_beta.py:180; BETA:L8/L4/work/computation/auditonomous_beta_result.json:18
+  - item 15
+    - **statement**: The beta 'fault correction' records describe a fresh rebuild after each injected fault, not a repair of the faulted packet; 'corrected_outcome.validation' is therefore true by construction.
+    - **locator**: BETA:L8/L4/work/computation/auditonomous_beta.py:281-282
+  - item 16
+    - **statement**: The beta binding pins commits that are on beta branches only: producer 805cd42 is not an ancestor of autonomous origin/main, and architecture 4ca3edb is not an ancestor of 7lm origin/main (it is an ancestor of 7lm beta 97314c5).
+    - **locator**: BETA:L7/peering/public/ingress/peer-1/object-2/binding.json (producer_commit, architecture_commit)
+- **open_questions**
+  - What the '78 requirements extracted, 46 definitions captured' run comprised and how it relates to the 113. L1 calls it 'a different, smaller run', yet the packability file describes the same four lanes on the same day; no reconciliation exists.
+  - Where the 14 NASA rows are. They are counted at L1 but exist in no tree; recovery needs the workflow journal, which is outside the repository.
+  - Q11: the auditability-requirements extraction has not been run (L1 §8; beta findings line 24).
+  - Whether the deep-research report's eight register corrections and six 'overtaken' rulings were ever adjudicated. MAIN records none. I did not trace ROADMAP registers beyond finding '2026/1744' in STANDARDS_CITED.md.
+  - Whether the report's external claims are true (Regulation (EU) 2026/1744, [source text withheld from the public copy], the 2026 action-certificate preprints, the Vaara draft). Not checked: no network in this pass.
+  - The prompt that started the deep-research run is in neither export.
+  - Whether the SSOT came from the deep-research run or from a later chat turn.
+  - Whether the OMMP README's 66 counted the 'ALL PASS' banner, or whether the suite emitted 66 check lines under Python 3.14.4. Only 3.13.16 was available.
+  - Whether the beta result is byte-identical when regenerated under Python 3.14.4.
+  - Whether the beta branch was made by Codex. The commit author and committer are 'EDM' and the commit has no generator trailer; the files searched carry no such trace.
+  - Whether any of the ROADMAP probes or the BETA fixture should be filed under experiments/ rather than computation/. The experiments sheet is unchanged on both branches.
+  - The 35 KB ommp.py and README lines 76-244 were not read line by line, and the 187 KB sources export was sampled after its first 84 lines.

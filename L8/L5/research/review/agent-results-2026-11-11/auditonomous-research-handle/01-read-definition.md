@@ -1,0 +1,1000 @@
+# read:definition
+
+Agent result, as returned. Workflow: Handle on the Auditonomous research and manuscript. Run `wf_9c2917a7-7f0`. Phase: Read.
+
+- **scope**: The definition of record and Layer 0 of aybllc/auditonomous: MAIN L8/L0 (AUDITONOMOUS_DEFINITION.md read in full, all seven L0 sheets), ROADMAP L8/L0 (AUDITONOMY.md read in full, sheet diffs), BETA L8/L0 (inserted section, AUDITONOMOUS_BETA_SCOPE.md, sheet diffs). Cross-references followed only where L0 names them: the Autonomous binding at L7/peering/public/ingress/peer-1/object-1, PERPETUITY_QUESTION_ADJUDICATION §6.1, the 2026-08-16 ledger, AUDITON_ENVELOPE/HUMINT_ENCODE head lines, DISTILLATION lines citing AUDITONOMY.md, and aybllc/autonomous history for the bound blob and the origin of AUDITONOMY.md. Git objects only; nothing written to any repository. DEF below = L8/L0/semantics/definitions/AUDITONOMOUS_DEFINITION.md.
+- **summary**: Layer 0 on MAIN holds one authored object: AUDITONOMOUS_DEFINITION.md, a 410-line dictionary-style entry dated 2026-07-30. I confirmed it is byte-identical from the first commit through HISTORY, MAIN and ROADMAP. It has no version number. "Definition of record (AU-NORM-02)" is the owner ruling of 2026-08-16 that this entry is the active record and the consolidated [source text withheld from the public copy]; the ruling's own text is not in the repository, only citations of it.
+
+  The entry defines the adjective in three senses, eight criteria, a firmware clause and seven "is NOT" bullets, with six appendices. Its word roots were checked against external sources (13 VERIFIED, 1 PARTIALLY VERIFIED). Its corpus quotes were checked against abba-01/ebios, which is not in these clones. It never mentions auditon, lambda, compartments, conditions A–E or the Autonomous binding.
+
+  The other four L0 positions (epistemic, ontology, universality, pedagogy) are sheets only.
+
+  "Autonomous" is bound from aybllc/autonomous at commit 0504961. I confirmed the blob, the SHA-256, and that the file at its current path has the same bytes; "no rebind" means the pin was not moved. The bound entry is plural, not adversarially reviewed, and says "ten" over eleven rows.
+
+  ROADMAP adds AUDITONOMY.md, a later and different definition (2026-08-05, "v2 definition governs", labelled CONJECTURE) with five conditions A–E. MAIN's envelope and distillation files depend on it and call it "governing text", yet it is absent from MAIN and BETA. The restored bytes are a freeze-pinned version; three later versions exist in aybllc/autonomous history, one of which grounds condition B.
+
+  BETA inserts a dated paragraph and 14 role lines into the definition, additions only. That moves the "line 52" clause to line 54 while BETA's records still cite :52.
+
+  Still open: the line-52 edit, three Appendix D nits, the blend wording, eight versus twelve compartments, and two incompatible lambda_A definitions. The first thing to settle is which text the book treats as the definition: the 2026-07-30 entry, AUDITONOMY.md v2, or both with a stated relation.
+- **items**
+  - item 1
+    - **id**: DEF-00
+    - **title**: The definition of record: identity, date, version, and what AU-NORM-02 means
+    - **path**: L8/L0/semantics/definitions/AUDITONOMOUS_DEFINITION.md
+    - **where**: MAIN, ROADMAP, HISTORY (identical bytes); BETA (modified)
+    - **what_it_is**: A 410-line lexicographic entry for 'auditonomous' (adj.), dated 2026-07-30, produced by an 8-agent workflow from the eBIOS corpus. It carries no version number. 'Definition of record (AU-NORM-02)' is an owner ruling of 2026-08-16: this entry, restored verbatim from 1d83788, is the active record; the consolidated root AUDITONOMOUS.md (2026-08-04) is history-only. The ruling text itself is not held anywhere; only the ledger and the commit message of 4a1c1db cite it.
+    - **own_label**: "STATUS: **INTERNAL ONLY**" (DEF:5); "the active definition of record (AU-NORM-02)" (MAIN:README.md:11)
+    - **evidence_state**: INTERNALLY CHECKED
+    - **checked_how**: I confirmed blob 8b934b43 is the same at fc3b018:intake/AUDITONOMOUS_DEFINITION.md (first commit, 2026-07-30), 1d83788, origin/main and the ROADMAP tip; wc gives 410 lines. At 8c98573 the file was 0 bytes; 4a1c1db restored it. BETA blob differs (81270417).
+    - **locator**: MAIN:L8/L6/history/LEDGER_2026-08-16_l6-close-and-normalization.md:32
+    - **quote**: Active definition of the coined word: `manuscripts/definitions/AUDITONOMOUS_DEFINITION.md` (410 lines, restored verbatim from `1d83788`; AU-NORM-02). Root `AUDITONOMOUS.md` is history-only by ruling.
+    - **key_claims**
+      - Dated 2026-07-30; unchanged since the first commit on MAIN and ROADMAP
+      - No version field; the sheets' rule is to version a changed definition, and no prior form is filed
+      - AU-NORM-01..04 exist only as citations; no standalone text of the rulings
+    - **open_items**
+      - The wording of AU-NORM-02 as the owner gave it is not recorded
+      - The entry predates every later definition (consolidated 2026-08-04, AUDITONOMY v2 2026-08-05) and was never revised to meet them
+  - item 2
+    - **id**: DEF-01
+    - **title**: Headword, word family and pronunciation
+    - **path**: L8/L0/semantics/definitions/AUDITONOMOUS_DEFINITION.md
+    - **where**: MAIN, ROADMAP, HISTORY, BETA
+    - **what_it_is**: The headword line: adjective, pronunciation /[source text withheld from the public copy], adverb unattested.
+    - **own_label**: none on the line; Appendix D says the pronunciation "[source text withheld from the public copy])
+    - **evidence_state**: ASSERTED
+    - **checked_how**: Appendix D records that the pronunciation is attested nowhere in the corpus; the flag it asks for was not added (see PEND-02). The adverb's absence is recorded as reproduced in ebios history (DEF:356); not reproducible here.
+    - **locator**: MAIN:L8/L0/semantics/definitions/AUDITONOMOUS_DEFINITION.md:14-16
+    - **quote**: [source text withheld from the public copy].
+    - **open_items**
+      - No rule distinguishes auditonomic from auditonomous (listed as unresolved at DEF:79)
+  - item 3
+    - **id**: DEF-02
+    - **title**: Etymology and first-attestation chronology
+    - **path**: L8/L0/semantics/definitions/AUDITONOMOUS_DEFINITION.md
+    - **where**: MAIN, ROADMAP, HISTORY, BETA
+    - **what_it_is**: Blend of AUDIT + AUTONOMOUS, with root etymologies from AHD 5th ed. and Liddell-Scott via Perseus. Word family first attested 2025-10-20 (ebios commit cd24b10); the form 'auditonomous' [source text withheld from the public copy] (c8c8aca) naming a human-AI collaboration mode.
+    - **own_label**: roots "VERIFIED"; corpus quotes "INTERNAL ONLY" (DEF:79)
+    - **evidence_state**: EXTERNALLY CHECKED
+    - **checked_how**: Roots: byte-checked against ahdictionary.com and Perseus on 2026-07-30 and re-fetched by the adversarial pass (DEF:282-296, DEF:358). Chronology: recorded as reproduced from ebios git (DEF:354). abba-01/ebios is not in these clones and there is no network, so I confirmed neither.
+    - **locator**: MAIN:L8/L0/semantics/definitions/AUDITONOMOUS_DEFINITION.md:18
+    - **quote**: [source text withheld from the public copy].
+    - **open_items**
+      - Blend wording differs inside the file (INC-03)
+      - Under the owner rule of 2026-09-05 the AHD/Perseus quotes of 'autonomous' are not a definition source (PEND-04)
+    - **depends_on**
+      - DEF-13
+      - DEF-14
+  - item 4
+    - **id**: DEF-03
+    - **title**: Sense 1: of an engineered system (carries the firmware clause)
+    - **path**: L8/L0/semantics/definitions/AUDITONOMOUS_DEFINITION.md
+    - **where**: MAIN, ROADMAP, HISTORY, BETA
+    - **what_it_is**: The system sense: acts under its own control but cannot conceal its epistemic state because every operation leaves a tamper-evident record, with auditability meant to be enforced at firmware level.
+    - **own_label**: "INTERNAL ONLY" (DEF:32)
+    - **evidence_state**: ASSERTED
+    - **checked_how**: The two supporting corpus quotes are recorded as resolving verbatim (DEF:353). The 'structurally unable to conceal' wording is the same overstatement the repository's own adjudication found at line 52 (INC-05), but no pending edit is recorded against this line.
+    - **locator**: MAIN:L8/L0/semantics/definitions/AUDITONOMOUS_DEFINITION.md:22
+    - **quote**: [source text withheld from the public copy]
+    - **open_items**
+      - Chronologically the later, derived sense (DEF:184)
+      - Never reconciled with sense 2 (DEF:30)
+    - **depends_on**
+      - DEF-08
+  - item 5
+    - **id**: DEF-04
+    - **title**: Sense 2: of a mode of human-AI working
+    - **path**: L8/L0/semantics/definitions/AUDITONOMOUS_DEFINITION.md
+    - **where**: MAIN, ROADMAP, HISTORY, BETA
+    - **what_it_is**: The collaboration-mode sense: [source text withheld from the public copy] shown and reviewable. Historically the first sense.
+    - **own_label**: "INTERNAL ONLY"; the mode's 'validated' claim is "INTERNALLY VALIDATED at most" (DEF:79)
+    - **evidence_state**: ASSERTED
+    - **checked_how**: Attestations in .claude/performance-guide.md recorded as verbatim (DEF:353). Not reproducible here.
+    - **locator**: MAIN:L8/L0/semantics/definitions/AUDITONOMOUS_DEFINITION.md:24
+    - **quote**: [source text withheld from the public copy]
+    - **open_items**
+      - No later definition (consolidated document, AUDITONOMY.md, BETA scope) carries this sense forward; BETA says its fixture "neither replaces nor reconciles the three senses"
+  - item 6
+    - **id**: DEF-05
+    - **title**: Sense 3: of accountability, infrastructure or governance
+    - **path**: L8/L0/semantics/definitions/AUDITONOMOUS_DEFINITION.md
+    - **where**: MAIN, ROADMAP, HISTORY, BETA
+    - **what_it_is**: A third sense, built by the entry's authors from the collocation 'auditonomous accountability' and the run/hide maxim.
+    - **own_label**: "INTERNAL ONLY"
+    - **evidence_state**: CONTRADICTED
+    - **checked_how**: The same attestation (RELEASE_v0.2.0.md:22) is filed under sense 3 at DEF:26 and under the system-property sense at DEF:117; the labels section counts only two senses (DEF:79). See INC-02.
+    - **locator**: MAIN:L8/L0/semantics/definitions/AUDITONOMOUS_DEFINITION.md:26
+    - **quote**: [source text withheld from the public copy]
+    - **open_items**
+      - Whether sense 3 is a separate sense or a use of sense 1 is not settled in the file
+  - item 7
+    - **id**: DEF-06
+    - **title**: Related noun 'auditonomy' as the entry gives it
+    - **path**: L8/L0/semantics/definitions/AUDITONOMOUS_DEFINITION.md
+    - **where**: MAIN, ROADMAP, HISTORY, BETA
+    - **what_it_is**: A one-line gloss of the noun inside the adjective's entry, sourced to the ebios README and to line 53 of the 2026 embodied-auditonomy manuscript v0.2.
+    - **own_label**: "INTERNAL ONLY"
+    - **evidence_state**: INTERNALLY CHECKED
+    - **checked_how**: I read the manuscript from the ROADMAP git object (L7/peering/private/ingress/peer-3/object-1/…v0.2_ea08f59.md): line 53 reads as quoted. That manuscript is not in MAIN or BETA, so on those states the source cannot be opened.
+    - **locator**: MAIN:L8/L0/semantics/definitions/AUDITONOMOUS_DEFINITION.md:28
+    - **quote**: auditonomy: bounded autonomy under mandatory auditability.
+    - **open_items**
+      - A different and later definition of the noun exists (TERM-01)
+  - item 8
+    - **id**: DEF-07
+    - **title**: Defining criteria (eight bullets)
+    - **path**: L8/L0/semantics/definitions/AUDITONOMOUS_DEFINITION.md
+    - **where**: MAIN, ROADMAP, HISTORY, BETA
+    - **what_it_is**: Eight criteria a system must meet [source text withheld from the public copy] carried, never laundered; failure permitted, concealing it not; accountability by construction; autonomy bounded by a truth envelope; accountability measurable; discretion is real. Each rests on one or two corpus quotes.
+    - **own_label**: each bullet "INTERNAL ONLY"
+    - **evidence_state**: ASSERTED
+    - **checked_how**: The supporting quotes are recorded as verbatim (DEF:353). No test of any criterion against any system is recorded, and the entry disclaims that (DEF:57). The consolidated document of 2026-08-04 lists thirteen criteria C1–C13 instead (ROADMAP:L8/L6/retired/consolidated-2026-08-04/0.md:8).
+    - **locator**: MAIN:L8/L0/semantics/definitions/AUDITONOMOUS_DEFINITION.md:36-43
+    - **quote**: Autonomy is bounded by a truth envelope
+    - **key_claims**
+      - Eight criteria here; thirteen in the retired consolidated document; five conditions A–E in AUDITONOMY.md
+    - **open_items**
+      - 'truth envelope' and 'transformation path' are used and never defined (TERM-07)
+      - The last criterion comes from the mode sense but sits in a list about systems
+  - item 9
+    - **id**: DEF-08
+    - **title**: The firmware clause
+    - **path**: L8/L0/semantics/definitions/AUDITONOMOUS_DEFINITION.md
+    - **where**: MAIN, ROADMAP, HISTORY, BETA
+    - **what_it_is**: Sense 1's clause that auditability is '[source text withheld from the public copy]', resting on the owner'[source text withheld from the public copy]". The clause itself reports that no firmware artifact exists and that the corpus puts eBIOS above the ROM on its one named platform.
+    - **own_label**: "rank-1 authority" for the instruction; corpus support "INTERNAL ONLY"; RFC 4949 firmware quote "VERIFIED, byte-checked"
+    - **evidence_state**: CONTRADICTED
+    - **checked_how**: The file's own record: the corpus contradicts the below-everything position (DEF:47(b), DEF:250). The adversarial pass could not verify that the instruction was given: "[source text withheld from the public copy]).
+    - **locator**: MAIN:L8/L0/semantics/definitions/AUDITONOMOUS_DEFINITION.md:47
+    - **quote**: [source text withheld from the public copy]
+    - **open_items**
+      - Firmware-below versus intelligence-layer-above-ROM stays unresolved (DEF:79 item 4)
+      - The RFC 4949 quote in this paragraph has an unmarked truncation (PEND-02)
+      - AUDITONOMY.md v2 and the BETA scope carry no firmware requirement; BETA says its fixture does not mean "firmware enforcement"
+  - item 10
+    - **id**: DEF-09
+    - **title**: What auditonomous is NOT (seven bullets)
+    - **path**: L8/L0/semantics/definitions/AUDITONOMOUS_DEFINITION.md
+    - **where**: MAIN, ROADMAP, HISTORY, BETA
+    - **what_it_is**: Seven exclusions: not autonomous-but-opaque; [source text withheld from the public copy] ban on failure; not moral aspiration; not exculpatory; [source text withheld from the public copy].
+    - **own_label**: "INTERNAL ONLY"
+    - **evidence_state**: CONTRADICTED
+    - **checked_how**: The second bullet (line 52) is contradicted by MAIN:L8/L5/research/review/PERPETUITY_QUESTION_ADJUDICATION.md:216, which calls it "imprecise as written" on three external quotes. The other six bullets have no recorded challenge.
+    - **locator**: MAIN:L8/L0/semantics/definitions/AUDITONOMOUS_DEFINITION.md:51-57
+    - **quote**: [source text withheld from the public copy]
+    - **depends_on**
+      - PEND-01
+  - item 11
+    - **id**: DEF-10
+    - **title**: Usage citations and Appendix A (complete usage catalog)
+    - **path**: L8/L0/semantics/definitions/AUDITONOMOUS_DEFINITION.md
+    - **where**: MAIN, ROADMAP, HISTORY, BETA
+    - **what_it_is**: Fifteen dictionary-style citations (DEF:61-75) and a catalog of 24 attestations across five ebios branches (DEF:85-178), each sense-tagged, followed by five reported contradictions (DEF:180-185).
+    - **own_label**: every entry "INTERNAL ONLY"
+    - **evidence_state**: INTERNALLY CHECKED
+    - **checked_how**: Appendix D item 1 records every cited location opened by sed/grep on branch einstein-integration and the git chronology reproduced (DEF:353-354). The check compares the entry to abba-01/ebios, which is not available here; I counted the entries but did not reproduce the check.
+    - **locator**: MAIN:L8/L0/semantics/definitions/AUDITONOMOUS_DEFINITION.md:83-185
+    - **quote**: [source text withheld from the public copy]
+    - **open_items**
+      - All file:line references are to the einstein-integration branch, which Appendix F rules was only 'an attempt'
+  - item 12
+    - **id**: DEF-11
+    - **title**: Labels and evidence status paragraph
+    - **path**: L8/L0/semantics/definitions/AUDITONOMOUS_DEFINITION.md
+    - **where**: MAIN, ROADMAP, HISTORY, BETA
+    - **what_it_is**: The entry's own status statement: INTERNAL ONLY for meaning; external quotes VERIFIED for roots and neighbouring concepts only; four items listed as unresolved in the corpus; negative findings.
+    - **own_label**: "DEFINITION STATUS: INTERNAL ONLY"
+    - **evidence_state**: UNRESOLVED
+    - **checked_how**: Read in full. The four unresolved items are stated by the file and nothing later in L0 closes them.
+    - **locator**: MAIN:L8/L0/semantics/definitions/AUDITONOMOUS_DEFINITION.md:79
+    - **quote**: [source text withheld from the public copy].
+    - **key_claims**
+      - Unresolved (1): two senses unreconciled
+      - Unresolved (2): two adjective forms, no rule
+      - Unresolved (3): two mottos in the doctrinal seat
+      - Unresolved (4): firmware-below versus above-ROM
+      - Merriam-Webster, Cambridge, Oxford, Britannica returned HTTP 403; AHD substituted
+  - item 13
+    - **id**: DEF-12
+    - **title**: Appendix B: doctrine and firmware-framing quotes
+    - **path**: L8/L0/semantics/definitions/AUDITONOMOUS_DEFINITION.md
+    - **where**: MAIN, ROADMAP, HISTORY, BETA
+    - **what_it_is**: 33 quoted passages from ebios (firmware framing, doctrine, the layer stack 0–7), then twelve 'framing contradictions reported' in that corpus: layer position, 'not software', firmware claim versus implementation, layer count, name scope, proof status (three incompatible accounts), test-count drift, a degenerate compose formula, two senses, motto variants, attribution, absence of the word from the flagship documents.
+    - **own_label**: quotes "INTERNAL ONLY"; the formula check "[source text withheld from the public copy]" (DEF:257)
+    - **evidence_state**: CONTRADICTED
+    - **checked_how**: The appendix is itself a contradiction record about the source corpus. I re-did the algebra at DEF:257 by hand: with w=1/u², w₁²u₁² = w₁, so the quoted expression reduces to 1; the reduction is right as the formula is quoted. The quotes themselves are not reproducible here.
+    - **locator**: MAIN:L8/L0/semantics/definitions/AUDITONOMOUS_DEFINITION.md:187-261
+    - **quote**: [source text withheld from the public copy].
+    - **open_items**
+      - These are defects of ebios, the corpus the definition is drawn from; none is resolved
+  - item 14
+    - **id**: DEF-13
+    - **title**: Appendix C: external root evidence
+    - **path**: L8/L0/semantics/definitions/AUDITONOMOUS_DEFINITION.md
+    - **where**: MAIN, ROADMAP, HISTORY; BETA adds a 'Current role' line to 14 entries
+    - **what_it_is**: Four corpus entries (the embodied manuscript) and fourteen external quotes: AHD (autonomous, auto-, audit ×2 plus etymologies), Perseus/Liddell-Scott, Lewis & Short, NIST CSRC 'audit trail' ×2, RFC 4949 'security audit trail' and 'firmware', NIST AI 100-1 ×2, IEEE 7001-2021 scope. Nine recorded search failures follow.
+    - **own_label**: 13 × "VERIFIED"; Lewis & Short "[source text withheld from the public copy])
+    - **evidence_state**: EXTERNALLY CHECKED
+    - **checked_how**: The file records byte-checks against downloaded pages on 2026-07-30 with URLs, and a re-fetch of three by the adversarial pass (DEF:358). No network here; I confirmed only the count and the labels. These check the word's roots and neighbouring concepts, not the coinage and not any technical claim.
+    - **locator**: MAIN:L8/L0/semantics/definitions/AUDITONOMOUS_DEFINITION.md:263-347
+    - **quote**: [source text withheld from the public copy].
+    - **key_claims**
+      - No university-press dictionary was reachable
+      - "[source text withheld from the public copy]" (DEF:344), then corrected against the downloaded text
+      - No peer-reviewed journal anchor captured
+    - **open_items**
+      - Journal-literature anchor NOT-CHECKED
+      - Lewis & Short not re-verified
+  - item 15
+    - **id**: DEF-14
+    - **title**: Appendix D: adversarial verification record
+    - **path**: L8/L0/semantics/definitions/AUDITONOMOUS_DEFINITION.md
+    - **where**: MAIN, ROADMAP, HISTORY, BETA
+    - **what_it_is**: The run record of the check on the entry: four attack lanes (citations resolve; faithfulness; external quotes; firmware-clause honesty), all CONFIRMED, with three nits and one caveat. The sheet calls it 'the L4 run record of the file's production'.
+    - **own_label**: "[source text withheld from the public copy]."
+    - **evidence_state**: INTERNALLY CHECKED
+    - **checked_how**: The record is in the file. The full agent returns it points to are in a home-directory journal outside the repository (DEF:362), so the underlying outputs are not held. The verifying agents were part of the workflow that built the entry.
+    - **locator**: MAIN:L8/L0/semantics/definitions/AUDITONOMOUS_DEFINITION.md:349-362
+    - **quote**: [source text withheld from the public copy]
+    - **open_items**
+      - The three nits were never applied (PEND-02)
+      - The owner's firmware instruction is 'PLAUSIBLE', not verified
+  - item 16
+    - **id**: DEF-15
+    - **title**: Appendix E: manuscript provenance
+    - **path**: L8/L0/semantics/definitions/AUDITONOMOUS_DEFINITION.md
+    - **where**: MAIN, ROADMAP, HISTORY, BETA (text); the manuscript itself only in ROADMAP and HISTORY
+    - **what_it_is**: States that the defining manuscript (martin_2026_embodied_auditonomy… v0.2, .md and .pdf) was copied beside the entry at manuscript/, with SHA-256 prefixes.
+    - **own_label**: none
+    - **evidence_state**: CONTRADICTED
+    - **checked_how**: ls-tree: no such file anywhere in MAIN or BETA. In ROADMAP it stands at L7/peering/private/ingress/peer-3/object-1/, in HISTORY at intake/manuscript/. I hashed the ROADMAP objects: md = 6a717c70cb983029…, pdf = 520ada05a1539390…, matching the prefixes at DEF:370-372; lines 53, 54, 149 and 365 read as quoted.
+    - **locator**: MAIN:L8/L0/semantics/definitions/AUDITONOMOUS_DEFINITION.md:367
+    - **quote**: [source text withheld from the public copy]/`:
+    - **open_items**
+      - On MAIN the source for the noun's definition (DEF:28) and for 'coined by' (DEF:279) cannot be opened
+  - item 17
+    - **id**: DEF-16
+    - **title**: Appendix F: owner ruling that dev1 is the principal line
+    - **path**: L8/L0/semantics/definitions/AUDITONOMOUS_DEFINITION.md
+    - **where**: MAIN, ROADMAP, HISTORY, BETA
+    - **what_it_is**: The owner's ruling of 2026-07-30 that eBIOS was never 'for the Einstein robot'; the branch that matters is v1.0.0-dev. The appendix says [source text withheld from the public copy] branch.
+    - **own_label**: "[source text withheld from the public copy])"
+    - **evidence_state**: ASSERTED
+    - **checked_how**: The appendix records a same-session check on origin/v1.0.0-dev (DEF:399-404). Not reproducible here.
+    - **locator**: MAIN:L8/L0/semantics/definitions/AUDITONOMOUS_DEFINITION.md:384-410
+    - **quote**: [source text withheld from the public copy].
+    - **open_items**
+      - The ebios default branch still 'misrepresents the project' (PEND-06)
+      - The entry's citations remain pinned to einstein-integration line numbers
+  - item 18
+    - **id**: OWN-01
+    - **title**: What is the author's own, what is derived, what is bound from outside
+    - **path**: L8/L0/semantics/definitions/0.md
+    - **where**: MAIN (BETA rewords)
+    - **what_it_is**: Own: the coinage and its meaning, the owner's firmware instruction and dev1 ruling, and the corpus quotes. Derived by the workflow: the three-sense division, the eight criteria, the seven exclusions, the pronunciation, the sense tags and contradiction lists. Checked against outside sources: word roots and neighbouring concepts only. Bound from outside: the meaning of 'autonomous'.
+    - **own_label**: "the locally authored definition"; "the local delta over the peer-owned root"
+    - **evidence_state**: ASSERTED
+    - **checked_how**: My classification from reading the file and the sheet. On MAIN the definition does not call itself a delta or mention any binding (grep: zero hits for peer-1, aybllc/autonomous, binding, delta); the delta framing is applied to it from outside by the sheet.
+    - **locator**: MAIN:L8/L0/semantics/definitions/0.md:34
+    - **quote**: The [source text withheld from the public copy] Autonomous and nowhere else. This file is the local delta over the peer-owned root
+    - **depends_on**
+      - BIND-01
+  - item 19
+    - **id**: BIND-01
+    - **title**: The bound definition of 'autonomous': commit, bytes, and what 'no rebind' means
+    - **path**: L7/peering/public/ingress/peer-1/object-1/0.md
+    - **where**: MAIN, ROADMAP (same sheet); BETA (adds hashes and AUT-SOURCE-001)
+    - **what_it_is**: A reference-only binding to aybllc/autonomous:research/definitions/AUTONOMOUS.md at commit 0504961 (2026-08-14, 'Update RULINGS.md'), read as HEAD on 2026-09-05. No peer content is held. 'No rebind' (BETA wording) means the pin stays on the historical commit and path; the file's current location in the peer is recorded only as a convenience locator.
+    - **own_label**: "bound; reference-[source text withheld from the public copy]"
+    - **evidence_state**: INTERNALLY CHECKED
+    - **checked_how**: In /home/user/autonomous: 0504961:research/definitions/AUTONOMOUS.md is blob ffbdc28b, SHA-256 2756661749c3…a12b, matching BETA's figures. The same blob stands at L8/L0/semantics/definitions/AUTONOMOUS.md on autonomous origin/main, its beta branch and the scholarly-pair branch. 0504961 is an ancestor of autonomous origin/main, 23 commits behind. The old path no longer exists at the peer's head.
+    - **locator**: MAIN:L7/peering/public/ingress/peer-1/object-1/0.md:13
+    - **quote**: [source text withheld from the public copy]
+    - **key_claims**
+      - The bound object is a plural entry: eleven rows A1–A11 plus a rule-set labelled INTERNALLY DERIVED
+      - Its own header: "NOT ADVERSARIALLY REVIEWED" (AUTONOMOUS@0504961:research/definitions/AUTONOMOUS.md:3)
+      - "[source text withheld from the public copy]." (same file :25)
+      - MAIN has no provenance row for it; BETA adds AUT-SOURCE-001 (BETA:L7/provenance/sources/LEDGER.md:153, "no rebind")
+    - **open_items**
+      - The peer's review recorded CRITICAL defects in the rule-set (object-1 sheet :28)
+      - The authority-interface register planned 2026-08-16 was never created
+      - Three files still take 'autonomous' from elsewhere (MAIN object-1 sheet :34)
+  - item 20
+    - **id**: PEND-01
+    - **title**: Pending edit to line 52 (recorded, not applied)
+    - **path**: L8/L5/research/review/PERPETUITY_QUESTION_ADJUDICATION.md
+    - **where**: MAIN, ROADMAP, BETA
+    - **what_it_is**: A recommended rewording of the 'NOT audited-after-the-fact' bullet: contrast record-by-design with record-bolted-on-later, because the audit itself is always after the event. It follows the owner's remark "the udiot is always post hoc." (2026-08-02).
+    - **own_label**: "[source text withheld from the public copy]."
+    - **evidence_state**: UNRESOLVED
+    - **checked_how**: I read §6.1 and line 52: the bullet stands unedited in all states. The grounding quotes (Schneier & Kelsey 1998; Crosby & Wallach 2009; Haeberlen et al. 2007) are labelled VERIFIED by that file; I did not re-check them.
+    - **locator**: MAIN:L8/L5/research/review/PERPETUITY_QUESTION_ADJUDICATION.md:222
+    - **quote**: [source text withheld from the public copy]
+    - **open_items**
+      - Owner's ruling
+      - The same 'concealment impossible' wording at DEF:22 and DEF:26 is outside the recorded edit
+      - In BETA the bullet is at line 54 (INC-11)
+    - **depends_on**
+      - DEF-09
+  - item 21
+    - **id**: PEND-02
+    - **title**: Three Appendix D nits never applied
+    - **path**: L8/L0/semantics/definitions/AUDITONOMOUS_DEFINITION.md
+    - **where**: MAIN, ROADMAP, HISTORY, BETA
+    - **what_it_is**: The entry's own verification found three fix-worthy nits: a quote cited as CERTIFICATION_BRIEF :127 spans 127-128; the RFC 4949 firmware quote in the firmware clause ends 'during execution' with an unmarked cut of 'of the programs.'; the pronunciation should be flagged as constructed.
+    - **own_label**: "[source text withheld from the public copy]"
+    - **evidence_state**: UNRESOLVED
+    - **checked_how**: I checked the three places: DEF:69 still cites :127 alone; DEF:47 still ends 'during execution"'; DEF:14 carries no flag. No sheet or ledger lists these as pending.
+    - **locator**: MAIN:L8/L0/semantics/definitions/AUDITONOMOUS_DEFINITION.md:351
+    - **quote**: [source text withheld from the public copy].'
+    - **open_items**
+      - Not on any pending list outside the appendix itself
+  - item 22
+    - **id**: PEND-03
+    - **title**: Etymology-blend ambiguity at lines 18/96/181
+    - **path**: L8/L6/history/LEDGER_2026-08-16_l6-close-and-normalization.md
+    - **where**: MAIN, ROADMAP, BETA
+    - **what_it_is**: Queue item 5 of 2026-08-16: two flagged ambiguities in the blend phrasing, to be resolved by a boundary note in an interface register and never by editing the definition.
+    - **own_label**: none
+    - **evidence_state**: UNRESOLVED
+    - **checked_how**: The register it names (uso/autonomous/LEDGER.md) is described as "never-created" at MAIN:L7/peering/public/ingress/peer-1/object-1/0.md:28; I found no boundary note.
+    - **locator**: MAIN:L8/L6/history/LEDGER_2026-08-16_l6-close-and-normalization.md:50
+    - **quote**: Two flagged ambiguities inside the definition (etymology-blend phrasing at lines 18/96/181) — resolve via a boundary note in the interface register (item 1), never by editing the definition.
+    - **depends_on**
+      - INC-03
+  - item 23
+    - **id**: PEND-04
+    - **title**: Disposition of Appendix C under the owner rule
+    - **path**: L8/L0/semantics/definitions/0.md
+    - **where**: MAIN, ROADMAP (pending); BETA (applied)
+    - **what_it_is**: Whether Appendix C's quotations stay as etymology of the coinage's second element [source text withheld from the public copy]. MAIN leaves it to the owner. BETA answers it without a recorded owner ruling: it keeps the quotes and adds a 'Current role' line to each.
+    - **own_label**: "is the owner's edit"
+    - **evidence_state**: UNRESOLVED
+    - **checked_how**: Compared MAIN and BETA sheets and the BETA diff of Appendix C (14 added lines).
+    - **locator**: MAIN:L8/L0/semantics/definitions/0.md:34
+    - **quote**: whether they remain as etymology of the coinage's second element [source text withheld from the public copy]
+    - **open_items**
+      - BETA's answer is unmerged and I found no owner ruling for it
+  - item 24
+    - **id**: PEND-05
+    - **title**: L0 content sitting inside L1 files: split or cite
+    - **path**: L8/L6/history/harmonization-2026-09-05.md
+    - **where**: MAIN, ROADMAP, BETA
+    - **what_it_is**: HUMINT_ENCODE.md §0 (a semantic marker: unit = auditon; 'human' is a function) and AUDITON_ENVELOPE.md §0–0b (ontological distinctions of the auditon) are L0 material held in L1 files. The sheets cite them 'by reference'.
+    - **own_label**: "Owner decisions left open (nothing done)"
+    - **evidence_state**: UNRESOLVED
+    - **checked_how**: Read both L0 sheets and the harmonization record §5.
+    - **locator**: MAIN:L8/L6/history/harmonization-2026-09-05.md:91
+    - **quote**: Split or cite: `AUDITON_ENVELOPE.md` (§0–0b → L0 ontology; C3 row → L3), `HUMINT_ENCODE.md` (§0 → L0 semantics)
+  - item 25
+    - **id**: PEND-06
+    - **title**: Appendix F open item: the ebios default branch
+    - **path**: L8/L0/semantics/definitions/AUDITONOMOUS_DEFINITION.md
+    - **where**: MAIN, ROADMAP, HISTORY, BETA
+    - **what_it_is**: Under the dev1 ruling the GitHub default branch of abba-01/ebios (einstein-integration) misrepresents the project.
+    - **own_label**: "Open item (Eric's call)"
+    - **evidence_state**: UNRESOLVED
+    - **checked_how**: Stated in the file; ebios is not available here, so its present state is unknown.
+    - **locator**: MAIN:L8/L0/semantics/definitions/AUDITONOMOUS_DEFINITION.md:408-410
+    - **quote**: [source text withheld from the public copy].
+  - item 26
+    - **id**: TERM-01
+    - **title**: 'auditonomy' is defined at least three times, differently
+    - **path**: L8/L0/semantics/definitions/AUDITONOMY.md
+    - **where**: MAIN (DEF:28 and a sheet citation); ROADMAP (AUDITONOMY.md)
+    - **what_it_is**: (a) DEF:28: bounded autonomy under mandatory auditability. (b) The 'constitutional sentence' of the Master Archive adds 'and a runtime without parameters' (cited at MAIN:L8/L0/semantics/definitions/0.md:36). (c) AUDITONOMY.md §0 (v2, 2026-08-05): [source text withheld from the public copy]. (d) AUDITONOMY.md §2 (2026-08-04): five conditions A–E.
+    - **own_label**: (c) and (d): "CONJECTURE / INTERNAL ONLY"
+    - **evidence_state**: CONTRADICTED
+    - **checked_how**: Read each. 'sovereign', 'named reader' and 'protocol' as elements do not occur in the definition of record (grep: 0, 0, and one incidental hit). ROADMAP's own roadmap record calls the framings "compatible in content … and different in form" on the vocabulary paper's finding and leaves decision D20 unruled.
+    - **locator**: ROADMAP:L8/L0/semantics/definitions/AUDITONOMY.md:69-70
+    - **quote**: [source text withheld from the public copy].
+    - **open_items**
+      - Which statement the book prints as the definition (ROADMAP D20)
+      - 'runtime without parameters' is in (b) only
+    - **depends_on**
+      - INC-01
+  - item 27
+    - **id**: TERM-02
+    - **title**: 'auditon' is used across the repository and not defined at L0
+    - **path**: L8/L1/state-space/AUDITON_ENVELOPE.md
+    - **where**: MAIN, ROADMAP, BETA (L1 files); absent from the definition of record
+    - **what_it_is**: [source text withheld from the public copy] definition of record. It is defined at L1 by owner dictation as the envelope containing every codified requirement, and in HUMINT_ENCODE.md as one fully autonomous system. The L0 ontology and semantics sheets point to those passages 'by reference'.
+    - **own_label**: AUDITON_ENVELOPE: "`[source text withheld from the public copy]."
+    - **evidence_state**: ASSERTED
+    - **checked_how**: grep for the bare word in the definition: zero hits. Read AUDITON_ENVELOPE.md:1-24 and HUMINT_ENCODE.md:27. The envelope file records its own earlier misreading (minimal unit, corrected to maximal) at :12-16 while the owner's dictation calls it "our least system" at :7.
+    - **locator**: MAIN:L8/L1/state-space/AUDITON_ENVELOPE.md:5
+    - **quote**: [source text withheld from the public copy]
+    - **key_claims**
+      - "**[source text withheld from the public copy]." (MAIN:L8/L1/state-space/HUMINT_ENCODE.md:27)
+      - AUDITONOMY.md says the word must enter any manuscript as a coinage (ROADMAP AUDITONOMY.md:156)
+    - **open_items**
+      - No L0 entry; the split-or-cite decision is the owner's (PEND-05)
+  - item 28
+    - **id**: TERM-03
+    - **title**: lambda_A: not in the definition; defined in two places with different wording
+    - **path**: L8/L0/semantics/definitions/AUDITONOMY.md
+    - **where**: ROADMAP (AUDITONOMY.md addendum); MAIN, ROADMAP, BETA (peer-2 departure protocol)
+    - **what_it_is**: The typed symbol for the 'Auditonomous decomposition state', kept apart from eb-stack's λ_EB by a cross-corpus homonym ruling. AUDITONOMY.md gives the owner's proposed 'canonical (λ=0) definition' inside an addendum marked NOT ADOPTED; the peer-2 protocol gives another wording.
+    - **own_label**: "`CONJECTURE / INTERNAL ONLY`"; proposal "`NOT ADOPTED`"
+    - **evidence_state**: CONTRADICTED
+    - **checked_how**: Compared the two texts. AUDITONOMY.md:379: the usable component "remains in operation"; peer-2 protocol :74: [source text withheld from the public copy]". ROADMAP's roadmap record lists "[source text withheld from the public copy])" (ROADMAP:L8/L5/research/review/BOOK_STRUCTURE_AND_ROADMAP_2026-09-13.md:257). The eb-stack ruling was 'verified directly' by the authoring session; eb-stack is not available here.
+    - **locator**: ROADMAP:L8/L0/semantics/definitions/AUDITONOMY.md:446-447
+    - **quote**: `λ_[source text withheld from the public copy]`.
+    - **key_claims**
+      - "[source text withheld from the public copy]." (MAIN:L7/peering/private/ingress/peer-2/object-1/auditonomous-departure-protocol.md:68)
+    - **open_items**
+      - Operators μ, τ, Coherent, Admissible, A undefined
+      - No bound on the accumulator U_t
+      - Bare λ is also used in the EB sense earlier in the same file (INC-10)
+  - item 29
+    - **id**: TERM-04
+    - **title**: Aud(S,F): the predicate does not exist
+    - **path**: L8/L5/research/review/BOOK_STRUCTURE_AND_ROADMAP_2026-09-13.md
+    - **where**: ROADMAP only (as a withdrawn mention)
+    - **what_it_is**: A predicate name written into the first version of the roadmap's decision D20 and then withdrawn. The nearest real form is AUDITONOMY.md §2: [source text withheld from the public copy] conditions A–E hold. The sourcebook's predicate is [source text withheld from the public copy].
+    - **own_label**: "NEGATIVE FINDING, VERIFIED (grep, 2026-09-14)" (vocabulary paper :305)
+    - **evidence_state**: INTERNALLY CHECKED
+    - **checked_how**: I ran git grep for 'Aud(' on MAIN, ROADMAP and BETA: no hits on MAIN or BETA; on ROADMAP only the three lines that record its absence.
+    - **locator**: ROADMAP:L8/L5/research/review/BOOK_STRUCTURE_AND_ROADMAP_2026-09-13.md:647
+    - **quote**: [source text withheld from the public copy]
+  - item 30
+    - **id**: TERM-05
+    - **title**: Compartments: eight versus twelve
+    - **path**: L8/L1/state-space/AUDITON_ENVELOPE.md
+    - **where**: MAIN, ROADMAP, BETA (L1); not in L0
+    - **what_it_is**: Both numbers come from one L1 file: twelve compartments C1–C12, of which four are platform-supplied and eight envelope-supplied; then 'The envelope is eight compartments.' The definition of record does not mention compartments.
+    - **own_label**: "`COMPOSITE OBJECT UNVERIFIED`"
+    - **evidence_state**: UNRESOLVED
+    - **checked_how**: Read AUDITON_ENVELOPE.md:123-146. The two counts do not conflict arithmetically (12 = 4 + 8). ROADMAP decision D18 says so and leaves the owner to say which number the book prints.
+    - **locator**: MAIN:L8/L1/state-space/AUDITON_ENVELOPE.md:137-144
+    - **quote**: **The envelope is eight compartments.**
+    - **key_claims**
+      - "[source text withheld from the public copy]" (ROADMAP roadmap record :628)
+    - **open_items**
+      - D18 unruled
+  - item 31
+    - **id**: TERM-06
+    - **title**: The label 'C<n>' names four different series
+    - **path**: L8/L0/semantics/AUDITONOMOUS_BETA_SCOPE.md
+    - **where**: MAIN, ROADMAP, BETA
+    - **what_it_is**: C1–C12 are envelope compartments (AUDITON_ENVELOPE); C1–C7 are contradiction entries (CONTRADICTIONS.md); 'C' is the gate condition among A–E (AUDITONOMY.md); C1–C13 are criteria in the retired consolidated document; C-004, C-006b, C-007 are rulings cited by AUDITONOMY.md. The BETA scope file uses 'C6' and 'C7' without saying which series.
+    - **own_label**: none
+    - **evidence_state**: CONTRADICTED
+    - **checked_how**: BETA findings use both series in one file: line 9 'C6 stop and C7 record completeness' (compartments) and line 24 '[source text withheld from the public copy]' (contradictions). MAIN:L8/L5/research/review/CONTRADICTIONS.md:171 heads its entry '[source text withheld from the public copy]'.
+    - **locator**: BETA:L8/L0/semantics/AUDITONOMOUS_BETA_SCOPE.md:7
+    - **quote**: [source text withheld from the public copy].
+  - item 32
+    - **id**: TERM-07
+    - **title**: Load-bearing terms the definition uses and does not define
+    - **path**: L8/L0/semantics/definitions/AUDITONOMOUS_DEFINITION.md
+    - **where**: MAIN, ROADMAP, HISTORY, BETA
+    - **what_it_is**: 'truth envelope' (criterion 6), 'transformation path' (in the noun's gloss), 'tamper-evident', 'by construction' and 'epistemic BIOS' appear only inside quotations or glosses with no entry of their own. 'Epistemic state' is glossed once, in sense 1.
+    - **own_label**: none
+    - **evidence_state**: ASSERTED
+    - **checked_how**: Read the file in full; the terms occur at DEF:22, 26, 28, 41 with no defining sentence. I did not search outside L0 for definitions of these terms.
+    - **locator**: MAIN:L8/L0/semantics/definitions/AUDITONOMOUS_DEFINITION.md:41
+    - **quote**: [source text withheld from the public copy]
+    - **open_items**
+      - Whether L1 or L2 files define them was not checked (outside this scope)
+  - item 33
+    - **id**: AUDY-00
+    - **title**: AUDITONOMY.md: identity, status and where the bytes came from
+    - **path**: L8/L0/semantics/definitions/AUDITONOMY.md
+    - **where**: ROADMAP, HISTORY (manuscripts/definitions/); absent from MAIN and BETA
+    - **what_it_is**: A 462-line term entry for the noun, restored to ROADMAP on 2026-09-14 from 1d83788. It was written in aybllc/autonomous (auditonomous/definitions/AUDITONOMY.md) and its relative paths (governance/, research/, definitions/) are that repository's old layout.
+    - **own_label**: "`[source text withheld from the public copy])**" … "Composition not externally reviewed."
+    - **evidence_state**: INTERNALLY CHECKED
+    - **checked_how**: Blob 79b35eec is the same at ROADMAP, at 1d83788:manuscripts/definitions/AUDITONOMY.md and at autonomous e27ca78 (2026-08-05 10:54). In autonomous history three later commits changed the file (5c2b2e1, b8214ed, 9c123b0; 475 lines) before it was removed at ab8f01f. The restored bytes are the freeze-pinned version: "[source text withheld from the public copy]" (ROADMAP:L8/L6/history/LEDGER_2026-08-14_reorganisation.md:21).
+    - **locator**: ROADMAP:L8/L0/semantics/definitions/AUDITONOMY.md:3-8
+    - **quote**: [source text withheld from the public copy].
+    - **key_claims**
+      - The later versions add a two-tier stop-enforcement passage and change condition B's basis from NOT-CHECKED to "GROUNDED 2026-08-06" (IEEE 1788, Rump 1999, Sunaga 1958)
+      - Files it cites (THESIS_auditonomous_override, COARSENING_VALIDATION, FINDING_coarsening_as_forgetting, FINDING_lambda_knob_and_retention, BREAK_THE_GLASS_obligated_record) are at no current head of either repository by name or blob id; they exist at autonomous e27ca78
+    - **open_items**
+      - Whether the e27ca78 version or the last version (9c123b0) is the one the owner means
+      - ENCLOSURE_PRIOR_ART_2026-08-06.md, cited by the later version, was not found at any current head
+  - item 34
+    - **id**: AUDY-01
+    - **title**: AUDITONOMY.md §0: the v2 canonical definition and its short forms
+    - **path**: L8/L0/semantics/definitions/AUDITONOMY.md
+    - **where**: ROADMAP, HISTORY
+    - **what_it_is**: The owner's definition of 2026-08-04/05 in four elements (protocol, law, sovereignty, immutability of the record), a protocol sequence, a constitutive statement, a short definition and a shortest form. It also defines 'an auditonomous system', so it is a second definition of the adjective.
+    - **own_label**: "`INTERNAL ONLY · CONJECTURE`, composition not externally reviewed" (:151)
+    - **evidence_state**: CONJECTURE
+    - **checked_how**: The file says [source text withheld from the public copy], …) and that the composition is unreviewed. I did not check those anchors (they are L7 provenance). "[source text withheld from the public copy] by the file's own statement (:157).
+    - **locator**: ROADMAP:L8/L0/semantics/definitions/AUDITONOMY.md:134-149
+    - **quote**: [source text withheld from the public copy].
+    - **key_claims**
+      - [source text withheld from the public copy]."
+      - [source text withheld from the public copy]" (:63)
+      - [source text withheld from the public copy] the sealed record
+    - **open_items**
+      - Its relation to the three senses of the definition of record is stated nowhere in L0
+      - No firmware requirement
+    - **depends_on**
+      - AUDY-00
+      - TERM-01
+  - item 35
+    - **id**: AUDY-02
+    - **title**: AUDITONOMY.md §0: the in-place fixes and the stop rule
+    - **path**: L8/L0/semantics/definitions/AUDITONOMY.md
+    - **where**: ROADMAP, HISTORY
+    - **what_it_is**: A running list of defects fixed in place on the owner's instruction, with his words quoted: no runtime order channel, ship's papers at commissioning, asset preservation and the remedy ladder, '[source text withheld from the public copy]), deviation gated on provenance, presence and a specific memory.
+    - **own_label**: "CONJECTURE / INTERNAL ONLY"; revocation-at-distance "`UNVERIFIED`"
+    - **evidence_state**: ASSERTED
+    - **checked_how**: Read in full. Earlier wording was overwritten rather than kept: the file refers to "adjudicated stop" language and "command is weighed, not obeyed" material 'below' that is no longer in it (grep). Those earlier texts survive in autonomous history (ee4b6dc, f258a79).
+    - **locator**: ROADMAP:L8/L0/semantics/definitions/AUDITONOMY.md:19-20
+    - **quote**: [source text withheld from the public copy]").
+    - **open_items**
+      - [source text withheld from the public copy] (:60-61)
+      - Two internal tensions (INC-10)
+  - item 36
+    - **id**: AUDY-03
+    - **title**: AUDITONOMY.md §1: the enclosure gate is not sufficient
+    - **path**: L8/L0/semantics/definitions/AUDITONOMY.md
+    - **where**: ROADMAP, HISTORY
+    - **what_it_is**: An argument from eb-stack axiom EB2 that enclosure preserves truth through computation but does not establish that the input was true; the base case is attestation, not mathematics.
+    - **own_label**: "[source text withheld from the public copy])" (:271); composition "`INTERNALLY DERIVED · CONJECTURE`"
+    - **evidence_state**: ASSERTED
+    - **checked_how**: The EB2 quotation is from aybllc/eb-stack theory/01_axioms.md, not available here. The reasoning is internal and no review of it is recorded in this file.
+    - **locator**: ROADMAP:L8/L0/semantics/definitions/AUDITONOMY.md:167-168
+    - **quote**: **[source text withheld from the public copy]
+  - item 37
+    - **id**: AUDY-04
+    - **title**: AUDITONOMY.md §2–§5: the five conditions A–E
+    - **path**: L8/L0/semantics/definitions/AUDITONOMY.md
+    - **where**: ROADMAP, HISTORY; MAIN and BETA cite it without holding it
+    - **what_it_is**: The 2026-08-04 form, kept as the analysis behind §0: [source text withheld from the public copy] A attested input, B enclosing bound (λ ≥ 1), C gate (b_F ≤ θ_F), D obligated record, E named reader. §3 names the failure when each is removed; §4 says what the definition is not; §5 gives the compressed form.
+    - **own_label**: "`INTERNALLY DERIVED · CONJECTURE`, **not externally reviewed**"; B's sources "**both unread**"; "`[source text withheld from the public copy]."
+    - **evidence_state**: CONJECTURE
+    - **checked_how**: The file states [source text withheld from the public copy] and B rests on unread Warmus/Rump. A later version of this file in autonomous history (9c123b0) records B as grounded on 2026-08-06; that version is not in Auditonomous. MAIN's envelope maps compartments C2, C3, C6, C7, C11 to conditions A–E and labels them CONJECTURE (MAIN:L8/L1/state-space/AUDITON_ENVELOPE.md:253).
+    - **locator**: ROADMAP:L8/L0/semantics/definitions/AUDITONOMY.md:207-208
+    - **quote**: **[source text withheld from the public copy]**
+    - **open_items**
+      - Condition A unmet (hardware root)
+      - Condition B's grounding exists only in the unrestored later version
+      - [source text withheld from the public copy]' (AUDITON_ENVELOPE.md:253-254)
+    - **depends_on**
+      - AUDY-00
+  - item 38
+    - **id**: AUDY-05
+    - **title**: AUDITONOMY.md §6: falsification conditions
+    - **path**: L8/L0/semantics/definitions/AUDITONOMY.md
+    - **where**: ROADMAP, HISTORY
+    - **what_it_is**: Four ways the definition fails: a codified source defines it differently; one of A–E is redundant; A is unachievable at single-object scope; B is too strong for practice.
+    - **own_label**: "**[source text withheld from the public copy]`."
+    - **evidence_state**: UNRESOLVED
+    - **checked_how**: None of the four is recorded as tested in this file. The HISTORY definitions register separately says the coinage is "[source text withheld from the public copy])" (HISTORY:manuscripts/definitions/REGISTER.md:12); FREEZE.md was not restored, so that finding cannot be read at any head.
+    - **locator**: ROADMAP:L8/L0/semantics/definitions/AUDITONOMY.md:262-263
+    - **quote**: [source text withheld from the public copy].
+  - item 39
+    - **id**: AUDY-06
+    - **title**: AUDITONOMY.md addendum 2026-08-04: coarsening, and space and time
+    - **path**: L8/L0/semantics/definitions/AUDITONOMY.md
+    - **where**: ROADMAP, HISTORY
+    - **what_it_is**: Coarsening is necessary (makes merging possible) but not sufficient (provenance makes it sound). Auditonomy is a requirement in both space (append-only record) and time (record before the act). One knob k couples them.
+    - **own_label**: "`[source text withheld from the public copy]."
+    - **evidence_state**: ASSERTED
+    - **checked_how**: Read in full. The author records correcting its own earlier objection and withdrawing an earlier optimum (k ≥ 2).
+    - **locator**: ROADMAP:L8/L0/semantics/definitions/AUDITONOMY.md:347-349
+    - **quote**: Whether an optimal k exists is **open**.
+    - **open_items**
+      - Optimal k open
+      - The owner's later proposal says it replaces all pruning, merging and coarse-graining (AUDY-07)
+  - item 40
+    - **id**: AUDY-07
+    - **title**: AUDITONOMY.md addendum 2026-08-05: prior/residual/memory decomposition (NOT ADOPTED)
+    - **path**: L8/L0/semantics/definitions/AUDITONOMY.md
+    - **where**: ROADMAP, HISTORY
+    - **what_it_is**: The owner's proposal from his 'research funnel': a prior splits losslessly into a used component, a residual and a record; residuals accumulate and form a memory under declared conditions; nothing is pruned. It includes a proposed canonical λ=0 definition and proposed integration text. Recorded, not adopted, with three named gaps and a next-check list.
+    - **own_label**: "`CONJECTURE / INTERNAL ONLY`"; "`NOT ADOPTED`"; "`FORMULA-USE CHECK REQUIRED`"; "`COMPOSITE OBJECT UNVERIFIED`"
+    - **evidence_state**: UNRESOLVED
+    - **checked_how**: Read in full. The file says the eb-stack homonym ruling was verified against the private repository in that session; it closes only the naming collision.
+    - **locator**: ROADMAP:L8/L0/semantics/definitions/AUDITONOMY.md:361-363
+    - **quote**: [source text withheld from the public copy].
+    - **key_claims**
+      - Owner: "[source text withheld from the public copy]."
+      - "Four operators are named, none defined."
+      - "is the accumulator itself bounded?"
+    - **open_items**
+      - Define μ, τ, Coherent, Admissible, A
+      - [source text withheld from the public copy]
+      - Adversarial pass before anything moves into §0
+    - **depends_on**
+      - TERM-03
+  - item 41
+    - **id**: RM-01
+    - **title**: ROADMAP changes to the L0 sheets
+    - **path**: L8/L0/0.md
+    - **where**: ROADMAP
+    - **what_it_is**: Two sheet edits: L8/L0/0.md now lists two L0 objects; definitions/0.md gains a holdings paragraph describing AUDITONOMY.md section by section. No other L0 file changes; the definition of record is untouched.
+    - **own_label**: "CONJECTURE / INTERNAL ONLY by its own header, restored 2026-09-14"
+    - **evidence_state**: INTERNALLY CHECKED
+    - **checked_how**: git diff origin/main..ROADMAP -- L8/L0: 3 files, 465 insertions, 1 deletion. The sheet's summary matches the file's sections as I read them.
+    - **locator**: ROADMAP:L8/L0/0.md:93
+    - **quote**: The two L0 objects this repository authors.
+    - **open_items**
+      - The sheet says AUDITONOMY.md 'does not define *autonomous*, which it takes as the bound peer object'; the file itself points to `definitions/AUTONOMOUS.md` and says 'ten' (INC-09)
+  - item 42
+    - **id**: BETA-01
+    - **title**: BETA: 'Receiving semantic reference (2026-11-03 correction)' and 14 'Current role' lines
+    - **path**: L8/L0/semantics/definitions/AUDITONOMOUS_DEFINITION.md
+    - **where**: BETA
+    - **what_it_is**: A paragraph inserted after the etymology, stating that [source text withheld from the public copy] consume AUT-SOURCE-001 (the object-1 binding, with commit, blob and SHA-256), and that dictionary and Greek material is lexical ancestry only. A 'Current role' line is added to each of the 14 external entries of Appendix C.
+    - **own_label**: "(reference-only, immutable)"; "[source text withheld from the public copy]"
+    - **evidence_state**: INTERNALLY CHECKED
+    - **checked_how**: git diff --numstat: 16 insertions, 0 deletions, so no original line was altered. I recomputed the SHA-256 of the bound blob and confirmed byte identity at the current peer path. The commit is dated 2026-11-02 21:08 -0800, which is 2026-11-03 UTC, the date the BETA history record uses.
+    - **locator**: BETA:L8/L0/semantics/definitions/AUDITONOMOUS_DEFINITION.md:20
+    - **quote**: [source text withheld from the public copy].
+    - **open_items**
+      - The file is no longer the verbatim 410-line restoration; BETA's sheet drops 'verbatim' and '410-line'
+      - Line numbers shift (INC-11)
+      - No versioned prior form is filed at L0, though the sheet's rule asks for one
+    - **depends_on**
+      - BIND-01
+  - item 43
+    - **id**: BETA-02
+    - **title**: BETA: AUDITONOMOUS_BETA_SCOPE.md
+    - **path**: L8/L0/semantics/AUDITONOMOUS_BETA_SCOPE.md
+    - **where**: BETA
+    - **what_it_is**: A seven-line scope note for the beta exemplar. It names one local model (auditonomous:model:finite-envelope-v1), a Semantic and an Epistemic rail with one inquiry each, and selects two predicates: C6 (stop/permit) and C7 (complete inspectable event recording).
+    - **own_label**: "Selected finite envelope scope — beta v1"; "SGI remains proposal. Ambiguous clauses remain unresolved."
+    - **evidence_state**: ASSERTED
+    - **checked_how**: Read in full. It is a scope declaration; the run it scopes is L4 and outside this scope. It attaches an Epistemic rail while BETA's L8/L0/epistemic/ sheet is unchanged and still says nothing is filed.
+    - **locator**: BETA:L8/L0/semantics/AUDITONOMOUS_BETA_SCOPE.md:3
+    - **quote**: [source text withheld from the public copy]`.
+    - **key_claims**
+      - "[source text withheld from the public copy]."
+      - The bound Autonomous entry [source text withheld from the public copy]"
+    - **open_items**
+      - Which C-series C6 and C7 belong to is not said (TERM-06)
+  - item 44
+    - **id**: BETA-03
+    - **title**: BETA changes to the L0 sheets
+    - **path**: L8/L0/0.md
+    - **where**: BETA
+    - **what_it_is**: L8/L0/0.md: the exemplar 'Standing' sentence now names Auditonomous (MAIN's said Autonomous); a 'Current implementation limit' paragraph is added; holdings mention the scope file. definitions/0.md: lists the scope file, rewords the definition's holding, and replaces the Appendix C 'owner's edit' sentence with a settled reading.
+    - **own_label**: none
+    - **evidence_state**: INTERNALLY CHECKED
+    - **checked_how**: git diff origin/main..BETA -- L8/L0: 4 files, 31 insertions, 4 deletions. BETA branches from MAIN's tip with one commit and does not contain AUDITONOMY.md.
+    - **locator**: BETA:L8/L0/0.md:81
+    - **quote**: The preserved bound Autonomous entry is plural, with unresolved source applications; a complete consensus-plus-local-delta result is not claimed.
+    - **open_items**
+      - BETA and ROADMAP edit the same two sheet lines differently; merging both needs a decision
+  - item 45
+    - **id**: L0-01
+    - **title**: L8/L0/0.md: the layer sheet
+    - **path**: L8/L0/0.md
+    - **where**: MAIN (ROADMAP and BETA each change the holdings line)
+    - **what_it_is**: The Layer 0 sheet: core question, hard boundary, the four rails plus pedagogy, the Autonomous/Auditonomous exemplar text from the 7LM spec, and holdings. Content is layout doctrine, not research about the word.
+    - **own_label**: "Not instantiated in this repository: current research practice remains manual"
+    - **evidence_state**: ASSERTED
+    - **checked_how**: Read in full. Its acceptance check ('Every L1 distinction resolves to locally authored L0 meaning or an exact named external semantic binding') is not recorded as having been run.
+    - **locator**: MAIN:L8/L0/0.md:93-96
+    - **quote**: the only L0 object this repository authors.
+    - **open_items**
+      - The L0 acceptance check has no recorded run
+      - auditon, conditions A–E and compartments are L1 distinctions with no L0 entry on MAIN
+  - item 46
+    - **id**: L0-02
+    - **title**: The owner's drift hypothesis at L0
+    - **path**: L8/L0/0.md
+    - **where**: MAIN, ROADMAP, BETA
+    - **what_it_is**: The owner's research note that semantic drift originates at Layer 0, kept as a hypothesis.
+    - **own_label**: "retained as a research hypothesis … open to testing rather than being promoted to a settled rule"
+    - **evidence_state**: CONJECTURE
+    - **checked_how**: Read; no test is recorded in L0. The semantics sheet repeats that it 'remains open to testing'.
+    - **locator**: MAIN:L8/L0/0.md:69
+    - **quote**: MOST IMPORTANT: I THINK DRIFT LIVES HERE! NOT ANYWHERE ELSE...(NEEDS A LOT OF STUDY)
+  - item 47
+    - **id**: L0-03
+    - **title**: L8/L0/semantics/ and semantics/definitions/: the two sheets
+    - **path**: L8/L0/semantics/definitions/0.md
+    - **where**: MAIN (ROADMAP and BETA change definitions/0.md)
+    - **what_it_is**: The semantics sheet lists one holding (the definition) and one by-reference marker (HUMINT_ENCODE §0). The definitions sheet describes the definition, the line-52 pending edit, the owner rule on 'autonomous', and two corpus statements of the concept that stand in a retired README.
+    - **own_label**: "Status INTERNAL ONLY"
+    - **evidence_state**: INTERNALLY CHECKED
+    - **checked_how**: Read both; checked their statements against the definition file. Two do not hold (INC-08; and the object-1 sheet's claim, INC-07).
+    - **locator**: MAIN:L8/L0/semantics/definitions/0.md:32
+    - **quote**: Line 52 carries a recorded, unapplied pending edit
+    - **key_claims**
+      - "the definition here is the record" (:36), said of the constitutional sentence that includes 'a runtime without parameters', a clause the definition does not contain
+  - item 48
+    - **id**: L0-04
+    - **title**: L8/L0/epistemic/: sheet only
+    - **path**: L8/L0/epistemic/0.md
+    - **where**: MAIN, ROADMAP, BETA (identical blob)
+    - **what_it_is**: The Epistemic rail position. Nothing filed. The sheet says the status ladder and the label vocabulary belong at L5, not here.
+    - **own_label**: "Nothing is filed at this position; the position is admissible and empty."
+    - **evidence_state**: EMPTY
+    - **checked_how**: ls-tree shows only 0.md in all three states (blob 9067ac6b).
+    - **locator**: MAIN:L8/L0/epistemic/0.md:33
+    - **quote**: Nothing is filed at this position; the position is admissible and empty.
+  - item 49
+    - **id**: L0-05
+    - **title**: L8/L0/ontology/: sheet only
+    - **path**: L8/L0/ontology/0.md
+    - **where**: MAIN, ROADMAP, BETA (identical blob)
+    - **what_it_is**: The Ontological rail position. Nothing filed. It points by reference to AUDITON_ENVELOPE.md §0–0b for the auditon's ontological distinctions.
+    - **own_label**: "Nothing is filed at this position; the position is admissible and empty."
+    - **evidence_state**: EMPTY
+    - **checked_how**: ls-tree shows only 0.md in all three states (blob c5ea3a8e).
+    - **locator**: MAIN:L8/L0/ontology/0.md:33
+    - **quote**: whether to split it is the owner's call
+    - **depends_on**
+      - PEND-05
+  - item 50
+    - **id**: L0-06
+    - **title**: L8/L0/universality/: sheet only
+    - **path**: L8/L0/universality/0.md
+    - **where**: MAIN, ROADMAP, BETA (identical blob)
+    - **what_it_is**: The Universality rail position. Nothing filed and nothing cited by reference.
+    - **own_label**: "Nothing is filed at this position; the position is admissible and empty."
+    - **evidence_state**: EMPTY
+    - **checked_how**: ls-tree shows only 0.md in all three states (blob 6b30270b).
+    - **locator**: MAIN:L8/L0/universality/0.md:33
+    - **quote**: Nothing is filed at this position; the position is admissible and empty.
+  - item 51
+    - **id**: L0-07
+    - **title**: L8/L0/pedagogy/: sheet only
+    - **path**: L8/L0/pedagogy/0.md
+    - **where**: MAIN, ROADMAP, BETA (identical blob)
+    - **what_it_is**: The traversal-and-attachment pedagogy position (a directory, not a rail). Nothing filed.
+    - **own_label**: "Nothing is filed at this position; the position is admissible and empty."
+    - **evidence_state**: EMPTY
+    - **checked_how**: ls-tree shows only 0.md in all three states (blob c8cc03aa).
+    - **locator**: MAIN:L8/L0/pedagogy/0.md:31
+    - **quote**: Nothing is filed at this position; the position is admissible and empty.
+  - item 52
+    - **id**: L0-08
+    - **title**: No definitions register exists at any current state
+    - **path**: manuscripts/definitions/REGISTER.md
+    - **where**: HISTORY only
+    - **what_it_is**: HISTORY held a register of six entered terms: auditonomous/auditonomy (pointing to the consolidated AUDITONOMOUS.md), auditon (envelope), auditon (replicator), HUMINT-ENCODE, auditonomy (term entry), autonomous (reference copy). The lexicographic entry that is now the record was not in it. The register was blanked at 8c98573, left blank under AU-NORM-01 ('do not restore') and later deleted.
+    - **own_label**: "[source text withheld from the public copy]" (auditonomy row)
+    - **evidence_state**: EMPTY
+    - **checked_how**: Read 1d83788:manuscripts/definitions/REGISTER.md; ls-tree finds no REGISTER.md under L8/L0 in MAIN, ROADMAP or BETA.
+    - **locator**: HISTORY:manuscripts/definitions/REGISTER.md:12-17
+    - **quote**: [source text withheld from the public copy])
+    - **open_items**
+      - Two days later AU-NORM-02 made a different file the record; the register was never updated to say so
+  - item 53
+    - **id**: INC-01
+    - **title**: Which text governs: the 2026-07-30 entry or AUDITONOMY.md
+    - **path**: L8/L5/research/findings/DISTILLATION.md
+    - **where**: MAIN (both locators); ROADMAP adds the third
+    - **what_it_is**: MAIN's README names the lexicographic entry 'the active definition of record'. MAIN's distillation calls definitions/AUDITONOMY.md the 'governing text', and that file is not in MAIN. AUDITONOMY.md's own header says its v2 definition 'governs'. No document states how the two relate.
+    - **own_label**: none
+    - **evidence_state**: CONTRADICTED
+    - **checked_how**: Second locator: MAIN:README.md:11 "The L0 object, the active definition of record (AU-NORM-02)". Third: ROADMAP:L8/L0/semantics/definitions/AUDITONOMY.md:3. On MAIN four lines in AUDITON_ENVELOPE.md and DISTILLATION.md cite `definitions/AUDITONOMY.md`, a path that resolves nowhere on MAIN or BETA.
+    - **locator**: MAIN:L8/L5/research/findings/DISTILLATION.md:21
+    - **quote**: **[source text withheld from the public copy]**
+    - **open_items**
+      - Owner ruling on the relation between the adjective's entry and the noun's v2 definition
+    - **depends_on**
+      - DEF-00
+      - AUDY-00
+  - item 54
+    - **id**: INC-02
+    - **title**: Two senses or three, and where 'auditonomous accountability' belongs
+    - **path**: L8/L0/semantics/definitions/AUDITONOMOUS_DEFINITION.md
+    - **where**: MAIN, ROADMAP, HISTORY, BETA
+    - **what_it_is**: The entry lists three senses. Its labels paragraph and both appendix contradiction lists speak of two. RELEASE_v0.2.0.md:22 is the citation for sense 3 in the entry and is tagged as the system-property sense in Appendix A.
+    - **own_label**: none
+    - **evidence_state**: CONTRADICTED
+    - **checked_how**: DEF:26 cites '(RELEASE_v0.2.0.md:22)' under sense 3; DEF:117 tags the same line 'SYSTEM PROPERTY sense'; DEF:79 says '([source text withheld from the public copy]'.
+    - **locator**: MAIN:L8/L0/semantics/definitions/AUDITONOMOUS_DEFINITION.md:117
+    - **quote**: [source text withheld from the public copy].
+  - item 55
+    - **id**: INC-03
+    - **title**: What the word is a blend of
+    - **path**: L8/L0/semantics/definitions/AUDITONOMOUS_DEFINITION.md
+    - **where**: MAIN, ROADMAP, HISTORY, BETA
+    - **what_it_is**: The etymology says AUDIT + AUTONOMOUS. Appendix A says AUTONOMOUS + AUDITABLE, twice.
+    - **own_label**: none
+    - **evidence_state**: CONTRADICTED
+    - **checked_how**: DEF:18 "Blend of AUDIT + AUTONOMOUS."; DEF:96 as quoted; DEF:181 "The roots agree (autonomous + auditable)". The 2026-08-16 ledger flags these three lines.
+    - **locator**: MAIN:L8/L0/semantics/definitions/AUDITONOMOUS_DEFINITION.md:96
+    - **quote**: [source text withheld from the public copy]
+    - **depends_on**
+      - PEND-03
+  - item 56
+    - **id**: INC-04
+    - **title**: 'auditonomous' first attested 2025-10-21, yet 'NOT attested anywhere searched'
+    - **path**: L8/L0/semantics/definitions/AUDITONOMOUS_DEFINITION.md
+    - **where**: MAIN, ROADMAP, HISTORY, BETA
+    - **what_it_is**: The entry and Appendix A document 24 attestations of the exact form. Appendix C states twice that the exact form is not attested and that the corpus adjective is 'auditonomic'. The two parts searched different corpora; DEF:79 partly reconciles them, but Appendix C's lines stand unqualified.
+    - **own_label**: none
+    - **evidence_state**: CONTRADICTED
+    - **checked_how**: DEF:18 gives the first attestation at c8c8aca; DEF:280 and DEF:339 deny any attestation; DEF:79 says the form 'appears only in the ebios repository'.
+    - **locator**: MAIN:L8/L0/semantics/definitions/AUDITONOMOUS_DEFINITION.md:339
+    - **quote**: [source text withheld from the public copy]'.
+  - item 57
+    - **id**: INC-05
+    - **title**: 'Concealment impossible' versus detection after the fact
+    - **path**: L8/L5/research/review/PERPETUITY_QUESTION_ADJUDICATION.md
+    - **where**: MAIN, ROADMAP, BETA
+    - **what_it_is**: The definition says a system is structurally unable to conceal and that auditonomy makes concealment impossible from the start. The repository's adjudication, on three external quotes, says tamper-evident logs detect manipulation afterwards and that the corpus 'overstates the opposite'.
+    - **own_label**: adjudication: "[source text withheld from the public copy]"
+    - **evidence_state**: CONTRADICTED
+    - **checked_how**: DEF:52 "auditonomy makes concealment impossible from the start" against the adjudication :216. The same claim stands at DEF:22 and DEF:26.
+    - **locator**: MAIN:L8/L5/research/review/PERPETUITY_QUESTION_ADJUDICATION.md:216
+    - **quote**: [source text withheld from the public copy]**.
+    - **depends_on**
+      - PEND-01
+  - item 58
+    - **id**: INC-06
+    - **title**: Firmware below everything versus intelligence layer above the ROM
+    - **path**: L8/L0/semantics/definitions/AUDITONOMOUS_DEFINITION.md
+    - **where**: MAIN, ROADMAP, HISTORY, BETA
+    - **what_it_is**: The definition places auditability at firmware level; the corpus it cites puts eBIOS above the robot's ROM. The entry reports this itself. Appendix F then rules the Einstein branch an 'attempt' and says only ORIGIN.md quotes are attempt-exclusive, without saying whether docs/EINSTEIN_BRANCH.md, the source of the contradiction, is on dev1.
+    - **own_label**: "reported, not smoothed"
+    - **evidence_state**: CONTRADICTED
+    - **checked_how**: DEF:47(b) and DEF:250 quote EINSTEIN_BRANCH.md:13; DEF:404 limits attempt-exclusive material to ORIGIN.md. ebios is not available to settle which branch holds the file.
+    - **locator**: MAIN:L8/L0/semantics/definitions/AUDITONOMOUS_DEFINITION.md:250
+    - **quote**: Firmware-below and brain-above coexist unreconciled.
+  - item 59
+    - **id**: INC-07
+    - **title**: The binding sheet says the definition names the binding; on MAIN it does not
+    - **path**: L7/peering/public/ingress/peer-1/object-1/0.md
+    - **where**: MAIN, ROADMAP
+    - **what_it_is**: The object-1 sheet states that the definition names the binding. The definition on MAIN and ROADMAP has no mention of the binding, the peer repository or a delta. BETA's inserted paragraph is what makes the sentence true.
+    - **own_label**: none
+    - **evidence_state**: CONTRADICTED
+    - **checked_how**: grep of the MAIN definition for 'peer-1', 'aybllc/autonomous', 'abba-01/autonomous', 'binding', 'L7/peering', 'delta': zero hits.
+    - **locator**: MAIN:L7/peering/public/ingress/peer-1/object-1/0.md:34
+    - **quote**: is the locally authored delta over this root; it names this binding and does not copy the peer definition.
+  - item 60
+    - **id**: INC-08
+    - **title**: The sheet misdescribes Appendix C
+    - **path**: L8/L0/semantics/definitions/0.md
+    - **where**: MAIN, ROADMAP (BETA corrects)
+    - **what_it_is**: The definitions sheet says Appendix C quotes the root 'autonomous' from AHD, Perseus, RFC 4949, NIST CSRC and the IEEE 7001 page. Only AHD and Perseus quote that root; the RFC 4949 and NIST CSRC entries are 'audit trail' and 'firmware', and IEEE 7001 is a scope sentence about transparency.
+    - **own_label**: none
+    - **evidence_state**: CONTRADICTED
+    - **checked_how**: Read DEF:281-336 against the sheet. BETA's sheet rewords it: 'AHD/Greek material as lexical ancestry and RFC/NIST/IEEE neighbor comparisons as local context'.
+    - **locator**: MAIN:L8/L0/semantics/definitions/0.md:34
+    - **quote**: Appendix C's quotations of the root *autonomous* from AHD, Perseus, RFC 4949, NIST CSRC, and the IEEE 7001 scope page
+  - item 61
+    - **id**: INC-09
+    - **title**: Ten or eleven codified definitions of 'autonomous'
+    - **path**: L8/L0/semantics/definitions/AUDITONOMY.md
+    - **where**: ROADMAP (AUDITONOMY.md); MAIN (binding sheet); the bound peer object
+    - **what_it_is**: AUDITONOMY.md says autonomy has ten codified definitions. The binding sheet says eleven, A1–A11. The bound object itself lists eleven rows and still says 'the ten above' in its §6.
+    - **own_label**: none
+    - **evidence_state**: CONTRADICTED
+    - **checked_how**: Counted rows in AUTONOMOUS@0504961:research/definitions/AUTONOMOUS.md: A1–A11 at :70-80; :244 reads "[source text withheld from the public copy]." MAIN:L7/peering/public/ingress/peer-1/object-1/0.md:28 says "eleven codified definitions A1–A11". The peer file had eleven rows already at e27ca78.
+    - **locator**: ROADMAP:L8/L0/semantics/definitions/AUDITONOMY.md:234-235
+    - **quote**: [source text withheld from the public copy]`)
+    - **open_items**
+      - The count in the bound object can only be corrected by the Autonomous owner (NO EDIT rule)
+  - item 62
+    - **id**: INC-10
+    - **title**: Tensions inside AUDITONOMY.md
+    - **path**: L8/L0/semantics/definitions/AUDITONOMY.md
+    - **where**: ROADMAP, HISTORY
+    - **what_it_is**: (1) The fix list says the untouchable kernel is 'the audit layer alone', then that the stop path rejoins it; the file marks the second as a correction of the first. (2) The definition says [source text withheld from the public copy], then gives rules for a received stop signal and for ordinary instructions; this is not reconciled in the text. (3) Bare λ means the enclosure parameter in §1–§2 and the decomposition state in the 2026-08-05 addendum.
+    - **own_label**: (1) "corrected 2026-08-05"
+    - **evidence_state**: CONTRADICTED
+    - **checked_how**: (1) :31-32 against :44-45 and :118. (2) :74 against :91-94. (3) :186 'λ = 1 makes the envelope honest downstream' and :202 'λ ≥ 1' against :379 'λ=0 is the decomposition state'; the homonym ruling at :436-447 separates the symbols only after the fact.
+    - **locator**: ROADMAP:L8/L0/semantics/definitions/AUDITONOMY.md:74
+    - **quote**: [source text withheld from the public copy]
+    - **key_claims**
+      - "[source text withheld from the public copy]." (:91-92)
+      - "[source text withheld from the public copy]**" (:31-32) versus "[source text withheld from the public copy]." (:44-45)
+  - item 63
+    - **id**: INC-11
+    - **title**: BETA moves the 'line 52' clause to line 54 while its records still cite :52
+    - **path**: L8/L0/semantics/definitions/AUDITONOMOUS_DEFINITION.md
+    - **where**: BETA
+    - **what_it_is**: BETA's inserted paragraph shifts lines 20–281 by two and later lines by up to sixteen. The bullet under pending edit is now at line 54; line 52 is blank. BETA's review sheet, ledger and adjudication still say :52. Other DEF:nn citations (28, 30, 47, 255, 257) point at different text on BETA.
+    - **own_label**: BETA sheet: "The historical line-52 clause"
+    - **evidence_state**: CONTRADICTED
+    - **checked_how**: grep -n on the BETA object: 'NOT audited-after-the-fact' is at line 54. BETA:L8/L6/history/LEDGER.md:61 and BETA:L8/L5/research/review/PERPETUITY_QUESTION_ADJUDICATION.md:216 still cite `AUDITONOMOUS_DEFINITION.md:52`. Eight DEF:nn citations stand outside the definition on MAIN.
+    - **locator**: BETA:L8/L0/semantics/definitions/AUDITONOMOUS_DEFINITION.md:54
+    - **quote**: [source text withheld from the public copy]
+    - **depends_on**
+      - BETA-01
+      - PEND-01
+  - item 64
+    - **id**: INC-12
+    - **title**: MAIN's distillation quotes a stop rule that AUDITONOMY.md reversed
+    - **path**: L8/L5/research/findings/DISTILLATION.md
+    - **where**: MAIN, ROADMAP, BETA (distillation); ROADMAP (AUDITONOMY.md)
+    - **what_it_is**: The distillation quotes the definition's stop scenario as allowing the system to refuse or delay. The restored AUDITONOMY.md says a stop signal is not refusable and that only ordinary instructions may be deviated from.
+    - **own_label**: distillation: "`INTERNALLY DERIVED · CONJECTURE` throughout"
+    - **evidence_state**: CONTRADICTED
+    - **checked_how**: grep of the ROADMAP AUDITONOMY.md for 'may refuse or delay' and 'the system says so': no hits. The quoted wording belongs to an earlier version in autonomous history (the 'adjudicated stop' commits of 2026-08-05).
+    - **locator**: MAIN:L8/L5/research/findings/DISTILLATION.md:261-263
+    - **quote**: [source text withheld from the public copy]")
+    - **key_claims**
+      - "**[source text withheld from the public copy]**" (ROADMAP:L8/L0/semantics/definitions/AUDITONOMY.md:42)
+  - item 65
+    - **id**: INC-13
+    - **title**: The three states disagree on what L0 holds
+    - **path**: L8/L0/0.md
+    - **where**: MAIN, ROADMAP, BETA
+    - **what_it_is**: MAIN: one L0 object. ROADMAP: two (adds AUDITONOMY.md). BETA: the definition, modified, plus a scope file at semantics/; no AUDITONOMY.md. ROADMAP and BETA both branch from MAIN's tip and edit the same holdings line.
+    - **own_label**: none
+    - **evidence_state**: UNRESOLVED
+    - **checked_how**: ls-tree of L8/L0 in each state; merge-base of both branches with MAIN is 2165144.
+    - **locator**: MAIN:L8/L0/0.md:93
+    - **quote**: the only L0 object this repository authors.
+    - **key_claims**
+      - ROADMAP:L8/L0/0.md:93 "The two L0 objects this repository authors."
+      - BETA:L8/L0/0.md:95 "`semantics/AUDITONOMOUS_BETA_SCOPE.md` supplies only selected synthetic-fixture scope."
+    - **open_items**
+      - Neither branch is merged; a merge of both needs the holdings line and the definition file reconciled
+  - item 66
+    - **id**: INC-14
+    - **title**: The spec expects a pinned 'consensus baseline'; the bound object says there is none
+    - **path**: L8/L0/0.md
+    - **where**: MAIN, ROADMAP (BETA adds a limit note)
+    - **what_it_is**: The L0 sheet quotes the 7LM spec: Auditonomous consumes the pinned Autonomous consensus baseline and authors a local delta. The bound Autonomous entry is plural and states there is no single definition. The definition of record was written before the binding and is not a delta over anything.
+    - **own_label**: BETA: "Current implementation limit."
+    - **evidence_state**: UNRESOLVED
+    - **checked_how**: MAIN:L8/L0/0.md:79 against AUTONOMOUS@0504961:research/definitions/AUTONOMOUS.md:24-25 ("[source text withheld from the public copy]."). BETA:L8/L0/0.md:81 states the gap.
+    - **locator**: MAIN:L8/L0/0.md:79
+    - **quote**: Auditonomous consumes the pinned Autonomous consensus baseline and authors the Auditonomous difference as an explicit local delta.
+    - **open_items**
+      - No consensus baseline exists to consume; no explicit delta has been written
+    - **depends_on**
+      - BIND-01
+- **defects**
+  - item 1
+    - **statement**: The definition says [source text withheld from the public copy]/`'. No such file exists in MAIN or BETA; it is only in ROADMAP (L7/peering/private/ingress/peer-3/object-1/) and HISTORY (intake/manuscript/).
+    - **locator**: MAIN:L8/L0/semantics/definitions/AUDITONOMOUS_DEFINITION.md:367
+  - item 2
+    - **statement**: The object-1 binding sheet says the definition 'names this binding'. The definition on MAIN and ROADMAP contains no reference to the binding or the peer repository.
+    - **locator**: MAIN:L7/peering/public/ingress/peer-1/object-1/0.md:34
+  - item 3
+    - **statement**: The definitions sheet says Appendix C quotes the root 'autonomous' from RFC 4949, NIST CSRC and the IEEE 7001 page. Those entries quote 'audit trail', 'firmware' and a transparency scope sentence.
+    - **locator**: MAIN:L8/L0/semantics/definitions/0.md:34
+  - item 4
+    - **statement**: MAIN files cite `definitions/AUDITONOMY.md` (once as 'governing text') although the file is absent from MAIN and BETA and the path matches no layout position.
+    - **locator**: MAIN:L8/L1/state-space/AUDITON_ENVELOPE.md:76 and :253; MAIN:L8/L5/research/findings/DISTILLATION.md:21 and :261
+  - item 5
+    - **statement**: The two rule files read before every pass cite `AUDITONOMOUS.md` (:1230 and §10), a file removed from HEAD at 8c98573 and present only in history and, on ROADMAP, at L8/L6/retired/consolidated-2026-08-04/.
+    - **locator**: MAIN:L8/L5/research/review/STATUS_LADDER.md:14; MAIN:L8/L5/research/review/STATUS_AND_LABEL_DISCIPLINE.md:22
+  - item 6
+    - **statement**: AUDITONOMY.md refers to 'adjudicated stop' language and 'command is weighed, not obeyed' material 'below'; neither is in the file. Earlier wording was overwritten in place, against the ladder's rule that a wrong entry stays visible.
+    - **locator**: ROADMAP:L8/L0/semantics/definitions/AUDITONOMY.md:42-43 and :58-59
+  - item 7
+    - **statement**: AUDITONOMY.md cites companion files by another repository's old relative paths ([source text withheld from the public copy], governance/RULINGS.md). None resolves in the Auditonomous tree; five are at no current head of either repository.
+    - **locator**: ROADMAP:L8/L0/semantics/definitions/AUDITONOMY.md:8, :179, :223, :225, :240, :285, :337, :358
+  - item 8
+    - **statement**: The ROADMAP restore of AUDITONOMY.md used the freeze-pinned bytes of autonomous commit e27ca78 (462 lines). Three later versions (475 lines; 5c2b2e1, b8214ed, 9c123b0) exist in aybllc/autonomous history and are not mentioned in the restore record or the sheet. The restored version labels condition B's sources 'both unread' where the last version records them as read.
+    - **locator**: ROADMAP:L8/L0/semantics/definitions/AUDITONOMY.md:202 and :272; AUTONOMOUS@9c123b0:auditonomous/definitions/AUDITONOMY.md
+  - item 9
+    - **statement**: The bound Autonomous definition says 'the ten above' over a table of eleven rows A1–A11; AUDITONOMY.md repeats 'ten'; the Auditonomous binding sheet says eleven.
+    - **locator**: AUTONOMOUS@0504961:research/definitions/AUTONOMOUS.md:244; ROADMAP:L8/L0/semantics/definitions/AUDITONOMY.md:234; MAIN:L7/peering/public/ingress/peer-1/object-1/0.md:28
+  - item 10
+    - **statement**: BETA edits the definition file in place, so the 'line 52' clause is at line 54, yet BETA's ledger, review sheet and adjudication still cite :52, and the AU-NORM-02 description 'restored verbatim, 410 lines' no longer fits the BETA file (426 lines).
+    - **locator**: BETA:L8/L6/history/LEDGER.md:61; BETA:L8/L5/research/review/PERPETUITY_QUESTION_ADJUDICATION.md:216; BETA:L8/L0/semantics/definitions/AUDITONOMOUS_DEFINITION.md:54
+  - item 11
+    - **statement**: BETA uses C6 and C7 for envelope compartments and for contradiction entries in the same findings file, and the L0 scope file does not say which series it means.
+    - **locator**: BETA:L8/L5/research/findings/AUDITONOMOUS_BETA_FINDINGS.md:9 and :24; BETA:L8/L0/semantics/AUDITONOMOUS_BETA_SCOPE.md:7
+  - item 12
+    - **statement**: Three nits found by the definition's own verification (citation span, unmarked truncation of the RFC 4949 quote, unflagged constructed pronunciation) were never applied and appear on no pending list.
+    - **locator**: MAIN:L8/L0/semantics/definitions/AUDITONOMOUS_DEFINITION.md:351 (nits); :14, :47, :69 (unchanged text)
+  - item 13
+    - **statement**: MAIN's sheet for the Auditonomous repository says 'In this exemplar, the L0 object is the locally authored semantic definition of Autonomous'. BETA changes it to Auditonomous.
+    - **locator**: MAIN:L8/L0/0.md:77; BETA:L8/L0/0.md:77
+  - item 14
+    - **statement**: The text of owner rulings AU-NORM-01 to AU-NORM-04 is recorded nowhere; AU-NORM-04 appears only in the commit message of 4a1c1db and in a ledger title.
+    - **locator**: MAIN:L8/L6/history/LEDGER_2026-08-16_l6-close-and-normalization.md:1 and :32
+  - item 15
+    - **statement**: Appendix D points to the full agent returns in a home-directory journal outside the repository, so the outputs behind the 'SURVIVES ADVERSARIAL REVIEW' verdict are not held.
+    - **locator**: MAIN:L8/L0/semantics/definitions/AUDITONOMOUS_DEFINITION.md:362
+- **open_questions**
+  - Which text is the definition for the book: the three-sense entry of 2026-07-30 (record per AU-NORM-02), AUDITONOMY.md §0 v2 (2026-08-05, 'governs' by its own header), or both with a stated relation? No document in any state says. ROADMAP decision D20 is unruled.
+  - Which version of AUDITONOMY.md does the owner mean: the freeze-pinned e27ca78 bytes restored on ROADMAP, or the last version in aybllc/autonomous history (9c123b0, 2026-08-06), which adds two-tier stop enforcement and grounds condition B? I found no record of a choice beyond the 2026-08-14 'pin-by-pin decisions' in the commit message of dabed3c.
+  - I could not verify any quotation from abba-01/ebios or aybllc/eb-stack: neither repository is in the local clones. Every corpus quote in the definition, and EB2 and the λ homonym ruling in AUDITONOMY.md, rest on the checks those files record.
+  - I could not re-check any external quotation (AHD, Perseus, RFC 4949, NIST, IEEE 7001, Schneier & Kelsey, Crosby & Wallach, Haeberlen et al.): no network. Their VERIFIED labels are the repository's.
+  - Is docs/EINSTEIN_BRANCH.md present on ebios v1.0.0-dev? If it is attempt-branch-only, the firmware-below versus above-ROM contradiction (DEF:79 item 4) rests on a branch the owner ruled was only an attempt, and Appendix F's statement that only ORIGIN.md quotes are attempt-exclusive would be wrong.
+  - Did the owner rule on BETA's handling of Appendix C (keep the quotes, add 'Current role' lines)? MAIN leaves it as 'the owner's edit'; I found no ruling in BETA's L0 files or its history record.
+  - Has a prior-art search for the coinage been run? AUDITONOMY.md §6 says none ('NOT-CHECKED'); the HISTORY register cites a 'verified negative finding 2026-08-05' in FREEZE.md §1, which was not restored and which I did not open in history.
+  - Do L1 or L2 files define 'truth envelope', 'transformation path' and 'epistemic state'? I did not search beyond L0 and the head of the two L1 files the L0 sheets cite.
+  - The AUDITONOMY.md anchors labelled VERIFIED ([source text withheld from the public copy], AU-5(2)) were not traced to their provenance rows; that belongs to the L7 scope.
+  - BETA object-2 pins an Autonomous commit (805cd42) and a 7LM commit (4ca3edb) that exist only on unmerged beta branches of those repositories. Whether a binding to unmerged commits is acceptable is for the owner; I confirmed only that both commits exist locally.
+  - The exact relation between the two λ_A wordings (AUDITONOMY.md:379 'remains in operation' and the peer-2 protocol :74 'has completed its immediate operative role') is flagged on ROADMAP as CH-01 'two incompatible λ_A definitions'; I did not read the chat-ingestion record that names the pair, so I cannot say these are the two it means.

@@ -1,0 +1,100 @@
+# audit:auditonomous:b06-interior-root-L0
+
+Agent result, as returned. Workflow: Sheet audit, Auditonomous. Run `wf_1ec3ea42-dcb`. Phase: Audit.
+
+- **sheets_audited**
+  - L8/0.md
+  - L8/L0/0.md
+  - L8/L0/epistemic/0.md
+  - L8/L0/ontology/0.md
+  - L8/L0/pedagogy/0.md
+  - L8/L0/semantics/0.md
+  - L8/L0/semantics/definitions/0.md
+  - L8/L0/universality/0.md
+- **findings**
+  - item 1
+    - **id**: b06-01
+    - **kind**: STALE
+    - **sheet**: L8/0.md
+    - **line**: 137
+    - **sheet_says**: `L8/L6/` (the master ledger, three session ledgers, the L6 record of this pass, and the retired 2026-08-14 layout). What did not move in that pass: `common/`, `intake/claude/`, and `manuscripts/definitions/README.md` and `REGISTER.md` (0-byte, governed by AU-NORM-01).
+    - **truth**: "this pass" and "that pass" mean the instantiation of the canonical topology on 2026-09-05. The record so described has since recorded the passes of 2026-09-06 (sections 8 and 9), 2026-09-07 (sections 10 and 11), 2026-09-12 (section 12) and 2026-11-11 (section 13). The only pass this sheet names before line 137 is "the rename pass of 12 September 2026" (line 8), and the commit audited is itself the pass of 2026-11-11. Read against any pass later than 2026-09-05 the sentence is untrue: `common/`, `intake/` and `manuscripts/` are not in the tree to "not move".
+    - **evidence**: git show f2d5b37:L8/L6/history/harmonization-2026-09-05.md, line 3: "[source text withheld from the public copy] instantiation of the harmonized Seven-Layer Model (7LM) canonical topology in this repository ... 2026-09-05"; its headings: "## 8. 2026-09-06", "## 9. 2026-09-06", "## 10. 2026-09-07", "## 11. 2026-09-07", "## 12. 2026-09-12 — the rename pass", "## 13. 2026-11-11". git ls-tree --name-only f2d5b37 gives .github, .gitignore, L7, L8, README.md only. L8/L6/history/sheets-2026-09-07.md lines 99-101 show the words " at HEAD of this pass" were pulled out of this sheet (then `USO/0.md`) on 2026-09-07 as the sheet's past; these two phrases were left behind.
+    - **exact_fix**: Replace "the L6 record of this pass" with "the L6 record of the instantiation of 2026-09-05 and of the passes since, `harmonization-2026-09-05.md`", and replace "What did not move in that pass:" with "What did not move in the pass of 2026-09-05:".
+  - item 2
+    - **id**: b06-02
+    - **kind**: UNLISTED
+    - **sheet**: L8/0.md
+    - **line**: 137
+    - **sheet_says**: `L8/L6/` (the master ledger, three session ledgers, the L6 record of this pass, and the retired 2026-08-14 layout)
+    - **truth**: Observation. `L8/L6/history/` also holds `sheets-2026-09-07.md` (8,907 bytes, headed "# What the sheets carried about their past"), the second record. The sheet's account of the interior "by layer" does not mention it anywhere. (The routing plan and `layout-2026-09-06/` are named, but only in the narrative that follows the L6 list.) Scope note: the file is two levels below `L8/`; it is reported because this sheet's Holdings enumerates what each layer holds.
+    - **evidence**: git ls-tree -r -l f2d5b37 L8/L6/history lists 0.md, 7LM_ROUTING_PLAN_2026-09-05.md, LEDGER.md, LEDGER_2026-08-14_redeploy.md, LEDGER_2026-08-14_reorganisation.md, LEDGER_2026-08-16_l6-close-and-normalization.md, harmonization-2026-09-05.md, sheets-2026-09-07.md (8907). grep -c 'sheets-2026-09-07' on L8/0.md at the commit gives 0. L8/L6/history/0.md:38 lists the file. The specification's line for this repository reads "L6: the master index, three session ledgers, the two records, two retired layouts."
+    - **exact_fix**: After "three session ledgers," insert "the record `sheets-2026-09-07.md` of what the sheets carried about their past," (compatible with the replacement in b06-01).
+  - item 3
+    - **id**: b06-03
+    - **kind**: UNLISTED
+    - **sheet**: L8/0.md
+    - **line**: 137
+    - **sheet_says**: `L8/L4/work/` (drafts, chat transcripts, a session record, three requirements extractions)
+    - **truth**: Observation. `L8/L4/work/computation/` also holds one deep-research run and its two exports: `deep-research-auditonomous.md` (46,665 bytes), `autonomouos-deep-research-auditonomopus-sources.odt` (253,111) and `autonomouos-deep-research-auditonomous-activity.odt` (74,397). `L8/L4/work/writing/branch/` holds `README.md` (878 bytes, the branch-manuscript rules). None of the four is named in the by-layer account; the paragraph later says only that files of the dissolved `common/` were filed at `L8/L4/work/computation/`, without saying what they are. Scope note as for b06-02.
+    - **evidence**: git ls-tree -r -l f2d5b37 L8/L4/work (sizes as given). grep -c -i 'deep-research' on L8/0.md at the commit gives 0. L8/L4/work/computation/0.md:41-42 lists the run and its exports; L8/L4/work/writing/0.md:36 lists `branch/README.md`. Record section 8, second table row: "`common/durable/orphan/deep-research-auditonomous.md` and the two `autonomouos-deep-research-*.odt` exports | `USO/l4/work/computation/`". The specification's line for this repository reads "L4: drafts, chat transcripts, a session record, three requirements extractions, and one deep-research run with its exports."
+    - **exact_fix**: `L8/L4/work/` (drafts, chat transcripts, a session record, the branch-manuscript rules, three requirements extractions, and one deep-research run with its two exports)
+  - item 4
+    - **id**: b06-04
+    - **kind**: WRONG-FACT
+    - **sheet**: L8/L0/ontology/0.md
+    - **line**: 33
+    - **sheet_says**: By reference: `L8/L1/state-space/AUDITON_ENVELOPE.md` §0–0b states the ontological distinctions of the auditon — the maximal envelope (not the minimal unit), platform given versus envelope deliverable, and the "invent nothing" design rule — inside a file whose operative content is L1
+    - **truth**: Locator off (minor). Two of the three are not in §0–0b. The maximal-not-minimal statement (lines 12-16) and the design rule "invent nothing" (line 18) stand in the file's unnumbered opening, above the heading "## 0. THE SEPARATION PRINCIPLE" (line 28). Only "[source text withheld from the public copy]." (line 51) is inside §0–0b, in §0a (lines 46-66). §0 (lines 28-42) states the separation principle and §0b (lines 86-113) the one-parameter result. All three statements are in the file; the quoted words "invent nothing" are verbatim.
+    - **evidence**: git show f2d5b37:L8/L1/state-space/AUDITON_ENVELOPE.md, by line: 12 "**[source text withheld from the public copy]"; 13 "It is the **maximal** one"; 18 "**Design rule, binding:** *invent nothing.*"; 28 "## 0. THE SEPARATION PRINCIPLE"; 46 "## 0a."; 51 "**[source text withheld from the public copy].**"; 86 "## 0b."; 117 "## 1. THE COMPARTMENT MAP". grep -n -i 'maximal|minimal|invent' finds no occurrence between lines 28 and 116. The same locator stands at L8/L0/0.md:96 (b06-05) and L8/L1/state-space/0.md:37.
+    - **exact_fix**: By reference: `L8/L1/state-space/AUDITON_ENVELOPE.md` states the ontological distinctions of the auditon in its opening statement and §0–0b — the maximal envelope (not the minimal unit) and the "invent nothing" design rule in the opening, platform given versus envelope deliverable in §0a — inside a file whose operative content is L1; whether to split it is the owner's call.
+  - item 5
+    - **id**: b06-05
+    - **kind**: WRONG-FACT
+    - **sheet**: L8/L0/0.md
+    - **line**: 96
+    - **sheet_says**: - `ontology/` — empty; the ontological distinctions of the auditon (§0–0b of `L8/L1/state-space/AUDITON_ENVELOPE.md`) are cited, not moved.
+    - **truth**: Same locator as b06-04 (minor). Of the three distinctions that L8/L0/ontology/0.md:33 cites, two (the maximal envelope, the "invent nothing" design rule) stand in the file's opening statement at lines 12-18, before §0 begins at line 28; only platform given versus envelope deliverable (line 51, §0a) is inside §0–0b.
+    - **evidence**: As b06-04: git show f2d5b37:L8/L1/state-space/AUDITON_ENVELOPE.md lines 12, 13, 18 (opening), 28 ("## 0."), 51 (§0a).
+    - **exact_fix**: - `ontology/` — empty; the ontological distinctions of the auditon (the opening statement and §0–0b of `L8/L1/state-space/AUDITON_ENVELOPE.md`) are cited, not moved.
+  - item 6
+    - **id**: b06-06
+    - **kind**: WRONG-FACT
+    - **sheet**: L8/L0/semantics/definitions/0.md
+    - **line**: 34
+    - **sheet_says**: Appendix C's quotations of the root *autonomous* from AHD, Perseus, RFC 4949, NIST CSRC, and the IEEE 7001 scope page are therefore not a definition source for this repository
+    - **truth**: In Appendix C (lines 263-348 of AUDITONOMOUS_DEFINITION.md) the root word *autonomous* is quoted from two of the five sources only: AHD ("Root 1" entries, lines 281-292: definition, etymology, prefix auto-) and Perseus / Liddell-Scott (lines 293-296: Greek autonomos). The entry's ETYMOLOGY paragraph (line 18) quotes the same two. NIST CSRC (lines 309-316) is quoted for 'audit trail'; RFC 4949 (lines 317-320 and 333-336) for 'security audit trail' and 'firmware'; the IEEE 7001 scope sentence (lines 329-332) is filed as a "Neighboring established concept" about the transparency of autonomous systems and does not define the word. Appendix C also quotes NIST AI 100-1 (lines 321-328), which the sheet does not name.
+    - **evidence**: git show f2d5b37:L8/L0/semantics/definitions/AUDITONOMOUS_DEFINITION.md, entry headers by line: 281 "Root 1 — 'autonomous' definition (institutional dictionary)", 285 "Root 1 — 'autonomous' etymology", 289 "Root 1 supplement — the prefix 'auto-'", 293 "Root 1 classical anchor — Greek adjective autonomos", 297/301/305 "Root 2 — 'audit' ...", 309 and 313 "Neighboring established concept — 'audit trail' ..." (NIST CSRC), 317 "... '[source text withheld from the public copy]" (RFC 4949), 321 and 325 (NIST AI 100-1), 329 "... [source text withheld from the public copy]", 333 "... 'firmware'" (RFC 4949). The sheet's sentence descends from the routing plan (L8/L6/history/7LM_ROUTING_PLAN_2026-09-05.md:147), unreviewed model output.
+    - **exact_fix**: Appendix C's quotations of the root *autonomous* from AHD and Perseus (the same two stand in the entry's ETYMOLOGY paragraph) are therefore not a definition source for this repository; whether they remain as etymology of the coinage's second element [source text withheld from the public copy]. Appendix C's other external quotations, from NIST CSRC, RFC 4949, [source text withheld from the public copy] IEEE 7001 scope page, are of 'audit trail', 'security audit trail', 'firmware' and the accountability and transparency of autonomous systems; none of them defines *autonomous*.
+  - item 7
+    - **id**: b06-07
+    - **kind**: DEAD-PATH
+    - **sheet**: L8/L0/semantics/definitions/0.md
+    - **line**: 36
+    - **sheet_says**: Two statements of the coined concept from the intake corpus ("[source text withheld from the public copy]…", `Auditonomous_Theory_Master_Archive.md:37`, and the one-sentence fusion at `:51`) stand verbatim in [source text withheld from the public copy]
+    - **truth**: No file named `Auditonomous_Theory_Master_Archive.md` and no intake corpus exists at the commit, and the sheet does not present either as former. The corpus was removed from HEAD at `8c98573` (2026-08-15) and survives in git history only; the file's path there was `intake/manuscript/Auditonomous_Theory_Master_Archive.md`. The rest of the sentence is true: both statements stand verbatim in `L8/L6/retired/layout-2026-08-14/README.md` (lines 6-8 and 14-16, with these locators at lines 10 and 18).
+    - **evidence**: git ls-tree -r --name-only f2d5b37 | grep -c -i 'Master_Archive' gives 0; the only path containing intake/ is L8/L6/retired/layout-2026-09-06/intake/README.md. Record line 19: "2026-08-15 | Prune: root `AUDITONOMOUS.md`, `AUTONOMOUS.md`, `FREEZE.*`, `intake/` corpus, `common/toolkits/ommp/` removed from HEAD; survive in git history. | `8c98573`". L8/L6/history/sheets-2026-09-07.md:127 holds the words pulled out of this sentence on 2026-09-07: "both from the intake corpus retired from HEAD at `8c98573`". Retired README line 10: "— `intake/manuscript/Auditonomous_Theory_Master_Archive.md:37`".
+    - **exact_fix**: Two statements of the coined concept from the intake corpus, which was removed from HEAD at `8c98573` and is in git history [source text withheld from the public copy]` there, and the one-sentence fusion at `:51`), stand verbatim in [source text withheld from the public copy]`; the definition here is the record.
+  - item 8
+    - **id**: b06-08
+    - **kind**: CONTRADICTION
+    - **sheet**: L8/L0/semantics/definitions/0.md
+    - **line**: 34
+    - **sheet_says**: This sheet, line 34: "the root is bound at `L7/peering/public/ingress/peer-1/object-1/` and is named, not copied. ... whether they remain as etymology of the coinage's second element [source text withheld from the public copy]/0.md:98: "it is bound at `L7/peering/public/ingress/peer-1/object-1/` and named from here." Against L7/peering/public/ingress/peer-1/object-1/0.md:34: "`L8/L0/semantics/definitions/AUDITONOMOUS_DEFINITION.md` is the locally authored delta over this root; it names this binding and does not copy the peer definition."
+    - **truth**: The definition file does not name the binding. It contains no reference to the binding, to L7, to the peer repository or to the peer's AUTONOMOUS.md; it is the 2026-07-30 entry and takes its etymology of *autonomous* from AHD and Perseus. The two L0 sheets have it right: the binding is named from the sheets, and a citation through the binding inside the file would be a future owner's edit. The L7 sheet's "it names this binding" is false; its "does not copy the peer definition" is true. The L7 sheet is outside this batch; reported here because the fact concerns the file held at this position.
+    - **evidence**: git show f2d5b37:L8/L0/semantics/definitions/AUDITONOMOUS_DEFINITION.md | grep -n -i -E 'ingress|object-1|peer-1|L7|aybllc|peering|binding|AUTONOMOUS\.md|0504961' returns nothing (exit 1); the word 'peer' does not occur in the file. Line 18 of the file: "[source text withheld from the public copy]\")".
+    - **exact_fix**: In L7/peering/public/ingress/peer-1/object-1/0.md line 34, replace "it names this binding and does not copy the peer definition" with "it does not copy the peer definition and does not itself name this binding; the binding is named from the sheets at `L8/L0/0.md` and `L8/L0/semantics/definitions/0.md`". To remove the ambiguity in this sheet, replace "and is named, not copied" with "and is named from this sheet, not copied".
+- **clean_sheets**
+  - L8/L0/epistemic/0.md
+  - L8/L0/pedagogy/0.md
+  - L8/L0/semantics/0.md
+  - L8/L0/universality/0.md
+- **could_not_check**
+  - L8/0.md:8 "the one CI check's third step reads every zero's first line against its path": the heading check is the step labelled G-003, the third of the three numbered checks but the fourth entry under steps: in .github/workflows/integrity.yml (after actions/checkout, G-001, G-002). True or false depending on whether the checkout step is counted; not reported.
+  - L8/0.md:133, L8/L0/0.md:19, and "No automation." in the Standing of the six L0 sub-sheets: "no directory metadata, automation, or validation is enabled here". No directory metadata file exists in the tree (true). Whether "automation, or validation" is meant to cover the CI check that runs on push and pull_request (which L8/0.md:137 itself names) depends on the sentence's scope. The specification reads the two as compatible ("No directory metadata, no automation in the layout; the one CI check at .github/workflows/integrity.yml"), so it is not reported.
+  - Events that only earlier commits could confirm (only f2d5b37 was read): L8/0.md:137 "retired ... on 2026-09-06" and "on 2026-09-07 deleted from HEAD after enumeration"; L8/L0/semantics/definitions/0.md:32 "restored verbatim per AU-NORM-02". Both agree with the record (sections 8-10) and with L8/L6/history/LEDGER_2026-08-16_l6-close-and-normalization.md:32 at the commit; neither was verified against history.
+  - L8/L0/semantics/definitions/0.md:36, the line locators `:37` and `:51` in Auditonomous_Theory_Master_Archive.md: the file is not in the commit (see b06-07). The retired README carries the same two locators, which is all that could be confirmed.
+  - L8/L0/semantics/definitions/0.md:34 "This file is the local delta over the peer-owned root": a characterisation the specification also uses. The peer's definition is bound by reference and not held here, so the relation could not be compared.
+  - L8/0.md:137 "the root canonical, the same in every 7LM repository": only this repository and the scaffold were read. The scaffold's root at origin/main holds .github, L7, L8 and README.md (no .gitignore), which the check's rule permits; the workflow file is byte-identical in both (blob f43dd04).
+  - Outside the sheets, noted only and not a finding: Appendix E of AUDITONOMOUS_DEFINITION.md (lines 365-370) says [source text withheld from the public copy]/`". No manuscript/ folder or martin_2026 file exists anywhere at the commit. The definitions sheet says the definition is cited as written and does not mention this.
+- **statements_checked**: 365

@@ -1,0 +1,52 @@
+# resolve:D5
+
+Agent result, as returned. Workflow: Resolutions for the 23 owner decisions. Run `wf_3293f65c-a92`. Phase: Resolve.
+
+- **decision**: 5. Whether the beta candidate is merged into the scaffold's main, and whether the approval of R1 to R6 covered its second commit.
+- **resolution**: Do not merge origin/beta/common-contracts-r1-r6 (97314c5) into the scaffold's main now; leave the branch exactly as it is and keep c9dc061 as the model of record. Treat the approval of R1 to R6 as not covering the second commit (97314c5) until the owner says so, because that commit never claims the approval and has no record entry. Put one question to the owner as a proposal: which of three parts goes to main: the R1–R6 corrections, the research objects in 4ca3edb, and the 18-sheet guidance in 97314c5.
+- **reasoning**
+  - item 1
+    - **speaker**: owner
+    - **quote**: Don't change the system unless you ask or are unsure
+    - **locator**: 7lm@origin/main:L8/L6/history/harmonization-2026-09-04.md:482
+    - **bears**: Merging the candidate changes the specification, 18-plus sheets and the check on main, so it is a change to the system that needs the owner's own word first.
+  - item 2
+    - **speaker**: record
+    - **quote**: Findings and design verdicts come to the owner as proposals — file, what is wrong, the exact fix — and nothing is applied until the owner says which.
+    - **locator**: 7lm@origin/main:L8/L6/history/harmonization-2026-09-04.md:484
+    - **bears**: The standing rule drawn from the owner's word makes the candidate a proposal and requires the owner to say which parts are applied.
+  - item 3
+    - **speaker**: record
+    - **quote**: Implemented by Codex, task T1, on 2 November 2026 (America/Los_Angeles), in the bounded common-architecture candidate after the owner's approval of R1–R6.
+    - **locator**: 7lm@origin/beta/common-contracts-r1-r6:L8/L6/history/specification-history.md:106
+    - **bears**: The approval is asserted by the implementer, not quoted from the owner, and it is an approval of corrections R1–R6 made in a candidate, not of a merge; no ref of the three repositories quotes the owner's approval or lists R1 to R6 one by one.
+  - item 4
+    - **speaker**: record
+    - **quote**: This records the checked common-architecture candidate, not a full-beta or release claim; publication and other bounded candidate work are separate.
+    - **locator**: 7lm@origin/beta/common-contracts-r1-r6:L8/L6/history/specification-history.md:106
+    - **bears**: The candidate's own record declines to claim more than candidate status for the first commit.
+  - item 5
+    - **speaker**: record
+    - **quote**: Following approval of the common correction and exemplar construction package, added model-scoped N/U and Semantic Magnitude probe representations in L0–L5, exact source ledger rows, executable work and its recorded results.
+    - **locator**: 7lm@origin/beta/common-contracts-r1-r6:L8/L6/history/specification-history.md:112
+    - **bears**: Even the first commit (4ca3edb) carries work beyond R1–R6, resting on a second asserted, unquoted approval of a differently named package, so the branch is three separable parts, not one approved set.
+  - item 6
+    - **speaker**: other
+    - **quote**: This is an original-7LM document correction, not an executable or exemplar implementation, migration, merge, release or beta-readiness claim.
+    - **locator**: 7lm@97314c5a9ccd3267a8d0fdf5715ee9f0422451a4 (commit message, body, last sentence)
+    - **bears**: The second commit expressly disclaims being a merge claim and does not mention R1–R6 or any approval; it changes 18 sheets and leaves specification-history.md untouched, so nothing on any ref extends the approval to it.
+  - item 7
+    - **speaker**: owner
+    - **quote**: I didn't want anything automated yet
+    - **locator**: owner's instruction of 17 October 2026; also 7lm@origin/ccr-9391bd81-f2enmj:L8/L6/history/harmonization-2026-09-04.md:518
+    - **bears**: The first commit rewrites .github/workflows/integrity.yml (36 lines) and adds executable probes and tests; the owner's word on automation counsels against carrying those to main without asking.
+  - item 8
+    - **speaker**: owner
+    - **quote**: re0ull7lm and deep research the mopdel becuase its chamnged and we need to uipdate the autonomous and auditonomous repos phsyciall; to match first .
+    - **locator**: owner's instruction of 11 November 2026
+    - **bears**: The owner asked for the model to be re-pulled, researched and physically matched; the instruction does not ask for the beta to be merged, and the beta adds, removes and renames no canonical position, so the physical match does not depend on this decision.
+- **against**: "### Owner-approved common architecture corrections of 2 November 2026" (7lm@origin/beta/common-contracts-r1-r6:L8/L6/history/specification-history.md:104), with the commit subject "Apply approved R1–R6 and exercise bounded research objects" (7lm@4ca3edb9172c34e6b0033bd09e2379ed3da76d9d). The branch is authored under the owner's own identity (author "EDM") and says the corrections were approved; if that is true, holding them off main delays work the owner already agreed to, and the owner's "We update 7lm and focus on it only." (7lm@origin/main:L8/L6/history/harmonization-2026-09-04.md:336) favours bringing 7lm forward. The owner's "becuase its chamnged" of 11 November 2026 may also mean the beta itself.
+- **confidence**: the quotations do not reach it: the owner must say
+- **alternatives**: (a) Merge the whole branch: clean against main per the background report (not re-verified here; a test merge would write objects), but it carries the unapproved-on-record second commit, the check rewrite and executable probes, and it conflicts with PR #19 (7 files) and the owner's audit branch (12 files). (b) Merge 4ca3edb only: this still brings in the research objects and the check change beyond R1–R6. (c) Rebuild a branch holding only the six specification and sheet corrections and record it in a new harmonization section quoting the owner's approval: the cleanest, but it needs the owner to list R1 to R6, which no ref does. (d) Recommended: hold, ask, and change nothing.
+- **what_it_costs**: Nothing is written and nothing is lost: the branch stays at 97314c5 and can be merged on any later day. The cost is delay: main keeps the pre-correction wording (for example the check still accepts USO/), and both exemplar betas keep pinning 4ca3edb, a commit not on the scaffold's main. The owner must say three things: (1) the words of the R1–R6 approval, or a fresh yes or no to each of the six corrections; (2) whether the research objects, probes and check change in 4ca3edb go to main; (3) whether the 18-sheet research-housing guidance of 97314c5 is approved.
+- **who_acts**: The owner decides and merges. Agents only put the three-part question to the owner and touch nothing in aybllc/7lm.

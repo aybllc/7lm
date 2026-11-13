@@ -1,0 +1,62 @@
+# audit:auditonomous:b07-L1-L2-L3
+
+Agent result, as returned. Workflow: Sheet audit, Auditonomous. Run `wf_1ec3ea42-dcb`. Phase: Audit.
+
+- **sheets_audited**
+  - L8/L1/0.md
+  - L8/L1/state-space/0.md
+  - L8/L2/0.md
+  - L8/L2/formal-mathematics/0.md
+  - L8/L2/formal-mathematics/operators/0.md
+  - L8/L2/formal-mathematics/proofs/0.md
+  - L8/L2/formal-mathematics/relations/0.md
+  - L8/L3/0.md
+  - L8/L3/engineering-mathematics/0.md
+  - L8/L3/engineering-mathematics/approximation/0.md
+  - L8/L3/engineering-mathematics/tolerances/0.md
+  - L8/L3/engineering-mathematics/uncertainty/0.md
+- **findings**
+  - item 1
+    - **id**: b07-1
+    - **kind**: STALE
+    - **sheet**: L8/L1/0.md
+    - **line**: 54
+    - **sheet_says**: "(The spec prints the four headings below at H2; their depth is reduced here only to nest under this sheet's section. Words are unchanged.)"
+    - **truth**: The current specification prints the four headings at H3 ("###"), the same depth the sheet uses; nothing is reduced. The statement was true of the specification as first filed (H2) and stopped being true when the specification was normalized on 2026-09-05.
+    - **evidence**: Spec at /home/user/7lm origin/main, L8/L4/work/writing/7lm-harmonized-architecture-specification.md: line 389 "### State-space boundary — leaving the declared state space", line 400 "### Mathematical permission is not automatic scientific or engineering permission", line 410 "### No exotic capability gets a free explanatory advantage", line 420 "### Observable science is bounded without forbidding speculation". 7lm commit fa584b8 (2026-09-05) diff shows "-## State-space boundary — leaving the declared state space" / "+### State-space boundary — leaving the declared state space". The sheet's own lines 56, 67, 77, 87 are "###". (The words do match; the only other difference is that the spec's two alternatives at lines 394-395 are numbered "1."/"2." where the sheet's lines 62-63 use "-" bullets.)
+    - **exact_fix**: (The spec prints the four headings below at H3, as here. Words are unchanged.)
+  - item 2
+    - **id**: b07-2
+    - **kind**: WRONG-FACT
+    - **sheet**: L8/L3/0.md
+    - **line**: 92
+    - **sheet_says**: "§7.4 of `L8/L4/work/writing/sessions/SESSION_2026-08-05_AUDITON_ARCHITECTURE.md` (cell sizing, R ∝ (ρt)^¼, "recoverable, not zero")"
+    - **truth**: Of the three items attributed to §7.4, only "recoverable, not zero" is in §7.4. Cell sizing is in §3.1 and R ∝ (ρt)^¼ is in §4.3 of that session file (both are named again in §9).
+    - **evidence**: git show f2d5b37:L8/L4/work/writing/sessions/SESSION_2026-08-05_AUDITON_ARCHITECTURE.md: §7.4 is lines 409-442 ("### [source text withheld from the public copy]") and contains line 434 "[source text withheld from the public copy]*" but neither a cell-size statement nor the R law. Line 147 (under "### [source text withheld from the public copy]", line 142): "**Sizing the cell to \"one auditon over\"". Line 217 (under "### 4.3 The frogger rate", line 212): "> **[source text withheld from the public copy].**". Line 542 (§9): "`take ≤ give − 1`, cell size, `R ∝ (ρt)^¼`".
+    - **exact_fix**: §3.1 (cell sizing), §4.3 (R ∝ (ρt)^¼) and §7.4 ("recoverable, not zero") of `L8/L4/work/writing/sessions/SESSION_2026-08-05_AUDITON_ARCHITECTURE.md`
+  - item 3
+    - **id**: b07-3
+    - **kind**: WRONG-FACT
+    - **sheet**: L8/L1/state-space/0.md
+    - **line**: 50
+    - **sheet_says**: "\"origidity; certainty; intolerance\" — Reserved: \"Candidate L1 semantics preserved; topology remains unadjudicated.\" Given no home here; see `L8/L1/0.md`."
+    - **truth**: `L8/L1/0.md` says nothing about the reserved terms; the pointer leads to a sheet that does not carry the subject. The reservation is stated only in the specification's reserved-terms table (and in this sheet's own lines 33 and 50).
+    - **evidence**: git -C /home/user/auditonomous grep -n -F origidity f2d5b37 -- L8/L1 returns only L8/L1/state-space/0.md:33 and :50; no hit in L8/L1/0.md (read in full, 111 lines; also no occurrence of "certainty" or "intolerance" there). Spec line 989: "| origidity; certainty; intolerance | Reserved | Candidate L1 semantics preserved; topology remains unadjudicated. |".
+    - **exact_fix**: - "origidity; certainty; intolerance" — Reserved: "Candidate L1 semantics preserved; topology remains unadjudicated." Given no home here; the reservation is the specification's own row and is not restated at `L8/L1/0.md`.
+- **clean_sheets**
+  - L8/L2/0.md
+  - L8/L2/formal-mathematics/0.md
+  - L8/L2/formal-mathematics/operators/0.md
+  - L8/L2/formal-mathematics/proofs/0.md
+  - L8/L2/formal-mathematics/relations/0.md
+  - L8/L3/engineering-mathematics/0.md
+  - L8/L3/engineering-mathematics/approximation/0.md
+  - L8/L3/engineering-mathematics/tolerances/0.md
+  - L8/L3/engineering-mathematics/uncertainty/0.md
+- **could_not_check**
+  - L8/L1/state-space/0.md:39 — "where Autonomous holds those standards' definitions as bound rows": whether the peer's rows A1–A11 include IEEE 1920.1 and ISO/IEC 22989 cannot be determined from this repository; L7/peering/public/ingress/peer-1/object-1/ holds only its 0.md, which names the issuing bodies (ISO, ISO/IEC, IEEE, NIST, EU, DoD, EASA, ETSI) but not the individual standards.
+  - L8/L3/engineering-mathematics/approximation/0.md:34 — "the scaling and precision reasoning of §7.4 ...; textbook physics analogies there are flagged NOT-CHECKED": ambiguous. §7.4 of the session file (lines 409-442) does hold precision reasoning and one sentence on "Dimensionless scaling", but carries no NOT-CHECKED flag; the NOT-CHECKED textbook flags are at lines 152 (§3.1), 287 (§6.1), 460 (§7.5), 474 (§7.6), 498 (§7.7) and 696. If "there" means the session file the sentence is true; if it means §7.4 it is not. The scaling law itself is §4 (see finding b07-2).
+  - L8/L1/0.md:6, L8/L3/0.md:79-80 and :86 — specification table rows are quoted inside one pair of quotation marks with the row name and the cell joined by an em dash (e.g. "L3 / L2 / L1 technical-possibility bundle — Engineering mathematics, ..."). Each cell is verbatim (spec lines 160, 161, 184); the joining dash is the sheet's rendering of a table row. Not reported as MISQUOTE; left to the owner's reading of 'verbatim'.
+  - L8/L2/0.md:74 — "relocated from `research/formulas/LEDGER.md`": a former path; confirmed only by the history record (harmonization-2026-09-05.md line 55), not independently.
+  - Statements that machine metadata is "not instantiated in this repository" and "No automation" were not tested beyond the batch directories (no metadata files exist in L8/L1, L8/L2, L8/L3).
+- **statements_checked**: 168

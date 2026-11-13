@@ -1,0 +1,16 @@
+# verify:autonomous:REC-4
+
+Agent result, as returned. Workflow: Review of the two commits. Run `wf_26752832-654`. Phase: Verify.
+
+- **real**: yes
+- **reasoning**: Verified from git objects only. autonomous@8257118:L8/L6/history/harmonization-2026-09-05.md:189 says of the six new sheets: "Each states its position as the scaffold's sheet at the same path states it, with this repository's Holdings line added; nothing is filed at any of the five." I diffed all six sheets at autonomous@8257118 against 7lm@c9dc061 at the same paths. Five differ only by the added "## Holdings" section. The container sheet L7/allications/0.md differs by the Holdings section AND one further changed line: scaffold line 38 "- `publications/` moved here from `L7/publications/` in the pass of 2026-09-20; the record is at `L8/L6/history/harmonization-2026-09-04.md` §25." versus exemplar line 42 "- `publications/` moved here from `L7/publications/` in the pass of 2026-11-11; the record is at `L8/L6/history/harmonization-2026-09-05.md` §14." That second difference is intended (item 2 of the intended content: the container's Standing line points at this repository's own record; the scaffold's record file harmonization-2026-09-04.md does not exist in this repository's L8/L6/history/). But section 14 nowhere mentions it: the only occurrence of "Standing" in the section is the unrelated left-as-found bullet about L7/allications/publications/0.md. So the record's account of what the new sheets are is incomplete by one line: a reader who checks the sentence by diff finds a difference the record does not account for, in a section that otherwise enumerates its changes down to per-phrase counts. The line sits in new text written by this commit (not inherited from the parent), is within the pass's scope (item 5, the record of the pass), and is not a taste matter but a completeness-of-record matter. Severity minor is right; the sheet itself is correct and nothing else needs to change.
+- **corrected_statement**: In section 14 of autonomous@8257118:L8/L6/history/harmonization-2026-09-05.md (line 189), the sentence describing the six new sheets says each is the scaffold's sheet with this repository's Holdings line added. For five of the six that is exact. The container sheet L7/allications/0.md differs from the scaffold's (7lm@c9dc061) in one further line: its Standing bullet on the move of publications/ (line 42) names the pass of 2026-11-11 and this record's section 14 where the scaffold's (line 38) names the pass of 2026-09-20 and harmonization-2026-09-04.md section 25. The difference is intended and correct; the record simply does not state it anywhere in section 14.
+- **exact_fix**: In /home/user/autonomous L8/L6/history/harmonization-2026-09-05.md, section 14, line 189, replace the one sentence
+
+  "Each states its position as the scaffold's sheet at the same path states it, with this repository's Holdings line added; nothing is filed at any of the five."
+
+  with
+
+  "Each states its position as the scaffold's sheet at the same path states it, with this repository's Holdings line added and, in the container's sheet, the Standing line on the move naming this pass and this section where the scaffold's names its own; nothing is filed at any of the five."
+
+  No other file changes; the sheet L7/allications/0.md is correct as committed.

@@ -1,0 +1,52 @@
+# resolve:D11
+
+Agent result, as returned. Workflow: Resolutions for the 23 owner decisions. Run `wf_3293f65c-a92`. Phase: Resolve.
+
+- **decision**: 11. Whether the audit branch (7lm origin/audit/peering-descriptive-reframe-2026-09-20, tip 3555866) is adopted, retired, or taken in part.
+- **resolution**: Hold the branch exactly as it stands: do not merge it, do not delete it, and do not let it gate the physical mirror of the two exemplars, since it adds, removes and renames no canonical position. Put one question to the owner: whether L0 is now meant to hold definitions adopted from outside sources (the branch's rule) or only locally authored ones with peer definitions bound through L7 (main's rule). If the owner says yes, take it in part by a recorded pass: the wording first, with a record section and a specification-history entry, and the check's three changes (exactly four root entries, a required body in every sheet, the owner's 7 September words dropped from the header) decided separately.
+- **reasoning**
+  - item 1
+    - **speaker**: record
+    - **quote**: The branch itself is neither adopted nor retired by this: its disposition is still the owner's call (§36).
+    - **locator**: /home/user/7lm@origin/ccr-9391bd81-f2enmj:L8/L6/history/harmonization-2026-09-04.md:537
+    - **bears**: The last written standing of the branch (17 October 2026) is undecided and reserved to the owner; nothing on any ref of the three repositories records a later decision.
+  - item 2
+    - **speaker**: owner
+    - **quote**: Don't change the system unless you ask or are unsure
+    - **locator**: /home/user/7lm@origin/main:L8/L6/history/harmonization-2026-09-04.md:482
+    - **bears**: Merging the branch into main, or deleting it, is a change to the system that no one but the owner may make, so the course open now is to ask.
+  - item 3
+    - **speaker**: record
+    - **quote**: read as leave to make the words say what the folders already say and to act on findings verified three ways, and as no leave to change what any position is, holds, or is named.
+    - **locator**: /home/user/7lm@origin/main:L8/L6/history/harmonization-2026-09-04.md:510
+    - **bears**: The test for what may go in without a fresh word from the owner is whether it changes what a position holds; the branch does, at L0, so it is not a wording sweep that can be taken on standing leave.
+  - item 4
+    - **speaker**: specification
+    - **quote**: **[Note]** Author note. Current correction: L0/semantics is the semantic version we make of the thing. If we do not make one, the directory is not populated with someone else’s definition.
+    - **locator**: /home/user/7lm@origin/main:L8/L4/work/writing/7lm-harmonized-architecture-specification.md:341
+    - **bears**: The model of record forbids filling L0 with an outside definition; the branch replaces this note with one saying L0 'may be locally formulated, externally adopted, or mixed', which reverses a rule of the specification under the same version string of 20 September 2026 and with no entry in specification-history.md.
+  - item 5
+    - **speaker**: owner
+    - **quote**: Auditonomous gets the definitions of autonomous from Autonomous and nowhere else
+    - **locator**: /home/user/7lm@origin/main:L8/L6/history/specification-history.md:29
+    - **bears**: The owner's word of 5 September 2026 is the ground of the peer binding both exemplars carry; the branch's sheet at L8/L0/semantics/definitions/0.md:12 says 'Peering is not the universal route for external definitions', so adopting it whole would loosen the rule the exemplars' binding rests on, and only the owner can say whether that is meant.
+  - item 6
+    - **speaker**: owner
+    - **quote**: I left out sub folders because those are design choices but they should all either be blank with just the location this being skipped and tagged at the end of the doc as an adult xception for HOA review
+    - **locator**: /home/user/7lm@origin/main:L8/L6/history/harmonization-2026-09-04.md:388
+    - **bears**: The owner allowed a blank sheet beneath a layer; the branch's check refuses it ('current sheet has no semantic body', integrity.yml:92 on the branch) and its templates say minimal 'does not mean semantically blank', so the check cannot be taken whole without the owner withdrawing this.
+  - item 7
+    - **speaker**: record
+    - **quote**: 2. Integrity is enforced; no deletion is implied. Stated at L6 with the owner's words; the retired/ sheets and the header of the one CI check say the same.
+    - **locator**: /home/user/7lm@origin/main:L8/L6/history/specification-history.md:74
+    - **bears**: The check's header is recorded as one of the places the owner's rule of 7 September 2026 stands; the branch's check deletes that header (main integrity.yml:3-5), and its root rule allows exactly four entries (integrity.yml:49 on the branch) where both exemplars' main roots hold a fifth, .gitignore, so the check would fail in the exemplars if mirrored.
+  - item 8
+    - **speaker**: owner
+    - **quote**: Get qa hanfle on the research and manuscruipt for Auditonomous but firwst re0ull7lm and deep research the mopdel becuase its chamnged and we need to uipdate the autonomous and auditonomous repos phsyciall; to match first .
+    - **locator**: owner's instruction of 11 November 2026, as typed
+    - **bears**: The work ordered first is the physical match; the branch changes 79 files against main and adds no position beyond the retired guide set it took from pull request #20, so holding it does not delay that work and the hold can be lifted at any time.
+- **against**: The branch is the owner's own work and runs the way the owner asked the controlling document to go: "this was my last controlling dfocument. we nee to update it agniostical;ly then using autoniomous andautonomus as an exmaple even if its not perect right hnow i woaant iot documenyted that way" (/home/user/7lm@origin/main:L8/L6/history/harmonization-2026-09-04.md:113). All 118 commits are authored and committed as EDM between 17:27:46 and 17:59:53 -0700 on 20 September 2026, after the standing rule was recorded, one of them titled "Align controlling specification with descriptive agnostic architecture" (/home/user/7lm@26cbfcb, commit subject). Also for part of it: "OUR 7Lm 0.md files will be absolutely complete and detailed and rigorous." (same record:376), which supports a required body for the scaffold's own sheets. On this reading the hold leaves the owner's latest intent off main and leaves "[source text withheld from the public copy]." (/home/user/auditonomous@origin/claude/book-structure-roadmap-k8ap82:L8/L6/history/restore-2026-09-14.md:7) unmet as to peering.
+- **confidence**: the quotations do not reach it: the owner must say
+- **alternatives**: (a) Adopt whole: it merges into main without conflict (git merge-tree, clean), but it reverses the L0 rule, drops the owner's quoted words from the check header, refuses blank sheets and a root .gitignore, leaves the generated .docx unregenerated beside a specification that says the .docx reads back unchanged, and conflicts with the beta candidate in 12 files, so adopting it prejudges the beta decision. (b) Retire: file the branch's diff under L8/L6/retired/ or L8/L6/in/ as a proposal and close the branch; this is safe for the record but discards 118 owner commits from the live line without the owner's word. (c) Take in part now: the 72 sheet rewordings without the L0 rule and without the check; not separable by quotation, because the descriptive wording and the L0 rule are the same edits in many sheets.
+- **what_it_costs**: Nothing is written, so nothing needs reversing. The cost is that the peering and L0 question stays open while the exemplars are mirrored to main: if the owner later adopts the branch, the exemplars' L0 and peering sheets will need a second wording pass (no folder moves), and the beta candidate and the branch still cannot both go in cleanly (12 files conflict). The branch also has no record section for its own 118 commits and no specification-history entry; that gap remains until a decision is recorded.
+- **who_acts**: The owner, by answering one question: "Is L0 now to hold definitions adopted from outside sources, as the audit branch says, or only locally authored ones with peer definitions bound through L7, as main says?" and then saying adopt, retire, or which parts. Until then no agent merges, rebases, deletes or edits the branch; the mirror of the exemplars proceeds against main.

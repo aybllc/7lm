@@ -1,0 +1,57 @@
+# resolve:D6
+
+Agent result, as returned. Workflow: Resolutions for the 23 owner decisions. Run `wf_3293f65c-a92`. Phase: Resolve.
+
+- **decision**: 6. Which mirror lands in each exemplar: the commit of 11 November 2026 (draft PRs #30 and #28), the beta of 2 November 2026, or a fresh pass; the first two conflict in 12 and 13 files.
+- **resolution**: Name the 11 November 2026 mirror (autonomous 8257118 + a719cec, draft PR #30; auditonomous f2d5b37 + 294c843, draft PR #28) as the mirror that lands, and make no fresh pass. Leave both beta branches (e64b382, 714480d) unmerged and untouched as candidates, to be reconciled onto the mirror later under decision 7. Nothing is merged until the owner says so: the PRs stay draft until then.
+- **reasoning**
+  - item 1
+    - **speaker**: owner
+    - **quote**: we need to uipdate the autonomous and auditonomous repos phsyciall; to match first .
+    - **locator**: owner's instructions of 11 November 2026, as typed (also quoted at autonomous@origin/ccr-9391bd81-f2enmj:L8/L6/history/harmonization-2026-09-05.md:185)
+    - **bears**: The owner asked for a physical update of both exemplars to match the model, and asked for it first; the 11 November commits are the pass made on that word and quote it.
+  - item 2
+    - **speaker**: owner
+    - **quote**: All repos should mirror the 7lm. Manually. We update 7lm and focus on it only. No outside updates until we are sure I'm close.
+    - **locator**: 7lm@origin/main:L8/L6/history/harmonization-2026-09-04.md:336
+    - **bears**: What an exemplar mirrors is the 7lm itself; a mirror that also brings in outside updates (new research objects, definition and ledger edits) is more than the owner asked of a mirror.
+  - item 3
+    - **speaker**: specification
+    - **quote**: The desk carries the L7 branch names of the version before 20 September 2026, publications/ as a direct branch and governance/restrictions/; the L7 restructure is not yet mirrored.
+    - **locator**: 7lm@origin/main:L8/L4/work/writing/7lm-harmonized-architecture-specification.md:950
+    - **bears**: The specification on main states the gap as the L7 restructure only, so the mirror owed is the two moves, the new positions and the matching words, nothing further.
+  - item 4
+    - **speaker**: record
+    - **quote**: Each states its position as the scaffold's sheet at the same path states it, with this repository's Holdings line added
+    - **locator**: autonomous@origin/ccr-9391bd81-f2enmj:L8/L6/history/harmonization-2026-09-05.md:189
+    - **bears**: The 11 November commit takes its new sheets from the scaffold's own sheets, which is what mirroring the 7lm means; its record says the beta instead "writes its own sheets at the six new positions" and "words them differently" (same file, line 213).
+  - item 5
+    - **speaker**: record
+    - **quote**: No research object, no definition, no ledger row and no manuscript file is touched.
+    - **locator**: auditonomous@origin/ccr-9391bd81-f2enmj:L8/L6/history/harmonization-2026-09-05.md:200
+    - **bears**: The 11 November mirror is confined to the physical alignment; verified against git, the Auditonomous beta by contrast adds lines to AUDITONOMOUS_DEFINITION.md, CONTRADICTIONS.md and L7/provenance/sources/LEDGER.md (39 insertions in those three files).
+  - item 6
+    - **speaker**: record
+    - **quote**: This record concerns the authorized local candidate, not a new source-owner decision or release.
+    - **locator**: auditonomous@origin/beta/7lm-exemplar-auditonomous:L8/L6/history/AUDITONOMOUS_BETA_HISTORY.md:3
+    - **bears**: The exemplar beta's own record declines to be a decision of the owner or a release, so it does not present itself as the thing to land on main.
+  - item 7
+    - **speaker**: record
+    - **quote**: This records the checked common-architecture candidate, not a full-beta or release claim; publication and other bounded candidate work are separate.
+    - **locator**: 7lm@origin/beta/common-contracts-r1-r6:L8/L6/history/specification-history.md:106
+    - **bears**: The scaffold commit the exemplar betas pin (4ca3edb) is itself an unmerged candidate, not the model of record on main; an exemplar landed from the beta would mirror something the 7lm main does not yet say.
+  - item 8
+    - **speaker**: record
+    - **quote**: This pass was made from `main` and does not touch that branch; whichever of the two lands second will need them reconciled.
+    - **locator**: autonomous@origin/ccr-9391bd81-f2enmj:L8/L6/history/harmonization-2026-09-05.md:213
+    - **bears**: Landing the 11 November mirror destroys nothing: the beta branch stays whole and the cost of the choice is a later reconciliation in the 12 (autonomous) and 13 (auditonomous) files that git merge-tree reports, so the choice is reversible and a fresh pass is unnecessary.
+  - item 9
+    - **speaker**: owner
+    - **quote**: Don't change the system unless you ask or are unsure
+    - **locator**: 7lm@origin/main:L8/L6/history/harmonization-2026-09-04.md:482
+    - **bears**: The recommendation stops at naming the mirror; the merge of either draft PR into an exemplar's main waits for the owner's word, and when unsure the question goes to the owner.
+- **against**: "Implemented by Codex, task T1, on 2 November 2026 (America/Los_Angeles), in the bounded common-architecture candidate after the owner's approval of R1–R6." (7lm@origin/beta/common-contracts-r1-r6:L8/L6/history/specification-history.md:106), with the exemplar beta's "on the authorized candidate branch" (autonomous@origin/beta/7lm-exemplar-autonomous:L8/L6/history/BETA_HISTORY.md:14). The beta records assert an owner approval that the 11 November pass does not have beyond the instruction it quotes; if that approval covered the exemplar betas as the form the exemplars take, the beta has the prior claim. The approval is asserted and nowhere quoted in the owner's words. A second consideration: the owner's "Manually" and "human only actions take that L6 and apply the updates or not" (7lm@origin/main:L8/L6/history/harmonization-2026-09-04.md:336) may mean a person applies the mirror, which a session-made commit is not; and the record's reading "when the owner judges the scaffold close, and not before" (same file, line 346) reserves the timing.
+- **alternatives**: (a) Land the beta of 2 November 2026 in each exemplar: it makes the same two moves and a 71-entry list, but its 65 and 56 changed files carry research objects and edits to definitions, CONTRADICTIONS.md and LEDGER.md, it pins scaffold commit 4ca3edb which is not on the scaffold's main, and its own records call it a candidate. (b) A fresh pass after the scaffold beta is merged or refused (decision 5): cleanest if the owner wants the exemplars to mirror the beta wording, but it repeats work already done and checked, and the folders are the same either way. (c) Land neither now and keep all four branches as they are: the most conservative course, at the cost of leaving the owner's "to match first" unmet.
+- **what_it_costs**: A later reconciliation of each beta onto the mirrored main: 12 conflicting files in autonomous (.github/workflows/integrity.yml, L7/0.md, the six L7/allications sheets other than publications, L7/governance/0.md, L7/governance/controlled/0.md, L7/peering/0.md, L7/peering/public/0.md) and the same 12 plus L8/L4/work/computation/0.md in auditonomous. Note for the owner: draft PR #28 in auditonomous is not the mirror alone; its branch also carries two check-in commits of agent results (149ab6c, cc0fc6a; 226 files against main in total), so merging #28 as it stands lands those too. If the mirror alone is wanted, f2d5b37 and 294c843 are the two commits to take. Undoing the choice is one revert per repository; no beta branch is altered.
+- **who_acts**: The owner says which mirror lands and merges (or tells a session to merge) PR #30 in aybllc/autonomous and PR #28 in aybllc/auditonomous. Until then no session changes anything; the PRs stay draft and the beta branches stay as they are.
+- **confidence**: the quotations favour it

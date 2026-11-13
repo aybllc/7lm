@@ -1,0 +1,47 @@
+# resolve:D15
+
+Agent result, as returned. Workflow: Resolutions for the 23 owner decisions. Run `wf_3293f65c-a92`. Phase: Resolve.
+
+- **decision**: 15. Whether binder/internal/ stays under L7/allications/publications/ or goes to L8/L4/work/writing/.
+- **resolution**: Leave binder/internal/ where it is in both exemplars (under L7/allications/publications/binder/ on the mirror branches, under L7/publications/binder/ on main) and move nothing. Keep the question standing as an open owner decision in both records and in the binder sheet. Only on the owner's explicit word, move it by a single git mv to L8/L4/work/writing/ and add a record section.
+- **reasoning**
+  - item 1
+    - **speaker**: owner
+    - **quote**: Don't change the system unless you ask or are unsure
+    - **locator**: /home/user/7lm@origin/main:L8/L6/history/harmonization-2026-09-04.md:482
+    - **bears**: A change of position needs the owner's word first, so without a ruling on binder/internal/ the default is to leave it where it stands.
+  - item 2
+    - **speaker**: owner
+    - **quote**: we dont want hard strcuture yet.  we arent sure what goes where ans why so we lkeep the 0.md the cource fo the dir, the dir moveds  so does th e 0.md.
+    - **locator**: /home/user/7lm@origin/main:L8/L6/history/harmonization-2026-09-04.md:297
+    - **bears**: The owner has said placement is not yet fixed, which argues against settling this placement on the owner's behalf; it also means a later move is cheap, since a directory travels with its sheet.
+  - item 3
+    - **speaker**: record
+    - **quote**: - Positions: `EBIOS_RECODE_single_object.md` at L5 versus L3; `LEDGER.md` at L6 history versus root infrastructure; `binder/internal/` at publications versus L4 writing; `FORMULAS_LEDGER.md` at L2 versus L3; `datasets-LEDGER.md` name; the empty `RULINGS.md` (rulings C-001…C-007 and P-001…P-004 are cited throughout but exist only as fragments in other files).
+    - **locator**: /home/user/autonomous@origin/main:L8/L6/history/harmonization-2026-09-05.md:80
+    - **bears**: The Autonomous record lists this exact question under its heading "Owner decisions left open (nothing done)" (line 77); the Auditonomous record carries the same clause at its line 94. No later section of either record closes it.
+  - item 4
+    - **speaker**: sheet
+    - **quote**: - Whether `internal/` belongs instead at `L8/L4/work/writing/` as assembled-but-unreleased work is the owner's decision.
+    - **locator**: /home/user/auditonomous@origin/ccr-9391bd81-f2enmj:L7/allications/publications/binder/0.md:27
+    - **bears**: The live sheet, after the 11 November mirror, still reserves the decision to the owner by name; the mirror moved the binder whole and did not rule on it.
+  - item 5
+    - **speaker**: sheet
+    - **quote**: - **[source text withheld from the public copy]
+    - **locator**: /home/user/autonomous@origin/ccr-9391bd81-f2enmj:L7/allications/publications/binder/internal/README.md:19
+    - **bears**: The binder's own rule makes internal/ the holding side of a clearance gate whose other side is press-kit/; splitting the two across L7 and L8 would separate the gate from what it gates, which is a reason for staying that the owner would have to weigh.
+  - item 6
+    - **speaker**: specification
+    - **quote**: Face. Public ingress peer-1 to peer-9: the issuing bodies whose clauses are bound into the definition, ISO/TC 299, ISO/IEC JTC 1/SC 42, ISO/IEC JTC 1/SC 7, IEEE, NIST, the European Union, US DoD, EASA, and ETSI, one object per bound clause. Public egress peer-1: aybllc/auditonomous, the definition as exposed. Private ingress peer-1 aybllc/l6; peer-2 aybllc/eb-stack with abba-01/ebios; peer-3 aybllc/auditonomous, the coinage, referenced and not adopted; peer-4 the principal's intake corpus. Private egress: none. Provenance: the pointer ledger into l6 and a 450-entry capture register. Publications: a binder; nothing released.
+    - **locator**: /home/user/7lm@origin/main:L8/L4/work/writing/7lm-harmonized-architecture-specification.md:946
+    - **bears**: The specification's own account of the Autonomous exemplar already describes publications as holding a binder with nothing released, so leaving the binder whole contradicts nothing the model of record says about this repository.
+  - item 7
+    - **speaker**: specification
+    - **quote**: | **writing/** | Directory for writing and document production as performed work. | Distinguishes making the document from its L5 research meaning and its L7 released publication. |
+    - **locator**: /home/user/7lm@origin/main:L8/L4/work/writing/7lm-harmonized-architecture-specification.md:566
+    - **bears**: This is the rule a move would rest on: unreleased drafts, a fetch list and checking tools are performed work, and L4 writing is the position for the making as distinct from the release. It shows the alternative is admissible, not that the owner has chosen it.
+- **against**: "| **allications/publications/** | Directory for released publication objects at the forward face. | Keeps publication release at L7 while writing remains L4, research meaning remains L5, and internal history remains L6. |" (/home/user/7lm@origin/main:L8/L4/work/writing/7lm-harmonized-architecture-specification.md:872). The exemplars' own publications sheet draws the consequence: "- drafts stamped internal, empty release slots, and material that has not left: none of these is a released publication object" (/home/user/autonomous@origin/ccr-9391bd81-f2enmj:L7/allications/publications/0.md:29). By the specification's letter, internal/ is not a released publication object, and the 11 November mirror put it one level deeper under a branch defined as outward acts. The Autonomous binder sheet also concedes "- The tooling is code as made (L4 by role) kept with the binder it checks; it is not automation of the repository and does not run at HEAD." (/home/user/autonomous@origin/ccr-9391bd81-f2enmj:L7/allications/publications/binder/0.md:27).
+- **confidence**: the quotations do not reach it: the owner must say
+- **alternatives**: (a) Move binder/internal/ to L8/L4/work/writing/ in both exemplars by git mv, with a sheet at the new position and a record section. In Autonomous that is four files (README.md, FETCH_LIST.md, tools/verify_fragments.py, tools/verify_fragments_v2.py); in Auditonomous one file (README.md). This follows spec lines 566 and 872 but splits the clearance gate from press-kit/. (b) Move only the Autonomous tooling and fetch list to L4 and leave the internal/ README as the gate; no quotation proposes this. (c) Move the whole binder to L4 until something is released; this goes beyond the question asked and contradicts spec line 946. The owner must say one of: "internal stays with the binder" or "internal goes to L4 writing".
+- **what_it_costs**: Staying costs nothing on disk and is fully reversible. It leaves a known mismatch standing: unreleased material sits under a position the specification defines as holding released publication objects, and the internal/ folders remain unsheeted (reported, not failed, by the check). The Autonomous binder sheet on the mirror branch does not carry the "owner's decision" line that the Auditonomous sheet carries at line 27; the open item is held for Autonomous only in its record at line 80.
+- **who_acts**: The owner rules. Until then no one moves anything. If the owner says move, whoever holds draft PRs #30 (autonomous) and #28 (auditonomous) makes the git mv by hand on those branches and records it; nothing automated.

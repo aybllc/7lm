@@ -1,0 +1,606 @@
+# read:sheets-L7
+
+Agent result, as returned. Workflow: The model, read deep. Run `wf_9a60cf50-a5f`. Phase: Read.
+
+- **scope**: Every sheet (0.md) under L7 on /home/user/7lm@origin/main (c9dc061): 35 sheets, plus the two non-sheet files under L7 (L7/provenance/sources/source-ledger.md, L7/provenance/prior-art/uha-ommp-exemplar.html); then the diff origin/main..origin/beta/common-contracts-r1-r6 (97314c5) restricted to L7. Read from git objects only. Cross-reference checks made outside scope: .github/workflows/integrity.yml canon list (7lm@origin/main), `git diff --stat` of the other named 7lm branches on L7, and `ls-tree` of L7 directory names on the two exemplar repositories' main and beta refs.
+- **summary**: L7 on 7lm main is 37 files: 35 sheets and two non-sheet files. It is unchanged from the state last studied: nothing between 2e5a6d6 and c9dc061 touches L7. The last L7 commit (2e5a6d6, 2026-10-05) only added the owner's heading about private repositories to L7/0.md.
+
+  The model's L7 has four direct branches: provenance (4 children), governance (6 children, the sixth being controlled/), peering (public and private, each with ingress and egress, each with peer-1/object-1) and allications (6 children: publications, applications, communications, specifications, notifications, participations). Every sheet has the same skeleton and carries one identical boundary/traversal paragraph. Only six sheets carry an "Exemplars (by reference)" section naming aybllc/autonomous and aybllc/auditonomous; no allications, governance or provenance sheet does.
+
+  The unmerged beta branch changes 7 L7 files (35 insertions, 14 deletions) and adds or removes none. It does not touch any allications sheet. It changes one Holds bullet of controlled/, makes licensing/ point to copyright/ for conditions, adds a "research network" section to L7/0.md and a "shared setup" section to peering/0.md, softens the Autonomous consensus-baseline paragraph into "a research obligation", downgrades aybllc/l6 from "bound here" to program context, and adds two rows to the source ledger.
+
+  Cross-checks: the CI canon list on main names the same 35 L7 positions. Both exemplar mains still have L7/publications/ and L7/governance/restrictions/; both exemplar betas already have L7/allications/ with six children and L7/governance/controlled/.
+
+  Things to settle before mirroring: L7/0.md's Object line, core question and Function row still say "publications", not "allications"; main says aybllc/l6 "is bound here" although the tree holds only the generic sheets; and PR #19 and the owner's audit branch also change L7 files and were not read here.
+- **facts**
+  - item 1
+    - **id**: F01
+    - **kind**: tree
+    - **statement**: L7 on 7lm origin/main holds exactly 37 files: 35 sheets named 0.md and two non-sheet files, L7/provenance/prior-art/uha-ommp-exemplar.html and L7/provenance/sources/source-ledger.md. All 35 sheets have a first line equal to '# <path>/' (checked each programmatically).
+    - **locator**: 7lm@origin/main:L7:ls-tree -r (37 entries)
+  - item 2
+    - **id**: F02
+    - **kind**: tree
+    - **statement**: The 35 sheeted L7 positions on main are: L7; L7/provenance + prior-art, sources, lineage, authority; L7/governance + copyright, licensing, patents, permissions, access, controlled; L7/peering + private, private/ingress, private/ingress/peer-1, private/ingress/peer-1/object-1, private/egress, private/egress/peer-1, private/egress/peer-1/object-1, and the same seven under public; L7/allications + publications, applications, communications, specifications, notifications, participations. There is no L7/publications/ and no L7/governance/restrictions/ in the tree.
+    - **locator**: 7lm@origin/main:L7:ls-tree -r --name-only
+  - item 3
+    - **id**: F03
+    - **kind**: tree
+    - **statement**: L7 did not change on main between the state last studied (2e5a6d6) and c9dc061: `git diff --stat 2e5a6d6 origin/main -- L7` is empty. The last five commits touching L7 on main are 2e5a6d6 (2026-10-05 'Update 0.md'), bbb04dd (2026-09-20 'The words match the folders: the prose sweep'), 606d4b3 (2026-09-20 'The L7 restructure: allications, and controlled'), 8c5d74b (2026-09-19), 6600f77 (2026-09-19).
+    - **locator**: 7lm@origin/main:L7:git log -5 -- L7
+  - item 4
+    - **id**: F04
+    - **kind**: tree
+    - **statement**: Cross-check: the CI workflow on main lists the same 35 L7 positions as canonical for G-003, including L7/governance/controlled and L7/allications with its six children.
+    - **locator**: 7lm@origin/main:.github/workflows/integrity.yml:47-51
+    - **quote**: L7/allications L7/allications/publications L7/allications/applications L7/allications/communications L7/allications/specifications L7/allications/notifications L7/allications/participations
+  - item 5
+    - **id**: F05
+    - **kind**: tree
+    - **statement**: Cross-check of exemplar trees (directory names only). autonomous@origin/main and auditonomous@origin/main both still have L7/publications/ (with a binder/ child) and L7/governance/restrictions/, and no L7/allications/ or L7/governance/controlled/. Both beta refs (autonomous@origin/beta/7lm-exemplar-autonomous, auditonomous@origin/beta/7lm-exemplar-auditonomous) have L7/allications/ with all six children and L7/governance/controlled/, and no L7/publications/ or restrictions/. Sheet counts under L7: autonomous main 57, beta 67; auditonomous main 37, beta 44.
+    - **locator**: autonomous@origin/main:L7:ls-tree -r; auditonomous@origin/main:L7:ls-tree -r; and the two beta refs
+  - item 6
+    - **id**: F06
+    - **kind**: rule
+    - **statement**: L7/0.md Object line and header. Object: external provenance, public/legal governance, peering, publications, exposure, exchange. Header line: Path `L7/`, Layer 'L7 — SURFACE / FORWARD FACE', Owner 'L7/'. The Owner clause names the four owned relations with allications as the fourth.
+    - **locator**: 7lm@origin/main:L7/0.md:3-4
+    - **quote**: this layer owns the external relations of the bounded object (provenance, governance, peering, and allications — the outward acts, of which publication is one), not its lower-layer scientific meaning.
+  - item 7
+    - **id**: F07
+    - **kind**: rule
+    - **statement**: L7/0.md opening: L7 is the forward face where the bounded object meets external people, institutions, systems, repositories, legal and public conditions, publications and data sources. It quotes the specification's 'L7 = Desktop' and states the core question.
+    - **locator**: 7lm@origin/main:L7/0.md:6
+    - **quote**: What provenance, governance, peer relation, publication, or other external representation must exist at the object's forward face?
+  - item 8
+    - **id**: F08
+    - **kind**: rule
+    - **statement**: L7/0.md 'Position in the architecture': L7 is numbered but is not an eighth interior layer; it is outside the USO and a physical sibling of L8/; crossing L7 <-> L6 is a boundary/peering event, not filesystem nesting. The seventh layer is L6 under the owner's definition L8/L0/semantics/definitions/FIRST_IS_ALWAYS_0.md. The name L7 ('El-Seven') is the desk: L the lower left corner, 7 the upper right.
+    - **locator**: 7lm@origin/main:L7/0.md:12-15
+    - **quote**: L7 is the numbered external Surface / Forward Face; it participates in traversal but is not an eighth interior dependency layer.
+  - item 9
+    - **id**: F09
+    - **kind**: rule
+    - **statement**: L7/0.md states the four canonical direct branches of L7.
+    - **locator**: 7lm@origin/main:L7/0.md:16
+    - **quote**: Canonical direct L7 branches are L7/provenance/, L7/governance/, L7/peering/, and L7/allications/.
+  - item 10
+    - **id**: F10
+    - **kind**: rule
+    - **statement**: L7/0.md carries the packet reading of 13 September 2026 (L0 origin, L1 floor of payload, L6 its end, L7 the glue, L8 envelopes them all) and says it changes no position and no path; and the 'Contextual semantic route'.
+    - **locator**: 7lm@origin/main:L7/0.md:18-19
+    - **quote**: Source L0 definition → source L7 egress → receiving L7 ingress → receiving L0.
+  - item 11
+    - **id**: F11
+    - **kind**: rule
+    - **statement**: L7/0.md information sheet, Function and Hard boundary rows. Function: provide the external Surface for provenance, prior art, public/legal governance, peering, publications and release 'without absorbing external authority or granting lower-layer validity'. Hard boundary: L7 owns the external relation, not the scientific meaning.
+    - **locator**: 7lm@origin/main:L7/0.md:26,29
+    - **quote**: Presence, publication, copyright, patent status, custody, or provenance at L7 does not make an object valid, complete, true, or internally authored.
+  - item 12
+    - **id**: F12
+    - **kind**: rule
+    - **statement**: L7/0.md information sheet, Directional inputs, Output and Machine metadata rows. Outward release: 'approved L6-backed packages'. Ingress may carry an exact source-owned L0 definition to the receiving L0 without transferring authorship. Output: a bounded provenance record, governance record, ingress/egress binding, or publication/presentation with explicit source, authority, permissions, status and direction. Machine metadata is described but not instantiated.
+    - **locator**: 7lm@origin/main:L7/0.md:27-28,30
+    - **quote**: Not instantiated in this repository: current research practice remains manual; no directory metadata, automation, or validation is enabled here.
+  - item 13
+    - **id**: F13
+    - **kind**: rule
+    - **statement**: L7/0.md lists what L7 owns (provenance: prior art, sources, lineage, authority; public/legal governance: copyright, licensing, patents, permissions, access, controlled; peering: exposure/custody, ingress/egress, peer/object bindings; allications), the permitted actions (receive, bind, attribute, disclose, present, publish, release, route; record provenance and prior art; apply public/legal permissions and restrictions; authorize, deny, quarantine, retire a binding without deleting its history) and five acceptance checks.
+    - **locator**: 7lm@origin/main:L7/0.md:34-52
+    - **quote**: Unused canonical branches may remain empty without implying failure.
+  - item 14
+    - **id**: F14
+    - **kind**: tree
+    - **statement**: L7/0.md draws the L7 tree as 'L7/0' with four branches: provenance/0 (prior-art, sources, lineage, authority); governance/0 (copyright, licensing, patents, permissions, access, controlled); peering/0 (private/0 and public/0, each with ingress/0 and egress/0, each with peer-1/0 and object-1/0); allications/0 (publications, applications, communications, specifications, notifications, participations). The drawing matches the actual tree (F02). '/0' denotes the directory's local 0.md.
+    - **locator**: 7lm@origin/main:L7/0.md:56-94
+    - **quote**: No directory metadata is instantiated in this repository.
+  - item 15
+    - **id**: F15
+    - **kind**: rule
+    - **statement**: The Boundary / traversal rule is one fixed paragraph that appears verbatim in L7/0.md (line 96, bold-labelled) and under a '## Boundary / traversal rule' heading in every other L7 sheet. Full text: 'L7 is the forward face outside the USO. It owns the external relations of the bounded object: provenance, governance, peering, and allications — the outward acts, of which publication is one. Public/private exposure and ingress/egress direction remain independent peering distinctions. L7 does not thereby acquire or change the lower-layer scientific meaning.'
+    - **locator**: 7lm@origin/main:L7/0.md:96
+    - **quote**: Public/private exposure and ingress/egress direction remain independent peering distinctions. L7 does not thereby acquire or change the lower-layer scientific meaning.
+  - item 16
+    - **id**: F16
+    - **kind**: rule
+    - **statement**: L7/0.md prose table ('Directory / thing | Prose | Why'), provenance and governance rows. The controlled row reads: 'Directory for restrictions and other conditions that constrain external disclosure, use, transfer, or handling.' with the Why cell quoted here. Each child sheet's Object line equals its Prose cell in this table.
+    - **locator**: 7lm@origin/main:L7/0.md:100-114
+    - **quote**: Keeps what is controlled explicit and machine-addressable without redefining the underlying research.
+  - item 17
+    - **id**: F17
+    - **kind**: rule
+    - **statement**: L7/0.md prose table, peering rows (lines 115-123): peering/ preserves external ownership; private/ and public/ are exposure/custody branches; ingress/egress are direction; */peer-1/ identifies the external peer; */peer-1/object-1/ identifies one bounded object. The public/egress row says the released publication object is held by L7/allications/publications/.
+    - **locator**: 7lm@origin/main:L7/0.md:115-123
+    - **quote**: Peer-owned ingress is reference/binding only: NO EDIT and NO DELETE by the receiving repository.
+  - item 18
+    - **id**: F18
+    - **kind**: rule
+    - **statement**: L7/0.md prose table, the seven allications rows (lines 124-130). allications/: 'Directory for the bounded object's outward acts: publications, applications, communications, specifications, notifications, participations.' publications/: released publication objects. applications/: 'for funding, review, admission, or of its method to an outside case'. communications/: 'statements, correspondence, announcements, answers'. specifications/: 'issued outward for others to build or check against'. notifications/: 'notices the object issues outward'. participations/: 'bodies, panels, working groups, collaborations'.
+    - **locator**: 7lm@origin/main:L7/0.md:124-130
+    - **quote**: Each is a nominalized outward act that leaves an addressable record. One family, one place, the six senses kept distinct within it.
+  - item 19
+    - **id**: F19
+    - **kind**: rule
+    - **statement**: L7/0.md 'In the case of', subsection 'L7 scientific desktop and forward-face semantics': four owned external relations; exposure and direction are independent; the Peer-object contract; and an author note that a project may leave branches empty.
+    - **locator**: 7lm@origin/main:L7/0.md:136-154
+    - **quote**: peer-1 identifies the external peer and object-1 identifies the bounded object exposed by that peer. The object may be a document, database, foreign/federated data endpoint, or repository.
+  - item 20
+    - **id**: F20
+    - **kind**: rule
+    - **statement**: L7/0.md 'External definitions and inward interpretation': a definition lives once at its owner; an external definition's exact version is bound at L7 peering and may be carried inward with its immutable external-ownership tag; L7 provenance records source/version/authority/prior-art relation; L7 governance records conditions; L6 preserves binding history; L5 compares and interprets.
+    - **locator**: 7lm@origin/main:L7/0.md:156-158
+    - **quote**: No receiving layer thereby becomes the definition's author.
+  - item 21
+    - **id**: F21
+    - **kind**: rule
+    - **statement**: The heading about private repositories is a level-3 heading in L7/0.md placed directly after line 158 with no blank line before it and two blank lines after, immediately above the Autonomous/Auditonomous subsection. It was added by commit 2e5a6d6 (2026-10-05, 'Update 0.md', +2 lines), the only L7 change of that commit.
+    - **locator**: 7lm@origin/main:L7/0.md:159
+    - **quote**: ### THESE REPOS BELOW ARE PRIVATE THUS WILL RETURN 404 UNLESS YOU HAVE ACCESS.
+  - item 22
+    - **id**: F22
+    - **kind**: exemplar
+    - **statement**: L7/0.md subsection 'Autonomous and Auditonomous: peering without semantic annexation' (lines 162-176): the two repositories are the originating case for peer-1/object-1; they are named as reference implementations with URLs https://github.com/aybllc/autonomous and https://github.com/aybllc/auditonomous; Autonomous owns the Autonomous definition; Autonomous L7 public egress may expose an exact version; Auditonomous L7 public ingress binds it reference-only under NO EDIT and NO DELETE; receipt at L0 does not copy authorship.
+    - **locator**: 7lm@origin/main:L7/0.md:162-176
+    - **quote**: The repositories are implementation work in progress; their current layouts do not control this architecture.
+  - item 23
+    - **id**: F23
+    - **kind**: exemplar
+    - **statement**: Same subsection, lines 178-188: the declared semantic-deference rule (Auditonomous takes the owner's bound definition as authoritative for what the owner means, without claiming it true); Auditonomous L6 preserves binding history and L5 interprets; cross-object claims need an explicit named relation; Autonomous freezes a consensus baseline and Auditonomous authors an explicit local delta; an upstream change creates a new binding; and the Clarification quoted here.
+    - **locator**: 7lm@origin/main:L7/0.md:178-188
+    - **quote**: This is not an optional exemplar. It is the concrete originating boundary test for the agnostic architecture.
+  - item 24
+    - **id**: F24
+    - **kind**: rule
+    - **statement**: L7/0.md author notes at lines 190-192 and the flow diagram at 194-211. Public/private and ingress/egress are semantic positions and do not assert that every external implementation uses the same filesystem vocabulary. 'Many intelligences at one face': peer-1 opens an enumeration identical on all four faces; provenance is positional; the peer's 0 is the owner's register, written by a person. The diagram runs external owner L0 definition -> source L7 public egress -> receiving L7 public ingress -> receiving L7 provenance/governance -> receiving L6 through L1 -> receiving L0.
+    - **locator**: 7lm@origin/main:L7/0.md:190-213
+    - **quote**: The tree states positions; what any intelligence may write is not stated by the tree.
+  - item 25
+    - **id**: F25
+    - **kind**: rule
+    - **statement**: L7/0.md 'Forward-face model' (217-221) and 'Standing rules' (225-233): presence on the desk establishes nothing by itself; a definition lives once at its owner; to change an immutable external object, return to its owner; material crossing outward may lose fidelity and never gains maturity by exposure; machine metadata is not assumed enabled.
+    - **locator**: 7lm@origin/main:L7/0.md:217-233
+    - **quote**: No outsider traverses the USO by default. What an outside reader or system needs is represented at the forward face.
+  - item 26
+    - **id**: F26
+    - **kind**: exemplar
+    - **statement**: L7/0.md closing sections: 'Inherited terms and dispositions' (points to the Harmonization Record, L8/L6/retired/scaffold-2026-08-20/ and L8/L6/history/harmonization-2026-09-04.md); 'Exemplars (by reference)'; and 'Direction' (construction L0->L7, inspection L7->L0). The Exemplars section says the exemplars are not merged into the scaffold.
+    - **locator**: 7lm@origin/main:L7/0.md:235-245
+    - **quote**: The exemplar of this position is the sheet at the same path in `aybllc/autonomous` and `aybllc/auditonomous`, read with the specification's section "Exemplars as instantiated".
+  - item 27
+    - **id**: F27
+    - **kind**: rule
+    - **statement**: L7/allications/0.md. Object: 'Directory for the bounded object's outward acts: publications, applications, communications, specifications, notifications, and participations.' Function: one place for the family of nominalized outward acts, each done once, on a date, leaving an addressable record. Holds: the six named positions; nothing directly ('an act is filed at the position that names it'). Does not hold: a standing surface (site, account, exposed interface, repository page; 'no position in the current topology holds them'); writing (L8/L4/work/writing/); research meaning (L8/L5/research/); internal history (L8/L6/history/, retired L8/L6/retired/); provenance (L7/provenance/); conditions (L7/governance/); binding to a named peer (L7/peering/). It quotes the owner's naming of 2026-09-19.
+    - **locator**: 7lm@origin/main:L7/allications/0.md:3-29
+    - **quote**: └── controlled/0 changed to move all cation words into "allications" (all-ications), pronounced ally-cations.
+  - item 28
+    - **id**: F28
+    - **kind**: rule
+    - **statement**: L7/allications/0.md Standing (three lines): the branch and any of its six may remain empty; publications/ moved here from L7/publications/ in the pass of 2026-09-20 with the record at L8/L6/history/harmonization-2026-09-04.md §25; machine metadata described at L7/, not instantiated, no automation. The sheet also says the name is a mnemonic, not the membership test.
+    - **locator**: 7lm@origin/main:L7/allications/0.md:10,37-39
+    - **quote**: The name is a mnemonic for that family, not the test for membership.
+  - item 29
+    - **id**: F29
+    - **kind**: rule
+    - **statement**: L7/allications/publications/0.md. Object: 'Directory for released publication objects at the forward face.' Function: records the release (version that left, when, in what form, under what governance), not the writing or the argument. Holds: released publication objects with explicit release identity; the released-identity part of the inherited term 'corpus'. Does not hold: writing (L8/L4/work/writing/); research meaning (L8/L5/research/); internal history and retired releases (L8/L6/); provenance; 'copyright, licence, permission, access, or restriction conditions on a release' (L7/governance/); outward exchange to a specific peer (L7/peering/public/egress/peer-1/object-1/ or private egress); drafts stamped internal, empty release slots, material that has not left. Extra boundary quote: 'Material crossing outward may lose fidelity...'. Standing: may remain empty; no released publication object filed at present; the specification is at L8/L4/work/writing/; 'corpus' disposition Split and reserved; machine metadata not instantiated.
+    - **locator**: 7lm@origin/main:L7/allications/publications/0.md:3-41
+    - **quote**: Keeps publication release at L7 while writing remains L4, research meaning remains L5, and internal history remains L6.
+  - item 30
+    - **id**: F30
+    - **kind**: rule
+    - **statement**: L7/allications/applications/0.md. Object: 'Directory for applications the bounded object makes outward.' Function: an outward act in which the object asks something of an external body (funding, review, admission to a programme or standards body, or of its method to an outside case); filed as made: to whom, when, in what version, under what conditions. Holds: applications with the body applied to, the date, the version submitted, the outcome where known. Does not hold (specific): the judgement whether the claim is sound (L8/L5/research/); a correspondence that asks for nothing (L7/allications/communications/); then the six common exclusions. Standing: may remain empty; 'Nothing is filed here at present.'; machine metadata not instantiated.
+    - **locator**: 7lm@origin/main:L7/allications/applications/0.md:3-36
+    - **quote**: Keeping it distinct stops an application being read as a release and stops its outcome being read as a research finding.
+  - item 31
+    - **id**: F31
+    - **kind**: rule
+    - **statement**: L7/allications/communications/0.md. Object: 'Directory for communications the bounded object issues outward.' Function: an outward act whose substance is the conveying (statement, correspondence, announcement, answer); filed: what was said, to whom, when. Holds: communications with recipient, date, exact content or its version. Does not hold (specific): a notice discharging an obligation (notifications/); a request of an external body (applications/); a released object with a release identity (publications/); then the six common exclusions. Standing as for applications.
+    - **locator**: 7lm@origin/main:L7/allications/communications/0.md:3-37
+    - **quote**: A communication is the residual outward act of speech, and it needs a place so that it is not filed as a release it is not.
+  - item 32
+    - **id**: F32
+    - **kind**: rule
+    - **statement**: L7/allications/specifications/0.md. Object: 'Directory for specifications the bounded object issues outward for others to build or check against.' Function: a contract handed to an external party (interface contract, schema, wire format, published requirement set), filed as issued at its exact version. Holds: specifications issued outward, each at an exact version, with who it was issued to or published for. Does not hold (specific): the specification as a written artifact under development (L8/L4/work/writing/); an external specification the object consumes, bound reference-only at L7/peering/*/ingress/peer-1/object-1/ (NO EDIT, NO DELETE); then the six common exclusions. Standing as for applications.
+    - **locator**: 7lm@origin/main:L7/allications/specifications/0.md:3-36
+    - **quote**: A specification handed outward becomes a commitment to whoever builds on it, and the version they built against matters afterwards. That outward commitment is an L7 fact.
+  - item 33
+    - **id**: F33
+    - **kind**: rule
+    - **statement**: L7/allications/notifications/0.md. Object: 'Directory for notices the object issues outward.' (note: 'the object', not 'the bounded object'). Function: giving notice is itself the thing required (disclosure, required report, breach or defect notice, alert); filed: the notice, party notified, date, obligation discharged. Holds: notices with recipient, date, and the obligation or condition under which given. Does not hold (specific): the obligation itself, a governance fact (L7/governance/); an ordinary statement (communications/); then the six common exclusions. Standing as for applications.
+    - **locator**: 7lm@origin/main:L7/allications/notifications/0.md:3-36
+    - **quote**: Keeping notices separate means the question "was notice given, and when" has one place to be answered.
+  - item 34
+    - **id**: F34
+    - **kind**: rule
+    - **statement**: L7/allications/participations/0.md. Object: 'Directory for the bounded object's participations in external settings.' Function: an outward act of taking part (conference, working group, review panel, standards body, collaboration); filed: which body, what role, what period, what was contributed or received standing from. Holds: participations with body, role, period, contribution. Does not hold (specific): participant positions inside the research setting (L8/L5/institution/peers/); a bound peer object exchanged with a body (L7/peering/); anything produced and then released (publications/); then the six common exclusions. Standing as for applications.
+    - **locator**: 7lm@origin/main:L7/allications/participations/0.md:3-37
+    - **quote**: Taking part somewhere is an external relation with a date and a role, and it is not a publication, an application, or a peer binding.
+  - item 35
+    - **id**: F35
+    - **kind**: rule
+    - **statement**: Common tail of 'Does not hold' in applications, communications, specifications, notifications and participations (and, minus the first words, in allications/0.md): writing as produced work — L8/L4/work/writing/; research meaning, argument, or claim — L8/L5/research/; internal history of drafts, versions, supersessions — L8/L6/history/; retired states — L8/L6/retired/; provenance of what went out — L7/provenance/; 'the copyright, licence, permission, access, or controlled conditions on it' — L7/governance/; the binding to a named peer — L7/peering/. Common Standing: line 1 'This branch may remain empty. Presence in the agnostic topology establishes admissible capability, not mandatory population; unused now does not mean removed. Nothing is filed here at present.'; line 2 the machine-metadata line.
+    - **locator**: 7lm@origin/main:L7/allications/applications/0.md:22-27,35-36
+    - **quote**: Machine metadata: described at `L7/`; not instantiated in this repository. No automation.
+  - item 36
+    - **id**: F36
+    - **kind**: rule
+    - **statement**: L7/governance/0.md. Object: 'Directory for public/legal/custodial conditions attached to externally exposed or received objects.' Function: records a condition attaching to an object crossing the boundary in either direction, in one of six positions (copyright, licensing, patents, permissions, access, controlled). Holds: conditions in the owning child; the governance side of every peering binding and release; records of a binding authorized, denied, quarantined, retired. Does not hold: provenance facts; the bound object; the released publication object (L7/allications/publications/); internal history (L8/L6/); scientific judgment (L8/L5/research/). Standing: may remain empty; the prior L7/corpus/, L7/private/, L7/public/ were cut by the owner in commit c0f46e1; no inherited term placed here; machine metadata not instantiated.
+    - **locator**: 7lm@origin/main:L7/governance/0.md:3-41
+    - **quote**: Separates legal and access conditions from provenance, peering direction, publication, and scientific judgment.
+  - item 37
+    - **id**: F37
+    - **kind**: rule
+    - **statement**: L7/governance/controlled/0.md on main. Object: 'Directory for restrictions and other conditions that constrain external disclosure, use, transfer, or handling.' Function: a record states what may not be done with an object at the boundary ('not redistributed, not reproduced at length, not used on-line, not transferred, not disclosed, not opened'), with the restriction's source and the objects it binds. Holds: (1) restrictions on external disclosure, use, transfer, or handling of received or exposed objects; (2) restrictions that follow from a copyright, licence, patent, permission, or access condition in the sibling positions, cross-referenced by path; (3) owner rulings restricting what crosses outward. Does not hold: the restricted object (L7/peering/ or L7/allications/publications/); the deriving copyright/licence/patent condition (copyright/, licensing/, patents/); who may access (access/); what is affirmatively permitted (permissions/); history of a quarantine or retirement decision (L8/L6/history/), the retired binding (L8/L6/retired/).
+    - **locator**: 7lm@origin/main:L7/governance/controlled/0.md:3-28
+    - **quote**: Owner rulings that restrict what crosses outward, for example a ruling that a repository or object is not released.
+  - item 38
+    - **id**: F38
+    - **kind**: rule
+    - **statement**: L7/governance/controlled/0.md boundary and standing. After the common boundary paragraph it adds the quote 'Material crossing outward may lose fidelity and may never gain scientific maturity merely by being exposed.' Standing, three lines: may remain empty (common sentence, without 'Nothing is filed'); 'No inherited term in the Harmonization Record is placed at this directory.'; the machine-metadata line plus the sentence quoted here. Why it exists adds: a restriction constrains handling at the desk and does not change what the object means.
+    - **locator**: 7lm@origin/main:L7/governance/controlled/0.md:12-14,30-40
+    - **quote**: "Machine-addressable" in the Why cell describes what metadata may do; here restrictions are stated in prose only.
+  - item 39
+    - **id**: F39
+    - **kind**: rule
+    - **statement**: L7/governance/copyright/0.md. Object: 'Directory for copyright-related representation when applicable.' It has an extra section, 'One place': copyright has one place in a 7LM repository; no README, sheet, ledger row or binding record restates a copyright rule; the sheet states once every copyright and licence condition and the next steps; licensing/ and controlled/ 'stay admissible and point here'; access/ records what was obtained. Holds: copyright representation for received and released objects; the copyright reason for quarantine or cite-only status; the route (what to do next). Does not hold: the bound object; a licence instrument (licensing/); authority; source identity; scientific meaning. Standing: may remain empty; no inherited term; machine metadata line.
+    - **locator**: 7lm@origin/main:L7/governance/copyright/0.md:3-45
+    - **quote**: Copyright has one place in a 7LM repository, and it is this directory.
+  - item 40
+    - **id**: F40
+    - **kind**: rule
+    - **statement**: L7/governance/licensing/0.md on main. Object: 'Directory for licensing terms or status when applicable.' A record states the licence under which an object was received or released: grantor, terms, status, what use is permitted. Holds: licensing terms or status for received objects (including single-user, institutional, click-wrap) and for objects released at L7/allications/publications/ or exchanged through L7/peering/*/egress/; the licence reason for cite-only, quarantine or retirement. Does not hold: the licensed object; copyright ownership; explicit permissions; restrictions barring disclosure (controlled/); source identity. Standing: common three lines.
+    - **locator**: 7lm@origin/main:L7/governance/licensing/0.md:3-40
+    - **quote**: A person filing here records the terms as they stand at the boundary.
+  - item 41
+    - **id**: F41
+    - **kind**: rule
+    - **statement**: L7/governance/patents/0.md, permissions/0.md and access/0.md. Patents: Object 'Directory for patent-related representation when applicable.'; holds status and scope, and the patent status from which a restriction derives (the restriction itself at controlled/); Standing adds 'This repository files no patent-related representation.' Permissions: Object 'Directory for explicit permissions attached to external use, disclosure, or exchange.'; holds permissions in either direction and custodial permissions when the owner states them; what is barred goes to controlled/. Access: Object 'Directory for access conditions applicable to externally facing objects.'; holds who may reach an object and the record that a source was not obtained; restrictions on onward disclosure go to controlled/.
+    - **locator**: 7lm@origin/main:L7/governance/patents/0.md:3,19,35; L7/governance/permissions/0.md:3,28; L7/governance/access/0.md:3,27
+    - **quote**: Access is a governance condition. Exposure/custody (public versus private) is a peering distinction recorded at `L7/peering/`
+  - item 42
+    - **id**: F42
+    - **kind**: rule
+    - **statement**: L7/provenance/0.md. Object: 'Directory for the external provenance of the bounded object: where it came from, what preceded it, what source/version is being used, and what authority is being represented.' Four positions: prior-art/, sources/, lineage/, authority/. Holds: one record per relation; the provenance relation of any bound peer object; the source ledger. Does not hold: the bound peer object; 'copyright, licensing, patent, permission, access, or restriction conditions' (L7/governance/); internal chronology (L8/L6/); verdict on a source (L8/L5/research/); local meaning (L8/L0/semantics/definitions/); released publication objects (L7/allications/publications/). Standing: may remain empty; inherited term 'L6 provenance' Split; 'prior-art' Relocated; Git history is not scientific memory; machine metadata line.
+    - **locator**: 7lm@origin/main:L7/provenance/0.md:3-43
+    - **quote**: Internal reconstructable memory remains L6; external source, authority, prior art, and public provenance belong at L7/provenance/.
+  - item 43
+    - **id**: F43
+    - **kind**: rule
+    - **statement**: L7/provenance/prior-art/0.md. Object: 'Directory for identified prior art and antecedent work relevant to the bounded object.' Names external repositories: it files uha-ommp-exemplar.html, 'a worked exemplar filing `aybllc/uha` at `c483188` and `aybllc/ommp` at `609e4de` against this model, filed here 2026-09-19 on the owner's word', and identifies oMMP's 'Seven‑Layer Methodology v1.3' with a SHA-256. The sheet records two unresolved points: the page concludes neither object is an external antecedent, and aybllc/ommp marks the document INTERNAL ONLY and UNVERIFIED.
+    - **locator**: 7lm@origin/main:L7/provenance/prior-art/0.md:3,20-22
+    - **quote**: The page is filed as the document; what it establishes about the antecedent landscape is not settled by its presence here.
+  - item 44
+    - **id**: F44
+    - **kind**: rule
+    - **statement**: L7/provenance/sources/0.md on main. Object: 'Directory for source identity and exact source/version references.' The ledger is header-only with eight columns. A section 'The designated curated-source archive: aybllc/l6' says the owner designated aybllc/l6 (INTERNAL; 'pinned here at commit `53b28f6`') as the archive serving curated sources; it holds 1,368 tracked library files; sources are served 'by a pointer row, never by a copy'; seen from a consuming repository it is an external peer bound at L7/peering/private/ingress/, with class-2 material a condition for L7/governance/controlled/. Standing: 'The ledger has no rows; that is admissible.'
+    - **locator**: 7lm@origin/main:L7/provenance/sources/0.md:3,10-24,51
+    - **quote**: This is an implementation fact of the program recorded at the forward face, not part of the architecture; another instantiation of the topology may designate a different archive or none.
+  - item 45
+    - **id**: F45
+    - **kind**: rule
+    - **statement**: L7/provenance/lineage/0.md and authority/0.md. Lineage: Object 'Directory for externally relevant lineage and derivation relationships.'; holds transfers, derivations, and the relation between upstream versions of a peer-owned object; the binding event itself stays at L8/L6/; 'A commit graph is not a lineage record'. Authority: Object 'Directory for represented source/owner authority associated with the external object or record.'; holds the owner, source layer and capacity, and the authority element of the ownership tag; quotes the Autonomous case that disagreement stays source-tagged and visible.
+    - **locator**: 7lm@origin/main:L7/provenance/lineage/0.md:3,18-19,34; L7/provenance/authority/0.md:3,18-20
+    - **quote**: It must not manufacture consensus where sources materially disagree; every disagreement remains source-tagged and visible.
+  - item 46
+    - **id**: F46
+    - **kind**: tree
+    - **statement**: Non-sheet file L7/provenance/sources/source-ledger.md on main is six lines: a title '# Source Ledger', one instruction sentence, and a table header with eight columns (Source ID | Source and locator | Issuer / owner | Exact version | Retrieved | Declared scope | Relevant artifact or layer | Status / notes) and no rows.
+    - **locator**: 7lm@origin/main:L7/provenance/sources/source-ledger.md:1-6
+    - **quote**: Inclusion records provenance and does not by itself endorse a source or claim.
+  - item 47
+    - **id**: F47
+    - **kind**: tree
+    - **statement**: Non-sheet file L7/provenance/prior-art/uha-ommp-exemplar.html on main is a 700-line, 57,756-byte HTML page titled 'UHA and oMMP on the Layers', labelled 'Internal only', 'Not externally validated', 'A filing exemplar, not a claim of correctness'. It names aybllc/uha and aybllc/ommp (7 times each), aybllc/7lm (twice) and aybllc/autonomous once, saying oMMP's 'repository is laid out after aybllc/autonomous rather than the canonical topology'.
+    - **locator**: 7lm@origin/main:L7/provenance/prior-art/uha-ommp-exemplar.html:1,116,673
+    - **quote**: its repository is laid out after aybllc/autonomous rather than the canonical
+  - item 48
+    - **id**: F48
+    - **kind**: rule
+    - **statement**: L7/peering/0.md, what it is and what it holds. Object: 'Directory for relationships to externally owned peers and the bounded objects exchanged with them.' Two independent distinctions organize it: exposure (public/ or private/) and direction (ingress/ or egress/); the peer is at peer-1/, each object at peer-1/object-1/. A filing records one relation to one peer and one object. Holds: the exposure branches; peer identities and objects; an ingress/egress binding with explicit source, authority, permissions, status, direction; each binding's standing (authorized, denied, quarantined, retired). Does not hold: provenance facts; governance conditions ('copyright, licensing, patents, permissions, access, and controlled conditions'); the released publication object (L7/allications/publications/); binding history (L8/L6/); interpretation (L8/L5/); local definitions (L8/L0/semantics/definitions/).
+    - **locator**: 7lm@origin/main:L7/peering/0.md:3-14,35-48
+    - **quote**: An upstream change creates a new binding; it does not mutate the pinned object.
+  - item 49
+    - **id**: F49
+    - **kind**: rule
+    - **statement**: L7/peering/0.md section 'Many intelligences at one face' (lines 20-33). Peers and objects are counted from 1 'because they are physical'; layers from 0 (owner's ruling of 2026-09-12, record §16). Six consequences: separate incoming directories (ingress/peer-N/, NO EDIT, NO DELETE); separate outgoing directories (egress/peer-N/); standing one level above the object (the peer's 0.md is the owner's register: received, under review, adopted, denied, quarantined, retired); one acceptance path through L8/L5/; exposure per counterpart; a pattern identical in every 7LM repository. It ends 'Described here; not instantiated by this sheet.'
+    - **locator**: 7lm@origin/main:L7/peering/0.md:20-33
+    - **quote**: The pattern `L7/peering/{private,public}/{ingress,egress}/peer-N/object-M/` is identical in every 7LM repository.
+  - item 50
+    - **id**: F50
+    - **kind**: rule
+    - **statement**: L7/peering/0.md register rule and standing. The peer's 0.md, one directory above its objects, records decisions; a bound object never moves or changes when a decision is taken. Standing: may remain empty; reserved terms once under the old L7/private/ desk (found; caught; naught; regress) remain Reserved with topology unadjudicated and get no home in this branch; machine metadata line.
+    - **locator**: 7lm@origin/main:L7/peering/0.md:28,62-65
+    - **quote**: What any intelligence may or may not write is not stated by the tree (owner's direction, 2026-09-06).
+  - item 51
+    - **id**: F51
+    - **kind**: rule
+    - **statement**: L7/peering/public/0.md and L7/peering/private/0.md. Public: Object 'Peering branch for public exposure or custody.'; names only the exposure value; public exposure transfers nothing; Standing says the originating case runs through this branch (source side at public/egress/, receiving side at public/ingress/). Private: Object 'Peering branch for non-public exposure or custody.'; 'Private does not mean internally owned'; access conditions and restrictions go to L7/governance/access/ and L7/governance/controlled/; Standing reserves found, caught, naught and regress without giving them a home.
+    - **locator**: 7lm@origin/main:L7/peering/public/0.md:3,10,37; L7/peering/private/0.md:3,10,37-40
+    - **quote**: caught remains the zero state; found remains the observer role; naught remains the empty or settled state. Their topology remains unadjudicated.
+  - item 52
+    - **id**: F52
+    - **kind**: exemplar
+    - **statement**: L7/peering/public/ingress/0.md. Object: 'Public inbound peering position.' It is the receiving side of the originating case and carries a Standing rule specific to the receiving exemplar repository: the bound L0 object of aybllc/autonomous at this position is the only source of that definition for the auditonomous repository. Holds: peer-1/, peer-1/object-1/ bound reference-only with the ownership tag, and the binding's standing. Other Standing lines: may remain empty; NO EDIT and NO DELETE; machine metadata line.
+    - **locator**: 7lm@origin/main:L7/peering/public/ingress/0.md:3,12,43-46
+    - **quote**: The rule for a receiving repository: Auditonomous gets the definitions of autonomous from Autonomous and nowhere else.
+  - item 53
+    - **id**: F53
+    - **kind**: exemplar
+    - **statement**: Continuation of the public-ingress Standing rule, and its boundary quote: no standard, dictionary, corpus or archive is bound directly for the Autonomous definition in the auditonomous repository; a change to the Autonomous definition returns to the Autonomous owner and Auditonomous updates or retires its binding.
+    - **locator**: 7lm@origin/main:L7/peering/public/ingress/0.md:36,43
+    - **quote**: no standard, dictionary, corpus, or archive is bound directly for it.
+  - item 54
+    - **id**: F54
+    - **kind**: rule
+    - **statement**: L7/peering/public/ingress/peer-1/0.md and .../object-1/0.md. peer-1 Object: 'Directory identifying the external peer within an ingress or egress position. `peer-1` "identifies the external peer".' peer-1 is 'a canonical position name, not the name of any actual peer; a repository instantiating the position names the peer it identifies'; in the originating case, seen from Auditonomous, the peer is Autonomous. object-1 Object: 'Directory identifying one bounded peer-owned or peer-directed object.'; what is filed is the binding, not a copy; seen from Auditonomous the object is the exact version of the Autonomous L0 definition. Standing in both: may remain empty; NO EDIT and NO DELETE; machine metadata line; object-1 adds that retirement history is preserved at L8/L6/retired/.
+    - **locator**: 7lm@origin/main:L7/peering/public/ingress/peer-1/0.md:3,8,29-31; L7/peering/public/ingress/peer-1/object-1/0.md:3,8,31-33
+    - **quote**: `object-1` is a canonical position name, not the name of any actual object.
+  - item 55
+    - **id**: F55
+    - **kind**: exemplar
+    - **statement**: L7/peering/public/egress/0.md, peer-1/0.md and object-1/0.md. Egress Object: 'Public outbound peering position.'; it is the source side of the originating case; egress is a relation to a peer and is not the released publication object (held at L7/allications/publications/). peer-1: seen from Autonomous the peer is Auditonomous. object-1 Object adds 'at an egress position this repository is the exposing peer'; seen from Autonomous the object is 'an exact version of that Autonomous L0 definition'; Standing: on the peer's side the object is peer-owned ingress, NO EDIT and NO DELETE.
+    - **locator**: 7lm@origin/main:L7/peering/public/egress/0.md:3,10,14; L7/peering/public/egress/peer-1/0.md:8; L7/peering/public/egress/peer-1/object-1/0.md:3,8,32
+    - **quote**: Egress is a relation to a peer; a publication is a released object, and the two are separately addressable.
+  - item 56
+    - **id**: F56
+    - **kind**: rule
+    - **statement**: L7/peering/private/ingress/0.md on main. Object: 'Private inbound peering position.' It has a section 'The designated curated-source archive' naming aybllc/l6: a private-ingress peer binding, INTERNAL, reference-only, 'pinned at commit `53b28f6` at the time of this record'; sources consumed by pointer rows at L7/provenance/sources/, never by copying. Standing has four lines, the third being the one quoted here.
+    - **locator**: 7lm@origin/main:L7/peering/private/ingress/0.md:3,35-37,46
+    - **quote**: `aybllc/l6` is bound here as the designated curated-source archive; read-only from every consuming repository.
+  - item 57
+    - **id**: F57
+    - **kind**: rule
+    - **statement**: L7/peering/private/ingress/peer-1/0.md and object-1/0.md, and L7/peering/private/egress/0.md, peer-1/0.md, object-1/0.md. They mirror the public sheets with 'private' wording and no originating-case sentences. Private egress Object: 'Private outbound peering position.'; a filing records what is directed to the peer, the exact version, and the restriction keeping the exchange non-public, with conditions at L7/governance/. Private egress object-1 adds: a change to what is exposed is made by its owner and the peer updates or retires its binding.
+    - **locator**: 7lm@origin/main:L7/peering/private/egress/0.md:3,10,14; L7/peering/private/egress/peer-1/object-1/0.md:28; L7/peering/private/ingress/peer-1/object-1/0.md:3
+    - **quote**: Restricted exchange is a peering relation; release is a publication relation.
+  - item 58
+    - **id**: F58
+    - **kind**: exemplar
+    - **statement**: Only six of the 35 L7 sheets carry an '## Exemplars (by reference)' section naming aybllc/autonomous and aybllc/auditonomous: L7/0.md (239), L7/peering/0.md (58), and the four direction sheets private/egress (35), private/ingress (39), public/egress (35), public/ingress (38). No allications, governance, provenance, public/, private/, peer-1 or object-1 sheet has one. The text is identical in all six.
+    - **locator**: 7lm@origin/main:L7/peering/0.md:58-60
+    - **quote**: The exemplars fill in the layers by reference and are not merged into this scaffold; their layouts do not control the architecture.
+  - item 59
+    - **id**: F59
+    - **kind**: rule
+    - **statement**: Named external repositories across the L7 sheets on main: aybllc/autonomous and aybllc/auditonomous (L7/0.md:166, 241; peering/0.md:60; the four direction sheets; public/ingress/0.md:43); aybllc/l6 (provenance/sources/0.md:16,18; peering/private/ingress/0.md:37,46); aybllc/uha and aybllc/ommp (provenance/prior-art/0.md:20,22). No allications or governance sheet names any repository.
+    - **locator**: 7lm@origin/main:L7:git grep -n -o -E 'aybllc/[a-z0-9-]+'
+  - item 60
+    - **id**: C01
+    - **kind**: change
+    - **statement**: Beta adds a new section '## Projects across a research network' to L7/0.md between the opening paragraph and 'Position in the architecture'. First paragraph: each bounded project keeps its own interior, authorship and design choices; this face relates it to others through named peer/object bindings; use the peer's exact identified object when a dependency requires it, and keep the receiver's interpretation separately owned.
+    - **locator**: 7lm@origin/beta/common-contracts-r1-r6:L7/0.md:8-10
+    - **quote**: A shared 7LM setup supplies common places for those relations; it does not make one project's definitions, data or conclusions authoritative for every other project.
+  - item 61
+    - **id**: C02
+    - **kind**: change
+    - **statement**: Beta, same new section, second paragraph: a manuscript under development stays at L8/L4/work/writing/; this face records its external sources, permissions, exchanges and any authorized publication; public/private peering positions describe exposure and custody, and 'actual access restrictions require their own implementation and evidence'.
+    - **locator**: 7lm@origin/beta/common-contracts-r1-r6:L7/0.md:12
+    - **quote**: Filing a draft or binding a source is not a release.
+  - item 62
+    - **id**: C03
+    - **kind**: change
+    - **statement**: Beta replaces the consensus-baseline paragraph of L7/0.md (main line 184: 'Autonomous freezes the narrowest reasonable agreement ... It must not manufacture consensus where sources materially disagree. Auditonomous then authors the Auditonomous difference as an explicit local delta; the baseline and delta remain separately owned and overlaid.'). The new text begins 'In the originating exemplar design, Autonomous is intended to freeze the narrowest reasonable agreement among its exact source-tagged standards inputs as a consensus baseline.' and drops the sentences 'It must not manufacture consensus...' and '...separately owned and overlaid'.
+    - **locator**: 7lm@origin/beta/common-contracts-r1-r6:L7/0.md:190
+    - **quote**: This is a research obligation, not an assertion that agreement has been established. Where it remains plural, disputed or unresolved, a receiver retains that status.
+  - item 63
+    - **id**: C04
+    - **kind**: change
+    - **statement**: Beta, same replaced paragraph, remaining sentences: 'Any justified Auditonomous difference remains an explicitly local contribution; source and receiving meanings remain separately owned.' and the sentence quoted here.
+    - **locator**: 7lm@origin/beta/common-contracts-r1-r6:L7/0.md:190
+    - **quote**: Other projects retain their own subject matter and do not inherit an autonomy theory from this boundary example.
+  - item 64
+    - **id**: C05
+    - **kind**: change
+    - **statement**: Beta splits the second Holds bullet of L7/governance/controlled/0.md (main line 19: 'Restrictions that follow from a copyright, licence, patent, permission, or access condition recorded in the sibling governance positions, cross-referenced by path.') into two bullets. New bullet at line 19 is quoted here; new bullet at line 20: 'Other disclosure, transfer or handling restrictions with their own source and scope, cross-referenced to the applicable patent, permission or access record.' Nothing else in controlled/0.md changes.
+    - **locator**: 7lm@origin/beta/common-contracts-r1-r6:L7/governance/controlled/0.md:19-20
+    - **quote**: Pointers to copyright or licence conditions stated once at `L7/governance/copyright/`, with the affected objects identified; do not restate those conditions independently here.
+  - item 65
+    - **id**: C06
+    - **kind**: change
+    - **statement**: Beta rewrites the second sentence of L7/governance/licensing/0.md line 8. Main: 'A record here states the licence ... the grantor, the terms, the status, and what use the terms permit.' Beta text quoted here.
+    - **locator**: 7lm@origin/beta/common-contracts-r1-r6:L7/governance/licensing/0.md:8
+    - **quote**: A record here identifies the licence under which an external object was received, or a local object is released: the instrument, grantor, status and reference to its condition statement at `L7/governance/copyright/`.
+  - item 66
+    - **id**: C07
+    - **kind**: change
+    - **statement**: Beta replaces licensing/0.md line 10's first sentence ('A person filing here records the terms as they stand at the boundary.') with 'A person filing here holds the licence instrument, grantor, status and reference to its conditions.' plus the sentence quoted here; the rest of the paragraph is unchanged.
+    - **locator**: 7lm@origin/beta/common-contracts-r1-r6:L7/governance/licensing/0.md:10
+    - **quote**: State each copyright or licence condition once at `L7/governance/copyright/` and point to that statement here; do not maintain an independently worded second condition.
+  - item 67
+    - **id**: C08
+    - **kind**: change
+    - **statement**: Beta rewrites the first two Holds bullets of licensing/0.md: 'Licensing terms or status for received objects, including single-user, institutional, or click-wrap terms that constrain redistribution.' becomes the text quoted here; the second becomes 'Licence instruments and status for objects released at `L7/allications/publications/` or exchanged through `L7/peering/*/egress/`, with pointers to the same condition records.'
+    - **locator**: 7lm@origin/beta/common-contracts-r1-r6:L7/governance/licensing/0.md:18-19
+    - **quote**: Licence instruments and status for received objects, with pointers to the conditions stated once at `L7/governance/copyright/`, including single-user, institutional or click-wrap instruments.
+  - item 68
+    - **id**: C09
+    - **kind**: change
+    - **statement**: Beta adds a new section '## Shared setup without shared ownership' to L7/peering/0.md before 'Why it exists'. First paragraph: use the same peer/object positions across projects while identifying the actual counterpart and delivery in each project's local sheets; peer enumeration can grow and does not require every project to have the same peers, objects or research choices; plus the sentence quoted here.
+    - **locator**: 7lm@origin/beta/common-contracts-r1-r6:L7/peering/0.md:16-18
+    - **quote**: A model's rails remain within its applicable layer traversal; a cross-project source relation is an L7 binding, not lateral rail transport.
+  - item 69
+    - **id**: C10
+    - **kind**: change
+    - **statement**: Beta, same new section, second paragraph: 'When a source or the origin guidance changes, preserve the version already used.' plus the sentence quoted here.
+    - **locator**: 7lm@origin/beta/common-contracts-r1-r6:L7/peering/0.md:20
+    - **quote**: The receiving project can review and adopt a new binding, retain the old one or mark the dependency unresolved; another project's update does not silently replace its inputs, data or manuscript.
+  - item 70
+    - **id**: C11
+    - **kind**: change
+    - **statement**: Beta rewrites the 'One acceptance path for all of them' bullet of peering/0.md. Main: '...compared and interpreted at `L8/L5/`, and only what survives is carried inward, as the object's own authorship, citing the bound object.' Beta: '...compared and interpreted at `L8/L5/`. What the object concludes from it is its own L5 work, citing the bound original.' plus the sentence quoted here. The last two sentences of the bullet are unchanged.
+    - **locator**: 7lm@origin/beta/common-contracts-r1-r6:L7/peering/0.md:35
+    - **quote**: Any inward semantic reference to the bound object retains its immutable ownership tag; the bound original never becomes locally authored.
+  - item 71
+    - **id**: C12
+    - **kind**: change
+    - **statement**: Beta replaces the aybllc/l6 paragraph of L7/peering/private/ingress/0.md (main line 37, '`aybllc/l6` enters here ... pinned at commit `53b28f6` ...'). New paragraph begins 'Recorded program context: the owner designated `aybllc/l6` as a curated-source archive, described as INTERNAL and reference-only to consuming repositories, with short revision `53b28f6` recorded at the time.' and says a project using the archive must record its exact source/version at its own L7 positions.
+    - **locator**: 7lm@origin/beta/common-contracts-r1-r6:L7/peering/private/ingress/0.md:37
+    - **quote**: This scaffold has not instantiated that archive's exact peer/object binding or corresponding source row; the generic peer-1/object-1 slots do not supply the missing full identity.
+  - item 72
+    - **id**: C13
+    - **kind**: change
+    - **statement**: Beta, same paragraph, further sentences: 'Do not treat this context as an available qualified dependency or invent the missing pin.' and that the archive-local durable/ restrictions and the found/caught/naught lifecycle 'remain program-specific, unadjudicated context; they are not automatic metadata enforcement or a universal 7LM workflow'. Beta also adds a new paragraph at line 39, '**Retained historical program context, unadjudicated.**', which keeps the two durable/README.md quotes and ends with the text quoted here.
+    - **locator**: 7lm@origin/beta/common-contracts-r1-r6:L7/peering/private/ingress/0.md:37-39
+    - **quote**: not permissions verified or implemented by this scaffold, not a qualified archive binding, and not a rule imposed on every project using 7LM.
+  - item 73
+    - **id**: C14
+    - **kind**: change
+    - **statement**: Beta replaces the third Standing line of private/ingress/0.md ('`aybllc/l6` is bound here as the designated curated-source archive; read-only from every consuming repository.') with the text quoted here.
+    - **locator**: 7lm@origin/beta/common-contracts-r1-r6:L7/peering/private/ingress/0.md:48
+    - **quote**: `aybllc/l6` is recorded as designated program context, not an instantiated exact binding in this scaffold. Any qualified use requires its own identified peer/object and source record.
+  - item 74
+    - **id**: C15
+    - **kind**: change
+    - **statement**: Beta changes L7/provenance/sources/0.md line 10: 'It was relocated in this pass from `USO/l6/provenance/` and is header-only: it carries no rows.' becomes 'It was relocated from `USO/l6/provenance/`.' plus the sentence quoted here.
+    - **locator**: 7lm@origin/beta/common-contracts-r1-r6:L7/provenance/sources/0.md:10
+    - **quote**: It now carries the two explicitly scoped additional research-probe source records; these rows identify sources without endorsing their claims.
+  - item 75
+    - **id**: C16
+    - **kind**: change
+    - **statement**: Beta renames the sources/0.md section heading '## The designated curated-source archive: aybllc/l6' to '## Program context: the designated curated-source archive', adds a sub-heading '### aybllc/l6' (line 20), and inserts an introductory paragraph (line 18) whose first sentence is quoted here, followed by 'The two probe rows use their exact direct source identities; this candidate does not depend on private archive access.'
+    - **locator**: 7lm@origin/beta/common-contracts-r1-r6:L7/provenance/sources/0.md:16-20
+    - **quote**: The following archive description is retained program context, not an instantiated archive binding or verified source holding of this scaffold.
+  - item 76
+    - **id**: C17
+    - **kind**: change
+    - **statement**: Beta rewrites the owner-designation paragraph of sources/0.md (main line 18, '...pinned here at commit `53b28f6`... This is an implementation fact of the program...'). New text: 'The owner designated `aybllc/l6` as the archive serving curated sources to the program; the historical description records INTERNAL exposure and short revision `53b28f6`.' then the sentence quoted here, then 'A project may designate a different archive or none. Any qualified use must identify the authorized exact source/version in that project's peer/object and source records, without editing the archive from the consuming project.'
+    - **locator**: 7lm@origin/beta/common-contracts-r1-r6:L7/provenance/sources/0.md:22
+    - **quote**: That description does not instantiate an exact archive binding here or establish current archive holdings.
+  - item 77
+    - **id**: C18
+    - **kind**: change
+    - **statement**: Beta rewrites sources/0.md's 'external peer' paragraph into the conditional: 'it is an external peer: its binding is at ..., its source rows are here' becomes 'it would be an external peer: an instantiated binding belongs at `L7/peering/private/ingress/`, its source rows here, and its licence conditions at `L7/governance/`.'; adds 'or supplies a missing local binding'; and the last sentence becomes the text quoted here.
+    - **locator**: 7lm@origin/beta/common-contracts-r1-r6:L7/provenance/sources/0.md:28
+    - **quote**: A gap in its holdings belongs to the archive owner's acquisition process, not a file invented in a consuming repository.
+  - item 78
+    - **id**: C19
+    - **kind**: change
+    - **statement**: Beta changes the first Standing line of sources/0.md: 'The ledger has no rows; that is admissible.' becomes the text quoted here.
+    - **locator**: 7lm@origin/beta/common-contracts-r1-r6:L7/provenance/sources/0.md:55
+    - **quote**: The ledger currently records the two additional research-probe sources; unused source capabilities may remain empty.
+  - item 79
+    - **id**: C20
+    - **kind**: change
+    - **statement**: Beta adds two rows to L7/provenance/sources/source-ledger.md. Row NU-17271561: https://zenodo.org/records/17271561, nualgebra-main.zip, DOI 10.5281/zenodo.17271561, ZIP SHA256 60cccd32...f6f0e, 'completed audit, 2026-11-02', scope 'Numerical pair/operator fixture; no empirical endorsement', bearing on beta-research-boundaries.md and beta_boundary_probes.py. Row SM-PDF: 'Supplied Semantic_Magnitude_Aggradation_Core.docx.pdf', two-page PDF, SHA256 b8d36fa3...f235, same date and targets.
+    - **locator**: 7lm@origin/beta/common-contracts-r1-r6:L7/provenance/sources/source-ledger.md:7-8
+    - **quote**: Exact DOCX unavailable; source bytes are not redistributed here
+  - item 80
+    - **id**: C21
+    - **kind**: change
+    - **statement**: Extent of the beta diff on L7: 7 files changed, 35 insertions, 14 deletions (L7/0.md, governance/controlled/0.md, governance/licensing/0.md, peering/0.md, peering/private/ingress/0.md, provenance/sources/0.md, provenance/sources/source-ledger.md). The L7 file set is identical on both refs: no file added or removed. No allications sheet, no peer-1 or object-1 sheet, and no public peering sheet changes. Because main did not touch L7 after the fork point 2e5a6d6, the whole diff is beta-side, from two commits: 4ca3edb (2026-11-02, 'Apply approved R1–R6 and exercise bounded research objects') and 97314c5 (2026-11-03, 'Clarify 7LM research housing in the local guidance sheets').
+    - **locator**: 7lm@origin/beta/common-contracts-r1-r6:L7:git diff --stat origin/main; git log 2e5a6d6..beta -- L7
+  - item 81
+    - **id**: D01
+    - **kind**: defect
+    - **statement**: Says versus is: on main, L7/peering/private/ingress/0.md says aybllc/l6 'is bound here' and provenance/sources/0.md says it is 'pinned here at commit `53b28f6`', but the tree under L7/peering/private/ingress/ holds only the three generic sheets (0.md, peer-1/0.md, peer-1/object-1/0.md), which name no actual peer, and the source ledger has no rows. A seven-character short revision is the only pin given. The beta branch rewrites both passages to say the binding is not instantiated (C12, C14, C17).
+    - **locator**: 7lm@origin/main:L7/peering/private/ingress/0.md:46; L7/provenance/sources/0.md:18; L7/provenance/sources/source-ledger.md:5-6
+    - **quote**: `aybllc/l6` is bound here as the designated curated-source archive; read-only from every consuming repository.
+  - item 82
+    - **id**: D02
+    - **kind**: open
+    - **statement**: L7/0.md's Object line (line 3), core question (lines 6, 25) and Function row (line 26) still name 'publications' / 'publication' where the Owner clause, the Owns list (line 37) and the tree name 'allications'. The core question is given as a quotation of the specification. Whether this is a residue of the 2026-09-20 sweep or intended is not stated in L7.
+    - **locator**: 7lm@origin/main:L7/0.md:3,25-26
+    - **quote**: External provenance, public/legal governance, peering, publications, exposure, and exchange.
+  - item 83
+    - **id**: D03
+    - **kind**: open
+    - **statement**: Three sheets on main still describe governance conditions with the word 'restriction' where the allications sheets say 'controlled conditions': allications/publications/0.md:27, provenance/0.md:25, provenance/sources/0.md:40. The only former path name left under L7 is the deliberate history note in allications/0.md:38 ('moved here from `L7/publications/`'); no 'governance/restrictions' string remains under L7.
+    - **locator**: 7lm@origin/main:L7/allications/publications/0.md:27
+    - **quote**: the copyright, licence, permission, access, or restriction conditions on a release — `L7/governance/`
+  - item 84
+    - **id**: D04
+    - **kind**: defect
+    - **statement**: L7/provenance/sources/0.md on main still says the ledger 'was relocated in this pass from `USO/l6/provenance/`'; 'this pass' has no referent in the current sheet (the interior is now L8/). The beta branch removes 'in this pass' (C15).
+    - **locator**: 7lm@origin/main:L7/provenance/sources/0.md:10
+    - **quote**: It was relocated in this pass from `USO/l6/provenance/` and is header-only: it carries no rows.
+  - item 85
+    - **id**: D05
+    - **kind**: open
+    - **statement**: Scaffold-specific sentences that an adopting repository cannot copy unchanged: allications/0.md:38 cites the scaffold's own record (§25) for the move of publications/; allications/publications/0.md:39 speaks of 'The harmonized specification' filed at L8/L4/work/writing/; governance/0.md:39 cites the owner's commit c0f46e1; patents/0.md:35 says 'This repository files no patent-related representation'; several Standing lines say 'in this repository'. L7 gives no instruction on what an adopting repository writes in their place.
+    - **locator**: 7lm@origin/main:L7/allications/0.md:38
+    - **quote**: `publications/` moved here from `L7/publications/` in the pass of 2026-09-20; the record is at `L8/L6/history/harmonization-2026-09-04.md` §25.
+- **checklist**
+  - item 1
+    - **step**: 1. L7 must contain exactly four direct branches plus its own sheet
+    - **detail**: L7/0.md, L7/provenance/, L7/governance/, L7/peering/, L7/allications/. No L7/publications/ and no L7/governance/restrictions/ (both former names). Every directory under L7 carries a 0.md whose first line is '# <path>/' with trailing slash.
+    - **locator**: 7lm@origin/main:L7/0.md:16,56-92
+  - item 2
+    - **step**: 2. provenance/: five sheets
+    - **detail**: L7/provenance/0.md and children prior-art/, sources/, lineage/, authority/, each with 0.md. The scaffold also keeps sources/source-ledger.md (title, one sentence, eight-column header: Source ID | Source and locator | Issuer / owner | Exact version | Retrieved | Declared scope | Relevant artifact or layer | Status / notes). The ledger and the prior-art HTML are not among the canonical sheeted positions.
+    - **locator**: 7lm@origin/main:L7/provenance/sources/source-ledger.md:1-6
+  - item 3
+    - **step**: 3. governance/: seven sheets
+    - **detail**: L7/governance/0.md and children copyright/, licensing/, patents/, permissions/, access/, controlled/. The sixth child is named controlled/ (formerly restrictions/). copyright/ carries the extra 'One place' section: every copyright and licence condition is stated once there; licensing/ and controlled/ point to it.
+    - **locator**: 7lm@origin/main:L7/governance/copyright/0.md:16-18
+  - item 4
+    - **step**: 4. peering/: fifteen sheets
+    - **detail**: L7/peering/0.md; private/0.md and public/0.md; under each, ingress/0.md and egress/0.md; under each of those four, peer-1/0.md and peer-1/object-1/0.md. peer-1 and object-1 are canonical position names, counted from 1; further peers and objects are peer-N/ and object-M/. The peer's 0.md is the owner's register of that peer's objects and their standing.
+    - **locator**: 7lm@origin/main:L7/peering/0.md:22,28,31
+  - item 5
+    - **step**: 5. allications/: seven sheets
+    - **detail**: L7/allications/0.md and six children, each with 0.md: publications/, applications/, communications/, specifications/, notifications/, participations/. Anything formerly at L7/publications/ belongs under L7/allications/publications/. Nothing is filed directly in allications/; an act is filed at the child that names it. Total sheeted L7 positions: 35.
+    - **locator**: 7lm@origin/main:L7/allications/0.md:18-19
+  - item 6
+    - **step**: 6. Common sheet skeleton (every allications sheet and controlled/)
+    - **detail**: Line 1: '# <path>/'. Line 3: '**Object:** <one sentence>'. Line 4: '**Path:** `<path>/` · **Layer:** L7 — SURFACE / FORWARD FACE · **Owner:** L7/'. Then the headed sections in this order: '## What this directory is', '## Why it exists', '## Holds', '## Does not hold', '## Boundary / traversal rule', '## Standing'. The first four are the four questions.
+    - **locator**: 7lm@origin/main:L7/allications/applications/0.md:1-36
+  - item 7
+    - **step**: 7. The boundary rule (identical in all eight sheets)
+    - **detail**: 'L7 is the forward face outside the USO. It owns the external relations of the bounded object: provenance, governance, peering, and allications — the outward acts, of which publication is one. Public/private exposure and ingress/egress direction remain independent peering distinctions. L7 does not thereby acquire or change the lower-layer scientific meaning.' publications/ and controlled/ add a second paragraph, the quote: "Material crossing outward may lose fidelity and may never gain scientific maturity merely by being exposed."
+    - **locator**: 7lm@origin/main:L7/allications/0.md:33
+  - item 8
+    - **step**: 8. Common Standing lines
+    - **detail**: (a) 'This branch may remain empty. Presence in the agnostic topology establishes admissible capability, not mandatory population; unused now does not mean removed.' — the five non-publication children append 'Nothing is filed here at present.' (b) 'Machine metadata: described at `L7/`; not instantiated in this repository. No automation.'
+    - **locator**: 7lm@origin/main:L7/allications/applications/0.md:35-36
+  - item 9
+    - **step**: 9. Common 'Does not hold' tail (applications, communications, specifications, notifications, participations; and allications/ itself)
+    - **detail**: the writing as produced work — `L8/L4/work/writing/`; the research meaning, argument, or claim — `L8/L5/research/`; the internal history of drafts, versions, and supersessions — `L8/L6/history/`; retired states — `L8/L6/retired/`; the provenance of what went out — `L7/provenance/`; the copyright, licence, permission, access, or controlled conditions on it — `L7/governance/`; the binding to a named peer — `L7/peering/`.
+    - **locator**: 7lm@origin/main:L7/allications/applications/0.md:22-27
+  - item 10
+    - **step**: 10. Sheet: L7/allications/0.md
+    - **detail**: Object: 'Directory for the bounded object's outward acts: publications, applications, communications, specifications, notifications, and participations.' What: the owner named the position on 2026-09-19 (owner's sentence quoted as written); one of four direct L7 branches; each of the six is a nominalized outward act done once, on a date, leaving an addressable record; the name is a mnemonic, not the membership test. Why: a released publication was the only outward act with a position; this gives the family one place and keeps six senses distinct. Holds: the six positions; nothing directly. Does not hold: a standing surface rather than an act (site, account, exposed interface, repository page — no position holds them), then the common tail. Standing: may remain empty 'and so may any of its six'; a line recording where publications/ moved from and where that move is recorded in the repository's own history; the machine-metadata line.
+    - **locator**: 7lm@origin/main:L7/allications/0.md:3-39
+  - item 11
+    - **step**: 11. Sheet: L7/allications/publications/0.md
+    - **detail**: Object: 'Directory for released publication objects at the forward face.' What: a released thing with a release identity (version that left, when, form, governance); the filer records the release, not the writing or the argument; applicable actions are present, publish, release; input is 'approved L6-backed packages'; 'Publication or legal status does not strengthen scientific evidence.' Why: 'Keeps publication release at L7 while writing remains L4, research meaning remains L5, and internal history remains L6.' Holds: released publication objects with explicit release identity (source, version, authority, permissions, status, direction); released corpus/publication identity. Does not hold: writing; research meaning; internal history and retired releases; provenance; governance conditions; outward exchange to a specific peer (peering egress); drafts stamped internal, empty release slots, material that has not left. Standing: may remain empty and what, if anything, is filed at present; the 'corpus' disposition (Split and reserved); machine-metadata line noting 'release state' is not enabled.
+    - **locator**: 7lm@origin/main:L7/allications/publications/0.md:3-41
+  - item 12
+    - **step**: 12. Sheet: L7/allications/applications/0.md
+    - **detail**: Object: 'Directory for applications the bounded object makes outward.' What: the object asks something of an external body and the asking is the record (funding, review, admission to a programme or standards body, or of its method to an outside case); filed as made — to whom, when, what version, what conditions. Why: directed at a specific authority, carries an outcome, binds the object to what it claimed; not a release, and its outcome is not a research finding. Holds: applications with body, date, version submitted, outcome where known. Does not hold: the judgement whether the claim is sound (L8/L5/research/); a correspondence that asks for nothing (communications/); then the common tail. Standing: the two common lines.
+    - **locator**: 7lm@origin/main:L7/allications/applications/0.md:3-36
+  - item 13
+    - **step**: 13. Sheet: L7/allications/communications/0.md
+    - **detail**: Object: 'Directory for communications the bounded object issues outward.' What: an act whose substance is the conveying (statement, correspondence, announcement, answer); filed: what was said, to whom, when. Why: saying something is not releasing, asking, or notifying; it is 'the residual outward act of speech'. Holds: communications with recipient, date, exact content or its version. Does not hold: a notice discharging an obligation (notifications/); a request of an external body (applications/); a released object with a release identity (publications/); then the common tail. Standing: the two common lines.
+    - **locator**: 7lm@origin/main:L7/allications/communications/0.md:3-37
+  - item 14
+    - **step**: 14. Sheet: L7/allications/specifications/0.md
+    - **detail**: Object: 'Directory for specifications the bounded object issues outward for others to build or check against.' What: a contract handed to an external party to implement, interoperate with or verify (interface contract, schema, wire format, published requirement set), filed as issued at its version. Why: a self-directed specification is L4 work with L5 meaning; one handed outward is a commitment, and the version built against matters. Holds: specifications issued outward, each at an exact version, with who it was issued to or published for. Does not hold: the specification as a written artifact under development (L8/L4/work/writing/); an external specification the object consumes (L7/peering/*/ingress/peer-1/object-1/, NO EDIT, NO DELETE); then the common tail. Standing: the two common lines.
+    - **locator**: 7lm@origin/main:L7/allications/specifications/0.md:3-36
+  - item 15
+    - **step**: 15. Sheet: L7/allications/notifications/0.md
+    - **detail**: Object: 'Directory for notices the object issues outward.' What: giving notice is itself the thing required (disclosure, required report, breach or defect notice, alert); filed: the notice, party notified, date, obligation discharged. Why: a notice usually discharges an obligation; 'was notice given, and when' has one place. Holds: notices with recipient, date, and the obligation or condition under which given. Does not hold: the obligation itself, a governance fact (L7/governance/); an ordinary statement (communications/); then the common tail. Standing: the two common lines.
+    - **locator**: 7lm@origin/main:L7/allications/notifications/0.md:3-36
+  - item 16
+    - **step**: 16. Sheet: L7/allications/participations/0.md
+    - **detail**: Object: 'Directory for the bounded object's participations in external settings.' What: taking part (conference, working group, review panel, standards body, collaboration); filed: which body, role, period, what was contributed or received standing from. Why: an external relation with a date and a role; not a publication, application or peer binding. Holds: participations with body, role, period, contribution. Does not hold: participant positions inside the research setting (L8/L5/institution/peers/); a bound peer object exchanged with a body (L7/peering/); anything produced and then released (publications/); then the common tail. Standing: the two common lines.
+    - **locator**: 7lm@origin/main:L7/allications/participations/0.md:3-37
+  - item 17
+    - **step**: 17. Sheet: L7/governance/controlled/0.md (as on main)
+    - **detail**: Object: 'Directory for restrictions and other conditions that constrain external disclosure, use, transfer, or handling.' What: a record states what may not be done with an object at the boundary (not redistributed, not reproduced at length, not used on-line, not transferred, not disclosed, not opened); one of six governance positions; the filer records the restriction, its source (licence, copyright holder, patent filing, owner ruling) and the objects it binds; the restriction stays here and the decision's history at L8/L6/. Why: 'Keeps what is controlled explicit and machine-addressable without redefining the underlying research.' Holds: restrictions on disclosure, use, transfer, handling; restrictions following from a sibling condition, cross-referenced by path; owner rulings restricting what crosses outward. Does not hold: the restricted object (L7/peering/ or L7/allications/publications/); the deriving copyright/licence/patent condition; who may access (access/); what is permitted (permissions/); history (L8/L6/history/) and the retired binding (L8/L6/retired/). Boundary: common paragraph plus the 'Material crossing outward...' quote. Standing: may remain empty; no inherited term placed here; machine-metadata line plus 'here restrictions are stated in prose only'.
+    - **locator**: 7lm@origin/main:L7/governance/controlled/0.md:3-40
+  - item 18
+    - **step**: 18. Decide main wording or beta wording before writing controlled/ and its neighbours
+    - **detail**: The unmerged beta differs in controlled/ only in Holds: the second bullet becomes two — pointers to copyright or licence conditions stated once at L7/governance/copyright/ ('do not restate those conditions independently here'), and other restrictions cross-referenced to the patent, permission or access record. Beta also changes licensing/, L7/0.md, peering/0.md, private/ingress/0.md, sources/0.md and the ledger. The seven allications sheets are identical on main and beta.
+    - **locator**: 7lm@origin/beta/common-contracts-r1-r6:L7/governance/controlled/0.md:19-20
+  - item 19
+    - **step**: 19. Replace scaffold-only sentences with the adopting repository's own facts
+    - **detail**: Do not copy: the §25 record pointer in allications/0.md:38, the 'harmonized specification' sentence in publications/0.md:39, commit c0f46e1 in governance/0.md:39, and 'in this repository' statements about what is or is not filed. peer-1 sheets name the actual peer in the adopting repository. Only six scaffold sheets carry 'Exemplars (by reference)'; L7 does not say whether an exemplar repository's own sheets carry that section.
+    - **locator**: 7lm@origin/main:L7/peering/public/ingress/peer-1/0.md:8
+- **open_questions**
+  - Which wording do the exemplars mirror: main (the model of record) or the unmerged beta? They differ in 7 L7 files, including controlled/ Holds, licensing/, the consensus-baseline paragraph of L7/0.md and the aybllc/l6 passages. The seven allications sheets are the same on both.
+  - L7/0.md's Object line, core question and Function row still say 'publications' rather than 'allications' (L7/0.md:3, 25-26). L7 does not say whether this is intended; the specification and record section 37 were outside this scope.
+  - aybllc/l6: main says it 'is bound here' and 'pinned here at commit 53b28f6', but no peer or object sheet names it and the ledger is empty. Whether each exemplar must instantiate a real private-ingress binding and source row for it was not settled from L7.
+  - I read 'the four questions' as the four headed sections What this directory is / Why it exists / Holds / Does not hold. No L7 sheet uses the phrase 'four questions'.
+  - What an adopting repository writes in place of the scaffold-only Standing sentences (the §25 move record, the specification sentence in publications/, commit c0f46e1) is not stated in L7.
+  - Where the exemplar mains' existing L7/publications/binder/ content goes under L7/allications/publications/ was not examined; only directory names were listed.
+  - Other 7lm branches also change L7 and were not read: origin/ccr-00099fac-hjosbo (draft PR #19) and origin/audit/peering-descriptive-reframe-2026-09-20 (diff stat tail shows 35 files, 727 insertions, 509 deletions, including L7 files). origin/ccr-9391bd81-f2enmj (PR #20), both copilot branches and origin/ccr-9a67809a-iwii3n show no L7 change against their merge-bases.
+  - Whether exemplar sheets should carry their own 'Exemplars (by reference)' section, which in the scaffold points at the exemplars themselves, is not stated in L7.
+  - The heading 'THESE REPOS BELOW ARE PRIVATE THUS WILL RETURN 404 UNLESS YOU HAVE ACCESS.' sits as a level-3 heading with no blank line before it (L7/0.md:159). L7 does not say whether the exemplars' L7/0.md should carry it.

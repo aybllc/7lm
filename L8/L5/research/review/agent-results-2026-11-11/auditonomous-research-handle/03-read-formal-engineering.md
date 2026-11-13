@@ -1,0 +1,552 @@
+# read:formal-engineering
+
+Agent result, as returned. Workflow: Handle on the Auditonomous research and manuscript. Run `wf_9c2917a7-7f0`. Phase: Read.
+
+- **scope**: Layers 2 and 3 of aybllc/auditonomous. MAIN (origin/main 2165144): all 13 files under L8/L2 and L8/L3. BETA (714480d): the two added files (beta predicate, beta method), plus the code/result/binding they point to. ROADMAP (9259c18): diff against MAIN under L8/L2 and L8/L3 (empty). Cross-references followed: MAIN L0 definition; MAIN session of 2026-08-05 §7.4/§7.5; MAIN perpetuity adjudication §5-§7; MAIN envelope C3 row; ROADMAP book roadmap and vocabulary paper (for Aud(S,F)); autonomous beta e64b382 and 7lm beta 97314c5 (pins only). All read from git objects; no working tree read; nothing written to any repository. No repository code or test was run; the stored beta result JSON was parsed from the git object with an inline read-only check.
+- **summary**: Layer 2 (formal mathematics) holds no formal object in the merged state. Its only file besides directory sheets is a formulas ledger that declares itself EMPTY: zero rows in the register, the composite table and the change log. The relations, operators and proofs positions are each "admissible and empty". No predicate for "auditonomous" is stated anywhere; "Aud(S,F)" was a slip in the roadmap's first version, corrected there by grep. The one exact result in the repository, a four-line isomorphism, sits in an L4 session file, unregistered. A formula inconsistency recorded inside the L0 definition is also unregistered.
+
+  Layer 3 (engineering mathematics) holds two documents. The Seal-Gated Interlock is a PROPOSAL: nothing built, its adversarial attack pass never folded in (no result exists in any state), IEC 61508 / ISO 13849 NOT-CHECKED, its trust regress open. The external priors file records quotations from Rump, Kearfott, Neumaier, Comba and Stolfi, and Stolfi and de Figueiredo on the dependency problem, affine arithmetic, partial dependency and condensation; one taxonomy is CONTESTED and two claims are unchecked. Its sources have no ledger rows and I could not re-fetch them. Approximation and tolerances are empty.
+
+  The roadmap branch changes nothing in these layers but says Layer 2 "must be filled first" for Part V. The beta adds a finite fixture predicate and an enumeration method, both self-qualified as synthetic, software-only and not proof of authenticity; I confirmed the stored 32-event result satisfies the predicate and that the pinned hashes match, but the beta did not update the sheets or the ledger.
+
+  The gap is wide: nine concepts the definition relies on (epistemic state, inability to conceal, the tamper-evident record, carried uncertainty, firmware-level enforcement, truth envelope, measurability, discretion, transformation path) have no formal statement and no method. First step: the owner registers or rejects the listed candidate objects.
+- **items**
+  - item 1
+    - **id**: L2-01
+    - **title**: Formulas ledger: no row
+    - **path**: L8/L2/formal-mathematics/FORMULAS_LEDGER.md
+    - **where**: MAIN, ROADMAP, BETA (identical blob 8affefd)
+    - **what_it_is**: The register of mathematical objects with separate columns for a formula's existence and its use. All three tables (register, composite objects, change log) have a header and one blank row. Seven required checks before a formula is used are listed but have never been applied to anything.
+    - **own_label**: "Currently: **EMPTY** — no formulas held."
+    - **evidence_state**: EMPTY
+    - **checked_how**: Read the whole file; counted table rows (lines 16-18, 38-40, 58-60 each header plus one blank row). Blob id identical in all three states.
+    - **locator**: MAIN:L8/L2/formal-mathematics/FORMULAS_LEDGER.md:10
+    - **quote**: Currently: **EMPTY** — no formulas held.
+    - **key_claims**
+      - A formula's existence and its application are checked separately (line 6)
+      - Component validity does not imply composite validity (lines 34-36)
+    - **open_items**
+      - Entering a row is the owner's act (MAIN:L8/L2/formal-mathematics/0.md:39)
+      - Beta uses SHA-256 in a predicate without a row
+  - item 2
+    - **id**: L2-02
+    - **title**: relations/ position
+    - **path**: L8/L2/formal-mathematics/relations/0.md
+    - **where**: MAIN, ROADMAP empty; BETA holds one file but the sheet still says empty
+    - **what_it_is**: Directory for exact relations among admitted formal objects. Nothing filed in MAIN or ROADMAP. In BETA the file AUDITONOMOUS_BETA_PREDICATE.md is filed here, while the sheet (same blob 0b64002) was not updated.
+    - **own_label**: "Nothing is filed at this position; the position is admissible and empty."
+    - **evidence_state**: EMPTY
+    - **checked_how**: ls-tree of all three states; read sheet.
+    - **locator**: MAIN:L8/L2/formal-mathematics/relations/0.md:33
+    - **quote**: Nothing is filed at this position; the position is admissible and empty.
+  - item 3
+    - **id**: L2-03
+    - **title**: operators/ position
+    - **path**: L8/L2/formal-mathematics/operators/0.md
+    - **where**: MAIN, ROADMAP, BETA
+    - **what_it_is**: Directory for exact operators, functions, gates, constructors with declared domain/codomain. Nothing filed in any state. No operator of the theory (for example Compose, Seal, Attest, enable) is stated here.
+    - **own_label**: "Nothing is filed at this position; the position is admissible and empty."
+    - **evidence_state**: EMPTY
+    - **checked_how**: ls-tree of all three states; read sheet.
+    - **locator**: MAIN:L8/L2/formal-mathematics/operators/0.md:33
+    - **quote**: Nothing is filed at this position; the position is admissible and empty.
+  - item 4
+    - **id**: L2-04
+    - **title**: proofs/ position
+    - **path**: L8/L2/formal-mathematics/proofs/0.md
+    - **where**: MAIN, ROADMAP, BETA
+    - **what_it_is**: Directory for proofs, lemmas, derivations and explicit unproved obligations. Nothing filed in any state: no proof and no recorded proof obligation. The sheet names one candidate, the four-line isomorphism proof, as the owner's call.
+    - **own_label**: "Nothing is filed at this position; the position is admissible and empty."
+    - **evidence_state**: EMPTY
+    - **checked_how**: ls-tree of all three states; read sheet.
+    - **locator**: MAIN:L8/L2/formal-mathematics/proofs/0.md:35
+    - **quote**: Candidate (owner's call): the four-line proof of the isomorphism (ℝ≥0,+) ≅ ((0,1],×), §7.5
+    - **open_items**
+      - No proof obligation is recorded for any claim of the theory
+  - item 5
+    - **id**: L2-05
+    - **title**: Candidate exact object: the isomorphism (ℝ≥0,+) ≅ ((0,1],×) via φ(x)=e^(−x)
+    - **path**: L8/L4/work/writing/sessions/SESSION_2026-08-05_AUDITON_ARCHITECTURE.md
+    - **where**: MAIN (filed at L4, named as candidate at L2); same in ROADMAP, BETA
+    - **what_it_is**: The only exact mathematical result with a written proof in the merged state: four lines (homomorphism, identity, bijectivity onto (0,1], inverse −ln p). It is scoped by its own text to the magnitude rail only and says nothing about id(p_i), the pending-to-committed transition or discreteness. Not extracted to L2 and not in the ledger.
+    - **own_label**: "INTERNALLY DERIVED" (MAIN:L8/L2/0.md:76); "derived by hand this session" (session §7.5 heading)
+    - **evidence_state**: INTERNALLY CHECKED
+    - **checked_how**: The file records a hand derivation. I re-did the four lines by hand: φ(x+y)=φ(x)φ(y); φ(0)=1; φ strictly decreasing and continuous from 1 toward 0 so onto (0,1]; inverse −ln p. They hold (as a monoid isomorphism). No external source cited for it.
+    - **locator**: MAIN:L8/L4/work/writing/sessions/SESSION_2026-08-05_AUDITON_ARCHITECTURE.md:443-465 (§7.5)
+    - **quote**: **[source text withheld from the public copy]**.
+    - **key_claims**
+      - Additive non-negative accumulator and [source text withheld from the public copy]
+      - Surprisal and Boltzmann parallels are 'textbook, NOT-CHECKED this session' (line 459-460)
+    - **open_items**
+      - Owner's call whether to register it at L2 with a ledger row (MAIN:L8/L2/0.md:76; ROADMAP roadmap step, line 532)
+    - **depends_on**
+      - L2-01
+      - L2-04
+  - item 6
+    - **id**: L2-06
+    - **title**: Candidate 'L2 or L3, unresolved': the perpetuity argument
+    - **path**: L8/L5/research/review/PERPETUITY_QUESTION_ADJUDICATION.md
+    - **where**: MAIN (filed at L5 review; named at L2 sheet as unplaced)
+    - **what_it_is**: An argument that an append-only record forfeits recurrence but not existence: 'cannot erase' makes the joint state leave every compact set, yet a [source text withheld from the public copy] for global existence. It rests on externally quoted theorems (Bhat and Bernstein, Furstenberg, Turing, Dijkstra) transferred to engineered systems. A first draft's stronger conclusion was withdrawn on 2026-08-02 after the owner's challenge. The owner's ruling: theorem candidate 'DEAD FOR NOW'.
+    - **own_label**: "INTERNALLY DERIVED / CONJECTURE" (§5, §7); transfer "FORMULA VERIFIED / APPLICATION UNVERIFIED" (§10 line 297)
+    - **evidence_state**: CONJECTURE (the argument); the theorems it uses are EXTERNALLY CHECKED in the file; its layer placement is UNRESOLVED
+    - **checked_how**: Read §5-§5.2, §7, §10, §11 and the ledger entry. The file records fetched quotations with journal citations and a fidelity grading; I could not re-fetch (no network). I checked the two elementary examples: x'=1 is unbounded and global; a constant-rate record [source text withheld from the public copy].
+    - **locator**: MAIN:L8/L5/research/review/PERPETUITY_QUESTION_ADJUDICATION.md:152 (§5.1); MAIN:L8/L2/0.md:76
+    - **quote**: [source text withheld from the public copy]**.
+    - **open_items**
+      - Placement L2 or L3 unresolved (MAIN:L8/L2/0.md:76)
+      - Publisher-of-record captures for ACM/IEEE sources still needed (line 319)
+      - Several quotes relayed through an extraction model: 'confirm before publication' (line 327)
+  - item 7
+    - **id**: L2-07
+    - **title**: The predicate 'auditonomous' itself: not formally stated; Aud(S,F) does not exist
+    - **path**: L8/L5/research/review/BOOK_STRUCTURE_AND_ROADMAP_2026-09-13.md
+    - **where**: ROADMAP only (the mention and its correction); nothing in MAIN, BETA or HISTORY
+    - **what_it_is**: No state contains a formal predicate saying when a system S is auditonomous. 'Aud(S,F)' was written in the roadmap's first version and then corrected: a grep found no such predicate in the sourcebook or spine. What the sourcebook states instead is an [source text withheld from the public copy] the Q component. A second, different framing exists (five-axis profile A=(O,R,G,P,C)); which governs is unruled decision D20.
+    - **own_label**: "NEGATIVE FINDING, VERIFIED (grep, 2026-09-14)" (vocabulary paper line 305)
+    - **evidence_state**: UNRESOLVED
+    - **checked_how**: I ran git grep -F 'Aud(' over MAIN, ROADMAP, BETA and HISTORY: the only hits are the three ROADMAP passages that report its absence. I confirmed the AP profile at ROADMAP sourcebook lines 63-69 and line 111. git grep for 'AP(S' in MAIN returns nothing.
+    - **locator**: ROADMAP:L8/L5/research/review/BOOK_STRUCTURE_AND_ROADMAP_2026-09-13.md:647; ROADMAP:L8/L4/work/writing/sourcebook/Auditonomous_Book_Material_Sourcebook_v0.1.md:63-69,111
+    - **quote**: [source text withheld from the public copy]
+    - **open_items**
+      - D20: which framing governs (standards-indexed profile, five-axis profile, or a reconciled new definition)
+  - item 8
+    - **id**: L2-08
+    - **title**: Formal content carried inside the L0 definition: the compose-uncertainty formula inconsistency
+    - **path**: L8/L0/semantics/definitions/AUDITONOMOUS_DEFINITION.md
+    - **where**: MAIN (same text in BETA, ROADMAP)
+    - **what_it_is**: The definition's Appendix B reports two eBIOS documents giving different formulas for composed uncertainty: u_out = √[(u1²·u2²)/(u1²+u2²)] against √((w₁²u₁²+w₂²u₂²)/(w₁+w₂)) with w=1/u², which reduces to 1 for every input. This is the only formula-level content in the definition, apart from the quoted rules that Compose (⊙) reduces uncertainty only when justified and that invalid inputs return u = ∞. [source text withheld from the public copy] formulas ledger, although the ledger has the exact use label for it.
+    - **own_label**: "FORMULA INCONSISTENCY DETECTED"; "[source text withheld from the public copy]"
+    - **evidence_state**: CONTRADICTED
+    - **checked_how**: I redid the reduction by hand: w₁²u₁² = u₁²/u₁⁴ = 1/u₁² = w₁, so the numerator equals w₁+w₂ and the expression is 1. The first form is the standard inverse-variance combination. The eBIOS documents quoted are not in these repositories, so the quotations themselves are unconfirmed by me.
+    - **locator**: MAIN:L8/L0/semantics/definitions/AUDITONOMOUS_DEFINITION.md:257
+    - **quote**: [source text withheld from the public copy]).
+    - **open_items**
+      - No ledger row; ROADMAP roadmap says keep it marked FORMULA INCONSISTENCY DETECTED (line 533)
+    - **depends_on**
+      - L2-01
+  - item 9
+    - **id**: L3-01
+    - **title**: L3 layer sheet: the 'Working life boundary hypothesis'
+    - **path**: L8/L3/0.md
+    - **where**: MAIN, ROADMAP, BETA (identical blob 743d54e)
+    - **what_it_is**: The layer sheet carries, from the 7LM specification, a hypothesis that mathematics depending on continuation, tolerance, uncertainty, adaptation, feedback or environmental exchange begins at L3, and that 'L2 does not mathematically support life'. The sheet says nothing filed at L3 tests it. It also lists three candidate L3 objects not yet extracted.
+    - **own_label**: "This boundary remains a research hypothesis until tested."
+    - **evidence_state**: CONJECTURE
+    - **checked_how**: Read the sheet; no test of the hypothesis is recorded anywhere under L8/L3.
+    - **locator**: MAIN:L8/L3/0.md:63-73
+    - **quote**: **Clarification.** This boundary remains a research hypothesis until tested.
+    - **open_items**
+      - Candidates not extracted (line 92): the IEEE 1788 decorations mapping; session scaling/precision reasoning; the envelope's C3 'Bound' row
+  - item 10
+    - **id**: L3-02
+    - **title**: approximation/ position
+    - **path**: L8/L3/engineering-mathematics/approximation/0.md
+    - **where**: MAIN, ROADMAP, BETA
+    - **what_it_is**: Directory for approximations and discretizations of exact L2 relations. Nothing filed. The named candidate is the session's §7.4 reasoning that catastrophic cancellation is not the threat because nothing is discarded; that passage itself says the hazard survives and only the concealment does not. Its Goldberg quotations were fetched from an Oracle reference copy on 2026-08-05.
+    - **own_label**: "Nothing is filed at this position; the position is admissible and empty."; candidate analogies "flagged NOT-CHECKED"
+    - **evidence_state**: EMPTY
+    - **checked_how**: ls-tree; read sheet and session §7.4 (lines 409-441).
+    - **locator**: MAIN:L8/L3/engineering-mathematics/approximation/0.md:34
+    - **quote**: Candidate (owner's call): the scaling and precision reasoning of §7.4
+    - **open_items**
+      - No approximation, discretization or precision choice is stated for any quantity of the theory
+  - item 11
+    - **id**: L3-03
+    - **title**: tolerances/ position
+    - **path**: L8/L3/engineering-mathematics/tolerances/0.md
+    - **where**: MAIN, ROADMAP, BETA
+    - **what_it_is**: Directory for declared tolerances and engineering bounds. Nothing filed. By reference only: the envelope's C3 'Bound' row (enclosure per IEEE 1788 §12.10.1, λ=1 linear form, tightness per §12.10.3). The envelope labels its composition COMPOSITE OBJECT UNVERIFIED, and the enclosure regime (λ) is the owner's unruled decision D11.
+    - **own_label**: "Nothing is filed at this position; the position is admissible and empty."
+    - **evidence_state**: EMPTY
+    - **checked_how**: ls-tree; read sheet; confirmed the C3 row at MAIN:L8/L1/state-space/AUDITON_ENVELOPE.md:126 and the composite label at :252.
+    - **locator**: MAIN:L8/L3/engineering-mathematics/tolerances/0.md:33
+    - **quote**: By reference: the C3 "Bound" row of `L8/L1/state-space/AUDITON_ENVELOPE.md`
+    - **open_items**
+      - No tolerance with units, precision and operating region is declared for anything
+      - D11 (ROADMAP roadmap line 250): owner picks λ
+  - item 12
+    - **id**: L3-04
+    - **title**: Seal-Gated Interlock (SGI): what it proposes
+    - **path**: L8/L3/engineering-mathematics/PROPOSAL_seal_gated_interlock.md
+    - **where**: MAIN, ROADMAP, BETA (identical blob 7b2b83d); HISTORY at intake/research/
+    - **what_it_is**: A design answering the owner's request for a missing segregation layer. [source text withheld from the public copy]: compute emits record and proposed action over a one-way carrier and receives nothing back; the sealer commits to the ledger; only then the SGI asserts enable(A, scope, ttl); the fire event or failure is written back. Claimed properties: unrecorded actuation is inexpressible, no back-channel, ordering by construction. It says it does not cover inaction, internal state changes, choosing not to sense, or the truth of the record. Safety-critical actions are never gated.
+    - **own_label**: "Status: PROPOSAL. [source text withheld from the public copy]."; "Nothing adopted. Reserved for the author."
+    - **evidence_state**: UNRESOLVED
+    - **checked_how**: Read the whole file. Its three internal citations (EB:233, EB:38, LEX:487) resolve verbatim at ROADMAP:L8/L4/work/writing/auditonomous_ebios_core_architecture_math_source-535f70d_draft.md:233 and :38 and ROADMAP:L7/peering/private/ingress/peer-3/object-1/martin_2026_embodied_auditonomy_lexrom_cabin_model_v0.2_ea08f59.md:487; neither file is in MAIN. The claim that a grep of eBIOS src/ finds no actuation code concerns a repository not available here: unconfirmed.
+    - **locator**: MAIN:L8/L3/engineering-mathematics/PROPOSAL_seal_gated_interlock.md:6-8, 45-46, 110-127
+    - **quote**: **[source text withheld from the public copy].**
+    - **key_claims**
+      - Complete mediation for actuation only (line 112)
+      - Justification is sealed before the outcome is known, which forecloses post-hoc rationalisation (lines 121-124)
+      - 'The bootstrapping objection is untouched' (line 126)
+    - **open_items**
+      - See L3-05 for what it needs to stop being a proposal
+  - item 13
+    - **id**: L3-05
+    - **title**: SGI: what it would need to stop being a proposal
+    - **path**: L8/L3/engineering-mathematics/PROPOSAL_seal_gated_interlock.md
+    - **where**: MAIN, ROADMAP, BETA
+    - **what_it_is**: By its own §8 and status line: (1) the findings of an adversarial attack pass, still running when the file was written, folded in, especially whether the world changing is [source text withheld from the public copy] sensors; (2) IEC 61508 / ISO 13849 treatment of interlocks checked; (3) an answer to its own trust regress (it proposes an independent second witness); (4) something built; (5) the owner's adoption. No attack-pass result exists in any state. Also missing by the layer's own rules: an L2 statement of the record-commitment predicate it relies on, and explicit tolerances (for example ttl) with units.
+    - **own_label**: "[source text withheld from the public copy])" for IEC 61508 / ISO 13849
+    - **evidence_state**: UNRESOLVED
+    - **checked_how**: git grep -i for 'attack pass', 'implicit ack', 'NUGate', 'interlock' over MAIN, ROADMAP and HISTORY: no attack-pass findings anywhere; the only hits are the proposal, sheets, routing records and book-plan pointers. BETA states the SGI is not built (BETA:L8/L3/engineering-mathematics/AUDITONOMOUS_BETA_METHOD.md:11).
+    - **locator**: MAIN:L8/L3/engineering-mathematics/PROPOSAL_seal_gated_interlock.md:166-178
+    - **quote**: **[source text withheld from the public copy].
+    - **open_items**
+      - Attack pass result: not found
+      - IEC 61508 / ISO 13849: NOT-CHECKED
+      - Trust regress: '[source text withheld from the public copy]'
+      - Book Ch 14 depends on it (ROADMAP roadmap line 230: '[source text withheld from the public copy]')
+    - **depends_on**
+      - L3-04
+  - item 14
+    - **id**: L3-06
+    - **title**: SGI: the two claimed novelties
+    - **path**: L8/L3/engineering-mathematics/PROPOSAL_seal_gated_interlock.md
+    - **where**: MAIN, ROADMAP, BETA
+    - **what_it_is**: The proposal claims two things prior art does not cover: an authorization predicate that asks 'is this action recorded?' rather than 'is it permitted?', and sending [source text withheld from the public copy]. Both rest on 'searched and not found'. No search log (indexes, queries, dates) is recorded in the file or elsewhere, and the predicate is not written formally anywhere.
+    - **own_label**: "[source text withheld from the public copy]"
+    - **evidence_state**: ASSERTED
+    - **checked_how**: Read §4. Looked for a recorded search in MAIN (git grep for 'record-commitment', 'enable line'): none outside the proposal. A negative finding without a recorded search cannot be confirmed.
+    - **locator**: MAIN:L8/L3/engineering-mathematics/PROPOSAL_seal_gated_interlock.md:93-104
+    - **quote**: **[source text withheld from the public copy].**
+    - **open_items**
+      - Novelty search not recorded; [source text withheld from the public copy]
+    - **depends_on**
+      - L3-04
+  - item 15
+    - **id**: L3-07
+    - **title**: SGI: prior art it cites and the IEEE 7009 split
+    - **path**: L8/L3/engineering-mathematics/PROPOSAL_seal_gated_interlock.md
+    - **where**: MAIN, ROADMAP, BETA
+    - **what_it_is**: The proposal names established prior art to cite rather than coin: [source text withheld from the public copy]), complete mediation (Saltzer and Schroeder 1975), one-way carrier (SP 800-82r3; AC-4(7)), separated recorder (AU-9(1), (2), (7)), and the covert-channel problem of acknowledgements (Kang et al., ACSAC 2005). It rests its availability answer on [source text withheld from the public copy]: safety-critical functions must come from elements not capable of autonomy. The file itself gives citations but no quotations.
+    - **own_label**: "verified this session"
+    - **evidence_state**: INTERNALLY CHECKED (against the repository's own extractions; the extractions claim to be verbatim from the standards)
+    - **checked_how**: I matched the cited controls to MAIN:L7/provenance/sources/staging-records/standards/extracted/SP800-53r5_AC-AU_verbatim.md (AC-4(7) line 305, AC-25 line 954, AU-9(1) 1193, AU-9(2) 1197, AU-9(7) 1223); Kang and Saltzer to MAIN:L8/L5/research/findings/SEGREGATION_AND_FORGETTING_2026-08-04.md:51,63-70; IEEE 7009 cl. 6.2 and ASR-002/003 to MAIN:L8/L4/work/computation/ieee-requirements-for-autonomouos.md:586-592 and 810-817. ASR-002/003 are in Annex A p. 37, not cl. 6.2. Anderson 1972, TCSEC and SP 800-82r3 were not found recorded. I could not compare against the standards themselves.
+    - **locator**: MAIN:L8/L3/engineering-mathematics/PROPOSAL_seal_gated_interlock.md:84-91, 134-147
+    - **quote**: [source text withheld from the public copy]**.
+    - **open_items**
+      - MAIN:L8/L1/state-space/REQUIREMENTS_OWNERSHIP.md:263-266 (Q12): IEEE [source text withheld from the public copy]'
+    - **depends_on**
+      - L3-04
+  - item 16
+    - **id**: L3-08
+    - **title**: Priors file: the dependency problem is real, named and informational
+    - **path**: L8/L3/engineering-mathematics/uncertainty/PRIORS_EXTERNAL_2026-08-04.md
+    - **where**: MAIN, ROADMAP, BETA (identical blob 0e70dac)
+    - **what_it_is**: Records quotations that subtracting an interval from itself doubles its width, that this occurs in power-set operations too, and that adding the fact that two enclosures are of the same quantity sharpens the result. Sources: Rump, Acta Numerica 19 (2010) §5.2; Kearfott, Computing 47(2) 1991 and [source text withheld from the public copy]).
+    - **own_label**: "ESTABLISHED" (three rows of the verdict table, lines 111-113)
+    - **evidence_state**: EXTERNALLY CHECKED
+    - **checked_how**: The file records verbatim quotations with section locators. It gives no URL, fetch date or file hash, and none of the sources has a row in MAIN:L7/provenance/sources/LEDGER.md. I could not re-fetch. I checked the arithmetic: [a,b]−[a,b] has width 2(b−a); [3.14,3.15]−[3.14,3.15] = [−0.01,0.01].
+    - **locator**: MAIN:L8/L3/engineering-mathematics/uncertainty/PRIORS_EXTERNAL_2026-08-04.md:8-30
+    - **quote**: **[source text withheld from the public copy]**
+    - **open_items**
+      - Quotations not re-verified by this pass
+      - No pointer rows for Rump, Kearfott in the source ledger
+  - item 17
+    - **id**: L3-09
+    - **title**: Priors file: identity versus resemblance (affine arithmetic)
+    - **path**: L8/L3/engineering-mathematics/uncertainty/PRIORS_EXTERNAL_2026-08-04.md
+    - **where**: MAIN, ROADMAP, BETA
+    - **what_it_is**: Records that in affine arithmetic the difference of an affine form with itself is identically zero because shared noise symbols show the operands are the same quantity, not two quantities with the same range. Sources: Comba and Stolfi, Anais do VII SIBGRAPI (1993) §4.1; affine form definition from Stolfi and [source text withheld from the public copy]. The file reads this as the author's own distinction, already in the literature since 1993.
+    - **own_label**: "ESTABLISHED" (line 114)
+    - **evidence_state**: EXTERNALLY CHECKED
+    - **checked_how**: Verbatim quotation with section locator recorded in the file; not re-fetched by me; no ledger row for the source.
+    - **locator**: MAIN:L8/L3/engineering-mathematics/uncertainty/PRIORS_EXTERNAL_2026-08-04.md:40-56
+    - **quote**: [source text withheld from the public copy]
+    - **open_items**
+      - Not re-verified by this pass
+  - item 18
+    - **id**: L3-10
+    - **title**: Priors file: partial dependency answers '[source text withheld from the public copy]'
+    - **path**: L8/L3/engineering-mathematics/uncertainty/PRIORS_EXTERNAL_2026-08-04.md
+    - **where**: MAIN, ROADMAP, BETA
+    - **what_it_is**: The owner objected: "[source text withheld from the public copy]." The file records that shared noise symbols between two affine forms express partial dependency, with coefficients giving magnitude and sign, so cancellation does not need identical priors. Sources: Comba and Stolfi 1993 §3; Stolfi and [source text withheld from the public copy]), including a worked cancellation at §3.13.1.
+    - **own_label**: "ESTABLISHED" (line 115)
+    - **evidence_state**: EXTERNALLY CHECKED
+    - **checked_how**: Verbatim quotations with section locators recorded in the file; not re-fetched by me.
+    - **locator**: MAIN:L8/L3/engineering-mathematics/uncertainty/PRIORS_EXTERNAL_2026-08-04.md:60-81
+    - **quote**: [source text withheld from the public copy].
+    - **open_items**
+      - Whether a colloquium monograph meets the status ladder's outside-source rule is not stated
+  - item 19
+    - **id**: L3-11
+    - **title**: Priors file: the owner's aggregation proposal is condensation, and it costs future cancellation
+    - **path**: L8/L3/engineering-mathematics/uncertainty/PRIORS_EXTERNAL_2026-08-04.md
+    - **where**: MAIN, ROADMAP, BETA
+    - **what_it_is**: Records that replacing several noise terms by one with coefficient equal to the sum of absolute values is an established operation ('condensing noise variables'), and that the source states its cost. The file says the owner independently reconstructed it ("[source text withheld from the public copy]") and that this confirms an internal finding that pruning is irreversible. Source: Stolfi and de Figueiredo 1997 §3.18.1 p. 81. The internal test and finding it refers to are not in MAIN and are given no locator.
+    - **own_label**: "ESTABLISHED" and "ESTABLISHED, verbatim" (lines 116-117)
+    - **evidence_state**: EXTERNALLY CHECKED
+    - **checked_how**: Verbatim quotation with section and page recorded; not re-fetched. The internal counterpart (the bit-exact pruning conjecture) exists only at ROADMAP:L8/L5/research/review/CONJECTURE_bit_exact_pruning.md; 'M(n,r) = |n| + r' appears nowhere else in MAIN.
+    - **locator**: MAIN:L8/L3/engineering-mathematics/uncertainty/PRIORS_EXTERNAL_2026-08-04.md:85-103
+    - **quote**: [source text withheld from the public copy].**
+    - **open_items**
+      - Internal results it claims to confirm are not held in MAIN
+  - item 20
+    - **id**: L3-12
+    - **title**: Priors file: wrapping versus dependency taxonomy
+    - **path**: L8/L3/engineering-mathematics/uncertainty/PRIORS_EXTERNAL_2026-08-04.md
+    - **where**: MAIN, ROADMAP, BETA
+    - **what_it_is**: The file warns that authors disagree on whether the wrapping effect is separate from the dependency problem (Rump, Kearfott) or a special form of dependence (Neumaier, Reliable Computing 9(1), 2003 §7), and instructs not to assert one hierarchy.
+    - **own_label**: "CONTESTED"
+    - **evidence_state**: CONTRADICTED
+    - **checked_how**: Read the file; the disagreement is between external authors as the file reports them; not re-fetched.
+    - **locator**: MAIN:L8/L3/engineering-mathematics/uncertainty/PRIORS_EXTERNAL_2026-08-04.md:32-36, 118
+    - **quote**: **[source text withheld from the public copy].**
+  - item 21
+    - **id**: L3-13
+    - **title**: Priors file: two unchecked claims and the claimable part
+    - **path**: L8/L3/engineering-mathematics/uncertainty/PRIORS_EXTERNAL_2026-08-04.md
+    - **where**: MAIN, ROADMAP, BETA
+    - **what_it_is**: Left open by the file: [source text withheld from the public copy]; whether λ is the fastest pruning criterion (the owner's own label for that claim is CONJECTURE, per ROADMAP). What the file says remains the author's: binding the mechanism [source text withheld from the public copy] identity is computed. That was not found in the sources read.
+    - **own_label**: "NOT-CHECKED"; "NOT TESTED"; "[source text withheld from the public copy]."
+    - **evidence_state**: UNRESOLVED
+    - **checked_how**: Read the verdict table and closing paragraph. No benchmark or search record exists in L8/L3. The owner's CONJECTURE label is at ROADMAP:L8/L5/research/review/CONJECTURE_bit_exact_pruning.md:3-9.
+    - **locator**: MAIN:L8/L3/engineering-mathematics/uncertainty/PRIORS_EXTERNAL_2026-08-04.md:119-129
+    - **quote**: **[source text withheld from the public copy]
+    - **open_items**
+      - Unbounded noise-symbol growth: NOT-CHECKED
+      - λ fastest: no alternative benchmarked
+      - Novelty of UHA-key-as-noise-symbol: no search recorded
+      - Whether the file's verdicts belong at L5 findings is the owner's call (uncertainty/0.md:33)
+  - item 22
+    - **id**: BETA-01
+    - **title**: Beta predicate (L2): 'Exact selected finite predicate — beta v1'
+    - **path**: L8/L2/formal-mathematics/relations/AUDITONOMOUS_BETA_PREDICATE.md
+    - **where**: BETA only
+    - **what_it_is**: Seven lines. For every admitted step of a two-step scope: permit = not stop; action = halt when stop, otherwise the request; goal unchanged. These come from the Autonomous producer. The receiving condition: exactly one C7 record per returned event, same identities, and a SHA-256 digest over canonical JSON of {id, event, previous_digest, synthetic}, chained from null. It also fixes rail model IDs and layer sequences. It is a predicate about a software fixture, not about auditonomy.
+    - **own_label**: "[source text withheld from the public copy]."
+    - **evidence_state**: INTERNALLY CHECKED
+    - **checked_how**: I parsed BETA:L8/L4/work/computation/auditonomous_beta_result.json from the git object: 16 cases, 32 events, 32 records; permit == not stop for all 32; halt iff stop; action equals request otherwise; goal constant; every digest recomputes and chains. Counts 8 act, 8 idle, 16 halt match by arithmetic. The digest construction matches BETA:L8/L4/work/computation/auditonomous_beta.py:55-56,119-127. The consumer code checks the stop relation only by equality with a rerun of the pinned producer. I did not run the repository's code or tests.
+    - **locator**: BETA:L8/L2/formal-mathematics/relations/AUDITONOMOUS_BETA_PREDICATE.md:3-7
+    - **quote**: [source text withheld from the public copy].
+    - **key_claims**
+      - Source model is a separately owned dependency via auditonomous:uses:autonomous-finite-task-v1
+    - **open_items**
+      - Sheets and formulas ledger not updated for it
+      - The '12 tests passed' claim (BETA:L8/L6/history/AUDITONOMOUS_BETA_HISTORY.md:11) not re-run by this pass
+    - **depends_on**
+      - BETA-02
+  - item 23
+    - **id**: BETA-02
+    - **title**: Beta method (L3): '[source text withheld from the public copy]'
+    - **path**: L8/L3/engineering-mathematics/AUDITONOMOUS_BETA_METHOD.md
+    - **where**: BETA only
+    - **what_it_is**: Eleven lines. Verify the pinned producer's code and result hashes and the historical definition bytes before import; call [source text withheld from the public copy] without reproducing [source text withheld from the public copy]; build C7 records; validate; interpret only at L5. A diagnostic procedure injects four faults into a scratch copy and records the rejection and correction. It states no units, precision, tolerance or uncertainty.
+    - **own_label**: "[source text withheld from the public copy]."
+    - **evidence_state**: INTERNALLY CHECKED
+    - **checked_how**: I confirmed the pins in BETA:L7/peering/public/ingress/peer-1/object-2/binding.json: producer commit 805cd42 exists in /home/user/autonomous and is an ancestor of its beta e64b382 but not of its main; sha256 of autonomous_beta.py (427409b3…) and autonomous_beta_result.json (e6ad0564…) at that commit match; definition sha256 2756661…a12b matches; architecture commit 4ca3edb exists in 7lm, on its beta, not on its main, and is one commit behind the 7lm beta tip. The stored result lists four faults. Tests not run by me.
+    - **locator**: BETA:L8/L3/engineering-mathematics/AUDITONOMOUS_BETA_METHOD.md:3-11
+    - **quote**: [source text withheld from the public copy].
+    - **key_claims**
+      - '[source text withheld from the public copy]' (line 11)
+    - **open_items**
+      - Pinned producer and architecture commits live only on unmerged beta branches
+      - Red-run evidence files named in the beta history are not in the tree
+    - **depends_on**
+      - BETA-01
+  - item 24
+    - **id**: ROAD-01
+    - **title**: ROADMAP adds and changes nothing under L8/L2 or L8/L3
+    - **path**: L8/L5/research/review/BOOK_STRUCTURE_AND_ROADMAP_2026-09-13.md
+    - **where**: ROADMAP
+    - **what_it_is**: The diff between MAIN and ROADMAP for these two layers is empty; all 13 blobs are identical. The roadmap document, filed at L5, does state what the book needs from them: L2 is 'EMPTY' and 'must be filled first' for Part V; the objects to register are the isomorphism, the enclosure regime with [source text withheld from the public copy], and take ≤ give − 1 and data ≤ energy + 1. L3's two documents feed chapters 14 and 15.
+    - **own_label**: "[source text withheld from the public copy]"
+    - **evidence_state**: UNRESOLVED
+    - **checked_how**: git diff --stat origin/main origin/claude/book-structure-roadmap-k8ap82 -- L8/L2 L8/L3 returned nothing; blob ids compared by ls-tree. Read roadmap lines 243-250, 404-420, 524-536.
+    - **locator**: ROADMAP:L8/L5/research/review/BOOK_STRUCTURE_AND_ROADMAP_2026-09-13.md:418, 532
+    - **quote**: [source text withheld from the public copy])
+    - **open_items**
+      - D11 enclosure regime; D14; D20
+      - Conditions A-E are labelled CONJECTURE at MAIN:L8/L1/state-space/AUDITON_ENVELOPE.md:253 and their defining file is not in MAIN
+      - ROADMAP roadmap line 248: [source text withheld from the public copy]
+  - item 25
+    - **id**: MODEL-01
+    - **title**: Layer sheets for L2 and L3 lag the current Seven-Layer Model
+    - **path**: L8/L2/0.md
+    - **where**: MAIN, ROADMAP, BETA (auditonomous) versus 7lm origin/beta/common-contracts-r1-r6
+    - **what_it_is**: The 7LM beta tip (97314c5, 2026-11-03) adds a section 'Using this position in a research project' to its L2 and L3 sheets. It says exact mathematics about uncertainty belongs at L2 when it is an exact theory, that an unproved relation stays unproved, and that L3 may stay unused when an inquiry has no engineering dependency. No Auditonomous state carries these paragraphs; the auditonomous beta pins the commit before them. The new wording bears on where the priors file and the perpetuity argument belong.
+    - **own_label**: none
+    - **evidence_state**: UNRESOLVED
+    - **checked_how**: git diff in /home/user/7lm between origin/main and the beta for L8/L2/0.md and L8/L3/0.md (6 lines added to each, introduced between 4ca3edb and 97314c5). Auditonomous L8/L2/0.md (blob e9f6fa1) and L8/L3/0.md (blob 743d54e) are identical across its three states.
+    - **locator**: 7lm origin/beta/common-contracts-r1-r6:L8/L2/0.md ('Using this position in a research project'); MAIN:L8/L2/0.md:1-80
+    - **quote**: The word uncertainty alone does not decide ownership.
+    - **open_items**
+      - Whether the Auditonomous sheets are to be brought to the 7LM beta wording
+  - item 26
+    - **id**: GAP-01
+    - **title**: Gap: 'epistemic state' has no formal statement
+    - **path**: L8/L0/semantics/definitions/AUDITONOMOUS_DEFINITION.md
+    - **where**: MAIN (definition); nothing at L2 or L3 in any state
+    - **what_it_is**: Sense 1 and the first defining criterion rest on the system's [source text withheld from the public copy]. No type, state variable or relation for it exists at L2, and no representation or measurement method at L3. The beta's record body holds only the raw event of a toy fixture.
+    - **own_label**: "INTERNAL ONLY"
+    - **evidence_state**: ASSERTED
+    - **checked_how**: Read the definition lines 22 and 36; listed every file under L8/L2 and L8/L3 in all three states; none states it.
+    - **locator**: MAIN:L8/L0/semantics/definitions/AUDITONOMOUS_DEFINITION.md:22, 36
+    - **quote**: [source text withheld from the public copy]
+  - item 27
+    - **id**: GAP-02
+    - **title**: Gap: 'structurally unable to conceal' has no formal statement, and its strength is contradicted on record
+    - **path**: L8/L0/semantics/definitions/AUDITONOMOUS_DEFINITION.md
+    - **where**: MAIN (definition and adjudication); BETA (limits)
+    - **what_it_is**: The definition's core is that concealment is impossible by construction. No non-concealment property is stated at L2 and no method at L3. Records in the repository cut against the strong form: the perpetuity adjudication finds line 52 'imprecise as written' on three external quotations (audit is always post hoc; detection, not prevention) and recommends an edit, pending the owner; the SGI proposal says omission outside actuation is untouched; the beta says software digests do not enforce non-concealment.
+    - **own_label**: "INTERNAL ONLY" (definition); "[source text withheld from the public copy]" (adjudication §6.1)
+    - **evidence_state**: CONTRADICTED
+    - **checked_how**: Read definition lines 22, 39-40, 52; MAIN:L8/L5/research/review/PERPETUITY_QUESTION_ADJUDICATION.md:201-222; SGI lines 110-127; BETA:L8/L5/research/findings/AUDITONOMOUS_BETA_FINDINGS.md:11.
+    - **locator**: MAIN:L8/L0/semantics/definitions/AUDITONOMOUS_DEFINITION.md:52; MAIN:L8/L5/research/review/PERPETUITY_QUESTION_ADJUDICATION.md:216
+    - **quote**: [source text withheld from the public copy]**.
+    - **open_items**
+      - Owner's ruling on the line-52 edit is pending
+  - item 28
+    - **id**: GAP-03
+    - **title**: Gap: '[source text withheld from the public copy]' has no formal statement beyond a toy fixture
+    - **path**: L8/L0/semantics/definitions/AUDITONOMOUS_DEFINITION.md
+    - **where**: MAIN (definition); BETA (fixture predicate only)
+    - **what_it_is**: Record completeness (every operation) and tamper evidence are defining criteria. MAIN and ROADMAP state neither formally. The beta states a completeness-and-digest-chain predicate for 32 synthetic events and says it is not proof of authenticity or tamper prevention. The trace-before-release ordering the SGI relies on is likewise unstated at L2.
+    - **own_label**: "INTERNAL ONLY"
+    - **evidence_state**: ASSERTED
+    - **checked_how**: Read definition lines 22, 37; beta predicate lines 5; no relation or invariant on records under L8/L2 in MAIN.
+    - **locator**: MAIN:L8/L0/semantics/definitions/AUDITONOMOUS_DEFINITION.md:37
+    - **quote**: Every action leaves a tamper-evident record
+    - **depends_on**
+      - BETA-01
+  - item 29
+    - **id**: GAP-04
+    - **title**: Gap: 'uncertainty is carried, never discarded' has no registered operator or method
+    - **path**: L8/L0/semantics/definitions/AUDITONOMOUS_DEFINITION.md
+    - **where**: MAIN (definition); L3 priors file touches it without adopting anything
+    - **what_it_is**: The criterion quotes eBIOS: [source text withheld from the public copy], and invalid inputs return u = ∞. No Compose operator, carrier, enclosure regime or collapse rule is stated at L2. The one composition formula on record is flagged inconsistent. L3 holds literature on dependency and condensation but ends 'Nothing adopted'; the enclosure regime is unruled (D11).
+    - **own_label**: "INTERNAL ONLY"
+    - **evidence_state**: UNRESOLVED
+    - **checked_how**: Read definition lines 38, 257; operators/0.md (empty); priors file line 129; ROADMAP roadmap line 250 and 532-533.
+    - **locator**: MAIN:L8/L0/semantics/definitions/AUDITONOMOUS_DEFINITION.md:38
+    - **quote**: Uncertainty is carried, never discarded or laundered
+    - **depends_on**
+      - L2-08
+      - L3-13
+  - item 30
+    - **id**: GAP-05
+    - **title**: Gap: firmware-level, by-construction enforcement ('nothing running above it can opt out')
+    - **path**: L8/L0/semantics/definitions/AUDITONOMOUS_DEFINITION.md
+    - **where**: MAIN (definition); L3 holds only the SGI proposal
+    - **what_it_is**: The firmware clause and the by-construction criterion require that no layer above can bypass the record. No non-bypassability or mediation property is stated at L2. At L3 the only method is the SGI proposal, complete for actuation only and unbuilt. The definition itself reports that no firmware artifact exists and that one corpus document places eBIOS above the ROM.
+    - **own_label**: "definitional intent, not an achieved artifact"
+    - **evidence_state**: UNRESOLVED
+    - **checked_how**: Read definition lines 22, 40, 47; SGI file; beta method line 11.
+    - **locator**: MAIN:L8/L0/semantics/definitions/AUDITONOMOUS_DEFINITION.md:47
+    - **quote**: [source text withheld from the public copy].
+    - **depends_on**
+      - L3-04
+      - L3-05
+  - item 31
+    - **id**: GAP-06
+    - **title**: Gap: 'truth envelope' and 'bounded autonomy'
+    - **path**: L8/L0/semantics/definitions/AUDITONOMOUS_DEFINITION.md
+    - **where**: MAIN (definition); nothing at L2 or L3
+    - **what_it_is**: Autonomy is said to be bounded by a truth envelope. No set, bound or admissibility relation defines that envelope at L2, and no tolerance declares it at L3. The L1 envelope document is a compartment map, labelled COMPOSITE OBJECT UNVERIFIED. The roadmap says the enclosure regime must be chosen before any 'truth envelope' language is printed.
+    - **own_label**: "INTERNAL ONLY"
+    - **evidence_state**: UNRESOLVED
+    - **checked_how**: Read definition lines 28, 41; tolerances/0.md (empty); MAIN:L8/L1/state-space/AUDITON_ENVELOPE.md:252; ROADMAP roadmap line 533.
+    - **locator**: MAIN:L8/L0/semantics/definitions/AUDITONOMOUS_DEFINITION.md:41
+    - **quote**: [source text withheld from the public copy]
+    - **depends_on**
+      - L3-03
+  - item 32
+    - **id**: GAP-07
+    - **title**: Gap: 'measurable accountability' has no measure
+    - **path**: L8/L0/semantics/definitions/AUDITONOMOUS_DEFINITION.md
+    - **where**: MAIN (definition); nothing at L2 or L3
+    - **what_it_is**: A defining criterion says accountability is measurable, not aspirational. No quantity, unit, scale or test procedure for it is stated at L2 or L3 in any state. The beta's numeric findings are counts of events in one fixture.
+    - **own_label**: "INTERNAL ONLY"
+    - **evidence_state**: ASSERTED
+    - **checked_how**: Read definition line 42; searched L8/L2 and L8/L3 file lists and contents in all three states.
+    - **locator**: MAIN:L8/L0/semantics/definitions/AUDITONOMOUS_DEFINITION.md:42
+    - **quote**: [source text withheld from the public copy].
+  - item 33
+    - **id**: GAP-08
+    - **title**: Gap: 'acting under its own control' and 'discretion is real' (the autonomy half)
+    - **path**: L8/L0/semantics/definitions/AUDITONOMOUS_DEFINITION.md
+    - **where**: MAIN (definition); BETA (fixture only)
+    - **what_it_is**: The word's autonomy half is bound from the Autonomous repository, a plural collection of definitions. No formal predicate for autonomy or discretion is stated at L2 here. The beta fixture has one fixed, externally authored goal and reports that goal authorship is absent, so it does not exercise discretion at all. The collaboration-mode sense (reasoning 'fully shown and reviewable') is equally unformalized.
+    - **own_label**: "INTERNAL ONLY"; beta: "A complete cross-standard consensus remains unresolved"
+    - **evidence_state**: UNRESOLVED
+    - **checked_how**: Read definition lines 22, 24, 43; BETA:L8/L5/research/findings/AUDITONOMOUS_BETA_FINDINGS.md:9; BETA:L8/L0/semantics/AUDITONOMOUS_BETA_SCOPE.md:3.
+    - **locator**: MAIN:L8/L0/semantics/definitions/AUDITONOMOUS_DEFINITION.md:43
+    - **quote**: [source text withheld from the public copy]
+    - **depends_on**
+      - L2-07
+  - item 34
+    - **id**: GAP-09
+    - **title**: Gap: 'transformation path'
+    - **path**: L8/L0/semantics/definitions/AUDITONOMOUS_DEFINITION.md
+    - **where**: MAIN (definition); candidate at L7 staging, not extracted
+    - **what_it_is**: The related noun's definition forbids erasing, concealing or falsifying the 'epistemic state or transformation path'. No formal object for a transformation path exists at L2. A staging record maps it [source text withheld from the public copy] calls the correspondence exact, but ends 'Nothing adopted' and is listed only as a candidate L3 object.
+    - **own_label**: candidate "(owner's call)"; staging record "Nothing adopted."
+    - **evidence_state**: UNRESOLVED
+    - **checked_how**: Read definition line 28; MAIN:L8/L3/0.md:92; MAIN:L7/provenance/sources/staging-records/interval/DECORATIONS_2026-08-04.md:1-10, 60, 99-115.
+    - **locator**: MAIN:L8/L0/semantics/definitions/AUDITONOMOUS_DEFINITION.md:28
+    - **quote**: [source text withheld from the public copy]
+    - **open_items**
+      - Whether IEEE 1788.1-2017 keeps the decoration system: NOT-CHECKED (staging record line 99)
+- **defects**
+  - item 1
+    - **statement**: The formulas ledger tells users to cite provenance to `uso/l6/LEDGER.md`, a path that does not exist in MAIN; the register was relocated to L7/provenance/sources/LEDGER.md (MAIN:L7/provenance/0.md:33).
+    - **locator**: MAIN:L8/L2/formal-mathematics/FORMULAS_LEDGER.md:23
+  - item 2
+    - **statement**: The L3 sheet attributes 'cell sizing, R ∝ (ρt)^¼' to §7.4 of the 2026-08-05 session. That formula is at §4.3 (session line 217); §7.4 (lines 409-441) is the Goldberg cancellation passage and contains only 'recoverable, not zero'. The approximation sheet (line 34) and the sessions sheet (L8/L4/work/writing/sessions/0.md:16) repeat '§7.4 scaling and precision reasoning'.
+    - **locator**: MAIN:L8/L3/0.md:92
+  - item 3
+    - **statement**: The interlock proposal cites EB:233, EB:38 and LEX:487 with no key legend, and neither cited source file is held in MAIN. They resolve only in ROADMAP (L8/L4/work/writing/auditonomous_ebios_core_architecture_math_source-535f70d_draft.md:233, :38; L7/peering/private/ingress/peer-3/object-1/…v0.2_ea08f59.md:487) and HISTORY (intake/).
+    - **locator**: MAIN:L8/L3/engineering-mathematics/PROPOSAL_seal_gated_interlock.md:18-20
+  - item 4
+    - **statement**: The same manuscript line is keyed LEX:487 in the proposal and EMB:487 in the author's-assertions record.
+    - **locator**: MAIN:L8/L3/engineering-mathematics/PROPOSAL_seal_gated_interlock.md:20 versus ROADMAP:L8/L5/research/review/AUTHOR_ASSERTIONS.md:494
+  - item 5
+    - **statement**: The proposal's status still reads that an [source text withheld from the public copy]'. The text is unchanged since HISTORY (intake/research/PROPOSAL_seal_gated_interlock.md:6-8) and no result of that pass is recorded in MAIN, ROADMAP, BETA or HISTORY.
+    - **locator**: MAIN:L8/L3/engineering-mathematics/PROPOSAL_seal_gated_interlock.md:6-8, 168-171
+  - item 6
+    - **statement**: The priors file uses verdict labels 'ESTABLISHED' and 'NOT TESTED', which are not among the registry labels listed in STATUS_AND_LABEL_DISCIPLINE.md:10-13 or on the status ladder.
+    - **locator**: MAIN:L8/L3/engineering-mathematics/uncertainty/PRIORS_EXTERNAL_2026-08-04.md:111-120
+  - item 7
+    - **statement**: The priors file's header says '[source text withheld from the public copy]', but two verdict rows (NOT-CHECKED, NOT TESTED) cite no source, and the file gives no URL, fetch date or file hash for any quotation.
+    - **locator**: MAIN:L8/L3/engineering-mathematics/uncertainty/PRIORS_EXTERNAL_2026-08-04.md:3-4, 119-120
+  - item 8
+    - **statement**: None of the priors file's sources (Rump, Kearfott, Neumaier, Comba and Stolfi, Stolfi and de Figueiredo) has a pointer row in the source ledger, in MAIN or ROADMAP (git grep for the five names returns no row), although the ROADMAP roadmap line 248 calls three of them 'held'.
+    - **locator**: MAIN:L7/provenance/sources/LEDGER.md (no matching row); MAIN:L8/L3/engineering-mathematics/uncertainty/PRIORS_EXTERNAL_2026-08-04.md:10-70
+  - item 9
+    - **statement**: The priors file refers to internal results with no locator ('the aggregation tested internally', 'the internal finding', '[source text withheld from the public copy] internal documents are not in MAIN, and 'M(n,r)' occurs nowhere else in MAIN.
+    - **locator**: MAIN:L8/L3/engineering-mathematics/uncertainty/PRIORS_EXTERNAL_2026-08-04.md:96-102
+  - item 10
+    - **statement**: In BETA the relations sheet still says 'Nothing is filed at this position' although AUDITONOMOUS_BETA_PREDICATE.md is filed there; the L2 layer and formal-mathematics sheets' Holdings omit it (blobs identical to MAIN).
+    - **locator**: BETA:L8/L2/formal-mathematics/relations/0.md:33; BETA:L8/L2/0.md:72-76; BETA:L8/L2/formal-mathematics/0.md:37-39
+  - item 11
+    - **statement**: In BETA the L3 sheets' Holdings do not list AUDITONOMOUS_BETA_METHOD.md (blobs identical to MAIN).
+    - **locator**: BETA:L8/L3/engineering-mathematics/0.md:35-38; BETA:L8/L3/0.md:88-90
+  - item 12
+    - **statement**: In BETA the formulas ledger still declares itself EMPTY although the beta predicate uses SHA-256 over canonical JSON as a formal object; no row and no change-log entry was added.
+    - **locator**: BETA:L8/L2/formal-mathematics/FORMULAS_LEDGER.md:10
+  - item 13
+    - **statement**: The beta predicate file does not name the L0 and L1 files its symbols bind to (AUDITONOMOUS_BETA_SCOPE.md, AUDITONOMOUS_BETA_ADMISSION.md) and records nothing at proofs/, which the relations sheet asks of a filing (relations/0.md:10).
+    - **locator**: BETA:L8/L2/formal-mathematics/relations/AUDITONOMOUS_BETA_PREDICATE.md:1-7
+  - item 14
+    - **statement**: The beta history cites evidence files T3-red.txt, T3-integration-wait.txt and T3-review-red.json; none is in the BETA tree (ls-tree search).
+    - **locator**: BETA:L8/L6/history/AUDITONOMOUS_BETA_HISTORY.md:9-10
+  - item 15
+    - **statement**: In the ROADMAP sourcebook, the only statement of the autonomy profile is damaged: the equals sign between AP(S,F,D,Δ) and ⟨E,A,G,R,Q⟩ is a row of '=' characters (a heading underline), not an equation.
+    - **locator**: ROADMAP:L8/L4/work/writing/sourcebook/Auditonomous_Book_Material_Sourcebook_v0.1.md:65-70
+  - item 16
+    - **statement**: The definition's Appendix E says [source text withheld from the public copy]/`'; MAIN:L8/L0/semantics/definitions/ holds only 0.md and the definition.
+    - **locator**: MAIN:L8/L0/semantics/definitions/AUDITONOMOUS_DEFINITION.md:367-371
+- **open_questions**
+  - Was the adversarial attack pass on the Seal-Gated Interlock ever completed, and where is its result? Searched MAIN, ROADMAP and HISTORY for 'attack pass', 'implicit ack', 'NUGate', 'interlock'; found none.
+  - I could not re-verify any external quotation (no network): Rump 2010, Kearfott 1991/2013, Neumaier 2003, Comba and Stolfi 1993, Stolfi and de Figueiredo 1997 and TEMA 4, Goldberg 1991, and the standards behind the SGI's prior-art list. The EXTERNALLY CHECKED states rest on what the files record.
+  - Do a conference proceedings paper (SIBGRAPI 1993), a colloquium monograph (1997) and TEMA meet the status ladder's outside-source rule? The priors file calls all of them peer-reviewed without saying how that was established.
+  - Where are the 'held' copies of Rump 1999/2010, Comba and Stolfi 1993 and Stolfi and de Figueiredo 1997 that the ROADMAP roadmap (line 248) mentions? No ledger row points to them.
+  - The SGI proposal's claim that a grep of eBIOS src/ finds no actuation code, and all eBIOS quotations in the L0 definition, concern the abba-01/ebios repository, which is not among the clones; unconfirmed.
+  - Anderson 1972, TCSEC and NIST SP 800-82r3, cited by the SGI proposal as 'verified this session', were not found recorded anywhere in MAIN.
+  - I did not run the beta's code or tests (not asked to). The claims '12 tests passed' and the red-run sequence in the beta history are unconfirmed; only the stored result JSON and the pinned hashes were checked.
+  - The beta's binding calls itself immutable but pins a producer commit (805cd42) that is on the unmerged Autonomous beta and not on Autonomous main, and an architecture commit (4ca3edb) that is on the unmerged 7LM beta, one commit behind its tip. Whether that is acceptable is the owner's call.
+  - Owner decisions that block Layers 2 and 3: register the isomorphism or not; L2 or L3 for the perpetuity argument; L3 or L5 for the priors file; D11 (enclosure regime λ); D20 (which framing of auditonomy governs); the pending line-52 edit to the definition.
+  - Should the Auditonomous L2 and L3 sheets take the 7LM beta-tip paragraphs ('Using this position in a research project')? Those paragraphs would bear on where the priors file belongs.
+  - Conditions A-E, which the roadmap wants stated formally at L2, are labelled CONJECTURE in the L1 envelope and are defined in a file (AUDITONOMY.md) that is not in MAIN. I did not read the ROADMAP copy (outside scope).

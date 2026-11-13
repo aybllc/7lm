@@ -1,0 +1,16 @@
+# verify:auditonomous:AUD-TOUCH-02
+
+Agent result, as returned. Workflow: Review of the two commits. Run `wf_26752832-654`. Phase: Verify.
+
+- **real**: yes
+- **reasoning**: Verified from git objects only. The sentence is added by the commit (auditonomous f2d5b37:L8/L6/history/harmonization-2026-09-05.md:200, a '+' line in the diff against 2165144): "The specification's Object and Function cells for L7, which still read \"peering, publications, exposure, and exchange\" and which the scaffold's own sheets carry unchanged." The quoted string is the Object cell only: f2d5b37:L7/0.md:3 "**Object:** External provenance, public/legal governance, peering, publications, exposure, and exchange." The Function cell reads differently: f2d5b37:L7/0.md:23 "| Function | Provide the external Surface for provenance, prior art, public/legal governance, peering, publications, and release without absorbing external authority or granting lower-layer validity. |". The scaffold agrees with both: 7lm c9dc061:L7/0.md:3 and :26, and c9dc061:L8/L4/work/writing/7lm-harmonized-architecture-specification.md:731 (Object) and :735 (Function). A repo-wide grep at f2d5b37 for "peering, publications, exposure, and exchange" finds it only at L7/0.md:3, L8/0.md:99 (a parenthetical restating the Object line) and the record itself; no Function cell carries it. Both cells are byte-identical to the parent (2165144:L7/0.md:3 and :23), so the tree is as intended; the defect is confined to the new record section, which is in the commit's scope (item 5) and is a statement of fact about what two cells read, attributing one quotation to both when it matches only one. That is a factual inexactness in a record whose purpose is to be read later as the account of what was and was not changed, not a matter of taste. The workflow's own task brief carries the same loose wording, but that does not make the record's quotation accurate. Severity is minor: nothing in any sheet or the check is wrong. The reviewer's suggested fix is accurate but reads ambiguously as to which string belongs to which cell; a slightly more explicit wording is given.
+- **corrected_statement**: In the new section of the record (auditonomous f2d5b37:L8/L6/history/harmonization-2026-09-05.md:200) one quoted string, "peering, publications, exposure, and exchange", is given as what both the Object cell and the Function cell for L7 still read. Only the Object cell reads it (f2d5b37:L7/0.md:3); the Function cell reads "peering, publications, and release" (f2d5b37:L7/0.md:23), as the scaffold's sheet and specification also do (7lm c9dc061:L7/0.md:26; specification line 735). Both cells are unchanged from the parent, as intended; only the record's quotation is inexact for the Function cell. Minor.
+- **exact_fix**: In /home/user/auditonomous L8/L6/history/harmonization-2026-09-05.md, line 200, replace the sentence
+
+  The specification's Object and Function cells for L7, which still read "peering, publications, exposure, and exchange" and which the scaffold's own sheets carry unchanged.
+
+  with
+
+  The specification's Object and Function cells for L7, which still read "peering, publications, exposure, and exchange" and "peering, publications, and release" respectively and which the scaffold's own sheets carry unchanged.
+
+  No other file changes; L7/0.md lines 3 and 23 stay as they are.

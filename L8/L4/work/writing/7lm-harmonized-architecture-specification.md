@@ -1,5 +1,5 @@
 <!-- Canonical Markdown form of the Seven-Layer Model (7LM) Harmonized Authoritative Architecture Specification,
-     version of 6 October 2026. This Markdown is the source; the .docx filed beside it is generated from the text
+     version of 13 November 2026. This Markdown is the source; the .docx filed beside it is generated from the text
      below this comment and reads back to it unchanged. The history of versions and changes is at
      L8/L6/history/specification-history.md. -->
 
@@ -9,13 +9,13 @@ Harmonized Authoritative Architecture Specification
 
 Canonical research directory topology and uniform layer information sheets
 
-*7LM Harmonized Authoritative Architecture Specification • 6 October 2026*
+*7LM Harmonized Authoritative Architecture Specification • 13 November 2026*
 
 > Authority\
 > This specification states the controlling 7LM research architecture: one canonical agnostic directory topology and one uniform information sheet for each layer. The structure, layer boundaries, directory prose, machine-metadata distinction, and stated rationales are authoritative for this research program. Capability branches may remain empty when unused; they remain part of the agnostic topology so a project can instantiate them without changing the architecture.
 
 Version\
-Version of 6 October 2026. The history of versions and changes is at L8/L6/history/specification-history.md in the scaffold repository.
+Version of 13 November 2026. The history of versions and changes is at L8/L6/history/specification-history.md in the scaffold repository.
 
 Self-description and machine-instruction rule\
 Every directory carries a local Layer 0 semantic description. In tree notation, /0 denotes that directory's local 0.md without drawing the file as a separate branch. The same directory separately carries machine-readable metadata for machine instructions, constraints, permissions, routing, validation, and lifecycle behavior. /0 carries human-readable meaning; metadata carries machine-actionable instruction. Neither replaces the other. This separation keeps semantic description distinct from machine operation.
@@ -935,7 +935,7 @@ Reference implementations: the Autonomous and Auditonomous repositories, with th
 - One locally authored L0 definition each. Autonomous owns L0/semantics/definitions/AUTONOMOUS.md, a plural entry of eleven codified definitions A1–A11 carried in verbatim with their issuing bodies' ownership tags. Auditonomous owns L0/semantics/definitions/AUDITONOMOUS_DEFINITION.md, the local delta over the bound Autonomous root.
 - The binding of the Autonomous definition at Auditonomous's L7/peering/public/ingress/peer-1/object-1/, reference-only, NO EDIT and NO DELETE, under the rule that Auditonomous gets the definitions of autonomous from Autonomous and nowhere else. Autonomous exposes the definition at its L7/peering/public/egress/peer-1/.
 - Curated sources served by pointer from l6, bound at each repository's L7/peering/private/ingress/peer-1/; one ledger row per source at L7/provenance/sources/LEDGER.md; no source file in either repository.
-- Copyright in one place, L7/governance/copyright/, with licensing/ and restrictions/ (the position this specification now names controlled/) pointing to it.
+- Copyright in one place, L7/governance/copyright/, with licensing/ and controlled/ pointing to it.
 - L5/research/review/ as the catch-all and L5/research/lanes/ as the working position. The queue that preceded them at the repository roots, orphan, foster, results, delete, with its access rules for sessions, is retired at L6/retired/layout-2026-09-06/ in each repository.
 - The records at L6/history/ in each repository, carrying the quoted words verbatim and every move, retirement, deletion, and binding.
 - No rule in either tree about what a session or any other intelligence may touch. The repository file that would carry such rules is held off.
@@ -947,7 +947,7 @@ Face. Public ingress peer-1 to peer-9: the issuing bodies whose clauses are boun
 
 Interior. L6: the master ledger, five forensic reconstructions, the two records, two retired layouts, and four definition error records. L5: six lanes; the reviews, audits, and adjudications; seven findings. L4: the manuscript placeholder, the autonomy scale (ruled an L4 object), and one deep-research run. L3: two engineering-mathematics notes. L2: an empty formulas ledger. L1: empty, its dimensions fixed by content inside four L5 findings. L0: the definition with its companions and a universality scope statement.
 
-Not yet as stated. The catch-all holds material that belongs to other objects: Autonomous Theory, one work and not the definition of autonomous, whose home is not yet named; a template of the Auditonomous definition; and notes on memory consolidation with conserved uncertainty. Each leaves when its home is named. The provenance rows for the bound issuing bodies are not yet ledgered. The desk carries the L7 branch names of the version before 20 September 2026, publications/ as a direct branch and governance/restrictions/; the L7 restructure is not yet mirrored.
+Not yet as stated. The catch-all holds material that belongs to other objects: Autonomous Theory, one work and not the definition of autonomous, whose home is not yet named; a template of the Auditonomous definition; and notes on memory consolidation with conserved uncertainty. Each leaves when its home is named. The provenance rows for the bound issuing bodies are not yet ledgered.
 
 **Auditonomous** (auditonomous)
 
@@ -955,7 +955,7 @@ Face. Public ingress peer-1: autonomous, the definition of autonomous, bound at 
 
 Interior. L6: the master index, three session ledgers, the two records, two retired layouts. L5: two lanes; two reviews and the status ladder carried verbatim; three findings. L4: drafts, chat transcripts, a session record, three requirements extractions, and one deep-research run with its exports. L3: a proposal and an external-priors note. L2: an empty formulas ledger. L1: the auditon envelope, the substitutability states, and the requirements partition. L0: the one locally authored definition; the other rails empty.
 
-Not yet as stated. The binding of the Autonomous definition names the path the peer used before its own 7LM layout, research/definitions/AUTONOMOUS.md at 0504961; the same object now stands at the peer's L0/semantics/definitions/AUTONOMOUS.md, and rebinding to a current version is the owner's act. The binding record says three files still take a definition of autonomous from somewhere other than the binding. The catch-all holds two Autonomous Theory files that leave once that work's home is named. The L0 epistemic rail is empty; its vocabulary stands at L5 as review status. The desk carries the L7 branch names of the version before 20 September 2026, publications/ as a direct branch and governance/restrictions/; the L7 restructure is not yet mirrored.
+Not yet as stated. The binding of the Autonomous definition names the path the peer used before its own 7LM layout, research/definitions/AUTONOMOUS.md at 0504961; the same object now stands at the peer's L0/semantics/definitions/AUTONOMOUS.md, and rebinding to a current version is the owner's act. The binding record says three files still take a definition of autonomous from somewhere other than the binding. The catch-all holds two Autonomous Theory files that leave once that work's home is named. The L0 epistemic rail is empty; its vocabulary stands at L5 as review status.
 
 **What the exemplars show**
 

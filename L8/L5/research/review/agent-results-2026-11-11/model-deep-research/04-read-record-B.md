@@ -1,0 +1,553 @@
+# read:record-B
+
+Agent result, as returned. Workflow: The model, read deep. Run `wf_9a60cf50-a5f`. Phase: Read.
+
+- **scope**: Read from git objects only: /home/user/7lm@origin/main:L8/L6/history/harmonization-2026-09-04.md lines 295-510 (sections 24-37); /home/user/7lm@origin/main:L8/L6/history/specification-history.md (all 102 lines); and the 10 lines origin/beta/common-contracts-r1-r6 adds to that file. Cross-checks made against the two commits that performed the work (7lm 606d4b3 the restructure, bbb04dd the sweep), the CI workflow on main, the L7 tree on main, and file counts on the two exemplar mains.
+- **summary**: Inside this scope the model of record has not changed since it was last studied: both history files are byte-identical between 2e5a6d6 and origin/main (c9dc061); the only change on main since then is one added proposal file at L8/L6/in/. The beta candidate adds two sections to specification-history.md and nothing to the harmonization record.
+
+  The record describes two passes on 2026-09-20. Section 25 (commit 606d4b3) moved L7/publications/ to L7/allications/publications/ and L7/governance/restrictions/ to L7/governance/controlled/ as tracked renames, wrote six new sheets, updated the specification, swept the former paths out of live files and updated the CI list. It left historical records alone and recorded that the exemplars now differ (24 and 21 files; 12 and 13 for governance/restrictions; both reproduced, excluding .github).
+
+  Section 37 (commit bbb04dd, 44 files) swept the prose with eleven counted replacements, added eight peer-1/object-1 positions to the CI list (71 in all), and corrected sections 25, 28, 31 and 35 in place. I reproduced every count from git. Two small mismatches: the record says the Boundary Rule sentence is in "thirty-six live sheets" where git shows 36 occurrences in 35 sheets, and a correction filed under section 25 concerns a sentence in section 26.
+
+  Sections 26-31 set the rules: exemplars mirror by hand, on the owner's judgement; the tree and each sheet's first line are not design choices; the guides share no history. Sections 32-35 are recorded, not applied, and section 37 parks 1.md. Section 36: nothing changes without asking.
+
+  The beta's 2 November entries name Codex, baseline 2e5a6d6, and say they are not a full-beta or release claim.
+- **facts**
+  - item 1
+    - **id**: F01
+    - **kind**: change
+    - **statement**: Neither file in scope changed on main after the state last studied. `git diff --stat 2e5a6d6 origin/main` lists one file only, L8/L6/in/7lm-layer-lists.md (+415 lines, PR #21). The record still ends at section 37 on main and on the beta branch (the beta's diff under L8/L6/history/ touches specification-history.md only, +10 lines).
+    - **locator**: 7lm@origin/main:L8/L6/history/harmonization-2026-09-04.md:492 (last section heading); git -C /home/user/7lm diff --stat 2e5a6d6 origin/main; diff --stat origin/main origin/beta/common-contracts-r1-r6 -- L8/L6/history/
+    - **quote**: ## 37. 2026-09-20 — the words match the folders: the prose sweep; `1.md` parked; corrections to §25, §28, §31 and §35
+  - item 2
+    - **id**: F02
+    - **kind**: rule
+    - **statement**: Section 24: `in/` is a position's inbox. It may exist at any position, is never required, carries a 0.md, is not a canonical position, and changes no position, count or path. It is distinct from the catch-all at L8/L5/research/review/. The specification does not mention it.
+    - **locator**: 7lm@origin/main:L8/L6/history/harmonization-2026-09-04.md:299 and :313
+    - **quote**: It is a folder, not a rule: nothing is obliged to have one, nothing is obliged to pass through one, and no position, count, or path changes because one exists.
+  - item 3
+    - **id**: F03
+    - **kind**: change
+    - **statement**: Section 24: branch claude/optimistic-thompson-gd7rgs (PR #10) was closed unmerged and deleted on 2026-09-19 after enumeration. Its text was filed at L8/L6/in/ (three files) and none of it is adopted. The check passed at 88 sheets.
+    - **locator**: 7lm@origin/main:L8/L6/history/harmonization-2026-09-04.md:301-307, :313
+    - **quote**: Nothing in it is adopted.
+  - item 4
+    - **id**: F04
+    - **kind**: change
+    - **statement**: Section 25 origin: the owner edited L7/0.md directly on main at 0738519 (2026-09-19), renaming governance/restrictions/0 to governance/controlled/0 and replacing the publications/0 branch with allications/0 holding six children. The sheet then described a tree that did not exist. On 2026-09-20 the owner ruled the contradictions be fixed in favour of that edit.
+    - **locator**: 7lm@origin/main:L8/L6/history/harmonization-2026-09-04.md:317
+    - **quote**: Fix thoe contradictions in favor of the new editing in the 0.md file i made tio how the L7 is structured.
+  - item 5
+    - **id**: F05
+    - **kind**: rule
+    - **statement**: Section 25, the owner's words naming the new branch, as recorded.
+    - **locator**: 7lm@origin/main:L8/L6/history/harmonization-2026-09-04.md:317
+    - **quote**: └── controlled/0 changed to move all cation words into "allications" (all-ications), pronounced ally-cations. whAT DO YOU think of allicatins to hold everything for now
+  - item 6
+    - **id**: F06
+    - **kind**: rule
+    - **statement**: Section 25, the reading: allications/ holds what the bounded object does outward. The six are publications, applications, communications, specifications, notifications and participations. The name is a mnemonic, not the membership test. governance/controlled/ is the same position governance/restrictions/ was, under a wider name.
+    - **locator**: 7lm@origin/main:L8/L6/history/harmonization-2026-09-04.md:319
+    - **quote**: The name is a mnemonic for that family, not the test for membership — an outward act belongs there whether or not its name ends in *-ication*.
+  - item 7
+    - **id**: F07
+    - **kind**: change
+    - **statement**: Section 25, the two directory moves, both tracked renames. Commit 606d4b3 confirms: `rename L7/{ => allications}/publications/0.md (90%)` and `rename L7/governance/{restrictions => controlled}/0.md (89%)`. On main the tree has L7/allications/publications and L7/governance/controlled, and no L7/publications or L7/governance/restrictions.
+    - **locator**: 7lm@origin/main:L8/L6/history/harmonization-2026-09-04.md:321; git -C /home/user/7lm show --stat -M 606d4b3; ls-tree -r origin/main L7
+    - **quote**: `L7/publications/` moved to `L7/allications/publications/` and `L7/governance/restrictions/` to `L7/governance/controlled/`, both as tracked renames so their history follows them.
+  - item 8
+    - **id**: F08
+    - **kind**: change
+    - **statement**: Section 25, sheets written: five beside publications (applications, communications, specifications, notifications, participations) and one for the container L7/allications/. L7 went from 29 to 35 sheets; main has 35 L7 sheets. The owner's `notificattions` is spelled `notifications` in the directory name; `allications` stands as written. In the commit the six new sheets are 36-39 lines each and the two renamed sheets had their first line, Object line and Path line changed.
+    - **locator**: 7lm@origin/main:L8/L6/history/harmonization-2026-09-04.md:321; git show --stat 606d4b3 (six `create mode` lines); ls-tree count of L7/**/0.md on origin/main = 35
+    - **quote**: L7 goes from 29 sheets to 35. The owner's `notificattions` is spelled `notifications` in the directory name; the coinage `allications` stands as written.
+  - item 9
+    - **id**: F09
+    - **kind**: change
+    - **statement**: Section 25, the specification: version 20 September 2026. The canonical direct L7 branches line is replaced; the sentence naming the four owned external relations changes with it; both canonical trees are redrawn; the prose table gains seven rows where the publications/ row stood; the governance/restrictions/ row becomes governance/controlled/; the two copyright clarifications point at controlled/. No rule of the count, the eight positions, the two directions or the peering contract is superseded.
+    - **locator**: 7lm@origin/main:L8/L6/history/harmonization-2026-09-04.md:323
+    - **quote**: Canonical direct L7 branches are L7/provenance/, L7/governance/, L7/peering/, and L7/allications/.
+  - item 10
+    - **id**: F10
+    - **kind**: change
+    - **statement**: Section 25, the new L7/0.md table rows as committed in 606d4b3: governance/controlled/ reads "Directory for restrictions and other conditions that constrain external disclosure, use, transfer, or handling." with Why "Keeps what is controlled explicit and machine-addressable without redefining the underlying research."; then rows for allications/ and each of its six children. The Surface sentence became "...provenance, governance, peering, and allications — the outward acts, of which publication is one."
+    - **locator**: git -C /home/user/7lm show 606d4b3 -- L7/0.md; current text at 7lm@origin/main:L7/0.md
+    - **quote**: The Surface is organized around four owned external relations: provenance, governance, peering, and allications — the outward acts, of which publication is one.
+  - item 11
+    - **id**: F11
+    - **kind**: change
+    - **statement**: Section 25, propagated: the record says twenty-eight live files (section 37 corrects this to twenty-six) now name the current paths: the L7 sheets of peering, governance and provenance; L8/L6/0.md; L8/L4/work/0.md; L8/L4/work/writing/0.md; L8/L5/research/findings/0.md; and the field guide, whose desk section was rewritten from "Publications" to "Allications". The word-level diff of 606d4b3 shows the path strings replaced: `L7/publications/` -> `L7/allications/publications/`, `L7/governance/restrictions/` -> `L7/governance/controlled/`, and in the quoted canonical line `L7/publications/."` -> `L7/allications/."`.
+    - **locator**: 7lm@origin/main:L8/L6/history/harmonization-2026-09-04.md:325; git show --word-diff 606d4b3
+    - **quote**: Twenty-eight live files named the former paths and now name the current ones
+  - item 12
+    - **id**: F12
+    - **kind**: change
+    - **statement**: Section 25, the CI change, confirmed in the diff of 606d4b3: in the canon list `L7/governance/restrictions` became `L7/governance/controlled`; the single entry `L7/publications` became seven entries `L7/allications L7/allications/publications L7/allications/applications L7/allications/communications L7/allications/specifications L7/allications/notifications L7/allications/participations`. The same commit also changed the header comment `USO/l6/history/` to `L8/L6/history/`.
+    - **locator**: 7lm@origin/main:L8/L6/history/harmonization-2026-09-04.md:325; git show 606d4b3 -- .github/workflows/integrity.yml
+    - **quote**: `L7/governance/restrictions` becomes `L7/governance/controlled`, and `L7/publications` becomes the seven `L7/allications` positions, so the check now requires a sheet at each.
+  - item 13
+    - **id**: F13
+    - **kind**: rule
+    - **statement**: Section 25, deliberately NOT propagated: historical records keep the paths true when written. Listed: the record's own rows for 2026-08-24 and 2026-09-04; its reserved-terms list; the specification's Harmonization Record disposition rows for "corpus" (section 37 corrects this: that row WAS propagated); L8/L6/history/sheets-2026-09-07.md; the retired sets under L8/L6/retired/; the frozen extract at L8/L6/in/.
+    - **locator**: 7lm@origin/main:L8/L6/history/harmonization-2026-09-04.md:327
+    - **quote**: A record states what was so when it was written; moving a path inside it would falsify it.
+  - item 14
+    - **id**: F14
+    - **kind**: exemplar
+    - **statement**: Section 25 on the exemplars, with counts: they quote the canonical direct L7 branches line and name the former paths in 24 files (autonomous) and 21 files (auditonomous), with `governance/restrictions` in 12 and 13. Reproduced on the exemplar mains when .github is excluded: `L7/publications` 24 and 21 files, `governance/restrictions` 12 and 13 (25/22 and 13/14 with the CI workflow counted). Neither main contains `L7/allications` or `governance/controlled`; both trees still have L7/publications and L7/governance/restrictions.
+    - **locator**: 7lm@origin/main:L8/L6/history/harmonization-2026-09-04.md:329; git grep -l on autonomous@origin/main and auditonomous@origin/main; ls-tree -d origin/main L7/ L7/governance/
+    - **quote**: They are not brought into step by this pass and now differ from the specification at those names. That divergence is recorded here rather than left to be discovered.
+  - item 15
+    - **id**: F15
+    - **kind**: rule
+    - **statement**: Section 25, the owner's standing word of 2026-09-20 limiting work to the scaffold.
+    - **locator**: 7lm@origin/main:L8/L6/history/harmonization-2026-09-04.md:329
+    - **quote**: We are only from now on updating the 7LM. Lets finish the updates.
+  - item 16
+    - **id**: F16
+    - **kind**: procedure
+    - **statement**: Section 25, how it was checked: the generated .docx was patched by direct XML surgery (word/document.xml prose, seven table rows, four tree blocks, the Version box, word/footer1.xml dateline, docProps/core.xml description), rebuilt with eighteen members in order, 1,053 text runs all found in the Markdown. The one CI check passed, including the seven new positions.
+    - **locator**: 7lm@origin/main:L8/L6/history/harmonization-2026-09-04.md:331
+    - **quote**: The one CI check passes: no conflict markers, the canonical root, every sheet headed by its own path, and every canonical position sheeted including the seven new ones.
+  - item 17
+    - **id**: F17
+    - **kind**: change
+    - **statement**: The restructure commit 606d4b3 (2026-09-20 07:01 UTC) lists 37 changed paths: 6 sheets created, 2 sheets renamed, 29 modified (including the CI workflow, the specification .md and .docx, the field guide then at L8/L0/pedagogy/, and both L6 history files). Its message says "Propagated to 28 live files".
+    - **locator**: git -C /home/user/7lm show --stat -M 606d4b3
+    - **quote**: Propagated to 28 live files and to the CI canonical-position list
+  - item 18
+    - **id**: F18
+    - **kind**: rule
+    - **statement**: Section 26, the owner's ruling that the exemplars mirror the scaffold by hand, and not yet.
+    - **locator**: 7lm@origin/main:L8/L6/history/harmonization-2026-09-04.md:336
+    - **quote**: All repos should mirror the 7lm. Manually. We update 7lm and focus on it only. No outside updates until we are sure I'm close.
+  - item 19
+    - **id**: F19
+    - **kind**: rule
+    - **statement**: Section 26, what the field guide is and is not, in the owner's words (double space as written). It is an L6 source document of aybllc/7lm, not the L0 pedagogy of a repository that uses the model. The adopter takes it from L6, applies its updates or not, and publishes their own version at their L7 or keeps it at their L6; that step is a person's (HOA, human-only actions) and where the version sits is a design choice.
+    - **locator**: 7lm@origin/main:L8/L6/history/harmonization-2026-09-04.md:336 and :340
+    - **quote**: I intended the field guide to be the penultimate guide, really. It's not a USO layer 0 for repos that use  7lm. Instead, it's an L6 source document.
+  - item 20
+    - **id**: F20
+    - **kind**: change
+    - **statement**: Section 26, done on disk: L8/L0/pedagogy/7lm-field-guide.md became L8/L6/7lm-field-guide.md (tracked rename), directly at the layer in no sub-position. The plate sheet and its generator stay at L8/L0/pedagogy/. Tree on main confirms: L8/L6/ holds 0.md, 7lm-field-guide.md, 7lm-sheet-templates.md, history, in, retired; L8/L0/pedagogy/ holds 0.md, 7lm-plate-sheet.html, 7lm-plate-sheet.py. Neither exemplar main carries a file matching field-guide, plate-sheet, sheet-templates or specification.
+    - **locator**: 7lm@origin/main:L8/L6/history/harmonization-2026-09-04.md:338; ls-tree origin/main L8/L6/ L8/L0/pedagogy/ (7lm); ls-tree -r origin/main grep (autonomous, auditonomous): not found
+    - **quote**: `L8/L0/pedagogy/7lm-field-guide.md` is now `L8/L6/7lm-field-guide.md`, a tracked rename so its history follows it.
+  - item 21
+    - **id**: F21
+    - **kind**: rule
+    - **statement**: Section 26, standing: the exemplars mirror aybllc/7lm by hand; section 25's "not being brought into step" is refined: they will be, manually, when the owner judges the scaffold close, and not before. Section 26 changed no specification text, no CI, no README.
+    - **locator**: 7lm@origin/main:L8/L6/history/harmonization-2026-09-04.md:344, :346
+    - **quote**: they will be, manually, when the owner judges the scaffold close, and not before.
+  - item 22
+    - **id**: F22
+    - **kind**: rule
+    - **statement**: Section 27, what is NOT a design choice: the tree the scaffold pushes, and in every folder a 0.md whose first line is the folder's path from the root. A repository that keeps both is a 7LM repository; one that drops either has branched outside the system. What a sheet says after its first line is a design choice.
+    - **locator**: 7lm@origin/main:L8/L6/history/harmonization-2026-09-04.md:352
+    - **quote**: What is not a design choice is the tree the scaffold pushes and, in every folder of it, a `0.md` whose first line is the folder's path from the root.
+  - item 23
+    - **id**: F23
+    - **kind**: rule
+    - **statement**: Section 27, the recommendation (not a requirement): at least one sentence more than the layer's number, one at L0, two at L1, three at L2. The scaffold's sheets are not to be cut; section 26's sentence "That is all a sheet states" is withdrawn as wrong. The owner's own words say "3 for 1" where the reading takes three at L2.
+    - **locator**: 7lm@origin/main:L8/L6/history/harmonization-2026-09-04.md:350, :352, :354
+    - **quote**: Sheets are design choices. What is not a design choice is the relative path to root like we currently do, then for each layer we recommend at least 1 sentence at layer 0.
+  - item 24
+    - **id**: F24
+    - **kind**: rule
+    - **statement**: Section 27: the push mechanism from scaffold to adopter (pinned hashes; HOA review item at the adopter's L7/peering/private/; a person deciding to follow or edit; declined items listed in the HOA record; a return path for the adopter's working guide) is described in the guide and none of it is built. Unresolved: whether the sentence recommendation reaches the desk and the interior.
+    - **locator**: 7lm@origin/main:L8/L6/history/harmonization-2026-09-04.md:354, :358
+    - **quote**: and that none of it is built.
+  - item 25
+    - **id**: F25
+    - **kind**: rule
+    - **statement**: Section 28, the sheet templates at L8/L6/7lm-sheet-templates.md, three degrees. Minimal: the path, then one sentence more than the layer's number. Standard: four headings (what this directory is, why it exists, holds, does not hold). Full: the scaffold's own form (object line, four questions, boundary, standing). The templates are not sheets and the CI reads nothing in them.
+    - **locator**: 7lm@origin/main:L8/L6/history/harmonization-2026-09-04.md:362-368
+    - **quote**: I love your 0.md but we can't make it the default :) we can make a template default in various degrees of control issues users have
+  - item 26
+    - **id**: F26
+    - **kind**: rule
+    - **statement**: Section 29: the three degrees stand and an adopter starts at the degree they choose. The scaffold's own sheets are at the full degree. Section 28's "not the default" is withdrawn. A one-click republishing of all sheets into a .docx at the HOA step is meant one day and is not built. For now everything is HOA.
+    - **locator**: 7lm@origin/main:L8/L6/history/harmonization-2026-09-04.md:376, :378, :382
+    - **quote**: OUR 7Lm 0.md files will be absolutely complete and detailed and rigorous. My mistake. I want clear usage would start at a degree they choose, one day we can do choices for now everything is HOA
+  - item 27
+    - **id**: F27
+    - **kind**: rule
+    - **statement**: Section 30: the sentence recommendation applies to a layer's own sheet (L8/L0/0.md through L8/L6/0.md). A folder beneath a layer keeps its sheet and the sheet may be blank: the first line and nothing else. A blank sheet is tagged as an audit exception for HOA review in the collecting document meant one day. A missing sheet is a folder outside the system. No CI check was added to report blank sheets; none of the scaffold's sheets is blank.
+    - **locator**: 7lm@origin/main:L8/L6/history/harmonization-2026-09-04.md:388-396
+    - **quote**: I left out sub folders because those are design choices but they should all either be blank with just the location this being skipped and tagged at the end of the doc as an adult xception for HOA review
+  - item 28
+    - **id**: F28
+    - **kind**: rule
+    - **statement**: Section 31, the hard rule, in the owner's words.
+    - **locator**: 7lm@origin/main:L8/L6/history/harmonization-2026-09-04.md:402
+    - **quote**: Our 7Lm guides DO NOT share ANY HISTORY! HARD RULE. That's why you have l6. Start handing the job out to anything and you break away from 7lm
+  - item 29
+    - **id**: F29
+    - **kind**: rule
+    - **statement**: Section 31, the reading of the hard rule: each repository's history is its own, kept at its own L6 and nowhere else; the guides carry the model and not any repository's past; a push carries the tree and the sheets, never the scaffold's L6; no repository's history moves in either direction. The specification, CI, sheets and templates were not changed by it.
+    - **locator**: 7lm@origin/main:L8/L6/history/harmonization-2026-09-04.md:406, :408, :410
+    - **quote**: Each repository's history is its own, kept at its own L6 and nowhere else.
+  - item 30
+    - **id**: F30
+    - **kind**: open
+    - **statement**: Section 32, RECORDED, NOT APPLIED: a second file `1.md` (a landscape infographic of what a directory and its subdirectories do) and "base dirs" (proposed: the canonical children of the two roots, eleven base dirs: L7's provenance, governance, peering, allications and L8's L0 to L6); subs carry no default 1.md; promotion of a sub; one generator, many plates. Nothing in the tree, sheets, guide, templates, specification or CI changes.
+    - **locator**: 7lm@origin/main:L8/L6/history/harmonization-2026-09-04.md:416-428
+    - **quote**: Recorded, not applied. Nothing in the tree, the sheets, the guide, the templates, the specification, or the CI changes on this section
+  - item 31
+    - **id**: F31
+    - **kind**: open
+    - **statement**: Section 33, RECORDED, NOT APPLIED: plate (1.md) assignments for allications, governance, peering, provenance, L0, L1, L6; L7/provenance/lineage/ as "the one of one" delivered blank and never getting a 1.md; the name "allics" (naming only, no directory change); a separate directory to be established as the one home for definitions (the one decision that would change the canonical tree, the CI canon list and sheets; "it waits"); L6 as a layered library picture. L2, L3, L4, L5 and the two roots are not assigned.
+    - **locator**: 7lm@origin/main:L8/L6/history/harmonization-2026-09-04.md:444-453
+    - **quote**: This is the one decision of the evening that changes the canonical tree, the CI canon list, and sheets; it waits.
+  - item 32
+    - **id**: F32
+    - **kind**: open
+    - **statement**: Section 34, RECORDED, NOT APPLIED: the brief for the L1 state-space plate (how to write in state space; how to make your own; the climb through L2 formal math, L3 engineering math, L4 manufacturing) and the dependency test. The owner refused adding "God rules" as a term. Two candidate clarifications to the specification are stated as not written.
+    - **locator**: 7lm@origin/main:L8/L6/history/harmonization-2026-09-04.md:457-467
+    - **quote**: Recorded, not applied: the plate is not drawn, the specification is not changed, no term is added.
+  - item 33
+    - **id**: F33
+    - **kind**: open
+    - **statement**: Section 35, RECORDED, NOT APPLIED: the picture book, the plates of section 32 read in order as a guide for readers without time or reading in a second language. Section 37 corrects its "thirteen plates" as counting pictures section 33 records as unassigned.
+    - **locator**: 7lm@origin/main:L8/L6/history/harmonization-2026-09-04.md:473-478, :506
+    - **quote**: I'm concerned that researchers without time, or language native....etc might need a picture book somehow to be crass but academically and desingally rigorous and acupressure
+  - item 34
+    - **id**: F34
+    - **kind**: rule
+    - **statement**: Section 36, standing: no change to the system without asking first; when unsure, ask. Findings and design verdicts come to the owner as proposals (file, what is wrong, the exact fix) and nothing is applied until the owner says which.
+    - **locator**: 7lm@origin/main:L8/L6/history/harmonization-2026-09-04.md:482, :484
+    - **quote**: Don't change the system unless you ask or are unsure
+  - item 35
+    - **id**: F35
+    - **kind**: rule
+    - **statement**: Section 36, the review workflows: section 31's reading (that the offer to run a workflow of agents was withdrawn) is corrected; the owner asked for it. Workflows run read-only and return findings; no decision is theirs; every change remains HOA. Three ran: a review of two open pull requests (nine dimensions), an audit of seventy-five sheets and the specification (twenty), and the design review of section 32. The owner also said 7LM is the key to a list of projects including the two exemplars.
+    - **locator**: 7lm@origin/main:L8/L6/history/harmonization-2026-09-04.md:486, :488
+    - **quote**: 7LM is the key to ebios, s,m, uha, ommp, autonomous and Auditonomous and eb audit,
+  - item 36
+    - **id**: F36
+    - **kind**: rule
+    - **statement**: Section 37, `1.md` parked, in the owner's words. Sections 32 to 35 stand as a record of what was thought; nothing of it is built and nothing of it is next.
+    - **locator**: 7lm@origin/main:L8/L6/history/harmonization-2026-09-04.md:494
+    - **quote**: lets not do 1.md becuase we are still working 0.md and I think i will end up just nmaking it worse.
+  - item 37
+    - **id**: F37
+    - **kind**: defect
+    - **statement**: Section 37, what was found: section 25 swept paths but left prose naming the same positions in words. Three read-only reviews found fifty-nine defects. The specification's L7 Boundary Rule still read "provenance, governance, peering, and publication state"; its Owns/represents cell still read "access, restrictions" and "publications and release identity"; "the L7 publications branch" stood in two specification sentences and four sheets; the README reading order, the .docx, and the plate sheet's desk label and Source field were stale.
+    - **locator**: 7lm@origin/main:L8/L6/history/harmonization-2026-09-04.md:496
+    - **quote**: §25's "no live reference to a former path" was true of paths and false of words.
+  - item 38
+    - **id**: F38
+    - **kind**: procedure
+    - **statement**: Section 37, trees excluded from the sweep (live text only): nothing under L8/L6/history/, L8/L6/retired/, L8/L6/in/, the filed exemplar page at L7/provenance/prior-art/, or any quotation of the owner's words. Git shows the excluded page is L7/provenance/prior-art/uha-ommp-exemplar.html; the sheet L7/provenance/prior-art/0.md was swept (it is in commit bbb04dd's file list). The sweep was a scripted pass with a count per phrase, forty-four files; commit bbb04dd lists exactly 44 changed files.
+    - **locator**: 7lm@origin/main:L8/L6/history/harmonization-2026-09-04.md:498; git show --stat bbb04dd; ls-tree origin/main L7/provenance/prior-art
+    - **quote**: Live text only — nothing under `L8/L6/history/`, `L8/L6/retired/`, `L8/L6/in/`, the filed exemplar page at `L7/provenance/prior-art/`, or any quotation of the owner's words
+  - item 39
+    - **id**: F39
+    - **kind**: procedure
+    - **statement**: Sweep pair 1 (37 occurrences). BEFORE: "peering, and publication state". AFTER: "peering, and allications — the outward acts, of which publication is one" (an em dash with a space each side). Git reproduces 37 in live text between bbb04dd~1 and bbb04dd: 36 in the 35 L7 sheets (L7/0.md has two) and 1 in the specification; 0 remain in live text on main.
+    - **locator**: 7lm@origin/main:L8/L6/history/harmonization-2026-09-04.md:498; git grep -c on bbb04dd~1 and bbb04dd
+    - **quote**: "peering, and publication state" became "peering, and allications — the outward acts, of which publication is one", the specification's own wording at the sentence §25 changed (37 occurrences)
+  - item 40
+    - **id**: F40
+    - **kind**: procedure
+    - **statement**: Sweep pair 2 (11 occurrences). BEFORE: "the L7 publications branch". AFTER: "L7/allications/publications/". Git: 11 before, 0 after. In context: "is held by the L7 publications branch" became "is held by L7/allications/publications/".
+    - **locator**: 7lm@origin/main:L8/L6/history/harmonization-2026-09-04.md:498; git grep -o counts bbb04dd~1 vs bbb04dd
+    - **quote**: "the L7 publications branch" became "L7/allications/publications/" (11)
+  - item 41
+    - **id**: F41
+    - **kind**: procedure
+    - **statement**: Sweep pair 3 (3 occurrences). BEFORE: "peering, and publications become addressable". AFTER: "peering, and allications become addressable". Git: 3 before, 0 after, 3 of the new string after.
+    - **locator**: 7lm@origin/main:L8/L6/history/harmonization-2026-09-04.md:498; git grep -o counts
+    - **quote**: "peering, and publications become addressable" became "peering, and allications become addressable" (3)
+  - item 42
+    - **id**: F42
+    - **kind**: procedure
+    - **statement**: Sweep pair 4 (3 occurrences). BEFORE: "publications and release identity". AFTER: "allications: the outward acts, of which publication is one" (a colon here, not a dash). Git: 3 before, 0 after.
+    - **locator**: 7lm@origin/main:L8/L6/history/harmonization-2026-09-04.md:498; git grep -o counts
+    - **quote**: "publications and release identity" became "allications: the outward acts, of which publication is one" (3)
+  - item 43
+    - **id**: F43
+    - **kind**: procedure
+    - **statement**: Sweep pair 5 (10 occurrences). BEFORE: "access, restrictions". AFTER: "access, controlled". Git: 10 before, 0 after. This is the tail of the quoted cell "public/legal governance: copyright, licensing, patents, permissions, access, restrictions".
+    - **locator**: 7lm@origin/main:L8/L6/history/harmonization-2026-09-04.md:498; git grep -o counts
+    - **quote**: "access, restrictions" became "access, controlled" (10)
+  - item 44
+    - **id**: F44
+    - **kind**: procedure
+    - **statement**: Sweep pair 6 (2 occurrences). BEFORE: "access, and restrictions". AFTER: "access, and controlled conditions". Git: 2 before, 0 after.
+    - **locator**: 7lm@origin/main:L8/L6/history/harmonization-2026-09-04.md:498; git grep -o counts
+    - **quote**: "access, and restrictions" became "access, and controlled conditions" (2)
+  - item 45
+    - **id**: F45
+    - **kind**: procedure
+    - **statement**: Sweep pair 7 (1 occurrence). BEFORE: "licensing and restrictions folders". AFTER: "licensing and controlled folders". Git: 1 before, 0 after.
+    - **locator**: 7lm@origin/main:L8/L6/history/harmonization-2026-09-04.md:498; git grep -o counts
+    - **quote**: "licensing and restrictions folders" became "licensing and controlled folders" (1)
+  - item 46
+    - **id**: F46
+    - **kind**: procedure
+    - **statement**: Sweep pair 8 (2 occurrences). `restrictions/` as a folder name became `controlled/`. Git locates the two at bbb04dd~1: L7/governance/0.md line 8 and L7/governance/copyright/0.md line 18 ("The sibling positions `licensing/` and `restrictions/` stay admissible" became "`licensing/` and `controlled/`").
+    - **locator**: 7lm@origin/main:L8/L6/history/harmonization-2026-09-04.md:498; git grep -n 'restrictions/' bbb04dd~1
+    - **quote**: `restrictions/` as a folder name became `controlled/` (2)
+  - item 47
+    - **id**: F47
+    - **kind**: procedure
+    - **statement**: Sweep item 9 (no count given): the two retired cells quoted in L7/governance/controlled/0.md became the current ones. From the diff: "Directory for restrictions that constrain external disclosure, use, transfer, or handling." became "Directory for restrictions and other conditions that constrain external disclosure, use, transfer, or handling."; "Keeps restrictions explicit and machine-addressable without redefining the underlying research." became "Keeps what is controlled explicit and machine-addressable without redefining the underlying research."
+    - **locator**: 7lm@origin/main:L8/L6/history/harmonization-2026-09-04.md:498; git show bbb04dd -- L7/governance/controlled/0.md
+    - **quote**: the two retired cells quoted in `L7/governance/controlled/0.md` became the current ones
+  - item 48
+    - **id**: F48
+    - **kind**: procedure
+    - **statement**: Sweep items 10 and 11: the plate's desk label (2 occurrences: the generator .py and the generated .html) and its Source field, the sheet regenerated from the generator. From the diff: "provenance &#183; governance &#183; peering &#183; publications" became "... &#183; allications"; Source "version of 13 September 2026" became "version of 20 September 2026". The same commit changed README.md line 9 from "provenance, governance, peering, publications." to "provenance, governance, peering, allications."
+    - **locator**: 7lm@origin/main:L8/L6/history/harmonization-2026-09-04.md:498; git show bbb04dd -- L8/L0/pedagogy/7lm-plate-sheet.py README.md
+    - **quote**: the plate's desk label (2) and its Source field, the sheet regenerated from the generator. Forty-four files.
+  - item 49
+    - **id**: F49
+    - **kind**: rule
+    - **statement**: Section 37, what the sweep left standing on purpose: the word "restrictions" where it names a kind of condition, and "execution restrictions" in the L2 machine-metadata cell. Example kept in the sheets: "apply public/legal permissions and restrictions".
+    - **locator**: 7lm@origin/main:L8/L6/history/harmonization-2026-09-04.md:498
+    - **quote**: The word "restrictions" naming a kind of condition, and "execution restrictions" in the L2 machine-metadata cell, are not position names and stand.
+  - item 50
+    - **id**: F50
+    - **kind**: change
+    - **statement**: Section 37, the specification, without a new version string (the 20 September version had not reached main). Its CI description now names four refusals, adding "a canonical position without a sheet". Its exemplar bullet now says `restrictions/` ("the position this specification now names controlled/"). Both "Not yet as stated" paragraphs now record that the exemplar desks carry the former branch names. On main these statements stand at specification lines 938, 950 and 958.
+    - **locator**: 7lm@origin/main:L8/L6/history/harmonization-2026-09-04.md:500; 7lm@origin/main:L8/L4/work/writing/7lm-harmonized-architecture-specification.md:938,950,958
+    - **quote**: The desk carries the L7 branch names of the version before 20 September 2026, publications/ as a direct branch and governance/restrictions/; the L7 restructure is not yet mirrored.
+  - item 51
+    - **id**: F51
+    - **kind**: change
+    - **statement**: Section 37, the guide and templates corrections (scaffold-only files): the desk paragraph's four folders; the release position; the copyright pointer; the six governance positions; the peer-acceptance sentence; the sheet rule on folders beneath a layer (what the sheet says is the design choice; the folder and its first line are not); the audit-exception tag; "Give each one a `0.md` when you can" (had made the sheet optional); the README description; "manuscript in three formats" corrected to "manuscript placeholder"; the exemplar snapshot dated. Templates: "at least" restored to the minimal degree.
+    - **locator**: 7lm@origin/main:L8/L6/history/harmonization-2026-09-04.md:502
+    - **quote**: what the sheet says is the design choice, the folder and its first line are not
+  - item 52
+    - **id**: F52
+    - **kind**: change
+    - **statement**: Section 37, sheets beyond the sweep: L7/0.md gained the author note "Many intelligences at one face", its communications Why cell became the specification's cell verbatim, and its introductory sentence no longer claims every statement beneath is a quotation. L7/allications/notifications/0.md takes the specification's cell as its Object line ("Directory for notices the object issues outward."). L8/L6/0.md describes what in/ holds correctly.
+    - **locator**: 7lm@origin/main:L8/L6/history/harmonization-2026-09-04.md:504; git show bbb04dd -- L7/0.md L7/allications/notifications/0.md
+    - **quote**: `L7/0.md` carries the author note "Many intelligences at one face" that its "In the case of" section had omitted
+  - item 53
+    - **id**: F53
+    - **kind**: change
+    - **statement**: Section 37, what the CI list gained: the eight peer-1 and object-1 positions, making seventy-one. Confirmed in bbb04dd's diff (one added line of eight paths under L7/peering/{private,public}/{ingress,egress}/peer-1 and /peer-1/object-1) and by counting the list on main (lines 47-59: 6+7+7+8+7+4+5+3+5+5+5+2+7 = 71). The comment now reads "Retired sets under L6/retired/ (l6/retired/ before the rename pass)". The workflow is unchanged between bbb04dd and main.
+    - **locator**: 7lm@origin/main:L8/L6/history/harmonization-2026-09-04.md:504; 7lm@origin/main:.github/workflows/integrity.yml:33,47-59
+    - **quote**: The CI: its canon list gains the eight peer-1 and object-1 positions the specification's tree draws, seventy-one positions in all, and its comment names the current retired path.
+  - item 54
+    - **id**: F54
+    - **kind**: defect
+    - **statement**: Section 37's corrections to section 25, stated in section 37 and left in place in section 25: the commit changed twenty-six live files, not twenty-eight; the corpus disposition row of the specification's Harmonization Record WAS propagated to L7/allications/publications/ and is wrongly listed as not propagated; the sections that keep the guide's former path are 15, 17, 18, 23 and 24.
+    - **locator**: 7lm@origin/main:L8/L6/history/harmonization-2026-09-04.md:506
+    - **quote**: §25: the commit changed twenty-six live files, not twenty-eight; the corpus disposition row of the specification's Harmonization Record was propagated to `L7/allications/publications/` in that commit
+  - item 55
+    - **id**: F55
+    - **kind**: defect
+    - **statement**: Section 37's corrections to sections 28, 31, 35 and to specification-history.md. Section 28: "every sheet" unchanged is contradicted by its own Done paragraph (L8/L6/0.md was changed). Section 31: the hard rule sits in guide section 5 as a bold lead-in, not under its own heading. Section 35: "thirteen plates" counts unassigned pictures. The versions row for 20 September said "the topology's shape" is not superseded; it now reads as point 6 does (confirmed at specification-history.md line 14).
+    - **locator**: 7lm@origin/main:L8/L6/history/harmonization-2026-09-04.md:506; 7lm@origin/main:L8/L6/history/specification-history.md:14
+    - **quote**: §31: the hard rule sits in section 5 as a bold lead-in in the form of the section's other rules, not under its own heading.
+  - item 56
+    - **id**: F56
+    - **kind**: rule
+    - **statement**: Section 37, not changed, and the limit of the leave given: the tree, every sheet's first line, the owner's words, the historical records and the design decisions of sections 32 to 35 were not changed. "Please take the qwheel" is read as leave to make the words say what the folders say, and no leave to change what any position is, holds or is named.
+    - **locator**: 7lm@origin/main:L8/L6/history/harmonization-2026-09-04.md:508, :510
+    - **quote**: Not changed. The tree. Every sheet's first line. The owner's words, anywhere. The historical records.
+  - item 57
+    - **id**: F57
+    - **kind**: defect
+    - **statement**: Mismatch between record and tree: section 37 (and specification-history point 8) says the Boundary Rule sentence "is copied into thirty-six live sheets". At bbb04dd~1 git shows the phrase in 35 sheet files, all under L7, with 36 occurrences because L7/0.md has two. The total of 37 with the specification is right.
+    - **locator**: 7lm@origin/main:L8/L6/history/harmonization-2026-09-04.md:496; git grep -c -F 'peering, and publication state' bbb04dd~1
+    - **quote**: that sentence is copied into thirty-six live sheets
+  - item 58
+    - **id**: F58
+    - **kind**: defect
+    - **statement**: Section 37 files its third correction under "§25", but the sentence it corrects stands in section 26 (line 344), which lists "§15, §17, §18, §24 and §25". Git confirms the corrected list: the former guide path appears at record lines 184 (section 15), 200 (17), 220 (18), 287 and 291 (23), 311 (24), and 338 (section 26 itself). Section 25 does not name the path.
+    - **locator**: 7lm@origin/main:L8/L6/history/harmonization-2026-09-04.md:344 and :506; grep -n 'pedagogy/7lm-field-guide' on the same file
+    - **quote**: The sections of this record that name the guide at its former path, §15, §17, §18, §24 and §25, which keep the path that was true when they were written.
+  - item 59
+    - **id**: F59
+    - **kind**: change
+    - **statement**: specification-history.md, the version history (six rows): 4 September 2026 (the owner's FINAL.docx, at L8/L6/retired/specification-2026-09-04/); 6 September (draft, never adopted, main at 30fcf10); 7 September (main at 1a6098e); 12 September (rename pass, main at b85d2e0); 13 September (packet reading, main at e22c5fc); 20 September 2026, the current version, at L8/L4/work/writing/.
+    - **locator**: 7lm@origin/main:L8/L6/history/specification-history.md:7-14
+    - **quote**: The current version, drafted from the 13 September version by the L7 restructure: `publications/` becomes `allications/publications/` beneath a new canonical branch `allications/` holding six outward acts
+  - item 60
+    - **id**: F60
+    - **kind**: change
+    - **statement**: specification-history.md, changes of 20 September 2026, points 1 to 6: publications/ is no longer a direct L7 branch; allications/ added with five further positions; governance/restrictions/ renamed governance/controlled/ with prose widened to "restrictions and other conditions"; the canonical line changed; both trees redrawn; seven table rows in place of one; version date changed in header comment, dateline, Version box, footer and description; no rule superseded.
+    - **locator**: 7lm@origin/main:L8/L6/history/specification-history.md:95-100
+    - **quote**: The change is to the L7 branch names and the shape beneath `allications/`, not to what L7 owns.
+  - item 61
+    - **id**: F61
+    - **kind**: exemplar
+    - **statement**: specification-history.md, point 7 of 20 September 2026: only aybllc/7lm is updated from here; the exemplars still carry the former branch names.
+    - **locator**: 7lm@origin/main:L8/L6/history/specification-history.md:101
+    - **quote**: The exemplar repositories `aybllc/autonomous` and `aybllc/auditonomous` still carry the former branch names and are not brought into step by this pass.
+  - item 62
+    - **id**: F62
+    - **kind**: change
+    - **statement**: specification-history.md, point 8 of 20 September 2026: the second pass, the words made to match the folders. The specification's L7 Owns/represents cell, Boundary Rule, desk sentence, public/egress Why cell and peering paragraph now read allications and controlled; the CI description names the fourth refusal; the exemplar bullet and both "Not yet as stated" paragraphs record that the exemplars carry the former names; the version string is unchanged.
+    - **locator**: 7lm@origin/main:L8/L6/history/specification-history.md:102
+    - **quote**: The version string is unchanged, the version of 20 September 2026 not yet being on `main`.
+  - item 63
+    - **id**: F63
+    - **kind**: exemplar
+    - **statement**: specification-history.md, other content bearing on the exemplars: the dated dispositions say the 12 September rename pass (USO/ to L8/, l0…l6 to L0…L6) was carried out in the scaffold and both exemplars; the owner's words behind "the same root in every repository"; and the binding rule for the Autonomous definition.
+    - **locator**: 7lm@origin/main:L8/L6/history/specification-history.md:29, :37, :52
+    - **quote**: Auditonomous gets the definitions of autonomous from Autonomous and nowhere else
+  - item 64
+    - **id**: F64
+    - **kind**: change
+    - **statement**: BETA, first added section, "Owner-approved common architecture corrections of 2 November 2026". Who: Codex, task T1. When: 2 November 2026 (America/Los_Angeles). Baseline: 2e5a6d67b6c590a06ea9761dfd8a98c3ed8ff270 (git merge-base with main confirms). Claimed: after the owner's approval of R1–R6, the correction set preserves the canonical topology and layer owners; repairs the remaining peer-authorship instruction; clarifies manual metadata status, non-exhaustive L0 foundations and model-attached vertical inquiries; scopes scale placement; harmonizes external semantic examples; qualifies the byte analogy.
+    - **locator**: 7lm@origin/beta/common-contracts-r1-r6:L8/L6/history/specification-history.md:104-106
+    - **quote**: Implemented by Codex, task T1, on 2 November 2026 (America/Los_Angeles), in the bounded common-architecture candidate after the owner's approval of R1–R6.
+  - item 65
+    - **id**: F65
+    - **kind**: change
+    - **statement**: BETA, first added section, verification claims: the DOCX was synchronized from the corrected Markdown (29 tables, 477 cells matched; 54 rendered pages inspected); the integrity workflow now requires L8 and uppercase L0–L6 with its 71-position list unchanged; a targeted replay accepted the candidate and rejected USO/lowercase and L8/lowercase variants. The beta's CI diff against 2e5a6d6 confirms the workflow change (root case drops USO; `top=L8`; `${lower}` removed).
+    - **locator**: 7lm@origin/beta/common-contracts-r1-r6:L8/L6/history/specification-history.md:106; git diff 2e5a6d6 origin/beta/common-contracts-r1-r6 -- .github/workflows/integrity.yml
+    - **quote**: The existing integrity workflow now requires L8 and uppercase L0–L6; its 71-position list is unchanged.
+  - item 66
+    - **id**: F66
+    - **kind**: rule
+    - **statement**: BETA, first added section, what is NOT claimed and not changed: it is not a full-beta or release claim; superseded horizontal-rail and finite/infinite ownership rules are not restored; all v1.3 variants remain excluded; no N/U or NCF theory, machine metadata engine, ACL, rail directory, private peer source, release or sibling repository is changed.
+    - **locator**: 7lm@origin/beta/common-contracts-r1-r6:L8/L6/history/specification-history.md:106, :108
+    - **quote**: This records the checked common-architecture candidate, not a full-beta or release claim; publication and other bounded candidate work are separate.
+  - item 67
+    - **id**: F67
+    - **kind**: change
+    - **statement**: BETA, second added section, "Bounded additional research-object construction, 2 November 2026". Claimed: after approval of the common correction and exemplar construction package, model-scoped N/U and Semantic Magnitude probe representations were added in L0–L5 with source ledger rows, executable work and recorded results; nine targeted new integration tests passed. No actor is named in this section. Not claimed: neither owner theory was repaired or adopted as a universal foundation; exemplar integration and candidate branch commit identities are recorded separately.
+    - **locator**: 7lm@origin/beta/common-contracts-r1-r6:L8/L6/history/specification-history.md:110-112
+    - **quote**: The N/U enclosure counterexample and Semantic Magnitude unresolved aggradation are retained as scientific outcomes, not converted to successful theory validation.
+  - item 68
+    - **id**: F68
+    - **kind**: defect
+    - **statement**: The beta candidate records its 2 November work only in specification-history.md. It adds no section to the harmonization record, which still ends at section 37 on the beta, and the two commits on the branch (4ca3edb of 2026-11-02 and 97314c5 of 2026-11-03, author EDM) change 32 files in all. The approval of R1–R6 is asserted by the candidate's own text; no owner quotation accompanies it in this file.
+    - **locator**: git -C /home/user/7lm log 2e5a6d6..origin/beta/common-contracts-r1-r6; diff --stat origin/main origin/beta/common-contracts-r1-r6 -- L8/L6/history/
+    - **quote**: after the owner's approval of R1–R6
+  - item 69
+    - **id**: F69
+    - **kind**: exemplar
+    - **statement**: Cross-check for the mirror: the sweep's main phrase "peering, and publication state" is present on the exemplar mains in 55 files (autonomous) and 37 files (auditonomous), counted over the whole tree including any history and retired material, which the scaffold's sweep would exclude.
+    - **locator**: git -C /home/user/autonomous grep -c -F 'peering, and publication state' origin/main; same for /home/user/auditonomous
+    - **quote**: 
+- **checklist**
+  - item 1
+    - **step**: 0. Before anything: the owner's word
+    - **detail**: Nothing changes without asking (section 36), and the exemplars are mirrored by hand, by a person, when the owner judges the scaffold close (section 26). Each repository records its own pass at its own L8/L6/history/; do not copy the scaffold's L6 history into an exemplar (section 31).
+    - **locator**: 7lm@origin/main:L8/L6/history/harmonization-2026-09-04.md:482, :346, :402
+  - item 2
+    - **step**: A1. Move publications (tracked rename)
+    - **detail**: Move L7/publications/ to L7/allications/publications/ as a tracked rename so history follows. In the moved sheet change line 1 to `# L7/allications/publications/` and the Path line to `L7/allications/publications/`.
+    - **locator**: 7lm@origin/main:L8/L6/history/harmonization-2026-09-04.md:321; commit 606d4b3 rename L7/{ => allications}/publications/0.md
+  - item 3
+    - **step**: A2. Move restrictions (tracked rename)
+    - **detail**: Move L7/governance/restrictions/ to L7/governance/controlled/ as a tracked rename. In the moved sheet change line 1 to `# L7/governance/controlled/`, the Path line to `L7/governance/controlled/`, and the Object line to "Directory for restrictions and other conditions that constrain external disclosure, use, transfer, or handling."
+    - **locator**: 7lm@origin/main:L8/L6/history/harmonization-2026-09-04.md:321; commit 606d4b3 rename L7/governance/{restrictions => controlled}/0.md
+  - item 4
+    - **step**: A3. Write the container sheet
+    - **detail**: Create L7/allications/0.md, first line `# L7/allications/`. Scaffold Object line: "Directory for the bounded object's outward acts: publications, applications, communications, specifications, notifications, and participations."
+    - **locator**: 7lm@origin/main:L7/allications/0.md:1-4
+  - item 5
+    - **step**: A4. Write five sibling sheets
+    - **detail**: Create 0.md at L7/allications/applications/, communications/, specifications/, notifications/, participations/, each headed by its own path. Spell `notifications` (not the owner's `notificattions`); keep `allications` as written. L7 goes from 29 to 35 sheets.
+    - **locator**: 7lm@origin/main:L8/L6/history/harmonization-2026-09-04.md:321; 7lm@origin/main:L7/allications/*/0.md
+  - item 6
+    - **step**: A5. Redraw L7/0.md
+    - **detail**: Tree: `controlled/0` under governance; `allications/0` with six children in place of `publications/0`. Table: governance/restrictions/ row becomes governance/controlled/ ("...restrictions and other conditions..." / "Keeps what is controlled explicit..."); the publications/ row becomes seven rows (allications/ and its six children). Sentence: "four owned external relations: provenance, governance, peering, and allications — the outward acts, of which publication is one."
+    - **locator**: git -C /home/user/7lm show 606d4b3 -- L7/0.md; 7lm@origin/main:L7/0.md
+  - item 7
+    - **step**: A6. Specification (scaffold only)
+    - **detail**: Version 20 September 2026. Canonical line now: "Canonical direct L7 branches are L7/provenance/, L7/governance/, L7/peering/, and L7/allications/." Four-relations sentence changed; both trees redrawn; seven table rows in place of publications/; governance/controlled/ row; the two copyright clarifications point at controlled/. Neither exemplar main carries a specification file.
+    - **locator**: 7lm@origin/main:L8/L6/history/harmonization-2026-09-04.md:323
+  - item 8
+    - **step**: A7. Path sweep in live files
+    - **detail**: Replace `L7/publications/` with `L7/allications/publications/`; `L7/governance/restrictions/` with `L7/governance/controlled/`; and in any quotation of the canonical line, "and L7/publications/." with "and L7/allications/." Scaffold files touched: L7 sheets of peering, governance, provenance; L8/L6/0.md; L8/L4/work/0.md; L8/L4/work/writing/0.md; L8/L5/research/findings/0.md; the field guide. The record gives no per-string count (26 live files after correction).
+    - **locator**: 7lm@origin/main:L8/L6/history/harmonization-2026-09-04.md:325, :506; git show --word-diff 606d4b3
+  - item 9
+    - **step**: A8. CI canon list, first change
+    - **detail**: In .github/workflows/integrity.yml: `L7/governance/restrictions` becomes `L7/governance/controlled`; the entry `L7/publications` becomes `L7/allications L7/allications/publications L7/allications/applications L7/allications/communications L7/allications/specifications L7/allications/notifications L7/allications/participations`.
+    - **locator**: git -C /home/user/7lm show 606d4b3 -- .github/workflows/integrity.yml
+  - item 10
+    - **step**: A9. Leave the records alone
+    - **detail**: Do not move a path inside any historical record: the repository's own L8/L6/history/ files and dated rows, reserved-terms lists, L8/L6/history/sheets-2026-09-07.md, everything under L8/L6/retired/, and the frozen extract at L8/L6/in/.
+    - **locator**: 7lm@origin/main:L8/L6/history/harmonization-2026-09-04.md:327
+  - item 11
+    - **step**: A10. Check and record
+    - **detail**: Run the one CI check: no conflict markers, canonical root, [source text withheld from the public copy] including the seven new ones. Record the pass in the repository's own L6 history. (Scaffold only: the .docx was patched by XML surgery.)
+    - **locator**: 7lm@origin/main:L8/L6/history/harmonization-2026-09-04.md:331
+  - item 12
+    - **step**: B0. Sweep scope
+    - **detail**: Live text only, scripted, with a count per phrase. Exclude L8/L6/history/, L8/L6/retired/, L8/L6/in/, the filed exemplar page (in the scaffold, L7/provenance/prior-art/uha-ommp-exemplar.html; the sheet prior-art/0.md was swept), and every quotation of the owner's words.
+    - **locator**: 7lm@origin/main:L8/L6/history/harmonization-2026-09-04.md:498
+  - item 13
+    - **step**: B1. Phrase pair, 37 in the scaffold
+    - **detail**: "peering, and publication state" -> "peering, and allications — the outward acts, of which publication is one"
+    - **locator**: 7lm@origin/main:L8/L6/history/harmonization-2026-09-04.md:498
+  - item 14
+    - **step**: B2. Phrase pair, 11
+    - **detail**: "the L7 publications branch" -> "L7/allications/publications/"
+    - **locator**: 7lm@origin/main:L8/L6/history/harmonization-2026-09-04.md:498
+  - item 15
+    - **step**: B3. Phrase pair, 3
+    - **detail**: "peering, and publications become addressable" -> "peering, and allications become addressable"
+    - **locator**: 7lm@origin/main:L8/L6/history/harmonization-2026-09-04.md:498
+  - item 16
+    - **step**: B4. Phrase pair, 3
+    - **detail**: "publications and release identity" -> "allications: the outward acts, of which publication is one"
+    - **locator**: 7lm@origin/main:L8/L6/history/harmonization-2026-09-04.md:498
+  - item 17
+    - **step**: B5. Phrase pair, 10
+    - **detail**: "access, restrictions" -> "access, controlled"
+    - **locator**: 7lm@origin/main:L8/L6/history/harmonization-2026-09-04.md:498
+  - item 18
+    - **step**: B6. Phrase pair, 2
+    - **detail**: "access, and restrictions" -> "access, and controlled conditions"
+    - **locator**: 7lm@origin/main:L8/L6/history/harmonization-2026-09-04.md:498
+  - item 19
+    - **step**: B7. Phrase pair, 1
+    - **detail**: "licensing and restrictions folders" -> "licensing and controlled folders"
+    - **locator**: 7lm@origin/main:L8/L6/history/harmonization-2026-09-04.md:498
+  - item 20
+    - **step**: B8. Folder name, 2
+    - **detail**: `restrictions/` as a folder name -> `controlled/` (scaffold: L7/governance/0.md and L7/governance/copyright/0.md, "`licensing/` and `restrictions/` stay admissible").
+    - **locator**: 7lm@origin/main:L8/L6/history/harmonization-2026-09-04.md:498; git grep -n 'restrictions/' bbb04dd~1
+  - item 21
+    - **step**: B9. Two quoted cells in L7/governance/controlled/0.md
+    - **detail**: "Directory for restrictions that constrain external disclosure, use, transfer, or handling." -> "Directory for restrictions and other conditions that constrain external disclosure, use, transfer, or handling."; "Keeps restrictions explicit and machine-addressable without redefining the underlying research." -> "Keeps what is controlled explicit and machine-addressable without redefining the underlying research."
+    - **locator**: git -C /home/user/7lm show bbb04dd -- L7/governance/controlled/0.md
+  - item 22
+    - **step**: B10. Plate label (2) and Source field (scaffold only)
+    - **detail**: In the generator and regenerated sheet: "provenance &#183; governance &#183; peering &#183; publications" -> "... &#183; allications"; Source "version of 13 September 2026" -> "version of 20 September 2026". Neither exemplar main carries a plate sheet.
+    - **locator**: git -C /home/user/7lm show bbb04dd -- L8/L0/pedagogy/7lm-plate-sheet.py
+  - item 23
+    - **step**: B11. README reading order
+    - **detail**: "`L7/0.md` — the desk, the forward face: provenance, governance, peering, publications." -> "... provenance, governance, peering, allications."
+    - **locator**: git -C /home/user/7lm show bbb04dd -- README.md
+  - item 24
+    - **step**: B12. Leave these words standing
+    - **detail**: "restrictions" where it names a kind of condition (for example "apply public/legal permissions and restrictions"), and "execution restrictions" in the L2 machine-metadata cell. They are not position names.
+    - **locator**: 7lm@origin/main:L8/L6/history/harmonization-2026-09-04.md:498
+  - item 25
+    - **step**: B13. Sheets beyond the sweep (scaffold)
+    - **detail**: L7/0.md: add the author note "Many intelligences at one face"; communications Why cell verbatim from the specification; introductory sentence no longer claims all is quotation. L7/allications/notifications/0.md Object line: "Directory for notices the object issues outward." L8/L6/0.md: describe what in/ holds.
+    - **locator**: 7lm@origin/main:L8/L6/history/harmonization-2026-09-04.md:504
+  - item 26
+    - **step**: B14. CI canon list, second change
+    - **detail**: Add one line of eight positions: L7/peering/private/ingress/peer-1, .../peer-1/object-1, L7/peering/private/egress/peer-1, .../object-1, L7/peering/public/ingress/peer-1, .../object-1, L7/peering/public/egress/peer-1, .../object-1. Total 71. Comment: "Retired sets under L6/retired/ (l6/retired/ before the rename pass)".
+    - **locator**: 7lm@origin/main:.github/workflows/integrity.yml:33, :50
+  - item 27
+    - **step**: B15. Do not change
+    - **detail**: The tree. Every sheet's first line. The owner's words, anywhere. The historical records. No version string change in the scaffold's specification.
+    - **locator**: 7lm@origin/main:L8/L6/history/harmonization-2026-09-04.md:500, :508
+  - item 28
+    - **step**: C. Do NOT apply (recorded only)
+    - **detail**: Section 32: 1.md and base dirs. Section 33: plate assignments, a blank lineage sheet, the name allics, a separate definitions directory, the L6 library picture. Section 34: the L1 plate, the dependency test, any "God rules" term, the two candidate specification clarifications. Section 35: the picture book. Also not built: the push mechanism (section 27) and the one-click republishing (section 29). Section 37 parks 1.md.
+    - **locator**: 7lm@origin/main:L8/L6/history/harmonization-2026-09-04.md:418, :444, :459, :478, :494
+- **open_questions**
+  - Section 25 says 28 live files were changed and section 37 corrects this to 26. Commit 606d4b3 lists 37 paths (6 created, 2 renamed, 29 modified). The record does not say which files the 26 counts, so the number cannot be reproduced exactly.
+  - Section 37 says the Boundary Rule sentence is in "thirty-six live sheets"; git shows 36 occurrences in 35 sheets. Whether the record meant occurrences is not stated.
+  - The scaffold's specification on main still states (lines 938, 950, 958) that the exemplars carry publications/ and governance/restrictions/ and that the restructure "is not yet mirrored". Once the exemplars are mirrored those three statements become untrue. Changing them changes the scaffold and needs the owner's word (section 36); the record does not say who updates them or when.
+  - The exemplars' sheets may not quote the specification in the same words as the scaffold's sheets. The sweep's counts (37, 11, 3, 3, 10, 2, 1, 2) are the scaffold's; the exemplars' own counts per phrase, split between live and historical text, were not established in this scope.
+  - Whether every one of the eight peer-1/object-1 positions the CI list now requires has a sheet in each exemplar was not checked here (outside scope). The scaffold's CI would fail an exemplar that lacks one.
+  - The beta's two 2 November sections assert "the owner's approval of R1–R6" and an approved "exemplar construction package" without quoting the owner, and the harmonization record carries no section for that work. Whether the beta is to be treated as part of the model to mirror is the owner's call; main does not contain it.
+  - The second beta section names no actor; only the first names Codex. Whether the same task produced both is not stated in the file.
+  - Section 27 leaves unresolved whether the sentence recommendation reaches the desk (L7) and the interior root. Section 30 leaves unresolved where a person keeps the list of blank sheets until the collecting document exists.
+  - Section 33 leaves two questions for the owner: whether the scaffold's own lineage sheet is to be blank or blanked on push, and where the one home for definitions sits. Both wait; neither is to be applied.
+  - Section 29: whether "Delarers choice" introduces "declarer" as a term is recorded as not settled.

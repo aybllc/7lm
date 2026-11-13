@@ -1,0 +1,52 @@
+# resolve:D14
+
+Agent result, as returned. Workflow: Resolutions for the 23 owner decisions. Run `wf_3293f65c-a92`. Phase: Resolve.
+
+- **decision**: 14. Whether a physical match includes a sheet, blank if need be, at the 18 unsheeted folders, nine of which hold third-party staging records.
+- **resolution**: Keep the sheets out of the mirror itself: the scaffold pushes none of these 18 folders, so draft PRs #30 and #28 stay as they are, with the folders "left as found, for the owner". As a separate, single commit in each exemplar, add a blank sheet (the first line `# <path>/` and nothing else) at each of the 18 folders (6 in autonomous, 12 in auditonomous), editing no existing file, and list the 18 in each record as audit exceptions for HOA review. Because this adds files the owner's order of 11 November did not name, make that commit only on the owner's yes; it is undone by reverting the one commit.
+- **reasoning**
+  - item 1
+    - **speaker**: owner
+    - **quote**: I left out sub folders because those are design choices but they should all either be blank with just the location this being skipped and tagged at the end of the doc as an adult xception for HOA review
+    - **locator**: /home/user/7lm@origin/main:L8/L6/history/harmonization-2026-09-04.md:388
+    - **bears**: The owner's own rule for folders beneath a layer is a sheet that may be blank, the location only, tagged for HOA review; this is the form a sheet at the 18 folders would take, and it requires no wording about the contents.
+  - item 2
+    - **speaker**: owner
+    - **quote**: We long as you maintain the dir structure, 0.md files, (in the future, pinned hashes push HOA REVIEW inter peering private where decisions are made to follow or edit, dir structure we push is required.
+    - **locator**: /home/user/7lm@origin/main:L8/L6/history/harmonization-2026-09-04.md:350
+    - **bears**: What the owner makes required is the directory structure the scaffold pushes with its 0.md files; the 18 folders are the exemplars' own and are not pushed by the scaffold, so the physical match to the model does not by itself reach them.
+  - item 3
+    - **speaker**: owner
+    - **quote**: All repos should mirror the 7lm. Manually.
+    - **locator**: /home/user/7lm@origin/main:L8/L6/history/harmonization-2026-09-04.md:336
+    - **bears**: The mirror is of the scaffold, by hand; the scaffold has no counterpart of these 18 folders to mirror, so sheeting them is a second act beside the mirror, not part of it.
+  - item 4
+    - **speaker**: owner
+    - **quote**: Don't change the system unless you ask or are unsure
+    - **locator**: /home/user/7lm@origin/main:L8/L6/history/harmonization-2026-09-04.md:482
+    - **bears**: Adding 18 files the order of 11 November did not name is a change to ask about first, which is why the sheets go in a separate commit made on the owner's yes.
+  - item 5
+    - **speaker**: record
+    - **quote**: A folder beneath a layer keeps its sheet — the tree and the first line are not design choices — and the sheet may be blank, the first line and nothing else.
+    - **locator**: /home/user/7lm@origin/main:L8/L6/history/harmonization-2026-09-04.md:390
+    - **bears**: The scaffold's record reads the owner's sentence as: every folder beneath a layer has a sheet, and blank is permitted; so a blank sheet satisfies the rule at all 18.
+  - item 6
+    - **speaker**: other
+    - **quote**: Give each one a `0.md`; every folder carries one. The check reports a missing one rather than failing on it, and a folder without a sheet is outside the system. Both exemplar repositories do exactly this.
+    - **locator**: /home/user/7lm@origin/main:L8/L6/7lm-field-guide.md:474
+    - **bears**: The field guide on main extends the rule expressly to an adopter's own folders and says the exemplars already comply, which the 18 unsheeted folders make untrue; note the guide is retired as stale on the unmerged PR #20 branch, so this is weaker than the owner's words.
+  - item 7
+    - **speaker**: record
+    - **quote**: - Twelve folders carry no sheet: `L7/allications/publications/binder/internal/` and `L7/allications/publications/binder/press-kit/`; nine beneath `L7/provenance/sources/staging-records/` (`ieee/`, `ieee/papers/`, `ieee/reading/`, `interval/`, `library/`, `library/reading/`, `library/text/`, `standards/`, `standards/extracted/`); and `L8/L5/research/review/autonomous-theory/`. The check reports them and does not fail on them.
+    - **locator**: /home/user/auditonomous@origin/ccr-9391bd81-f2enmj:L8/L6/history/harmonization-2026-09-05.md:204
+    - **bears**: Establishes the facts for auditonomous (12 folders, 9 under staging-records), that the mirror left them as found for the owner, and that the check passes without them, so nothing blocks the mirror while the owner decides.
+  - item 8
+    - **speaker**: record
+    - **quote**: - Six folders carry no sheet: `L7/allications/publications/binder/internal/`, `L7/allications/publications/binder/internal/tools/`, `L7/allications/publications/binder/press-kit/`, and `L8/L5/research/review/autonomous-theory/` with its `audit-anon/` and `autonomouos/`. The check reports them and does not fail on them.
+    - **locator**: /home/user/autonomous@origin/ccr-9391bd81-f2enmj:L8/L6/history/harmonization-2026-09-05.md:211
+    - **bears**: Establishes the other six, making 18 in all outside the retired sets (confirmed by ls-tree on both PR branches).
+- **against**: "Its own `README.md` explains it; its files are not edited, and their internal `intake/sources/…` references are their own dated provenance, deliberately not rewritten. The interior directories carry their own READMEs from the earlier layout and are not re-gated here." (/home/user/auditonomous@origin/ccr-9391bd81-f2enmj:L7/provenance/sources/staging-records/0.md:8). The staging subtree was moved intact and deliberately left without sheets; the check agrees that such material "may carry sheets or not (reported in the next step)" (/home/user/7lm@origin/main:.github/workflows/integrity.yml:35). A blank sheet edits no file there, but it does add a file to a tree the record says is not re-gated.
+- **confidence**: the quotations favour it
+- **alternatives**: (a) Leave all 18 as found and keep them listed in each record for the owner: the most conservative course, and the state of PRs #30 and #28 today. (b) Sheet only the nine folders outside staging-records (binder and autonomous-theory: 6 in autonomous, 3 in auditonomous) and leave the nine staging folders unsheeted, honouring "not re-gated here". (c) Write full sheets describing the contents: not recommended, since describing hold-private source records is more than the owner's "blank with just the location".
+- **what_it_costs**: Eighteen new one-line files (6 in autonomous, 12 in auditonomous) and one record paragraph in each exemplar; no existing file changes and the check's result is unchanged (it already passes; its report of unsheeted directories would become empty outside retired sets). The cost is nine added files inside a subtree recorded as moved intact, and the guide that states the every-folder rule most plainly is itself retired on the unmerged PR #20 branch. Reversal is one revert per repository.
+- **who_acts**: The owner says yes or no (and whether the nine staging-records folders are included). On yes, the session that holds the draft PR branches (autonomous #30, auditonomous #28) adds the one commit per repository by hand and records it in each L8/L6/history/harmonization-2026-09-05.md.

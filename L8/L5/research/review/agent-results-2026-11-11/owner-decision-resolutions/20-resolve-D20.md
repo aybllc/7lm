@@ -1,0 +1,52 @@
+# resolve:D20
+
+Agent result, as returned. Workflow: Resolutions for the 23 owner decisions. Run `wf_3293f65c-a92`. Phase: Resolve.
+
+- **decision**: 20. Which base the Auditonomous research and manuscript QA takes, main or the closed book branch, and whether that branch is revived before or after the mirror.
+- **resolution**: Run the QA now, read-only, against the closed book branch tip 9259c18 as git objects, marking each finding as "also on main" or "book branch only". Do not revive the branch yet: once the owner has accepted the mirror (draft PR #28), bring the five book commits forward onto post-mirror main as a new draft pull request, with the thirty files that still name the former paths listed for the owner. If the owner says PR #27 was closed as a rejection of the restore, the QA re-scopes to main's 169 files and the book-only findings are set aside.
+- **reasoning**
+  - item 1
+    - **speaker**: owner
+    - **quote**: Get qa hanfle on the research and manuscruipt for Auditonomous but firwst re0ull7lm and deep research the mopdel becuase its chamnged and we need to uipdate the autonomous and auditonomous repos phsyciall; to match first .
+    - **locator**: owner's instructions of 11 November 2026, as typed
+    - **bears**: The owner sets the order himself: the physical match to the model comes first and the QA after, so any revival of the book branch that changes the tree belongs after the mirror, not before.
+  - item 2
+    - **speaker**: owner
+    - **quote**: [source text withheld from the public copy].
+    - **locator**: auditonomous@origin/claude/book-structure-roadmap-k8ap82:L8/L6/history/restore-2026-09-14.md:7
+    - **bears**: The same order on 14 September 2026: set-up and a stable model precede the research, which is why the book branch's restore was made and why the model match precedes resuming it.
+  - item 3
+    - **speaker**: record
+    - **quote**: [source text withheld from the public copy]
+    - **locator**: auditonomous@origin/claude/book-structure-roadmap-k8ap82:L8/L6/history/restore-2026-09-14.md:13
+    - **bears**: The research the QA is asked to handle sits largely on the book branch: 328 files there against 169 on main, and the branch is main plus five commits (0 behind), so reading it loses nothing main holds.
+  - item 4
+    - **speaker**: record
+    - **quote**: [source text withheld from the public copy]
+    - **locator**: auditonomous@origin/claude/book-structure-roadmap-k8ap82:L8/L5/research/review/BOOK_STRUCTURE_AND_ROADMAP_2026-09-13.md:626
+    - **bears**: Main cites files it does not hold (for example AUDITONOMY.md, named at main's L8/L1/state-space/AUDITON_ENVELOPE.md:76 and absent from main's tree), so a QA on main alone would audit citations to absent objects.
+  - item 5
+    - **speaker**: record
+    - **quote**: [source text withheld from the public copy]
+    - **locator**: auditonomous@origin/claude/book-structure-roadmap-k8ap82:L8/L5/research/review/BOOK_STRUCTURE_AND_ROADMAP_2026-09-13.md:587
+    - **bears**: The manuscript structure itself (book/ and manuscript/) exists only on the book branch; main's writing position holds three drafts, two chat transcripts and one session record.
+  - item 6
+    - **speaker**: record
+    - **quote**: was made from `main` before this pass: none of its own files sits under a moved path, and thirty of its live files name the former paths as `main` did
+    - **locator**: auditonomous@origin/ccr-9391bd81-f2enmj:L8/L6/history/harmonization-2026-09-05.md:207
+    - **bears**: Reviving after the mirror is small and bounded: no file of the branch has to move, only the wording of thirty files is stale, so nothing is gained by reviving first and the mirror need not wait on it.
+  - item 7
+    - **speaker**: owner
+    - **quote**: Don't change the system unless you ask or are unsure
+    - **locator**: 7lm@origin/main:L8/L6/history/harmonization-2026-09-04.md:482
+    - **bears**: Reopening or rebasing a closed branch is a change the owner has not asked for; reading its git objects is not, so the QA can start at once while the revival waits for his word.
+  - item 8
+    - **speaker**: record
+    - **quote**: Enumerated before deletion, as the integrity rule requires.
+    - **locator**: 7lm@origin/main:L8/L6/history/harmonization-2026-09-04.md:303
+    - **bears**: The scaffold's precedent for a branch closed unmerged is that its content is accounted for before anything is dropped; a QA that reads the closed book branch is that accounting, and ignoring the branch would leave 159 files unexamined.
+- **against**: "[source text withheld from the public copy]" (auditonomous@origin/claude/book-structure-roadmap-k8ap82:L8/L6/history/restore-2026-09-14.md:9). The restore was a session's reading of the owner's words, not his explicit ruling, and pull request #27 was then closed unmerged; no git object records why. The closure may itself be the reversal, in which case the book branch is not the base. The roadmap also says of itself "Nothing here is adopted." (same branch, L8/L5/research/review/BOOK_STRUCTURE_AND_ROADMAP_2026-09-13.md:3).
+- **alternatives**: (a) QA on main only: fully within what is merged, but audits 169 files whose research cites absent objects and has no manuscript tree. (b) Revive the book branch first and mirror on top: contradicts "to match first" and would make the mirror redo its word pass over thirty more files. (c) Wait for the owner before any QA: safest, but delays work that reading alone can do without changing anything.
+- **what_it_costs**: Nothing on disk: the QA reads git objects only. If the owner later rules that PR #27 was rejected, the book-only findings are wasted effort; findings tagged "also on main" survive. The later revival costs one new draft pull request and a wording pass over thirty files, plus a reconciliation in L7/0.md, where the background report found the branch conflicts with the mirror commit (not re-tested here, since testing a merge writes objects).
+- **who_acts**: The session runs the read-only QA now. The owner says (1) whether closing PR #27 was a rejection of the restore or housekeeping, and (2) after accepting the mirror, whether the five book commits come forward as a new draft pull request. Only then does a session open it.
+- **confidence**: the quotations favour it

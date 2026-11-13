@@ -1,0 +1,52 @@
+# resolve:D3
+
+Agent result, as returned. Workflow: Resolutions for the 23 owner decisions. Run `wf_3293f65c-a92`. Phase: Resolve.
+
+- **decision**: 3. Whether a session-made, counted pass is the mirror "Manually", or a proposal for a person to apply.
+- **resolution**: Treat the session-made pass of 11 November 2026 as a proposal: leave it where it is, on the two draft pull requests (autonomous #30 at a719cec, auditonomous #28 at 294c843), and let nothing reach either main except by the owner's own review and merge, which is the "Manually" step. Until the owner says otherwise, no session merges, marks ready, or applies it; if the owner merges, the records' phrase "mirrored by hand" can stand, and if the owner wants the wording changed to "proposed" before merging, that is one sentence in each record's section (14 and 13).
+- **reasoning**
+  - item 1
+    - **speaker**: owner
+    - **quote**: All repos should mirror the 7lm. Manually. We update 7lm and focus on it only. No outside updates until we are sure I'm close.
+    - **locator**: /home/user/7lm@origin/main:L8/L6/history/harmonization-2026-09-04.md:336
+    - **bears**: The owner's rule is that the mirror is made manually; the word itself does not say whether a session's hand counts, so the surrounding words must be read.
+  - item 2
+    - **speaker**: owner
+    - **quote**: What I call HOA in jest but also as a great marker human only actions take that L6 and apply the updates or not
+    - **locator**: /home/user/7lm@origin/main:L8/L6/history/harmonization-2026-09-04.md:336
+    - **bears**: In the same message as "Manually", the owner names the act of applying updates "or not" as a human-only action, so the applying, and the choice to decline, is a person's.
+  - item 3
+    - **speaker**: owner
+    - **quote**: one day we can do choices for now everything is HOA
+    - **locator**: /home/user/7lm@origin/main:L8/L6/history/harmonization-2026-09-04.md:376
+    - **bears**: No step is yet exempted from human-only action, so the mirror reaching an exemplar's main is HOA like every other step.
+  - item 4
+    - **speaker**: owner
+    - **quote**: Don't change the system unless you ask or are unsure
+    - **locator**: /home/user/7lm@origin/main:L8/L6/history/harmonization-2026-09-04.md:482
+    - **bears**: A session does not change the system on its own; where it is unsure whether its pass is the mirror, the conservative course is to ask, which a draft pull request does.
+  - item 5
+    - **speaker**: record
+    - **quote**: Findings and design verdicts come to the owner as proposals — file, what is wrong, the exact fix — and nothing is applied until the owner says which.
+    - **locator**: /home/user/7lm@origin/main:L8/L6/history/harmonization-2026-09-04.md:484
+    - **bears**: The record's standing reading of the owner's word gives session work the form of a proposal with the exact fix, applied only on the owner's say; a counted pass on a draft branch is exactly that form.
+  - item 6
+    - **speaker**: record
+    - **quote**: Every change remains HOA, at the owner's word.
+    - **locator**: /home/user/7lm@origin/main:L8/L6/history/harmonization-2026-09-04.md:488
+    - **bears**: Even where the owner asked for session workflows, the record holds that the change itself stays a human-only action; session output informs, the person applies.
+  - item 7
+    - **speaker**: owner
+    - **quote**: I didn't want anything automated yet
+    - **locator**: /home/user/7lm@origin/ccr-9391bd81-f2enmj:L8/L6/history/harmonization-2026-09-04.md:518
+    - **bears**: The owner's most recent word on automation (17 October 2026, on the unmerged PR #20 branch only) weighs against counting a session's phrase-by-phrase sweep as the manual mirror without the owner's own act.
+  - item 8
+    - **speaker**: record
+    - **quote**: This pass mirrors it, by hand.
+    - **locator**: /home/user/autonomous@origin/ccr-9391bd81-f2enmj:L8/L6/history/harmonization-2026-09-05.md:187
+    - **bears**: The fact of the matter: the session's own record (commits 8257118 and a719cec, author Claude, not ancestors of main c9076c3; the same sentence at auditonomous@origin/ccr-9391bd81-f2enmj:L8/L6/history/harmonization-2026-09-05.md:180) calls its pass the mirror by hand, a claim the owner has not yet confirmed and which sits only on draft branches.
+- **against**: The owner asked for the update directly on 11 November 2026: "we need to uipdate the autonomous and auditonomous repos phsyciall; to match first ." (owner's instructions of 11 November 2026, as typed), which can be read as asking the session to make the mirror, not to propose it; and the scaffold's record already uses "by hand" for session-written work: "by hand, without automation" (/home/user/7lm@origin/main:L8/L6/history/harmonization-2026-09-04.md:70). On that reading the pass is the mirror and only the merge is outstanding.
+- **alternatives**: (a) Count the session pass as the mirror "Manually" on the strength of the 11 November instruction and the record's own earlier use of "by hand" for session work; the owner then merges #30 and #28 as an ordinary merge. (b) Treat the pass strictly as a proposal that a person re-applies by their own hand, item by item, following the retired guide's "A person decides, item by item, to follow or to edit." (/home/user/7lm@origin/main:L8/L6/7lm-field-guide.md:610); the draft branches then serve only as a worked list. (c) The recommended middle: the pass is a proposal, and the owner's review and merge of the draft pull request is the manual, human-only act.
+- **what_it_costs**: Nothing on disk: both passes already sit on draft branches and neither main is touched, so the course is in effect now and reversible by a word. The cost is delay: the exemplars' mains stay on the pre-20-September L7 names (57-position check) until the owner reviews and merges, and the two branches drift further from the beta candidates (e64b382, 714480d) that make the same moves with different wording. If the owner wants the record reworded from "mirrored by hand" to "proposed", that is one further small commit per exemplar.
+- **who_acts**: The owner: says either "the pass is the mirror" or "it is a proposal", and merges (or declines) draft PRs #30 (autonomous) and #28 (auditonomous) by their own hand. The session does nothing further to those branches until then.
+- **confidence**: the quotations favour it
