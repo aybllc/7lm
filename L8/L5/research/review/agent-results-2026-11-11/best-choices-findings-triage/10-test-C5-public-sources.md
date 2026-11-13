@@ -1,0 +1,298 @@
+# test:C5-public-sources
+
+Agent result, as returned. Workflow: Best choices: the audit findings and the source problems, triaged. Run `wf_c64d0b80-b2c`. Phase: Test.
+
+- **checks**
+  - item 1
+    - **ref**: sp800-53-1 (COUNT-WRONG)
+    - **cls_ok**: yes
+    - **final_cls**: owner-chooses
+    - **note**: Opened the export at aa30b03. The file is a verbatim extraction kept as a staging record. Its folder's sheet says 'its files are not edited' (L7/provenance/sources/staging-records/0.md line 8), and its own header admits no commentary (line 5). The file has 24 '### AC-' headings and none for AC-13 (counted). The entry is exact, and filing it beside the file is right.
+  - item 2
+    - **ref**: sp800-53-2 (MISATTRIBUTED)
+    - **cls_ok**: yes
+    - **final_cls**: owner-chooses
+    - **note**: Lines 830-832 split the title as the finding says. Counted in the file: 27 entries carry the withdrawn mark, 13 of them AC enhancements, and AC-19(3) is not among them. Same staging record and same grounds as sp800-53-1.
+  - item 3
+    - **ref**: sp800-53-3 (MISMATCH)
+    - **cls_ok**: yes
+    - **final_cls**: owner-chooses
+    - **note**: Lines 1137-1141 show 'COMMANDS' heading the statement, as stated. Same staging record and same grounds.
+  - item 4
+    - **ref**: sp800-53-4 (MISMATCH)
+    - **cls_ok**: yes
+    - **final_cls**: owner-chooses
+    - **note**: Lines 1143-1147 show 'NONTECHNICAL SOURCES' heading the statement, as stated. Same staging record and same grounds.
+  - item 5
+    - **ref**: sp800-53-5 (MISMATCH)
+    - **cls_ok**: yes
+    - **final_cls**: owner-chooses
+    - **note**: Lines 1223-1227 show 'SYSTEM' heading the statement, as stated. Same staging record and same grounds.
+  - item 6
+    - **ref**: sp800-53-6 (MISMATCH)
+    - **cls_ok**: yes
+    - **final_cls**: owner-chooses
+    - **note**: Lines 1303-1307 show 'INFORMATION' heading the statement, as stated. Same staging record and same grounds.
+  - item 7
+    - **ref**: sp800-53-7 (COUNT-WRONG)
+    - **cls_ok**: yes
+    - **final_cls**: owner-chooses
+    - **note**: Confirmed all three places. Line 20 of the extraction gives 24/146/69/215, which are true counts of the file. Line 44 of the computation sheet says '(215 control statements, SHA-256 recorded)'. Line 198 of the routing plan says the same, and the history sheet's line 39 calls that plan a decision record. Counted in the file: 215 entries, 27 withdrawn marks and one title fragment, which leaves 187 statements. So '187 control statements' is true now and stays true after any correction. Step 1 is therefore an edit of a live sheet that can go into the apply pass alone. The rest of the finding touches a staging record and a decision record, so the finding stays owner-chooses.
+  - item 8
+    - **ref**: nist-requirements-1 (MISMATCH)
+    - **cls_ok**: yes
+    - **final_cls**: owner-chooses
+    - **note**: Lines 242, 360 and 396 hold the text. The file is the recorded output of an L4 run: 'Extraction date: 2026-08-04/05' (line 9), and the computation sheet's lines 3, 38 and 40 file it as computation as run. One qualification the result missed: commit 4a1c1db of 16 August rewrote line 7 of this file in place, and its message calls the three requirements files 'active text' while leaving 'historical records untouched'. Correcting in place with a dated note is therefore a real alternative for this file. Filing beside still fits how the file is filed today. What follows for belief #1 is the author's ruling at L5.
+  - item 9
+    - **ref**: nist-requirements-2 (COUNT-WRONG)
+    - **cls_ok**: yes
+    - **final_cls**: owner-chooses
+    - **note**: Line 364 says 'exactly three occurrences of the stem'. The entry is exact. Same grounds as nist-requirements-1.
+  - item 10
+    - **ref**: nist-requirements-3 (MISATTRIBUTED)
+    - **cls_ok**: yes
+    - **final_cls**: owner-chooses
+    - **note**: Line 364 cites the privacy sentence as '(2) p.13'. The entry is exact. Same grounds.
+  - item 11
+    - **ref**: nist-requirements-4 (MISMATCH)
+    - **cls_ok**: yes
+    - **final_cls**: owner-chooses
+    - **note**: The Verbatim block at lines 262-264 lacks the mixed-initiative sentence and has no ellipsis. The report itself offers two ways to fix it in place (restore the sentence, or mark the gap), which is a further reason the owner must choose.
+  - item 12
+    - **ref**: nist-requirements-5 (MISATTRIBUTED)
+    - **cls_ok**: yes
+    - **final_cls**: owner-chooses
+    - **note**: Line 177 says 'printed p. 41'. The entry is exact. Same grounds.
+  - item 13
+    - **ref**: nist-requirements-6 (MISATTRIBUTED)
+    - **cls_ok**: yes
+    - **final_cls**: owner-chooses
+    - **note**: Line 318 says 'printed p. 37'. The entry is exact. Same grounds.
+  - item 14
+    - **ref**: nist-requirements-7 (MISATTRIBUTED)
+    - **cls_ok**: yes
+    - **final_cls**: owner-chooses
+    - **note**: Line 65 says 'Vol II §2.1 B, p.16'. The entry is exact. Same grounds.
+  - item 15
+    - **ref**: nist-requirements-8 (MISATTRIBUTED)
+    - **cls_ok**: yes
+    - **final_cls**: owner-chooses
+    - **note**: Line 376 says 'Vol II §2.1 B (p.16)'. The entry is exact. Same grounds.
+  - item 16
+    - **ref**: nist-requirements-9 (COUNT-WRONG)
+    - **cls_ok**: yes
+    - **final_cls**: owner-chooses
+    - **note**: Line 358 says '60 "may", 51 "can"'. The report gives two counting methods, and the entry rightly records both. Same grounds.
+  - item 17
+    - **ref**: nist-requirements-10 (MISMATCH)
+    - **cls_ok**: yes
+    - **final_cls**: owner-chooses
+    - **note**: Line 372 holds both sentences. The entry is incomplete: line 400 repeats the same claim ('[source text withheld from the public copy]'), and neither the report nor the entry names it. The entry should name line 400 as well. What follows for the ISO/IEC 22989 tension is the author's ruling.
+  - item 18
+    - **ref**: nist-requirements-11 (MISMATCH)
+    - **cls_ok**: yes
+    - **final_cls**: owner-chooses
+    - **note**: Lines 195 and 394 hold the text, and the cut quotation of item d at line 394 is confirmed. One inexactness: the reading of the Logical UMS as only a model of a UMS stands at line 195 too ('[source text withheld from the public copy] only at line 394. The entry should name both lines for that statement.
+  - item 19
+    - **ref**: rfc6962-1 (MISMATCH)
+    - **cls_ok**: yes
+    - **final_cls**: owner-chooses
+    - **note**: This reading record has had no change of content since commit 370425e of 4 August. It is a staging record, and its sheet says it is not edited. Lines 366 and 211 hold the text. The duties the RFC places on submitters and log clients are confirmed in Autonomous's canonical copy, rfc6962-canonical.txt, at lines 488, 522, 968, 1095 and 1101.
+  - item 20
+    - **ref**: rfc6962-2 (MISMATCH)
+    - **cls_ok**: yes
+    - **final_cls**: owner-chooses
+    - **note**: Line 323 says what the finding says. The canonical copy, lines 1328-1340, names the two violations separately. Same staging record and same grounds.
+  - item 21
+    - **ref**: rfc6962-3 (MISATTRIBUTED)
+    - **cls_ok**: yes
+    - **final_cls**: owner-chooses
+    - **note**: The heading at line 329 reads 'PDF p.48 (printed p.24)'. The record's own line 333 already says the quote 'completes on PDF page 49', and its verifier (line 390) called the start-page citation defensible. What is missing is printed page 25: by the record's own page mapping (line 25), PDF page 49 is printed page 25. The entry should say this, so it does not read as if the span were undisclosed. The page break was confirmed in RFC6962.txt (pages 48 and 49).
+  - item 22
+    - **ref**: rfc6962-5 (MISMATCH)
+    - **cls_ok**: yes
+    - **final_cls**: owner-chooses
+    - **note**: Lines 139 and 366 hold the capitalised words. The canonical copy has them in lower case at lines 185, 1166, 1206 and 1260. Same grounds.
+  - item 23
+    - **ref**: rfc6962-7 (COUNT-WRONG)
+    - **cls_ok**: yes
+    - **final_cls**: owner-chooses
+    - **note**: Line 29 lists three captures that cross a page break. C4's break between PDF pages 5 and 6 is confirmed in RFC6962.txt and stated at the record's line 121. Same grounds.
+  - item 24
+    - **ref**: rfc6962-8 (COUNT-WRONG)
+    - **cls_ok**: yes
+    - **final_cls**: owner-chooses
+    - **note**: Line 390 is the verifier's output, recorded in the file. Counted on page 31 of RFC6962.txt: 14 words, 54 of 201 non-space characters. The verifier's conclusion that Q18 should cite pages 31-32 holds with 14 words as it did with 12, so the entry is only a footnote. Recording it is in keeping with '[source text withheld from the public copy]' (library/README.md line 21).
+  - item 25
+    - **ref**: rfc9162-1 (MISMATCH)
+    - **cls_ok**: yes
+    - **final_cls**: owner-chooses
+    - **note**: Line 241 ends 'is known).'. The canonical copy, rfc9162-canonical.txt, ends the sentence with a colon at lines 498-503, and the formula follows at line 505. Same staging record and same grounds.
+  - item 26
+    - **ref**: rfc9162-2 (MISMATCH)
+    - **cls_ok**: yes
+    - **final_cls**: owner-chooses
+    - **note**: Line 76 lacks the last words of the heading. The canonical copy gives the full heading at lines 1544-1545 and 105-106.
+  - item 27
+    - **ref**: rfc9162-3 (MISMATCH)
+    - **cls_ok**: yes
+    - **final_cls**: owner-chooses
+    - **note**: Lines 12 and 543 hold the text. The result's reason overstates: the record says the absence of the print it read ('The file nowhere prints', line 12; 'the document as captured', line 10; 'browser print', line 544). Line 543 still sits under 'Recorded absences', which a reader takes as results about the RFC, and the citation block lacks the issued RFC's ISSN (canonical line 9) and its DOI. The entry beside is therefore still worth its line.
+  - item 28
+    - **ref**: rfc9162-4 (MISATTRIBUTED)
+    - **cls_ok**: yes
+    - **final_cls**: owner-chooses
+    - **note**: Line 501 cites page 36. Counted by page breaks in RFC9162.txt: the heading of section 6.2 is on page 36 and 'If a CA and a log collude' on page 37.
+  - item 29
+    - **ref**: rfc9162-5 (MISATTRIBUTED)
+    - **cls_ok**: yes
+    - **final_cls**: owner-chooses
+    - **note**: Line 533 already says that the heading on page 50 was '[source text withheld from the public copy]', yet it gives the quoted phrase that page. In RFC9162.txt the phrase is on page 51. Same grounds.
+  - item 30
+    - **ref**: rfc9162-6 (MISMATCH)
+    - **cls_ok**: yes
+    - **final_cls**: owner-chooses
+    - **note**: Line 489 holds the text. The canonical copy, lines 2588-2594, introduces the five as examples. Same grounds.
+  - item 31
+    - **ref**: rfc9162-7 (NOT-FOUND)
+    - **cls_ok**: yes
+    - **final_cls**: owner-chooses
+    - **note**: Item (a) at line 301 holds the claim. Confirmed in the canonical copy at lines 870-871, 879-880 and 908-909. One small point of precision: section 4.1 defines Maximum Chain Length 'if the log imposes any limit' (line 842), so it is fixed in advance only when a log sets one.
+  - item 32
+    - **ref**: rfc9162-8 (MISMATCH)
+    - **cls_ok**: yes
+    - **final_cls**: owner-chooses
+    - **note**: Line 497 says 'detected ONLY by'. The canonical copy has 'can be detected' at lines 2602-2604, and single-party checks at lines 1985-1986 and 2096-2097.
+  - item 33
+    - **ref**: rfc9162-9 (MISATTRIBUTED)
+    - **cls_ok**: yes
+    - **final_cls**: owner-chooses
+    - **note**: Line 139 numbers the sentences wrongly. The canonical copy, lines 159-165, confirms the order.
+  - item 34
+    - **ref**: rfc9162-14 (MISMATCH)
+    - **cls_ok**: yes
+    - **final_cls**: owner-chooses
+    - **note**: Line 25 says 'Every other page extracted cleanly'. Page 19 of RFC9162.txt has six cut lines (counted), and the record's own line 23 lists page 19 as not read.
+  - item 35
+    - **ref**: rfc9162-15 (MISMATCH)
+    - **cls_ok**: yes
+    - **final_cls**: leave
+    - **note**: Moot. The ct-lane sheet (9fa3744, L7/provenance/prior-art/ct-lane/0.md lines 8, 16-18 and 20) calls RFC9162.txt an RFC Editor page capture, kept beside the canonical editions, and says 'Files are not edited.' The prior-art sheet (line 33) calls the texts 'captured'. Nothing in Autonomous says the capture is the RFC as issued. The quotations that name their file name the canonical one: CLOSED_LOOP_GOVERNANCE.md lines 36-37 and 95, AUDIT_L6_ADVERSARIAL.md line 361, AUDIT_L1_QUOTE_FIDELITY.md line 46. The result's word 'only' is slightly too strong: EBIOS_RECODE_single_object.md line 147 names no file. But it quotes prose that the capture carries intact.
+  - item 36
+    - **ref**: fips180-4-1 (COUNT-WRONG)
+    - **cls_ok**: yes
+    - **final_cls**: owner-chooses
+    - **note**: Lines 17, 21 and 29 hold the text. Counted from the record's own lists: 24 pages read and 12 not read. Same staging record and same grounds.
+  - item 37
+    - **ref**: fips180-4-2 (MISATTRIBUTED)
+    - **cls_ok**: yes
+    - **final_cls**: owner-chooses
+    - **note**: Line 21 gives the page contents that the finding corrects. The entry is exact. Same grounds.
+  - item 38
+    - **ref**: fips180-4-3 (MISMATCH)
+    - **cls_ok**: yes
+    - **final_cls**: owner-chooses
+    - **note**: Line 216 puts 'yield the same message digest' in quotation marks, while the record's own capture at line 214 reads 'yields'. The defect is minor, but a quotation taken from line 216 would be inexact, so one line beside is proportionate.
+  - item 39
+    - **ref**: definition-citations-1 (NOT-FOUND)
+    - **cls_ok**: yes
+    - **final_cls**: owner-chooses
+    - **note**: Lines 310-312 hold the text. The class is right, but the reason the result cites is inexact. Line 50 of the 16 August ledger is an item in the next session's queue about two other ambiguities, not an owner ruling covering the definition's issues. The definition's protection rests on four things: ruling AU-NORM-02, which restored it verbatim as the active record (that ledger, line 32); the definitions sheet, which 'versions a changed definition rather than silently rewriting prior use' (line 10) and says the definition 'is cited as written' (line 32); and Appendix C, which is itself an open owner decision (sheet line 34; Auditonomous record section 5, line 93). The entry rightly says only what the page showed on 11 November and that no hash was kept.
+  - item 40
+    - **ref**: definition-citations-2 (MISMATCH)
+    - **cls_ok**: yes
+    - **final_cls**: owner-chooses
+    - **note**: Line 53 drops 'Assignment:'. The file is a dated finding. The findings sheet (line 10) qualifies a finding only when review rejects or supersedes it, and a dropped word does neither, so one line beside fits.
+  - item 41
+    - **ref**: definition-citations-3 (MISMATCH)
+    - **cls_ok**: yes
+    - **final_cls**: owner-chooses
+    - **note**: Line 133 drops 'Assignment:'. Same grounds as definition-citations-2.
+  - item 42
+    - **ref**: definition-citations-4 (MISATTRIBUTED)
+    - **cls_ok**: yes
+    - **final_cls**: owner-chooses
+    - **note**: Line 41 holds the text. The class stands, but on better grounds than the result gives. Line 264 labels only the section 6 quotations, while line 41 is in section 1, whose labels are its own Status cell and lines 9-10. The open split-or-cite decision concerns section 0 only (Auditonomous record section 5, line 91), so the correction takes no side in it. The grounds that hold are these: the file's VERIFIED attestations (lines 9-10, 40-41, 157 and 264), and the corpus's standing rule '[source text withheld from the public copy] lines 18-20). That rule rules out a plain edit in place.
+  - item 43
+    - **ref**: definition-citations-5 (MISMATCH)
+    - **cls_ok**: yes
+    - **final_cls**: owner-chooses
+    - **note**: Line 80 drops 'its', and line 37 of the same file has the full clause. The slot table carries no label of its own. Same grounds as definition-citations-4.
+  - item 44
+    - **ref**: definition-citations-6 (COUNT-WRONG)
+    - **cls_ok**: yes
+    - **final_cls**: owner-chooses
+    - **note**: The heading at line 159 holds the wrong figures. Line 161 names 13 controls (counted from the names), which supports the form the entry chose.
+  - item 45
+    - **ref**: definition-citations-7 (MISATTRIBUTED)
+    - **cls_ok**: yes
+    - **final_cls**: owner-chooses
+    - **note**: Lines 175 and 180-181 hold the claim, and the result rightly adds the heading at line 175. The entry states what the source says. Any rewording of the instrument's key claim is the author's.
+  - item 46
+    - **ref**: definition-citations-8 (MISMATCH)
+    - **cls_ok**: yes
+    - **final_cls**: owner-chooses
+    - **note**: Lines 240-241 hold the merged quotation. The report gives two forms, and recording each enhancement's own wording is the better one.
+  - item 47
+    - **ref**: definition-citations-9 (COUNT-WRONG)
+    - **cls_ok**: yes
+    - **final_cls**: owner-chooses
+    - **note**: Both 'the only two normative uses' (line 243) and 'The two parameters' (line 244) are wrong. The entry's count covers both.
+  - item 48
+    - **ref**: autonomous-definitions-1 (MISMATCH)
+    - **cls_ok**: yes
+    - **final_cls**: owner-chooses
+    - **note**: Row A6 at line 75 drops '<A.4>' and adds bold, while DEFINITION_LIST_AUTONOMOUS.md line 28 has the exact form. Checked: blob ffbdc28 is the same at 0504961 and at 9fa3744. The definitions sheet says it 'versions a changed definition' (line 10). The owner's words in section 26 are confirmed at line 336 of the scaffold's record. Waiting fits section 25 ('We are only from now on updating the 7LM.') and section 26, since the 11 November word opened Autonomous only for the mirror.
+  - item 49
+    - **ref**: autonomous-definitions-2 (MISATTRIBUTED)
+    - **cls_ok**: yes
+    - **final_cls**: owner-chooses
+    - **note**: The path is rightly corrected to L7/allications/publications/binder/press-kit/GLOSSARY_AUTONOMOUS.md. Line 385 reads '(b) Terms and Definitions, p. 15.', and the slot named at line 389 is marked DEFERRED. The binder's sheet says its files 'are not rewritten' (line 8).
+  - item 50
+    - **ref**: zenodo-and-ledger-2 (MISMATCH)
+    - **cls_ok**: yes
+    - **final_cls**: leave
+    - **note**: Row 27 is a shortened citation like its neighbours (row 25 reads 'HEALPix…'), not a false one. The NTRS number identifies the paper, and the ledger was relocated without rewriting (sources sheet line 41). The result says the hash is recorded but not where: it is not in LEDGER.md. It and the full title, verbatim, stand at staging-records/standards/SOURCE_LEDGER.md line 333, and the hash is also in L7/peering/private/egress/peer-1/object-1/RECONCILIATION_FROM_L6_2026-08-16.md line 23. Nothing is lost by leaving the row.
+- **overall**: Count. The result lists all 50 findings under the report's heading, each exactly once. Compared against the report's 50 headings: none is missing and none is doubled. No finding is marked apply, so step 3 of the test had nothing to re-check.
+
+  Classes. I re-derived all 50 from the exports at aa30b03 and 9fa3744, and all 50 stand as given. The corrected counts are therefore unchanged:
+  - 48 owner-chooses: 46 in Auditonomous, and 2 in Autonomous that wait.
+  - 2 leave: rfc9162-15 and zenodo-and-ledger-2.
+  - 0 apply.
+  One act inside sp800-53-7 is of the apply kind: line 44 of the computation sheet becomes '187 control statements'. Counted in the file: 215 entries, 27 withdrawn marks and one title fragment. That wording is true whatever the owner picks for the records, so it can go into the apply pass on its own.
+
+  The repositories' practice supports filing beside, and the result's evidence checks out:
+  - The staging-records sheet, line 8.
+  - The SP 800-53 file's header, line 5.
+  - Auditonomous record sections 7, 8, 10 and 13.
+  - The scaffold record, line 506.
+  - The same-day second commits that close Auditonomous section 13 and scaffold section 41.
+  - Commit e9b7a26, which corrected the Ferreira record in place on the day it was written.
+  The strongest source is one the result did not cite: L8/L5/research/review/STATUS_AND_LABEL_DISCIPLINE.md lines 18-20, '[source text withheld from the public copy].' That rule rules out a plain edit in place anywhere in the research files, which is why none of the 48 can be apply.
+
+  What the owner should know before saying yes:
+  (1) The result says the repositories correct a record in place only on the day it is written. There is one exception. Commit 4a1c1db of 16 August rewrote line 7 of the three requirements files in place; its message calls them 'active text' and leaves 'historical records untouched'. That was governance wording, not a correction of a source, so the pick stands. But for the NIST requirements run, correcting in place with a dated note is a real alternative, which it is not for the staging records.
+  (2) The new lines on the folder sheets do not put a mark on the corrected files. Autonomous's own audit of its corrections (L8/L6/history/AUDIT_L3_CORRECTION_CHAIN.md lines 12-14) counts a correction that 'leaves no mark on the corrected text' as not propagated: a reader who lands on the file directly still sees the old claim. Marking the files themselves needs the owner to allow a one-line dated pointer at the head of each.
+     - For the staging records, that means lifting 'its files are not edited'.
+     - For HUMINT_ENCODE.md, the NIST requirements run and the override finding, no sheet forbids it.
+     - The definition stays unmarked under its own rule.
+  (3) The two Autonomous items wait on the owner's word under sections 25 and 26. A yes in the same answer would be that word.
+
+  Entries to tighten before the pass (none changes a class):
+  - nist-requirements-10: add line 400, which repeats the claim.
+  - nist-requirements-11: name line 195 as well as line 394 for the reading of the Logical UMS as a model.
+  - definition-citations-4: fix the locator, and drop the split-or-cite reason.
+  - definition-citations-1: fix the grounds it cites.
+  - rfc9162-3: fix the reason given.
+  - rfc6962-3: note that line 333 already gives the PDF span.
+  - rfc9162-7: add 'if the log imposes any limit'.
+  - zenodo-and-ledger-2: say where the full title and the hash already stand.
+
+  Collisions. The plan's sheet lines do not collide with the sheet audit's fixes:
+  - staging-records sheet: the audit's lines 8 and 30 against the plan's 18 and 20;
+  - computation sheet: 38 and 54 against 40 and 44;
+  - definitions sheet: 34 and 36 against 32;
+  - state-space sheet: 50 against 38;
+  - history sheet: 35 and 37 against a new entry.
+
+  No network was used and no repository file was changed. Scratch files are in /tmp/claude-0/-home-user/bfcfd013-a2da-5019-961e-7f46116f08be/scratchpad/advice/scratch/test-C5-public-sources/.
