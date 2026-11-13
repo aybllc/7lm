@@ -1,0 +1,272 @@
+# read:catchall
+
+Agent result, as returned. Workflow: Manuscript status of 3 November 2026. Run `wf_1cf4205c-c72`. Phase: Read.
+
+- **summary**: Source: the catch-all `L8/L5/research/review/` and the findings `L8/L5/research/findings/` on origin/main (2165144, 2026-09-11), read read-only, with the L6 harmonization record, the routing plan, the L4 computation/writing sheets and git history for context.
+
+  What the catch-all is: on the owner's word [source text withheld from the public copy]"), `common/` and `intake/` were dissolved (commit 50f43d3) and `review/` became the place where "everything awaiting the owner's review lands"; items the owner sets aside "stay here labelled PARKED", items taken up move to `lanes/`, "nothing is deleted". The sheet says of the three items placed there that day: "none adjudicated". No item in the directory actually carries a PARKED label; PARKED appears only in the rule text and the ladder definition.
+
+  What sits there: STATUS_LADDER.md and STATUS_AND_LABEL_DISCIPLINE.md (governance texts carried verbatim), CONTRADICTIONS.md (C1–C7, "reported and never harmonized"), PERPETUITY_QUESTION_ADJUDICATION.md (2026-08-02, "DEAD FOR NOW", with the §6.1 line-52 edit "Pending Eric's ruling"), and `autonomous-theory/`: `#autonomous(1).txt` (1,060,768 B) and `02_AutonomousTheory(1).pdf` (219,277 B, 27 pp.). The Autonomous Theory files are the one thing waiting for a specific owner's word, consistently phrased since 2026-09-05: "OWNER DECISION … Stays in orphan/ until Eric moves it" (routing plan), "leaves once the owner names its home" (harmonization §8), "they leave this repository once the owner names that work's home" (review/0.md:42), "awaiting the owner's call" (peer-1 sheet), and harmonization:125 lists "the Autonomous Theory files' home" among things "Not done, by the owner's word or pending it". The other open items are the author's calls (T3, Q1–Q9/Q9, the DEF:52 edit, the reader-agnostic divergence), "none decided anywhere in this repository".
+
+  Is anything in the catch-all a manuscript draft? Not of the Auditonomous manuscript. The live drafts are at `L8/L4/work/writing/` (two .docx, one .odt, two chat .docx); `MANUSCRIPT.tex` is a "STUB" that "does not exist at HEAD". The only draft-like object in the catch-all is `#autonomous(1).txt`, which is a draft of a different work: lines 1–635 are Markdown prose "Autonomous Theory: Post-Biological Intelligence … Autonomous Alien Theory (AAT) … Eric Dwight Martin - 2025", and lines 636–746 are a JSON chat export dated 2025-06-25 with embedded HTML pages and a "Draft Letter to Dr. Steven Greer". It contains zero occurrences of "auditonom". The PDF is "Document Version: 1.0 (Unreviewed) … Status: Speculative hypothesis awaiting peer review", printed from autonomoustheory.org on 2025-10-11. Contradiction to record: review/0.md calls the .txt "the 2025 Autonomous Theory draft"; the closed roadmap branch calls it a "chat export"; the sourcebook's L015 row calls it "CORE EXCLUSION … [source text withheld from the public copy]". All three are partly right. DISTILLATION is explicitly "not a manuscript"; its §5 says [source text withheld from the public copy] is "still unrun", while §7 (not §5) records a four-lane prior-art verification of the correspondence rows. PERPETUITY and THEME_LEDGER cite `intake/manuscript/Block_*.md` paths that no longer exist at HEAD.
+- **facts**
+  - item 1
+    - **claim**: The catch-all rule as stated on main: everything awaiting the owner's review lands in review/, set-aside items stay labelled PARKED, taken-up items move to lanes/, nothing is deleted; the three items placed 2026-09-06 are unadjudicated.
+    - **evidence**: L8/L5/research/review/0.md:38 — "Everything awaiting the owner's review lands here, however much of it there is; what the owner sets aside stays here labelled PARKED; what the owner takes up moves to `L8/L5/research/lanes/`; finished work is filed at its layer; nothing is deleted. Placed here on 2026-09-06 from the dissolved `common/durable/`, none adjudicated:"
+    - **date**: 2026-09-06
+    - **status_label**: none adjudicated
+  - item 2
+    - **claim**: The owner's words that created the catch-all and dissolved the queue, quoted as written in the L6 record.
+    - **evidence**: L8/L6/history/harmonization-2026-09-05.md:107 — "orphan is pejorative. durable assigns orphans as foreveer. Im nopt liking this"; "i need  aokring solution for a slush piuile, workiong piile an d I need it recycled pile"; "research/review/ works as a catch all"; "HOdl off on clude.md. do the other things and mrererge"
+    - **date**: 2026-09-06
+    - **status_label**: owner's word
+  - item 3
+    - **claim**: The dissolve was executed by git mv in commit 50f43d3 with no content deletions; the commit message names the two Autonomous Theory files as placed in research/review/ 'which the owner named the catch-all'.
+    - **evidence**: git show 50f43d3 (2026-09-06 03:11:32 +0000, author Claude) — "the two Autonomous Theory files in research/review/, which the owner named the catch-all" … "15 renames, 0 content deletions; the only deletions are four 0-byte placeholders."
+    - **date**: 2026-09-06
+    - **status_label**: executed
+  - item 4
+    - **claim**: Standing of the Autonomous Theory files on main: a separate work by the corpus's own rule EB:22; they leave once the owner names that work's home. review/0.md calls the .txt 'the 2025 Autonomous Theory draft'.
+    - **evidence**: L8/L5/research/review/0.md:42 — "`autonomous-theory/` — `#autonomous(1).txt` (the 2025 Autonomous Theory draft) and `02_AutonomousTheory(1).pdf`: Autonomous Theory, a separate work by the corpus's own rule (EB:22, \"Autonomous Theory and Auditonomous are separate works\"); they leave this repository once the owner names that work's home."
+    - **date**: 2026-09-06
+    - **status_label**: awaiting owner's naming of home
+  - item 5
+    - **claim**: Same standing in the harmonization enumeration table and in the list of things not done.
+    - **evidence**: L8/L6/history/harmonization-2026-09-05.md:113 — "| `common/durable/orphan/#autonomous(1).txt`, `02_AutonomousTheory(1).pdf` | `USO/l5/research/review/autonomous-theory/` | Autonomous Theory, a separate work (EB:22); leaves once the owner names its home |"; :125 — "Not done, by the owner's word or pending it: `CLAUDE.md` (held off); the Autonomous Theory files' home; the two 0-byte AU-NORM-01 files."
+    - **date**: 2026-09-06
+    - **status_label**: Not done … pending the owner's word
+  - item 6
+    - **claim**: The routing plan of 2026-09-05 labelled both Autonomous Theory files OWNER DECISION with two candidate homes and said they stay until Eric moves them; the plan itself is unreviewed model output.
+    - **evidence**: L8/L6/history/7LM_ROUTING_PLAN_2026-09-05.md:122 — "| `common/durable/orphan/#autonomous(1).txt` | OWNER DECISION | candidates: `L7/peering/private/ingress/` (Eric's own Autonomous Theory corpus as a separate work, per EB:22) · `USO/l6/retired/` | Different subject from the definition work; must not be conflated. Stays in `orphan/` until Eric moves it. |"; :123 pdf "OWNER DECISION | same as above"; :3 — "**Status:** UNREVIEWED MODEL OUTPUT · INTERNAL ONLY · a proposal, not an adjudication."
+    - **date**: 2026-09-05
+    - **status_label**: OWNER DECISION; UNREVIEWED MODEL OUTPUT · INTERNAL ONLY
+  - item 7
+    - **claim**: The peer-1 binding sheet describes the Autonomous Theory files as 'awaiting the owner's call' and excludes them as a source for the definition of autonomous.
+    - **evidence**: L7/peering/public/ingress/peer-1/0.md:12 — "not the Autonomous Theory files awaiting the owner's call in `L8/L5/research/review/autonomous-theory/` (EB:22: \"Autonomous Theory and Auditonomous are separate works\")"
+    - **date**: 2026-09-06
+    - **status_label**: awaiting the owner's call
+  - item 8
+    - **claim**: EB:22 quote origin on main: the retired 2026-08-14 README, which says the engineering layer cannot inherit the theory layer's forcing claim.
+    - **evidence**: L8/L6/retired/layout-2026-08-14/README.md:82-83 — "`EB:22` disclaims the connection outright: *\"Autonomous Theory and Auditonomous are separate works.\"*"
+    - **date**: 2026-08-14
+    - **status_label**: retired layout text
+  - item 9
+    - **claim**: Directory listing of the catch-all's autonomous-theory/ with sizes: #autonomous(1).txt 1,060,768 bytes, 746 lines, UTF-8 with CRLF and very long lines; 02_AutonomousTheory(1).pdf 219,277 bytes.
+    - **evidence**: ls -la L8/L5/research/review/autonomous-theory/ — "1060768 … #autonomous(1).txt", "219277 … 02_AutonomousTheory(1).pdf"; wc -l → 746; file → "Unicode text, UTF-8 text, with very long lines (9997), with CRLF line terminators"
+    - **date**: 2026-10-17 (checkout mtime)
+    - **status_label**: n/a
+  - item 10
+    - **claim**: The PDF is a 27-page browser print of autonomoustheory.org made 2025-10-11, titled '[source text withheld from the public copy]', self-labelled Version 1.0 (Unreviewed), awaiting peer review. (`file` reported '8 page(s)'; pdfinfo and the page footer say 27 — pdfinfo taken as correct.)
+    - **evidence**: pdftotext of 02_AutonomousTheory(1).pdf lines 1,6-9 — "[source text withheld from the public copy]"; line 42 "https://autonomoustheory.org … 1/27"; pdfinfo — "Title: Autonomous Theory … Producer: Skia/PDF m141 … CreationDate: Sat Oct 11 07:32:13 2025 UTC … Pages: 27"
+    - **date**: 2025-10-11
+    - **status_label**: Version 1.0 (Unreviewed); Speculative hypothesis awaiting peer review
+  - item 11
+    - **claim**: PDF disclaimer and structure: nine numbered sections (Introduction … Conclusion); no author line, no 'manuscript', no 'auditonomous' anywhere in its text.
+    - **evidence**: pdftotext lines 13-14 — "[source text withheld from the public copy]."; headings at lines 76 "1. Introduction and Context" … 972 "9. Conclusion"; grep -i counts: manuscript 0, auditonomous 0, eric/martin 0
+    - **date**: 2025
+    - **status_label**: Unreviewed
+  - item 12
+    - **claim**: The .txt opens as a Markdown prose draft of 'Autonomous Theory: Post-Biological Intelligence' (UAP/post-biological thesis), signed Eric Dwight Martin 2025, with 26 headings over lines 1–635.
+    - **evidence**: #autonomous(1).txt:1 — "# Autonomous Theory: Post-Biological Intelligence"; :15 — "[source text withheld from the public copy]"; :196-199 — "[source text withheld from the public copy]"; :6-11 placeholders "[source text withheld from the public copy]>"
+    - **date**: 2025
+    - **status_label**: draft (unlabelled; placeholders present)
+  - item 13
+    - **claim**: Lines 636–746 of the .txt are not prose: they are ~10,000-character lines holding a JSON chat export (human/assistant turns all created 2025-06-25), embedded HTML/CSS pages, 'Interactive artifact · Version 48…56' markers, and a 'Draft Letter to Dr. Steven Greer' signed 'Eric Dwight Martin, Framework Developer, Ailien Studies, [address withheld]'.
+    - **evidence**: #autonomous(1).txt — awk line lengths 636-746 ≈ 9987–10001; grep counts: '"uuid"' 127, '"sender": "human"' 29, '"sender": "assistant"' 30, created_at range 2025-06-25..2025-06-25; :636 "Interactive artifact … Version 48"; :646 "**Draft Letter to Dr. Steven Greer**"; :646 "**Eric Dwight Martin**  \nFramework Developer, Ailien Studies"; :735 "\"sender\": \"human\", \"created_at\": \"2025-06-25T18:48:48.203984Z\""
+    - **date**: 2025-06-25
+    - **status_label**: chat export / web dump (my characterization)
+  - item 14
+    - **claim**: The .txt's three 'manuscript' hits are all in the chat/HTML region and refer to the AAT framework, not to Auditonomous; the file contains zero occurrences of 'auditonom'.
+    - **evidence**: #autonomous(1).txt:652 and :661 — "[source text withheld from the public copy]."; :665 (a captured search result: "[source text withheld from the public copy]"); grep -o -i 'auditonom' → 0; 'Ailien' → 282; 'Greer' → 60
+    - **date**: 2025
+    - **status_label**: n/a
+  - item 15
+    - **claim**: Contradiction between sources on what the .txt is: main's sheet calls it 'the 2025 Autonomous Theory draft'; the closed roadmap branch calls it a 'chat export'; the sourcebook draft (L015) calls it CORE EXCLUSION dominated by AAT drafts, web dumps and tool logs. Inspection shows it is both a prose draft (lines 1–635) and a chat export (636–746).
+    - **evidence**: L8/L5/research/review/0.md:42 — "(the 2025 Autonomous Theory draft)"; origin/claude/book-structure-roadmap-k8ap82:L8/L5/research/review/BOOK_STRUCTURE_AND_ROADMAP_2026-09-13.md:5 — "[source text withheld from the public copy]"; scratchpad/manuscript/text/auditnomous-main.md:2201 — "| **L015** | **\\#autonomous.txt** | **CORE EXCLUSION** | … **[source text withheld from the public copy].** |"
+    - **date**: 2026-09-06 / 2026-09-13 / 2026-08-06
+    - **status_label**: CORE EXCLUSION (sourcebook L015)
+  - item 16
+    - **claim**: The sourcebook draft rates the Autonomous Theory PDF 'OPTIONAL APPLICATION ONLY' and says [source text withheld from the public copy].
+    - **evidence**: scratchpad/manuscript/text/auditnomous-main.md:2198 — "| **[source text withheld from the public copy].** |"; :213 — "[source text withheld from the public copy]."
+    - **date**: 2026-08-06
+    - **status_label**: OPTIONAL APPLICATION ONLY
+  - item 17
+    - **claim**: Provenance of the two Autonomous Theory files: byte-identical to the copies first committed 2026-08-05 under intake/auditonomy-book/ (names without '(1)'); a '(1)' copy entered manuscripts/main/research/ via the 2026-08-08 merge of PR #12; 8c98573 (2026-08-15) deleted the intake copies and moved the '(1)' copies to common/durable/orphan/; 50f43d3 (2026-09-06) moved them to USO/l5/research/review/autonomous-theory/; 3045e07 (2026-09-12) renamed USO→L8.
+    - **evidence**: git ls-tree a512737 'intake/auditonomy-book/#autonomous.txt' → blob 4e376fd0…; git ls-tree HEAD '…/#autonomous(1).txt' → blob 4e376fd0… (identical); pdf blobs ce0209b1… identical; git log --all -- 'manuscripts/main/research/#autonomous(1).txt' → 077d5de 2026-08-08 "Merge pull request #12"; git show --stat 8c98573 — "{manuscripts/main/research => common/durable/orphan}/#autonomous(1).txt", "intake/auditonomy-book/02_AutonomousTheory.pdf | Bin 219277 -> 0 bytes"; git log --follow → 50f43d3, 3045e07
+    - **date**: 2026-08-05 to 2026-09-12
+    - **status_label**: n/a
+  - item 18
+    - **claim**: A duplicate PDF copy was deleted during hygiene stabilization on 2026-08-14.
+    - **evidence**: git log --all --name-status — "COMMIT d16450a 2026-08-14 Hygiene stabilization …" / "D	manuscripts/main/research/02_AutonomousTheory(1) (1).pdf"
+    - **date**: 2026-08-14
+    - **status_label**: deleted duplicate
+  - item 19
+    - **claim**: Under the earlier queue the Autonomous Theory files were 'orphan' material: read-only to sessions, lifecycle transitions Eric's alone; the retired durable README recorded orphan/ as 'holding five ODT manuscripts, not tasks'.
+    - **evidence**: L8/L6/history/harmonization-2026-09-05.md:78 — "all of `durable/orphan/` (the Autonomous Theory corpus files; the deep-research tool outputs; …). Read-only to sessions; lifecycle transitions are Eric's."; L8/L6/retired/layout-2026-09-06/common/durable/README.md:75-77 — "[source text withheld from the public copy]:6-7 — "The lifecycle transitions … are made by Eric (or an externally authorized process) only."
+    - **date**: 2026-08-14 / 2026-09-05
+    - **status_label**: orphan (retired vocabulary)
+  - item 20
+    - **claim**: STATUS_LADDER.md: carried verbatim 2026-09-06 from common/durable/README.md on the owner's word; defines the ladder SPECULATION → CONJECTURE → RESEARCHING → VERIFIED with side states PARKED and SUPERSEDED.
+    - **evidence**: L8/L5/research/review/STATUS_LADDER.md:3 — "[source text withheld from the public copy]\")"; :8 — "SPECULATION  -->  CONJECTURE  -->  RESEARCHING  -->  VERIFIED"; :21-22 — "[source text withheld from the public copy]"
+    - **date**: 2026-09-06
+    - **status_label**: governance text, verbatim
+  - item 21
+    - **claim**: STATUS_AND_LABEL_DISCIPLINE.md: carried verbatim 2026-09-07; declares everything INTERNAL ONLY, lists the registry labels, and the two standing rules.
+    - **evidence**: L8/L5/research/review/STATUS_AND_LABEL_DISCIPLINE.md:3 — "[source text withheld from the public copy])."; :5 — "Everything in this repository is **INTERNAL ONLY**"; :10-13 — "`[source text withheld from the public copy]`"; :18,21 — "Contradictions are reported, never [source text withheld from the public copy]."
+    - **date**: 2026-09-07
+    - **status_label**: INTERNAL ONLY
+  - item 22
+    - **claim**: No item in the catch-all actually carries a PARKED, DRAFT, OWNER DECISION or UNREVIEWED label; PARKED occurs only in the rule statement and the ladder definition.
+    - **evidence**: grep over L8/L5/research/review/*.md for PARKED|DRAFT|OWNER DECISION|UNREVIEWED (60-char context) → only 0.md:38 ("stays here labelled PARKED") and 0.md:40 ("with PARKED and SUPERSEDED as side states"); STATUS_LADDER.md:21 defines PARKED; PERPETUITY_QUESTION_ADJUDICATION.md:344 label list contains no PARKED
+    - **date**: 2026-09-11 (HEAD)
+    - **status_label**: absent
+  - item 23
+    - **claim**: The author's calls listed as open on main, none decided: T3, record-ontology Q1–Q9 (Q9 flagged as possibly the definitional key), [source text withheld from the public copy], and the reader-agnostic divergence.
+    - **evidence**: L8/L5/research/review/0.md:44 — "**What is open.** The author's calls, none decided anywhere in this repository (wording verbatim [source text withheld from the public copy]\", three external literature lanes reported and the option set unranked …; the record-ontology questions Q1–Q9, Q9 the state asymmetry …; [source text withheld from the public copy]`, the rewording recorded and not applied (`PERPETUITY_QUESTION_ADJUDICATION.md` §6.1, here); [source text withheld from the public copy], removed from HEAD at `8c98573`, in git history)."
+    - **date**: 2026-09-06
+    - **status_label**: none decided
+  - item 24
+    - **claim**: Verbatim wording of the author's calls in the retired README that review/0.md points to.
+    - **evidence**: L8/L6/retired/layout-2026-08-14/README.md:112-127 — "These are the author's calls. None is decided anywhere in this repository."; "**[source text withheld from the public copy]\"*. … Three external literature lanes have reported; the option set remains unranked."; "**[source text withheld from the public copy]*), which its own file flags as possibly the definitional key."; "**[source text withheld from the public copy]`** — … The recommended rewording is recorded and **not applied**."; "**The reader-agnostic divergence** — … Whether the [source text withheld from the public copy] undecided."
+    - **date**: 2026-08-14
+    - **status_label**: unranked / not applied / undecided
+  - item 25
+    - **claim**: T3 in the theme ledger is OPEN and flagged for the author's definition; the law-lane literature finding is [source text withheld from the public copy].
+    - **evidence**: L8/L5/research/lanes/THEME_LEDGER.md:156 — "**[source text withheld from the public copy]).**"; :169 — "[source text withheld from the public copy]."
+    - **date**: 2026-08-02
+    - **status_label**: OPEN
+  - item 26
+    - **claim**: Q1–Q9 file is OPEN throughout, nothing adopted; Q9 'may be the definitional key'.
+    - **evidence**: L8/L5/research/lanes/RECORD_ONTOLOGY_OPEN_QUESTIONS.md:4 — "**[source text withheld from the public copy]."; :227 — "## [source text withheld from the public copy]"; :231 — "[source text withheld from the public copy]."
+    - **date**: 2026-08-02
+    - **status_label**: OPEN
+  - item 27
+    - **claim**: PERPETUITY_QUESTION_ADJUDICATION.md header: dated 2026-08-02; the owner's ruling is that the theorem candidate is DEAD FOR NOW; method six Fable agents, external sources only, arXiv excluded; internal corpus quotes INTERNAL ONLY.
+    - **evidence**: L8/L5/research/review/PERPETUITY_QUESTION_ADJUDICATION.md:3 — "**Date:** 2026-08-02"; :6 — "**[source text withheld from the public copy]**."; :8 — "Six independent Fable research agents … **[source text withheld from the public copy] … Internal corpus quotes are **INTERNAL ONLY**"
+    - **date**: 2026-08-02
+    - **status_label**: DEAD FOR NOW; INTERNAL ONLY
+  - item 28
+    - **claim**: PERPETUITY verdict table labels: FAILED CHECK, UNVERIFIABLE AS POSED, CONTESTED, NO (VERIFIED).
+    - **evidence**: PERPETUITY_QUESTION_ADJUDICATION.md:18-21 — "**FAILED CHECK** — no such general theorem exists"; "**[source text withheld from the public copy]"; "**CONTESTED** [source text withheld from the public copy]"; "**NO** — recording concurrent with operation is classical"; :344 — "**[source text withheld from the public copy]."
+    - **date**: 2026-08-02
+    - **status_label**: FAILED CHECK / UNVERIFIABLE AS POSED / CONTESTED
+  - item 29
+    - **claim**: PERPETUITY's 'manuscript' lines quote the Auditonomous manuscript blocks (Block 3 definition, Block 52) as INTERNAL ONLY, from intake/manuscript/ paths that no longer exist at HEAD.
+    - **evidence**: PERPETUITY_QUESTION_ADJUDICATION.md:133 — "[source text withheld from the public copy]):"; :135 — "— `manuscript/Block_03_The_Definition.md:10`"; :246 — "`manuscript/Block_52_The_Decodability_Requirement.md:55` (INTERNAL ONLY, grep-verified)"; :337 — "**[source text withheld from the public copy]`…"; :345 — "`grep -rinE` over `intake/manuscript`"; git ls-files | grep -c '^(intake|common|manuscripts)/' → 0
+    - **date**: 2026-08-02
+    - **status_label**: INTERNAL ONLY; cited paths absent at HEAD
+  - item 30
+    - **claim**: PERPETUITY §6.1: the recommended edit to the definition's line 52 is recorded, labelled INTERNALLY DERIVED, and explicitly pending Eric's ruling; the file itself does not apply it.
+    - **evidence**: PERPETUITY_QUESTION_ADJUDICATION.md:201 — "## [source text withheld from the public copy]"; :203 — "[source text withheld from the public copy].**"; :216 — "Therefore `AUDITONOMOUS_DEFINITION.md:52` (INTERNAL ONLY) … is **imprecise as written**."; :222 — "**[source text withheld from the public copy]."; review/0.md:36 — "§6.1 recommends, and does not apply, an edit to the definition's line 52."
+    - **date**: 2026-08-02
+    - **status_label**: INTERNALLY DERIVED; Pending Eric's ruling
+  - item 31
+    - **claim**: PERPETUITY's ledger entry records the repository at the time as github.com/abba-01/auditonomous with research directory intake/research/, and names three 'Next Required Check' items before any publication use.
+    - **evidence**: PERPETUITY_QUESTION_ADJUDICATION.md:333-335 — "**[source text withheld from the public copy]/`"; :348 — "**[source text withheld from the public copy]) …"
+    - **date**: 2026-08-02
+    - **status_label**: Next Required Check (open)
+  - item 32
+    - **claim**: DISTILLATION.md header: INTERNALLY DERIVED · CONJECTURE throughout, [source text withheld from the public copy], and explicitly 'not a manuscript'.
+    - **evidence**: L8/L5/research/findings/DISTILLATION.md:3-6 — "**[source text withheld from the public copy]"
+    - **date**: 2026-08-05
+    - **status_label**: INTERNALLY DERIVED · CONJECTURE
+  - item 33
+    - **claim**: DISTILLATION §5 says [source text withheld from the public copy] is still unrun; §7 (not §5) is the four-lane prior-art verification of the correspondence rows, with VERIFIED / PARTIALLY VERIFIED / COMPOSITE OBJECT UNVERIFIED outcomes. The task's 'section 5 on the prior-art search' maps to §5 line 134 plus §7.
+    - **evidence**: DISTILLATION.md:132 — "## 5. WHAT WOULD FALSIFY THE LAYER ITSELF"; :134 — "[source text withheld from the public copy]**)."; :148 — "## [source text withheld from the public copy]"; :158 "### [source text withheld from the public copy]"; :195 "### 7.2 Agency law — PARTIALLY VERIFIED"; :231 "### [source text withheld from the public copy]"; :273 "### [source text withheld from the public copy]"; :293-294 — "[source text withheld from the public copy]`."
+    - **date**: 2026-08-05
+    - **status_label**: still unrun (definition prior art); VERIFIED / PARTIALLY VERIFIED / COMPOSITE OBJECT UNVERIFIED (§7)
+  - item 34
+    - **claim**: DISTILLATION's second 'manuscript' line carries an open problem: [source text withheld from the public copy] is needed [source text withheld from the public copy] are struck as closed 2026-08-05.
+    - **evidence**: DISTILLATION.md:146 — "[source text withheld from the public copy].**"
+    - **date**: 2026-08-05
+    - **status_label**: OPEN PROBLEMS, CARRIED
+  - item 35
+    - **claim**: The findings sheet labels DISTILLATION as a grandfathered multi-claim import and states the L4→L5 rule that a manuscript written at L4 becomes a finding only when L5 judges it.
+    - **evidence**: L8/L5/research/findings/0.md:35 — "INTERNALLY DERIVED · CONJECTURE throughout; a grandfathered multi-claim import (the one-claim-per-file rule not applied retroactively)."; :14 — "A computation run, an experiment performed, or a manuscript written at `L8/L4/work/` becomes a finding only when L5 judges what it supports."
+    - **date**: 2026-09-07
+    - **status_label**: INTERNALLY DERIVED · CONJECTURE
+  - item 36
+    - **claim**: The other two findings are external tests of the author's verbatim claims dated 2026-08-04 (SUPPORTED / PARTIALLY SUPPORTED verdicts; adversarial refutation).
+    - **evidence**: L8/L5/research/findings/0.md:36-37 — "`OVERRIDE_NECESSITY_2026-08-04.md` — external test of the override thesis: propositions P-A..P-E with SUPPORTED / PARTIALLY SUPPORTED verdicts and adversarial refutation results." / "`SEGREGATION_AND_FORGETTING_2026-08-04.md` — two owner claims … put to the literature and adversarially refuted."; OVERRIDE_NECESSITY_2026-08-04.md:1 — "# [source text withheld from the public copy]"
+    - **date**: 2026-08-04
+    - **status_label**: SUPPORTED / PARTIALLY SUPPORTED
+  - item 37
+    - **claim**: CONTRADICTIONS.md header: opened 2026-08-05, append-and-strike, C1–C7, every quote from a standards body's own text; it 'does not add new claims'; it mentions neither 'manuscript' nor 'Autonomous Theory'.
+    - **evidence**: L8/L5/research/review/CONTRADICTIONS.md:1 — "# [source text withheld from the public copy]"; :9 — "**Opened:** 2026-08-05 · append-and-strike"; :17-18 — "[source text withheld from the public copy]"; headings C1 (:32) … C7 (:171); grep -i 'manuscript|autonomous theory' → no match
+    - **date**: 2026-08-05
+    - **status_label**: VERIFIED / CONTESTED / PARTIALLY VERIFIED (per review/0.md:35)
+  - item 38
+    - **claim**: CONTRADICTIONS.md's relative links to its source files do not resolve at HEAD: none of the four named files exists in review/.
+    - **evidence**: CONTRADICTIONS.md:10,15-17 — "[`STANDARDS_REGISTER.md`](STANDARDS_REGISTER.md)", "[`ISO_IEC_REQUIREMENTS.md`]…", "[`IEEE_REQUIREMENTS.md`]…", "[`NIST_REQUIREMENTS.md`]…"; test -e in L8/L5/research/review/ → all four ABSENT (directory holds only 0.md, CONTRADICTIONS.md, PERPETUITY_QUESTION_ADJUDICATION.md, STATUS_AND_LABEL_DISCIPLINE.md, STATUS_LADDER.md, autonomous-theory/)
+    - **date**: 2026-09-11 (HEAD)
+    - **status_label**: dangling links
+  - item 39
+    - **claim**: review/0.md's standing for CONTRADICTIONS: never harmonized; which rows are Autonomous's job versus this repository's is 'the owner's reading'; the file is not edited.
+    - **evidence**: L8/L5/research/review/0.md:35 — "comparison across peer standards C1–C7, reported and never harmonized, with VERIFIED / CONTESTED / PARTIALLY VERIFIED labels. By the owner's rule, whichever of its rows compare definitions of *autonomy* across standards are Autonomous's bounded job to record … Which rows are which is the owner's reading; the file is not edited."
+    - **date**: 2026-09-06
+    - **status_label**: never harmonized; owner's reading pending
+  - item 40
+    - **claim**: deep-research-auditonomous.md header and its 'manuscript' lines: a 2026-08-05 deep-research run concluding the broad novelty claim is no longer defensible but a narrower window remains; it treats the repository's position that imported standards cannot yet be cited as manuscript evidence as correct.
+    - **evidence**: L8/L4/work/computation/deep-research-auditonomous.md:1 — "# [source text withheld from the public copy]"; :9 — "**[source text withheld from the public copy] … still appears open.**"; :36 — "[source text withheld from the public copy]."; :381 — "[source text withheld from the public copy]."
+    - **date**: 2026-08-05
+    - **status_label**: model output as run, never evidence (per computation/0.md:41)
+  - item 41
+    - **claim**: Standing of the deep-research file on main and in the routing plan: model output, never evidence; UNREVIEWED; not a finding.
+    - **evidence**: L8/L4/work/computation/0.md:41 — "`deep-research-auditonomous.md` — … a deep-research run that tested this repository's claims against external standards: model output as run, never evidence."; L8/L6/history/7LM_ROUTING_PLAN_2026-09-05.md:126 — "Asserts earlier negative findings are \"overtaken\" — UNREVIEWED; not a finding."; :124 — "Never L5: the repo's rule is that model output is not evidence."
+    - **date**: 2026-09-05 / 2026-09-07
+    - **status_label**: UNREVIEWED; not a finding; never evidence
+  - item 42
+    - **claim**: deep-research proposes a three-paper publication agenda with a flagship title; this is the file's own recommendation, unadopted anywhere on main.
+    - **evidence**: deep-research-auditonomous.md:549-555 — "## [source text withheld from the public copy]*"; :575 "### The contradiction-register paper"; :590 "### The cross-domain doctrine paper"
+    - **date**: 2026-08-05
+    - **status_label**: proposal in model output
+  - item 43
+    - **claim**: Where the actual manuscript drafts are on main: L4 writing, not the catch-all. Three live drafts, two chat transcripts, one session record; MANUSCRIPT.tex is a stub that does not exist at HEAD; no branch manuscript exists; nothing is released.
+    - **evidence**: L8/L4/work/writing/0.md:33 — "`auditnomous-main.docx`, `auditonomouos-important.docx`, `auditonomous-08-03-26.odt` — the live drafts (\"[source text withheld from the public copy]\"), relocated from `manuscripts/main/open-research/`. The LaTeX `MANUSCRIPT.tex` the master ledger calls a stub does not exist at HEAD."; :34 — "`chat/` — two recorded working sessions as produced"; :36 — "no branch manuscript exists"; :38 — "The research meaning of every file here is L5; nothing here is released (L7)."; find L8/L4/work/writing → auditnomous-main.docx 69430 B, auditonomouos-important.docx 169494 B, auditonomous-08-03-26.odt 136256 B, chat/auditonomous-chat-1.docx 73264 B, chat/auditonomouos-chat-2.docx 77894 B
+    - **date**: 2026-09-07
+    - **status_label**: live drafts; STUB; nothing released
+  - item 44
+    - **claim**: Master ledger statuses for the manuscript tree: MANUSCRIPT.tex STUB — no content migrated; prior-art directory empty, first prior-art search outstanding.
+    - **evidence**: L8/L6/history/LEDGER.md:37 — "| `[source text withheld from the public copy]. … | Real LaTeX migration |"; :39 — "| `[source text withheld from the public copy] |"
+    - **date**: 2026-08-14
+    - **status_label**: STUB; Empty, rules in place
+  - item 45
+    - **claim**: The routing of manuscript material on 2026-09-05 sent live drafts to L4 writing and CONTRADICTIONS.md to review/; the 2026-08-02 theme ledger's 'manuscript' is the Blocks 1–52 corpus, since retired from HEAD so its path aliases no longer resolve.
+    - **evidence**: L8/L6/history/harmonization-2026-09-05.md:43-44 — "| `manuscripts/main/open-research/CONTRADICTIONS.md` | `USO/l5/research/review/` | cross-standard comparison |" / "| `manuscripts/main/open-research/*.docx`, `*.odt` | `USO/l4/work/writing/` | live drafts |"; L8/L5/research/lanes/0.md:36 — "cluster analysis of the theory manuscript corpus (C1–C6) … INTERNALLY VALIDATED against an intake corpus since retired from HEAD, so its ARCH/LEX path aliases no longer resolve; carried unchanged."; THEME_LEDGER.md:3 — "[source text withheld from the public copy])"
+    - **date**: 2026-09-05 / 2026-08-02
+    - **status_label**: INTERNALLY VALIDATED; aliases unresolved
+  - item 46
+    - **claim**: Status labels 'skipped' and 'stub' in the theme ledger refer to manuscript blocks the author cut: Blocks 31, 32, 35, 36 SKIPPED — CUT FROM THE BOOK; '(stub)' = an 8-byte 'Skipped.' placeholder.
+    - **evidence**: L8/L5/research/lanes/THEME_LEDGER.md:146 — "**[source text withheld from the public copy],\""; :304 — "\"([source text withheld from the public copy])."
+    - **date**: 2026-08-02
+    - **status_label**: SKIPPED — CUT FROM THE BOOK; (stub); T1 CLOSED
+  - item 47
+    - **claim**: Inconsistency between sheets on main: L8/L5/0.md lists only two review/ holdings, omitting the two STATUS files and autonomous-theory/ that review/0.md lists.
+    - **evidence**: L8/L5/0.md:80 — "- `research/review/` — `CONTRADICTIONS.md`, `PERPETUITY_QUESTION_ADJUDICATION.md`."; :83 — "`research/review/` is also the catch-all: everything awaiting the owner's review lands there, and an item taken up moves to `research/lanes/`."; versus L8/L5/research/review/0.md:40-42 listing STATUS_LADDER.md, STATUS_AND_LABEL_DISCIPLINE.md, autonomous-theory/
+    - **date**: 2026-09-07
+    - **status_label**: n/a
+  - item 48
+    - **claim**: The root README points to review/0.md as the place that states what is open.
+    - **evidence**: README.md:12 — "4. The status and label discipline and the status ladder: `L8/L5/research/review/STATUS_AND_LABEL_DISCIPLINE.md` and `L8/L5/research/review/STATUS_LADDER.md`; what is open: `L8/L5/research/review/0.md`."
+    - **date**: 2026-09-07
+    - **status_label**: n/a
+  - item 49
+    - **claim**: The routing plan explicitly left all the open calls untouched: no contradiction harmonized, Q9 not adopted, the line-52 edit not applied, T3 unranked, labels unchanged.
+    - **evidence**: L8/L6/history/7LM_ROUTING_PLAN_2026-09-05.md:244-246 — "Does not harmonize a single contradiction (C1–C7 stand), adopt Q9, apply the line-52 pending edit, rank T3's option set, or change any label (VERIFIED, INTERNALLY DERIVED, CONJECTURE, NOT-CHECKED, [source text withheld from the public copy] travel unchanged)."
+    - **date**: 2026-09-05
+    - **status_label**: unchanged
+  - item 50
+    - **claim**: Context only (not on main): the closed PR #27 roadmap branch adds to the catch-all a PROPOSAL whose gate D12 recommends [source text withheld from the public copy] get 'their own home', calling the 2025 draft 'outreach material that cannot pass review'; it also records that AUTONOMOUS_vs_AUDITONOMOUS_CYCLES.md's verdict (ii) 'stands against PERPETUITY_QUESTION_ADJUDICATION.md §6.1, both unranked'.
+    - **evidence**: origin/claude/book-structure-roadmap-k8ap82 (9259c18, 2026-09-14): L8/L5/research/review/BOOK_STRUCTURE_AND_ROADMAP_2026-09-13.md:3 — "**Standing.** PROPOSAL · INTERNAL ONLY · INTERNALLY DERIVED."; :623 — "| [source text withheld from the public copy] … | out as a source. … [source text withheld from the public copy] |"; git diff 2165144..9259c18 -- L8/L5/research/review/0.md adds "its verdict (ii) that audit is not necessarily post hoc stands against `PERPETUITY_QUESTION_ADJUDICATION.md` §6.1, both unranked."
+    - **date**: 2026-09-13/14
+    - **status_label**: PROPOSAL · INTERNAL ONLY (branch only, PR #27 closed unmerged)
+- **open_questions**
+  - Which home the owner names for the Autonomous Theory files: the routing plan's candidates were L7/peering/private/ingress/ (as Eric's own separate work) or L6 retired; the roadmap branch's D12 says 'the files get their own home' and names an existing repository aybllc/autonomous-theory in its survey (D23), but nothing on main records a decision.
+  - Whether `#autonomous(1).txt` should be described as a draft or a chat export: main's sheet says 'the 2025 Autonomous Theory draft', the roadmap branch says 'chat export', the sourcebook L015 says 'CORE EXCLUSION … [source text withheld from the public copy] … personal material'; inspection shows lines 1–635 prose draft and 636–746 a 2025-06-25 chat export with personal contact details and a draft letter — whether that personal material should sit in a repository at all is not addressed on main.
+  - Why the PDF carries no author line while the .txt signs 'Eric Dwight Martin - 2025'; and whether the 2025-10-11 print of autonomoustheory.org is the version the owner means by 'Autonomous Theory'.
+  - The author's calls remain undecided on main: [source text withheld from the public copy]'), Q1–Q9 (Q9 'may be the definitional key'), the DEF:52 rewording ('Pending Eric's ruling'), the reader-agnostic divergence; the routing plan and the roadmap branch both leave them untouched.
+  - DISTILLATION §5 says [source text withheld from the public copy] is 'still unrun' and LEDGER.md:39 says 'First prior-art search' is outstanding; nothing on main records it as run (§7 covers only the four correspondence lanes). Whether the deep-research run of 2026-08-05 (model output, 'never evidence') counts for anything here is unadjudicated.
+  - CONTRADICTIONS.md links to STANDARDS_REGISTER.md, ISO_IEC_REQUIREMENTS.md, IEEE_REQUIREMENTS.md and NIST_REQUIREMENTS.md, none of which exists in review/ at HEAD; whether the L4 extractions (ieee-/iso-iec-/nist-requirements-for-autonomo*.md) are their renamed successors is not stated anywhere I read.
+  - PERPETUITY and THEME_LEDGER cite intake/manuscript/Block_*.md and ARCH/LEX aliases that are absent at HEAD (git ls-files shows no intake/, common/ or manuscripts/ paths); the roadmap branch restored some pruned material from 1d83788 but that branch is closed unmerged.
+  - L8/L5/0.md:80 lists only two review/ holdings while review/0.md lists five; which sheet the owner treats as authoritative for the catch-all's inventory is not stated.
+  - No PARKED label is applied to any catch-all item on main; whether 'none adjudicated' means the owner has not yet looked, or has looked and left them unlabelled, cannot be determined from the repository.

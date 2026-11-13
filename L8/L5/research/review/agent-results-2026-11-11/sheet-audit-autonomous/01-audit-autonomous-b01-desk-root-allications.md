@@ -1,0 +1,92 @@
+# audit:autonomous:b01-desk-root-allications
+
+Agent result, as returned. Workflow: Sheet audit, Autonomous. Run `wf_8e13ec8e-47f`. Phase: Audit.
+
+- **sheets_audited**
+  - L7/0.md
+  - L7/allications/0.md
+  - L7/allications/applications/0.md
+  - L7/allications/communications/0.md
+  - L7/allications/notifications/0.md
+  - L7/allications/participations/0.md
+  - L7/allications/publications/0.md
+  - L7/allications/publications/binder/0.md
+  - L7/allications/specifications/0.md
+  - README.md
+- **statements_checked**: 359
+- **findings**
+  - item 1
+    - **id**: b01-01
+    - **kind**: WRONG-FACT
+    - **sheet**: L7/allications/publications/binder/0.md
+    - **line**: 8
+    - **sheet_says**: `README.md` states its rules (introduces no evidence; the [source text withheld from the public copy] repository; a quotation may be downgraded to cite-only for custody reasons and never upgraded; the coinage introduced as a coinage)
+    - **truth**: The binder's README.md has no rule about introducing a coinage. Its rule on coined terms is the opposite: they do not appear on binder pages at all. The nearest wording to the sheet's is one checklist line in a different file, press-kit/README.md. The other three rules the sheet lists are in README.md as described.
+    - **evidence**: `git -C /home/user/autonomous show 8257118:L7/allications/publications/binder/README.md`, lines 21-23: "[source text withheld from the public copy]." `git -C /home/user/autonomous grep -n -i -E 'coin' 8257118 -- L7/allications` returns four lines only: this sheet's line 8; binder/README.md:22 (quoted above); binder/press-kit/GLOSSARY_AUTONOMOUS.md:8 "[source text withheld from the public copy]."; binder/press-kit/README.md:21 "- [ ] [source text withheld from the public copy]."
+    - **exact_fix**: In line 8 replace "the coinage introduced as a coinage" with "[source text withheld from the public copy]".
+  - item 2
+    - **id**: b01-02
+    - **kind**: STALE
+    - **sheet**: L7/allications/publications/binder/0.md
+    - **line**: 8
+    - **sheet_says**: The `binder/` tree as it stood at HEAD before this pass, moved whole because its subject is release identity.
+    - **truth**: "This pass" is the pass of 2026-09-05, which moved the root `binder/` tree to `L7/publications/binder/`. The sentence was carried unchanged through the pass of 2026-11-11, which moved the tree again to its present path. Read at the pinned commit it is no longer true: before the latest pass the tree stood at `L7/publications/binder/`, and the root holds no `binder/`. (The two other "at HEAD" statements in this sheet, lines 8 and 27, that the tools cannot run, are still true: every anchor path the two scripts name is absent at the commit.)
+    - **evidence**: Record `L8/L6/history/harmonization-2026-09-05.md` section 4a, line 34: "| `binder/` (7 files) | `L7/publications/binder/` | presentation layer; nothing released |". The pinned commit's own change list (`git -C /home/user/autonomous show 8257118 -M --stat`) has "L7/{ => allications}/publications/binder/0.md | 6 +--"; its rename diff changes only line 1 (heading), line 4 (Path) and line 20 (boundary rule), so line 8 predates this commit. `git -C /home/user/autonomous ls-tree --name-only 8257118` lists .github, .gitignore, L7, L8, README.md and no binder.
+    - **exact_fix**: Replace the sentence with: "The `binder/` tree of the 2026-08-14 layout, kept whole because its subject is release identity; it was moved to `L7/publications/binder/` in the pass of 2026-09-05 and to this path in the pass of 2026-11-11 (the record, `L8/L6/history/harmonization-2026-09-05.md` §4a and §14)."
+  - item 3
+    - **id**: b01-03
+    - **kind**: WRONG-FACT
+    - **sheet**: L7/0.md
+    - **line**: 232
+    - **sheet_says**: `L7/provenance/sources/LEDGER_OF_DEFINITIONS.md` (450 verbatim definitions from 55 intake documents with adoption chains — a capture register, "not an adjudication")
+    - **truth**: The ledger counts 450 entries, not 450 definitions. Its own header separates the two: [source text withheld from the public copy], or a requirement, prohibition, provision or scope statement recorded and labelled as such, and nothing so labelled [source text withheld from the public copy]. At least 32 of the 450 counted entries carry such a label, so the number of verbatim definitions is smaller than 450.
+    - **evidence**: `git -C /home/user/autonomous show 8257118:L7/provenance/sources/LEDGER_OF_DEFINITIONS.md`: line 6 "**[source text withheld from the public copy].**"; lines 8-12 "[source text withheld from the public copy].**"; line 84 "**[source text withheld from the public copy] domain index gives 39, 67 and 50 entries for Domains 2, 3 and 7; those domains hold exactly 39, 67 and 50 "####" entry headings, of which 10, 18 and 4 are bracket-labelled (Domain 2's ten stand under line 1143, "### Requirements recorded — NOT definitions"; Domain 7's read "[NOT A DEFINITION]"). Other sheets use the ledger's word: L7/provenance/0.md:34 "the 450-entry verbatim capture register". The same "450 verbatim definitions" wording also stands at L7/provenance/sources/0.md:42.
+    - **exact_fix**: In line 232 replace "450 verbatim definitions from 55 intake documents" with "450 verbatim entries from 55 intake documents".
+  - item 4
+    - **id**: b01-04
+    - **kind**: WRONG-FACT
+    - **sheet**: README.md
+    - **line**: 5
+    - **sheet_says**: The documentation is the sheets: every directory under `L7/` and `L8/` describes itself in its own `0.md`
+    - **truth**: 19 of the 122 directories under L7/ and L8/ carry no 0.md at the commit. Six are the folders the record's section 14 already lists (not reported again as such). The other 13 lie below the roots of two retired sets, which are kept verbatim: under L8/L6/retired/layout-2026-08-14/ the folders manuscripts, manuscripts/main, research, research/definitions, research/findings, research/lanes, research/ledgers, research/review; under L8/L6/retired/layout-2026-09-06/ the folders durable, intake, intake/claude, manuscripts, manuscripts/main. The README's sentence is unqualified and so untrue for all 19.
+    - **evidence**: `git -C /home/user/autonomous ls-tree -r -d --name-only 8257118 -- L7 L8 | wc -l` gives 122; `git -C /home/user/autonomous ls-tree -r --name-only 8257118 -- L7 L8 | grep -c -E '(^|/)0\.md$'` gives 103; testing each directory with `git cat-file -e 8257118:<dir>/0.md` leaves the 19 named. L8/L6/retired/0.md:30 states the rule for retired sets: "A `0.md` beneath this directory that is not at the root of a retired set is a retained prior state, not a gate."
+    - **exact_fix**: Replace the clause with: "every directory under `L7/` and `L8/` describes itself in its own `0.md`, except the directories kept verbatim below the root of each retired set under `L8/L6/retired/` and the six folders the record lists as unsheeted (§14)".
+  - item 5
+    - **id**: b01-05
+    - **kind**: CONTRADICTION
+    - **sheet**: L7/0.md
+    - **line**: 232 (against L7/provenance/sources/0.md lines 41 and 54)
+    - **sheet_says**: L7/0.md:232: "S-001…S-121 pinned to `7540a9d6951c`". L7/provenance/sources/0.md:41: "`LEDGER.md` — the pointer register into `aybllc/l6` by path and pinned commit (`7540a9d6951c`), 122 rows". L7/provenance/sources/0.md:54: "The ledger has no rows; that is admissible."
+    - **truth**: The ledger file holds 121 source rows, S-001 to S-121 with no gap, each pinned to 7540a9d6951c. L7/0.md is right; the two lines of the sources sheet disagree with it and with each other. 122 is the number of lines that contain the pin (the 121 rows plus the closing note). "No rows" is true only of the table under the file's heading "## The register", which has a header and nothing else; the rows stand after the "Search log" table and under "Part B".
+    - **evidence**: `git -C /home/user/autonomous show 8257118:L7/provenance/sources/LEDGER.md | grep -c -E '^\| S-[0-9]{3} \|'` gives 121 (first S-001, last S-121, 121 distinct IDs, all with `| 7540a9d6951c |`); `grep -c -F 7540a9d6951c` on the same object gives 122, the extra line being the note at lines 188-189 "[source text withheld from the public copy]`". L7/provenance/0.md:33 agrees with L7/0.md: "register table empty, rows S-001…S-121 populated by a hub-wide transfer".
+    - **exact_fix**: No change to L7/0.md. In L7/provenance/sources/0.md line 41 replace "122 rows" with "121 rows (S-001…S-121)"; in line 54 replace "The ledger has no rows; that is admissible." with "The ledger carries 121 rows, S-001…S-121."
+  - item 6
+    - **id**: b01-06
+    - **kind**: MISFILED
+    - **sheet**: L7/allications/publications/0.md
+    - **line**: 29 (with 23 and 33)
+    - **sheet_says**: Under "Does not hold": "the writing as produced work — `L8/L4/work/writing/`" and "drafts stamped internal, empty release slots, and material that has not left: none of these is a released publication object". Under "Holdings": "`press-kit/GLOSSARY_AUTONOMOUS.md` (reader-facing quote-stitched glossary, 43 six-part footnotes; stamped DRAFT — INTERNAL; `binder/served/` "reserved, not yet built"). Nothing has been released."
+    - **truth**: Observation for the owner. Everything filed at this position is of the kinds its own list excludes: a draft glossary stamped internal, three rule files, an acquisition queue and two scripts. No released publication object exists. The specification's row for the position reads "Directory for released publication objects at the forward face." By the sheet's own list and the specification's rows, the glossary as produced writing would belong at L8/L4/work/writing/ ("Directory for writing and document production as performed work."); the two verify_fragments scripts at L8/L4/work/computation/ (the binder's sheet, line 27, calls them "code as made (L4 by role)"); and internal/FETCH_LIST.md, a queue of sources not yet held, beside the acquisition lists at L7/provenance/sources/staging-records/. Inside the binder the same draft also sits against the binder's own rules: it is in press-kit/, which is for cleared material, not in internal/.
+    - **evidence**: binder/press-kit/GLOSSARY_AUTONOMOUS.md:9 "**Status:** `DRAFT — INTERNAL`." binder/internal/README.md:3 "[source text withheld from the public copy]**." and :10 "[source text withheld from the public copy]." binder/press-kit/README.md:3 and :6 "Material **cleared for outside eyes**", "[source text withheld from the public copy]." Specification (origin/main) line 872, row allications/publications/, and line 566, row writing/. The record's section 5 (line 80) already lists "`binder/internal/` at publications versus L4 writing" among the owner's open decisions; this observation extends the same question to the rest of the binder. All paths read with `git -C /home/user/autonomous show 8257118:L7/allications/publications/...`.
+    - **exact_fix**: None required; the placement is the owner's to decide. If the binder stays, line 29 could end: "none of these is a released publication object; the binder listed below is such material, held here unreleased (the record, §4a and §5)".
+  - item 7
+    - **id**: b01-07
+    - **kind**: UNLISTED
+    - **sheet**: L7/0.md
+    - **line**: 232 (Holdings, provenance bullet)
+    - **sheet_says**: **provenance** — `L7/provenance/sources/LEDGER.md` (…), `L7/provenance/sources/LEDGER_OF_DEFINITIONS.md` (…), `L7/provenance/sources/datasets-LEDGER.md` (empty), the parked sources tree `L7/provenance/sources/staging-records/`, and `L7/provenance/prior-art/` (RFC 6962/9162 canonical texts and the prior-art lane with its Q-6 licence exposure).
+    - **truth**: Observation. One held file under L7/ is not accounted for anywhere in this sheet's Holdings: L7/provenance/authority/JOURNALS.md (667 bytes), the list of peer-reviewed journals [source text withheld from the public copy]. The other 70 non-sheet files under L7/ are each named in the Holdings or sit in a folder the Holdings names. The four direct sub-folders of L7/ are all mentioned.
+    - **evidence**: `git -C /home/user/autonomous ls-tree -r -l 8257118 L7/provenance/authority` lists 0.md (3998 bytes) and JOURNALS.md (667 bytes), headed "# Enumerated peer-reviewed journals" with one row, Reliable Computing. `git -C /home/user/autonomous grep -n -F 'JOURNALS' 8257118 -- L7/0.md` returns nothing; among sheets and the README only L7/provenance/authority/0.md names the file. `git ls-tree -r --name-only 8257118 L7 | grep -v -E '/0\.md$'` gives 71 files: 7 in the binder, 35 under prior-art/, 3 ledgers and 25 staging records under sources/, and this one.
+    - **exact_fix**: Before the closing full stop of the provenance bullet add: ", and `L7/provenance/authority/JOURNALS.md` (the enumerated peer-reviewed journals of evidence rule 1; one entry, *Reliable Computing*)".
+- **clean_sheets**
+  - L7/allications/0.md
+  - L7/allications/applications/0.md
+  - L7/allications/communications/0.md
+  - L7/allications/notifications/0.md
+  - L7/allications/participations/0.md
+  - L7/allications/specifications/0.md
+- **could_not_check**
+  - L7/0.md:232, whether the ledger's own total of 450 is right. The header (line 6), the domain index and the corpus-total line (84) of LEDGER_OF_DEFINITIONS.md all say 450 entries across 55 documents, and seven of the eight domains recount exactly (41, 39, 67, 79, 27, 50 and 15 '####' entry headings). Domain 4 does not: its index says 132, and I count 30 '####' headings plus 113 standalone bold term lines (85 and 12 clause-numbered terms, 5 from the superseded draft, 11 from IEEE 2894), 143 in all. The ledger does not say which of these it counts, so 450 could not be confirmed or refuted by recount. The 55 documents were at /home/eric/ayb/intake/, outside the repository, and cannot be listed.
+  - L7/0.md:27, "no directory metadata, automation, or validation is enabled here". True if it speaks of the machine-metadata contract: no metadata file exists in the tree. If "here" means the repository, .github/workflows/integrity.yml does validate sheet headings, the root and the canonical positions on every push and pull request (README.md:15 "one CI check"). Which reading is meant could not be determined; L8/0.md:133 carries the same sentence four lines above its own description of that check, and the specification separates the two ("No directory metadata, no automation in the layout; the one CI check").
+  - Two near-verbatim quotations judged not to be misquotes, disclosed so the call can be reviewed. L7/0.md:241 quotes "Authorized external inspection inward: L7→L6→L5→L4→L3→L2→L1→L0" and "Scientific construction outward: L0→L1→L2→L3→L4→L5→L6→L7" each as one line; the specification (lines 91-97) sets each label and its route on separate lines, words and characters otherwise identical. L7/allications/publications/0.md:8 quotes the column heading as "owns / represents"; the specification has "Owns / represents". Every other quotation attributed to the specification in the batch is verbatim, and each quoted cell is the cell for the position that quotes it.
+  - README.md:17, "the README that carried the documentation until 7 September 2026 is in git history". Supported by the record's section 11 at the pinned commit ("git history keeps it (main `d707b7d`)") and by commit subjects reachable from the pin (87ce2cf and b11a78c, both 2026-09-07). The older README's content itself was not read, because it is not an object at the pinned commit.

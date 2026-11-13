@@ -1,0 +1,247 @@
+# read:roadmap
+
+Agent result, as returned. Workflow: Manuscript status of 3 November 2026. Run `wf_1cf4205c-c72`. Phase: Read.
+
+- **summary**: Source: branch origin/claude/book-structure-roadmap-k8ap82 (head 9259c18, 2026-09-14 02:04 UTC; five commits above origin/main 2165144, all authored "Claude <noreply@anthropic.com>"), the head of PR #27. Below, ROADMAP = L8/L5/research/review/BOOK_STRUCTURE_AND_ROADMAP_2026-09-13.md on that branch (686 lines; the first version at 30a40f1 had 635 lines and no §9), and BOOK = L8/L4/work/writing/book/ on that branch. The branch was never merged: `git branch -r --contains` lists only itself, origin/main has zero commits it lacks (merge-base = main's head), GitHub's main is still 2165144 (2026-09-12T06:26Z), and the REST API reports PR #27 created 2026-09-13T20:39Z, closed 2026-10-17T08:41Z, merged=false, with no later PR in the repository. None of the branch's files (ROADMAP, book/, papers/, manuscript/, the restore record, AUDITONOMY.md) exists on origin/main.
+
+  What it shows: the furthest point the manuscript reached. ROADMAP (PROPOSAL · INTERNAL ONLY · INTERNALLY DERIVED; "Nothing here is adopted") fixes a finished shape of eight parts (0–VII), 27 chapters and appendices A–I in two legs (A = the conditional, Ch 1–18; B = the antecedent, Ch 19–24 and 26; the leg change announced at the head of Ch 19). §4 labels every chapter: [source text withheld from the public copy]." §7 lists 22 owner decisions numbered D1–D23 (D17 absent in both versions), all unruled except D15, "[source text withheld from the public copy] owner's instruction. The 14 September revision re-sequenced the plan to a build-first order S0–S6 and §9 records the same-day execution: two papers drafted (S0; the vocabulary paper is a 62,540-byte DRAFT, "Not adversarially reviewed"), an exemplar declared at the peer (S1, the owner's merge pending), 116 files restored from git 1d83788 (S2), peering checked (S3, D22 pending), 27 chapter files opened (S4), fifteen component repositories surveyed and "none on the model" (S5, D23 pending), and "the writing not begun (S6)". Every chapter file (1,581–2,983 bytes) is a header block plus one "## Text" section whose only content is the identical sentence "*Not yet drafted.*"; bibliography.md says "No entry yet"; build.sh was "Not run in the environment that wrote it"; the L2 formulas ledger is still EMPTY. The chapter headers were generated from the 13 September version (ch09 still gates on D15 and calls AUDITONOMY.md "history-only" though the file was restored that day). Development stopped here: no prose, no recorded rulings, and the PR closed unmerged five weeks later.
+- **facts**
+  - item 1
+    - **claim**: The roadmap branch was never merged into main: only the branch itself contains its head; origin/main has 0 commits the branch lacks; merge-base equals origin/main's head 2165144.
+    - **date**: checked 2026-11-03
+    - **evidence**: `git -C /home/user/auditonomous branch -r --contains origin/claude/book-structure-roadmap-k8ap82` → only 'origin/claude/book-structure-roadmap-k8ap82'; `git log origin/main..origin/claude/book-structure-roadmap-k8ap82 --oneline` → 5 commits; `git merge-base` → 21651446b1f3f4547b588e6d7122ef7f9f81e9b9; `git log branch..origin/main | wc -l` → 0; `git branch -r` lists only origin/HEAD, origin/main, origin/claude/book-structure-roadmap-k8ap82
+    - **status_label**: unmerged
+  - item 2
+    - **claim**: The branch holds five commits, all authored 'Claude <noreply@anthropic.com>': 30a40f1 (2026-09-13 20:37:08 +0000) 'The book's finished shape and the path to it: a roadmap record in the catch-all'; 62d2e3f (2026-09-14 01:42:45) 'Set up the repository before research: the cited-but-absent files returned from 1d83788, with sheets and an L6 record' (142 paths); b1ec302 (01:48:05) 'Open the manuscript source tree: twenty-seven chapter files with their feeds, labels and gates as headers' (32 files, 872 insertions); 4e2c4e4 (01:52:56) 'The vocabulary paper: auditonomous, auditonomy, auditon and HUMINT-ENCODE fixed as strings with locators and labels'; 9259c18 (02:04:14) 'The roadmap re-sequenced to the owner's build-first order, with the component repositories surveyed' (ROADMAP: 123 insertions, 72 deletions).
+    - **date**: 2026-09-13 / 2026-09-14
+    - **evidence**: `git log origin/main..origin/claude/book-structure-roadmap-k8ap82 --format='%h %ad %an %s'` and `git show --stat` of each sha
+    - **status_label**: n/a
+  - item 3
+    - **claim**: PR #27 (head claude/book-structure-roadmap-k8ap82 at 9259c18, base main, 5 commits, opened by abba-01) was created 2026-09-13T20:39:22Z and closed 2026-10-17T08:41:45Z with merged=false, merged_at=null; it is the newest PR in the repository and no later PR re-files the work. Its title: 'The book roadmap, re-sequenced to build-first: the repository set up, the chapters opened, the vocabulary paper drafted'. Note: the PR was closed on 17 October 2026, not on 13–14 September as the task text frames it.
+    - **date**: 2026-09-13 to 2026-10-17
+    - **evidence**: `gh api repos/aybllc/auditonomous/pulls/27` → "state":"closed","merged":false,"merged_at":null,"closed_at":"2026-10-17T08:41:45Z","head_sha":"9259c180e5b47421e3f972434f8ff66e68505629"; `gh api repos/aybllc/auditonomous/pulls?state=all` lists #27 as the highest number; `gh api repos/aybllc/auditonomous/branches/main` → sha 21651446…, date 2026-09-12T06:26:02Z
+    - **status_label**: closed, unmerged
+  - item 4
+    - **claim**: None of the branch's manuscript material exists on origin/main: ROADMAP, L8/L4/work/writing/book, L8/L4/work/writing/papers, L8/L4/work/writing/manuscript, L8/L6/history/restore-2026-09-14.md and L8/L0/semantics/definitions/AUDITONOMY.md are all ABSENT on origin/main and PRESENT on the branch. On main, L8/L4/work/writing holds only 0.md, auditnomous-main.docx, auditonomouos-important.docx, auditonomous-08-03-26.odt, branch/, chat/, sessions/.
+    - **date**: checked 2026-11-03
+    - **evidence**: `git ls-tree origin/main -- <path>` empty for each of the six paths; `git ls-tree -l origin/main -- L8/L4/work/writing/`
+    - **status_label**: absent on main
+  - item 5
+    - **claim**: ROADMAP's standing is '[source text withheld from the public copy] 2026-09-13 instruction ('[source text withheld from the public copy].' Filed in the catch-all [source text withheld from the public copy].
+    - **date**: 2026-09-13
+    - **evidence**: ROADMAP:3 — "**Standing.** PROPOSAL · INTERNAL ONLY · INTERNALLY DERIVED … Nothing here is adopted."
+    - **status_label**: PROPOSAL · INTERNAL ONLY · INTERNALLY DERIVED
+  - item 6
+    - **claim**: No external source was fetched for the roadmap; outbound access to the science hosts was [source text withheld from the public copy].
+    - **date**: 2026-09-13
+    - **evidence**: ROADMAP:5 — "[source text withheld from the public copy])"
+    - **status_label**: n/a
+  - item 7
+    - **claim**: The 2026-09-14 revision: on the owner's instruction ('[source text withheld from the public copy]') §6 was re-sequenced to build-first S0–S6, '[source text withheld from the public copy]'; 'Nothing else in §0–§5 is rewritten'. The file name and H1 keep the date 2026-09-13.
+    - **date**: 2026-09-14
+    - **evidence**: ROADMAP:7 — "**Revision of 2026-09-14.** … [source text withheld from the public copy]) … Nothing else in §0–§5 is rewritten"; ROADMAP:1 title still '— 2026-09-13 —'
+    - **status_label**: n/a
+  - item 8
+    - **claim**: The first version (30a40f1) was 635 lines with sections §0–§8 only, §6 titled 'The order of work' with phases P0–P6; the head version is 686 lines with §6 retitled '[source text withheld from the public copy]' and a new §9.
+    - **date**: 2026-09-13 vs 2026-09-14
+    - **evidence**: `git show 30a40f1:ROADMAP | wc -l` → 635, headings at 563 '## 6. The order of work' and 603 '## 7.'; head: 686 lines, ROADMAP:565 '## [source text withheld from the public copy]', ROADMAP:641 '## 9. Revision of 2026-09-14'
+    - **status_label**: n/a
+  - item 9
+    - **claim**: The record describes itself as '[source text withheld from the public copy]' and composes six prior structures (2026-08-02 TOC: 5 parts, 18 chapters; 2026-08-02 BOOK_STRUCTURE_PROPOSAL: 28 chapters, 36 of 52 blocks severable; 2026-08-03 Prospectus v0.1: [source text withheld from the public copy]; 2026-08-04 CONTRIBUTION_INDEX_AND_TOC; 2026-08-06 Sourcebook v0.1; 2026-08-14 SPINE_v0.1: 42 chapter titles in 7 parts), five of which were in git history only at 1d83788.
+    - **date**: 2026-08-02 to 2026-08-14
+    - **evidence**: ROADMAP:13-24 — table rows 17–22; ROADMAP:24 "[source text withheld from the public copy]."
+    - **status_label**: v0.1 (prospectus, sourcebook, spine)
+  - item 10
+    - **claim**: 'The book is done when' has nine conditions, including: [source text withheld from the public copy]; every quotation byte-checked against a publisher of record; each part with an adversarial review on the record; '[source text withheld from the public copy]'.
+    - **date**: 2026-09-13
+    - **evidence**: ROADMAP:30-40 — items 1–9
+    - **status_label**: NOT-CHECKED / UNVERIFIED / CONTESTED (labels barred from being presented as settled)
+  - item 11
+    - **claim**: Finished shape fixed by §2: title is OWNER DECISION D2 with three candidates ([source text withheld from the public copy]; Auditonomous Theory; Auditon); epigraph = the constitutional sentence ARCH:37; thesis sentence of record = Sourcebook [source text withheld from the public copy]'; two legs that '[source text withheld from the public copy]'.
+    - **date**: 2026-09-13
+    - **evidence**: ROADMAP:44-56; mirrored in BOOK/00-front-matter.md:3-21
+    - **status_label**: OWNER DECISION (D2)
+  - item 12
+    - **claim**: The parts and chapters: Part 0 Method (Ch 1–2), Part I autonomous (Ch 3–4), Part II The defect (Ch 5–6), Part III Auditonomous (Ch 7–11), Part IV Auditon (Ch 12–14), Part V The machinery (Ch 15–17), Part VI Deep space, after us (Ch 18–24), Part VII The reckoning (Ch 25–27); appendices A–I (A codified definitions register; B two contradiction registers; C autonomy scale A1–A5; D standards register; E glossary; F Denial Lexicon; G Convergence File; H The Instrument; I Timeline/companion seam). Eight parts, twenty-seven chapters.
+    - **date**: 2026-09-13
+    - **evidence**: ROADMAP:62-74 (mermaid), 93, 115, 137, 159, 208, 239, 270, 337 (part headings), 368-380 (Back matter table); BOOK/00-front-matter.md:26-87; BOOK/0.md:8 "Twenty-seven chapter files in eight parts"
+    - **status_label**: n/a
+  - item 13
+    - **claim**: Leg assignment is internally inconsistent: Ch 18 is 'leg A' in §2 and §4 but the mermaid diagram places 'Ch 18 — the hinge' inside subgraph B 'Leg B — the antecedent, argued', under a Part VI heading marked '(leg B)'; Part VII is headed '(leg AB)' while Ch 25 is leg A, Ch 26 leg B and Ch 27 leg AB.
+    - **date**: 2026-09-13
+    - **evidence**: ROADMAP:69-71 (subgraph B contains H18), ROADMAP:270 '#### Part VI … *(leg B)*', ROADMAP:274 '**Ch 18. …** — leg A', ROADMAP:337 '(leg AB)', ROADMAP:341/350/359 (leg A / leg B / leg AB)
+    - **status_label**: n/a
+  - item 14
+    - **claim**: §4 'Status now, by chapter' labels: 1 RESEARCHING (D8); 2 VERIFIED (components); 3 RESEARCHING (D14); 4 RESEARCHING; 5 CONJECTURE; 6 RESEARCHING; 7 RESEARCHING (D4, D20); 8 RESEARCHING (D3, D4, D13); 9 CONJECTURE (D5, D10, D15); 10 CONJECTURE (D6); 11 RESEARCHING; 12 CONJECTURE (D14, D18, D20); 13 RESEARCHING (D14); 14 CONJECTURE (D10); 15 VERIFIED (literature) · INTERNALLY DERIVED (use) (D11, D14); 16 CONJECTURE (D11); 17 CONJECTURE (D7, D19); 18 RESEARCHING (D13); 19 RESEARCHING (method) · every case number NOT-CHECKED (D1, D21); 20 SPECULATION → CONJECTURE (D1, D12); 21 CONJECTURE; 22 [source text withheld from the public copy]) (D1); 23 SPECULATION (as evidence) · RESEARCHING (as method) (D1, D21); 24 [source text withheld from the public copy]) (D1, D7, D19); 25 CONJECTURE (with VERIFIED components) (D9); 26 CONJECTURE (labelled [C] by the prospectus) (D1); 27 RESEARCHING.
+    - **date**: 2026-09-13 (unchanged 2026-09-14)
+    - **evidence**: ROADMAP:424-452 table; identical labels in each chapter file's line 3 (e.g. BOOK/ch12-…md:3 'CONJECTURE · **Gates:** D14, D18, D20')
+    - **status_label**: RESEARCHING / CONJECTURE / SPECULATION / VERIFIED (components) / NOT-CHECKED / INTERNALLY DERIVED
+  - item 15
+    - **claim**: [source text withheld from the public copy].' (The count was re-tallied against the table and matches: 11+10+4+2 = 27.)
+    - **date**: 2026-09-13
+    - **evidence**: ROADMAP:454
+    - **status_label**: [source text withheld from the public copy]
+  - item 16
+    - **claim**: 'Author prose' per §4: only Ch 8 ('[source text withheld from the public copy])'), Ch 10 ('[source text withheld from the public copy])'), Ch 17 ('drafted (Blocks 43–52) …'), Ch 20 ('[source text withheld from the public copy])'), Ch 21 ('[source text withheld from the public copy])') and Ch 24 ('drafted for Nimitz … Phoenix has a plan only') have author prose in the restored blocks; every other row says 'prose none', 'no single text' or 'plan only'. The 'drafted' material is the restored manuscript blocks, not book-chapter text.
+    - **date**: 2026-09-13
+    - **evidence**: ROADMAP:426-452 column 'Author prose'; e.g. ROADMAP:433, 435, 442, 445, 446, 449
+    - **status_label**: n/a
+  - item 17
+    - **claim**: The owner's order of work (§6, head version): '[source text withheld from the public copy].' S0 The pair → S1 Exemplar → S2 Set up → S3 Stable → S4 Chapters → S5 Clean repos → S6 Write. Which four count as done is not stated; §9 describes S1, S3 and S5 as each done only to the session's half.
+    - **date**: 2026-09-14
+    - **evidence**: ROADMAP:567 "[source text withheld from the public copy]."; ROADMAP:569-579 mermaid S0→…→S6; ROADMAP:645
+    - **status_label**: n/a
+  - item 18
+    - **claim**: S0 The pair — 'two papers drafted 2026-09-14'; gate '[source text withheld from the public copy] vocabulary paper exists on the branch (L8/L4/work/writing/papers/AUDITONOMOUS_VOCABULARY_PAPER_2026-09-14.md, 62,540 bytes) with [source text withheld from the public copy] … Not adversarially reviewed. Nothing released.' The companion AUTONOMOUS_BASELINE_PAPER_2026-09-14.md is said to be in aybllc/autonomous and is not verifiable from this repository.
+    - **date**: 2026-09-14
+    - **evidence**: ROADMAP:583; `git ls-tree -r -l` of papers/ → 62540 bytes; papers/AUDITONOMOUS_VOCABULARY_PAPER_2026-09-14.md:3; papers/0.md:16-18 'DRAFT · INTERNAL ONLY · INTERNALLY DERIVED composition; not adversarially reviewed'
+    - **status_label**: DRAFT · INTERNAL ONLY · INTERNALLY DERIVED · not adversarially reviewed
+  - item 19
+    - **claim**: S1 Exemplar — '[source text withheld from the public copy]'; gate 'the owner's merge'; the tag exemplar-2026-09-14 and protection of main are 'the owner's acts'. Not verifiable from this repository.
+    - **date**: 2026-09-14
+    - **evidence**: ROADMAP:584; ROADMAP:645 "[source text withheld from the public copy])"
+    - **status_label**: pending owner's merge
+  - item 20
+    - **claim**: S2 Set up — 'done 2026-09-14'; gate '[source text withheld from the public copy]'. The restore record: 318 paths; 65 byte-identical at HEAD; 16 earlier versions; 116 returned; 121 left in history; integrity 'PASS, 86 sheets checked'.
+    - **date**: 2026-09-14
+    - **evidence**: ROADMAP:585; L8/L6/history/restore-2026-09-14.md:13 "[source text withheld from the public copy]"; :21 "PASS, 86 sheets checked"; commit 62d2e3f touches 142 paths
+    - **status_label**: done (D15 TAKEN AS RULED)
+  - item 21
+    - **claim**: S3 Stable — '[source text withheld from the public copy]'; gate D22; '[source text withheld from the public copy] peer-3 hashes are unpinned'.
+    - **date**: 2026-09-14
+    - **evidence**: ROADMAP:586
+    - **status_label**: checked; rebinding pending (D22)
+  - item 22
+    - **claim**: S4 Chapters — 'opened 2026-09-14'; output '[source text withheld from the public copy]'. The book directory holds 31 files: 27 chapters, 0.md, 00-front-matter.md, bibliography.md, build.sh.
+    - **date**: 2026-09-14
+    - **evidence**: ROADMAP:587; `git ls-tree -r -l origin/claude/book-structure-roadmap-k8ap82 -- L8/L4/work/writing/book` → 31 entries
+    - **status_label**: opened; no text
+  - item 23
+    - **claim**: No chapter contains prose beyond its header block. All 27 chapter files are 1,581–2,983 bytes and 24–29 lines; each has exactly one '## ' heading ('## Text') and the material after it is byte-identical in all 27 (one md5 for 27 files): '*[source text withheld from the public copy].'
+    - **date**: 2026-09-14
+    - **evidence**: `git ls-tree -r -l` sizes (ch05 1581 … ch24 2983); per-file awk after '^## Text' piped to md5sum → '27 e5a1b14b…'; e.g. BOOK/ch01-the-readers-contract.md:26-28, ch07:24-26, ch12:24-26, ch19:24-26, ch24:26-28, ch27:26-28
+    - **status_label**: Not yet drafted
+  - item 24
+    - **claim**: The book sheet states the tree's standing: 'No chapter carries text yet; the headers are the built positions the text goes into'; 'The tree is generated from one data file (the roadmap's) by a script kept in the session's scratchpad, and then edited by hand like any manuscript; regeneration would overwrite hand edits, so it is not to be re-run once a chapter has text'; build products are not committed.
+    - **date**: 2026-09-14
+    - **evidence**: BOOK/0.md:8, :10, :21 "build products are not committed"
+    - **status_label**: n/a
+  - item 25
+    - **claim**: Each chapter header carries: Part · Leg · 'Status on the ladder' · Gates; a Feeds list with '(restored 2026-09-14; was git:1d83788:…)' annotations; 'Spine and prior structures'; 'Verify before drafting'; 'What exists now'; 'Done when'; 'Next step'. Examples: ch01 Gates D8, [source text withheld from the public copy]'; ch07 Gates [source text withheld from the public copy]'; ch12 Gates D14, D18, D20, done when '… COMPOSITE OBJECT UNVERIFIED on the cover'; ch19 'RESEARCHING (method) · every case number NOT-CHECKED', [source text withheld from the public copy]'; ch24 '[source text withheld from the public copy]'; ch27 'RESEARCHING', 'Gates: none', [source text withheld from the public copy]'.
+    - **date**: 2026-09-14
+    - **evidence**: BOOK/ch01…md:3-24; ch07…md:3-22; ch12…md:3-22; ch19…md:3-22; ch24…md:3-24; ch27…md:3-24
+    - **status_label**: RESEARCHING · CONJECTURE · SPECULATION · NOT-CHECKED · COMPOSITE OBJECT UNVERIFIED
+  - item 26
+    - **claim**: The chapter headers were generated from the 13 September version and not regenerated after the 14 September revision: ch09 still lists 'Gates: D5, D10, D15' (D15 was 'TAKEN AS RULED' the same day), says 'What exists now: … the conditions' file is history-only' and 'Next step: restore AUDITONOMY.md', while its own feed line says AUDITONOMY.md was '(restored 2026-09-14 …)' and the file is PRESENT on the branch at L8/L0/semantics/definitions/AUDITONOMY.md ('[source text withheld from the public copy])'). §4 row 9 of ROADMAP carries the same stale text. Commit order: b1ec302 (chapters, 01:48) precedes 9259c18 (revision, 02:04).
+    - **date**: 2026-09-14
+    - **evidence**: BOOK/ch09-…md:3, :9, :20, :24; ROADMAP:434 "the conditions' file is history-only"; L8/L0/semantics/definitions/AUDITONOMY.md:3; `git log` timestamps
+    - **status_label**: CONJECTURE / INTERNAL ONLY (AUDITONOMY.md)
+  - item 27
+    - **claim**: The book sheet, the vocabulary paper and the catch-all sheet all cite the decision range as 'D1–D21', while the head ROADMAP §7 also has D22 and D23 (added by 9259c18 after those files were written); the catch-all entry says both '(D1–D21)' and 'D22 (the rebinding) and D23 (the component repositories, fifteen surveyed, none on the model) added'.
+    - **date**: 2026-09-14
+    - **evidence**: BOOK/0.md:8 "the owner's decisions D1–D21 that block it"; papers/AUDITONOMOUS_VOCABULARY_PAPER_2026-09-14.md:12 "§7, D1–D21"; L8/L5/research/review/0.md:43
+    - **status_label**: n/a
+  - item 28
+    - **claim**: S5 Clean repos — gate '[source text withheld from the public copy]'s table lists aybllc/ebc (749 files, 0 sheets, no integrity check), eb-carrier (996), nua (100), una (63), broken-zero (101), uha (307), uha-stack (3,012), ommp (48; 'the closest of the fifteen to clean'; INTERNAL ONLY by its README), ebios (249), eb-audit (48; 'v0.2, experimental'), l6 (1,413), autonomous-theory (148), ncf-research (67), som (3), edm (51). '[source text withheld from the public copy] survey '[source text withheld from the public copy]'.
+    - **date**: 2026-09-14
+    - **evidence**: ROADMAP:588; ROADMAP:649 "None is on the Seven-Layer Model"; ROADMAP:653-669 table; ROADMAP:671; ROADMAP:685
+    - **status_label**: INTERNAL ONLY; INTERNALLY DERIVED (the survey); v0.2 experimental (eb-audit)
+  - item 29
+    - **claim**: S6 Write — not begun. Effort '[source text withheld from the public copy]'; gate [source text withheld from the public copy]'. §9: 'the writing not begun (S6)'. Overall estimate '[source text withheld from the public copy]).
+    - **date**: 2026-09-14
+    - **evidence**: ROADMAP:589; ROADMAP:591; ROADMAP:645 "the writing not begun (S6)"
+    - **status_label**: not begun
+  - item 30
+    - **claim**: §9 reads the owner's instruction as S0–S6 '[source text withheld from the public copy]': papers drafted (S0); exemplar declared, tag and protection left to the owner (S1); 116 files returned with the L6 record (S2); peering and the model checked, '[source text withheld from the public copy])'; chapters opened 'with no text' (S4); [source text withheld from the public copy])'.
+    - **date**: 2026-09-14
+    - **evidence**: ROADMAP:643 (instruction verbatim) and ROADMAP:645
+    - **status_label**: n/a
+  - item 31
+    - **claim**: §9 lists five corrections to the first version: (1) D20 named 'the predicate Aud(S,F)' which occurs nowhere in sourcebook or spine — reworded to [source text withheld from the public copy]); (3) Chapter 5's two dossiers [source text withheld from the public copy]/, not 'not at HEAD'; (4) the referee blueprint exists at HEAD as [source text withheld from the public copy] copy); (5) every git:1d83788 feed re-pointed, 'two remain history-only (HUB_LEDGER.md …; the Malmstrom note under manuscripts/main/notes/)'.
+    - **date**: 2026-09-14
+    - **evidence**: ROADMAP:647; first-version text at 30a40f1 ROADMAP:627 "the predicate Aud(S,F)" and :625 D18 recommendation "as the file says"
+    - **status_label**: n/a
+  - item 32
+    - **claim**: [source text withheld from the public copy] (none executed on the branch): 1 owner reads the two papers; 2 owner merges the aybllc/autonomous PR, creates tag exemplar-2026-09-14, protects main; 3 owner rules D22 and D23 ('[source text withheld from the public copy] writes the new binding record once D22 is ruled; 5–7 session harmonizes ebc/eb-carrier/nua/una, then broken-zero/uha/ommp, then ebios/eb-audit; 8 owner+session register the L2 objects (D14); 9 adversarial review of the two papers, '[source text withheld from the public copy] opens a network-enabled session for the census re-fetch, case captures, prior-art search and licences.
+    - **date**: 2026-09-14
+    - **evidence**: ROADMAP:593-604
+    - **status_label**: n/a
+  - item 33
+    - **claim**: The superseded 2026-09-13 order (P0 Decide → P1 Restore and register → P2 Verify → P3 Draft → P4 Break → P5 Papers → P6 Propose and release) is kept struck through in §9; its first ten moves began 'owner — Rule D1, D12, D15, D20 and D21 in one sitting. Everything below waits on these five.' P3's [source text withheld from the public copy]'.
+    - **date**: 2026-09-13 (superseded 2026-09-14)
+    - **evidence**: ROADMAP:673-683 (rows '~~P0 Decide~~' … '~~P6 Propose and release~~'); 30a40f1 ROADMAP §6 first ten moves item 1; ROADMAP:680; BOOK/0.md:14
+    - **status_label**: superseded
+  - item 34
+    - **claim**: §7 'The owner's decisions' holds 22 rows numbered D1–D16, D18, D19, D20, D22, D23, D21 (in that order); D17 is absent in both the 30a40f1 and head versions (grep 'D17' returns nothing). '[source text withheld from the public copy].'
+    - **date**: 2026-09-13 / 2026-09-14
+    - **evidence**: ROADMAP:608; ROADMAP:612-633; `git show 30a40f1:ROADMAP | grep -n D17` and head grep → empty
+    - **status_label**: OWNER DECISION; nothing adopted
+  - item 35
+    - **claim**: Session recommendations per decision (not rulings): D1 (a) one academic book with the scenario narrative to a companion volume; D2 title 'none'; D3 T3 verb 'none'; D4 apply the PERP §6.1 rewording by version; D5 keep Q9 as discourse; D6 disclose and replace the fourth derivation with the silent-failure bridge; D7 (c) both, by layer; D8 worked example in Ch 19, ranking to Ch 1; D9 (c) stated objection in Ch 25; D10 (a) seal-gated interlock; D11 (a) λ = 1; D12 Autonomous Theory files out as a source; D13 (a) reviewer as implementation convenience; D14 cite in place, register the L2 objects now; D16 [source text withheld from the public copy]; D18 both counts right; D19 propagate Reactive→Responsive by dated correction; D20 the standards-indexed framing governs; D21 the four laboratories; D22 [source text withheld from the public copy]; D23 ([source text withheld from the public copy], no new repositories.
+    - **date**: 2026-09-13 / 2026-09-14
+    - **evidence**: ROADMAP:612-633 column 'Recommended (this session)'
+    - **status_label**: RECOMMENDED (session), not adopted
+  - item 36
+    - **claim**: D15 (restore from history) is the only decision marked ruled: '[source text withheld from the public copy]'. Its 'Blocks' column changed from 'every chapter marked git:' to '[source text withheld from the public copy]'. The first version recommended 'restore; [source text withheld from the public copy]'.
+    - **date**: 2026-09-14
+    - **evidence**: ROADMAP:626; 30a40f1 ROADMAP:623
+    - **status_label**: TAKEN AS RULED
+  - item 37
+    - **claim**: D1 records an unharmonized contradiction between prior structures: '[source text withheld from the public copy].' §8: '[source text withheld from the public copy].'
+    - **date**: 2026-09-13
+    - **evidence**: ROADMAP:612; ROADMAP:639
+    - **status_label**: n/a
+  - item 38
+    - **claim**: The formal layer is empty and remains so on the branch: §3 '[source text withheld from the public copy])'; L8/L2 on the branch holds only sheets and FORMULAS_LEDGER.md, 'EMPTY by its own declaration ("no formulas held")'. Move 8 (register the L2 objects) was not executed.
+    - **date**: 2026-09-14
+    - **evidence**: ROADMAP:418; ROADMAP:532 "The ledger is EMPTY today"; `git ls-tree -r -l` L8/L2 → 0.md files + FORMULAS_LEDGER.md (2197 bytes); L8/L2/0.md:74
+    - **status_label**: EMPTY
+  - item 39
+    - **claim**: Front matter file (91 lines): title 'OWNER DECISION D2' with three candidates; epigraph located at Master Archive line 37 / Block_03 line 10; thesis sentence at sourcebook line 173; the TOC lists Parts 0–VII with each chapter's file name; appendices A–I; a 'reader's contract' section stating the status ladder, label discipline, outside-source rule and that '[source text withheld from the public copy].'
+    - **date**: 2026-09-14
+    - **evidence**: BOOK/00-front-matter.md:3-21, 23-87, 89-91
+    - **status_label**: OWNER DECISION D2
+  - item 40
+    - **claim**: bibliography.md: 'No entry yet. … [source text withheld from the public copy]; holding status row in L7/provenance/sources/LEDGER.md or 'PAYWALLED — NOT OBTAINED'; access class from L7/governance/copyright/; the citing chapter. Candidates: census dossier 'zero entries byte-verified'; '[source text withheld from the public copy]'.
+    - **date**: 2026-09-14
+    - **evidence**: BOOK/bibliography.md:3-7
+    - **status_label**: No entry yet; PAYWALLED — NOT OBTAINED; LEAD — NOT VERIFIED
+  - item 41
+    - **claim**: build.sh (8 lines, mode 100755): pandoc of 00-front-matter.md + ch*.md + bibliography.md to manuscript.tex and manuscript.pdf (xelatex); 'Not run in the environment that wrote it (pandoc absent there); it is the intended build, stated so that it can be run.' No manuscript.tex or .pdf is in the tree.
+    - **date**: 2026-09-14
+    - **evidence**: BOOK/build.sh:2-8; `git ls-tree -r` of book/ shows no .tex/.pdf
+    - **status_label**: not run
+  - item 42
+    - **claim**: The restored manuscript (L8/L4/work/writing/manuscript/, from 1d83788 intake/manuscript/) holds 52 block files, Auditonomous_Theory_Master_Archive.md (152,366 bytes), Auditonomous_Theory_TOC.md (2026-08-02) and 0.md; Blocks 31, 32, 35, 36 are 8-byte files reading 'Skipped.' ('forty-eight with text; 31, 32, 35 and 36 skipped'); 'the scenario chapters are fiction and carry CONJECTURE for their premises'.
+    - **date**: 2026-09-14 (restored); 2026-08-02 (TOC)
+    - **evidence**: `git ls-tree -r -l` manuscript/ (55 entries); Block_31_skipped.md content 'Skipped.'; L8/L4/work/writing/manuscript/0.md:8, :12, :16
+    - **status_label**: skipped (Blocks 31, 32, 35, 36); CONJECTURE (scenario premises); INTERNAL ONLY (definitional sentences)
+  - item 43
+    - **claim**: Sheet counts reconcile the two figures in the record: origin/main 78 sheets; at 62d2e3f 86 (matches restore record 'PASS, 86 sheets checked'); branch head 88 (matches §6 S3 '88 sheets here'), the two added being book/0.md and papers/0.md.
+    - **date**: 2026-09-14
+    - **evidence**: `git ls-tree -r --name-only <ref> | grep -cE '(^|/)0\.md$'` → 78 / 86 / 88; restore-2026-09-14.md:21; ROADMAP:586
+    - **status_label**: PASS (integrity)
+  - item 44
+    - **claim**: The catch-all sheet entry for ROADMAP: 'the finished shape of the academic book on auditonomy and first contact (eight parts, twenty-seven chapters …) … PROPOSAL, INTERNAL ONLY, nothing adopted; every gate an OWNER DECISION (D1–D21) … Revised 2026-09-14 (its §9): re-sequenced to the owner's build-first order S0–S6, D15 taken as ruled, D18 and D20 corrected, D22 (the rebinding) and D23 (the component repositories, fifteen surveyed, none on the model) added, the feeds re-pointed to the restored paths.' Added by 30a40f1 (also to L8/L5/0.md) and amended by 9259c18.
+    - **date**: 2026-09-13 / 2026-09-14
+    - **evidence**: L8/L5/research/review/0.md:43 on the branch; `git show 30a40f1 -- L8/L5/research/review/0.md`, `git show 9259c18 -- L8/L5/research/review/0.md`
+    - **status_label**: PROPOSAL, INTERNAL ONLY, nothing adopted
+  - item 45
+    - **claim**: §8 (unchanged from 13 September) still states '[source text withheld from the public copy])', although by 14 September the book tree and the vocabulary paper had been built at L4 (§3's L4 row was updated to say '[source text withheld from the public copy]'). Labels: 'INTERNAL ONLY and INTERNALLY DERIVED'; [source text withheld from the public copy]'.
+    - **date**: 2026-09-13 / 2026-09-14
+    - **evidence**: ROADMAP:637; ROADMAP:416; ROADMAP:639
+    - **status_label**: INTERNAL ONLY · INTERNALLY DERIVED
+  - item 46
+    - **claim**: Part-level 'done when' conditions (§5) are all unmet: e.g. Part 0 'Two chapters drafted … [source text withheld from the public copy]'; Part III '[source text withheld from the public copy]'; Part V 'the formal layer populated'; Part VI '[source text withheld from the public copy])'.
+    - **date**: 2026-09-13
+    - **evidence**: ROADMAP:462, 500, 528, 542
+    - **status_label**: n/a
+- **open_questions**
+  - Which four of S0–S6 the record counts as 'done' (ROADMAP:567): S0, S2 and S4 are plainly done; S1, S3 and S5 are each done only to the session's half, and the record does not say which of them is the fourth.
+  - Whether the owner ever ruled any D-number after 2026-09-14. Nothing in this repository records a ruling: origin/main (and GitHub's main) has not moved past 2165144 of 2026-09-12, PR #27 was closed unmerged on 2026-10-17, and no later PR exists.
+  - Why PR #27 was closed without merge on 2026-10-17: not recoverable from git; the PR body and comments were not read (would require a REST read of issues/27/comments).
+  - Whether the S1 pull request on aybllc/autonomous, the tag exemplar-2026-09-14, the branch protection and AUTONOMOUS_BASELINE_PAPER_2026-09-14.md exist: all are claimed in ROADMAP §6/§9 and papers/0.md but live in another repository and were not verified.
+  - Whether the chapter headers were ever regenerated after the 14 September revision anywhere: on this branch they were not (ch09 still gates on D15 and calls AUDITONOMY.md history-only), and only two remote branches exist (main, k8ap82).
+  - Whether a decision D17 was ever defined: the number is absent from both the 30a40f1 and 9259c18 versions of §7 while D1–D16 and D18–D23 are present.
+  - Whether [source text withheld from the public copy]' (bibliography.md:7; ROADMAP:637, '[source text withheld from the public copy]') survived anywhere; it is not in the branch.
+  - Whether the roadmap's §4 'Author prose' entries that say 'drafted' (Ch 8, 10, 17, 20, 21, 24) were ever re-cut into chapter text: on the branch the restored blocks exist at L8/L4/work/writing/manuscript/ but every chapter file's Text section reads 'Not yet drafted'.

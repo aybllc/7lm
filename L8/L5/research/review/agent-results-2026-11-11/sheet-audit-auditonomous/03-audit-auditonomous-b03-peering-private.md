@@ -1,0 +1,122 @@
+# audit:auditonomous:b03-peering-private
+
+Agent result, as returned. Workflow: Sheet audit, Auditonomous. Run `wf_1ec3ea42-dcb`. Phase: Audit.
+
+- **sheets_audited**
+  - L7/peering/0.md
+  - L7/peering/private/0.md
+  - L7/peering/private/egress/0.md
+  - L7/peering/private/egress/peer-1/0.md
+  - L7/peering/private/egress/peer-1/object-1/0.md
+  - L7/peering/private/egress/peer-2/0.md
+  - L7/peering/private/egress/peer-2/object-1/0.md
+  - L7/peering/private/ingress/0.md
+  - L7/peering/private/ingress/peer-1/0.md
+  - L7/peering/private/ingress/peer-1/object-1/0.md
+  - L7/peering/private/ingress/peer-2/0.md
+  - L7/peering/private/ingress/peer-2/object-1/0.md
+  - L7/peering/private/ingress/peer-3/0.md
+  - L7/peering/private/ingress/peer-3/object-1/0.md
+- **findings**
+  - item 1
+    - **id**: b03-01
+    - **kind**: WRONG-FACT
+    - **sheet**: L7/peering/private/ingress/peer-1/0.md
+    - **line**: 16
+    - **sheet_says**: - `object-1/` — the library holdings this repository points to, bound by the 62 rows of `L7/provenance/sources/LEDGER.md`; see its binding record.
+    - **truth**: The register in L7/provenance/sources/LEDGER.md has 60 rows at f2d5b37, not 62: PR-001…020 (20), STD-001…034 (34), INST-001…004 (4), EXC-001…002 (2). 58 of them point to an l6 `library/` path; the two EXC rows read "— (HELD OUT of l6)" and name no holding.
+    - **evidence**: `git -C /home/user/auditonomous grep -c -E '^\| (PR|STD|INST|EXC)-[0-9]+ \|' f2d5b37 -- L7/provenance/sources/LEDGER.md` returns 60; per prefix PR 20, STD 34, INST 4, EXC 2; no duplicate IDs. The register table is LEDGER.md lines 20–79: 60 data rows between the header (line 18) and "**Column rules:**" (line 81). Its `l6 commit` column: 39 rows `b328334`, 19 rows `e4f0d5c`, 2 rows "—". The 62 traces to L8/L6/history/LEDGER_2026-08-16_l6-close-and-normalization.md:30, "62 rows (PR-001..020, STD-001..034, INST-001..004, EXC-001/002)", whose own ranges sum to 60. The same figure stands outside this batch at L7/0.md:232, L7/provenance/0.md:20 and :33, L7/provenance/sources/0.md:10 and :41, while L7/provenance/sources/0.md:55 says "The ledger has no rows".
+    - **exact_fix**: - `object-1/` — the library holdings this repository points to, bound by the 60 rows of `L7/provenance/sources/LEDGER.md`; see its binding record.
+  - item 2
+    - **id**: b03-02
+    - **kind**: WRONG-FACT
+    - **sheet**: L7/peering/private/ingress/peer-1/object-1/0.md
+    - **line**: 10
+    - **sheet_says**: | Object identity | the `library/` holdings of `aybllc/l6` named row by row in `L7/provenance/sources/LEDGER.md` (62 rows: PR-, STD-, INST-, EXC-) |
+    - **truth**: The rows with those four prefixes number 60 (PR 20, STD 34, INST 4, EXC 2). Only 58 name a `library/` holding of aybllc/l6; EXC-001 and EXC-002 record items held out of l6.
+    - **evidence**: Same count as b03-01: `git -C /home/user/auditonomous grep -c -E '^\| (PR|STD|INST|EXC)-[0-9]+ \|' f2d5b37 -- L7/provenance/sources/LEDGER.md` returns 60 (LEDGER.md lines 20–79). Rows whose third column begins `library/`: 58. LEDGER.md:78–79 are the EXC rows: "| [source text withheld from the public copy] | ..." and "| [source text withheld from the public copy] | ...".
+    - **exact_fix**: | Object identity | the `library/` holdings of `aybllc/l6` named row by row in `L7/provenance/sources/LEDGER.md` (60 rows: PR-, STD-, INST-, EXC-; the two EXC- rows record items held out of l6) |
+  - item 3
+    - **id**: b03-03
+    - **kind**: WRONG-FACT
+    - **sheet**: L7/peering/private/ingress/peer-3/object-1/0.md
+    - **line**: 13
+    - **sheet_says**: | Version | as recorded in the definition's appendices; no commit or manuscript hash is pinned there — the owner's next ledgering session pins them |
+    - **truth**: The definition's appendices do record both. Appendix E gives each of the two manuscript files a sha256 (truncated to 16 hex digits) and an mtime; Appendix F gives the tip commit of the principal line v1.0.0-dev and the three coining commits; Appendix A dates the first attestation by commit. What is absent is a commit for the head of the branch the citations were read on (einstein-integration) and a full-length manuscript hash.
+    - **evidence**: `git -C /home/user/auditonomous show f2d5b37:L8/L0/semantics/definitions/AUDITONOMOUS_DEFINITION.md`, lines 369–372 (Appendix E): "- `[source text withheld from the public copy])". Line 391 (Appendix F): "- [source text withheld from the public copy];". Line 404: "(cd24b10, c8c8aca, f3bc098) predate the attempt entirely." Line 87 (Appendix A): "[source text withheld from the public copy]". Line 354 (Appendix D) names the branch read, "[source text withheld from the public copy])", with no commit.
+    - **exact_fix**: | Version | as recorded in the definition's appendices: Appendix F names the tip of the principal line `v1.0.0-dev` (`ff57986`, 2025-10-29) and the coining commits (`cd24b10`, `c8c8aca`, `f3bc098`); Appendix E gives each manuscript file a truncated sha256 (`6a717c70cb983029…` for the `.md`, `520ada05a1539390…` for the `.pdf`); no commit is recorded for the head of the branch that was read (`einstein-integration`) and no full-length manuscript hash — the owner's next ledgering session pins them |
+  - item 4
+    - **id**: b03-04
+    - **kind**: WRONG-FACT
+    - **sheet**: L7/peering/private/ingress/peer-2/object-1/0.md
+    - **line**: 15
+    - **sheet_says**: | Status | bound; the reference copy held here is NO EDIT and NO DELETE; self-labelled RESEARCH / NOT IMPLEMENTED / NO NOVELTY CLAIM |
+    - **truth**: The held file's own status line has four terms, not three; the sheet's rendering drops INTERNAL ONLY. Each of the three terms the sheet gives is in the file; the label as given is not the file's label.
+    - **evidence**: `git -C /home/user/auditonomous show f2d5b37:L7/peering/private/ingress/peer-2/object-1/auditonomous-departure-protocol.md`, line 4: "**[source text withheld from the public copy]`". The three-term form matches L8/L6/history/7LM_ROUTING_PLAN_2026-09-05.md:81, from which the sheet appears to have taken it.
+    - **exact_fix**: | Status | bound; the reference copy held here is NO EDIT and NO DELETE; self-labelled [source text withheld from the public copy] |
+  - item 5
+    - **id**: b03-05
+    - **kind**: STALE
+    - **sheet**: L7/peering/private/ingress/peer-1/0.md
+    - **line**: 8
+    - **sheet_says**: At this pass its HEAD is `53b28f6` and it holds 1,368 tracked library files filed by venue or issuing body.
+    - **truth**: "This pass" is the binding pass of 2026-09-05, not the pass of the commit under audit (2026-11-11), which changed words in live sheets and re-read nothing of the archive. The present-tense observation is therefore dated to the wrong pass. Whether the archive's HEAD has moved since 2026-09-05 cannot be read from this repository.
+    - **evidence**: L8/L6/history/harmonization-2026-09-05.md:68 (§4c, the 2026-09-05 event): "`L7/peering/private/ingress/peer-1/object-1/` — `aybllc/l6`, the library holdings named in `L7/provenance/sources/LEDGER.md` (rows @ `b328334`; accession `e4f0d5c`; archive HEAD `53b28f6`)." L8/L6/history/sheets-2026-09-07.md:95: "On 2026-09-05 the owner designated `aybllc/l6` (an INTERNAL repository; pinned here at commit `53b28f6`)". The same record shows the phrase "at HEAD of this pass" was pulled out of the sheets on 2026-09-07 as the sheets' past (`git grep -c -F 'at HEAD of this pass' f2d5b37 -- L8/L6/history/sheets-2026-09-07.md` returns 20). harmonization-2026-09-05.md:200 (§13, the 2026-11-11 pass): "No research object, no definition, no ledger row and no manuscript file is touched." `git grep -n -F 'this pass' f2d5b37 -- L7/peering` returns this line, L7/peering/private/ingress/peer-1/object-1/0.md:13 and L7/peering/public/ingress/peer-1/0.md:22.
+    - **exact_fix**: As read at the 2026-09-05 binding pass its HEAD was `53b28f6` and it held 1,368 tracked library files filed by venue or issuing body.
+  - item 6
+    - **id**: b03-06
+    - **kind**: STALE
+    - **sheet**: L7/peering/private/ingress/peer-1/object-1/0.md
+    - **line**: 13
+    - **sheet_says**: | Version | rows pinned to `l6` commit `b328334`; the 2026-08-16 accession at `e4f0d5c`; archive HEAD at this pass `53b28f6` |
+    - **truth**: "This pass" is the 2026-09-05 binding pass (see b03-05); the sheet now stands at the 2026-11-11 pass, which did not read the archive. The first two clauses are right: 39 ledger rows carry `b328334` and 19 carry `e4f0d5c`. No ledger row carries `53b28f6`; it is only the archive HEAD observed on 2026-09-05.
+    - **evidence**: L8/L6/history/harmonization-2026-09-05.md:68 as quoted in b03-05. LEDGER.md `l6 commit` column at f2d5b37: 39 rows `b328334`, 19 rows `e4f0d5c`, 2 rows "—"; `git grep -c -F '53b28f6' f2d5b37 -- L7/provenance/sources/LEDGER.md` returns nothing (0). L7/peering/private/ingress/0.md:43 gives the same commit as "pinned at commit `53b28f6` at the time of this record".
+    - **exact_fix**: | Version | rows pinned to `l6` commit `b328334`; the 2026-08-16 accession at `e4f0d5c`; archive HEAD as read on 2026-09-05 `53b28f6` |
+  - item 7
+    - **id**: b03-07
+    - **kind**: CONTRADICTION
+    - **sheet**: L7/peering/private/egress/peer-1/object-1/0.md
+    - **line**: 17
+    - **sheet_says**: | Governance | IL-001-R2 discipline: quotations travel, files do not; the repository is private/INTERNAL |
+    - **truth**: L7/governance/copyright/0.md:18 says of this repository: "So no README, sheet, ledger, or binding record restates a copyright rule; each names this directory, and the next step is stated below, once." This binding record restates the IL-001-R2 rule in the copyright sheet's own words and does not name `L7/governance/copyright/`. The two sheets cannot both stand. The sibling l6 binding record does name the one place. Low severity; the fix could equally be made on the copyright sheet's side.
+    - **evidence**: L7/governance/copyright/0.md:18 as quoted; :43 carries the rule itself: "IL-001-R2 class-2 hold-private: ... — \"quotations travel; the files do not\"". L7/peering/private/ingress/peer-1/object-1/0.md:17: "WSU-route items are IL-001-R2 class-2 hold-private — see `L7/governance/copyright/`, the one place". L8/L6/history/harmonization-2026-09-05.md:103 (§7) lists what was made to name the one place — "the forward-face summary in `L7/0.md`, the sources sheet, the l6 binding record, and the README's tree line" — and the egress record is not among them. "The repository" in the row is aybllc/l6 per the held report, line 5: "l6 repo: `aybllc/l6` (private/INTERNAL)".
+    - **exact_fix**: | Governance | IL-001-R2 — see `L7/governance/copyright/`, the one place; `aybllc/l6` is private/INTERNAL |
+  - item 8
+    - **id**: b03-08
+    - **kind**: DEAD-PATH
+    - **sheet**: L7/peering/private/egress/peer-1/0.md
+    - **line**: 8
+    - **sheet_says**: on 2026-08-16 the sources parked in this repository's `_STAGING_TO_L6/` were dispositioned by the l6 provenance session
+    - **truth**: No `_STAGING_TO_L6/` exists at f2d5b37; it was removed on 2026-08-16. The sentence is a dated past-tense narrative but does not mark the path as former, where the sheet one level down does ("this repository's former `_STAGING_TO_L6/` (removed 2026-08-16)"). Borderline: reported because the path is given as this repository's without "former". Every count in the sentence (19, 40, 2, 27, `e4f0d5c`) checks against the held report.
+    - **evidence**: `git -C /home/user/auditonomous ls-tree -r --name-only f2d5b37 | grep -c '_STAGING_TO_L6'` returns 0; the root holds only .github, .gitignore, L7, L8, README.md. L8/L6/history/LEDGER_2026-08-16_l6-close-and-normalization.md:23: "`_STAGING_TO_L6/` gone". L8/L6/history/LEDGER.md:40: "Directory removal is staged in this delta (62 `git rm`)". L7/peering/private/egress/peer-1/object-1/0.md:12: "| Source layer | this repository's former `_STAGING_TO_L6/` (removed 2026-08-16) outbound to the archive |".
+    - **exact_fix**: `aybllc/l6` as the receiving side of an outbound transfer: on 2026-08-16 the sources parked in this repository's former `_STAGING_TO_L6/` (removed 2026-08-16) were dispositioned by the l6 provenance session — 19 PDFs accessioned at `e4f0d5c`, 40 already held, 2 held out, 27 working records "not l6's to take". The transfer is CLOSED.
+  - item 9
+    - **id**: b03-09
+    - **kind**: MISFILED
+    - **sheet**: L7/peering/private/egress/peer-1/object-1/0.md
+    - **line**: 16, 25
+    - **sheet_says**: | Content held here | `RECONCILIATION_FROM_L6_2026-08-16.md` — the receiving-side copy, relocated verbatim from `research/ledgers/` |
+    - **truth**: Observation for the owner; no sheet text is false. The one file held at this egress position is not what left (the 61 staged PDFs, none held here) but a report written by the peer and received from it, whose canonical copy the sheet itself places with the peer. By the position's own lists it would belong either at L7/peering/private/ingress/peer-1/ as a second object of the same peer aybllc/l6 (inbound, peer-owned, NO EDIT and NO DELETE), or at L8/L6/history/ as the record of what happened to the binding. The placement here was deliberate and is recorded.
+    - **evidence**: Held file, line 3: "[source text withheld from the public copy]." This sheet, line 11: "the canonical copy of the report lives in `l6/research/`". L7/peering/private/egress/0.md "Does not hold", line 23: "inbound material — L7/peering/private/ingress/"; line 26: "the package's internal memory — L8/L6/". L7/peering/0.md:30: "binding history — L8/L6/". Specification row for private/egress/: "Represents something leaving toward a peer without making it a public release." Deliberate placement: L8/L6/history/harmonization-2026-09-05.md:57, "receiving-side record of the closed egress to aybllc/l6". Two unrewritten records still point at the former location: L7/provenance/sources/LEDGER.md:122 and L7/provenance/sources/staging-records/README.md:5 (`../RECONCILIATION_FROM_L6_2026-08-16.md`).
+    - **exact_fix**: None required if the owner keeps it here. If it is re-filed, line 16 becomes "| Content held here | none; the reconciliation report is at <new position> |", and line 25, L7/peering/private/egress/0.md:31 and L7/peering/private/egress/peer-1/0.md:16 follow.
+- **clean_sheets**
+  - L7/peering/0.md
+  - L7/peering/private/0.md
+  - L7/peering/private/egress/0.md
+  - L7/peering/private/egress/peer-2/0.md
+  - L7/peering/private/egress/peer-2/object-1/0.md
+  - L7/peering/private/ingress/0.md
+  - L7/peering/private/ingress/peer-2/0.md
+  - L7/peering/private/ingress/peer-3/0.md
+- **could_not_check**
+  - L7/peering/private/ingress/peer-1/0.md:8 — everything said of the external repository aybllc/l6 (its README sentence "Archival copies of primary literature held for research provenance.", VERIFICATION_LOG.md append-only with PREMIS-style events, ACQUIRE.md never deleting a row, "The integrity check is copyright, not sha256.", HEAD `53b28f6`, 1,368 tracked library files). The peer is not readable under the rules; the same wording at L7/provenance/sources/0.md:16 is agreement between sheets, not verification.
+  - L7/peering/private/ingress/0.md:43 — the two quotations from l6's own `durable/README.md` ("can ONLY create new `.md` files inside `durable/orphan/`"; "CANNOT edit, append to, overwrite, or delete any file once created"). External file; neither string occurs anywhere else at f2d5b37.
+  - L7/peering/private/ingress/peer-1/object-1/0.md:11, :12, :17, :21 — the archive's `ACCESS-ROUTES.md` and licence records, its self-name "USO rail L6 — Provenance", "route and licence are recorded separately, as the archive itself insists", and its `consider-l6.md` (2026-08-16) with paths verified at `e4f0d5c`. All external.
+  - "byte-identical" as identity with the peer's canonical file (L7/peering/private/ingress/0.md:32; .../peer-2/0.md:8; .../peer-2/object-1/0.md:16). Only identity with the retired local duplicate is verifiable and holds (both are blob 99ecb6caa131222cf5cb15f7f52c85d7004d23a1, 8,978 bytes). The mirror's own text (line 12, "[source text withheld from the public copy]"; line 260, "[source text withheld from the public copy]`") reads as an Auditonomous-side record deferring to a fuller canonical file, so identity with the peer's file is doubtful but untestable here.
+  - L7/peering/private/ingress/peer-2/object-1/0.md:21 — the unattributed quotation "L2 or L3, unresolved" said of the protocol's identities. Its only other occurrences at the commit (L8/L2/0.md:76; L8/L6/history/harmonization-2026-09-05.md:92; L8/L6/history/7LM_ROUTING_PLAN_2026-09-05.md:168) attach it to the exact argument of PERPETUITY_QUESTION_ADJUDICATION.md, not to the departure protocol. No source for the phrase as applied to the protocol was found; it is not presented as the specification's.
+  - "relocated verbatim" (L7/peering/private/egress/peer-1/object-1/0.md:16 and :25; L7/peering/private/ingress/peer-2/object-1/0.md:25). The record says the moves were `git mv` with contents untouched (harmonization-2026-09-05.md §4a, lines 52 and 57), and the protocol equals its retired duplicate byte for byte; comparing with the pre-move blobs would need an earlier commit, which the rules exclude.
+  - L7/peering/private/egress/peer-1/object-1/0.md:11 — "the canonical copy of the report lives in `l6/research/`". External; corroborated only by L7/provenance/sources/LEDGER.md:121.
+  - L7/peering/private/egress/peer-2/0.md:8 and :16, .../peer-2/object-1/0.md:15 and :25 — "Nothing has left" / "no transfer has occurred", and aybllc/ncf-research as the destination. The three files are present and item 4 of the 2026-08-16 queue names ncf-research (L8/L6/history/LEDGER_2026-08-16_l6-close-and-normalization.md:49), but whether anything has been sent cannot be seen from here; the held OWNERSHIP_PENDING.md itself names no destination.
+  - L7/peering/0.md:57 — "the old L7/private/ desk". Presented as a former path, so not reported. It is the scaffold's old desk (aybllc/7lm, cut in its commit c0f46e1 per the scaffold's L8/L6/history/harmonization-2026-09-04.md); this repository's own record shows L7/ first instantiated on 2026-09-05 with peering/ already in place. Whether the sentence is meant of this repository cannot be decided from its text.
+  - L7/peering/private/ingress/peer-3/0.md:8 and .../peer-3/object-1/0.md:10–17 — abba-01/ebios as a separate repository read on 2026-07-30, and the manuscript surviving only in a cold backup. External; the sheets agree with the definition file (lines 3–8, 79, 340 and Appendix E).
+- **statements_checked**: 430

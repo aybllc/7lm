@@ -1,0 +1,52 @@
+# resolve:D19
+
+Agent result, as returned. Workflow: Resolutions for the 23 owner decisions. Run `wf_3293f65c-a92`. Phase: Resolve.
+
+- **decision**: 19. Where the layer lists finally sit, which their own text calls "the owner's call, HOA".
+- **resolution**: Leave `L8/L6/in/7lm-layer-lists.md` exactly where it is on the scaffold's main, as a proposal in the L6 inbox, and do not move, promote, withdraw or mirror it into the exemplars until the owner rules. Put the question to the owner as a three-way choice: stays in `in/`; is promoted to `L8/L6/` as a held source document beside the sheet templates; or is withdrawn to `L8/L6/retired/`. Tell the owner at the same time about the two loose ends found (below), without fixing either.
+- **reasoning**
+  - item 1
+    - **quote**: Don't change the system unless you ask or are unsure
+    - **locator**: /home/user/7lm@origin/main:L8/L6/history/harmonization-2026-09-04.md:482
+    - **speaker**: owner
+    - **bears**: The owner's standing word forbids moving or promoting the file without asking, so the default is to leave it where it is and ask.
+  - item 2
+    - **quote**: Whether it stays at L6 beside the field guide and the sheet templates, moves, or is withdrawn is the owner's call, HOA.
+    - **locator**: /home/user/7lm@origin/main:L8/L6/in/7lm-layer-lists.md:5
+    - **speaker**: other
+    - **bears**: The document's own standing line names the three open outcomes and reserves the choice to the owner; nothing in it claims a ruling.
+  - item 3
+    - **quote**: we dont want hard strcuture yet.  we arent sure what goes where ans why so we lkeep the 0.md the cource fo the dir, the dir moveds  so does th e 0.md.
+    - **locator**: /home/user/7lm@origin/main:L8/L6/history/harmonization-2026-09-04.md:297
+    - **speaker**: owner
+    - **bears**: The owner created `in/` precisely for material whose final place is not yet known, so resting there is a legitimate state and not a defect to be cleared.
+  - item 4
+    - **quote**: Update the field guide to include in/ as the appropriate default to-be, to-do, inbpx for a dir
+    - **locator**: /home/user/7lm@origin/main:L8/L6/history/harmonization-2026-09-04.md:297
+    - **speaker**: owner
+    - **bears**: The owner named `in/` the default to-be and to-do place for a directory, which is what a proposal awaiting a ruling is.
+  - item 5
+    - **quote**: It's not a USO layer 0 for repos that use  7lm. Instead, it's an L6 source document.
+    - **locator**: /home/user/7lm@origin/main:L8/L6/history/harmonization-2026-09-04.md:336
+    - **speaker**: owner
+    - **bears**: The owner's one ruling on a document about the model as a whole put it at L6, so if the lists are ever promoted, L6 itself (not L0 pedagogy) is the placement with precedent; it is precedent for the guide, not a ruling on the lists.
+  - item 6
+    - **quote**: Put the field guide into l6 as provenance stale. Deprecated and to be used as an example.
+    - **locator**: /home/user/7lm@origin/ccr-9391bd81-f2enmj:L8/L6/history/harmonization-2026-09-04.md:518
+    - **speaker**: owner
+    - **bears**: On the unmerged PR #20 the owner retires the very guide the lists would sit "beside" and cite, so promoting the lists now would fix them next to a document the owner has called stale; another reason to wait.
+  - item 7
+    - **quote**: OUR 7Lm 0.md files will be absolutely complete and detailed and rigorous. My mistake. I want clear usage would start at a degree they choose, one day we can do choices for now everything is HOA
+    - **locator**: /home/user/7lm@origin/main:L8/L6/history/harmonization-2026-09-04.md:376
+    - **speaker**: owner
+    - **bears**: The sheets are the complete statement of each position and every change is a human-only action, so a restating document needs the owner's word before it gains any standing beyond the inbox.
+  - item 8
+    - **quote**: - `L8/L6/in/` — the inbox: the text of a branch closed unmerged, an unadopted slimmed rendering of the specification, and that pass's record of what it would have removed, held for L6 and not yet worked into any record (see `L8/L6/in/0.md`).
+    - **locator**: /home/user/7lm@origin/main:L8/L6/0.md:79
+    - **speaker**: sheet
+    - **bears**: The L6 sheet's inventory of the inbox does not name the layer lists, confirming they have been filed but not worked into the layer; that omission is a loose end to report, not to fix unasked.
+- **against**: "I intended the field guide to be the penultimate guide, really." and "It's not a USO layer 0 for repos that use  7lm. Instead, it's an L6 source document." (/home/user/7lm@origin/main:L8/L6/history/harmonization-2026-09-04.md:336). Read with the guide's retirement on PR #20, this suggests the owner may want a current whole-model document held at L6 as the source an adopter takes, and the lists are the only candidate; leaving them in the inbox leaves that seat empty once PR #20 merges. It is an inference: the owner has said nothing recorded about the lists themselves.
+- **alternatives**: (a) Promote to `L8/L6/7lm-layer-lists.md` as a held source document beside the sheet templates, with an entry in `L8/L6/0.md` and a record section: the placement with the closest precedent (record §26), but a change to the system. (b) Withdraw to a dated set under `L8/L6/retired/`: consistent with the sheets being the complete statement, but nothing quoted asks for it. (c) Move to `L8/L0/pedagogy/`: runs against the owner's §26 ruling that a guide to the whole model is not L0 material. Facts for the owner: the file was added by commit c6d598a (31 Oct 2026) and reached main by the merge of PR #21 (c9dc061, 11 Nov 2026); it exists on no other branch (not on beta 97314c5, PR #19, PR #20 or the audit branch, all forked at 2e5a6d6) and in neither exemplar. Two loose ends: the record on main (sections 1-37) has no section for it although its line 5 cites §36, and `L8/L6/0.md` line 79 does not list it; and its lines 5, 94, 136, 264, 277 and 311 refer to the field guide as live, which goes stale if PR #20 merges.
+- **confidence**: the quotations do not reach it: the owner must say
+- **what_it_costs**: Nothing changes on disk, so it is free and fully reversible. The cost is that the lists keep proposal standing: an adopter is not pointed at them, the exemplars do not carry them, and the stale references to the field guide and the missing inventory and record entries remain until the owner rules.
+- **who_acts**: The owner says one of: "stays in in/", "hold it at L6 beside the templates", or "withdraw it". Only then does an agent make the move by hand, with the matching entry in `L8/L6/0.md` and a record section; until then no one acts.

@@ -1,0 +1,1907 @@
+# Final return of the workflow: Manuscript status of 3 November 2026
+
+As returned. Run `wf_1cf4205c-c72`.
+
+- **summary**: Read-only: where the auditonomous manuscript development got to, with verified evidence
+- **agentCount**: 73
+- **logs**
+  - readers returned: 10/10, facts: 492
+  - claims: 20, surviving: 19, refuted or unconfirmed: 1
+- **result**
+  - **report**: # Where the Auditonomous manuscript development got to (read 2026-11-03)
+
+    **Short answer.** No chapter of the book has been written. The author's only book prose is the fifty-two-block Auditonomous Theory corpus of July 2026 (committed 2 August, last edited 4 August, pruned from `main` on 15 August); everything since is planning: a prospectus and referee report (3 August), an extraction sourcebook (6 August), a chapter-title spine (14 August), a roadmap (13 and 14 September) and twenty-seven empty chapter files (14 September). `origin/main` is still `2165144`, the PR #26 merge of 11 September 2026; the roadmap, restored corpus, chapter files and vocabulary paper exist only on the branch of draft PR #27, closed unmerged on 17 October. The roadmap's last word is "the writing not begun (S6)"; today's commit 714480d on a new beta branch does not touch the book.
+
+    ## The corpus (2 to 4 August)
+
+    The Master Archive (748 lines), the 18-chapter TOC and 52 block files entered git in 5a8d533. Blocks 31, 32, 35 and 36 are 8-byte "Skipped." files, the author's own markers ("[source text withheld from the public copy]"), whose meaning was recorded twice: 3406bd1 (2 August) wrote "skipped at the outline layer"; 314ceba (4 August, titled "IEEE read") rewrote the TOC to "cut from the book" on a second ruling, THEME_LEDGER T1 noting "two successive misreadings", and stripped Block 3's header. Nothing else ever changed: the archive blob is byte-identical from 2 August to the branch and still chapter-maps the cut blocks; Blocks 44 and 46 citing cut Block 36 is flagged [ERIC]. The TOC marks six chapters "material drafted", five "core argument seeded", Ch 8 "to develop", Ch 17 "partial material drafted"; ARCH:748 names the next steps: decide the subtitle, draft Ch 8, expand six chapters.
+
+    ## The planning documents
+
+    *Prospectus (3 August).* `auditonomous-08-03-26.odt` is a LibreOffice capture of a ChatGPT session: a model-written "Book Prospectus v0.1" on "Your uploaded notes", 5 parts, 20 chapters. Its only prose is a three-paragraph "Proposed opening passage"; its [source text withheld from the public copy]". Unchanged since 71f75cb (5 August), which also committed that afternoon's "Deep Research Pro Prompt v1.0", pruned and not restored.
+
+    *Referee report (3 August).* `auditonomouos-important.docx`: "Auditonomy: Adversarial Scientific Assessment and Research Blueprint", "Search date: August 3, 2026", docx generator "ChatGPT Deep Research". Its one cited upload matches the prompt (seven invariants, Roswell levels R5 to R7), not the prospectus (six invariants, R0 to R4). Verdicts: "[I] partial integrative and operational novelty"; "[source text withheld from the public copy]"; "not a completed systematic review". None of its fourteen research tasks has a follow-up; "referee blueprint" is the branch's name for it, not the file's.
+
+    *Sourcebook (6 August).* `auditnomous-main.docx` is a LibreOffice re-save of the python-docx "Auditonomous Book Material Sourcebook" v0.1, text-identical: "an extraction corpus", "not a final manuscript". It carries a 30-row coverage ledger, two "Manuscript-ready" definitions, a thesis sentence and ten items of work remaining, first "ratify the final internal definition". The set (with a zip of inputs found nowhere else in git) entered `main` in merge 077d5de on 8 August; the prune kept only this re-save and the chat volumes; the branch restored the .md, CSV ledger and JSON manifest. The chat files are "Chat History Ingestion" volumes I and II of the series, though main's sheet calls them transcripts; volume III, pruned, is restored on the branch. All three leave the λ_A definition open (CH-01).
+
+    *Spine (14 August).* `SPINE_v0.1_2026-08-14.md` (f67968b): "chapter titles only · INTERNALLY DERIVED synthesis", 42 titles under Part 0 and Parts I to VII, "the 1947/contact material (Blocks 45–52)" severed to Appendix F. An hour later the hub ledger recorded decision 5 of "Owner decisions 2026-08-14": "Book register: scholarly only ... Spine's Appendix-F severance stands." Both left HEAD on 15 August; only the spine is restored, so that ruling survives at no ref tip.
+
+    *Roadmap (13 September, revised 14 September).* Branch only: "PROPOSAL · INTERNAL ONLY · INTERNALLY DERIVED ... Nothing here is adopted", written on your 13 September instruction for an "academic book for auditbonomy and first contact". Eight parts, 27 chapters, labelled [source text withheld from the public copy], none VERIFIED as a whole; 22 decisions D1 to D23, unruled except D15, "[source text withheld from the public copy]". It also logs steps S0 to S5 done that day and S6 (writing) not begun, though it counts six chapters "drafted" from the blocks. It composes six prior structures; a seventh, the author's six-chapter plan of 31 July, is unlisted. D1 sets the spine's severance against that instruction and recommends one academic book with the scenario narrative in a companion; the ledger's "scholarly only" is never cited.
+
+    *Chapter files (14 September).* `L8/L4/work/writing/book/ch01` to `ch27` (b1ec302) are 24- to 29-line headers each ending "*Not yet drafted.*"; `bibliography.md` "No entry yet", by rule; `build.sh` "Not run in the environment that wrote it (pandoc absent there)", a pandoc build, not the LaTeX migration `LEDGER.md:37` still awaits. Next by the roadmap: you read the two papers, rule D22 and D23, an adversarial review, "[source text withheld from the public copy])".
+
+    *Vocabulary paper (14 September).* Branch only: "DRAFT of 2026-09-14 · INTERNAL ONLY ... Not adversarially reviewed. Nothing released." Its "VERIFIED" negative finding that Aud(S,F) occurs nowhere in the sourcebook is wrong (sourcebook line 116 states it in LaTeX); the roadmap's 14 September "correction" repeated the error. Its companion baseline paper sits in aybllc/autonomous PR #29, a draft closed unmerged the same minute as #27; its proposed exemplar tag "was never created".
+
+    *Embodied manuscript; the .tex stub.* "Embodied Auditonomy, LexROM, and the Cabin Model" (v0.2, 28 April 2026) entered on 30 July, was pruned, and is restored on the branch at the peer-3 binding (its parent sheet is stale). Its self-declared sha256 refers to content at an ebios commit not held here; the ledger's "FAILED CHECK" is that expected mismatch, and the file matches the hash the definition's Appendix E records. Nothing says whether [source text withheld from the public copy] repository (both 403 here). `MANUSCRIPT.tex` (e9511f5, 14 August) lived 31 hours as a 22-line "STUB"; the restore record declined it as superseded by a `book/` tree created five minutes later.
+
+    ## Where things stand today
+
+    On `main` (2165144), `L8/L4/work/writing/` holds the three Office files, two chat volumes, one session record and four sheets, nothing else; The Third Power Corpus v3, the only chaptered file on `main`, is a different work parked under "OWNER DECISION REQUIRED". The "live drafts" label (`LEDGER.md:37`) originally named `auditonomous.odt` and the sourcebook; `L7/publications/0.md` says "Nothing has been released." PR #27 never left draft; a Claude Code close-out under your account closed it on 17 October ("Merging is the owner's act"; the work "predates the scaffold's L7 restructure" of 20 September); reopen or cherry-pick to take it up. PR #25 (7 September) is still open, a draft now unmergeable. Today `beta/7lm-exemplar-auditonomous` received 714480d (56 files, no PR): the Autonomous binding kept at 0504961 ("no rebind") where D22 proposed moving it, contradictions C1 to C7 "unresolved", `L7/publications/` renamed `L7/allications/publications/`.
+
+    History only: the .tex stub; the author's `manuscripts/main/auditonomous.odt` (begun 2 August: an empty eight-term glossary, a note and a pasted model SSOT), which the restore record misfiles as "packaging of the sourcebook"; the Deep Research prompt, `chat.txt` and seven `chapter-chunk/` chat answers; and five orphan .odt files of 30 July to 8 August (including the six-chapter plan), whose cited disposition in harmonization §8 does not exist and which `LEDGER.md:32` still treats as present.
+
+    ## Timeline
+
+    | Date | Artifact | Event | Where now |
+    |---|---|---|---|
+    | 2026-04-28 | Embodied Auditonomy v0.2 | self-dated draft | history; branch peer-3 |
+    | 2026-07-30/31 | fc3b018; `auditonomous.odt`; six-chapter plan | repo opened; drafts begun | history |
+    | 2026-08-02 | corpus, TOC, archive; proposal; Third Power v3 | 5a8d533, 3385322; skips ruled 3406bd1 | branch; Third Power on main |
+    | 2026-08-03/05 | prompt v1.0; prospectus; assessment | written 08-03; committed 71f75cb | two files main; prompt history |
+    | 2026-08-04 | TOC, Block 3; CONTRIBUTION_INDEX | last corpus edit 314ceba; fe4548b | branch |
+    | 2026-08-06/08 | sourcebook set; CHAT-HIST I to III | merge 077d5de | docx, chats main; rest branch |
+    | 2026-08-14 | spine; hub ledger; .tex stub | f67968b, 3c25633, e9511f5; 1d83788 last pre-prune tree | spine branch; rest history |
+    | 2026-08-15 | prune 8c98573 | 205 deletions, 26 relocations | history |
+    | 2026-09-11/12 | PR #26 = 2165144 | USO to L8 rename; last change to main | main HEAD |
+    | 2026-09-13 | roadmap 30a40f1; draft PR #27 | 8 parts, 27 chapters | branch |
+    | 2026-09-14 | restore, stubs, paper, revision; autonomous PR #29 | 62d2e3f to 9259c18 | branch head |
+    | 2026-10-17 | PR #27, PR #29 | closed, not merged | branches persist |
+    | 2026-11-03 | beta branch 714480d | 56 files; not the book | branch, no PR |
+
+    ## Decisions the records leave to you
+
+    1. PR #27 (merge, reopen or cherry-pick; otherwise the restore, roadmap, stubs and paper stay off `main`), PR #25 (open) and whether the beta branch gets a PR.
+    2. The roadmap's twenty-two decisions, above all D1 (one book or companion), D2 (title), D12 (the Autonomous Theory files' home), D18 (eight or twelve compartments) and D20 to D23 (D22: the binding today's commit kept); the rest are equally unruled.
+    3. Which "Manuscript-ready" definition and thesis sentence is ratified; CH-01, the two λ_A definitions.
+    4. Which document governs blocks 31/32/35/36 (TOC: cut; archive: mapped); whether the Block 3 header loss was intended.
+    5. Whether the three Office files are "live drafts"; correcting `LEDGER.md:37` and `:32`; whether the sourcebook's companions return to HEAD.
+    6. The older calls: Q1 to Q9, the unrun prior-art search, the 2 August proposal's problems P1 to P4.
+    7. The peer-3 hash and ebios commit; whether the two ebios repositories are one; the stale `peer-3/0.md`; approval of the 30 July ebios core-architecture draft.
+    8. The never-restored author files (`auditonomous.odt`, the five orphan .odt, the notes, `chat.txt`) and the Third Power Corpus's home.
+    9. The companion paper and exemplar tag in aybllc/autonomous, and the adversarial review of both papers.
+  - **claims_total**: 20
+  - **claims_refuted**
+    - item 1
+      - **id**: K05
+      - **claim**: Blocks 31, 32, 35 and 36 are 8-byte 'Skipped.' stubs cut by the author's ruling of 2026-08-02; the TOC says 'cut from the book' while the Master Archive still maps them to chapters.
+      - **corrections**
+        - Claim stands; precision notes only: 'line 39' is line 39 of the `git show 3406bd1 -- intake/MOVE_LOG.md` output (file line 64 in intake/MOVE_LOG.md at 3406bd1). The 'cut from the book ... 2026-08-02' TOC wording was written in 314ceba on 2026-08-04 (the 2026-08-02 commit 3406bd1 said 'skipped at the outline layer — no separate outline files'); the TOC and Master Archive quoted exist on origin/claude/book-structure-roadmap-k8ap82 (and at 314ceba..1d83788 in history), not on origin/main 2165144, where none of the TOC, archive, stubs or MOVE_LOG are present.
+        - Blocks 31, 32, 35 and 36 exist (only on the closed, unmerged PR #27 branch, restored 2026-09-14 from 1d83788; absent from origin/main since 8c98573 of 2026-08-15) as 8-byte "Skipped." files (blob 2101e1d) that the author wrote before the session of 2026-08-02 (mtimes 10:08–10:09; committed 5a8d533 at 10:29 -0700). Their status was recorded in two incompatible successive versions: 3406bd1 (2026-08-02 11:24 -0700) read the ruling "[source text withheld from the public copy]" as "skipped at the outline layer — no separate outline files" with the material kept in the book plan and "[source text withheld from the public copy]" (MOVE_LOG.md:65-67; TOC:53/72 blob 7e57704; T1 "RESOLVED ... NOT a defect"); 314ceba (2026-08-04 12:55 -0700, in a commit titled "IEEE read ...") replaced that, on a second ruling ("[source text withheld from the public copy]."), with "cut from the book" at TOC:53/72 (blob 983a5a4, the version on the branch) and T1 "CLOSED ... CUT FROM THE BOOK ... TWO successive misreadings". The MOVE_LOG was never updated to the cut reading and is not restored on the branch; the consolidated document of 2026-08-04 (written before 314ceba) and CONTRIBUTION_INDEX_AND_TOC.md still carry the outline-layer/live reading; THEME_LEDGER:280 still says Block 36's outline "no longer exists". The Master Archive (ARCH:3 "Session record through July 31, 2026", blob unchanged since 5a8d533) maps all four blocks to chapters at :723-:728 by design as the TOC's declared companion that "preserves all drafted material in full" (TOC:112); the knock-on (ARCH:572 and ARCH:540 citing cut Block 36) is flagged as a live [ERIC] item in THEME_LEDGER:152, RESEARCH_DOCKET:156 and the roadmap (:462, :619), while the mapping rows themselves are flagged nowhere.
+        - Corrected statement: On the roadmap branch origin/claude/book-structure-roadmap-k8ap82 (not on origin/main HEAD 2165144, where the manuscript tree is absent), L8/L4/work/writing/manuscript/Block_31_skipped.md, Block_32_skipped.md, Block_35_skipped.md and Block_36_skipped.md are 8-byte files containing exactly "Skipped." (blob 2101e1d7). They were written by the author before any ruling (mtimes 2026-08-02 10:08-10:09 per 3406bd1:intake/MOVE_LOG.md:88,97; committed 5a8d533, 2026-08-02 10:29:48 -0700) and ratified about an hour later by the author's ruling "[source text withheld from the public copy]" (3406bd1, 2026-08-02 11:24:54 -0700, MOVE_LOG.md:64). That 2026-08-02 commit characterised them as "skipped at the outline layer - no separate outline files" with "archive prose ... unaffected and complete" (TOC:53/72 at 3406bd1; commit body), i.e. not cut from the book. The "cut from the book" characterisation was written two days later in 314ceba (2026-08-04 12:55:59 -0700), which re-dated the decision to 2026-08-02 on the strength of a second quoted ruling ("[source text withheld from the public copy].") that appears in no 2026-08-02 commit, and which labels the 08-02 outline-layer gloss a misreading (THEME_LEDGER:123-125 at 314ceba: "'Skipped' means cut."). The branch TOC (blob 983a5a4e = 314ceba = 1d83788; last changed 2026-08-04; deleted from main 8c98573 2026-08-15; restored to the branch 62d2e3f 2026-09-14) reads at :53 "**[source text withheld from the public copy] ...**" and at :72 "**[source text withheld from the public copy].**", while the Master Archive (blob 31a09874, never modified since 5a8d533; header "Session record through July 31, 2026") still carries the four blocks' full prose (:374, :380, :416, :422) and still maps them to chapters at :723 (Block 31 -> Ch 1, Ch 3, Ch 12), :724 (Block 32 -> Ch 1, 3, 7, 12, 13), :727 (Block 35 -> Ch 7), :728 (Block 36 -> Ch 4, 7, 12). This archive/TOC inconsistency is already recorded in-repo on both main and branch at L8/L5/research/lanes/THEME_LEDGER.md:335 ("[source text withheld from the public copy])"), and the branch's own manuscript sheet (L8/L4/work/writing/manuscript/0.md:18) mis-dates the TOC as "(2026-08-02)". Note also the evidence citation "MOVE_LOG.md line 39" is line 39 of the diff output; the file line at 3406bd1 is 64.
+  - **gaps**
+    - item 1
+      - **gap**: A source not read: the remote branch `beta/7lm-exemplar-auditonomous`, pushed to the repository today (2026-11-03), is absent from the local clone and from the report. The report's 'origin/main … has not moved since' is true of main but the repository has new work.
+      - **finding**: Local clone: `git branch -r` lists only origin/main and origin/claude/book-structure-roadmap-k8ap82; the GitHub API lists 13 branches. `beta/7lm-exemplar-auditonomous`: CreateEvent 2026-11-03T03:39:00Z; one commit 714480d (author and committer 'EDM' <149889949+abba-01@users.noreply.github.com>, 2026-11-03T05:08:36Z, parent 2165144, 56 files, +2,352/−86, not signed); repo pushed_at 2026-11-03T05:08:39Z; no pull request opened for it (PR numbering ends at #27). Message: 'Construct pinned Auditonomous 7LM beta envelope exemplar … Consume exact Autonomous artifact 805cd42f073644177c618bdb18008137b7e7d170 under common architecture 4ca3edb9172c34e6b0033bd09e2379ed3da76d9d. Execute and qualify the selected finite C6/C7 envelope … while retaining unresolved scientific claims.' Added: `L8/L0/semantics/AUDITONOMOUS_BETA_SCOPE.md`, `L8/L1/state-space/AUDITONOMOUS_BETA_ADMISSION.md`, `L8/L2/formal-mathematics/relations/AUDITONOMOUS_BETA_PREDICATE.md`, `L8/L3/engineering-mathematics/AUDITONOMOUS_BETA_METHOD.md`, `L8/L4/work/computation/auditonomous_beta.py` (+310), `auditonomous_beta_result.json` (+1,554), `test_auditonomous_beta.py` (+198), `L8/L5/research/findings/AUDITONOMOUS_BETA_FINDINGS.md` ('16 cases, 32 events, 32 C7 records'; 'SGI remains unbuilt proposal'; '[source text withheld from the public copy]'), `L8/L6/history/AUDITONOMOUS_BETA_HISTORY.md` ('2026-11-03 UTC … This record concerns the authorized local candidate, not a new source-owner decision or release'), `[source text withheld from the public copy], architecture_owner aybllc/7lm). Appended to `AUDITONOMOUS_DEFINITION.md`: 'Receiving semantic reference (2026-11-03 correction)' consuming AUT-SOURCE-001 at commit 0504961 with 'no rebind' — it keeps the binding that roadmap D22 proposed to move to c9076c3. Appended to `CONTRADICTIONS.md`: 'Current receiving-use dispositions — 2026-11-03' (C1–C7 'remain unresolved'). Appended to `L7/provenance/sources/LEDGER.md`: 'The existing register has 60 archive rows … the dated close-out … "22 new rows" … enumerates 21' (roadmap §8 line 638 still counts '62 source rows'). Renames `L7/publications/` to `L7/allications/publications/` (sic) and `governance/restrictions/` to `controlled/`; the sole change to `L8/L4/work/writing/0.md` is that path. A grep of all 56 patches for manuscript|book|chapter|roadmap|#27|k8ap82|vocabulary|restore-2026-09-14|1d83788 finds nothing: the newest commit addresses the Autonomous binding and a finite-envelope test, not the manuscript.
+    - item 2
+      - **gap**: Two pull requests the report omits: PR #25 is still OPEN (a standing owner decision) and PR #21 was closed unmerged; the report mentions only #26 and #27.
+      - **finding**: PR #25 'The catch-all sheets stop asserting nothing is deleted': state open, draft true, created 2026-09-07T19:43:22Z, branch claude/no-deletion-fix-2026-09-07, head f89bf8a (2026-09-07T19:42:59Z), 3 files +4/−2 (`USO/l5/research/0.md`, `USO/l5/research/review/0.md`, `USO/l6/0.md`), mergeable false, mergeable_state 'dirty' (its paths predate the USO→L8 rename 3045e07 of 2026-09-12); body ends 'Draft — nothing merges without the owner's word'; its body quotes the owner: 'we cant enforce integroty by ebforceing no deletion. we can only imply no deletion to enforcer integiortyty.' Repository open_issues_count = 1 (this PR; no non-PR issues exist). PR #21 'Move common/ and intake/ into USO/l5/research': draft, created 2026-09-06T01:08:07Z, closed unmerged 2026-09-06T03:02:30Z, head 55541d7; `L8/L6/history/harmonization-2026-09-05.md:107`: 'built as PR #21 here and closed unmerged when the words below superseded it'. PRs #15–#17 (2026-08-14) came from a branch named `claude/auditonomous-book-outline-oim6hw`, the branch that delivered the spine (f67968b).
+    - item 3
+      - **gap**: PR #27's status and close-out are reported thinly: the report omits that it was a Draft PR, its size, the dates of the drafting session, and the external standing cited as the reason for closing.
+      - **finding**: API: draft true, created 2026-09-13T20:39:22Z, title renamed 2026-09-14T02:04:49Z (the revision commit 9259c18 is 02:04:14), closed 2026-10-17T08:41:45Z by abba-01, merged null, 5 commits, 176 files, +22,883/−12, mergeable true / 'clean'. Close-out comment (2026-10-17T08:41:24Z): 'The session that drafted this pull request, 13 to 19 September 2026, is archived … Nothing was pushed after its fifth commit 9259c18; its hourly check-ins lapsed on 16 September'; 'Mergeable against main at 2165144, which has not moved since 11 September. The integrity check and CodeQL are green on the head'; 'Why it is closed rather than merged. Merging is the owner's act in this repository. The standing of 20 September 2026 in aybllc/7lm (record §25 and §26) is that only the scaffold is updated until the owner judges it close, and the exemplars are brought into step by hand afterwards. This pull request also predates the scaffold's L7 restructure of that day; its desk positions and wording are the former ones'; 'To take the work up: reopen this pull request, or cherry-pick the five commits onto the branch that brings this repository into step with the scaffold'; 'Left to the owner … D22 and D23; the review of the two papers; writing, step seven of the build-first order, which was never started.' The 7lm record §25–§26 of 20 September was not read: aybllc/7lm is public (pushed_at 2026-11-03T04:53:26Z) but one contents-API read of `L8/L6/history/specification-history.md` returned no section numbered 25 or 26; no other 7lm file was tried.
+    - item 4
+      - **gap**: The report calls the companion baseline paper 'not verifiable here'. It is verifiable through the GitHub API, and its state (unmerged, tag never created) is an owner decision the report omits.
+      - **finding**: aybllc/autonomous PR #29 'The baseline paper on autonomous, and the read-only exemplar declaration': draft, created 2026-09-14T02:01:33Z, branch claude/scholarly-pair-baseline-k8ap82, closed unmerged 2026-10-17T08:41:43Z (two seconds before #27), one commit 9b49910, 9 files +280/−4 including `L8/L4/work/writing/papers/AUTONOMOUS_BASELINE_PAPER_2026-09-14.md` (+212), `L8/L4/work/writing/papers/0.md`, `L7/governance/restrictions/0.md` (the read-only exemplar declaration), `L8/L6/history/exemplar-2026-09-14.md`. Its close-out: 'The tag exemplar-2026-09-14 that the declaration proposes was never created; main carries only the organization's default-branch ruleset'; autonomous main at c9076c3 'has not moved since 11 September'. So roadmap steps S0 (the pair) and S1 (the exemplar) both sit in closed draft PRs; the vocabulary paper's companion exists only on that branch. aybllc/ebios and abba-01/ebios returned HTTP 403 ('GitHub access to this repository is not enabled for this session'), so the report's ebios question stays unverifiable from here.
+    - item 5
+      - **gap**: The 'five orphan .odt drafts' are dismissed without content, dates or disposition. Three are the author's own earliest documents (30 July–1 August 2026), one is a six-chapter book plan older than the 2026-08-02 TOC, and one is prose for a different book; the records about them are stale or circular.
+      - **finding**: All five entered at e9511f5 (2026-08-14) under `common/durable/durable/orphan/` and were deleted by 8c98573 (2026-08-15); never restored (restore-2026-09-14.md:191–195 '[source text withheld from the public copy]'). Extracted from blobs at 1d83788 (meta.xml dates, LibreOffice 26.2.4.2): (1) `auditonomous.odt` 59,094 B, created 2026-07-30T22:32, modified 07-31T02:00, 4 editing cycles, 1,005 words — '[source text withheld from the public copy] … The defining requirements are: Epistemic visibility … Tamper-evident operation … Uncertainty preservation … Failure transparency … Architectural enforcement … Truth-envelope autonomy … Evidence-bound accountability', then 'Auditonomous Strict … free-fail … Runtime initialization', ending 'Book / What is A'; (2) `autonomous-theory.odt` 17,585 B, created 2026-07-30T22:29, 56 words: '[source text withheld from the public copy]…'; (3) `auditonomous-manuscript.odt` 51,254 B, created 2026-07-31T04:58, 1,049 words, 5 pages: the epigraph sentence followed by a three-part, six-chapter plan — '[source text withheld from the public copy]) / Chapter 1: The Cultural Override / Chapter 2: The [source text withheld from the public copy]) / Chapter 3: The Duty Cycle of Civilizations / Chapter 4: The Thermodynamic Limit / [source text withheld from the public copy]) / Chapter 5: The Migration Hypothesis / Chapter 6: Resolving the Great Silence', each with 'Scientific Goal', 'Academic Basis', 'Quote to Ground Decision', then 'Justification of Decision' and the Proof-of-Office passage ending '[source text withheld from the public copy]"?' — a seventh structure that the roadmap §0 ('Six structures for this book already exist') does not list and that predates the TOC; (4) `my-book.odt` 33,321 B, created 2026-08-01T16:47, modified 20:40, 16 editing cycles, 1,682 words, 9 pages: 'The Third Power Introduction … Chapter 1 NAUGHT, CAUGHT, [source text withheld from the public copy] … Chapter 3 NONE, MANY, ONE' — prose for the Third Power corpus, not the Auditonomous book; (5) `stream-eb-carrier-imporotant.odt` 533,499 B, created 2026-08-08T03:34, one editing cycle of 9m56s, 33,618 words, 124 pages, 111 images, opening '[source text withheld from the public copy] chat-stream export). HUB_LEDGER (3c25633:93–94) TODO: '[source text withheld from the public copy])'. `L8/L6/history/LEDGER.md:32` on main today still says '[source text withheld from the public copy]' although the files left HEAD on 2026-08-15. The restore record's cited disposition does not exist: harmonization-2026-09-05.md §8 (lines 105–125, dated 2026-09-06) tables `common/durable/orphan/` items but never mentions these five files; §5 lists 'Everything in common/durable/orphan/' under 'Owner decisions left open (nothing done)'.
+    - item 6
+      - **gap**: The author's `manuscripts/main/auditonomous.odt` is named but not described; its content, editing history and the restore record's misclassification of it are missing.
+      - **finding**: Blob b57ca33 (47,487 B), committed 71f75cb (2026-08-05) together with its LibreOffice lock file `manuscripts/main/.~lock.auditonomous.odt#` (72 B, removed by a512737 the same day — the author had it open at commit time); meta.xml: created 2026-08-02T13:48:38, modified 2026-08-05T10:22:33, 8 editing cycles, editing duration P1DT8H54M38S, 1,946 words, 8 pages, 1 table. Text: title 'Auditonomous: The Auditon'; an empty glossary scaffold '[source text withheld from the public copy]:'; the note '[source text withheld from the public copy]…'; then a pasted '[source text withheld from the public copy]' with the AP(S,F,D,Δ) profile, two 'Manuscript-ready definition' blocks and '[source text withheld from the public copy]' — the same SSOT text as `manuscripts/main/research/chapter-chunk/autonomopy-stack-ssot-v0.1.txt`, which the branch holds as `L8/L4/work/computation/all-research-corpus-auditonomous.md` (blob 2025bffa, identical). The pre-prune `manuscripts/main/README.md` (1d83788) listed it with the sourcebook as '[source text withheld from the public copy]'. restore-2026-09-14.md:365 classes it '[source text withheld from the public copy]' — it is not packaging of the 2026-08-06 sourcebook; it is the author's own document begun four days earlier.
+    - item 7
+      - **gap**: The report notes that the writing sheet's 'live drafts' label conflicts with the files' self-descriptions but does not trace where the label came from or that it originally named different files.
+      - **finding**: Chain: `manuscripts/main/README.md` at 1d83788 (2026-08-14 layout) — '[source text withheld from the public copy]'; `L8/L6/history/LEDGER.md:37` ([source text withheld from the public copy]:158` — 'manuscripts/main/open-research/auditnomous-main.docx, auditonomouos-important.docx, auditonomous-08-03-26.odt | MOVE | USO/l4/work/writing/ | Live drafts ("[source text withheld from the public copy]")'; `harmonization-2026-09-05.md:44` — 'manuscripts/main/open-research/*.docx, *.odt | USO/l4/work/writing/ | live drafts'; `L8/L4/work/writing/0.md:33` quotes LEDGER:37. The file the label first named (`auditonomous.odt`) is history-only; the three files now carrying it are an extraction corpus, a referee report and a prospectus. On main both retired READMEs are 0 bytes (`L8/L6/retired/layout-2026-08-14/manuscripts/README.md`, `…/manuscripts/main/README.md`, blob e69de29), per LEDGER_2026-08-16:35 'Intentionally blank (AU-NORM-01, do not restore)'.
+    - item 8
+      - **gap**: A source not read: the seven files of `manuscripts/main/research/chapter-chunk/` — the only directory in the repository's history named for chapters — are not mentioned.
+      - **finding**: Present from merge 077d5de (2026-08-08; `git log -m --diff-filter=A`) to 1d83788; deleted by 8c98573. Sizes and openings at 1d83788: `autonomopy-stack-ssot-v0.1.txt` 15,044 B ('## [source text withheld from the public copy]'); `everything-needed-autonomous` 31,169 B ('# Exhaustive Auditonomous action specification … [source text withheld from the public copy]'); `everythingmore` 31,355 B ('# [source text withheld from the public copy]'); `more` 7,197 B ('Correct. Using the repositories to validate their own claims was circular'); `more1` 6,755 B ('[source text withheld from the public copy]'); `moret` 5,407 B; `moretq` 10,292 B ('Lambda zero is an outcome-preserving enclosure of the decision tree'). They are assistant chat answers, not deep-research exports, yet restore-2026-09-14.md:376–382 marks each '[source text withheld from the public copy]/'; only the SSOT file reached the branch, renamed `all-research-corpus-auditonomous.md` (blob 2025bffa identical; restore:31 'The run's SSOT synthesis … [source text withheld from the public copy]'). HUB_LEDGER TODO '[source text withheld from the public copy]'.
+    - item 9
+      - **gap**: The sourcebook's packaging is under-described: the history-only Extraction Bundle zip holds ten companion input files that exist nowhere else in git, and the original Sourcebook .docx is a different blob from `auditnomous-main.docx`.
+      - **finding**: `manuscripts/main/Auditonomous_Book_Extraction_Bundle_v0.1.zip` (blob fe1c6c1, 161,117 B; enters at merge 077d5de 2026-08-08; deleted 8c98573; restore:351 '[source text withheld from the public copy]'). Contents (internal timestamps 2026-08-06): `Auditonomous_Book_Material_Sourcebook_v0.1.md` (93,997 B, 07:51:52), `…Coverage_Exclusion_Ledger_v0.1.csv`, `…Source_Manifest_v0.1.json`, `…Sourcebook_v0.1.docx` (81,886 B, 07:51:54), and `companion_sources/` (07:45): 'Formula Stripping and Verification.txt' (28,816 B), 'CONTRADICTION_REGISTER_METHOD_v0.1.md' (18,753 B), 'THESIS_lambda_decomposed_record.md' (8,449 B), 'Citation Choices Analysis.txt', 'Audit-licensed autonomy analysis.txt' (11,919 B), 'Auditonomous Definition and Scope.txt' (3,082 B), 'Autonomous definition research.txt', 'Deep Research on Forcing.txt', 'Pasted markdown.md' (15,049 B), 'contradiction-entry.schema.json' (11,494 B). Nine of these names occur in no path in `git log --all --name-only` (count 0 each); the Source Manifest lists them as inputs with sha256 and 'access: HELD_LOCAL'. The sourcebook docx (blob 6052b44, 81,886 B, core.xml creator 'python-docx', created 2013-12-23 placeholder) and `auditnomous-main.docx` on main (blob d03eb10, 69,430 B, app.xml 'LibreOffice/26.2.4.2', dcterms:modified 2026-08-06T20:18:51Z, revision 3, TotalTime 605, 56 pages, 11,892 words) have the same text to within one trailing empty line (line-level similarity 0.9996): main's file is a LibreOffice re-save of the python-docx original, which is history-only. `_CHAT-HIST.docx` is blob 20036f6 = `auditonomous-chat-1.docx`.
+    - item 10
+      - **gap**: A source not read: `intake/auditonomy-book/Untitled 2.odt` (a status-label scheme for the manuscript) and the `intake/auditonomy-book/` directory itself are absent from the report.
+      - **finding**: `intake/auditonomy-book/` (11 files at 1d83788: `#autonomous.txt` 1,060,768 B, `02_AutonomousTheory.pdf`, `Untitled 2.odt`, five `autonomouos-deep-research-*.odt` exports of 61–253 KB, `deep-research-auditonomous.md`, `deep-research-report.md`, `deep-research-report (1).md`) enters at merge 51565b9/077d5de (2026-08-06/08) and is deleted by 8c98573; it is the only directory ever named 'auditonomy-book'. `Untitled 2.odt` (13,253 B, created 2026-08-06T10:10:33, modified 18:44, 372 words): '[source text withheld from the public copy] … / PROVISIONAL FORMALIZATION: … requiring author ratification. / REPOSITORY OBSERVATION … / CONDITIONAL TECHNICAL NOTE … / [source text withheld from the public copy] … / Part I — Corpus Method and Academic Integrity … / Part II — Standards-Indexed Autonomy and Auditonomy' — an early skeleton and label scheme of the sourcebook written the same day. restore-2026-09-14.md:211 misclasses it '[source text withheld from the public copy]'. Two of the directory's .odt exports are on main at `L8/L4/work/computation/` (blobs 1ae82b4, 77350f2); `7LM_ROUTING_PLAN_2026-09-05.md:124–125` marks those 'OWNER DECISION'.
+    - item 11
+      - **gap**: A source not read: `auditonomous_ebios_core_architecture_math_source-535f70d_draft.md`, the earliest text in the repository that calls itself a chapter and the `EB:` locator cited by roadmap decisions D10, D12 and D13 and by the chapter feeds.
+      - **finding**: In the tree from fc3b018 (2026-07-30) as `intake/…`; deleted by 8c98573; restored branch-only at `L8/L4/work/writing/` (restore:208; 639 lines, 28,164 B). Header table: 'Author and originator | Eric D. Martin', '[source text withheld from the public copy]'. Line 16: '[source text withheld from the public copy]'; line 22: '[source text withheld from the public copy]' in roadmap D12 and D13); line [source text withheld from the public copy] … reduces auditonomy to ordinary after-action logging' (= 'EB:233' in D10). Roadmap feeds cite it for three chapters (lines 152, 232, 245: '(EB:233)', '§6', '§7–9'); CONTRIBUTION_INDEX row 2 cites '…_ebios_core…draft.md §5.1'. Its approval ('Not canonical until Eric approves it') is an unruled owner act not in the report's decision list.
+    - item 12
+      - **gap**: A source not read: `Auditonomous_Primary_Manuscript_Extraction_Verification_Prompt_v2.md`, which fixes which document counted as 'the primary working manuscript' on 2026-08-06 and is the prompt behind the sourcebook.
+      - **finding**: `intake/prompts/first/…_v2.md` entered e9511f5 (2026-08-14), deleted 8c98573, restored branch-only at `L8/L4/work/writing/prompts/` (restore:290; 611 lines, 29,201 B). Title '# [source text withheld from the public copy]'; §2.1 'Primary working manuscript - controlling source … Repository: abba-01/[source text withheld from the public copy]'; §2.2 lists the embodied manuscript, `AUDITONOMOUS_DEFINITION.md`, the ebios draft, `AUTONOMY_SCALE.md`, `MOVE_LOG.md`; §[source text withheld from the public copy]'; labels include '[CHAPTER DRAFT MATERIAL]', '[INTERNAL CONFLICT]', '[INTERNALLY VERIFIED]', '[INTERNAL N/A - AUTHOR DEFINITION]'. Branch sheet `prompts/0.md`: 'the extraction-and-verification prompt behind the sourcebook at L8/L4/work/writing/sourcebook/'.
+    - item 13
+      - **gap**: A thread not covered: The Third Power Corpus v3 — the author's other theory corpus, committed with the manuscript on 2026-08-02, on main today with an 'OWNER DECISION REQUIRED' note, a required source of the sourcebook, and the subject of `my-book.odt`.
+      - **finding**: Committed 5a8d533 (2026-08-02, 'Add Auditonomous Theory manuscript corpus and Third Power source'); `intake/MOVE_LOG.md:47–52` (1d83788): copied per the owner's instruction from '/home/eric/ayb/ncf/manuscript/research/The_Third_Power_Corpus_v3.docx', 'SHA-256 identical at source and destination: 04877841e55a…', pandoc extraction '28,080 bytes, 776 lines'. On main at `L7/peering/private/egress/peer-2/object-1/` (.md 28,080 B, .docx, `OWNERSHIP_PENDING.md`): '[source text withheld from the public copy]'; binding sheet: 'Status | PENDING — no transfer has occurred'; `LEDGER_2026-08-16:36` 'Parked for owner decision'; roadmap §9 line 667: [source text withheld from the public copy]'. The corpus text opens '[source text withheld from the public copy]'; the extraction prompt makes it a required secondary source; the HUB_LEDGER and harmonization §6 note its vocabulary parallels the 7lm lifecycle terms. None of this is in the report.
+    - item 14
+      - **gap**: Two of the six prior book structures the roadmap builds on are not described: `BOOK_STRUCTURE_PROPOSAL.md` (2026-08-02) and `CONTRIBUTION_INDEX_AND_TOC.md` (2026-08-04); their open [ERIC] calls are the origin of several roadmap decisions.
+      - **finding**: Roadmap §0 (lines 11–23): 'Six structures for this book already exist … [source text withheld from the public copy]' — TOC 08-02; BOOK_STRUCTURE_PROPOSAL 08-02 ('28 chapters; … [source text withheld from the public copy]'); Prospectus + referee 08-03; CONTRIBUTION_INDEX 08-04; Sourcebook 08-06; SPINE 08-14. `BOOK_STRUCTURE_PROPOSAL.md` (3385322, 2026-08-02; branch-only, restore:294): '[source text withheld from the public copy]' (9 '[ERIC]' marks); §0 'Severable … 36 blocks … Premise-bound — 16 blocks'; §2 outline in five parts (THE CONSTITUTION / THE DERIVATIONS / THE CONVERGENCE FILE / THE ANTECEDENT / THE RECKONING; 31 numbered chapter lines); §[source text withheld from the public copy] fourth derivation 'self-corroboration as currently filed', [source text withheld from the public copy] deepest-stratum (ARCH:410 vs ARCH:430) and validity-vs-erasure (ARCH:593 vs ARCH:639), P4 'Reactive → Responsive' and the Block 51 mis-attribution; §[source text withheld from the public copy]; … All [ERIC]'. `CONTRIBUTION_INDEX_AND_TOC.md` (fe4548b, 2026-08-04, Claude; branch-only, restore:297): 'Status: PROPOSAL / living index'; eleven 'constructed instruments'; 'The four operating domains … gives the book its spine'; Parts IV–V 'PENDING census_dossier.md'; §[source text withheld from the public copy]'; line 121 '[source text withheld from the public copy])'. Roadmap D6 = P1, D7 = P3b, D8/D9 = §7 items, D19 = P4.
+    - item 15
+      - **gap**: Decisions the records leave to the owner that the report's list omits: fifteen of the roadmap's twenty-two numbered decisions, and owner calls recorded elsewhere.
+      - **finding**: Roadmap §7 rows (lines 612–633; D1–D16, D18–D23; no D17): omitted by the report — [source text withheld from the public copy]' (recommended 'apply, by version'); [source text withheld from the public copy]'; D6 'The fourth derivation (Block 46)'; D7 'Validity constraint versus erasure: Block 46 … against Block 50'; [source text withheld from the public copy]'; D9 'Reconstitution (Blocks 37–38)'; D10 'EB:233 … versus the pure one-way carrier'; [source text withheld from the public copy]'; D13 'The reader-agnostic divergence (§2.8)'; D14 'The three file splits … and the registrations at L2' ('[source text withheld from the public copy])' (recommended '[source text withheld from the public copy]'); D18 'Eight versus twelve compartments' ('[source text withheld from the public copy])'. Elsewhere: HUB_LEDGER (3c25633:84–96) TODO — '[source text withheld from the public copy] … revisit before any repo goes public'; harmonization-2026-09-05.md §5 'Owner decisions left open (nothing done)' — split-or-cite of AUDITON_ENVELOPE/HUMINT_ENCODE/REQUIREMENTS_OWNERSHIP, 'Extract and register: the three candidate objects in SESSION_2026-08-05_AUDITON_ARCHITECTURE.md', 'binder/internal/ at publications versus L4 writing', 'Everything in common/durable/orphan/'; `OWNERSHIP_PENDING.md` (Third Power); the ebios draft's 'Not canonical until Eric approves it'; the tag exemplar-2026-09-14 never created (autonomous#29 close-out); PR #25 open; the beta branch of 2026-11-03 with no PR; the SSOT note in auditonomous.odt and sourcebook line 1619 '[[source text withheld from the public copy]]'.
+    - item 16
+      - **gap**: A claim made without evidence: that the assessment was 'generated by ChatGPT Deep Research from the history-only Deep Research Pro Prompt v1.0, not from the prospectus'. The assessment file itself names neither tool nor prompt; the evidence is in a history-only .odt the report never cites.
+      - **finding**: `auditonomouos-important.md` contains no 'ChatGPT', 'Deep Research' or 'prompt' (grep); its only tool trace is the token 'fileciteturn0file0' after '[source text withheld from the public copy]' (line 8), with '[source text withheld from the public copy]' (lines 5–7). The prompt is `manuscripts/main/notes/auditonomous-08-03-26-prompt.odt` (blob 10c8ea9, 84,143 B; meta.xml created 2026-08-03T13:58:41, modified 14:16:34, 3 editing cycles, 6,312 words, 28 pages; committed 71f75cb 2026-08-05; deleted 8c98573; restore:369 '[source text withheld from the public copy]'): line 3 '[source text withheld from the public copy] … to flesh out teh book chpaters …'; line 4 'Deep Research Pro Prompt v1.0'; line 17 '[source text withheld from the public copy]' (the title the assessment cites, which differs from the prospectus's '[source text withheld from the public copy]', prospectus lines 3–5 and 705); §XI 'PROPOSED AUDITON INVARIANTS'; §XVIII 'ROSWELL 1947 CASE PROTOCOL' with 'R5: Recovery of non-human [source text withheld from the public copy]'; its chapter list has 'Chapter 19: Artificial Successors and Cosmic Governance' (line 1133), matching the assessment's research table row 'Artificial Successors and Cosmic Governance' (important.md:404). A second file `auditonomous-08-03-26-prompt-brick.odt` (27,642 B, created 14:22:41, 178 words) is the owner's raw instruction: '[source text withheld from the public copy] …'. Counts the report asserts check out: fourteen research-task rows (important.md:426–439, from 'Register a scoping-review protocol' to 'Apply to specific UAP cases'); seven proposed invariants (lines 211–217).
+    - item 17
+      - **gap**: The report's statement that the vocabulary paper 'mis-attributes six invariants and levels R0–R4' to the assessment is only half right; the prospectus does carry exactly those, so the attribution is wrong only for the referee half.
+      - **finding**: Vocabulary paper line 162: '[source text withheld from the public copy]'. Prospectus (`auditonomous-08-03-26.md`): '# 7. Auditon invariants' with headings 'Invariant 1: Causal traceability' … 'Invariant 6: Replication-accountability symmetry' (lines 193–232) and a replication ladder 'R0 No descendant production' … '[source text withheld from the public copy]' (lines 287–291). The referee tabulates seven (adds 'Independent auditability', important.md:217) and the prompt uses R0–R7. Also the paper's claims-table row 16 (line 305) '[source text withheld from the public copy])' is contradicted by the sourcebook .md line 116 '\operatorname{Aud}(S,F)' (the report's locator 'EXT:141' is the line in the docx-derived text `auditnomous-main.md`:141; the branch .md has it at 116).
+    - item 18
+      - **gap**: The report says the branch's `peer-3/0.md` 'still says nothing is held'. That conflates two sheets; on the branch the object sheet was updated and only a parenthetical on the peer sheet is stale.
+      - **finding**: Main: `L7/peering/private/ingress/peer-3/object-1/0.md:15–16` 'Status | bound by identity; reference-only; the manuscript is "absent from live trees"' and 'Content held here | none'; `peer-3/0.md:8` '… the Martin 2026 embodied-auditonomy manuscript (a cold backup, absent from live trees)'. Branch: `object-1/0.md:15` 'the manuscript was "absent from live trees" until 2026-09-14, when the copy that had stood in the intake until the prune of 2026-08-15 was restored to this position from git 1d83788', line 16 'Content held here | martin_2026_embodied_auditonomy_lexrom_cabin_model_v0.2_ea08f59.md and …_v0_2.pdf', line 13 'no commit or manuscript hash is pinned there — the owner's next ledgering session pins them'; `peer-3/0.md:8` unchanged ('a cold backup, absent from live trees'). The manuscript file's header confirms the report's facts: 'Date | 2026-04-28', 'Version | v0.2', '[source text withheld from the public copy]', 'Content sha256 | 7fd260a5…'; the word 'auditonomous' occurs 0 times, 'auditonomy' 17 times. THEME_LEDGER.md:346 'FAILED CHECK — embodied-manuscript content hash … 6a717c70… ≠ claimed 7fd260a5…' and T16 at line 298 confirmed.
+    - item 19
+      - **gap**: The notes beside the prospectus (`manuscripts/main/notes/`) are not described: two plain-text notes and the two prompt .odt files, all history-only and excluded from the restore as 'personal material'.
+      - **finding**: At 1d83788: `notes/notes.txt` (2,342 B) and `notes/audiontiomouns` (48,509 B), both committed 71f75cb (2026-08-05): '[source text withheld from the public copy] … VIM (JCGM 200:2012) §2.41 … NIST TN 1900's "dark uncertainty" … Tian & Bar-Shalom' (the prior-decomposition / λ thread of Block 46 and THESIS_lambda); `notes.txt` opens with the epigraph-like line '[source text withheld from the public copy].' restore-2026-09-14.md:28 '[source text withheld from the public copy]', and :367–371 class all four 'working notes and prompts in Office containers' although `notes.txt` and `audiontiomouns` are plain text. The notes directory also held the pre-rename referee docx (blob e76f606 = main's `auditonomouos-important.docx`) and the prospectus .odt (blob 6da3713 = main's copy).
+    - item 20
+      - **gap**: A source not read: `intake/prompts/chat.txt`, the owner's ChatGPT export, which bears on the report's open question whether [source text withheld from the public copy].
+      - **finding**: 58,894 B, entered e9511f5 (2026-08-14), deleted 8c98573, '[source text withheld from the public copy]' (restore:289). It opens 'ChatGPT … Yesterday 8:33 AM' with the deep-research files attached, then 'The full picture / GitHub aybllc/broken-zero aybllc/eb-stack aybllc/ebios aybllc/ommp'; line 44: '[source text withheld from the public copy] … It has a Zenodo DOI'; line 54: '[source text withheld from the public copy]'; line 2049: '[source text withheld from the public copy]' (the same sentence that opens chapter-chunk/everythingmore); lines 2324–2325 'Present but not segregated in ebios'. Both names are used in one export, one with a local path under abba-01 and one as an aybllc remote; nothing in the file states they are the same repository.
+    - item 21
+      - **gap**: The report never says where a released book would be filed, that nothing has been released, or that today's beta branch moves that position.
+      - **finding**: `L7/publications/0.md:33` (main): 'binder/ — the presentation layer relocated intact … Nothing has been released.' `L7/publications/binder/README.md` rules: 'Introduces no evidence', '[source text withheld from the public copy]'; `press-kit/README.md` release checklist of six items including '[source text withheld from the public copy]/'; `internal/README.md` 'Release is an explicit act.' The beta branch (714480d) renames the tree to `L7/allications/publications/` and replaces the publications sheet's note with 'The complete pinned tree contains no harmonized-specification writing artifact; the earlier local description of one was inaccurate.' The writing sheet `L8/L4/work/writing/0.md:38` (main): 'nothing here is released (L7)'; `branch/0.md:16` 'No branch manuscript exists; the template/ it refers to does not exist at HEAD'.
+    - item 22
+      - **gap**: Dates and locations the report leaves vague or unevidenced: the prune's own account of the 'important' rename, the timestamps of the last change to main, and the redeploy's 'Not pushed'.
+      - **finding**: 8c98573: author date 2026-08-15 23:28:27 −0700, 'Eric's manual prune and promotion (2026-08-14/15), committed on his instruction after session review: Retire intake/ entirely (131 files) and the root governance set (AUDITONOMOUS.md, AUTONOMOUS.md, CLAUDE.md, FREEZE.md, HUB_LEDGER.md) … Remove … the older manuscripts set … (205 deletions total; all content remains reachable in history). Add 29 files: … chat/open-research manuscripts, and the common/durable/orphan/ salvage … IL-001 verified for this commit'; `--stat -M` shows the rename `[source text withheld from the public copy] => open-research/auditonomouos-important.docx` and `manuscripts/main/{notes => open-research}/auditonomous-08-03-26.odt` — a manual act with no stated reason for the new name, as the report says, but the report cites no source for 'no recorded reason'. 2165144: committer 2026-09-11 23:26:02 −0700 = PR #26 merged_at 2026-09-12T06:26:02Z; its parents f7d9b57/5e18f0a are 2026-09-12 04:46/04:38 UTC. e9511f5 (2026-08-14) message ends 'Verified: 3 in-repo freeze pins OK … Not pushed.' a512737 (2026-08-05 'Commit author's working material: manuscript, deep-research intake, walk-across') is the commit that removed the LibreOffice lock file. The 'Deep Research prompt' the report places in history has path, blob and meta dates given above (2026-08-03 13:58–14:23).
+    - item 23
+      - **gap**: Quotations and counts in the report that were checked, with exact locators the report lacks (data for the next agent).
+      - **finding**: Roadmap (`origin/claude/book-structure-roadmap-k8ap82:L8/L5/research/review/BOOK_STRUCTURE_AND_ROADMAP_2026-09-13.md`, 686 lines): standing line 3 'PROPOSAL · INTERNAL ONLY · INTERNALLY DERIVED … [source text withheld from the public copy]'; counts line 454 '[source text withheld from the public copy]'; effort line 591 'about sixty to eighty working sessions'; line 603 '[source text withheld from the public copy])'; D15 row line 626 '[source text withheld from the public copy]'; 'the writing not begun (S6)' is at line 645. Corpus: only two files ever changed after 5a8d533 — 3406bd1 (TOC) and 314ceba (TOC + Block_03); 314ceba removed Block 3's eight header lines ('# BLOCK 3 — THE DEFINITION', Type/Feeds/Pairs, '## The text') and changed '## Outline' to '## COnsiderations', and rewrote TOC Ch 7/Ch 12 statuses to '[source text withheld from the public copy]' / 'Blocks 31–32 SKIPPED …'; its message ('IEEE read: 170 pages, 118 defined terms, 144 captures. T-13 was mis-scoped.') does not mention these edits. TOC: 18 '**Chapter N.**' lines, five '## PART' headings, Appendices A–F, 'Working subtitle — decide one' with three candidates; archive line 3 'Session record through July 31, 2026'; ARCH:748 'Open items: decide the subtitle; Ch 8 … still needs drafting; … [source text withheld from the public copy] …'. Sourcebook .md: 'not a final manuscript' line 10; 'Manuscript-ready definition' lines 94 and 134; thesis line 173; CSV 30 rows L001–L030; Part XIII items 1–10 at lines 2252–2261 ('1. ratify the final internal definition …'); '[[source text withheld from the public copy]]' line 1619. Chapter stubs: 27 files, each with exactly one '*Not yet drafted.*'; `bibliography.md:3` 'No entry yet'; `build.sh:3` 'Not run in the environment that wrote it (pandoc absent there)'; `book/0.md:8` 'No chapter carries text yet'; `00-front-matter.md:3` 'Title — OWNER DECISION D2' with the three candidates. Vocabulary paper 62,540 B, 316 lines, standing line 3 as quoted. HUB_LEDGER 3c25633:49–50 '[source text withheld from the public copy]."' LEDGER.md:37 'Real LaTeX migration'. MANUSCRIPT.tex blob 8a0d3a7, 665 B, 22 lines at 1d83788.
+    - item 24
+      - **gap**: Timeline rows missing from the report's table.
+      - **finding**: 2026-07-30 22:29/22:32 (meta.xml) `autonomous-theory.odt`, `auditonomous.odt` begun; 2026-07-30 ebios core-architecture 'chapter' draft dated (in fc3b018); 2026-07-31 04:58 `auditonomous-manuscript.odt` six-chapter plan; 2026-08-01 `my-book.odt` (Third Power introduction); 2026-08-02 5a8d533 also adds The Third Power Corpus v3; 2026-08-03 13:58–14:23 Deep Research Pro Prompt v1.0 and prompt-brick .odt written; 2026-08-04 fe4548b CONTRIBUTION_INDEX_AND_TOC (Claude); 2026-08-05 71f75cb commits auditonomous.odt + lock file, prompt .odts, notes, prospectus, referee docx; a512737 removes the lock; 2026-08-06 07:45–07:54 extraction bundle built (zip timestamps), 10:10 `Untitled 2.odt` status labels, 20:18 `auditnomous-main.docx` re-saved in LibreOffice; 2026-08-08 `stream-eb-carrier-imporotant.odt` (03:34) and merge 077d5de bringing chapter-chunk/, auditonomy-book/, the zip and the sourcebook set; 2026-08-14 e9511f5 adds the five orphan .odt, chat.txt, the extraction prompt v2, F-004_DRAFT sha256 ('Not pushed'); PRs #15–17 from branch claude/auditonomous-book-outline-oim6hw; 2026-09-06 PR #21 closed unmerged; 2026-09-07 PR #25 opened (still open, draft, dirty); 2026-09-14 aybllc/autonomous#29 opened; 2026-10-17 08:41 #29 and #27 closed by abba-01; 2026-11-03 03:39 branch beta/7lm-exemplar-auditonomous created, 05:08 commit 714480d pushed (56 files; no PR).
+  - **readers**
+    - item 1
+      - **key**: sourcebook
+      - **facts**: 42
+      - **open_questions**
+        - Who produced auditnomous-main.docx from Auditonomous_Book_Material_Sourcebook_v0.1.docx (LibreOffice re-save, modified 2026-08-06T20:18:51Z, TotalTime 605 min) and why it was committed under a different name beside the original on 2026-08-08; no commit message or file at HEAD explains it.
+        - Whether the owner regards the sourcebook as a 'live draft' of the book or as a finished extraction record; the sheet (L8/L4/work/writing/0.md:33) and the document (EXT:7, 15) disagree and no owner statement at HEAD adjudicates.
+        - Whether the sourcebook's companion production files (Auditonomous_Coverage_Exclusion_Ledger_v0.1.csv, Auditonomous_Source_Manifest_v0.1.json, Auditonomous_Book_Extraction_Bundle_v0.1.zip, the extraction prompt) should return to HEAD; they exist only at 1d83788 and on the closed, unmerged PR #27 branch.
+        - Which prompt actually produced the sourcebook: the roadmap branch files 'Auditonomous_Primary_Manuscript_Extraction_Verification_Prompt_v2.md' as 'the prompt behind the sourcebook', yet that prompt names the Master Archive as the controlling source while the sourcebook's L028 says the controlling manuscript 'were not mounted in this extraction set'.
+        - Whether the roadmap branch's negative finding 'no such predicate [Aud(S,F)] occurs in the sourcebook' (vocabulary paper line 158, roadmap record lines 630 and 647) should be corrected, given \operatorname{Aud}(S,F) at EXT:141 / MD:116.
+        - Which of the two 'Manuscript-ready' definitions (EXT:117, EXT:173) and the thesis sentence (EXT:219) the author has ratified; the sourcebook labels them manuscript-ready but Part XIII item 1 still lists 'ratify the final internal definition' as remaining work, and the roadmap branch says the autonomous definition is a pre-2026-09-05 restatement not to be used.
+        - Whether any of the ten Part XIII items (EXT:2306-2324) has since been completed; nothing at HEAD references them.
+        - Whether the docx's zip entry timestamps (2026-08-07 03:18) versus core.xml modified (2026-08-06T20:18:51Z) reflect a time-zone offset or a later repackaging; not determinable from the container alone.
+    - item 2
+      - **key**: assessment
+      - **facts**: 58
+      - **open_questions**
+        - Which file(s) were uploaded to the Deep Research run: the four 'filecite turn0file0' tokens point to a single file, and the text matches the history-only prompt .odt (title, PRISMA-ScR, seven invariants, R0–R7 Roswell codes, chapter names) rather than the prospectus; no repository record states this.
+        - Why the docx was renamed 'auditonomouos-important.docx' on 2026-08-15 (8c98573) and by what criterion it is 'important'; no commit message or sheet says.
+        - Whether the roadmap's and vocabulary paper's attribution of 'six invariants and levels R0–R4' to 'the referee' (D20, §5.3) is a mis-attribution: the assessment has seven invariants and no R0–R4 (its R5–R7 are Roswell hypotheses); the vocabulary paper admits the Office containers were 'not re-extracted'.
+        - Whether decision D20 (five-axis profile retired to an appendix vs governing) was ever ruled; PR #27 was closed unmerged on 2026-10-17 and origin/main holds no roadmap record, no book tree and no D-decisions.
+        - Whether the restore record's statement that '[source text withheld from the public copy]/' was intended to cover the Deep Research Pro Prompt .odt (it does not; that prompt remains history-only at 71f75cb).
+        - Whether the owner reviewed or accepted the assessment's verdicts; no acceptance, rebuttal, L5 review or STATUS_LADDER entry about it exists on either branch.
+        - Whether any of the fourteen research tasks (scoping-review protocol, ontology, five-axis validation, closure benchmark, PROV extension, authority-conservation formalization, population simulation, auditability-overhead measurement, demonstrator, UAP preregistration, Roswell archival graph, terminology/trademark review, priors elicitation, case applications) was started in the component repositories surveyed under D23 (aybllc/autonomous, ebc, ommp, etc.); this review covered only aybllc/auditonomous.
+        - Why the Sourcebook v0.1 (6 August 2026) coverage ledger L001–L030 lists neither the prospectus nor the assessment although both pre-date it by three days — deliberate exclusion or omission.
+        - The AARO product date discrepancy (assessment: 'added July 20, 2026'; prospectus listings: 'July 19, 2026') is unresolved in the repository.
+        - Whether the claim-label set [S],[E],[O],[M],[X] used by the assessment has a definition anywhere (the prompt/prospectus define [V][I][C][U]; no legend was found in IMP.md or PROSP.md by grep).
+    - item 3
+      - **key**: prospectus
+      - **facts**: 38
+      - **open_questions**
+        - Did the owner ever rule D20 (which framing of auditonomy governs) or D21 (four laboratories vs three case files) after PR #27 was closed on 2026-10-17? No ruling is recorded on origin/main as checked out (HEAD 2026-09-11), and the branch itself says 'Nothing here is adopted'.
+        - Why was PR #27 closed without merge (2026-10-17)? The repository as checked out gives no reason; the closure is visible only via the GitHub API. Whether a later main contains any of its content was not checkable from this checkout (origin/main head predates the branch).
+        - Which model/session produced the prospectus? The file is a saved chat export ('Pro thinking', 'Worked for 15m 21s', 239 web sources) with no model name in the text; the sibling '-prompt.odt' (deleted 2026-08-15) holds the author's prompt and may identify the tool.
+        - What were 'the uploaded notes' / 'Pasted markdown.md' the prospectus critiques (the autonomy tables with 'GPT-Verified', the Malmstrom 'logic-gate' sentence)? The roadmap points to git:1d83788:manuscripts/main/notes/audiontiomouns for the Malmstrom sentence; that file was not read in this task.
+        - Prospectus chapters 12 (Provenance Across Generations) and 13 (The Economy and Failure of Auditons) are mapped to no chapter in the 27-chapter structure; whether this omission was deliberate (subsumed by Ch 16-17 / Ch 25) or an oversight is not stated anywhere found.
+        - The .odt was created at 13:18 on 2026-08-03 but the prompt .odt files were created at 13:58 and 14:22 the same day; the prospectus container therefore predates the saved prompts — the sequence of prompt → response → paste is not reconstructible from metadata alone.
+        - The task description called the repository history 'about 1000 commits'; origin/main counts 147 commits (not shallow, first commit fc3b018 2026-07-30). Whether the larger figure counts other refs or an earlier clone was not determined.
+    - item 4
+      - **key**: chats
+      - **facts**: 55
+      - **open_questions**
+        - Who authored the lambda 'correction block' formulas ([source text withheld from the public copy] ...)? The ingestion labels the block 'Authorial correction' but reproduces only the one-line user correction verbatim and says the attached THESIS_lambda_decomposed_record.md body was 'not independently re-read here'; raw turns are not in these files.
+        - Has the owner ruled on CH-01 (the two incompatible λ_A formulations) since 2026-08-06? Nothing in either volume; the roadmap of 2026-09-13/14 still lists it as a verify item for Chapter 16.
+        - Where is chat_history_chunk_02.txt (62,270 bytes) held? It is cited as 'Held locally' but never appears in repository history, unlike chat.txt (intake/prompts/chat.txt at 1d83788, 58,894 bytes, pruned 2026-08-15 and not restored).
+        - What is the source of the 'four-class formal gate' (PERMIT, OVERRIDE, DEGRADE, REFUSE) that the chat 'also reports' against the seven-output list (CH-06)? The volumes do not identify the document it comes from.
+        - Were the standards statuses verified on 2026-08-06 (ISO 19011:2026 Edition 4 May 2026; IEEE 1012-2024 published 2025-08-22; IEC 62061 amendments through 2026; ISO/IEC 27014 replacement FDIS pending) re-checked at any later date? The volumes require a recheck 'at manuscript freeze'; no later recheck appears in these files.
+        - Was the third volume (CHAT-HIST-03, restored only on the roadmap branch) produced from a third chunk or from the same chat.txt? Its header gives no 'Input source' line in the first 40 lines; it was not read in full for this task.
+        - Were the chat-preserved repository observations (eb-receipt CommandResult unsigned; eBIOS halt_on_critical default false; Merkle-style vs hash-linked chain) ever re-inspected at pinned commits as publication item 2 requires? Not evidenced in these files.
+        - Actual production timestamps of the three .docx volumes are unknown: the embedded dates are the python-docx template default (2013-12-23); the only dates are the self-declared 6 August 2026 and the first git appearance in merge 077d5de on 2026-08-08.
+    - item 5
+      - **key**: roadmap
+      - **facts**: 46
+      - **open_questions**
+        - Which four of S0–S6 the record counts as 'done' (ROADMAP:567): S0, S2 and S4 are plainly done; S1, S3 and S5 are each done only to the session's half, and the record does not say which of them is the fourth.
+        - Whether the owner ever ruled any D-number after 2026-09-14. Nothing in this repository records a ruling: origin/main (and GitHub's main) has not moved past 2165144 of 2026-09-12, PR #27 was closed unmerged on 2026-10-17, and no later PR exists.
+        - Why PR #27 was closed without merge on 2026-10-17: not recoverable from git; the PR body and comments were not read (would require a REST read of issues/27/comments).
+        - Whether the S1 pull request on aybllc/autonomous, the tag exemplar-2026-09-14, the branch protection and AUTONOMOUS_BASELINE_PAPER_2026-09-14.md exist: all are claimed in ROADMAP §6/§9 and papers/0.md but live in another repository and were not verified.
+        - Whether the chapter headers were ever regenerated after the 14 September revision anywhere: on this branch they were not (ch09 still gates on D15 and calls AUDITONOMY.md history-only), and only two remote branches exist (main, k8ap82).
+        - Whether a decision D17 was ever defined: the number is absent from both the 30a40f1 and 9259c18 versions of §7 while D1–D16 and D18–D23 are present.
+        - Whether [source text withheld from the public copy]' (bibliography.md:7; ROADMAP:637, '[source text withheld from the public copy]') survived anywhere; it is not in the branch.
+        - Whether the roadmap's §4 'Author prose' entries that say 'drafted' (Ch 8, 10, 17, 20, 21, 24) were ever re-cut into chapter text: on the branch the restored blocks exist at L8/L4/work/writing/manuscript/ but every chapter file's Text section reads 'Not yet drafted'.
+    - item 6
+      - **key**: blocks
+      - **facts**: 51
+      - **open_questions**
+        - Was the 314ceba (2026-08-04) edit to Block_03_The_Definition.md intentional? It deleted the '# BLOCK 3' header, Type/Feeds/Pairs lines and '## The text', and renamed '## Outline' to '## COnsiderations', inside a commit about an IEEE standards read whose message never mentions it; 0.md's 'line 10 of Block 3' matches the pre-edit file.
+        - Did outline text for Blocks 35/36 ever exist beyond the archive prose? The struck finding F1 says a session-start git status listed Block_35_Eye_of_Ra_Thesis.md and Block_36_The_Deployed_Eye.md as untracked before the 8-byte stubs appeared (mtime 2026-08-02 10:09); no such files exist in any commit.
+        - Which document governs the book's content for 31/32/35/36: the TOC (as of 314ceba: 'cut from the book', material 'removed') or the archive (still mapping all four to chapters and listing 'Blocks 33–36' as an open placement decision)? The 2026-08-02 TOC wording was 'skipped at the outline layer — no separate outline files'; two days later it became 'cut from the book'.
+        - The 0.md register claim ('the scenario chapters are fiction and carry CONJECTURE for their premises') is attributed to STATUS_AND_LABEL_DISCIPLINE.md, which lists CONJECTURE as a label but contains no 'fiction' or 'scenario' text; where was the fiction/CONJECTURE labelling of the manuscript actually ruled?
+        - Commit 5a8d533 says '55 block/outline files' but committed 52 block files (plus TOC and archive, plus two pre-existing Martin files); the origin of the count is unexplained.
+        - The restore exists only on the closed, unmerged PR #27 branch (closed 2026-10-17). Did the owner reverse D15, or has the restore simply not been merged? Main at 2165144 never received L8/L4/work/writing/manuscript/, and its sheets still cite ARCH:37 and intake/manuscript/ as paths that cannot be opened.
+        - How do the 52 blocks map onto the 27-chapter book tree opened by b1ec302 (L8/L4/work/writing/book/ch01…ch27)? The TOC's 18-chapter structure and the archive's chapter mapping refer to the older numbering; no crosswalk was found in the manuscript directory.
+        - The archive's open items (ARCH:748) include unfinished verification tasks (NASA CP-2255, SpudCell preprint status, AARO documents, the six Block 46 specification defects, the Tic Tac date correction); none of the files in this directory records whether any were later closed, and THEME_LEDGER T4 noted that the Reactive->Responsive correction had not propagated to Block_44 line 11.
+        - The five extracted .docx/.odt/chat Markdown files in the scratchpad show no block-corpus markers; whether they are earlier or later states of the same manuscript, or a different line of development, remains to be established by another step.
+    - item 7
+      - **key**: ledgers
+      - **facts**: 50
+      - **open_questions**
+        - Is the master LEDGER row 37 (MANUSCRIPT.tex stub, waiting on 'Real LaTeX migration') meant to stand as a declared-stale record, or is the LaTeX migration still an intended deliverable now that the stub was deleted at 8c98573 and no .tex exists at HEAD? No record read states that the LaTeX plan was abandoned or superseded.
+        - Which sense of 'prior-art search' governs: DISTILLATION §7 records a four-lane 2026-08-05 check, but §5 and all three L7 sheets say the search for a prior definition of auditonomy is 'still unrun'. Was a definition-level search ever run anywhere?
+        - The 2026-08-16 queue items 3 (auditability-gap search) and 5 (definition ambiguities at lines 18/96/181 via a boundary note) are not recorded as done in any file read; are they still open?
+        - AU-NORM-01 'do not restore' (2026-08-16 ledger) versus LEDGER.md:38 'restore is the principal's call' for manuscripts/definitions README/REGISTER: which text is current, given that both remain at HEAD and the files were deleted 2026-09-07?
+        - Where did auditonoomous-chat-3.docx, the Sourcebook v0.1 set, SPINE_v0.1 and the coverage/source manifests go: deleted at 8c98573 on main, restored only on the closed roadmap branch (62d2e3f); is that restoration still wanted?
+        - The 'rescue/reorg-2026-08-14' branch and commit 9aefa6e named by the ledgers are not present in this clone's remotes; are they still held anywhere?
+        - LEDGER.md:29 dates the freeze retirement '2026-08-16' while the commit 1d83788 and the harmonization table say 2026-08-14; which date is intended by that row?
+        - The THEME_LEDGER's ISO/IEC 27002 'dedicated retrieval lane is running' (line 221) has no recorded report in the files read; did it report?
+        - The owner-decision rows of harmonization §5 (split-or-cite, session-object extraction, binder/internal position, Autonomous Theory home, CLAUDE.md held off) are unrecorded as decided in anything read up to HEAD 2165144; were any decided in the 13–14 September roadmap branch (outside this step)?
+    - item 8
+      - **key**: history
+      - **facts**: 57
+      - **open_questions**
+        - PR #27's state (closed, unmerged) is asserted by the task text only; git shows the branch is unmerged (merge-base = main HEAD, no main commits beyond) but cannot show PR status — confirm via GitHub if it matters.
+        - Whether manuscripts/main/auditonomous.odt (47487 bytes at a512737, deleted at 8c98573, restored nowhere) or the five orphan .odt files (auditonomous-manuscript.odt, auditonomous.odt, autonomous-theory.odt, my-book.odt, stream-eb-carrier-imporotant.odt, all deleted at 8c98573) contain author chapter prose — binaries not extracted; they are the only candidates for author drafts outside the Master Archive, and the restore record's classification of auditonomous.odt as 'packaging of the sourcebook' conflicts with its commit dates.
+        - Whether auditnomous-main.docx (69430 bytes, blob d03eb10) and the deleted Auditonomous_Book_Material_Sourcebook_v0.1.docx (81886 bytes) differ in content or only in rendering — not diffed (binary); the extracted text of the former is the Sourcebook v0.1.
+        - SESSION_2026-08-05_AUDITON_ARCHITECTURE.md changed content at 8c98573 (R090, blob 1373893 -> 4a180b7) although that commit describes moves; the nature of the change was not examined.
+        - The rescue commit 9aefa6e ('rescue/reorg-2026-08-14', cited by e9511f5 as the first deployment 'reset away by PRs #15-17') is not present in this clone's refs; its content could not be checked.
+        - Which owner ruling governs contact/first-contact material in the book: HUB_LEDGER 2026-08-14 'scholarly only' vs the roadmap's 2026-09-13 instruction quoting 'auditbonomy and first contact'.
+        - The restore record's cross-reference to harmonization §8 for the five .odt files points to a section with no such disposition; the only standing statement is LEDGER.md:32 '[source text withheld from the public copy]'.
+        - Whether the roadmap branch's restored Block/Master Archive/TOC files are intended to supersede HEAD's state is undecided by git: the branch is unmerged and the roadmap labels itself PROPOSAL / nothing adopted.
+    - item 9
+      - **key**: embodied
+      - **facts**: 45
+      - **open_questions**
+        - Does nu-algebra commit ea08f59 exist, and what does `[source text withheld from the public copy]` return? This is the only way to resolve the FAILED CHECK (6a717c70… on disk vs 7fd260a5… declared at LEX:18); MOVE_LOG@1d83788:127-129 leaves the two explanations (local divergence vs wrong declared hash) undistinguished.
+        - Where is feedback_artifact_hash_naming.md, the 'locked' naming-policy authority cited at LEX:20-22? Not found under intake/ (THEME_LEDGER:347); not searched beyond this repository.
+        - Are abba-01/ebios and aybllc/ebios one object (roadmap D-item, BOOK_STRUCTURE:663/671), and does either hold the manuscript? Nothing in this repository says so; the ebios repository was not read here.
+        - Will the owner reopen PR #27 or cherry-pick 62d2e3f onto main? Until then main (2165144) holds no copy and the binding record says 'Content held here | none'.
+        - Who pins [source text withheld from the public copy]? Left to the owner (restore-2026-09-14.md:73; roadmap S5), and the Version row still says 'no commit or manuscript hash is pinned'.
+        - Is holding the two files at a BIND position consistent with the routing plan's BIND rule ('the peer's content is not copied')? The branch justifies it by the peer-2 precedent; no owner ruling is recorded.
+        - On the branch, peer-3/0.md still says 'absent from live trees' and 'Nothing of them is held here' while object-1/0.md holds the files; which sheet is to be corrected is unrecorded.
+        - Appendix E's 'now lives beside this entry at manuscript/' has been false since 8c98573 on both main and the branch; the routing plan says it does not edit the definition — who corrects or annotates Appendix E?
+        - The PDF carries no hash in its filename and no self-claim; whether the PDF is exactly v0.2 of the md (beyond matching Appendix E's 520ada05… prefix) is unverified.
+        - The manuscript's 'Intended destination' is the 'eBIOS / EB Carrier repo intake pipeline' (LEX:10) with a proposed docs/ placement (LEX:300); whether it was ever placed there, or whether peer-3 here is its only live home, is not recorded.
+    - item 10
+      - **key**: catchall
+      - **facts**: 50
+      - **open_questions**
+        - Which home the owner names for the Autonomous Theory files: the routing plan's candidates were L7/peering/private/ingress/ (as Eric's own separate work) or L6 retired; the roadmap branch's D12 says 'the files get their own home' and names an existing repository aybllc/autonomous-theory in its survey (D23), but nothing on main records a decision.
+        - Whether `#autonomous(1).txt` should be described as a draft or a chat export: main's sheet says 'the 2025 Autonomous Theory draft', the roadmap branch says 'chat export', the sourcebook L015 says 'CORE EXCLUSION … [source text withheld from the public copy] … personal material'; inspection shows lines 1–635 prose draft and 636–746 a 2025-06-25 chat export with personal contact details and a draft letter — whether that personal material should sit in a repository at all is not addressed on main.
+        - Why the PDF carries no author line while the .txt signs 'Eric Dwight Martin - 2025'; and whether the 2025-10-11 print of autonomoustheory.org is the version the owner means by 'Autonomous Theory'.
+        - The author's calls remain undecided on main: [source text withheld from the public copy]'), Q1–Q9 (Q9 'may be the definitional key'), the DEF:52 rewording ('Pending Eric's ruling'), the reader-agnostic divergence; the routing plan and the roadmap branch both leave them untouched.
+        - DISTILLATION §5 says [source text withheld from the public copy] is 'still unrun' and LEDGER.md:39 says 'First prior-art search' is outstanding; nothing on main records it as run (§7 covers only the four correspondence lanes). Whether the deep-research run of 2026-08-05 (model output, 'never evidence') counts for anything here is unadjudicated.
+        - CONTRADICTIONS.md links to STANDARDS_REGISTER.md, ISO_IEC_REQUIREMENTS.md, IEEE_REQUIREMENTS.md and NIST_REQUIREMENTS.md, none of which exists in review/ at HEAD; whether the L4 extractions (ieee-/iso-iec-/nist-requirements-for-autonomo*.md) are their renamed successors is not stated anywhere I read.
+        - PERPETUITY and THEME_LEDGER cite intake/manuscript/Block_*.md and ARCH/LEX aliases that are absent at HEAD (git ls-files shows no intake/, common/ or manuscripts/ paths); the roadmap branch restored some pruned material from 1d83788 but that branch is closed unmerged.
+        - L8/L5/0.md:80 lists only two review/ holdings while review/0.md lists five; which sheet the owner treats as authoritative for the catch-all's inventory is not stated.
+        - No PARKED label is applied to any catch-all item on main; whether 'none adjudicated' means the owner has not yet looked, or has looked and left them unlabelled, cannot be determined from the repository.
+- **workflowProgress**
+  - item 1
+    - **type**: workflow_phase
+    - **index**: 1
+    - **title**: Read
+  - item 2
+    - **type**: workflow_phase
+    - **index**: 2
+    - **title**: Synthesize
+  - item 3
+    - **type**: workflow_phase
+    - **index**: 3
+    - **title**: Verify
+  - item 4
+    - **type**: workflow_phase
+    - **index**: 4
+    - **title**: Critique
+  - item 5
+    - **type**: workflow_phase
+    - **index**: 5
+    - **title**: Final
+  - item 6
+    - **type**: workflow_agent
+    - **index**: 1
+    - **label**: read:sourcebook
+    - **phaseIndex**: 1
+    - **phaseTitle**: Read
+    - **agentId**: a311b6aa1ca610033
+    - **model**: claude-fable-5-1
+    - **state**: done
+    - **startedAt**: 1793676777055
+    - **queuedAt**: 1793676777019
+    - **attempt**: 1
+    - **lastToolName**: StructuredOutput
+    - **lastToolSummary**: Source: /home/user/auditonomous/L8/L4/work/writing/auditnom…
+    - **promptPreview**: GROUND RULES (read-only). The repository is at /home/user/auditonomous; its working tree is checked out at origin/main (commit 2165144, 2026-09-11) and must stay that way.
+      Never run git checkout, switch, stash, reset, merge, pull, or write any file inside the repository. Read other branches only with "git -C /home/user/auditonomous show <ref>:<path>" and "git -C /home/user/auditonomous ls-tree -r …
+    - **promptFramed**: yes
+    - **lastProgressAt**: 1793677469003
+    - **tokens**: 215919
+    - **toolCalls**: 45
+    - **durationMs**: 691946
+    - **resultPreview**: {"summary":"Source: /home/user/auditonomous/L8/L4/work/writing/auditnomous-main.docx (blob d03eb10, 69430 bytes, sha256 fb2c7123…670e), read in full via the extraction EXT = /tmp/claude-0/-home-user/bfcfd013-a2da-5019-961e-7f46116f08be/scratchpad/manuscript/text/auditnomous-main.md (2326 lines, 12435 words; a fresh pandoc --wrap=none conversion matches it exactly). Despite its filename and the she…
+  - item 7
+    - **type**: workflow_agent
+    - **index**: 2
+    - **label**: read:assessment
+    - **phaseIndex**: 1
+    - **phaseTitle**: Read
+    - **agentId**: ac531b18c4f8ef9fb
+    - **model**: claude-fable-5-1
+    - **state**: done
+    - **startedAt**: 1793676777055
+    - **queuedAt**: 1793676777019
+    - **attempt**: 1
+    - **lastToolName**: StructuredOutput
+    - **lastToolSummary**: Abbreviations: IMP.md = /tmp/claude-0/-home-user/bfcfd013-a…
+    - **promptPreview**: GROUND RULES (read-only). The repository is at /home/user/auditonomous; its working tree is checked out at origin/main (commit 2165144, 2026-09-11) and must stay that way.
+      Never run git checkout, switch, stash, reset, merge, pull, or write any file inside the repository. Read other branches only with "git -C /home/user/auditonomous show <ref>:<path>" and "git -C /home/user/auditonomous ls-tree -r …
+    - **promptFramed**: yes
+    - **lastProgressAt**: 1793677585194
+    - **tokens**: 229673
+    - **toolCalls**: 52
+    - **durationMs**: 806568
+    - **resultPreview**: {"summary":"Abbreviations: IMP.md = /tmp/claude-0/-home-user/bfcfd013-a2da-5019-961e-7f46116f08be/scratchpad/manuscript/text/auditonomouos-important.md (620 lines, 7,611 words; extraction of L8/L4/work/writing/auditonomouos-important.docx at origin/main 2165144). PROSP.md = .../manuscript/text/auditonomous-08-03-26.md. PROMPT.txt = /tmp/claude-0/-home-user/bfcfd013-a2da-5019-961e-7f46116f08be/scra…
+  - item 8
+    - **type**: workflow_agent
+    - **index**: 3
+    - **label**: read:prospectus
+    - **phaseIndex**: 1
+    - **phaseTitle**: Read
+    - **agentId**: a2eacb9f91bc46645
+    - **model**: claude-fable-5-1
+    - **state**: done
+    - **startedAt**: 1793677471525
+    - **queuedAt**: 1793676777019
+    - **attempt**: 1
+    - **lastToolName**: StructuredOutput
+    - **lastToolSummary**: Source: L8/L4/work/writing/auditonomous-08-03-26.odt ("Book…
+    - **promptPreview**: GROUND RULES (read-only). The repository is at /home/user/auditonomous; its working tree is checked out at origin/main (commit 2165144, 2026-09-11) and must stay that way.
+      Never run git checkout, switch, stash, reset, merge, pull, or write any file inside the repository. Read other branches only with "git -C /home/user/auditonomous show <ref>:<path>" and "git -C /home/user/auditonomous ls-tree -r …
+    - **promptFramed**: yes
+    - **lastProgressAt**: 1793677969827
+    - **tokens**: 210411
+    - **toolCalls**: 41
+    - **durationMs**: 498302
+    - **resultPreview**: {"summary":"Source: L8/L4/work/writing/auditonomous-08-03-26.odt (\"Book Prospectus v0.1\", [source text withheld from the public copy]), read in full from its Markdown extraction P = /tmp/claude-0/-home-user/bfcfd013-a2da-5019-961e-7f46116f08be/scratchpad/manuscript/text/auditonomous-08-03-26.md (2485 lines; the prospectus proper is P:1-717, followed at P:719-248…
+  - item 9
+    - **type**: workflow_agent
+    - **index**: 4
+    - **label**: read:chats
+    - **phaseIndex**: 1
+    - **phaseTitle**: Read
+    - **agentId**: ae8f7b41dcd1a8eb5
+    - **model**: claude-fable-5-1
+    - **state**: done
+    - **startedAt**: 1793677587063
+    - **queuedAt**: 1793676777019
+    - **attempt**: 1
+    - **lastToolName**: StructuredOutput
+    - **lastToolSummary**: The two files are not raw chat logs. Each is a python-docx-…
+    - **promptPreview**: GROUND RULES (read-only). The repository is at /home/user/auditonomous; its working tree is checked out at origin/main (commit 2165144, 2026-09-11) and must stay that way.
+      Never run git checkout, switch, stash, reset, merge, pull, or write any file inside the repository. Read other branches only with "git -C /home/user/auditonomous show <ref>:<path>" and "git -C /home/user/auditonomous ls-tree -r …
+    - **promptFramed**: yes
+    - **lastProgressAt**: 1793678284341
+    - **tokens**: 212493
+    - **toolCalls**: 37
+    - **durationMs**: 697278
+    - **resultPreview**: {"summary":"The two files are not raw chat logs. Each is a python-docx-generated \"Chat History Ingestion\" volume in the Auditonomous Book Material Sourcebook series. Chat-1 (/tmp/claude-0/-home-user/bfcfd013-a2da-5019-961e-7f46116f08be/scratchpad/manuscript/text/auditonomous-chat-1.md) is \"Version 0.1 CHAT-HIST\", chat-2 (/tmp/claude-0/-home-user/bfcfd013-a2da-5019-961e-7f46116f08be/scratchpad/…
+  - item 10
+    - **type**: workflow_agent
+    - **index**: 5
+    - **label**: read:roadmap
+    - **phaseIndex**: 1
+    - **phaseTitle**: Read
+    - **agentId**: a9dc2855804421f50
+    - **model**: claude-fable-5-1
+    - **state**: done
+    - **startedAt**: 1793677971696
+    - **queuedAt**: 1793676777019
+    - **attempt**: 1
+    - **lastToolName**: StructuredOutput
+    - **lastToolSummary**: Source: branch origin/claude/book-structure-roadmap-k8ap82 …
+    - **promptPreview**: GROUND RULES (read-only). The repository is at /home/user/auditonomous; its working tree is checked out at origin/main (commit 2165144, 2026-09-11) and must stay that way.
+      Never run git checkout, switch, stash, reset, merge, pull, or write any file inside the repository. Read other branches only with "git -C /home/user/auditonomous show <ref>:<path>" and "git -C /home/user/auditonomous ls-tree -r …
+    - **promptFramed**: yes
+    - **lastProgressAt**: 1793678480707
+    - **tokens**: 175851
+    - **toolCalls**: 27
+    - **durationMs**: 509010
+    - **resultPreview**: {"summary":"Source: branch origin/claude/book-structure-roadmap-k8ap82 (head 9259c18, 2026-09-14 02:04 UTC; five commits above origin/main 2165144, all authored \"Claude <noreply@anthropic.com>\"), the head of PR #27. Below, ROADMAP = L8/L5/research/review/BOOK_STRUCTURE_AND_ROADMAP_2026-09-13.md on that branch (686 lines; the first version at 30a40f1 had 635 lines and no §9), and BOOK = L8/L4/wor…
+  - item 11
+    - **type**: workflow_agent
+    - **index**: 6
+    - **label**: read:blocks
+    - **phaseIndex**: 1
+    - **phaseTitle**: Read
+    - **agentId**: a3cce81e21bd6177e
+    - **model**: claude-fable-5-1
+    - **state**: done
+    - **startedAt**: 1793678286109
+    - **queuedAt**: 1793676777020
+    - **attempt**: 1
+    - **lastToolName**: StructuredOutput
+    - **lastToolSummary**: Source: the directory L8/L4/work/writing/manuscript/ on ori…
+    - **promptPreview**: GROUND RULES (read-only). The repository is at /home/user/auditonomous; its working tree is checked out at origin/main (commit 2165144, 2026-09-11) and must stay that way.
+      Never run git checkout, switch, stash, reset, merge, pull, or write any file inside the repository. Read other branches only with "git -C /home/user/auditonomous show <ref>:<path>" and "git -C /home/user/auditonomous ls-tree -r …
+    - **promptFramed**: yes
+    - **lastProgressAt**: 1793678896104
+    - **tokens**: 162962
+    - **toolCalls**: 49
+    - **durationMs**: 609995
+    - **resultPreview**: {"summary":"Source: the directory L8/L4/work/writing/manuscript/ on origin/claude/book-structure-roadmap-k8ap82 (abbreviated RM: below; head 9259c18, 2026-09-14), read only with git show / ls-tree; cross-checked against main (HEAD 2165144, 2026-09-11), git history, the restore record RM:L8/L6/history/restore-2026-09-14.md, and commits fc3b018, 5a8d533, 3406bd1, 314ceba, 1d83788, 8c98573, 62d2e3f. …
+  - item 12
+    - **type**: workflow_agent
+    - **index**: 7
+    - **label**: read:ledgers
+    - **phaseIndex**: 1
+    - **phaseTitle**: Read
+    - **agentId**: ad6415be2acfdb5be
+    - **model**: claude-fable-5-1
+    - **state**: done
+    - **startedAt**: 1793678482672
+    - **queuedAt**: 1793676777020
+    - **attempt**: 1
+    - **lastToolName**: StructuredOutput
+    - **lastToolSummary**: Source: the L6 ledgers and layer sheets of aybllc/auditonom…
+    - **promptPreview**: GROUND RULES (read-only). The repository is at /home/user/auditonomous; its working tree is checked out at origin/main (commit 2165144, 2026-09-11) and must stay that way.
+      Never run git checkout, switch, stash, reset, merge, pull, or write any file inside the repository. Read other branches only with "git -C /home/user/auditonomous show <ref>:<path>" and "git -C /home/user/auditonomous ls-tree -r …
+    - **promptFramed**: yes
+    - **lastProgressAt**: 1793679064121
+    - **tokens**: 179140
+    - **toolCalls**: 39
+    - **durationMs**: 581449
+    - **resultPreview**: {"summary":"Source: the L6 ledgers and layer sheets of aybllc/auditonomous at origin/main (HEAD 2165144, merge of PR #26, 2026-09-11), plus read-only git history (147 commits reachable from HEAD; first commit fc3b018 of 2026-07-30), cross-checked against the retired 2026-08-14 layout and the 7LM sheets. These are the repository's own records of what happened to the manuscript material, not the dra…
+  - item 13
+    - **type**: workflow_agent
+    - **index**: 8
+    - **label**: read:history
+    - **phaseIndex**: 1
+    - **phaseTitle**: Read
+    - **agentId**: a1d6611427c13a132
+    - **model**: claude-fable-5-1
+    - **state**: done
+    - **startedAt**: 1793678898619
+    - **queuedAt**: 1793676777020
+    - **attempt**: 1
+    - **lastToolName**: StructuredOutput
+    - **lastToolSummary**: Source: git history of /home/user/auditonomous (origin/main…
+    - **promptPreview**: GROUND RULES (read-only). The repository is at /home/user/auditonomous; its working tree is checked out at origin/main (commit 2165144, 2026-09-11) and must stay that way.
+      Never run git checkout, switch, stash, reset, merge, pull, or write any file inside the repository. Read other branches only with "git -C /home/user/auditonomous show <ref>:<path>" and "git -C /home/user/auditonomous ls-tree -r …
+    - **promptFramed**: yes
+    - **lastProgressAt**: 1793679529082
+    - **tokens**: 220855
+    - **toolCalls**: 41
+    - **durationMs**: 630462
+    - **resultPreview**: {"summary":"Source: git history of /home/user/auditonomous (origin/main = 2165144, 147 commits, first fc3b018 2026-07-30; one extra ref origin/claude/book-structure-roadmap-k8ap82 = 9259c18, 5 commits past main, merge-base 2165144, unmerged; no tags/stash). Read-only; no checkout performed.\n\nWhat it shows about manuscript development: the only author prose ever committed is the Auditonomous Theo…
+  - item 14
+    - **type**: workflow_agent
+    - **index**: 9
+    - **label**: read:embodied
+    - **phaseIndex**: 1
+    - **phaseTitle**: Read
+    - **agentId**: a03d86a2cee7f1b4f
+    - **model**: claude-fable-5-1
+    - **state**: done
+    - **startedAt**: 1793679065991
+    - **queuedAt**: 1793676777020
+    - **attempt**: 1
+    - **lastToolName**: StructuredOutput
+    - **lastToolSummary**: The second manuscript thread is "Embodied Auditonomy, LexRO…
+    - **promptPreview**: GROUND RULES (read-only). The repository is at /home/user/auditonomous; its working tree is checked out at origin/main (commit 2165144, 2026-09-11) and must stay that way.
+      Never run git checkout, switch, stash, reset, merge, pull, or write any file inside the repository. Read other branches only with "git -C /home/user/auditonomous show <ref>:<path>" and "git -C /home/user/auditonomous ls-tree -r …
+    - **promptFramed**: yes
+    - **lastProgressAt**: 1793679639064
+    - **tokens**: 180426
+    - **toolCalls**: 40
+    - **durationMs**: 573072
+    - **resultPreview**: {"summary":"The second manuscript thread is \"Embodied Auditonomy, LexROM, and the Cabin Model\" (self-described \"Intake document for eBIOS / EB Carrier repository\"), author Eric D. Martin with an assistant doing \"[source text withheld from the public copy]\", dated 2026-04-28, [source text withheld from the public copy]\", Ve…
+  - item 15
+    - **type**: workflow_agent
+    - **index**: 10
+    - **label**: read:catchall
+    - **phaseIndex**: 1
+    - **phaseTitle**: Read
+    - **agentId**: a05921fc0c771e86b
+    - **model**: claude-fable-5-1
+    - **state**: done
+    - **startedAt**: 1793679531163
+    - **queuedAt**: 1793676777020
+    - **attempt**: 1
+    - **lastToolName**: StructuredOutput
+    - **lastToolSummary**: Source: the catch-all `L8/L5/research/review/` and the find…
+    - **promptPreview**: GROUND RULES (read-only). The repository is at /home/user/auditonomous; its working tree is checked out at origin/main (commit 2165144, 2026-09-11) and must stay that way.
+      Never run git checkout, switch, stash, reset, merge, pull, or write any file inside the repository. Read other branches only with "git -C /home/user/auditonomous show <ref>:<path>" and "git -C /home/user/auditonomous ls-tree -r …
+    - **promptFramed**: yes
+    - **lastProgressAt**: 1793680099825
+    - **tokens**: 162182
+    - **toolCalls**: 48
+    - **durationMs**: 568661
+    - **resultPreview**: {"summary":"Source: the catch-all `L8/L5/research/review/` and the findings `L8/L5/research/findings/` on origin/main (2165144, 2026-09-11), read read-only, with the L6 harmonization record, the routing plan, the L4 computation/writing sheets and git history for context.\n\nWhat the catch-all is: on the owner's word [source text withheld from the public copy]\"), `common/` and `intake/`…
+  - item 16
+    - **type**: workflow_agent
+    - **index**: 11
+    - **label**: synthesize
+    - **phaseIndex**: 2
+    - **phaseTitle**: Synthesize
+    - **agentId**: a92f7ea8c7349428b
+    - **model**: claude-fable-5-1
+    - **state**: done
+    - **startedAt**: 1793680102142
+    - **queuedAt**: 1793680102119
+    - **attempt**: 1
+    - **lastToolName**: StructuredOutput
+    - **lastToolSummary**: # Where the Auditonomous manuscript development got to (rea…
+    - **promptPreview**: GROUND RULES (read-only). The repository is at /home/user/auditonomous; its working tree is checked out at origin/main (commit 2165144, 2026-09-11) and must stay that way.
+      Never run git checkout, switch, stash, reset, merge, pull, or write any file inside the repository. Read other branches only with "git -C /home/user/auditonomous show <ref>:<path>" and "git -C /home/user/auditonomous ls-tree -r …
+    - **promptFramed**: yes
+    - **lastProgressAt**: 1793680629619
+    - **tokens**: 280889
+    - **toolCalls**: 7
+    - **durationMs**: 527475
+    - **resultPreview**: {"report":"# Where the Auditonomous manuscript development got to (read 2026-11-03)\n\n**Short answer.** No chapter of the book has been written anywhere. The author's only prose is the fifty-two-block Auditonomous Theory corpus, last edited 4 August 2026 and deleted from `main` on 15 August 2026. Everything since is planning: a prospectus and a referee report (3 August), an extraction sourcebook …
+  - item 17
+    - **type**: workflow_agent
+    - **index**: 12
+    - **label**: verify:K01:1
+    - **phaseIndex**: 3
+    - **phaseTitle**: Verify
+    - **agentId**: a6f692a387d2c3e64
+    - **model**: claude-fable-5-1
+    - **state**: done
+    - **startedAt**: 1793680632070
+    - **queuedAt**: 1793680632040
+    - **attempt**: 1
+    - **lastToolName**: StructuredOutput
+    - **lastToolSummary**: high
+    - **promptPreview**: GROUND RULES (read-only). The repository is at /home/user/auditonomous; its working tree is checked out at origin/main (commit 2165144, 2026-09-11) and must stay that way.
+      Never run git checkout, switch, stash, reset, merge, pull, or write any file inside the repository. Read other branches only with "git -C /home/user/auditonomous show <ref>:<path>" and "git -C /home/user/auditonomous ls-tree -r …
+    - **promptFramed**: yes
+    - **lastProgressAt**: 1793680757431
+    - **tokens**: 64668
+    - **toolCalls**: 12
+    - **durationMs**: 125360
+    - **resultPreview**: {"refuted":false,"confidence":"high","reason":"CLAIM K01 CONFIRMED on every quoted phrase, number, date and path. Checks run 2026-11-03 ~03:30-04:38Z, all read-only (git log/rev-parse/merge-base/ls-remote, gh api); no checkout/fetch/write performed.\n\n(1) Local head. `git -C /home/user/auditonomous log -1 --format='%h %ai %s' origin/main` (run verbatim) → `2165144 2026-09-11 23:26:02 -0700 Merge …
+  - item 18
+    - **type**: workflow_agent
+    - **index**: 13
+    - **label**: verify:K01:2
+    - **phaseIndex**: 3
+    - **phaseTitle**: Verify
+    - **agentId**: ae937300bc6529225
+    - **model**: claude-fable-5-1
+    - **state**: done
+    - **startedAt**: 1793680632070
+    - **queuedAt**: 1793680632040
+    - **attempt**: 1
+    - **lastToolName**: StructuredOutput
+    - **lastToolSummary**: high
+    - **promptPreview**: GROUND RULES (read-only). The repository is at /home/user/auditonomous; its working tree is checked out at origin/main (commit 2165144, 2026-09-11) and must stay that way.
+      Never run git checkout, switch, stash, reset, merge, pull, or write any file inside the repository. Read other branches only with "git -C /home/user/auditonomous show <ref>:<path>" and "git -C /home/user/auditonomous ls-tree -r …
+    - **promptFramed**: yes
+    - **lastProgressAt**: 1793680880899
+    - **tokens**: 92628
+    - **toolCalls**: 22
+    - **durationMs**: 247673
+    - **resultPreview**: {"refuted":false,"confidence":"high","reason":"CLAIM K01 CONFIRMED on every stated fact; lens-2 search found omissions but none that change its meaning.\n\nA. Identity and date (local clone). `git -C /home/user/auditonomous log -1 origin/main`: sha 21651446b1f3f4547b588e6d7122ef7f9f81e9b9 (2165144); author \"EDM <149889949+abba-01@users.noreply.github.com> 2026-09-11 23:26:02 -0700\"; committer \"…
+  - item 19
+    - **type**: workflow_agent
+    - **index**: 14
+    - **label**: verify:K01:3
+    - **phaseIndex**: 3
+    - **phaseTitle**: Verify
+    - **agentId**: a0fd245bcd5e0bc35
+    - **model**: claude-fable-5-1
+    - **state**: done
+    - **startedAt**: 1793680759099
+    - **queuedAt**: 1793680632040
+    - **attempt**: 1
+    - **lastToolName**: StructuredOutput
+    - **lastToolSummary**: high
+    - **promptPreview**: GROUND RULES (read-only). The repository is at /home/user/auditonomous; its working tree is checked out at origin/main (commit 2165144, 2026-09-11) and must stay that way.
+      Never run git checkout, switch, stash, reset, merge, pull, or write any file inside the repository. Read other branches only with "git -C /home/user/auditonomous show <ref>:<path>" and "git -C /home/user/auditonomous ls-tree -r …
+    - **promptFramed**: yes
+    - **lastProgressAt**: 1793680916915
+    - **tokens**: 66667
+    - **toolCalls**: 7
+    - **durationMs**: 157816
+    - **resultPreview**: {"refuted":false,"confidence":"high","reason":"CLAIM K01 CONFIRMED on every element (checked 2026-11-03T04:41:03Z; all commands read-only; working tree untouched).\n\n(1) SHA / subject. `git -C /home/user/auditonomous log -1 --format='%H %h ... %s' origin/main` → `21651446b1f3f4547b588e6d7122ef7f9f81e9b9 2165144`, subject `Merge pull request #26 from aybllc/claude/admiring-pascal-t2yv3r`, author a…
+  - item 20
+    - **type**: workflow_agent
+    - **index**: 15
+    - **label**: verify:K02:1
+    - **phaseIndex**: 3
+    - **phaseTitle**: Verify
+    - **agentId**: afe4202434bea0aa5
+    - **model**: claude-fable-5-1
+    - **state**: done
+    - **startedAt**: 1793680882641
+    - **queuedAt**: 1793680632102
+    - **attempt**: 1
+    - **lastToolName**: StructuredOutput
+    - **lastToolSummary**: high
+    - **promptPreview**: GROUND RULES (read-only). The repository is at /home/user/auditonomous; its working tree is checked out at origin/main (commit 2165144, 2026-09-11) and must stay that way.
+      Never run git checkout, switch, stash, reset, merge, pull, or write any file inside the repository. Read other branches only with "git -C /home/user/auditonomous show <ref>:<path>" and "git -C /home/user/auditonomous ls-tree -r …
+    - **promptFramed**: yes
+    - **lastProgressAt**: 1793680988106
+    - **tokens**: 60625
+    - **toolCalls**: 10
+    - **durationMs**: 105465
+    - **resultPreview**: {"refuted":false,"confidence":"high","reason":"Every element of K02 reproduces verbatim from primary sources (checked 2026-11-03, read-only).\n\nCOMMITS ABOVE MAIN. `git -C /home/user/auditonomous rev-list --count origin/main..origin/claude/book-structure-roadmap-k8ap82` = 5; reverse direction (branch..main) = 0; merge-base = 21651446b1f3 = origin/main head (2165144, \"Merge pull request #26 from …
+  - item 21
+    - **type**: workflow_agent
+    - **index**: 16
+    - **label**: verify:K02:2
+    - **phaseIndex**: 3
+    - **phaseTitle**: Verify
+    - **agentId**: a79c34d1845446f55
+    - **model**: claude-fable-5-1
+    - **state**: done
+    - **startedAt**: 1793680918558
+    - **queuedAt**: 1793680632103
+    - **attempt**: 1
+    - **lastToolName**: StructuredOutput
+    - **lastToolSummary**: high
+    - **promptPreview**: GROUND RULES (read-only). The repository is at /home/user/auditonomous; its working tree is checked out at origin/main (commit 2165144, 2026-09-11) and must stay that way.
+      Never run git checkout, switch, stash, reset, merge, pull, or write any file inside the repository. Read other branches only with "git -C /home/user/auditonomous show <ref>:<path>" and "git -C /home/user/auditonomous ls-tree -r …
+    - **promptFramed**: yes
+    - **lastProgressAt**: 1793681379962
+    - **tokens**: 139061
+    - **toolCalls**: 21
+    - **durationMs**: 461404
+    - **resultPreview**: {"refuted":true,"confidence":"high","reason":"VERDICT BASIS (lens 2, omission/framing): every literal particular of K02 is CONFIRMED, but the claim omits facts carried by the very sources it cites that change the meaning of \"closed unmerged\" — chiefly that PR #27 was a DRAFT for its entire life and was closed by a Claude Code session close-out (posted under the owner's account), not by an owner …
+  - item 22
+    - **type**: workflow_agent
+    - **index**: 17
+    - **label**: verify:K02:3
+    - **phaseIndex**: 3
+    - **phaseTitle**: Verify
+    - **agentId**: acdf0c637a3023419
+    - **model**: claude-fable-5-1
+    - **state**: done
+    - **startedAt**: 1793680989607
+    - **queuedAt**: 1793680632103
+    - **attempt**: 1
+    - **lastToolName**: StructuredOutput
+    - **lastToolSummary**: high
+    - **promptPreview**: GROUND RULES (read-only). The repository is at /home/user/auditonomous; its working tree is checked out at origin/main (commit 2165144, 2026-09-11) and must stay that way.
+      Never run git checkout, switch, stash, reset, merge, pull, or write any file inside the repository. Read other branches only with "git -C /home/user/auditonomous show <ref>:<path>" and "git -C /home/user/auditonomous ls-tree -r …
+    - **promptFramed**: yes
+    - **lastProgressAt**: 1793681074642
+    - **tokens**: 59854
+    - **toolCalls**: 7
+    - **durationMs**: 85034
+    - **resultPreview**: {"refuted":false,"confidence":"high","reason":"Attempted refutation of K02 on chronology/location; every element is confirmed by independent checks of the local clone (/home/user/auditonomous, read-only) and the GitHub API (gh api). No contradiction found.\n\n(1) \"Exactly five commits above main\": `git rev-list --count origin/main..origin/claude/book-structure-roadmap-k8ap82` = 5; reverse count …
+  - item 23
+    - **type**: workflow_agent
+    - **index**: 18
+    - **label**: verify:K03:1
+    - **phaseIndex**: 3
+    - **phaseTitle**: Verify
+    - **agentId**: a9059f9e8d0be4dcd
+    - **model**: claude-fable-5-1
+    - **state**: done
+    - **startedAt**: 1793681076158
+    - **queuedAt**: 1793680632103
+    - **attempt**: 1
+    - **lastToolName**: StructuredOutput
+    - **lastToolSummary**: high
+    - **promptPreview**: GROUND RULES (read-only). The repository is at /home/user/auditonomous; its working tree is checked out at origin/main (commit 2165144, 2026-09-11) and must stay that way.
+      Never run git checkout, switch, stash, reset, merge, pull, or write any file inside the repository. Read other branches only with "git -C /home/user/auditonomous show <ref>:<path>" and "git -C /home/user/auditonomous ls-tree -r …
+    - **promptFramed**: yes
+    - **lastProgressAt**: 1793681355388
+    - **tokens**: 98250
+    - **toolCalls**: 15
+    - **durationMs**: 279229
+    - **resultPreview**: {"refuted":false,"confidence":"high","reason":"Verified read-only against /home/user/auditonomous, HEAD == origin/main == 2165144 (2026-09-11 23:26:02 -0700, \"Merge pull request #26\"), working tree clean. (1) `git ls-tree -r --name-only origin/main L8/L4/work/writing/` returns exactly the 11 paths the claim lists, all mode 100644 blobs: 0.md (4219 B), auditnomous-main.docx (69430 B), auditonomou…
+  - item 24
+    - **type**: workflow_agent
+    - **index**: 19
+    - **label**: verify:K03:2
+    - **phaseIndex**: 3
+    - **phaseTitle**: Verify
+    - **agentId**: a10a16e407b3b33d9
+    - **model**: claude-fable-5-1
+    - **state**: done
+    - **startedAt**: 1793681357074
+    - **queuedAt**: 1793680632103
+    - **attempt**: 1
+    - **lastToolName**: StructuredOutput
+    - **lastToolSummary**: high
+    - **promptPreview**: GROUND RULES (read-only). The repository is at /home/user/auditonomous; its working tree is checked out at origin/main (commit 2165144, 2026-09-11) and must stay that way.
+      Never run git checkout, switch, stash, reset, merge, pull, or write any file inside the repository. Read other branches only with "git -C /home/user/auditonomous show <ref>:<path>" and "git -C /home/user/auditonomous ls-tree -r …
+    - **promptFramed**: yes
+    - **lastProgressAt**: 1793681960708
+    - **tokens**: 175105
+    - **toolCalls**: 34
+    - **durationMs**: 603634
+    - **resultPreview**: {"refuted":true,"confidence":"high","reason":"The HEAD-only inventory in K03 reproduces exactly (11 paths under L8/L4/work/writing/ at origin/main 2165144; the pattern grep over the HEAD tree hits only L7/provenance/sources/staging-records/ieee/papers/README.md; no *.tex at HEAD). But under the omission/framing lens the sentence \"no block, archive, TOC, spine, sourcebook .md, roadmap, chapter, pa…
+  - item 25
+    - **type**: workflow_agent
+    - **index**: 20
+    - **label**: verify:K03:3
+    - **phaseIndex**: 3
+    - **phaseTitle**: Verify
+    - **agentId**: ac397fa26f8977426
+    - **model**: claude-fable-5-1
+    - **state**: done
+    - **startedAt**: 1793681381912
+    - **queuedAt**: 1793680632103
+    - **attempt**: 1
+    - **lastToolName**: StructuredOutput
+    - **lastToolSummary**: high
+    - **promptPreview**: GROUND RULES (read-only). The repository is at /home/user/auditonomous; its working tree is checked out at origin/main (commit 2165144, 2026-09-11) and must stay that way.
+      Never run git checkout, switch, stash, reset, merge, pull, or write any file inside the repository. Read other branches only with "git -C /home/user/auditonomous show <ref>:<path>" and "git -C /home/user/auditonomous ls-tree -r …
+    - **promptFramed**: yes
+    - **lastProgressAt**: 1793681742540
+    - **tokens**: 114965
+    - **toolCalls**: 25
+    - **durationMs**: 360628
+    - **resultPreview**: {"refuted":false,"confidence":"high","reason":"NOT REFUTED. Verified read-only against /home/user/auditonomous (HEAD = origin/main = 21651446b1f3f4547b588e6d7122ef7f9f81e9b9; author date 2026-09-11 23:26:02 -0700 = 2026-09-12T06:26:02Z; PR #26 merge commit per REST merge_commit_sha).\n\nPART 1 (inventory) CONFIRMED EXACTLY. `git ls-tree -r origin/main L8/L4/work/writing/` returns 11 entries, all m…
+  - item 26
+    - **type**: workflow_agent
+    - **index**: 21
+    - **label**: verify:K04:1
+    - **phaseIndex**: 3
+    - **phaseTitle**: Verify
+    - **agentId**: a7927e01a1ae4cf90
+    - **model**: claude-fable-5-1
+    - **state**: done
+    - **startedAt**: 1793681744159
+    - **queuedAt**: 1793680632116
+    - **attempt**: 1
+    - **lastToolName**: StructuredOutput
+    - **lastToolSummary**: high
+    - **promptPreview**: GROUND RULES (read-only). The repository is at /home/user/auditonomous; its working tree is checked out at origin/main (commit 2165144, 2026-09-11) and must stay that way.
+      Never run git checkout, switch, stash, reset, merge, pull, or write any file inside the repository. Read other branches only with "git -C /home/user/auditonomous show <ref>:<path>" and "git -C /home/user/auditonomous ls-tree -r …
+    - **promptFramed**: yes
+    - **lastProgressAt**: 1793682021522
+    - **tokens**: 88491
+    - **toolCalls**: 12
+    - **durationMs**: 277363
+    - **resultPreview**: {"refuted":false,"confidence":"high","reason":"Every quoted phrase, number, date, path and hash in K04 was re-checked against /home/user/auditonomous (working tree still at origin/main = 2165144; read-only commands only). All confirmed.\n\n(1) \"52-block corpus entered git on 2026-08-02\": commit 5a8d533d8fd5475e240db1881c90e2219342a7a9, author AND committer date 2026-08-02 10:29:48 -0700 (= 17:29…
+  - item 27
+    - **type**: workflow_agent
+    - **index**: 22
+    - **label**: verify:K04:2
+    - **phaseIndex**: 3
+    - **phaseTitle**: Verify
+    - **agentId**: ae0ba5a28c54588da
+    - **model**: claude-fable-5-1
+    - **state**: done
+    - **startedAt**: 1793681962999
+    - **queuedAt**: 1793680632116
+    - **attempt**: 1
+    - **lastToolName**: StructuredOutput
+    - **lastToolSummary**: medium
+    - **promptPreview**: GROUND RULES (read-only). The repository is at /home/user/auditonomous; its working tree is checked out at origin/main (commit 2165144, 2026-09-11) and must stay that way.
+      Never run git checkout, switch, stash, reset, merge, pull, or write any file inside the repository. Read other branches only with "git -C /home/user/auditonomous show <ref>:<path>" and "git -C /home/user/auditonomous ls-tree -r …
+    - **promptFramed**: yes
+    - **lastProgressAt**: 1793682562766
+    - **tokens**: 177108
+    - **toolCalls**: 30
+    - **durationMs**: 599767
+    - **resultPreview**: {"refuted":true,"confidence":"medium","reason":"VERDICT SHAPE: every literal proposition of K04 is CONFIRMED from git; the claim is marked refuted ONLY under the lens-2 omission/framing criterion (facts in the same source and neighbouring files that change its meaning). Confidence is 'medium' because the underlying facts are high-confidence while 'changes its meaning' is a judgment; the downstream…
+  - item 28
+    - **type**: workflow_agent
+    - **index**: 23
+    - **label**: verify:K04:3
+    - **phaseIndex**: 3
+    - **phaseTitle**: Verify
+    - **agentId**: a83aa17f4e293a8e5
+    - **model**: claude-fable-5-1
+    - **state**: done
+    - **startedAt**: 1793682023193
+    - **queuedAt**: 1793680632117
+    - **attempt**: 1
+    - **lastToolName**: StructuredOutput
+    - **lastToolSummary**: high
+    - **promptPreview**: GROUND RULES (read-only). The repository is at /home/user/auditonomous; its working tree is checked out at origin/main (commit 2165144, 2026-09-11) and must stay that way.
+      Never run git checkout, switch, stash, reset, merge, pull, or write any file inside the repository. Read other branches only with "git -C /home/user/auditonomous show <ref>:<path>" and "git -C /home/user/auditonomous ls-tree -r …
+    - **promptFramed**: yes
+    - **lastProgressAt**: 1793682356057
+    - **tokens**: 103531
+    - **toolCalls**: 15
+    - **durationMs**: 332863
+    - **resultPreview**: {"refuted":false,"confidence":"high","reason":"Every element of K04 is confirmed by git in /home/user/auditonomous. Entry: 5a8d533 (2026-08-02 10:29:48 -0700, 'Add Auditonomous Theory manuscript corpus and Third Power source') adds 54 files under intake/manuscript/ (Block_01..Block_52, Auditonomous_Theory_Master_Archive.md, Auditonomous_Theory_TOC.md); no earlier commit holds any of them (root fc3…
+  - item 29
+    - **type**: workflow_agent
+    - **index**: 24
+    - **label**: verify:K05:1
+    - **phaseIndex**: 3
+    - **phaseTitle**: Verify
+    - **agentId**: a6180a62f9a495460
+    - **model**: claude-fable-5-1
+    - **state**: done
+    - **startedAt**: 1793682358012
+    - **queuedAt**: 1793680632117
+    - **attempt**: 1
+    - **lastToolName**: StructuredOutput
+    - **lastToolSummary**: high
+    - **promptPreview**: GROUND RULES (read-only). The repository is at /home/user/auditonomous; its working tree is checked out at origin/main (commit 2165144, 2026-09-11) and must stay that way.
+      Never run git checkout, switch, stash, reset, merge, pull, or write any file inside the repository. Read other branches only with "git -C /home/user/auditonomous show <ref>:<path>" and "git -C /home/user/auditonomous ls-tree -r …
+    - **promptFramed**: yes
+    - **lastProgressAt**: 1793682785481
+    - **tokens**: 120334
+    - **toolCalls**: 26
+    - **durationMs**: 427469
+    - **resultPreview**: {"refuted":false,"confidence":"high","reason":"Every quoted phrase, number, date and path in K05 re-opens as cited; nothing was found wrong or unsupported.\n\n(1) 8-byte 'Skipped.' stubs — CONFIRMED. All four files share blob 2101e1d75cbe64da554d39217103472706b0d979, size 8; `od -c` gives exactly `S k i p p e d .` (no trailing newline). Present at 3406bd1 as intake/manuscript/Block_31_skipped.md, …
+  - item 30
+    - **type**: workflow_agent
+    - **index**: 25
+    - **label**: verify:K05:2
+    - **phaseIndex**: 3
+    - **phaseTitle**: Verify
+    - **agentId**: aa85066be519f6a70
+    - **model**: claude-fable-5-1
+    - **state**: done
+    - **startedAt**: 1793682564479
+    - **queuedAt**: 1793680632117
+    - **attempt**: 1
+    - **lastToolName**: StructuredOutput
+    - **lastToolSummary**: medium
+    - **promptPreview**: GROUND RULES (read-only). The repository is at /home/user/auditonomous; its working tree is checked out at origin/main (commit 2165144, 2026-09-11) and must stay that way.
+      Never run git checkout, switch, stash, reset, merge, pull, or write any file inside the repository. Read other branches only with "git -C /home/user/auditonomous show <ref>:<path>" and "git -C /home/user/auditonomous ls-tree -r …
+    - **promptFramed**: yes
+    - **lastProgressAt**: 1793682996417
+    - **tokens**: 186374
+    - **toolCalls**: 36
+    - **durationMs**: 431938
+    - **resultPreview**: {"refuted":true,"confidence":"medium","reason":"VERIFIED COMPONENTS. (1) Stubs: on origin/claude/book-structure-roadmap-k8ap82 the files L8/L4/work/writing/manuscript/Block_31_skipped.md, Block_32_skipped.md, Block_35_skipped.md, Block_36_skipped.md are each 8 bytes, `od -c` = \"S k i p p e d .\" (no newline), all the same blob 2101e1d, unchanged since they were added as intake/manuscript/Block_3N…
+  - item 31
+    - **type**: workflow_agent
+    - **index**: 26
+    - **label**: verify:K05:3
+    - **phaseIndex**: 3
+    - **phaseTitle**: Verify
+    - **agentId**: aa3c72d34c5ddb60a
+    - **model**: claude-fable-5-1
+    - **state**: done
+    - **startedAt**: 1793682787266
+    - **queuedAt**: 1793680632117
+    - **attempt**: 1
+    - **lastToolName**: StructuredOutput
+    - **lastToolSummary**: medium
+    - **promptPreview**: GROUND RULES (read-only). The repository is at /home/user/auditonomous; its working tree is checked out at origin/main (commit 2165144, 2026-09-11) and must stay that way.
+      Never run git checkout, switch, stash, reset, merge, pull, or write any file inside the repository. Read other branches only with "git -C /home/user/auditonomous show <ref>:<path>" and "git -C /home/user/auditonomous ls-tree -r …
+    - **promptFramed**: yes
+    - **lastProgressAt**: 1793683421540
+    - **tokens**: 135185
+    - **toolCalls**: 35
+    - **durationMs**: 634273
+    - **resultPreview**: {"refuted":true,"confidence":"medium","reason":"Substance largely confirmed, but the chronology clause \"stubs cut by the author's ruling of 2026-08-02\" is off against git, and the location is narrower than stated. (1) Stubs are confirmed: blob 2101e1d7 = bytes \"Skipped.\" (8 bytes, no newline), identical for Block_31/32/35/36_skipped.md; committed in 5a8d533 (2026-08-02 10:29:48 -0700, \"Add Au…
+  - item 32
+    - **type**: workflow_agent
+    - **index**: 27
+    - **label**: verify:K06:1
+    - **phaseIndex**: 3
+    - **phaseTitle**: Verify
+    - **agentId**: aa4a0e2ba448e2a2b
+    - **model**: claude-fable-5-1
+    - **state**: done
+    - **startedAt**: 1793682998195
+    - **queuedAt**: 1793680632117
+    - **attempt**: 1
+    - **lastToolName**: StructuredOutput
+    - **lastToolSummary**: high
+    - **promptPreview**: GROUND RULES (read-only). The repository is at /home/user/auditonomous; its working tree is checked out at origin/main (commit 2165144, 2026-09-11) and must stay that way.
+      Never run git checkout, switch, stash, reset, merge, pull, or write any file inside the repository. Read other branches only with "git -C /home/user/auditonomous show <ref>:<path>" and "git -C /home/user/auditonomous ls-tree -r …
+    - **promptFramed**: yes
+    - **lastProgressAt**: 1793683312726
+    - **tokens**: 122848
+    - **toolCalls**: 13
+    - **durationMs**: 314530
+    - **resultPreview**: {"refuted":false,"confidence":"high","reason":"VERIFIED VERBATIM against origin/claude/book-structure-roadmap-k8ap82:L8/L4/work/writing/manuscript/Auditonomous_Theory_TOC.md (blob 983a5a4e99520cd451e868d0c89537c... = 983a5a4e99520cd451e868d0c89782a873424ba3; 112 lines; added to that branch in 62d2e3f, 2026-09-14 01:42:45 +0000, author \"Claude\", msg \"the cited-but-absent files returned from 1d83…
+  - item 33
+    - **type**: workflow_agent
+    - **index**: 28
+    - **label**: verify:K06:2
+    - **phaseIndex**: 3
+    - **phaseTitle**: Verify
+    - **agentId**: a101214176ef225f4
+    - **model**: claude-fable-5-1
+    - **state**: done
+    - **startedAt**: 1793683314802
+    - **queuedAt**: 1793680632117
+    - **attempt**: 1
+    - **lastToolName**: StructuredOutput
+    - **lastToolSummary**: high
+    - **promptPreview**: GROUND RULES (read-only). The repository is at /home/user/auditonomous; its working tree is checked out at origin/main (commit 2165144, 2026-09-11) and must stay that way.
+      Never run git checkout, switch, stash, reset, merge, pull, or write any file inside the repository. Read other branches only with "git -C /home/user/auditonomous show <ref>:<path>" and "git -C /home/user/auditonomous ls-tree -r …
+    - **promptFramed**: yes
+    - **lastProgressAt**: 1793683784116
+    - **tokens**: 133471
+    - **toolCalls**: 18
+    - **durationMs**: 469314
+    - **resultPreview**: {"refuted":true,"confidence":"high","reason":"The four counts the claim gives are verbatim-correct for the TOC as it stands on the roadmap branch (6/4+1/1/1), but under the omission-and-framing lens the claim misstates the source in three ways that change its meaning. (1) Version/date conflation: the roadmap-branch TOC is byte-identical to the 2026-08-04 revision (commit 314ceba), not to either 20…
+  - item 34
+    - **type**: workflow_agent
+    - **index**: 29
+    - **label**: verify:K06:3
+    - **phaseIndex**: 3
+    - **phaseTitle**: Verify
+    - **agentId**: a75ce16230dbff527
+    - **model**: claude-fable-5-1
+    - **state**: done
+    - **startedAt**: 1793683423288
+    - **queuedAt**: 1793680632117
+    - **attempt**: 1
+    - **lastToolName**: StructuredOutput
+    - **lastToolSummary**: medium
+    - **promptPreview**: GROUND RULES (read-only). The repository is at /home/user/auditonomous; its working tree is checked out at origin/main (commit 2165144, 2026-09-11) and must stay that way.
+      Never run git checkout, switch, stash, reset, merge, pull, or write any file inside the repository. Read other branches only with "git -C /home/user/auditonomous show <ref>:<path>" and "git -C /home/user/auditonomous ls-tree -r …
+    - **promptFramed**: yes
+    - **lastProgressAt**: 1793683722278
+    - **tokens**: 147472
+    - **toolCalls**: 24
+    - **durationMs**: 298990
+    - **resultPreview**: {"refuted":false,"confidence":"medium","reason":"CONTENT CONFIRMED EXACTLY on the cited branch copy. `git show origin/claude/book-structure-roadmap-k8ap82:L8/L4/work/writing/manuscript/Auditonomous_Theory_TOC.md` (112 lines, blob 983a5a4) — `grep -o 'Status: .*' | sort | uniq -c` gives: 6 × \"Status: material drafted)\" at L40 Ch 4, L43 Ch 5, L46 Ch 6, L59 Ch 9, L69 Ch 11, L85 Ch 15; 4 × \"Status:…
+  - item 35
+    - **type**: workflow_agent
+    - **index**: 30
+    - **label**: verify:K07:1
+    - **phaseIndex**: 3
+    - **phaseTitle**: Verify
+    - **agentId**: abe962d13e5122f7c
+    - **model**: claude-fable-5-1
+    - **state**: done
+    - **startedAt**: 1793683723942
+    - **queuedAt**: 1793680632118
+    - **attempt**: 1
+    - **lastToolName**: StructuredOutput
+    - **lastToolSummary**: high
+    - **promptPreview**: GROUND RULES (read-only). The repository is at /home/user/auditonomous; its working tree is checked out at origin/main (commit 2165144, 2026-09-11) and must stay that way.
+      Never run git checkout, switch, stash, reset, merge, pull, or write any file inside the repository. Read other branches only with "git -C /home/user/auditonomous show <ref>:<path>" and "git -C /home/user/auditonomous ls-tree -r …
+    - **promptFramed**: yes
+    - **lastProgressAt**: 1793683987018
+    - **tokens**: 86172
+    - **toolCalls**: 20
+    - **durationMs**: 263075
+    - **resultPreview**: {"refuted":false,"confidence":"high","reason":"Lens 1 (textual accuracy): every quoted phrase, number, date, sha, blob and path in K07 was re-checked against the extraction file and the git object store; none is wrong or unsupported.\n\nA. Extraction file /tmp/claude-0/-home-user/bfcfd013-a2da-5019-961e-7f46116f08be/scratchpad/manuscript/text/auditnomous-main.md (2326 lines):\n- :1 'Version 0.1'; …
+  - item 36
+    - **type**: workflow_agent
+    - **index**: 31
+    - **label**: verify:K07:2
+    - **phaseIndex**: 3
+    - **phaseTitle**: Verify
+    - **agentId**: a85d47cfa138408d6
+    - **model**: claude-fable-5-1
+    - **state**: done
+    - **startedAt**: 1793683786043
+    - **queuedAt**: 1793680632118
+    - **attempt**: 1
+    - **lastToolName**: StructuredOutput
+    - **lastToolSummary**: medium
+    - **promptPreview**: GROUND RULES (read-only). The repository is at /home/user/auditonomous; its working tree is checked out at origin/main (commit 2165144, 2026-09-11) and must stay that way.
+      Never run git checkout, switch, stash, reset, merge, pull, or write any file inside the repository. Read other branches only with "git -C /home/user/auditonomous show <ref>:<path>" and "git -C /home/user/auditonomous ls-tree -r …
+    - **promptFramed**: yes
+    - **lastProgressAt**: 1793684243870
+    - **tokens**: 150197
+    - **toolCalls**: 37
+    - **durationMs**: 457827
+    - **resultPreview**: {"refuted":true,"confidence":"medium","reason":"Every literal element of K07 verifies, but under the omission/framing lens the claim leaves out facts in the same merge and in neighbouring files that change its meaning. VERIFIED ELEMENTS: (1) EXT auditnomous-main.md:1 'Version 0.1', :3 'Extraction date: 6 August 2026', :9 '# Auditonomous Book Material Sourcebook', :11 '**Version:** 0.1 \\n**Extract…
+  - item 37
+    - **type**: workflow_agent
+    - **index**: 32
+    - **label**: verify:K07:3
+    - **phaseIndex**: 3
+    - **phaseTitle**: Verify
+    - **agentId**: ae37712687acaa069
+    - **model**: claude-fable-5-1
+    - **state**: done
+    - **startedAt**: 1793683988747
+    - **queuedAt**: 1793680632118
+    - **attempt**: 1
+    - **lastToolName**: StructuredOutput
+    - **lastToolSummary**: high
+    - **promptPreview**: GROUND RULES (read-only). The repository is at /home/user/auditonomous; its working tree is checked out at origin/main (commit 2165144, 2026-09-11) and must stay that way.
+      Never run git checkout, switch, stash, reset, merge, pull, or write any file inside the repository. Read other branches only with "git -C /home/user/auditonomous show <ref>:<path>" and "git -C /home/user/auditonomous ls-tree -r …
+    - **promptFramed**: yes
+    - **lastProgressAt**: 1793684264108
+    - **tokens**: 93043
+    - **toolCalls**: 12
+    - **durationMs**: 275360
+    - **resultPreview**: {"refuted":false,"confidence":"high","reason":"Every date, location and last-changed statement in K07 checks out against git; nothing is off. Details (repo /home/user/auditonomous, HEAD 2165144 = 2026-09-11 23:26:02 -0700, 147 commits on origin/main, 152 across all refs, root fc3b018 2026-07-30 23:29:50 -0700).\n\n(1) IDENTITY / VERSION / DATE — CONFIRMED. Working-tree file L8/L4/work/writing/audi…
+  - item 38
+    - **type**: workflow_agent
+    - **index**: 33
+    - **label**: verify:K08:1
+    - **phaseIndex**: 3
+    - **phaseTitle**: Verify
+    - **agentId**: a1f2ca9f599d9e6f1
+    - **model**: claude-fable-5-1
+    - **state**: done
+    - **startedAt**: 1793684245673
+    - **queuedAt**: 1793680632118
+    - **attempt**: 1
+    - **lastToolName**: StructuredOutput
+    - **lastToolSummary**: high
+    - **promptPreview**: GROUND RULES (read-only). The repository is at /home/user/auditonomous; its working tree is checked out at origin/main (commit 2165144, 2026-09-11) and must stay that way.
+      Never run git checkout, switch, stash, reset, merge, pull, or write any file inside the repository. Read other branches only with "git -C /home/user/auditonomous show <ref>:<path>" and "git -C /home/user/auditonomous ls-tree -r …
+    - **promptFramed**: yes
+    - **lastProgressAt**: 1793684482418
+    - **tokens**: 89464
+    - **toolCalls**: 17
+    - **durationMs**: 236745
+    - **resultPreview**: {"refuted":false,"confidence":"high","reason":"CLAIM K08 CONFIRMED on every cited element (lens: textual accuracy).\n\nA. Quoted phrases / line numbers in EXT /tmp/claude-0/-home-user/bfcfd013-a2da-5019-961e-7f46116f08be/scratchpad/manuscript/text/auditonomous-08-03-26.md (2485 lines; .err file empty):\n- :1 '# Book Prospectus v0.1' — verbatim (grep -n; sole occurrence). Also present exactly once …
+  - item 39
+    - **type**: workflow_agent
+    - **index**: 34
+    - **label**: verify:K08:2
+    - **phaseIndex**: 3
+    - **phaseTitle**: Verify
+    - **agentId**: a300d315af54df333
+    - **model**: claude-fable-5-1
+    - **state**: done
+    - **startedAt**: 1793684266132
+    - **queuedAt**: 1793680632118
+    - **attempt**: 1
+    - **lastToolName**: StructuredOutput
+    - **lastToolSummary**: medium
+    - **promptPreview**: GROUND RULES (read-only). The repository is at /home/user/auditonomous; its working tree is checked out at origin/main (commit 2165144, 2026-09-11) and must stay that way.
+      Never run git checkout, switch, stash, reset, merge, pull, or write any file inside the repository. Read other branches only with "git -C /home/user/auditonomous show <ref>:<path>" and "git -C /home/user/auditonomous ls-tree -r …
+    - **promptFramed**: yes
+    - **lastProgressAt**: 1793684728791
+    - **tokens**: 176732
+    - **toolCalls**: 35
+    - **durationMs**: 462658
+    - **resultPreview**: {"refuted":true,"confidence":"medium","reason":"LITERAL COMPONENTS CONFIRMED (EXT = /tmp/claude-0/-home-user/bfcfd013-a2da-5019-961e-7f46116f08be/scratchpad/manuscript/text/auditonomous-08-03-26.md, 2485 lines): :1 '# Book Prospectus v0.1'; :3 '## **AUDITONOMY**'; :5 '[source text withheld from the public copy]'; :476 '# 16. Twenty-chapter book architecture'; Parts I–V at :478 :496…
+  - item 40
+    - **type**: workflow_agent
+    - **index**: 35
+    - **label**: verify:K08:3
+    - **phaseIndex**: 3
+    - **phaseTitle**: Verify
+    - **agentId**: a0cb4351d67a7d163
+    - **model**: claude-fable-5-1
+    - **state**: done
+    - **startedAt**: 1793684484306
+    - **queuedAt**: 1793680632118
+    - **attempt**: 1
+    - **lastToolName**: StructuredOutput
+    - **lastToolSummary**: high
+    - **promptPreview**: GROUND RULES (read-only). The repository is at /home/user/auditonomous; its working tree is checked out at origin/main (commit 2165144, 2026-09-11) and must stay that way.
+      Never run git checkout, switch, stash, reset, merge, pull, or write any file inside the repository. Read other branches only with "git -C /home/user/auditonomous show <ref>:<path>" and "git -C /home/user/auditonomous ls-tree -r …
+    - **promptFramed**: yes
+    - **lastProgressAt**: 1793684736375
+    - **tokens**: 120812
+    - **toolCalls**: 27
+    - **durationMs**: 252069
+    - **resultPreview**: {"refuted":false,"confidence":"high","reason":"LENS 3 (chronology/location) — every git statement in K08 verified, none off.\n\nGIT HISTORY (git -C /home/user/auditonomous log --follow --raw --date=iso origin/main -- L8/L4/work/writing/auditonomous-08-03-26.odt): A 0000000->6da3713 at 71f75cbd002ea0851bd37f8a81f6bba40a133d76, author+committer Eric D. Martin 2026-08-05 01:18:48 -0700, path manuscri…
+  - item 41
+    - **type**: workflow_agent
+    - **index**: 36
+    - **label**: verify:K09:1
+    - **phaseIndex**: 3
+    - **phaseTitle**: Verify
+    - **agentId**: af004166c2a227e2f
+    - **model**: claude-fable-5-1
+    - **state**: done
+    - **startedAt**: 1793684730524
+    - **queuedAt**: 1793680632118
+    - **attempt**: 1
+    - **lastToolName**: StructuredOutput
+    - **lastToolSummary**: high
+    - **promptPreview**: GROUND RULES (read-only). The repository is at /home/user/auditonomous; its working tree is checked out at origin/main (commit 2165144, 2026-09-11) and must stay that way.
+      Never run git checkout, switch, stash, reset, merge, pull, or write any file inside the repository. Read other branches only with "git -C /home/user/auditonomous show <ref>:<path>" and "git -C /home/user/auditonomous ls-tree -r …
+    - **promptFramed**: yes
+    - **lastProgressAt**: 1793685189317
+    - **tokens**: 131347
+    - **toolCalls**: 14
+    - **durationMs**: 458793
+    - **resultPreview**: {"refuted":false,"confidence":"high","reason":"CLAIM K09 NOT REFUTED. Every quoted phrase, date, version string and path in the claim statement is confirmed in the primary files; two citation imprecisions in the EVIDENCE OFFERED (a wrong line number and a truncated path) do not touch the claim's content. Facts, with evidence:\n\n[A] The extracted text /tmp/claude-0/-home-user/bfcfd013-a2da-5019-96…
+  - item 42
+    - **type**: workflow_agent
+    - **index**: 37
+    - **label**: verify:K09:2
+    - **phaseIndex**: 3
+    - **phaseTitle**: Verify
+    - **agentId**: a19a3e999447fc8fb
+    - **model**: claude-fable-5-1
+    - **state**: done
+    - **startedAt**: 1793684737929
+    - **queuedAt**: 1793680632119
+    - **attempt**: 1
+    - **lastToolName**: StructuredOutput
+    - **lastToolSummary**: high
+    - **promptPreview**: GROUND RULES (read-only). The repository is at /home/user/auditonomous; its working tree is checked out at origin/main (commit 2165144, 2026-09-11) and must stay that way.
+      Never run git checkout, switch, stash, reset, merge, pull, or write any file inside the repository. Read other branches only with "git -C /home/user/auditonomous show <ref>:<path>" and "git -C /home/user/auditonomous ls-tree -r …
+    - **promptFramed**: yes
+    - **lastProgressAt**: 1793685225131
+    - **tokens**: 179407
+    - **toolCalls**: 30
+    - **durationMs**: 487201
+    - **resultPreview**: {"refuted":false,"confidence":"high","reason":"NOT REFUTED. Every element of K09 is confirmed from the files, and no omitted fact in the same source or a neighbouring file changes its meaning.\n\nCONFIRMED (EXT = /tmp/claude-0/-home-user/bfcfd013-a2da-5019-961e-7f46116f08be/scratchpad/manuscript/text/auditonomouos-important.md; DOCX = blob e76f606, sha256 b864202a…1cb5 extracted to scratchpad/k09/…
+  - item 43
+    - **type**: workflow_agent
+    - **index**: 38
+    - **label**: verify:K09:3
+    - **phaseIndex**: 3
+    - **phaseTitle**: Verify
+    - **agentId**: aa5eca547303f2d77
+    - **model**: claude-fable-5-1
+    - **state**: done
+    - **startedAt**: 1793685191269
+    - **queuedAt**: 1793680632119
+    - **attempt**: 1
+    - **lastToolName**: StructuredOutput
+    - **lastToolSummary**: high
+    - **promptPreview**: GROUND RULES (read-only). The repository is at /home/user/auditonomous; its working tree is checked out at origin/main (commit 2165144, 2026-09-11) and must stay that way.
+      Never run git checkout, switch, stash, reset, merge, pull, or write any file inside the repository. Read other branches only with "git -C /home/user/auditonomous show <ref>:<path>" and "git -C /home/user/auditonomous ls-tree -r …
+    - **promptFramed**: yes
+    - **lastProgressAt**: 1793685771558
+    - **tokens**: 156486
+    - **toolCalls**: 34
+    - **durationMs**: 580288
+    - **resultPreview**: {"refuted":false,"confidence":"high","reason":"LENS 3 (chronology/location) — every checkable date, location and \"unchanged\" statement in K09 holds; nothing found that refutes it. Working tree stayed at origin/main 2165144 (2026-09-11 23:26:02 -0700); only git show/ls-tree/log/branch -r --contains were used.\n\nA. IDENTITY AND LOCATION OF THE DOCX (blob e76f606a9cb7b93ee283f35fa6107a5a08ae1776).…
+  - item 44
+    - **type**: workflow_agent
+    - **index**: 39
+    - **label**: verify:K10:1
+    - **phaseIndex**: 3
+    - **phaseTitle**: Verify
+    - **agentId**: a1e6f4d18bff20e03
+    - **model**: claude-fable-5-1
+    - **state**: done
+    - **startedAt**: 1793685227064
+    - **queuedAt**: 1793680632119
+    - **attempt**: 1
+    - **lastToolName**: StructuredOutput
+    - **lastToolSummary**: high
+    - **promptPreview**: GROUND RULES (read-only). The repository is at /home/user/auditonomous; its working tree is checked out at origin/main (commit 2165144, 2026-09-11) and must stay that way.
+      Never run git checkout, switch, stash, reset, merge, pull, or write any file inside the repository. Read other branches only with "git -C /home/user/auditonomous show <ref>:<path>" and "git -C /home/user/auditonomous ls-tree -r …
+    - **promptFramed**: yes
+    - **lastProgressAt**: 1793685408168
+    - **tokens**: 93911
+    - **toolCalls**: 20
+    - **durationMs**: 181104
+    - **resultPreview**: {"refuted":false,"confidence":"high","reason":"Every cited sha, path, date, blob and quoted phrase in K10 checks out against the repository; one number (\"7 parts\") is the sources' own self-description but is contradicted by a literal heading count of the file (8 \"## Part\" headings), recorded below as an imprecision, not a fabrication.\n\nCONFIRMED, with evidence:\n(1) ADD. `git log -1 f67968b`…
+  - item 45
+    - **type**: workflow_agent
+    - **index**: 40
+    - **label**: verify:K10:2
+    - **phaseIndex**: 3
+    - **phaseTitle**: Verify
+    - **agentId**: a0ea2031e3e876dd1
+    - **model**: claude-fable-5-1
+    - **state**: done
+    - **startedAt**: 1793685409877
+    - **queuedAt**: 1793680632119
+    - **attempt**: 1
+    - **lastToolName**: StructuredOutput
+    - **lastToolSummary**: medium
+    - **promptPreview**: GROUND RULES (read-only). The repository is at /home/user/auditonomous; its working tree is checked out at origin/main (commit 2165144, 2026-09-11) and must stay that way.
+      Never run git checkout, switch, stash, reset, merge, pull, or write any file inside the repository. Read other branches only with "git -C /home/user/auditonomous show <ref>:<path>" and "git -C /home/user/auditonomous ls-tree -r …
+    - **promptFramed**: yes
+    - **lastProgressAt**: 1793685774877
+    - **tokens**: 157621
+    - **toolCalls**: 26
+    - **durationMs**: 364999
+    - **resultPreview**: {"refuted":true,"confidence":"medium","reason":"Every checkable literal in K10 holds, but under the omission/framing lens the claim drops facts in the very sources it cites that change their meaning, and mis-states one count. VERIFIED LITERALS: f67968b (2026-08-14 19:02:27 +0000, author Claude, \"Book spine v0.1: chapter titles with evidence anchors\") adds manuscripts/SPINE_v0.1_2026-08-14.md (23…
+  - item 46
+    - **type**: workflow_agent
+    - **index**: 41
+    - **label**: verify:K10:3
+    - **phaseIndex**: 3
+    - **phaseTitle**: Verify
+    - **agentId**: a23f6f7c41c37f177
+    - **model**: claude-fable-5-1
+    - **state**: done
+    - **startedAt**: 1793685781172
+    - **queuedAt**: 1793680632119
+    - **attempt**: 1
+    - **lastToolName**: StructuredOutput
+    - **lastToolSummary**: high
+    - **promptPreview**: GROUND RULES (read-only). The repository is at /home/user/auditonomous; its working tree is checked out at origin/main (commit 2165144, 2026-09-11) and must stay that way.
+      Never run git checkout, switch, stash, reset, merge, pull, or write any file inside the repository. Read other branches only with "git -C /home/user/auditonomous show <ref>:<path>" and "git -C /home/user/auditonomous ls-tree -r …
+    - **promptFramed**: yes
+    - **lastProgressAt**: 1793686142880
+    - **tokens**: 98100
+    - **toolCalls**: 14
+    - **durationMs**: 361707
+    - **resultPreview**: {"refuted":false,"confidence":"high","reason":"LENS 3 (chronology and location) — every date, location and last-changed statement in K10 checks out against git in /home/user/auditonomous (working tree untouched; HEAD = origin/main = 2165144 2026-09-11 23:26:02 -0700). Two imprecisions are recorded in `correction` (parts count; timezone/authoring-commit nuance), neither of which falsifies the chron…
+  - item 47
+    - **type**: workflow_agent
+    - **index**: 42
+    - **label**: verify:K11:1
+    - **phaseIndex**: 3
+    - **phaseTitle**: Verify
+    - **agentId**: a574ffbe2c36d616e
+    - **model**: claude-fable-5-1
+    - **state**: done
+    - **startedAt**: 1793685781701
+    - **queuedAt**: 1793680632119
+    - **attempt**: 1
+    - **lastToolName**: StructuredOutput
+    - **lastToolSummary**: high
+    - **promptPreview**: GROUND RULES (read-only). The repository is at /home/user/auditonomous; its working tree is checked out at origin/main (commit 2165144, 2026-09-11) and must stay that way.
+      Never run git checkout, switch, stash, reset, merge, pull, or write any file inside the repository. Read other branches only with "git -C /home/user/auditonomous show <ref>:<path>" and "git -C /home/user/auditonomous ls-tree -r …
+    - **promptFramed**: yes
+    - **lastProgressAt**: 1793685943739
+    - **tokens**: 80395
+    - **toolCalls**: 12
+    - **durationMs**: 162037
+    - **resultPreview**: {"refuted":false,"confidence":"high","reason":"Every quoted phrase, number, date and path in K11 re-checked against origin/claude/book-structure-roadmap-k8ap82 (head 9259c18, 2026-09-14 02:04:14 +0000) at L8/L5/research/review/BOOK_STRUCTURE_AND_ROADMAP_2026-09-13.md (686 lines); all hold.\n\nBRANCH ONLY: `git ls-tree -r origin/main --name-only | grep -ic BOOK_STRUCTURE_AND_ROADMAP` = 0; `git log …
+  - item 48
+    - **type**: workflow_agent
+    - **index**: 43
+    - **label**: verify:K11:2
+    - **phaseIndex**: 3
+    - **phaseTitle**: Verify
+    - **agentId**: a8f8309e9420a7ad8
+    - **model**: claude-fable-5-1
+    - **state**: done
+    - **startedAt**: 1793685945510
+    - **queuedAt**: 1793680632119
+    - **attempt**: 1
+    - **lastToolName**: StructuredOutput
+    - **lastToolSummary**: medium
+    - **promptPreview**: GROUND RULES (read-only). The repository is at /home/user/auditonomous; its working tree is checked out at origin/main (commit 2165144, 2026-09-11) and must stay that way.
+      Never run git checkout, switch, stash, reset, merge, pull, or write any file inside the repository. Read other branches only with "git -C /home/user/auditonomous show <ref>:<path>" and "git -C /home/user/auditonomous ls-tree -r …
+    - **promptFramed**: yes
+    - **lastProgressAt**: 1793686349392
+    - **tokens**: 187668
+    - **toolCalls**: 28
+    - **durationMs**: 403882
+    - **resultPreview**: {"refuted":true,"confidence":"medium","reason":"Every particular of K11 is confirmed verbatim in the HEAD version of the roadmap (origin/claude/book-structure-roadmap-k8ap82 = 9259c18, 2026-09-14 02:04:14 +0000; file L8/L5/research/review/BOOK_STRUCTURE_AND_ROADMAP_2026-09-13.md, 686 lines): :3 'PROPOSAL · INTERNAL ONLY · INTERNALLY DERIVED … Nothing here is adopted.'; :608 'Nothing below is adopt…
+  - item 49
+    - **type**: workflow_agent
+    - **index**: 44
+    - **label**: verify:K11:3
+    - **phaseIndex**: 3
+    - **phaseTitle**: Verify
+    - **agentId**: a3ffafa043103fcc9
+    - **model**: claude-fable-5-1
+    - **state**: done
+    - **startedAt**: 1793686144865
+    - **queuedAt**: 1793680632119
+    - **attempt**: 1
+    - **lastToolName**: StructuredOutput
+    - **lastToolSummary**: high
+    - **promptPreview**: GROUND RULES (read-only). The repository is at /home/user/auditonomous; its working tree is checked out at origin/main (commit 2165144, 2026-09-11) and must stay that way.
+      Never run git checkout, switch, stash, reset, merge, pull, or write any file inside the repository. Read other branches only with "git -C /home/user/auditonomous show <ref>:<path>" and "git -C /home/user/auditonomous ls-tree -r …
+    - **promptFramed**: yes
+    - **lastProgressAt**: 1793686369055
+    - **tokens**: 81966
+    - **toolCalls**: 11
+    - **durationMs**: 224190
+    - **resultPreview**: {"refuted":false,"confidence":"high","reason":"Every component of K11 is confirmed against the head of origin/claude/book-structure-roadmap-k8ap82 (9259c18, 2026-09-14 02:04:14 +0000), file L8/L5/research/review/BOOK_STRUCTURE_AND_ROADMAP_2026-09-13.md (686 lines); none of the chronology/location checks refute it.\n\nLOCATION (\"branch only\"): `git ls-tree -r origin/main --name-only | grep BOOK_S…
+  - item 50
+    - **type**: workflow_agent
+    - **index**: 45
+    - **label**: verify:K12:1
+    - **phaseIndex**: 3
+    - **phaseTitle**: Verify
+    - **agentId**: aee5b82889db256fa
+    - **model**: claude-fable-5-1
+    - **state**: done
+    - **startedAt**: 1793686352290
+    - **queuedAt**: 1793680632120
+    - **attempt**: 1
+    - **lastToolName**: StructuredOutput
+    - **lastToolSummary**: high
+    - **promptPreview**: GROUND RULES (read-only). The repository is at /home/user/auditonomous; its working tree is checked out at origin/main (commit 2165144, 2026-09-11) and must stay that way.
+      Never run git checkout, switch, stash, reset, merge, pull, or write any file inside the repository. Read other branches only with "git -C /home/user/auditonomous show <ref>:<path>" and "git -C /home/user/auditonomous ls-tree -r …
+    - **promptFramed**: yes
+    - **lastProgressAt**: 1793686551641
+    - **tokens**: 85655
+    - **toolCalls**: 11
+    - **durationMs**: 199351
+    - **resultPreview**: {"refuted":false,"confidence":"high","reason":"Every quoted phrase, number, date, path and commit in claim K12 re-checked read-only against origin/claude/book-structure-roadmap-k8ap82 (head 9259c18, 2026-09-14 02:04:14 +0000) and found exact.\n\n(1) File set. `git ls-tree -r origin/claude/book-structure-roadmap-k8ap82 L8/L4/work/writing/book/` returns 31 entries: ch01…ch27 (27 files, `grep -c '/ch…
+  - item 51
+    - **type**: workflow_agent
+    - **index**: 46
+    - **label**: verify:K12:2
+    - **phaseIndex**: 3
+    - **phaseTitle**: Verify
+    - **agentId**: a2f5024f67378e5e1
+    - **model**: claude-fable-5-1
+    - **state**: done
+    - **startedAt**: 1793686370994
+    - **queuedAt**: 1793680632120
+    - **attempt**: 1
+    - **lastToolName**: StructuredOutput
+    - **lastToolSummary**: high
+    - **promptPreview**: GROUND RULES (read-only). The repository is at /home/user/auditonomous; its working tree is checked out at origin/main (commit 2165144, 2026-09-11) and must stay that way.
+      Never run git checkout, switch, stash, reset, merge, pull, or write any file inside the repository. Read other branches only with "git -C /home/user/auditonomous show <ref>:<path>" and "git -C /home/user/auditonomous ls-tree -r …
+    - **promptFramed**: yes
+    - **lastProgressAt**: 1793686717347
+    - **tokens**: 122516
+    - **toolCalls**: 16
+    - **durationMs**: 346353
+    - **resultPreview**: {"refuted":false,"confidence":"high","reason":"Every element of K12 is confirmed byte-for-byte on origin/claude/book-structure-roadmap-k8ap82 (head 9259c18), and the lens-2 search (later commits, neighbouring files, contrary status labels, other versions) found no fact that reverses or materially changes its meaning; it found only two framing points recorded under 'correction'. FACTS. (1) File set…
+  - item 52
+    - **type**: workflow_agent
+    - **index**: 47
+    - **label**: verify:K12:3
+    - **phaseIndex**: 3
+    - **phaseTitle**: Verify
+    - **agentId**: a6ecb11e7a2a2db51
+    - **model**: claude-fable-5-1
+    - **state**: done
+    - **startedAt**: 1793686553323
+    - **queuedAt**: 1793680632120
+    - **attempt**: 1
+    - **lastToolName**: StructuredOutput
+    - **lastToolSummary**: high
+    - **promptPreview**: GROUND RULES (read-only). The repository is at /home/user/auditonomous; its working tree is checked out at origin/main (commit 2165144, 2026-09-11) and must stay that way.
+      Never run git checkout, switch, stash, reset, merge, pull, or write any file inside the repository. Read other branches only with "git -C /home/user/auditonomous show <ref>:<path>" and "git -C /home/user/auditonomous ls-tree -r …
+    - **promptFramed**: yes
+    - **lastProgressAt**: 1793686849980
+    - **tokens**: 105144
+    - **toolCalls**: 22
+    - **durationMs**: 296657
+    - **resultPreview**: {"refuted":false,"confidence":"high","reason":"NOT REFUTED. Every checkable element of K12 is confirmed by git and the files; the lens checks (dates, branch/location, last-changed) all hold. Evidence, all read-only (git show/ls-tree/log/branch -r --contains on /home/user/auditonomous; working tree untouched, HEAD = origin/main = 2165144 2026-09-11 23:26:02 -0700).\n\nLOCATION. `git ls-tree -r orig…
+  - item 53
+    - **type**: workflow_agent
+    - **index**: 48
+    - **label**: verify:K13:1
+    - **phaseIndex**: 3
+    - **phaseTitle**: Verify
+    - **agentId**: a5679ded97d0fc68e
+    - **model**: claude-fable-5-1
+    - **state**: done
+    - **startedAt**: 1793686719497
+    - **queuedAt**: 1793680632120
+    - **attempt**: 1
+    - **lastToolName**: StructuredOutput
+    - **lastToolSummary**: high
+    - **promptPreview**: GROUND RULES (read-only). The repository is at /home/user/auditonomous; its working tree is checked out at origin/main (commit 2165144, 2026-09-11) and must stay that way.
+      Never run git checkout, switch, stash, reset, merge, pull, or write any file inside the repository. Read other branches only with "git -C /home/user/auditonomous show <ref>:<path>" and "git -C /home/user/auditonomous ls-tree -r …
+    - **promptFramed**: yes
+    - **lastProgressAt**: 1793686955215
+    - **tokens**: 79401
+    - **toolCalls**: 16
+    - **durationMs**: 235718
+    - **resultPreview**: {"refuted":false,"confidence":"high","reason":"CLAIM K13 CONFIRMED on every checkable element; one citation is imprecise but resolves to a real location (see correction).\n\nFILE / SIZE / BRANCH-ONLY: `git ls-tree -r -l origin/claude/book-structure-roadmap-k8ap82 | grep -i vocab` -> `100644 blob c21e59ef... 62540 L8/L4/work/writing/papers/AUDITONOMOUS_VOCABULARY_PAPER_2026-09-14.md` (62,540 bytes,…
+  - item 54
+    - **type**: workflow_agent
+    - **index**: 49
+    - **label**: verify:K13:2
+    - **phaseIndex**: 3
+    - **phaseTitle**: Verify
+    - **agentId**: abeced54f53f469f0
+    - **model**: claude-fable-5-1
+    - **state**: done
+    - **startedAt**: 1793686852188
+    - **queuedAt**: 1793680632120
+    - **attempt**: 1
+    - **lastToolName**: StructuredOutput
+    - **lastToolSummary**: high
+    - **promptPreview**: GROUND RULES (read-only). The repository is at /home/user/auditonomous; its working tree is checked out at origin/main (commit 2165144, 2026-09-11) and must stay that way.
+      Never run git checkout, switch, stash, reset, merge, pull, or write any file inside the repository. Read other branches only with "git -C /home/user/auditonomous show <ref>:<path>" and "git -C /home/user/auditonomous ls-tree -r …
+    - **promptFramed**: yes
+    - **lastProgressAt**: 1793687236818
+    - **tokens**: 119513
+    - **toolCalls**: 22
+    - **durationMs**: 384630
+    - **resultPreview**: {"refuted":false,"confidence":"high","reason":"Lens 2 (omission/framing) check of K13. Every element of the claim is confirmed from the files; no neighbouring file, later commit or contrary status label changes its meaning. Evidence:\n\n(1) BRANCH ONLY, 62,540 BYTES — confirmed. Refs in the clone: main/origin/main = 2165144 (2026-09-11 23:26:02 -0700), origin/claude/book-structure-roadmap-k8ap82 =…
+  - item 55
+    - **type**: workflow_agent
+    - **index**: 50
+    - **label**: verify:K13:3
+    - **phaseIndex**: 3
+    - **phaseTitle**: Verify
+    - **agentId**: adb75546d1ee98dd9
+    - **model**: claude-fable-5-1
+    - **state**: done
+    - **startedAt**: 1793686957076
+    - **queuedAt**: 1793680632120
+    - **attempt**: 1
+    - **lastToolName**: StructuredOutput
+    - **lastToolSummary**: high
+    - **promptPreview**: GROUND RULES (read-only). The repository is at /home/user/auditonomous; its working tree is checked out at origin/main (commit 2165144, 2026-09-11) and must stay that way.
+      Never run git checkout, switch, stash, reset, merge, pull, or write any file inside the repository. Read other branches only with "git -C /home/user/auditonomous show <ref>:<path>" and "git -C /home/user/auditonomous ls-tree -r …
+    - **promptFramed**: yes
+    - **lastProgressAt**: 1793687251344
+    - **tokens**: 96891
+    - **toolCalls**: 11
+    - **durationMs**: 294267
+    - **resultPreview**: {"refuted":false,"confidence":"high","reason":"CLAIM K13 survives every chronology/location check; all five components confirmed from git, and the contradiction is confirmed from the repository's own sourcebook at the paper's own commit, independent of the external .docx extract.\n\n(1) LOCATION \"branch only\": `git ls-tree -r -l origin/claude/book-structure-roadmap-k8ap82 -- L8/L4/work/writing/p…
+  - item 56
+    - **type**: workflow_agent
+    - **index**: 51
+    - **label**: verify:K14:1
+    - **phaseIndex**: 3
+    - **phaseTitle**: Verify
+    - **agentId**: a551b7c17934765f5
+    - **model**: claude-fable-5-1
+    - **state**: done
+    - **startedAt**: 1793687238762
+    - **queuedAt**: 1793680632120
+    - **attempt**: 1
+    - **lastToolName**: StructuredOutput
+    - **lastToolSummary**: high
+    - **promptPreview**: GROUND RULES (read-only). The repository is at /home/user/auditonomous; its working tree is checked out at origin/main (commit 2165144, 2026-09-11) and must stay that way.
+      Never run git checkout, switch, stash, reset, merge, pull, or write any file inside the repository. Read other branches only with "git -C /home/user/auditonomous show <ref>:<path>" and "git -C /home/user/auditonomous ls-tree -r …
+    - **promptFramed**: yes
+    - **lastProgressAt**: 1793687387507
+    - **tokens**: 77458
+    - **toolCalls**: 18
+    - **durationMs**: 148745
+    - **resultPreview**: {"refuted":false,"confidence":"high","reason":"Every quoted phrase, path, sha, line number and date in K14 re-opens exactly as cited; nothing is wrong or unsupported. Verification (all read-only, repo at /home/user/auditonomous, HEAD = 2165144, 2026-09-11 23:26:02 -0700, working tree clean):\n\n(1) FILE CONTENT. `git show 1d83788:manuscripts/main/MANUSCRIPT.tex` is 22 lines. Line 2 reads verbatim …
+  - item 57
+    - **type**: workflow_agent
+    - **index**: 52
+    - **label**: verify:K14:2
+    - **phaseIndex**: 3
+    - **phaseTitle**: Verify
+    - **agentId**: a40b6733a256fb982
+    - **model**: claude-fable-5-1
+    - **state**: done
+    - **startedAt**: 1793687253171
+    - **queuedAt**: 1793680632121
+    - **attempt**: 1
+    - **lastToolName**: StructuredOutput
+    - **lastToolSummary**: high
+    - **promptPreview**: GROUND RULES (read-only). The repository is at /home/user/auditonomous; its working tree is checked out at origin/main (commit 2165144, 2026-09-11) and must stay that way.
+      Never run git checkout, switch, stash, reset, merge, pull, or write any file inside the repository. Read other branches only with "git -C /home/user/auditonomous show <ref>:<path>" and "git -C /home/user/auditonomous ls-tree -r …
+    - **promptFramed**: yes
+    - **lastProgressAt**: 1793687678687
+    - **tokens**: 126502
+    - **toolCalls**: 32
+    - **durationMs**: 425516
+    - **resultPreview**: {"refuted":false,"confidence":"high","reason":"LENS 2 (omission/framing) RESULT: every factual component of K14 is confirmed verbatim from the files; the neighbouring-file facts the claim leaves out add context but do not reverse any statement in it, so it is NOT refuted. Details, with evidence.\n\nA. LIFETIME — CONFIRMED. `git -C /home/user/auditonomous log --all --name-status --date=iso -- '*MAN…
+  - item 58
+    - **type**: workflow_agent
+    - **index**: 53
+    - **label**: verify:K14:3
+    - **phaseIndex**: 3
+    - **phaseTitle**: Verify
+    - **agentId**: a77f7a9a5aa5f2ad5
+    - **model**: claude-fable-5-1
+    - **state**: done
+    - **startedAt**: 1793687390318
+    - **queuedAt**: 1793680632121
+    - **attempt**: 1
+    - **lastToolName**: StructuredOutput
+    - **lastToolSummary**: high
+    - **promptPreview**: GROUND RULES (read-only). The repository is at /home/user/auditonomous; its working tree is checked out at origin/main (commit 2165144, 2026-09-11) and must stay that way.
+      Never run git checkout, switch, stash, reset, merge, pull, or write any file inside the repository. Read other branches only with "git -C /home/user/auditonomous show <ref>:<path>" and "git -C /home/user/auditonomous ls-tree -r …
+    - **promptFramed**: yes
+    - **lastProgressAt**: 1793687840892
+    - **tokens**: 101836
+    - **toolCalls**: 24
+    - **durationMs**: 450574
+    - **resultPreview**: {"refuted":false,"confidence":"high","reason":"NOT REFUTED. Every date, location and \"last changed\" statement in K14 checks out against git; attempts to find an earlier/later copy or a rename failed. Evidence (repo /home/user/auditonomous, HEAD=origin/main 2165144 2026-09-11 23:26:02 -0700, clean tree):\n\n(1) LIFETIME. `git log --all --name-status -- '*MANUSCRIPT.tex'` returns exactly two rows:…
+  - item 59
+    - **type**: workflow_agent
+    - **index**: 54
+    - **label**: verify:K15:1
+    - **phaseIndex**: 3
+    - **phaseTitle**: Verify
+    - **agentId**: afeb73b4fbc49f4aa
+    - **model**: claude-fable-5-1
+    - **state**: done
+    - **startedAt**: 1793687680412
+    - **queuedAt**: 1793680632121
+    - **attempt**: 1
+    - **lastToolName**: StructuredOutput
+    - **lastToolSummary**: high
+    - **promptPreview**: GROUND RULES (read-only). The repository is at /home/user/auditonomous; its working tree is checked out at origin/main (commit 2165144, 2026-09-11) and must stay that way.
+      Never run git checkout, switch, stash, reset, merge, pull, or write any file inside the repository. Read other branches only with "git -C /home/user/auditonomous show <ref>:<path>" and "git -C /home/user/auditonomous ls-tree -r …
+    - **promptFramed**: yes
+    - **lastProgressAt**: 1793687909797
+    - **tokens**: 80094
+    - **toolCalls**: 12
+    - **durationMs**: 229385
+    - **resultPreview**: {"refuted":false,"confidence":"high","reason":"NOT REFUTED. Every quoted phrase, number, date, path, blob and commit in claim K15 re-opened and found verbatim/accurate (repo /home/user/auditonomous, HEAD=origin/main 2165144 2026-09-11 23:26:02 -0700; branch B=origin/claude/book-structure-roadmap-k8ap82 head 9259c18 2026-09-14 02:04:14 +0000).\n\n(1) Manuscript identity: B:L7/peering/private/ingres…
+  - item 60
+    - **type**: workflow_agent
+    - **index**: 55
+    - **label**: verify:K15:2
+    - **phaseIndex**: 3
+    - **phaseTitle**: Verify
+    - **agentId**: a32e434bf42a9615b
+    - **model**: claude-fable-5-1
+    - **state**: done
+    - **startedAt**: 1793687843123
+    - **queuedAt**: 1793680632121
+    - **attempt**: 1
+    - **lastToolName**: StructuredOutput
+    - **lastToolSummary**: high
+    - **promptPreview**: GROUND RULES (read-only). The repository is at /home/user/auditonomous; its working tree is checked out at origin/main (commit 2165144, 2026-09-11) and must stay that way.
+      Never run git checkout, switch, stash, reset, merge, pull, or write any file inside the repository. Read other branches only with "git -C /home/user/auditonomous show <ref>:<path>" and "git -C /home/user/auditonomous ls-tree -r …
+    - **promptFramed**: yes
+    - **lastProgressAt**: 1793688237102
+    - **tokens**: 132933
+    - **toolCalls**: 28
+    - **durationMs**: 393979
+    - **resultPreview**: {"refuted":true,"confidence":"high","reason":"Lens 2 (omission/framing). The claim's core facts hold, but two of its five parts omit facts in the SAME sources that change their meaning. (1) \"the branch's peer-3 sheet still says nothing is held\": true only of the parent sheet peer-3/0.md (blob c35cb94 on both refs; :16 \"Nothing of them is held here; the manuscript path cited in Appendix E does n…
+  - item 61
+    - **type**: workflow_agent
+    - **index**: 56
+    - **label**: verify:K15:3
+    - **phaseIndex**: 3
+    - **phaseTitle**: Verify
+    - **agentId**: aa40c35bf08c527fb
+    - **model**: claude-fable-5-1
+    - **state**: done
+    - **startedAt**: 1793687911529
+    - **queuedAt**: 1793680632121
+    - **attempt**: 1
+    - **lastToolName**: StructuredOutput
+    - **lastToolSummary**: high
+    - **promptPreview**: GROUND RULES (read-only). The repository is at /home/user/auditonomous; its working tree is checked out at origin/main (commit 2165144, 2026-09-11) and must stay that way.
+      Never run git checkout, switch, stash, reset, merge, pull, or write any file inside the repository. Read other branches only with "git -C /home/user/auditonomous show <ref>:<path>" and "git -C /home/user/auditonomous ls-tree -r …
+    - **promptFramed**: yes
+    - **lastProgressAt**: 1793688207568
+    - **tokens**: 91200
+    - **toolCalls**: 14
+    - **durationMs**: 296039
+    - **resultPreview**: {"refuted":false,"confidence":"high","reason":"Every chronology and location statement in K15 checks out against git. (1) ABSENT FROM MAIN: `git ls-tree -r origin/main` (HEAD 2165144, 2026-09-11 23:26:02 -0700) has no path matching martin_2026|embodied and no blob ea851007/29007fc3; `ls-tree -r --name-only origin/main L7/peering/private/ingress/peer-3` → exactly peer-3/0.md and peer-3/object-1/0.m…
+  - item 62
+    - **type**: workflow_agent
+    - **index**: 57
+    - **label**: verify:K16:1
+    - **phaseIndex**: 3
+    - **phaseTitle**: Verify
+    - **agentId**: af9afc4c894ece75c
+    - **model**: claude-fable-5-1
+    - **state**: done
+    - **startedAt**: 1793688209243
+    - **queuedAt**: 1793680632121
+    - **attempt**: 1
+    - **lastToolName**: StructuredOutput
+    - **lastToolSummary**: medium
+    - **promptPreview**: GROUND RULES (read-only). The repository is at /home/user/auditonomous; its working tree is checked out at origin/main (commit 2165144, 2026-09-11) and must stay that way.
+      Never run git checkout, switch, stash, reset, merge, pull, or write any file inside the repository. Read other branches only with "git -C /home/user/auditonomous show <ref>:<path>" and "git -C /home/user/auditonomous ls-tree -r …
+    - **promptFramed**: yes
+    - **lastProgressAt**: 1793688658792
+    - **tokens**: 106397
+    - **toolCalls**: 14
+    - **durationMs**: 449549
+    - **resultPreview**: {"refuted":true,"confidence":"medium","reason":"PART CONFIRMED, PART UNSUPPORTED. Git half of the claim holds in full; the self-description clause fails the textual-accuracy lens (descriptor order inverted; \"referee\" absent from the cited text).\n\nCONFIRMED. (1) Working tree: HEAD 2165144 (2026-09-11 23:26:02 -0700) = main = origin/main; roadmap branch origin/claude/book-structure-roadmap-k8ap8…
+  - item 63
+    - **type**: workflow_agent
+    - **index**: 58
+    - **label**: verify:K16:2
+    - **phaseIndex**: 3
+    - **phaseTitle**: Verify
+    - **agentId**: a33572195116e3a3b
+    - **model**: claude-fable-5-1
+    - **state**: done
+    - **startedAt**: 1793688239893
+    - **queuedAt**: 1793680632122
+    - **attempt**: 1
+    - **lastToolName**: StructuredOutput
+    - **lastToolSummary**: medium
+    - **promptPreview**: GROUND RULES (read-only). The repository is at /home/user/auditonomous; its working tree is checked out at origin/main (commit 2165144, 2026-09-11) and must stay that way.
+      Never run git checkout, switch, stash, reset, merge, pull, or write any file inside the repository. Read other branches only with "git -C /home/user/auditonomous show <ref>:<path>" and "git -C /home/user/auditonomous ls-tree -r …
+    - **promptFramed**: yes
+    - **lastProgressAt**: 1793688855379
+    - **tokens**: 160579
+    - **toolCalls**: 17
+    - **durationMs**: 615484
+    - **resultPreview**: {"refuted":false,"confidence":"medium","reason":"VERDICT: the literal claim is confirmed on all three points; [source text withheld from the public copy] imprecise in framing (see correction): read positionally it pairs the wrong descriptor with two of the three files, 'referee' is not the files' own word, and it omits neighbouring facts (a text-identical binary predecessor of the main .docx; the one Office manuscri…
+  - item 64
+    - **type**: workflow_agent
+    - **index**: 59
+    - **label**: verify:K16:3
+    - **phaseIndex**: 3
+    - **phaseTitle**: Verify
+    - **agentId**: aa6ab1909ef1d3619
+    - **model**: claude-fable-5-1
+    - **state**: done
+    - **startedAt**: 1793688660436
+    - **queuedAt**: 1793680632122
+    - **attempt**: 1
+    - **lastToolName**: StructuredOutput
+    - **lastToolSummary**: high
+    - **promptPreview**: GROUND RULES (read-only). The repository is at /home/user/auditonomous; its working tree is checked out at origin/main (commit 2165144, 2026-09-11) and must stay that way.
+      Never run git checkout, switch, stash, reset, merge, pull, or write any file inside the repository. Read other branches only with "git -C /home/user/auditonomous show <ref>:<path>" and "git -C /home/user/auditonomous ls-tree -r …
+    - **promptFramed**: yes
+    - **lastProgressAt**: 1793689067737
+    - **tokens**: 116332
+    - **toolCalls**: 20
+    - **durationMs**: 407301
+    - **resultPreview**: {"refuted":false,"confidence":"high","reason":"LENS 3 (chronology/location) — NOT REFUTED. Every date, sha, blob id, branch location and \"relocated from\" statement in the claim's evidence checks out; no ref anywhere holds a different version of any of the three files.\n\nREPO STATE CHECKED: /home/user/auditonomous, HEAD detached at origin/main = 2165144 (2026-09-11 23:26:02 -0700, \"Merge pull r…
+  - item 65
+    - **type**: workflow_agent
+    - **index**: 60
+    - **label**: verify:K17:1
+    - **phaseIndex**: 3
+    - **phaseTitle**: Verify
+    - **agentId**: a0fc1a6ca8fc964dc
+    - **model**: claude-fable-5-1
+    - **state**: done
+    - **startedAt**: 1793688857495
+    - **queuedAt**: 1793680632122
+    - **attempt**: 1
+    - **lastToolName**: StructuredOutput
+    - **lastToolSummary**: medium
+    - **promptPreview**: GROUND RULES (read-only). The repository is at /home/user/auditonomous; its working tree is checked out at origin/main (commit 2165144, 2026-09-11) and must stay that way.
+      Never run git checkout, switch, stash, reset, merge, pull, or write any file inside the repository. Read other branches only with "git -C /home/user/auditonomous show <ref>:<path>" and "git -C /home/user/auditonomous ls-tree -r …
+    - **promptFramed**: yes
+    - **lastProgressAt**: 1793689232835
+    - **tokens**: 119696
+    - **toolCalls**: 20
+    - **durationMs**: 375340
+    - **resultPreview**: {"refuted":false,"confidence":"medium","reason":"Lens 1 (textual accuracy). Every quoted phrase, number, date, path and sha in the claim re-opens as cited; two interpretive clauses are imprecise (see correction) but no quoted item is wrong.\n\nVERIFIED VERBATIM:\n(1) EXT /tmp/claude-0/-home-user/bfcfd013-a2da-5019-961e-7f46116f08be/scratchpad/manuscript/text/auditonomous-chat-1.md: line 1 \"Versio…
+  - item 66
+    - **type**: workflow_agent
+    - **index**: 61
+    - **label**: verify:K17:2
+    - **phaseIndex**: 3
+    - **phaseTitle**: Verify
+    - **agentId**: aece83fedca6eed39
+    - **model**: claude-fable-5-1
+    - **state**: done
+    - **startedAt**: 1793689069584
+    - **queuedAt**: 1793680632122
+    - **attempt**: 1
+    - **lastToolName**: StructuredOutput
+    - **lastToolSummary**: high
+    - **promptPreview**: GROUND RULES (read-only). The repository is at /home/user/auditonomous; its working tree is checked out at origin/main (commit 2165144, 2026-09-11) and must stay that way.
+      Never run git checkout, switch, stash, reset, merge, pull, or write any file inside the repository. Read other branches only with "git -C /home/user/auditonomous show <ref>:<path>" and "git -C /home/user/auditonomous ls-tree -r …
+    - **promptFramed**: yes
+    - **lastProgressAt**: 1793689664948
+    - **tokens**: 155420
+    - **toolCalls**: 33
+    - **durationMs**: 595364
+    - **resultPreview**: {"refuted":true,"confidence":"high","reason":"Lens 2 (omission/framing). The claim's checkable particulars are largely CONFIRMED, but two of its four assertions omit facts in the same or neighbouring sources that change their meaning, and one is contradicted by the repository's own sheets.\n\nCONFIRMED PARTICULARS\n(1) Headers. EXT auditonomous-chat-1.md:1 \"Version 0.1 CHAT-HIST\"; :3 \"Ingestion…
+  - item 67
+    - **type**: workflow_agent
+    - **index**: 62
+    - **label**: verify:K17:3
+    - **phaseIndex**: 3
+    - **phaseTitle**: Verify
+    - **agentId**: a94453a5c49744f46
+    - **model**: claude-fable-5-1
+    - **state**: done
+    - **startedAt**: 1793689234655
+    - **queuedAt**: 1793680632122
+    - **attempt**: 1
+    - **lastToolName**: StructuredOutput
+    - **lastToolSummary**: high
+    - **promptPreview**: GROUND RULES (read-only). The repository is at /home/user/auditonomous; its working tree is checked out at origin/main (commit 2165144, 2026-09-11) and must stay that way.
+      Never run git checkout, switch, stash, reset, merge, pull, or write any file inside the repository. Read other branches only with "git -C /home/user/auditonomous show <ref>:<path>" and "git -C /home/user/auditonomous ls-tree -r …
+    - **promptFramed**: yes
+    - **lastProgressAt**: 1793689642442
+    - **tokens**: 130281
+    - **toolCalls**: 24
+    - **durationMs**: 407787
+    - **resultPreview**: {"refuted":false,"confidence":"high","reason":"All four factual elements of K17 are confirmed by git and the files; one location phrase (\"exists only on the branch\") is imprecise about history and is corrected below; one contradiction between sources is recorded.\n\n(1) \"Chat History Ingestion volumes of the Sourcebook v0.1 series dated 6 August 2026, not raw transcripts\" — CONFIRMED from the …
+  - item 68
+    - **type**: workflow_agent
+    - **index**: 63
+    - **label**: verify:K18:1
+    - **phaseIndex**: 3
+    - **phaseTitle**: Verify
+    - **agentId**: a9772caed06eec26c
+    - **model**: claude-fable-5-1
+    - **state**: done
+    - **startedAt**: 1793689644461
+    - **queuedAt**: 1793680632122
+    - **attempt**: 1
+    - **lastToolName**: StructuredOutput
+    - **lastToolSummary**: high
+    - **promptPreview**: GROUND RULES (read-only). The repository is at /home/user/auditonomous; its working tree is checked out at origin/main (commit 2165144, 2026-09-11) and must stay that way.
+      Never run git checkout, switch, stash, reset, merge, pull, or write any file inside the repository. Read other branches only with "git -C /home/user/auditonomous show <ref>:<path>" and "git -C /home/user/auditonomous ls-tree -r …
+    - **promptFramed**: yes
+    - **lastProgressAt**: 1793690051384
+    - **tokens**: 105699
+    - **toolCalls**: 16
+    - **durationMs**: 406922
+    - **resultPreview**: {"refuted":false,"confidence":"high","reason":"Every quoted phrase, number, date, path and ancestry statement in claim K18 and its offered evidence re-checks verbatim against the repository (all commands read-only: git -C /home/user/auditonomous log/show/ls-tree/grep/merge-base; working tree left at 2165144 = origin/main, HEAD detached).\n\nCOMMIT IDENTITY AND DATES (verified)\n- 8c98573 = 8c98573…
+  - item 69
+    - **type**: workflow_agent
+    - **index**: 64
+    - **label**: verify:K18:2
+    - **phaseIndex**: 3
+    - **phaseTitle**: Verify
+    - **agentId**: a39a8baa4084b9d8e
+    - **model**: claude-fable-5-1
+    - **state**: done
+    - **startedAt**: 1793689666877
+    - **queuedAt**: 1793680632122
+    - **attempt**: 1
+    - **lastToolName**: StructuredOutput
+    - **lastToolSummary**: high
+    - **promptPreview**: GROUND RULES (read-only). The repository is at /home/user/auditonomous; its working tree is checked out at origin/main (commit 2165144, 2026-09-11) and must stay that way.
+      Never run git checkout, switch, stash, reset, merge, pull, or write any file inside the repository. Read other branches only with "git -C /home/user/auditonomous show <ref>:<path>" and "git -C /home/user/auditonomous ls-tree -r …
+    - **promptFramed**: yes
+    - **lastProgressAt**: 1793690447769
+    - **tokens**: 156032
+    - **toolCalls**: 17
+    - **durationMs**: 780891
+    - **resultPreview**: {"refuted":true,"confidence":"high","reason":"LITERAL PARTS CONFIRMED (repo /home/user/auditonomous, read-only git): 8c98573 = 8c9857372843686b9d19452399a51bfd800b28b4, author+committer \"Eric D. Martin\", 2026-08-15 23:28:27 -0700, subject \"Reorganize working tree to the shared aybllc model layout\"; body verbatim: \"Eric's manual prune and promotion (2026-08-14/15), committed on his instruction…
+  - item 70
+    - **type**: workflow_agent
+    - **index**: 65
+    - **label**: verify:K18:3
+    - **phaseIndex**: 3
+    - **phaseTitle**: Verify
+    - **agentId**: a182f93395003762c
+    - **model**: claude-fable-5-1
+    - **state**: done
+    - **startedAt**: 1793690053412
+    - **queuedAt**: 1793680632122
+    - **attempt**: 1
+    - **lastToolName**: StructuredOutput
+    - **lastToolSummary**: high
+    - **promptPreview**: GROUND RULES (read-only). The repository is at /home/user/auditonomous; its working tree is checked out at origin/main (commit 2165144, 2026-09-11) and must stay that way.
+      Never run git checkout, switch, stash, reset, merge, pull, or write any file inside the repository. Read other branches only with "git -C /home/user/auditonomous show <ref>:<path>" and "git -C /home/user/auditonomous ls-tree -r …
+    - **promptFramed**: yes
+    - **lastProgressAt**: 1793690334374
+    - **tokens**: 89086
+    - **toolCalls**: 12
+    - **durationMs**: 280962
+    - **resultPreview**: {"refuted":false,"confidence":"high","reason":"LENS 3 (chronology/location) — all statements in K18 check out against git in /home/user/auditonomous (HEAD = origin/main = 2165144, 2026-09-11, working tree untouched; only read commands run).\n\nCOMMIT 8c98573 = 8c9857372843686b9d19452399a51bfd800b28b4. Author and committer \"Eric D. Martin <[address withheld]>\"; author-date and commit-da…
+  - item 71
+    - **type**: workflow_agent
+    - **index**: 66
+    - **label**: verify:K19:1
+    - **phaseIndex**: 3
+    - **phaseTitle**: Verify
+    - **agentId**: a64e671f8b4f09c31
+    - **model**: claude-fable-5-1
+    - **state**: done
+    - **startedAt**: 1793690336160
+    - **queuedAt**: 1793680632123
+    - **attempt**: 1
+    - **lastToolName**: StructuredOutput
+    - **lastToolSummary**: high
+    - **promptPreview**: GROUND RULES (read-only). The repository is at /home/user/auditonomous; its working tree is checked out at origin/main (commit 2165144, 2026-09-11) and must stay that way.
+      Never run git checkout, switch, stash, reset, merge, pull, or write any file inside the repository. Read other branches only with "git -C /home/user/auditonomous show <ref>:<path>" and "git -C /home/user/auditonomous ls-tree -r …
+    - **promptFramed**: yes
+    - **lastProgressAt**: 1793690639282
+    - **tokens**: 117307
+    - **toolCalls**: 25
+    - **durationMs**: 303121
+    - **resultPreview**: {"refuted":false,"confidence":"high","reason":"Lens 1 (textual accuracy): every sha, date, number, path and quoted phrase in K19 and its evidence re-opens as stated; nothing is wrong or unsupported. Checked read-only against /home/user/auditonomous (HEAD detached at origin/main 2165144) with git show/ls-tree/rev-parse only.\n\n1. Commit 62d2e3f (62d2e3f40ce61270834676d1949a86cad7a47810), AuthorDat…
+  - item 72
+    - **type**: workflow_agent
+    - **index**: 67
+    - **label**: verify:K19:2
+    - **phaseIndex**: 3
+    - **phaseTitle**: Verify
+    - **agentId**: a95ba74eb1a9397af
+    - **model**: claude-fable-5-1
+    - **state**: done
+    - **startedAt**: 1793690449579
+    - **queuedAt**: 1793680632123
+    - **attempt**: 1
+    - **lastToolName**: StructuredOutput
+    - **lastToolSummary**: medium
+    - **promptPreview**: GROUND RULES (read-only). The repository is at /home/user/auditonomous; its working tree is checked out at origin/main (commit 2165144, 2026-09-11) and must stay that way.
+      Never run git checkout, switch, stash, reset, merge, pull, or write any file inside the repository. Read other branches only with "git -C /home/user/auditonomous show <ref>:<path>" and "git -C /home/user/auditonomous ls-tree -r …
+    - **promptFramed**: yes
+    - **lastProgressAt**: 1793691076416
+    - **tokens**: 143557
+    - **toolCalls**: 31
+    - **durationMs**: 626837
+    - **resultPreview**: {"refuted":true,"confidence":"medium","reason":"LITERAL CORE CONFIRMED, FRAMING REFUTED (lens 2). Confirmed: (a) 62d2e3f (2026-09-14 01:42:45 +0000, author 'Claude', branch origin/claude/book-structure-roadmap-k8ap82) body: '116 restored, 65 byte-identical at HEAD, 16 superseded by later versions at HEAD, 121 left in history for a stated reason' and 'No file's bytes were changed'; a scripted blob …
+  - item 73
+    - **type**: workflow_agent
+    - **index**: 68
+    - **label**: verify:K19:3
+    - **phaseIndex**: 3
+    - **phaseTitle**: Verify
+    - **agentId**: ab64b167d16b4a722
+    - **model**: claude-fable-5-1
+    - **state**: done
+    - **startedAt**: 1793690641056
+    - **queuedAt**: 1793680632123
+    - **attempt**: 1
+    - **lastToolName**: StructuredOutput
+    - **lastToolSummary**: high
+    - **promptPreview**: GROUND RULES (read-only). The repository is at /home/user/auditonomous; its working tree is checked out at origin/main (commit 2165144, 2026-09-11) and must stay that way.
+      Never run git checkout, switch, stash, reset, merge, pull, or write any file inside the repository. Read other branches only with "git -C /home/user/auditonomous show <ref>:<path>" and "git -C /home/user/auditonomous ls-tree -r …
+    - **promptFramed**: yes
+    - **lastProgressAt**: 1793691030012
+    - **tokens**: 121244
+    - **toolCalls**: 19
+    - **durationMs**: 388955
+    - **resultPreview**: {"refuted":false,"confidence":"high","reason":"Every element of K19 checks out against git and the branch files; the content of the .odt itself (extracted to the scratchpad) strengthens the \"contradicting\" clause.\n\nCHRONOLOGY/LOCATION. 62d2e3f: author+committer \"Claude\" 2026-09-14 01:42:45 +0000 (= 2026-09-13 18:42:45 -0700), parent 30a40f1 (2026-09-13 20:37:08 +0000); `git branch -r --conta…
+  - item 74
+    - **type**: workflow_agent
+    - **index**: 69
+    - **label**: verify:K20:1
+    - **phaseIndex**: 3
+    - **phaseTitle**: Verify
+    - **agentId**: a3c6ceeb159c305f0
+    - **model**: claude-fable-5-1
+    - **state**: done
+    - **startedAt**: 1793691037295
+    - **queuedAt**: 1793680632123
+    - **attempt**: 1
+    - **lastToolName**: StructuredOutput
+    - **lastToolSummary**: high
+    - **promptPreview**: GROUND RULES (read-only). The repository is at /home/user/auditonomous; its working tree is checked out at origin/main (commit 2165144, 2026-09-11) and must stay that way.
+      Never run git checkout, switch, stash, reset, merge, pull, or write any file inside the repository. Read other branches only with "git -C /home/user/auditonomous show <ref>:<path>" and "git -C /home/user/auditonomous ls-tree -r …
+    - **promptFramed**: yes
+    - **lastProgressAt**: 1793691491939
+    - **tokens**: 117800
+    - **toolCalls**: 21
+    - **durationMs**: 454643
+    - **resultPreview**: {"refuted":false,"confidence":"high","reason":"Lens 1 (textual accuracy): every quoted phrase, line number, date and file in K20 re-checked; all verbatim-correct. Two imprecisions found (attribution and path), neither refuting.\n\nVERIFIED EVIDENCE\n(1) 1d83788:HUB_LEDGER.md:49-50 — exact text: \"[source text withheld from the public copy]\" …
+  - item 75
+    - **type**: workflow_agent
+    - **index**: 70
+    - **label**: verify:K20:2
+    - **phaseIndex**: 3
+    - **phaseTitle**: Verify
+    - **agentId**: a8cda66f5a76126cb
+    - **model**: claude-fable-5-1
+    - **state**: done
+    - **startedAt**: 1793691087786
+    - **queuedAt**: 1793680632123
+    - **attempt**: 1
+    - **lastToolName**: StructuredOutput
+    - **lastToolSummary**: medium
+    - **promptPreview**: GROUND RULES (read-only). The repository is at /home/user/auditonomous; its working tree is checked out at origin/main (commit 2165144, 2026-09-11) and must stay that way.
+      Never run git checkout, switch, stash, reset, merge, pull, or write any file inside the repository. Read other branches only with "git -C /home/user/auditonomous show <ref>:<path>" and "git -C /home/user/auditonomous ls-tree -r …
+    - **promptFramed**: yes
+    - **lastProgressAt**: 1793691703704
+    - **tokens**: 156379
+    - **toolCalls**: 39
+    - **durationMs**: 615917
+    - **resultPreview**: {"refuted":true,"confidence":"medium","reason":"VERIFIED PARTS OF K20. (1) 1d83788 (2026-08-14 17:40:15 -0700, \"F-005: retire the freeze check on Eric's instruction\"):HUB_LEDGER.md:39 heading \"### Owner decisions 2026-08-14 (recorded)\"; :49-50 verbatim \"[source text withheld from the public copy]'…
+  - item 76
+    - **type**: workflow_agent
+    - **index**: 71
+    - **label**: verify:K20:3
+    - **phaseIndex**: 3
+    - **phaseTitle**: Verify
+    - **agentId**: a24d202179a239cdb
+    - **model**: claude-fable-5-1
+    - **state**: done
+    - **startedAt**: 1793691493766
+    - **queuedAt**: 1793680632123
+    - **attempt**: 1
+    - **lastToolName**: StructuredOutput
+    - **lastToolSummary**: high
+    - **promptPreview**: GROUND RULES (read-only). The repository is at /home/user/auditonomous; its working tree is checked out at origin/main (commit 2165144, 2026-09-11) and must stay that way.
+      Never run git checkout, switch, stash, reset, merge, pull, or write any file inside the repository. Read other branches only with "git -C /home/user/auditonomous show <ref>:<path>" and "git -C /home/user/auditonomous ls-tree -r …
+    - **promptFramed**: yes
+    - **lastProgressAt**: 1793691914174
+    - **tokens**: 110128
+    - **toolCalls**: 12
+    - **durationMs**: 420407
+    - **resultPreview**: {"refuted":false,"confidence":"high","reason":"Chronology and location check out. (1) 14 August hub ledger: HUB_LEDGER.md authored in 3c25633 (2026-08-14 20:03:53 +0000); header line 2 \"[source text withheld from the public copy]\"; line 39 \"### Owner decisions 2026-08-14 (recorded)\"; lines 49-50 verbatim \"[source text withheld from the public copy]; \…
+  - item 77
+    - **type**: workflow_agent
+    - **index**: 72
+    - **label**: critic
+    - **phaseIndex**: 4
+    - **phaseTitle**: Critique
+    - **agentId**: a2b7f4c371b46a25d
+    - **model**: claude-fable-5-1
+    - **state**: done
+    - **startedAt**: 1793691915981
+    - **queuedAt**: 1793691915949
+    - **attempt**: 1
+    - **lastToolName**: StructuredOutput
+    - **promptPreview**: GROUND RULES (read-only). The repository is at /home/user/auditonomous; its working tree is checked out at origin/main (commit 2165144, 2026-09-11) and must stay that way.
+      Never run git checkout, switch, stash, reset, merge, pull, or write any file inside the repository. Read other branches only with "git -C /home/user/auditonomous show <ref>:<path>" and "git -C /home/user/auditonomous ls-tree -r …
+    - **promptFramed**: yes
+    - **lastProgressAt**: 1793693075996
+    - **tokens**: 331274
+    - **toolCalls**: 58
+    - **durationMs**: 1160014
+    - **resultPreview**: {"gaps":[{"gap":"A source not read: the remote branch `beta/7lm-exemplar-auditonomous`, pushed to the repository today (2026-11-03), is absent from the local clone and from the report. The report's 'origin/main … has not moved since' is true of main but the repository has new work.","finding":"Local clone: `git branch -r` lists only origin/main and origin/claude/book-structure-roadmap-k8ap82; the …
+  - item 78
+    - **type**: workflow_agent
+    - **index**: 73
+    - **label**: final
+    - **phaseIndex**: 5
+    - **phaseTitle**: Final
+    - **agentId**: a259f1bc65afe6df1
+    - **model**: claude-fable-5-1
+    - **state**: done
+    - **startedAt**: 1793693078451
+    - **queuedAt**: 1793693078413
+    - **attempt**: 1
+    - **lastToolName**: StructuredOutput
+    - **lastToolSummary**: # Where the Auditonomous manuscript development got to (rea…
+    - **promptPreview**: You are finishing a status report for a repository owner who asked: "Read the auditonomous manuscript dir and find out where the manuscript development got to." Rewrite the draft below into the final report, applying the verification verdicts (drop or correct any refuted or unconfirmed claim, using the corrections given) and closing the gaps the critic found (fold their findings in). Keep it plain…
+    - **promptFramed**: yes
+    - **lastProgressAt**: 1793694195023
+    - **tokens**: 429888
+    - **toolCalls**: 10
+    - **durationMs**: 1116570
+    - **resultPreview**: {"report":"# Where the Auditonomous manuscript development got to (read 2026-11-03)\n\n**Short answer.** No chapter of the book has been written. The author's only book prose is the fifty-two-block Auditonomous Theory corpus of July 2026 (committed 2 August, last edited 4 August, pruned from `main` on 15 August); everything since is planning: a prospectus and referee report (3 August), an extracti…
+- **totalTokens**: 10087001
+- **totalToolCalls**: 1739

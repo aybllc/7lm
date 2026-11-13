@@ -1,0 +1,47 @@
+# resolve:D1
+
+Agent result, as returned. Workflow: Resolutions for the 23 owner decisions. Run `wf_3293f65c-a92`. Phase: Resolve.
+
+- **decision**: 1. Whether the scaffold is close enough for the hand mirror to land now; section 26 reserves that judgement.
+- **resolution**: Treat the owner's instruction of 11 November 2026 as the order to make the mirror, but not yet as the judgement that it lands. Leave both mirrors as the draft pull requests they are (autonomous #30 at a719cec, auditonomous #28 at 294c843), change nothing on any main, and put one question to the owner: "Is 7lm close enough for the mirror to land on main now?" On a yes the owner merges the two drafts by hand; a merge is undone by one revert commit.
+- **reasoning**
+  - item 1
+    - **speaker**: owner
+    - **quote**: All repos should mirror the 7lm. Manually. We update 7lm and focus on it only. No outside updates until we are sure I'm close.
+    - **locator**: /home/user/7lm@origin/main:L8/L6/history/harmonization-2026-09-04.md:336
+    - **bears**: The owner's rule of 20 September 2026 makes any update outside the scaffold wait on the owner's own judgement of closeness, and it has no later owner sentence on main lifting it.
+  - item 2
+    - **speaker**: record
+    - **quote**: they will be, manually, when the owner judges the scaffold close, and not before
+    - **locator**: /home/user/7lm@origin/main:L8/L6/history/harmonization-2026-09-04.md:346
+    - **bears**: Section 26's standing reserves the judgement to the owner by name, so no session, record or check can supply it.
+  - item 3
+    - **speaker**: owner
+    - **quote**: Get qa hanfle on the research and manuscruipt for Auditonomous but firwst re0ull7lm and deep research the mopdel becuase its chamnged and we need to uipdate the autonomous and auditonomous repos phsyciall; to match first .
+    - **locator**: owner's instructions of 11 November 2026, as typed; also copied at /home/user/autonomous@origin/ccr-9391bd81-f2enmj:L8/L6/history/harmonization-2026-09-05.md:185
+    - **bears**: The owner's latest word orders the physical update of both exemplars, and orders it first, which is the strongest evidence that the owner now wants the mirror; it does not contain the word close or say the scaffold is settled.
+  - item 4
+    - **speaker**: specification
+    - **quote**: The desk carries the L7 branch names of the version before 20 September 2026, publications/ as a direct branch and governance/restrictions/; the L7 restructure is not yet mirrored.
+    - **locator**: /home/user/7lm@origin/main:L8/L4/work/writing/7lm-harmonized-architecture-specification.md:950
+    - **bears**: The specification names exactly what is outstanding in the exemplars, the L7 restructure; that is all the two draft pull requests carry as mirror, so what would land is bounded and already ruled in the scaffold.
+  - item 5
+    - **speaker**: owner
+    - **quote**: [source text withheld from the public copy].
+    - **locator**: /home/user/autonomous@origin/claude/scholarly-pair-baseline-k8ap82:L8/L6/history/exemplar-2026-09-14.md:7
+    - **bears**: The owner's order of 14 September 2026 sets a second condition, stability of both peering and the model, before Auditonomous work starts; the 11 November instruction does not say that condition is met.
+  - item 6
+    - **speaker**: record
+    - **quote**: ### Owner-approved common architecture corrections of 2 November 2026
+    - **locator**: /home/user/7lm@origin/beta/common-contracts-r1-r6:L8/L6/history/specification-history.md:104
+    - **bears**: The scaffold still has an owner-approved correction set sitting unmerged on a candidate branch nine days before the mirror was made, so the scaffold was still being updated and "close" cannot be inferred from main standing still.
+  - item 7
+    - **speaker**: owner
+    - **quote**: Don't change the system unless you ask or are unsure
+    - **locator**: /home/user/7lm@origin/main:L8/L6/history/harmonization-2026-09-04.md:482
+    - **bears**: Where the owner's two words pull apart (wait until close; update first), the standing rule is to ask and not decide, which makes holding the drafts and asking the one question the course the owner has already prescribed.
+- **against**: "we need to uipdate the autonomous and auditonomous repos phsyciall; to match first ." (owner's instructions of 11 November 2026, as typed). The owner asked for the update itself, first, before the Auditonomous QA; holding the mirrors as drafts and asking again can be read as not doing what was plainly asked, and it leaves the QA the owner wants queued behind a question.
+- **confidence**: the quotations do not reach it: the owner must say
+- **alternatives**: (a) Read the 11 November instruction as itself the judgement of section 26 and have the owner merge both drafts now. This is the natural reading of "to match first", but it rests on an inference the owner has not stated. (b) Hold the mirror until the beta candidate (origin/beta/common-contracts-r1-r6 at 97314c5) is merged or declined in the scaffold, then mirror once. This is the strictest reading of "No outside updates until we are sure I'm close", but it delays what the owner asked for first. (c) Land the mirror in autonomous only, as a trial, and auditonomous after. No quotation supports splitting them.
+- **what_it_costs**: One question and one answer from the owner. Until then both exemplar mains stay as they are (L7/publications/ and L7/governance/restrictions/ still on disk, verified at autonomous origin/main c9076c3 and auditonomous origin/main 2165144), the specification's "not yet mirrored" sentence stays true, and the Auditonomous QA proceeds against a main that does not yet match, or waits. Two facts the owner should have when answering: scaffold main has not changed its positions since 20 September 2026 (2e5a6d6..c9dc061 adds one file, L8/L6/in/7lm-layer-lists.md), and auditonomous draft #28 carries more than the mirror (226 files against main, including the agent results checked in on the owner's word), so merging it lands those too.
+- **who_acts**: The owner alone: says whether the scaffold is close ("yes, land it" or "not yet"), and on a yes merges draft PR #30 (autonomous) and draft PR #28 (auditonomous) by hand. No session merges, and nothing is automated.

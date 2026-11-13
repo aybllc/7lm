@@ -1,0 +1,150 @@
+export const meta = {
+  name: 'exemplar-mirror-review',
+  description: 'Read-only adversarial review of the two local commits that mirror the L7 restructure into the exemplar repositories',
+  phases: [
+    { title: 'Review', detail: 'three lenses per repository: completeness, do-no-harm, record accuracy' },
+    { title: 'Verify', detail: 'one skeptic per finding' },
+  ],
+}
+
+const SCRATCH = '/tmp/claude-0/-home-user/bfcfd013-a2da-5019-961e-7f46116f08be/scratchpad/wf-review'
+
+const REPOS = [
+  { key: 'autonomous', path: '/home/user/autonomous', commit: '8257118', base: 'c9076c3', sec: '14', beta: 'origin/beta/7lm-exemplar-autonomous' },
+  { key: 'auditonomous', path: '/home/user/auditonomous', commit: 'f2d5b37', base: '2165144', sec: '13', beta: 'origin/beta/7lm-exemplar-auditonomous' },
+]
+
+const RULES = `You are one reviewer in a READ-ONLY adversarial review. Nothing may be changed.
+
+WHAT IS UNDER REVIEW
+Two repositories, aybllc/autonomous and aybllc/auditonomous, are "exemplars" of the Seven-Layer Model (7LM), whose scaffold is aybllc/7lm (local clone /home/user/7lm, model of record = origin/main at c9dc061). On 2026-09-20 the scaffold restructured its desk, L7 (its record L8/L6/history/harmonization-2026-09-04.md sections 25 and 37): L7/publications/ became L7/allications/publications/ with five new sibling positions (applications, communications, specifications, notifications, participations) and a container sheet L7/allications/0.md; L7/governance/restrictions/ became L7/governance/controlled/; then the words in live text were swept so they match the folders. The exemplars were never brought into step. On 2026-11-11 the owner asked that both be physically brought into step. One local, UNPUSHED commit in each exemplar now does that, by hand, following the scaffold's own procedure. You review that commit.
+
+THE INTENDED CONTENT OF EACH COMMIT (judge the commit against this)
+1. Tracked renames (git mv): L7/publications/ -> L7/allications/publications/ ; L7/governance/restrictions/ -> L7/governance/controlled/. Payload files unchanged.
+2. Six new sheets: L7/allications/0.md and L7/allications/{applications,communications,specifications,notifications,participations}/0.md. Each is the scaffold's sheet at the same path (/home/user/7lm origin/main) with a "## Holdings" section added in the exemplar's style and, for the container, its Standing line pointing at this repository's own record.
+3. Words, in LIVE SHEETS AND THE README ONLY (a sheet is a file named 0.md; "live" excludes every file under L8/L6/history/ except its 0.md, everything below the root of a retired set under L8/L6/retired/<set>/, and L8/L6/in/). Literal phrase pairs, each becoming the specification's current wording:
+   "peering, and publication state" -> "peering, and allications — the outward acts, of which publication is one"
+   "peering, and publications become addressable" -> "peering, and allications become addressable"
+   "... L7/peering/, and L7/publications/." (the canonical-branches line) -> "... L7/peering/, and L7/allications/."
+   "four owned external relations: provenance, governance, peering, and publications." -> "... peering, and allications — the outward acts, of which publication is one."
+   "the L7 publications branch" -> "L7/allications/publications/"
+   "publications and release identity" -> "allications: the outward acts, of which publication is one"
+   "access, restrictions" -> "access, controlled" ; "access, and restrictions" -> "access, and controlled conditions"
+   "Directory for restrictions that constrain external disclosure, use, transfer, or handling." -> "Directory for restrictions and other conditions that constrain external disclosure, use, transfer, or handling."
+   "Keeps restrictions explicit and machine-addressable without redefining the underlying research." -> "Keeps what is controlled explicit and machine-addressable without redefining the underlying research."
+   path "L7/governance/restrictions" -> "L7/governance/controlled" ; path "L7/publications" -> "L7/allications/publications" ; folder name \`restrictions/\` -> \`controlled/\`
+   In L7/0.md: the tree drawing and the prose table redrawn as the scaffold's L7/0.md draws them; the Holdings line for the fourth relation headed "allications". In README.md: "peering, publications." -> "peering, allications."
+4. The one CI check, .github/workflows/integrity.yml: the canonical list of positions becomes the scaffold's list of 71; two comments name the current paths. (Autonomous keeps its own comment block about a retired "Q-6" step.)
+5. A new numbered section at the end of the repository's own record, L8/L6/history/harmonization-2026-09-05.md, and one clause added to the bullet about that record in L8/L6/history/0.md.
+6. MUST NOT be touched: any other record under L8/L6/history/, anything below a retired set, dated research records, staging records (L7/provenance/sources/staging-records/** except its 0.md), source texts and prior-art files, deep-research files, quotations of the owner's words, the word "restrictions" where it names a kind of condition and not the folder, and any sentence of a sheet that is not about the renamed positions. The specification's Object and Function cells for L7 still read "peering, publications, exposure, and exchange" in the scaffold's own sheets and are meant to stay.
+7. Deliberately NOT done: no sheet is added to folders that lack one (they are listed in the record instead); the unmerged beta branch is not touched.
+
+HARD RULES
+1. READ-ONLY. Never run git checkout, switch, restore, reset, merge, rebase, commit, stash, push, fetch, pull, worktree, clean, gc, or anything that writes inside /home/user/7lm, /home/user/autonomous or /home/user/auditonomous.
+2. NEVER read a file from a working tree. Read only git objects, by commit id: \`git -C <repo> show <commit>:<path>\`, \`git -C <repo> ls-tree -r --name-only <commit> [path]\`, \`git -C <repo> grep -n -F '<text>' <commit> -- <paths>\`, \`git -C <repo> diff -M <base> <commit> [-- paths]\`, \`git -C <repo> diff -M --name-status <base> <commit>\`, \`git -C <repo> show --stat <commit>\`.
+3. Scratch files only under ${SCRATCH}/<your label>/ . You may copy objects there and run shell or python3 -I on the copies.
+4. Report only what you can show with a locator (<repo>@<commit>:<path>:<line>) and a quote. Do not report style preferences. Do not report as a defect anything listed above as intended or deliberately not done. If you checked something and it is correct, list it under "checked".
+5. Be exhaustive within your lens; another reviewer has the other lenses.
+`
+
+const FINDINGS_SCHEMA = {
+  type: 'object',
+  properties: {
+    findings: {
+      type: 'array',
+      items: {
+        type: 'object',
+        properties: {
+          id: { type: 'string' },
+          severity: { type: 'string', enum: ['blocker', 'major', 'minor'] },
+          file: { type: 'string' },
+          line: { type: 'string' },
+          statement: { type: 'string', description: 'what is wrong, concretely' },
+          evidence: { type: 'string', description: 'locators and quotes that show it' },
+          suggested_fix: { type: 'string', description: 'the exact replacement text or operation' },
+        },
+        required: ['id', 'severity', 'file', 'statement', 'evidence'],
+      },
+    },
+    checked: { type: 'array', items: { type: 'string' } },
+  },
+  required: ['findings', 'checked'],
+}
+
+const lensPrompt = (r, lens) => {
+  const head = `REPOSITORY UNDER REVIEW: ${r.key} at ${r.path}. THE COMMIT: ${r.commit}. ITS PARENT (origin/main): ${r.base}. Its new record section is section ${r.sec} of L8/L6/history/harmonization-2026-09-05.md. The scaffold: /home/user/7lm origin/main. The unmerged beta candidate of this repository (for reference only): ${r.beta}.\n\n`
+  if (lens === 'complete') return head + `YOUR LENS: IS THE MIRROR COMPLETE AND CORRECT?
+1. The tree. Take the 71 canonical positions from /home/user/7lm origin/main:.github/workflows/integrity.yml. At ${r.commit}: does every one exist with a 0.md whose first line is exactly "# <path>/"? Does any 0.md under L7 or L8 (outside retired sets) have a first line that is not its path? Does anything remain at L7/publications or L7/governance/restrictions?
+2. Residue. At ${r.commit}, in live sheets and the README, search for every former name and phrase in the list above, and for variants the list may have missed: "publications" used as the name of the desk's fourth branch or relation in any other wording (for example "peering and publications", "publications branch", "the publications position", a tree or table that still draws publications/ directly under L7, "restrictions/" as a folder, "governance/restrictions" without the L7 prefix). Report each survivor with file and line. Remember what is meant to stay.
+3. Fidelity. For every sheet at ${r.commit} that has a sheet at the same path in the scaffold, every line that mentions allications, controlled, publications or restrictions should be byte-identical to a line of the scaffold's sheet unless it is this repository's own local sentence. List each local sentence that is now wrong or misleading after the restructure (for example it names a path that does not exist, or calls the fourth relation by the old name).
+4. Dead references. In every file the commit changed or added, extract each path-like reference beginning L7/ or L8/ (in backticks or bare) and check that it exists in the tree at ${r.commit} (a directory or file; allow patterns with * and placeholder names like peer-N/object-M). Report each that does not resolve, unless it is inside the new record section describing a former path, or in the container sheet's Standing line naming the former path.
+5. The six new sheets. Compare each with the scaffold's sheet (diff). Is every difference intended (the Holdings section; the container's Standing line)? Is anything in them untrue of THIS repository (for example a sentence that says something is filed here that is not, or a pointer to a file that exists only in the scaffold)? Does the container's Holdings sentence match what L7/allications/publications/ actually holds?
+6. L7/0.md. Compare its tree drawing and prose table with the scaffold's L7/0.md: are the allications block and the seven rows identical to the scaffold's, and the controlled row? Is anything else in that sheet now inconsistent with the new tree?
+7. README.md at ${r.commit}: does every statement about the desk match the tree?`
+  if (lens === 'harm') return head + `YOUR LENS: DID THE COMMIT TOUCH ANYTHING IT MUST NOT, OR LOSE ANYTHING?
+1. The full list of changed paths: git -C ${r.path} diff -M --name-status ${r.base} ${r.commit}. Classify every entry: rename (with similarity), add, modify. Is there ANY path outside this set: the two moved directories, the six new sheets, live 0.md sheets, README.md, .github/workflows/integrity.yml, L8/L6/history/harmonization-2026-09-05.md, L8/L6/history/0.md? Report each.
+2. Renames. For each renamed file: is the similarity 100 for every non-sheet payload file (README.md files, .py, glossary, fetch list)? For the renamed sheets, show the full diff and confirm every changed line is one of the intended phrase or path changes and nothing else. Were file modes preserved (git diff --summary shows mode changes)? Is any file from ${r.base} missing at ${r.commit} (compare the sets of blob ids: every blob under the two moved directories at ${r.base} must exist at ${r.commit}, modified sheets aside)?
+3. For EVERY modified sheet (not just a sample): get the diff and confirm that each removed line differs from its added line only by the intended phrase pairs. Do this mechanically: write a small python3 -I script in your scratch directory that takes each -/+ line pair from git diff -U0, applies the intended pairs to the removed line, and tests equality with the added line; then inspect by eye every pair that fails. Report every change that is not one of the intended pairs (the L7/0.md tree, table and holdings line and the README line are intended and described above).
+4. Forbidden areas. Confirm by diff that nothing changed under L8/L6/retired/, under L8/L6/history/ other than the two files named, under L7/provenance/sources/staging-records/ other than its 0.md, under L7/provenance/prior-art/ other than 0.md sheets, in any research document that is not a 0.md, or in any file whose name is not 0.md, README.md or integrity.yml (the record aside).
+5. Quotations. In the modified sheets, did any change land INSIDE a quotation of the owner's words (text introduced as the owner's, or dated quotations in the owner's voice)? Quotations of the specification are meant to change to the specification's current wording: for five such changed quotations, confirm the new wording appears verbatim in /home/user/7lm origin/main:L8/L4/work/writing/7lm-harmonized-architecture-specification.md.
+6. Encoding. For every modified or added text file: no CR characters introduced, no BOM, no change to the final-newline state relative to the parent, no trailing-whitespace churn, no tabs converted. Compare byte counts where useful.
+7. The check. Diff ${r.path}@${r.commit}:.github/workflows/integrity.yml against /home/user/7lm origin/main's file and against the parent's. Is every difference intended? Run the three steps of the committed check against the committed tree by reading objects (you may reconstruct the tree in scratch with git archive piped to tar: git -C ${r.path} archive ${r.commit} | tar -x -C <scratch>, which does not write to the repository) and report pass or fail for each step with its output.
+8. Anything else in the commit that would surprise the owner.`
+  return head + `YOUR LENS: IS EVERY NUMBER AND STATEMENT IN THE NEW RECORD SECTION, AND IN THE COMMIT MESSAGE, TRUE?
+Read section ${r.sec} of ${r.path}@${r.commit}:L8/L6/history/harmonization-2026-09-05.md in full, and the commit message (git -C ${r.path} show -s --format=%B ${r.commit}). Then verify, statement by statement:
+1. The owner's words. The section quotes the owner's instruction of 2026-11-11 "as written". The instruction, exactly as the owner typed it, is the following string between the markers; the quotation must match it character for character:
+<<<Get qa hanfle on the research and manuscruipt for Auditonomous but firwst re0ull7lm and deep research the mopdel becuase its chamnged and we need to uipdate the autonomous and auditonomous repos phsyciall; to match first .>>>
+2. The quotations of the specification: each must appear verbatim in /home/user/7lm origin/main:L8/L4/work/writing/7lm-harmonized-architecture-specification.md, and the "Not yet as stated" sentence must be the one the specification gives for THIS repository (find which paragraph of the section "Exemplars as instantiated" is about ${r.key}). Is "version of 20 September 2026" what the specification calls itself?
+3. Every count. Recount each independently from the diff ${r.base}..${r.commit}: the number of files moved; the number of sheets written; the L7 sheet count before and after and the repository sheet count before and after (count files named 0.md with ls-tree); each per-phrase count (count occurrences of the old phrase in the parent's live sheets and README, and confirm zero remain at ${r.commit} where zero is expected; note the path counts exclude occurrences already consumed by a longer phrase such as the canonical-branches line); the number of sheets changed by the word pass ("N sheets and the README"); the number of canonical positions (71).
+4. Every factual statement: what the check's list gained; whether the check file is "the scaffold's, byte for byte" where that is claimed, or differs only by the stated comment block; the list of folders without a sheet (recompute: every directory under L7 and L8 at ${r.commit}, outside retired sets, without a 0.md); the sentence about the publications sheet's Standing (does that sheet say the harmonized specification is filed at L8/L4/work/writing/, and is it true that no such file is in this repository?); what is said about the beta branch (its head id and date; that it makes the same two moves; that it writes its own sheets at the six new positions, and, where claimed, at the unsheeted folders); what is said about the other branches and pull requests (which files they edit and at which paths: check with git diff --name-status <merge-base> <branch>; branches: origin/claude/no-deletion-fix-2026-09-07 in both repositories; origin/claude/scholarly-pair-baseline-k8ap82 in autonomous; origin/claude/book-structure-roadmap-k8ap82 in auditonomous, including the count of its live files that name the former paths).
+5. The "Not changed" paragraph: is each thing it says was not changed in fact unchanged in the diff?
+6. Internal consistency: section number follows the previous one; the date; the cross-references from L7/allications/0.md's Standing line and from L8/L6/history/0.md to this section number are right; nothing in the section contradicts an earlier section of the same record.
+7. The commit message: is every statement in it true of the commit?
+Report every statement that is false, imprecise or unverifiable, with the exact corrected wording.`
+}
+
+phase('Review')
+const lenses = ['complete', 'harm', 'record']
+const jobs = []
+for (const r of REPOS) for (const l of lenses) jobs.push({ r, l })
+const reviews = await parallel(jobs.map(j => () =>
+  agent(RULES + '\n' + lensPrompt(j.r, j.l), { label: `review:${j.r.key}:${j.l}`, phase: 'Review', schema: FINDINGS_SCHEMA })
+    .then(x => (x ? { repo: j.r.key, lens: j.l, findings: x.findings || [], checked: x.checked || [] } : null))
+))
+const got = reviews.filter(Boolean)
+const all = []
+for (const g of got) for (const f of g.findings) all.push(Object.assign({ repo: g.repo, lens: g.lens }, f))
+log(`reviews returned: ${got.length}/${jobs.length}; findings: ${all.length}`)
+
+const VERDICT_SCHEMA = {
+  type: 'object',
+  properties: {
+    real: { type: 'boolean' },
+    reasoning: { type: 'string' },
+    corrected_statement: { type: 'string' },
+    exact_fix: { type: 'string' },
+  },
+  required: ['real', 'reasoning'],
+}
+
+phase('Verify')
+const judged = await parallel(all.map(f => () => {
+  const r = REPOS.find(x => x.key === f.repo)
+  return agent(RULES + `
+YOU ARE A SKEPTIC. A reviewer reported the finding below against ${r.key} (${r.path}, commit ${r.commit}, parent ${r.base}). Decide whether it is REAL: a true defect of the commit measured against the intended content stated above, shown by the git objects. Check the evidence yourself. It is NOT real if the thing is intended, deliberately not done, a matter of taste, already true of the parent and outside the pass's scope, or simply wrong. If it is real, give the exact fix (the replacement text or the operation), as small as possible.
+FINDING ${f.id} [${f.severity}] in ${f.file}${f.line ? ':' + f.line : ''}
+STATEMENT: ${f.statement}
+EVIDENCE: ${f.evidence}
+SUGGESTED FIX: ${f.suggested_fix || '(none given)'}`, { label: `verify:${f.repo}:${f.id}`, phase: 'Verify', schema: VERDICT_SCHEMA, effort: 'high' })
+    .then(v => Object.assign({}, f, { verdict: v }))
+}))
+
+const confirmed = judged.filter(Boolean).filter(j => j.verdict && j.verdict.real)
+const rejected = judged.filter(Boolean).filter(j => j.verdict && !j.verdict.real)
+log(`confirmed: ${confirmed.length}; rejected: ${rejected.length}`)
+return {
+  confirmed,
+  rejected: rejected.map(j => ({ repo: j.repo, id: j.id, statement: j.statement, why_not: j.verdict.reasoning })),
+  checked: got.map(g => ({ repo: g.repo, lens: g.lens, checked: g.checked })),
+  reviews_returned: got.length,
+}

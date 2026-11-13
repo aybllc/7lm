@@ -1,0 +1,440 @@
+# read:record-A
+
+Agent result, as returned. Workflow: The model, read deep. Run `wf_9a60cf50-a5f`. Phase: Read.
+
+- **scope**: Scaffold record /home/user/7lm@origin/main:L8/L6/history/harmonization-2026-09-04.md lines 1-294 (preamble and sections 1-23, 2026-09-04 to 2026-09-13) and /home/user/7lm@origin/main:L8/L6/history/sheets-2026-09-07.md (423 lines). Read from git objects only. Cross-reference checks made, and only these: the root trees and integrity.yml of 7lm@origin/main, 7lm@68c550e (the last commit before section 24 was added) and both exemplars' origin/main; a few greps of current scaffold and exemplar sheets to tell what the record SAYS from what the tree IS.
+- **summary**: Sections 1-23 of the scaffold's record run from 4 to 13 September 2026. Sections 1-5 record the harmonization itself: inherited terms relocated, split or reserved, nineteen old sheets retired verbatim, external provenance moved to L7. Sections 6-13 are the owner's standing rules: copyright in one place; research/review/ as catch-all and the tree silent on access; First is always 0; one CI check, the same in every 7LM repository; the README as the start; deletion only after enumeration, with integrity enforced and no-deletion only implied; sheets say what is, the record says what happened. Section 14 is the rename pass (USO/ to L8/, l0-l6 to L0-L6), done the same day in all three repositories. Sections 15-18 concern the field guide, which is teaching and not a rule. Section 16 rules that peers count from 1. Sections 19-23 reduce the drawings to one plate and enter the packet reading into the specification while ruling that the tree does not move.
+
+  For the exemplars: as of section 23 their main branches were in step with the scaffold. Their CI lists the same 57 canonical positions the scaffold's did at that point (68c550e), with L7/publications and L7/governance/restrictions, and their records carry the rename pass. Sections 15-23 required no exemplar change by the record's own account; the plate sheet, field guide and FIRST_IS_ALWAYS_0.md are scaffold-only files, and the packet reading was propagated to scaffold sheets only. The gap to today's model (71 positions, allications, controlled) therefore lies wholly in sections 24-37, outside this scope.
+
+  sheets-2026-09-07.md is L6 memory that "controls nothing": history pulled verbatim out of 47 sheets, with exemplar snapshots from before their 7LM layouts.
+- **facts**
+  - item 1
+    - **id**: F01
+    - **kind**: procedure
+    - **statement**: Record preamble: the record records and does not adjudicate; its dispositions are copied from the specification's Harmonization Record; commit ids are orientation pointers. Line 4 still reads 'Path: USO/l6/history/harmonization-2026-09-04.md' while line 1 (the heading) reads the L8 path; section 14 says the heading names the current path and the body quotes paths as they stood. Standing (ii) for this file, but the distinction git history vs scientific memory is the specification's and so (i).
+    - **locator**: 7lm@origin/main:L8/L6/history/harmonization-2026-09-04.md:1-6 (preamble)
+    - **quote**: This record records; it does not adjudicate. Its dispositions are the Harmonization Record's dispositions, copied by name.
+  - item 2
+    - **id**: F02
+    - **kind**: change
+    - **statement**: Section 1 (no date in heading; the event is 2026-09-04): inherited terms and where they went. prior-art relocated to L7/provenance/prior-art/; definitions ratified at USO/l0/semantics/definitions/ (now L8/L0/...); thesis-statements relocated to USO/l5/research/lanes/; semantic-formulas split (L0 reading, L2 exact, L3 applied) with no path for the compound; corpus split, released identity at L7/publications/; INFRASTRUCTURE superseded as L4 name (L4 is Conversion); L6 provenance split. No owner words quoted. Layer ownership is (i), the specification's dispositions; the retired paths are (ii).
+    - **locator**: 7lm@origin/main:L8/L6/history/harmonization-2026-09-04.md:8-23 (§1)
+    - **quote**: Locally authored definitions belong at USO/l0/semantics/definitions/; peer definitions arrive as immutable external bindings.
+  - item 3
+    - **id**: F03
+    - **kind**: change
+    - **statement**: Section 1a: nineteen gate files of the 2026-08-20 scaffold were moved verbatim on 2026-09-04 (commit e810f61) to USO/l6/retired/scaffold-2026-08-20/USO/<path>; the owner's README sketch 'Unified Science Object' retired verbatim beside them. Tree check: all nineteen plus README.md are present on main under L8/L6/retired/scaffold-2026-08-20/ with the inner USO/l0..l6 paths unchanged. (ii) this repository only: [source text withheld from the public copy] prior scaffold.
+    - **locator**: 7lm@origin/main:L8/L6/history/harmonization-2026-09-04.md:25-51 (§1a)
+    - **quote**: Each of the nineteen gate files was moved verbatim on 2026-09-04, in commit e810f61
+  - item 4
+    - **id**: F04
+    - **kind**: change
+    - **statement**: Section 2: chronology 2026-08-20 to 2026-09-05 with commit ids (scaffold drafted with lowercase uso/; c0f46e1 on 2026-08-24 renamed uso/ to USO/ and cut the old L7 desk; e810f61 retirement and filing; fb22e25 sheets committed). Sheets were written 'by hand, without automation'. (ii) this repository's history.
+    - **locator**: 7lm@origin/main:L8/L6/history/harmonization-2026-09-04.md:53-73 (§2)
+    - **quote**: Uniform `0.md` sheets written for every directory of the canonical topology, by hand, without automation
+  - item 5
+    - **id**: F05
+    - **kind**: rule
+    - **statement**: Section 2, row of 2026-09-05: the owner designated aybllc/l6 (INTERNAL) as the archive that serves curated sources, read-only from every consuming repository; recorded at L7/provenance/sources/0.md and L7/peering/private/ingress/0.md, pinned at 53b28f6. Standing: every consuming repository of this program (both exemplars included), but section 15 records it is 'a fact about this program and not a rule of the model'.
+    - **locator**: 7lm@origin/main:L8/L6/history/harmonization-2026-09-04.md:72 (§2); :186 (§15)
+    - **quote**: don't edit l6; use it to serve curated sources
+  - item 6
+    - **id**: F06
+    - **kind**: exemplar
+    - **statement**: Section 2, row of 2026-09-05: owner rule for the originating boundary test, recorded at L7/peering/public/ingress/0.md and applied in the auditonomous routing proposal. Binds Auditonomous specifically: its only source for the definition of autonomous is the bound L0 object of aybllc/autonomous. Repeated in sheets-2026-09-07.md line 97 with the gloss that no standard, dictionary, corpus or archive is bound directly for it.
+    - **locator**: 7lm@origin/main:L8/L6/history/harmonization-2026-09-04.md:73 (§2); 7lm@origin/main:L8/L6/history/sheets-2026-09-07.md:97
+    - **quote**: Auditonomous gets the definitions of autonomous from Autonomous and nowhere else.
+  - item 7
+    - **id**: F07
+    - **kind**: rule
+    - **statement**: Section 3: reserved terms have no current path, owner or directory: found/caught/naught; regress; origidity/certainty/intolerance; corpus in its broader sense; semantic-formulas as a compound. Standing (i): it is the specification's Harmonization Record rule, so no 7LM repository manufactures a directory for a reserved term. Section 7 names the exemplars' orphan/foster/results/delete queue as the analogue of found/caught/naught.
+    - **locator**: 7lm@origin/main:L8/L6/history/harmonization-2026-09-04.md:75-83 (§3)
+    - **quote**: A reserved term remains available for research without manufacturing a directory or layer owner.
+  - item 8
+    - **id**: F08
+    - **kind**: rule
+    - **statement**: Section 4: the 'L6 provenance' split. Internal reconstructable memory stays at L6 (history/, retired/); external source, authority, prior art and public provenance belong at L7/provenance/; the ledger moved to L7/provenance/sources/source-ledger.md. No L6 provenance directory remains. Standing (i) as a rule of the specification; the file move is (ii).
+    - **locator**: 7lm@origin/main:L8/L6/history/harmonization-2026-09-04.md:85-87 (§4)
+    - **quote**: Internal reconstructable memory remains L6; external source, authority, prior art, and public provenance belong at L7/provenance/.
+  - item 9
+    - **id**: F09
+    - **kind**: procedure
+    - **statement**: Section 5: deliberately not recorded: whether any retired text was right (an L5 judgment); the provenance of external sources the retired sheets cited (resolves to L7/provenance/); any placement for a reserved term. (ii) scope statement of this record.
+    - **locator**: 7lm@origin/main:L8/L6/history/harmonization-2026-09-04.md:89-93 (§5)
+    - **quote**: Whether any retired text was right. That is an L5 judgment.
+  - item 10
+    - **id**: F10
+    - **kind**: rule
+    - **statement**: Section 6, addendum 2026-09-05: the copyright rule. The owner wrote it into the README of aybllc/autonomous (commit 7465e77, 2026-09-04); the full quotation continues 'I THINK WE NEED TO ENFORCE INTUITVITY BY NOT DEFINING SO MANY RULES. COPYRIGHT FOR TO COPYRIGHT WE DON'T SPEAK ABOUT THAT HERE.' The teaching is placed at L7/governance/copyright/0.md ('One place') and named in the README; 'the two exemplars apply it'. Not done: the specification's text is not changed. Standing (i): the record says the exemplars apply it and section 9 lists 'copyright in one place' among the specification's rules. Tree: 'One place' heading at 7lm@origin/main:L7/governance/copyright/0.md:16; both exemplar mains have L7/governance/copyright/0.md.
+    - **locator**: 7lm@origin/main:L8/L6/history/harmonization-2026-09-04.md:95-97 (§6)
+    - **quote**: THE PLACE TO LOOK FOR COPYRIGHT IS ONLY ONE PLACE, FROM THERE IT SHOULD BE OBVIOUS TO THE OBSERVER THERE WHAT TO DO NEXT.
+  - item 11
+    - **id**: F11
+    - **kind**: rule
+    - **statement**: Section 7, addendum 2026-09-06: the catch-all. Owner's words: "orphan is pejorative. durable assigns orphans as foreveer. Im nopt liking this" and "research/review/ works as a catch all". Everything awaiting the owner's review lands at research/review/; what is set aside stays there labelled PARKED; what is taken up moves to lanes/; finished work is filed at its layer; nothing is deleted; no new position is added to the canonical tree. Standing (i): the displaced sheet text and the current sheet both say 'In every 7LM repository' (sheets-2026-09-07.md:397; 7lm@origin/main:L8/L5/research/review/0.md:36).
+    - **locator**: 7lm@origin/main:L8/L6/history/harmonization-2026-09-04.md:99-103 (§7)
+    - **quote**: research/review/ works as a catch all
+  - item 12
+    - **id**: F12
+    - **kind**: rule
+    - **statement**: Section 7: the tree's silence on access. Owner's words in full: "delete the cannon, teh ideea, the dirs not the data. Hear my words, lokk at the data, the core idea odf qwhere this shoudl go and simply requireng whatvefr 8inteligence you abve to abide byu the stay out rules is not our concerm". L7/peering/0.md no longer says who may write where; the sentences stating an intelligence's write access were removed and the bullet describes the register's position only. Standing (i): section 9 lists 'the topology's silence on access' as written into the specification.
+    - **locator**: 7lm@origin/main:L8/L6/history/harmonization-2026-09-04.md:101-103 (§7); :115 (§9)
+    - **quote**: `L7/peering/0.md` no longer says who may write where: the sentences that stated an intelligence's write access were removed
+  - item 13
+    - **id**: F13
+    - **kind**: exemplar
+    - **statement**: Section 7: the queue vocabulary orphan/foster/results/delete was retired in both exemplars on 2026-09-06; the scaffold never carried it. The session rules file CLAUDE.md is held off on the owner's word: "HOdl off on clude.md. do the other things and mrererge". Tree: no CLAUDE.md in 7lm@origin/main, autonomous@origin/main or auditonomous@origin/main (ls-tree grep, none found); both exemplars hold L8/L6/retired/layout-2026-09-06/0.md. The hold-off is listed as still open at section 14 (line 178). Standing (i) in effect: it is applied to all three repositories.
+    - **locator**: 7lm@origin/main:L8/L6/history/harmonization-2026-09-04.md:103 (§7); :178 (§14)
+    - **quote**: The file that would carry rules for a session (`CLAUDE.md`) is held off on the owner's word.
+  - item 14
+    - **id**: F14
+    - **kind**: rule
+    - **statement**: Section 8, addendum 2026-09-06: 'First is always 0'. Owner's words: "layer 7 will always be layer 6 :)" and, with a three-column table (semantic, >, magnitude; FIRST is 0 ... FOURTH is 3), "First is always 0". Filed verbatim at .../l0/semantics/definitions/FIRST_IS_ALWAYS_0.md 'as a locally authored definition of this object'; cited from the interior root sheet, L7/0.md and the definitions sheet. The seven layers are magnitudes 0-6; the seventh layer is L6; 7 is the desk's position, numbered and not a layer. Not done: nothing in the specification's text changed (it was written into the count rule on 2026-09-06, section 9). The count rule is (i); the definition file is (ii): tree check finds FIRST_IS_ALWAYS_0.md in the scaffold only, not in either exemplar's main.
+    - **locator**: 7lm@origin/main:L8/L6/history/harmonization-2026-09-04.md:105-107 (§8)
+    - **quote**: the first thing at any position is its zero; 7 is the magnitude of the desk's position, the eighth reached in traversal, which is why L7 is numbered and not a layer
+  - item 15
+    - **id**: F15
+    - **kind**: rule
+    - **statement**: Section 8, second paragraph: the naming is design. Owner's words, 2026-09-06: "L7 pronbouce El-Seven is the lower left hand corner of the desk and the 7 is the upper right"; "its lioterally a rectanle desktop"; "L8 as two 0 on top of each other"; "im not doing it to be cute. I didnt name thagt way on accident either". Not done at that date: no rename; the interior stayed USO/ until the owner wrote otherwise (done in section 14). One difference reported, not resolved then: peers and objects numbered from 1 while layers count from 0 (resolved in section 16). Standing (i): the names L7 and L8 are the model's.
+    - **locator**: 7lm@origin/main:L8/L6/history/harmonization-2026-09-04.md:107-109 (§8)
+    - **quote**: No rename is made here. The interior remains `USO/` until the owner writes otherwise in the specification.
+  - item 16
+    - **id**: F16
+    - **kind**: change
+    - **statement**: Section 9, 2026-09-06: the specification's version of 6 September. Owner: "this was my last controlling dfocument. we nee to update it agniostical;ly then using autoniomous andautonomus as an exmaple even if its not perect right hnow i woaant iot documenyted that way". Done: the 4 September version retired to USO/l6/retired/specification-2026-09-04/; the new version adds L8 as the interior's name (USO kept as the term), First is always 0, silence on access, the catch-all, semantic instruments as L4 objects with L5 discourse, copyright in one place, sources by pointer, many intelligences at one face, the exemplars' queue vocabulary retired, and a section 'Exemplars as instantiated' (autonomous at 85a0320, auditonomous at 64e3ed2). Not done: the USO/ to L8/ rename; the sheets still quoted 4 September wording. The rules listed are (i), written into the specification.
+    - **locator**: 7lm@origin/main:L8/L6/history/harmonization-2026-09-04.md:111-117 (§9)
+    - **quote**: the tree and every path in the document say L8/; this scaffold and the exemplars carry USO/ until the rename pass
+  - item 17
+    - **id**: F17
+    - **kind**: open
+    - **statement**: Section 9 lists the open items as of 2026-09-06: the peering enumeration from 1 against First is always 0 (resolved section 16); the home of Autonomous Theory; the two 0-byte files in Auditonomous; rebinding the Autonomous definition to a current version; the held-off rules file for sessions. Section 14 (line 178) repeats the list without the two 0-byte files and adds the queue's rule texts at L8/L6/retired/layout-2026-09-06/ in each exemplar. The fate of the two 0-byte files is not stated in sections 1-23.
+    - **locator**: 7lm@origin/main:L8/L6/history/harmonization-2026-09-04.md:115 (§9); :178 (§14)
+    - **quote**: the home of Autonomous Theory; the two 0-byte files in Auditonomous; rebinding the Autonomous definition to a current version; the held-off rules file for sessions
+  - item 18
+    - **id**: F18
+    - **kind**: rule
+    - **statement**: Section 10, 2026-09-07: the one CI check, 'the same in every 7LM repository' (the section's own heading). Owner, 2026-09-06: "under autonomous and auidtonomous the root needs to be the same for both and anything we need to discuss shoudl be brough to my atgention with soluitionsw like gitworkflows"; 2026-09-07: "merge all three". Merged: autonomous #25 at d707b7d, auditonomous #23 at e2199e5, scaffold #8 at 30fcf10. The workflow: G-001 no unresolved conflict markers; G-002 the root is canonical; G-003 every sheet headed by its path and every canonical position with a sheet; plus a report, not a failure, of directories without a sheet. Standing (i), by the heading and by the workflow's own comment 'Every 7LM repository has the same root' (7lm@origin/main:.github/workflows/integrity.yml:20).
+    - **locator**: 7lm@origin/main:L8/L6/history/harmonization-2026-09-04.md:119-121 (§10)
+    - **quote**: G-002 the root is canonical (`README.md`, `L7/`, the interior container `USO/` or `L8/`, `.github/`, `.gitignore`, nothing else)
+  - item 19
+    - **id**: F19
+    - **kind**: rule
+    - **statement**: Section 10, done here and not done. The scaffold got the same workflow 'without the exemplar's retired step'. The check is repository infrastructure, not a layer; it reads the tree and moves nothing; the layout holds no metadata, hooks or movers. No .gitignore was added to the scaffold: G-002 permits its absence (permitted, not required; confirmed at line 186). Not done: the rename and the uppercase interior the owner proposed ("I think tghe dir structurs should carry uppercae") waited on the owner's word; the workflow already admitted either spelling. Tree: scaffold main root has no .gitignore; both exemplar mains have one; autonomous's workflow carries the commented 'RETIRED 2026-08-14' Q-6 step.
+    - **locator**: 7lm@origin/main:L8/L6/history/harmonization-2026-09-04.md:123-125 (§10)
+    - **quote**: The check is repository infrastructure, not a layer ("General repository infrastructure is not automatically a layer"); it reads the tree and moves nothing.
+  - item 20
+    - **id**: F20
+    - **kind**: rule
+    - **statement**: Section 11, 2026-09-07: the README is the start, not the documentation. Owner: "the read me files all need updating. Again. we dont use the reasd me for teh docuemtnation". The documentation is the sheets with the specification; reading order: the README, then the L7 desk, then every directory's 0.md. The new README states what the repository is, the reading order, the root, and where the prior READMEs are, 'and nothing else'. Standing (i): 'The exemplars' READMEs are treated the same in their own pull requests' (line 150) and section 12 writes it into the specification. Tree: all three mains' README.md line 5 reads 'This file is the start, not the documentation.'
+    - **locator**: 7lm@origin/main:L8/L6/history/harmonization-2026-09-04.md:127-131 (§11)
+    - **quote**: The new README states what the repository is, the reading order, the root, and where the prior READMEs are, and nothing else.
+  - item 21
+    - **id**: F21
+    - **kind**: rule
+    - **statement**: Section 11: deletion after enumeration. The old README was first retired byte for byte (f572ce1), then the owner objected: "wait, nothing deleted? then your saying nothing is ever deleted? I'm confused on who is being intelligent and who is making an intelligent point but the things is I get both and most likely you only get one. note that I put both in your court please do as I am". Rule stated: nothing is deleted until enumerated (owner, 2026-09-06: "that does nto mean delete over tehre until we enumerate"). Retirement at L6 is for scientific memory only (the owner's authored documents, rule texts of a prior layout, error records); a superseded file whose every section is enumerated as standing elsewhere is a change event that git records, so it is deleted. Standing (i): applied to the exemplars' READMEs and written into the specification (section 12).
+    - **locator**: 7lm@origin/main:L8/L6/history/harmonization-2026-09-04.md:148-150 (§11)
+    - **quote**: Nothing deleted was never the rule; the rule is nothing deleted until enumerated
+  - item 22
+    - **id**: F22
+    - **kind**: rule
+    - **statement**: Section 11, last paragraph: integrity is what is enforced. Owner, 2026-09-07: "we cant enforce integroty by ebforceing no deletion. we can only imply no deletion to enforcer integiortyty". What is enforced: the record, the enumeration that precedes every deletion, and the one CI check, which checks integrity and not the absence of deletion; 'the CI check must not become one'. Standing (i): the same words head the CI workflow of the scaffold (integrity.yml lines 2-5) and section 12 writes the rule into the specification.
+    - **locator**: 7lm@origin/main:L8/L6/history/harmonization-2026-09-04.md:152 (§11)
+    - **quote**: we cant enforce integroty by ebforceing no deletion. we can only imply no deletion to enforcer integiortyty
+  - item 23
+    - **id**: F23
+    - **kind**: change
+    - **statement**: Section 12, 2026-09-07: the specification's version of 7 September. Owner: "where is the updated documentation". Written in: the README as the start with the root's repository infrastructure named; integrity enforced and no deletion implied; the interior directories uppercase, L0 through L6 under L8, 'the eight bits L0 through L7 and the extra bit L8'; every architecture path reads L8/L0/ ... L8/L6/. The draft of 6 September was never adopted and stays in git history, not retired. Not done: the scaffold's directories remained USO/ and l0-l6 until the rename pass. The rules are (i), in the specification.
+    - **locator**: 7lm@origin/main:L8/L6/history/harmonization-2026-09-04.md:154-156 (§12)
+    - **quote**: the interior directories uppercase, L0 through L6 under L8, the eight bits L0 through L7 and the extra bit L8
+  - item 24
+    - **id**: F24
+    - **kind**: rule
+    - **statement**: Section 13, 2026-09-07: the documentation says what is; the record says what happened. Owner: "thank you please pull out historicallyu referndes to the docuejtnation leaving just the historical docuemtnatio that is cirrent and relevant for the purpose of using the thing". In the specification: version history, dated change lists, snapshot commits and every owner quotation and date beside a rule moved verbatim to .../l6/history/specification-history.md; the specification keeps its version date and one pointer. In the sheets: dates, owner quotations and the narrative of moves, retirements and deletions leave the sheets and stay in the record. Nothing deleted. Standing (i): each exemplar's record has the matching section (autonomous §12, auditonomous §11, 'the sheets say what is; the record says what happened').
+    - **locator**: 7lm@origin/main:L8/L6/history/harmonization-2026-09-04.md:158-164 (§13)
+    - **quote**: each sheet states what its directory is, holds, and does not hold, as it stands, with at most one pointer to this record for its history
+  - item 25
+    - **id**: F25
+    - **kind**: change
+    - **statement**: Section 14, 2026-09-12: the rename pass. Owner: "Lets do this today."; "L8 (consider the 8 to be 2 0's stacked ontop of eachj other.)"; "DIgest L8 for wewhat it is and how ywouuld you propgate that through thd system?". Renamed by git mv, in one commit here and one in each exemplar: USO/ is L8/; USO/l0/ through USO/l6/ are L8/L0/ through L8/L6/. Nothing else was renamed. The record's commit is c699e3e (2026-09-12). Standing (i): done in all three repositories.
+    - **locator**: 7lm@origin/main:L8/L6/history/harmonization-2026-09-04.md:166-172 (§14)
+    - **quote**: by `git mv`: `USO/` is `L8/`; `USO/l0/` through `USO/l6/` are `L8/L0/` through `L8/L6/`
+  - item 26
+    - **id**: F26
+    - **kind**: rule
+    - **statement**: Section 14, the reading of L8 used for the pass (the specification's count rule, unchanged): L8 = USO, the interior; L8 is a count, not a position; L0 through L7 are the eight bits of a byte and L8 the extra bit. The 8 is two zeros stacked: L8/0.md over the seven layer zeros L8/L0/0.md ... L8/L6/0.md; uppercase so that it reads as one byte across interior and desk; the check is the CI check's third step (G-003). The term USO remains the name of what L8 holds. The archive aybllc/l6 keeps its name: a repository, not a layer. Standing (i).
+    - **locator**: 7lm@origin/main:L8/L6/history/harmonization-2026-09-04.md:170 (§14)
+    - **quote**: L8 is a count, not a position: the interior's own zero over the seven layer zeros.
+  - item 27
+    - **id**: F27
+    - **kind**: procedure
+    - **statement**: Section 14, what was propagated by path rewrite after the git mv: every active sheet's heading is its new path; every path reference in the active sheets, in README.md and in L8/L0/semantics/definitions/FIRST_IS_ALWAYS_0.md names the new paths; L8/0.md quotes the specification's L8 lines in place of the retired 'USO = USO as bounded scientific object'; the specification's version of 12 September removes its statements that the rename was pending; the generated rendering patched in thirteen paragraphs, footer and description; the sheet at L8/L6/retired/specification-2026-09-04/0.md now names specification-history.md. Nothing deleted. The CI check passed in all three repositories 'with 68, 97, and 78 sheets checked'.
+    - **locator**: 7lm@origin/main:L8/L6/history/harmonization-2026-09-04.md:172 (§14)
+    - **quote**: The one CI check passes on the result in all three repositories, with 68, 97, and 78 sheets checked.
+  - item 28
+    - **id**: F28
+    - **kind**: procedure
+    - **statement**: Section 14, what was left as written: (a) the body of this record and the other records at L8/L6/history/, which quote paths as they stood; (b) everything below the root of each retired set at L8/L6/retired/, verbatim, so the 2026-08-20 scaffold still reads USO/l0 ... USO/l6 inside; (c) former locations named in current sheets ('formerly at USO/l6/provenance/source-ledger.md', 'beneath USO/...', 'relocated in this pass from USO/l6/provenance/', 'the old USO/l0/definitions/0.md'), three of which the pass had wrongly rewritten and a follow-up commit restored; (d) the CI check, whose header reads 'USO/ until the rename pass, L8/ after'; (e) the term USO wherever it names the interior and not the directory. Standing (i) as the method of a rename in any 7LM repository: records and retired sets are not rewritten.
+    - **locator**: 7lm@origin/main:L8/L6/history/harmonization-2026-09-04.md:174 (§14)
+    - **quote**: everything below the root of each retired set at `L8/L6/retired/`, verbatim, so the scaffold of 2026-08-20 still reads `USO/l0` … `USO/l6` inside it
+  - item 29
+    - **id**: F29
+    - **kind**: exemplar
+    - **statement**: Section 14 on the exemplars: the rename was made in one commit in each exemplar, recorded as §13 of aybllc/autonomous and §12 of aybllc/auditonomous, both at L8/L6/history/harmonization-2026-09-05.md. Tree check confirms: autonomous@origin/main has '## 13. 2026-09-12 — the rename pass' at line 169 and auditonomous@origin/main has '## 12. 2026-09-12 — the rename pass' at line 162 of that file; sheet counts on the two mains today are 97 and 78, matching the record. Both mains' head commits are dated 2026-09-11 23:26 -0700, i.e. 2026-09-12 UTC.
+    - **locator**: 7lm@origin/main:L8/L6/history/harmonization-2026-09-04.md:172 (§14); autonomous@origin/main:L8/L6/history/harmonization-2026-09-05.md:169; auditonomous@origin/main:L8/L6/history/harmonization-2026-09-05.md:162
+    - **quote**: the commits that add this section, §13 of `aybllc/autonomous`, and §12 of `aybllc/auditonomous`, the latter two at `L8/L6/history/harmonization-2026-09-05.md`
+  - item 30
+    - **id**: F30
+    - **kind**: procedure
+    - **statement**: Section 14, reading older records: a path USO/lN/... in a record dated before 2026-09-12 stands at L8/LN/... now (N 0 to 6) and USO/... at L8/...; uso/..., before c0f46e1 (2026-08-24), was that layout's path. Standing (i): the translation applies to all three repositories' records and to sheets-2026-09-07.md, whose headings still read USO/l…
+    - **locator**: 7lm@origin/main:L8/L6/history/harmonization-2026-09-04.md:176 (§14)
+    - **quote**: a path `USO/lN/…` in a record dated before 2026-09-12 stands at `L8/LN/…` now, N from 0 to 6, and `USO/…` at `L8/…`
+  - item 31
+    - **id**: F31
+    - **kind**: change
+    - **statement**: Section 15, 2026-09-12: the field guide filed at L8/L0/pedagogy/7lm-field-guide.md. Owner: "New task: generate a human readable, wait to follow documentation guide for the seven layer model. Small sentences, bullets, high school college level, ready to understand"; "the wording is wrong. Use regualr swentnces. NOt complex. Try voicre JOsh Gates meet Me"; "L an 7 L is the lower part of a desk and 7 looks like the upper right part of the deesk. IT looks like a rectangle using the rught font L7 thats why  its funny"; "Since L0 starts the fact that L8 encloses becomes clear 0 and 0/0  or 8"; "commit". Checked by 23 agents; seven accuracy findings applied. 'Not a rule': the guide is teaching; the specification controls. (ii) a scaffold file. Tree today: the guide is no longer at pedagogy on main; it is at L8/L6/7lm-field-guide.md (moved by a later section, outside scope).
+    - **locator**: 7lm@origin/main:L8/L6/history/harmonization-2026-09-04.md:180-188 (§15)
+    - **quote**: Not a rule. The guide is teaching. Where it and the specification differ, the specification controls
+  - item 32
+    - **id**: F32
+    - **kind**: rule
+    - **statement**: Section 15 records four corrections of overstatement that bound what is a rule: the archive aybllc/l6 is a fact about this program and not a rule of the model; .gitignore is permitted at the root, not required; deletion after enumeration is the ordinary act, not an option; a record dated before 2026-09-12 may, not must, write USO/. These qualify (i) rules for every repository.
+    - **locator**: 7lm@origin/main:L8/L6/history/harmonization-2026-09-04.md:186 (§15)
+    - **quote**: that `.gitignore` is permitted at the root, not required; that deletion after enumeration is the ordinary act, not an option
+  - item 33
+    - **id**: F33
+    - **kind**: rule
+    - **statement**: Section 16, 2026-09-12: peers from 1, layers from 0. Owner: "0 is the semantic inverse  to itseklf. Peers are physical and should start at 1. 0 is where semantics, eptistemic etc define the iupper layers. Its what exists in your ghead first". Done: the specification's row 'peer-1 / object-1 numbering' moved from 'Reported, not resolved' to 'Resolved'; a clarification under First is always 0; L7/peering/0.md says the same; the owner's words added to FIRST_IS_ALWAYS_0.md and specification-history.md. Not done: 'Nothing else changed; the exemplars carried no statement on the question.' Standing (i): a rule of the specification (peer-1/, object-1/ at L7/peering/). Tree: 7lm@origin/main:L7/peering/0.md:22 and the specification line 66 carry it.
+    - **locator**: 7lm@origin/main:L8/L6/history/harmonization-2026-09-04.md:190-194 (§16)
+    - **quote**: peers are physical and are counted from 1 at `L7/peering/`; the layers are counted from 0, the semantic origin
+  - item 34
+    - **id**: F34
+    - **kind**: change
+    - **statement**: Section 17, 2026-09-12: the field guide rewritten. Owner: "As a whole the docuemnt needs better wroding keeping Josh Gates/Eric MArtin style. YOU yuse repeated thinbgs like saying... etc with no examples. GO thropugh and smooth out the guide to natural languagre"; "Also its imjprtnt to use scientific words . we may wriote for an audeince in college but the words need to mATCH THE". Three things changed: prose, worked examples drawn from the exemplars as they stood, the discipline's terms. Not changed: every fact, rule, path, and the sixteen sections. (ii) scaffold file; sets no rule.
+    - **locator**: 7lm@origin/main:L8/L6/history/harmonization-2026-09-04.md:196-208 (§17)
+    - **quote**: Not changed: every statement of fact, every rule, every path, and the structure of sixteen sections.
+  - item 35
+    - **id**: F35
+    - **kind**: change
+    - **statement**: Section 18, 2026-09-12: the field guide's register corrected. Owner: "where can i edit the guidfe. you put jopkes and stuff in there nine  of that shoud[d be there. it shoudfl a fiedd guide not a circus". Sixty-five edits removed first-person narration, asides, the framing of the L7/L8 namings as jokes, and figures of speech; the count-rule subsection is headed 'The names are descriptive'. Not changed: facts, rules, paths, examples. The source is the one file; the published page is generated from it. (ii) scaffold file; the register lesson (a reference document, not a performance) is the owner's standing taste for 7LM documentation.
+    - **locator**: 7lm@origin/main:L8/L6/history/harmonization-2026-09-04.md:210-220 (§18)
+    - **quote**: The fault was in the execution of §17, not in its instruction.
+  - item 36
+    - **id**: F36
+    - **kind**: rule
+    - **statement**: Section 19, 2026-09-12: the plate sheet. Owner: "Lets develop the model using only diagrams can you reate a new dopagrams infographic page on emajor big infogrphic so we dont have kmultiple versions and forgte to update something". Done: L8/L0/pedagogy/7lm-plate-sheet.py is the single source of every drawing; 7lm-plate-sheet.html is generated, fourteen plates in five parts; plates 13-14 marked PROPOSED and OPEN CALL; the field guide carries no diagrams of its own. Not done: no statement of the specification changed; nothing deleted. The rule 'one source for the drawings' is (ii) by its own wording ('every drawing in this repository'). Tree: the .py and .html exist on scaffold main only; neither exemplar main has a plate sheet.
+    - **locator**: 7lm@origin/main:L8/L6/history/harmonization-2026-09-04.md:223-237 (§19)
+    - **quote**: `L8/L0/pedagogy/7lm-plate-sheet.py` is the single source: every drawing in this repository is defined there and nowhere else.
+  - item 37
+    - **id**: F37
+    - **kind**: rule
+    - **statement**: Section 20, 2026-09-12: the packet reading refined. Owner: "L8 has to envelope them all to simulate a packet where gteh floor is l1 the end is l6, ythe glue is l7 adn l8 is gthe connectror the the next l0...get it?". L0 is the origin and not payload; L1 the floor and L6 the end of the payload; L7 the glue; L8 envelopes the whole unit and its trailing edge is the connector to the next object's L0; objects chain L8 to L0 and the run is the lineage. Plate 14 drew Autonomous joined to Auditonomous at L8 to L0. The sheet then carried fifteen plates, 13-15 still PROPOSED. Settled: the count rule is untouched. Not done: the specification unchanged. Standing (i) once entered in the specification (section 23).
+    - **locator**: 7lm@origin/main:L8/L6/history/harmonization-2026-09-04.md:239-249 (§20)
+    - **quote**: Eight positions, L0 through L7, first is always 0; L8 is not a ninth position under either.
+  - item 38
+    - **id**: F38
+    - **kind**: change
+    - **statement**: Section 21, 2026-09-12: one plate. Owner: "we need only 1 infographic for right now becuase you arent updating them alal corfe ctly.. just  pick the first one and only that one remove the erest. L8 is incrrdctlyh shown". The sheet contradicted itself (plates 01-12 drew L8 as the interior, 13-15 as the envelope). Done: one plate, the eight positions, redrawn with the L8 envelope; plates 02-15 removed and enumerated in the record; the guide's masthead figure removed. Not retired at L6/retired: none is an owner-authored document; git holds 9b0fdbb. (ii) scaffold files; it applies the (i) rule of deletion after enumeration.
+    - **locator**: 7lm@origin/main:L8/L6/history/harmonization-2026-09-04.md:251-263 (§21)
+    - **quote**: nothing of them needs retiring at `L8/L6/retired/`, since none is an owner-authored document
+  - item 39
+    - **id**: F39
+    - **kind**: rule
+    - **statement**: Section 22, 2026-09-12: the tree stands. Owner: "I thought it through. I like to waive that l seven and l eight are set up right now in the current directory structure. So redo the one plate l eight envelope with". The record notes 'The message ends there' and reads it as: keep the directory structure, redraw the plate with the envelope around it. Ruling recorded: the tree does not move; L7/ and L8/ stay siblings at the root; L8/ holds L0 through L6; the envelope is a reading of the layout, not a change to it. Standing (i), explicitly: 'Every path in the three repositories stands'.
+    - **locator**: 7lm@origin/main:L8/L6/history/harmonization-2026-09-04.md:265-269 (§22)
+    - **quote**: Every path in the three repositories stands; check G-002 stands; the peering paths stand.
+  - item 40
+    - **id**: F40
+    - **kind**: change
+    - **statement**: Section 22, done and not done: the one plate now draws the L8 envelope around the tree as it is on disk (root, L7/ marked GLUE, L8/ holding L6 down to L1 with END and FLOOR, L0 marked ORIGIN). The specification's L8 note is 'not contradicted; it is incomplete'; adding the packet reading to it 'is the remaining work' and was not made in this pass ('the owner asked for the plate').
+    - **locator**: 7lm@origin/main:L8/L6/history/harmonization-2026-09-04.md:271-275 (§22)
+    - **quote**: L8 is not a ninth position, it counts the eight, names the folder that holds the interior, and is the envelope around the whole
+  - item 41
+    - **id**: F41
+    - **kind**: rule
+    - **statement**: Section 23, 2026-09-13: the packet reading written into the specification (commit 3a29c58). Owner's words of 12 September quoted again (the envelope quotation and "I thought it through. I like to waive that l seven and l eight are set up right now in the current directory structure."). Two clarifications added after the byte-reading author note; nothing removed. First: read the bounded object as one packet (L0 origin, not payload; L1 floor; L6 end; L7 glue; L8 envelope with the connector to the next object's L0). Second: no position, count or path changes. The specification takes version date 13 September 2026. Standing (i): it is rule text of the controlling specification.
+    - **locator**: 7lm@origin/main:L8/L6/history/harmonization-2026-09-04.md:277-285 (§23)
+    - **quote**: No position changes, no count changes, no path changes. The eight positions remain L0 through L7; first is always 0; L8 remains a count and not a ninth position
+  - item 42
+    - **id**: F42
+    - **kind**: procedure
+    - **statement**: Section 23, propagation, all inside the scaffold: L8/0.md; FIRST_IS_ALWAYS_0.md; the field guide section 2; the plate sheet; then, on audit, L7/0.md ('Position in the architecture': L7 is the glue, its egress is where the connector hands off); L8/L4/work/writing/0.md (names the 13 September version); L8/L0/pedagogy/0.md; specification-history.md ('Changes of 13 September 2026'). No exemplar file is named as changed. Tree check: neither exemplar main's L8/0.md or L7/0.md contains envelope, glue or connector in the packet sense; the scaffold's L7/0.md:18 and L8/0.md:10 do.
+    - **locator**: 7lm@origin/main:L8/L6/history/harmonization-2026-09-04.md:287-289 (§23)
+    - **quote**: The desk sheet `L7/0.md` carries the reading under "Position in the architecture", where the clause that is about L7 belongs
+  - item 43
+    - **id**: F43
+    - **kind**: procedure
+    - **statement**: Section 23, how it was checked: the .docx patched by XML surgery and read back both ways (952 paragraphs); an independent audit of seventy-nine agents 'over the three repositories', six lenses including cross-repository staleness; ten findings survived, six distinct, all fixed. One older fault fixed: the field guide had tidied the owner's words, dropping the emoticon from "layer 7 will always be layer 6 :)"; restored as written. Standing (i) as practice: owner quotations are never tidied.
+    - **locator**: 7lm@origin/main:L8/L6/history/harmonization-2026-09-04.md:291 (§23)
+    - **quote**: the field guide had tidied the owner's words at `L8/L0/pedagogy/7lm-field-guide.md`, dropping the emoticon
+  - item 44
+    - **id**: F44
+    - **kind**: rule
+    - **statement**: Section 23, not changed: the canonical topology; the canonical position lines 'L7 = Desktop' and 'L8 = USO, the bounded scientific object's interior: the research packet on the desk', 'which the sheets of three repositories quote verbatim'; the count rule and byte reading; the Harmonization Record's dispositions. Nothing deleted. Tree check: both exemplar mains' L8/0.md line 6 quotes both lines verbatim.
+    - **locator**: 7lm@origin/main:L8/L6/history/harmonization-2026-09-04.md:293 (§23); autonomous@origin/main:L8/0.md:6; auditonomous@origin/main:L8/0.md:6
+    - **quote**: The canonical position lines "L7 = Desktop" and "L8 = USO, the bounded scientific object's interior: the research packet on the desk", which the sheets of three repositories quote verbatim.
+  - item 45
+    - **id**: F45
+    - **kind**: tree
+    - **statement**: What the tree IS as of section 23. The last scaffold commit before section 24 was added is 68c550e (section 24's commit is d1807a2, 2026-09-19). At 68c550e the root holds .github, L7, L8, README.md; integrity.yml lists 57 canonical positions including L7/publications and L7/governance/restrictions, with no peer-1/object-1 positions and no allications; 69 sheets fall under G-003; L8/L0/pedagogy holds 0.md, 7lm-field-guide.md, 7lm-plate-sheet.html, 7lm-plate-sheet.py.
+    - **locator**: 7lm@68c550e:.github/workflows/integrity.yml:canon list; 7lm@68c550e:(root tree)
+  - item 46
+    - **id**: F46
+    - **kind**: tree
+    - **statement**: Both exemplars' main branches match the scaffold as of section 23 on the checked points. Root of each: .github, .gitignore, L7, L8, README.md. Each integrity.yml lists the same 57 canonical positions, with L7/publications and L7/governance/restrictions (autonomous lines 76, 78; auditonomous lines 48, 50). L7/ of each holds governance, peering, provenance, publications; governance holds access, copyright, licensing, patents, permissions, restrictions. The scaffold's main today lists 71 positions; the 14 added (allications and its six children in place of publications; eight peer-1/object-1 positions) and the rename restrictions to controlled all postdate section 23.
+    - **locator**: autonomous@origin/main:.github/workflows/integrity.yml:76-78; auditonomous@origin/main:.github/workflows/integrity.yml:48-50; 7lm@origin/main:.github/workflows/integrity.yml:47-59
+  - item 47
+    - **id**: F47
+    - **kind**: tree
+    - **statement**: The scaffold's CI on main still admits either interior spelling: the case statement accepts USO or L8 at the root and requires exactly one; the header comment 'USO/ until the rename pass, L8/ after' stands as section 14 says it was left. G-003 skips sheets below the root of each retired set.
+    - **locator**: 7lm@origin/main:.github/workflows/integrity.yml:19-28, 33-40
+    - **quote**: The root holds README.md, L7/, the interior container (USO/ until the rename pass, L8/ after),
+  - item 48
+    - **id**: F48
+    - **kind**: procedure
+    - **statement**: sheets-2026-09-07.md, what it is: until 2026-09-07 the sheets carried their own past; on the owner's instruction of that day (the same words as record section 13) that past was pulled out verbatim, sheet by sheet, under 47 headings that name the sheets by their paths as they then stood (L7/... and USO/l0 ... USO/l6). The file was added in 1f7013c (2026-09-07) and moved in the rename pass c699e3e. Its first line is a title, not a path heading; it is not a 0.md, so G-003 does not apply. It sets no rule.
+    - **locator**: 7lm@origin/main:L8/L6/history/sheets-2026-09-07.md:3
+    - **quote**: Nothing is deleted; this file is L6 memory and controls nothing.
+  - item 49
+    - **id**: F49
+    - **kind**: exemplar
+    - **statement**: sheets-2026-09-07.md records that the displaced exemplar paragraphs snapshot the exemplars at commits BEFORE their own 7LM layouts: aybllc/autonomous @ 0504961, aybllc/auditonomous @ 280226a, aybllc/ommp @ 609e4de with aybllc/uha-stack @ 49ab41f. The paths they cite (research/..., manuscripts/..., uso/l6/LEDGER.md, binder/press-kit/, common/durable/) are the pre-7LM layouts and are not current exemplar paths. There are 19 EXEMPLAR AUTO, 21 EXEMPLAR AUDIT and 19 EXEMPLAR OMMP mentions.
+    - **locator**: 7lm@origin/main:L8/L6/history/sheets-2026-09-07.md:3, 9-13
+    - **quote**: a snapshot of the exemplar repositories at commits before their own 7LM layouts (`aybllc/autonomous` @ 0504961, `aybllc/auditonomous` @ 280226a
+  - item 50
+    - **id**: F50
+    - **kind**: rule
+    - **statement**: sheets-2026-09-07.md, the standing of the exemplars toward the scaffold: the owner's instruction that the exemplar repositories are not merged into the scaffold as research projects but used as exemplars by reference; and the specification's statement that their layouts do not control the architecture. Every displaced exemplar paragraph ends 'Cited by reference; the artifact stays owned by its repository and its current layout does not control this architecture.' Standing (i) as a direction of control: the scaffold controls, the exemplars follow.
+    - **locator**: 7lm@origin/main:L8/L6/history/sheets-2026-09-07.md:131 (under `USO/0.md`); :7
+    - **quote**: The Autonomous and Auditonomous repositories are implementation work in progress; their current layouts do not control the architecture.
+  - item 51
+    - **id**: F51
+    - **kind**: rule
+    - **statement**: sheets-2026-09-07.md quotes the specification on the topology being one and the same for all repositories, and on empty positions: presence in the topology is capability, not mandatory population. Standing (i): this is why every canonical position must be sheeted in each exemplar even when empty.
+    - **locator**: 7lm@origin/main:L8/L6/history/sheets-2026-09-07.md:194 (under `USO/l1/0.md`); :345 (under `USO/l5/0.md`)
+    - **quote**: The same complete topology is available to Autonomous, Auditonomous, OMMP, classroom research, institutional research, and future research repositories.
+  - item 52
+    - **id**: F52
+    - **kind**: exemplar
+    - **statement**: sheets-2026-09-07.md, Auditonomous at 280226a: the binding of the Autonomous definition was 'intended, not yet realized'; the authority-interface register uso/autonomous/LEDGER.md did not exist at that commit. The auditonomous map then labelled the relation private ingress, while the specification places the originating case at public ingress; the displaced text says the map's label is implementation state and does not control. Historical state only; the present state of the binding is outside this scope.
+    - **locator**: 7lm@origin/main:L8/L6/history/sheets-2026-09-07.md:11, 93
+    - **quote**: Auditonomous L7 public ingress binds that version as a peer-owned, reference-only object under NO EDIT and NO DELETE.
+  - item 53
+    - **id**: F53
+    - **kind**: rule
+    - **statement**: sheets-2026-09-07.md, sources by pointer: a source is served from aybllc/l6 by a pointer row, never by a copy; the consuming repository's register carries ID, citation, l6 path, l6 commit, access class and label. At the snapshot the exemplars' registers were uso/l6/LEDGER.md (autonomous rows pinned to 7540a9d6951c; auditonomous to b328334). Standing: every consuming repository of this program (see F05 for the limit: a program fact, not a model rule).
+    - **locator**: 7lm@origin/main:L8/L6/history/sheets-2026-09-07.md:119-121 (under `L7/provenance/sources/0.md`)
+    - **quote**: How a source is served from it: by a pointer row, never by a copy.
+  - item 54
+    - **id**: F54
+    - **kind**: change
+    - **statement**: sheets-2026-09-07.md records the old L7 layout superseded: L7/public/{ingress,egress}/ and L7/private/ (with durable/found, caught, naught and regress) were cut in c0f46e1 and are superseded by the canonical L7/peering/{private,public}/{ingress,egress}/peer-1/object-1/ topology; their text is recoverable from git history only and is not under the retired scaffold.
+    - **locator**: 7lm@origin/main:L8/L6/history/sheets-2026-09-07.md:29, 49, 53, 77
+    - **quote**: superseded by the canonical `L7/peering/{private,public}/{ingress,egress}/peer-1/object-1/` topology
+  - item 55
+    - **id**: F55
+    - **kind**: change
+    - **statement**: sheets-2026-09-07.md keeps the heading and note of the inherited controlled-definitions tables of the 2026-08-20 scaffold (carried forward into the definitions sheet, not re-adjudicated; rows not rewritten to harmonized paths), and the displaced line of the definitions sheet naming FIRST_IS_ALWAYS_0.md. It also keeps the displaced statement, from the interior root sheet, that the 7 September version names the interior L8 and the directories L0-L6 while the scaffold's directories remained USO/ and l0-l6 'until the rename pass, which is the owner's word'.
+    - **locator**: 7lm@origin/main:L8/L6/history/sheets-2026-09-07.md:145, 184-190
+    - **quote**: This scaffold's directories remain `USO/` and `l0/` through `l6/` until the rename pass, which is the owner's word
+  - item 56
+    - **id**: F56
+    - **kind**: defect
+    - **statement**: sheets-2026-09-07.md contains truncated fragments: line 37 ends 'So a README'; line 99 repeats the start of line 97 and stops at 'The exact bound L0 object'; line 397 ends 'In every 7LM repository this position is also where'; lines 47, 73, 385 and 421 are bare parentheticals or clauses. The file says each entry is 'a line, paragraph, or section as it stood', so these read as clause-level removals, but the file does not say so entry by entry. Whether they are faithful cuts or extraction faults is not settled inside the scope.
+    - **locator**: 7lm@origin/main:L8/L6/history/sheets-2026-09-07.md:37, 47, 73, 99, 385, 397, 421
+    - **quote**: Owner's rule, 2026-09-06, quoted as written: "research/review/ works as a catch all". In every 7LM repository this position is also where
+  - item 57
+    - **id**: F57
+    - **kind**: defect
+    - **statement**: Small irregularities in the record inside the scope: (a) in the section 2 chronology the row dated 2026-08-24 (3bdbe4b) stands before the row dated 2026-08-23 (1edf4c7); (b) line 4 names the path USO/l6/history/... and owner USO/l6/ (as written, consistent with section 14's rule that bodies are not rewritten); (c) section 22's owner message is cut off at 'with' and the ruling 'the tree does not move' rests on the record's stated reading of it, confirmed by the owner's quotation being entered into the specification in section 23.
+    - **locator**: 7lm@origin/main:L8/L6/history/harmonization-2026-09-04.md:59-60 (§2); :4; :267 (§22)
+    - **quote**: The message ends there; it is read as: keep the directory structure as it is, and redraw the one plate with the L8 envelope around that structure.
+- **checklist**
+  - item 1
+    - **step**: 1. The root is canonical
+    - **detail**: The root holds README.md, L7/, L8/, .github/ and .gitignore, and nothing else. .gitignore is permitted, not required. Exactly one interior container. Enforced by G-002. Standing for every 7LM repository.
+    - **locator**: 7lm@origin/main:L8/L6/history/harmonization-2026-09-04.md:121, 123 (§10); :186 (§15); 7lm@origin/main:.github/workflows/integrity.yml:17-29
+  - item 2
+    - **step**: 2. The interior is L8/, the layers L8/L0/ to L8/L6/, uppercase
+    - **detail**: USO/ is L8/; l0-l6 are L0-L6. The term USO stays as the name of what L8 holds. L7/ and L8/ are siblings at the root. Every repository (done in all three on 2026-09-12).
+    - **locator**: 7lm@origin/main:L8/L6/history/harmonization-2026-09-04.md:170-172 (§14); :156 (§12)
+  - item 3
+    - **step**: 3. Every directory's sheet is headed by its path; every canonical position has a sheet
+    - **detail**: A sheet is 0.md with first line '# <path>/'. As of section 23 the canonical list has 57 positions, including L7/publications and L7/governance/restrictions (not the 71 of today's main). Sheets below the root of a retired set are not checked. Enforced by G-003; a directory without a sheet beneath a canonical position is reported, not failed.
+    - **locator**: 7lm@origin/main:L8/L6/history/harmonization-2026-09-04.md:121 (§10); 7lm@68c550e:.github/workflows/integrity.yml:canon list
+  - item 4
+    - **step**: 4. No unresolved conflict markers
+    - **detail**: G-001. Every repository.
+    - **locator**: 7lm@origin/main:L8/L6/history/harmonization-2026-09-04.md:121 (§10)
+  - item 5
+    - **step**: 5. One CI check, the same in every 7LM repository
+    - **detail**: .github/workflows/integrity.yml carrying G-001, G-002, G-003 and the report step. It is repository infrastructure, not a layer; it reads the tree and moves nothing; it enforces integrity and must never enforce no-deletion. The layout holds no metadata, hooks or movers.
+    - **locator**: 7lm@origin/main:L8/L6/history/harmonization-2026-09-04.md:119-123 (§10); :152 (§11)
+  - item 6
+    - **step**: 6. The README is the start, not the documentation
+    - **detail**: README states what the repository is, the reading order (README, then L7/0.md, then every directory's 0.md), the root, and where prior READMEs are, and nothing else. The documentation is the sheets with the specification.
+    - **locator**: 7lm@origin/main:L8/L6/history/harmonization-2026-09-04.md:129-131 (§11)
+  - item 7
+    - **step**: 7. Sheets say what is; the record says what happened
+    - **detail**: No dates, owner quotations or narrative of moves, retirements or deletions in a sheet; each sheet states what its directory is, holds and does not hold, with at most one pointer to the record. History lives in the record at L8/L6/history/.
+    - **locator**: 7lm@origin/main:L8/L6/history/harmonization-2026-09-04.md:162-164 (§13)
+  - item 8
+    - **step**: 8. Copyright in one place
+    - **detail**: The one place to look for copyright is L7/governance/copyright/0.md, named in the README; copyright is not spoken about elsewhere.
+    - **locator**: 7lm@origin/main:L8/L6/history/harmonization-2026-09-04.md:97 (§6)
+  - item 9
+    - **step**: 9. research/review/ is the catch-all; research/lanes/ the working position
+    - **detail**: Everything awaiting the owner's review lands at L8/L5/research/review/; set-aside items stay there labelled PARKED; what is taken up moves to lanes/; finished work is filed at its layer; nothing is deleted; no new position is added to the canonical tree.
+    - **locator**: 7lm@origin/main:L8/L6/history/harmonization-2026-09-04.md:103 (§7)
+  - item 10
+    - **step**: 10. The tree is silent on access
+    - **detail**: No sheet says who may write where; L7/peering/0.md describes the register's position only. No queue vocabulary (orphan, foster, results, delete) and no directory for any reserved term (found, caught, naught, regress, origidity, certainty, intolerance, corpus in the broad sense, semantic-formulas).
+    - **locator**: 7lm@origin/main:L8/L6/history/harmonization-2026-09-04.md:103 (§7); :75-83 (§3)
+  - item 11
+    - **step**: 11. No CLAUDE.md
+    - **detail**: The session rules file is held off on the owner's word; still listed open at section 14.
+    - **locator**: 7lm@origin/main:L8/L6/history/harmonization-2026-09-04.md:103 (§7); :178 (§14)
+  - item 12
+    - **step**: 12. First is always 0; peers from 1
+    - **detail**: The seven layers are L0 to L6; L7 is numbered and not a layer; L8 is a count, not a ninth position. Peers and objects at L7/peering/ are counted from 1 (peer-1/, object-1/).
+    - **locator**: 7lm@origin/main:L8/L6/history/harmonization-2026-09-04.md:107 (§8); :194 (§16)
+  - item 13
+    - **step**: 13. Deletion only after enumeration; retirement only for scientific memory
+    - **detail**: A superseded file is deleted once every section is enumerated in the record as standing elsewhere. L8/L6/retired/ holds only states that must stay reconstructable: the owner's authored documents, rule texts of a prior layout, error records. L6 is not a copy of git.
+    - **locator**: 7lm@origin/main:L8/L6/history/harmonization-2026-09-04.md:150-152 (§11)
+  - item 14
+    - **step**: 14. External provenance at L7, internal memory at L6
+    - **detail**: L8/L6/ holds history/ and retired/; there is no L6 provenance directory; external source, authority, prior art and lineage are at L7/provenance/. Sources are served from aybllc/l6 by pointer row, never by copy, and that archive is not edited from a consuming repository (a rule of this program).
+    - **locator**: 7lm@origin/main:L8/L6/history/harmonization-2026-09-04.md:87 (§4); :72 (§2); 7lm@origin/main:L8/L6/history/sheets-2026-09-07.md:121
+  - item 15
+    - **step**: 15. Records and retired sets are never rewritten
+    - **detail**: In any rename, the bodies of the records at L8/L6/history/ and everything below the root of each retired set stay as written; former locations named in current sheets stay as written; older records are read with the rule USO/lN -> L8/LN. Owner quotations are never tidied.
+    - **locator**: 7lm@origin/main:L8/L6/history/harmonization-2026-09-04.md:174-176 (§14); :291 (§23)
+  - item 16
+    - **step**: 16. The tree does not move for the packet reading
+    - **detail**: L7/ and L8/ stay siblings; L8/ holds L0 to L6; the envelope is a reading, not a change. Sheets that quote the canonical position lines 'L7 = Desktop' and 'L8 = USO, the bounded scientific object's interior: the research packet on the desk' quote them verbatim.
+    - **locator**: 7lm@origin/main:L8/L6/history/harmonization-2026-09-04.md:269 (§22); :283, 293 (§23)
+  - item 17
+    - **step**: 17. The specification controls
+    - **detail**: Where a sheet, guide or drawing differs from the specification (version of 13 September 2026 as of section 23), the specification controls. The exemplar's own record carries a section for each pass applied to it.
+    - **locator**: 7lm@origin/main:L8/L6/history/harmonization-2026-09-04.md:188 (§15); :285 (§23); :172 (§14)
+  - item 18
+    - **step**: 18. Auditonomous only: one source for the definition of autonomous
+    - **detail**: Auditonomous binds the definition of autonomous from Autonomous's bound L0 object and from nowhere else.
+    - **locator**: 7lm@origin/main:L8/L6/history/harmonization-2026-09-04.md:73 (§2); 7lm@origin/main:L8/L6/history/sheets-2026-09-07.md:97
+  - item 19
+    - **step**: 19. NOT required of an exemplar by sections 1-23
+    - **detail**: The field guide, the plate sheet (.py and .html), FIRST_IS_ALWAYS_0.md, specification-history.md and the specification itself are scaffold files. Section 16 says the exemplars carried no statement on the peer count; section 23 names only scaffold files as carrying the packet reading.
+    - **locator**: 7lm@origin/main:L8/L6/history/harmonization-2026-09-04.md:194 (§16); :229 (§19); :287-289 (§23)
+  - item 20
+    - **step**: Result of checking the exemplars against this list
+    - **detail**: Both exemplars' origin/main satisfy steps 1-5 and 11 by tree check (root, L8/L0-L6, 57-position integrity.yml, no CLAUDE.md), carry L7/governance/copyright/0.md, a README that says it is the start, and the rename-pass record section. They stand in step with the scaffold as of section 23; what separates them from today's scaffold lies in sections 24-37.
+    - **locator**: autonomous@origin/main:.github/workflows/integrity.yml:76-78; auditonomous@origin/main:.github/workflows/integrity.yml:48-50; autonomous@origin/main:README.md:5; auditonomous@origin/main:README.md:5
+- **open_questions**
+  - Whether an exemplar's L8/0.md and L7/0.md must carry the packet reading. Section 23 propagated it to scaffold sheets only and names no exemplar file; neither exemplar main carries it (grep for envelope, glue, connector in L8/0.md and L7/0.md of both: not found in that sense). Sections 1-23 do not say it is required of exemplars; a later section may.
+  - Whether FIRST_IS_ALWAYS_0.md should exist in an exemplar. Section 8 files it as 'a locally authored definition of this object' (the scaffold); it is not found in either exemplar's origin/main tree. Not settled in scope.
+  - The fate of 'the two 0-byte files in Auditonomous', listed open in section 9 (line 115) and absent from section 14's open list (line 178). No section in 1-23 says they were resolved; not found.
+  - The other items section 14 leaves open (the home of Autonomous Theory; rebinding the Autonomous definition to a current version; the queue's rule texts at L8/L6/retired/layout-2026-09-06/ in each exemplar; the held-off CLAUDE.md) are not closed anywhere in sections 15-23. Their later status lies outside this scope.
+  - Section 22's owner message is cut off ('So redo the one plate l eight envelope with'). The ruling that the tree does not move is the record's reading of it. The same quotation, without the cut-off sentence, is entered into the specification in section 23, which supports the reading but is not a fresh owner statement.
+  - sheets-2026-09-07.md lines 37, 99 and 397 are truncated fragments. I did not compare them with the sheets as they stood before commit 1f7013c, so I cannot say whether they are faithful clause-level cuts or extraction faults.
+  - The section 2 chronology lists a 2026-08-24 event (3bdbe4b) before a 2026-08-23 event (1edf4c7). Whether a date is wrong or the order is deliberate is not stated.

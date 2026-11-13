@@ -1,0 +1,302 @@
+# read:history
+
+Agent result, as returned. Workflow: Manuscript status of 3 November 2026. Run `wf_1cf4205c-c72`. Phase: Read.
+
+- **summary**: Source: git history of /home/user/auditonomous (origin/main = 2165144, 147 commits, first fc3b018 2026-07-30; one extra ref origin/claude/book-structure-roadmap-k8ap82 = 9259c18, 5 commits past main, merge-base 2165144, unmerged; no tags/stash). Read-only; no checkout performed.
+
+  What it shows about manuscript development: the only author prose ever committed is the Auditonomous Theory corpus added 2026-08-02 (5a8d533): Master Archive (748 lines, "Session record through July 31, 2026"), TOC, and 52 Block files (31/32/35/36 are 1-line "Skipped." stubs). Blob hashes prove the Master Archive and 51 blocks never changed; only Block_03 was edited once (314ceba, 2026-08-04) and the TOC twice (3406bd1, 314ceba) to mark the skips. The corpus, the 2026-08-02 structure proposal, the 2026-08-04 index, the 2026-08-06 Sourcebook v0.1 set, the 2026-08-14 Book spine v0.1 (f67968b, manuscripts/SPINE_v0.1_2026-08-14.md) and the 22-line LaTeX stub MANUSCRIPT.tex ("STUB — NO CONTENT MIGRATED") were all deleted in Eric's prune 8c98573 (2026-08-15, 214 files, -99383 lines). 1d83788 (2026-08-14 17:40 -0700, "F-005: retire the freeze check") is the last pre-prune tree and is an ancestor of origin/main. After the prune, main only moved files: ccc0554 (2026-09-05, 7LM topology) and 3045e07 (2026-09-12, USO/→L8/) renamed the three Office files now at L8/L4/work/writing/ with blobs unchanged (R100). Those three "live drafts" have never had a content change in git: auditonomouos-important.docx and auditonomous-08-03-26.odt are byte-identical to their first commit 71f75cb (2026-08-05); auditnomous-main.docx and the two chat transcripts first appear inside merge commit 077d5de (2026-08-08, absent from both parents) and are unchanged. Extracted texts show they are a Sourcebook v0.1 extraction corpus, a referee blueprint, and a Book Prospectus v0.1, not chapter drafts. At HEAD no Block, Master Archive, TOC, spine, sourcebook, proposal, .tex or chapter file exists. The roadmap branch (2026-09-13/14) adds a 635-line PROPOSAL/INTERNAL ONLY roadmap, restores 116 files from 1d83788 byte-identically, opens 27 chapter files each marked "Not yet drafted", and a vocabulary paper labelled DRAFT; its own §9 says "the writing not begun (S6)". The author's own .odt draft (manuscripts/main/auditonomous.odt, 2026-08-05) was deleted at 8c98573 and is restored nowhere.
+- **facts**
+  - item 1
+    - **claim**: fc3b018 — repository initial commit: intake/ with lexrom manuscript v0.2 (md 495 lines + pdf 97790 bytes), intake/AUDITONOMOUS_DEFINITION.md (410 lines), manuscripts/branch/README.md (1 line), README.md 0 bytes; 19 files, 67012 insertions
+    - **date**: 2026-07-30 23:29:50 -0700
+    - **evidence**: git show --stat fc3b018: 'intake/manuscript/martin_2026_embodied_auditonomy_lexrom_cabin_model_v0.2_ea08f59.md | 495 +' ; 'manuscripts/branch/README.md | 1 +' ; subject 'Initial: auditonomous research home — intake/ with move log, scaffolding (definitions, formulas, manuscripts)'
+    - **status_label**: v0.2 (lexrom manuscript)
+  - item 2
+    - **claim**: 5a8d533 — Auditonomous Theory manuscript corpus added under intake/manuscript/: Auditonomous_Theory_Master_Archive.md (748 lines), Auditonomous_Theory_TOC.md (112), Block_01..Block_52 (31/32/35/36 are 1-line stubs 'Skipped.'), plus Third Power Corpus v3 docx+md; 57 files, 3289 insertions
+    - **date**: 2026-08-02 10:29:48 -0700
+    - **evidence**: git show --stat 5a8d533: 'Master Archive (52 blocks, full prose), TOC, 55 block/outline files'; 'intake/manuscript/Block_31_skipped.md | 1 +'; git show 5a8d533:intake/manuscript/Block_35_skipped.md = 'Skipped.'
+    - **status_label**: none in commit; Master Archive header: 'Session record through July 31, 2026'
+  - item 3
+    - **claim**: Master Archive header states it is a complete session record of July 2026, blocks in development order
+    - **date**: 2026-08-02
+    - **evidence**: 5a8d533:intake/manuscript/Auditonomous_Theory_Master_Archive.md:1-3 '# [source text withheld from the public copy].'
+    - **status_label**: author's text, verbatim (block 1 tag)
+  - item 4
+    - **claim**: fde6c47 — extraction prompt Auditonomous_Primary_Manuscript_Extraction_Verification_Prompt_v2.md added under promtps/first/ (typo dir)
+    - **date**: 2026-08-02
+    - **evidence**: git log --all -m --name-status: 'fde6c47 2026-08-02 ... A promtps/first/Auditonomous_Primary_Manuscript_Extraction_Verification_Prompt_v2.md'
+    - **status_label**: v2
+  - item 5
+    - **claim**: 75a1616 then 3406bd1 — MOVE_LOG integrity finding [source text withheld from the public copy])') recorded, then WITHDRAWN on author ruling; F2 (lexrom self-declared hash 'FAILED CHECK') demoted to publication-phase note; TOC edited (blob 0d90e04 -> 7e57704) to mark Blocks 31-32 and 35-36 skipped
+    - **date**: 2026-08-02 11:24:54 -0700
+    - **evidence**: 3406bd1:intake/MOVE_LOG.md:62-65 '### ⚠ [source text withheld from the public copy]."'; :126 '**FAILED CHECK.**'; commit msg 'blocks 31/32/35/36 are deliberate skips'
+    - **status_label**: WITHDRAWN (F1); DEMOTED (F2); FAILED CHECK; skipped
+  - item 6
+    - **claim**: 3385322 — intake/research/BOOK_STRUCTURE_PROPOSAL.md added (215 lines): 28-chapter grouping proposal from four-analyst pass
+    - **date**: 2026-08-02 12:07:58 -0700
+    - **evidence**: 1d83788:intake/research/BOOK_STRUCTURE_PROPOSAL.md:1-5 '**[source text withheld from the public copy].' / '**Corpus status:** INTERNAL ONLY throughout.'
+    - **status_label**: PROPOSAL; INTERNAL ONLY
+  - item 7
+    - **claim**: fe4548b (merged 214fb22, PR #1) — intake/research/CONTRIBUTION_INDEX_AND_TOC.md added
+    - **date**: 2026-08-04 06:53:55 +0000
+    - **evidence**: 1d83788:intake/research/CONTRIBUTION_INDEX_AND_TOC.md:1-7 '**[source text withheld from the public copy].' / 'Corpus entries are **INTERNAL ONLY**' / 'marked **PENDING EXTERNAL VERIFICATION**'
+    - **status_label**: PROPOSAL / living index; INTERNAL ONLY; PENDING EXTERNAL VERIFICATION
+  - item 8
+    - **claim**: 314ceba — the ONLY content change ever made to a Block file: Block_03_The_Definition.md blob 049bb40 -> 2bd725e (front-matter header removed; '## Outline' renamed '## COnsiderations'); TOC blob 7e57704 -> 983a5a4 escalating 'skipped at the outline layer' to '[source text withheld from the public copy]'; BOOK_STRUCTURE_PROPOSAL.md also modified
+    - **date**: 2026-08-04
+    - **evidence**: git log --follow --raw -- intake/manuscript/Block_03_The_Definition.md: ':100644 100644 049bb40 2bd725e M'; git diff 5a8d533 8c98573~1 -- Block_03: '-## Outline' '+## COnsiderations'; git show 314ceba -- TOC: '+... **[source text withheld from the public copy]'
+    - **status_label**: SKIPPED
+  - item 9
+    - **claim**: Block_01 (blob b3a90c6), Block_35 (2101e1d), Master Archive (31a0987) are byte-identical at 5a8d533, 3406bd1, 314ceba, 1d83788, 8c98573~1 and on the roadmap branch; i.e., no content change between addition and removal
+    - **date**: 2026-08-02 to 2026-08-15
+    - **evidence**: git rev-parse <ref>:intake/manuscript/<file> for each ref: Block_01 'b3a90c63e4197f51be141ddb061759a3620b5333' at all six refs; Master Archive '31a098741423f2ee52cf3c7bfd0b228836049822' at all six
+    - **status_label**: unchanged
+  - item 10
+    - **claim**: git diff 5a8d533..1d83788 on intake/manuscript/ touches only two files: TOC (4 lines) and Block_03 (11 lines)
+    - **date**: 2026-08-02 to 2026-08-14
+    - **evidence**: git diff --stat 5a8d533 1d83788 -- intake/manuscript/: 'Auditonomous_Theory_TOC.md | 4 ++--' ; 'Block_03_The_Definition.md | 11 +----------' ; '2 files changed, 3 insertions(+), 12 deletions(-)'
+    - **status_label**: unchanged except TOC/Block_03
+  - item 11
+    - **claim**: 71f75cb — first Office manuscript files committed: manuscripts/main/auditonomous.odt (12605 bytes) with LibreOffice lock file; [source text withheld from the public copy]' (169494 bytes, blob e76f606), auditonomous-08-03-26.odt (136256 bytes, blob 6da3713), auditonomous-08-03-26-prompt.odt, -prompt-brick.odt, 'audiontiomouns' (392 lines), notes.txt (12 lines)
+    - **date**: 2026-08-05 01:18:48 -0700
+    - **evidence**: git show --stat 71f75cb: 'manuscripts/main/auditonomous.odt | Bin 0 -> 12605 bytes'; '[source text withheld from the public copy] | Bin 0 -> 169494 bytes'; 'manuscripts/main/notes/auditonomous-08-03-26.odt | Bin 0 -> 136256 bytes'
+    - **status_label**: none
+  - item 12
+    - **claim**: a512737 — author's working material committed on explicit instruction: manuscripts/main/auditonomous.odt updated 12605 -> 47487 bytes; intake/auditonomy-book/ deep-research reports/odt/pdf; intake/claude/ THESIS + three BYTE-IDENTICAL WALK_ACROSS copies; commit states it is not evidence-grade
+    - **date**: 2026-08-05 19:37:40 -0700
+    - **evidence**: git show a512737: 'Committed on Eric's explicit instruction ("commit all four push"). This is the author's own working material, not sources under the evidence rules'; 'manuscripts/main/auditonomous.odt | Bin 12605 -> 47487 bytes'; 'The three WALK_ACROSS files are BYTE-IDENTICAL (md5 0d6884c3...)'
+    - **status_label**: author's working material
+  - item 13
+    - **claim**: 4ae9e07 — SESSION_2026-08-05_AUDITON_ARCHITECTURE.md added at intake/research/ (blob 1373893); at 8c98573 it moved to research/ as R090 with blob 4a180b7 (content changed at the move); R100 thereafter to L8/L4/work/writing/sessions/
+    - **date**: 2026-08-05
+    - **evidence**: git log --follow --raw: '4ae9e07 ... :000000 100644 0000000 1373893 A intake/research/SESSION_...' ; '8c98573 ... :100644 100644 1373893 4a180b7 R090 intake/research/SESSION_... research/SESSION_...'
+    - **status_label**: R090 at reorg
+  - item 14
+    - **claim**: Document-internal dates: Sourcebook 'Extraction date: 2026-08-06'; chat transcripts 'Ingestion date: 6 August 2026'; referee blueprint 'Search date: August 3, 2026'; prospectus titled 'Book Prospectus v0.1'
+    - **date**: 2026-08-03 / 2026-08-06
+    - **evidence**: scratchpad/manuscript/text/auditnomous-main.md:1-11 'Version 0.1' / '# Auditonomous Book Material Sourcebook' / '**Extraction date:** 2026-08-06'; auditonomous-chat-1.md:1-3 '[source text withheld from the public copy]'; auditonomouos-chat-2.md:1 'Version 0.1 CHAT-HIST-02'; auditonomouos-important.md:1,5 '# Auditonomy: Adversarial Scientific Assessment and Research Blueprint' / '**Search date:** August 3, 2026'; auditonomous-08-03-26.md:1 '# Book Prospectus v0.1'
+    - **status_label**: Version 0.1; CHAT-HIST; CHAT-HIST-02; Prospectus v0.1
+  - item 15
+    - **claim**: auditnomous-main.docx self-describes as an extraction corpus, not a manuscript
+    - **date**: 2026-08-06
+    - **evidence**: scratchpad/manuscript/text/auditnomous-main.md:7 '*[source text withheld from the public copy].*'; :15 '[source text withheld from the public copy].'; :2063 '**Status: `CONJECTURE / INTERNAL ONLY`.**'
+    - **status_label**: CONJECTURE / INTERNAL ONLY
+  - item 16
+    - **claim**: 077d5de (merge 'Merge pull request #12', parents f3f7e47 and 5c52b12) introduces, in the merge commit itself and absent from BOTH parents, manuscripts/auditnomous-main.docx (blob d03eb10, 69430 bytes), manuscripts/auditonomous-chat-1.docx (20036f6, 73264), manuscripts/auditonomouos-chat-2.docx (42582d0, 77894), manuscripts/auditonoomous-chat-3.docx (54751), manuscripts/main/Auditonomous_Book_Material_Sourcebook_v0.1.md (2261 lines), .docx (81886), _CHAT-HIST.docx (73264), Coverage_Exclusion_Ledger_v0.1.csv, Source_Manifest_v0.1.json, Extraction_Bundle_v0.1.zip (161117), durable/orphan/{auditonomous-manuscript.odt 51254, auditonomous.odt 59094, autonomous-theory.odt 17585, my-book.odt 33321, stream-eb-carrier-imporotant.odt 533499}, research/chapter-chunk/*; sibling merge 081ca39 of the same parents lacks them
+    - **date**: 2026-08-08 16:13:45 -0700
+    - **evidence**: git rev-parse 077d5de^1:manuscripts/auditnomous-main.docx -> (absent); 077d5de^2 -> (absent); 077d5de -> 'd03eb10a1d424c16838024d5a7d0c08ef91cda4b'; 081ca39 -> absent; git show 077d5de --first-parent --stat: 'manuscripts/auditnomous-main.docx | Bin 0 -> 69430 bytes' ... '57 files changed, 11404 insertions(+)'
+    - **status_label**: v0.1 (Sourcebook set)
+  - item 17
+    - **claim**: auditonomous-chat-1.docx (blob 20036f6) is byte-identical to the deleted manuscripts/main/Auditonomous_Book_Material_Sourcebook_v0.1_CHAT-HIST.docx
+    - **date**: 2026-08-08 (both introduced at 077d5de)
+    - **evidence**: git rev-parse HEAD:L8/L4/work/writing/chat/auditonomous-chat-1.docx = '20036f6ca2971b493c5707a458ff7906043aec15' = git rev-parse 8c98573~1:manuscripts/main/Auditonomous_Book_Material_Sourcebook_v0.1_CHAT-HIST.docx; roadmap restore record line 354 '[source text withheld from the public copy]'
+    - **status_label**: byte-identical
+  - item 18
+    - **claim**: f67968b — 'Book spine v0.1' added as manuscripts/SPINE_v0.1_2026-08-14.md (238 lines, blob a35aaa1) by Claude; merged in d47ba46 (PR #15) at 13:37 -0700 the same day
+    - **date**: 2026-08-14 19:02:27 +0000
+    - **evidence**: git log --all --diff-filter=A --name-only -- '*spine*': 'f67968b 2026-08-14 Book spine v0.1 ... manuscripts/SPINE_v0.1_2026-08-14.md'; file :1-2 '# [source text withheld from the public copy]**'; :11 'Titles are offers, not freezes.'
+    - **status_label**: v0.1; INTERNALLY DERIVED; COMPOSITE OBJECT UNVERIFIED (lines 98,116)
+  - item 19
+    - **claim**: Spine structure: seven parts, 42 chapters + 6 appendices, 1947/contact material severed to Appendix F; built from four prior structures (TOC, BOOK_STRUCTURE_PROPOSAL, CONTRIBUTION_INDEX, Sourcebook)
+    - **date**: 2026-08-14
+    - **evidence**: f67968b commit body: 'a seven-part spine (42 chapters + 6 appendices) synthesized [source text withheld from the public copy]'; file :13-15 '[source text withheld from the public copy] ...) is severed to a closing appendix ... 36 of 52 blocks run without it.'
+    - **status_label**: v0.1
+  - item 20
+    - **claim**: 3c25633 HUB_LEDGER.md records spine delivered and a 'scholarly only' book register ruling
+    - **date**: 2026-08-14 20:03:53 +0000
+    - **evidence**: 1d83788:HUB_LEDGER.md:49-50 '[source text withheld from the public copy].'; :82-83 '**[source text withheld from the public copy]`)'
+    - **status_label**: DONE (ledger)
+  - item 21
+    - **claim**: e9511f5 — 'Redeploy the shared repo layout': creates manuscripts/README.md (25 lines), manuscripts/main/README.md (43), manuscripts/main/MANUSCRIPT.tex (22-line STUB), manuscripts/definitions/{AUDITONOMOUS.md 1339, AUTONOMOUS.md 356, README 47, REGISTER 26}, manuscripts/prior-art/README.md; moves 8 root docs into manuscripts/main/; rewrites manuscripts/branch/README.md (blob e5c3dfe -> 293b556, the blob still at HEAD)
+    - **date**: 2026-08-14 16:26:40 -0700
+    - **evidence**: git show --stat e9511f5: 'manuscripts/main/MANUSCRIPT.tex | 22 ++'; body 'HUB_LEDGER.md and manuscripts/SPINE_v0.1 stay where PR #15 put them.'; git rev-parse e9511f5:manuscripts/branch/README.md = HEAD:L8/L4/work/writing/branch/README.md = '293b556a...'
+    - **status_label**: STUB
+  - item 22
+    - **claim**: MANUSCRIPT.tex content: a placeholder with no manuscript text; READMEs call it source of truth while naming the .docx/.odt/.md files the live drafts
+    - **date**: 2026-08-14
+    - **evidence**: 8c98573~1:manuscripts/main/MANUSCRIPT.tex:2 '% [source text withheld from the public copy])' :6-7 '[source text withheld from the public copy]'; manuscripts/main/README.md:10 '`[source text withheld from the public copy].**' :42 '`DRAFT — INTERNAL` until it is not.'; manuscripts/README.md:20 '`main/MANUSCRIPT.tex` is a **stub**'
+    - **status_label**: STUB; DRAFT — INTERNAL
+  - item 23
+    - **claim**: dabed3c — five auditonomy documents restored at F-003-witnessed bytes: manuscripts/definitions/{AUDITONOMY.md 462, AUDITON_ENVELOPE.md 257, AUDITON_REPLICATOR.md 617, HUMINT_ENCODE.md 335}, research/findings/DISTILLATION.md 294; F-004 manifest parked, NOT installed
+    - **date**: 2026-08-14 17:26:22 -0700
+    - **evidence**: git show --stat dabed3c: 'Restore five auditonomy documents deleted by the sibling restructure'; 'F-004 manifest assembled, self-verified 14/14, parked in intake/claude/ - NOT installed'
+    - **status_label**: F-004 parked / NOT installed
+  - item 24
+    - **claim**: 1d83788 — 'F-005: retire the freeze check on Eric's instruction': CLAUDE.md edited, FREEZE.md +1 line, FREEZE.sha256 deleted; parent db426ab; it IS an ancestor of origin/main and is the last commit before the prune 8c98573 (the 318-path tree the roadmap branch later restores from)
+    - **date**: 2026-08-14 17:40:15 -0700
+    - **evidence**: git show --stat 1d83788: 'CLAUDE.md | 8 ++++----' 'FREEZE.md | 1 +' 'FREEZE.sha256 | 34 ---'; 'git merge-base --is-ancestor 1d83788 origin/main' -> YES; roadmap restore record :3 '[source text withheld from the public copy]`)'
+    - **status_label**: F-005 retired
+  - item 25
+    - **claim**: LEDGER.md at 1d83788 states manuscript status: .tex stub, live drafts are Office/md files
+    - **date**: 2026-08-14
+    - **evidence**: 1d83788:LEDGER.md:35 '`[source text withheld from the public copy]. ... | Real LaTeX migration'
+    - **status_label**: STUB
+  - item 26
+    - **claim**: 8c98573 — Eric's prune: 214 files changed, 1255 insertions, 99383 deletions; intake/ retired entirely (131 files) — all 52 Block_*.md, Master Archive, TOC, lexrom md+pdf, BOOK_STRUCTURE_PROPOSAL.md, CONTRIBUTION_INDEX_AND_TOC.md, extraction prompt leave the tree; also deleted: manuscripts/SPINE_v0.1_2026-08-14.md, MANUSCRIPT.tex, manuscripts/main/auditonomous.odt (47487 B), Sourcebook .md/.docx/CHAT-HIST/.csv/.json/.zip, chat-3, notes/ set, five orphan .odt, chapter-chunk/*, definitions AUDITONOMOUS/AUDITONOMY/AUDITON_REPLICATOR/AUTONOMOUS/README/REGISTER; manuscripts/README.md and main/README.md reduced to 0 bytes
+    - **date**: 2026-08-15 23:28:27 -0700
+    - **evidence**: git show --stat 8c98573: 'Eric's manual prune and promotion (2026-08-14/15), committed on his instruction'; 'Retire intake/ entirely (131 files)'; 'all content remains reachable in history'; 'manuscripts/SPINE_v0.1_2026-08-14.md | 238 -'; 'intake/manuscript/Auditonomous_Theory_Master_Archive.md | 748 --'; '214 files changed, 1255 insertions(+), 99383 deletions(-)'
+    - **status_label**: pruned (history-only)
+  - item 27
+    - **claim**: 8c98573 renames (R100, blobs unchanged): manuscripts/auditnomous-main.docx -> manuscripts/main/open-research/; [source text withheld from the public copy]' -> open-research/auditonomouos-important.docx; notes/auditonomous-08-03-26.odt -> open-research/; chat-1/chat-2 -> manuscripts/main/chat/
+    - **date**: 2026-08-15
+    - **evidence**: git log --follow --raw: '8c98573 ... :100644 100644 e76f606 e76f606 R100 [source text withheld from the public copy] manuscripts/main/open-research/auditonomouos-important.docx'; 'd03eb10 d03eb10 R100 manuscripts/auditnomous-main.docx manuscripts/main/open-research/auditnomous-main.docx'
+    - **status_label**: R100
+  - item 28
+    - **claim**: 4a1c1db — AUDITONOMOUS_DEFINITION.md (410 lines) restored verbatim from 1d83788 into a placeholder 'born empty at 8c98573'; AUDITON_ENVELOPE banner restored; four 0-byte files (manuscripts/README.md, definitions/README.md, definitions/REGISTER.md, main/README.md) declared intentional blanks under AU-NORM-01
+    - **date**: 2026-08-16 15:48:01 -0700
+    - **evidence**: 4a1c1db body: 'restored verbatim from 1d83788:intake/AUDITONOMOUS_DEFINITION.md (410 lines; the placeholder was born empty at 8c98573)'; 'The four zero-byte files stand as intentional blanks (AU-NORM-01)'; 280226a diff: 'Intentionally blank (AU-NORM-01, do not restore): manuscripts/README.md, manuscripts/definitions/README.md, manuscripts/definitions/REGISTER.md, manuscripts/main/README.md'
+    - **status_label**: AU-NORM-01 / AU-NORM-02
+  - item 29
+    - **claim**: ccc0554 — Seven-Layer Model topology: 68 files git mv, contents untouched; three drafts -> USO/l4/work/writing/, chats -> USO/l4/work/writing/chat/, session -> .../sessions/, branch/README -> .../branch/; 0-byte manuscripts READMEs retired to USO/l6/retired/layout-2026-08-14/manuscripts/; new sheet USO/l4/work/writing/0.md (49 lines); merged as PR #18 (b00c3fe)
+    - **date**: 2026-09-05 01:42:06 +0000
+    - **evidence**: git show --stat ccc0554: '{manuscripts/main/open-research => USO/l4/work/writing}/auditnomous-main.docx | Bin'; '68 files move by git mv with contents untouched; nothing is deleted'; '150 files changed, 4233 insertions(+), 50 deletions(-)'
+    - **status_label**: R100
+  - item 30
+    - **claim**: 3045e07 — rename pass USO/ -> L8/, l4 -> L4; the three drafts, two chats, session and branch README arrive at L8/L4/work/writing/ (R100, blobs unchanged); merged as PR #26 = 2165144 (origin/main HEAD)
+    - **date**: 2026-09-12 04:17:49 +0000 (merge 2165144 dated 2026-09-11 -0700)
+    - **evidence**: git log --follow --raw: '3045e07 ... :100644 100644 d03eb10 d03eb10 R100 USO/l4/work/writing/auditnomous-main.docx L8/L4/work/writing/auditnomous-main.docx'; '126 files changed, 493 insertions(+), 477 deletions(-)'
+    - **status_label**: R100
+  - item 31
+    - **claim**: (3) Last CONTENT change of auditnomous-main.docx: none after its first appearance at merge 077d5de (2026-08-08); blob d03eb10 (69430 bytes) identical through 8c98573, ccc0554, 3045e07 to HEAD
+    - **date**: 2026-08-08
+    - **evidence**: git log --follow --raw origin/main -- L8/L4/work/writing/auditnomous-main.docx shows only R100 rows with 'd03eb10 d03eb10'; git rev-parse HEAD:L8/L4/work/writing/auditnomous-main.docx = 'd03eb10a1d424c16838024d5a7d0c08ef91cda4b'; git cat-file -s = 69430
+    - **status_label**: unchanged since 2026-08-08
+  - item 32
+    - **claim**: (3) Last CONTENT change of auditonomouos-important.docx: its creation at 71f75cb (2026-08-05) as '[source text withheld from the public copy]'; blob e76f606 (169494 bytes) unchanged through three renames
+    - **date**: 2026-08-05 01:18:48 -0700
+    - **evidence**: git log --follow --raw: '71f75cb ... :000000 100644 0000000 e76f606 A [source text withheld from the public copy]'; HEAD blob 'e76f606a9cb7b93ee283f35fa6107a5a08ae1776', 169494 bytes
+    - **status_label**: unchanged since 2026-08-05
+  - item 33
+    - **claim**: (3) Last CONTENT change of auditonomous-08-03-26.odt: its creation at 71f75cb (2026-08-05); blob 6da3713 (136256 bytes) unchanged through three renames
+    - **date**: 2026-08-05 01:18:48 -0700
+    - **evidence**: git log --follow --raw: '71f75cb ... :000000 100644 0000000 6da3713 A manuscripts/main/notes/auditonomous-08-03-26.odt'; HEAD blob '6da3713b6b1c1d10444a50cfa0940cf5070d12ba', 136256 bytes
+    - **status_label**: unchanged since 2026-08-05
+  - item 34
+    - **claim**: Chat transcripts chat-1 (20036f6, 73264 B) and chat-2 (42582d0, 77894 B) unchanged since 077d5de (2026-08-08); three R100 renames to L8/L4/work/writing/chat/
+    - **date**: 2026-08-08
+    - **evidence**: git log --follow --raw origin/main -- L8/L4/work/writing/chat/auditonomous-chat-1.docx: three rows '20036f6 20036f6 R100'; --find-object lists only 8c98573, ccc0554, 3045e07 (non-merge commits)
+    - **status_label**: unchanged
+  - item 35
+    - **claim**: (1) Book spine v0.1 at HEAD: ABSENT. Added f67968b at manuscripts/SPINE_v0.1_2026-08-14.md; deleted 8c98573 (2026-08-15); re-added byte-identical (blob a35aaa1) only on the roadmap branch at L8/L5/research/review/SPINE_v0.1_2026-08-14.md (62d2e3f, 2026-09-14)
+    - **date**: 2026-08-14 / 2026-08-15 / 2026-09-14
+    - **evidence**: git ls-files | grep -i spine -> no output (exit 1); git log --all --name-status -- '*spine*': '62d2e3f A L8/L5/research/review/SPINE_v0.1_2026-08-14.md' / '8c98573 D manuscripts/SPINE_v0.1_2026-08-14.md' / 'f67968b A manuscripts/SPINE_v0.1_2026-08-14.md'; blob 'a35aaa168a2c1ffc6986d08ee825097a718cccaf' at f67968b, 1d83788, 8c98573~1 and roadmap
+    - **status_label**: absent at HEAD; byte-identical on roadmap branch
+  - item 36
+    - **claim**: (2) intake/manuscript/Block_*.md (52 files) and Auditonomous_Theory_Master_Archive.md left the tree at 8c98573 (2026-08-15); Block_01 content unchanged (b3a90c6 add->delete); Block_03 changed once at 314ceba; Master Archive unchanged (31a0987)
+    - **date**: 2026-08-15
+    - **evidence**: git log --follow --raw -- intake/manuscript/Block_01_Founding_Premise.md: '8c98573 ... :100644 000000 b3a90c6 0000000 D' and '5a8d533 ... A ... b3a90c6'; git log --all --name-status -- '*Master*': '8c98573 D intake/manuscript/Auditonomous_Theory_Master_Archive.md'
+    - **status_label**: removed 2026-08-15
+  - item 37
+    - **claim**: HEAD (2165144) tree: 169 files; root holds .github, .gitignore, L7, L8, README.md; L8/L4/work/writing/ holds exactly auditnomous-main.docx, auditonomouos-important.docx, auditonomous-08-03-26.odt, chat/{auditonomous-chat-1.docx, auditonomouos-chat-2.docx}, sessions/SESSION_2026-08-05_AUDITON_ARCHITECTURE.md, branch/README.md and four 0.md sheets; no Block_, Master Archive, TOC, SPINE, Sourcebook, PROPOSAL, CONTRIBUTION_INDEX, .tex, chapter or book/ file exists at HEAD; the only 'manuscripts' paths are two 0-byte retired READMEs
+    - **date**: 2026-09-11
+    - **evidence**: git ls-files | wc -l = 169; git ls-files | grep -iE 'TOC|SPINE|Sourcebook|PROPOSAL|CONTRIBUTION_INDEX|Block_|Master_Archive|MANUSCRIPT\.tex|ROADMAP|chapter|/book/|papers/' matches only unrelated paths (auditonomous-departure-protocol.md, PROPOSAL_seal_gated_interlock.md, ieee/papers/README.md); git cat-file -s HEAD:L8/L6/retired/layout-2026-08-14/manuscripts/README.md = 0
+    - **status_label**: HEAD state
+  - item 38
+    - **claim**: HEAD writing sheet labels the three Office files 'the live drafts' and records that the .tex stub does not exist; sessions sheet names three unextracted candidate objects; branch sheet: no branch manuscript exists
+    - **date**: 2026-09-12 (sheet as at HEAD)
+    - **evidence**: HEAD:L8/L4/work/writing/0.md:33 '`auditnomous-main.docx`, `auditonomouos-important.docx`, `auditonomous-08-03-26.odt` — the live drafts ("[source text withheld from the public copy]") ... The LaTeX `MANUSCRIPT.tex` the master ledger calls a stub does not exist at HEAD.'; :36 'no branch manuscript exists'; :38 'nothing here is released (L7)'
+    - **status_label**: live drafts (sheet's term)
+  - item 39
+    - **claim**: HEAD master ledger still carries the stub note and flags the five orphan .odt drafts as a category error awaiting the principal
+    - **date**: 2026-09-11 (HEAD)
+    - **evidence**: HEAD:L8/L6/history/LEDGER.md:37 '`[source text withheld from the public copy]'; :32 '`[source text withheld from the public copy]'
+    - **status_label**: STUB; category error
+  - item 40
+    - **claim**: Status ladder in force at HEAD: SPECULATION -> CONJECTURE -> RESEARCHING -> VERIFIED, side states PARKED and SUPERSEDED; 'Nothing is ever deleted'
+    - **date**: 2026-09-06 (carried verbatim)
+    - **evidence**: HEAD:L8/L5/research/review/STATUS_LADDER.md:8 'SPECULATION  -->  CONJECTURE  -->  RESEARCHING  -->  VERIFIED'; :21-22 '[source text withheld from the public copy]'; :25 '**Nothing is ever deleted.**'
+    - **status_label**: SPECULATION/CONJECTURE/RESEARCHING/VERIFIED/PARKED/SUPERSEDED
+  - item 41
+    - **claim**: (5) Roadmap branch origin/claude/book-structure-roadmap-k8ap82 = 9259c18; merge-base with origin/main = 2165144 (main HEAD); 0 main commits beyond it; 5 branch commits beyond main; tree 328 files vs 169 on main; not merged into origin/main (PR #27 'closed, unmerged' is the task's statement, not verifiable from git)
+    - **date**: 2026-09-13 to 2026-09-14
+    - **evidence**: git merge-base origin/main origin/claude/book-structure-roadmap-k8ap82 = '21651446b1f3f4547b588e6d7122ef7f9f81e9b9'; git log origin/claude/book-structure-roadmap-k8ap82..origin/main -> empty; git ls-tree -r | wc -l: roadmap 328, main 169
+    - **status_label**: unmerged
+  - item 42
+    - **claim**: (5a) 30a40f1 — L8/L5/research/review/BOOK_STRUCTURE_AND_ROADMAP_2026-09-13.md added (635 lines): eight parts, twenty-seven chapters composed from six prior structures; 21 owner decisions
+    - **date**: 2026-09-13 20:37:08 +0000
+    - **evidence**: 30a40f1 body: 'PROPOSAL, INTERNAL ONLY, nothing adopted'; file :3 '**Standing.** PROPOSAL · INTERNAL ONLY · INTERNALLY DERIVED.'; :13 'Six structures for this book already exist ... [source text withheld from the public copy]`'
+    - **status_label**: PROPOSAL · INTERNAL ONLY · INTERNALLY DERIVED
+  - item 43
+    - **claim**: Roadmap's §0 identifies the three HEAD Office files as the 2026-08-03 prospectus/referee blueprint and the 2026-08-06 sourcebook (not chapter drafts), and quotes an owner instruction that the book must cover 'auditbonomy and first contact'
+    - **date**: 2026-09-13
+    - **evidence**: BOOK_STRUCTURE_AND_ROADMAP_2026-09-13.md:19 '[source text withheld from the public copy]`'; :21 '[source text withheld from the public copy] ...` | an extraction corpus, not a manuscript'; :3 '[source text withheld from the public copy].'
+    - **status_label**: PROPOSAL
+  - item 44
+    - **claim**: Roadmap §4 'Status now, by chapter': [source text withheld from the public copy] VERIFIED as a whole; author prose exists only via Blocks/Master Archive for a few chapters, 'prose none' for most
+    - **date**: 2026-09-14 (revision)
+    - **evidence**: BOOK_STRUCTURE_AND_ROADMAP_2026-09-13.md §4 (line 422ff): '[source text withheld from the public copy]'; row 8 '[source text withheld from the public copy])'; row 2 'registers complete; chapter prose none'
+    - **status_label**: RESEARCHING/CONJECTURE/SPECULATION/VERIFIED/NOT-CHECKED
+  - item 45
+    - **claim**: (5b) 62d2e3f — 'Set up the repository before research': 116 files returned from 1d83788 byte-identically (65 already at HEAD byte-identical, 16 superseded, 121 left in history); restores the 52 blocks + Master Archive + TOC to L8/L4/work/writing/manuscript/, SPINE to L8/L5/research/review/, Sourcebook .md/.csv/.json to writing/sourcebook/, chat-3, prompts, BOOK_STRUCTURE_PROPOSAL and CONTRIBUTION_INDEX to L5 review, lexrom md+pdf to L7/peering/private/ingress/peer-3/object-1/; record at L8/L6/history/restore-2026-09-14.md
+    - **date**: 2026-09-14 01:42:45 +0000
+    - **evidence**: 62d2e3f body: '116 restored, 65 byte-identical at HEAD, 16 superseded by later versions at HEAD, 121 left in history for a stated reason'; roadmap blobs equal 1d83788 blobs: Master Archive '31a0987...', Block_03 '2bd725e...', TOC '983a5a4...', Sourcebook.md 'be4c219a...'
+    - **status_label**: restored (byte-identical)
+  - item 46
+    - **claim**: Restore record explicitly does NOT restore: MANUSCRIPT.tex stub, manuscripts/main/auditonomous.odt, the five orphan .odt files, notes/ set (audiontiomouns, prompt .odt, notes.txt), Sourcebook .docx and .zip, owner's chat.txt
+    - **date**: 2026-09-14
+    - **evidence**: roadmap:L8/L6/history/restore-2026-09-14.md:34 '`[source text withheld from the public copy].'; :365 '`[source text withheld from the public copy]'; :191-195 '[source text withheld from the public copy]'; git ls-tree roadmap | grep auditonomous.odt -> none
+    - **status_label**: NOT RESTORED
+  - item 47
+    - **claim**: (5c) b1ec302 — manuscript source tree L8/L4/work/writing/book/ opened: 00-front-matter.md, ch01..ch27 (eight parts), bibliography.md (empty by rule), build.sh (pandoc to manuscript.tex/.pdf, not run); every chapter 'Not yet drafted'
+    - **date**: 2026-09-14 01:48:05 +0000
+    - **evidence**: b1ec302 body: 'No chapter carries text.'; book/ch01-the-readers-contract.md:3 '**Status on the ladder:** RESEARCHING · **Gates:** D8'; :28 '*[source text withheld from the public copy])'; build.sh:3 'Not run in the environment that wrote it (pandoc absent there)'
+    - **status_label**: Not yet drafted; RESEARCHING (ch01)
+  - item 48
+    - **claim**: (5d) 4e2c4e4 — L8/L4/work/writing/papers/AUDITONOMOUS_VOCABULARY_PAPER_2026-09-14.md (316 lines), second half of the 'scholarly pair'
+    - **date**: 2026-09-14 01:52:56 +0000
+    - **evidence**: paper :3 '**[source text withheld from the public copy] ... Not adversarially reviewed. Nothing released.'
+    - **status_label**: DRAFT · INTERNAL ONLY · INTERNALLY DERIVED
+  - item 49
+    - **claim**: (5e) 9259c18 — roadmap re-sequenced to owner's build-first order S0–S6; records that writing has not begun; corrects D18/D20 ('Aud(S,F)' occurs nowhere); surveys 15 component repositories, none on the 7LM
+    - **date**: 2026-09-14 02:04:14 +0000
+    - **evidence**: BOOK_STRUCTURE_AND_ROADMAP_2026-09-13.md §9: '[source text withheld from the public copy] ... (S5, D23); the writing not begun (S6)'; 'None is on the Seven-Layer Model.'
+    - **status_label**: S6 not begun; INTERNAL ONLY
+  - item 50
+    - **claim**: Roadmap manuscript sheet counts the blocks: forty-eight with text, four skipped; TOC dated 2026-08-02
+    - **date**: 2026-09-14
+    - **evidence**: roadmap:L8/L4/work/writing/manuscript/0.md Holdings: 'the blocks as written (forty-eight with text; 31, 32, 35 and 36 skipped)'; '`Auditonomous_Theory_TOC.md` — the author's table of contents (2026-08-02)'
+    - **status_label**: skipped (4 blocks)
+  - item 51
+    - **claim**: CONTRADICTION — the restore record classifies manuscripts/main/auditonomous.odt as 'Office or archive packaging of the sourcebook', but git shows [source text withheld from the public copy] .odt created 2026-08-05 01:18 (71f75cb, 12605 B) and updated 2026-08-05 19:37 (a512737, 47487 B, 'manuscripts/main/auditonomous.odt - updated ... author's own working material'), one day before the sourcebook's self-declared extraction date 2026-08-06; it is absent from HEAD and from the roadmap branch
+    - **date**: 2026-08-05 vs 2026-09-14
+    - **evidence**: restore-2026-09-14.md:365 vs a512737 body 'manuscripts/main/auditonomous.odt - updated; its LibreOffice lock file ... removed'; 8c98573 stat 'manuscripts/main/auditonomous.odt | Bin 47487 -> 0 bytes'; auditnomous-main.md:3 'Extraction date: 6 August 2026'
+    - **status_label**: contradiction
+  - item 52
+    - **claim**: CONTRADICTION — the term 'live drafts' (LEDGER 2026-08-14, writing sheet at HEAD) is applied to three files whose own text identifies them as an extraction corpus ('not a final manuscript'), a referee blueprint ('Adversarial Scientific Assessment and Research Blueprint') and a 'Book Prospectus v0.1'; the roadmap §0 itself uses those identifications
+    - **date**: 2026-08-14 to 2026-09-14
+    - **evidence**: HEAD:L8/L4/work/writing/0.md:33 'the live drafts'; scratchpad text auditnomous-main.md:15 'This sourcebook is not a final manuscript'; auditonomouos-important.md:1; auditonomous-08-03-26.md:1; roadmap §0 rows 19,21
+    - **status_label**: contradiction
+  - item 53
+    - **claim**: CONTRADICTION / dangling reference — restore record defers the five orphan .odt files to 'harmonization-2026-09-05.md §8', but §8 (2026-09-06 dissolution of common/ and intake/) contains no row for them; they had already been deleted at 8c98573 on 2026-08-15 (common/durable/durable/orphan/*.odt, 51254/59094/17585/33321/533499 bytes)
+    - **date**: 2026-08-15 / 2026-09-06 / 2026-09-14
+    - **evidence**: restore-2026-09-14.md:191-195 '[source text withheld from the public copy]'; git show HEAD:L8/L6/history/harmonization-2026-09-05.md | grep -nE 'my-book|auditonomous-manuscript\.odt|stream-eb' -> no output; 8c98573 stat 'common/durable/durable/orphan/my-book.odt | Bin 33321 -> 0 bytes'
+    - **status_label**: contradiction
+  - item 54
+    - **claim**: CONTRADICTION — owner direction on contact material differs between sources: HUB_LEDGER (2026-08-14) '[source text withheld from the public copy]' vs roadmap (2026-09-13) quoting the owner wanting an 'academic book for auditbonomy and first contact' with Leg B chapters 19–24, 26 gated by D1
+    - **date**: 2026-08-14 vs 2026-09-13
+    - **evidence**: 1d83788:HUB_LEDGER.md:49-50; roadmap :3 and §4 rows 19-26 ('Leg B')
+    - **status_label**: contradiction (owner rulings)
+  - item 55
+    - **claim**: CONTRADICTION — chapter counts across the six structures differ and are not reconciled: TOC 18 chapters/5 parts (2026-08-02); proposal 28 chapters (2026-08-02); prospectus 20 chapters/5 parts (2026-08-03); spine 42 chapters + 6 appendices/7 parts (2026-08-14); roadmap 27 chapters/8 parts (2026-09-13)
+    - **date**: 2026-08-02 to 2026-09-13
+    - **evidence**: roadmap §0 table lines 17-22: '5 parts, 18 chapters', '28 chapters', '5 parts, 20 chapters', '42 chapter titles ... in 7 parts'; 30a40f1 body 'eight parts and twenty-seven chapters'
+    - **status_label**: unreconciled
+  - item 56
+    - **claim**: CONTRADICTION — skip status escalated between TOC versions: 3406bd1 TOC says blocks 31–32/35–36 'skipped at the outline layer — no separate outline files' with 'archive prose is unaffected and complete'; 314ceba TOC says 'SKIPPED — cut from the book ... [source text withheld from the public copy]', while the Master Archive blob never changed
+    - **date**: 2026-08-02 vs 2026-08-04
+    - **evidence**: git show 3406bd1 -- TOC: '+... Blocks 35–36 skipped at the outline layer — no separate outline files, by the author's decision'; git show 314ceba -- TOC: '+... **[source text withheld from the public copy].**'; Master Archive blob 31a0987 constant
+    - **status_label**: skipped vs SKIPPED/cut
+  - item 57
+    - **claim**: Author/committer timezones differ: Eric D. Martin / EDM commits are -0700, Claude commits are +0000; e.g. f67968b (spine) 19:02 UTC = 12:02 PDT on 2026-08-14, 1d83788 17:40 PDT = 00:40 UTC 2026-08-15; merge 2165144 dated 2026-09-11 -0700 contains 3045e07 dated 2026-09-12 UTC
+    - **date**: n/a
+    - **evidence**: git log -1 --format='%ai' f67968b '2026-08-14 19:02:27 +0000'; 1d83788 '2026-08-14 17:40:15 -0700'; 3045e07 '2026-09-12 04:17:49 +0000'
+    - **status_label**: n/a
+- **open_questions**
+  - PR #27's state (closed, unmerged) is asserted by the task text only; git shows the branch is unmerged (merge-base = main HEAD, no main commits beyond) but cannot show PR status — confirm via GitHub if it matters.
+  - Whether manuscripts/main/auditonomous.odt (47487 bytes at a512737, deleted at 8c98573, restored nowhere) or the five orphan .odt files (auditonomous-manuscript.odt, auditonomous.odt, autonomous-theory.odt, my-book.odt, stream-eb-carrier-imporotant.odt, all deleted at 8c98573) contain author chapter prose — binaries not extracted; they are the only candidates for author drafts outside the Master Archive, and the restore record's classification of auditonomous.odt as 'packaging of the sourcebook' conflicts with its commit dates.
+  - Whether auditnomous-main.docx (69430 bytes, blob d03eb10) and the deleted Auditonomous_Book_Material_Sourcebook_v0.1.docx (81886 bytes) differ in content or only in rendering — not diffed (binary); the extracted text of the former is the Sourcebook v0.1.
+  - SESSION_2026-08-05_AUDITON_ARCHITECTURE.md changed content at 8c98573 (R090, blob 1373893 -> 4a180b7) although that commit describes moves; the nature of the change was not examined.
+  - The rescue commit 9aefa6e ('rescue/reorg-2026-08-14', cited by e9511f5 as the first deployment 'reset away by PRs #15-17') is not present in this clone's refs; its content could not be checked.
+  - Which owner ruling governs contact/first-contact material in the book: HUB_LEDGER 2026-08-14 'scholarly only' vs the roadmap's 2026-09-13 instruction quoting 'auditbonomy and first contact'.
+  - The restore record's cross-reference to harmonization §8 for the five .odt files points to a section with no such disposition; the only standing statement is LEDGER.md:32 '[source text withheld from the public copy]'.
+  - Whether the roadmap branch's restored Block/Master Archive/TOC files are intended to supersede HEAD's state is undecided by git: the branch is unmerged and the roadmap labels itself PROPOSAL / nothing adopted.

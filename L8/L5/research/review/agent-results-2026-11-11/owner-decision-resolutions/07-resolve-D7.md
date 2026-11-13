@@ -1,0 +1,57 @@
+# resolve:D7
+
+Agent result, as returned. Workflow: Resolutions for the 23 owner decisions. Run `wf_3293f65c-a92`. Phase: Resolve.
+
+- **decision**: 7. What becomes of the beta exemplars' research objects and their edits to the definitions, Q13, CONTRADICTIONS.md, LEDGER.md, REGISTER.md, DEFINITION_LIST_AUTONOMOUS.md and two binder files.
+- **resolution**: Leave all of it where it is, on the two beta branches (autonomous e64b382, auditonomous 714480d), untouched and undeleted, and keep it out of the physical mirror that goes to each exemplar's main. Put it to the owner as an itemised proposal, one row per file (the file, what the beta changed, take or leave), and apply nothing until the owner says which rows.
+- **reasoning**
+  - item 1
+    - **speaker**: owner
+    - **quote**: we need to uipdate the autonomous and auditonomous repos phsyciall; to match first
+    - **locator**: owner's instructions of 11 November 2026, as typed
+    - **bears**: The order in hand is a physical match to the model, done first; new research objects and edits to definitions, registers and ledgers are not a physical match, so this order does not carry them.
+  - item 2
+    - **speaker**: owner
+    - **quote**: Don't change the system unless you ask or are unsure
+    - **locator**: /home/user/7lm@origin/main:L8/L6/history/harmonization-2026-09-04.md:482
+    - **bears**: Bringing the beta's contract edits onto main would change what the L0 objects and registers say without the owner having been asked about each, which this standing word forbids.
+  - item 3
+    - **speaker**: record
+    - **quote**: Findings and design verdicts come to the owner as proposals — file, what is wrong, the exact fix — and nothing is applied until the owner says which.
+    - **locator**: /home/user/7lm@origin/main:L8/L6/history/harmonization-2026-09-04.md:484
+    - **bears**: It gives the form the resolution takes: a per-file proposal, with nothing applied before the owner chooses.
+  - item 4
+    - **speaker**: owner
+    - **quote**: Auditonomous gets the definitions of autonomous from Autonomous and nowhere else.
+    - **locator**: /home/user/auditonomous@origin/main:L8/L6/history/harmonization-2026-09-05.md:9
+    - **bears**: The beta's edits to AUDITONOMOUS_DEFINITION.md, Q13 and CONTRADICTIONS.md are one way of applying this rule, so the subject is the owner's own rule and how it is applied is the owner's to settle.
+  - item 5
+    - **speaker**: record
+    - **quote**: - Under the owner rule: [source text withheld from the public copy]`.
+    - **locator**: /home/user/auditonomous@origin/main:L8/L6/history/harmonization-2026-09-05.md:93 (under the heading at :89, "## 5. Owner decisions left open (nothing done)")
+    - **bears**: The Auditonomous record lists exactly the three things the beta edited as owner decisions left open with nothing done; the beta's edits close them without a recorded ruling.
+  - item 6
+    - **speaker**: sheet
+    - **quote**: Which rows are which is the owner's reading; the file is not edited.
+    - **locator**: /home/user/auditonomous@origin/main:L8/L5/research/review/0.md:35
+    - **bears**: The standing sheet on main says CONTRADICTIONS.md is not edited and that sorting its rows is the owner's reading; the beta adds a 15-line disposition table that sorts rows C1 to C7.
+  - item 7
+    - **speaker**: record
+    - **quote**: `REGISTER.md` listing autonomy "not yet entered" while `AUTONOMOUS.md` is ADOPTED
+    - **locator**: /home/user/autonomous@origin/main:L8/L6/history/harmonization-2026-09-05.md:81 (under the heading at :77, "## 5. Owner decisions left open (nothing done)")
+    - **bears**: The Autonomous record holds the REGISTER.md contest as open and not settled by the sheets; the beta settles it by moving the row to "ADOPTED **as a plural entry**".
+  - item 8
+    - **speaker**: owner
+    - **quote**: [source text withheld from the public copy].
+    - **locator**: /home/user/autonomous@origin/claude/scholarly-pair-baseline-k8ap82:L8/L6/history/exemplar-2026-09-14.md:7
+    - **bears**: The owner asked for Autonomous to be a read-only exemplar; the declaration built on that word (same branch, L7/governance/restrictions/0.md:34, unmerged) reads "the L0 object `L8/L0/semantics/definitions/AUTONOMOUS.md` and its companions change only by a dated version merged by the owner", and REGISTER.md and DEFINITION_LIST_AUTONOMOUS.md are those companions.
+  - item 9
+    - **speaker**: record
+    - **quote**: This record concerns the authorized local candidate, not a new source-owner decision or release.
+    - **locator**: /home/user/auditonomous@origin/beta/7lm-exemplar-auditonomous:L8/L6/history/AUDITONOMOUS_BETA_HISTORY.md:3
+    - **bears**: The beta's own record disclaims being an owner decision, so its edits cannot be read as the owner's ruling on the open items; they stand as a candidate until the owner says so.
+- **against**: "committed that verified artifact as `805cd42f073644177c618bdb18008137b7e7d170` on the authorized candidate branch" (/home/user/autonomous@origin/beta/7lm-exemplar-autonomous:L8/L6/history/BETA_HISTORY.md:14), with "every original definition line and historical quotation remains in order" (/home/user/auditonomous@origin/beta/7lm-exemplar-auditonomous:L8/L6/history/AUDITONOMOUS_BETA_HISTORY.md:7). The three beta commits carry the owner's author name (EDM, 2026-11-02), the branch is called authorized, and the edits are additive: no original line was removed. Read that way the owner has already sanctioned this work and holding it back delays the owner's own candidate. The authorization is asserted in the beta's records and quoted nowhere, and the same record says it is "not a new source-owner decision".
+- **alternatives**: (a) Take the whole beta into each main: fastest, but it closes items both records list under "Owner decisions left open (nothing done)" and pins scaffold commit 4ca3edb, which is not on the scaffold's main. (b) Take only the new files (13 in autonomous, 11 in auditonomous, which touch no existing file) and leave the edits to existing files: possible, but BETA_SOURCE_OVERLAY.md is written to govern the definition list and register, so the new files are not neutral. (c) File the beta material at L8/L5/research/review/ as the catch-all on main: this still writes to main and still needs the owner's word. (d) Close or delete the beta branches: refused by "that does nto mean delete over tehre until we enumerate" (/home/user/7lm@origin/main:L8/L6/history/harmonization-2026-09-04.md:150).
+- **what_it_costs**: Nothing is written, so there is nothing to reverse. The beta work stays off main for now: 13 added research files, edits to REGISTER.md and DEFINITION_LIST_AUTONOMOUS.md, the press-kit README and GLOSSARY_AUTONOMOUS.md, and the three new sheets under the binder in autonomous; 11 added files and edits to AUDITONOMOUS_DEFINITION.md, REQUIREMENTS_OWNERSHIP.md (Q13), CONTRADICTIONS.md and L7/provenance/sources/LEDGER.md in auditonomous. Main therefore keeps three known defects the beta corrects: the REGISTER row that contradicts AUTONOMOUS.md, the "22 new rows" ledger arithmetic (21 enumerated, 60 archive rows), and the press-kit README that says its contents are "cleared for outside eyes" and cites `uso/l6/LEDGER.md`. The beta's second peer object (object-2) and its bindings also wait. The owner must read a table of about twenty rows.
+- **who_acts**: A session prepares the per-file table, read-only, from the two beta diffs. The owner says which rows are taken. Each taken row then goes in as a pull request the owner merges; for the Autonomous L0 companions, as a dated version. The owner must say: (1) whether the 2 November beta edits are the owner's ruling on the open items (Appendix C, Q13, the CONTRADICTIONS rows, the REGISTER contest) or a candidate only; (2) whether the read-only exemplar declaration of 14 September, still unmerged, governs REGISTER.md and DEFINITION_LIST_AUTONOMOUS.md; (3) whether the three plain corrections (ledger count, register row, press-kit README) may go ahead of the rest.
+- **confidence**: the quotations favour it

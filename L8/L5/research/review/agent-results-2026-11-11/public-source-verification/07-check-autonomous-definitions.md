@@ -1,0 +1,170 @@
+# check:autonomous-definitions
+
+Agent result, as returned. Workflow: Public sources against their originals. Run `wf_73fbd9d4-516`. Phase: Check.
+
+- **check**: autonomous-definitions: codified definitions A1-A11 of "autonomous/autonomy" in aybllc/autonomous (origin/main c9076c3), files L8/L0/semantics/definitions/AUTONOMOUS.md section 1, DEFINITION_LIST_AUTONOMOUS.md section 1, with citation detail from L7/publications/binder/press-kit/GLOSSARY_AUTONOMOUS.md, tested against the issuing bodies' own hosts
+- **sources**
+  - item 1
+    - **name**: [source text withheld from the public copy], Version 2.0, October 2008), 47 PDF pages
+    - **official_url**: https://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication1011-I-2.0.pdf
+    - **final_url**: https://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication1011-I-2.0.pdf
+    - **http_status**: 200
+    - **bytes**: 216691
+    - **sha256**: a7b5c3a37c487ec7a15eeae8f3ffb1df7b84992a03e5eefecb3c4dbff854da84
+    - **repo_recorded**: sha256 a7b5c3a3...54da84 for NIST-SP-1011-I-2.0.pdf (L7/provenance/sources/staging-records/sources___fulltext___SHA256SUMS.txt)
+    - **same_as_recorded**: yes - sha256 identical
+    - **saved_at**: /tmp/claude-0/-home-user/bfcfd013-a2da-5019-961e-7f46116f08be/scratchpad/wf-sources/autonomous-definitions/dl-1/sp1011.pdf
+  - item 2
+    - **name**: A7 [source text withheld from the public copy]), OJ L 12.7.2024, PDF rendition, 144 pages. eur-lex.europa.eu is the EU's official legal-publication host
+    - **official_url**: https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=OJ:L_202401689
+    - **final_url**: https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=OJ:L_202401689
+    - **http_status**: 200
+    - **bytes**: 2583319
+    - **sha256**: bba630444b3278e881066774002a1d7824308934f49ccfa203e65be43692f55e
+    - **repo_recorded**: sha256 bba63044...692f55e for EU-2024-1689-AI-Act.pdf (sources___fulltext___SHA256SUMS.txt)
+    - **same_as_recorded**: yes - sha256 identical
+    - **saved_at**: /tmp/claude-0/-home-user/bfcfd013-a2da-5019-961e-7f46116f08be/scratchpad/wf-sources/autonomous-definitions/dl-11/aiact.pdf
+  - item 3
+    - **name**: A7 Regulation (EU) 2024/1689, EUR-Lex HTML rendition (second copy used for cross-check)
+    - **official_url**: https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202401689
+    - **final_url**: https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202401689
+    - **http_status**: 200
+    - **bytes**: 1263936
+    - **sha256**: 242b88140ecf85d87fe1f64f8acea82e21b0008e5025825a62114da637d403bb
+    - **repo_recorded**: sha256 8f0b6563...872d721a for EU-2024-1689-AI-Act.xhtml (SHA256SUMS.txt); the repository does not record which URL produced that xhtml
+    - **same_as_recorded**: no - hash differs, but the repository's fetch URL for the xhtml is not recorded, so this may be a different rendition rather than a changed source; not reported as SOURCE-CHANGED. The PDF rendition is byte-identical to the recorded one.
+    - **saved_at**: /tmp/claude-0/-home-user/bfcfd013-a2da-5019-961e-7f46116f08be/scratchpad/wf-sources/autonomous-definitions/dl-2/aiact.html
+  - item 4
+    - **name**: A8 DoD Directive 3000.09 (25 January 2023). www.esd.whs.mil is the DoD Executive Services Directorate issuances host
+    - **official_url**: https://www.esd.whs.mil/Portals/54/Documents/DD/issuances/dodd/300009p.pdf
+    - **final_url**: https://www.esd.whs.mil/Portals/54/Documents/DD/issuances/dodd/300009p.pdf
+    - **http_status**: 403 (twice; Akamai 'Access Denied' HTML, 451 bytes; the issuances index https://www.esd.whs.mil/Directives/issuances/dodd/ also 403)
+    - **bytes**: 451 (error page, not the document)
+    - **sha256**: not obtained (error page only)
+    - **repo_recorded**: sha256 a31f7ed2...4ebc55f2 for DoDD-3000.09.pdf (SHA256SUMS.txt); the repository itself notes [source text withheld from the public copy] (sources__CLICK_LIST_2026-08-08.md:44)
+    - **same_as_recorded**: could not check
+    - **saved_at**: /tmp/claude-0/-home-user/bfcfd013-a2da-5019-961e-7f46116f08be/scratchpad/wf-sources/autonomous-definitions/dl-3/dodd300009.pdf
+  - item 5
+    - **name**: A9 [source text withheld from the public copy], Version 2.0), 36 pages. www.easa.europa.eu is EASA's own site
+    - **official_url**: https://www.easa.europa.eu/sites/default/files/dfu/easa_ai_roadmap_2_0_2023.pdf
+    - **final_url**: https://www.easa.europa.eu/sites/default/files/dfu/easa_ai_roadmap_2_0_2023.pdf
+    - **http_status**: 200
+    - **bytes**: 2836542
+    - **sha256**: 800eb6f8714926db5d812169a1a1a4de630f72ce26b6ec10f7453277d7aba00f
+    - **repo_recorded**: sha256 800eb6f8...d7aba00f, 2836542 bytes, 36 pages (SHA256SUMS.txt and sources___fulltext___dl_lane3_aviation.log)
+    - **same_as_recorded**: yes - sha256 and size identical
+    - **saved_at**: /tmp/claude-0/-home-user/bfcfd013-a2da-5019-961e-7f46116f08be/scratchpad/wf-sources/autonomous-definitions/dl-5/roadmap2.pdf
+  - item 6
+    - **name**: A9 EASA Concept Paper: guidance for Level 1 & 2 machine learning applications, Issue 02, 285 PDF pages
+    - **official_url**: https://www.easa.europa.eu/en/downloads/139504/en
+    - **final_url**: https://www.easa.europa.eu/en/downloads/139504/en
+    - **http_status**: 200
+    - **bytes**: 7770171
+    - **sha256**: daa1525eb50fd31c3bad8928c012324a002cacffb9e4ac52591f7913e0b342ed
+    - **repo_recorded**: sha256 daa1525e...d0b342ed, 7770171 bytes (SHA256SUMS.txt, dl_lane3_aviation.log). Note: L7/provenance/sources/LEDGER.md:112 says 283 pp.; pdfinfo reports 285 pages
+    - **same_as_recorded**: yes - sha256 and size identical
+    - **saved_at**: /tmp/claude-0/-home-user/bfcfd013-a2da-5019-961e-7f46116f08be/scratchpad/wf-sources/autonomous-definitions/dl-6/cp02.pdf
+  - item 7
+    - **name**: A10 ETSI GR ENI 007 V1.1.1 (2019-11), 37 pages. www.etsi.org/deliver is ETSI's own free publication server
+    - **official_url**: https://www.etsi.org/deliver/etsi_gr/ENI/001_099/007/01.01.01_60/gr_ENI007v010101p.pdf
+    - **final_url**: https://www.etsi.org/deliver/etsi_gr/ENI/001_099/007/01.01.01_60/gr_ENI007v010101p.pdf
+    - **http_status**: 200
+    - **bytes**: 586940
+    - **sha256**: 0a38b476ab56e9b5eccfba8af8e9aedaec179eefa8ff6d6e3f5f11097b4c9347
+    - **repo_recorded**: not recorded (no hash or size; only 'official ETSI PDF (etsi.org/deliver)' in sources__LEDGER.md:59)
+    - **same_as_recorded**: not applicable
+    - **saved_at**: /tmp/claude-0/-home-user/bfcfd013-a2da-5019-961e-7f46116f08be/scratchpad/wf-sources/autonomous-definitions/dl-7/eni007.pdf
+  - item 8
+    - **name**: A1 ISO 8373:2021 - ISO Online Browsing Platform (iso.org, ISO's own domain)
+    - **official_url**: https://www.iso.org/obp/ui/#iso:std:iso:8373:ed-3:v1:en
+    - **final_url**: https://www.iso.org/obp/ui/#iso:std:iso:8373:ed-3:v1:en
+    - **http_status**: 403 (bot-challenge page 'Just a moment...', 5348 bytes)
+    - **bytes**: 5348 (challenge page)
+    - **sha256**: 71c652fa09e86dbdb5907c7ec119d9213884e5bebb6769acb2151b08072d9710 (challenge page, not the source)
+    - **repo_recorded**: not recorded (OBP HTML rendering, no hash)
+    - **same_as_recorded**: could not check
+    - **saved_at**: /tmp/claude-0/-home-user/bfcfd013-a2da-5019-961e-7f46116f08be/scratchpad/wf-sources/autonomous-definitions/dl-8/obp8373.html
+  - item 9
+    - **name**: A2/A3 ISO/IEC 22989:2022 - ISO OBP
+    - **official_url**: https://www.iso.org/obp/ui/en/#iso:std:iso-iec:22989:ed-1:v1:en
+    - **final_url**: https://www.iso.org/obp/ui/en/#iso:std:iso-iec:22989:ed-1:v1:en
+    - **http_status**: 403 (bot-challenge page, 5378 bytes)
+    - **bytes**: 5378 (challenge page)
+    - **sha256**: b623dc47478a0da8603125deb36c0f7160dfe47b5c8ec457e048dfbb5b8cec74 (challenge page)
+    - **repo_recorded**: not recorded
+    - **same_as_recorded**: could not check
+    - **saved_at**: /tmp/claude-0/-home-user/bfcfd013-a2da-5019-961e-7f46116f08be/scratchpad/wf-sources/autonomous-definitions/dl-9/obp22989.html
+  - item 10
+    - **name**: A2/A3 ISO/IEC 22989:2022 - ISO Publicly Available Standards (standards.iso.org, ISO's own free-download host)
+    - **official_url**: https://standards.iso.org/ittf/PubliclyAvailableStandards/c074296_ISO_IEC_22989_2022(E).zip
+    - **final_url**: https://standards.iso.org/ittf/PubliclyAvailableStandards/c074296_ISO_IEC_22989_2022(E).zip
+    - **http_status**: 200, but the body is the HTML 'Licence Agreement for Publicly Available Standards' click-through form (6457 bytes), not the zip; the document is released only after accepting ISO's licence by POST, which I did not do on the owner's behalf
+    - **bytes**: 6457 (licence page)
+    - **sha256**: 3f4ae1f3cf1c4f4e5a71ec7c0832c354ea92a2f927917963d4436038333daf8f (licence page)
+    - **repo_recorded**: not recorded; the repository treats clauses 4-7 of 22989 as paywalled (~CHF 180) and does not mention the free ISO PAS listing
+    - **same_as_recorded**: could not check
+    - **saved_at**: /tmp/claude-0/-home-user/bfcfd013-a2da-5019-961e-7f46116f08be/scratchpad/wf-sources/autonomous-definitions/dl-4/iso22989.zip
+  - item 11
+    - **name**: A11 IEEE Std 7001-2021 - IEEE SA product page (standards.ieee.org), reachability only
+    - **official_url**: https://standards.ieee.org/ieee/7001/6929/
+    - **final_url**: https://standards.ieee.org/ieee/7001/6929/
+    - **http_status**: 200 (product page; does not contain the clause 3.1 definition text)
+    - **bytes**: 105583
+    - **sha256**: 5f0d87a68187311e041eb5079b053b8edfb9fd4b4c91be8ed7924b3dae5d9ee9
+    - **repo_recorded**: not recorded
+    - **same_as_recorded**: not applicable
+    - **saved_at**: /tmp/claude-0/-home-user/bfcfd013-a2da-5019-961e-7f46116f08be/scratchpad/wf-sources/autonomous-definitions/dl-12/ieee7001.html
+- **items_total**: 11
+- **confirmed**: 3
+- **problems**
+  - item 1
+    - **id**: autonomous-definitions-1
+    - **kind**: MISMATCH
+    - **repo_locator**: autonomous origin/main:L8/L0/semantics/definitions/AUTONOMOUS.md, section 1 table, row [source text withheld from the public copy]), under the heading 'THE CODIFIED DEFINITIONS - verbatim'
+    - **repo_text**: [source text withheld from the public copy]
+    - **source_locator**: NIST SP 1011-I-2.0, section 2 Multi-Domain Terms and Definitions, entry 'Autonomy', printed page 15 (PDF page 16)
+    - **source_text**: A UMS's own ability of integrated sensing, perceiving, analyzing, communicating, planning, decision-making, and acting/executing [<A.4>], to achieve its goals as assigned by its human operator(s) through designed Human-Robot Interface (HRI) or by another system that the UMS communicates with.
+    - **note**: The row labelled verbatim silently drops the source's cross-reference token '<A.4>' after 'acting/executing' (no ellipsis), and adds bold not in the source. The same definition in DEFINITION_LIST_AUTONOMOUS.md row A6 and GLOSSARY_AUTONOMOUS.md [4] includes '<A.4>' and is CONFIRMED verbatim at printed p. 15, so the two repository files disagree with each other; only the DEFINITION_LIST form matches NIST. Likely cause: '<A.4>' is swallowed as an HTML tag by markdown, which the glossary itself flags. Version/date (Version 2.0, October 2008) confirmed.
+  - item 2
+    - **id**: autonomous-definitions-2
+    - **kind**: MISATTRIBUTED
+    - **repo_locator**: autonomous origin/main:L7/publications/binder/press-kit/GLOSSARY_AUTONOMOUS.md, entry [5] (b) (supplementary item, same NIST document as A6; carried in DEFINITION_LIST_AUTONOMOUS.md section 3)
+    - **repo_text**: [source text withheld from the public copy]
+    - **source_locator**: NIST SP 1011-I-2.0, entry 'Mode of UMS Operation', associated term 'Fully Autonomous', printed page 22 (PDF page 23)
+    - **source_text**: Fully Autonomous A mode of UMS operation wherein the UMS accomplishes its assigned mission, within a defined scope, without human intervention while adapting to operational and environmental conditions.
+    - **note**: Wording is verbatim, but the page is wrong: the definition is on printed p. 22, under 'Mode of UMS Operation'. Printed p. 15 holds only a pointer ('Fully autonomous - See Mode of UMS Operation - Associated terms'). Not one of the eleven; reported because it sits in the same checked source.
+  - item 3
+    - **id**: autonomous-definitions-3
+    - **kind**: MISMATCH
+    - **repo_locator**: autonomous origin/main:L8/L0/semantics/definitions/AUTONOMOUS.md, section 6, boxed 'falsification condition has been met' quote attributed to EASA Concept Paper Issue 02 (supplementary item, same EASA document as A9)
+    - **repo_text**: [source text withheld from the public copy]
+    - **source_locator**: EASA Concept Paper Issue 02, chapter B/C classification text, paragraph beginning 'The boundary between level 2B and level 3A' (extracted text lines 1310-1317)
+    - **source_text**: ...the ability of the end user to override the authority of the AI-based system is limited to cases where it is necessary to ensure safety of the operations (e.g. an operator supervising a fleet of UAS, terminating the operation of one given UAS upon alerting).
+    - **note**: All quoted words are present and in order, but the repository ends the sentence with a full stop where the source sentence continues with a parenthetical example; the truncation is not marked with an ellipsis. Minor. Not one of the eleven.
+- **could_not_check**
+  - item 1
+    - **what**: [source text withheld from the public copy]"
+    - **why**: ISO standard is sold; the free terms view is the ISO Online Browsing Platform on iso.org, which refused with HTTP 403 (bot-challenge page). No substitute source used.
+  - item 2
+    - **what**: [source text withheld from the public copy]
+    - **why**: ISO OBP on iso.org refused with HTTP 403. ISO does list this standard as freely downloadable at standards.iso.org/ittf/PubliclyAvailableStandards (HTTP 200), but the download is gated by a click-through licence agreement that must be accepted by POST; I did not accept a licence on the owner's behalf. The owner can obtain the full official text free there, which would also settle A3.
+  - item 3
+    - **what**: [source text withheld from the public copy] and the clause 5.13 'misnomer' NOTE
+    - **why**: Same as A2: OBP 403; ISO PAS zip behind licence click-through. The repository itself marks this row '[source text withheld from the public copy] believes the body is paywalled (~CHF 180); the standards.iso.org listing suggests a lawful free copy exists.
+  - item 4
+    - **what**: [source text withheld from the public copy]
+    - **why**: ISO/IEC text is sold; ISO OBP returned 403. The repository obtained it via SEVOCAB (pascal.computer.org), which is an IEEE Computer Society host, not the issuing body's host, so it was not consulted.
+  - item 5
+    - **what**: [source text withheld from the public copy]
+    - **why**: Paywalled IEEE standard (Inactive-Reserved); no public definition text on ieee.org. Repository itself has no clause number and sources the wording from two presentation decks.
+  - item 6
+    - **what**: A8 - [source text withheld from the public copy]), Glossary, autonomous weapon system
+    - **why**: Document is public, but the official host www.esd.whs.mil refused: HTTP 403 'Access Denied' on the PDF (two attempts) and on the issuances index. Not substituted.
+  - item 7
+    - **what**: [source text withheld from the public copy]
+    - **why**: Paywalled / login-gated IEEE standard. standards.ieee.org product page is reachable (HTTP 200) but does not show the clause 3.1 definition text.
+- **summary**: I listed the eleven codified definitions (A1-A11) from AUTONOMOUS.md and DEFINITION_LIST_AUTONOMOUS.md and tried each at its issuing body's own host. Four could be checked: NIST SP 1011-I-2.0 (nvlpubs.nist.gov), the EU AI Act (eur-lex.europa.eu), the EASA AI [source text withheld from the public copy] (www.easa.europa.eu), and ETSI GR ENI 007 (www.etsi.org). The four files for which the repository records a hash (NIST, AI Act PDF, both EASA) are byte-identical to it.
+
+  Three were confirmed verbatim with clause and date: A7 (Recital 12, OJ 12.7.2024), A9 (EASA glossary wording in both documents; Roadmap dated May 2023, Version 2.0) and A10 (clause 4.2.1 NOTE 2, V1.1.1 2019-11). A6 is verbatim in DEFINITION_LIST_AUTONOMOUS.md (printed p. 15, Version 2.0, October 2008), but AUTONOMOUS.md silently drops the source token "<A.4>" from a row headed verbatim. Two supplementary problems sit in the same sources: a wrong page for NIST "Fully Autonomous" (p. 22, not p. 15) and an unmarked truncation of an EASA sentence.
+
+  Seven could not be checked: the DoD host returned 403; ISO's browsing platform returned 403 for A1-A4; IEEE A5 and A11 are paywalled. ISO does offer ISO/IEC 22989:2022 free at standards.iso.org behind a licence click-through, which I did not accept; the repository treats that text as paywalled.

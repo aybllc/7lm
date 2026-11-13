@@ -1,0 +1,57 @@
+# resolve:D21
+
+Agent result, as returned. Workflow: Resolutions for the 23 owner decisions. Run `wf_3293f65c-a92`. Phase: Resolve.
+
+- **decision**: 21. What becomes of the other closed branches: the two no-deletion-fix branches and claude/research-move, still on USO/ paths, and the scholarly-pair branch.
+- **resolution**: Delete, merge and rebase none of the five branches now; leave each ref where it is and record their state in each exemplar's L6 record when the next pass is written. Then put three separate proposals to the owner: (a) re-make the no-deletion-fix wording on the L8/ paths as a fresh proposal and close PRs #27 and #25 with a comment; (b) enumerate auditonomous claude/research-move in the record and then delete both research-move branches; (c) keep scholarly-pair as the only holder of the baseline paper and the 14 September record until the owner rules on the read-only declaration.
+- **reasoning**
+  - item 1
+    - **speaker**: owner
+    - **quote**: Don't change the system unless you ask or are unsure
+    - **locator**: /home/user/7lm@origin/main:L8/L6/history/harmonization-2026-09-04.md:482
+    - **bears**: Deleting, merging or rebasing a branch is a change the owner has not asked for, so the default is to ask and meanwhile touch nothing.
+  - item 2
+    - **speaker**: owner
+    - **quote**: yes (that does nto mean delete over tehre until we enumerate please and thank you)
+    - **locator**: /home/user/auditonomous@origin/main:L8/L6/history/harmonization-2026-09-05.md:107
+    - **bears**: The owner's own condition on any deletion is enumeration first; no enumeration of these five branches exists in any record, so none may be deleted yet.
+  - item 3
+    - **speaker**: owner
+    - **quote**: we cant enforce integroty by ebforceing no deletion. we can only imply no deletion to enforcer integiortyty
+    - **locator**: /home/user/autonomous@origin/main:L8/L6/history/harmonization-2026-09-05.md:161
+    - **bears**: Keeping the branches forever is not the rule either: once enumerated they may go, and this is the very rule the no-deletion-fix branches were written to put into the sheets, so their substance is the owner's, not stale.
+  - item 4
+    - **speaker**: owner
+    - **quote**: have them check in their results periodically so we dont lose them.
+    - **locator**: owner's instructions of 11 November 2026
+    - **bears**: The owner's stated concern on the day is not losing work; scholarly-pair (9b49910, one commit ahead of main, none behind) is the only ref in the autonomous clone holding the baseline paper and exemplar-2026-09-14.md, so it must stay.
+  - item 5
+    - **speaker**: record
+    - **quote**: [source text withheld from the public copy].
+    - **locator**: /home/user/autonomous@origin/claude/scholarly-pair-baseline-k8ap82:L8/L6/history/exemplar-2026-09-14.md:7
+    - **bears**: The scholarly-pair branch carries out an instruction of the owner's and is the only place on the autonomous side where those words of 14 September are recorded; its closure as a PR did not withdraw the instruction.
+  - item 6
+    - **speaker**: record
+    - **quote**: merging it would have recreated `USO/` as a second copy of every sheet beside `L8/`, which is why GitHub read it as dirty.
+    - **locator**: /home/user/7lm@origin/main:L8/L6/history/harmonization-2026-09-04.md:301
+    - **bears**: The scaffold's precedent shows why the no-deletion-fix and research-move branches, whose trees still hold USO/ (verified by ls-tree), cannot be merged as they stand; their content must be re-made on L8/ paths if wanted.
+  - item 7
+    - **speaker**: record
+    - **quote**: Enumerated before deletion, as the integrity rule requires.
+    - **locator**: /home/user/7lm@origin/main:L8/L6/history/harmonization-2026-09-04.md:303
+    - **bears**: The precedent for a stale USO/ branch is: enumerate its contents into the record, then close and delete on the owner's word; this is the route proposed for research-move and, after re-making, for no-deletion-fix.
+  - item 8
+    - **speaker**: record
+    - **quote**: built as PR #21 here and closed unmerged when the words below superseded it
+    - **locator**: /home/user/auditonomous@origin/main:L8/L6/history/harmonization-2026-09-05.md:107
+    - **bears**: auditonomous claude/research-move (55541d7, one commit, 39 files) was overtaken by the owner's later words, so it is a candidate for enumerate-then-delete and not for revival; autonomous claude/research-move (07e8ce1) is zero commits ahead of main and holds nothing main lacks.
+  - item 9
+    - **speaker**: sheet
+    - **quote**: finished work is filed at its layer; nothing is deleted.
+    - **locator**: /home/user/autonomous@origin/main:L8/L5/research/review/0.md:41
+    - **bears**: Main's catch-all sheets (the same words stand at auditonomous@origin/main:L8/L5/research/review/0.md:38) still assert what the owner's rule of 7 September corrected, so the three-file change on the no-deletion-fix branches is still unapplied and still wanted in substance.
+- **against**: "The open pull request #27 edits three sheets at their `USO/` paths of before 2026-09-12." (/home/user/autonomous@origin/ccr-9391bd81-f2enmj:L8/L6/history/harmonization-2026-09-05.md:214) together with the precedent that such a branch "was closed unmerged on 2026-09-19 and deleted" (/home/user/7lm@origin/main:L8/L6/history/harmonization-2026-09-04.md:301): the owner has already once disposed of a stale USO/ branch by closing and deleting it, and leaving five such refs standing keeps unmergeable work in view and invites a later session to merge one by mistake.
+- **alternatives**: (1) Follow the scaffold's section 24 precedent at once for all four USO/ branches: enumerate each into the exemplar record, close PRs #27 and #25 with a comment, delete the branches. Cleanest, but it deletes on no word of the owner's and drops the no-deletion wording unless it is re-made first. (2) Delete only autonomous claude/research-move now, since it is zero commits ahead of main and nothing is lost; still a change not asked for. (3) Rebase scholarly-pair onto the mirrored tree (restrictions/ is now controlled/) and reopen it; this presupposes the owner's ruling on the read-only declaration, which the beta's edits to the L0 companions already strain. (4) Leave everything and record nothing; costs nothing but leaves the next session to rediscover the same facts.
+- **what_it_costs**: Nothing is changed in any repository, so it is fully reversible. The cost is that five stale refs and two open PRs on dead paths remain; that main's catch-all sheets in both exemplars go on saying "nothing is deleted" against the owner's rule of 7 September until proposal (a) is approved; and that one paragraph must be added to each exemplar's record the next time it is written. Facts relied on, from git objects: autonomous no-deletion-fix 44a2c7c (1 ahead, 3 behind main, 3 files); auditonomous no-deletion-fix f89bf8a (1 ahead, 4 behind, 3 files); autonomous research-move 07e8ce1 (0 ahead, 13 behind); auditonomous research-move 55541d7 (1 ahead, 13 behind, 39 files); scholarly-pair 9b49910 (1 ahead, 0 behind, 9 files). There is no scholarly-pair branch in the auditonomous clone.
+- **who_acts**: The owner says, per branch: whether the no-deletion wording is to be re-made on L8/ paths (and on which base: main, the PR #30/#28 mirror, or the beta); whether the two research-move branches may be deleted once enumerated; and whether the read-only declaration and baseline paper on scholarly-pair are still wanted, which decides whether that branch is rebased or enumerated and retired. A session then writes the record paragraph and the proposals; closing PRs and deleting branches on GitHub is done only on the owner's word.
+- **confidence**: the quotations favour it

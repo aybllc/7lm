@@ -1,0 +1,404 @@
+# read:beta-and-prs
+
+Agent result, as returned. Workflow: The model, read deep. Run `wf_9a60cf50-a5f`. Phase: Read.
+
+- **scope**: Everything on the scaffold repository /home/user/7lm that is NOT on origin/main (c9dc061): the beta candidate origin/beta/common-contracts-r1-r6 (97314c5, two commits on 2e5a6d6); open draft PR #20 origin/ccr-9391bd81-f2enmj (c9638a9); open draft PR #19 origin/ccr-00099fac-hjosbo (b5c3984); origin/audit/peering-descriptive-reframe-2026-09-20 (3555866); origin/copilot/create-error-list (1e2fe77); origin/copilot/create-academic-guide-plan (e22c5fc); origin/ccr-9a67809a-iwii3n (c6d598a). Read from git objects only; merge tests by git merge-tree --write-tree only. The exemplar repositories were touched only for two cross-reference checks (root entries; search for an R1-R6 enumeration). No network was used, so the open/draft state of PRs #19/#20 is taken from the task statement, not verified.
+- **summary**: No branch off main changes the physical model. Every ref carries the same 71 canonical positions in integrity.yml, and no canonical directory is added, removed or renamed anywhere. The only directory not on main is the dated retired set L8/L6/retired/field-guide-2026-09-20/ (PR #20, also merged into PR #19 and the audit branch), which sits beneath the canonical retired/ position.
+
+  The beta (two commits, 2-3 Nov) is prose plus files: six text corrections to the specification, three sheets and the field guide (peer authorship, metadata status, non-exhaustive L0 rails, scale placement, external-definition examples, byte analogy); seven new "beta-*" probe files at existing L0-L5 positions; two source-ledger rows; and 18 sheets given "research housing" and manuscript-placement guidance. Its integrity.yml drops the USO/lowercase alternatives and hard-requires L8 with uppercase L0-L6; the 71-position list is identical. It does not carry PR #21's L8/L6/in/7lm-layer-lists.md, and merges cleanly into main today. No document enumerates R1 to R6 individually; my mapping is inference.
+
+  PR #20 (field guide retired) merges cleanly into main and textually into the beta, but there the beta's three guide edits follow the rename into the "verbatim" retired copy. PR #19 (authorship tags stripped, spec "Version of 6 October 2026", release.sh and release.yml) merges cleanly into main but conflicts with the beta in 7 files. The audit branch (118 owner commits of 20 Sep: descriptive reframe of peering and L0, hardened CI) merges cleanly into main, conflicts with the beta in 12 files and with PR #19 in 20. Its CI requires exactly four root entries, excluding .gitignore, which both exemplars carry. copilot/create-error-list holds one unmerged review file (96 recommendations); copilot/create-academic-guide-plan and ccr-9a67809a hold nothing beyond main.
+- **facts**
+  - item 1
+    - **id**: B01
+    - **kind**: change
+    - **statement**: The beta branch is two commits on top of 2e5a6d6 (the merge-base with main), both authored and committed by EDM: 4ca3edb (2026-11-02 20:53:22 -0800, 17 files, +792/-32) and 97314c5 (2026-11-03 08:58:01 -0800, 18 files, +92/-15). Total against 2e5a6d6: 32 files, +884/-47; 7 files added, 25 modified, none deleted or renamed.
+    - **locator**: 7lm@origin/beta/common-contracts-r1-r6:git log 2e5a6d6..97314c5 --stat; git diff --name-status 2e5a6d6 97314c5
+    - **quote**: Apply approved R1–R6 and exercise bounded research objects
+  - item 2
+    - **id**: B02
+    - **kind**: change
+    - **statement**: Commit 4ca3edb's message says it keeps the 20 September baseline, synchronises specification, guidance and structural checks, and adds N/U and Semantic Magnitude probes. It touches integrity.yml, L7/peering/0.md, L7/provenance/sources/0.md and source-ledger.md, L8/L0/0.md, the specification .md and .docx, the field guide, specification-history.md, and adds 7 new files.
+    - **locator**: 7lm@4ca3edb:commit message
+    - **quote**: Add exact N/U and Semantic Magnitude boundary probes with model-attached vertical inquiries and unresolved claims preserved.
+  - item 3
+    - **id**: B03
+    - **kind**: change
+    - **statement**: Commit 97314c5 edits exactly 18 existing 0.md sheets and nothing else (verified by stat). Its message disclaims being an implementation, migration, merge, release or readiness claim.
+    - **locator**: 7lm@97314c5:commit message
+    - **quote**: This is an original-7LM document correction, not an executable or exemplar implementation, migration, merge, release or beta-readiness claim.
+  - item 4
+    - **id**: B04
+    - **kind**: tree
+    - **statement**: The beta does NOT change the tree of directories. git ls-tree -r -d is identical (97 directories) for 2e5a6d6, origin/main and the beta; root entries are identical (.github, L7, L8, README.md). The only tree difference is 7 added files at existing canonical positions.
+    - **locator**: 7lm@origin/beta/common-contracts-r1-r6:ls-tree -r -d (diff against origin/main and 2e5a6d6 is empty)
+  - item 5
+    - **id**: B05
+    - **kind**: rule
+    - **statement**: The beta does NOT change the list of 71 canonical positions. Its canon list, with main's ${lower} expanded to L, is token-for-token identical to main's (71 entries each). The beta's own record says the same.
+    - **locator**: 7lm@origin/beta/common-contracts-r1-r6:.github/workflows/integrity.yml:45-57; L8/L6/history/specification-history.md:106
+    - **quote**: The existing integrity workflow now requires L8 and uppercase L0–L6; its 71-position list is unchanged.
+  - item 6
+    - **id**: B06
+    - **kind**: change
+    - **statement**: Exactly how the beta's integrity.yml differs from main's (17 insertions, 19 deletions): (a) G-002 comment no longer mentions USO; (b) root case drops USO from the allowed names; (c) the 'exactly one of USO/ or L8/' count is replaced by a hard 'missing L8/' check; (d) top is hardcoded to L8 in G-003 and in the report step; (e) the retired-set skip drops the lowercase */l6/retired/*/* pattern; (f) the lower= variable is removed and the canon list is written literally with L6..L0. G-001, the header comment, the heading test and .gitignore's admission at root are unchanged.
+    - **locator**: 7lm@origin/beta/common-contracts-r1-r6:.github/workflows/integrity.yml:19-27,32,36,39,50-57,63,65 (main: 19-28,33,37,40,46,52-59,65,67)
+    - **quote**: git ls-tree --name-only HEAD | grep -qx 'L8' || { echo "missing L8/"; fail=1; }
+  - item 7
+    - **id**: B07
+    - **kind**: rule
+    - **statement**: The beta's record of the correction set: implemented by Codex as task T1 after the owner's approval of R1-R6, against baseline 2e5a6d6, preserving topology and layer owners. This approval is asserted by the beta's own record and commit message; no owner words are quoted for it, and nothing about it is on main.
+    - **locator**: 7lm@origin/beta/common-contracts-r1-r6:L8/L6/history/specification-history.md:104-106
+    - **quote**: Implemented by Codex, task T1, on 2 November 2026 (America/Los_Angeles), in the bounded common-architecture candidate after the owner's approval of R1–R6.
+  - item 8
+    - **id**: B08
+    - **kind**: open
+    - **statement**: No file on any ref of 7lm (nor on the two exemplar beta branches) enumerates R1, R2 ... R6 individually. 'R1–R6' appears only in commit 4ca3edb's subject and at specification-history.md:106. The six-way mapping in B09-B14 is therefore my inference from the record's sentence, which lists seven noun phrases in five clauses; I read 'non-exhaustive L0 foundations and model-attached vertical inquiries' as one correction because one inserted paragraph carries both.
+    - **locator**: 7lm@origin/beta/common-contracts-r1-r6:L8/L6/history/specification-history.md:106 (searched: git grep 'R1[–-]R6' on every origin ref; exemplar betas)
+    - **quote**: It repairs the remaining peer-authorship instruction; clarifies manual metadata status, non-exhaustive L0 foundations and model-attached vertical inquiries; scopes scale placement to its representation
+  - item 9
+    - **id**: B09
+    - **kind**: change
+    - **statement**: Inferred R1, peer authorship: in L7/peering/0.md the 'One acceptance path' bullet no longer says surviving content is carried inward 'as the object's own authorship' (main line 29); it now says the conclusion is the object's own L5 work and the bound original keeps its ownership tag.
+    - **locator**: 7lm@origin/beta/common-contracts-r1-r6:L7/peering/0.md:35 (replaces origin/main:L7/peering/0.md:29)
+    - **quote**: Any inward semantic reference to the bound object retains its immutable ownership tag; the bound original never becomes locally authored.
+  - item 10
+    - **id**: B10
+    - **kind**: change
+    - **statement**: Inferred R2, manual metadata status: the specification's self-description rule now conditions machine-readable metadata on machine instructions being enabled. (Commit 97314c5 adds the matching qualification in L8/0.md:141: metadata may enforce a rule 'only where a separate implementation is enabled and tested'.)
+    - **locator**: 7lm@origin/beta/common-contracts-r1-r6:L8/L4/work/writing/7lm-harmonized-architecture-specification.md:21
+    - **quote**: Current manual practice does not imply that such metadata or enforcement has been instantiated.
+  - item 11
+    - **id**: B11
+    - **kind**: change
+    - **statement**: Inferred R3, non-exhaustive L0 foundations and model-attached vertical inquiries: a new [Clarification] paragraph is inserted in the specification before '## L1 — STATE SPACE'; the same wording is added to L8/L0/0.md:69 and, shortened, to the field guide line 150. It explicitly requires no new directory.
+    - **locator**: 7lm@origin/beta/common-contracts-r1-r6:L8/L4/work/writing/7lm-harmonized-architecture-specification.md:355; L8/L0/0.md:69; L8/L6/7lm-field-guide.md:150
+    - **quote**: Other justified distinctions retain their stated scope and owning contract within the existing topology; no new directory or fixed ontology is required.
+  - item 12
+    - **id**: B12
+    - **kind**: change
+    - **statement**: Inferred R4, scale placement scoped to its representation: the L5 clarification that a scale/ladder 'is not an L1 state space and not L2 mathematics' (main line 681) is narrowed to the written instrument; separately declared L1 values and L2 relations are allowed. The field guide line 230 is changed to match.
+    - **locator**: 7lm@origin/beta/common-contracts-r1-r6:L8/L4/work/writing/7lm-harmonized-architecture-specification.md:683; L8/L6/7lm-field-guide.md:230
+    - **quote**: This does not prevent separately declared admissible values at L1 or exact relations and operators at L2 under their governing contracts.
+  - item 13
+    - **id**: B13
+    - **kind**: change
+    - **statement**: Inferred R5, external semantic examples harmonised: two specification table cells change, the OSI-inquiry L0 row (line 187) and the 'External definition' cross-layer case (line 598; main 596), so that an exact source-owned semantic reference may reach receiving L0 without local authorship. Commit 97314c5 rewrites the same 'External definition' row in L8/L4/0.md:91.
+    - **locator**: 7lm@origin/beta/common-contracts-r1-r6:L8/L4/work/writing/7lm-harmonized-architecture-specification.md:187,598
+    - **quote**: an exact tagged semantic reference may reach receiving L0 without local authorship or redefinition.
+  - item 14
+    - **id**: B14
+    - **kind**: change
+    - **statement**: Inferred R6, byte analogy qualified: one sentence is appended to the specification's author note at line 68, and the field guide's 'byte reading' at line 96 is reworded; the author's metaphor is kept. Commit 97314c5 adds an 'Analogy boundary' paragraph to L8/0.md:12.
+    - **locator**: 7lm@origin/beta/common-contracts-r1-r6:L8/L4/work/writing/7lm-harmonized-architecture-specification.md:68; L8/L6/7lm-field-guide.md:96
+    - **quote**: This byte/extra-bit reading is an architectural mnemonic, not a theorem that one extra bit detects every possible error
+  - item 15
+    - **id**: B15
+    - **kind**: change
+    - **statement**: The beta's specification keeps the version string 'Version of 20 September 2026' although its text changed in six places; the .docx was regenerated (blob 8ae7af7 against main's 9659d08). The record claims the rendering was checked; that claim cannot be verified from git objects.
+    - **locator**: 7lm@origin/beta/common-contracts-r1-r6:L8/L4/work/writing/7lm-harmonized-architecture-specification.md:18; L8/L6/history/specification-history.md:106
+    - **quote**: all normalized body text, 29 tables and 477 cells matched, and all 54 rendered pages were inspected.
+  - item 16
+    - **id**: B16
+    - **kind**: change
+    - **statement**: Other hunks of 4ca3edb outside the six corrections: L7/provenance/sources/0.md re-heads the l6 archive section as 'Program context' and says the ledger now has rows; source-ledger.md gains two rows, NU-17271561 (Zenodo DOI 10.5281/zenodo.17271561, ZIP SHA256 given) and SM-PDF (a supplied two-page PDF, SHA256 given, bytes not redistributed).
+    - **locator**: 7lm@origin/beta/common-contracts-r1-r6:L7/provenance/sources/source-ledger.md:7-8; L7/provenance/sources/0.md:10,16-18
+    - **quote**: these rows identify sources without endorsing their claims.
+  - item 17
+    - **id**: B17
+    - **kind**: change
+    - **statement**: New file at L0: beta-research-scope.md. It declares the two probes are hosted research objects and not foundations of 7LM, separates numerical N/U (real nominal, nonnegative uncertainty) from Semantic Magnitude (semantic coordinate plus magnitude), and says source text is not copied in.
+    - **locator**: 7lm@origin/beta/common-contracts-r1-r6:L8/L0/semantics/beta-research-scope.md:3-9
+    - **quote**: These are separately identified hosted research objects, not foundations of 7LM.
+  - item 18
+    - **id**: B18
+    - **kind**: change
+    - **statement**: New file at L1: beta-research-admissibility.md. It admits rational pairs (n,u) with u nonnegative and named semantic labels with nonnegative rational magnitude; negative radii are rejected by the consumer's gate, not coerced.
+    - **locator**: 7lm@origin/beta/common-contracts-r1-r6:L8/L1/state-space/beta-research-admissibility.md:3-7
+    - **quote**: Missing semantic operations are unresolved objects, not numerical zero.
+  - item 19
+    - **id**: B19
+    - **kind**: change
+    - **statement**: New file at L2: beta-research-boundaries.md. It states the source N/U product, gives the counterexample (10,1)*(5,1/2)=(50,10) whose decoded upper bound 60 misses the exact upper endpoint 121/2, shows Catch(5,2)=Catch(3,4), and records Semantic Magnitude aggradation as unresolved (S and Phi undefined).
+    - **locator**: 7lm@origin/beta/common-contracts-r1-r6:L8/L2/formal-mathematics/proofs/beta-research-boundaries.md:3-9
+    - **quote**: The operation itself is evaluated correctly; the stronger general-enclosure claim is contradicted.
+  - item 20
+    - **id**: B20
+    - **kind**: change
+    - **statement**: New file at L3: beta-exact-reference-method.md. It prescribes Python fractions.Fraction, four endpoint products as the reference, and not calling aggradation when its contract is absent.
+    - **locator**: 7lm@origin/beta/common-contracts-r1-r6:L8/L3/engineering-mathematics/approximation/beta-exact-reference-method.md:3-7
+    - **quote**: This small exact implementation is a reference for the finite cases, not a verified binary64 interval library or a performance study.
+  - item 21
+    - **id**: B21
+    - **kind**: change
+    - **statement**: New files at L4: beta_boundary_probes.py (131 lines), test_beta_boundary_probes.py (51 lines, 9 unittest methods) and beta-boundary-results.json (519 lines, format '7lm.beta.demonstration.v1'). The JSON records two objects with outcomes 'enclosure_claim_rejected' and 'aggradation_unresolved', python 3.14.4, and a code_sha256 that equals the SHA-256 of the committed script blob (7fa4562d...; I recomputed it).
+    - **locator**: 7lm@origin/beta/common-contracts-r1-r6:L8/L4/work/computation/beta-boundary-results.json:2,277,462,487,490; beta_boundary_probes.py:1-131
+    - **quote**: """Bounded research-object probes; no owner theory or directory enforcement engine."""
+  - item 22
+    - **id**: B22
+    - **kind**: procedure
+    - **statement**: Checked by execution in the scratch directory, from git objects only: the 9 tests pass ('Ran 9 tests ... OK') under Python 3.13.16, and regenerating the JSON reproduces the committed file exactly except the python-version line. The claim of nine passing tests is therefore reproducible; the claim that they first failed for a missing implementation has no artefact in the tree (not found).
+    - **locator**: 7lm@origin/beta/common-contracts-r1-r6:L8/L4/work/computation/test_beta_boundary_probes.py:13-49; L8/L6/history/specification-history.md:112
+    - **quote**: Nine targeted new integration tests passed after the recorded missing-implementation failures.
+  - item 23
+    - **id**: B23
+    - **kind**: change
+    - **statement**: New file at L5: beta-research-boundary-findings.md. It reports the two outcomes, states they are not theory validation, and points to the exemplar candidates as the primary demonstrations.
+    - **locator**: 7lm@origin/beta/common-contracts-r1-r6:L8/L5/research/findings/beta-research-boundary-findings.md:3,11
+    - **quote**: The actual Autonomous/Auditonomous candidates supply the primary exemplar demonstrations.
+  - item 24
+    - **id**: B24
+    - **kind**: open
+    - **statement**: The beta's record says exemplar integration and the candidate branch commit identities are 'recorded separately'. No such record is in the 7lm beta tree: a search for e64b382, 714480d and '7lm-exemplar' on the beta returns nothing.
+    - **locator**: 7lm@origin/beta/common-contracts-r1-r6:L8/L6/history/specification-history.md:112
+    - **quote**: actual exemplar integration and candidate branch commit identities are recorded separately.
+  - item 25
+    - **id**: B25
+    - **kind**: rule
+    - **statement**: Beta commit 97314c5 adds to L8/0.md a section 'Shared housing and local research choices' (lines 14-24). It states how an existing project takes an origin update, which bears directly on bringing the exemplars into step: compare, keep local data and choices, record moves, review dependencies before claiming migration.
+    - **locator**: 7lm@origin/beta/common-contracts-r1-r6:L8/0.md:24
+    - **quote**: compare the changed contracts, retain the project's data and local choices, record any moves, and review affected dependencies before claiming the project has migrated.
+  - item 26
+    - **id**: B26
+    - **kind**: rule
+    - **statement**: Beta manuscript placement (unmerged guidance): the manuscript stays at L8/L4/work/writing/; argument and claim qualification at L8/L5/; development history at L8/L6/; a released version at L7/allications/publications/. Stated in L8/0.md:22, L8/L4/0.md 'Using this position' (line 8 ff.), L8/L4/work/writing/0.md:12-16 and L7/0.md:12.
+    - **locator**: 7lm@origin/beta/common-contracts-r1-r6:L8/L4/work/writing/0.md:16
+    - **quote**: The manuscript is the writing goal; 7LM is its research housing. L5 owns what its claims warrant, L6 preserves its development
+  - item 27
+    - **id**: B27
+    - **kind**: rule
+    - **statement**: Beta commit 97314c5 adds a 'Using this position in a research project' section to L8/L1, L2, L3, L4, L5 and L6 sheets (line 8 in each), 'Local choices at this position' to L8/L0/0.md:10, 'Projects across a research network' to L7/0.md:8 and 'Shared setup without shared ownership' to L7/peering/0.md:16. The L6 section says an origin update does not overwrite a project's design.
+    - **locator**: 7lm@origin/beta/common-contracts-r1-r6:L8/L6/0.md:12
+    - **quote**: An origin update is not permission to overwrite every project's local design. Compare versions, adopt the applicable guidance deliberately
+  - item 28
+    - **id**: B28
+    - **kind**: change
+    - **statement**: Beta commit 97314c5 rewrites the exemplar paragraph in L7/0.md: the Autonomous consensus baseline becomes an intended research obligation, not an established fact, and other projects do not inherit an autonomy theory.
+    - **locator**: 7lm@origin/beta/common-contracts-r1-r6:L7/0.md:190
+    - **quote**: This is a research obligation, not an assertion that agreement has been established.
+  - item 29
+    - **id**: B29
+    - **kind**: change
+    - **statement**: Beta commit 97314c5 downgrades the aybllc/l6 archive from a bound peer to recorded program context in L7/peering/private/ingress/0.md (lines 37-39 and Standing) and L7/provenance/sources/0.md (lines 22, 28). Main's Standing line 46 said it 'is bound here'.
+    - **locator**: 7lm@origin/beta/common-contracts-r1-r6:L7/peering/private/ingress/0.md:37
+    - **quote**: This scaffold has not instantiated that archive's exact peer/object binding or corresponding source row
+  - item 30
+    - **id**: B30
+    - **kind**: change
+    - **statement**: Beta commit 97314c5 makes L7/governance/copyright/ the single home of copyright and licence conditions: licensing/0.md (lines 8-10, 18-19) and controlled/0.md (line 19) now hold instruments and pointers only.
+    - **locator**: 7lm@origin/beta/common-contracts-r1-r6:L7/governance/licensing/0.md:10
+    - **quote**: State each copyright or licence condition once at `L7/governance/copyright/` and point to that statement here
+  - item 31
+    - **id**: B31
+    - **kind**: change
+    - **statement**: Remaining small hunks of 97314c5: L8/L0/semantics/definitions/0.md:41 says inherited rows are preserved, not adopted; L8/L5/research/lanes/0.md:39 and review/0.md ('The catch-all') replace 'Nothing is deleted' with routing moves that delete nothing plus a pointer to the L6 enumeration rule.
+    - **locator**: 7lm@origin/beta/common-contracts-r1-r6:L8/L0/semantics/definitions/0.md:41; L8/L5/research/lanes/0.md:39
+    - **quote**: do not treat preservation as adoption.
+  - item 32
+    - **id**: B32
+    - **kind**: tree
+    - **statement**: The beta does NOT carry today's PR #21 file. main differs from 2e5a6d6 by exactly one added file, L8/L6/in/7lm-layer-lists.md; that path is absent from the beta tree.
+    - **locator**: 7lm@origin/main:L8/L6/in/7lm-layer-lists.md (git diff --name-status 2e5a6d6 origin/main); absent in ls-tree of origin/beta/common-contracts-r1-r6
+  - item 33
+    - **id**: B33
+    - **kind**: procedure
+    - **statement**: The beta merges cleanly into main today: git merge-tree --write-tree origin/main origin/beta/common-contracts-r1-r6 exits 0 with tree 633c343. That merged tree has 126 files and 97 directories, and all 75 checked sheets are headed by their paths (simulated G-003 heading test).
+    - **locator**: 7lm@merge-tree(origin/main, origin/beta/common-contracts-r1-r6)=633c343f88378e80d75bc2fe7505e743c192dbad
+  - item 34
+    - **id**: P20-1
+    - **kind**: change
+    - **statement**: PR #20 branch is four commits by Claude on 2026-10-17 on top of 2e5a6d6 (9 files, +78/-8). It renames L8/L6/7lm-field-guide.md to L8/L6/retired/field-guide-2026-09-20/7lm-field-guide.md with similarity 100% (same blob 0c9626e as main) and adds a sheet for the new retired set.
+    - **locator**: 7lm@origin/ccr-9391bd81-f2enmj:L8/L6/retired/field-guide-2026-09-20/0.md:1-36 (git diff -M origin/main...origin/ccr-9391bd81-f2enmj)
+    - **quote**: Its standing is stale: it is deprecated as a source document, it is not maintained, and it is kept as an example of a guide to the model
+  - item 35
+    - **id**: P20-2
+    - **kind**: rule
+    - **statement**: PR #20 records the owner's instruction for the retirement as record section 39, and reserves section 38 for PR #19's pass so the record stays in date order.
+    - **locator**: 7lm@origin/ccr-9391bd81-f2enmj:L8/L6/history/harmonization-2026-09-04.md:512-518
+    - **quote**: Put the field guide into l6 as provenance stale. Deprecated and to be used as an example.
+  - item 36
+    - **id**: P20-3
+    - **kind**: rule
+    - **statement**: PR #20 adds a new section to the L6 sheet, 'The hard rule: the guides share no history', moved there because the retired guide no longer carries it in live text; record section 40 gives the owner's word for it as "fix them" (line 530) and for pushing the reconciling merges as "push them".
+    - **locator**: 7lm@origin/ccr-9391bd81-f2enmj:L8/L6/0.md:64-66; L8/L6/history/harmonization-2026-09-04.md:528-534
+    - **quote**: Each repository's history is its own, kept at its own L6 and nowhere else.
+  - item 37
+    - **id**: P20-4
+    - **kind**: change
+    - **statement**: PR #20's other edits are pointer updates: L8/L6/0.md drops the guide from held source documents and lists the retired set; L8/L6/retired/0.md lists the set; L8/L0/pedagogy/0.md, 7lm-sheet-templates.md and the plate sheet (.py and regenerated .html colophon) point at the retired path. The specification and integrity.yml are untouched.
+    - **locator**: 7lm@origin/ccr-9391bd81-f2enmj:git diff --stat origin/main...origin/ccr-9391bd81-f2enmj
+    - **quote**: Not changed. The tree: `retired/` is canonical and a dated set beneath it is the established form.
+  - item 38
+    - **id**: P20-5
+    - **kind**: procedure
+    - **statement**: PR #20 merges cleanly into main today (merge-tree exit 0, tree 7df0bd6). It also merges into the beta without textual conflict (exit 0, tree 1b235ad).
+    - **locator**: 7lm@merge-tree(origin/main, origin/ccr-9391bd81-f2enmj)=7df0bd6; merge-tree(origin/beta/common-contracts-r1-r6, origin/ccr-9391bd81-f2enmj)=1b235ad
+  - item 39
+    - **id**: P20-6
+    - **kind**: defect
+    - **statement**: Semantic conflict between the beta and PR #20 that git does not flag: the beta edits the field guide at its live path (three hunks, lines 96, 150, 230); in the beta+PR #20 merge those edits follow the rename, so the retired copy becomes blob a82f0c5 (the beta's text), not the 20 September text 0c9626e that PR #20's sheet and record declare is kept verbatim.
+    - **locator**: 7lm@1b235ad:L8/L6/retired/field-guide-2026-09-20/7lm-field-guide.md:96 (blob a82f0c5); 7lm@origin/ccr-9391bd81-f2enmj:L8/L6/retired/field-guide-2026-09-20/0.md:8
+    - **quote**: moved here on 2026-10-17 from `L8/L6/7lm-field-guide.md` as a tracked rename, its text unchanged.
+  - item 40
+    - **id**: P20-7
+    - **kind**: tree
+    - **statement**: PR #20's tip c9638a9 is one commit ahead of c4dae95, the commit that was merged into PR #19 and the audit branch. That last commit only extends record section 40 with the push note and the two merge-commit identifiers b5c3984 and 3555866, which match the current tips of those branches.
+    - **locator**: 7lm@c9638a9:L8/L6/history/harmonization-2026-09-04.md:534 (git diff c4dae95 c9638a9)
+    - **quote**: the merge commits are `b5c3984` on `ccr-00099fac-hjosbo` and `3555866` on `audit/peering-descriptive-reframe-2026-09-20`
+  - item 41
+    - **id**: P19-1
+    - **kind**: change
+    - **statement**: PR #19 branch is four commits by Claude on 2026-10-06 on 2e5a6d6 plus merge b5c3984 of PR #20 (at c4dae95) on 2026-10-17. Against main: 48 files, +389/-173. It is a prose sweep that removes authorship tags from live text; its record says no rule changes and the tree is untouched.
+    - **locator**: 7lm@origin/ccr-00099fac-hjosbo:L8/L6/history/harmonization-2026-09-04.md:512-518
+    - **quote**: The specification is the version of 6 October 2026 (`specification-history.md`); no rule changes. Thirty-three of the seventy-one live sheets change
+  - item 42
+    - **id**: P19-2
+    - **kind**: change
+    - **statement**: PR #19 changes the specification's version string to 'Version of 6 October 2026', drops the 'Author note' labels and owner attributions, patches the .docx (blob 29c202f), and adds a 6 October row and change list to specification-history.md. The owner's instruction is recorded in indirect speech, not quoted.
+    - **locator**: 7lm@origin/ccr-00099fac-hjosbo:L8/L4/work/writing/7lm-harmonized-architecture-specification.md:18; L8/L6/history/harmonization-2026-09-04.md:514
+    - **quote**: On that doubt the words of this instruction are not quoted here as written; they are in the session's transcript
+  - item 43
+    - **id**: P19-3
+    - **kind**: change
+    - **statement**: PR #19 adds two files under .github: release.sh (87 lines, mode 100755) and workflows/release.yml (31 lines, workflow_dispatch only, permissions contents: read). The script builds a tree of README.md, integrity.yml, L7/ and L8/ minus the contents of L8/L6/history, in and retired (their 0.md sheets stay), checks it, and force-pushes one authorless commit to a public repository.
+    - **locator**: 7lm@origin/ccr-00099fac-hjosbo:.github/release.sh:1-87; .github/workflows/release.yml:1-31
+    - **quote**: What the public sees: one commit, authored "7LM <7lm@localhost>", whose message is the release date.
+  - item 44
+    - **id**: P19-4
+    - **kind**: rule
+    - **statement**: PR #19 changes the README's root line and three sheets to describe the release: the root's .github now holds 'the one CI check and the release script'; L7/allications/publications/0.md:40 calls the public release a released publication object; L8/L6/history/0.md says its records do not leave with the release. Its integrity.yml differs from main only in the header comment (owner's quoted words replaced by a paraphrase citing record section 11); the checks and the 71-position list are unchanged.
+    - **locator**: 7lm@origin/ccr-00099fac-hjosbo:README.md:13; .github/workflows/integrity.yml:3-5
+    - **quote**: The root holds `README.md`, `L7/`, `L8/`, and `.github/` (the one CI check and the release script, repository infrastructure and not a layer), and nothing else.
+  - item 45
+    - **id**: P19-5
+    - **kind**: procedure
+    - **statement**: PR #19 merges cleanly into main today (merge-tree exit 0, tree ce1e27f). Against the beta it conflicts (exit 1) in 7 files: L7/peering/0.md, L7/peering/private/ingress/0.md, L7/provenance/sources/0.md, the specification .md (1 conflict hunk) and .docx (binary), L8/L5/research/review/0.md and L8/L6/history/specification-history.md (1 hunk). integrity.yml auto-merges.
+    - **locator**: 7lm@merge-tree(origin/main, origin/ccr-00099fac-hjosbo)=ce1e27f; merge-tree(origin/beta/common-contracts-r1-r6, origin/ccr-00099fac-hjosbo)=5e245e1 (exit 1)
+  - item 46
+    - **id**: P19-6
+    - **kind**: tree
+    - **statement**: PR #19's own edits to the field guide's text are not in its tip tree: after the reconciling merge the retired copy is byte-identical to main's guide (rename similarity 100%). PR #20's record says this was deliberate.
+    - **locator**: 7lm@origin/ccr-9391bd81-f2enmj:L8/L6/history/harmonization-2026-09-04.md:536
+    - **quote**: That pass's edits to the guide's text are not carried onto the retired copy
+  - item 47
+    - **id**: A1
+    - **kind**: change
+    - **statement**: The audit branch is 118 commits by EDM, all dated 2026-09-20 17:27 to 17:59 -0700, on top of 6609f38 (the PR #18 merge), plus merge 3555866 of PR #20 (at c4dae95) on 2026-10-17. None of the 118 commits has a message body. Against main: 79 files, +1406/-988. The branch has no record section of its own in the harmonization record (its own commits touch only L8/L6/history/0.md there).
+    - **locator**: 7lm@origin/audit/peering-descriptive-reframe-2026-09-20:git log 6609f38..83ad204; git diff --stat origin/main...3555866
+  - item 48
+    - **id**: A2
+    - **kind**: change
+    - **statement**: The audit branch rewrites the specification (327 changed lines) and about 70 sheets from prescriptive to descriptive wording. Peering becomes one kind of external relationship, not the universal intake route; the Autonomous/Auditonomous handling contract (exact version, reference-only) is demoted to a property of that exemplar.
+    - **locator**: 7lm@origin/audit/peering-descriptive-reframe-2026-09-20:L8/L4/work/writing/7lm-harmonized-architecture-specification.md (section 'Originating peering exemplar'; git diff -U0 6609f38 83ad204)
+    - **quote**: Those are properties of that exemplar's handling contract. They are not universal requirements of peering.
+  - item 49
+    - **id**: A3
+    - **kind**: rule
+    - **statement**: The audit branch changes what L0 holds: from definitions 'actually authored by this object' to definitions that function in the object's Semantic rail, whether locally formulated or adopted from an external source. [source text withheld from the public copy] the beta's R5 wording, which keeps source ownership and allows only a tagged reference to reach L0.
+    - **locator**: 7lm@origin/audit/peering-descriptive-reframe-2026-09-20:L8/L4/work/writing/7lm-harmonized-architecture-specification.md (L0 Boundary Rule; git diff -U0 6609f38 83ad204)
+    - **quote**: External origin does not force a meaning out of L0; provenance and peering describe different external relations where those relations are relevant.
+  - item 50
+    - **id**: A4
+    - **kind**: change
+    - **statement**: Further audit-branch rule edits in the specification: layer table headers 'Permitted actions' and 'Acceptance / boundary check' become 'What occurs here' and 'Boundary indicators'; the L2 'does not support life' statement becomes a labelled untested hypothesis; scale/ladder placement goes by role; the L6 core question is reworded as Library plus reconstructable memory; the review catch-all becomes an [Exemplar] implementation choice.
+    - **locator**: 7lm@origin/audit/peering-descriptive-reframe-2026-09-20:L8/L4/work/writing/7lm-harmonized-architecture-specification.md (git diff -U0 6609f38 83ad204)
+    - **quote**: A scale, ladder, or status vocabulary is placed by the role of the representation, not by the word used for it.
+  - item 51
+    - **id**: A5
+    - **kind**: rule
+    - **statement**: The audit branch replaces integrity.yml (216 changed lines): G-001 also catches '|||||||' markers and distinguishes scan failure; G-002 requires exactly four root entries, README.md, L7, L8 and .github, so .gitignore and USO are no longer admitted; G-003 adds a test that each current sheet has a non-blank body after its heading; the report step is named G-004. Its canon list, written one per line, is the same 71 positions as main.
+    - **locator**: 7lm@origin/audit/peering-descriptive-reframe-2026-09-20:.github/workflows/integrity.yml:19,49,92,181
+    - **quote**: canonical root must contain exactly README.md, L7/, L8/, and .github/ (found $count entries)
+  - item 52
+    - **id**: A6
+    - **kind**: defect
+    - **statement**: The audit branch is internally inconsistent about the root: its CI refuses .gitignore, while its specification line 289 still says the root may hold .gitignore (same sentence as main line 281). Both exemplar repositories carry a root .gitignore on main and on their beta branches; the scaffold itself has none on any ref. Under the audit CI as written, the exemplars' roots would fail G-002.
+    - **locator**: 7lm@origin/audit/peering-descriptive-reframe-2026-09-20:L8/L4/work/writing/7lm-harmonized-architecture-specification.md:289 versus .github/workflows/integrity.yml:49; autonomous@origin/main and auditonomous@origin/main: ls-tree root (.github .gitignore L7 L8 README.md)
+    - **quote**: and moves nothing; and .gitignore. Every 7LM repository has the same root.
+  - item 53
+    - **id**: A7
+    - **kind**: defect
+    - **statement**: The audit branch leaves the specification's version string at 'Version of 20 September 2026' and does not touch the generated .docx (same blob 9659d08 as main), so on that branch the rendering is out of step with the rewritten Markdown.
+    - **locator**: 7lm@origin/audit/peering-descriptive-reframe-2026-09-20:L8/L4/work/writing/7lm-harmonized-architecture-specification.md:18; .docx blob 9659d08 equals origin/main
+  - item 54
+    - **id**: A8
+    - **kind**: procedure
+    - **statement**: The audit branch merges cleanly into main today (merge-tree exit 0, tree b9c0599). Against the beta it conflicts (exit 1) in 12 files: integrity.yml, L7/0.md, L7/governance/controlled/0.md, L7/governance/licensing/0.md, L7/peering/0.md, L7/peering/private/ingress/0.md, L7/provenance/sources/0.md, L8/L0/0.md, L8/L0/semantics/definitions/0.md, L8/L4/0.md, the specification .md and L8/L5/research/review/0.md. Against PR #19 it conflicts in 20 files.
+    - **locator**: 7lm@merge-tree(origin/main, audit)=b9c0599; merge-tree(beta, audit)=34806a2 (exit 1); merge-tree(origin/ccr-00099fac-hjosbo, audit)=39a8dc7 (exit 1)
+  - item 55
+    - **id**: A9
+    - **kind**: open
+    - **statement**: The audit branch's standing is undecided on the record: PR #20's section 40 says it is neither adopted nor retired. main itself never names the branch (git grep 'audit/peering' on origin/main returns nothing).
+    - **locator**: 7lm@origin/ccr-9391bd81-f2enmj:L8/L6/history/harmonization-2026-09-04.md:537
+    - **quote**: The branch itself is neither adopted nor retired by this: its disposition is still the owner's call (§36).
+  - item 56
+    - **id**: C1
+    - **kind**: change
+    - **statement**: origin/copilot/create-error-list holds one commit beyond main, 1e2fe77 by copilot-swe-agent[bot] (co-authored abba-01), 2026-09-20 21:24:52 +0000, adding one 328-line file: L8/L5/research/review/7lm-audit-recommendations.md. It is based on 6609f38, three commits behind main. It adds no directory and merges cleanly into both main and the beta.
+    - **locator**: 7lm@origin/copilot/create-error-list:L8/L5/research/review/7lm-audit-recommendations.md:1-9
+    - **quote**: Preliminary review, awaiting owner adjudication. Recommendations are not adopted architecture and have not been implemented.
+  - item 57
+    - **id**: C2
+    - **kind**: open
+    - **statement**: The 96-item list is stale in baseline (it cites line numbers at 6609f38 under /home/runner/work paths) but not superseded on main. Several items match what later branches did: item 1 (peer authorship, line 59) matches the beta's R1; item 32 (extra bit, line 152) R6; item 37 (scale, line 162) R4; item 43 (metadata, line 174) R2; items 7-8 the beta's copyright single-home edits; item 17 (README versus .gitignore, line 109) the audit CI's root rule. The beta does not cite this file; the link is my inference.
+    - **locator**: 7lm@origin/copilot/create-error-list:L8/L5/research/review/7lm-audit-recommendations.md:59,109,152,162,174
+    - **quote**: **Error — one extra bit cannot catch “any error.”** Line 68 makes this claim.
+  - item 58
+    - **id**: C3
+    - **kind**: tree
+    - **statement**: origin/copilot/create-academic-guide-plan holds nothing beyond main: its tip e22c5fc (the merge of PR #16, 2026-09-19) is an ancestor of main, 0 commits ahead and 19 behind. It is fully stale. origin/ccr-9a67809a-iwii3n (c6d598a) is likewise an ancestor of main, being the merged PR #21 branch.
+    - **locator**: 7lm@origin/copilot/create-academic-guide-plan:e22c5fc (git rev-list --count origin/main..ref = 0); 7lm@origin/ccr-9a67809a-iwii3n:c6d598a
+  - item 59
+    - **id**: M1
+    - **kind**: tree
+    - **statement**: Answer to question 6: no branch adds, removes or renames a canonical position. Directory lists: beta = main (97). PR #20, PR #19 and the audit branch each have exactly one directory main lacks, L8/L6/retired/field-guide-2026-09-20/ (98 directories), a dated retired set beneath the canonical L8/L6/retired/, with its own sheet. All five refs pass the simulated sheet-heading test (75 sheets on main and the beta, 76 on the other three).
+    - **locator**: 7lm@origin/ccr-9391bd81-f2enmj, origin/ccr-00099fac-hjosbo, origin/audit/peering-descriptive-reframe-2026-09-20: diff of ls-tree -r -d against origin/main gives only 'L8/L6/retired/field-guide-2026-09-20'
+  - item 60
+    - **id**: M2
+    - **kind**: tree
+    - **statement**: Physical differences from main that are not canonical positions: (1) PR #20, PR #19, audit: L8/L6/7lm-field-guide.md moved into the new retired set; (2) PR #19: .github/release.sh and .github/workflows/release.yml added; (3) beta: seven beta-* files added at L0, L1, L2, L3, L4 (three) and L5; (4) copilot/create-error-list: one review file added. Rule-level changes to the root with no change to the tree: beta CI drops the USO alternative; audit CI drops .gitignore and USO.
+    - **locator**: 7lm@git diff --name-status -M origin/main <each ref> (non-M rows)
+- **checklist**
+  - item 1
+    - **step**: 1. Treat main c9dc061 as the physical target for the exemplars
+    - **detail**: Nothing off main changes the 71 canonical positions or the root, so the directory mirror the exemplars need (allications/ with six children; governance/controlled/) is the same whichever unmerged branch is later accepted. The exemplar physical update does not have to wait on the beta, PR #19, PR #20 or the audit branch.
+    - **locator**: 7lm@origin/main:.github/workflows/integrity.yml:47-59; all refs: canon list identical
+  - item 2
+    - **step**: 2. Decide the beta before copying integrity.yml to the exemplars
+    - **detail**: main's CI still accepts USO/ and lowercase l0-l6; the beta's requires L8 and uppercase. If the beta is to be merged, the exemplars should receive the beta form; if not, main's. The 71-position list is the same either way.
+    - **locator**: 7lm@origin/beta/common-contracts-r1-r6:.github/workflows/integrity.yml:19-27,36,50-57
+  - item 3
+    - **step**: 3. Beta into main: clean today
+    - **detail**: git merge-tree --write-tree origin/main origin/beta/common-contracts-r1-r6 exits 0 (tree 633c343). The merged tree keeps PR #21's layer-lists file and passes the sheet-heading test. The specification version string would stay 'Version of 20 September 2026' despite changed text.
+    - **locator**: 7lm@merge-tree result 633c343f88378e80d75bc2fe7505e743c192dbad
+  - item 4
+    - **step**: 4. If both the beta and PR #20 are wanted, settle the field guide first
+    - **detail**: Textually they merge cleanly in either order, but the beta's three field-guide edits follow the rename and land in the retired copy that PR #20 declares verbatim. Either drop the beta's guide hunks or accept that the retired copy is not the 20 September text.
+    - **locator**: 7lm@1b235ad:L8/L6/retired/field-guide-2026-09-20/7lm-field-guide.md:96,150,230
+  - item 5
+    - **step**: 5. PR #19 and the beta cannot both merge without hand resolution
+    - **detail**: Seven conflicting files, including the specification .md, the binary .docx and specification-history.md. PR #19 sets the spec to 'Version of 6 October 2026'; the beta leaves 20 September. Whichever lands second must be re-done by hand and the .docx regenerated.
+    - **locator**: 7lm@merge-tree(beta, origin/ccr-00099fac-hjosbo) exit 1: 7 files
+  - item 6
+    - **step**: 6. The audit branch is a competing rewrite, not an increment
+    - **detail**: It merges cleanly into main alone, but conflicts with the beta in 12 files and with PR #19 in 20, and it reverses the L0 authorship rule that the beta's R5 keeps. Its CI forbids a root .gitignore that both exemplars carry, while its own specification still allows it. Its disposition is recorded as the owner's call.
+    - **locator**: 7lm@origin/audit/peering-descriptive-reframe-2026-09-20:.github/workflows/integrity.yml:49; L8/L4/work/writing/7lm-harmonized-architecture-specification.md:289
+  - item 7
+    - **step**: 7. Beta guidance for the exemplar and manuscript work, if adopted
+    - **detail**: Manuscript at L8/L4/work/writing/; argument at L8/L5/; history at L8/L6/; released version at L7/allications/publications/. On taking an origin update: compare contracts, keep local data and choices, record old and new locations of each move, review dependencies before claiming migration. This guidance exists only on the unmerged beta.
+    - **locator**: 7lm@origin/beta/common-contracts-r1-r6:L8/0.md:22-24; L8/L6/0.md:10-12; L8/L4/work/writing/0.md:12-16
+  - item 8
+    - **step**: 8. Stale branches
+    - **detail**: copilot/create-academic-guide-plan and ccr-9a67809a-iwii3n are ancestors of main and hold nothing. copilot/create-error-list holds one unmerged review file (96 recommendations at baseline 6609f38) that merges cleanly anywhere and is partly answered by the beta.
+    - **locator**: 7lm@origin/copilot/create-error-list:L8/L5/research/review/7lm-audit-recommendations.md
+- **open_questions**
+  - Which hunk is R1, R2 ... R6: no document on any ref of 7lm or on the exemplar beta branches enumerates them. The record's sentence names seven noun phrases; my six-way grouping (B09-B14) is inference. The original R1-R6 list presumably lives in the Codex task conversation, outside the repositories.
+  - The owner's approval of R1-R6 is asserted only by the beta's own commit subject and specification-history.md:106; no owner words are quoted for it and nothing on main records it. Whether the owner still stands by that approval, and whether it covered the second commit (97314c5, the 18-sheet 'research housing' guidance), is not settled by any document.
+  - Where the 'actual exemplar integration and candidate branch commit identities are recorded separately' (beta specification-history.md:112): not found in the 7lm beta tree (searched for e64b382, 714480d, '7lm-exemplar').
+  - The beta leaves the specification at 'Version of 20 September 2026' although six passages changed; PR #19 moves it to 6 October 2026. Which version string the model of record should carry after either merge is undecided.
+  - The beta edits the field guide at its live path while PR #20 retires that guide as stale and verbatim. Whether the beta's three guide hunks should be dropped is the owner's call.
+  - Root .gitignore: main's specification (line 281) and CI admit it, main's README line 13 lists four entries 'and nothing else', the scaffold has no .gitignore on any ref, both exemplars have one, and the audit branch's CI would forbid it. Which rule the exemplars should be held to is not settled.
+  - Disposition of the audit branch: PR #20's record section 40 says it is 'neither adopted nor retired'. It reverses the L0 local-authorship rule and the universal peering route that the beta retains, so the two cannot both be the model.
+  - Whether PRs #19 and #20 are still open drafts was not verified (no network use); taken from the task statement. PR #20's tip c9638a9 is one record-only commit ahead of what PR #19 and the audit branch merged (c4dae95).
+  - Beta claims not verifiable from git objects: that the .docx's 54 rendered pages were inspected; that the nine tests first failed for a missing implementation (no failing-run artefact in the tree); that the Zenodo deposit and the supplied Semantic Magnitude PDF have the stated SHA-256 values (source bytes are not in the repository).
+  - Whether copilot/create-error-list's 96 recommendations were ever adjudicated by the owner: no adjudication found on main or on any other ref.

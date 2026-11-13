@@ -1,0 +1,138 @@
+# audit:autonomous:b03-peering-private
+
+Agent result, as returned. Workflow: Sheet audit, Autonomous. Run `wf_8e13ec8e-47f`. Phase: Audit.
+
+- **sheets_audited**
+  - L7/peering/0.md
+  - L7/peering/private/0.md
+  - L7/peering/private/egress/0.md
+  - L7/peering/private/egress/peer-1/0.md
+  - L7/peering/private/egress/peer-1/object-1/0.md
+  - L7/peering/private/ingress/0.md
+  - L7/peering/private/ingress/peer-1/0.md
+  - L7/peering/private/ingress/peer-1/object-1/0.md
+  - L7/peering/private/ingress/peer-2/0.md
+  - L7/peering/private/ingress/peer-2/object-1/0.md
+  - L7/peering/private/ingress/peer-3/0.md
+  - L7/peering/private/ingress/peer-3/object-1/0.md
+  - L7/peering/private/ingress/peer-4/0.md
+  - L7/peering/private/ingress/peer-4/object-1/0.md
+- **findings**
+  - item 1
+    - **id**: b03-01
+    - **kind**: WRONG-FACT
+    - **sheet**: L7/peering/private/ingress/peer-1/object-1/0.md
+    - **line**: 13
+    - **sheet_says**: | Version | [source text withheld from the public copy]` (one row at `8277144`); archive HEAD at this pass `53b28f6` |
+    - **truth**: No row of the register is pinned at 8277144. All 121 rows (S-001…S-121) carry `7540a9d6951c` in the `l6 commit` column. `8277144` is not a commit at all: it is the tail of a DOI inside the citation cell of row S-097 ("10.1109/IEEESTD.2018.8277144"), whose own commit cell is `7540a9d6951c`.
+    - **evidence**: git show 8257118:L7/provenance/sources/LEDGER.md: 121 lines match '^| S-NNN |' (S-001 at line 54, S-121 at line 179, no gaps, no duplicates); the 4th cell is 7540a9d6951c in 121 of 121. git grep -n -F 8277144 8257118 hits only LEDGER.md:155 (S-097: "[source text withheld from the public copy]'"), staging-records/sources__LEDGER.md:26 (the same DOI) and this sheet. LEDGER.md:188-190: "[source text withheld from the public copy]`". L8/L6/history/harmonization-2026-09-05.md:62: "(rows @ `7540a9d6951c`; archive HEAD `53b28f6`)". L7/0.md:232 and L7/provenance/sources/0.md:10 both say "S-001…S-121 pinned to `7540a9d6951c`".
+    - **exact_fix**: | Version | [source text withheld from the public copy]`; archive HEAD at the 2026-09-05 pass `53b28f6` |
+  - item 2
+    - **id**: b03-02
+    - **kind**: STALE
+    - **sheet**: L7/peering/private/ingress/peer-1/0.md
+    - **line**: 8 (same phrase at L7/peering/private/ingress/peer-1/object-1/0.md:13, "archive HEAD at this pass `53b28f6`")
+    - **sheet_says**: At this pass its HEAD is `53b28f6` and it holds 1,368 tracked library files.
+    - **truth**: "This pass" is the instantiation pass of 2026-09-05. The commit audited is the pass of 2026-11-11 (record section 14), the third pass over these sheets since then, and it made no observation of the archive. The sentence is an undated observation left in the present tense; it is the kind of phrase the 2026-09-07 pass took out of the sheets.
+    - **evidence**: L8/L6/history/harmonization-2026-09-05.md:62 (section 4c of the 2026-09-05 event): "`aybllc/l6`, the holdings named in `L7/provenance/sources/LEDGER.md` (rows @ `7540a9d6951c`; archive HEAD `53b28f6`)". L8/L6/history/sheets-2026-09-07.md:29-39 records " at HEAD of this pass" pulled out of the three private-egress sheets of this batch (and some thirty other sheets) on 2026-09-07; these two "this pass" phrases stayed. Record sections 13 (2026-09-12) and 14 (2026-11-11) are later passes. Not checked: the archive's present HEAD and file count (aybllc/l6 is not available here).
+    - **exact_fix**: At the pass of 2026-09-05 its HEAD was `53b28f6` and it held 1,368 tracked library files.   (In the binding record, line 13: "archive HEAD at the 2026-09-05 pass `53b28f6`", as in b03-01.)
+  - item 3
+    - **id**: b03-03
+    - **kind**: WRONG-FACT
+    - **sheet**: L7/peering/private/ingress/0.md
+    - **line**: 34
+    - **sheet_says**: - `peer-4/` — the principal's intake corpus (55 documents including 33 IEEE PDFs under institutional watermark): captured, not deposited.
+    - **truth**: The 33 IEEE PDFs are not among the 55 documents. The 55 are the documents at `/home/eric/ayb/intake/` and its `uha/`, catalogued in sources__CORPUS_INTAKE.md and captured in LEDGER_OF_DEFINITIONS.md; only three of them are IEEE-published (IEEE Std 2894-2024, IEEE Std 1872.2-2021, one CBMS'06 paper) and two carry the Washington State University stamp. The 33 IEEE files are a separate delivery at `/home/eric/ayb/intake/audit-anon/` (33 files, 30 distinct documents), recorded in sources__INTAKE_AUDIT_ANON_2026-08-04.md; none of them is in the 55-row register or in the ledger of definitions.
+    - **evidence**: L7/provenance/sources/staging-records/sources__CORPUS_INTAKE.md:1,3-4: "# [source text withheld from the public copy]`"; its tables in sections 1-7 hold 8+7+6+7+6+15+6 = 55 rows; grep -c in that file for audit-anon, 7001, 7009, 19201, ethically_aligned, finance_playbook = 0 each. L7/provenance/sources/LEDGER_OF_DEFINITIONS.md:3-6: "[source text withheld from the public copy].**"; no occurrence of audit-anon or 7009, and 7001 only inside "27001". sources__INTAKE_AUDIT_ANON_2026-08-04.md:1 "# [source text withheld from the public copy]"; :5 "[source text withheld from the public copy]"; :22-23 "30 distinct documents".
+    - **exact_fix**: - `peer-4/` — the principal's intake corpus (55 documents, catalogued in `L7/provenance/sources/staging-records/sources__CORPUS_INTAKE.md`; a separate delivery of 33 IEEE PDFs under institutional watermark is recorded in `L7/provenance/sources/staging-records/sources__INTAKE_AUDIT_ANON_2026-08-04.md`): captured, not deposited.
+  - item 4
+    - **id**: b03-04
+    - **kind**: WRONG-FACT
+    - **sheet**: L7/peering/private/ingress/peer-4/0.md
+    - **line**: 8
+    - **sheet_says**: The principal's intake corpus — 55 documents held outside this repository (`/home/eric/ayb/intake/`, including 33 IEEE PDFs under institutional watermark) whose 450 verbatim definitions were captured into `L7/provenance/sources/LEDGER_OF_DEFINITIONS.md` on 2026-08-04: "[source text withheld from the public copy]"; no watermarked PDF deposited; three third-party-licensed files removed mid-session.
+    - **truth**: Three things in the sentence are off. (1) The 33 IEEE PDFs are not part of the 55 documents and were not captured into the ledger of definitions (see b03-03). (2) The ledger counts 450 entries, not 450 definitions: its entries include passages it labels as requirements, provisions, prohibitions, scope statements and "not a definition", and it says "[source text withheld from the public copy]." (3) The quoted sentence is not from the ledger or the 55-document register; it is the import rule of the separate IEEE delivery's record.
+    - **evidence**: (1) as b03-03. (2) LEDGER_OF_DEFINITIONS.md:6 "**[source text withheld from the public copy].**", :8-12 "[source text withheld from the public copy].**" Counting '#### ' headings between '# DOMAIN 1' [source text withheld from the public copy]': 44 carry a bracketed label ([PROVISION] 14, [REQUIREMENT] 8, [NOT A DEFINITION] 3, [PROHIBITION] 1, [SCOPE] 1, others 17), and they are inside the 450: Domain 2's index figure 39 equals its 39 headings, 10 of them labelled. (3) git grep -F 'the analysis is what imports' 8257118: sources__INTAKE_AUDIT_ANON_2026-08-04.md:6 "[source text withheld from the public copy].**" (about the 33 IEEE files); the phrase is in neither LEDGER_OF_DEFINITIONS.md nor sources__CORPUS_INTAKE.md.
+    - **exact_fix**: The principal's intake corpus — 55 documents held outside [source text withheld from the public copy]/`) whose 450 entries were captured verbatim into `L7/provenance/sources/LEDGER_OF_DEFINITIONS.md` (opened 2026-08-04); no PDF from the intake deposited; three third-party-licensed files removed mid-session. A separate delivery of 33 IEEE files under institutional watermark (`/home/eric/ayb/intake/audit-anon/`, 30 distinct documents) is recorded in `L7/provenance/sources/staging-records/[source text withheld from the public copy].**"
+  - item 5
+    - **id**: b03-05
+    - **kind**: WRONG-FACT
+    - **sheet**: L7/peering/private/ingress/peer-4/object-1/0.md
+    - **line**: 10
+    - **sheet_says**: | Object identity | the 55-document intake corpus enumerated in `L7/provenance/sources/staging-records/sources__INTAKE_AUDIT_ANON_2026-08-04.md` and captured in `L7/provenance/sources/LEDGER_OF_DEFINITIONS.md` |
+    - **truth**: The file named does not enumerate the 55-document corpus. It enumerates a different delivery: 33 IEEE files (30 distinct documents) at `/home/eric/ayb/intake/audit-anon/`. The 55 documents are enumerated, one row each, in `L7/provenance/sources/staging-records/sources__CORPUS_INTAKE.md`, which names itself the companion of the ledger of definitions.
+    - **evidence**: git show 8257118:L7/provenance/sources/staging-records/sources__INTAKE_AUDIT_ANON_2026-08-04.md: line 1 "# [source text withheld from the public copy]"; line 149 "## FULL INVENTORY — 30 distinct documents"; the number 55 does not describe anything in it. sources__CORPUS_INTAKE.md:3-4 "**[source text withheld from the public copy]."; 55 table rows in its sections 1-7. L7/provenance/sources/staging-records/0.md:18 lists `sources__CORPUS_INTAKE.md` among the corpus enumerations and :20 lists `sources__INTAKE_AUDIT_ANON_2026-08-04.md` among the intake records.
+    - **exact_fix**: | Object identity | the 55-document intake corpus enumerated in `L7/provenance/sources/staging-records/sources__CORPUS_INTAKE.md` and captured in `L7/provenance/sources/LEDGER_OF_DEFINITIONS.md` |   (If the 33 IEEE files are meant to stand under this peer as well, add: "; the 33 IEEE files of `/home/eric/ayb/intake/audit-anon/` are enumerated in `L7/provenance/sources/staging-records/sources__INTAKE_AUDIT_ANON_2026-08-04.md` and are not in that ledger".)
+  - item 6
+    - **id**: b03-06
+    - **kind**: WRONG-FACT
+    - **sheet**: L7/peering/private/ingress/peer-4/object-1/0.md
+    - **line**: 17
+    - **sheet_says**: | Governance | institutional watermarks: hold-private; the standing caveat that this material "was NOT used as evidence for the autonomy definition" (`.gitignore`; RULINGS C-001 as cited) |
+    - **truth**: The `.gitignore` caveat is about other material: the repository's own former `intake/` directory, six owner-authored Autonomous Theory files deleted on 2026-08-03 and now under `L8/L5/research/review/autonomous-theory/audit-anon/` and `L8/L4/work/writing/AUTONOMY_SCALE.md`. It does not describe the principal's external intake corpus, and for that corpus the opposite is recorded: rows A3 and A11 and section 3 of the autonomy definition were read from intake copies.
+    - **evidence**: .gitignore:28-40: "intake/ — RE-TRACKED 2026-08-14 ... Eric deleted intake/ from the repository on 2026-08-03 (commits 97d00de, 0939718) ... Standing caveat, unchanged by re-tracking: this material was NOT used as evidence for the autonomy definition." L8/L6/history/DELETION_AUDIT_2026-08-14.md:37-42: those two commits deleted `intake/01-Autonomous-Theory-Post-Biological.txt`, `intake/AUTONOMY_SCALE.md`, `intake/MOVE_LOG.md`, `intake/PRIORITY_SEARCH.md`, `intake/SCENARIO_UAP.md`, `intake/THESIS.md`. L8/L6/history/LEDGER.md:158: "Prior Autonomous Theory corpus (THESIS, PRIORITY_SEARCH, AUTONOMY_SCALE, SCENARIO_UAP) | **HISTORICAL** — predates this commission; **not used as evidence** for the autonomy definition". Against the caveat for this corpus: L8/L0/semantics/definitions/AUTONOMOUS.md:80 row [source text withheld from the public copy].**", :101-102 "Full record: `sources/INTAKE_AUDIT_ANON_2026-08-04.md`", :228-231 A3 and section 3 "[source text withheld from the public copy]" (the two intake copies of ISO/IEC 22989); sources__INTAKE_AUDIT_ANON_2026-08-04.md:185 "A11 (new) ... added to `definitions/AUTONOMOUS.md`"; L7/peering/public/ingress/peer-4/object-2/0.md Governance "WSU single-user institutional licence".
+    - **exact_fix**: | Governance | institutional watermarks: hold-private — see `L7/governance/copyright/`, the one place |
+  - item 7
+    - **id**: b03-07
+    - **kind**: CONTRADICTION
+    - **sheet**: L7/peering/private/ingress/peer-3/object-1/0.md
+    - **line**: 15 (other locator: L8/L0/semantics/definitions/0.md:35)
+    - **sheet_says**: | Status | referenced, not adopted; CONJECTURE per the register |
+    - **truth**: The register this line cites enters the coinage as an adopted term, and the definitions sheet says so. REGISTER.md is headed "[source text withheld from the public copy]"; its row for auditonomy / auditonomous reads, under "Adopted use", "[source text withheld from the public copy]", entered 2026-08-05; CONJECTURE there qualifies the composition only. So one sheet says the coinage is an adopted entry of the register and this one says it is not adopted. Which stands is the owner's call: the register row dates from 2026-08-04/05, when the auditonomous tree was still inside this repository, and the specification's own account of this exemplar says "referenced and not adopted".
+    - **evidence**: L8/L0/semantics/definitions/REGISTER.md:1 "# [source text withheld from the public copy]"; :13 "| **[source text withheld from the public copy]) | ... | **Coinage — located in no standard.** ... [source text withheld from the public copy] |". L8/L0/semantics/definitions/0.md:35 "`REGISTER.md` — the definitions ledger: adopted entries (automation; the auditonomy coinage referenced as CONJECTURE) and the blocked terms with their blockers". The same "not adopted" stands at L7/peering/private/ingress/peer-3/0.md:8, L7/peering/0.md:39 and L7/0.md:234.
+    - **exact_fix**: To agree with the register as it stands: | Status | referenced; entered in this repository's register as "[source text withheld from the public copy]", its composition `INTERNAL ONLY · CONJECTURE`; defined at the peer, not here |   If "not adopted" is the owner's present position, this line stays and L8/L0/semantics/definitions/0.md:35 is the line to change.
+  - item 8
+    - **id**: b03-08
+    - **kind**: CONTRADICTION
+    - **sheet**: L7/peering/private/ingress/peer-3/0.md
+    - **line**: 8 (other locator: L8/L0/semantics/definitions/0.md:35)
+    - **sheet_says**: the coinage *auditonomy / auditonomous* (CONJECTURE) is referenced by this repository's `L8/L0/semantics/definitions/REGISTER.md` and by the gate b_F ≤ θ_F in `L8/L3/engineering-mathematics/uncertainty/DEPENDENCE_AND_THE_GATE.md`, and is not adopted here.
+    - **truth**: Same contradiction as b03-07: the register named in this sentence carries the coinage as "ADOPTED as coinage", and L8/L0/semantics/definitions/0.md:35 lists it among the register's adopted entries. The rest of the sentence holds: the register row and DEPENDENCE_AND_THE_GATE.md:32 both reference it.
+    - **evidence**: REGISTER.md:13, column "Adopted use": "[source text withheld from the public copy]". L8/L0/semantics/definitions/0.md:35: "adopted entries (automation; the auditonomy coinage referenced as CONJECTURE)". L8/L3/engineering-mathematics/uncertainty/DEPENDENCE_AND_THE_GATE.md:32-35: "[source text withheld from the public copy] ... `b_F ≤ θ_F`".
+    - **exact_fix**: To agree with the register as it stands, replace "and is not adopted here" with "and is not defined here; the register enters it as \"[source text withheld from the public copy]\"". If "not adopted" is the owner's present position, leave this and change L8/L0/semantics/definitions/0.md:35.
+  - item 9
+    - **id**: b03-09
+    - **kind**: CONTRADICTION
+    - **sheet**: L7/peering/0.md
+    - **line**: 39 (other locator: L8/L0/semantics/definitions/0.md:35)
+    - **sheet_says**: `peer-3/` — `aybllc/auditonomous` (the coinage *auditonomy / auditonomous*, referenced, CONJECTURE, not adopted)
+    - **truth**: Same contradiction as b03-07, in the branch sheet's Holdings: "not adopted" here against "adopted entries (automation; the auditonomy coinage referenced as CONJECTURE)" in the definitions sheet and "ADOPTED as coinage" in the register row itself.
+    - **evidence**: REGISTER.md:13 and L8/L0/semantics/definitions/0.md:35, quoted in b03-07.
+    - **exact_fix**: To agree with the register as it stands: `peer-3/` — `aybllc/auditonomous` (the coinage *auditonomy / auditonomous*, referenced; entered in the register as adopted coinage, CONJECTURE; defined at the peer). If "not adopted" is the owner's present position, leave this and change L8/L0/semantics/definitions/0.md:35.
+  - item 10
+    - **id**: b03-10
+    - **kind**: WRONG-FACT
+    - **sheet**: L7/peering/0.md
+    - **line**: 54
+    - **sheet_says**: - Reserved terms once kept under the old L7/private/ desk (found; caught; naught; regress) remain Reserved with topology unadjudicated; see L7/peering/private/0.md. Nothing in this branch gives them a home.
+    - **truth**: This repository never had an `L7/private/` desk, and never kept found, caught, naught or regress anywhere. The old desk was the scaffold's (aybllc/7lm), cut there on 2026-08-24. This repository had no `L7/` at all before the topology was instantiated on 2026-09-05; its own queue vocabulary was orphan, foster, results, delete. The sentence came word for word with the scaffold's sheet, the same way as the already-recorded sentence in L7/allications/publications/0.md. Related wording, not itself false: L7/peering/private/0.md:27 "any reserved term of the old desk (see Standing)".
+    - **evidence**: git grep -n -F 'L7/private' 8257118 returns this line and nothing else in the tree. L8/L6/history/7LM_ROUTING_PLAN_2026-09-05.md:36-65, the table "Path at HEAD" for the tree before instantiation, lists `.gitignore`, `.github/workflows/integrity.yml`, `README.md`, `[source text withheld from the public copy]/l6/LEDGER.md` and no `L7/` path; its line 12 is headed "## 1. Peering positions created". L8/L6/history/harmonization-2026-09-05.md:88: "the lifecycle vocabulary orphan/foster/results/delete (the analogue of found/caught/naught in aybllc/7lm)". Scaffold: 7lm origin/main:L7/peering/0.md:64 is the identical sentence; 7lm origin/main:L8/L6/history/sheets-2026-09-07.md:53 "The pre-harmonization scaffold kept L7/private/ as a desk directly under L7/, holding L7/private/0.md, L7/private/durable/ (with found/, caught/, naught/) and L7/private/regress/. The owner deleted those sheets in commit c0f46e1 (2026-08-24)". Only the pinned commit of this repository was read; no earlier commit was opened.
+    - **exact_fix**: - Reserved terms once kept under the scaffold's old L7/private/ desk in aybllc/7lm (found; caught; naught; regress) remain Reserved with topology unadjudicated; see L7/peering/private/0.md. Nothing in this branch gives them a home.
+  - item 11
+    - **id**: b03-11
+    - **kind**: CONTRADICTION
+    - **sheet**: L7/peering/private/ingress/peer-1/object-1/0.md
+    - **line**: 10 (other locators: L7/provenance/sources/0.md:41 and :54)
+    - **sheet_says**: | Object identity | the `library/` holdings of `aybllc/l6` named row by row in `L7/provenance/sources/LEDGER.md` (S-001…S-121) |
+    - **truth**: This sheet is the one the tree supports: the register holds 121 rows, S-001 to S-121, every path under `library/`. The register's own sheet states the same fact two other ways: "122 rows" in its Holdings and "The ledger has no rows" in its Standing. The fix belongs in L7/provenance/sources/0.md, outside this batch; it is reported here because the binding record and the sheet of the position it points to disagree.
+    - **evidence**: git show 8257118:L7/provenance/sources/LEDGER.md | grep -c -E '^\| S-[0-9]+ \|' = 121; IDs run 1 to 121 with no gap or duplicate; the 3rd cell begins `library/` in all 121. L7/provenance/sources/0.md:41 "`LEDGER.md` — the pointer register into `aybllc/l6` by path and pinned commit (`7540a9d6951c`), 122 rows"; :54 "The ledger has no rows; that is admissible." (122 is reached only by counting the second table's header line, LEDGER.md:82, as a row.)
+    - **exact_fix**: No change to this sheet. In L7/provenance/sources/0.md:41 read "121 rows (S-001…S-121)" for "122 rows"; in :54 delete "The ledger has no rows; that is admissible." or read "The pointer ledger holds 121 rows."
+- **clean_sheets**
+  - L7/peering/private/0.md
+  - L7/peering/private/egress/0.md
+  - L7/peering/private/egress/peer-1/0.md
+  - L7/peering/private/egress/peer-1/object-1/0.md
+  - L7/peering/private/ingress/peer-2/0.md
+  - L7/peering/private/ingress/peer-2/object-1/0.md
+- **could_not_check**
+  - L7/peering/private/ingress/peer-1/0.md:8 — everything said of aybllc/l6 itself (its README sentence "Archival copies of primary literature held for research provenance.", `VERIFICATION_LOG.md` append-only with PREMIS-style events, `ACQUIRE.md` never deleting a row, "The integrity check is copyright, not sha256.", HEAD `53b28f6`, 1,368 tracked library files). The archive is not available locally. The same words stand in L7/provenance/sources/0.md:16, so the two sheets agree with each other.
+  - L7/peering/private/ingress/0.md:44 — that aybllc/l6's own `durable/README.md` carries the two quoted access-control sentences, and that `53b28f6` was its HEAD when recorded. The two sentences do stand in this repository's retired L8/L6/retired/layout-2026-09-06/durable/README.md:20-21, there with "Claude" as subject and the path `../durable/orphan/`.
+  - L7/peering/private/ingress/peer-1/object-1/0.md:12 and :17 — that the archive "names itself" "USO rail L6 — Provenance" and "itself insists" that route and licence are recorded separately (external; L7/provenance/sources/0.md:20 uses the same words).
+  - L7/peering/private/ingress/peer-2/0.md:8 and peer-2/object-1/0.md:10 — the contents and file paths of aybllc/eb-stack and abba-01/ebios. They were confirmed only as cited by this repository's own files (FINDING_lambda_enclosure_boundary.md:6-7,19,72; ASSESSMENT_nu_algebra_cannot_require_architecture.md:6-7, which gives the fuller path `verification/NUProof/NUProof/NUCore.lean`). The statement that no commit is pinned in the citing files was checked and holds.
+  - L7/peering/private/ingress/peer-3/object-1/0.md:10 — the peer's path `aybllc/auditonomous:L8/L0/semantics/definitions/AUDITONOMOUS_DEFINITION.md` and "active record per its AU-NORM-02". Outside the pinned repository. A read-only look at the local clone's origin/main (2165144, 2026-09-11) shows the path and the AU-NORM-02 wording present, but no state of the peer is pinned by this task.
+  - The figure 450 (L7/peering/private/ingress/peer-4/0.md:8). It agrees with the ledger's header (line 6) and with its domain index (41+39+67+132+79+27+50+15 = 450). A recount of entry headings reproduces seven of the eight domain figures (41, 39, 67, 79, 27, 50, 15) but gives 143 heading-style entries in Domain 4 against the index's 132; the ledger does not say how Domain 4 was counted, so the total could not be confirmed independently.
+  - The contents of `/home/eric/ayb/intake/` (outside the repository): the counts 55, 33 and 30 were verified only against the staging records and the ledger held at the commit.
+  - The GitHub visibility "INTERNAL" of aybllc/l6, aybllc/eb-stack, abba-01/ebios and aybllc/auditonomous.
+  - Whether aybllc/l6's HEAD has moved since 2026-09-05. Finding b03-02 rests on "this pass" no longer naming the pass in which the observation was made, not on a newer HEAD.
+  - Whether any commit of this repository before 8257118 ever held an `L7/private/` path. No other commit was read; finding b03-10 rests on the records held at the pinned commit (the routing plan's list of paths before 2026-09-05 and record section 6).
+- **statements_checked**: 330

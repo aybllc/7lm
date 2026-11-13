@@ -1,0 +1,465 @@
+# read:spec-A
+
+Agent result, as returned. Workflow: The model, read deep. Run `wf_9a60cf50-a5f`. Phase: Read.
+
+- **scope**: The specification /home/user/7lm@origin/main:L8/L4/work/writing/7lm-harmonized-architecture-specification.md, lines 1-520 of 1003 (front matter, outline, canonical topology, L0, L1, L2, L3 sheets), read from git objects only; plus the diff of that file origin/main -> origin/beta/common-contracts-r1-r6 (6 hunks, 4 inside lines 1-520). Cross-checks made outside the range: ls-tree of origin/main, .github/workflows/integrity.yml on origin/main, heading list of the rest of the specification. Abbreviation used in locators: SPEC = L8/L4/work/writing/7lm-harmonized-architecture-specification.md.
+- **summary**: The specification on origin/main still declares itself the "Version of 20 September 2026" and the file is byte-identical to its state at 2e5a6d6: nothing in the specification changed on main between 2026-10-05 and c9dc061. The only difference between 2e5a6d6 and origin/main in the whole repository is one added file, L8/L6/in/7lm-layer-lists.md. The specification text that differs lives only on the unmerged beta branch (commit 4ca3edb, 2026-11-02).
+
+  Within lines 1-520 the physical rules are: the root holds README.md, L7/ and L8/ plus non-layer infrastructure (the integrity check and .gitignore); every directory carries a 0.md that first states its path; L7 and L8 are siblings and L0-L6 are flat siblings under L8/. The drawn tree has 35 L7 positions and 36 L8 positions, 71 in all, matching the integrity check's list and the tree on main. L7's four direct branches are provenance, governance, peering, allications; governance carries controlled/, allications carries six positions. Layers count from 0, peers from 1.
+
+  Three things the document says that the tree does not show: per-directory machine metadata (no such file exists), .gitignore (absent on main), and L8/L6/in/ (on main with a sheet, but not in the drawn tree).
+
+  The L7 directory prose/why table and both "Not yet as stated" paragraphs lie outside this range (lines 729-925 and 950, 958). In range, the exemplars are described only conceptually and as "implementation work in progress" whose layouts "do not control the architecture".
+
+  The beta makes four in-range changes: metadata becomes conditional, the extra-bit reading becomes a mnemonic, an exact tagged external reference may reach receiving L0, and a new L0 clarification is inserted. None changes a path, a name or a count.
+- **facts**
+  - item 1
+    - **id**: A1
+    - **kind**: rule
+    - **statement**: The file's leading comment names itself the canonical Markdown form, 'version of 20 September 2026'; the Markdown is the source and the .docx beside it is generated from it. Tree check: both SPEC .md and .docx exist at origin/main in L8/L4/work/writing/.
+    - **locator**: /home/user/7lm@origin/main:SPEC:1-4
+    - **quote**: This Markdown is the source; the .docx filed beside it is generated from the text below this comment and reads back to it unchanged.
+  - item 2
+    - **id**: A2
+    - **kind**: rule
+    - **statement**: The title block dates the specification 20 September 2026, and the Version paragraph repeats it and points to the version history file in the scaffold.
+    - **locator**: /home/user/7lm@origin/main:SPEC:12,17-18
+    - **quote**: Version of 20 September 2026. The history of versions and changes, with the owner's words behind each rule, is at L8/L6/history/specification-history.md in the scaffold repository.
+  - item 3
+    - **id**: A3
+    - **kind**: rule
+    - **statement**: Authority statement: the specification states the controlling architecture; what is authoritative is the structure, layer boundaries, directory prose, machine-metadata distinction and stated rationales.
+    - **locator**: /home/user/7lm@origin/main:SPEC:14-15
+    - **quote**: The structure, layer boundaries, directory prose, machine-metadata distinction, and stated rationales are authoritative for this research program.
+  - item 4
+    - **id**: A4
+    - **kind**: rule
+    - **statement**: Harmonization rule: the principal L0-L7 information sheets control over repeated contracts and contradictory anchors; questionable inherited concepts stay reserved unless the specification places them.
+    - **locator**: /home/user/7lm@origin/main:SPEC:52
+    - **quote**: The coherent principal L0-L7 information sheets control. Repeated contracts and contradictory anchors are superseded; unique notes, cases, rationales, and boundary research are preserved.
+  - item 5
+    - **id**: A5
+    - **kind**: rule
+    - **statement**: The exemplar repositories' current layouts do not control the architecture; the architecture controls them, and status of architecture and of implementation are separate claims.
+    - **locator**: /home/user/7lm@origin/main:SPEC:30
+    - **quote**: The Autonomous and Auditonomous repositories are implementation work in progress; their current layouts do not control the architecture. Architecture and implementation status are separate claims.
+  - item 6
+    - **id**: A6
+    - **kind**: defect
+    - **statement**: The specification file did not change on main between the last-studied state and the model of record: `git diff 2e5a6d6 origin/main -- L8/L4/work/writing/` is empty, and the only file differing between 2e5a6d6 and origin/main in the whole repository is the added L8/L6/in/7lm-layer-lists.md (415 lines). The specification still says 'Version of 20 September 2026'. All specification text changes exist only on the unmerged beta (single commit 4ca3edb, 2026-11-02, 'Apply approved R1–R6 and exercise bounded research objects'), which also leaves the version/date lines 1-18 unchanged.
+    - **locator**: /home/user/7lm@origin/main:SPEC:1-18 (git diff --stat 2e5a6d6 origin/main; git log 2e5a6d6..origin/beta/common-contracts-r1-r6 -- SPEC)
+  - item 7
+    - **id**: B1
+    - **kind**: rule
+    - **statement**: Root rule: the root holds README.md, L7/ and L8/, and may hold non-layer infrastructure: the one CI check at .github/workflows/integrity.yml and .gitignore. Every 7LM repository has the same root.
+    - **locator**: /home/user/7lm@origin/main:SPEC:281
+    - **quote**: The root holds README.md, L7/, and L8/, and may hold repository infrastructure that is not a layer: the one CI check at .github/workflows/integrity.yml
+  - item 8
+    - **id**: B2
+    - **kind**: tree
+    - **statement**: Tree check of the root at origin/main: exactly .github, L7, L8, README.md. No .gitignore exists anywhere in the tree at origin/main (nor at the beta root). The specification says the root 'may hold' it; it is not required and not present.
+    - **locator**: /home/user/7lm@origin/main:(root, git ls-tree origin/main)
+  - item 9
+    - **id**: B3
+    - **kind**: rule
+    - **statement**: README rule: README.md is the start page, not the documentation; it states only what the repository is, the reading order (L7/0, L8/0, then every sheet), the root, and where the prior README is.
+    - **locator**: /home/user/7lm@origin/main:SPEC:281
+    - **quote**: The README states what the repository is, the reading order (the desk L7/0, the interior L8/0, then every sheet), the root, and where the prior README is, and nothing else.
+  - item 10
+    - **id**: B4
+    - **kind**: rule
+    - **statement**: What the integrity check does, as the specification states it: refuses conflict markers, a non-canonical root, a sheet whose heading is not its path, and a canonical position without a sheet; only reports other unsheeted directories; moves nothing.
+    - **locator**: /home/user/7lm@origin/main:SPEC:281
+    - **quote**: refuses unresolved conflict markers, a root that is not canonical, a sheet whose heading is not its path, and a canonical position without a sheet, reports any other directory without a sheet, and moves nothing
+  - item 11
+    - **id**: B5
+    - **kind**: tree
+    - **statement**: Cross-check of the check itself: integrity.yml at origin/main accepts README.md, L7, USO, L8, .github, .gitignore at the root and requires exactly one of USO/ or L8/; it lists 71 canonical positions with L7/governance/controlled and the seven L7/allications positions; it has no L7/publications or L7/governance/restrictions entry. Sheets beneath L6/retired/<set>/ are not heading-checked.
+    - **locator**: /home/user/7lm@origin/main:.github/workflows/integrity.yml:17-29,31-61
+    - **quote**: case "$e" in README.md|L7|USO|L8|.github|.gitignore) ;; *) echo "not canonical at root: $e"; fail=1;; esac
+  - item 12
+    - **id**: B6
+    - **kind**: rule
+    - **statement**: Sheet rule: every directory carries a local 0.md (written /0 in tree notation, not drawn as a branch) holding the human-readable semantic description.
+    - **locator**: /home/user/7lm@origin/main:SPEC:21,201
+    - **quote**: Every directory carries a local Layer 0 semantic description. In tree notation, /0 denotes that directory's local 0.md without drawing the file as a separate branch.
+  - item 13
+    - **id**: B7
+    - **kind**: rule
+    - **statement**: First-line rule for a sheet: each 0.md first identifies the directory/object and its path, then gives the semantic description; machine instructions do not go in the prose. (The exact form '# <path>/' is stated by integrity.yml line 33, not in this range of the specification.)
+    - **locator**: /home/user/7lm@origin/main:SPEC:283,285
+    - **quote**: Each local 0.md first identifies the directory/object and its path, then supplies that directory's semantic description. Machine instructions belong to the directory metadata, not to the semantic prose.
+  - item 14
+    - **id**: B8
+    - **kind**: tree
+    - **statement**: Canonical L7 tree as drawn (35 positions): L7; provenance/{prior-art, sources, lineage, authority}; governance/{copyright, licensing, patents, permissions, access, controlled}; peering/{private, public}, each with ingress/peer-1/object-1 and egress/peer-1/object-1; allications/{publications, applications, communications, specifications, notifications, participations}. No L7/publications and no governance/restrictions are drawn.
+    - **locator**: /home/user/7lm@origin/main:SPEC:206-240
+    - **quote**: │   └── allications/0
+  - item 15
+    - **id**: B9
+    - **kind**: tree
+    - **statement**: Canonical L8 tree as drawn (36 positions): L8; L6/{history, retired}; L5/research/{lanes, review, findings}; L5/institution/{peers, undergraduates}; L4/work/{writing, experiments, computation}; L3/engineering-mathematics/{approximation, uncertainty, tolerances}; L2/formal-mathematics/{relations, operators, proofs}; L1/state-space; L0/{universality, pedagogy, epistemic, ontology, semantics/definitions}.
+    - **locator**: /home/user/7lm@origin/main:SPEC:241-276
+    - **quote**: └── L8/0
+  - item 16
+    - **id**: B10
+    - **kind**: tree
+    - **statement**: Counts: the drawn tree has 35 + 36 = 71 positions, equal to the 71 in integrity.yml's list. Tree check at origin/main: all 71 carry a 0.md; total 0.md files are 94 (71 canonical, 1 at L8/L6/in, 22 inside retired sets); the only directory without a sheet is L8/L6/retired/scaffold-2026-08-20/USO. Sampled first lines are '# L7/', '# L8/', '# L7/allications/', '# L7/governance/controlled/', '# L8/L0/semantics/definitions/'.
+    - **locator**: /home/user/7lm@origin/main:SPEC:203-277 (git ls-tree -r origin/main)
+  - item 17
+    - **id**: B11
+    - **kind**: defect
+    - **statement**: L8/L6/in/ exists at origin/main with a sheet ('# L8/L6/in/', 'The inbox for L6.'; added 051da0b on 2026-09-19) but is not drawn in the canonical tree (L6 shows only history/ and retired/), is not in integrity.yml's canonical list, and the string 'L6/in' or 'inbox' occurs nowhere in the specification.
+    - **locator**: /home/user/7lm@origin/main:SPEC:242-244; /home/user/7lm@origin/main:L8/L6/in/0.md:1-3
+    - **quote**: The inbox for L6.
+  - item 18
+    - **id**: B12
+    - **kind**: rule
+    - **statement**: The four canonical direct branches of L7 are named in prose.
+    - **locator**: /home/user/7lm@origin/main:SPEC:46
+    - **quote**: Canonical direct L7 branches are L7/provenance/, L7/governance/, L7/peering/, and L7/allications/.
+  - item 19
+    - **id**: B13
+    - **kind**: rule
+    - **statement**: L7 and L8 are physical siblings at the root; L7 is outside the USO; L0-L6 are flat siblings under L8/; diagrams and bands do not create nesting.
+    - **locator**: /home/user/7lm@origin/main:SPEC:129,154
+    - **quote**: The canonical research tree keeps the interior physically flat: L6/, L5/, L4/, L3/, L2/, L1/, and L0/ are siblings under L8/.
+  - item 20
+    - **id**: B14
+    - **kind**: rule
+    - **statement**: Layer count: L0-L6 are the seven interior layers; L7 is numbered but not an eighth interior layer; L8 is a count, not a position; first is always 0.
+    - **locator**: /home/user/7lm@origin/main:SPEC:50,54-64
+    - **quote**: L7 is a magnitude, the position numbered 7, the eighth reached in traversal: numbered, not a layer. L8 is a count, not a position
+  - item 21
+    - **id**: B15
+    - **kind**: rule
+    - **statement**: Peer count: peers are physical and counted from 1 at L7/peering/ (peer-1, object-1); layers are counted from 0; the two counts do not conflict.
+    - **locator**: /home/user/7lm@origin/main:SPEC:66
+    - **quote**: Peers are physical and are counted from 1 at L7/peering/: peer-1, object-1. The layers are counted from 0
+  - item 22
+    - **id**: B16
+    - **kind**: rule
+    - **statement**: Machine metadata, as stated on main: every directory separately carries machine-readable metadata for instructions, constraints, permissions, routing, validation and lifecycle; it is attached to the directory and not drawn; it never replaces /0 and /0 never replaces it.
+    - **locator**: /home/user/7lm@origin/main:SPEC:21,109,201
+    - **quote**: The same directory separately carries machine-readable metadata for machine instructions, constraints, permissions, routing, validation, and lifecycle behavior.
+  - item 23
+    - **id**: B17
+    - **kind**: defect
+    - **statement**: Tree check: no machine-metadata file exists at origin/main. The only non-.md files are .github/workflows/integrity.yml, two .html, one .py, four .docx, one .pdf, one .txt. The main text says every directory 'carries' metadata; the tree carries none. The beta rewrites the sentence to make metadata conditional (see C1).
+    - **locator**: /home/user/7lm@origin/main:SPEC:21 (git ls-tree -r --name-only origin/main | grep -v '\.md$')
+  - item 24
+    - **id**: B18
+    - **kind**: rule
+    - **statement**: Each layer sheet has a 'Machine metadata' row stating what metadata may identify and that it must not define meaning (L0 line 309, L1 line 365, L2 line 450, L3 line 492).
+    - **locator**: /home/user/7lm@origin/main:SPEC:309
+    - **quote**: It may enforce handling constraints, but it must not define or replace semantic meaning.
+  - item 25
+    - **id**: B19
+    - **kind**: rule
+    - **statement**: Empty branches stay: the full topology is kept in every repository even where a capability is unused; presence means admissible capability, not mandatory population.
+    - **locator**: /home/user/7lm@origin/main:SPEC:107,199,279
+    - **quote**: A branch may remain empty when unused; the canonical tree is not reduced merely because one project does not need a capability.
+  - item 26
+    - **id**: B20
+    - **kind**: rule
+    - **statement**: The topology states positions and meaning only; it states no rule about who or what may touch anything; such rules belong to infrastructure outside the layers.
+    - **locator**: /home/user/7lm@origin/main:SPEC:287
+    - **quote**: It states no rule about what any intelligence, a person, a session, a model, or an orchestrator, may or may not touch.
+  - item 27
+    - **id**: B21
+    - **kind**: rule
+    - **statement**: Names: L7 = Desktop; L8 = USO, the bounded object's interior. General repository infrastructure is not automatically a layer; the layer tree is not a command to refile unrelated infrastructure.
+    - **locator**: /home/user/7lm@origin/main:SPEC:289-295
+    - **quote**: L8 = USO, the bounded scientific object's interior: the research packet on the desk
+  - item 28
+    - **id**: B22
+    - **kind**: rule
+    - **statement**: Direction rule: construction runs L0 outward as dependencies are established; external inspection runs L7 inward; description does not become prescription.
+    - **locator**: /home/user/7lm@origin/main:SPEC:23-24,89-97
+    - **quote**: Scientific construction proceeds from L0 outward only as dependencies are established. External inspection begins at L7 and proceeds inward.
+  - item 29
+    - **id**: B23
+    - **kind**: tree
+    - **statement**: Per-layer directory structures drawn in range repeat the canonical tree with the L8/ prefix: L8/L0/0 (lines 318-324), L8/L1/0 with state-space/0 (374-375), L8/L2/0 with formal-mathematics/{relations, operators, proofs} (459-463), L8/L3/0 with engineering-mathematics/{approximation, uncertainty, tolerances} (501-505). L4, L5, L6, L7 sheets begin at lines 532, 627, 685, 729, outside this range.
+    - **locator**: /home/user/7lm@origin/main:SPEC:318-324,374-375,459-463,501-505
+  - item 30
+    - **id**: C-L7-1
+    - **kind**: open
+    - **statement**: The L7 'Directory prose and rationale' table (the prose and why cells for L7 and each position beneath it) is NOT in lines 1-520. The L7 sheet is the section '## L7 — SURFACE / FORWARD FACE' starting at line 729 and running to about line 925. Not read here.
+    - **locator**: /home/user/7lm@origin/main:SPEC:729
+  - item 31
+    - **id**: C-L7-2
+    - **kind**: rule
+    - **statement**: What lines 1-520 do say about L7 as a whole: it is the numbered external Surface / Forward Face, the desk, the glue at which the object binds to what is outside, and where externally owned definitions are bound.
+    - **locator**: /home/user/7lm@origin/main:SPEC:50,68,70
+    - **quote**: L7 is the numbered external Surface / Forward Face; it participates in traversal but is not an eighth interior dependency layer.
+  - item 32
+    - **id**: C-L7-3
+    - **kind**: rule
+    - **statement**: In-range content assignment for L7 (OSI inquiry table): externally owned standards and source bindings, provenance, standards-publication state, public/legal governance, relationships to peers.
+    - **locator**: /home/user/7lm@origin/main:SPEC:180
+    - **quote**: Externally owned standards and source bindings, provenance, standards-publication state, public/legal governance, and relationships to standards bodies or other peers.
+  - item 33
+    - **id**: C-L0-0
+    - **kind**: rule
+    - **statement**: L0 heading line and function: L0 is the local origin contract, holding locally authored foundational representation and exact immutable bindings to external semantic inputs, not a store of external definitions.
+    - **locator**: /home/user/7lm@origin/main:SPEC:299-305
+    - **quote**: Local semantic/rail version of the bounded thing; origin contract, not a warehouse for external definitions.
+  - item 34
+    - **id**: C-L0-1
+    - **kind**: rule
+    - **statement**: L0 hard boundary: a source L0 definition may travel source L7 egress -> receiving L7 ingress -> receiving L0, where it stays exact, externally authored, immutable, version-pinned, tagged, and is not counted as local authorship. L0 does not own prior art, provenance, governance, operators, proofs, experiments or conclusions.
+    - **locator**: /home/user/7lm@origin/main:SPEC:308
+    - **quote**: At receiving L0 it remains exact, externally authored, immutable, version-pinned, and explicitly tagged; it is not locally redefined or counted as local authorship.
+  - item 35
+    - **id**: C-L0-2
+    - **kind**: rule
+    - **statement**: L0 acceptance checks: every L1 distinction resolves to local L0 meaning or a named external binding; every external binding keeps identity, owner, source layer, version, ingress binding, immutable status; no peer definition is redefined to make L0 look complete.
+    - **locator**: /home/user/7lm@origin/main:SPEC:313
+    - **quote**: No peer definition is locally redefined merely to make L0 look complete.
+  - item 36
+    - **id**: C-L0-3
+    - **kind**: rule
+    - **statement**: L0 boundary rule: L0/semantics holds only what the bounded thing itself authored; an external definition is not copied in to fill the directory.
+    - **locator**: /home/user/7lm@origin/main:SPEC:327
+    - **quote**: An externally owned definition is not copied into L0 merely to populate the directory.
+  - item 37
+    - **id**: C-L0-4
+    - **kind**: rule
+    - **statement**: Cell for L8/L0/. Prose: 'Layer 0 container for the bounded object’s locally authored foundational and rail representation.' Why: keeps foundational meaning distinct from the other layers' content.
+    - **locator**: /home/user/7lm@origin/main:SPEC:333
+    - **quote**: Keeps foundational meaning distinct from state, formalization, engineering, realized work, research judgment, provenance, and surface exchange.
+  - item 38
+    - **id**: C-L0-5
+    - **kind**: rule
+    - **statement**: Cell for universality/. Prose: 'Directory for the Universality rail content owned by L0.' Why as quoted.
+    - **locator**: /home/user/7lm@origin/main:SPEC:334
+    - **quote**: Preserves Universality as its own rail instead of letting another rail silently supply it.
+  - item 39
+    - **id**: C-L0-6
+    - **kind**: rule
+    - **statement**: Cell for pedagogy/. Prose: 'Directory for system-level traversal and attachment pedagogy.' Why as quoted. Pedagogy is a directory/function, not a fifth rail (also line 313).
+    - **locator**: /home/user/7lm@origin/main:SPEC:335
+    - **quote**: Keeps pedagogy explicit without turning it into a fifth philosophical rail.
+  - item 40
+    - **id**: C-L0-7
+    - **kind**: rule
+    - **statement**: Cell for epistemic/. Prose: 'Directory for the Epistemic rail content owned by L0.' Why as quoted.
+    - **locator**: /home/user/7lm@origin/main:SPEC:336
+    - **quote**: Keeps epistemic distinctions inside the rail that owns them.
+  - item 41
+    - **id**: C-L0-8
+    - **kind**: rule
+    - **statement**: Cell for ontology/. Prose: 'Directory for the Ontological rail content owned by L0.' Why as quoted.
+    - **locator**: /home/user/7lm@origin/main:SPEC:337
+    - **quote**: Keeps ontological distinctions inside the rail that owns them.
+  - item 42
+    - **id**: C-L0-9
+    - **kind**: rule
+    - **statement**: Cell for semantics/. Prose: 'Directory for the Semantic rail content authored by this bounded object.' Why as quoted.
+    - **locator**: /home/user/7lm@origin/main:SPEC:338
+    - **quote**: Keeps local semantic meaning separate from externally owned definitions and later formal representation.
+  - item 43
+    - **id**: C-L0-10
+    - **kind**: rule
+    - **statement**: Cell for semantics/definitions/. Prose: 'Directory for definitions actually authored by this object under its Semantic rail.' Why as quoted.
+    - **locator**: /home/user/7lm@origin/main:SPEC:339
+    - **quote**: Prevents an external definition from being copied inward and mistaken for locally owned meaning.
+  - item 44
+    - **id**: D1
+    - **kind**: exemplar
+    - **statement**: The Autonomous/Auditonomous root issue is the origin of the peering rule: Auditonomous uses the exact Autonomous definition without becoming a second authority; peer-1/object-1 is the agnostic form of that problem.
+    - **locator**: /home/user/7lm@origin/main:SPEC:28
+    - **quote**: Auditonomous can use the exact Autonomous definition without becoming a second semantic authority for Autonomous. peer-1/object-1 is the agnostic form of this concrete ownership problem.
+  - item 45
+    - **id**: D2
+    - **kind**: exemplar
+    - **statement**: The only in-range statement about the exemplars' present state: both repositories are implementation work in progress whose current layouts do not control the architecture. No in-range sentence describes what the exemplars carry on disk today.
+    - **locator**: /home/user/7lm@origin/main:SPEC:30
+    - **quote**: The Autonomous and Auditonomous repositories are implementation work in progress; their current layouts do not control the architecture.
+  - item 46
+    - **id**: D3
+    - **kind**: exemplar
+    - **statement**: Cross-object rule: a claim about Autonomous cannot stand in for one about Auditonomous; an explicit named relation or handoff is required.
+    - **locator**: /home/user/7lm@origin/main:SPEC:40
+    - **quote**: An argument about Autonomous cannot silently stand in for an argument about Auditonomous. A cross-object claim requires an explicit named relation or handoff.
+  - item 47
+    - **id**: D4
+    - **kind**: exemplar
+    - **statement**: Autonomous's one semantic job: state and freeze the narrowest reasonable agreement across independently bound standards definitions, leaving disagreements source-tagged and visible.
+    - **locator**: /home/user/7lm@origin/main:SPEC:42
+    - **quote**: Autonomous has one bounded semantic job: state and freeze the narrowest reasonable agreement shared across exact, independently bound standards definitions.
+  - item 48
+    - **id**: D5
+    - **kind**: exemplar
+    - **statement**: Auditonomous's job: consume the pinned Autonomous baseline and author its difference as a local delta; baseline and delta stay separately owned and overlaid.
+    - **locator**: /home/user/7lm@origin/main:SPEC:44
+    - **quote**: Auditonomous consumes the pinned Autonomous consensus baseline and authors the Auditonomous difference as an explicit local delta.
+  - item 49
+    - **id**: D6
+    - **kind**: exemplar
+    - **statement**: Canonical-tree rule names the exemplars: the same complete topology applies to Autonomous and Auditonomous; unused positions are not removed.
+    - **locator**: /home/user/7lm@origin/main:SPEC:279
+    - **quote**: The same complete topology is available to Autonomous, Auditonomous, OMMP, classroom research, institutional research, and future research repositories.
+  - item 50
+    - **id**: D7
+    - **kind**: exemplar
+    - **statement**: A bounded exemplar is made at L4 while its other representations stay separately addressable at their own layers.
+    - **locator**: /home/user/7lm@origin/main:SPEC:295
+    - **quote**: A bounded exemplar can be written or made at L4 while its semantic, state-space, formal, engineering, research, memory/history, provenance/governance, and surface representations remain separately addressable.
+  - item 51
+    - **id**: D8
+    - **kind**: exemplar
+    - **statement**: L0 'In the case of': in the Autonomous exemplar the locally authored definition lives at L0; both repositories are retained as pedagogical exemplars named EXEMPLAR AUTO and EXEMPLAR AUDIT.
+    - **locator**: /home/user/7lm@origin/main:SPEC:349
+    - **quote**: AUTONOMOUS and AUDITONOMOUS are retained as pedagogical exemplars: EXEMPLAR AUTO and EXEMPLAR AUDIT.
+  - item 52
+    - **id**: D9
+    - **kind**: exemplar
+    - **statement**: Standing clarification for the Autonomous exemplar: L0 holds the locally authored definition; IEEE/IEC definitions are external inputs bound through L7 peering, with identity/version/authority/prior-art at L7 provenance and internal use history at L6.
+    - **locator**: /home/user/7lm@origin/main:SPEC:351
+    - **quote**: IEEE/IEC source definitions and standards remain externally owned inputs bound through L7 peering; their source identity, version, authority, and prior-art relation are represented through L7 provenance.
+  - item 53
+    - **id**: D10
+    - **kind**: open
+    - **statement**: No 'Not yet as stated' paragraph occurs in lines 1-520. Two occur at lines 950 (Autonomous) and 958 (Auditonomous) inside '## Exemplars as instantiated' (starts line 926), the section that documents what the exemplars carry. Other exemplar passages outside the range: lines 599-621 and 813-839. Not read here.
+    - **locator**: /home/user/7lm@origin/main:SPEC:926,950,958
+  - item 54
+    - **id**: E1
+    - **kind**: rule
+    - **statement**: Dated Clarification, 12 September 2026 (packet reading): L0 is the origin and not payload; L1 the floor; L6 the end; L7 the glue; L8 envelopes all and connects to the next object's L0. Owner quoted as written.
+    - **locator**: /home/user/7lm@origin/main:SPEC:70
+    - **quote**: L8 has to envelope them all to simulate a packet where gteh floor is l1 the end is l6, ythe glue is l7 adn l8 is gthe connectror the the next l0
+  - item 55
+    - **id**: E2
+    - **kind**: rule
+    - **statement**: Dated Clarification, 12 September 2026: the packet reading changes no position, count or path; L7/ and L8/ stay siblings at the root with L8/ holding L0-L6. Owner quoted as written.
+    - **locator**: /home/user/7lm@origin/main:SPEC:72
+    - **quote**: I like to waive that l seven and l eight are set up right now in the current directory structure.
+  - item 56
+    - **id**: E3
+    - **kind**: rule
+    - **statement**: Undated Clarification on ordinals: ordinals are semantics, numbers are magnitudes, joined by 'is'; the seventh layer is L6. Owner's table given at lines 57-62.
+    - **locator**: /home/user/7lm@origin/main:SPEC:64
+    - **quote**: Ordinals are semantics; numbers are magnitudes; the relation between them is "is".
+  - item 57
+    - **id**: E4
+    - **kind**: rule
+    - **statement**: Undated Author Note on names: L7 is the desk (the L and the 7 draw its rectangle); L8 is the packet, two stacked zeros; L0-L7 are eight bits and L8 the extra bit. The names are design.
+    - **locator**: /home/user/7lm@origin/main:SPEC:68
+    - **quote**: L0 through L7 are the eight bits of a byte, 0 being a bit, and L8 is the extra bit that carries the semantic, as information needs an extra bit to catch any error.
+  - item 58
+    - **id**: E5
+    - **kind**: rule
+    - **statement**: Undated Clarifications (author notes) in the outline: description does not prescribe (line 125); analytic bundles are views, not filesystem nesting (line 164); OSI does not become 7LM L0-L7, it stays an L4 object (line 189).
+    - **locator**: /home/user/7lm@origin/main:SPEC:125,164,189
+    - **quote**: These bundles are semantic and dependency views, not filesystem nesting and not mandatory traversal paths.
+  - item 59
+    - **id**: E6
+    - **kind**: rule
+    - **statement**: Undated topology notes: Clarification on README and root (line 281); Research Note that each /0 begins with the object directory and path (line 283); Clarification 'Standing' on the 0.md first line and metadata (line 285); Clarification that the topology states no touch rules (line 287).
+    - **locator**: /home/user/7lm@origin/main:SPEC:281-287
+    - **quote**: Each /0 begins with the object directory and path: /data/location/object
+  - item 60
+    - **id**: E7
+    - **kind**: rule
+    - **statement**: L0 notes: Author Note that L0/semantics is the semantic version 'we make' and is not filled with someone else's definition (line 341); Research Note that drift lives at L0 (line 343); Clarification keeping that as an open hypothesis, not a rule (line 345).
+    - **locator**: /home/user/7lm@origin/main:SPEC:341-345
+    - **quote**: MOST IMPORTANT: I THINK DRIFT LIVES HERE! NOT ANYWHERE ELSE...(NEEDS A LOT OF STUDY)
+  - item 61
+    - **id**: E8
+    - **kind**: rule
+    - **statement**: L1 and L2 author notes: the controlling layer name is State Space, with STATE and IMMUTABLE only mnemonic (line 436); 'finite tolerance' is not an L2 ownership rule, tolerance and numerical uncertainty belong at L3 (line 478).
+    - **locator**: /home/user/7lm@origin/main:SPEC:436,478
+    - **quote**: STATE and IMMUTABLE remain useful descriptive/mnemonic language, but the controlling layer name is State Space.
+  - item 62
+    - **id**: C1
+    - **kind**: change
+    - **statement**: Beta change at line 21 (machine-metadata rule). Before: 'The same directory separately carries machine-readable metadata ...'. After: prefixed 'When machine instructions are enabled, the same directory separately carries ...' plus a new sentence. Meaning: metadata stops being an unconditional property of every directory and becomes conditional; the text now admits it is not instantiated, which matches the tree (no metadata files).
+    - **locator**: /home/user/7lm@origin/beta/common-contracts-r1-r6:SPEC:21 (main line 21)
+    - **quote**: Current manual practice does not imply that such metadata or enforcement has been instantiated.
+  - item 63
+    - **id**: C2
+    - **kind**: change
+    - **statement**: Beta change at line 68 (Author Note on names). Before: the note ends 'were not chosen by accident.' After: one sentence appended. Meaning: the byte/extra-bit reading is downgraded to a mnemonic and disclaims any error-detection theorem. No name, path or count changes.
+    - **locator**: /home/user/7lm@origin/beta/common-contracts-r1-r6:SPEC:68 (main line 68)
+    - **quote**: This byte/extra-bit reading is an architectural mnemonic, not a theorem that one extra bit detects every possible error; any error-detection guarantee requires its own stated code and error model.
+  - item 64
+    - **id**: C3
+    - **kind**: change
+    - **statement**: Beta change at line 187 (OSI table, L0 row). Before: '... remain owned by their source and are bound through L7 rather than copied into L0.' After: as quoted. Meaning: removes the flat 'rather than copied into L0' and aligns the row with the L0 hard boundary (line 308): an exact tagged external reference may be present at receiving L0, without local authorship.
+    - **locator**: /home/user/7lm@origin/beta/common-contracts-r1-r6:SPEC:187 (main line 187)
+    - **quote**: remain source-owned and are bound through L7; an exact tagged semantic reference may reach receiving L0 without local authorship or redefinition.
+  - item 65
+    - **id**: C4
+    - **kind**: change
+    - **statement**: Beta insertion: a new Clarification at beta line 355, placed after the '---' rule that closes L0 and before '## L1 — STATE SPACE' (between main lines 353 and 355). Before: absent. After: the five L0 branches are not exhaustive of foundational distinctions, yet no new directory is required; foundational branches, vertical analytic inquiries and L5 research lanes are distinct. Meaning: adds scope without adding any position; the tree is unchanged.
+    - **locator**: /home/user/7lm@origin/beta/common-contracts-r1-r6:SPEC:355
+    - **quote**: Other justified distinctions retain their stated scope and owning contract within the existing topology; no new directory or fixed ontology is required.
+  - item 66
+    - **id**: C5
+    - **kind**: change
+    - **statement**: Two further beta hunks fall outside lines 1-520 and are only noted: main line 596 / beta 598 ('External definition' row: an exact source-owned semantic reference may reach receiving L0) and main line 681 / beta 683 (the scale/ladder Clarification rewritten to allow separately declared L1 values and L2 relations). The diff has 6 hunks in total, 12 changed lines, none touching either drawn tree, the root rule, or the version lines.
+    - **locator**: /home/user/7lm@origin/beta/common-contracts-r1-r6:SPEC:598,683
+    - **quote**: an exact source-owned semantic reference may reach receiving L0; a locally authored L0 definition exists only if this bounded thing authors one.
+- **checklist**
+  - item 1
+    - **step**: 1. Root
+    - **detail**: Root holds README.md, L7/, L8/ and nothing else except non-layer infrastructure: .github/workflows/integrity.yml and optionally .gitignore. The scaffold's own main root has no .gitignore.
+    - **locator**: /home/user/7lm@origin/main:SPEC:281
+  - item 2
+    - **step**: 2. README
+    - **detail**: README.md is a start page only: what the repository is, the reading order (L7/0, L8/0, then every sheet), the root, where the prior README is.
+    - **locator**: /home/user/7lm@origin/main:SPEC:281
+  - item 3
+    - **step**: 3. L7 direct branches
+    - **detail**: Exactly four: L7/provenance/, L7/governance/, L7/peering/, L7/allications/. There is no L7/publications/ at the top of L7.
+    - **locator**: /home/user/7lm@origin/main:SPEC:46,206-240
+  - item 4
+    - **step**: 4. L7/provenance
+    - **detail**: Positions prior-art, sources, lineage, authority.
+    - **locator**: /home/user/7lm@origin/main:SPEC:207-211
+  - item 5
+    - **step**: 5. L7/governance
+    - **detail**: Positions copyright, licensing, patents, permissions, access, controlled. The sixth is named controlled, not restrictions.
+    - **locator**: /home/user/7lm@origin/main:SPEC:212-218
+  - item 6
+    - **step**: 6. L7/peering
+    - **detail**: private/ and public/, each with ingress/peer-1/object-1 and egress/peer-1/object-1. Peers and objects are counted from 1.
+    - **locator**: /home/user/7lm@origin/main:SPEC:219-233,66
+  - item 7
+    - **step**: 7. L7/allications
+    - **detail**: Positions publications, applications, communications, specifications, notifications, participations.
+    - **locator**: /home/user/7lm@origin/main:SPEC:234-240
+  - item 8
+    - **step**: 8. L8 interior
+    - **detail**: L8/ holds L6, L5, L4, L3, L2, L1, L0 as flat siblings (uppercase L). L6/{history, retired}; L5/research/{lanes, review, findings}; L5/institution/{peers, undergraduates}; L4/work/{writing, experiments, computation}; L3/engineering-mathematics/{approximation, uncertainty, tolerances}; L2/formal-mathematics/{relations, operators, proofs}; L1/state-space; L0/{universality, pedagogy, epistemic, ontology, semantics/definitions}.
+    - **locator**: /home/user/7lm@origin/main:SPEC:241-276,154
+  - item 9
+    - **step**: 9. Sheets
+    - **detail**: Every directory carries 0.md; it first identifies the directory and its path, then gives the semantic description. All 71 canonical positions must be sheeted. Sheets inside a retired set under L6/retired/<set>/ keep their prior headings and are not checked.
+    - **locator**: /home/user/7lm@origin/main:SPEC:21,283,285; /home/user/7lm@origin/main:.github/workflows/integrity.yml:31-61
+  - item 10
+    - **step**: 10. Keep unused positions
+    - **detail**: An unused canonical branch stays in place, empty of content but sheeted; the tree is not reduced.
+    - **locator**: /home/user/7lm@origin/main:SPEC:107,199,279
+  - item 11
+    - **step**: 11. L0 content
+    - **detail**: L0/semantics/definitions holds only definitions the object itself authored. An external definition is bound at L7 peering ingress and is not copied into L0 to populate it.
+    - **locator**: /home/user/7lm@origin/main:SPEC:327,339,341
+  - item 12
+    - **step**: 12. Machine metadata
+    - **detail**: Create no metadata files. Main says every directory carries metadata, but none exists in the scaffold tree; the unmerged beta makes it conditional on machine instructions being enabled.
+    - **locator**: /home/user/7lm@origin/main:SPEC:21; /home/user/7lm@origin/beta/common-contracts-r1-r6:SPEC:21
+  - item 13
+    - **step**: 13. Integrity check
+    - **detail**: The exemplar's .github/workflows/integrity.yml should carry the scaffold's canonical list (controlled, allications and its six positions), otherwise G-003 will test the former names.
+    - **locator**: /home/user/7lm@origin/main:.github/workflows/integrity.yml:47-59
+- **open_questions**
+  - The L7 directory prose/why table (L7 and every position beneath it) is outside lines 1-520; it sits in the L7 sheet starting at line 729. It was not read here and needs the agent covering lines 521-1003.
+  - Both 'Not yet as stated' paragraphs (lines 950 and 958) and the whole 'Exemplars as instantiated' section (from line 926) are outside this range, so what the specification says the exemplars carry today is not settled here.
+  - The owner says the model changed, but the specification on origin/main is identical to its 2e5a6d6 state and still dated 20 September 2026; the only main change since is the added L8/L6/in/7lm-layer-lists.md. Whether 'changed' refers to that file, to the unmerged beta (R1-R6), or to the 20 September restructure the exemplars never received is not answerable from this file.
+  - Is L8/L6/in/ part of the model the exemplars must mirror? It exists on main with a sheet but is absent from the drawn tree, from the integrity check's 71 positions, and from the specification text.
+  - Should the exemplars be matched to origin/main's wording or to the beta's? The beta's four in-range changes alter meaning (metadata conditional; exact tagged reference may reach receiving L0) but no path, name or count, so the physical mirror is the same either way.
+  - The .gitignore named in the root rule is not present in the scaffold at origin/main; whether an exemplar should carry one is left open by 'may hold'.
+  - The exact sheet heading form '# <path>/' is stated by integrity.yml, not by lines 1-520 of the specification, which say only that the sheet first identifies the directory and its path (line 283 gives the looser form '/data/location/object').

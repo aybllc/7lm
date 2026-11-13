@@ -1,0 +1,833 @@
+# read:review-docket
+
+Agent result, as returned. Workflow: Handle on the Auditonomous research and manuscript. Run `wf_9c2917a7-7f0`. Phase: Read.
+
+- **scope**: ROADMAP only (origin/claude/book-structure-roadmap-k8ap82, 9259c18), L8/L5/research/review/: RESEARCH_DOCKET.md, AUTHOR_ASSERTIONS.md, SOURCE_REQUESTS.md, CENSUS_SOURCES_DOSSIER.md, NASA_PAPER_DEFECT_LEDGER.md, WALK_ACROSS_repo-instrument-standards_2026-08-05.md, AUTONOMOUS_vs_AUDITONOMOUS_CYCLES.md, TICTAC_PROPULSION_ADJUDICATION.md. Left scope only to follow specific cross-references: the review sheet 0.md, EXTERNAL_AUDIT_2026-08-04.md (sections 2.1, 3.1, 3.2, 4.1, 6), STANDARDS_REGISTER.md, staging-records/ieee/FINDINGS_2026-08-04.md, SESSION_2026-08-05_VERIFICATION_LOG.md, the probes directory, AUDITONOMOUS_DEFINITION.md lines 52 and 257, Blocks 43-45, the book roadmap's feed lines, HISTORY HUB_LEDGER.md at 3c25633, and four locators in aybllc/autonomous at 6568e3c. All reads were from git objects. No script was run (the task did not authorise it); arithmetic marked "by hand" is my own recomputation.
+- **summary**: All eight documents exist only on the ROADMAP branch and in pre-prune HISTORY. Each is byte-identical to its August blob, so none has changed since 2026-08-04 to 08-08, and none is on MAIN or BETA.
+
+  The research docket (2026-08-02, one commit) holds section 0, section 0a (two propositions) and 45 lettered entries. Five (H1-H5) are closed, three are marked HIGH PRIORITY (B2, D3, E1), and eleven wait on the owner. The rest wait on sources or on arithmetic that was derived and never run (A1-A3). I found no later record closing any entry; the external audit of 2026-08-04 refutes part of D3.
+
+  The author assertions (A-001 to A-009c) are the owner's positions. Their attached algebra reproduces by hand where I checked it, nothing external tests them, and two tables have counting problems.
+
+  The source-request list (SR-01 to SR-24) records three closures. At least four more requests have since been met or part-met elsewhere without the list being amended.
+
+  The census dossier is a plan only: zero entries verified, its stated cause (an egress block) disproved the same day, and one citation carrying an unregistered DOI.
+
+  The NASA-paper ledger records seven substantive defects in the owner's N/U algebra paper, chiefly that the product rule omits a term and does not enclose, plus one blocked attribution. The paper is not held in this repository.
+
+  The walk-across compares both repositories with a "definitional instrument" that neither repository holds.
+
+  The cycles document's two external verdicts stand, with two overstatements recorded against them. The propulsion adjudication's arithmetic was independently re-derived; its named physics results are unchecked.
+
+  The owner's ruling "scholarly only" survives only in HISTORY and is not carried into the ROADMAP's open decision D1.
+
+  First steps: rule D1 against that ruling; reconcile the source requests with what is now held; run the unrun arithmetic; fix the ISO 15489 gloss.
+- **items**
+  - item 1
+    - **id**: DOCKET-FILE
+    - **title**: Research docket: the file as a whole
+    - **path**: L8/L5/research/review/RESEARCH_DOCKET.md
+    - **where**: ROADMAP and HISTORY (intake/research/RESEARCH_DOCKET.md, identical blob 3014e16); absent from MAIN and BETA
+    - **what_it_is**: A list opened 2026-08-02 of open questions, unverified claims and outstanding checks: section 0, section 0a (P1, P2), and 45 lettered entries A1-A3, B1-B6, C1-C8, D1-D5, E1-E5, F1-F7, G1-G6, H1-H5. Entries marked [ERIC] are the owner's decisions.
+    - **own_label**: "Nothing here is adopted or resolved." The review sheet adds: "each carries the status its own header states, and none is adjudicated" (ROADMAP:L8/L5/research/review/0.md:45).
+    - **evidence_state**: UNRESOLVED
+    - **checked_how**: Confirmed by me: blob hash equal on ROADMAP and at 1d83788; git log at 1d83788 shows one commit (314ceba, 2026-08-04), so no entry has been edited since. Searched ROADMAP for other mentions of RESEARCH_DOCKET: only the sheet, the restore record and one finding (OVERRIDE_NECESSITY_2026-08-04.md:14) cite it. No closure record found.
+    - **key_claims**
+      - Three entries carry the words HIGH PRIORITY: B2 (line 81), D3 (line 129), E1 (line 139).
+      - Eleven entries carry [ERIC]: P1, A1, A3, C2, D1, F1, F2, F4, F5, G1, H3.
+      - Five entries are closed: H1-H5.
+    - **open_items**
+      - Every entry outside H is open as written; the file has not been reconciled with the external audit of 2026-08-04 or with later acquisitions.
+    - **depends_on**
+      - L8/L5/research/lanes/RECORD_ONTOLOGY_OPEN_QUESTIONS.md
+      - L8/L5/research/lanes/THEME_LEDGER.md
+      - L8/L5/research/review/SOURCE_REQUESTS.md
+    - **quote**: [source text withheld from the public copy].
+    - **locator**: ROADMAP:L8/L5/research/review/RESEARCH_DOCKET.md:4
+  - item 2
+    - **id**: DOCKET-0
+    - **title**: Docket section 0: the two-tier constraint split (regulative vs constitutive)
+    - **path**: L8/L5/research/review/RESEARCH_DOCKET.md
+    - **where**: ROADMAP, HISTORY
+    - **what_it_is**: A candidate definitional core drawn from two owner statements: policy constraints can be broken (and the breach is recorded); concealment cannot be. It asks whether the distinction has an established name (Searle is the lead) [source text withheld from the public copy] split. No priority stated; waits on research, not on the owner.
+    - **own_label**: "[source text withheld from the public copy].**"; Searle lead "NOT-CHECKED"
+    - **evidence_state**: ASSERTED
+    - **checked_how**: No check recorded. Confirmed by me: 'Searle' occurs nowhere else on ROADMAP (git grep -i), so the named external check was never run. The finding OVERRIDE_NECESSITY_2026-08-04.md:14 repeats the same label.
+    - **key_claims**
+      - The pre-action check is a declaration point, not a gate: "It never says no." (line 28)
+      - The legal-admissibility problem of B6 "dissolves" (line 29).
+      - The record must bind three things: [source text withheld from the public copy], the result (line 30).
+    - **open_items**
+      - Searle's constitutive/regulative rules: not checked.
+      - Whether any system-design source makes the two-tier split: not checked.
+    - **depends_on**
+      - DOCKET-B4-B6 (revises B5, dissolves B6)
+      - DOCKET-B1-B3 (makes B1 load-bearing)
+    - **quote**: [source text withheld from the public copy].
+    - **locator**: ROADMAP:L8/L5/research/review/RESEARCH_DOCKET.md:8-34
+  - item 3
+    - **id**: DOCKET-0a
+    - **title**: Docket section 0a: propositions P1 (symmetry of physicality) and P2 (outside uncertainty discarded)
+    - **path**: L8/L5/research/review/RESEARCH_DOCKET.md
+    - **where**: ROADMAP, HISTORY
+    - **what_it_is**: Two owner propositions opened for test. P1 needs sharpening before it is testable and waits on the owner ([ERIC]: what the symmetry ranges over). P2 is set against the GUM (JCGM 100:2008), which standardises Type B evaluation from outside sources; the docket says a lane was launched. No priority word on either.
+    - **own_label**: P1: "NOT-CHECKED"; P2: "Status: UNVERIFIED, lane launched."
+    - **evidence_state**: P1 UNRESOLVED; P2 CONTRADICTED (by the docket's own reading of the GUM; the check was not completed)
+    - **checked_how**: No result recorded. Confirmed by me: the string 'Type B' occurs in no other file on ROADMAP, and L8/L5/research/lanes/ holds only RECORD_ONTOLOGY_OPEN_QUESTIONS.md and THEME_LEDGER.md, so no P2 lane report exists in this tree.
+    - **key_claims**
+      - P2 "appears to CONTRADICT the international measurement standard" (line 49).
+      - Failure mode named: discarding external uncertainty without an internal replacement gives silent overconfidence (line 48).
+    - **open_items**
+      - P1: owner to say whether the symmetry ranges over state, record, or coupling to the world.
+      - P2: defect or deliberate departure; GUM comparison not completed.
+      - Interaction of P2 with the self-composition defect (A4 is referred to at line 50 but no entry A4 exists in section A).
+    - **depends_on**
+      - DOCKET-A
+    - **quote**: [source text withheld from the public copy]
+    - **locator**: ROADMAP:L8/L5/research/review/RESEARCH_DOCKET.md:38-50
+  - item 4
+    - **id**: DOCKET-A
+    - **title**: Docket A1-A3: the arithmetic (does u = infinity survive composition; formula inconsistency)
+    - **path**: L8/L5/research/review/RESEARCH_DOCKET.md
+    - **where**: ROADMAP, HISTORY
+    - **what_it_is**: A1 asks whether a collapsed value (u = infinity) is silently absorbed by the compose rule, erasing the record of collapse; waits on a run and on the owner for (iii). A2 asks for [source text withheld from the public copy] records two documents giving different u_out formulas, one of which reduces to 1 for all inputs; waits on the owner to say which is canonical. No priority word.
+    - **own_label**: A1: "[source text withheld from the public copy]." A3: "INTERNALLY DERIVED, unrun."
+    - **evidence_state**: A1, A2 UNRESOLVED (unrun); A3 CONTRADICTED (two documents disagree)
+    - **checked_how**: Confirmed by me by hand: with u_out^2 = u1^2*u2^2/(u1^2+u2^2), u1 to infinity gives u_out to u2, so the algebra in A1 is right; and w1^2*u1^2 = w1 when w1 = 1/u1^2, so A3's reduction to 1 is right. Confirmed the A3 inconsistency is still carried at ROADMAP:L8/L0/semantics/definitions/AUDITONOMOUS_DEFINITION.md:257. No probe for A1/A2 exists in L8/L4/work/computation/probes/ (eight scripts listed; none for compose).
+    - **key_claims**
+      - "[source text withheld from the public copy]" (line 58).
+      - "[source text withheld from the public copy]." (line 64)
+    - **open_items**
+      - Run A1; build the A2 table for add, multiply, flip and compose variants.
+      - Owner: is absorption right [source text withheld from the public copy]?
+      - Owner: which compose formula is canonical.
+    - **depends_on**
+      - DOCKET-F (F5 is called the same question as A1)
+    - **quote**: [source text withheld from the public copy].
+    - **locator**: ROADMAP:L8/L5/research/review/RESEARCH_DOCKET.md:56-68
+  - item 5
+    - **id**: DOCKET-B1-B3
+    - **title**: Docket B1-B3: fast path vs verified path (the novelty position)
+    - **path**: L8/L5/research/review/RESEARCH_DOCKET.md
+    - **where**: ROADMAP, HISTORY
+    - **what_it_is**: B1: [source text withheld from the public copy]; called the strongest available novelty position; needs one more sweep. B2 (HIGH PRIORITY): verified computation under hard deadlines is named and never measured; waits on one paper (Johnson, Bak, Caccamo and Sha, ACM TECS, DOI 10.1145/2723871) through institutional access. B3: the cost asymmetry is proved only for priority-queue checking; waits on the version of record.
+    - **own_label**: B1: "NEGATIVE FINDING, searched." B3: "PARTIALLY VERIFIED — author manuscript"
+    - **evidence_state**: B1 UNRESOLVED (absence-of-precedent, one sweep owed); B2 UNRESOLVED (source not obtained); B3 EXTERNALLY CHECKED against an author manuscript only, scoped to priority queues
+    - **checked_how**: The docket records counts (94-page survey: word family once; 170 Reliable Computing PDFs: zero hits) and a section-level quote for B3 (Computer Science Review 5(2), section 12.2). No captured bytes or file locators are given, and I did not re-verify them. SOURCE_REQUESTS SR-05 still lists the B2 paper as unobtained (ACM DL 403).
+    - **key_claims**
+      - "[source text withheld from the public copy]." (line 76)
+      - "[source text withheld from the public copy]" (line 84, quoted from McConnell et al.)
+    - **open_items**
+      - One more sweep before any publication claim (B1).
+      - Obtain Johnson et al. (B2, HIGH PRIORITY).
+      - Typeset version of McConnell et al.; does the separation generalise beyond priority queues (B3).
+    - **depends_on**
+      - SR-TIER2 (SR-05)
+      - DOCKET-0
+    - **quote**: [source text withheld from the public copy].
+    - **locator**: ROADMAP:L8/L5/research/review/RESEARCH_DOCKET.md:74-86
+  - item 6
+    - **id**: DOCKET-B4-B6
+    - **title**: Docket B4-B6: Markov property, reference monitor as prior art, legal-admissibility gap
+    - **path**: L8/L5/research/review/RESEARCH_DOCKET.md
+    - **where**: ROADMAP, HISTORY
+    - **what_it_is**: B4: no axiomatic definition of the Markov property obtained from an approved source. B5: a lane was testing whether the pre-action gate restates Anderson's reference monitor (1972) and Saltzer and Schroeder's complete mediation (1975). B6: a system cannot evaluate its own legality deterministically; is there literature on machine-evaluable legal admissibility. None waits on the owner; no priority word.
+    - **own_label**: B4: "NOT-CHECKED"; B5: "Lane running at docket open."; B6: "NOT-CHECKED"
+    - **evidence_state**: UNRESOLVED
+    - **checked_how**: No result recorded in the docket. Section 0 of the same file says B5's comparison is "a contrast, not a precedent" and that B6 "dissolves" (lines 28-29), but entries B5 and B6 were not amended. AUTHOR_ASSERTIONS A-002(b) records the companion repository's argument that the spec maps onto the three reference-monitor properties; I found no B5 lane report in L8/L5/research/lanes/.
+    - **key_claims**
+      - B5 question: does anyone join [source text withheld from the public copy]" (line 93).
+    - **open_items**
+      - B4: [source text withheld from the public copy].
+      - B5: lane outcome not recorded.
+      - B6: literature not searched.
+    - **depends_on**
+      - DOCKET-0
+      - AA-002
+    - **quote**: Lane running at docket open.
+    - **locator**: ROADMAP:L8/L5/research/review/RESEARCH_DOCKET.md:88-96
+  - item 7
+    - **id**: DOCKET-C
+    - **title**: Docket C1-C8: the record-ontology questions
+    - **path**: L8/L5/research/review/RESEARCH_DOCKET.md
+    - **where**: ROADMAP, HISTORY; the full questions are in L8/L5/research/lanes/RECORD_ONTOLOGY_OPEN_QUESTIONS.md, which is also on MAIN
+    - **what_it_is**: Eight questions about what the record is. C1 what the record is of; C2 observer vs observed (owner's ruling that both bear epistemic state is called a genuine extension; waits on the owner); C3 can recording be autonomous; C4 [source text withheld from the public copy] (partly answered: NIST SP 800-53 AU-5(4), fail-stop); C5 silence is ambiguous (answered: FLP 1985, Chandra and Toueg 1996, RFC 3706; one gap left); C6 replay direction; C7 audit as backward inference; C8 [source text withheld from the public copy]"). No priority word.
+    - **own_label**: C2: "NEGATIVE FINDING"; C3, C6, C7, C8: "NOT-CHECKED"; C4: "Partly answered since"; C5: "Answered, and it is foundational"
+    - **evidence_state**: C4, C5 EXTERNALLY CHECKED as recorded (named sources and quotes, document-level locators only); C1, C2, C3, C6, C7, C8 UNRESOLVED
+    - **checked_how**: The docket quotes its sources but gives no page or capture locators; I did not re-verify the quotes. Confirmed by me: the docket maps only Q1, Q2, Q6, Q6b, Q6c, Q7, Q8, Q9; the lane file also has Q3, Q4, Q5 and Q6a (headings at lines 76, 246, 127, 165), which have no docket entry. The review sheet lists Q1-Q9 as the owner's open calls (0.md:55).
+    - **key_claims**
+      - "[source text withheld from the public copy]*." (line 105)
+      - "[source text withheld from the public copy]" (line 116)
+      - [source text withheld from the public copy] (line 112).
+    - **open_items**
+      - C2: owner's call on promoting the observed from environment to agent.
+      - C3, C6, C7, C8: not researched.
+      - C5: no approved source requires in-band proof of liveness.
+    - **depends_on**
+      - L8/L5/research/lanes/RECORD_ONTOLOGY_OPEN_QUESTIONS.md
+    - **quote**: [source text withheld from the public copy].
+    - **locator**: ROADMAP:L8/L5/research/review/RESEARCH_DOCKET.md:100-118
+  - item 8
+    - **id**: DOCKET-D
+    - **title**: Docket D1-D5: the triad erase / conceal / falsify
+    - **path**: L8/L5/research/review/RESEARCH_DOCKET.md
+    - **where**: ROADMAP, HISTORY
+    - **what_it_is**: D1: which reading of the triad; open, four unranked readings in THEME_LEDGER T3; waits on the owner. D2: [source text withheld from the public copy]. D3 (HIGH PRIORITY): ISO 15489-1:2001 cl. 7.2.2 is offered as the one instrument holding all three; does the 2016 edition keep the concealment language. D4: citator check on Bronston and Chiarella not run. D5: Tiersma (1990) not obtained.
+    - **own_label**: D1: "OPEN"; D3: "UNVERIFIED — needs an approved surface."; D4: "Citator check NOT RUN"; D5: "NOT-CHECKED"
+    - **evidence_state**: D3 CONTRADICTED on the 'holds all three' claim and UNRESOLVED on the 2016 edition; D1, D4, D5 UNRESOLVED; D2 ASSERTED (literature summary without locators)
+    - **checked_how**: Recorded check: EXTERNAL_AUDIT_2026-08-04.md section 4.1 ([source text withheld from the public copy] primary chains and found [source text withheld from the public copy] the clause; it says [source text withheld from the public copy]" (ROADMAP:L8/L5/research/review/EXTERNAL_AUDIT_2026-08-04.md:183-188). SOURCE_REQUESTS SR-03 repeats this. STANDARDS_REGISTER.md:108 lists the 2016 edition as NOT OBTAINED. The docket entry was not amended.
+    - **key_claims**
+      - "[source text withheld from the public copy]" (line 126)
+      - [source text withheld from the public copy]" (line 128)
+    - **open_items**
+      - Owner: D1.
+      - Obtain ISO 15489-1:2016 cl. 5.2.2.1; fix the 2001 gloss regardless (SR-03).
+      - Shepard's / KeyCite run (SR-07).
+      - Tiersma 63 S. Cal. L. Rev. 373 (SR-06).
+    - **depends_on**
+      - SR-TIER1 (SR-03)
+      - SR-TIER2 (SR-06, SR-07)
+      - L8/L5/research/lanes/THEME_LEDGER.md
+    - **quote**: [source text withheld from the public copy].
+    - **locator**: ROADMAP:L8/L5/research/review/RESEARCH_DOCKET.md:122-133
+  - item 9
+    - **id**: DOCKET-E
+    - **title**: Docket E1-E5: corpus claims needing verification before publication
+    - **path**: L8/L5/research/review/RESEARCH_DOCKET.md
+    - **where**: ROADMAP, HISTORY
+    - **what_it_is**: E1 (HIGH PRIORITY): Block 26 states about [source text withheld from the public copy]; its provenance line names no verifier, date or method. E2: Block 39 (SpudCell) is labelled 'source verified' and also disclosed as a rejected preprint. E3: a list of external claims the corpus itself flags as unverified. [source text withheld from the public copy]. E5: Appendix D (Denial Lexicon) not compiled. None is marked [ERIC].
+    - **own_label**: E2: "PREPRINT — NOT PEER REVIEWED"; E4: "INTERNAL ONLY / NOT INDEPENDENTLY VERIFIED"
+    - **evidence_state**: E1, E3, E4 UNRESOLVED; E2 CONTRADICTED (two labels on one block, never reconciled); E5 EMPTY (not compiled)
+    - **checked_how**: No check recorded in the docket. One E3 item has since been tested: EXTERNAL_AUDIT_2026-08-04.md section 1.2 is headed "[source text withheld from the public copy]**" (line 72; I read the heading only). I did not open Blocks 26, 39 or 45 to re-check E1, E2, E4 (outside this scope).
+    - **key_claims**
+      - "[source text withheld from the public copy]." (line 139)
+      - E3 list: NASA CP-2255, AARO workshop Aug 2025, FY2024 and FY2025 figures, SEXTANT/NICER, [source text withheld from the public copy], RepRap 2005 (line 143).
+    - **open_items**
+      - Anchor or remove the Block 26 facts.
+      - Reconcile the two labels on Block 39.
+      - Verify or drop each E3 claim.
+      - Compile Appendix D from primary sources.
+    - **depends_on**
+      - L8/L4/work/writing/manuscript/ (Blocks 25-27, 39, 45)
+    - **quote**: [source text withheld from the public copy]
+    - **locator**: ROADMAP:L8/L5/research/review/RESEARCH_DOCKET.md:137-147
+  - item 10
+    - **id**: DOCKET-F
+    - **title**: Docket F1-F7: internal inconsistencies in the corpus (owner decisions)
+    - **path**: L8/L5/research/review/RESEARCH_DOCKET.md
+    - **where**: ROADMAP, HISTORY
+    - **what_it_is**: F1: the fourth derivation is the author's own work filed as independent arrival. F2: the evidence ranking lived in cut Block 36 and two surviving blocks still cite it. F3: the ruling Reactive to Responsive never reached Blocks 43 and 44. F4: Block 51 attributes to Block 50 a reading Block 50 denies. F5: 'record-and-flag, never reject' (Block 46) against non-formation as correct behaviour (Block 50). F6: Chapter 8 [source text withheld from the public copy] incomplete and two different top priorities stand. F1, F2, F4, F5 wait on the owner.
+    - **own_label**: none beyond "[ERIC]" on F1, F2, F4, F5 and "Unreconciled" on F5
+    - **evidence_state**: F1, F4, F5, F7 CONTRADICTED (two documents disagree); F2, F3 UNRESOLVED; F6 EMPTY
+    - **checked_how**: Confirmed by me for F3: on ROADMAP, Block_43_OMMP_UHA_Thesis.md has 1 whole-word hit for 'Reactive' and 0 for 'Responsive'; Block_44_Ontology_Free_Classification.md has 3 and 0; the ruling the docket quotes is at L8/L4/work/writing/manuscript/Auditonomous_Theory_Master_Archive.md:564. I did not re-check F1, F2, F4, F5, F7 against the blocks (outside scope). The book roadmap gives the orphaned evidence ranking (F2) a home in its method chapter as a plan only (BOOK_STRUCTURE_AND_ROADMAP_2026-09-13.md:462).
+    - **key_claims**
+      - "[source text withheld from the public copy]." (line 153)
+      - "[source text withheld from the public copy]." (line 158)
+      - F5 "[source text withheld from the public copy]" (line 162).
+    - **open_items**
+      - Owner rulings on F1, F2, F4, F5.
+      - Propagate Responsive into Blocks 43-44.
+      - Draft Chapter 8 material or drop it.
+      - One complete defect register with one top priority.
+    - **depends_on**
+      - DOCKET-A
+      - L8/L4/work/writing/manuscript/ (Blocks 36, 43-46, 49-52)
+    - **quote**: [source text withheld from the public copy].
+    - **locator**: ROADMAP:L8/L5/research/review/RESEARCH_DOCKET.md:151-166
+  - item 11
+    - **id**: DOCKET-G
+    - **title**: Docket G1-G6: housekeeping (sources that changed status; method note)
+    - **path**: L8/L5/research/review/RESEARCH_DOCKET.md
+    - **where**: ROADMAP, HISTORY
+    - **what_it_is**: G1: the journal Reliable Computing is archival since 2018 (owner may want to update CLAUDE.md). [source text withheld from the public copy]; cite 1788.1-2017. G3: a widely circulated Kalman link is dead. G4: 'inclusion isotonicity' does not appear in Rump. G5: list of blocked publisher surfaces. G6: the fetch-layer summarizer fabricated quotes twice; every quote must be byte-checked with grep -F.
+    - **own_label**: none (stated as session observations); G1 carries "[ERIC]"
+    - **evidence_state**: ASSERTED (session observations with quotes but no captured-source locators)
+    - **checked_how**: No locator to retrieved bytes is recorded for any G entry and I could not re-check them (no network). Cross-document note: the NASA_PAPER_DEFECT_LEDGER rests D-001 to D-007 on IEEE 1788-2015, the standard G2 says is no longer active; the ledger does not mention the status change.
+    - **key_claims**
+      - "[source text withheld from the public copy]." (line 174)
+      - "[source text withheld from the public copy]." (line 182)
+    - **open_items**
+      - Owner: update CLAUDE.md for G1.
+      - Moore/Kearfott/Cloud or Neumaier for the isotonicity term (G4): neither obtainable.
+    - **depends_on**
+      - NASA-DEFECTS
+    - **quote**: [source text withheld from the public copy]
+    - **locator**: ROADMAP:L8/L5/research/review/RESEARCH_DOCKET.md:170-182
+  - item 12
+    - **id**: DOCKET-H
+    - **title**: Docket H1-H5: closed items
+    - **path**: L8/L5/research/review/RESEARCH_DOCKET.md
+    - **where**: ROADMAP, HISTORY
+    - **what_it_is**: [source text withheld from the public copy] (owner's ruling). [source text withheld from the public copy]; AUDITONOMOUS_DEFINITION.md:52 overstates; edit pending with the owner. [source text withheld from the public copy] (owner's ruling). H5: enclosure is not a guarantee (owner's correction, borne out by Rump).
+    - **own_label**: section heading: "[source text withheld from the public copy] "DEAD FOR NOW"; H2 "UNSUPPORTED and contradicted"
+    - **evidence_state**: H1, H4 ASSERTED (owner rulings); H2, H5 EXTERNALLY CHECKED as recorded (named sources, quotes, no capture locators); H3 UNRESOLVED (the recommended edit has not been applied)
+    - **checked_how**: Confirmed by me for H3: ROADMAP:L8/L0/semantics/definitions/AUDITONOMOUS_DEFINITION.md:52 still reads "[source text withheld from the public copy]"; the review sheet lists the edit as pending (0.md:55). H3 also sits against the CYCLES document's verdict (ii), which the sheet records as "both unranked" (0.md:48).
+    - **key_claims**
+      - "The record forfeits *recurrence*, not *existence*." (line 188)
+      - "[source text withheld from the public copy]." (line 192)
+      - Rump: "[source text withheld from the public copy]" (line 196).
+    - **open_items**
+      - Owner: apply or refuse the edit to the definition's line 52.
+    - **depends_on**
+      - CYCLES
+      - L8/L5/research/review/PERPETUITY_QUESTION_ADJUDICATION.md
+    - **quote**: Recommended doctrine edit pending. [ERIC]
+    - **locator**: ROADMAP:L8/L5/research/review/RESEARCH_DOCKET.md:186-196
+  - item 13
+    - **id**: AA-FILE
+    - **title**: Author assertions: the file and its firewall
+    - **path**: L8/L5/research/review/AUTHOR_ASSERTIONS.md
+    - **where**: ROADMAP and HISTORY (intake/research/AUTHOR_ASSERTIONS.md, identical blob 7bcea93; 13 commits, last a0fdae0 2026-08-07); absent from MAIN and BETA
+    - **what_it_is**: The owner's own positions A-001 to A-009c, in his words and dated, kept apart from evidence. A firewall forbids using anything in the file as input to the companion repository's definition of 'autonomous' (ruling C-001 there).
+    - **own_label**: "[source text withheld from the public copy]."
+    - **evidence_state**: ASSERTED
+    - **checked_how**: Read in full (1,136 lines). Tests of individual assertions are reported per item below. The file names the companion repository as `abba-01/autonomous`; the walk-across of 2026-08-05 and the task name it aybllc/autonomous.
+    - **key_claims**
+      - "[source text withheld from the public copy]`." (lines 9-10)
+    - **open_items**
+      - Every assertion is 'not adopted' or adopted only as the owner's ruling; none is externally verified.
+    - **depends_on**
+      - aybllc/autonomous governance ruling C-001
+    - **quote**: on [source text withheld from the public copy]
+    - **locator**: ROADMAP:L8/L5/research/review/AUTHOR_ASSERTIONS.md:1-16
+  - item 14
+    - **id**: AA-001-004
+    - **title**: A-001 (go by the least) and A-004 (binary by math, graded by physics)
+    - **path**: L8/L5/research/review/AUTHOR_ASSERTIONS.md
+    - **where**: ROADMAP, HISTORY
+    - **what_it_is**: A-001: [source text withheld from the public copy] across functions, against the companion repository's '(system, task) pair' result. A-004: auditonomy is binary (the record precedes the act or it does not), autonomy is graded; the file says this closes A-001 because conjunction over booleans equals minimum.
+    - **own_label**: A-001: "[source text withheld from the public copy]." then "SUPERSEDED IN PART BY A-004"; A-004: "AUTHOR RULING ... Adopted as a structural ruling"
+    - **evidence_state**: ASSERTED; one external test recorded elsewhere reports that the least-function rule is not in IEEE
+    - **checked_how**: Internal only: the all()/min() identity over booleans (lines 347-351) is trivially correct, confirmed by me. The file cites tools/ommp/ommp.py:579 as already returning a conjunction; I did not open that line. A test exists outside the file: L8/L4/work/computation/ieee-requirements-for-autonomouos.md:1039 states "[source text withheld from the public copy] file itself records a negative finding that no codified aggregation rule exists.
+    - **key_claims**
+      - "[source text withheld from the public copy]" (line 329)
+      - "[source text withheld from the public copy]" (line 380)
+      - Caveat: IMO's four degrees are non-hierarchical, so the graded half applies only to ordered scales (lines 385-388).
+    - **open_items**
+      - No codified source for the aggregation rule; the IEEE reading says it is absent there.
+    - **depends_on**
+      - aybllc/autonomous DEFINITION_OF_AUTONOMOUS_v2
+      - AUTONOMY_SCALE.md (not in the ROADMAP tree; the roadmap says the peer holds it)
+    - **quote**: [source text withheld from the public copy]
+    - **locator**: ROADMAP:L8/L5/research/review/AUTHOR_ASSERTIONS.md:20-64, 321-391
+  - item 15
+    - **id**: AA-002
+    - **title**: A-002: two findings read from the companion repository (pre-execution record unclaimed; the spec is a reference monitor)
+    - **path**: L8/L5/research/review/AUTHOR_ASSERTIONS.md
+    - **where**: ROADMAP, HISTORY
+    - **what_it_is**: Not an owner assertion: a note of two findings in the companion repository's gap analysis. (a) [source text withheld from the public copy]. (b) The twelve-step spec maps onto the three reference-monitor properties; what is new is mediating decisions and recording the deduction tree. Three criticisms of the step-spec (A3, A11, A12) are recorded and not adjudicated.
+    - **own_label**: "[source text withheld from the public copy]."
+    - **evidence_state**: INTERNALLY CHECKED for (a) as a quotation; ASSERTED as to substance (the source labels its own nominations NOT-CHECKED)
+    - **checked_how**: Confirmed by me: the negative finding quoted in (a) appears as F20 in aybllc/autonomous at 6568e3c, LEDGER.md:109 ("[source text withheld from the public copy]"). The file itself says the source "could retrieve no primary text". Whether the owner accepts the narrowing in (b) is flagged, not decided.
+    - **key_claims**
+      - "Convergence, not corroboration" (line 88)
+      - "[source text withheld from the public copy].'" (lines 100-101, quoted from the companion repository)
+    - **open_items**
+      - Owner: accept or refuse the narrowing to 'mediates decisions and records the deduction tree'.
+      - The three spec conflicts A3, A11, A12: not adjudicated.
+    - **depends_on**
+      - DOCKET-B4-B6 (B5)
+      - WALK-PART2 (X17)
+    - **quote**: [source text withheld from the public copy].
+    - **locator**: ROADMAP:L8/L5/research/review/AUTHOR_ASSERTIONS.md:68-113
+  - item 16
+    - **id**: AA-002b
+    - **title**: A-002b: the cycle 0 -> 1 -> 2 -> 0 -> 1 (commit before act; seal on its own tick)
+    - **path**: L8/L5/research/review/AUTHOR_ASSERTIONS.md
+    - **where**: ROADMAP, HISTORY
+    - **what_it_is**: The owner's proposal, with his own 'maybe', that the least number of commands [source text withheld from the public copy] is a three-step cycle: commit (decide, log), act, seal, and that sealing must occupy a tick by itself. The file derives that there is no rest-to-action edge and that 3 is the floor.
+    - **own_label**: "AUTHOR ASSERTION ... [source text withheld from the public copy]."
+    - **evidence_state**: ASSERTED (held with the owner's declared uncertainty); the minimality argument is INTERNALLY CHECKED only
+    - **checked_how**: Internal derivation in the file (lines 186-208); no external source sought. The file corrects its own earlier reading that merged this 'least' with A-001's and leaves the wrong paragraph visible (lines 216-229). Note that A-009 does build on this cycle, against the 'nothing downstream depends on it' line.
+    - **key_claims**
+      - "[source text withheld from the public copy]" (line 134)
+      - [source text withheld from the public copy], EB:233 (line 173).
+    - **open_items**
+      - Is 2 -> 0 unconditional when the action fails mid-flight.
+      - What arms 0 -> 1.
+      - Why state 2 is bracketed.
+      - Why 3 and not 2: owner's call.
+    - **depends_on**
+      - AA-009
+    - **quote**: [source text withheld from the public copy].
+    - **locator**: ROADMAP:L8/L5/research/review/AUTHOR_ASSERTIONS.md:117-244
+  - item 17
+    - **id**: AA-003
+    - **title**: [source text withheld from the public copy])
+    - **path**: L8/L5/research/review/AUTHOR_ASSERTIONS.md
+    - **where**: ROADMAP, HISTORY
+    - **what_it_is**: The owner's method ruling: external sources apply to 'audit', 'autonomous' and 'auditability'; no verbatim source exists or can exist for the coinage applied to domains, so its absence is not a gap. The file offers, without adopting, a three-part Tier-2 test: constituent fidelity, compositional coherence, non-redundancy.
+    - **own_label**: "AUTHOR ASSERTION (method ruling)"; "[source text withheld from the public copy] test "offered, not adopted"
+    - **evidence_state**: ASSERTED
+    - **checked_how**: Not testable as a factual claim; it is a rule about where to look. The file cites two rows of the companion repository's compounds finding as the same pattern, marked "UNVERIFIED here". I did not open those rows.
+    - **key_claims**
+      - "[source text withheld from the public copy]." (line 273)
+      - Agreement between the two repositories is expected only at Tier 1 (lines 280-283).
+    - **open_items**
+      - Owner: adopt or refuse the three-part Tier-2 test.
+    - **depends_on**
+      - aybllc/autonomous DEFINITION_OF_AUTONOMOUS_COMPOUNDS
+    - **quote**: [source text withheld from the public copy]
+    - **locator**: ROADMAP:L8/L5/research/review/AUTHOR_ASSERTIONS.md:248-317
+  - item 18
+    - **id**: AA-005-008
+    - **title**: A-005 to A-008: the EB carrier and its two rails (transducer; independence claimed, then withdrawn; swap-flip as a lossy ratchet; witness-loss)
+    - **path**: L8/L5/research/review/AUTHOR_ASSERTIONS.md
+    - **where**: ROADMAP, HISTORY
+    - **what_it_is**: A-005: the (e,b) pair is the primitive, non-boolean object that makes a binary verdict possible. [source text withheld from the public copy]. A-007: the owner corrects A-006 ("Or it can"): the swap-flip B(n,u) = (u,|n|) moves the value into the second rail, so 'uncorrelated' is withdrawn. A-008: the |n| is the repair of a recorded defect, [source text withheld from the public copy] secrecy property in another repository (eb-audit).
+    - **own_label**: A-005: "AUTHOR RULING"; A-006: "PARTLY WRONG — CORRECTED BY A-007"; A-007: "AUTHOR CORRECTION of A-006", independence "WITHDRAWN"; A-008: "SOURCED FROM AUTHOR-SUPPLIED MATERIAL ... INTERNAL ONLY"
+    - **evidence_state**: A-006 CONTRADICTED (by A-007, on the record); A-007 INTERNALLY CHECKED; A-005, A-008 ASSERTED
+    - **checked_how**: The file records a recomputation over (-3,2), (5,1), (-7.5,0) (lines 601-602). Confirmed by me by hand: B(B(n,u)) = (|n|,|u|) = (|n|,u) for u >= 0; B^3 = B; B^4 = B^2; F(F(n,u)) = (n,u). A-006 records a grep negative finding (one unrelated hit across EB, EMB, DEF), not re-run by me. No outside source [source text withheld from the public copy] four; the file says of this material "[source text withheld from the public copy]".
+    - **key_claims**
+      - "[source text withheld from the public copy]" (line 402)
+      - "[source text withheld from the public copy]" (line 567)
+      - A conformance test for rail independence "is constructible ... and none exists" (lines 543-545).
+    - **open_items**
+      - Which operator the gate may apply, and when (denial route by forced expansion): not analysed.
+      - When is engineered non-recoverability privacy rather than concealment: owner's call.
+      - The eb-audit file on 'auditability before secrecy' was not read by the session.
+    - **depends_on**
+      - NASA-DEFECTS (the Flip domain error is recorded in the same paper)
+      - L8/L4/work/writing/ EB draft 535f70d
+    - **quote**: [source text withheld from the public copy]
+    - **locator**: ROADMAP:L8/L5/research/review/AUTHOR_ASSERTIONS.md:395-756
+  - item 19
+    - **id**: AA-009
+    - **title**: A-009, A-009b, A-009c: energy logistics, the powered-rest invariant, and transport loss as propulsion
+    - **path**: L8/L5/research/review/AUTHOR_ASSERTIONS.md
+    - **where**: ROADMAP, HISTORY; three probes at L8/L4/work/computation/probes/ (energy_reserve_probe.py, energy_logistics_probe.py, emission_thrust_probe.py)
+    - **what_it_is**: [source text withheld from the public copy] flows; an auditon must rest with a whole next cycle already funded, or it can act and be unable to seal. A-009b: sending costs more than arrives, so relaying is never self-funding and its cost grows exponentially with depth. A-009c: the owner confirms the reading and proposes turning the transport loss into forward motion; the file computes radiation recoil (E/c) and finds usefulness depends on an energy unit the corpus never sizes.
+    - **own_label**: "AUTHOR ASSERTION"; rest invariant "[source text withheld from the public copy]"; A-009c "[source text withheld from the public copy]"; figures "illustrative ... must not be cited as such"
+    - **evidence_state**: ASSERTED (the owner's proposals); the arithmetic is INTERNALLY CHECKED with two table defects; A-009c usefulness UNRESOLVED
+    - **checked_how**: The file cites three probes. The probes sheet says "None was re-run in the restoring pass" (probes/0.md:8) and I did not run them. By hand I confirmed: relay figures 32.8 / 214.7 / 1407.4 (8 x 1.6^(d-1)); the push-grading table (13 + 4(n-j), stranded 24 / 34 / 41 per cent); 1/c = 3.34e-9 N/W; 300 MW per newton; the ratio 7,500 against an ion thruster at 4e4 W/N; 6.1x refusals. Two tables do not hold as labelled (see defects). The probe source shows a fourth outcome the A-009 table omits.
+    - **key_claims**
+      - "REST INVARIANT E_rest >= c1 + c2 + c0" (line 830)
+      - "[source text withheld from the public copy]" (lines 1001-1002)
+      - "`[source text withheld from the public copy]." (lines 1079-1080)
+    - **open_items**
+      - Real units and bounds for c1, c2, c0.
+      - Is a refusal itself a sealed event, and what pays for it.
+      - Does replication get the same treatment.
+      - Whether the books balance over a whole population: "nobody has done it" (line 927).
+      - The size of the energy unit decides the propulsion proposal.
+    - **depends_on**
+      - AA-002b
+      - RULING-SCHOLARLY (the propulsion proposal is not scholarly-sourced)
+    - **quote**: [source text withheld from the public copy]
+    - **locator**: ROADMAP:L8/L5/research/review/AUTHOR_ASSERTIONS.md:760-1136
+  - item 20
+    - **id**: SR-CLOSED
+    - **title**: Source requests: what was closed on 2026-08-04
+    - **path**: L8/L5/research/review/SOURCE_REQUESTS.md
+    - **where**: ROADMAP and HISTORY (intake/research/SOURCE_REQUESTS.md, identical blob e9de488; last commit 54bf802, 2026-08-05); absent from MAIN and BETA
+    - **what_it_is**: A procurement list: each row names a document, the internal claim that depends on it, and what closes it. Three items are recorded closed by the owner's out-of-band supply: [source text withheld from the public copy] (terms T-08, T-10, T-11); and IEEE 1872.2-2021, which turned out not to contain the degrees-of-autonomy taxonomy the corpus expected.
+    - **own_label**: "It adopts nothing and verifies nothing."; closed rows: "OBTAINED, read in full", "VERIFIED EXACT", "[source text withheld from the public copy]"
+    - **evidence_state**: EXTERNALLY CHECKED as recorded (22989 clauses); CONTRADICTED (the expectation placed on IEEE 1872.2-2021)
+    - **checked_how**: Recorded: EXTERNAL_AUDIT_2026-08-04.md:230-231 lists [source text withheld from the public copy] as exact and "[source text withheld from the public copy]". Custody caveat: HISTORY HUB_LEDGER.md (3c25633):36 says "ISO 22989 (third-party) stays out" and IEEE 1872.2 was restored to a private repository; SOURCE_REQUESTS rule 4 says one held copy [source text withheld from the public copy]. Confirmed by me: the ROADMAP tree holds only two PDFs, neither a standard.
+    - **key_claims**
+      - "[source text withheld from the public copy]" (lines 15-16)
+      - IEEE 1872.2-2021 "contains no degrees-of-autonomy taxonomy" (line 26).
+    - **open_items**
+      - Licence position of the held 22989 copy before any publication.
+    - **depends_on**
+      - L7/provenance/sources/staging-records/standards/SOURCE_LEDGER.md
+      - L7/provenance/sources/STANDARDS_REGISTER.md
+    - **quote**: [source text withheld from the public copy].
+    - **locator**: ROADMAP:L8/L5/research/review/SOURCE_REQUESTS.md:13-26
+  - item 21
+    - **id**: SR-TIER1
+    - **title**: Source requests Tier 1 (load-bearing): SR-01, SR-02, SR-03, SR-04, SR-21, SR-22, SR-23, SR-24
+    - **path**: L8/L5/research/review/SOURCE_REQUESTS.md
+    - **where**: ROADMAP, HISTORY
+    - **what_it_is**: SR-01 Beer, Fisk and Rogers 2014 (the real source of the levels-of-autonomy material; open access). SR-02 IEEE Std 1872-2015 (term T-02 is contradicted on what it defines). [source text withheld from the public copy] keep 'concealment'). SR-04 ISO 8373 edition and clause for T-01. SR-21 Kahan 1965 and SR-22 Neumaier 1974 (attribution of the compensated-summation step). SR-23 Shapiro et al. 2011 (CRDT counters). SR-24 Birgisson et al. 2014 (Macaroons, eb-receipt's 'closest cousin').
+    - **own_label**: each row states its own: SR-02 "[source text withheld from the public copy]"; SR-21 "[source text withheld from the public copy]"
+    - **evidence_state**: SR-01, SR-03, SR-21, SR-22, SR-23, SR-24 UNRESOLVED (not obtained); SR-02 UNRESOLVED (now held elsewhere, not read); SR-04 EXTERNALLY CHECKED elsewhere but not marked closed here
+    - **checked_how**: Confirmed by me against other ROADMAP records. SR-01: terms.json:205 "[source text withheld from the public copy]". SR-02: STANDARDS_REGISTER.md:310-315 (amendment A-004, 2026-08-14) says IEEE 1872-2015 is now HELD in aybllc/l6 and "[source text withheld from the public copy]". SR-03: STANDARDS_REGISTER.md:108 "NOT OBTAINED". SR-04: EXTERNAL_AUDIT_2026-08-04.md:151-154 finds T-01 [source text withheld from the public copy], which meets SR-04's own closing condition. SR-21 to SR-24: SESSION_2026-08-05_VERIFICATION_LOG.md:176-179 lists all four "open".
+    - **key_claims**
+      - SR-03 carries an adversarial finding: the 2001 clause lists five acts [source text withheld from the public copy]" (lines 61-63).
+      - "[source text withheld from the public copy]." (lines 68-69)
+      - SR-01: "[source text withheld from the public copy]." (line 41)
+    - **open_items**
+      - Fetch Beer et al. 2014 (open access).
+      - Read the held IEEE 1872-2015 clause 3 and settle T-02.
+      - Obtain ISO 15489-1:2016; correct the 2001 gloss.
+      - Mark SR-04 closed and cite ISO 8373:2021.
+      - Kahan, Neumaier, Shapiro, Birgisson: obtain and compare.
+    - **depends_on**
+      - DOCKET-D (D3)
+      - L8/L5/research/review/CONJECTURE_bit_exact_pruning.md
+      - L8/L5/research/review/EB_RECEIPT_RIGOR_SPEC_2026-08-05.md
+    - **quote**: [source text withheld from the public copy].
+    - **locator**: ROADMAP:L8/L5/research/review/SOURCE_REQUESTS.md:30-149
+  - item 22
+    - **id**: SR-TIER2
+    - **title**: Source requests Tier 2 (named and blocked): SR-05 to SR-14
+    - **path**: L8/L5/research/review/SOURCE_REQUESTS.md
+    - **where**: ROADMAP, HISTORY
+    - **what_it_is**: SR-05 Johnson et al., ACM TECS (docket's fast-path question). SR-06 Tiersma 1990. SR-07 citator run on Bronston and Chiarella. SR-08 Haerder and Reuter 1983 (a URL gave a slide deck, rejected). SR-09 SAE J3016 body text. SR-10 ISO/IEC 42001 clause content. SR-11 ACM / IEEE versions of record for ARIES, Chandy-Lamport, PeerReview, Schneier-Kelsey, Dijkstra. SR-12 IEEE 7010-2020 section 2.1 (term T-16 carries no quote). SR-13 EASA primary for T-09. SR-14 Halpern, Reasoning About Uncertainty (only chapters 1-3 held).
+    - **own_label**: SR-07 "NOT RUN"; SR-08 "FAILED CHECK"; SR-09 "PAYWALLED"; SR-10 "NOT-CHECKED"; SR-12 "UNVERIFIED — NO QUOTE CARRIED"
+    - **evidence_state**: UNRESOLVED; SR-12 and SR-10 part-met elsewhere without this list being amended
+    - **checked_how**: Confirmed by me: STANDARDS_REGISTER.md:315-316 says "[source text withheld from the public copy].)" (SR-12: held, quote not yet captured as far as this tree shows); STANDARDS_REGISTER.md:105 lists ISO/IEC 42001:2023 "OBTAINED" via ISO OBP, "inspected, carries no autonomy term" (SR-10, clause content for the cycles document still not recorded). No record found on ROADMAP that SR-05, 06, 07, 08, 09, 11, 13 or 14 was obtained.
+    - **key_claims**
+      - SR-06: "[source text withheld from the public copy]" (line 158).
+      - SR-11: USENIX 1998 currently substitutes for TISSEC 1999 (line 163).
+    - **open_items**
+      - All ten rows remain open as listed; SR-12 needs a read of the held copy; SR-10 needs a clause-level capture.
+    - **depends_on**
+      - DOCKET-B1-B3
+      - DOCKET-D
+      - CYCLES (SR-10)
+    - **quote**: [source text withheld from the public copy]**
+    - **locator**: ROADMAP:L8/L5/research/review/SOURCE_REQUESTS.md:153-166
+  - item 23
+    - **id**: SR-TIER3
+    - **title**: Source requests Tier 3 (opened by the external audit of 2026-08-04): SR-15 to SR-20
+    - **path**: L8/L5/research/review/SOURCE_REQUESTS.md
+    - **where**: ROADMAP, HISTORY
+    - **what_it_is**: SR-15 ISO/IEC/IEEE 29119-11 and 15289:2019 (designation and TR status). [source text withheld from the public copy] (both auditability definitions, T-12 and T-13). SR-17 Raup and Sepkoski 1982 full text ('[source text withheld from the public copy] abstract says four). SR-18 Schulte et al. 2010 ('consensus review' is contested). SR-19 Vasarhelyi and Halper 1991 plus Groomer and Murthy 1989 ('since 1991' is contestable; '[source text withheld from the public copy]) (and NIST must be dropped from the 'legally mandated' parenthetical).
+    - **own_label**: SR-15, SR-16: "material discrepancy"; SR-18: "[source text withheld from the public copy]"
+    - **evidence_state**: CONTRADICTED (each row records a claim in the corpus that the outside source does not carry); SR-16's IEEE 7014 half EXTERNALLY CHECKED and settled elsewhere
+    - **checked_how**: Confirmed by me: L7/provenance/sources/staging-records/ieee/FINDINGS_2026-08-04.md:18-46 is headed "[source text withheld from the public copy] quotes IEEE 7014-2024 cl. 3.1 as "[source text withheld from the public copy]", finding the corpus dropped the empathy scope. The 25052-1 half of SR-16 and SR-15, 17, 18, 20 show no later record. SR-19 and SR-20 bear directly on the cycles document's verdict (ii), which was not amended.
+    - **key_claims**
+      - "NIST must be dropped from that parenthetical" (line 181).
+      - [source text withheld from the public copy]" (line 180).
+      - IEEE 7014: [source text withheld from the public copy] and no requirement invokes it (FINDINGS_2026-08-04.md:50-53).
+    - **open_items**
+      - Re-record T-13 with EA/IS and its NOTE.
+      - Fix the 'Big Five' gloss whatever the full text says.
+      - Correct the cycles document's 'since 1991' and '(NIST, EU AI Act)'.
+    - **depends_on**
+      - CYCLES
+      - CENSUS
+      - L8/L5/research/review/EXTERNAL_AUDIT_2026-08-04.md
+    - **quote**: [source text withheld from the public copy].
+    - **locator**: ROADMAP:L8/L5/research/review/SOURCE_REQUESTS.md:170-181
+  - item 24
+    - **id**: SR-EGRESS-RULES
+    - **title**: Source requests: the withdrawn egress blocker and the standing rules
+    - **path**: L8/L5/research/review/SOURCE_REQUESTS.md
+    - **where**: ROADMAP, HISTORY
+    - **what_it_is**: A correction needing no source: the organisation-wide network block recorded in the census dossier and in AUTONOMOUS_TERMS.md did not reproduce on re-test (controls returned HTTP 200); the cause was host-level bot filtering. Four standing rules follow: verification does not travel; quote paywalled standards only from the standard; byte-check every string (the fetch layer fabricated quotes three times on record); licence before publication.
+    - **own_label**: "The standing egress blocker is withdrawn."
+    - **evidence_state**: INTERNALLY CHECKED (re-test recorded, with host list); it CONTRADICTS the census dossier's stated premise
+    - **checked_how**: Recorded twice: here (lines 187-196) and in EXTERNAL_AUDIT_2026-08-04.md:94-110 with a host table. I could not re-test (no network). AUTONOMOUS_TERMS.md, which this section cites, is not in the ROADMAP tree.
+    - **key_claims**
+      - "Retry before purchasing anything." (line 195)
+      - "[source text withheld from the public copy]**" (line 211).
+    - **open_items**
+      - Retry every row previously recorded as blocked.
+      - Licence clearance for standards held under single-user or third-party licences.
+    - **depends_on**
+      - CENSUS
+    - **quote**: [source text withheld from the public copy]
+    - **locator**: ROADMAP:L8/L5/research/review/SOURCE_REQUESTS.md:185-212
+  - item 25
+    - **id**: CENSUS
+    - **title**: Census sources dossier (Drake equation, deep time, the silence)
+    - **path**: L8/L5/research/review/CENSUS_SOURCES_DOSSIER.md
+    - **where**: ROADMAP and HISTORY (intake/research/CENSUS_SOURCES_DOSSIER.md, identical blob a1394c8; one commit, 2026-08-04); absent from MAIN and BETA
+    - **what_it_is**: Meant to supply the external anchors for the table of contents' Parts IV-V: the Drake equation and its factors, L as unconstrained, N as a range, the 13.8 Gyr age, life-onset delay, the 'Big Five' extinctions, Chicxulub, impact frequency, species lifespan, the Great Silence, postbiological intelligence, and three reasons silence is not absence. It exists only as a plan: candidate sources located, none read, with a re-fetch list.
+    - **own_label**: "[source text withheld from the public copy].**"; entries labelled NOT-CHECKED or FAILED CHECK; "[source text withheld from the public copy]."
+    - **evidence_state**: UNRESOLVED (a plan, not a dossier); its stated cause CONTRADICTED; one entry EXTERNALLY CHECKED elsewhere; one citation CONTRADICTED
+    - **checked_how**: Read lines 1-130 and 320-365 in full and the headings and labels of the rest (label counts by grep: NOT-CHECKED 16, FAILED CHECK 13). Recorded checks elsewhere: EXTERNAL_AUDIT_2026-08-04.md:94-110 finds the egress premise false ("FAILED CHECK on the dossier's premise"); :228-229 confirms Planck [source text withheld from the public copy] A&A 641 A6 Table 2; :137-147 finds the Westby and Conselice citation at dossier line 114 wrong in volume, page and DOI (the DOI is unregistered; the paper is ApJ 896:58). The dossier was not amended. The book roadmap uses it for Ch 20 "(zero byte-verified)", label SPECULATION to CONJECTURE, gate D1, D12 (BOOK_STRUCTURE_AND_ROADMAP_2026-09-13.md:292-296), and lists re-running its fetch plan as a step (:548).
+    - **key_claims**
+      - "[source text withheld from the public copy]**" (lines 14-15)
+      - Weakest number: the ~350 Myr recurrence for 10 km impactors, "CONTESTED / order-of-magnitude" (line 208).
+      - Content gap: no clean peer-reviewed authority located for 'a signal may be undecodable' (line 353).
+    - **open_items**
+      - Re-fetch every entry from publisher-of-record pages and capture verbatim strings (section H lists six priority targets).
+      - Correct the Westby and Conselice identifiers.
+      - Replace or attribute the ~350 Myr figure.
+      - Find a source for V.3(a) or drop it.
+      - Whether this material belongs in the book at all turns on D1 and the 'scholarly only' ruling.
+    - **depends_on**
+      - SR-EGRESS-RULES
+      - SR-TIER3 (SR-17, SR-18)
+      - RULING-SCHOLARLY
+      - L8/L5/research/review/CONTRIBUTION_INDEX_AND_TOC.md
+    - **quote**: [source text withheld from the public copy].**
+    - **locator**: ROADMAP:L8/L5/research/review/CENSUS_SOURCES_DOSSIER.md:3
+  - item 26
+    - **id**: NASA-LEDGER
+    - **title**: NASA paper defect ledger: which paper, its labels, what follows
+    - **path**: L8/L5/research/review/NASA_PAPER_DEFECT_LEDGER.md
+    - **where**: ROADMAP and HISTORY (intake/research/NASA_PAPER_DEFECT_LEDGER.md, identical blob 2c8bc15; 4 commits, last be439f3 2026-08-08); absent from MAIN and BETA. Probe at ROADMAP:L8/L4/work/computation/probes/nu_enclosure_probe.py
+    - **what_it_is**: A working checklist of what is wrong with the owner's own paper, [source text withheld from the public copy] as a PDF), so that a rewrite has a list. Eight entries D-001 to D-008, three 'not defects', three open questions for the owner.
+    - **own_label**: "Status of this file: OPEN / IN PROGRESS."; "Nothing here is durable manuscript truth."; D-001 to D-007 `INTERNALLY VERIFIED`, D-008 `BLOCKED`
+    - **evidence_state**: INTERNALLY CHECKED (exact-arithmetic reproduction); external comparison CLAIMED for D-001 to D-007 with links, but no captured-bytes check is recorded
+    - **checked_how**: The ledger defines its own label: `INTERNALLY VERIFIED` means "[source text withheld from the public copy]" (line 40). That label is not in the repository's registry. Confirmed by me: the paper itself is not in the ROADMAP tree (git grep 'Small Falcon' finds only the ledger, the probe, the sheet, AUTHOR_ASSERTIONS and the roadmap); the roadmap records it as held in a separate repository `aybllc/nua` with "[source text withheld from the public copy]:657). The ledger records three sourcing corrections of 2026-08-08 replacing preprint, aggregator and vendor links. D-008 says fetches were failing in that session (lines 440-441); the ledger does not say how the outside quotes in D-001 to D-007 were read.
+    - **key_claims**
+      - "Internal data never verifies internal data." (line 21)
+      - What follows: either adopt repair A (the three-term product, the standard ball-arithmetic form) and keep the coverage claim, or delete the claim (lines 176-177).
+      - The roadmap binds the ledger to Ch 15, 16 ("the λ = 0 regime").
+    - **open_items**
+      - Owner: is enclosure the intended contract (if yes, repair A is mandatory).
+      - Re-derive associativity and sub-distributivity under repair A.
+      - Report signed deviation throughout section 7.2 of the paper.
+      - Whether the published paper has been or will be corrected: not recorded here.
+    - **depends_on**
+      - NASA-DEFECTS
+      - DOCKET-G (G2: IEEE 1788-2015 inactive)
+      - L8/L5/research/review/LAMBDA_EXTERNAL_VERIFICATION_2026-08-04.md
+    - **quote**: [source text withheld from the public copy].
+    - **locator**: ROADMAP:L8/L5/research/review/NASA_PAPER_DEFECT_LEDGER.md:1-66
+  - item 27
+    - **id**: NASA-DEFECTS
+    - **title**: NASA paper defect ledger: entries D-001 to D-008
+    - **path**: L8/L5/research/review/NASA_PAPER_DEFECT_LEDGER.md
+    - **where**: ROADMAP, HISTORY
+    - **what_it_is**: The eight entries. D-001 (HIGH): the product rule (n1n2, |n1|u2 + |n2|u1) omits the u1u2 term, so the result is the right width centred wrong and does not contain the true product. D-002 (HIGH): the paper's section 9 claims coverage the algebra does not give. D-003 (HIGH): none of the paper's tests measures the boundary, which is why 70,000 cases missed it. D-004 (MEDIUM): section [source text withheld from the public copy]. D-005 (MEDIUM): sections 7.2.3 and 7.2.4 over-read their measurements; the error contracts, the dangerous direction. D-006 (MEDIUM, only under repair B): sgn(0) deletes the correction. D-007 (MEDIUM): the paper's invariant M is the standard interval magnitude and is not preserved by the product; testing it would have caught D-001. D-008 (UNKNOWN): the attribution of the product rule to Moore 1966 p.12 and all other page citations are unchecked.
+    - **own_label**: D-001 to D-007: `INTERNALLY VERIFIED` and `REPRODUCED`; D-008: `BLOCKED`; D-007 carries "CORRECTION OF RECORD" (it was first under-labelled)
+    - **evidence_state**: D-001 to D-007 INTERNALLY CHECKED (reproduced), with named outside sources; D-008 UNRESOLVED
+    - **checked_how**: Confirmed by me by hand: (2,1) x (7,2) under Definition 3.1 gives (14,11) = [3,25]; the true product of [1,3] and [5,9] is [5,27]; half-width 11 matches, midpoint 14 against 16 does not; M(x)M(y) = 3 x 9 = 27 against M of the printed product 25, difference 2 = u1u2; half-range over sigma for a uniform is sqrt(3) = 1.7321. The percentage tables (15.93, 75.65, 12.24, 97.13 per cent) come from nu_enclosure_probe.py, which I did not run. Outside sources named: Johansson, Arb, IEEE Trans. Computers 66(8) 2017; IEEE 1788-2015 via Revol and Zimmermann; Benet, Revol et al. 2024; JCGM 100:2008; GNU Octave interval package; Hargreaves.
+    - **key_claims**
+      - "[source text withheld from the public copy]**." (line 91)
+      - "[source text withheld from the public copy]" (lines 314-315)
+      - "[source text withheld from the public copy]." (line 422)
+      - Not defects: the non-involutive Flip, the |.| closure repair, and conservatism against dispersion measures (lines 451-461).
+    - **open_items**
+      - D-008: needs a physical or licensed copy of Moore 1966; also unverified: Moore pp. 9, 31-34, 75-76, 87; JCGM pp. 37, 68, 75; Ferson 2003; D'Agostini 2000.
+      - The paper's 'minimum 0.69' margin: ratio or difference, unstated (lines 271-274).
+    - **depends_on**
+      - NASA-LEDGER
+      - AA-005-008 (A-008 uses the same paper)
+      - DOCKET-H (H5: enclosure is not a guarantee)
+    - **quote**: [source text withheld from the public copy] ✗.
+    - **locator**: ROADMAP:L8/L5/research/review/NASA_PAPER_DEFECT_LEDGER.md:70-447
+  - item 28
+    - **id**: WALK-PART1
+    - **title**: Walk-across Part I: repositories vs definitional instrument vs standards (rows X1-X15, amendments A1-A8)
+    - **path**: L8/L5/research/review/WALK_ACROSS_repo-instrument-standards_2026-08-05.md
+    - **where**: ROADMAP and HISTORY (intake/claude/WALK_ACROSS_repo-instrument-standards_2026-08-05.md, identical blob 9625868; one commit, 2026-08-05); absent from MAIN and BETA
+    - **what_it_is**: A crosswalk dated 2026-08-05 comparing three things: positions in the two repositories (auditonomous at ddaa81f, autonomous at 6568e3c), a 'definitional instrument' v0.1 written in another project, and codified standards (ISO/IEC 22989, ISO 8373, IEEE 7001, EASA, NIST AU controls, ISO 19011, ISO 15489). Each row gets a verdict: ALIGNS, CONVERGES, CONTRADICTS, DIVERGES or NO COUNTERPART.
+    - **own_label**: no status line; section 4: "[source text withheld from the public copy]."; row X15 downgrades prior art to "PARTIALLY CHECKED — negative"
+    - **evidence_state**: INTERNALLY CHECKED (repository side, on a partial read); the instrument side cannot be checked because the instrument is not held
+    - **checked_how**: The walk states its own coverage: three files read in full, two in part, the rest inventoried or not read (lines 13-16). Confirmed by me at aybllc/autonomous 6568e3c: definitions/AUDITONOMY.md:47-49 and :61-62, definitions/AUTONOMOUS.md:70 and :258-262 read as the rows quote them (4 of 4 spot checks). Confirmed by me: no file named definitional-instrument-autonomy-auditonomy.md exists on ROADMAP or on autonomous origin/main; it is referenced only by this document.
+    - **key_claims**
+      - X6: overridability is a third axis; it "CONTRADICTS the instrument's axis set".
+      - X7: autonomy is predicated of (system, task) pairs; "repo wins".
+      - X8: the record must be sealed [source text withheld from the public copy] merely contemporaneous; "repo form is stronger".
+      - X10 and X12 DIVERGE and are recorded, not resolved (licensing condition vs characteristic; exceedances vs all unsupervised actions).
+      - X13: "[source text withheld from the public copy]".
+      - X15: prior-art search for the coinage, negative and method-limited.
+    - **open_items**
+      - Amendments A1-A8 are owed to an instrument v0.2 that this tree does not hold.
+      - [source text withheld from the public copy] (section 4).
+      - X12 design fork to be chosen per system.
+    - **depends_on**
+      - aybllc/autonomous at 6568e3c
+      - ROADMAP:L8/L0/semantics/definitions/AUDITONOMY.md (the file the rows cite now lives here)
+    - **quote**: "[source text withheld from the public copy].
+    - **locator**: ROADMAP:L8/L5/research/review/WALK_ACROSS_repo-instrument-standards_2026-08-05.md:1-89
+  - item 29
+    - **id**: WALK-F1
+    - **title**: Walk-across finding F-1: third-party standards published when the repositories went public
+    - **path**: L8/L5/research/review/WALK_ACROSS_repo-instrument-standards_2026-08-05.md
+    - **where**: ROADMAP, HISTORY
+    - **what_it_is**: A custody finding: on 2026-08-05 both repositories were publicly clonable while holding full texts of paywalled or licence-bound standards (31 IEEE PDFs, IEEE 1788 and 1788.1, flattened full texts in the companion repository), with no clearance record. A verification log records the repositories returning HTTP 404 to anonymous access minutes later.
+    - **own_label**: "F-1 · CRITICAL · CUSTODY"; log: "Status: EXTERNALLY CONFIRMED — ongoing exposure closed."
+    - **evidence_state**: INTERNALLY CHECKED (the holding); the closure is recorded as externally probed; the residual is UNRESOLVED
+    - **checked_how**: Confirmed by me: git ls-tree at ddaa81f shows 31 files under intake/sources/ieee/pdf/, matching the finding. Confirmed by me: the ROADMAP tree holds 2 PDFs and MAIN 1, none a standard, so the current trees are clean; ddaa81f is still reachable in the clone, so history retains the blobs, as the log says. HISTORY HUB_LEDGER.md (3c25633):44-45 records the owner's decision for the companion repository: "commercial pdfs, leave them deleted." No purge.
+    - **key_claims**
+      - "[source text withheld from the public copy]" (line 62)
+      - Part II row X23: the corpus itself records that the $0 [source text withheld from the public copy].
+    - **open_items**
+      - History rewrite or a fresh repository is required before either repository is made public again.
+      - "[source text withheld from the public copy]" (line 135).
+    - **depends_on**
+      - SR-CLOSED
+    - **quote**: [source text withheld from the public copy]
+    - **locator**: ROADMAP:L8/L5/research/review/WALK_ACROSS_repo-instrument-standards_2026-08-05.md:48-62
+  - item 30
+    - **id**: WALK-PART2
+    - **title**: Walk-across Part II: deep walk of the companion repository (correction to X4, rows X16-X23, amendments A9-A12 and A2', standing result)
+    - **path**: L8/L5/research/review/WALK_ACROSS_repo-instrument-standards_2026-08-05.md
+    - **where**: ROADMAP, HISTORY
+    - **what_it_is**: A second pass after reading the companion repository's ledger, conformance matrix, scope note and automation entry. It downgrades row X4 (the 22989 cl. 5.13 text was read from image-only pages and is not re-verifiable), adds eight rows and five amendments, and states what blocks manuscript-grade citation.
+    - **own_label**: X4: "PARTIALLY VERIFIED — NOT RE-VERIFIABLE"; X17: sealed-before-act [source text withheld from the public copy]"
+    - **evidence_state**: INTERNALLY CHECKED (cross-reading of the companion repository); the named blockers UNRESOLVED
+    - **checked_how**: Confirmed by me: LEDGER.md:109 at autonomous 6568e3c carries F20 as row X17 quotes it. Counted by me: rows X1-X15 plus X16-X23, one correction, amendments A1-A12 plus A2' = thirteen, matching the document's own tally (line 135). Of the three blockers named, one has moved: STANDARDS_REGISTER.md:310-315 records IEEE 1872-2015 as held in aybllc/l6 since 2026-08-14, unread.
+    - **key_claims**
+      - X16: '[source text withheld from the public copy] 8373 3.2.
+      - X18: recording is tied to autonomy categories in binding law ([source text withheld from the public copy]), each not read by the walk.
+      - X19: the attestation base case is "The program's live front"; [source text withheld from the public copy] itself".
+      - X21: [source text withheld from the public copy].
+      - Three blockers, "[source text withheld from the public copy], IEEE 1872-2015 body text, the F-1 remediation.
+    - **open_items**
+      - A licensed ISO/IEC 22989 that makes cl. 5.13 re-verifiable.
+      - Read IEEE 1872-2015 (now held elsewhere).
+      - The legal instruments in X18 are unread.
+      - The attestation base case (X19) is called the deepest open problem.
+    - **depends_on**
+      - WALK-PART1
+      - WALK-F1
+      - SR-TIER1 (SR-02)
+    - **quote**: [source text withheld from the public copy]
+    - **locator**: ROADMAP:L8/L5/research/review/WALK_ACROSS_repo-instrument-standards_2026-08-05.md:94-135
+  - item 31
+    - **id**: CYCLES
+    - **title**: Autonomous vs Auditonomous: cycles, convergences, divergences, and the post-hoc question
+    - **path**: L8/L5/research/review/AUTONOMOUS_vs_AUDITONOMOUS_CYCLES.md
+    - **where**: ROADMAP and HISTORY (intake/research/AUTONOMOUS_vs_AUDITONOMOUS_CYCLES.md, identical blob d1db75d; 2 commits, last 314ceba 2026-08-04); absent from MAIN and BETA
+    - **what_it_is**: A comparison dated 2026-08-02 of ordered sequences in three internal bodies of text (the Third Power Corpus, the Autonomous Theory master archive and scale, and the auditonomous definition and drafts): seven differences, six convergences, seven shared structures in different order. Section 6 answers the owner's question whether post-hoc audits are precluded by autonomous cycles, using external sources.
+    - **own_label**: internal sections: "INTERNAL ONLY"; verdict (i): "NO — VERIFIED (external)"; verdict (ii): "NO — VERIFIED (external)"; the claim that post-hoc audit is precluded: "FAILED CHECK"
+    - **evidence_state**: Section 6 EXTERNALLY CHECKED as recorded, with two overstatements CONTRADICTED by a later record; sections 1-5 INTERNALLY CHECKED quotation only; several internal contradictions recorded and left standing
+    - **checked_how**: The document says every internal quote was grep-verified that session and every external quote carries a verdict from re-check lanes (audit-theory 9 of 9 confirmed; runtime-verification 5 confirmed, 3 partial, 1 failed; AI-governance 8 confirmed, 1 partial; line 145). The external quotes carry no page or URL locators in this file. I did not re-verify them. Later record: SOURCE_REQUESTS SR-19 says 'since 1991' is contestable (Groomer and Murthy 1989) and the 1991 paper says 'less-after-the fact'; SR-20 says NIST must be dropped from 'legally mandated ... (NIST, EU AI Act)'. The file was not amended. The review sheet records verdict (ii) as standing against PERPETUITY_QUESTION_ADJUDICATION.md section 6.1, "both unranked" (0.md:48). The book roadmap feeds it to Ch 6 as "audit not necessarily post hoc — VERIFIED external".
+    - **key_claims**
+      - "[source text withheld from the public copy]." (line 110)
+      - "[source text withheld from the public copy]." (line 60)
+      - Contradictions reported, not harmonized: MA:314 vs MA:338 on the order of the two halves; the Caught/Naught homonym inversion; time-immune authority vs a schedule-bound auditor (line 153).
+      - "[source text withheld from the public copy]." (line 137)
+    - **open_items**
+      - Correct 'since 1991' and the NIST parenthetical in verdict (ii).
+      - AAA/ASOBAC 1973 classical audit definition: unverified.
+      - ISO/IEC 42001 clause content: not checked (SR-10).
+      - Whether verdict (ii) or the perpetuity adjudication's section 6.1 governs the definition's line 52: owner's call.
+    - **depends_on**
+      - SR-TIER3 (SR-19, SR-20)
+      - DOCKET-H (H3)
+      - RULING-SCHOLARLY
+      - L7/peering/private/egress/peer-2/object-1/The_Third_Power_Corpus_v3.md
+      - L8/L4/work/writing/manuscript/Auditonomous_Theory_Master_Archive.md
+    - **quote**: [source text withheld from the public copy])
+    - **locator**: ROADMAP:L8/L5/research/review/AUTONOMOUS_vs_AUDITONOMOUS_CYCLES.md:101-137
+  - item 32
+    - **id**: TICTAC
+    - **title**: The Tic Tac propulsion question: physics adjudication
+    - **path**: L8/L5/research/review/TICTAC_PROPULSION_ADJUDICATION.md
+    - **where**: ROADMAP and HISTORY (intake/research/TICTAC_PROPULSION_ADJUDICATION.md, identical blob dcd4751; 2 commits, last ce3d1fb 2026-08-04); absent from MAIN and BETA. Script at ROADMAP:L8/L4/work/computation/probes/tictac_calc.py
+    - **what_it_is**: A closed-form calculation dated 2026-08-04 answering the owner's question whether a fusiform body with all-round thrust and a vacuum behind it could reach the speeds claimed for the 2004 Nimitz object. It concludes: the 60 nmi transit is Mach 5.44, not exotic; the 0.78 s descent needs about 5,711 g and breaks every material and thermal bound; equal thrust in all directions sums to zero; a pressure differential supplies 0.128 per cent of the force needed; a passive infrared sensor without range cannot give speed; [source text withheld from the public copy] the footage.
+    - **own_label**: "[source text withheld from the public copy]."; kinematics "VERIFIED arithmetic"; [source text withheld from the public copy]."; "Nothing here adjudicates the Nimitz encounter."
+    - **evidence_state**: Kinematic arithmetic INTERNALLY CHECKED (twice, independently); the named physics results (Sutton-Graves, Allen-Eggers, Allen-Perkins, Whitham, wake-filling) ASSERTED and unchecked; the 0.78 s input UNRESOLVED as to provenance and not endorsed by official documents
+    - **checked_how**: Recorded: EXTERNAL_AUDIT_2026-08-04.md:240-251 re-derived the drop (8,519 m), mean speed (10,922 m/s), 5,711 g and Mach 5.44, and found two framing defects (an equals sign on a strict lower bound; Mach quoted without a reference altitude: 35.7 aloft vs 32.1 at sea level); :262-268 found neither the AARO report nor the ODNI assessment endorses the 0.78 s figure, and that the word 'Roosevelt' is in none of the three official documents. Confirmed by me by hand: 111,120 m / 60 s = 1,852 m/s; 8,519 m / 0.78 s = 10,922 m/s; peak 21,844 m/s over 0.39 s = 56,010 m/s^2; 101,325 Pa x 7.07 m^2 = 0.716 MN; 0.716 / 560.1 = 0.128 per cent; GoFast altitude 25,000 - 26,735 x sin 22 deg = 14,985 ft and parallax ratio 10.98 / 4.4 = 2.50. I did not run tictac_calc.py. The file itself says no external source was fetched (line 362).
+    - **key_claims**
+      - "[source text withheld from the public copy]." (lines 56-58)
+      - Theorem (section 7.1): an analyst who assumes the wrong range recovers the observer's own speed scaled by the range error.
+      - "[source text withheld from the public copy]" (lines 285-286)
+      - Assumptions: [source text withheld from the public copy] not reported values (line 365).
+    - **open_items**
+      - A retrieval lane for the named results "before any of this reaches publishable text" (line 364).
+      - The sonic-boom estimate is labelled WEAK: replace or drop.
+      - HUD values for GoFast not re-read from the video.
+      - The FLIR1 track-loss dispute is not resolved.
+      - Apply the audit's two framing corrections.
+      - Whether a UAP case analysis may enter the book: owner's call (see RULING-SCHOLARLY).
+    - **depends_on**
+      - L8/L5/research/review/EXTERNAL_AUDIT_2026-08-04.md section 6
+      - RULING-SCHOLARLY
+      - L8/L4/work/writing/manuscript/ (Blocks 43, 44, 46, 52)
+    - **quote**: [source text withheld from the public copy].
+    - **locator**: ROADMAP:L8/L5/research/review/TICTAC_PROPULSION_ADJUDICATION.md:1-376
+  - item 33
+    - **id**: RULING-SCHOLARLY
+    - **title**: The owner's ruling 'Book register: scholarly only' and its bearing on the cycles document and the propulsion adjudication
+    - **path**: HUB_LEDGER.md
+    - **where**: HISTORY only (HUB_LEDGER.md at 3c25633, 2026-08-14, lines 49-50; same lines at 1d83788). Not in any current tree: no HUB_LEDGER.md on ROADMAP or MAIN
+    - **what_it_is**: Owner decision 5 of 2026-08-14: the book is scholarly only, with no conspiracy or contact material; any such material comes after. It postdates both documents (2026-08-02 and 2026-08-04).
+    - **own_label**: "Owner decisions 2026-08-14 (recorded)"
+    - **evidence_state**: ASSERTED (owner ruling); its application UNRESOLVED, since no current document carries it
+    - **checked_how**: Confirmed by me: lines 49-50 read as quoted at 3c25633 and at 1d83788. git grep on ROADMAP for 'Book register' and 'if we attach conspiracies' returns nothing; the roadmap cites HUB_LEDGER.md once as "[in history only]" (BOOK_STRUCTURE_AND_ROADMAP_2026-09-13.md:143) for a different purpose. The roadmap's decision D1 (line 612) treats one-book-or-companion as open and says "[source text withheld from the public copy]"; it does not cite decision 5. Bearing on CYCLES: section 6 (the post-hoc question, external sources) is scholarly material and is what the roadmap uses for Ch 6 (gate: none); sections 2.2, 3.7 and 5 quote the master archive's scenario narrative (for example [source text withheld from the public copy]") and the Third Power Corpus's self-labelled CONJECTURE block, which the ruling's wording would keep out of the book. Bearing on TICTAC: the document analyses a UAP case and is fed only to leg-B chapters 19 and 24, gated on D1 (with D21, D7, D19); the document itself says it [source text withheld from the public copy]" and must be placed, if anywhere, "as rationale, not as evidence". Whether that is 'conspiracy/contact material' is not something I can settle.
+    - **key_claims**
+      - "Spine's Appendix-F severance stands."
+      - The ruling is absent from every current tree's decision apparatus; D1 remains listed as unruled.
+    - **open_items**
+      - Owner: does decision 5 of 2026-08-14 still stand after the instruction of 2026-09-13, and does it already rule D1.
+      - Owner: is the Tic Tac adjudication (method and case laboratory) inside or outside 'conspiracy/contact material'.
+    - **depends_on**
+      - CYCLES
+      - TICTAC
+      - CENSUS
+      - AA-009
+    - **quote**: [source text withheld from the public copy].
+    - **locator**: HISTORY:HUB_LEDGER.md@3c25633:49-50
+- **defects**
+  - item 1
+    - **statement**: All eight documents are byte-identical to their pre-prune blobs, so every internal path in them is from the retired layout and does not resolve on ROADMAP (for example `intake/research/nu_enclosure_probe.py`, now L8/L4/work/computation/probes/nu_enclosure_probe.py; `tools/ommp/../../research/tictac_calc.py`; `AUDITONOMOUS.md:1230`; `../sources/standards/SOURCE_LEDGER.md`). AUTONOMOUS_TERMS.md and AUTONOMY_SCALE.md, which several of them cite, are not in the ROADMAP tree.
+    - **locator**: ROADMAP:L8/L5/research/review/NASA_PAPER_DEFECT_LEDGER.md:33; ROADMAP:L8/L5/research/review/TICTAC_PROPULSION_ADJUDICATION.md:15; ROADMAP:L8/L5/research/review/SOURCE_REQUESTS.md:14
+  - item 2
+    - **statement**: SOURCE_REQUESTS SR-05 says the Johnson et al. paper unblocks docket B1; the docket files that paper and the words "This single paper" under B2.
+    - **locator**: ROADMAP:L8/L5/research/review/SOURCE_REQUESTS.md:157 vs ROADMAP:L8/L5/research/review/RESEARCH_DOCKET.md:81
+  - item 3
+    - **statement**: SOURCE_REQUESTS SR-03 cites "docket **D3/D129**"; there is no docket entry D129 (129 is the line number of D3).
+    - **locator**: ROADMAP:L8/L5/research/review/SOURCE_REQUESTS.md:57
+  - item 4
+    - **statement**: Docket F7 says "three more raised later" and then lists four ([source text withheld from the public copy]).
+    - **locator**: ROADMAP:L8/L5/research/review/RESEARCH_DOCKET.md:166
+  - item 5
+    - **statement**: Docket section 0a refers to "the self-composition defect (§A4 below)"; section A has only A1, A2, A3.
+    - **locator**: ROADMAP:L8/L5/research/review/RESEARCH_DOCKET.md:50
+  - item 6
+    - **statement**: Docket section 0 says it revises B5 and that B6 "dissolves", and the external audit refutes D3's 'one instrument holds all three'; entries B5, B6 and D3 were never amended (the file has one commit).
+    - **locator**: ROADMAP:L8/L5/research/review/RESEARCH_DOCKET.md:28-29, 92-96, 128
+  - item 7
+    - **statement**: The docket's section C maps only Q1, Q2, Q6, Q6b, Q6c, Q7, Q8, Q9 of the record-ontology file; Q3, Q4, Q5 and Q6a have no docket entry, although the docket describes itself as every open question in one place.
+    - **locator**: ROADMAP:L8/L5/research/review/RESEARCH_DOCKET.md:100-118 vs ROADMAP:L8/L5/research/lanes/RECORD_ONTOLOGY_OPEN_QUESTIONS.md:76,127,165,246
+  - item 8
+    - **statement**: SOURCE_REQUESTS was last committed 2026-08-05 and still lists as open several requests that other records show met or part-met: SR-16 (IEEE 7014-2024 read; '[source text withheld from the public copy]'), SR-02 and SR-12 (IEEE 1872-2015 and 7010-2020 held in aybllc/l6 since 2026-08-14, unread), SR-04 (T-01 matched to ISO 8373:2021 cl. 3.2 by the external audit), SR-10 (ISO/IEC 42001:2023 listed OBTAINED in the standards register).
+    - **locator**: ROADMAP:L8/L5/research/review/SOURCE_REQUESTS.md:43-49,142-149,162,164,177 vs ROADMAP:L7/provenance/sources/staging-records/ieee/FINDINGS_2026-08-04.md:18; ROADMAP:L7/provenance/sources/STANDARDS_REGISTER.md:105,310-316; ROADMAP:L8/L5/research/review/EXTERNAL_AUDIT_2026-08-04.md:151
+  - item 9
+    - **statement**: The census dossier's header still states an organisation-wide egress denial and that zero entries are verified; the external audit of the same date found the premise false, byte-verified the Planck age, and found the Westby and Conselice citation wrong (volume 902:63 should be 896:58; the DOI 10.3847/1538-4357/abb6ce is unregistered). The dossier was not amended.
+    - **locator**: ROADMAP:L8/L5/research/review/CENSUS_SOURCES_DOSSIER.md:3-9,114 vs ROADMAP:L8/L5/research/review/EXTERNAL_AUDIT_2026-08-04.md:94-110,137-147,228
+  - item 10
+    - **statement**: AUTHOR_ASSERTIONS A-009: the table for "200,000 attempts" gives 28,718 + 81,418 + 13,117 = 123,253 in the no-check row. The probe source has a fourth, uncounted outcome (committed but could not act: a trace with no action), which accounts for the other 76,747. "26.1 % of started cycles" is computed over cycles that acted, not cycles that committed.
+    - **locator**: ROADMAP:L8/L5/research/review/AUTHOR_ASSERTIONS.md:842-850; ROADMAP:L8/L4/work/computation/probes/energy_reserve_probe.py:46-49,74
+  - item 11
+    - **statement**: AUTHOR_ASSERTIONS A-009b: the table "depth at which relay costs 1000× direct" (19, 41, 152, 742) holds only if 'direct' is fixed at 8.0 units while S/P varies with P = 5 (5·r^d >= 8,000). Measured against the direct cost at each S/P (r^(d-1) >= 1,000) the depths are 19, 39, 143, 696. My hand calculation; the probe was not run.
+    - **locator**: ROADMAP:L8/L5/research/review/AUTHOR_ASSERTIONS.md:994-999
+  - item 12
+    - **statement**: AUTHOR_ASSERTIONS A-009c: the '~1 eV' row gives 1.0 × 10⁻²⁷ N·s per transfer, which matches a unit of 1e-19 J; with 1 eV = 1.602e-19 J and three units dissipated the figure is 1.6e-27 N·s. Order of magnitude unaffected.
+    - **locator**: ROADMAP:L8/L5/research/review/AUTHOR_ASSERTIONS.md:1068
+  - item 13
+    - **statement**: AUTHOR_ASSERTIONS A-002b says "nothing downstream depends on it", yet A-009 builds the rest invariant and the commit gate on the A-002b cycle.
+    - **locator**: ROADMAP:L8/L5/research/review/AUTHOR_ASSERTIONS.md:121 vs 826-832, 872-884
+  - item 14
+    - **statement**: AUTHOR_ASSERTIONS names the companion repository `abba-01/autonomous` throughout; the walk-across of 2026-08-05 and the current remotes name it aybllc/autonomous.
+    - **locator**: ROADMAP:L8/L5/research/review/AUTHOR_ASSERTIONS.md:9-16
+  - item 15
+    - **statement**: The NASA paper defect ledger uses a private label, `INTERNALLY VERIFIED`, to mean "[source text withheld from the public copy] label is not in the repository's registry (which has VERIFIED, PARTIALLY VERIFIED, INTERNALLY VALIDATED, INTERNALLY DERIVED) and its name says the opposite of its meaning. The ledger records no byte-check of its outside quotes, and D-008 says fetches were failing in the same session.
+    - **locator**: ROADMAP:L8/L5/research/review/NASA_PAPER_DEFECT_LEDGER.md:36-56,439-442 vs MAIN:L8/L5/research/review/STATUS_AND_LABEL_DISCIPLINE.md:10-13
+  - item 16
+    - **statement**: The NASA paper defect ledger rests D-001 to D-007 on IEEE Std 1788-2015 without noting what docket G2 records: that the standard [source text withheld from the public copy] and 1788.1-2017 is the live one.
+    - **locator**: ROADMAP:L8/L5/research/review/NASA_PAPER_DEFECT_LEDGER.md:49-55 vs ROADMAP:L8/L5/research/review/RESEARCH_DOCKET.md:174
+  - item 17
+    - **statement**: The paper the defect ledger examines is not held in this repository in any state examined; the ledger identifies it only as a 19-page PDF 'supplied to this session' and gives no hash, version or DOI.
+    - **locator**: ROADMAP:L8/L5/research/review/NASA_PAPER_DEFECT_LEDGER.md:3-5
+  - item 18
+    - **statement**: The walk-across compares the repositories against `definitional-instrument-autonomy-auditonomy.md` v0.1 ("this project"); that file is not in aybllc/auditonomous (ROADMAP) or aybllc/autonomous (origin/main). Thirteen amendments are owed to a document the repositories do not hold.
+    - **locator**: ROADMAP:L8/L5/research/review/WALK_ACROSS_repo-instrument-standards_2026-08-05.md:5,72-83,123-131
+  - item 19
+    - **statement**: The walk-across locators point to `autonomous/definitions/AUDITONOMY.md` at 6568e3c. No file of that name is on aybllc/autonomous origin/main, its beta, or the scholarly-pair branch; a file AUDITONOMY.md now stands on auditonomous ROADMAP at L8/L0/semantics/definitions/AUDITONOMY.md and is absent from auditonomous MAIN and BETA.
+    - **locator**: ROADMAP:L8/L5/research/review/WALK_ACROSS_repo-instrument-standards_2026-08-05.md:13,34-40
+  - item 20
+    - **statement**: The cycles document's verdict (ii) says continuous audit is established "since 1991" and "[source text withheld from the public copy])". SOURCE_REQUESTS SR-19 and SR-20 record that the date is contestable, that the 1991 paper says 'less-after-the fact', and that NIST's framework is voluntary. The cycles document was not amended, and the book roadmap cites it as "VERIFIED external".
+    - **locator**: ROADMAP:L8/L5/research/review/AUTONOMOUS_vs_AUDITONOMOUS_CYCLES.md:136 vs ROADMAP:L8/L5/research/review/SOURCE_REQUESTS.md:180-181; ROADMAP:L8/L5/research/review/BOOK_STRUCTURE_AND_ROADMAP_2026-09-13.md:152
+  - item 21
+    - **statement**: The propulsion adjudication's summary table says the vacuum mechanism "FAILS BY ~4 ORDERS OF MAGNITUDE"; its own figures give 0.128 per cent, a shortfall of about 780 times ("~800×" at line 366), which is about three orders.
+    - **locator**: ROADMAP:L8/L5/research/review/TICTAC_PROPULSION_ADJUDICATION.md:40 vs 111, 366
+  - item 22
+    - **statement**: The propulsion adjudication labels its kinematics "VERIFIED arithmetic"; the status ladder reserves VERIFIED for a check against a cited outside source, and the file says no external source was fetched. The external audit also found an equals sign where a strict lower bound is meant ("<60 s") and a Mach number given without a reference altitude.
+    - **locator**: ROADMAP:L8/L5/research/review/TICTAC_PROPULSION_ADJUDICATION.md:52-53,346-347,362 vs MAIN:L8/L5/research/review/STATUS_LADDER.md:8-18; ROADMAP:L8/L5/research/review/EXTERNAL_AUDIT_2026-08-04.md:253-260
+  - item 23
+    - **statement**: The propulsion adjudication attributes the GoFast video to the "2015 Roosevelt" encounters; the external audit records that "[source text withheld from the public copy] the attribution is unsupported.
+    - **locator**: ROADMAP:L8/L5/research/review/TICTAC_PROPULSION_ADJUDICATION.md:250,327-328 vs ROADMAP:L8/L5/research/review/EXTERNAL_AUDIT_2026-08-04.md:267-268
+  - item 24
+    - **statement**: The book roadmap's Ch 24 feed attributes "[source text withheld from the public copy]" to the propulsion adjudication. That file says those two reports "were not consulted" and labels the point NOT-CHECKED; the statement comes from the external audit, section 6.2.
+    - **locator**: ROADMAP:L8/L5/research/review/BOOK_STRUCTURE_AND_ROADMAP_2026-09-13.md:330 vs ROADMAP:L8/L5/research/review/TICTAC_PROPULSION_ADJUDICATION.md:374-375; ROADMAP:L8/L5/research/review/EXTERNAL_AUDIT_2026-08-04.md:262-266
+  - item 25
+    - **statement**: The owner's decision "Book register: scholarly only" is recorded only in HUB_LEDGER.md in history. No file on ROADMAP carries it, and the roadmap lists the question it appears to answer (D1) as an open owner decision without citing it.
+    - **locator**: HISTORY:HUB_LEDGER.md@3c25633:49-50 vs ROADMAP:L8/L5/research/review/BOOK_STRUCTURE_AND_ROADMAP_2026-09-13.md:612
+  - item 26
+    - **statement**: The review sheet describes the walk-across among "The structures of the book"; the document is a crosswalk and custody finding, not a book structure. The roadmap uses only its section 9 (acquisition blockers).
+    - **locator**: ROADMAP:L8/L5/research/review/0.md:52
+- **open_questions**
+  - Does the owner's decision of 2026-08-14 ("[source text withheld from the public copy]") still stand after the instruction of 2026-09-13? I have that later instruction only as the roadmap paraphrases it ("[source text withheld from the public copy]") and did not find its verbatim text in my scope.
+  - Is the Tic Tac propulsion adjudication 'conspiracy/contact material' under that ruling? The document disclaims any claim about what was observed and is used by the roadmap only as method (Ch 19) and case laboratory (Ch 24), both gated on D1. The same question applies to the census dossier (Ch 20) and to A-009c's propulsion proposal.
+  - How were the outside quotations in the NASA paper defect ledger (Arb, Revol, Benet et al., JCGM 100, Octave, Hargreaves) obtained? D-008 says direct fetches returned 000 and 403 in that session and that search summaries were used for Moore; the ledger records no byte-check for D-001 to D-007.
+  - Which version of 'The NASA Paper & Small Falcon Algebra' was examined, and is it the version published under DOI 10.5281/zenodo.17172694? The PDF is not held here; the roadmap says the paper lives in aybllc/nua, which is outside my scope. Whether the published paper has been corrected is not recorded.
+  - What became of the two lanes the docket says were launched or running: the GUM Type A / Type B test of P2, and the reference-monitor prior-art lane B5? I found no report of either on ROADMAP (searched for 'Type B'; listed L8/L5/research/lanes/ and findings/).
+  - Have IEEE 1872-2015 and IEEE 7010-2020, recorded as held in aybllc/l6 since 2026-08-14, been read? The standards register says T-02 is unchanged "until that read happens"; aybllc/l6 is not among the repositories I could inspect.
+  - Does the definitional instrument (v0.1, and a v0.2 carrying the thirteen amendments) exist anywhere the owner can point to? It is in neither repository.
+  - The numerical tables behind A-009, A-009b, A-009c, the NASA ledger and the propulsion adjudication come from five probe scripts that the restoring pass did not re-run and that I was not authorised to run. Their percentages (for example 15.93, 75.65, 12.24 per cent; 28,718 unsealed) are therefore reproduced on record but not re-confirmed.
+  - EXTERNAL_AUDIT section 6.3 says the propulsion file's '[source text withheld from the public copy]'. The propulsion adjudication as it stands on ROADMAP has no human-tolerance section. I could not settle whether the audit refers to an earlier revision, to tictac_calc.py, or to another file.
+  - Docket E1, E2, E4 and F1, F2, F4, F5, F7 describe the state of manuscript Blocks 25-27, 36, 39, 45, 46, 49-52. I confirmed only F3 against the blocks; whether the others still stand as described on ROADMAP is for the pass that covers the manuscript corpus.
+  - The external quotations in the docket (sections B, C, G, H) and in the cycles document carry no page, URL or capture locators in these files. The cycles document says per-lane verification records exist; I did not find them in my scope and could not confirm any external quote myself (no network).

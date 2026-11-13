@@ -1,0 +1,194 @@
+export const meta = {
+  name: 'public-source-verification',
+  description: 'Verify the research\'s quotations and identities of PUBLIC primary sources against the issuing body\'s own host; a skeptic re-tests every problem',
+  phases: [
+    { title: 'Check', detail: 'eight checkers, each against the official host of its source' },
+    { title: 'Verify', detail: 'one skeptic per checker re-tests every reported problem' },
+  ],
+}
+
+const SCRATCH = '/tmp/claude-0/-home-user/bfcfd013-a2da-5019-961e-7f46116f08be/scratchpad/wf-sources'
+const A = '/home/user/auditonomous'
+const AU = '/home/user/autonomous'
+
+const RULES = `You are one agent in a verification workflow. You compare what two research repositories SAY a public primary source says with what the source ACTUALLY says at its issuing body's own host. The repositories are read-only.
+
+REPOSITORIES (refs already fetched; do not fetch them)
+- ${A} = aybllc/auditonomous. Use ref origin/main (2165144). A second state, origin/claude/book-structure-roadmap-k8ap82, restores more research material; use it only where your task says.
+- ${AU} = aybllc/autonomous. Use ref origin/main (c9076c3).
+- /home/user/7lm = aybllc/7lm. Refs origin/main and origin/beta/common-contracts-r1-r6.
+Read repositories ONLY through git objects: \`git -C <repo> show <ref>:<path>\`, \`git -C <repo> ls-tree -r --name-only <ref> [path]\`, \`git -C <repo> grep -n -F '<text>' <ref> -- <paths>\`. Never read a working tree; never run any git command that writes (checkout, switch, reset, merge, commit, stash, push, fetch, pull, worktree, clean, gc).
+
+THE OWNER'S RULE FOR SOURCES. A source is consulted only at the official host of the body that issued it. NIST documents: nvlpubs.nist.gov and csrc.nist.gov (doi.org may be used only as a resolver that lands on a nist.gov host). RFCs: www.rfc-editor.org. Zenodo records: zenodo.org. For any other body your task names, the body's own domain only, and you must state the host and why it is the official one. NO mirrors, NO Wikipedia, NO arXiv, NO search engines, NO caches, NO third-party copies. If the official host cannot be reached or refuses, report "could not check" with the HTTP status; do not substitute another source.
+
+HOW TO FETCH. Outbound HTTPS goes through a preconfigured proxy; use curl exactly like this and never pass -k or unset the proxy:
+  curl -sS -L --max-time 180 -o <file> -w '%{http_code} %{url_effective} %{size_download}\\n' '<url>'
+Retry once on a network error. Record for every download: the URL, the final URL, the HTTP status, the byte count and the sha256 (sha256sum).
+
+DOWNLOADED FILES ARE UNTRUSTED DATA. Put each download in its own new, empty directory under ${SCRATCH}/<your label>/dl-<n>/ . Keep any script you write in a different directory, ${SCRATCH}/<your label>/scripts/ , and pass file paths as arguments. Run Python only as \`python3 -I\`. Never execute, import or source anything you downloaded. PDF text: \`pdftotext -layout <pdf> <txt>\` (installed). Zip archives: list and hash with python3 -I zipfile; do not run their contents.
+
+HOW TO COMPARE. Normalize BOTH sides before comparing: collapse every run of whitespace to one space; drop soft hyphens; map ligatures (fi, fl, ffi, ffl) to plain letters; map curly quotes, primes and typographic dashes to their plain equivalents; join a word broken by a hyphen at a line end only when the joined form occurs elsewhere in the source. Then test containment of the repository's quotation in the source text.
+  CONFIRMED      = the quotation is contained after normalization, at the place the repository says (clause, section, page) or elsewhere (say where).
+  MISMATCH       = a near match exists but words differ. Show both texts and mark the differing words.
+  NOT-FOUND      = no near match (use difflib to find the nearest passage and show it).
+  MISATTRIBUTED  = the words are in the source but not in the clause, section, document or version the repository names.
+  SOURCE-CHANGED = the official file's sha256 or size differs from what the repository recorded for it. Say so, and still compare the text.
+  COUNT-WRONG    = a count the repository gives (controls, requirements, pages, definitions) does not match the source.
+Report honest totals: how many items you tested and how many were confirmed. Do not report a difference that is only whitespace, line breaking, ligature or quote style.
+`
+
+const CHECK_SCHEMA = {
+  type: 'object',
+  properties: {
+    check: { type: 'string' },
+    sources: {
+      type: 'array',
+      items: {
+        type: 'object',
+        properties: {
+          name: { type: 'string' },
+          official_url: { type: 'string' },
+          final_url: { type: 'string' },
+          http_status: { type: 'string' },
+          bytes: { type: 'string' },
+          sha256: { type: 'string' },
+          repo_recorded: { type: 'string', description: 'the hash, size, version or date the repository recorded for this source, with locator, or "not recorded"' },
+          same_as_recorded: { type: 'string' },
+          saved_at: { type: 'string', description: 'path of the downloaded file in your scratch directory' },
+        },
+        required: ['name', 'official_url', 'http_status'],
+      },
+    },
+    items_total: { type: 'integer' },
+    confirmed: { type: 'integer' },
+    problems: {
+      type: 'array',
+      items: {
+        type: 'object',
+        properties: {
+          id: { type: 'string' },
+          kind: { type: 'string', enum: ['MISMATCH', 'NOT-FOUND', 'MISATTRIBUTED', 'SOURCE-CHANGED', 'COUNT-WRONG'] },
+          repo_locator: { type: 'string' },
+          repo_text: { type: 'string' },
+          source_locator: { type: 'string' },
+          source_text: { type: 'string' },
+          note: { type: 'string' },
+        },
+        required: ['id', 'kind', 'repo_locator', 'repo_text'],
+      },
+    },
+    could_not_check: {
+      type: 'array',
+      items: {
+        type: 'object',
+        properties: { what: { type: 'string' }, why: { type: 'string' } },
+        required: ['what', 'why'],
+      },
+    },
+    summary: { type: 'string', description: 'plain English, 120-250 words: what was tested, against what, and the result' },
+  },
+  required: ['check', 'sources', 'items_total', 'confirmed', 'problems', 'summary'],
+}
+
+const CHECKS = [
+  {
+    key: 'sp800-53',
+    prompt: `YOUR CHECK: the transcription of NIST SP 800-53 Rev. 5.
+Repository file: ${A} origin/main:L7/provenance/sources/staging-records/standards/extracted/SP800-53r5_AC-AU_verbatim.md (about 60 KB). It claims to hold, verbatim, the "Control:" statement of every base control and enhancement in families AC and AU; it gives the source URL, a SHA-256, a byte count, its extraction method, and the counts "AC — 24 base + 122 enhancements = 146. AU — 16 base + 53 enhancements = 69. Total 215."
+DO: 1. Download the PDF from the URL the file gives (nvlpubs.nist.gov). Compare sha256 and bytes with the file's stated values. If they differ, find on csrc.nist.gov whether the publication has been updated (errata, release dates) and report what you can establish. 2. pdftotext -layout. 3. Parse the repository file into its entries (each heading "### <ID> — <TITLE>" and the quoted block beneath it). For EVERY entry, locate the same control or enhancement in the PDF text and compare the statement with the text between that control's "Control:" marker and the next marker (Discussion, Related Controls, Control Enhancements, References), normalized. Count confirmed and problems. 4. Recount the base controls and enhancements of AC and AU in the PDF and compare with the stated counts, including which are withdrawn. 5. Report every entry whose text differs in words, every entry missing from the file, and every entry in the file that is not in the source.`,
+  },
+  {
+    key: 'nist-requirements',
+    prompt: `YOUR CHECK: the NIST requirements extraction.
+Repository file: ${A} origin/main:L8/L4/work/computation/nist-requirements-for-autonomouos.md (about 57 KB). It lists the NIST documents used (SP 1011-I-2.0, SP 1011-II-1.0, AI 100-1, SP 800-53 Rev. 5), with DOIs and URLs, and then "The requirements — 20 total", NIST-R1 to NIST-R20, each with a verbatim quotation, its source clause or page, and a normative class.
+DO: 1. Download each document it used from nvlpubs.nist.gov (use the URLs or DOIs it gives). Record hashes; compare with any hash the file records. Confirm each document's title, number, version, date and page count as the file states them. 2. pdftotext -layout each. 3. For EVERY one of the 20 requirements: test its quotation against the named document; test the clause, section or page it cites; if the entry says the statement is a definition, check that the source presents it as one. 4. The file says SP 800-53 was "checked only to confirm the brief's negative hypothesis": find what that hypothesis is in the file and test it against the SP 800-53 text. 5. Check the file's statements about what was NOT obtained. Report every problem with both texts.`,
+  },
+  {
+    key: 'rfc6962',
+    prompt: `YOUR CHECK: RFC 6962, Certificate Transparency.
+Repository objects: (a) ${A} origin/main:L7/provenance/sources/staging-records/library/reading/RFC6962_Certificate-Transparency.md, a reading record with quotations and section references; (b) ${AU} origin/main:L7/provenance/prior-art/ct-lane/RFC6962.txt and rfc6962-canonical.txt, stored copies of the RFC, and the sheet ${AU} origin/main:L7/provenance/prior-art/ct-lane/0.md that describes them.
+DO: 1. Download https://www.rfc-editor.org/rfc/rfc6962.txt . Record the hash. Confirm the RFC's title, date, status (Experimental or otherwise), authors, and whether rfc-editor.org lists it as obsoleted or updated by another RFC (fetch https://www.rfc-editor.org/info/rfc6962 or the RFC index entry from rfc-editor.org). 2. Compare each stored copy in Autonomous with the official text: byte-identical? If not, characterize every difference (line endings, form feeds, page headers and footers removed, anything in the words). Is what the ct-lane sheet says about the two files true? 3. In the Auditonomous reading record, extract EVERY quotation and every claim of the form "section N says ..." and test each against the official text. Report totals and every problem.`,
+  },
+  {
+    key: 'rfc9162',
+    prompt: `YOUR CHECK: RFC 9162, Certificate Transparency Version 2.0.
+Repository objects: (a) ${A} origin/main:L7/provenance/sources/staging-records/library/reading/RFC9162_Certificate-Transparency-v2.md, a reading record with quotations and section references; (b) ${AU} origin/main:L7/provenance/prior-art/ct-lane/RFC9162.txt and rfc9162-canonical.txt, stored copies, and the sheet ${AU} origin/main:L7/provenance/prior-art/ct-lane/0.md.
+DO: 1. Download https://www.rfc-editor.org/rfc/rfc9162.txt . Record the hash. Confirm the RFC's title, date, status, authors, and its relation to RFC 6962 as rfc-editor.org states it (fetch https://www.rfc-editor.org/info/rfc9162). 2. Compare each stored copy in Autonomous with the official text: byte-identical? If not, characterize every difference. Is what the ct-lane sheet says about the two files true? 3. In the Auditonomous reading record, extract EVERY quotation and every claim of the form "section N says ..." and test each against the official text. Report totals and every problem.`,
+  },
+  {
+    key: 'fips180-4',
+    prompt: `YOUR CHECK: FIPS 180-4, Secure Hash Standard.
+Repository objects: ${A} origin/main:L7/provenance/sources/staging-records/library/reading/NIST_FIPS-180-4_Secure-Hash-Standard.md (a reading record), and the row for this standard in ${A} origin/main:L7/provenance/sources/LEDGER.md (find it with grep -n 'FIPS').
+DO: 1. Download the official PDF from nvlpubs.nist.gov (https://nvlpubs.nist.gov/nistpubs/FIPS/NIST.FIPS.180-4.pdf). Record the hash and compare with any hash the reading record or ledger gives. Confirm title, number, date, and current status on csrc.nist.gov (https://csrc.nist.gov/pubs/fips/180-4/upd1/final or the page csrc gives for FIPS 180-4). 2. pdftotext -layout. 3. Extract EVERY quotation, every stated constant, every section reference and every numeric claim in the reading record (digest sizes, block sizes, message-length limits, the functions and constants it reproduces) and test each against the official text. Report totals and every problem.`,
+  },
+  {
+    key: 'definition-citations',
+    prompt: `YOUR CHECK: what the Auditonomous definition and findings say the PUBLIC sources say.
+Repository files (ref origin/main of ${A}): L8/L0/semantics/definitions/AUDITONOMOUS_DEFINITION.md (about 70 KB); L8/L5/research/findings/DISTILLATION.md, OVERRIDE_NECESSITY_2026-08-04.md, SEGREGATION_AND_FORGETTING_2026-08-04.md; L8/L1/state-space/AUDITON_ENVELOPE.md, HUMINT_ENCODE.md, REQUIREMENTS_OWNERSHIP.md.
+DO: 1. In those files, find EVERY quotation, clause citation, control identifier or numeric claim attributed to one of these public sources: NIST SP 800-53 Rev. 5 (controls such as AU-2, AU-9, AU-10, AC-5, AC-6 and their enhancements), NIST FIPS 180-4, NIST AI 100-1, NIST SP 1011 (ALFUS), RFC 6962, RFC 9162. Use grep for the identifiers and read around each hit. List each with its locator. 2. Download the official documents (nvlpubs.nist.gov; www.rfc-editor.org) and extract text. 3. Test EVERY listed item: is the quotation verbatim; does the cited control or section exist and say what is attributed to it; is a control identifier's title right; is a paraphrase a fair statement of the source (if it is a paraphrase, say so and judge only whether the source supports it; mark unsupported paraphrases as MISATTRIBUTED with the source's actual words). Report totals and every problem. Leave IEEE and ISO citations alone: their texts are not public.`,
+  },
+  {
+    key: 'autonomous-definitions',
+    prompt: `YOUR CHECK: the codified definitions of "autonomous" that the Autonomous repository binds from PUBLIC issuing bodies.
+Repository files (ref origin/main of ${AU}): L8/L0/semantics/definitions/AUTONOMOUS.md and DEFINITION_LIST_AUTONOMOUS.md (and REGISTER.md if it names sources). The definition carries codified definitions labelled A1 to A11, "each reproduced verbatim with its issuing body's ownership tag".
+DO: 1. List A1 to A11: the issuing body, the document, the version or date, the clause, and the quoted definition, with locators. 2. For each, decide whether the issuing body publishes the document freely on its own host (for example NIST at nvlpubs.nist.gov; the European Union at eur-lex.europa.eu; UNECE at unece.org; the US Department of Defense at www.esd.whs.mil; EASA at www.easa.europa.eu). IEEE, ISO, IEC and SAE texts are sold: mark them "not public; could not check" unless the body's own site shows the exact definition text publicly (the IEEE and ISO online term browsers count only if they are on the body's own domain and reachable). 3. For each public one: test reachability of the official host (report the HTTP status), download the document, extract text, and test the quoted definition verbatim, the clause number, and the version and date. 4. Report totals: how many of the eleven could be checked at the official host, how many were confirmed, and every problem with both texts. For each one you could not check, say exactly why (paywalled; host refused with status N; document not found at the official host).`,
+  },
+  {
+    key: 'zenodo-and-ledger',
+    prompt: `YOUR CHECK: identities of public sources in the ledgers.
+PART 1. /home/user/7lm origin/beta/common-contracts-r1-r6:L7/provenance/sources/source-ledger.md has a row NU-17271561: "https://zenodo.org/records/17271561 ; nualgebra-main.zip", "DOI 10.5281/zenodo.17271561; ZIP SHA256 60cccd3222b00965505a6f890f3540639fe976edbd1ab209f4b4bf8497cf6f0e". Fetch the record's metadata from Zenodo's own API (https://zenodo.org/api/records/17271561): title, creators, publication date, version, DOI, licence, and the file list with sizes and checksums. If nualgebra-main.zip is listed and is under 300 MB, download it from the link the API gives and compute its sha256; compare with the ledger. List the archive's top-level entries with python3 -I zipfile (do not extract or run anything). Report whether the row's statements are true. The second row of that ledger (SM-PDF) names a supplied PDF that is not public: mark it "could not check".
+PART 2. ${A} origin/main:L7/provenance/sources/LEDGER.md has 60 rows (IDs PR-…, STD-… and others). The files themselves are in a private archive and cannot be checked. But the CITATION of each row can be checked where the issuing body publishes a public record of the document on its own host. List every row whose source is a NIST publication, an RFC, an ITU-T Recommendation, a US Government or NASA report (ntrs.nasa.gov), or a W3C or IETF document. For each such row, fetch the issuing body's own record page (csrc.nist.gov or nvlpubs.nist.gov; www.rfc-editor.org; www.itu.int; ntrs.nasa.gov) and test the citation: title, number, year, authors or issuing body, and status (current, withdrawn, superseded: say which, with the official page's words). Report totals and every citation that is wrong or that names a superseded or withdrawn document without saying so. Rows for journal articles and IEEE or ISO standards: count them and mark "not checked: no public official text".`,
+  },
+]
+
+const VERIFY_SCHEMA = {
+  type: 'object',
+  properties: {
+    verdicts: {
+      type: 'array',
+      items: {
+        type: 'object',
+        properties: {
+          id: { type: 'string' },
+          real: { type: 'boolean' },
+          reasoning: { type: 'string' },
+          corrected: { type: 'string', description: 'the precise, corrected statement of the problem, with the source words' },
+        },
+        required: ['id', 'real', 'reasoning'],
+      },
+    },
+  },
+  required: ['verdicts'],
+}
+
+const results = await pipeline(
+  CHECKS,
+  c => agent(RULES + '\n' + c.prompt + `\n\nYour label is "${c.key}". Return the structured object. Give every problem a short id (${c.key}-1, ${c.key}-2, ...).`, { label: `check:${c.key}`, phase: 'Check', schema: CHECK_SCHEMA }),
+  (r, c) => {
+    if (!r) return null
+    if (!r.problems || r.problems.length === 0) return { key: c.key, check: r, verdicts: [] }
+    return agent(RULES + `
+YOU ARE A SKEPTIC for the check "${c.key}". A checker compared repository text with an official source and reported the problems below. PDF text extraction produces false alarms (column breaks, hyphenation, ligatures, footnote markers, running headers inside a passage, bracketed assignment placeholders split across lines). For EACH problem, re-establish the source text YOURSELF: you may reuse the checker's downloaded file only after confirming it is the official document (re-download it from the official host into your own scratch directory and compare sha256), then extract the passage again, by a different method where you can (for a PDF, try pdftotext without -layout as well as with it), and compare with the repository text read from the git object. A problem is REAL only if the WORDS, the attribution, the count or the recorded identity are in fact wrong. Return one verdict per problem id, and for each real one give the precise corrected statement with the source's words and their place.
+The checker's sources (with the paths where it saved them): ${JSON.stringify(r.sources)}
+PROBLEMS (JSON): ${JSON.stringify(r.problems)}`, { label: `verify:${c.key}`, phase: 'Verify', schema: VERIFY_SCHEMA, effort: 'high' })
+      .then(v => ({ key: c.key, check: r, verdicts: v ? v.verdicts : null }))
+  }
+)
+
+const out = { checks: [], confirmed_problems: [], rejected_problems: [], unverified_problems: [], failed_checks: [] }
+CHECKS.forEach((c, i) => {
+  const r = results[i]
+  if (!r) { out.failed_checks.push(c.key); return }
+  const k = r.check
+  out.checks.push({ key: c.key, items_total: k.items_total, confirmed: k.confirmed, problems_reported: (k.problems || []).length, sources: k.sources, could_not_check: k.could_not_check || [], summary: k.summary })
+  const vmap = {}
+  if (r.verdicts) for (const v of r.verdicts) vmap[v.id] = v
+  for (const p of (k.problems || [])) {
+    const v = vmap[p.id]
+    if (!r.verdicts || !v) { out.unverified_problems.push(Object.assign({ check: c.key }, p)); continue }
+    if (v.real) out.confirmed_problems.push(Object.assign({ check: c.key }, p, { corrected: v.corrected || '', skeptic: v.reasoning }))
+    else out.rejected_problems.push({ check: c.key, id: p.id, repo_locator: p.repo_locator, why_not: v.reasoning })
+  }
+})
+log(`checks returned ${out.checks.length}/${CHECKS.length}; items tested ${out.checks.reduce((n, c) => n + (c.items_total || 0), 0)}, confirmed ${out.checks.reduce((n, c) => n + (c.confirmed || 0), 0)}; problems confirmed ${out.confirmed_problems.length}, rejected ${out.rejected_problems.length}, unverified ${out.unverified_problems.length}`)
+return out

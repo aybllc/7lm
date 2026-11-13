@@ -1,0 +1,57 @@
+# resolve:D12
+
+Agent result, as returned. Workflow: Resolutions for the 23 owner decisions. Run `wf_3293f65c-a92`. Phase: Resolve.
+
+- **decision**: 12. Whether .gitignore belongs at a canonical root, since the specification and check admit it and the README does not.
+- **resolution**: Rule that .gitignore is permitted at a canonical root when there is something to ignore, and is not required; change nothing in any tree. The scaffold README's root sentence is then read as a true statement of what the scaffold's own root holds (it has no .gitignore), not as the rule, and both exemplars keep the .gitignore they have. If the owner wants the scaffold README to state the permission, that is one sentence added on his word, and it is reversible by one revert.
+- **reasoning**
+  - item 1
+    - **speaker**: owner
+    - **quote**: under autonomous and auidtonomous the root needs to be the same for both and anything we need to discuss shoudl be brough to my atgention with soluitionsw like gitworkflows
+    - **locator**: /home/user/7lm@origin/main:L8/L6/history/harmonization-2026-09-04.md:121
+    - **bears**: The owner's only quoted words on the root require the two exemplar roots to match each other; both exemplars at origin/main do hold .gitignore at the root, so the present state already satisfies him on this point.
+  - item 2
+    - **speaker**: specification
+    - **quote**: The root holds README.md, L7/, and L8/, and may hold repository infrastructure that is not a layer: the one CI check at .github/workflows/integrity.yml, which refuses unresolved conflict markers, a root that is not canonical, a sheet whose heading is not its path, and a canonical position without a sheet, reports any other directory without a sheet, and moves nothing; and .gitignore. Every 7LM repository has the same root.
+    - **locator**: /home/user/7lm@origin/main:L8/L4/work/writing/7lm-harmonized-architecture-specification.md:281
+    - **bears**: The controlling text names .gitignore among what the root 'may hold': permitted, in terms, as repository infrastructure that is not a layer.
+  - item 3
+    - **speaker**: other
+    - **quote**: Where anything else in this repository differs from the specification, the specification controls.
+    - **locator**: /home/user/7lm@origin/main:README.md:5
+    - **bears**: The scaffold README itself settles which text wins if its root sentence is read as differing from the specification: the specification does.
+  - item 4
+    - **speaker**: other
+    - **quote**: The root holds `README.md`, `L7/`, `L8/`, and `.github/` (one CI check, repository infrastructure and not a layer), and nothing else.
+    - **locator**: /home/user/7lm@origin/main:README.md:13
+    - **bears**: This is the sentence that omits .gitignore; it is accurate as a description of the scaffold's own root, which at c9dc061 holds exactly .github, L7, L8 and README.md.
+  - item 5
+    - **speaker**: record
+    - **quote**: No `.gitignore` is added: there is nothing here to ignore, and G-002 permits its absence.
+    - **locator**: /home/user/7lm@origin/main:L8/L6/history/harmonization-2026-09-04.md:123
+    - **bears**: The record explains the omission: the scaffold has no .gitignore because it has nothing to ignore, not because the file is excluded from a canonical root.
+  - item 6
+    - **speaker**: record
+    - **quote**: that `.gitignore` is permitted at the root, not required;
+    - **locator**: /home/user/7lm@origin/main:L8/L6/history/harmonization-2026-09-04.md:186
+    - **bears**: A verified finding already recorded on main states the rule in the form recommended here: permitted, not required.
+  - item 7
+    - **speaker**: other
+    - **quote**: case "$e" in README.md|L7|USO|L8|.github|.gitignore) ;; *) echo "not canonical at root: $e"; fail=1;; esac
+    - **locator**: /home/user/7lm@origin/main:.github/workflows/integrity.yml:23
+    - **bears**: The check, merged on the owner's word 'merge all three', admits .gitignore at the root and does not demand it; the same line stands in both exemplars' checks.
+  - item 8
+    - **speaker**: other
+    - **quote**: The root holds `README.md`, `L7/`, `L8/`, `.github/` (one CI check, repository infrastructure and not a layer), and `.gitignore`, and nothing else.
+    - **locator**: /home/user/autonomous@origin/main:README.md:15
+    - **bears**: Each exemplar's README names .gitignore because that exemplar has one (the identical sentence is at /home/user/auditonomous@origin/main:README.md:15), which shows the README root sentence is written per repository as a statement of what that root holds.
+  - item 9
+    - **speaker**: owner
+    - **quote**: Don't change the system unless you ask or are unsure
+    - **locator**: /home/user/7lm@origin/main:L8/L6/history/harmonization-2026-09-04.md:482
+    - **bears**: Since the specification, check and record already agree, no change to the system is needed; removing the file from the exemplars or tightening the check would be a change the owner has not asked for.
+- **against**: "Every 7LM repository has the same root." (/home/user/7lm@origin/main:L8/L4/work/writing/7lm-harmonized-architecture-specification.md:281), read with the scaffold README's "and nothing else" (/home/user/7lm@origin/main:README.md:13). Read literally, three roots of which two hold .gitignore and one does not are not "the same root", and the scaffold, which the record calls "the example of the root it prescribes" (/home/user/7lm@origin/main:L8/L6/history/harmonization-2026-09-04.md:123), shows a root without it. On that reading the owner would have to choose between adding a .gitignore to the scaffold or removing it from the exemplars.
+- **alternatives**: (a) Add one sentence to the scaffold README saying the root may also hold .gitignore, so it matches the specification word for word; small and reversible, but it edits the public scaffold and the README is by the owner's rule "the start, not the documentation". (b) Add an empty or minimal .gitignore to the scaffold so all three roots are literally identical; this contradicts the record's "there is nothing here to ignore". (c) Remove .gitignore from the canonical root everywhere; this would require editing the specification, the check in three repositories and both exemplar READMEs, and would drop the Autonomous file that its record calls "the owner's file; its copyright commentary is its own rule history" (/home/user/autonomous@origin/main:L8/L6/history/harmonization-2026-09-05.md:102). Not recommended.
+- **what_it_costs**: Nothing is written in any repository. The cost is that the scaffold README continues to say "and nothing else" without mentioning the permission, so a reader who stops at the README and does not reach the specification could take .gitignore to be excluded. The owner's unmerged candidate branch (97314c5) carries the same README, specification sentence and check allowance, so merging it later does not disturb this resolution.
+- **who_acts**: The owner, by confirming the reading "permitted, not required" (or by asking for alternative (a)). No agent acts unless he asks; if he chooses (a), one agent adds the sentence to the scaffold README on a draft pull request for his merge.
+- **confidence**: the quotations favour it

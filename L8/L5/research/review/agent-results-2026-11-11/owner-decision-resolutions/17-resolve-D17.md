@@ -1,0 +1,52 @@
+# resolve:D17
+
+Agent result, as returned. Workflow: Resolutions for the 23 owner decisions. Run `wf_3293f65c-a92`. Phase: Resolve.
+
+- **decision**: 17. Whether each new record section pins the scaffold commit mirrored and lists what was declined, as the guide asks.
+- **resolution**: Yes: add one short paragraph to each new section (autonomous section 14 on draft PR #30, auditonomous section 13 on draft PR #28) that names the scaffold commit mirrored (aybllc/7lm main at c9dc061) and lists, under the heading "Declined", what was not taken up from the scaffold, the count being stated even if it is "nothing". This is a words-only addition to two unmerged records, made by hand in one commit each and reversible by reverting it; no folder, sheet or check changes. The owner should confirm that c9dc061 is the commit to name and that the existing "Not changed" and "Left as found" items are what counts as declined.
+- **reasoning**
+  - item 1
+    - **speaker**: owner
+    - **quote**: We long as you maintain the dir structure, 0.md files, (in the future, pinned hashes push HOA REVIEW inter peering private where decisions are made to follow or edit, dir structure we push is required. You do not need to use it. You may remove them, and list them in HOA for your internal review when you are n notified we pushed 7LM.
+    - **locator**: /home/user/7lm@origin/main:L8/L6/history/harmonization-2026-09-04.md:350
+    - **bears**: The owner's own design for a scaffold update reaching an adopter has two parts, pinned hashes and a list in HOA of what is removed; he places the mechanism "in the future", but these are the two things he names.
+  - item 2
+    - **speaker**: owner
+    - **quote**: All repos should mirror the 7lm. Manually. We update 7lm and focus on it only. No outside updates until we are sure I'm close.
+    - **locator**: /home/user/7lm@origin/main:L8/L6/history/harmonization-2026-09-04.md:336
+    - **bears**: The mirror is a hand act made on the owner's judgement, so the record of it is the only place where which scaffold state was mirrored can be fixed.
+  - item 3
+    - **speaker**: owner
+    - **quote**: Get qa hanfle on the research and manuscruipt for Auditonomous but firwst re0ull7lm and deep research the mopdel becuase its chamnged and we need to uipdate the autonomous and auditonomous repos phsyciall; to match first .
+    - **locator**: owner's instructions of 11 November 2026; also /home/user/autonomous@origin/ccr-9391bd81-f2enmj:L8/L6/history/harmonization-2026-09-05.md:185 and /home/user/auditonomous@origin/ccr-9391bd81-f2enmj:L8/L6/history/harmonization-2026-09-05.md:178
+    - **bears**: The instruction is to match a model that "chamnged"; a match to a moving model is only checkable later if the record says which commit was matched.
+  - item 4
+    - **speaker**: other
+    - **quote**: The scaffold's update arrives, pinned to its hashes, as an item for HOA review at the adopter's `L7/peering/private/`: the scaffold is a peer, and its push is ingress. A person decides, item by item, to follow or to edit. The pushed tree is required; taking up everything in it is not, and what the person declines is listed in their HOA record rather than dropped without a trace.
+    - **locator**: /home/user/7lm@origin/main:L8/L6/7lm-field-guide.md:610
+    - **bears**: This is what "the guide asks": the update pinned, and what is declined listed in the adopter's record and not dropped without a trace.
+  - item 5
+    - **speaker**: record
+    - **quote**: The rule, from the specification (version of 20 September 2026, `aybllc/7lm` at `L8/L4/work/writing/7lm-harmonized-architecture-specification.md`): "Canonical direct L7 branches are L7/provenance/, L7/governance/, L7/peering/, and L7/allications/."
+    - **locator**: /home/user/autonomous@origin/ccr-9391bd81-f2enmj:L8/L6/history/harmonization-2026-09-05.md:187 (identical at /home/user/auditonomous@origin/ccr-9391bd81-f2enmj:L8/L6/history/harmonization-2026-09-05.md:180)
+    - **bears**: The fact of the matter: each new section identifies the scaffold by a date and a path and by no commit hash, and neither section contains the word declined; what was not taken appears only under "Not changed" and "Left as found, for the owner".
+  - item 6
+    - **speaker**: record
+    - **quote**: The file is now the scaffold's, byte for byte.
+    - **locator**: /home/user/auditonomous@origin/ccr-9391bd81-f2enmj:L8/L6/history/harmonization-2026-09-05.md:198
+    - **bears**: The section claims byte identity with a scaffold file without saying at which commit; the blob of .github/workflows/integrity.yml is f43dd04 on both that branch and 7lm origin/main (c9dc061), so the commit can be named truthfully.
+  - item 7
+    - **speaker**: specification
+    - **quote**: An upstream change creates a new binding; it does not mutate the pinned object.
+    - **locator**: /home/user/7lm@origin/ccr-9391bd81-f2enmj:L8/L4/work/writing/7lm-harmonized-architecture-specification.md:837
+    - **bears**: The specification's own rule for anything taken from a peer is a pinned version, so pinning the scaffold as a peer rests on the specification and not only on the retired guide.
+  - item 8
+    - **speaker**: owner
+    - **quote**: Don't change the system unless you ask or are unsure
+    - **locator**: /home/user/7lm@origin/main:L8/L6/history/harmonization-2026-09-04.md:482
+    - **bears**: Adding a hash and a list to a record's prose changes no position, sheet or check, so it sits inside this limit; anything beyond words would not.
+- **against**: Two quotations cut against treating this as a duty. The owner, 2026-10-17: "Put the field guide into l6 as provenance stale. Deprecated and to be used as an example." (/home/user/7lm@origin/ccr-9391bd81-f2enmj:L8/L6/history/harmonization-2026-09-04.md:518) - on draft PR #20 the guide that asks is retired. And the guide itself: "None of this is built; for now every step is HOA." (/home/user/7lm@origin/main:L8/L6/7lm-field-guide.md:610), with the scaffold record's "Read, not resolved." on the owner's "list them in HOA" (same record, line 358). So the pin-and-declined rule describes a future push mechanism and its reading is unsettled; it does not bind today's hand mirror.
+- **confidence**: the quotations favour it
+- **alternatives**: (a) Leave both sections as they are, on the ground that the guide is deprecated and the mechanism unbuilt; the date "version of 20 September 2026" then remains the only identification. (b) Pin the commit only and leave "Not changed" / "Left as found" to stand as the declined list without a heading. (c) Record the pin and the declined list not in the history record but as an ingress item at each exemplar's L7/peering/private/, as the guide literally describes; this creates new filings and should wait for the owner's word.
+- **what_it_costs**: One paragraph and one further commit on each of two draft branches (autonomous PR #30, auditonomous PR #28); no file moves. It commits the records to c9dc061 as the mirrored state, which the owner should confirm, since the sections themselves cite only the specification's version date. Reversal is a revert of that commit.
+- **who_acts**: The owner decides (and confirms the commit and what counts as declined); the session that made the mirror then adds the paragraph by hand to each draft branch.

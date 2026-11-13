@@ -1,0 +1,425 @@
+# read:timeline
+
+Agent result, as returned. Workflow: The model, read deep. Run `wf_9a60cf50-a5f`. Phase: Read.
+
+- **scope**: Commit history of /home/user/7lm, /home/user/autonomous and /home/user/auditonomous from 2026-09-11 to 2026-11-11, every remote branch (plus the local-only branches found in the clones), read from git objects only. Covers: scaffold first-parent history (PRs #11-#21 and the owner's two direct edits), when the exemplars were last in step, every non-main branch, and the three beta branches of 2-3 Nov 2026 with their cross-citations.
+- **summary**: Between 11 Sept and 11 Nov 2026 the scaffold's main took eleven first-parent commits (PRs #11-#18, #21 and two owner edits of L7/0.md); the exemplars' main branches took none after the rename-pass merges, made within six seconds of the scaffold's on 2026-09-11 23:25:56-23:26:02 -0700. That is the last moment all three were in step.
+
+  Only one scaffold change since then is physical for an adopter: PR #17 (0d1ec40, 20 Sept) moved L7/publications/ to L7/allications/publications/, added six new sheeted positions, and renamed L7/governance/restrictions/ to controlled/. PR #18 added the eight peer-1/object-1 positions to the CI canon list (71 positions) and swept the prose. Measured against that list, each exemplar main lacks exactly eight sheets (the seven allications positions and governance/controlled) and still carries the former names in prose. PR #12 (peers from 1) required nothing: both exemplars already number peers from 1 and carry no "peer-0" text. PRs #13-#16 and #21 and the 5 Oct owner edit changed words or filed material only. The tree at c9dc061 differs from 2e5a6d6 by one added file.
+
+  The three beta branches are authored and committed by EDM (git); "Codex" appears only in the beta's specification-history.md. Order: 7lm 4ca3edb, autonomous 805cd42, e64b382, auditonomous 714480d (all 2 Nov evening), then 7lm 97314c5 (3 Nov). Every cited id exists; "common architecture 4ca3edb" is the first beta commit on 7lm, not its tip.
+
+  Unexpected: each exemplar clone holds a local-only, unpushed commit dated today (8257118, f2d5b37) that already mirrors the L7 restructure by hand.
+- **facts**
+  - item 1
+    - **id**: F01
+    - **kind**: change
+    - **statement**: Scaffold origin/main first-parent history since 2026-09-11 is exactly 11 commits: 67bb795 (PR #11), b85d2e0 (PR #12), 0738519 (owner edit), 6600f77 (PR #13), 68c550e (PR #14), 22327cb (PR #15), e22c5fc (PR #16), 0d1ec40 (PR #17), 6609f38 (PR #18), 2e5a6d6 (owner edit), c9dc061 (PR #21). All are authored EDM, committed by GitHub. No PR #19 or #20 merge is on main.
+    - **locator**: 7lm@origin/main:git log --first-parent --since=2026-09-11
+  - item 2
+    - **id**: F02
+    - **kind**: change
+    - **statement**: PR #11 (67bb795, 2026-09-11 23:25:56 -0700 = 2026-09-12 06:25:56 UTC), 96 files: PHYSICAL rename USO/ -> L8/ and l0..l6 -> L0..L6 (git renames), WORDS (sheet headings and path references rewritten, specification version of 12 September), FILED MATERIAL (L8/L0/pedagogy/7lm-field-guide.md created, 566 lines). Branch commits c699e3e, 78a6c1f, ef429b4. Adopter action: the same rename; done in both exemplars the same minute (F12).
+    - **locator**: 7lm@67bb795:git show --first-parent --stat
+    - **quote**: The rename pass: USO/ is L8/, l0 … l6 are L0 … L6; the field guide filed at pedagogy
+  - item 3
+    - **id**: F03
+    - **kind**: rule
+    - **statement**: PR #12 (b85d2e0, 2026-09-12 10:09:55 -0700), 7 files, no path added, moved or removed: RULE + WORDS. The owner's ruling resolves the peer numbering: peers and objects count from 1, layers from 0. Changed L7/peering/0.md, FIRST_IS_ALWAYS_0.md, the field guide, the specification (.md/.docx), record section 16, specification-history.md.
+    - **locator**: 7lm@origin/main:L8/L6/history/harmonization-2026-09-04.md:192
+    - **quote**: 0 is the semantic inverse  to itseklf. Peers are physical and should start at 1. 0 is where semantics, eptistemic etc define the iupper layers. Its what exists in your ghead first
+  - item 4
+    - **id**: F04
+    - **kind**: change
+    - **statement**: PR #12 required nothing of the exemplars. The scaffold's own record says so, and the trees agree: on both exemplars' origin/main every peer directory is peer-1..peer-N with object-1.. (autonomous: private ingress peer-1..4, public ingress peer-1..9; auditonomous: private egress peer-1..2, private ingress peer-1..3), `git grep -F 'peer-0'` returns nothing, and neither carries FIRST_IS_ALWAYS_0.md or any 'First is always 0' / 'counted from 1' text.
+    - **locator**: 7lm@origin/main:L8/L6/history/harmonization-2026-09-04.md:194; autonomous@origin/main:L7/peering (ls-tree -r -d); auditonomous@origin/main:L7/peering (ls-tree -r -d)
+    - **quote**: Nothing else changed; the exemplars carried no statement on the question.
+  - item 5
+    - **id**: F05
+    - **kind**: change
+    - **statement**: Owner's direct edit 0738519 (2026-09-19 01:36:36 -0700, 'Update 0.md', author EDM <149889949+abba-01@users.noreply.github.com>, committer GitHub) changed only L7/0.md, +10/-2, in the drawn tree: line 68 '│   └── restrictions/0' became '│   └── controlled/0 ' (trailing space); the single line '└── publications/0' became '├── allications/0' with six children drawn with '|' bars: publications/0, applications/0, communications/0, specifications/0, notificattions/0, participations/0, plus two blank lines. WORDS only: no directory moved.
+    - **locator**: 7lm@0738519:L7/0.md:68,84-90
+    - **quote**: |    ├── notificattions/0
+  - item 6
+    - **id**: F06
+    - **kind**: defect
+    - **statement**: After 0738519 the sheet described a tree that was not on disk: at 0738519 and still at e22c5fc (PR #16) L7 held governance, peering, provenance, publications, and governance held restrictions, with no allications/. The mismatch lasted from 2026-09-19 01:36 -0700 until PR #17 merged 2026-09-20 13:31 -0700.
+    - **locator**: 7lm@0738519:L7 (ls-tree -d); 7lm@e22c5fc:L7 (ls-tree -d); 7lm@origin/main:L8/L6/history/harmonization-2026-09-04.md:317
+    - **quote**: The edit made the sheet describe a tree that did not exist: seven of the directories it drew were not on disk
+  - item 7
+    - **id**: F07
+    - **kind**: change
+    - **statement**: PR #13 (6600f77, merged 2026-09-19 01:37:54 -0700; its eight branch commits are dated 2026-09-12 17:57 to 2026-09-13 01:58 UTC, two authored EDM, six Claude), 12 files: WORDS (specification version of 13 September with the packet reading as two [Clarification] blocks; L7/0.md, L8/0.md, pedagogy and writing sheets, FIRST_IS_ALWAYS_0.md; field guide rewritten) + FILED MATERIAL (L8/L0/pedagogy/7lm-plate-sheet.html and .py created). Adopter action: none physical.
+    - **locator**: 7lm@6600f77:commit message
+    - **quote**: No position, count or path changed; L7/ and L8/ remain siblings per the owner's ruling.
+  - item 8
+    - **id**: F08
+    - **kind**: change
+    - **statement**: PR #14 (68c550e, 2026-09-19 10:25:17 -0700), 5 files: PHYSICAL in the scaffold only (new directory L8/L6/in/ with 0.md, optimistic-thompson-branch-text.md and two .docx) + WORDS (field guide names in/ as a position's inbox). in/ is not a canonical position (absent from the CI canon list) and is optional, so an adopter need do nothing. Neither exemplar main has L8/L6/in/.
+    - **locator**: 7lm@origin/main:L8/L6/7lm-field-guide.md:476; 7lm@origin/main:.github/workflows/integrity.yml:47-59
+    - **quote**: Any position may have one, it is never required, and it carries a `0.md` like every other folder.
+  - item 9
+    - **id**: F09
+    - **kind**: change
+    - **statement**: PR #15 (22327cb, 2026-09-19 10:39:58 -0700), 2 files: WORDS only: record section 24 added and L8/L6/0.md now names in/. Adopter action: none.
+    - **locator**: 7lm@22327cb:commit message
+    - **quote**: The specification is untouched.
+  - item 10
+    - **id**: F10
+    - **kind**: change
+    - **statement**: PR #16 (e22c5fc, 2026-09-19 10:53:11 -0700), 2 files: FILED MATERIAL: L7/provenance/prior-art/uha-ommp-exemplar.html (700 lines) added and its sheet updated. No model change; adopter action: none.
+    - **locator**: 7lm@e22c5fc:git show --first-parent --stat
+    - **quote**: Merge pull request #16: the UHA/oMMP exemplar filed at L7 prior-art
+  - item 11
+    - **id**: F11
+    - **kind**: change
+    - **statement**: PR #17 (0d1ec40, 2026-09-20 13:31:26 -0700; one branch commit 606d4b3), 37 files: PHYSICAL. L7/publications/0.md renamed to L7/allications/publications/0.md; L7/governance/restrictions/0.md renamed to L7/governance/controlled/0.md; six sheets created (L7/allications/0.md and applications, communications, notifications, participations, specifications). L7 sheets 29 -> 35; non-retired sheets 69 -> 75. Also WORDS (specification version 20 September, 26-28 live files re-pathed) and CI canon list changed (restrictions -> controlled; publications -> seven allications positions). Adopter action: the same two moves and six new sheets.
+    - **locator**: 7lm@0d1ec40:git show --first-parent --stat --summary; 7lm@origin/main:L8/L6/history/harmonization-2026-09-04.md:321
+    - **quote**: L7 goes from 29 sheets to 35.
+  - item 12
+    - **id**: F12
+    - **kind**: change
+    - **statement**: The exemplars were last in step at the rename pass. Scaffold PR #11 merged 2026-09-11 23:25:56 -0700 (67bb795); autonomous PR #28 merged 23:25:59 (c9076c3, 180 files: 126 renames, 52 modified, 1 add, 1 delete); auditonomous PR #26 merged 23:26:02 (2165144, 126 files: 92 renames, 34 modified). Both exemplar merges are titled 'The rename pass: USO/ is L8/, l0 … l6 are L0 … L6'. Neither exemplar main has any later commit.
+    - **locator**: autonomous@c9076c3:git show --first-parent --name-status -M; auditonomous@2165144:git show --first-parent --name-status -M; 7lm@origin/main:L8/L6/history/harmonization-2026-09-04.md:172
+    - **quote**: The one CI check passes on the result in all three repositories, with 68, 97, and 78 sheets checked.
+  - item 13
+    - **id**: F13
+    - **kind**: tree
+    - **statement**: Content check of 'in step' at 2026-09-12: auditonomous origin/main's .github/workflows/integrity.yml is byte-identical (blob 5538d89) to the scaffold's at 67bb795; autonomous origin/main's (blob 83dc7b3) differs only by one blank line and a 29-line comment block 'RETIRED 2026-08-14 — the Q-6 quarantine step'. Both exemplar CI files carry the 57-position canon list of that date. Sheet counts on main match the record: autonomous 97, auditonomous 78, scaffold at 67bb795 68 non-retired.
+    - **locator**: auditonomous@origin/main:.github/workflows/integrity.yml; autonomous@origin/main:.github/workflows/integrity.yml:16-44; 7lm@67bb795:.github/workflows/integrity.yml
+  - item 14
+    - **id**: F14
+    - **kind**: change
+    - **statement**: What the scaffold's PR #11 held that the exemplars' rename PRs did not: the field guide commit ef429b4 (2026-09-12 06:12:15 UTC, scaffold-only teaching file) and the specification files. The exemplars' branches hold the rename commit plus record-precision commits (autonomous 4e19369, 6bdfc3f; auditonomous 3045e07, 5e18f0a, f7d9b57). The exemplars' records end at the rename pass: autonomous section 13, auditonomous section 12, both dated 2026-09-12.
+    - **locator**: autonomous@origin/main:L8/L6/history/harmonization-2026-09-05.md:169; auditonomous@origin/main:L8/L6/history/harmonization-2026-09-05.md:162
+    - **quote**: ## 13. 2026-09-12 — the rename pass: `USO/` to `L8/`, `l0` … `l6` to `L0` … `L6`
+  - item 15
+    - **id**: F15
+    - **kind**: change
+    - **statement**: PR #18 (6609f38, 2026-09-20 13:32:08 -0700; 13 branch commits 80ce005..e8a5a2c, all Claude), 47 files. PHYSICAL in scaffold only: L8/L0/pedagogy/7lm-field-guide.md renamed to L8/L6/7lm-field-guide.md; L8/L6/7lm-sheet-templates.md created. RULES: record sections 26-31 and 36. WORDS: the prose sweep of 44 files (section 37), README reading order 'publications' -> 'allications'. CI: canon list gains eight peer-1/object-1 positions (57+6-... = 71 total).
+    - **locator**: 7lm@6609f38:git show --first-parent --stat --summary; 7lm@origin/main:L8/L6/history/harmonization-2026-09-04.md:504
+    - **quote**: its canon list gains the eight peer-1 and object-1 positions the specification's tree draws, seventy-one positions in all
+  - item 16
+    - **id**: F16
+    - **kind**: tree
+    - **statement**: The CI canon list grew from 57 positions (at 67bb795) to 71 (origin/main). Added: seven L7/allications positions, L7/governance/controlled, and eight peering positions (peer-1 and peer-1/object-1 on each of the four faces). Removed: L7/governance/restrictions and L7/publications. The CI file was last changed by bbb04dd (2026-09-20) and is unchanged since.
+    - **locator**: 7lm@origin/main:.github/workflows/integrity.yml:47-59; 7lm@67bb795:.github/workflows/integrity.yml
+  - item 17
+    - **id**: F17
+    - **kind**: tree
+    - **statement**: Measured against the scaffold's current 71-position canon list, each exemplar's origin/main lacks a sheet at exactly eight positions: L7/allications, L7/allications/applications, /communications, /notifications, /participations, /publications, /specifications, and L7/governance/controlled. The eight peer-1/object-1 positions are already sheeted in both. Both still have L7/publications/ (with binder/ beneath) and L7/governance/restrictions/.
+    - **locator**: autonomous@origin/main:L7 (ls-tree -r); auditonomous@origin/main:L7 (ls-tree -r); 7lm@origin/main:.github/workflows/integrity.yml:47-59
+  - item 18
+    - **id**: F18
+    - **kind**: tree
+    - **statement**: Former-name prose still on exemplar main (git grep -l counts): autonomous 25 files with 'L7/publications', 13 with 'governance/restrictions', 55 with 'peering, and publication state'; auditonomous 22, 14 and 37. Neither contains 'allications' or 'controlled/' anywhere. The scaffold record gives 24 and 21 files, and 12 and 13, for the first two measures; the small difference is not reconciled here.
+    - **locator**: autonomous@origin/main:git grep -l; auditonomous@origin/main:git grep -l; 7lm@origin/main:L8/L6/history/harmonization-2026-09-04.md:329
+    - **quote**: They are not brought into step by this pass and now differ from the specification at those names.
+  - item 19
+    - **id**: F19
+    - **kind**: rule
+    - **statement**: Standing rule (PR #18, record section 26): the exemplars mirror the scaffold by hand, later, at the owner's judgment.
+    - **locator**: 7lm@origin/main:L8/L6/history/harmonization-2026-09-04.md:336
+    - **quote**: All repos should mirror the 7lm. Manually. We update 7lm and focus on it only. No outside updates until we are sure I'm close.
+  - item 20
+    - **id**: F20
+    - **kind**: rule
+    - **statement**: Standing rule (PR #18, record section 27): what an adopter must keep is the pushed tree and a 0.md in every folder whose first line is the folder's path; everything after the first line is a design choice. So the scaffold's later wording changes to sheets (packet reading, prose sweep) are not requirements on an adopter beyond the names of positions.
+    - **locator**: 7lm@origin/main:L8/L6/history/harmonization-2026-09-04.md:352
+    - **quote**: What is not a design choice is the tree the scaffold pushes and, in every folder of it, a `0.md` whose first line is the folder's path from the root.
+  - item 21
+    - **id**: F21
+    - **kind**: rule
+    - **statement**: Standing rule (PR #18, record section 31): each repository's history stays at its own L6; a mirror pass carries the tree and sheets, never the scaffold's L6 records.
+    - **locator**: 7lm@origin/main:L8/L6/history/harmonization-2026-09-04.md:402
+    - **quote**: Our 7Lm guides DO NOT share ANY HISTORY! HARD RULE. That's why you have l6.
+  - item 22
+    - **id**: F22
+    - **kind**: rule
+    - **statement**: Standing rule (PR #18, record section 36): no change to the system without asking; when unsure, ask.
+    - **locator**: 7lm@origin/main:L8/L6/history/harmonization-2026-09-04.md:482
+    - **quote**: Don't change the system unless you ask or are unsure
+  - item 23
+    - **id**: F23
+    - **kind**: rule
+    - **statement**: PR #18 also recorded, as not applied and then parked, the 1.md / base-dir / plate design of record sections 32-35. Nothing of it is in the tree; an adopter has nothing to do for it.
+    - **locator**: 7lm@origin/main:L8/L6/history/harmonization-2026-09-04.md:494
+    - **quote**: lets not do 1.md becuase we are still working 0.md and I think i will end up just nmaking it worse.
+  - item 24
+    - **id**: F24
+    - **kind**: rule
+    - **statement**: PR #18 added the sheet templates and the blank-sheet allowance (sections 28-30): a folder beneath a layer keeps its sheet but the sheet may be only its first line; no CI check was added for this.
+    - **locator**: 7lm@origin/main:L8/L6/history/harmonization-2026-09-04.md:390
+    - **quote**: A folder beneath a layer keeps its sheet — the tree and the first line are not design choices — and the sheet may be blank, the first line and nothing else.
+  - item 25
+    - **id**: F25
+    - **kind**: change
+    - **statement**: The specification on main itself records that the exemplars are behind: its exemplar section says the desk carries the pre-20-September branch names.
+    - **locator**: 7lm@origin/main:L8/L4/work/writing/7lm-harmonized-architecture-specification.md:950
+    - **quote**: The desk carries the L7 branch names of the version before 20 September 2026, publications/ as a direct branch and governance/restrictions/; the L7 restructure is not yet mirrored.
+  - item 26
+    - **id**: F26
+    - **kind**: change
+    - **statement**: Owner's direct edit 2e5a6d6 (2026-10-05 20:33:36 -0700, 'Update 0.md', author EDM, committer GitHub) changed only L7/0.md, +2 lines: a heading inserted at line 159, directly above '### Autonomous and Auditonomous: peering without semantic annexation', plus one blank line. WORDS only; nothing for an adopter to mirror (the note concerns the scaffold's links to the private exemplar repositories). The line is still at 159 on origin/main.
+    - **locator**: 7lm@2e5a6d6:L7/0.md:159
+    - **quote**: ### THESE REPOS BELOW ARE PRIVATE THUS WILL RETURN 404 UNLESS YOU HAVE ACCESS.
+  - item 27
+    - **id**: F27
+    - **kind**: change
+    - **statement**: PR #21 (c9dc061, merged 2026-11-11 10:08:11 -0800; branch commit c6d598a by Claude dated 2026-10-31 04:16:20 UTC), 1 file: FILED MATERIAL, L8/L6/in/7lm-layer-lists.md (415 lines), filed as a proposal. `git diff --name-status 2e5a6d6 origin/main` shows that one added file and nothing else, so the model of record at c9dc061 is physically the tree of 2e5a6d6. No record section was added for it; the harmonization record on main still ends at section 37. Adopter action: none.
+    - **locator**: 7lm@origin/main:L8/L6/in/7lm-layer-lists.md:5
+    - **quote**: Nothing in the tree, any sheet, the guide, the templates, the specification, or the CI changes with it
+  - item 28
+    - **id**: F28
+    - **kind**: tree
+    - **statement**: Scaffold origin/main root holds .github, L7, L8, README.md (no .gitignore tracked); L8/L6 holds 0.md, 7lm-field-guide.md, 7lm-sheet-templates.md, history/, in/, retired/. Non-retired sheets: 75. Specification version line reads 'Version of 20 September 2026'.
+    - **locator**: 7lm@origin/main:(ls-tree); 7lm@origin/main:L8/L4/work/writing/7lm-harmonized-architecture-specification.md:18
+    - **quote**: Version of 20 September 2026.
+  - item 29
+    - **id**: F29
+    - **kind**: change
+    - **statement**: 7lm branch origin/ccr-9391bd81-f2enmj (c9638a9, Claude, four commits 2026-10-17 11:13-13:04 UTC, forks from 2e5a6d6, UNMERGED; the task names it draft PR #20). PHYSICAL: L8/L6/7lm-field-guide.md -> L8/L6/retired/field-guide-2026-09-20/7lm-field-guide.md (R100) with a new 0.md; adds record sections 38 (reserved), 39, 40; puts the hard rule into L8/L6/0.md. 9 files, +78/-8.
+    - **locator**: 7lm@origin/ccr-9391bd81-f2enmj:L8/L6/history/harmonization-2026-09-04.md:518
+    - **quote**: Put the field guide into l6 as provenance stale. Deprecated and to be used as an example.
+  - item 30
+    - **id**: F30
+    - **kind**: change
+    - **statement**: 7lm branch origin/ccr-00099fac-hjosbo (b5c3984, Claude, UNMERGED; the record on the PR #20 branch names it PR #19). Own commits c25c864, 5672e6c, 6287388, ed77d9c of 2026-10-06 07:15-07:50 UTC: 'the public face agnostic' prose sweep, 47 files +350/-200, adding .github/release.sh and .github/workflows/release.yml (new files under .github, none at root), and record section 38. Its tip is a merge of the PR #20 branch (2026-10-17 12:24:25 UTC).
+    - **locator**: 7lm@origin/ccr-00099fac-hjosbo:L8/L6/history/harmonization-2026-09-04.md:512
+    - **quote**: ## 38. 2026-10-06 — the public face agnostic: authorship tags out of the live text; the release, one commit and no history
+  - item 31
+    - **id**: F31
+    - **kind**: change
+    - **statement**: 7lm branch origin/audit/peering-descriptive-reframe-2026-09-20 (3555866, UNMERGED): 118 commits authored and committed by EDM <149889949+abba-01@users.noreply.github.com> between 2026-09-20 17:27:46 and 17:59:53 -0700, forking from 6609f38 (PR #18 merge), each rewording one sheet or the specification toward 'descriptive' peering semantics; net 75 files modified, +1400/-1059, no file added, removed or renamed. Its tip is a Claude merge of the PR #20 branch (2026-10-17 12:24:57 UTC). Its disposition is recorded as the owner's call.
+    - **locator**: 7lm@origin/audit/peering-descriptive-reframe-2026-09-20:git log 6609f38..83ad204; 7lm@origin/ccr-9391bd81-f2enmj:L8/L6/history/harmonization-2026-09-04.md:537
+    - **quote**: The branch itself is neither adopted nor retired by this: its disposition is still the owner's call (§36).
+  - item 32
+    - **id**: F32
+    - **kind**: change
+    - **statement**: 7lm branch origin/copilot/create-error-list (1e2fe77, copilot-swe-agent[bot], committer GitHub, 2026-09-20 21:24:52 UTC, forks from 6609f38, UNMERGED): one file added, L8/L5/research/review/7lm-audit-recommendations.md, 328 lines.
+    - **locator**: 7lm@1e2fe77:git show --stat
+    - **quote**: Publish all 96 audit recommendations with priorities and coverage limits
+  - item 33
+    - **id**: F33
+    - **kind**: change
+    - **statement**: 7lm branches with no content of their own: origin/copilot/create-academic-guide-plan points at e22c5fc (the PR #16 merge on main; 0 ahead, 19 behind) and origin/ccr-9a67809a-iwii3n points at c6d598a (the merged PR #21 branch). Both are reported merged by `git branch -r --merged origin/main`. The 7lm clone has 8 remote refs in all and no tags.
+    - **locator**: 7lm@origin/main:git branch -r --merged; git for-each-ref refs/remotes/origin
+  - item 34
+    - **id**: F34
+    - **kind**: change
+    - **statement**: autonomous branch origin/claude/scholarly-pair-baseline-k8ap82 (9b49910, Claude, 2026-09-14 01:57:47 UTC, one commit on c9076c3, UNMERGED): 9 files +280/-4; adds L8/L4/work/writing/papers/ (0.md and AUTONOMOUS_BASELINE_PAPER_2026-09-14.md) and L8/L6/history/exemplar-2026-09-14.md, and writes a read-only-exemplar declaration into L7/governance/restrictions/0.md, i.e. at the former path name.
+    - **locator**: autonomous@9b49910:commit message
+    - **quote**: [source text withheld from the public copy] is filed once, at L7/governance/restrictions/0.md
+  - item 35
+    - **id**: F35
+    - **kind**: change
+    - **statement**: auditonomous branch origin/claude/book-structure-roadmap-k8ap82 (9259c18, Claude, five commits 2026-09-13 20:37 to 2026-09-14 02:04 UTC on 2165144, UNMERGED; the task names it draft PR #27, closed): 176 files, +22883/-12. Adds L8/L4/work/writing/book/ (27 chapter files), manuscript/ (52 Block files), papers/AUDITONOMOUS_VOCABULARY_PAPER_2026-09-14.md, sourcebook/, prompts/, many L8/L5/research/review files including BOOK_STRUCTURE_AND_ROADMAP_2026-09-13.md, and L8/L6/history/restore-2026-09-14.md.
+    - **locator**: auditonomous@origin/claude/book-structure-roadmap-k8ap82:git diff --name-status origin/main
+    - **quote**: The roadmap re-sequenced to the owner's build-first order, with the component repositories surveyed
+  - item 36
+    - **id**: F36
+    - **kind**: change
+    - **statement**: Exemplar branches updated on or after 2026-09-11 and already merged: origin/claude/admiring-pascal-t2yv3r in autonomous (6bdfc3f, 2026-09-12 04:38:27 UTC) and auditonomous (f7d9b57, 2026-09-12 04:46:39 UTC), the rename-pass branches, both in main. Every other exemplar remote branch dates from 2026-09-07 or earlier (e.g. claude/no-deletion-fix-2026-09-07, unmerged in both). Neither exemplar has tags.
+    - **locator**: autonomous@origin:git for-each-ref --sort=-committerdate; auditonomous@origin:git for-each-ref --sort=-committerdate
+  - item 37
+    - **id**: F37
+    - **kind**: change
+    - **statement**: The three beta branches, in commit order (author and committer both 'EDM <149889949+abba-01@users.noreply.github.com>' on every commit; committer is EDM, not GitHub): 7lm 4ca3edb 2026-11-02 20:53:22 -0800; autonomous 805cd42 21:03:03; autonomous e64b382 21:05:23; auditonomous 714480d 21:08:36; 7lm 97314c5 2026-11-03 08:58:01 -0800. All three are UNMERGED (absent from `git branch -r --merged origin/main`).
+    - **locator**: 7lm@origin/beta/common-contracts-r1-r6:git log 2e5a6d6..; autonomous@origin/beta/7lm-exemplar-autonomous:git log origin/main..; auditonomous@origin/beta/7lm-exemplar-auditonomous:git log origin/main..
+  - item 38
+    - **id**: F38
+    - **kind**: change
+    - **statement**: Git metadata does not name Codex anywhere; the only 'Codex' attribution in the three beta trees is one sentence in the scaffold beta's specification-history.md.
+    - **locator**: 7lm@origin/beta/common-contracts-r1-r6:L8/L6/history/specification-history.md:106
+    - **quote**: Implemented by Codex, task T1, on 2 November 2026 (America/Los_Angeles), in the bounded common-architecture candidate after the owner's approval of R1–R6.
+  - item 39
+    - **id**: F39
+    - **kind**: change
+    - **statement**: 'Common architecture 4ca3edb' is commit 4ca3edb9172c34e6b0033bd09e2379ed3da76d9d in aybllc/7lm, 'Apply approved R1–R6 and exercise bounded research objects', parent 2e5a6d6, the FIRST of the two commits on origin/beta/common-contracts-r1-r6 (17 files, +792/-32; adds eight beta-* research files in L8/L0-L5 and edits the CI, specification, field guide, three sheets, source-ledger and specification-history). It exists only on that branch and is absent from both exemplar clones' object stores. It is not the branch tip: 97314c5 (18 sheets, +92/-15) follows it and is pinned by nothing.
+    - **locator**: 7lm@4ca3edb:git show --stat; autonomous@origin/beta/7lm-exemplar-autonomous:L8/L6/history/BETA_HISTORY.md:10
+    - **quote**: The immutable common architecture input is `4ca3edb9172c34e6b0033bd09e2379ed3da76d9d` on `beta/common-contracts-r1-r6`.
+  - item 40
+    - **id**: F40
+    - **kind**: change
+    - **statement**: Autonomous beta cites, in commit messages, binding.json and BETA_HISTORY.md: architecture 4ca3edb (verified, 7lm beta), producer artifact 805cd42f073644177c618bdb18008137b7e7d170 (verified: the first commit on origin/beta/7lm-exemplar-autonomous, parent c9076c3), base c9076c35 (verified: autonomous main). e64b382 exists to fill binding.json after the fact: at 805cd42 the file has status 'integration-required' and null producer_commit/hashes; at e64b382 status 'pinned'.
+    - **locator**: autonomous@origin/beta/7lm-exemplar-autonomous:L7/peering/public/egress/peer-1/object-2/binding.json:3,7-8
+    - **quote**: "producer_commit": "805cd42f073644177c618bdb18008137b7e7d170"
+  - item 41
+    - **id**: F41
+    - **kind**: change
+    - **statement**: The hashes in the autonomous beta binding are true of the git objects: sha256 of 805cd42:L8/L4/work/computation/autonomous_beta.py is 427409b3...6b77e and of autonomous_beta_result.json is e6ad0564...7de2, matching binding.json lines 10 and 12; both blobs are unchanged between 805cd42 and e64b382 (blob ids 97277d1 and b10167d).
+    - **locator**: autonomous@805cd42:L8/L4/work/computation/autonomous_beta.py; autonomous@e64b382:L7/peering/public/egress/peer-1/object-2/binding.json:10,12
+  - item 42
+    - **id**: F42
+    - **kind**: change
+    - **statement**: Auditonomous beta (single commit 714480d on 2165144, 56 files +2352/-86) cites architecture 4ca3edb and producer 805cd42 with the same two SHA-256 values in L7/peering/public/ingress/peer-1/object-2/binding.json, base 21651446 (verified: auditonomous main), and 'semantic object-1 identity' 050496161a848ea26492b8468e59afc7e0c07282 (verified: a commit in aybllc/autonomous reachable from its main; absent from the auditonomous and 7lm clones). It names neither e64b382 (the autonomous beta tip) nor 97314c5.
+    - **locator**: auditonomous@origin/beta/7lm-exemplar-auditonomous:L7/peering/public/ingress/peer-1/object-2/binding.json:5,7; auditonomous@origin/beta/7lm-exemplar-auditonomous:L8/L6/history/AUDITONOMOUS_BETA_HISTORY.md:7,11
+    - **quote**: Integrated producer artifact `805cd42f073644177c618bdb18008137b7e7d170` and architecture `4ca3edb9172c34e6b0033bd09e2379ed3da76d9d` via separate object-2 binding
+  - item 43
+    - **id**: F43
+    - **kind**: change
+    - **statement**: The scaffold beta does not name the exemplar betas: no 'beta/7lm-exemplar', '805cd42', '714480d' or 'e64b382' string occurs in its tree; it says exemplar identities are recorded elsewhere. The citation runs one way: exemplars -> scaffold 4ca3edb, auditonomous -> autonomous 805cd42.
+    - **locator**: 7lm@origin/beta/common-contracts-r1-r6:L8/L6/history/specification-history.md:112 (section 'Bounded additional research-object construction, 2 November 2026')
+    - **quote**: actual exemplar integration and candidate branch commit identities are recorded separately
+  - item 44
+    - **id**: F44
+    - **kind**: tree
+    - **statement**: Both exemplar betas already carry the L7 restructure: each renames L7/publications/ (whole subtree) to L7/allications/publications/ and L7/governance/restrictions/ to controlled/, and adds sheets for allications and its five other children; measured against the scaffold's 71-position list, neither beta lacks a sheet. They also add beta research files (BETA_* / AUDITONOMOUS_BETA_*, computation code and results) and a peering object-2 with binding.json, which are not part of the scaffold's model.
+    - **locator**: autonomous@805cd42:git show --stat --summary -M; auditonomous@714480d:git show --stat --summary -M
+  - item 45
+    - **id**: F45
+    - **kind**: tree
+    - **statement**: CI files on the betas: the scaffold beta's integrity.yml (blob cd39c5b) drops USO/lowercase tolerance (root must hold L8; top=L8) and keeps the 71-position list; auditonomous beta's CI is byte-identical to it (cd39c5b); autonomous beta's (blob 670bd3e) keeps the USO-tolerant logic and its Q-6 comment block but has the same 71 positions. Scaffold main's CI is a third blob (f43dd04).
+    - **locator**: 7lm@origin/beta/common-contracts-r1-r6:.github/workflows/integrity.yml:19-27; auditonomous@origin/beta/7lm-exemplar-auditonomous:.github/workflows/integrity.yml; autonomous@origin/beta/7lm-exemplar-autonomous:.github/workflows/integrity.yml
+    - **quote**: # The root holds README.md, L7/, L8/, .github/, and .gitignore, and nothing else.
+  - item 46
+    - **id**: F46
+    - **kind**: defect
+    - **statement**: The scaffold beta forks from 2e5a6d6 and is 2 ahead, 2 behind origin/main... precisely: 2 ahead and 1 merge (2 commits: c6d598a, c9dc061) behind, so it does not contain PR #21. Its harmonization record is unchanged (ends at section 37); its account is only in specification-history.md. The scaffold beta's second commit disclaims being an exemplar step.
+    - **locator**: 7lm@97314c5:commit message
+    - **quote**: This is an original-7LM document correction, not an executable or exemplar implementation, migration, merge, release or beta-readiness claim.
+  - item 47
+    - **id**: F47
+    - **kind**: change
+    - **statement**: Local-only branch in the autonomous clone (not on origin): refs/heads/ccr-9391bd81-f2enmj = 8257118, one commit on c9076c3, author/committer Claude <noreply@anthropic.com>, 2026-11-11 18:33:28 UTC, 78 files +427/-132 (6 added, 10 renamed, 62 modified). It moves L7/publications/ (nine files) to L7/allications/publications/ and restrictions/ to controlled/, writes six sheets, updates the CI to 71 positions (blob 45ad3f7), and claims record section 14. No canonical sheet missing. No remote branch contains it. It is the clone's HEAD.
+    - **locator**: autonomous@refs/heads/ccr-9391bd81-f2enmj (8257118):commit message
+    - **quote**: The L7 restructure mirrored by hand: allications, and controlled; the words match the folders
+  - item 48
+    - **id**: F48
+    - **kind**: change
+    - **statement**: Local-only branch in the auditonomous clone (not on origin): refs/heads/ccr-9391bd81-f2enmj = f2d5b37, one commit on 2165144, Claude, 2026-11-11 18:34:37 UTC, 55 files +407/-112 (6 added, 6 renamed, 43 modified). Same two moves (publications: five files), six sheets, record section 13. Its integrity.yml is blob f43dd04, byte-identical to scaffold origin/main's. No canonical sheet missing; no remote branch contains it; it is the clone's HEAD.
+    - **locator**: auditonomous@refs/heads/ccr-9391bd81-f2enmj (f2d5b37):commit message
+    - **quote**: The one CI check is now the scaffold's file, byte for byte, and names seventy-one canonical positions.
+  - item 49
+    - **id**: F49
+    - **kind**: tree
+    - **statement**: Local refs in the 7lm clone: refs/heads/main is at 2e5a6d6 (one merge behind origin/main c9dc061) and refs/heads/ccr-9391bd81-f2enmj is at c9638a9 (equal to origin's, the clone's HEAD). The scaffold has no commit after c9dc061 on any ref.
+    - **locator**: 7lm:git for-each-ref refs/heads
+  - item 50
+    - **id**: F50
+    - **kind**: change
+    - **statement**: Net requirement on an adopter from everything merged to scaffold main since the exemplars were last in step (2026-09-12): (a) move L7/publications/ -> L7/allications/publications/; (b) rename L7/governance/restrictions/ -> L7/governance/controlled/; (c) add six sheets at L7/allications/ and its applications, communications, specifications, notifications, participations; (d) update the CI canon list to the 71 positions; (e) make live prose name the positions as the folders do. Nothing in L8/ changed canonically.
+    - **locator**: 7lm@origin/main:.github/workflows/integrity.yml:47-59; 7lm@origin/main:L8/L6/history/harmonization-2026-09-04.md:321,498
+  - item 51
+    - **id**: F51
+    - **kind**: change
+    - **statement**: Scaffold-only items an adopter is not required to carry: the field guide (an L6 source document the adopter 'takes ... applies its updates or leaves them'), the sheet templates, the plate sheet and its generator, FIRST_IS_ALWAYS_0.md, L8/L6/in/ and its contents, the specification and specification-history, and the UHA/oMMP page at prior-art. None is a canonical position in the CI list.
+    - **locator**: 7lm@origin/main:L8/L6/7lm-field-guide.md:608
+    - **quote**: The other repositories mirror it, by hand: the scaffold is updated first and alone, and the others are brought into step when the owner judges it close to settled.
+- **checklist**
+  - item 1
+    - **step**: 2026-09-11 23:25:56 -0700 (09-12 06:25 UTC) | 7lm PR #11 merged, 67bb795
+    - **detail**: PHYSICAL + WORDS + FILED MATERIAL. USO/ -> L8/, l0..l6 -> L0..L6; specification version 12 September; field guide filed at L8/L0/pedagogy/. Adopter: same rename (done, next two rows).
+    - **locator**: 7lm@67bb795
+  - item 2
+    - **step**: 2026-09-11 23:25:59 -0700 | autonomous PR #28 merged, c9076c3
+    - **detail**: PHYSICAL + WORDS. The rename pass in the exemplar: 126 renames, 52 modified. Last commit on autonomous main. In step with the scaffold at this moment.
+    - **locator**: autonomous@c9076c3
+  - item 3
+    - **step**: 2026-09-11 23:26:02 -0700 | auditonomous PR #26 merged, 2165144
+    - **detail**: PHYSICAL + WORDS. The rename pass in the exemplar: 92 renames, 34 modified. Last commit on auditonomous main. CI file byte-identical to scaffold@67bb795.
+    - **locator**: auditonomous@2165144
+  - item 4
+    - **step**: 2026-09-12 10:09:55 -0700 | 7lm PR #12 merged, b85d2e0
+    - **detail**: RULE + WORDS. Peers and objects count from 1, layers from 0. No path changed. Adopter: nothing; exemplars already number from peer-1 and carry no statement on the question.
+    - **locator**: 7lm@b85d2e0; 7lm@origin/main:L8/L6/history/harmonization-2026-09-04.md:190-194
+  - item 5
+    - **step**: 2026-09-13 20:37 to 2026-09-14 02:04 UTC | auditonomous branch claude/book-structure-roadmap-k8ap82, 9259c18
+    - **detail**: FILED MATERIAL (exemplar content, unmerged; draft PR #27 per the task). Book and manuscript source tree, vocabulary paper, roadmap; 176 files. Not a model change.
+    - **locator**: auditonomous@origin/claude/book-structure-roadmap-k8ap82
+  - item 6
+    - **step**: 2026-09-14 01:57:47 UTC | autonomous branch claude/scholarly-pair-baseline-k8ap82, 9b49910
+    - **detail**: FILED MATERIAL + WORDS (exemplar content, unmerged). Baseline paper and a read-only-exemplar declaration written at L7/governance/restrictions/0.md (former name). Not a model change.
+    - **locator**: autonomous@9b49910
+  - item 7
+    - **step**: 2026-09-19 01:36:36 -0700 | owner's direct edit to 7lm main, 0738519
+    - **detail**: WORDS (the drawn tree in L7/0.md only): restrictions/0 -> controlled/0; publications/0 -> allications/0 with six children, 'notificattions' as typed. Directories not yet moved. Adopter: nothing until PR #17.
+    - **locator**: 7lm@0738519:L7/0.md:68,84-90
+  - item 8
+    - **step**: 2026-09-19 01:37:54 -0700 | 7lm PR #13 merged, 6600f77
+    - **detail**: WORDS + FILED MATERIAL. Specification version 13 September (packet reading), field guide rewritten, plate sheet and generator added. 'No position, count or path changed'. Adopter: nothing required.
+    - **locator**: 7lm@6600f77
+  - item 9
+    - **step**: 2026-09-19 10:25:17 -0700 | 7lm PR #14 merged, 68c550e
+    - **detail**: PHYSICAL (scaffold only, non-canonical) + WORDS. L8/L6/in/ created; in/ named as an optional inbox. Adopter: nothing required.
+    - **locator**: 7lm@68c550e
+  - item 10
+    - **step**: 2026-09-19 10:39:58 -0700 | 7lm PR #15 merged, 22327cb
+    - **detail**: WORDS. Record section 24; L8/L6/0.md names in/. Adopter: nothing.
+    - **locator**: 7lm@22327cb
+  - item 11
+    - **step**: 2026-09-19 10:53:11 -0700 | 7lm PR #16 merged, e22c5fc
+    - **detail**: FILED MATERIAL. uha-ommp-exemplar.html at L7/provenance/prior-art/. Adopter: nothing.
+    - **locator**: 7lm@e22c5fc
+  - item 12
+    - **step**: 2026-09-20 13:31:26 -0700 | 7lm PR #17 merged, 0d1ec40
+    - **detail**: PHYSICAL + WORDS + CI. L7/publications/ -> L7/allications/publications/; restrictions/ -> controlled/; six new sheets; specification version 20 September; canon list updated. Adopter: the two moves, six sheets, canon list. NOT yet on either exemplar main.
+    - **locator**: 7lm@0d1ec40; 7lm@origin/main:L8/L6/history/harmonization-2026-09-04.md:315-331
+  - item 13
+    - **step**: 2026-09-20 13:32:08 -0700 | 7lm PR #18 merged, 6609f38
+    - **detail**: RULE + WORDS + PHYSICAL (scaffold only) + CI. Field guide moved to L8/L6/; sheet templates added; rules of sections 26-31, 36; prose sweep of 44 files (section 37); canon list to 71 (eight peer-1/object-1 positions, already sheeted in both exemplars). Adopter: prose names and canon list; mirror by hand when the owner says.
+    - **locator**: 7lm@6609f38; 7lm@origin/main:L8/L6/history/harmonization-2026-09-04.md:334-510
+  - item 14
+    - **step**: 2026-09-20 17:27:46 to 17:59:53 -0700 | 7lm branch audit/peering-descriptive-reframe-2026-09-20, 118 EDM commits to 83ad204
+    - **detail**: WORDS (unmerged candidate). 75 files reworded toward descriptive peering semantics; no path change. Not the model of record.
+    - **locator**: 7lm@83ad204
+  - item 15
+    - **step**: 2026-09-20 21:24:52 UTC | 7lm branch copilot/create-error-list, 1e2fe77
+    - **detail**: FILED MATERIAL (unmerged). L8/L5/research/review/7lm-audit-recommendations.md, 96 recommendations.
+    - **locator**: 7lm@1e2fe77
+  - item 16
+    - **step**: 2026-10-05 20:33:36 -0700 | owner's direct edit to 7lm main, 2e5a6d6
+    - **detail**: WORDS. One heading added to L7/0.md line 159: 'THESE REPOS BELOW ARE PRIVATE THUS WILL RETURN 404 UNLESS YOU HAVE ACCESS.' Adopter: nothing.
+    - **locator**: 7lm@2e5a6d6:L7/0.md:159
+  - item 17
+    - **step**: 2026-10-06 07:15 to 07:50 UTC | 7lm branch ccr-00099fac-hjosbo (PR #19 per the record), c25c864..ed77d9c
+    - **detail**: WORDS + FILED MATERIAL (unmerged). 'Public face agnostic' sweep of 47 files; adds .github/release.sh and release.yml; record section 38.
+    - **locator**: 7lm@ed77d9c
+  - item 18
+    - **step**: 2026-10-17 11:13 to 13:04 UTC | 7lm branch ccr-9391bd81-f2enmj (PR #20 per the task), 574500d..c9638a9
+    - **detail**: PHYSICAL (scaffold only, unmerged). Field guide retired to L8/L6/retired/field-guide-2026-09-20/; hard rule into L8/L6/0.md; record sections 38-40. Merge commits b5c3984 and 3555866 pushed onto the PR #19 and audit branches the same day.
+    - **locator**: 7lm@origin/ccr-9391bd81-f2enmj
+  - item 19
+    - **step**: 2026-10-31 04:16:20 UTC | 7lm branch ccr-9a67809a-iwii3n, c6d598a
+    - **detail**: FILED MATERIAL. The layer lists written (merged 11 Nov as PR #21).
+    - **locator**: 7lm@c6d598a
+  - item 20
+    - **step**: 2026-11-02 20:53:22 -0800 | 7lm beta commit 4ca3edb on beta/common-contracts-r1-r6
+    - **detail**: WORDS + CI + FILED MATERIAL (unmerged candidate). 'Approved R1-R6' corrections to specification, guide, sheets; CI requires L8/uppercase; eight beta research files. This is 'common architecture 4ca3edb'.
+    - **locator**: 7lm@4ca3edb
+  - item 21
+    - **step**: 2026-11-02 21:03:03 -0800 | autonomous beta commit 805cd42
+    - **detail**: PHYSICAL + WORDS + FILED MATERIAL (unmerged candidate). L7 restructure applied in the exemplar plus beta research objects; pins 4ca3edb; binding.json left 'integration-required'.
+    - **locator**: autonomous@805cd42
+  - item 22
+    - **step**: 2026-11-02 21:05:23 -0800 | autonomous beta commit e64b382
+    - **detail**: WORDS (unmerged candidate). binding.json set to 'pinned' with producer 805cd42 and code/result SHA-256 (verified against the blobs).
+    - **locator**: autonomous@e64b382:L7/peering/public/egress/peer-1/object-2/binding.json
+  - item 23
+    - **step**: 2026-11-02 21:08:36 -0800 | auditonomous beta commit 714480d
+    - **detail**: PHYSICAL + WORDS + FILED MATERIAL (unmerged candidate). L7 restructure applied plus beta research objects; ingress binding pins autonomous 805cd42 and architecture 4ca3edb; CI byte-identical to the scaffold beta's.
+    - **locator**: auditonomous@714480d
+  - item 24
+    - **step**: 2026-11-03 08:58:01 -0800 | 7lm beta commit 97314c5
+    - **detail**: WORDS (unmerged candidate). 18 sheets edited for research-housing guidance. Cited by no exemplar binding.
+    - **locator**: 7lm@97314c5
+  - item 25
+    - **step**: 2026-11-11 10:08:11 -0800 (18:08 UTC) | 7lm PR #21 merged, c9dc061
+    - **detail**: FILED MATERIAL. L8/L6/in/7lm-layer-lists.md, a proposal; tree otherwise identical to 2e5a6d6. Adopter: nothing.
+    - **locator**: 7lm@c9dc061
+  - item 26
+    - **step**: 2026-11-11 18:33:28 UTC | autonomous LOCAL-ONLY commit 8257118 on refs/heads/ccr-9391bd81-f2enmj
+    - **detail**: PHYSICAL + WORDS + CI (unpushed, on no remote). L7 restructure mirrored by hand on c9076c3: two moves, six sheets, 71-position canon list, record section 14.
+    - **locator**: autonomous@8257118
+  - item 27
+    - **step**: 2026-11-11 18:34:37 UTC | auditonomous LOCAL-ONLY commit f2d5b37 on refs/heads/ccr-9391bd81-f2enmj
+    - **detail**: PHYSICAL + WORDS + CI (unpushed, on no remote). L7 restructure mirrored by hand on 2165144: two moves, six sheets, CI replaced by the scaffold's file byte for byte, record section 13.
+    - **locator**: auditonomous@f2d5b37
+- **open_questions**
+  - Pull-request numbers and states for unmerged branches cannot be read from git: #19 (ccr-00099fac-hjosbo) is named in the record on the PR #20 branch; #20 and #27, and 'open'/'closed', rest on the task's statement. No PR number was found for autonomous claude/scholarly-pair-baseline-k8ap82 or for 7lm copilot/create-error-list.
+  - 'Made by Codex' for the beta branches is supported only by one sentence in 7lm@origin/beta/common-contracts-r1-r6:L8/L6/history/specification-history.md:106; every beta commit's git author and committer is EDM. The 'approved R1-R6' approval itself (the owner's words) was not found quoted in that file; I did not search the rest of the beta tree for it.
+  - Two competing, unmerged implementations of the exemplar mirror now exist: the beta branches of 2 Nov (which also add research objects and pin scaffold 4ca3edb, a commit not on scaffold main) and the local-only commits 8257118 / f2d5b37 of 11 Nov (which mirror only the L7 restructure against scaffold main). Which is the intended route is the owner's decision; I did not compare their sheet texts.
+  - The exemplar betas pin 4ca3edb, not the scaffold beta's tip 97314c5, and the scaffold beta forks from 2e5a6d6 so lacks PR #21. Whether the owner regards the model 'changed' by the beta (R1-R6) or only by what is on main (c9dc061) is not settled by the history.
+  - The scaffold record (section 25, line 329) counts former-name files as 24 and 21, with governance/restrictions in 12 and 13; my git grep -l on exemplar main gives 25/22 and 13/14. The counting method behind the record's figures was not found.
+  - The scaffold's harmonization record on main has no section for the owner's edit 2e5a6d6 (5 Oct) or for PR #21 (11 Nov); it ends at section 37. Sections 38-40 exist only on unmerged branches. Not found on main: looked at headings of 7lm@origin/main:L8/L6/history/harmonization-2026-09-04.md.
+  - The local-only exemplar commits carry this session's Claude-Session trailer; I read them as git objects only and did not verify their contents beyond the commit message, name-status, the 71-position sheet check and the CI blob id.

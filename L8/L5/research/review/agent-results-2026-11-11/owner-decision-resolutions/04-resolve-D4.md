@@ -1,0 +1,57 @@
+# resolve:D4
+
+Agent result, as returned. Workflow: Resolutions for the 23 owner decisions. Run `wf_3293f65c-a92`. Phase: Resolve.
+
+- **decision**: 4. Whether the exemplars mirror main alone or main with the beta's wording; the folders are the same either way.
+- **resolution**: Mirror the scaffold's main alone (c9dc061), which is what draft PR #30 (autonomous a719cec) and draft PR #28 (auditonomous 294c843) already do, and leave the beta's wording out of the exemplars for now. Add one line to each new record section (autonomous section 14, auditonomous section 13) naming the scaffold commit mirrored and stating that the beta's wording (7lm 97314c5; exemplar betas e64b382 and 714480d) was declined for this pass, not dropped. If the owner later merges the beta into the scaffold's main, its wording follows as a second, separate hand pass.
+- **reasoning**
+  - item 1
+    - **speaker**: owner
+    - **quote**: we need to uipdate the autonomous and auditonomous repos phsyciall; to match first
+    - **locator**: owner's instruction of 11 November 2026, as typed (also quoted at autonomous@origin/ccr-9391bd81-f2enmj:L8/L6/history/harmonization-2026-09-05.md:185)
+    - **bears**: The order is for a physical match; the folders are identical on main and beta (no canonical position differs), so the order is fully met by main alone and does not ask for the beta's wording.
+  - item 2
+    - **speaker**: owner
+    - **quote**: All repos should mirror the 7lm. Manually. We update 7lm and focus on it only. No outside updates until we are sure I'm close.
+    - **locator**: /home/user/7lm@origin/main:L8/L6/history/harmonization-2026-09-04.md:336
+    - **bears**: The thing mirrored is "the 7lm"; the beta is an unmerged branch (origin/main..beta = 4ca3edb, 97314c5), so the 7lm as it stands is main, and carrying unmerged wording outward is an outside update ahead of the scaffold.
+  - item 3
+    - **speaker**: owner
+    - **quote**: Don't change the system unless you ask or are unsure
+    - **locator**: /home/user/7lm@origin/main:L8/L6/history/harmonization-2026-09-04.md:482
+    - **bears**: Where it is unsettled whether the beta's wording is the model, the rule is to ask, not to decide; main alone changes the least and decides nothing about the beta.
+  - item 4
+    - **speaker**: owner
+    - **quote**: Sheets are design choices. What is not a design choice is the relative path to root like we currently do
+    - **locator**: /home/user/7lm@origin/main:L8/L6/history/harmonization-2026-09-04.md:350
+    - **bears**: What must match is the path structure, not sheet wording; so the beta's rewording of 18 sheets is not something an exemplar is obliged to carry in order to mirror.
+  - item 5
+    - **speaker**: record
+    - **quote**: This records the checked common-architecture candidate, not a full-beta or release claim; publication and other bounded candidate work are separate.
+    - **locator**: /home/user/7lm@origin/beta/common-contracts-r1-r6:L8/L6/history/specification-history.md:106
+    - **bears**: The beta's own record calls itself a candidate and disclaims release, so by its own account it is not yet the model of record to mirror.
+  - item 6
+    - **speaker**: record
+    - **quote**: This is an original-7LM document correction, not an executable or exemplar implementation, migration, merge, release or beta-readiness claim.
+    - **locator**: /home/user/7lm@97314c5 (commit message body; git log origin/main..origin/beta/common-contracts-r1-r6)
+    - **bears**: The commit that carries the research-housing wording expressly disclaims being an exemplar implementation or a merge, so it gives no warrant for writing that wording into the exemplars.
+  - item 7
+    - **speaker**: sheet
+    - **quote**: Updating the origin's guidance is distinct from adopting that update in an existing project: compare the changed contracts, retain the project's data and local choices, record any moves, and review affected dependencies before claiming the project has migrated.
+    - **locator**: /home/user/7lm@origin/beta/common-contracts-r1-r6:L8/0.md:24
+    - **bears**: Even the beta's own wording says an update to the scaffold's guidance is not thereby adopted by an existing project; adoption is a separate, reviewed step, which is the deferral recommended here.
+  - item 8
+    - **speaker**: other
+    - **quote**: A person decides, item by item, to follow or to edit. The pushed tree is required; taking up everything in it is not, and what the person declines is listed in their HOA record rather than dropped without a trace.
+    - **locator**: /home/user/7lm@origin/main:L8/L6/7lm-field-guide.md:610
+    - **bears**: The tree is the required part and wording may be declined provided the declining is recorded; hence the one added line in each record section naming the beta wording as declined for this pass.
+  - item 9
+    - **speaker**: record
+    - **quote**: This pass was made from `main` and does not touch that branch; whichever of the two lands second will need them reconciled.
+    - **locator**: /home/user/autonomous@origin/ccr-9391bd81-f2enmj:L8/L6/history/harmonization-2026-09-05.md:213
+    - **bears**: The mirror already prepared is from main alone and leaves the beta branch intact, so the recommendation can be acted on at once and nothing of the beta is lost if the owner later chooses it.
+- **against**: "Implemented by Codex, task T1, on 2 November 2026 (America/Los_Angeles), in the bounded common-architecture candidate after the owner's approval of R1–R6." (/home/user/7lm@origin/beta/common-contracts-r1-r6:L8/L6/history/specification-history.md:106, under the heading "### Owner-approved common architecture corrections of 2 November 2026" at :104). If the owner did approve R1-R6, the beta's wording is the owner's intended current wording and a main-only mirror would have to be reworded a second time. The approval is asserted there but the owner's words are quoted nowhere in any ref, and the assertion does not name the second commit (97314c5) or the exemplars.
+- **confidence**: the quotations favour it
+- **alternatives**: (a) Main with the beta's wording: mirror from 7lm 97314c5 or land the exemplar betas (e64b382, 714480d). This carries unmerged scaffold text, and the exemplar betas also bring research objects and edits to definitions and registers beyond a physical alignment (decision 7). (b) Hold the mirror until the owner settles the beta (decision 5): safest against rework, but delays the "first" in the owner's order of 11 November. (c) Main alone now, beta wording as a later second hand pass once the beta is on the scaffold's main: this is the recommendation.
+- **what_it_costs**: If the owner later merges the beta into the scaffold's main, the exemplars need a second hand pass for wording (R1-R6 and the research-housing guidance), and the PR #30/#28 mirrors conflict with the exemplar beta branches in 12 and 13 files per the background report (not re-verified here), to be reconciled then. No folder moves twice. Reversal is cheap: the mirrors are draft PRs and the beta branches are untouched.
+- **who_acts**: The owner says which: "main alone" or "main with the beta". On "main alone", a session adds the one pin-and-declined line to autonomous record section 14 and auditonomous record section 13 on the ccr-9391bd81-f2enmj branches; the owner merges draft PRs #30 and #28. The owner alone decides whether the beta merges into the scaffold's main (decision 5), which is what would trigger the second wording pass.

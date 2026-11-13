@@ -1,0 +1,164 @@
+# audit:auditonomous:b05-provenance
+
+Agent result, as returned. Workflow: Sheet audit, Auditonomous. Run `wf_1ec3ea42-dcb`. Phase: Audit.
+
+- **sheets_audited**
+  - L7/provenance/0.md
+  - L7/provenance/authority/0.md
+  - L7/provenance/lineage/0.md
+  - L7/provenance/prior-art/0.md
+  - L7/provenance/sources/0.md
+  - L7/provenance/sources/staging-records/0.md
+- **findings**
+  - item 1
+    - **id**: b05-01
+    - **kind**: WRONG-FACT
+    - **sheet**: L7/provenance/0.md
+    - **line**: 37
+    - **sheet_says**: - `lineage/`, `authority/` — empty; authority for each bound peer object is stated in that object's binding record under `L7/peering/`.
+    - **truth**: `L7/provenance/lineage/` is not empty. It holds `2026-08-05-observed-not-observable-session-provenance.md` (13,733 bytes), record EBA-PROV-2026-08-05-01. Only `authority/` is empty (its sheet alone).
+    - **evidence**: `git ls-tree -l f2d5b37 L7/provenance/lineage/` lists 0.md (3450) and 2026-08-05-observed-not-observable-session-provenance.md (13733); `git ls-tree -l f2d5b37 L7/provenance/authority/` lists 0.md only. The lineage sheet's own Holdings (L7/provenance/lineage/0.md:32) lists the record, so the two sheets also contradict each other. L7/peering/private/ingress/peer-2/0.md:8 names the record too, and L8/L6/history/harmonization-2026-09-05.md:117 records its move into `L7/provenance/lineage/`.
+    - **exact_fix**: Replace line 37 with two lines:
+      - `lineage/2026-08-05-observed-not-observable-session-provenance.md` — record EBA-PROV-2026-08-05-01, a session-provenance record bound to this repository and `aybllc/eb-audit` (see `L7/provenance/lineage/0.md`).
+      - `authority/` — empty; authority for each bound peer object is stated in that object's binding record under `L7/peering/`.
+  - item 2
+    - **id**: b05-02
+    - **kind**: WRONG-FACT
+    - **sheet**: L7/provenance/0.md
+    - **line**: 20, 33
+    - **sheet_says**: Line 20: "The source register `L7/provenance/sources/LEDGER.md` (62 pointer rows into the aybllc/l6 archive)". Line 33: "`sources/LEDGER.md` — 62 pointer rows (PR-, STD-, INST-, EXC-) into `aybllc/l6` by path and pinned commit".
+    - **truth**: The register has 60 rows: PR-001..020 (20), STD-001..034 (34), INST-001..004 (4), EXC-001..002 (2). 58 are pointers into aybllc/l6 (39 at `b328334`, 19 at `e4f0d5c`). The two EXC rows read "— (HELD OUT of l6)" with no commit, so they are not pointers. 62 is the number of table lines in the section "The register" counting its header row and its |---| row.
+    - **evidence**: L7/provenance/sources/LEDGER.md at f2d5b37: header line 18, separator line 19, data rows lines 20-79 = 60. `grep -cE '^\| (PR|STD|INST|EXC)-[0-9]+ \|'` on the object gives 60 (PR 20, STD 34, INST 4, EXC 2); no duplicate IDs. Commit column: `b328334` x39, `e4f0d5c` x19, — x2. The figure traces to L8/L6/history/LEDGER_2026-08-16_l6-close-and-normalization.md:30, "62 rows (PR-001..020, STD-001..034, INST-001..004, EXC-001/002)", ranges that sum to 60. The same 62 stands in sheets outside this batch: L7/0.md:232, L7/peering/private/ingress/peer-1/0.md:16, L7/peering/private/ingress/peer-1/object-1/0.md:10.
+    - **exact_fix**: Line 20: "- The source register `L7/provenance/sources/LEDGER.md` (60 rows: 58 pointer rows into the aybllc/l6 archive and two rows for items held out of it) and `L7/provenance/sources/datasets-LEDGER.md` (empty), with the records-about-sources tree `L7/provenance/sources/staging-records/` (see `L7/provenance/sources/0.md`)."
+      Line 33: "- `sources/LEDGER.md` — 60 rows (PR-, STD-, INST-, EXC-): 58 pointer rows into `aybllc/l6` by path and pinned commit, and two EXC rows for items held out of the archive; relocated from `uso/l6/LEDGER.md`; its title still reads "L6 SOURCE LEDGER" under the earlier numbering and is not rewritten."
+  - item 3
+    - **id**: b05-03
+    - **kind**: WRONG-FACT
+    - **sheet**: L7/provenance/lineage/0.md
+    - **line**: 32
+    - **sheet_says**: "Its binding lines name the path it was filed from; they are the record's own words and stand."
+    - **truth**: The record's binding lines name `aybllc/auditonomous/manuscripts/main/research/eb-carrier/eb-audit/provenance/2026-08-05-observed-not-observable-session-provenance.md`. The record was filed here from a different path, `common/durable/orphan/eb-carrier/eb-audit/provenance/`. The binding lines name the path of two layouts back, not the path it was filed from.
+    - **evidence**: The record, lines 7-10 ("**Repository bindings:**" and its two entries). L8/L6/history/harmonization-2026-09-05.md:117 gives the move as `common/durable/orphan/eb-carrier/eb-audit/provenance/2026-08-05-observed-not-observable-session-provenance.md` to `L7/provenance/lineage/`. L8/L6/history/sheets-2026-09-07.md:91 keeps the sheet's earlier words: "filed here 2026-09-06 on the owner's word from `common/durable/orphan/eb-carrier/eb-audit/provenance/`. Its binding lines name the old path".
+    - **exact_fix**: "Its binding lines name a path of an earlier layout, `manuscripts/main/research/eb-carrier/eb-audit/provenance/`, not this position; they are the record's own words and stand."
+  - item 4
+    - **id**: b05-04
+    - **kind**: WRONG-FACT
+    - **sheet**: L7/provenance/sources/0.md
+    - **line**: 10, 41
+    - **sheet_says**: Line 10: "62 pointer rows into the `aybllc/l6` archive (ID, citation, `l6` path, `l6` commit, access, label)". Line 41: "62 rows (PR-, STD-, INST-, EXC-), each with citation, `l6` path, `l6` commit (`b328334`; accession rows at `e4f0d5c`), access class, and label."
+    - **truth**: The register has 60 rows (PR 20, STD 34, INST 4, EXC 2), not 62. Not every row has an `l6` path and commit: EXC-001 and EXC-002 carry "— (HELD OUT of l6)" and "—". So there are 58 pointer rows: 39 at `b328334` and 19 accession rows at `e4f0d5c`.
+    - **evidence**: LEDGER.md at f2d5b37, section "The register": 62 lines begin with "|", of which line 18 is the header and line 19 the separator; data rows are lines 20-79 = 60. Rows whose path cell starts with `library/`: 58. Rows without: EXC-001 (line 78), EXC-002 (line 79). Access column: FULL x58, NOT OBTAINED x1, BLOCKED x1. See b05-02 for where the figure 62 came from and the other sheets that repeat it.
+    - **exact_fix**: Line 10: replace "62 pointer rows into the `aybllc/l6` archive" with "60 rows, 58 of them pointer rows into the `aybllc/l6` archive and two (EXC-001, EXC-002) for items held out of it".
+      Line 41, first sentence: "- `LEDGER.md` — the pointer register into `aybllc/l6`: 60 rows (PR-, STD-, INST-, EXC-), each with citation, access class, and label; the 58 PR-, STD- and INST- rows carry an `l6` path and an `l6` commit (`b328334`; accession rows at `e4f0d5c`), and the two EXC- rows, held out of `l6`, carry neither."
+  - item 5
+    - **id**: b05-05
+    - **kind**: STALE
+    - **sheet**: L7/provenance/sources/0.md
+    - **line**: 10
+    - **sheet_says**: "relocated in this pass from `uso/l6/LEDGER.md` without rewriting"
+    - **truth**: The ledger was relocated on 2026-09-05, in the pass that instantiated the topology. The pass that produced the pinned commit is the 2026-11-11 L7 restructure, which touched no ledger.
+    - **evidence**: L8/L6/history/harmonization-2026-09-05.md:22 ("2026-09-05 | This event: canonical topology instantiated; 69 paths moved by `git mv`") and :59 (`uso/l6/LEDGER.md` to `L7/provenance/sources/LEDGER.md`). Section 13 of the same record (line 200) says of the 2026-11-11 pass: "No research object, no definition, no ledger row and no manuscript file is touched." `git show --stat f2d5b37 -- L7/provenance` shows only nine changed lines across the six sheets and no change to LEDGER.md. The same sheet's line 41 already says simply "Relocated from `uso/l6/LEDGER.md`".
+    - **exact_fix**: "relocated from `uso/l6/LEDGER.md` without rewriting"
+  - item 6
+    - **id**: b05-06
+    - **kind**: WRONG-FACT
+    - **sheet**: L7/provenance/sources/0.md
+    - **line**: 55
+    - **sheet_says**: "The ledger has no rows; that is admissible."
+    - **truth**: The ledger at this position, `LEDGER.md`, has 60 rows. Only `datasets-LEDGER.md` is empty. The sentence also contradicts the same sheet's lines 10 and 41, which give the ledger rows, and line 51, where "the ledger" is the source register.
+    - **evidence**: LEDGER.md data rows at lines 20-79 (60 rows; see b05-04). datasets-LEDGER.md:8 reads "Currently: **EMPTY** — no datasets held." and its register table (line 16) is one blank row. For context only: the sentence is word for word the scaffold's (7lm origin/main:L7/provenance/sources/0.md:51), where the ledger is header-only.
+    - **exact_fix**: Delete the sentence, or replace it with "The datasets ledger has no rows; that is admissible."
+  - item 7
+    - **id**: b05-07
+    - **kind**: DEAD-PATH
+    - **sheet**: L7/provenance/sources/0.md
+    - **line**: 45
+    - **sheet_says**: "no external source was fetched while preparing `AUDITONOMOUS.md`, every external quote in it restated from the corpus's own fetch record"
+    - **truth**: No file named `AUDITONOMOUS.md` exists at the commit. It was the consolidated defining document at the root of the 2026-08-14 layout, pruned from HEAD by `8c98573`. The sheet marks `common/toolkits/ommp/` in the same sentence as removed but names `AUDITONOMOUS.md` as if it were present.
+    - **evidence**: `git ls-tree -r --name-only f2d5b37 | grep -cE '(^|/)AUDITONOMOUS\.md$'` gives 0; the only near name is L8/L0/semantics/definitions/AUDITONOMOUS_DEFINITION.md, a different document. L8/L6/history/harmonization-2026-09-05.md:19: "2026-08-15 | Prune: root `AUDITONOMOUS.md`, `AUTONOMOUS.md`, `FREEZE.*` ... removed from HEAD; survive in git history. | `8c98573`". L8/L6/retired/layout-2026-08-14/README.md:92-93 says the same. L8/L5/research/review/0.md:44 names the file with the note "removed from HEAD at `8c98573`, in git history".
+    - **exact_fix**: "no external source was fetched while preparing `AUDITONOMOUS.md` (removed from HEAD at `8c98573`, in git history), every external quote in it restated from the corpus's own fetch record"
+  - item 8
+    - **id**: b05-08
+    - **kind**: CONTRADICTION
+    - **sheet**: L7/provenance/sources/0.md
+    - **line**: 16
+    - **sheet_says**: "items obtained through the owner's institutional access are held private under its IL-001-R2 class-2 rule ("never publish, mirror, or attach"), which is a condition for `L7/governance/controlled/`, not for this directory."
+    - **truth**: In this repository that condition is stated at `L7/governance/copyright/` and nowhere else. `L7/governance/controlled/` holds nothing and says copyright-derived restrictions are not filed there. The same sheet says so at line 20 ("its licence conditions are at `L7/governance/copyright/`, the one place") and line 36 ("copyright, licence, or restriction conditions on the source — `L7/governance/copyright/`, the one place").
+    - **evidence**: L7/governance/controlled/0.md:32: "Nothing filed directly. Every restriction this repository is under derives from a copyright or licence condition, and all of them are stated at `L7/governance/copyright/`, the one place. A restriction that is not copyright-derived would be filed here; none exists." L7/governance/copyright/0.md:43 states the IL-001-R2 class-2 condition, and :18 says each sheet "names this directory". L7/peering/private/ingress/peer-1/object-1/0.md:17: "WSU-route items are IL-001-R2 class-2 hold-private — see `L7/governance/copyright/`, the one place". The pinned commit changed only the folder name in this sentence (restrictions to controlled).
+    - **exact_fix**: "... ("never publish, mirror, or attach"), which is a condition stated at `L7/governance/copyright/`, the one place, not in this directory."
+  - item 9
+    - **id**: b05-09
+    - **kind**: WRONG-FACT
+    - **sheet**: L7/provenance/sources/0.md
+    - **line**: 41
+    - **sheet_says**: "the file is not rewritten, so its title and its "provenance is l6" framing reflect the earlier numbering."
+    - **truth**: The words "provenance is l6" are not in `LEDGER.md`. They are in the master ledger's row at `L8/L6/history/LEDGER.md`. What `LEDGER.md` itself carries from the earlier numbering is its title, "L6 SOURCE LEDGER". Minor.
+    - **evidence**: `git grep -n -i -F 'provenance is l6' f2d5b37 -- L7/provenance/sources/LEDGER.md` returns nothing. L8/L6/history/LEDGER.md:31 has: ([source text withheld from the public copy]). L8/L6/history/harmonization-2026-09-05.md:26 attributes it correctly: "The earlier layout's `uso/l6/LEDGER.md` called itself "L6 SOURCE LEDGER" and the master ledger's row said "provenance is l6"."
+    - **exact_fix**: "the file is not rewritten, so its title reflects the earlier numbering, as does the master ledger's row "provenance is l6" (`L8/L6/history/LEDGER.md`)."
+  - item 10
+    - **id**: b05-10
+    - **kind**: WRONG-FACT
+    - **sheet**: L7/provenance/sources/staging-records/0.md
+    - **line**: 8
+    - **sheet_says**: [source text withheld from the public copy]
+    - **truth**: Three of the nine interior directories carry a README: `ieee/`, `ieee/papers/`, `library/`. Six carry none: `ieee/reading/`, `interval/`, `library/reading/`, `library/text/`, `standards/`, `standards/extracted/`. Those six have neither sheet nor README.
+    - **evidence**: `git ls-tree -r --name-only f2d5b37 L7/provenance/sources/staging-records | grep README` returns README.md, STAGING_README.md, ieee/README.md, ieee/papers/README.md, library/README.md and nothing else. `git ls-tree -r -d --name-only f2d5b37 L7/provenance/sources/staging-records` lists the nine interior directories.
+    - **exact_fix**: "Three interior directories carry their own READMEs from the earlier layout (`ieee/`, `ieee/papers/`, `library/`); the other six (`ieee/reading/`, `interval/`, `library/reading/`, `library/text/`, `standards/`, `standards/extracted/`) carry none. None is re-gated here."
+  - item 11
+    - **id**: b05-11
+    - **kind**: CONTRADICTION
+    - **sheet**: L7/provenance/sources/staging-records/0.md
+    - **line**: 30
+    - **sheet_says**: [source text withheld from the public copy]
+    - **truth**: The condition is not stated at `L7/governance/controlled/`. That sheet holds nothing and says every restriction is stated at `L7/governance/copyright/`, which is where this one stands.
+    - **evidence**: L7/governance/controlled/0.md:32: "Nothing filed directly. ... all of them are stated at `L7/governance/copyright/`, the one place." L7/governance/copyright/0.md:43 states the condition ("IL-001-R2 class-2 hold-private: the 31 WSU-licensed IEEE PDFs and their reading captures — "quotations travel; the files do not""), and :18 says "no README, sheet, ledger, or binding record restates a copyright rule; each names this directory". L7/governance/0.md:32 and README.md:9 name `copyright/` as the one place. The pinned commit changed only the folder name in this line (restrictions to controlled).
+    - **exact_fix**: "- WSU-route material is IL-001-R2 class-2 hold-private: quotations travel, files do not (`L7/governance/copyright/`, the one place)."
+  - item 12
+    - **id**: b05-12
+    - **kind**: MISFILED
+    - **sheet**: L7/provenance/sources/0.md
+    - **line**: 33, 43
+    - **sheet_says**: Does not hold (line 33): "the source text or object itself — when bound, `L7/peering/public/ingress/peer-1/object-1/` or `L7/peering/private/ingress/peer-1/object-1/` (NO EDIT, NO DELETE); otherwise it stays with its owner". Holdings (line 43): "`library/text/Ferreira_break-glass-access-control.numbered.txt` is a full-text copy whose licence status is to be recorded before it is cited as held."
+    - **truth**: `staging-records/library/text/Ferreira_break-glass-access-control.numbered.txt` (21,803 bytes, 485 lines) is the full text of a source, Ferreira [source text withheld from the public copy]". By the sheet's own list the text stays with its owner: the archive `aybllc/l6`, which already holds the paper and is pointed to by LEDGER row PR-020. If a copy is kept as a bound object, the list places it at `L7/peering/private/ingress/peer-1/object-1/`. Observation for the owner; both sheets already flag the file.
+    - **evidence**: First lines of the object: "[source text withheld from the public copy] ...". LEDGER.md:6: "**This directory holds no source files.**" LEDGER.md:77: PR-020 at `library/journals/preprints/how-to-break-access-control-controlled-manner-ferreira.pdf`, commit `e4f0d5c`. The specification's author note: "no source file lives in it". The staging sheet's Object line (staging-records/0.md:3) says "not sources themselves". L7/governance/copyright/0.md:45 calls the file "a full-text copy of a published paper whose licence status is not yet recorded". L8/L6/history/harmonization-2026-09-05.md:94 lists its licence status as an open owner decision.
+    - **exact_fix**: No sheet text to correct; placement is the owner's decision.
+  - item 13
+    - **id**: b05-13
+    - **kind**: MISFILED
+    - **sheet**: L7/provenance/sources/0.md
+    - **line**: 43
+    - **sheet_says**: "`interval/DECORATIONS_2026-08-04.md` is L3 by content (an owner extraction)". The staging sheet says the same at L7/provenance/sources/staging-records/0.md:19: "L3 by content; an owner extraction candidate."
+    - **truth**: By both sheets' own words the file is engineering mathematics, not a source identity or version reference, which is the specification's row for this position. It would belong at `L8/L3/engineering-mathematics/uncertainty/`, whose sheet names it as its candidate. Observation for the owner; already recorded as an open decision.
+    - **evidence**: The file's title: "[source text withheld from the public copy]"; it maps the standard's decorations onto the corpus's transformation-path obligation. L8/L3/engineering-mathematics/uncertainty/0.md:35: "Candidate (owner's call): `L7/provenance/sources/staging-records/interval/DECORATIONS_2026-08-04.md`." L8/L3/0.md:92 says the same. L8/L6/history/harmonization-2026-09-05.md section 5 lists it under "Extract and register".
+    - **exact_fix**: No sheet text to correct; placement is the owner's decision.
+  - item 14
+    - **id**: b05-14
+    - **kind**: MISFILED
+    - **sheet**: L7/provenance/sources/0.md
+    - **line**: 36, 37, 43
+    - **sheet_says**: Does not hold (lines 36-37): "copyright, licence, or restriction conditions on the source — `L7/governance/copyright/`, the one place" and "the internal history of when a source was adopted, corrected, or dropped — `L8/L6/history/`". Holdings (line 43): "`ieee/README.md` and `ieee/papers/README.md` are licence standing and watermark manifest (`L7/governance/`) ... `standards/SOURCE_LEDGER.md` carries both licence status (`L7/governance/licensing/`) and the incident chain IL-001..IL-004 (`L8/L6/history/`)".
+    - **truth**: Three files under staging-records carry what the sheet's own list places elsewhere. The licence standing in `ieee/README.md`, `ieee/papers/README.md` and `standards/SOURCE_LEDGER.md` would belong at `L7/governance/copyright/`. The incident chain IL-001..IL-004 in `standards/SOURCE_LEDGER.md` (sources committed, withdrawn, restored) would belong at `L8/L6/history/`. They are kept in place and cited from those positions. Observation for the owner.
+    - **evidence**: staging-records/ieee/README.md:7: "## [source text withheld from the public copy]". staging-records/ieee/papers/README.md:5 (Watermark column) and :11 ("**Licence:**"). staging-records/standards/SOURCE_LEDGER.md headings at lines 14, 56, 94, 122 (IL-001 to IL-004) and 191 ("LICENCE AND PERSONAL-DATA NOTICE"). They are cited from L7/governance/copyright/0.md:39 and :43 and from L8/L6/0.md:91. L8/L6/history/harmonization-2026-09-05.md:103 says they were deliberately left: "Not changed: the quarantine and licence records under `L7/provenance/sources/staging-records/`, which are history".
+    - **exact_fix**: No sheet text to correct; placement is the owner's decision.
+  - item 15
+    - **id**: b05-15
+    - **kind**: MISFILED
+    - **sheet**: L7/provenance/sources/0.md
+    - **line**: 35, 43
+    - **sheet_says**: Does not hold (line 35): "what the source says in comparison with local work — `L8/L5/research/`". Holdings (line 43) calls `ieee/FINDINGS_2026-08-04.md` and `library/FINDINGS_2026-08-04.md` "reading captures under the reading protocol". The staging sheet (staging-records/0.md:12) says "They are not L5 findings".
+    - **truth**: Both FINDINGS files are numbered findings that set what the sources say against the corpus's own claims and give a result. By line 35 of the sheet's own list that comparison would belong at `L8/L5/research/findings/`, where two like-dated files already stand (`OVERRIDE_NECESSITY_2026-08-04.md`, `SEGREGATION_AND_FORGETTING_2026-08-04.md`). Observation for the owner; the routing plan classed them otherwise.
+    - **evidence**: staging-records/library/FINDINGS_2026-08-04.md, FINDING 1: "[source text withheld from the public copy]**". staging-records/library/README.md:25 describes its file as "[source text withheld from the public copy]:189 records the contrary reading ("not L5 findings").
+    - **exact_fix**: No sheet text to correct; placement is the owner's decision.
+- **clean_sheets**
+  - L7/provenance/authority/0.md
+  - L7/provenance/prior-art/0.md
+- **could_not_check**
+  - L7/provenance/sources/0.md:16 and :20 — what the archive aybllc/l6 is and holds (1,368 tracked library files; `books/`, `captures/`, `paywall/`; five quotations from its README, VERIFICATION_LOG and ACCESS-ROUTES; "never publish, mirror, or attach"; "USO rail L6 — Provenance"). Another repository, outside the read rule. The statements agree with L7/peering/private/ingress/peer-1/0.md:8 and peer-1/object-1/0.md:12.
+  - L7/provenance/sources/0.md:14 — "pinned here at commit `53b28f6`". The hash agrees with L7/peering/private/ingress/0.md:43, peer-1/0.md:8 and peer-1/object-1/0.md:13 (which calls it "archive HEAD at this pass"); whether it is still the archive's state cannot be told from this repository.
+  - L7/provenance/sources/0.md:18 — the siblings: "`uso/l6/LEDGER.md` in aybllc/autonomous (rows pinned to `7540a9d6951c`) and in aybllc/ommp (empty at `609e4de` ...)". Other repositories, not read. The specification's "Exemplars as instantiated" puts each exemplar's ledger at L7/provenance/sources/LEDGER.md, so the autonomous path may be that repository's former one (possible STALE).
+  - L7/provenance/sources/0.md:45 against :18 — line 45 says `github.com/aybllc/ommp` has "never been read" (carried from the 2026-08-14 README, retired copy lines 133-138), while line 18 reports the state of aybllc/ommp's ledger at `609e4de`. Whether the gap statement is now stale depends on how the line-18 fact was obtained, which the tree does not record. A wording true either way: "had not been read when [source text withheld from the public copy] recorded this gap".
+  - L7/provenance/sources/0.md:45 — "private repositories and organisation enumeration PENDING". The manifest it rests on (`intake/MANIFEST.md`) is not in the tree; whether it is still pending cannot be determined.
+  - L7/provenance/prior-art/0.md:32 and L7/provenance/0.md:36 — "No prior-art search has been run". The cited L8/L5/research/findings/DISTILLATION.md section 5 (line 134) does say "prior-art search **still unrun**", but section 4 (line 109) and section 7 (line 148, "[source text withheld from the public copy]") of the same file record a four-lane prior-art check. Whether that check counts as a prior-art search in the README's sense is the owner's reading.
+  - "Relocated intact", "not edited", "without rewriting" (L7/provenance/sources/0.md:10, :41, :43; staging-records/0.md:8; L7/provenance/0.md:35) — byte identity with the pre-move files was not tested, because earlier commits are outside the read rule. The record says so (harmonization-2026-09-05.md section 3 and lines 58-59), and the 25-file count is right at the commit.
+  - L7/provenance/lineage/0.md:32 — the eb-audit half of "bound to both this repository and `aybllc/eb-audit`". The record's own binding line names `aybllc/eb-audit/research/provenance/...`; that repository was not read.
+- **statements_checked**: 215
