@@ -1,0 +1,209 @@
+# resolve:B6-derivations-and-states
+
+Agent result, as returned. Workflow: Best choices: the research and manuscript decisions. Run `wf_b77d2bd0-834`. Phase: Resolve.
+
+- **decisions**
+  - item 1
+    - **id**: RH14
+    - **title**: Whether the author's own codec counts as a fourth independent derivation
+    - **kind**: authorial
+    - **status_now**: open
+    - **best_choice**: Withdraw the claim that the codec is a fourth independent derivation. Present the UHA and OMMP specifications as the author's own instrument, filed apart from independent convergence, and link them to the argument through the silent-failure motif. Leave the two old sentences standing, each with a dated note.
+    - **why**: The block that claims independence also calls the codec the author's own construction and says counting it as convergent evidence would be self-corroboration. The author's prompt says OMMP defines auditonomous classification, and the consolidated register marks the claim a failed check. The book's table of contents already files the codec in Appendix F [source text withheld from the public copy]; only its Chapter 11 entry still counts a fourth derivation. The silent-failure motif links the codec to the theory without that claim. Nothing held could change this: Block 46 tests independence by builders who never heard the word.
+    - **owner_words**
+      - item 1
+        - **quote**: [source text withheld from the public copy]
+        - **where**: aybllc/auditonomous, origin/claude/book-structure-roadmap-k8ap82 (9259c18), L8/L4/work/writing/manuscript/Auditonomous_Theory_Master_Archive.md:526 (Block 43, the author's thesis prompt as cleaned in the archive)
+    - **evidence**
+      - item 1
+        - **fact**: Block 46 calls the codec the fourth independent starting point (line 582) and, two lines later, the author's own construction, whose filing as convergent evidence would manufacture the author's own corroboration (line 584).
+        - **where**: aybllc/auditonomous, origin/claude/book-structure-roadmap-k8ap82 (9259c18), L8/L4/work/writing/manuscript/Auditonomous_Theory_Master_Archive.md:582, :584
+      - item 2
+        - **fact**: The consolidated register records this as contradiction C-8, a failed check on the independence claim, with both sentences left standing.
+        - **where**: aybllc/auditonomous, origin/claude/book-structure-roadmap-k8ap82 (9259c18), L8/L6/retired/consolidated-2026-08-04/AUDITONOMOUS.md:1149
+      - item 3
+        - **fact**: Block 45 names the author of the UHA and OMMP specifications, who is the book's author.
+        - **where**: aybllc/auditonomous, origin/claude/book-structure-roadmap-k8ap82 (9259c18), L8/L4/work/writing/manuscript/Auditonomous_Theory_Master_Archive.md:556
+      - item 4
+        - **fact**: The table of contents still counts the codec as the fourth derivation in its Chapter 11 entry, while its Appendix F entry files the codec apart [source text withheld from the public copy].
+        - **where**: aybllc/auditonomous, origin/claude/book-structure-roadmap-k8ap82 (9259c18), L8/L4/work/writing/manuscript/Auditonomous_Theory_TOC.md:69, :108
+      - item 5
+        - **fact**: The archive applies the same test twice more: its open items file the specifications in Appendix F and not Appendix E, and Block 52 files the hydrogen-line precedent there because following a known precedent is not independent arrival.
+        - **where**: aybllc/auditonomous, origin/claude/book-structure-roadmap-k8ap82 (9259c18), L8/L4/work/writing/manuscript/Auditonomous_Theory_Master_Archive.md:675, :748
+      - item 6
+        - **fact**: The structure proposal of 2 August 2026 and the research docket name a link that needs no self-corroboration: the silent-failure motif across Blocks 45, 46 and 52, the inverted dial that returned a plausible wrong answer without an error.
+        - **where**: aybllc/auditonomous, origin/claude/book-structure-roadmap-k8ap82 (9259c18), L8/L5/research/review/BOOK_STRUCTURE_PROPOSAL.md:173-178; L8/L5/research/review/RESEARCH_DOCKET.md:153-154
+      - item 7
+        - **fact**: The roadmap's recommendation, labelled not a ruling, is to [source text withheld from the public copy]; its Chapter 10 header waits on this ruling and already leaves Block 46 out of its feeds.
+        - **where**: aybllc/auditonomous, origin/claude/book-structure-roadmap-k8ap82 (9259c18), L8/L5/research/review/BOOK_STRUCTURE_AND_ROADMAP_2026-09-13.md:617; L8/L4/work/writing/book/ch10-the-derivations-built-for-orphanhood-the-tempo-argument-proof-of-office-ground-truth.md:9-15, :25
+      - item 8
+        - **fact**: On main, the theme ledger already describes the self-corroboration hazard as walled off, own construction to Appendix F and never Appendix E, while still calling the codec a fourth derivation.
+        - **where**: aybllc/auditonomous, origin/main (aa30b03), L8/L5/research/lanes/THEME_LEDGER.md:119
+      - item 9
+        - **fact**: The archive, table of contents, roadmap, proposal and docket exist only on the roadmap branch; main and the beta branch hold none of them, and main is no longer an ancestor of that branch, so where a dated note lands is decision RH2.
+        - **where**: git cat-file and git merge-base checks of aybllc/auditonomous on 13 November 2026: origin/main aa30b03, origin/beta/7lm-exemplar-auditonomous 714480d, origin/claude/book-structure-roadmap-k8ap82 9259c18
+      - item 10
+        - **fact**: The owner's standing rules: the exemplars are updated by hand and not until the owner judges the scaffold close; findings come as proposals and nothing is applied until the owner says which.
+        - **where**: aybllc/7lm, origin/main (6de996b), L8/L6/history/harmonization-2026-09-04.md:336, :346 (§26); :482-484 (§36)
+    - **on_yes**: The owner's yes is the ruling. A session then drafts, as a proposal under the scaffold record's §36, dated notes beside the roadmap's D6 row, the table of contents' line 69 and the archive's line 582, on the branch the owner picks under RH2.
+    - **cost_or_risk**: The archive's count of derivations falls from four to three, weakening its over-determination argument; the codec's link to the theory becomes an internal argument, labelled as such, not evidence.
+    - **confidence**: high
+    - **rejected**: Disclosing authorship but keeping a fourth route still counts self-built work toward over-determination, the corroboration Block 46 warns against; withdrawing without the silent-failure link drops the one honest connection; leaving both sentences unruled keeps a claim the register marks as a failed check.
+    - **depends_on**: (empty)
+  - item 2
+    - **id**: RH15
+    - **title**: Whether the record's reader is constitutive or an implementation convenience
+    - **kind**: authorial
+    - **status_now**: open
+    - **best_choice**: Rule the reviewer constitutive: an auditonomous record must reach a party distinct from the actor that can read and verify it, a party the definition never requires to be human, privileged or present at launch. Keep the constitutional sentence as written and state the reader in Chapter 8.
+    - **why**: The author's texts make reading part of the object. The envelope counts getting the record read within the whole object; the noun entry's governing v2 text sends the sealed record [source text withheld from the public copy] definition entry requires a tamper-evident, inspectable record. Both reading intakes found outside evidence for this reading alone. The owner's not-necessarily-human point survives: no corpus layer names a human reader. Option (c) rests on a disclaimer about another work. It changes only if RH3 adopts the constitutional sentence or its fused form alone and the book drops tamper-evidence.
+    - **owner_words**
+      - item 1
+        - **quote**: [source text withheld from the public copy]
+        - **where**: aybllc/auditonomous, origin/claude/book-structure-roadmap-k8ap82 (9259c18), L8/L6/retired/consolidated-2026-08-04/AUDITONOMOUS.md:301-302 (the owner, 4 August 2026, recorded in section 2.8)
+      - item 2
+        - **quote**: [source text withheld from the public copy]
+        - **where**: aybllc/auditonomous, commit 1d83788, FREEZE.md:5-6 (the owner, 5 August 2026; the bracketed word is the record's)
+    - **evidence**
+      - item 1
+        - **fact**: The envelope makes review compartment C11 envelope-supplied and external to the unit, with its human slot substitutable outside certification, and lists getting the record read among the eight things it calls the whole object.
+        - **where**: aybllc/auditonomous, origin/main (aa30b03), L8/L1/state-space/AUDITON_ENVELOPE.md:134, :144-146
+      - item 2
+        - **fact**: The noun entry's status line says its v2 text, set by the owner on 5 August 2026, governs; that text sends the sealed record to a named reader outside the system who is obliged to read it, and its earlier condition E defines the reader as [source text withheld from the public copy].
+        - **where**: aybllc/auditonomous, origin/claude/book-structure-roadmap-k8ap82 (9259c18), L8/L0/semantics/definitions/AUDITONOMY.md:3, :85-86, :205
+      - item 3
+        - **fact**: The definition entry's first sense and second criterion call for a tamper-evident, inspectable record and a verifiable trace.
+        - **where**: aybllc/auditonomous, origin/main (aa30b03), L8/L0/semantics/definitions/AUDITONOMOUS_DEFINITION.md:22, :37
+      - item 4
+        - **fact**: The library intake finds [source text withheld from the public copy] and says reading (b) has substantial external support while (a) and (c) have none; the IEEE intake says (b) is supported from two independent directions and calls the evidence one-sided. Both leave the ruling to the author.
+        - **where**: aybllc/auditonomous, origin/main (aa30b03), L7/provenance/sources/staging-records/library/FINDINGS_2026-08-04.md:92-108; L7/provenance/sources/staging-records/ieee/FINDINGS_2026-08-04.md:90-99
+      - item 5
+        - **fact**: Section 2.8 itself records that no layer of the corpus specifies the reviewer as human, so the divergence is [source text withheld from the public copy] whether it is a person.
+        - **where**: aybllc/auditonomous, origin/claude/book-structure-roadmap-k8ap82 (9259c18), L8/L6/retired/consolidated-2026-08-04/AUDITONOMOUS.md:354-358
+      - item 6
+        - **fact**: Option (c) cites line 22 of the engineering draft, which disclaims reliance on Autonomous Theory: Post-Biological Intelligence, a work the roadmap's D12 row treats as separate; it says nothing about the Auditonomous archive that section 2.8 calls the theory layer.
+        - **where**: aybllc/auditonomous, origin/claude/book-structure-roadmap-k8ap82 (9259c18), L8/L4/work/writing/auditonomous_ebios_core_architecture_math_source-535f70d_draft.md:22; L8/L5/research/review/BOOK_STRUCTURE_AND_ROADMAP_2026-09-13.md:623
+      - item 7
+        - **fact**: The archive's own theory layer places an auditor at every scale: unit by hub, hub by hub, network by neighbouring network.
+        - **where**: aybllc/auditonomous, origin/claude/book-structure-roadmap-k8ap82 (9259c18), L8/L4/work/writing/manuscript/Auditonomous_Theory_Master_Archive.md:364
+      - item 8
+        - **fact**: The roadmap recommended (a) for the sentence, citing a standard's independent recorder as the counter-design; its row cites neither intake nor the v2 reader. Its Chapter 18 plan records the named-reader gap rather than patching it.
+        - **where**: aybllc/auditonomous, origin/claude/book-structure-roadmap-k8ap82 (9259c18), L8/L5/research/review/BOOK_STRUCTURE_AND_ROADMAP_2026-09-13.md:624, :280
+      - item 9
+        - **fact**: The freeze file's rule P2 bars citing a codified instrument [source text withheld from the public copy]; this pick stands on the author's own texts and needs no standard, whatever RH7 rules on that rule.
+        - **where**: aybllc/auditonomous, commit 1d83788, FREEZE.md:65
+      - item 10
+        - **fact**: Main's review sheet lists the reader-agnostic divergence among the author's open calls, decided nowhere in the repository.
+        - **where**: aybllc/auditonomous, origin/main (aa30b03), L8/L5/research/review/0.md:44
+      - item 11
+        - **fact**: The owner's standing rules: the exemplars are updated by hand and not until the owner judges the scaffold close; findings come as proposals and nothing is applied until the owner says which.
+        - **where**: aybllc/7lm, origin/main (6de996b), L8/L6/history/harmonization-2026-09-04.md:336, :346 (§26); :482-484 (§36)
+    - **on_yes**: The owner's yes, with or after RH3, is the ruling. A session drafts, as a proposal under the scaffold record's §36 and on the branch RH2 chooses, a dated entry beside the roadmap's D13 row and notes for Chapters 8 and 18.
+    - **cost_or_risk**: The book can no longer say a record keeps its integrity with no reader, so Chapter 18 must state, not patch, the gap for a scout beyond return, which the roadmap already plans.
+    - **confidence**: medium
+    - **rejected**: (a) leaves the definition promising a tamper-evident record with no second party, which the library intake found unachievable; (c) misreads a disclaimer about another work. The roadmap's (a) survives only in that the constitutional sentence is not reworded.
+    - **depends_on**
+      - RH3
+  - item 3
+    - **id**: RH16
+    - **title**: Whether the book prints the auditon as eight compartments or twelve
+    - **kind**: authorial
+    - **status_now**: open
+    - **best_choice**: Print twelve compartments, C1 to C12, as the auditon's map, with the four platform-supplied ones marked as interface obligations and the eight envelope-supplied ones named as the envelope, the deliverable: the envelope's own table and wording, unchanged, in Chapter 12.
+    - **why**: Both counts are right, since twelve is four plus eight. The record leads with twelve: the envelope names the twelve compartments as what stays fixed across missions and states its one-parameter result over them; the replicator re-loaded the same twelve and needed no thirteenth, while the four-and-eight split carries a recorded threat over C8. Chapter 12's own completion test, platform given and envelope delivered, needs both numbers, and the vocabulary paper already prints them so. Printing eight alone would hide the platform's interface obligations, which carry the envelope's portability argument. Only the unrun adversarial review could change the twelve.
+    - **owner_words**
+      - item 1
+        - **quote**: [source text withheld from the public copy]
+        - **where**: aybllc/auditonomous, origin/main (aa30b03), L8/L1/state-space/AUDITON_ENVELOPE.md:8-9 (the owner, 4 August 2026)
+      - item 2
+        - **quote**: we dont need to design the robot.
+        - **where**: aybllc/auditonomous, origin/main (aa30b03), L8/L1/state-space/AUDITON_ENVELOPE.md:49 (the owner, 4 August 2026)
+    - **evidence**
+      - item 1
+        - **fact**: The envelope's table gives twelve compartments: four platform-supplied (C1, C4, C5, C8), not designed there and present only as interface obligations, and eight [source text withheld from the public copy]), which it calls the deliverable; it then says the envelope is eight compartments and that this is the whole object.
+        - **where**: aybllc/auditonomous, origin/main (aa30b03), L8/L1/state-space/AUDITON_ENVELOPE.md:122-146
+      - item 2
+        - **fact**: The envelope names the twelve compartments and their separations as what does not change with mission, and states its one-parameter result over the same twelve.
+        - **where**: aybllc/auditonomous, origin/main (aa30b03), L8/L1/state-space/AUDITON_ENVELOPE.md:94-95, :102-105
+      - item 3
+        - **fact**: It keeps C1 and C5 in the map only as interface obligations, because the envelope must be portable across platforms.
+        - **where**: aybllc/auditonomous, origin/main (aa30b03), L8/L1/state-space/AUDITON_ENVELOPE.md:59-66
+      - item 4
+        - **fact**: The replicator re-loaded the twelve, found no thirteenth compartment needed and all eight envelope-supplied ones still required; its second reading would move C8 into the envelope and is flagged as a live threat to the four-and-eight split, not resolved.
+        - **where**: aybllc/auditonomous, origin/claude/book-structure-roadmap-k8ap82 (9259c18), L8/L1/state-space/AUDITON_REPLICATOR.md:89-92, :415-416, :441-448
+      - item 5
+        - **fact**: The roadmap, corrected on 14 September 2026, says both counts are right and that the owner closes D18 [source text withheld from the public copy].
+        - **where**: aybllc/auditonomous, origin/claude/book-structure-roadmap-k8ap82 (9259c18), L8/L5/research/review/BOOK_STRUCTURE_AND_ROADMAP_2026-09-13.md:628, :647
+      - item 6
+        - **fact**: The vocabulary paper's claims table, row 9, already states the auditon as twelve compartments, eight envelope-supplied and four platform-supplied.
+        - **where**: aybllc/auditonomous, origin/claude/book-structure-roadmap-k8ap82 (9259c18), L8/L4/work/writing/papers/AUDITONOMOUS_VOCABULARY_PAPER_2026-09-14.md:202, :298
+      - item 7
+        - **fact**: Chapter 12's header is gated on D18 and is [source text withheld from the public copy] are stated as one design, platform given and envelope delivered; its next step is the envelope's adversarial review.
+        - **where**: aybllc/auditonomous, origin/claude/book-structure-roadmap-k8ap82 (9259c18), L8/L4/work/writing/book/ch12-auditon-the-least-system-that-contains-everything.md:3, :20, :22
+      - item 8
+        - **fact**: The freeze file lists the eight-compartment envelope and C1 to C12 together as coined architecture.
+        - **where**: aybllc/auditonomous, commit 1d83788, FREEZE.md:52
+      - item 9
+        - **fact**: The owner's standing rules: the exemplars are updated by hand and not until the owner judges the scaffold close; findings come as proposals and nothing is applied until the owner says which.
+        - **where**: aybllc/7lm, origin/main (6de996b), L8/L6/history/harmonization-2026-09-04.md:336, :346 (§26); :482-484 (§36)
+    - **on_yes**: The owner's yes closes D18. A session drafts, as a proposal under the scaffold record's §36 and on the branch RH2 chooses, a dated note beside the roadmap's D18 row; the envelope, the vocabulary paper and Chapter 12's header need no change.
+    - **cost_or_risk**: If the owner later puts C8 in the envelope, the split becomes nine and three by dated correction; twelve changes only if the unrun adversarial review adds or drops a compartment.
+    - **confidence**: high
+    - **rejected**: Eight alone drops C1, C4, C5 and C8 from print, with the interface obligations that make the envelope portable, and it is the number the open C8 question can change; twelve alone hides what the book actually designs.
+    - **depends_on**: (empty)
+  - item 4
+    - **id**: RH17
+    - **title**: Whether malformed states are recorded with a flag or never formed
+    - **kind**: authorial
+    - **status_now**: open
+    - **best_choice**: Rule both, by layer, stated once in Chapter 17: the wire format checks well-formedness only and never forms a malformed record; nothing submitted is silently dropped, so intake keeps it as observed, with a flag; plausibility is never a reason to reject.
+    - **why**: The record draws this line. Block 45 says the codec checks [source text withheld from the public copy]. Block 46 forbids rejecting the anomalous, a plausibility judgement, yet praises making malformed dials unrepresentable. Block 50 will not form a domain claim no lone observer can anchor, yet records the projection observed. The table of contents' Appendix F entry pairs malformed states unrepresentable with outliers retained by rule. The definition entry carries invalid inputs as infinite uncertainty and forbids silent discard. Every candidate definition prohibits erasure, so D3 need not come first. Only the unread OMMP specification could move this line.
+    - **owner_words**
+      - item 1
+        - **quote**: [source text withheld from the public copy].
+        - **where**: aybllc/auditonomous, origin/main (aa30b03), L8/L0/semantics/definitions/AUDITONOMOUS_DEFINITION.md:38 (the owner's eBIOS corpus, docs/NUCore_SPEC.md:92-94, as quoted in the definition entry)
+      - item 2
+        - **quote**: [source text withheld from the public copy]
+        - **where**: aybllc/auditonomous, origin/claude/book-structure-roadmap-k8ap82 (9259c18), L8/L4/work/writing/manuscript/Auditonomous_Theory_Master_Archive.md:627 (Block 49, the author's thesis prompt as cleaned in the archive)
+    - **evidence**
+      - item 1
+        - **fact**: Block 45 records that the codec carries the dial as two integer exponents so malformed dials cannot be represented, and that [source text withheld from the public copy].
+        - **where**: aybllc/auditonomous, origin/claude/book-structure-roadmap-k8ap82 (9259c18), L8/L4/work/writing/manuscript/Auditonomous_Theory_Master_Archive.md:558
+      - item 2
+        - **fact**: Block 46 lists as defect 6 that binding rules excluding physically implausible combinations conflict with the rule that outliers are never discarded, and concludes record-and-flag, never reject; the same block praises making the illegal dial inexpressible rather than merely rejected.
+        - **where**: aybllc/auditonomous, origin/claude/book-structure-roadmap-k8ap82 (9259c18), L8/L4/work/writing/manuscript/Auditonomous_Theory_Master_Archive.md:580, :593
+      - item 3
+        - **fact**: Block 50 says the binding rules cannot form a record whose domain a lone ground observer cannot lock, and in the same paragraph has the size report recorded as the observed projection rather than the inference.
+        - **where**: aybllc/auditonomous, origin/claude/book-structure-roadmap-k8ap82 (9259c18), L8/L4/work/writing/manuscript/Auditonomous_Theory_Master_Archive.md:639
+      - item 4
+        - **fact**: The table of contents' Appendix F entry already describes malformed states as unrepresentable in the wire format and outliers as retained by rule.
+        - **where**: aybllc/auditonomous, origin/claude/book-structure-roadmap-k8ap82 (9259c18), L8/L4/work/writing/manuscript/Auditonomous_Theory_TOC.md:108
+      - item 5
+        - **fact**: The definition entry, quoting the owner's corpus, also requires that events cannot be silently discarded.
+        - **where**: aybllc/auditonomous, origin/main (aa30b03), L8/L0/semantics/definitions/AUDITONOMOUS_DEFINITION.md:53
+      - item 6
+        - **fact**: The engineering draft seals the trace, failure state included, before release or refusal, and has invalid or prohibited transitions produce a catch, a denial or an explicit failure record.
+        - **where**: aybllc/auditonomous, origin/claude/book-structure-roadmap-k8ap82 (9259c18), L8/L4/work/writing/auditonomous_ebios_core_architecture_math_source-535f70d_draft.md:229-233
+      - item 7
+        - **fact**: The library intake records ARIES (1992) as [source text withheld from the public copy].
+        - **where**: aybllc/auditonomous, origin/main (aa30b03), L7/provenance/sources/staging-records/library/FINDINGS_2026-08-04.md:156-162
+      - item 8
+        - **fact**: The roadmap recommends both, by layer, stated once; Chapter 17's title already prints record-and-flag, never reject, and its next step is the owner's ruling on D7.
+        - **where**: aybllc/auditonomous, origin/claude/book-structure-roadmap-k8ap82 (9259c18), L8/L5/research/review/BOOK_STRUCTURE_AND_ROADMAP_2026-09-13.md:618; L8/L4/work/writing/book/ch17-uha-and-ommp-the-record-as-map-and-key-record-and-flag-never-reject-storage-is-conserved.md:1, :3, :25
+      - item 9
+        - **fact**: Main's theme ledger notes the corpus never states which malformation class the encoding excludes; the codec held on the roadmap branch is a reconstruction whose wire-format field widths must be checked against the real specification, which no clone holds.
+        - **where**: aybllc/auditonomous, origin/main (aa30b03), L8/L5/research/lanes/THEME_LEDGER.md:286; origin/claude/book-structure-roadmap-k8ap82 (9259c18), L8/L4/work/computation/ommp/README.md:4, :29-32
+      - item 10
+        - **fact**: The research docket ties D7 to its item A1, whether an infinite-uncertainty marker survives composition; that check is recorded as derived and unrun, and its third part is the owner's call.
+        - **where**: aybllc/auditonomous, origin/claude/book-structure-roadmap-k8ap82 (9259c18), L8/L5/research/review/RESEARCH_DOCKET.md:56-60, :162
+      - item 11
+        - **fact**: The constitutional sentence prohibits erasure together with concealment and falsification, and the definition entry's noun gloss and the noun entry's v2 text carry the same prohibition, so the ruling does not wait on which act is the one prohibited act (D3).
+        - **where**: aybllc/auditonomous, origin/claude/book-structure-roadmap-k8ap82 (9259c18), L8/L4/work/writing/manuscript/Auditonomous_Theory_Master_Archive.md:37 and L8/L0/semantics/definitions/AUDITONOMY.md:87-89; origin/main (aa30b03), L8/L0/semantics/definitions/AUDITONOMOUS_DEFINITION.md:28
+      - item 12
+        - **fact**: The owner's standing rules: the exemplars are updated by hand and not until the owner judges the scaffold close; findings come as proposals and nothing is applied until the owner says which.
+        - **where**: aybllc/7lm, origin/main (6de996b), L8/L6/history/harmonization-2026-09-04.md:336, :346 (§26); :482-484 (§36)
+    - **on_yes**: The owner's yes is the ruling. A session drafts, as proposals under the scaffold record's §36 and on the branch RH2 chooses, a dated note beside the roadmap's D7 row and Chapter 17's sentence, and lists Block 46's defect 6 for the OMMP specification.
+    - **cost_or_risk**: The OMMP specification must drop its plausibility exclusions, and the book must say which malformations the wire excludes, which the record never states and cannot check until the OMMP repository is read.
+    - **confidence**: high
+    - **rejected**: Record-and-flag everywhere would make malformed dials representable again, reopening the silent wrong answer the dial guard closed; non-formation everywhere would let a plausibility rule drop anomalous observations, the erasure Block 46 forbids. Nothing held favours either pure option.
+    - **depends_on**: (empty)

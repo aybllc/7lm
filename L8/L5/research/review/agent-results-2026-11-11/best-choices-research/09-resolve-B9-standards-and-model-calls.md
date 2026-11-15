@@ -1,0 +1,137 @@
+# resolve:B9-standards-and-model-calls
+
+Agent result, as returned. Workflow: Best choices: the research and manuscript decisions. Run `wf_b77d2bd0-834`. Phase: Resolve.
+
+- **decisions**
+  - item 1
+    - **id**: RH29
+    - **title**: The held-off rules file for sessions, and whether the layer lists stay
+    - **kind**: process
+    - **status_now**: open
+    - **best_choice**: Keep the rules file held off in all three repositories: write no CLAUDE.md. Keep the layer lists in L8/L6/in/ as a proposal, unmoved. Once pull request #19 is settled, propose one dated correction to their line 311, which still calls the retired field guide a held source document.
+    - **why**: Your words of 6 September hold the file off and say that making any intelligence obey stay-out rules is not your concern; the specification calls the tree's silence on access deliberate and places such rules outside the layers. A root CLAUDE.md would fail the one CI check, which admits six root names, in all three repositories. Nothing since lifts the hold, and the pull request #19 reconciliation leaves those sentences unchanged. The lists sit where your merge of 11 November filed them; moving them changes the system unasked. The guide's retirement, merged 13 November, made their line 311 untrue.
+    - **owner_words**
+      - item 1
+        - **quote**: HOdl off on clude.md. do the other things and mrererge
+        - **where**: aybllc/7lm origin/main 6de996b, L8/L6/history/harmonization-2026-09-04.md:101 (section 7, the owner's words of 6 September 2026)
+      - item 2
+        - **quote**: simply requireng whatvefr 8inteligence you abve to abide byu the stay out rules is not our concerm
+        - **where**: aybllc/7lm origin/main 6de996b, L8/L6/history/harmonization-2026-09-04.md:101 (same message)
+    - **evidence**
+      - item 1
+        - **fact**: The specification says neither exemplar tree holds a rule on what a session or any other intelligence may touch, and that the file which would carry such rules is held off.
+        - **where**: aybllc/7lm origin/main 6de996b, L8/L4/work/writing/7lm-harmonized-architecture-specification.md:941
+      - item 2
+        - **fact**: The specification's clarification says the topology states no rule on what a person, session, model or orchestrator may touch, and that such rules belong to repository infrastructure outside the layers; its exemplar section calls the tree's silence on access deliberate.
+        - **where**: aybllc/7lm origin/main 6de996b, same file :287 and :965
+      - item 3
+        - **fact**: The one CI check's root step admits only README.md, L7, USO, L8, .github and .gitignore at the root, in all three repositories, so a CLAUDE.md at the root would fail it.
+        - **where**: .github/workflows/integrity.yml: aybllc/7lm 6de996b :17-23; aybllc/autonomous 9fa3744 :45-51; aybllc/auditonomous aa30b03 :17-23
+      - item 4
+        - **fact**: No CLAUDE.md, AGENTS.md, .claude/ or similar rules file exists on any of the three main branches.
+        - **where**: git ls-tree -r of aybllc/7lm 6de996b, aybllc/autonomous 9fa3744 and aybllc/auditonomous aa30b03, read 13 November 2026
+      - item 5
+        - **fact**: The local PR #19 reconciliation leaves specification lines 287, 941 and 965 and the layer lists unchanged, but it edits L8/L6/0.md and adds record section 42, so a scaffold correction made on main now would collide with it.
+        - **where**: /home/user/7lm-pr19 at 8aa66c1 (not pushed), diff against 6de996b
+      - item 6
+        - **fact**: The owner's later remark calling a hold-off a typo refers to the hold-off in the message recorded in section 33, on the allics, not to the rules file.
+        - **where**: aybllc/7lm origin/main 6de996b, L8/L6/history/harmonization-2026-09-04.md:428 and :437
+      - item 7
+        - **fact**: The layer lists still say the field guide is held at L6 as a source document an adopter takes; since PR #20 merged, the guide sits in a retired set whose sheet says it is deprecated as a source document. Their line 5 also places them beside the guide.
+        - **where**: aybllc/7lm 6de996b, L8/L6/in/7lm-layer-lists.md:5 and :311; L8/L6/retired/field-guide-2026-09-20/0.md:8
+      - item 8
+        - **fact**: The owner (EDM) authored the merge of PR #21 on 11 November 2026, whose message says the lists were filed at the L6 inbox on the owner's word; the L6 sheet's inventory of the inbox does not name them. The scaffold beta edits all nine sheets the lists restate.
+        - **where**: aybllc/7lm commit c9dc061; 6de996b L8/L6/0.md:82; origin/beta/common-contracts-r1-r6 97314c5 against 2e5a6d6
+      - item 9
+        - **fact**: Standing rule: the system is not changed without asking, and findings come to the owner as proposals naming the file, what is wrong and the exact fix. Neither exemplar has an L6 inbox, and the scaffold's L6 holdings are never mirrored.
+        - **where**: aybllc/7lm 6de996b, L8/L6/history/harmonization-2026-09-04.md:482-484 (section 36) and :402-408 (section 31); ls-tree of L8/L6/ on 9fa3744 and aa30b03
+    - **on_yes**: Nothing is written now. Once #19 is settled, a session proposes one scaffold commit: the lists' lines 5 and 311 corrected for the retirement, L8/L6/0.md naming them in the inbox, a record section; you merge. Neither exemplar changes; the scaffold's L6 is never mirrored.
+    - **cost_or_risk**: No written rule tells a session what it may touch; that rests on your word in each session. The lists go stale against the nine sheets they restate if the scaffold beta merges.
+    - **confidence**: high
+    - **rejected**: Writing a rules file: your hold stands, the root check refuses it, and the specification keeps access out of the tree. Promoting the lists into the guide's vacated seat, or withdrawing them: no word of yours asks for either, and both change the system.
+    - **depends_on**: (empty)
+  - item 2
+    - **id**: RH30
+    - **title**: How the book treats IEEE 7014's deletion duty against the erase clause
+    - **kind**: authorial
+    - **status_now**: open
+    - **best_choice**: Treat the collision in Chapter 8 as an open limit on the erase clause: cite clause 4.3.3.2 e) unquoted; state that both hold only if the protected objects exclude [source text withheld from the public copy] never said; name crypto-erase as unadopted; never cite 7014 as support for mandatory auditability.
+    - **why**: Both records on it defer to you: the IEEE intake calls the collision genuine and unresolved; the forgetting finding shows that not recalling data does not meet the duty, names crypto-erase as a partial route on an unledgered source, and adopts nothing. A ruling that the protected objects exclude personal data runs against DEF's gloss of the epistemic state as what the system knows. Chapter 8 must disclose contradictions, and every candidate text carries the erase clause or an immutable record. What would change it: your ruling on what the protected objects cover, or on whether a recorded crypto-erase erases.
+    - **owner_words**
+      - item 1
+        - **quote**: [source text withheld from the public copy].
+        - **where**: aybllc/auditonomous origin/claude/book-structure-roadmap-k8ap82 9259c18, L8/L4/work/writing/manuscript/Auditonomous_Theory_Master_Archive.md:37 (headed as the author's text, verbatim)
+      - item 2
+        - **quote**: TO be autonomus it oto be forgetful.
+        - **where**: aybllc/auditonomous origin/main aa30b03, L8/L5/research/lanes/RECORD_ONTOLOGY_OPEN_QUESTIONS.md:129 (the owner's claim of 2 August 2026, quoted verbatim there)
+    - **evidence**
+      - item 1
+        - **fact**: The IEEE intake finding calls IEEE 7014-2024 clause 4.3.3.2 e), a duty to delete or anonymize affective data once no longer needed, a genuine collision with the corpus's no-erasure clause, not resolved; both can hold only if the protected objects are [source text withheld from the public copy]. It reserves the point to the author.
+        - **where**: aybllc/auditonomous origin/main aa30b03, L7/provenance/sources/staging-records/ieee/FINDINGS_2026-08-04.md:59-69
+      - item 2
+        - **fact**: The same finding: 7014 defines auditability for empathic systems only, the word occurs once in its 51 pages and no requirement invokes it, so citing [source text withheld from the public copy] overclaim in scope and in force.
+        - **where**: aa30b03, same file :18-57
+      - item 3
+        - **fact**: The forgetting finding: non-recall does not satisfy the deletion duty, because retention still occurred; [source text withheld from the public copy]; the recall policy would itself have to be sealed; nothing adopted.
+        - **where**: aa30b03, L8/L5/research/findings/SEGREGATION_AND_FORGETTING_2026-08-04.md:148-168 and :190-193
+      - item 4
+        - **fact**: Crypto-erase rests on NIST SP 800-88, which has no ledger row or reading record under L7/provenance on main.
+        - **where**: git grep for 800-88 in aa30b03 L7/provenance/, no hits
+      - item 5
+        - **fact**: The 7014 reading record notes that every duty in the standard is addressed to the developer, not the system, and that the licensed copy is hold-private: [source text withheld from the public copy]. The copyright sheet says nothing is published from material under copyright until clearance exists.
+        - **where**: aa30b03, L7/provenance/sources/staging-records/ieee/reading/IEEE-7014.md:7 and :437; L7/governance/copyright/0.md:43 and :54
+      - item 6
+        - **fact**: The erase clause stands in DEF and in both corpus forms of the sentence; AUDY v2, the fourth candidate text, defines by an immutable record instead. DEF glosses the epistemic state as what the system [source text withheld from the public copy].
+        - **where**: aa30b03 L8/L0/semantics/definitions/AUDITONOMOUS_DEFINITION.md:22 and :28; 9259c18 L8/L6/retired/consolidated-2026-08-04/AUDITONOMOUS.md:70 and :80; 9259c18 L8/L0/semantics/definitions/AUDITONOMY.md:69
+      - item 7
+        - **fact**: Chapter 8 is done when the two protected objects are stated with the contradictions disclosed, and nothing contested is presented as settled; its feeds include neither finding, and no chapter file or the roadmap names IEEE 7014.
+        - **where**: 9259c18 L8/L4/work/writing/book/ch08-the-constitution-bounded-autonomy-mandatory-auditability-a-runtime-without-parameters.md:5, :7-13 and :21; git grep for 7014 over 9259c18
+      - item 8
+        - **fact**: Author assertion A-008 leaves open when engineered non-recoverability is privacy rather than concealment; an eb-audit file that may answer it was never read here.
+        - **where**: 9259c18 L8/L5/research/review/AUTHOR_ASSERTIONS.md:743-754
+    - **on_yes**: When the chapter files reach main (decision 2), a session adds the IEEE intake finding and the forgetting finding to Chapter 8's feeds, marked open; the claims table carries the collision when the text is written. Quoting 7014 waits for decision 33.
+    - **cost_or_risk**: The book prints a live counter-instance to its own defining clause, which a referee will press; a later ruling means rewriting Chapter 8's account.
+    - **confidence**: medium
+    - **rejected**: Ruling that the protected objects exclude personal data: the corpus never did, and DEF's gloss reads against it. Crypto-erase as the answer: unledgered source, adopted nowhere. Leaving 7014 out: hides a known collision, against Chapter 8's rule.
+    - **depends_on**: (empty)
+  - item 3
+    - **id**: RH31
+    - **title**: Appendix C of the definition, and BETA's dispositions for the three files
+    - **kind**: authorial
+    - **status_now**: open
+    - **best_choice**: Keep Appendix C whole, its entries on the root autonomous as [source text withheld from the public copy]. Adopt BETA's routing through the binding as your ruling, written into the three sheets that reserve it, not the three files; DEF's next dated version carries BETA's note.
+    - **why**: The definitions sheet offers two choices. The bound Autonomous entry holds no etymology, so replacing Appendix C's four entries on the root word autonomous would lose three checked etymologies; only one entry defines the word. BETA's substance applies your rule of 5 September and loses nothing, but its record calls it a candidate, its text breaks DEF's verbatim 410 lines and contradicts its own review sheet, and it names a commit that decision 6 may change. What would change it: a rule meant to bar even the word's ancestry from the entry (then replace), or decision 2 taking BETA whole.
+    - **owner_words**
+      - item 1
+        - **quote**: Auditonomous gets the definitions of autonomous from Autonomous and nowhere else.
+        - **where**: aybllc/auditonomous origin/main aa30b03, L8/L6/history/harmonization-2026-09-05.md:9 (the owner's rule of 5 September 2026)
+    - **evidence**
+      - item 1
+        - **fact**: The definitions sheet says Appendix C's quotations are not a definition source, and leaves to the owner whether they remain as etymology of the coinage's second element [source text withheld from the public copy].
+        - **where**: aybllc/auditonomous origin/main aa30b03, L8/L0/semantics/definitions/0.md:34
+      - item 2
+        - **fact**: The binding sheet names the three files that still take autonomous from elsewhere (Appendix C, Q13, the autonomy rows of CONTRADICTIONS.md) and reserves resolving them to the owner; the record lists the same three as owner decisions left open, nothing done. The roadmap counts a fourth, the sourcebook's line 96, on ROADMAP only, which BETA does not touch.
+        - **where**: aa30b03 L7/peering/public/ingress/peer-1/object-1/0.md:34; aa30b03 L8/L6/history/harmonization-2026-09-05.md:89-93; 9259c18 L8/L5/research/review/BOOK_STRUCTURE_AND_ROADMAP_2026-09-13.md:586
+      - item 3
+        - **fact**: Appendix C holds four internal-corpus entries and fourteen external ones, thirteen labelled VERIFIED and one PARTIALLY VERIFIED; four of the fourteen concern the root word autonomous, and only one of those, the American Heritage entry, defines it.
+        - **where**: aa30b03 L8/L0/semantics/definitions/AUDITONOMOUS_DEFINITION.md:263-336; the defining entry at :281-284
+      - item 4
+        - **fact**: The bound Autonomous entry at the pinned commit (315 lines) contains no etymology: no Greek, nomos, Perseus or dictionary source.
+        - **where**: aybllc/autonomous 0504961:research/definitions/AUTONOMOUS.md
+      - item 5
+        - **fact**: BETA adds 16 lines to DEF (410 to 426: one dated paragraph and a Current role line under each of the fourteen external entries), 2 lines to Q13's file and 15 to CONTRADICTIONS.md; it deletes nothing. None of the three files has changed on main since BETA forked, so its text would arrive unchanged if BETA joined.
+        - **where**: git diff --numstat aa30b03 714480d on the three paths; merge-base 2165144
+      - item 6
+        - **fact**: BETA's review sheet still says CONTRADICTIONS.md is not edited and that which rows are which is the owner's reading, while BETA edits that file.
+        - **where**: origin/beta/7lm-exemplar-auditonomous 714480d, L8/L5/research/review/0.md:35 (same sentence on aa30b03 :35)
+      - item 7
+        - **fact**: BETA's own history calls its work the authorized local candidate, not a new source-owner decision; its Q13 note also rules Q13's headline not a present conformance finding, which is decision 12's question.
+        - **where**: 714480d L8/L6/history/AUDITONOMOUS_BETA_HISTORY.md:3 and :7; 714480d L8/L1/state-space/REQUIREMENTS_OWNERSHIP.md:268
+      - item 8
+        - **fact**: The scaffold's specification reports the binding record's three files; once the binding sheet records the ruling, that sentence needs the same correction. It stands at line 958 on main and on the PR #19 reconciliation.
+        - **where**: aybllc/7lm 6de996b L8/L4/work/writing/7lm-harmonized-architecture-specification.md:958; /home/user/7lm-pr19 8aa66c1 same line
+    - **on_yes**: A session drafts, for your merge, a dated section in the Auditonomous record and the three sheets restated as ruled, BETA's C1 to C7 table becoming the review sheet's reading. Q13's verdict waits for decision 12; the specification's line 958 follows once #19 is settled.
+    - **cost_or_risk**: Until DEF's next version, a reader of DEF alone meets Appendix C unlabelled. Q13's verdict and the specification's line 958 wait. If BETA later joins whole, its in-file text must be left out or reconciled.
+    - **confidence**: medium
+    - **rejected**: BETA's text as written: DEF grows from 410 to 426 lines, shifting cited lines by 2 to 16; CONTRADICTIONS.md gains 15 lines while BETA's review sheet still says it is not edited; its Q13 note pre-empts decision 12. Replacement loses etymology.
+    - **depends_on**: (empty)

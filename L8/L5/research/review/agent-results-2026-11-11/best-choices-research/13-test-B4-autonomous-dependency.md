@@ -1,0 +1,41 @@
+# test:B4-autonomous-dependency
+
+Agent result, as returned. Workflow: Best choices: the research and manuscript decisions. Run `wf_b77d2bd0-834`. Phase: Test.
+
+- **verdicts**
+  - item 1
+    - **id**: RH6
+    - **quotes_ok**: yes
+    - **state_ok**: yes
+    - **stands**: yes
+    - **final_best_choice**: The indexed plural entry is the baseline. A session drafts REVIEW_4's seven fixes as one dated version for your merge, old text kept. Keep 0504961 until it clears re-review, then bind it beside the old record, enter the term in REGISTER.md, and route the four files through the new binding.
+    - **final_why**: Your instruction had the entry adopt every definition, indexed ("[source text withheld from the public copy]"), and your specification of 4 September forbids manufacturing consensus where sources materially disagree; the eleven rows disagree on what is measured, so only the plural entry manufactures nothing. Fixes come as proposals for your merge, as your rule of 20 September asks. The pinned bytes equal today's, and the Auditonomous beta also wrote "no rebind", so one rebind after the fixes replaces two. REGISTER.md admits a term only once its labels are fixed. A clause all eleven rows share would change the first ruling.
+    - **final_confidence**: medium
+    - **note**: Every quotation is verbatim at its locator, and every state claim checks out: blob ffbdc28 and SHA-256 2756...a12b at both 0504961 and 9fa3744, no tag in any of the three clones, REVIEW_4 lines 435-471, and 0504961 deleting the 695-line RULINGS.md. Two things are tightened. First, the best choice now covers REGISTER.md and the four files, which the colleague put only in on_yes. Second, it says 'the baseline' rather than 'the consensus baseline'. Both betas (EDM, 2 November) say no consensus exists: the Autonomous beta's BETA_SOURCE_OVERLAY.md:11 reads '[source text withheld from the public copy].', and the Auditonomous beta's AUDITONOMOUS_BETA_SCOPE.md:3 reads 'not a ratified universal consensus'. The unmerged 7lm branch audit/peering-descriptive-reframe-2026-09-20 drops the consensus-baseline wording altogether. Support the colleague did not cite: Auditonomous beta 714480d, L7/provenance/sources/LEDGER.md:153, '[source text withheld from the public copy].'
+  - item 2
+    - **id**: RH7
+    - **quotes_ok**: yes
+    - **state_ok**: no
+    - **stands**: yes
+    - **final_best_choice**: Rule that P1 to P3 still bind: your words of 14 August removed the tamper check, not the rule. Return section 3 of the freeze file verbatim as one file at Auditonomous L8/L5/research/review/, beside the label discipline, with a header giving today's paths and a dated record.
+    - **final_why**: The rule's own text says P1 to P3, not the hashes, are what binds; your words at the retirement, 'i diotn want tampe fhcekc', name only the tamper check, and the 16 August pass that retired the freeze kept P2 and P3 as three files' discipline. Nothing live carries it corpus-wide, so Chapter 13 and the vocabulary paper can breach it unseen. Standing research rules sit verbatim at L5 review, and a rule on what may be cited is not one on what a session may touch. Your word that it went with the emptied Autonomous rulings would change this.
+    - **final_confidence**: medium
+    - **note**: Both quotations are verbatim. Two statements are inexact. (1) Outside L6, the binder README also names 'the retired FREEZE §2b' (aa30b03, L7/allications/publications/binder/README.md:22), so more than the three scope rules and one staging record mention the freeze file. (2) Amendment F-005 (1d83788, FREEZE.md:359) is headed 'Freeze retired': it removed FREEZE.sha256 and kept the file as the historical record. That goes further than retiring 'only the tamper check'. The colleague also left two contrary signals unweighed. Commit 4a1c1db's message says 'Zero active freeze dependence remains'. On 14 August the owner's own account made commit 0504961, which emptied Autonomous's RULINGS.md; that file held contamination guard P-003 (0504961^:manuscripts/main/RULINGS.md:561), and no reason is recorded. Neither overturns the pick, because the owner's recorded words never withdraw the rule. Confidence lowered from high to medium.
+  - item 3
+    - **id**: RH21
+    - **quotes_ok**: yes
+    - **state_ok**: no
+    - **stands**: yes
+    - **final_best_choice**: Make aybllc/autonomous-theory the home of every Autonomous Theory file in both exemplars, and aybllc/ncf-research of the Third Power Corpus. Once pull request #19 lands, record both in each exemplar and correct the specification's sentences calling the home unnamed; move files when you allow writing there, '#autonomous(1).txt' after its purge ruling.
+    - **final_why**: The record points to both homes: the specification gives a second work a repository of its own, met by peering; the 14 September survey found aybllc/autonomous-theory titled for this work; and ruling AU-NORM-03 made the corpus NCF-derived, with five sheets naming aybllc/ncf-research. The two works do not cite each other. Naming moves nothing; the move waits on your rule against outside updates, on those repositories being built, and on the chat export's third-party addresses. Once named, main's 'whose home the owner has not named' is false, so the specification is corrected with the record, not at the move.
+    - **final_confidence**: medium
+    - **note**: Both quotations are verbatim. One claim about the file is wrong. '#autonomous(1).txt' turns into a raw chat export at line 636, where its first e-mail address also appears; the report itself said 'about line 636'. Line 649 is only where the account identifier first appears, and 6 of the 7 distinct addresses occur from line 649 on. The pull request #19 build has since been amended from 38e2ec3 to 8aa66c1; lines 950, 958 and 962 are unchanged. The sequencing is tightened. The colleague corrects the specification once, at the move. That leaves two sentences false from the naming until the move: main line 950 ('whose home the owner has not named') and, in the #19 build, 'Each leaves when its home is named.' Keeping statements true ranks above saving one edit. Whether both repositories still exist was not re-checked, because that needs the network.
+  - item 4
+    - **id**: RH28
+    - **quotes_ok**: yes
+    - **state_ok**: yes
+    - **stands**: yes
+    - **final_best_choice**: Leave the status vocabulary at L5 and Auditonomous's L8/L0/epistemic/ empty, as your ruling of 6 September settled. After pull request #19 lands, remove the specification's sentence 'The L0 epistemic rail is empty; its vocabulary stands at L5 as review status' from 'Not yet as stated', keeping it in specification-history.md.
+    - **final_why**: Your ruling of 6 September, which the specification first recorded as given for the autonomy scale and the status ladder, puts a review-status ladder at L5, not the L0 epistemic rail; the specification lets a rail stay empty, and main, the pull request #19 build and every unmerged 7lm branch keep that placement. Your words of 12 September, that 0 is where the epistemic rail defines the layers above, came with the peer-numbering ruling and moved nothing. So the 'Not yet as stated' sentence lists a conforming state as a gap, and the Interior paragraph already states both facts.
+    - **final_confidence**: high
+    - **note**: Both quotations are verbatim and the state claims hold. The decision was settled by the owner's ruling of 6 September (aba46a2 recorded it as 'given for the exemplars' autonomy scale and status ladder'), not by anything that happened after the reports. The pull request #19 build is now 8aa66c1 rather than 38e2ec3, with the same lines. The colleague did not mention that the two exemplars' epistemic sheets are worded differently. Autonomous's (9fa3744, L8/L0/epistemic/0.md:33) calls its evidence labels 'this object's epistemic-status distinctions, stated where they stand'. Auditonomous's (aa30b03, line 33) says 'not here'. Both keep the rail empty, and what a sheet says is a design choice. The same sentence also stands in beta/common-contracts-r1-r6 (line 960) and audit/peering-descriptive-reframe-2026-09-20 (line 953), so it must be removed again if either branch merges later.

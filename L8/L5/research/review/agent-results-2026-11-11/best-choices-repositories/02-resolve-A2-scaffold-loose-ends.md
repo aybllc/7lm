@@ -1,0 +1,251 @@
+# resolve:A2-scaffold-loose-ends
+
+Agent result, as returned. Workflow: Best choices: the scaffold, the exemplars, the eleven proposals. Run `wf_8e87a1b5-8ec`. Phase: Resolve.
+
+- **decisions**
+  - item 1
+    - **id**: M19
+    - **title**: Where the layer lists finally sit
+    - **kind**: process
+    - **status_now**: open
+    - **best_choice**: Keep the layer lists in L8/L6/in/ as an unadopted proposal: do not promote, move or withdraw them. Once PR #19 is merged or closed, one small commit names them in L8/L6/0.md's inbox entry and corrects their lines 5, 309 and 311, which predate the field guide's retirement.
+    - **why**: The owner made in/ the default place for unplaced material, merged the lists there on 11 November, and bars unasked changes; no word of his places them elsewhere. Promoted to L8/L6/, they would leave with the release PR #19 adds, which takes L6 source documents but never in/, and would need nine lines swept of attributions and upkeep beside the sheets: the kind of second text he retired as stale when it was the field guide. Since PR #20, lines 309 and 311 are untrue and line 5 out of date, and the L6 inbox entry has never named them.
+    - **owner_words**
+      - item 1
+        - **quote**: Update the field guide to include in/ as the appropriate default to-be, to-do, inbpx for a dir
+        - **where**: aybllc/7lm, origin/main (6de996b), L8/L6/history/harmonization-2026-09-04.md:297 (the owner, 19 September 2026)
+      - item 2
+        - **quote**: Don't change the system unless you ask or are unsure
+        - **where**: aybllc/7lm, origin/main (6de996b), L8/L6/history/harmonization-2026-09-04.md:482 (the owner, 20 September 2026)
+    - **evidence**
+      - item 1
+        - **fact**: The lists were added by commit c6d598a on 31 October 2026 and reached main through the owner's merge of pull request #21 (c9dc061, 11 November 2026), whose message says they were filed at the inbox for L6 on the owner's word. The file is the same (blob ab91236) on main and on the reconciled PR #19 commit; neither exemplar, the beta, PR #19's pushed head, the audit branch nor the error-list branch carries it.
+        - **where**: aybllc/7lm commits c6d598a and c9dc061; /home/user/7lm-pr19 at 38e2ec3, L8/L6/in/7lm-layer-lists.md
+      - item 2
+        - **fact**: Since PR #20 merged on 13 November, line 311 of the lists names 7lm-field-guide.md as a source document held at L6, while L8/L6/ holds only 7lm-sheet-templates.md and the guide sits in L8/L6/retired/field-guide-2026-09-20/; line 309 names three retired sets where main holds four; line 5 places the lists beside the field guide.
+        - **where**: aybllc/7lm origin/main (6de996b), L8/L6/in/7lm-layer-lists.md:5, :309, :311; git ls-tree origin/main L8/L6/
+      - item 3
+        - **fact**: The L6 sheet's entry for the inbox describes it as holding three things and does not name the lists; no section of the record on main (sections 1 to 41) names them either.
+        - **where**: aybllc/7lm origin/main, L8/L6/0.md:82; L8/L6/history/harmonization-2026-09-04.md
+      - item 4
+        - **fact**: The release script PR #19 adds takes everything under L7/ and L8/ except the contents of L8/L6/history/, in/ and retired/, so the lists do not leave while they sit in in/; a file promoted to L8/L6/ would leave.
+        - **where**: /home/user/7lm-pr19 at 38e2ec3, .github/release.sh:6-8 and :35-36
+      - item 5
+        - **fact**: Nine lines of the lists (5, 43, 50, 93, 308, 317, 320, 356 and 360) attribute a word, rule or call to the owner: the kind of tag PR #19's sweep removes from live text and leaves alone under in/.
+        - **where**: aybllc/7lm origin/main, L8/L6/in/7lm-layer-lists.md; /home/user/7lm-pr19 at 38e2ec3, L8/L6/history/harmonization-2026-09-04.md:516-518
+      - item 6
+        - **fact**: Record section 42 is taken by PR #19's reconciliation, which is not yet pushed, so a record section for this answer has to follow it.
+        - **where**: /home/user/7lm-pr19 at 38e2ec3, L8/L6/history/harmonization-2026-09-04.md:581
+    - **on_yes**: Once PR #19 is merged or closed, an agent makes one scaffold commit: L8/L6/0.md's inbox entry names the lists, their lines 5, 309 and 311 name the retired guide, and the next record section quotes this answer and records the filing of 11 November.
+    - **cost_or_risk**: Adopters get no whole-model summary, and the lists drift as the sheets and specification change; if the owner later wants them as a source document, they need a full re-check and the agnostic sweep.
+    - **confidence**: medium
+    - **rejected**: Promotion beside the templates: released publicly, needs sweeping and upkeep, never asked for. Moving to L0 pedagogy: the owner ruled a whole-model guide is not L0 material. Withdrawal: the retired-sheet rule deletes it. Leaving it untouched: the untrue lines and the incomplete inbox entry stay.
+    - **depends_on**: (empty)
+  - item 2
+    - **id**: M12
+    - **title**: Whether .gitignore is allowed at a canonical root
+    - **kind**: process
+    - **status_now**: open
+    - **best_choice**: Yes: .gitignore is permitted at a canonical root and not required. Change nothing in any of the three trees: the scaffold keeps its root without one, both exemplars keep theirs, and each README goes on describing its own root. Record the answer in the scaffold's next record section.
+    - **why**: The specification, which the scaffold README names as controlling, lets the root hold .gitignore; every check now on a main, the beta's and PR #19's admit it without requiring it; the record says the scaffold has none because there was nothing to ignore. The scaffold README truthfully describes its own root, and the owner ruled [source text withheld from the public copy]. His word on roots asked the two exemplars' roots to match, and they do; mirroring holds because the model itself permits the file. Nothing is false today, so recording the reading is the smallest act.
+    - **owner_words**
+      - item 1
+        - **quote**: under autonomous and auidtonomous the root needs to be the same for both
+        - **where**: aybllc/7lm, origin/main (6de996b), L8/L6/history/harmonization-2026-09-04.md:121 (the owner, 6 September 2026)
+      - item 2
+        - **quote**: we dont use the reasd me for teh docuemtnation
+        - **where**: aybllc/7lm, origin/main (6de996b), L8/L6/history/harmonization-2026-09-04.md:129 (the owner, 7 September 2026)
+    - **evidence**
+      - item 1
+        - **fact**: The specification's root clarification names .gitignore among what the root may hold, beside the one check, and adds that every 7LM repository has the same root. The line is identical on main, the beta, the audit branch (its line 289) and the reconciled PR #19 commit.
+        - **where**: aybllc/7lm origin/main, L8/L4/work/writing/7lm-harmonized-architecture-specification.md:281
+      - item 2
+        - **fact**: The check's root rule admits .gitignore and does not demand it: scaffold main and Auditonomous main share blob f43dd04, Autonomous main (45ad3f7) has the same line, and so do the beta's check (cd39c5b) and PR #19's (d98049a).
+        - **where**: .github/workflows/integrity.yml:23 on each of those refs
+      - item 3
+        - **fact**: The scaffold's root holds .github, L7, L8 and README.md; Autonomous (9fa3744) and Auditonomous (aa30b03) add a .gitignore of 59 and 4 lines. Each README states its own root: the scaffold's without .gitignore, each exemplar's with it.
+        - **where**: git ls-tree origin/main in /home/user/7lm, /home/user/autonomous, /home/user/auditonomous; README.md:13 in the scaffold, README.md:15 in each exemplar
+      - item 4
+        - **fact**: The record of 7 September 2026 explains that no .gitignore was added to the scaffold because there was nothing in it to ignore, and that the check permits its absence.
+        - **where**: aybllc/7lm origin/main, L8/L6/history/harmonization-2026-09-04.md:123
+      - item 5
+        - **fact**: The two opposite readings stand only off main: the review of 20 September calls the scaffold README's root sentence an error (item 17), and the audit branch's check would refuse .gitignore at any root.
+        - **where**: origin/copilot/create-error-list, L8/L5/research/review/7lm-audit-recommendations.md:109; origin/audit/peering-descriptive-reframe-2026-09-20, .github/workflows/integrity.yml:39-40
+    - **on_yes**: No file changes in any repository. An agent quotes the answer in the scaffold's next record section, after PR #19's section 42; it also answers item 17 of the review of 20 September, so the question is not raised again at the next mirror.
+    - **cost_or_risk**: A reader who stops at the scaffold README may take .gitignore to be excluded everywhere; the specification, which that README names as controlling, says otherwise.
+    - **confidence**: high
+    - **rejected**: Add a .gitignore to the scaffold: contradicts the record's reason, nothing to ignore. Remove the exemplars' files: edits the specification and three checks, dropping Autonomous's rule history. Add a README sentence: repeats the specification where the owner says documentation does not live.
+    - **depends_on**: (empty)
+  - item 3
+    - **id**: M13
+    - **title**: Whether each exemplar's check must equal the scaffold's file byte for byte
+    - **kind**: process
+    - **status_now**: open
+    - **best_choice**: Not byte for byte: every line of each exemplar's check is the scaffold main's except in two places, the header comment, which names the repository's own record, and Autonomous's recorded Q-6 comment block, which stays. Mirror main's form only; the beta's L8-only form follows once it is on main.
+    - **why**: The owner's word is to mirror by hand with the scaffold updated first, so an exemplar takes main's check, never an unmerged beta's. From the first day, the scaffold's copy was the exemplar's workflow without its retired step. Strict identity would take the only full text of Autonomous's retired step out of the file it explains and, once PR #19 lands, plant a header naming a record file neither exemplar has, at a section number wrong for Auditonomous. Both exemplars already meet this rule, so nothing changes now, and PR #19's comment calling the check the same everywhere stays true.
+    - **owner_words**
+      - item 1
+        - **quote**: All repos should mirror the 7lm. Manually. We update 7lm and focus on it only.
+        - **where**: aybllc/7lm, origin/main (6de996b), L8/L6/history/harmonization-2026-09-04.md:336 (the owner, 20 September 2026)
+    - **evidence**
+      - item 1
+        - **fact**: The record of the scaffold's own copy of the check, 7 September 2026: "The same workflow, without the exemplar's retired step, added at `.github/workflows/integrity.yml`, so that the scaffold is the example of the root it prescribes."
+        - **where**: aybllc/7lm origin/main, L8/L6/history/harmonization-2026-09-04.md:123
+      - item 2
+        - **fact**: Blobs today: scaffold main and Auditonomous main f43dd04, identical; Autonomous main 45ad3f7, the scaffold's file plus a 28-line comment recording its retired Q-6 step (lines 16 to 43); scaffold beta and Auditonomous beta cd39c5b, which refuse USO/; Autonomous beta 670bd3e, which still accepts it; PR #19 (b5c3984 and 38e2ec3) d98049a.
+        - **where**: .github/workflows/integrity.yml on each named ref of /home/user/7lm, /home/user/autonomous, /home/user/auditonomous, /home/user/7lm-pr19
+      - item 3
+        - **fact**: PR #19's header names L8/L6/history/harmonization-2026-09-04.md section 11 as the record of the no-deletion rule. Neither exemplar has that file: the owner's words stand in each one's harmonization-2026-09-05.md, in section 11 in Autonomous and section 10 in Auditonomous.
+        - **where**: /home/user/7lm-pr19 at 38e2ec3, .github/workflows/integrity.yml:4; autonomous origin/main L8/L6/history/harmonization-2026-09-05.md:161; auditonomous origin/main same file :154
+      - item 4
+        - **fact**: The exact command of Autonomous's retired step, and the decision not to re-point it, stand only in that comment block; .gitignore lines 44 to 55 and LEDGER.md lines 886 to 888 carry parts of the story.
+        - **where**: /home/user/autonomous origin/main, .github/workflows/integrity.yml:16-43
+      - item 5
+        - **fact**: The mirror of 11 November kept Autonomous's comment block unchanged and made Auditonomous's file the scaffold's, byte for byte, each recorded in its own record.
+        - **where**: autonomous origin/main L8/L6/history/harmonization-2026-09-05.md:205; auditonomous origin/main same file :198
+      - item 6
+        - **fact**: PR #19's release script calls this file the one CI check, the same in every 7LM repository; under this answer that statement holds.
+        - **where**: /home/user/7lm-pr19 at 38e2ec3, .github/release.sh:6-7
+    - **on_yes**: Nothing changes now. When main's check next changes, the next hand mirror copies it into both exemplars, with the header naming each one's own record (harmonization-2026-09-05.md, section 11 in Autonomous, section 10 in Auditonomous), Autonomous's Q-6 block kept, and the scaffold commit recorded.
+    - **cost_or_risk**: Two named differences must be checked by eye at every mirror; any other drift in an exemplar's check would break this rule without anything automatic catching it.
+    - **confidence**: medium
+    - **rejected**: Byte for byte: moves the retired Q-6 step's only full text out of the workflow it explains and, after PR #19, plants a pointer to a record neither exemplar has. The beta's form now: copies an unmerged branch, against the owner's order of work.
+    - **depends_on**: (empty)
+  - item 4
+    - **id**: M11
+    - **title**: Whether the audit branch is adopted, retired, or taken in part
+    - **kind**: authorial
+    - **status_now**: open
+    - **best_choice**: Retire it without deleting it: adopt nothing from it, whole or in part; leave the branch exactly as it is, neither merged nor deleted; and record in the scaffold's next record section that it is not adopted. Any part wanted later is re-proposed against today's main.
+    - **why**: Made in 32 minutes after the owner's standing words of 20 September reached main, its 118 single-file commits reverse his L0 note, refuse the blank sheets he allowed, and set a root rule both exemplars would fail. It never patched the .docx: a clean git merge would put its rewrite under the version of 12 November, whose history row says only the exemplar section changed. On 17 October he kept it mergeable, not adopted; all since was built on main, and the R1–R6 beta keeps his note. Only his word that outside definitions may stand unbound in L0 changes this.
+    - **owner_words**
+      - item 1
+        - **quote**: Current correction: L0/semantics is the semantic version we make of the thing. If we do not make one, the directory is not populated with someone else’s definition.
+        - **where**: aybllc/7lm, origin/main (6de996b), L8/L4/work/writing/7lm-harmonized-architecture-specification.md:341; the owner's note in his authored document of 4 September 2026, retired verbatim at L8/L6/retired/specification-2026-09-04/7lm-harmonized-architecture-specification.md:317
+      - item 2
+        - **quote**: I left out sub folders because those are design choices but they should all either be blank with just the location this being skipped and tagged at the end of the doc as an adult xception for HOA review
+        - **where**: aybllc/7lm, origin/main (6de996b), L8/L6/history/harmonization-2026-09-04.md:388 (the owner, 20 September 2026)
+    - **evidence**
+      - item 1
+        - **fact**: The branch is 119 commits ahead of main: its own 118 plus the merge 3555866 of 17 October. All 118 are authored and committed under the owner's account name (EDM), each touches one file, and they run from 17:27:46 to 17:59:53 −0700 on 20 September 2026, forked from 6609f38, which already carried the record through section 37.
+        - **where**: /home/user/7lm, git log 6609f38..83ad204; 6609f38:L8/L6/history/harmonization-2026-09-04.md
+      - item 2
+        - **fact**: At its specification line 349 the branch rewrites the L0 note to allow a definition adopted from outside; its check admits only README.md, L7, L8 and .github at the root (lines 39 to 40), fails any sheet that is only its heading (lines 89 to 94), and drops the owner's words of 7 September from its header.
+        - **where**: origin/audit/peering-descriptive-reframe-2026-09-20 (3555866): L8/L4/work/writing/7lm-harmonized-architecture-specification.md:349; .github/workflows/integrity.yml
+      - item 3
+        - **fact**: Its 118 commits change 75 files: 71 sheets, the check, the specification's Markdown, the field guide and the templates. The .docx is not among them, and its specification still reads Version of 20 September 2026.
+        - **where**: git diff --stat 6609f38 83ad204; 3555866:L8/L4/work/writing/7lm-harmonized-architecture-specification.md:18
+      - item 4
+        - **fact**: Trial merges in a scratch copy of the repository: clean into main (6de996b), where the result keeps main's .docx and the version of 12 November around the branch's rewrite; 20 files in conflict against PR #19 (both b5c3984 and 38e2ec3); 12 against the beta (97314c5). The versions row for 12 November says the exemplar section alone was corrected.
+        - **where**: git merge-tree in a scratch mirror; aybllc/7lm origin/main L8/L6/history/specification-history.md:15
+      - item 5
+        - **fact**: Record section 40 on main leaves the branch's disposition to the owner, and GitHub lists no pull request from it, open or closed (checked 13 November 2026).
+        - **where**: aybllc/7lm origin/main, L8/L6/history/harmonization-2026-09-04.md:537; GitHub pull requests of aybllc/7lm
+      - item 6
+        - **fact**: The beta of 2 November, recorded as made after the owner's approval of R1–R6, keeps the L0 note unchanged at line 341, and the reconciled PR #19 keeps its words under the label Note.
+        - **where**: origin/beta/common-contracts-r1-r6 and /home/user/7lm-pr19 at 38e2ec3, L8/L4/work/writing/7lm-harmonized-architecture-specification.md:341
+    - **on_yes**: No file or branch changes. Once PR #19 is merged or closed, the scaffold's next record section states that the audit branch (tip 3555866, forked at 6609f38) is not adopted and is kept as it stands. The exemplars go on mirroring main.
+    - **cost_or_risk**: The sheets' descriptive rewording, partly favoured by the owner's word of 20 September, stays off main; any of it wanted later needs a fresh proposal, as the branch conflicts with PR #19 in 20 files.
+    - **confidence**: high
+    - **rejected**: Adopt whole: reverses the owner's L0 note and blank-sheet word, fails both exemplar roots, leaves the .docx and version history untrue. Take in part: its descriptive wording and its L0 change are the same sheet edits. Leave undecided: open since 17 October, it stays open.
+    - **depends_on**: (empty)
+  - item 5
+    - **id**: M8
+    - **title**: What happens to the beta's three edits to the retired field guide
+    - **kind**: process
+    - **status_now**: open
+    - **best_choice**: Drop them. If the beta is merged, the merge commit keeps the retired guide at blob 0c9626e, undoing the three edits git would otherwise carry onto it, and that merge's record section says where they stand: in the beta's history, and as the same corrections in its specification and L8/L0/0.md.
+    - **why**: The owner retired the guide as stale and deprecated, and its set's sheet promises the text unchanged and verbatim. Record section 40 settled the same question for PR #19 and the audit branch: their guide edits were not carried onto the retired copy and stay in their history. Nothing is lost: the beta's specification carries all three corrections, at lines 68, 355 and 683, and L8/L0/0.md line 69 carries the rails one. The beta's record sentence saying the guide carries them is dated 2 November and stays as written, as records here do.
+    - **owner_words**
+      - item 1
+        - **quote**: Put the field guide into l6 as provenance stale. Deprecated and to be used as an example.
+        - **where**: aybllc/7lm, origin/main (6de996b), L8/L6/history/harmonization-2026-09-04.md:518 (the owner, 17 October 2026)
+    - **evidence**
+      - item 1
+        - **fact**: Record section 40, on the two other branches that edited the guide at its former path: "a retired set is preserved verbatim; they remain in that branch's history"
+        - **where**: aybllc/7lm origin/main, L8/L6/history/harmonization-2026-09-04.md:536
+      - item 2
+        - **fact**: A trial merge of the beta (97314c5) into main (6de996b), made in a scratch copy, conflicts in two files, the .docx and specification-history.md, and writes the beta's guide (blob a82f0c5) over the retired copy (blob 0c9626e) without a conflict: the edits at guide lines 96, 150 and 230, on the byte reading, the four rails and the scale ruling.
+        - **where**: git merge-tree in a scratch mirror; origin/beta/common-contracts-r1-r6, L8/L6/7lm-field-guide.md:96, :150, :230
+      - item 3
+        - **fact**: The beta carries the same three corrections in its specification at lines 68, 355 and 683, and the rails correction again at L8/L0/0.md line 69.
+        - **where**: origin/beta/common-contracts-r1-r6, L8/L4/work/writing/7lm-harmonized-architecture-specification.md:68, :355, :683; L8/L0/0.md:69
+      - item 4
+        - **fact**: The retired set's sheet says the guide was moved with its text unchanged and is held verbatim.
+        - **where**: aybllc/7lm origin/main, L8/L6/retired/field-guide-2026-09-20/0.md:8, :18
+      - item 5
+        - **fact**: Against dropping: the guide edits come from commit 4ca3edb of 2 November, made under the owner's name after the retirement order, and the beta's record says its field guide carries the corrections; the approval of R1–R6 is reported there, not quoted.
+        - **where**: origin/beta/common-contracts-r1-r6, commit 4ca3edb; L8/L6/history/specification-history.md:106
+    - **on_yes**: Only if the beta is merged: whoever prepares that merge restores L8/L6/retired/field-guide-2026-09-20/7lm-field-guide.md to blob 0c9626e in the merge commit and writes in its record section where the three corrections stand.
+    - **cost_or_risk**: The beta's record sentence goes on saying the field guide carries the corrections; only the new record section answers it, so a reader of that sentence alone could look in the guide.
+    - **confidence**: high
+    - **rejected**: Carry them onto the retired copy: breaks the set's verbatim promise and the section 40 precedent, making a text that never stood. A dated note beside the guide: nothing asks for it, and the corrections already stand in the specification and L8/L0/0.md.
+    - **depends_on**
+      - M5
+  - item 6
+    - **id**: CEL
+    - **title**: Whether the error-list branch is merged, kept, or retired
+    - **kind**: process
+    - **status_now**: open
+    - **best_choice**: Merge it: once PR #19 is merged or closed, merge copilot/create-error-list into main as it stands, so the 96-item review of 20 September sits at L8/L5/research/review/, unadopted and awaiting adjudication; keep the branch, and name the filing in the next record section.
+    - **why**: The owner made research/review/ the catch-all, and its sheet says everything awaiting his review lands there; this file calls itself a review awaiting his adjudication, yet it sits off main on a branch with no pull request. It adds one file, carries none of the four things PR #19's release refuses, and merges cleanly into main and into the reconciled PR #19. Several of its items match corrections the beta later made. Waiting for PR #19 leaves that pass's section 42 and its counts as written.
+    - **owner_words**
+      - item 1
+        - **quote**: research/review/ works as a catch all
+        - **where**: aybllc/7lm, origin/main (6de996b), L8/L6/history/harmonization-2026-09-04.md:101 (the owner, 6 September 2026)
+    - **evidence**
+      - item 1
+        - **fact**: The file's own status line: "Preliminary review, awaiting owner adjudication. Recommendations are not adopted architecture and have not been implemented."
+        - **where**: origin/copilot/create-error-list (1e2fe77), L8/L5/research/review/7lm-audit-recommendations.md:3
+      - item 2
+        - **fact**: 1e2fe77 is one commit by the Copilot coding agent, co-authored by the owner's account, at 21:24:52 UTC on 20 September 2026, on top of 6609f38. It adds that one file: 328 lines, 96 numbered items. Main does not have it.
+        - **where**: /home/user/7lm, git show 1e2fe77
+      - item 3
+        - **fact**: GitHub lists no pull request from this branch, open or closed (checked 13 November 2026), so no act of the owner has merged or refused it.
+        - **where**: GitHub pull requests of aybllc/7lm, head copilot/create-error-list
+      - item 4
+        - **fact**: The catch-all sheet holds everything awaiting the owner's review until it is taken up, filed or set aside labelled PARKED, and nothing there is deleted.
+        - **where**: aybllc/7lm origin/main, L8/L5/research/review/0.md:22, :36
+      - item 5
+        - **fact**: Trial merges in a scratch copy are clean into main (6de996b), into the reconciled PR #19 (38e2ec3) and into the beta (97314c5). The file carries no e-mail address, GitHub URL, co-author trailer, author-note label or account name, the things the release check refuses.
+        - **where**: git merge-tree in a scratch mirror; /home/user/7lm-pr19 at 38e2ec3, .github/release.sh:55-60
+      - item 6
+        - **fact**: Items 1, 32 and 37 (peer authorship, the extra bit, scale placement) match corrections the beta made on 2 November; item 17 is the .gitignore question.
+        - **where**: origin/copilot/create-error-list, L8/L5/research/review/7lm-audit-recommendations.md:59, :152, :162, :109; origin/beta/common-contracts-r1-r6, L8/L6/history/specification-history.md:106
+    - **on_yes**: Once PR #19 is merged or closed, an agent merges the branch into main unchanged (one file, no conflict), and the next record section names it as filed at the catch-all, not adopted. The branch is kept; the owner adjudicates its items when he chooses.
+    - **cost_or_risk**: When PR #19's release runs, the review leaves with the public copy unless the release decision leaves review material out; its line numbers describe 6609f38, not today's text.
+    - **confidence**: medium
+    - **rejected**: Keep it as a bare branch: leaves an item awaiting review outside the place the owner made for it. Retire it: it is an unadjudicated review, not a superseded state. Act on its items now: each is a change only the owner orders.
+    - **depends_on**: (empty)
+  - item 7
+    - **id**: M18
+    - **title**: Whether the retired guide's sentence about both exemplars stays as written
+    - **kind**: process
+    - **status_now**: settled-by-events
+    - **best_choice**: Leave it as written: it is retired text, kept verbatim at line 474 of the retired guide, and record section 41, on main since 13 November, already keeps it. Nothing remains to decide; any beta merge must keep that file at blob 0c9626e.
+    - **why**: PR #20's merge on 13 November brought to main both the retirement, whose sheet promises the guide's text unchanged and verbatim, and section 41, which keeps this sentence as written. The same sheet tells the reader that a sentence found only in the retired guide is not current, and section 41 names the unsheeted folders that make it untrue, so no one is misled about the exemplars. Editing it would turn the retired file into a text that never stood. The specification's own sentence about sheets is decided separately.
+    - **owner_words**
+      - item 1
+        - **quote**: Put the field guide into l6 as provenance stale. Deprecated and to be used as an example.
+        - **where**: aybllc/7lm, origin/main (6de996b), L8/L6/history/harmonization-2026-09-04.md:518 (the owner, 17 October 2026)
+    - **evidence**
+      - item 1
+        - **fact**: Record section 41, on main since the merge of PR #20: "The retired field guide, whose sentence "Both exemplar repositories do exactly this." stays as written with the rest of its text (§39)."
+        - **where**: aybllc/7lm origin/main (6de996b), L8/L6/history/harmonization-2026-09-04.md:558
+      - item 2
+        - **fact**: The sentence is at line 474 of the retired guide, blob 0c9626e: the same blob on main, on the reconciled PR #19 commit, on the audit branch, and as the live guide stood at 6609f38 on 20 September.
+        - **where**: aybllc/7lm origin/main, L8/L6/retired/field-guide-2026-09-20/7lm-field-guide.md:474
+      - item 3
+        - **fact**: The set's sheet says the text moved unchanged, is held verbatim, and that a sentence found only there, and not in the specification or the sheets, is not current.
+        - **where**: aybllc/7lm origin/main, L8/L6/retired/field-guide-2026-09-20/0.md:8, :18, :33
+      - item 4
+        - **fact**: Section 41 names six folders without a sheet in Autonomous and twelve in Auditonomous, which is what makes the sentence untrue.
+        - **where**: aybllc/7lm origin/main, L8/L6/history/harmonization-2026-09-04.md:562
+      - item 5
+        - **fact**: Before PR #20's merge, main's record ended at section 37; sections 39 to 41 reached main with it, at 6de996b on 13 November.
+        - **where**: /home/user/7lm, c9dc061:L8/L6/history/harmonization-2026-09-04.md; git log --first-parent origin/main
+    - **on_yes**: No one acts. The sentence stays at line 474 of L8/L6/retired/field-guide-2026-09-20/7lm-field-guide.md; whoever prepares any beta merge keeps that file at blob 0c9626e, as proposed for the beta's guide edits.
+    - **cost_or_risk**: An untrue sentence about the exemplars stays readable in the public scaffold, guarded only by the retired set's sheet saying that a sentence found only there is not current.
+    - **confidence**: high
+    - **rejected**: Correct the sentence: breaks the verbatim promise and the section 40 precedent. A note inside the guide: the same objection. A new line in the set's sheet: unneeded, since the sheet already says that what is found only in the guide is not current.
+    - **depends_on**: (empty)

@@ -1,0 +1,373 @@
+# resolve:A5-eleven-proposals
+
+Agent result, as returned. Workflow: Best choices: the scaffold, the exemplars, the eleven proposals. Run `wf_8e87a1b5-8ec`. Phase: Resolve.
+
+- **decisions**
+  - item 1
+    - **id**: P1
+    - **title**: Spec says every exemplar directory has a sheet; eighteen live folders have none
+    - **kind**: process
+    - **status_now**: open
+    - **best_choice**: Take option (b), the specification fix, as given, but write 'under L7/ and L8/' after 'six folders' and after 'twelve folders' in the two sentences it appends to 'Not yet as stated'.
+    - **why**: Option (a) cannot make the bullet true: in each exemplar thirteen directories inside the retired sets carry no sheet, and a retired set is kept verbatim. Option (b)'s bullet is true now: all 71 canonical positions are sheeted, and all 103 Autonomous and 84 Auditonomous sheets are headed by their paths. Its appended counts hold for L7/ and L8/, but .github/ and .github/workflows/ are also unsheeted folders outside the retired sets, in the scaffold too; four words make the counts literal. The specification documents the exemplars as they stand (line 930).
+    - **owner_words**
+      - item 1
+        - **quote**: I left out sub folders because those are design choices but they should all either be blank with just the location
+        - **where**: aybllc/7lm origin/main 6de996b, L8/L6/history/harmonization-2026-09-04.md line 388 (§30)
+      - item 2
+        - **quote**: All repos should mirror the 7lm. Manually. We update 7lm and focus on it only. No outside updates until we are sure I'm close.
+        - **where**: aybllc/7lm origin/main 6de996b, L8/L6/history/harmonization-2026-09-04.md line 336 (§26)
+    - **evidence**
+      - item 1
+        - **fact**: The bullet says every directory has its 0.md headed by its path; the line is the same on main and on the reconciled #19.
+        - **where**: aybllc/7lm origin/main 6de996b and commit 38e2ec3 (PR #19 reconciliation, local, not pushed), L8/L4/work/writing/7lm-harmonized-architecture-specification.md line 934
+      - item 2
+        - **fact**: Autonomous has 122 directories under L7/ and L8/: 103 with a sheet, the 6 live ones the proposal names without, and 13 inside the retired sets without.
+        - **where**: aybllc/autonomous origin/main 9fa3744, git ls-tree (the export in scratchpad/spec-fix/exemplars/autonomous matches all 264 blobs)
+      - item 3
+        - **fact**: Auditonomous has 109 directories under L7/ and L8/: 84 with a sheet, the 12 live ones the proposal names without, and 13 inside the retired sets without.
+        - **where**: aybllc/auditonomous origin/main aa30b03, git ls-tree (export matches all 175 blobs)
+      - item 4
+        - **fact**: In both exemplars all 71 canonical positions of the CI list carry a sheet, and every sheet's first line is its own path.
+        - **where**: .github/workflows/integrity.yml canon list in each exemplar at 9fa3744 and aa30b03, checked against the trees
+      - item 5
+        - **fact**: Retired sets keep their prior sheets verbatim and are not checked below their own root; the scaffold's record calls a retired set preserved verbatim.
+        - **where**: aybllc/autonomous 9fa3744 .github/workflows/integrity.yml lines 61-62; aybllc/7lm 6de996b L8/L6/history/harmonization-2026-09-04.md line 536 (§40)
+      - item 6
+        - **fact**: .github/ and .github/workflows/ carry no sheet in either exemplar nor in the scaffold.
+        - **where**: git ls-tree of origin/main in aybllc/7lm, aybllc/autonomous and aybllc/auditonomous
+    - **on_yes**: Made in the one scaffold pass described under PSEQ. Writing the eighteen sheets, blank if need be, stays open in each exemplar under its own record, as the owner's words on sub folders ask; once written, the two sentences come out.
+    - **cost_or_risk**: Nothing changes in the exemplars. The bullet gives up a claim the exemplars cannot meet; the specification's history keeps the old wording.
+    - **confidence**: high
+    - **rejected**: Option (a) alone, writing the eighteen sheets: the bullet would stay false because of the retired sets, which cannot be given sheets. The given sentences unchanged: literally they miss .github/ and .github/workflows/.
+    - **depends_on**: (empty)
+  - item 2
+    - **id**: P2
+    - **title**: Spec says no source file in either exemplar; both hold third-party files
+    - **kind**: process
+    - **status_now**: open
+    - **best_choice**: Take the fix, changing: the bullet says 'from l6'; Autonomous's sentence reads 'thirty-four third-party files of its own, four texts of two RFCs at ct-lane/, which the staging records list as redistributable, and thirty at prior-art-lane/, committed without a licence determination'; Auditonomous's says 'one ledgered paper, PR-020, at library/text/'.
+    - **why**: The bullet's last two clauses are false: Autonomous holds 34 third-party files at prior-art/, and Auditonomous a full-text copy of a paper. The fix drops both. Its Autonomous sentence says none is under a recorded licence determination, but the staging records' quarantine log lists both RFCs as freely redistributable, and 'source files' overstates, two of the thirty being error pages. Written against main, it would restore on #19's base the account prefix and, in the filename, a personal surname. The ledger point understates: 25 documents carry two or three rows (52 of 121), not one.
+    - **owner_words**
+      - item 1
+        - **quote**: track all
+        - **where**: aybllc/autonomous origin/main 9fa3744, L7/provenance/prior-art/prior-art-lane/0.md line 8 (the owner's instruction as that sheet quotes it)
+    - **evidence**
+      - item 1
+        - **fact**: The bullet claims one ledger row per source and no source file in either repository; it names the archive with its account prefix on main and as plain l6 on #19.
+        - **where**: aybllc/7lm 6de996b and 38e2ec3, L8/L4/work/writing/7lm-harmonized-architecture-specification.md line 937
+      - item 2
+        - **fact**: Autonomous holds 4 RFC texts at ct-lane/ and 30 files at prior-art-lane/; S10P03.pdf is a 358-byte '403 Forbidden' page and [source text withheld from the public copy], as its own sheet says.
+        - **where**: aybllc/autonomous 9fa3744, L7/provenance/prior-art/ (sheet line 34)
+      - item 3
+        - **fact**: The quarantine log lists RFC 9162 and RFC 6962 under its freely redistributable exception; the ct-lane sheet says no determination is recorded there, and the prior-art-lane sheet that the thirty were committed without one.
+        - **where**: aybllc/autonomous 9fa3744, L7/provenance/sources/staging-records/sources__QUARANTINE_AND_REMEDIATION.md lines 187-198; L7/provenance/prior-art/ct-lane/0.md line 12; prior-art-lane/0.md line 8
+      - item 4
+        - **fact**: The pointer ledger has 121 rows; 25 documents carry two or three rows each (52 rows, a PDF beside text or EUR-Lex captures), NIST SP 1011-I-2.0 at S-016 and S-042 among them.
+        - **where**: aybllc/autonomous 9fa3744, L7/provenance/sources/LEDGER.md (S-016 line 69, S-042 line 100)
+      - item 5
+        - **fact**: Auditonomous holds a 21,803-byte full-text copy of the paper ledgered as PR-020 at staging-records/library/text/; its copyright sheet says that paper's licence status is not yet recorded.
+        - **where**: aybllc/auditonomous aa30b03, L7/provenance/sources/LEDGER.md line 77; L7/governance/copyright/0.md line 45
+      - item 6
+        - **fact**: #19's sweep took the account prefixes and the one personal name out of this section.
+        - **where**: aybllc/7lm 38e2ec3, L8/L6/history/harmonization-2026-09-04.md line 518 (§38)
+      - item 7
+        - **fact**: Resulting sentences. Autonomous: 'L7/provenance/prior-art/ holds thirty-four third-party files of its own, four texts of two RFCs at ct-lane/, which the staging records list as redistributable, and thirty at prior-art-lane/, committed without a licence determination; what becomes of them is the owner's decision.' Auditonomous: 'The staging records hold a full-text copy of one ledgered paper, PR-020, at library/text/, whose licence status is not yet recorded.'
+        - **where**: proposed, appended to the two 'Not yet as stated' paragraphs (lines 950 and 958 at 38e2ec3)
+    - **on_yes**: Made in the one scaffold pass described under PSEQ. Whether the thirty-four files and the paper copy stay in the exemplars remains the owner's separate call under each exemplar's copyright sheet.
+    - **cost_or_risk**: The specification will name files the exemplars hold without a licence determination; it reproduces none of their text.
+    - **confidence**: medium
+    - **rejected**: The fix as given: its licence clause is contradicted by the quarantine log, and on #19's base it restores the account prefix and a surname. Deleting the files instead: not the specification's act, and the owner's copyright call.
+    - **depends_on**
+      - PVER
+  - item 3
+    - **id**: P3
+    - **title**: Spec says no rule on what a session may touch; copyright rule 5 names sessions
+    - **kind**: process
+    - **status_now**: open
+    - **best_choice**: Take option (b), adding 'in force': '- No rule in force in either tree about which position a session or any other intelligence may touch; the copyright sheet of each reserves removal from git history to the owner. The repository file that would carry such rules is held off.'
+    - **why**: Option (a) cannot make the sentence literally true: the retired queue rules that told a session what it may do stand verbatim in each tree, as the specification's line 939 says, and records keep sentences such as 'not an agent's', which are not rewritten. Option (b) states what is so: no rule in force decides which position a session may enter, the matter of the owner's words on stay-out rules, and it names the copyright reservation. It holds whether or not the exemplars later drop 'never a session's', as their sheet audits propose.
+    - **owner_words**
+      - item 1
+        - **quote**: simply requireng whatvefr 8inteligence you abve to abide byu the stay out rules is not our concerm
+        - **where**: aybllc/7lm origin/main 6de996b, L8/L6/history/harmonization-2026-09-04.md line 101 (§7)
+      - item 2
+        - **quote**: HOdl off on clude.md
+        - **where**: aybllc/7lm origin/main 6de996b, L8/L6/history/harmonization-2026-09-04.md line 101 (§7)
+    - **evidence**
+      - item 1
+        - **fact**: Line 941 says no rule in either tree concerns what a session may touch; line 939 says the queue's access rules for sessions are retired at L6/retired/layout-2026-09-06/ in each repository. Both lines are the same on #19.
+        - **where**: aybllc/7lm 6de996b and 38e2ec3, the specification lines 939 and 941
+      - item 2
+        - **fact**: Rule 5 of each copyright sheet reserves removal from git history to the owner and excludes a session.
+        - **where**: aybllc/autonomous 9fa3744 L7/governance/copyright/0.md line 56; aybllc/auditonomous aa30b03 same file line 55
+      - item 3
+        - **fact**: The retired queue README still sets out what a session may and may not do in the queue's positions.
+        - **where**: aybllc/autonomous 9fa3744, L8/L6/retired/layout-2026-09-06/durable/README.md lines 19-23
+      - item 4
+        - **fact**: A staging record and two .gitignore comments reserve history decisions to the principal and not an agent.
+        - **where**: aybllc/autonomous 9fa3744, L7/provenance/sources/staging-records/sources__QUARANTINE_AND_REMEDIATION.md line 280; .gitignore lines 19 and 58
+      - item 5
+        - **fact**: Each exemplar's governance and permissions sheets say the tree states no such rule; both sheet audits propose deleting the session clause of rule 5.
+        - **where**: L7/governance/0.md line 34 and L7/governance/permissions/0.md line 33 in both exemplars; /tmp/claude-0/-home-user/bfcfd013-a2da-5019-961e-7f46116f08be/scratchpad/audits/sheet-audit-autonomous-2026-11-11.md lines 426-432 and sheet-audit-auditonomous-2026-11-11.md lines 232-238
+    - **on_yes**: Made in the one scaffold pass described under PSEQ. The exemplars' own contradiction between their governance sheets and rule 5 stays with their sheet audits, decided separately.
+    - **cost_or_risk**: The bullet becomes narrower and names a rule the exemplars carry; removing the session clause itself would be a separate exemplar edit.
+    - **confidence**: medium
+    - **rejected**: Option (a), rewording rule 5 and the .gitignore comments: retired rules and records would still contradict the bullet literally, and it edits exemplar sheets, their design choice, to fit a description. Option (b) without 'in force': collides with line 939.
+    - **depends_on**: (empty)
+  - item 4
+    - **id**: P4
+    - **title**: Spec counts two records in each exemplar's L6/history; there are three
+    - **kind**: process
+    - **status_now**: open
+    - **best_choice**: Take it as given: 'the two records' becomes 'the three records' in the Interior paragraph of Autonomous (line 948) and of Auditonomous (line 956).
+    - **why**: Each exemplar's L8/L6/history/ holds harmonization-2026-09-05.md, sheets-2026-09-07.md and 7LM_ROUTING_PLAN_2026-09-05.md, and each history sheet lists all three. The count was right against the snapshots of 6 September; the sheets record was first committed on 7 September in both. The phrase stands identically on main and on #19, so the fix holds on either base.
+    - **owner_words**: (empty)
+    - **evidence**
+      - item 1
+        - **fact**: Each history sheet lists the three records.
+        - **where**: aybllc/autonomous 9fa3744 L8/L6/history/0.md lines 41-43; aybllc/auditonomous aa30b03 L8/L6/history/0.md lines 37-39
+      - item 2
+        - **fact**: sheets-2026-09-07.md was first committed on 7 September 2026 in both exemplars.
+        - **where**: aybllc/autonomous commit 042afbe; aybllc/auditonomous commit 595d3b5
+      - item 3
+        - **fact**: Lines 948 and 956 carry the phrase on main and on #19 alike.
+        - **where**: aybllc/7lm 6de996b and 38e2ec3, the specification lines 948 and 956
+    - **on_yes**: Made in the one scaffold pass described under PSEQ; nothing changes in the exemplars.
+    - **cost_or_risk**: None; two words in two lines.
+    - **confidence**: high
+    - **rejected**: Naming the three files in the specification: longer, and each exemplar's history sheet already names them.
+    - **depends_on**: (empty)
+  - item 5
+    - **id**: P5
+    - **title**: Spec says bound issuing bodies are not ledgered; four of eleven clauses are
+    - **kind**: process
+    - **status_now**: open
+    - **best_choice**: Take it, ending the sentence 'and none of the eleven binding records cites a row of it' in place of 'and no binding record cites a row of it'.
+    - **why**: Of the eleven bound clauses, the documents of four (NIST SP 1011-I-2.0, Regulation (EU) 2024/1689, DoDD 3000.09, EASA AI Roadmap 2.0) have pointer-ledger rows and seven (rows A1 to A5, A10, A11) have none, so 'not yet ledgered' is inexact; the staging source register does carry rows for all seven documents. The given sentence is exact except its last clause: the l6 binding record at private ingress names its rows, S-001 to S-121, so 'no binding record' is literally false. None of the eleven public binding records cites a row.
+    - **owner_words**: (empty)
+    - **evidence**
+      - item 1
+        - **fact**: Eleven binding records sit at L7/peering/public/ingress/peer-1/ to peer-9/, two objects at peer-2 and at peer-4, one per row A1 to A11.
+        - **where**: aybllc/autonomous 9fa3744, L7/peering/public/ingress/
+      - item 2
+        - **fact**: The pointer ledger has rows for the documents of A6 (S-016, S-042), A7 (S-014, S-063, S-064), A8 (S-078, S-079) and A9 (S-050, S-051), and none for [source text withheld from the public copy]-2015, IEEE 7001-2021 or ETSI GR ENI 007.
+        - **where**: aybllc/autonomous 9fa3744, L7/provenance/sources/LEDGER.md
+      - item 3
+        - **fact**: The staging source register has a row for each of those six documents.
+        - **where**: aybllc/autonomous 9fa3744, L7/provenance/sources/staging-records/sources__LEDGER.md lines 22, 24, 31, 32, 40, 59
+      - item 4
+        - **fact**: The l6 binding record names the ledger's rows S-001 to S-121; no public binding record cites a pointer-ledger row.
+        - **where**: aybllc/autonomous 9fa3744, L7/peering/private/ingress/peer-1/object-1/0.md line 10; search over L7/peering/public/ingress/
+    - **on_yes**: Made in the one scaffold pass described under PSEQ; the sentence is identical on main and #19.
+    - **cost_or_risk**: None; one sentence.
+    - **confidence**: high
+    - **rejected**: The given sentence unchanged: its last clause is contradicted by the l6 binding record. Ledgering the seven documents in Autonomous instead: an exemplar act no one has asked for.
+    - **depends_on**: (empty)
+  - item 6
+    - **id**: P6
+    - **title**: Spec says Auditonomous has 62 pointer rows; its ledger has 60 rows
+    - **kind**: process
+    - **status_now**: open
+    - **best_choice**: Take the specification fix as given (line 954). Then, in Auditonomous under its own record, correct its seven live sentences that say 62, using its sheet audit's exact fixes.
+    - **why**: The register at L7/provenance/sources/LEDGER.md is a header, a separator and 60 rows: PR 20, STD 34, INST 4, EXC 2. Fifty-eight carry an l6 path; EXC-001 and EXC-002 are marked held out of l6. Sixty-two is the line count. The given sentence is exact, and line 954 stands identically on main and #19. The exemplars are not edited from the scaffold, so Auditonomous's own seven sentences are corrected in Auditonomous.
+    - **owner_words**: (empty)
+    - **evidence**
+      - item 1
+        - **fact**: The register runs from line 18 to line 79: a header, a separator and 60 rows; 58 carry an l6 path, and EXC-001 and EXC-002 are held out of l6.
+        - **where**: aybllc/auditonomous aa30b03, L7/provenance/sources/LEDGER.md lines 18-79 (EXC rows at 78-79)
+      - item 2
+        - **fact**: Seven live sentences say 62: L7/0.md line 232; L7/peering/private/ingress/peer-1/0.md line 16 and its object-1/0.md line 10; L7/provenance/0.md lines 20 and 33; L7/provenance/sources/0.md lines 10 and 41. The sheet audit gives an exact fix for each.
+        - **where**: aybllc/auditonomous aa30b03; /tmp/claude-0/-home-user/bfcfd013-a2da-5019-961e-7f46116f08be/scratchpad/audits/sheet-audit-auditonomous-2026-11-11.md lines 9-13, 41-53, 91-112
+    - **on_yes**: The scaffold pass makes the specification change; Auditonomous's next pass makes the seven sheet corrections under its record §14, as PSEQ orders them.
+    - **cost_or_risk**: Until Auditonomous's pass, its sheets say 62 while the specification says 60; the specification is the true one.
+    - **confidence**: high
+    - **rejected**: Keeping 62 in the specification until Auditonomous changes: keeps a false count in public. Correcting Auditonomous from the scaffold: breaks the rule that each repository is edited under its own record.
+    - **depends_on**: (empty)
+  - item 7
+    - **id**: P7
+    - **title**: Spec says nothing was deleted; eleven files were, as both records enumerate
+    - **kind**: process
+    - **status_now**: open
+    - **best_choice**: Take it as given: in line 963, 'Nothing was deleted.' becomes 'Nothing was deleted but what the records enumerate: four 0-byte placeholders in each repository and, in Autonomous, the three sheets of the dissolved directories.'
+    - **why**: Commit 5dbf85c deleted seven files in Autonomous, four 0-byte placeholders and the three sheets of the dissolved trees (1,287, 1,015 and 825 bytes); 50f43d3 deleted four 0-byte placeholders in Auditonomous. No other file was deleted in either repository on 5 or 6 September. Each record enumerates these. The owner's rule is integrity enforced and no deletion implied, and the specification's own disposition calls deletion after enumeration the ordinary act. Line 963 stands identically on main and #19.
+    - **owner_words**
+      - item 1
+        - **quote**: we cant enforce integroty by ebforceing no deletion. we can only imply no deletion to enforcer integiortyty
+        - **where**: aybllc/7lm origin/main 6de996b, L8/L6/history/harmonization-2026-09-04.md line 152 (§11)
+    - **evidence**
+      - item 1
+        - **fact**: 5dbf85c, 6 September 2026, deleted four 0-byte .gitkeep files and the sheets of durable/, intake/ and manuscripts/, which had been added at 07e8ce1.
+        - **where**: aybllc/autonomous commit 5dbf85c
+      - item 2
+        - **fact**: 50f43d3, 6 September 2026, deleted four 0-byte .gitkeep files.
+        - **where**: aybllc/auditonomous commit 50f43d3
+      - item 3
+        - **fact**: Each record enumerates those deletions.
+        - **where**: aybllc/autonomous 9fa3744 L8/L6/history/harmonization-2026-09-05.md line 120 (§9); aybllc/auditonomous aa30b03 same file line 122 (§8)
+      - item 4
+        - **fact**: The specification's disposition table calls deletion after enumeration the ordinary act.
+        - **where**: aybllc/7lm 6de996b, the specification line 998
+    - **on_yes**: Made in the one scaffold pass described under PSEQ.
+    - **cost_or_risk**: None.
+    - **confidence**: high
+    - **rejected**: Dropping the sentence: loses the passage's point that position carried the move. Recounting 'Three motions' as four: the deletions removed empty placeholders and session-written sheets and carried nothing.
+    - **depends_on**: (empty)
+  - item 8
+    - **id**: P8
+    - **title**: Writing sheet's style list omits used styles and wrongly says 'only'
+    - **kind**: process
+    - **status_now**: open
+    - **best_choice**: In L8/L4/work/writing/0.md line 24, replace 'built-in Word styles only (Title, … a monospace Code style)' with 'built-in Word styles (Title, Subtitle, Headings 1–3, Normal, Quote, Caption, List Bullet, List Number, Table Grid, Header, and Footer) and one custom monospace Code style'.
+    - **why**: Counted in the rendering's XML: Subtitle (1 paragraph), List Bullet (13) and Footer (the footer) are used and not listed; Code (186 paragraphs) is a custom style, so 'built-in Word styles only' is false even with a full list. On #19 the rendering also has a header, one empty paragraph in the Header style. The given fix completes the list but keeps 'only' and omits Header. If the pass were made on main without #19, drop 'Header, '.
+    - **owner_words**: (empty)
+    - **evidence**
+      - item 1
+        - **fact**: Line 24 gives the list with 'only' on main and on #19 alike.
+        - **where**: aybllc/7lm 6de996b and 38e2ec3, L8/L4/work/writing/0.md line 24
+      - item 2
+        - **fact**: In the rendering Subtitle styles 1 paragraph, List Bullet 13, Code 186 (marked custom in styles.xml), and Footer the footer's paragraph.
+        - **where**: aybllc/7lm 6de996b, L8/L4/work/writing/7lm-harmonized-architecture-specification.docx members word/document.xml, word/styles.xml, word/footer1.xml
+      - item 3
+        - **fact**: #19's rendering has a nineteenth member, word/header1.xml, holding one empty paragraph in the Header style, referenced by the document's section.
+        - **where**: aybllc/7lm 38e2ec3, the same .docx, word/header1.xml and word/document.xml
+    - **on_yes**: Made in the one scaffold pass described under PSEQ, with the version date the writing sheet names.
+    - **cost_or_risk**: None; a sheet sentence, not the specification's text.
+    - **confidence**: high
+    - **rejected**: The given list: keeps the false 'only' and misses Header on #19's rendering. Removing the empty header from the rendering instead: a change to the rendering nobody asked for.
+    - **depends_on**
+      - PVER
+  - item 9
+    - **id**: P9
+    - **title**: Rendering's description says built-in styles only and one page per section
+    - **kind**: process
+    - **status_now**: open
+    - **best_choice**: Take it with the pass's own version date in place of '12 November 2026' and 'custom' before 'monospace': 'Version of <that date>, generated from the canonical Markdown beside it: built-in styles and one custom monospace Code style, every top-level section starting a new page; reads back to the Markdown unchanged.'
+    - **why**: The description in docProps/core.xml says built-in styles only and one page per top-level section, on main and on #19. Code is a custom style used by 186 paragraphs. Each of the 12 top-level sections starts a page (12 page-break-before marks), but LibreOffice lays the file out at 51 pages. The given text is right but fixes the date at 12 November 2026; the description names the version and is patched with it, as §41 and §42 did. docProps/app.xml still says 1 page; Word rewrites that on save.
+    - **owner_words**: (empty)
+    - **evidence**
+      - item 1
+        - **fact**: The description is dated 12 November 2026 on main and 13 November 2026 on #19, with the same false clause.
+        - **where**: docProps/core.xml of L8/L4/work/writing/7lm-harmonized-architecture-specification.docx at aybllc/7lm 6de996b and 38e2ec3
+      - item 2
+        - **fact**: 12 Heading 1 paragraphs, each with page-break-before; LibreOffice lays both renderings out at 51 pages.
+        - **where**: word/document.xml of both; /tmp/claude-0/-home-user/bfcfd013-a2da-5019-961e-7f46116f08be/scratchpad/advice/scratch/A5-eleven-proposals/pdf/main.pdf and pr19.pdf
+    - **on_yes**: Patched in the one scaffold pass with the Version box and footer, by the member-level surgery §41 and §42 used, then read back against the Markdown.
+    - **cost_or_risk**: None beyond the usual patch of one member.
+    - **confidence**: high
+    - **rejected**: The given text: carries 12 November 2026 into a later version. Leaving it: a false description travels with every copy of the rendering.
+    - **depends_on**
+      - PVER
+  - item 10
+    - **id**: P10
+    - **title**: Writing sheet says prior versions are retired; only 4 September's is
+    - **kind**: process
+    - **status_now**: open
+    - **best_choice**: In L8/L4/work/writing/0.md line 25 replace only '; prior versions are retired under `L8/L6/retired/`.' with ', whose Versions table says where each prior version stands: the version of 4 September 2026 retired under `L8/L6/retired/specification-2026-09-04/`, the later ones in git history.'
+    - **why**: L8/L6/retired/ holds the version of 4 September 2026 and the draft of 3 September before it, and nothing later; the Versions table of specification-history.md puts every later prior version in git history (on #19 also the draft of 6 October and the version of 12 November). The given fix rewrites the whole sentence and so restores 'the owner's words', which #19's sweep made 'the quoted words'. Replacing only the false clause is exact on either base, and smaller.
+    - **owner_words**: (empty)
+    - **evidence**
+      - item 1
+        - **fact**: Line 25's first half names the owner's words on main and the quoted words on #19; both end with the claim that prior versions are retired under L8/L6/retired/.
+        - **where**: aybllc/7lm 6de996b and 38e2ec3, L8/L4/work/writing/0.md line 25
+      - item 2
+        - **fact**: L8/L6/retired/ holds four sets: field-guide-2026-09-20, scaffold-2026-08-20, specification-2026-09-04 and specification-draft-2026-09-03.
+        - **where**: git ls-tree of aybllc/7lm 6de996b and 38e2ec3
+      - item 3
+        - **fact**: The Versions table places 4 September 2026 at L8/L6/retired/specification-2026-09-04/ and every later prior version in git history.
+        - **where**: aybllc/7lm L8/L6/history/specification-history.md lines 9-15 at 6de996b, lines 9-17 at 38e2ec3
+    - **on_yes**: Made in the one scaffold pass described under PSEQ.
+    - **cost_or_risk**: None.
+    - **confidence**: high
+    - **rejected**: The given whole-sentence text: undoes #19's wording of the first half. Retiring later versions under L8/L6/retired/ to make the claim true: §11 and §12 keep change events in git, not at L6.
+    - **depends_on**
+      - PVER
+  - item 11
+    - **id**: P11
+    - **title**: Two unmerged branches would bring 20-September text under a later version
+    - **kind**: process
+    - **status_now**: open
+    - **best_choice**: Do not append to §41. Under 'Open, for the owner' in §43, the scaffold pass's record, for each branch still open, write that it dates the specification 20 September 2026, merges only by a reconciliation that takes its own date, and, for the audit branch, never patched the .docx.
+    - **why**: The hazard is real today: the audit branch merges into main without a conflict, bringing 20-September text under 12 November 2026, and none of its 119 commits touched the .docx. Appending to §41 breaks the record's practice: later corrections go in the later section and the earlier is left in place (§37), and §42 leaves §41 as written. After #19, neither branch merges without a reconciliation (against 38e2ec3: beta conflicts in seven files, the audit branch in twenty, the specification in both), and a reconciliation takes its own date (§42).
+    - **owner_words**: (empty)
+    - **evidence**
+      - item 1
+        - **fact**: Both branches date the specification 20 September 2026 in the header comment and the dateline.
+        - **where**: aybllc/7lm origin/beta/common-contracts-r1-r6 97314c5 and origin/audit/peering-descriptive-reframe-2026-09-20 3555866, the specification lines 2 and 12
+      - item 2
+        - **fact**: The audit branch has 119 commits not on main; 8 touch the specification and none the .docx.
+        - **where**: git rev-list origin/main..3555866 in aybllc/7lm
+      - item 3
+        - **fact**: Against main today the audit branch merges with no conflict; against #19's reconciliation it conflicts in 20 files, 8 hunks in the specification, and beta in 6 text files and the .docx.
+        - **where**: git merge-tree in its read-only trivial mode, each branch with 6de996b and with 38e2ec3
+      - item 4
+        - **fact**: The record states a later correction in the later section and leaves the earlier in place; §42 leaves §41 as written.
+        - **where**: aybllc/7lm 6de996b L8/L6/history/harmonization-2026-09-04.md line 506 (§37); 38e2ec3 same file line 597 (§42)
+      - item 5
+        - **fact**: Proposed text: '`beta/common-contracts-r1-r6` and `audit/peering-descriptive-reframe-2026-09-20` change the specification's text and still date it 20 September 2026. Neither merges with `main` without a reconciliation, and by the practice §41 records a reconciliation takes the date of the day it is made, the owner to confirm it. The audit branch never changed the rendering, so on that branch the Markdown and the `.docx` disagree, and its reconciliation would patch the `.docx` to its text.'
+        - **where**: to be written in aybllc/7lm L8/L6/history/harmonization-2026-09-04.md §43, for whichever branch is still open then
+    - **on_yes**: Written by whoever makes the scaffold pass, after re-checking which branches are still open and that each still conflicts; left out for a branch the owner has retired or merged by then.
+    - **cost_or_risk**: A record note only; if the branches' disposition is decided first, it shrinks or disappears.
+    - **confidence**: medium
+    - **rejected**: Appending to §41 as given: breaks §37's practice and names 12 November 2026, stale once #19 lands. Adding it to §42 now: names 13 November, stale after the proposals pass.
+    - **depends_on**
+      - PVER
+  - item 12
+    - **id**: PSEQ
+    - **title**: The grouping and order of the eleven, and how many passes
+    - **kind**: process
+    - **status_now**: open
+    - **best_choice**: Make two passes. First, after #19 merges, one scaffold pass on main carrying all eleven: P1–P7 in the specification, P9 in the rendering, P8 and P10 in the writing sheet, P11 in its record section §43. Second, Auditonomous's seven '62' sentences in its own next pass. Nothing in Autonomous.
+    - **why**: All eleven touch the specification, its rendering, the writing sheet that names its version, or the record that goes with them, so one scaffold pass gives one version, one history entry and one record section. It waits for #19 because #19 rewords four of the eight specification lines it changes. The exemplars are not edited from the scaffold, so Auditonomous's own seven sentences saying 62 are its own pass. Autonomous needs nothing, P1 and P3 taking the specification options. In each 'Not yet as stated' paragraph the appended sentences follow the bullets' order: P1's, then P2's.
+    - **owner_words**
+      - item 1
+        - **quote**: All repos should mirror the 7lm. Manually. We update 7lm and focus on it only. No outside updates until we are sure I'm close.
+        - **where**: aybllc/7lm origin/main 6de996b, L8/L6/history/harmonization-2026-09-04.md line 336 (§26)
+      - item 2
+        - **quote**: Don't change the system unless you ask or are unsure
+        - **where**: aybllc/7lm origin/main 6de996b, L8/L6/history/harmonization-2026-09-04.md line 482 (§36)
+    - **evidence**
+      - item 1
+        - **fact**: #19 rewords four of the eight specification lines the proposals change (937, 948, 950, 954); 934, 941, 956 and 963 are the same on both.
+        - **where**: diff of L8/L4/work/writing/7lm-harmonized-architecture-specification.md between aybllc/7lm 6de996b and 38e2ec3
+      - item 2
+        - **fact**: A change to the specification's text carries the version date into the header comment, dateline, Version box, writing sheet, plate sheet's Source field, rendering and specification-history.md, with a record section.
+        - **where**: aybllc/7lm 6de996b, L8/L6/history/harmonization-2026-09-04.md §41, 'Done, the version' (line 552)
+      - item 3
+        - **fact**: #19 is not yet mergeable as it stands: its release refuses on the agent-results folder and its refusal path exits 141.
+        - **where**: aybllc/7lm 38e2ec3, L8/L6/history/harmonization-2026-09-04.md §42, 'Open, for the owner', lines 599-602
+    - **on_yes**: After the owner merges #19, whoever makes the pass branches from main, makes all eleven with the history, plate and record, runs the integrity check and opens one pull request. Auditonomous's pass is separate and waits on nothing.
+    - **cost_or_risk**: One larger scaffold pass rather than several small ones; if the owner declines some proposals, the pass shrinks rather than splits.
+    - **confidence**: medium
+    - **rejected**: One pass per proposal: as many version dates or same-day passes, each repatching the rendering and history. Folding some into #19 now: widens a pass under review. Exemplar passes for P1 and P3: not chosen there.
+    - **depends_on**
+      - PVER
+  - item 13
+    - **id**: PVER
+    - **title**: The proposals pass's version date, and main or pull request #19
+    - **kind**: process
+    - **status_now**: open
+    - **best_choice**: Make the pass on main after #19 merges, written on #19's wording, as its own pass with record §43, and give it a new version date, the UTC day it is made; only if made on 13 November itself, after #19's merge, would it keep 13 November 2026.
+    - **why**: By §41's practice, a change to the specification's text made on a later day than its version date takes a new date, and one made that same day keeps it. Main is dated 12 November 2026 and #19 13 November 2026, so any later pass takes its own day's date. Made on main before #19, it would conflict with #19 at lines 937, 948, 950 and 954, forcing a second reconciliation and a third date. Made inside #19, it would widen a pass under review whose release refuses to run. On #19's wording it restores nothing #19 swept.
+    - **owner_words**
+      - item 1
+        - **quote**: merge 20 then reconcile 19, give me best choices for 1-4
+        - **where**: aybllc/7lm 38e2ec3, L8/L6/history/harmonization-2026-09-04.md line 583 (§42)
+      - item 2
+        - **quote**: correct the spec sentences in 7lm
+        - **where**: aybllc/7lm origin/main 6de996b, L8/L6/history/harmonization-2026-09-04.md line 543 (§41)
+    - **evidence**
+      - item 1
+        - **fact**: §41 records that since the version of 6 September 2026 every change to the specification's text made on a later day than its version date took a new date, and three same-day passes (§13, §16, §37) kept theirs.
+        - **where**: aybllc/7lm 6de996b, L8/L6/history/harmonization-2026-09-04.md line 552
+      - item 2
+        - **fact**: §42 applied it: the reconciliation, made on a later day than both texts, took 13 November 2026, the owner to confirm.
+        - **where**: aybllc/7lm 38e2ec3, same file line 590
+      - item 3
+        - **fact**: The proposals' texts, written against main, would on #19's base restore the account prefix and a personal surname (P2) and 'the owner's words' (P10), and miss the Header style (P8).
+        - **where**: /tmp/claude-0/-home-user/bfcfd013-a2da-5019-961e-7f46116f08be/scratchpad/proposals/spec-exemplar-section-proposals-2026-11-12.md items 2, 8 and 10, read against aybllc/7lm 38e2ec3
+    - **on_yes**: Wait for the owner's word merging #19, after its two open release items are settled. Then whoever makes the pass branches from main, dates it the UTC day of its commit, and records §43; the owner merges.
+    - **cost_or_risk**: The untruths stay on main until #19 merges. If #19 is closed unmerged, make the same pass on main with the account prefix in P2 and without Header in P8.
+    - **confidence**: high
+    - **rejected**: On main now: conflicts with #19 at four of the eight lines, a second reconciliation, and a second text dated 13 November. Inside #19: widens a pass under review and puts three passes under one version.
+    - **depends_on**: (empty)

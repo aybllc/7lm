@@ -1,0 +1,250 @@
+# resolve:A3-beta-and-wording
+
+Agent result, as returned. Workflow: Best choices: the scaffold, the exemplars, the eleven proposals. Run `wf_8e87a1b5-8ec`. Phase: Resolve.
+
+- **decisions**
+  - item 1
+    - **id**: M5
+    - **title**: Whether the scaffold's beta candidate merges into main, and what R1–R6 approval covered
+    - **kind**: process
+    - **status_now**: open
+    - **best_choice**: Do not merge beta/common-contracts-r1-r6, now or after pull request #19; leave it untouched at 97314c5. Treat your R1–R6 approval as not covering 97314c5. Any correction you want from it reaches main as its own pass, item by item, under a new version date, with your approval quoted.
+    - **why**: A plain merge makes true statements false: it puts R1–R6 under the version of 12 November 2026, whose history row says only the exemplar section changed, and through rename detection rewrites three passages of the retired field guide, which the record keeps verbatim. It conflicts in two files today, in seven against pull request #19 as reconciled. No branch quotes your approval; 97314c5, made the next day, claims none, has no record entry and disclaims being a merge. The scale item rewrites the clarification resting on your ruling of 6 September. Holding keeps the exemplars in step.
+    - **owner_words**
+      - item 1
+        - **quote**: Don't change the system unless you ask or are unsure
+        - **where**: aybllc/7lm, origin/main (6de996b), L8/L6/history/harmonization-2026-09-04.md:482 (the owner, 2026-09-20)
+      - item 2
+        - **quote**: Autonomy scale is not math or a state slace. its semantics layer 4 up it wiyuyuld be a layer 4 obkject and layer 5 discourse
+        - **where**: aybllc/7lm, origin/main (6de996b), L8/L6/history/specification-history.md:28 (the owner, 2026-09-06)
+    - **evidence**
+      - item 1
+        - **fact**: Merging the beta into today's main conflicts in two files: the specification's .docx rendering and L8/L6/history/specification-history.md. The scaffold's own record says the same.
+        - **where**: aybllc/7lm: git merge-tree --write-tree --name-only origin/main origin/beta/common-contracts-r1-r6, run 13 November 2026 in a scratch copy (two early runs against /home/user/7lm created no file but refreshed the timestamps of 10 existing loose objects); origin/main L8/L6/history/harmonization-2026-09-04.md:563
+      - item 2
+        - **fact**: The merged specification keeps main's dateline, Version of 12 November 2026, while carrying the R1–R6 text (for example the rewritten scale clarification); main's history row for that version says it was drafted by correcting the exemplar section alone.
+        - **where**: aybllc/7lm origin/main L8/L6/history/specification-history.md:15; merge result of the run above, L8/L4/work/writing/7lm-harmonized-architecture-specification.md:18 and :683
+      - item 3
+        - **fact**: Because main moved the field guide into the retired set, the merge applies the beta's three guide edits to the retired copy: 3 lines change (the byte reading, the L0 rails, the scale ruling). The record says the guide moved there with its text unchanged.
+        - **where**: aybllc/7lm origin/main L8/L6/retired/field-guide-2026-09-20/7lm-field-guide.md (3 lines changed in the merge result); origin/main L8/L6/history/harmonization-2026-09-04.md:522
+      - item 4
+        - **fact**: Against the reconciliation of pull request #19 built locally (38e2ec3, not pushed), the beta conflicts in 7 files: L7/peering/0.md, L7/peering/private/ingress/0.md, L7/provenance/sources/0.md, the specification and its rendering, L8/L5/research/review/0.md and specification-history.md.
+        - **where**: /home/user/7lm-pr19 HEAD 38e2ec3: git merge-tree --write-tree --name-only 38e2ec3 origin/beta/common-contracts-r1-r6 (scratch copy)
+      - item 5
+        - **fact**: Outside the agent results, R1–R6 is named in one file on any branch of the three repositories: the beta's own history, which says the work followed the owner's approval but quotes no word of the owner.
+        - **where**: aybllc/7lm origin/beta/common-contracts-r1-r6 L8/L6/history/specification-history.md:106 (git grep over every origin ref of the three clones)
+      - item 6
+        - **fact**: 97314c5 (3 November 2026, the day after 4ca3edb) changes 18 sheets, adds no history entry, mentions no approval, and its message says it is not a merge claim.
+        - **where**: aybllc/7lm commit 97314c5 (git show --stat; message body, last sentence)
+      - item 7
+        - **fact**: The beta adds 8 files, among them executable probes and their test under L8/L4/work/computation/, and rewrites the CI check (17 lines added, 19 removed); main's check still accepts USO/ as the interior.
+        - **where**: aybllc/7lm git diff --numstat origin/main...origin/beta/common-contracts-r1-r6; origin/main .github/workflows/integrity.yml:27-28
+      - item 8
+        - **fact**: The scale item replaces main's sentence that a scale is not an L1 state space and not L2 mathematics with one admitting L1 values and L2 relations.
+        - **where**: aybllc/7lm origin/main L8/L4/work/writing/7lm-harmonized-architecture-specification.md:681; origin/beta/common-contracts-r1-r6 same file :683
+    - **on_yes**: Nothing changes; the branch stays at 97314c5, keeping the exemplar betas' pin to 4ca3edb resolvable. If you later name R1–R6 items you approve, a session drafts each as a proposal (file, what is wrong, exact fix) on main after pull request #19; you merge each.
+    - **cost_or_risk**: Main keeps its pre-R1–R6 wording until you rule item by item, including a check that still accepts the old USO/ interior and the unqualified byte analogy. Nothing is lost; the branch stays readable.
+    - **confidence**: high
+    - **rejected**: Merging the whole branch: falsifies the 12 November row, edits the retired guide, brings 97314c5 unapproved plus executable probes and a rewritten check. Merging 4ca3edb alone: still the probes, check and guide edits. Deleting the branch: orphans the exemplar betas' pin.
+    - **depends_on**: (empty)
+  - item 2
+    - **id**: RH1
+    - **title**: Which model commit both exemplars match, and how updates reach them
+    - **kind**: process
+    - **status_now**: settled-by-events
+    - **best_choice**: Name the scaffold's main, today 6de996b, as what both exemplars match; the beta's 4ca3edb and 97314c5 count only for what reaches main. Updates arrive by hand passes recorded in each exemplar's own record, not by the review at L7/peering/private/, which you placed in the future and which is not built.
+    - **why**: Your merge of pull requests 29 and 30 put mirrors of the scaffold's main on both exemplars and nothing of 4ca3edb or 97314c5. Since that mirror, main has changed no canonical position and not its check, so both exemplars match 6de996b at all 71 positions today. The other two commits are on an unmerged branch; carrying them out would be an outside update ahead of the scaffold. The review route stands only in your words of 20 September and the retired guide. No exemplar main names any scaffold commit, so one record line makes the match checkable.
+    - **owner_words**
+      - item 1
+        - **quote**: All repos should mirror the 7lm. Manually. We update 7lm and focus on it only. No outside updates until we are sure I'm close.
+        - **where**: aybllc/7lm, origin/main (6de996b), L8/L6/history/harmonization-2026-09-04.md:336 (the owner, 2026-09-20)
+      - item 2
+        - **quote**: (in the future, pinned hashes push HOA REVIEW inter peering private where decisions are made to follow or edit, dir structure we push is required.
+        - **where**: aybllc/7lm, origin/main (6de996b), L8/L6/history/harmonization-2026-09-04.md:350 (the owner, 2026-09-20)
+    - **evidence**
+      - item 1
+        - **fact**: Both exemplar mains are the hand mirrors of 11 November, made from the scaffold's main and merged under the owner's account: aybllc/autonomous 9fa3744 (pull request #30) and aybllc/auditonomous aa30b03 (pull request #29).
+        - **where**: aybllc/7lm origin/main L8/L6/history/harmonization-2026-09-04.md:545; aybllc/autonomous origin/main L8/L6/history/harmonization-2026-09-05.md:213 and aybllc/auditonomous same file :206 (each pass made from main)
+      - item 2
+        - **fact**: Between c9dc061, the main the mirrors were made from, and 6de996b the scaffold changed 13 files outside the agent results; none adds, removes or renames a canonical position, and the CI check is the same file (blob f43dd04), which Auditonomous carries byte for byte and Autonomous with only its retired Q-6 comment added.
+        - **where**: aybllc/7lm git diff --stat c9dc061 origin/main; .github/workflows/integrity.yml on origin/main of all three repositories
+      - item 3
+        - **fact**: All 71 positions on the check's canonical list carry a sheet on the scaffold's main and on both exemplar mains.
+        - **where**: aybllc/7lm origin/main .github/workflows/integrity.yml:47-51, each position checked for a 0.md on origin/main of the three repositories
+      - item 4
+        - **fact**: Neither exemplar main names c9dc061, 6de996b, 4ca3edb or 97314c5; both exemplar betas pin 4ca3edb as their architecture commit.
+        - **where**: git grep on origin/main of aybllc/autonomous and aybllc/auditonomous; aybllc/autonomous origin/beta/7lm-exemplar-autonomous L7/peering/public/egress/peer-1/object-2/binding.json:7; aybllc/auditonomous origin/beta/7lm-exemplar-auditonomous L7/peering/public/ingress/peer-1/object-2/binding.json:7
+      - item 5
+        - **fact**: The manuscript guidance is on 97314c5 only (absent from main and from 4ca3edb), and 97314c5 lacks main's layer lists at L8/L6/in/7lm-layer-lists.md and the 12 November correction.
+        - **where**: aybllc/7lm origin/beta/common-contracts-r1-r6 L8/L4/work/writing/0.md:12
+      - item 6
+        - **fact**: The review of pinned updates at an adopter's L7/peering/private/ is described in the retired field guide as how a push is meant to arrive once the mechanism exists; the record says none of it is built.
+        - **where**: aybllc/7lm origin/main L8/L6/retired/field-guide-2026-09-20/7lm-field-guide.md:610; L8/L6/history/harmonization-2026-09-04.md:354
+    - **on_yes**: Nothing moves now. In its next pull request to each exemplar, a session adds one dated line to the 11 November section of its record naming c9dc061 as mirrored and the scaffold's main then checked (6de996b today); research work reads against that commit. You merge.
+    - **cost_or_risk**: If you later adopt R1–R6 or the manuscript guidance on the scaffold's main, the exemplars need a second hand pass for wording, and the pinned commit must be renewed at every pass.
+    - **confidence**: high
+    - **rejected**: 4ca3edb or 97314c5: unmerged scaffold text, an outside update ahead of the 7lm; 97314c5 also lacks main's layer lists and the 12 November correction. Review at L7/peering/private/: unbuilt, described only in the retired guide.
+    - **depends_on**
+      - M5
+  - item 3
+    - **id**: M4-6
+    - **title**: Which L7 wording stands in the exemplars; what becomes of both beta branches
+    - **kind**: process
+    - **status_now**: settled-by-events
+    - **best_choice**: Let the mirror's wording stand, as merged. Keep beta/7lm-exemplar-autonomous (e64b382) and beta/7lm-exemplar-auditonomous (714480d) exactly as they are: not merged, rebased, reconciled or deleted. Anything wanted from them reaches main one item at a time, by its own pull request, never by merging either branch.
+    - **why**: Your merge of pull requests 29 and 30 settled the wording: both mains carry the mirror of the scaffold's main. Measured today, the betas conflict with their mains in 12 and 13 files, and in each repository 34 files differ on both sides, so a merge would also blend 22 and 21 files without warning. Wording after a sheet's first line is a design choice, so nothing requires reconciling the two. Keeping the branches loses nothing and keeps their pins and research objects readable; both records already call them unmerged.
+    - **owner_words**
+      - item 1
+        - **quote**: merge 29 and 30
+        - **where**: aybllc/7lm, origin/main (6de996b), L8/L6/history/harmonization-2026-09-04.md:543 (the owner, 2026-11-12 00:19 UTC)
+      - item 2
+        - **quote**: Sheets are design choices. What is not a design choice is the relative path to root like we currently do
+        - **where**: aybllc/7lm, origin/main (6de996b), L8/L6/history/harmonization-2026-09-04.md:350 (the owner, 2026-09-20)
+    - **evidence**
+      - item 1
+        - **fact**: Autonomous main 9fa3744 against beta e64b382 conflicts in 12 files: the CI check, L7/0.md, the six sheets L7/allications/0.md and its applications, communications, notifications, participations and specifications, L7/governance/0.md, L7/governance/controlled/0.md, L7/peering/0.md and L7/peering/public/0.md.
+        - **where**: aybllc/autonomous: git merge-tree --write-tree --name-only origin/main origin/beta/7lm-exemplar-autonomous, 13 November 2026, scratch copy
+      - item 2
+        - **fact**: Auditonomous main aa30b03 against beta 714480d conflicts in 13 files: the same 12 and L8/L4/work/computation/0.md.
+        - **where**: aybllc/auditonomous: git merge-tree --write-tree --name-only origin/main origin/beta/7lm-exemplar-auditonomous, 13 November 2026, scratch copy
+      - item 3
+        - **fact**: In each repository 34 files are changed by both sides since their merge base and end different; 22 in Autonomous and 21 in Auditonomous would merge with no conflict reported, mixing two wordings.
+        - **where**: blob comparison of origin/main and the beta for every file changed on both sides since merge bases c9076c3 (aybllc/autonomous) and 2165144 (aybllc/auditonomous)
+      - item 4
+        - **fact**: Both records on main say the beta is not merged, makes the same two moves, words its sheets differently, and needs reconciling if it lands second.
+        - **where**: aybllc/autonomous origin/main L8/L6/history/harmonization-2026-09-05.md:213; aybllc/auditonomous origin/main same file :206
+      - item 5
+        - **fact**: All 71 canonical positions are sheeted on both mains and both betas, so the folders are the same either way; the Auditonomous beta's check is the scaffold beta's file byte for byte (blob cd39c5b).
+        - **where**: canonical list at aybllc/7lm origin/main .github/workflows/integrity.yml:47-51, checked on all four refs; .github/workflows/integrity.yml blob ids
+    - **on_yes**: Nothing is written in any repository; the records' lines on the betas (autonomous record line 213, auditonomous line 206) stay true as written. Their research objects and definition edits are taken up one item at a time, if at all.
+    - **cost_or_risk**: Two branches drift further from main; any later take from them is by hand, file by file. Their check files and pins follow an unmerged scaffold commit, so they cannot land as they are.
+    - **confidence**: high
+    - **rejected**: Merging or rebasing either beta: 12 or 13 conflicts, 22 or 21 silent blends, and brings research objects, definition edits and a check following an unmerged scaffold commit. Deleting them: loses the only copy of that work, unenumerated. A fresh reconciliation pass: nothing requires it.
+    - **depends_on**: (empty)
+  - item 4
+    - **id**: M7
+    - **title**: What becomes of the beta exemplars' research objects and definition edits
+    - **kind**: process
+    - **status_now**: open
+    - **best_choice**: Keep all of it on the two beta branches, untouched; take none of it to main by merging. Have the 31 items put to you one by one as proposals (file, what is wrong, exact fix); each reaches main only on your yes, by its own pull request.
+    - **why**: Merging would make true statements on main false and settle, without you, decisions you left open: Auditonomous's record lists Appendix C, Q13 and the CONTRADICTIONS rows as owner decisions left open with nothing done, and its review sheet says CONTRADICTIONS.md is not edited; Autonomous's record holds the REGISTER contest open, which the beta settles by deleting the blocker row. None of these edits conflicts with main, so a merge would carry them in without a prompt. Keeping them on the branches loses nothing.
+    - **owner_words**
+      - item 1
+        - **quote**: Don't change the system unless you ask or are unsure
+        - **where**: aybllc/7lm, origin/main (6de996b), L8/L6/history/harmonization-2026-09-04.md:482 (the owner, 2026-09-20)
+      - item 2
+        - **quote**: that does nto mean delete over tehre until we enumerate
+        - **where**: aybllc/7lm, origin/main (6de996b), L8/L6/history/harmonization-2026-09-04.md:150 (the owner, 2026-09-06)
+    - **evidence**
+      - item 1
+        - **fact**: The Autonomous beta e64b382 adds 13 files that are not sheets (eight BETA files at L0 to L6, four computation files with executable code and results, the object-2 binding) and edits 4 content files: REGISTER.md (2 lines added, 2 removed), DEFINITION_LIST_AUTONOMOUS.md (2 added), and the press-kit README.md and GLOSSARY_AUTONOMOUS.md.
+        - **where**: aybllc/autonomous: git diff --numstat c9076c3 origin/beta/7lm-exemplar-autonomous
+      - item 2
+        - **fact**: The REGISTER edit enters autonomy / autonomous as adopted as a plural entry and deletes that term's row, with its blocker, from the table of terms not yet entered.
+        - **where**: aybllc/autonomous origin/beta/7lm-exemplar-autonomous L8/L0/semantics/definitions/REGISTER.md:12; origin/main same file :19
+      - item 3
+        - **fact**: The Auditonomous beta 714480d adds 10 files that are not sheets (six AUDITONOMOUS_BETA files, three computation files, the object-2 binding) and edits 4 content files: AUDITONOMOUS_DEFINITION.md (16 lines added), REQUIREMENTS_OWNERSHIP.md at Q13 (2), CONTRADICTIONS.md (15, a disposition table for rows C1 to C7) and L7/provenance/sources/LEDGER.md (8). With Autonomous's 13 and 4, that is 31 items.
+        - **where**: aybllc/auditonomous: git diff --numstat 2165144 origin/beta/7lm-exemplar-auditonomous
+      - item 4
+        - **fact**: Auditonomous's record lists Appendix C of the definition, Q13 and the autonomy-definition rows of CONTRADICTIONS.md as owner decisions left open with nothing done, and its review sheet says CONTRADICTIONS.md is not edited.
+        - **where**: aybllc/auditonomous origin/main L8/L6/history/harmonization-2026-09-05.md:93; L8/L5/research/review/0.md:35
+      - item 5
+        - **fact**: Autonomous's record lists the REGISTER.md contest with AUTONOMOUS.md among live contests the sheets do not settle.
+        - **where**: aybllc/autonomous origin/main L8/L6/history/harmonization-2026-09-05.md:81
+      - item 6
+        - **fact**: The mirror touched none of REGISTER.md, DEFINITION_LIST_AUTONOMOUS.md, AUDITONOMOUS_DEFINITION.md, REQUIREMENTS_OWNERSHIP.md, CONTRADICTIONS.md or LEDGER.md, so merging either beta would take those edits in with no conflict reported.
+        - **where**: git diff --name-only from merge base to origin/main: aybllc/autonomous c9076c3..9fa3744, aybllc/auditonomous 2165144..aa30b03
+      - item 7
+        - **fact**: The Autonomous beta also writes sheets at the six Autonomous folders the scaffold's record names as unsheeted; that is a source for that separate correction, not part of this one.
+        - **where**: aybllc/autonomous origin/beta/7lm-exemplar-autonomous (binder/internal/0.md, internal/tools/0.md, press-kit/0.md, L8/L5/research/review/autonomous-theory/0.md and its two subfolders); aybllc/7lm origin/main L8/L6/history/harmonization-2026-09-04.md:562
+    - **on_yes**: Nothing is written now. The Auditonomous research work reads the beta files read-only and gives you a table of the 31 items; you mark each yes or no; each yes becomes a pull request on that exemplar's current main, recorded in its record.
+    - **cost_or_risk**: Main keeps defects the betas address, such as the REGISTER row the Autonomous record calls a contest with AUTONOMOUS.md, until you rule; the betas' new objects stay pinned to 4ca3edb, off the scaffold's main.
+    - **confidence**: high
+    - **rejected**: Merging either beta: closes open owner decisions silently. Taking only the new files: BETA_SOURCE_OVERLAY.md is written to govern the definition list and register, so they are not neutral. Deleting the branches: nothing is enumerated, and your rule forbids it.
+    - **depends_on**
+      - M4-6
+  - item 5
+    - **id**: M10
+    - **title**: Whether the exemplars take the agnostic wording of pull request #19
+    - **kind**: process
+    - **status_now**: open
+    - **best_choice**: No. Keep the exemplars as merged: line 8 of L7/allications/0.md with your quotation of 19 September, and your words of 11 November as written in both exemplar records. When pull request #19 reaches the scaffold's main, do not copy its lines 8 and 10 into the exemplars.
+    - **why**: The instruction of 6 October survives only in indirect speech and concerns what the public sees; the scaffold marks the exemplars private. The specification, on main and in pull request #19, says each repository's records carry the quoted words verbatim. What a sheet says after its first line is a design choice, so the exemplars stay in step without the new wording, whose line 8 points to a record file neither exemplar holds. You merged line 8 after your 7 September pull-out of such quotations, twice. It would change if the exemplars are to be published.
+    - **owner_words**
+      - item 1
+        - **quote**: Sheets are design choices. What is not a design choice is the relative path to root like we currently do
+        - **where**: aybllc/7lm, origin/main (6de996b), L8/L6/history/harmonization-2026-09-04.md:350 (the owner, 2026-09-20)
+      - item 2
+        - **quote**: put them in auditonomous too and the public one its public so you can access it and one other ai right npow
+        - **where**: aybllc/7lm, origin/main (6de996b), L8/L5/research/review/agent-results-2026-11-11/0.md:8 (the owner, 2026-11-11 19:43 UTC)
+    - **evidence**
+      - item 1
+        - **fact**: Line 8 of L7/allications/0.md is the same on the scaffold's main and both exemplar mains: the owner's naming of the position on 2026-09-19, quoted as written.
+        - **where**: origin/main L7/allications/0.md:8 in aybllc/7lm, aybllc/autonomous and aybllc/auditonomous
+      - item 2
+        - **fact**: In the reconciliation of pull request #19 built locally (38e2ec3, not pushed), line 8 instead cites the record L8/L6/history/harmonization-2026-09-04.md §25 and line 10 carries the pronunciation; the exemplars hold their own record, harmonization-2026-09-05.md, not that file.
+        - **where**: /home/user/7lm-pr19 at 38e2ec3, L7/allications/0.md:8 and :10
+      - item 3
+        - **fact**: The 6 October instruction exists only in indirect speech, and it speaks of what the public is to see.
+        - **where**: aybllc/7lm origin/ccr-00099fac-hjosbo (b5c3984) L8/L6/history/harmonization-2026-09-04.md:514
+      - item 4
+        - **fact**: The scaffold's L7 sheet heads the two exemplar repositories as private.
+        - **where**: aybllc/7lm origin/main L7/0.md:159
+      - item 5
+        - **fact**: The specification says the records at L6/history/ in each repository carry the words verbatim, on main and in the text of pull request #19.
+        - **where**: aybllc/7lm origin/main L8/L4/work/writing/7lm-harmonized-architecture-specification.md:940; 38e2ec3 same file :940
+      - item 6
+        - **fact**: Both exemplar records quote the owner's words of 11 November as written, and both say that on 7 September the dates and owner's words beside the rules were pulled out of the sheets into the records.
+        - **where**: aybllc/autonomous origin/main L8/L6/history/harmonization-2026-09-05.md:185 and :167; aybllc/auditonomous same file :178 and :160
+      - item 7
+        - **fact**: Line 8 reached main under the owner's account after 7 September: in the scaffold by pull request #17 (0d1ec40, 20 September) and in both exemplars by pull requests #30 and #29 (9fa3744, aa30b03, 12 November UTC). Neither exemplar beta's sheet at that path quotes the owner.
+        - **where**: git log -1 0d1ec40 in aybllc/7lm; git log -1 origin/main in aybllc/autonomous and aybllc/auditonomous; origin/beta/7lm-exemplar-autonomous and origin/beta/7lm-exemplar-auditonomous L7/allications/0.md
+    - **on_yes**: Nothing is written. If you later want the exemplars' own rule of 7 September applied instead, the one fix is to drop line 8's first sentence in each exemplar, recorded in each record.
+    - **cost_or_risk**: After pull request #19, line 8 differs between scaffold and exemplars, and each exemplar keeps a dated quotation of you in a live sheet, against its own 7 September pull-out of such quotations.
+    - **confidence**: medium
+    - **rejected**: Copying lines 8 and 10 of pull request #19: its pointer names a file the exemplars lack, and it applies a public-face rule to private repositories. A full agnostic sweep: nothing orders it. Indirect speech in the records: the records are where your words stand.
+    - **depends_on**: (empty)
+  - item 6
+    - **id**: PR28
+    - **title**: Pull request #28 in Auditonomous, and where the complete agent results live
+    - **kind**: process
+    - **status_now**: open
+    - **best_choice**: Mark #28 ready and merge it into Auditonomous main unchanged. The complete copy then lives at L8/L5/research/review/agent-results-2026-11-11/ on Auditonomous main, the catch-all, at the same path as the scaffold's public copy, and nowhere public.
+    - **why**: You asked for the results in Auditonomous so they are not lost; today the complete copy exists only on this draft branch, left alone when you merged the mirror-only pull request #29. The scaffold's public sheet already says the complete copy is at that path in Auditonomous, which is false of its main until #28 merges. The merge is clean and adds exactly 311 files under that folder, each folder sheeted, nothing else. Auditonomous is private, and its copyright sheet lets quotations travel within private repositories. One revert undoes it.
+    - **owner_words**
+      - item 1
+        - **quote**: have them check in their results periodically so we dont lose them.
+        - **where**: aybllc/7lm, origin/main (6de996b), L8/L5/research/review/agent-results-2026-11-11/0.md:8 (the owner, 2026-11-11 19:34 UTC)
+      - item 2
+        - **quote**: put them in auditonomous too and the public one its public so you can access it and one other ai right npow
+        - **where**: aybllc/7lm, origin/main (6de996b), L8/L5/research/review/agent-results-2026-11-11/0.md:8 (the owner, 2026-11-11 19:43 UTC)
+    - **evidence**
+      - item 1
+        - **fact**: Branch ccr-9391bd81-f2enmj, head 3696894, differs from Auditonomous main aa30b03 by 311 added files, all under L8/L5/research/review/agent-results-2026-11-11/; a test merge is clean and its result equals the branch tip.
+        - **where**: aybllc/auditonomous: git diff --name-status origin/main origin/ccr-9391bd81-f2enmj; git merge-tree --write-tree in a scratch copy
+      - item 2
+        - **fact**: No other ref of Auditonomous, and no ref of Autonomous, holds that folder.
+        - **where**: git ls-tree over every origin ref of /home/user/auditonomous and /home/user/autonomous
+      - item 3
+        - **fact**: The scaffold's public sheet says the complete copy is at the same path in aybllc/auditonomous; on Auditonomous main that folder does not exist.
+        - **where**: aybllc/7lm origin/main L8/L5/research/review/agent-results-2026-11-11/0.md:33; aybllc/auditonomous origin/main L8/L5/research/review/
+      - item 4
+        - **fact**: The two copies hold the same 311 paths, both at check-in no. 12; 89 files are identical and 222 differ, the public copy replacing source text with a withheld marker.
+        - **where**: blob comparison of aybllc/7lm origin/main and aybllc/auditonomous origin/ccr-9391bd81-f2enmj, same folder; their 0.md:37 and 0.md:36
+      - item 5
+        - **fact**: All 10 folders of the complete copy carry a 0.md headed by its own path, and no file holds a line the check's conflict-marker test rejects; the copy totals 15,440,786 bytes.
+        - **where**: aybllc/auditonomous origin/ccr-9391bd81-f2enmj L8/L5/research/review/agent-results-2026-11-11/; origin/main .github/workflows/integrity.yml (G-001, G-003)
+      - item 6
+        - **fact**: Auditonomous's review sheet makes review/ the catch-all where everything awaiting the owner's review lands, labelled PARKED when set aside; the results' sheet says PARKED, not adopted.
+        - **where**: aybllc/auditonomous origin/main L8/L5/research/review/0.md:38; origin/ccr-9391bd81-f2enmj L8/L5/research/review/agent-results-2026-11-11/0.md:36
+      - item 7
+        - **fact**: Auditonomous's copyright sheet keeps licensed files to private repositories and lets quotations travel; the scaffold heads Auditonomous as private.
+        - **where**: aybllc/auditonomous origin/main L7/governance/copyright/0.md:43 and :52; aybllc/7lm origin/main L7/0.md:159
+      - item 8
+        - **fact**: The owner had the mirror cut onto its own branch and merged it as pull request #29, which left #28 holding the results alone.
+        - **where**: owner's messages of 2026-11-11 21:43 UTC and 2026-11-12 00:19 UTC, /tmp/claude-0/-home-user/bfcfd013-a2da-5019-961e-7f46116f08be/scratchpad/reconcile19/owner-words.txt:14 and :16; aybllc/auditonomous origin/main aa30b03
+    - **on_yes**: You, or a session on your word, mark #28 ready for review and merge it; Auditonomous main gains the 311 files and nothing else, and the scaffold's sheet becomes true.
+    - **cost_or_risk**: 15,440,786 bytes of unadopted agent output on an internal main, with verbatim quotations of internal sources. If the scaffold's public copy moves, its sheet's sentence on where the complete copy is must move with it.
+    - **confidence**: high
+    - **rejected**: Keep as draft: the public sheet stays false and the only complete copy sits on a branch that can be deleted. Close: the same, without the review page. The public scaffold: would publish internal and licensed text.
+    - **depends_on**: (empty)

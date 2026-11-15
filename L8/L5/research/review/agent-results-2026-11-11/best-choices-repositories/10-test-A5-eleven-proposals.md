@@ -1,0 +1,122 @@
+# test:A5-eleven-proposals
+
+Agent result, as returned. Workflow: Best choices: the scaffold, the exemplars, the eleven proposals. Run `wf_8e87a1b5-8ec`. Phase: Test.
+
+- **verdicts**
+  - item 1
+    - **id**: P1
+    - **quotes_ok**: yes
+    - **state_ok**: no
+    - **stands**: yes
+    - **final_best_choice**: Take option (b) as given, adding 'under L7/ and L8/' after 'six folders' and after 'twelve folders' in the two sentences it appends to 'Not yet as stated'. Writing the eighteen sheets stays open for each exemplar's own pass, on the owner's word (§26).
+    - **final_why**: Option (a) cannot make the bullet literally true: in each exemplar thirteen directories inside the retired sets carry no sheet, and a retired set is kept verbatim (record §40, line 536). Option (b)'s bullet is true now: all 71 canonical positions are sheeted, and all 103 Autonomous and 84 Auditonomous sheets are headed by their paths. Its appended counts hold for L7/ and L8/, but .github/ and .github/workflows/ are unsheeted too, so four words make them literal. The owner still wants every folder sheeted, blank if need be (§30): that stays the exemplars' own work.
+    - **final_confidence**: high
+    - **note**: Pick stands. One stale state claim: the reconciliation of #19 is no longer 'local, not pushed'; it was pushed at 20:10:19 UTC on 13 November as 8aa66c1, an amend of 38e2ec3 that changes only §42 and specification-history.md, so line 934 is identical there. Counts re-verified with git ls-tree at 9fa3744 and aa30b03 (122/103/6/13 and 109/84/12/13; the 122 and 109 include L7/ and L8/ themselves). Added that writing the sheets is an outside update under §26.
+  - item 2
+    - **id**: P2
+    - **quotes_ok**: yes
+    - **state_ok**: no
+    - **stands**: no
+    - **final_best_choice**: Take it on #19's wording ('from l6'), no licence clause: Autonomous, 'L7/provenance/prior-art/ holds thirty-four third-party files, four texts of two RFCs at ct-lane/ and thirty at prior-art-lane/; what becomes of them is the owner's decision.'; Auditonomous, 'The staging records hold a full-text copy of one ledgered paper, PR-020, at library/text/.'
+    - **final_why**: The bullet's last two clauses are false: Autonomous tracks thirty-four third-party files at L7/provenance/prior-art/, Auditonomous a 21,803-byte full text of PR-020. What the specification must record is files held where sources are served by pointer; that needs no licence clause. The owner put copyright in one place, each repository's L7/governance/copyright/. The proposal's clause and the colleague's replacement both state licence standing outside it; the replacement rests on a staging record that Autonomous's copyright sheet does not carry, while the ct-lane sheet says no determination is recorded. 'from l6' and the row id keep #19's sweep.
+    - **final_confidence**: medium
+    - **note**: Missed owner's word: 'THE PLACE TO LOOK FOR COPYRIGHT IS ONLY ONE PLACE' (aybllc/7lm 6de996b, L8/L6/history/harmonization-2026-09-04.md line 97, §6), carried into the scaffold's L7/governance/copyright/0.md line 18. Count corrected: by the colleague's own test (one document in two or three formats), 34 documents carry two or three ledger rows, 70 of 121: the 25 named, NIST AI 100-1 at S-001 and S-030, and eight SEVOCAB search pages in HTML and text (S-098 to S-113). The filename's surname would be introduced, not restored. Kept 'files' for 'source files': S10P03.pdf and ieee_arb.html are error pages.
+  - item 3
+    - **id**: P3
+    - **quotes_ok**: yes
+    - **state_ok**: no
+    - **stands**: yes
+    - **final_best_choice**: Take option (b) with 'in force': 'No rule in force in either tree about which position a session or any other intelligence may touch; the copyright sheet of each reserves removal from git history to the owner. The repository file that would carry such rules is held off.'
+    - **final_why**: Option (a) cannot make the bullet literally true: each tree keeps verbatim, under L8/L6/retired/layout-2026-09-06/, the queue rules that told a session where it may write, as line 939 itself says, and records that reserve acts to the principal and not an agent are not rewritten. Option (b) with 'in force' is true now and stays true whether or not the exemplars later drop 'never a session's' from rule 5, as both sheet audits propose. It edits no exemplar, and it keeps the owner's word that stay-out rules for any intelligence are 'not our concerm'.
+    - **final_confidence**: medium
+    - **note**: Pick stands; both quotations verified at 6de996b line 101. One inexact evidence claim: Autonomous's .gitignore line 19 reserves the decision to put the cached third-party texts under version control, not a history decision; only line 58 and the quarantine log's line 280 concern history. The pick does not depend on it.
+  - item 4
+    - **id**: P4
+    - **quotes_ok**: yes
+    - **state_ok**: yes
+    - **stands**: yes
+    - **final_best_choice**: Take it as given: 'the two records' becomes 'the three records' in the Interior paragraph of Autonomous (line 948) and of Auditonomous (line 956).
+    - **final_why**: Each exemplar's L8/L6/history/ holds three records beside its ledgers: harmonization-2026-09-05.md, sheets-2026-09-07.md and 7LM_ROUTING_PLAN_2026-09-05.md, and each history sheet lists the three (Autonomous lines 41 to 43, Auditonomous lines 37 to 39). The sheets record was first committed on 7 September 2026 (042afbe, 595d3b5), after the snapshots of 6 September the count was taken from. The phrase is the same on main and on #19, so the fix fits either base.
+    - **final_confidence**: high
+    - **note**: 
+  - item 5
+    - **id**: P5
+    - **quotes_ok**: yes
+    - **state_ok**: no
+    - **stands**: yes
+    - **final_best_choice**: Take it, ending the sentence 'and none of the eleven binding records cites a row of it' in place of 'and no binding record cites a row of it'.
+    - **final_why**: Of the eleven bound clauses, the documents of A6 to A9 (NIST SP 1011-I-2.0, Regulation (EU) 2024/1689, DoDD 3000.09, EASA AI Roadmap 2.0) have pointer-ledger rows and the seven others (A1 to A5, A10, A11) none, so 'not yet ledgered' is inexact. The given sentence is exact but for its last clause: the l6 binding record, L7/peering/private/ingress/peer-1/object-1/0.md line 10, names the rows S-001 to S-121. None of the eleven public binding records cites a row; peer-1's points to the staging register instead.
+    - **final_confidence**: high
+    - **note**: Pick stands. One miscount in the colleague's reasoning: the staging register carries rows for six documents, not seven (ISO/IEC 22989 serves both A2 and A3); the evidence entry says six correctly.
+  - item 6
+    - **id**: P6
+    - **quotes_ok**: yes
+    - **state_ok**: yes
+    - **stands**: yes
+    - **final_best_choice**: Take the specification fix as given at line 954 in the scaffold pass. Correct Auditonomous's seven '62' sentences by its sheet audit's exact fixes in its own next pass (record §14), after the scaffold pass and on the owner's word lifting §26's 'No outside updates' for this miscount.
+    - **final_why**: The register at L7/provenance/sources/LEDGER.md (lines 18 to 79 at aa30b03) is a header, a separator and 60 rows: PR 20, STD 34, INST 4, EXC 2; 58 carry an l6 path. The given sentence is exact, and line 954 carries it identically on main and #19. Seven live Auditonomous sentences say 62 and are corrected in Auditonomous, not from the scaffold; but §26 ('No outside updates until we are sure I'm close', record line 336) still stands, so that pass needs the owner's word. Worth asking: a plain miscount, no position, path or rule changes, and the repositories then agree.
+    - **final_confidence**: high
+    - **note**: The act stands; the exemplar step now names §26, which the colleague's pick did not (its sequencing entry even says that pass waits on nothing). Re-verified: 60 rows at lines 20 to 79; the seven sentences at L7/0.md:232, L7/peering/private/ingress/peer-1/0.md:16, its object-1/0.md:10, L7/provenance/0.md:20 and :33, L7/provenance/sources/0.md:10 and :41.
+  - item 7
+    - **id**: P7
+    - **quotes_ok**: yes
+    - **state_ok**: yes
+    - **stands**: yes
+    - **final_best_choice**: Take it as given: in line 963, 'Nothing was deleted.' becomes 'Nothing was deleted but what the records enumerate: four 0-byte placeholders in each repository and, in Autonomous, the three sheets of the dissolved directories.'
+    - **final_why**: Commit 5dbf85c (6 September 2026) deleted seven files in Autonomous: four 0-byte placeholders and the three sheets of the dissolved directories (1,287, 1,015 and 825 bytes), added the day before at 07e8ce1. Commit 50f43d3 deleted four 0-byte placeholders in Auditonomous. No other file was deleted in either repository on 5 or 6 September, and each record enumerates these (Autonomous §9 line 120, Auditonomous §8 line 122). The owner's rule is integrity enforced and no deletion implied; the specification's own table calls deletion after enumeration the ordinary act (line 998).
+    - **final_confidence**: high
+    - **note**: 
+  - item 8
+    - **id**: P8
+    - **quotes_ok**: yes
+    - **state_ok**: yes
+    - **stands**: yes
+    - **final_best_choice**: In L8/L4/work/writing/0.md line 24, replace 'built-in Word styles only (Title, … a monospace Code style)' with 'built-in Word styles (Title, Subtitle, Headings 1–3, Normal, Quote, Caption, List Bullet, List Number, Table Grid, Header, and Footer) and one custom monospace Code style'; on main without #19, drop 'Header, '.
+    - **final_why**: Counted in the rendering's XML: Title on 1 paragraph, Subtitle 1, Headings 1 to 3 on 12, 18 and 11, Quote 3, Caption 18, List Bullet 13, List Number 8, Table Grid on 29 tables, Normal for the rest, Footer in the footer, and Code on 186 paragraphs, the one style styles.xml marks custom. So 'only' is false even with a full list. #19's rendering adds word/header1.xml, one empty paragraph in the Header style. The given fix keeps 'only' and misses Header.
+    - **final_confidence**: high
+    - **note**: 
+  - item 9
+    - **id**: P9
+    - **quotes_ok**: yes
+    - **state_ok**: yes
+    - **stands**: yes
+    - **final_best_choice**: Take it with the pass's own version date for '12 November 2026' and 'custom' before 'monospace': 'Version of <that date>, generated from the canonical Markdown beside it: built-in styles and one custom monospace Code style, every top-level section starting a new page; reads back to the Markdown unchanged.'
+    - **final_why**: docProps/core.xml describes the rendering as built-in styles only, one page per top-level section, on main (dated 12 November) and on #19 (13 November). Code is a custom style on 186 paragraphs; all 12 Heading 1 paragraphs carry page-break-before, and LibreOffice lays both renderings out at 51 pages (converted again for this check). The given text is right but fixes 12 November 2026, while the description names the version and is patched with it, as §41 and §42 did.
+    - **final_confidence**: high
+    - **note**: 
+  - item 10
+    - **id**: P10
+    - **quotes_ok**: yes
+    - **state_ok**: yes
+    - **stands**: yes
+    - **final_best_choice**: In L8/L4/work/writing/0.md line 25 replace only '; prior versions are retired under `L8/L6/retired/`.' with ', whose Versions table says where each prior version stands: the version of 4 September 2026 retired under `L8/L6/retired/specification-2026-09-04/`, the later ones in git history.'
+    - **final_why**: L8/L6/retired/ holds the specification of 4 September 2026 and the draft of 3 September before it, and no later version; the Versions table of specification-history.md places every later prior version in git history (lines 10 to 14 on main, 10 to 16 on #19). The given fix rewrites the whole sentence and would put back 'the owner's words', which #19 made 'the quoted words'. Replacing only the false clause is exact on either base, and smaller.
+    - **final_confidence**: high
+    - **note**: Pick stands. Not proposed by anyone: line 31 of the same sheet also points 'superseded drafts and prior versions' at L8/L6/retired/; the owner may want it pointed at specification-history.md in the same pass.
+  - item 11
+    - **id**: P11
+    - **quotes_ok**: yes
+    - **state_ok**: yes
+    - **stands**: yes
+    - **final_best_choice**: Do not append to §41. Under 'Open, for the owner' in §43, the scaffold pass's record, for each branch still open, write that it dates the specification 20 September 2026, merges only by a reconciliation that takes its own date, and, for the audit branch, never patched the .docx.
+    - **final_why**: Appending to §41 would edit a section already on main; the record states a later correction in the later section and leaves the earlier in place (§37, line 506), and §42 on #19 leaves §41 as written (line 597). The hazard is real: today the audit branch merges into main with no conflict, bringing text dated 20 September 2026 under 12 November 2026, and none of its 119 commits touched the .docx. Once #19 is on main both branches conflict with it, and a reconciliation takes its own date, as §42's did.
+    - **final_confidence**: medium
+    - **note**: Re-verified with read-only merge-tree against 8aa66c1, the pushed head of #19: the audit branch conflicts in 20 files, 8 hunks in the specification; beta in 6 text files and the .docx. Against main: the audit branch none; beta specification-history.md and the .docx.
+  - item 12
+    - **id**: PSEQ
+    - **quotes_ok**: yes
+    - **state_ok**: no
+    - **stands**: yes
+    - **final_best_choice**: Two passes. First, after #19 merges, one scaffold pass on main: P1–P7 in the specification and rendering, P9 in its description, P8 and P10 in the writing sheet, P11 in record §43. Second, on the owner's word lifting §26, Auditonomous's seven '62' sentences. Nothing in Autonomous.
+    - **final_why**: All eleven touch the specification, its rendering, the writing sheet that names its version, or the record that goes with them, so one pass gives one version, one history entry and one record section. It follows #19, which rewords four of the nine lines the pass changes and the version lines. Auditonomous's sentences are edited only in Auditonomous, under its own record, and §26 ('No outside updates until we are sure I'm close', record line 336) still stands. Autonomous needs nothing: P1 and P3 take the specification side. Appended sentences follow the bullets' order, P1's then P2's.
+    - **final_confidence**: medium
+    - **note**: Corrected state: #19 is mergeable as it stands (its pushed head 8aa66c1 contains main; §42 leaves the release's refusal and exit status 141 open for the owner, not as a bar to merging). The pass changes nine specification lines, not eight: 958 takes P1's and P2's sentences. The colleague quoted §26 yet had the Auditonomous pass wait on nothing; it now waits on the owner's word.
+  - item 13
+    - **id**: PVER
+    - **quotes_ok**: yes
+    - **state_ok**: no
+    - **stands**: yes
+    - **final_best_choice**: Make it on main after #19 merges, on #19's wording, as its own pass with record §43, dated the UTC day it is made: a new version date unless that day is 13 November 2026. The date is the owner's to confirm, as §41 and §42 say.
+    - **final_why**: Record §41 (line 552 at 6de996b) states the practice: a change to the specification's text made on a later day than its version date takes a new date, and three passes made on the version's own day kept it; §42 applied it to #19's 13 November 2026. The pass changes nine specification lines; #19 rewords four of them, rewords line 940 beside a fifth, and re-dates the three version lines, so a pass on main first would conflict and force a second reconciliation. Inside #19 it would widen a pass under review. #19's head already contains main.
+    - **final_confidence**: high
+    - **note**: Corrections: nine lines change, not eight; a simulated merge of the pass made on main with #19's specification conflicts in six hunks, three in the exemplar section (one taking in 941) and the header comment, dateline and Version box. P2's surname would be introduced, not restored. #19 was pushed at 20:10:19 UTC as 8aa66c1, an amend of 38e2ec3 changing only §42 and specification-history.md; line 583 holds the same words. Dropped the precondition that #19's release items be settled first: §42 leaves them open for the owner, not as a bar to merging.

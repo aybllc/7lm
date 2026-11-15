@@ -1,0 +1,2852 @@
+# Final return of the workflow: Best choices: the audit findings and the source problems, triaged
+
+As returned. Run `wf_c64d0b80-b2c`.
+
+- **summary**: A best choice for each decision that waits on the owner: resolvers read the record and the repositories as they stand, a skeptic checks every quotation and tests every pick
+- **agentCount**: 10
+- **logs**
+  - run C: 5 groups
+  - run C: 5 of 5 groups returned
+- **result**
+  - **run**: C
+  - **groups**
+    - item 1
+      - **key**: C1-autonomous-wrong-fact
+      - **out**
+        - **findings**
+          - item 1
+            - **ref**: L7/allications/publications/binder/0.md:8
+            - **category**: wrong-fact
+            - **cls**: apply
+            - **touches**: live sheet
+            - **why**: The binder's README has no rule about introducing a coinage. Its rule 5 (README.md lines 21-23) keeps terms coined in this repository off binder pages, and the fix edits only the binder's sheet, not the binder files that its line 8 says "are not rewritten".
+            - **fix**: In L7/allications/publications/binder/0.md line 8 replace "the coinage introduced as a coinage" with "[source text withheld from the public copy]".
+          - item 2
+            - **ref**: L7/0.md:232
+            - **category**: wrong-fact
+            - **cls**: apply
+            - **touches**: live sheet
+            - **why**: The ledger counts itself as "450 entries" (LEDGER_OF_DEFINITIONS.md:6) and says that nothing labelled as a requirement, provision or scope passage [source text withheld from the public copy] (lines 8-12), so "450 verbatim definitions" overstates. The fix uses the ledger's own word.
+            - **fix**: In L7/0.md line 232 replace "450 verbatim definitions from 55 intake documents" with "450 verbatim entries from 55 intake documents". The report gives the same replacement at L7/provenance/sources/0.md line 42; that is the L7/provenance/sources/0.md:42 finding, so make that edit once.
+          - item 3
+            - **ref**: README.md:5
+            - **category**: wrong-fact
+            - **cls**: owner-chooses
+            - **touches**: README
+            - **why**: 19 of the 122 directories under L7/ and L8/ have no 0.md. Thirteen of them are kept verbatim below the roots of the two retired sets. The other six are live folders that the record leaves for the owner (harmonization-2026-09-05.md:211), and whether those six get sheets is decision 14, which is still open.
+            - **fix**: Options: (a) now, the report's wording, which names both exceptions: in README.md line 5 replace "every directory under `L7/` and `L8/` describes itself in its own `0.md`" with "every directory under `L7/` and `L8/` describes itself in its own `0.md`, except the directories kept verbatim below the root of each retired set under `L8/L6/retired/` and the six folders the record lists as unsheeted (§14)"; (b) the retired-set exception only, with blank sheets written in the six folders if decision 14 is answered yes. Pick (a). It is true today and takes no side on decision 14. If decision 14 is later answered yes, the clause about the six folders comes out in the same pass that writes their sheets. The scaffold's README line 5 makes the same claim, and its retired set has one directory without a sheet (L8/L6/retired/scaffold-2026-08-20/USO/), so the retired-set clause belongs there too.
+          - item 4
+            - **ref**: L7/governance/copyright/0.md:39
+            - **category**: wrong-fact
+            - **cls**: owner-chooses
+            - **touches**: live sheet
+            - **why**: LEDGER.md has no copyright label: Access reads HELD on all 121 rows and Label holds a document class. Neither register carries "PAYWALLED — NOT OBTAINED". So the "one column" that this line, the owner's one place for copyright, names does not exist, and creating it would mean editing LEDGER.md, whose inconsistency the record says "is carried, not repaired" (harmonization-2026-09-05.md:25).
+            - **fix**: Options: (a) replace line 39 with the report's description of where the standing is actually written; (b) lift "carried, not repaired" and give LEDGER.md and the staging register copyright labels in their Label column. Pick (a). Replace line 39 of L7/governance/copyright/0.md with:
+              **Where a source's standing is written.** In the pre-restructure register, `L7/provenance/sources/staging-records/sources__LEDGER.md`: the Access column carries `PAYWALLED` and the licence constraint on IEEE Std 7001-2021, 1788-2015 and 7009-2024; the Label column carries `COPYRIGHT-BLOCK` on one row, `INST-OECD-AIP8-2024`. `L7/provenance/sources/LEDGER.md` carries no copyright label: its Label column holds the document class, its Access column reads `HELD` on every row, and the hold note on rows S-095 to S-097 stands in the Citation cell. The block on ISO/IEC 22989 clause 5.13 is written in section 5 of `L8/L0/semantics/definitions/AUTONOMOUS.md`, in [source text withheld from the public copy]-2/object-2/`, and in Q-1a of the quarantine log. Two labels are copyright's: `[source text withheld from the public copy] `PAYWALLED — NOT OBTAINED` — not obtained, the legal route recorded; neither register carries the second in that form.
+          - item 5
+            - **ref**: L7/governance/copyright/0.md:18
+            - **category**: wrong-fact
+            - **cls**: owner-chooses
+            - **touches**: live sheet
+            - **why**: Three files carry copyright rules without naming this directory: rule 4 of the binder README, standing rule 6 and two notes of LEDGER_OF_DEFINITIONS.md, and the hold notes on rows S-095 to S-097 of LEDGER.md. The repository keeps each of them as written, so the sentence that states the owner's one-place rule as already met is false.
+            - **fix**: Options: (a) the report's sentence, which names the files that point here and says that the three files kept as written are not the rule; (b) lift "not rewritten" for those three files so that each names this directory. Pick (a). In L7/governance/copyright/0.md line 18, replace the sentence "So no README, sheet, ledger, or binding record restates a copyright rule; each names this directory, and the next step is stated below, once." with:
+              So the root README, the evidence rules, the layer sheet `L7/0.md`, the sources sheet, the prior-art lane sheet, the epistemic sheet and three binding records (`L7/peering/public/ingress/peer-2/object-2/`, `L7/peering/public/ingress/peer-4/object-2/`, `L7/peering/private/ingress/peer-1/object-1/`) name this directory instead of restating a rule, and the next step is stated below, once. Files kept as they were written still carry copyright rules of their own day and do not name this directory: rule 4 of `L7/allications/publications/binder/README.md`; standing rule 6, the clause 5.13 publication-status note and the ISO copyright notice in `L7/provenance/sources/LEDGER_OF_DEFINITIONS.md`; and the hold notes on rows S-095 to S-097 of `L7/provenance/sources/LEDGER.md`. Those are not the rule.
+          - item 6
+            - **ref**: L7/governance/0.md (same claim in L7/governance/controlled/0.md and L7/governance/licensing/0.md):32 (and controlled/0.md:32, licensing/0.md:32)
+            - **category**: wrong-fact
+            - **cls**: owner-chooses
+            - **touches**: live sheet
+            - **why**: Six conditions that the registers hold are not in the one place: the OECD block, four more IEEE standards on the WSU route, the IETF terms on the two RFC texts, CC-BY on Boden et al., the ISO notice over the ledger's 22989 extracts, and the Q-6 exposure of the lane's text and HTML files. The report offers two different fixes.
+            - **fix**: Options: (a) add the six conditions to "What stands now" in L7/governance/copyright/0.md, which makes the claim true at once in governance/0.md:32, controlled/0.md:32, licensing/0.md:32 and L7/0.md:233; (b) narrow governance/0.md:32 as the report's alternative does, which leaves the other three sentences false unless each is narrowed too. Pick (a), because the owner's note asks for copyright in "ONLY ONE PLACE" (aybllc/autonomous main, L8/L6/history/harmonization-2026-09-05.md:94). After the bullets that replace line 48 (the copyright/0.md:48 finding), add:
+              - OECD AI Papers No. 8 (`INST-OECD-AIP8-2024` in the pre-restructure register): [source text withheld from the public copy].
+              - IEEE Std 7009-2024, IEEE Std 1788.1-2017, IEEE 1872-2015 and IEEE Std 7010-2020: the same WSU route and hold as 7001 and 1788; the files do not travel.
+              - RFC 6962 and RFC 9162, tracked as text at `L7/provenance/prior-art/ct-lane/`: IETF Trust copyright, subject to BCP 78 and the Trust's Legal Provisions; the quarantine log records both as redistributable.
+              - [source text withheld from the public copy]) (`PR-BODEN-2017`): CC-BY.
+              - `L7/provenance/sources/LEDGER_OF_DEFINITIONS.md`: every verbatim ISO/IEC 22989 extract in it stands under the ISO copyright notice it quotes.
+              - The prior-art lane's 16 text extractions and 4 HTML pages stand under the same Q-6 exposure as its ten PDFs.
+          - item 7
+            - **ref**: L7/governance/copyright/0.md:48
+            - **category**: wrong-fact
+            - **cls**: apply
+            - **touches**: live sheet
+            - **why**: SEVOCAB's licence statement, recorded verbatim in sources__standards__IEEE-7000-SERIES-ACQUISITION.md lines 324-326, keeps its definitions under IEEE copyright and allows copying only with the notice attached. Lane F records EUR-Lex reuse as subject to acknowledgement of source (LANE_F_VERBATIM_CAPTURE.md:633-635). So only the US Government works are free of copyright, and the fix makes the one place state the other two conditions correctly.
+            - **fix**: Replace line 48 of L7/governance/copyright/0.md with:
+              - Free of copyright: NIST, DoD, and NASA documents as US Government works (17 U.S.C. §105).
+              - Reusable on a stated condition: the EU AI Act via EUR-Lex (reuse permitted with acknowledgement of source; cite the Official Journal); SEVOCAB definitions, which are IEEE or ISO/IEC copyright and may be copied under SEVOCAB's stated permission as long as [source text withheld from the public copy]." (IEEE entries) or the source citation (ISO/IEC entries) stays with the definition.
+          - item 8
+            - **ref**: L7/peering/private/ingress/peer-1/object-1/0.md:13
+            - **category**: wrong-fact
+            - **cls**: apply
+            - **touches**: live sheet
+            - **why**: All 121 rows of LEDGER.md are pinned to 7540a9d6951c. The string 8277144 is the tail of the DOI in the citation of row S-097 (LEDGER.md:155), not a commit.
+            - **fix**: In line 13 delete " (one row at `8277144`)", so that the line reads: | Version | [source text withheld from the public copy]`; archive HEAD at this pass `53b28f6` |. The words "at this pass" on this line belong to a separate STALE finding (report heading "L7/peering/private/ingress/peer-1/0.md:8 (same phrase at ...)") and are not changed here.
+          - item 9
+            - **ref**: L7/peering/private/ingress/0.md:34
+            - **category**: wrong-fact
+            - **cls**: apply
+            - **touches**: live sheet
+            - **why**: The 55 documents are enumerated in sources__CORPUS_INTAKE.md and do not include the 33 IEEE files. Those files are a separate delivery to intake/audit-anon/, recorded in sources__INTAKE_AUDIT_ANON_2026-08-04.md.
+            - **fix**: Replace line 34 with: - `peer-4/` — the principal's intake corpus (55 documents; a separate delivery of 33 IEEE files under institutional watermark is recorded in `L7/provenance/sources/staging-records/sources__INTAKE_AUDIT_ANON_2026-08-04.md`): captured, not deposited.
+          - item 10
+            - **ref**: L7/peering/private/ingress/peer-4/0.md:8
+            - **category**: wrong-fact
+            - **cls**: apply
+            - **touches**: live sheet
+            - **why**: The 33 watermarked IEEE files are that separate delivery, and the import rule quoted here comes from that delivery's record (sources__INTAKE_AUDIT_ANON_2026-08-04.md lines 5-6). The ledger also counts 450 entries, not 450 definitions.
+            - **fix**: Replace line 8 with: The principal's intake corpus — 55 documents held outside [source text withheld from the public copy]/`) whose 450 entries were captured verbatim into `L7/provenance/sources/LEDGER_OF_DEFINITIONS.md` on 2026-08-04; no PDF from the intake deposited; three third-party-licensed files removed mid-session. A separate delivery of 33 IEEE files under institutional watermark (`/home/eric/ayb/intake/audit-anon/`) is recorded in `L7/provenance/sources/staging-records/[source text withheld from the public copy].**"
+          - item 11
+            - **ref**: L7/peering/private/ingress/peer-4/object-1/0.md:10
+            - **category**: wrong-fact
+            - **cls**: apply
+            - **touches**: live sheet
+            - **why**: The 55-document corpus is enumerated in sources__CORPUS_INTAKE.md ("[source text withheld from the public copy]", its line 3). The file this record names enumerates the 33-file IEEE delivery. Correcting the pointer leaves the bound object unchanged.
+            - **fix**: Replace line 10 with: | Object identity | the 55-document intake corpus enumerated in `L7/provenance/sources/staging-records/sources__CORPUS_INTAKE.md` and captured in `L7/provenance/sources/LEDGER_OF_DEFINITIONS.md` |
+          - item 12
+            - **ref**: L7/peering/private/ingress/peer-4/object-1/0.md:17
+            - **category**: wrong-fact
+            - **cls**: apply
+            - **touches**: live sheet
+            - **why**: The .gitignore caveat sits under the rule for the repository's own former intake/ directory (.gitignore lines 27-41). The master ledger (L8/L6/history/LEDGER.md:158) ties "not used as evidence" to the earlier Autonomous Theory corpus, not to the principal's external intake corpus, so the caveat is attached here in error. The fix points to the one place, as the record for private peer 1 already does.
+            - **fix**: Replace line 17 with: | Governance | institutional watermarks: hold-private — see `L7/governance/copyright/`, the one place |
+          - item 13
+            - **ref**: L7/peering/0.md:54
+            - **category**: wrong-fact
+            - **cls**: apply
+            - **touches**: live sheet
+            - **why**: L7/ first appears in this repository on 5 September 2026, and L7/private/ exists on no branch of it. The sentence is the scaffold's own (7lm main L7/peering/0.md:64), where it is true.
+            - **fix**: Replace line 54 with: - Reserved terms once kept under the scaffold's old L7/private/ desk in aybllc/7lm (found; caught; naught; regress) remain Reserved with topology unadjudicated; see L7/peering/private/0.md. Nothing in this branch gives them a home.
+          - item 14
+            - **ref**: L7/peering/public/ingress/peer-1/object-1/0.md:25
+            - **category**: wrong-fact
+            - **cls**: apply
+            - **touches**: live sheet
+            - **why**: Row A1 (AUTONOMOUS.md line 70) gives the body, the designation and clause, the verbatim text, the deliverable and the label, and has no pointer to L7 or to this position. Only this record names the row, and adding a pointer to the row would edit the definition.
+            - **fix**: Replace the first sentence of line 25 with: "`L8/L0/semantics/definitions/AUTONOMOUS.md` §1 row A1 is the receiving side of this binding; the row itself carries no pointer to this position."
+          - item 15
+            - **ref**: L7/peering/public/ingress/peer-2/object-1/0.md:25
+            - **category**: wrong-fact
+            - **cls**: apply
+            - **touches**: live sheet
+            - **why**: Row A2 (AUTONOMOUS.md line 71) has no pointer to L7 or to this position; only this record names the row.
+            - **fix**: Replace the first sentence of line 25 with: "`L8/L0/semantics/definitions/AUTONOMOUS.md` §1 row A2 is the receiving side of this binding; the row itself carries no pointer to this position."
+          - item 16
+            - **ref**: L7/peering/public/ingress/peer-2/object-2/0.md:25
+            - **category**: wrong-fact
+            - **cls**: apply
+            - **touches**: live sheet
+            - **why**: Row A3 (AUTONOMOUS.md line 72), §3 (from line 134) and §3a (from line 179) contain no pointer to L7 or to this position; only this record names them.
+            - **fix**: Replace the first sentence of line 25 with: "`L8/L0/semantics/definitions/AUTONOMOUS.md` §1 row A3 and §3 / §3a are the receiving side of this binding; they carry no pointer to this position."
+          - item 17
+            - **ref**: L7/peering/public/ingress/peer-3/object-1/0.md:25
+            - **category**: wrong-fact
+            - **cls**: apply
+            - **touches**: live sheet
+            - **why**: Row A4 (AUTONOMOUS.md line 73) has no pointer to L7 or to this position; only this record names the row.
+            - **fix**: Replace the first sentence of line 25 with: "`L8/L0/semantics/definitions/AUTONOMOUS.md` §1 row A4 is the receiving side of this binding; the row itself carries no pointer to this position."
+          - item 18
+            - **ref**: L7/peering/public/ingress/peer-4/object-1/0.md:25
+            - **category**: wrong-fact
+            - **cls**: apply
+            - **touches**: live sheet
+            - **why**: Row A5 (AUTONOMOUS.md line 74) has no pointer to L7 or to this position; only this record names the row.
+            - **fix**: Replace the first sentence of line 25 with: "`L8/L0/semantics/definitions/AUTONOMOUS.md` §1 row A5 is the receiving side of this binding; the row itself carries no pointer to this position."
+          - item 19
+            - **ref**: L7/peering/public/ingress/peer-4/object-2/0.md:25
+            - **category**: wrong-fact
+            - **cls**: apply
+            - **touches**: live sheet
+            - **why**: Row A11 (AUTONOMOUS.md line 80) has no pointer to L7 or to this position; only this record names the row.
+            - **fix**: Replace the first sentence of line 25 with: "`L8/L0/semantics/definitions/AUTONOMOUS.md` §1 row A11 is the receiving side of this binding; the row itself carries no pointer to this position."
+          - item 20
+            - **ref**: L7/peering/public/ingress/peer-4/object-1/0.md:21
+            - **category**: wrong-fact
+            - **cls**: apply
+            - **touches**: live sheet
+            - **why**: For row A5 this record fixes no clause, because the clause number is unknown (AUTONOMOUS.md:236). The row's [source text withheld from the public copy] (AUTONOMOUS.md:235-236), so the quotation has never been checked against the standard itself.
+            - **fix**: Corrected from the report. Replace the first sentence of line 21 with: "It fixes which referent row A5 of `L8/L0/semantics/definitions/AUTONOMOUS.md` means: the issuer, the entry (*fully autonomous robot*; its clause number is unknown), the deliverable type, and the version, so that the quotation carried in that row, whose [source text withheld from the public copy], can be checked against the standard's own text; that check has not been made." The report ended the sentence with "once its body is obtained". That would take a side between the definition, which says "its body is unread" (AUTONOMOUS.md:235), and the parked register, which records the body as held in aybllc/l6 since 14 August 2026 with the re-read of A5 still to do (staging-records/sources__LEDGER.md:234-240). "That check has not been made" is true under both.
+          - item 21
+            - **ref**: L7/peering/public/ingress/peer-5/object-1/0.md:25
+            - **category**: wrong-fact
+            - **cls**: apply
+            - **touches**: live sheet
+            - **why**: Row A6 (AUTONOMOUS.md line 75) has no pointer to this binding, to this position or to anything under L7; only this record names the row.
+            - **fix**: Replace the first sentence of line 25 with: "`L8/L0/semantics/definitions/AUTONOMOUS.md` §1 row A6 is the receiving side of this binding; the row itself carries no pointer to this position." This uses the report's wording for rows A1 to A5 and A11, so that all eleven binding records read alike. The report's own wording for this row ("is the row this binding names; the row itself does not cite this position.") is equally true.
+          - item 22
+            - **ref**: L7/peering/public/ingress/peer-6/object-1/0.md:25
+            - **category**: wrong-fact
+            - **cls**: apply
+            - **touches**: live sheet
+            - **why**: Row A7 (AUTONOMOUS.md line 76) has no pointer to this binding or to this position; only this record names the row.
+            - **fix**: Replace the first sentence of line 25 with: "`L8/L0/semantics/definitions/AUTONOMOUS.md` §1 row A7 is the receiving side of this binding; the row itself carries no pointer to this position." This is the same wording as for rows A1 to A5 and A11; the report's wording for this row is equally true.
+          - item 23
+            - **ref**: L7/peering/public/ingress/peer-7/object-1/0.md:25
+            - **category**: wrong-fact
+            - **cls**: apply
+            - **touches**: live sheet
+            - **why**: Row A8 (AUTONOMOUS.md line 77) has no pointer to this binding or to this position; only this record names the row.
+            - **fix**: Replace the first sentence of line 25 with: "`L8/L0/semantics/definitions/AUTONOMOUS.md` §1 row A8 is the receiving side of this binding; the row itself carries no pointer to this position." This is the same wording as for rows A1 to A5 and A11; the report's wording for this row is equally true.
+          - item 24
+            - **ref**: L7/peering/public/ingress/peer-8/object-1/0.md:25
+            - **category**: wrong-fact
+            - **cls**: apply
+            - **touches**: live sheet
+            - **why**: Row A9 (AUTONOMOUS.md line 78) has no pointer to this binding or to this position; only this record names the row.
+            - **fix**: Replace the first sentence of line 25 with: "`L8/L0/semantics/definitions/AUTONOMOUS.md` §1 row A9 is the receiving side of this binding; the row itself carries no pointer to this position." This is the same wording as for rows A1 to A5 and A11; the report's wording for this row is equally true.
+          - item 25
+            - **ref**: L7/peering/public/ingress/peer-9/object-1/0.md:25
+            - **category**: wrong-fact
+            - **cls**: apply
+            - **touches**: live sheet
+            - **why**: Row A10 (AUTONOMOUS.md line 79) has no pointer to this binding or to this position; only this record names the row.
+            - **fix**: Replace the first sentence of line 25 with: "`L8/L0/semantics/definitions/AUTONOMOUS.md` §1 row A10 is the receiving side of this binding; the row itself carries no pointer to this position." This is the same wording as for rows A1 to A5 and A11; the report's wording for this row is equally true.
+          - item 26
+            - **ref**: L7/provenance/prior-art/prior-art-lane/0.md:17
+            - **category**: wrong-fact
+            - **cls**: apply
+            - **touches**: live sheet
+            - **why**: The title page of higham.txt reads "[source text withheld from the public copy]", by Higham and Mary, MIMS EPrint 2021.20. Higham's book is only cited in its references (higham.txt:3009). The fix edits the lane's sheet, not the lane's files.
+            - **fix**: Replace line 17 with: - `higham.pdf`, `higham.txt`, `higham_flat.txt` — Higham and Mary, *[source text withheld from the public copy] EPrint 2021.20, 2021.
+          - item 27
+            - **ref**: L7/provenance/0.md:38
+            - **category**: wrong-fact
+            - **cls**: apply
+            - **touches**: live sheet
+            - **why**: authority/ holds JOURNALS.md, with one entry, Reliable Computing; only lineage/ is empty.
+            - **fix**: Replace line 38 with:
+              - `lineage/` — empty; the 2026-08-04/05 transfer `abba-01/autonomous` → `aybllc/autonomous` (SHAs unchanged; cite `aybllc/autonomous`) is recorded at the head of `L8/L6/history/LEDGER.md` and cited from `lineage/0.md`.
+              - `authority/` — `JOURNALS.md`, the enumerated peer-reviewed journals of evidence rule 1 (one entry, *Reliable Computing*).
+          - item 28
+            - **ref**: L7/provenance/sources/0.md:54
+            - **category**: wrong-fact
+            - **cls**: apply
+            - **touches**: live sheet
+            - **why**: LEDGER.md has 121 rows. The same sentence stands in the scaffold's sources sheet (7lm main L7/provenance/sources/0.md:51), where the ledger has a header and no rows; here only datasets-LEDGER.md is empty.
+            - **fix**: Replace the last sentence of line 54, "The ledger has no rows; that is admissible.", with: "`LEDGER.md` has 121 rows (S-001…S-121); `datasets-LEDGER.md` has none, and that is admissible."
+          - item 29
+            - **ref**: L7/provenance/sources/0.md:41
+            - **category**: wrong-fact
+            - **cls**: apply
+            - **touches**: live sheet
+            - **why**: LEDGER.md has 121 source rows, S-001 to S-121. 122 is the number of its lines that contain the commit id, the closing note included.
+            - **fix**: Replace line 41 with: - `LEDGER.md` — the pointer register into `aybllc/l6` by path and pinned commit (`7540a9d6951c`), 121 rows (S-001…S-121); "This directory holds no source files."
+          - item 30
+            - **ref**: L7/provenance/prior-art/0.md:34
+            - **category**: wrong-fact
+            - **cls**: apply
+            - **touches**: live sheet
+            - **why**: The lane holds one Rump paper (1999), the Rump index and no Wang document. Rump 2010 is pointer row S-119 of LEDGER.md, not a file in the lane.
+            - **fix**: In line 34 replace the parenthesis "(JCGM GUM; Higham; Rump 1999/2010 and the Rump index; Wang 2012; NIST TN 1297; CMS; dd; hll; lossy; P2195 Masson; the IEEE arbitrary-precision page)" with "(JCGM GUM; Higham; Rump 1999 and the Rump index; NIST TN 1297; CMS; dd; hll; lossy; P2195 Masson; the IEEE arbitrary-precision page)".
+          - item 31
+            - **ref**: L7/provenance/0.md:37
+            - **category**: wrong-fact
+            - **cls**: apply
+            - **touches**: live sheet
+            - **why**: None of the lane's 30 files is a Wang document.
+            - **fix**: In line 37 replace "`prior-art-lane/` (30 files: GUM, Higham, Rump, Wang, NIST TN 1297, CMS, dd, hll, lossy, and two error pages under scholarly filenames)" with "`prior-art-lane/` (30 files: GUM, Higham, Rump, NIST TN 1297, CMS, dd, hll, lossy, and two error pages under scholarly filenames)".
+          - item 32
+            - **ref**: L7/provenance/sources/0.md:18
+            - **category**: wrong-fact
+            - **cls**: apply
+            - **touches**: live sheet
+            - **why**: As filled, Access reads HELD in all 121 rows and Label holds a document class, so neither column records what was checked. LEDGER.md's own column rules define different values for both, and the fix describes that mismatch without repairing the ledger.
+            - **fix**: Replace the last sentence of line 18 with: Here, `LEDGER.md` is that register: its `l6 path` and `l6 commit` columns are the pointer; its Access column reads `HELD` in all 121 rows and its Label column carries a document-type class (for example `peer-reviewed-journal`, `official-standard`), not the access classes and evidence labels its own column rules define.
+          - item 33
+            - **ref**: L7/provenance/sources/0.md:42
+            - **category**: wrong-fact
+            - **cls**: apply
+            - **touches**: live sheet
+            - **why**: The register counts 450 entries, and the entries labelled as requirements, provisions or scope statements may not be cited as definitions, so they are not all definitions.
+            - **fix**: Replace line 42 with: - `LEDGER_OF_DEFINITIONS.md` — 450 verbatim entries from 55 intake documents, with [SOURCE:] adoption chains, TIER labels, and "[source text withheld from the public copy]" flags; "[source text withheld from the public copy]." This one edit also covers the second half of the L7/0.md:232 finding.
+          - item 34
+            - **ref**: L7/provenance/sources/0.md:44
+            - **category**: wrong-fact
+            - **cls**: apply
+            - **touches**: live sheet
+            - **why**: The staging README's rule (its line 44) reads "[source text withheld from the public copy].". "Do not cite anything here" is the wording of the retired root README of 14 August 2026 (its line 19).
+            - **fix**: In line 44 replace "Its README said "Do not cite anything here" pending reconciliation into the l6 register" with "Its README said "[source text withheld from the public copy]." pending reconciliation into the l6 register".
+          - item 35
+            - **ref**: L7/provenance/sources/staging-records/0.md:8
+            - **category**: wrong-fact
+            - **cls**: apply
+            - **touches**: live sheet
+            - **why**: __STAGING_README.md line 44 reads "[source text withheld from the public copy]." The fix edits the folder's sheet, not the staging files, which its own line 8 says "are not edited".
+            - **fix**: In line 8 replace "Its own `__STAGING_README.md` said "Do not cite anything here" pending reconciliation into the l6 register" with "Its own `__STAGING_README.md` said "[source text withheld from the public copy]." pending reconciliation into the l6 register".
+          - item 36
+            - **ref**: L8/0.md:137
+            - **category**: wrong-fact
+            - **cls**: apply
+            - **touches**: live sheet
+            - **why**: review/ holds twelve reviews, audits and the external check, plus seven files relocated from manuscripts/main/: the adjudications, assessments and checks, with the empty rulings register among them. That is nineteen in all, not twelve.
+            - **fix**: In line 137 replace "`L8/L5/research/` (six lanes, seven findings, twelve review and adjudication files)" with "`L8/L5/research/` (six lanes, seven findings, nineteen review, audit and adjudication files)".
+          - item 37
+            - **ref**: L8/L0/semantics/definitions/0.md:35
+            - **category**: wrong-fact
+            - **cls**: apply
+            - **touches**: live sheet
+            - **why**: REGISTER.md blocks six compounds and itself calls them "the six compounds" (REGISTER.md:22). The fix edits the sheet, not the register.
+            - **fix**: In line 35 replace "auditability CONTESTED; heteronomy single-source; the five compounds" with "auditability CONTESTED; heteronomy single-source; the six compounds".
+          - item 38
+            - **ref**: L8/L0/semantics/0.md:38
+            - **category**: wrong-fact
+            - **cls**: apply
+            - **touches**: live sheet
+            - **why**: The list leaves out the sixth compound that REGISTER.md blocks, perpetual mission (REGISTER.md:25).
+            - **fix**: In line 38 replace the parenthesis with: (autonomous networks; manufacturing; replication; preservation; perpetual mission; [source text withheld from the public copy]")
+          - item 39
+            - **ref**: L8/L0/semantics/definitions/0.md:32
+            - **category**: wrong-fact
+            - **cls**: apply
+            - **touches**: live sheet
+            - **why**: REVIEW_4 records two CRITICAL defects: F1 in §1, on row A3's label (its line 99), and F2 in §6, on rule 3 (its line 243). The record's §5 also says "in §6", but the record is dated and stays as written.
+            - **fix**: In line 32 replace "`L8/L5/research/review/REVIEW_4_AUTONOMOUS_ADJUDICATION.md` (2026-08-08) records CRITICAL defects in §6" with "`L8/L5/research/review/REVIEW_4_AUTONOMOUS_ADJUDICATION.md` (2026-08-08) records two CRITICAL defects, one in §1 (the A3 label) and one in §6 (rule 3)".
+          - item 40
+            - **ref**: L8/L0/epistemic/0.md:33
+            - **category**: wrong-fact
+            - **cls**: apply
+            - **touches**: live sheet
+            - **why**: EVIDENCE_RULES.md lists ten labels in use (lines 24-26). The sheet names seven, leaving out ABSTRACT ONLY, FAILED CHECK and COMPOSITE OBJECT UNVERIFIED. The fix edits the sheet, not the owner's rules text.
+            - **fix**: In line 33 replace the parenthesis with: ([source text withheld from the public copy] copyright labels are defined at `L7/governance/copyright/`)
+          - item 41
+            - **ref**: L8/L3/engineering-mathematics/uncertainty/0.md:33
+            - **category**: wrong-fact
+            - **cls**: apply
+            - **touches**: live sheet
+            - **why**: DEPENDENCE_AND_THE_GATE.md never names Kearfott or Neumaier. It quotes Wang 2012, Rump 1999 and 2010, IEEE Std 1788-2015 and 1788.1-2017, NIST TN 1297 and Ku 1966.
+            - **fix**: In line 33 replace "Peer quotations (Rump, Kearfott, Neumaier, Wang) are ingress; the local content is the engineering reasoning." with "Peer quotations (Wang 2012; Rump 1999 and 2010; IEEE Std 1788-2015 and 1788.1-2017; NIST TN 1297; Ku 1966) are ingress; the local content is the engineering reasoning." The report's smaller alternative, which only deletes "Kearfott, Neumaier, ", is not chosen, because it leaves four of the quoted sources unnamed.
+          - item 42
+            - **ref**: L8/L1/state-space/0.md:48
+            - **category**: wrong-fact
+            - **cls**: apply
+            - **touches**: live sheet
+            - **why**: This repository's L8/L1/0.md never mentions the three terms, so the pointer leads nowhere. Their disposition is the specification's row at line 989 on 7lm main. In the scaffold the same pointer holds, because its L1 sheet has a section on inherited terms that the exemplar's lacks.
+            - **fix**: In line 48 replace "Given no home here; see `L8/L1/0.md`." with "Given no home here; the disposition is the specification's, in its table of inherited terms and their dispositions."
+          - item 43
+            - **ref**: L8/L1/0.md:54
+            - **category**: wrong-fact (stale)
+            - **cls**: apply
+            - **touches**: live sheet
+            - **why**: The specification on 7lm main prints the four headings at H3 (lines 389, 400, 410 and 420), the same depth this sheet uses, so nothing is reduced.
+            - **fix**: Replace line 54 with: "(The four headings below stand at H3 in the specification, as here. Words are unchanged.)" The identical stale line is at L8/L1/0.md:54 on aybllc/7lm main, on PR #19's branch and in its local reconcile at /home/user/7lm-pr19, and on aybllc/auditonomous main. Under the owner's rule of 20 September ("We update 7lm and focus on it only"), make the same replacement in the scaffold first, then here and in Auditonomous, so that the three read alike.
+          - item 44
+            - **ref**: L8/L4/0.md:122
+            - **category**: wrong-fact
+            - **cls**: apply
+            - **touches**: live sheet
+            - **why**: L8/L4/work/computation/ holds deep-research-report.md (38,738 bytes), which the computation sheet itself lists at its line 38; only experiments/ is empty.
+            - **fix**: Replace line 122 with:
+              - `work/computation/deep-research-report.md` — a deep-research run about this object (2026-08-05): model output as run, never evidence.
+              - `work/experiments/` — empty.
+          - item 45
+            - **ref**: L8/L4/work/0.md:40
+            - **category**: wrong-fact
+            - **cls**: apply
+            - **touches**: live sheet
+            - **why**: L8/L4/work/computation/ holds deep-research-report.md (38,738 bytes); only experiments/ is empty.
+            - **fix**: Corrected from the report. Replace line 40 with:
+              - `work/computation/deep-research-report.md` — a deep-research run about this object (2026-08-05): model output as run, never evidence.
+              - `work/experiments/` — empty.
+              The report wrote `computation/…` and `experiments/`, but line 39 of the same sheet writes `work/writing/…`. The corrected form keeps one path form in the list and matches the L8/L4/0.md:122 fix.
+          - item 46
+            - **ref**: L8/L5/research/review/0.md:41 (governing sentence) and 45 (the item)
+            - **category**: wrong-fact
+            - **cls**: owner-chooses
+            - **touches**: live sheet
+            - **why**: EVIDENCE_RULES.md was created on 7 September 2026 (commit 87ce2cf), not placed here from the queue dissolved on 6 September. The record leaves its home open: "The home of the evidence rules is the owner's to confirm or change." (aybllc/autonomous main, L8/L6/history/harmonization-2026-09-05.md:159).
+            - **fix**: Options: (a) the report's move, whose new paragraph adds "[source text withheld from the public copy]` (record §11), not from the dissolved queue"; (b) the same move with no date and no history. Pick (b), because the record pulls "the narrative of what was retired or moved on which day" out of the sheets (same file, line 167). In L8/L5/research/review/0.md, delete line 45 from the list under line 41. After the `memories.odt`, `memories2.odt` bullet, and before "The review rules are preserved at ...", add the paragraph: "`EVIDENCE_RULES.md` — the nine evidence rules and the evidence-label vocabulary this repository runs under, the owner's text; research governance at L5, filed here [source text withheld from the public copy] this position [source text withheld from the public copy]." The last clause repeats EVIDENCE_RULES.md's own line 3, so the move takes no side on the open question of its home.
+          - item 47
+            - **ref**: L8/L6/history/0.md:35
+            - **category**: wrong-fact
+            - **cls**: apply
+            - **touches**: live sheet
+            - **why**: The findings tables in L8/L6/history/LEDGER.md run to F23 (its line 202). The fix edits the history folder's sheet, not the ledger.
+            - **fix**: In L8/L6/history/0.md line 35 replace "findings F1–F22 with REFUTED strikes retained" with "findings F1–F23 with REFUTED strikes retained".
+        - **notes**: 47 findings: 42 apply, 5 owner-chooses (README.md:5; copyright/0.md:39; copyright/0.md:18; the governance claim at :32; review/0.md:41 and 45), 0 leave. I opened every line in the export of main at 9fa3744, which is byte-identical to origin/main (264 files). All 47 texts still stand at the lines the report names, because main differs from the audited commit 8257118 only in the record file, so none is moot. Every fix edits a live sheet or the README. None edits a dated record, a retired set, a binder file, the definition or its companions, a ledger row or a source text.
+
+          The rule that every apply needs lifted, once. The owner wrote on 20 September 2026: "All repos should mirror the 7lm. Manually. We update 7lm and focus on it only. No outside updates until we are sure I'm close." (aybllc/7lm origin/main, L8/L6/history/harmonization-2026-09-04.md:336). These are outside updates, so the owner's yes to this list is itself the lift, for one pass made by hand. The case for lifting it here: each apply turns a false statement in the sheets, which this repository's README calls its documentation, into a true one; none changes a path, a sheet's first line or a rule; and the list comes as the proposals that "Don't change the system unless you ask or are unsure" (same file, line 482) asks for. The pass would be made by hand in aybllc/autonomous, with a new section in L8/L6/history/harmonization-2026-09-05.md.
+
+          Decision 2 (whether the order of 14 September 2026 makes Autonomous a read-only exemplar) changes no class here. The declaration on the closed branch limits three things: the L0 object and its companions, deletion under L7/ and L8/, and the egress exposure. In its words: "(1) the L0 object `L8/L0/semantics/definitions/AUTONOMOUS.md` and its companions change only by a dated version merged by the owner" (aybllc/autonomous origin/claude/scholarly-pair-baseline-k8ap82, L7/governance/restrictions/0.md:34). No fix here edits AUTONOMOUS.md, AUTOMATION.md, DEFINITION_LIST_AUTONOMOUS.md or REGISTER.md, deletes a file, or touches the egress record. If the owner revives the declaration, the pass lands as one pull request that the owner merges, which is the plan in any case.
+
+          Edits that fall in the same place:
+          - L7/0.md:232 and L7/provenance/sources/0.md:42 need one replacement each; the report gives the sources line twice.
+          - The copyright sheet takes up to four edits, at lines 18, 39 and 48 and the six added conditions. Make them together, with the conditions placed after the bullets that replace line 48.
+          - The edit at L7/peering/private/ingress/peer-1/object-1/0.md:13 is also the fix of the CONTRADICTION finding "L7/provenance/sources/0.md:10 and 18 (against L7/peering/private/ingress/peer-1/object-1/0.md:13, a sheet outside this batch)". The words "at this pass" on that line are a STALE finding in another batch.
+          - The edits to binding records change no field that names the bound object or its version, so no new binding record is due.
+
+          Keeping the three repositories in step:
+          - The stale note at L8/L1/0.md:54 is also on aybllc/7lm main, on PR #19's branch and in its local reconcile, and on aybllc/auditonomous main. By the rule above, the scaffold takes it first.
+          - Three sentences that this repository copied from the scaffold are true there and false here: L7/peering/0.md:54, L7/provenance/sources/0.md:54 and L8/L1/state-space/0.md:48. Each gets wording for this repository only.
+
+          Three fixes in the report are corrected against the export:
+          - L8/L4/work/0.md:40: the path form now matches line 39 of the same sheet.
+          - L7/peering/public/ingress/peer-4/object-1/0.md:21: "once its body is obtained" would take a side between the definition and the parked register.
+          - The five records for rows A6 to A10 take the same wording as the six for rows A1 to A5 and A11, so all eleven read alike.
+
+          The unmerged branch beta/7lm-exemplar-autonomous (e64b382) words many of these sheets in its own way and keeps "names this binding". Whichever of it and this pass lands second has to reconcile the two.
+      - **check**
+        - **checks**
+          - item 1
+            - **ref**: L7/allications/publications/binder/0.md:8
+            - **cls_ok**: yes
+            - **final_cls**: apply
+            - **note**: Confirmed in the export of main at 9fa3744. The binder's README.md has seven rules. Its rule 5 reads "[source text withheld from the public copy]" (README.md:22-23), and no rule says a coinage is introduced as a coinage. The edit is to the binder's sheet, not to the binder files that line 8 says are not rewritten. A STALE finding in another batch changes other words in the same line ("as it stood at HEAD before this pass"), so make both changes as one edit.
+          - item 2
+            - **ref**: L7/0.md:232
+            - **cls_ok**: yes
+            - **final_cls**: apply
+            - **note**: Confirmed. The ledger counts itself as "[source text withheld from the public copy]." (L7/provenance/sources/LEDGER_OF_DEFINITIONS.md:6). Its lines 8-12 say labelled passages may not be cited as definitions, so the ledger's own word, entries, is the safe one. The UNLISTED finding in another batch adds JOURNALS.md to this same bullet at a different place in the line.
+          - item 3
+            - **ref**: README.md:5
+            - **cls_ok**: yes
+            - **final_cls**: owner-chooses
+            - **note**: Counted in the export: 122 directories under L7/ and L8/, of which 19 have no 0.md. Thirteen are below the roots of the two retired sets (8 under layout-2026-08-14 and 5 under layout-2026-09-06). The other six are the live folders the record lists at L8/L6/history/harmonization-2026-09-05.md:211. The right wording depends on decision 14, which is still open, so owner-chooses with pick (a) is right. One correction to the result's remark on the scaffold: 7lm main's README line 5 says every directory has its own 0.md, not only those under L7/ and L8/. There it is also false for .github/ and .github/workflows/, so adding the retired-set clause alone would not make it true.
+          - item 4
+            - **ref**: L7/governance/copyright/0.md:39
+            - **cls_ok**: yes
+            - **final_cls**: owner-chooses
+            - **note**: Confirmed. In L7/provenance/sources/LEDGER.md the Access column reads HELD in all 121 rows and the Label column holds a document class. COPYRIGHT-BLOCK appears once in the staging register, in the Label of INST-OECD-AIP8-2024 (staging-records/sources__LEDGER.md:50). PAYWALLED — NOT OBTAINED appears in neither register. This paragraph tells the reader where to look for copyright, which is the heart of the owner's one-place rule, so the choice belongs to the owner. Pick (a) holds. The owner should know that (a) says in plain words that a source's standing is written in six places, so the one-place rule is not yet met in the registers.
+          - item 5
+            - **ref**: L7/governance/copyright/0.md:18
+            - **cls_ok**: yes
+            - **final_cls**: owner-chooses
+            - **note**: Confirmed. Three files carry copyright rules without naming this directory: rule 4 of the binder's README.md (lines 17-20); standing rule 6, the clause 5.13 note and the ISO notice in LEDGER_OF_DEFINITIONS.md (lines 35-36, 193 and 641); and the hold notes on rows S-095 to S-097 of LEDGER.md. The replacement sentence ends with a ruling ("Those are not the rule."), so the owner chooses. Pick (a) holds. If (a) is taken, its list of files that name this directory leaves out six sheets that also name it: L7/governance/0.md, L7/governance/controlled/0.md, L7/governance/licensing/0.md, L7/provenance/0.md, L7/allications/publications/0.md and L8/L6/0.md. Add them, or say the list is not complete.
+          - item 6
+            - **ref**: L7/governance/0.md (same claim in L7/governance/controlled/0.md and L7/governance/licensing/0.md):32 (and controlled/0.md:32, licensing/0.md:32)
+            - **cls_ok**: yes
+            - **final_cls**: owner-chooses
+            - **note**: Each of the six conditions checks out in the export: the OECD block (staging-records/sources__LEDGER.md:50); the WSU route for IEEE 1788.1, 7009, 1872 and 7010 (same file, lines 26, 55 and 234-245); the IETF terms and 'redistributable' for both RFCs (sources__QUARANTINE_AND_REMEDIATION.md:187-194); CC-BY for Boden (sources__LEDGER.md:100); the ISO notice (LEDGER_OF_DEFINITIONS.md:641); and the lane's 10 PDFs, 16 text files and 4 HTML pages. The report gives two different fixes, so owner-chooses is right, and (a) is the better pick. But (a) alone does not make the four sentences true. The licence conditions recorded for the 55-document intake corpus are not in the one place either: staging-records/sources__CORPUS_INTAKE.md lines 265-417, sections A.1 to A.5 (documents licensed to named third parties) and B.1 to B.7 (restrictive licences). Add a seventh bullet that names that section.
+          - item 7
+            - **ref**: L7/governance/copyright/0.md:48
+            - **cls_ok**: yes
+            - **final_cls**: apply
+            - **note**: Confirmed. SEVOCAB's own statement reads "[source text withheld from the public copy]" (staging-records/sources__standards__IEEE-7000-SERIES-ACQUISITION.md:324). Lane F records EUR-Lex reuse as "subject to acknowledgement of source" (L8/L5/research/lanes/LANE_F_VERBATIM_CAPTURE.md:634-635). The ISO/IEC condition, that the source is cited, is recorded at LANE_B_AUDITABILITY.md:11-13. The sheet already reads SEVOCAB as copyable under its permission, and the fix keeps that reading. It does not adopt the COPYRIGHT-BLOCK that LANE_F_VERBATIM_CAPTURE.md:43 gives SEVOCAB transcriptions, so it takes no new side. It only stops calling SEVOCAB and EUR-Lex free of copyright.
+          - item 8
+            - **ref**: L7/peering/private/ingress/peer-1/object-1/0.md:13
+            - **cls_ok**: no
+            - **final_cls**: owner-chooses
+            - **note**: The text is still there and the finding is right: all 121 rows are pinned to 7540a9d6951c, and 8277144 is the end of the DOI in row S-097 (LEDGER.md:155). But Version is one of the five fields of the binding's tag. This repository calls that tag immutable and lists its fields as "object identity, owner, source layer, version, and ingress binding" (aybllc/autonomous main, L7/peering/private/ingress/0.md:18). So the result is wrong to say that no binding-record edit touches a field naming the bound object or its version. Options: (a) correct the field in place as an error and note it in the record; (b) leave the field and state the correction in the sheet's text below the table; (c) replace the record with a new one and keep the old one at L8/L6/retired/. Pick (a): the version actually pinned, 7540a9d6951c for every row, does not change. The STALE edit of 'at this pass' in the same field gets the same answer.
+          - item 9
+            - **ref**: L7/peering/private/ingress/0.md:34
+            - **cls_ok**: yes
+            - **final_cls**: apply
+            - **note**: Confirmed. The 55-document corpus is the register at staging-records/sources__CORPUS_INTAKE.md, which counts 55 documents and 3 exact duplicates (lines 3-4) and lists no file from intake/audit-anon/. The 33 IEEE files are a separate delivery, recorded in sources__INTAKE_AUDIT_ANON_2026-08-04.md (line 1). The edit is to the Holdings text of the parent sheet, not to a binding's tag.
+          - item 10
+            - **ref**: L7/peering/private/ingress/peer-4/0.md:8
+            - **cls_ok**: yes
+            - **final_cls**: apply
+            - **note**: Confirmed. The quoted import rule belongs to that separate delivery: "[source text withheld from the public copy]' is standing rule 6 of LEDGER_OF_DEFINITIONS.md (line 35). This is the peer's sheet, not the object's tag.
+          - item 11
+            - **ref**: L7/peering/private/ingress/peer-4/object-1/0.md:10
+            - **cls_ok**: no
+            - **final_cls**: owner-chooses
+            - **note**: The finding is right: the 55 documents are listed in staging-records/sources__CORPUS_INTAKE.md, and sources__INTAKE_AUDIT_ANON_2026-08-04.md lists the separate 33-file delivery. But Object identity is the first field of the tag that L7/peering/private/ingress/0.md:18 calls immutable. Like the edit at private peer-1/object-1:13, this one needs the owner's word. Same options and same pick: correct the pointer in place as an error and note it in the record. The bound object, the 55-document intake corpus, does not change.
+          - item 12
+            - **ref**: L7/peering/private/ingress/peer-4/object-1/0.md:17
+            - **cls_ok**: yes
+            - **final_cls**: apply
+            - **note**: Confirmed. The caveat sits under the .gitignore rule for this repository's own former intake/ directory (.gitignore:27-41). The master ledger ties that directory to the Autonomous Theory corpus (L8/L6/history/LEDGER.md:158), not to the principal's external corpus. Governance is not one of the five tag fields, so apply stands. The new text points to the one place for copyright, which does not yet state this corpus's licence conditions (see the governance claim at :32).
+          - item 13
+            - **ref**: L7/peering/0.md:54
+            - **cls_ok**: yes
+            - **final_cls**: apply
+            - **note**: Confirmed. L7/ first appears in this repository on 2026-09-05, and no branch holds L7/private/. The sentence was copied from the scaffold (aybllc/7lm main, L7/peering/0.md:64), where it is true, so this new wording is for this repository only.
+          - item 14
+            - **ref**: L7/peering/public/ingress/peer-1/object-1/0.md:25
+            - **cls_ok**: yes
+            - **final_cls**: apply
+            - **note**: Confirmed: row A1 (L8/L0/semantics/definitions/AUTONOMOUS.md:70) has no pointer to L7 or to this position. The edit is to the sheet's 'Receiving side' text, outside the binding's tag, and the line's second sentence stays as it is.
+          - item 15
+            - **ref**: L7/peering/public/ingress/peer-2/object-1/0.md:25
+            - **cls_ok**: yes
+            - **final_cls**: apply
+            - **note**: Confirmed: row A2 (AUTONOMOUS.md:71) has no pointer to L7 or to this position. The edit is outside the tag.
+          - item 16
+            - **ref**: L7/peering/public/ingress/peer-2/object-2/0.md:25
+            - **cls_ok**: yes
+            - **final_cls**: apply
+            - **note**: Confirmed: row A3 (AUTONOMOUS.md:72), §3 (from line 134) and §3a (from line 179) have no pointer to L7 or to this position. The edit is outside the tag.
+          - item 17
+            - **ref**: L7/peering/public/ingress/peer-3/object-1/0.md:25
+            - **cls_ok**: yes
+            - **final_cls**: apply
+            - **note**: Confirmed: row A4 (AUTONOMOUS.md:73) has no pointer to L7 or to this position. The edit is outside the tag.
+          - item 18
+            - **ref**: L7/peering/public/ingress/peer-4/object-1/0.md:25
+            - **cls_ok**: yes
+            - **final_cls**: apply
+            - **note**: Confirmed: row A5 (AUTONOMOUS.md:74) has no pointer to L7 or to this position. The edit is outside the tag.
+          - item 19
+            - **ref**: L7/peering/public/ingress/peer-4/object-2/0.md:25
+            - **cls_ok**: yes
+            - **final_cls**: apply
+            - **note**: Confirmed: row A11 (AUTONOMOUS.md:80) has no pointer to L7 or to this position. The edit is outside the tag.
+          - item 20
+            - **ref**: L7/peering/public/ingress/peer-4/object-1/0.md:21
+            - **cls_ok**: yes
+            - **final_cls**: apply
+            - **note**: The result's correction holds. AUTONOMOUS.md:235 says the standard's body is unread. staging-records/sources__LEDGER.md:234-240 records the body as held in aybllc/l6 since 2026-08-14, with the re-read of A5 still to do. 'That check has not been made' is true on both records, while 'once its body is obtained' would side with the definition. The edit is outside the tag.
+          - item 21
+            - **ref**: L7/peering/public/ingress/peer-5/object-1/0.md:25
+            - **cls_ok**: yes
+            - **final_cls**: apply
+            - **note**: Confirmed: row A6 (AUTONOMOUS.md:75) has no pointer to this binding or to anything under L7. The result's single wording for all eleven records is as true as the report's own wording for this row.
+          - item 22
+            - **ref**: L7/peering/public/ingress/peer-6/object-1/0.md:25
+            - **cls_ok**: yes
+            - **final_cls**: apply
+            - **note**: Confirmed: row A7 (AUTONOMOUS.md:76) has no pointer to this binding or to this position. Same wording as the other ten records.
+          - item 23
+            - **ref**: L7/peering/public/ingress/peer-7/object-1/0.md:25
+            - **cls_ok**: yes
+            - **final_cls**: apply
+            - **note**: Confirmed: row A8 (AUTONOMOUS.md:77) has no pointer to this binding or to this position. Same wording as the other ten records.
+          - item 24
+            - **ref**: L7/peering/public/ingress/peer-8/object-1/0.md:25
+            - **cls_ok**: yes
+            - **final_cls**: apply
+            - **note**: Confirmed: row A9 (AUTONOMOUS.md:78) has no pointer to this binding or to this position. The only appearance of 'binding' in the row is the deliverable cell's 'Non-binding roadmap'.
+          - item 25
+            - **ref**: L7/peering/public/ingress/peer-9/object-1/0.md:25
+            - **cls_ok**: yes
+            - **final_cls**: apply
+            - **note**: Confirmed: row A10 (AUTONOMOUS.md:79) has no pointer to this binding or to this position. Same wording as the other ten records.
+          - item 26
+            - **ref**: L7/provenance/prior-art/prior-art-lane/0.md:17
+            - **cls_ok**: yes
+            - **final_cls**: apply
+            - **note**: Confirmed. higham.txt lines 1-11 give the title, Higham and Mary, 2021, and MIMS EPrint 2021.20. The book is only cited, at higham.txt:3009. The lane's files themselves are not touched.
+          - item 27
+            - **ref**: L7/provenance/0.md:38
+            - **cls_ok**: yes
+            - **final_cls**: apply
+            - **note**: Confirmed: lineage/ holds only its sheet, and authority/ holds JOURNALS.md with one entry, Reliable Computing.
+          - item 28
+            - **ref**: L7/provenance/sources/0.md:54
+            - **cls_ok**: yes
+            - **final_cls**: apply
+            - **note**: Confirmed: LEDGER.md has 121 rows, and datasets-LEDGER.md has only an empty row. The sentence was copied from the scaffold (7lm main L7/provenance/sources/0.md:51), where it is true because source-ledger.md has a header and no rows. Two CONTRADICTION findings in another batch offer other replacements for the same sentence ('The ledger carries 121 rows, S-001…S-121.', and deleting it). Make only this batch's replacement.
+          - item 29
+            - **ref**: L7/provenance/sources/0.md:41
+            - **cls_ok**: yes
+            - **final_cls**: apply
+            - **note**: Confirmed: there are 121 rows, S-001 to S-121. The commit id appears on 122 lines: the 121 rows and the closing note. The CONTRADICTION findings in another batch give the same replacement.
+          - item 30
+            - **ref**: L7/provenance/prior-art/0.md:34
+            - **cls_ok**: yes
+            - **final_cls**: apply
+            - **note**: Confirmed: the lane holds rump_ru99.pdf with ru99.txt, ru99_flat.txt and rump_index.html, and no Wang file. Rump 2010 is pointer row S-119 of LEDGER.md. A CONTRADICTION fix in another batch changes 'controlled/' to 'copyright/' later in the same line, so make both as one edit.
+          - item 31
+            - **ref**: L7/provenance/0.md:37
+            - **cls_ok**: yes
+            - **final_cls**: apply
+            - **note**: Confirmed: none of the lane's 30 files is by Wang. The name appears only in the reference lists of other papers.
+          - item 32
+            - **ref**: L7/provenance/sources/0.md:18
+            - **cls_ok**: yes
+            - **final_cls**: apply
+            - **note**: Confirmed against LEDGER.md's column rules (lines 22-30: Access values FULL, ABSTRACT, TERMS-ONLY, BLOCKED and NOT OBTAINED, and evidence labels for Label) and its 121 rows, which all read HELD and carry a document class. The fix describes the ledger and does not repair it.
+          - item 33
+            - **ref**: L7/provenance/sources/0.md:42
+            - **cls_ok**: yes
+            - **final_cls**: apply
+            - **note**: Confirmed on the same grounds as L7/0.md:232. Only the one word changes.
+          - item 34
+            - **ref**: L7/provenance/sources/0.md:44
+            - **cls_ok**: yes
+            - **final_cls**: apply
+            - **note**: Confirmed. The staging README's rule reads "**[source text withheld from the public copy].**" (staging-records/__STAGING_README.md:44). 'Do not cite anything here' is the wording of the retired root README (L8/L6/retired/layout-2026-08-14/README.md:19).
+          - item 35
+            - **ref**: L7/provenance/sources/staging-records/0.md:8
+            - **cls_ok**: yes
+            - **final_cls**: apply
+            - **note**: Confirmed on the same grounds as L7/provenance/sources/0.md:44. The edit is to the folder's sheet, not to the staging files that its line 8 says are not edited.
+          - item 36
+            - **ref**: L8/0.md:137
+            - **cls_ok**: yes
+            - **final_cls**: apply
+            - **note**: Counted: review/ holds 23 files besides its sheet. Twelve are reviews, audits and the external check, seven were moved from manuscripts/main/, and four are others: EVIDENCE_RULES.md, auditon.ott and the two .odt files. Twelve plus seven is nineteen. In another batch, the CONTRADICTION finding 'L8/L5/0.md:80' gives a slightly different wording for the same phrase ('nineteen review and adjudication files'), and a STALE finding changes 'the record of this pass' in the same line. Make one edit with one wording.
+          - item 37
+            - **ref**: L8/L0/semantics/definitions/0.md:35
+            - **cls_ok**: yes
+            - **final_cls**: apply
+            - **note**: Confirmed: REGISTER.md blocks six compounds and calls them 'the six compounds' itself (line 22). The register is not edited.
+          - item 38
+            - **ref**: L8/L0/semantics/0.md:38
+            - **cls_ok**: yes
+            - **final_cls**: apply
+            - **note**: Confirmed: the sixth compound, perpetual mission, is at REGISTER.md:25. The fix keeps the quoted phrase attached to governance.
+          - item 39
+            - **ref**: L8/L0/semantics/definitions/0.md:32
+            - **cls_ok**: yes
+            - **final_cls**: apply
+            - **note**: Confirmed: REVIEW_4 records F1 (CRITICAL) on A3's label cell at line 99 and F2 (CRITICAL) on rule 3 of §6 at line 243. The record's §5 (harmonization-2026-09-05.md:81) also says 'in §6'; it is a dated record and stays as written.
+          - item 40
+            - **ref**: L8/L0/epistemic/0.md:33
+            - **cls_ok**: yes
+            - **final_cls**: apply
+            - **note**: Confirmed: EVIDENCE_RULES.md lists ten labels (lines 24-26). The rules text itself is not edited.
+          - item 41
+            - **ref**: L8/L3/engineering-mathematics/uncertainty/0.md:33
+            - **cls_ok**: yes
+            - **final_cls**: apply
+            - **note**: Confirmed: DEPENDENCE_AND_THE_GATE.md never names Kearfott or Neumaier. It quotes all seven sources the fix lists: Wang 2012, Rump 1999, Rump 2010, IEEE Std 1788-2015, IEEE Std 1788.1-2017, NIST TN 1297 (§2.7 and §D.1.7) and Ku 1966.
+          - item 42
+            - **ref**: L8/L1/state-space/0.md:48
+            - **cls_ok**: yes
+            - **final_cls**: apply
+            - **note**: Confirmed: this repository's L8/L1/0.md never mentions the three terms. They are in the specification's table 'Inherited terms and their dispositions' (7lm main spec, heading at line 981, row at line 989). The old pointer is true in the scaffold because the scaffold's own L8/L1/0.md has that section (line 105).
+          - item 43
+            - **ref**: L8/L1/0.md:54
+            - **cls_ok**: yes
+            - **final_cls**: apply
+            - **note**: Confirmed: the specification prints the four headings at H3 on 7lm main (lines 389, 400, 410 and 420), in the local reconcile of PR #19 (the same lines) and on the beta branch (lines 391 to 422). The same out-of-date line stands at L8/L1/0.md:54 on 7lm main, on PR #19's branch at b5c3984, in the reconcile at /home/user/7lm-pr19, and on aybllc/auditonomous main. Fixing the scaffold first fits the owner's word of 20 September. The reconcile does not change this line, so PR #19 is not affected.
+          - item 44
+            - **ref**: L8/L4/0.md:122
+            - **cls_ok**: yes
+            - **final_cls**: apply
+            - **note**: Confirmed: L8/L4/work/computation/ holds deep-research-report.md (38,738 bytes), which the computation sheet lists at its line 38; experiments/ holds only its sheet. From L8/L4/, paths starting work/ are correct.
+          - item 45
+            - **ref**: L8/L4/work/0.md:40
+            - **cls_ok**: yes
+            - **final_cls**: apply
+            - **note**: The class is right, but the result's change to the fix is wrong. Seen from L8/L4/work/, the paths `work/computation/…` and `work/experiments/` lead nowhere. For that reason the DEAD-PATH finding 'L8/L4/work/0.md:39-40' in another batch removes the leading `work/`, and the report wrote `computation/…` and `experiments/` to match it. Use the report's own fix. Make it together with that finding and the UNLISTED finding on line 39; the report prints the combined lines 39-40 at its own lines 543-546.
+          - item 46
+            - **ref**: L8/L5/research/review/0.md:41 (governing sentence) and 45 (the item)
+            - **cls_ok**: yes
+            - **final_cls**: owner-chooses
+            - **note**: Confirmed: EVIDENCE_RULES.md was added on 2026-09-07 in commit 87ce2cf. The record says "The home of the evidence rules is the owner's to confirm or change." (harmonization-2026-09-05.md:159). Owner-chooses holds: taking the item out of the awaiting-review list bears on that open question, and the two wordings differ on whether the sheet carries the date of the transfer. Pick (b) holds; its last clause repeats EVIDENCE_RULES.md:3.
+          - item 47
+            - **ref**: L8/L6/history/0.md:35
+            - **cls_ok**: yes
+            - **final_cls**: apply
+            - **note**: Confirmed: the findings tables in L8/L6/history/LEDGER.md run to F23 (line 202). The ledger itself is not edited.
+        - **overall**: Count: all 47 findings under "## WRONG-FACT (47)" appear exactly once. The result's 47 refs and the report's 47 headings are the same set, with none missing and none doubled. I opened every finding's line in the export of main at 9fa3744, which matches origin/main file for file (264 files), and all 47 texts are still there.
+
+          Corrected counts: 40 apply, 7 owner-chooses, 0 leave (the result had 42, 5 and 0).
+          - The seven owner-chooses: README.md:5; L7/governance/copyright/0.md:39; L7/governance/copyright/0.md:18; the governance claim at :32; L7/peering/private/ingress/peer-1/object-1/0.md:13; L7/peering/private/ingress/peer-4/object-1/0.md:10; and L8/L5/research/review/0.md:41 and 45.
+          - All five of the result's owner-chooses hold, with their picks.
+          - Two findings move from apply to owner-chooses. Each edits a field of a binding's tag (Version at peer-1/object-1:13, Object identity at peer-4/object-1:10). This repository calls that tag immutable (L7/peering/private/ingress/0.md:18). So the result's note that no binding-record edit touches a field naming the bound object or its version is wrong for these two. Pick for both: correct the field in place and note the error in the record. Neither the bound object nor its pinned version changes.
+          - The other 13 binding-record edits stay apply: line 25 in eleven records, line 21 of public peer-4/object-1, and the Governance field of private peer-4/object-1. All three lie outside the tag.
+
+          One fix to undo: the result changed the paths at L8/L4/work/0.md:40 to `work/computation/…` and `work/experiments/`. From that folder those paths lead nowhere. Use the report's `computation/…` and `experiments/` instead, together with the DEAD-PATH and UNLISTED findings on lines 39-40; the report gives the combined lines at its lines 543-546. The result's other two changes to report fixes hold: public peer-4/object-1:21, and one wording for rows A6 to A10.
+
+          Lines that findings in other batches also edit. Make one edit per line, in the same pass:
+          - L7/provenance/sources/0.md:54: two CONTRADICTION findings offer two other replacements; use this batch's.
+          - L8/0.md:137: a CONTRADICTION finding words the same phrase without "audit", and a STALE finding edits the same line.
+          - L7/governance/copyright/0.md: STALE and CONTRADICTION findings also edit lines 47 and 56, so this sheet takes six edits in all.
+          - L7/0.md:232 (UNLISTED), L7/allications/publications/binder/0.md:8 (STALE) and L7/provenance/prior-art/0.md:34 (CONTRADICTION).
+          - The Version field at private peer-1/object-1:13 also has a STALE edit ("at this pass"), which should get the same owner answer as this batch's edit there.
+
+          Other things the owner should know:
+          1. Adding the six conditions to the copyright sheet does not by itself make "every copyright or licence condition" true. The licence conditions recorded for the 55-document intake corpus (staging-records/sources__CORPUS_INTAKE.md lines 265-417) are not in the one place either. A seventh line naming that section would close the gap.
+          2. The eleven corrections at line 25 state plainly that the definition's rows carry no pointer to their bindings. The specification asks every internal copy of an outside definition to carry the "ingress binding" in its tag (aybllc/7lm main, L8/L4/work/writing/7lm-harmonized-architecture-specification.md:36). Closing that gap would mean editing the L0 object, which only the owner does.
+          3. The result is right on two standing points. Every apply is an outside update under the owner's word of 20 September (7lm main, L8/L6/history/harmonization-2026-09-04.md:336), so the owner's yes to the list is what lifts that rule. And decision 2 changes no class here: no fix edits the L0 object or its companions, deletes a file, or touches the egress record.
+    - item 2
+      - **key**: C2-autonomous-other
+      - **out**
+        - **findings**
+          - item 1
+            - **ref**: L7/0.md:232 (against L7/provenance/sources/0.md lines 41 and 54)
+            - **category**: contradiction
+            - **cls**: apply
+            - **touches**: live sheet
+            - **why**: L7/provenance/sources/LEDGER.md holds 121 rows, S-001 to S-121 with no gap, every one pinned to 7540a9d6951c (counted; 122 is the number of lines that carry the pin), so L7/0.md:232 is right and L7/provenance/sources/0.md is wrong twice, saying 122 rows at line 41 and no rows at line 54.
+            - **fix**: No change to L7/0.md for this finding. In L7/provenance/sources/0.md line 41 replace "122 rows" with "121 rows (S-001…S-121)". In line 54 replace "The ledger has no rows; that is admissible." with "The source registers are populated as listed in Holdings; the datasets register is empty." The report offers three different texts for line 54; this one is the owner's own wording of that sentence on the owner's candidate branch (aybllc/autonomous, origin/beta/7lm-exemplar-autonomous at e64b382, L7/provenance/sources/0.md:54). It is true on main once line 41 reads 121, and it neither decides nor waits on whether that branch's wording is adopted.
+          - item 2
+            - **ref**: L7/governance/controlled/0.md (against L7/provenance/prior-art/0.md):32 (against prior-art/0.md:34)
+            - **category**: contradiction
+            - **cls**: apply
+            - **touches**: live sheet
+            - **why**: L7/governance/controlled/0.md:32 says nothing is filed there and that every licence-derived restriction is stated at L7/governance/copyright/, whose line 46 does state the prior-art lane's Q-6 exposure, so L7/provenance/prior-art/0.md:34 sends the reader to the wrong place.
+            - **fix**: In L7/provenance/prior-art/0.md line 34 replace "its licence exposure is a `L7/governance/controlled/` matter" with "its licence exposure is stated at `L7/governance/copyright/`, the one place". This is one edit, shared with the finding at prior-art/0.md:34 against prior-art-lane/0.md:8. The same line also carries a correction outside this batch (the Rump and Wang holdings), made in the same edit.
+          - item 3
+            - **ref**: L7/governance/controlled/0.md (against L7/provenance/sources/0.md):32 (against sources/0.md:16)
+            - **category**: contradiction
+            - **cls**: apply
+            - **touches**: live sheet
+            - **why**: The hold on items obtained through the owner's institutional access is a licence-derived condition, which controlled/0.md:32 places at L7/governance/copyright/, yet L7/provenance/sources/0.md:16 calls it a condition for controlled/.
+            - **fix**: In L7/provenance/sources/0.md line 16 replace "which is a condition for `L7/governance/controlled/`, not for this directory" with "which is a condition for `L7/governance/copyright/`, the one place, not for this directory". This is one edit, shared with the finding headed L7/provenance/sources/0.md:16. Its wording is preferred to that finding's "a condition stated at", because copyright/0.md:44 states the WSU licence condition for IEEE 7001 and 1788 only, and no sheet under L7/governance/ names IL-001-R2 (searched).
+          - item 4
+            - **ref**: L7/governance/copyright/0.md (against L7/governance/0.md and L7/governance/permissions/0.md):56 (against 0.md:34 and permissions/0.md:33)
+            - **category**: contradiction
+            - **cls**: apply
+            - **touches**: live sheet
+            - **why**: A session wrote the clause "never a session's" on 2026-09-05 (commit b30c291), the day before the owner said that requiring an intelligence "to abide byu the stay out rules is not our concerm" (aybllc/7lm origin/main, L8/L6/history/harmonization-2026-09-04.md:101), which is why two governance sheets say the tree states no such rule. Dropping the three words makes all three sheets true and loses nothing, because line 46 keeps "Removal from git history is the owner's decision alone." (aybllc/autonomous origin/main, L7/governance/copyright/0.md:46).
+            - **fix**: In L7/governance/copyright/0.md line 56 replace "5. Removing anything from git history is the owner's act, never a session's." with "5. Removing anything from git history is the owner's act." The same clause stands in aybllc/auditonomous at L7/governance/copyright/0.md:55. Make the same choice there so that the two exemplars stay in step.
+          - item 5
+            - **ref**: L7/peering/private/ingress/peer-3/object-1/0.md:15 (other locator: L8/L0/semantics/definitions/0.md:35)
+            - **category**: contradiction
+            - **cls**: owner-chooses
+            - **touches**: live sheet
+            - **why**: Authorial: whether the coinage auditonomy / auditonomous counts as adopted in this repository is the owner's ruling, and the record holds both answers. The register row entered 2026-08-05 gives its adopted use as "[source text withheld from the public copy]" (aybllc/autonomous origin/main, L8/L0/semantics/definitions/REGISTER.md:13). The specification describes this repository's "peer-3 aybllc/auditonomous, the coinage, referenced and not adopted" (aybllc/7lm origin/main, L8/L4/work/writing/7lm-harmonized-architecture-specification.md:946), as do four Autonomous sheets and the owner's candidate branch of 2 November.
+            - **fix**: One decision covers this finding and the next two. Options: (a) the report's fix, rewording this Status cell, peer-3/0.md:8 and L7/peering/0.md:39 to report the register's "ADOPTED as coinage" (L7/0.md:234 and the specification would still say "not adopted"); (b) keep "not adopted" in the peering sheets and make the definitions sheet name both senses. Pick (b): it is one edit and stays in step with the specification. This cell stays as it is. In L8/L0/semantics/definitions/0.md line 35 replace "the auditonomy coinage referenced as CONJECTURE" with "the auditonomy coinage, its adopted use "[source text withheld from the public copy]" and its composition `INTERNAL ONLY · CONJECTURE`, while its definition stays at the peer, referenced and not adopted here (`L7/peering/private/ingress/peer-3/`)". REGISTER.md, a dated ledger, is not edited. What would change the pick: the owner saying the coinage is adopted here as this repository's own term. Then (a) is made, together with L7/0.md:234 and the specification's sentence.
+          - item 6
+            - **ref**: L7/peering/private/ingress/peer-3/0.md:8 (other locator: L8/L0/semantics/definitions/0.md:35)
+            - **category**: contradiction
+            - **cls**: owner-chooses
+            - **touches**: live sheet
+            - **why**: Authorial: this is the same ruling as the finding at peer-3/object-1/0.md:15 on whether the coinage is adopted here. One answer settles this finding, that one and the one at L7/peering/0.md:39.
+            - **fix**: Pick (b) of the finding at peer-3/object-1/0.md:15: this sentence stays as it is, and the one edit is made at L8/L0/semantics/definitions/0.md:35. Under option (a) instead, replace "and is not adopted here" with "and is not defined here; the register enters it as "[source text withheld from the public copy]"".
+          - item 7
+            - **ref**: L7/peering/0.md:39 (other locator: L8/L0/semantics/definitions/0.md:35)
+            - **category**: contradiction
+            - **cls**: owner-chooses
+            - **touches**: live sheet
+            - **why**: Authorial: this is the same ruling as the finding at peer-3/object-1/0.md:15. This bullet matches the specification's own wording for peer-3.
+            - **fix**: Pick (b) of the finding at peer-3/object-1/0.md:15: this bullet stays as it is, and the one edit is made at L8/L0/semantics/definitions/0.md:35. Under option (a) instead, the parenthesis reads "(the coinage *auditonomy / auditonomous*, referenced; entered in the register as adopted coinage, CONJECTURE; defined at the peer)".
+          - item 8
+            - **ref**: L7/peering/private/ingress/peer-1/object-1/0.md:10 (other locators: L7/provenance/sources/0.md:41 and :54)
+            - **category**: contradiction
+            - **cls**: apply
+            - **touches**: live sheet
+            - **why**: The binding record's "S-001…S-121" is right (121 rows, counted). The two lines of the sources sheet that contradict it are the same two that the finding at L7/0.md:232 corrects.
+            - **fix**: No change to L7/peering/private/ingress/peer-1/object-1/0.md:10. Make the same two edits as the finding headed "L7/0.md:232 (against L7/provenance/sources/0.md lines 41 and 54)", once. In L7/provenance/sources/0.md line 41, "122 rows" becomes "121 rows (S-001…S-121)". In line 54, "The ledger has no rows; that is admissible." becomes "The source registers are populated as listed in Holdings; the datasets register is empty." The sentence is replaced, not deleted as this finding's text says, so that the Standing line still says which register is empty.
+          - item 9
+            - **ref**: L7/peering/public/0.md:42
+            - **category**: contradiction
+            - **cls**: apply
+            - **touches**: live sheet
+            - **why**: The sentence is the scaffold's own, copied word for word (aybllc/7lm origin/main, L7/peering/public/0.md:37). In this repository, ingress/ holds peers 1 to 9, the issuing bodies, while the receiving side of the originating case is Auditonomous's own L7/peering/public/ingress/peer-1/object-1/ (checked at aybllc/auditonomous main aa30b03). What a sheet says after its first line is a design choice, so the exemplar can say what is true of itself.
+            - **fix**: In L7/peering/public/0.md line 42 replace "The source side is exemplified at L7/peering/public/egress/; the receiving side at L7/peering/public/ingress/." with "The source side is exemplified here, at L7/peering/public/egress/peer-1/; the receiving side is `aybllc/auditonomous`, at its own L7/peering/public/ingress/peer-1/object-1/."
+          - item 10
+            - **ref**: L7/peering/public/ingress/peer-5/object-1/0.md:17
+            - **category**: contradiction
+            - **cls**: apply
+            - **touches**: live sheet (binding record)
+            - **why**: The binding is NIST SP 1011-I-2.0, whose condition copyright/0.md:48 already states as "NIST, DoD, and NASA documents as US Government works (17 U.S.C. §105)". Pointing to the one place therefore loses nothing, and it takes the form that three other binding records already use (public peer-2/object-2 and peer-4/object-2, private peer-1/object-1).
+            - **fix**: In L7/peering/public/ingress/peer-5/object-1/0.md line 17 replace "| Governance | US Government work, redistributable (17 U.S.C. §105) |" with "| Governance | US Government work — see `L7/governance/copyright/`, the one place |". A finding outside this batch rewrites L7/governance/copyright/0.md:18. If it is also made, its list of binding records that name the directory counts four, adding this one.
+          - item 11
+            - **ref**: L7/provenance/prior-art/0.md:34 (against L7/provenance/prior-art/prior-art-lane/0.md:8)
+            - **category**: contradiction
+            - **cls**: apply
+            - **touches**: live sheet
+            - **why**: The lane's own sheet already says "Their licence exposure is stated at `L7/governance/copyright/`, the one place" (aybllc/autonomous origin/main, L7/provenance/prior-art/prior-art-lane/0.md:8), and copyright/0.md:46 does state that exposure. The parent sheet must say the same.
+            - **fix**: Make the same single edit as the finding headed "L7/governance/controlled/0.md (against L7/provenance/prior-art/0.md):32 (against prior-art/0.md:34)": in L7/provenance/prior-art/0.md line 34 replace "its licence exposure is a `L7/governance/controlled/` matter" with "its licence exposure is stated at `L7/governance/copyright/`, the one place".
+          - item 12
+            - **ref**: L7/provenance/sources/0.md:16 (against line 36 of the same sheet and L7/peering/private/ingress/peer-1/object-1/0.md:17)
+            - **category**: contradiction
+            - **cls**: apply
+            - **touches**: live sheet
+            - **why**: Line 36 of the same sheet and the binding record's Governance cell both send this condition to L7/governance/copyright/. Line 16 alone names controlled/.
+            - **fix**: Make the same single edit as the finding headed "L7/governance/controlled/0.md (against L7/provenance/sources/0.md):32 (against sources/0.md:16)": in L7/provenance/sources/0.md line 16 replace "which is a condition for `L7/governance/controlled/`, not for this directory" with "which is a condition for `L7/governance/copyright/`, the one place, not for this directory". This finding's own wording, "a condition stated at", is not used, because copyright/0.md names the WSU licence for IEEE 7001 and 1788 only and does not name IL-001-R2.
+          - item 13
+            - **ref**: L7/provenance/prior-art/ct-lane/0.md:20 (against L7/provenance/prior-art/0.md:27 and :10)
+            - **category**: contradiction
+            - **cls**: owner-chooses
+            - **touches**: live sheet
+            - **why**: Where a prior-art verdict sits is the owner's design choice between two written rules. The relocated README asks each search record for "**[source text withheld from the public copy]." (aybllc/autonomous origin/main, L7/provenance/prior-art/README.md:20). The parent sheets here, and the scaffold's own sheet, put "the comparison, interpretation, or judgment about whether the antecedent anticipates the local work" at L8/L5/research/ (aybllc/7lm origin/main, L7/provenance/prior-art/0.md:30).
+            - **fix**: Options: (a) this sheet follows the parent sheets and the scaffold; (b) the parent sheets follow the README, which changes L7/provenance/prior-art/0.md:27 and L7/provenance/0.md:27. Pick (a): it changes one line and stays in step with the scaffold. In L7/provenance/prior-art/ct-lane/0.md line 20 replace "No search record is filed here; the claim searched against, queries, and verdict belong in a dated search record under `L7/provenance/prior-art/`, and none has been written." with "No search record is filed here; the claim searched against, the queries and what was found belong in a dated search record under `L7/provenance/prior-art/`, and the verdict on whether an antecedent anticipates the local work at `L8/L5/research/`; none has been written." The line's last sentence, "Files are not edited.", stands, and the README stays as written.
+          - item 14
+            - **ref**: L7/provenance/sources/0.md:10 and 18 (against L7/peering/private/ingress/peer-1/object-1/0.md:13, a sheet outside this batch)
+            - **category**: contradiction
+            - **cls**: apply
+            - **touches**: live sheet (binding record)
+            - **why**: All 121 rows of LEDGER.md are pinned to 7540a9d6951c and none to 8277144, which is the tail of the identifier 10.1109/IEEESTD.2018.8277144 inside row S-097's citation (checked). The binding record's parenthesis is therefore false, and the sources sheet is right.
+            - **fix**: No change in L7/provenance/sources/0.md. In L7/peering/private/ingress/peer-1/object-1/0.md line 13 replace "| Version | [source text withheld from the public copy]` (one row at `8277144`); archive HEAD at this pass `53b28f6` |" with "| Version | [source text withheld from the public copy]`; archive HEAD at the 2026-09-05 pass `53b28f6` |". This one replacement also makes the stale fix for the same line (the finding headed L7/peering/private/ingress/peer-1/0.md:8).
+          - item 15
+            - **ref**: L8/L5/research/findings/0.md:35
+            - **category**: contradiction
+            - **cls**: apply
+            - **touches**: live sheet
+            - **why**: L8/L1/0.md:107 names four findings as fixing the L1 dimensions (edge property, human referent, NASA per function, overridability), and L8/0.md:137 says "four L5 findings". The IEEE 1872.2 finding is not one of them: it records that [source text withheld from the public copy].
+            - **fix**: In L8/L5/research/findings/0.md replace line 35 with two bullets: "- `FINDING_autonomy_is_an_edge_property.md`; `FINDING_autonomy_requires_a_human_referent.md`; `FINDING_nasa_per_function_not_weakest_link.md`; `FINDING_overridability_third_axis.md` — the four findings whose content fixes L1 dimensions of the autonomy state space (see `L8/L1/0.md`)." and "- `[source text withheld from the public copy]."
+          - item 16
+            - **ref**: L8/L5/0.md:80 (against L8/0.md line 137, a sheet outside this batch)
+            - **category**: contradiction
+            - **cls**: apply
+            - **touches**: live sheet
+            - **why**: L8/L5/0.md:80 enumerates nineteen files (five reviews, six audits, one external check, seven relocated adjudications). The review directory holds those nineteen plus EVIDENCE_RULES.md, auditon.ott, memories.odt, memories2.odt and the eleven files of autonomous-theory/, 34 files beside its sheet (counted). The "twelve" in L8/0.md:137 is the wrong side.
+            - **fix**: No change to L8/L5/0.md. In L8/0.md line 137 replace "twelve review and adjudication files" with "nineteen review, audit and adjudication files". Make this in one edit with the stale fix on the same line (the finding headed L8/0.md:137 under STALE).
+          - item 17
+            - **ref**: L8/L4/work/0.md:39-40
+            - **category**: dead-path
+            - **cls**: apply
+            - **touches**: live sheet
+            - **why**: Read from the sheet's own directory, `work/writing/…` resolves to L8/L4/work/work/writing/, which does not exist. The sibling sheet L8/L4/work/writing/0.md writes its paths from its own directory, as this sheet should.
+            - **fix**: In L8/L4/work/0.md replace lines 39-40 with three bullets: "- `writing/MANUSCRIPT.tex` (source of truth; a placeholder skeleton), `MANUSCRIPT.docx`, `MANUSCRIPT.pdf` (pandoc build products); `writing/branch/README.md`; `writing/AUTONOMY_SCALE.md` (the A1–A5 autonomy scale as written; INTERNAL ONLY).", "- `computation/deep-research-report.md` — a deep-research run about this object (2026-08-05): model output as run, never evidence." and "- `experiments/` — empty." This one replacement also makes the unlisted-file fix for line 39, and the correction outside this batch that computation/ is not empty.
+          - item 18
+            - **ref**: L7/allications/publications/binder/0.md:8
+            - **category**: stale
+            - **cls**: apply
+            - **touches**: live sheet
+            - **why**: "This pass" now reads as the pass of 2026-11-11, but the state meant is the binder as it stood at the root before 2026-09-05. The report's longer fix narrates both moves, which the owner asked to keep out of sheets: "thank you please pull out historicallyu referndes to the docuejtnation leaving just the historical docuemtnatio that is cirrent and relevant for the purpose of using the thing" (aybllc/autonomous origin/main, L8/L6/history/harmonization-2026-09-05.md:165). The corrected fix therefore names the state and leaves the moves to the record (§4a, §14).
+            - **fix**: In L7/allications/publications/binder/0.md line 8 replace "as it stood at HEAD before this pass, moved whole" with "as it stood at the repository root before the pass of 2026-09-05, moved whole". The parenthesis the report adds is left out. The binder's seven files are not touched, and the same line's correction outside this batch (the coinage rule) is made in the same edit.
+          - item 19
+            - **ref**: L7/governance/copyright/0.md:47
+            - **category**: stale
+            - **cls**: apply
+            - **touches**: live sheet
+            - **why**: The root .gitignore excludes no document: its only patterns are .DS_Store, *.swp and __pycache__/, and its own lines 21-25 record that the exclusion rules were removed on 2026-08-14 on the owner's "track all". None of the 36 files in the cached-text hash list is tracked, by name or by SHA-256 (checked).
+            - **fix**: Replace line 47 of L7/governance/copyright/0.md with: "- Cached full texts of third-party documents (NIST, EUR-Lex, UNECE, DoD, EASA, IEEE SEVOCAB extracts) are not in this repository; only their hash list and three download logs are, in `L7/provenance/sources/staging-records/`. The `.gitignore` rules that once excluded them were removed on 2026-08-14. `L7/provenance/sources/LEDGER.md` carries pointer rows into the archive `aybllc/l6` for documents of each of those issuers, and each is re-downloadable from its official source. The prior-art lane above holds its own tracked copy of NIST Technical Note 1297." This corrects the report's text in two places. That text would have said no such NIST text is in the repository, although `prior-art-lane/nist1297.pdf` is tracked. It also said the cached texts themselves are held in `aybllc/l6`, which the ledger shows only issuer by issuer.
+          - item 20
+            - **ref**: L7/peering/private/ingress/peer-1/0.md:8 (same phrase at L7/peering/private/ingress/peer-1/object-1/0.md:13, "archive HEAD at this pass `53b28f6`")
+            - **category**: stale
+            - **cls**: apply
+            - **touches**: live sheet (binding record)
+            - **why**: The pass of 2026-09-05 wrote both observations (commit b49deb0, checked). A capture date belongs to the object, and the record keeps such dates in sheets as provenance.
+            - **fix**: In L7/peering/private/ingress/peer-1/0.md line 8 replace "At this pass its HEAD is `53b28f6` and it holds 1,368 tracked library files." with "At the 2026-09-05 pass its HEAD was `53b28f6` and it held 1,368 tracked library files." In L7/peering/private/ingress/peer-1/object-1/0.md line 13, make the single replacement given under the contradiction finding for that line, which yields "| Version | [source text withheld from the public copy]`; archive HEAD at the 2026-09-05 pass `53b28f6` |".
+          - item 21
+            - **ref**: L7/peering/public/egress/peer-1/object-1/0.md:10, 13
+            - **category**: stale
+            - **cls**: apply
+            - **touches**: live sheet (binding record)
+            - **why**: "This pass" is left over from the writing of 2026-09-05. The object at 0504961:research/definitions/AUTONOMOUS.md and at main:L8/L0/semantics/definitions/AUTONOMOUS.md is the same blob, ffbdc28 (checked). The fix changes wording only: it neither withdraws the exposure nor rebinds anything.
+            - **fix**: Line 10: replace "(at commit `0504961` and before this pass: `research/definitions/AUTONOMOUS.md`)" with "(at the bound commit `0504961`: `research/definitions/AUTONOMOUS.md`)". Line 13: replace "after this pass the same object sits at `L8/L0/semantics/definitions/AUTONOMOUS.md`" with "the same object, unchanged, now sits at `L8/L0/semantics/definitions/AUTONOMOUS.md`"; the rest of the cell stands.
+          - item 22
+            - **ref**: L7/provenance/sources/0.md:10
+            - **category**: stale
+            - **cls**: apply
+            - **touches**: live sheet
+            - **why**: The ledger was relocated on 2026-09-05 (the record, §3), not in the latest pass. The former path stays as the provenance of that relocation; it is not one of the live pointers that decision 23 is about.
+            - **fix**: In L7/provenance/sources/0.md line 10 replace "relocated in this pass from `uso/l6/LEDGER.md` without rewriting" with "relocated on 2026-09-05 from `uso/l6/LEDGER.md` without rewriting".
+          - item 23
+            - **ref**: L8/0.md:137
+            - **category**: stale
+            - **cls**: apply
+            - **touches**: live sheet
+            - **why**: The record meant is the harmonization record of 2026-09-05, continued through its §14 of 2026-11-11, so "this pass" no longer names it.
+            - **fix**: In L8/0.md line 137 replace "the record of this pass" with "the harmonization record `L8/L6/history/harmonization-2026-09-05.md`". This is the report's minimum, with the path written from the root as the rest of the line writes paths. Make it in one edit with the contradiction fix on the same line, where "twelve review and adjudication files" becomes "nineteen review, audit and adjudication files".
+          - item 24
+            - **ref**: L8/L4/work/computation/0.md:50
+            - **category**: stale
+            - **cls**: apply
+            - **touches**: live sheet
+            - **why**: The same sheet lists `deep-research-report.md` at line 38 (filed 2026-09-06, commit 5dbf85c), then says at line 50 that the position is empty.
+            - **fix**: In L8/L4/work/computation/0.md line 50 replace "It is empty at present." with "It holds one file at present (`deep-research-report.md`)."
+          - item 25
+            - **ref**: L8/L6/0.md:88
+            - **category**: stale
+            - **cls**: apply
+            - **touches**: live sheet
+            - **why**: There is no current pass for the file to be "the record of", and line 74 of the same sheet already describes it exactly.
+            - **fix**: In L8/L6/0.md line 88 replace "`history/harmonization-2026-09-05.md` — the record of this pass." with "`history/harmonization-2026-09-05.md` — the record of the instantiation of the canonical topology on 2026-09-05." (line 74's wording). Make it in one edit with the two entries that the unlisted finding for this sheet appends to the same line.
+          - item 26
+            - **ref**: L8/L6/history/0.md:41
+            - **category**: stale
+            - **cls**: apply
+            - **touches**: live sheet
+            - **why**: This is the same stale phrase as at L8/L6/0.md:88. The rest of the line, naming the record's §9 and §14, is right.
+            - **fix**: In L8/L6/history/0.md line 41 replace "the record of this pass;" with "the record of the instantiation of the canonical topology on 2026-09-05;"; the rest of the line stands.
+          - item 27
+            - **ref**: L7/0.md:232 (Holdings, provenance bullet)
+            - **category**: unlisted
+            - **cls**: apply
+            - **touches**: live sheet
+            - **why**: L7/provenance/authority/JOURNALS.md (667 bytes; one entry, Reliable Computing) is the one file under L7/ that is neither a sheet nor inside a directory the Holdings already names.
+            - **fix**: In L7/0.md line 232 replace "and `L7/provenance/prior-art/` (RFC 6962/9162 canonical texts and the prior-art lane with its Q-6 licence exposure)." with "`L7/provenance/prior-art/` (RFC 6962/9162 canonical texts and the prior-art lane with its Q-6 licence exposure), and `L7/provenance/authority/JOURNALS.md` (the enumerated peer-reviewed journals of evidence rule 1; one entry, *Reliable Computing*)." This corrects the report's text, which appended the entry after a list already closed by "and". The same line's correction outside this batch ("450 verbatim definitions" to "450 verbatim entries") is made in the same edit.
+          - item 28
+            - **ref**: L8/L4/0.md:121
+            - **category**: unlisted
+            - **cls**: apply
+            - **touches**: live sheet
+            - **why**: AUTONOMY_SCALE.md (49,501 bytes, marked INTERNAL ONLY) sits at L8/L4/work/writing/ on the owner's ruling of 2026-09-06 (the record, §9), and L8/L4/work/writing/0.md:35 lists it, but the layer sheet does not.
+            - **fix**: In L8/L4/0.md line 121, before the final full stop, append "; `work/writing/AUTONOMY_SCALE.md` (the A1–A5 autonomy scale as written; INTERNAL ONLY)". Line 122, which is corrected outside this batch (computation/ is not empty), is changed in the same pass.
+          - item 29
+            - **ref**: L8/L4/work/0.md:39
+            - **category**: unlisted
+            - **cls**: apply
+            - **touches**: live sheet
+            - **why**: The same file is missing from the work sheet's Holdings, and the dead-path finding rewrites the same line.
+            - **fix**: This is made by the single replacement of lines 39-40 given under the dead-path finding for this sheet. Its first bullet ends "; `writing/AUTONOMY_SCALE.md` (the A1–A5 autonomy scale as written; INTERNAL ONLY).", with the path written from the sheet's own directory.
+          - item 30
+            - **ref**: L8/L6/0.md:73-75 and 88-89
+            - **category**: unlisted
+            - **cls**: apply
+            - **touches**: live sheet
+            - **why**: L8/L6/ holds sheets-2026-09-07.md, 7LM_ROUTING_PLAN_2026-09-05.md and the retired set layout-2026-09-06/ (five files with its sheet), and the layer sheet itemizes none of them. L8/L6/history/0.md:42-43 and the retired set's own sheet give the descriptions used.
+            - **fix**: In L8/L6/0.md, after line 74, add "- `L8/L6/history/sheets-2026-09-07.md` — what the sheets carried about their past until 2026-09-07." and "- `L8/L6/history/7LM_ROUTING_PLAN_2026-09-05.md` — the routing proposal the 2026-09-05 instantiation followed.". Replace line 75 with "- `L8/L6/retired/layout-2026-08-14/`, `L8/L6/retired/layout-2026-09-06/` and `L8/L6/retired/error-records/` — the retired layout, the one-day queue's rule texts with one duplicate file, and the superseded definition documents, verbatim.". At the end of line 88, after the stale fix's "…on 2026-09-05" and before its full stop, insert "; `history/sheets-2026-09-07.md` — what the sheets carried about their past until 2026-09-07; `history/7LM_ROUTING_PLAN_2026-09-05.md` — the routing proposal the 2026-09-05 instantiation followed". In line 89, after "`retired/layout-2026-08-14/` — the pre-pass README and directory READMEs, verbatim; ", insert "`retired/layout-2026-09-06/` — the one-day queue's rule texts and one duplicate `.odt`, verbatim; ".
+          - item 31
+            - **ref**: L7/allications/publications/0.md:29 (with 23 and 33)
+            - **category**: misfiled
+            - **cls**: owner-chooses
+            - **touches**: live sheet
+            - **why**: Where binder/internal/ belongs is decision 15, still open in the record ("`binder/internal/` at publications versus L4 writing", aybllc/autonomous origin/main, L8/L6/history/harmonization-2026-09-05.md:80). Meanwhile, line 29 says the position holds no drafts stamped internal, while line 33 lists one.
+            - **fix**: Options: (a) keep the binder where it is and leave line 29 as it is; (b) keep the binder there and make line 29 say what is held; (c) move binder/internal/ to L8/L4/work/writing/ by git mv, with a sheet there and a record section. Pick (b): it moves nothing and fits the owner's "whAT DO YOU think of allicatins to hold everything for now" (aybllc/7lm origin/main, L8/L6/history/harmonization-2026-09-04.md:317). Append to L7/allications/publications/0.md line 29 "; the binder listed below is such material, held here unreleased (the record, §4a and §5)".
+          - item 32
+            - **ref**: L7/provenance/sources/staging-records/0.md:21
+            - **category**: misfiled
+            - **cls**: leave
+            - **touches**: staging record (nothing to edit)
+            - **why**: The finding is moot. Line 21 is true; L7/governance/0.md:32 already says the quarantine log "is the history behind those conditions and stays where it is"; and the log is a dated record inside a parked tree whose sheet says "Files are not edited", so a move would cost more than it buys.
+            - **fix**: 
+          - item 33
+            - **ref**: L8/L0/semantics/definitions/0.md:24, 26 (Does not hold); 34-35 (Holdings)
+            - **category**: misfiled
+            - **cls**: owner-chooses
+            - **touches**: live sheet (a definition companion only if moved)
+            - **why**: The owner commissioned the list in the owner's own words ("[source text withheld from the public copy].", aybllc/autonomous origin/main, L8/L0/semantics/definitions/DEFINITION_LIST_AUTONOMOUS.md:10-11), and the record files it among "the L0 object and its companions" (aybllc/autonomous origin/main, L8/L6/history/harmonization-2026-09-05.md:44). Moving it is therefore the owner's act, and if decision 2 makes Autonomous read-only it would need a dated version that the owner merges.
+            - **fix**: Options: (a) keep DEFINITION_LIST_AUTONOMOUS.md and REGISTER.md where they are, and make line 34 say what the list is; (b) move the list beside the ingress bindings or the sources under L7/, re-pathing every live mention, and move REGISTER.md to L8/L0/semantics/ only if it is read as not a definition. Pick (a): replace line 34 with "- `DEFINITION_LIST_AUTONOMOUS.md` — [source text withheld from the public copy] file, a compilation of externally authored definitions carried inward verbatim with source and label, not this object's authorship (its one internal note is labelled INTERNALLY DERIVED; the adopted use appears only by pointer); "introduces no evidence"; canonical adjudication remains `AUTONOMOUS.md`." Nothing moves. The parenthesis corrects the report's text, which called every entry external, although the list carries one note labelled INTERNALLY DERIVED and gives the adopted use only by pointer.
+          - item 34
+            - **ref**: L8/L3/engineering-mathematics/tolerances/0.md:26-28, 33
+            - **category**: misfiled
+            - **cls**: owner-chooses
+            - **touches**: live sheets (a working file's path only if moved)
+            - **why**: The file sits at tolerances/ by the routing of 2026-09-05 ("feasibility under tolerance", aybllc/autonomous origin/main, L8/L6/history/harmonization-2026-09-05.md:40), and the owner has said "we dont want hard strcuture yet." (aybllc/7lm origin/main, L8/L6/history/harmonization-2026-09-04.md:297). A move is the owner's design choice.
+            - **fix**: Options: (a) keep THE_SHARED_REFERENT_DEFECT.md in tolerances/ with no sheet change; (b) move it to L8/L3/engineering-mathematics/uncertainty/, beside its companion DEPENDENCE_AND_THE_GATE.md. Under (b), its Holdings line moves to uncertainty/0.md, tolerances/0.md:33 becomes "Nothing is filed at this position; the position is admissible and empty.", and the path changes at L8/L3/engineering-mathematics/0.md:38, L8/L3/0.md:90 and L8/0.md:137 (the report leaves out the last). Pick (a): nothing moves and nothing is edited.
+        - **notes**: Batch C2-autonomous-other covers the 34 findings under CONTRADICTION, DEAD-PATH, STALE, UNLISTED and MISFILED in /tmp/claude-0/-home-user/bfcfd013-a2da-5019-961e-7f46116f08be/scratchpad/audits/sheet-audit-autonomous-2026-11-11.md. I checked them against aybllc/autonomous main 9fa3744. The range 8257118..9fa3744 changes only the record file. All 38 files these findings name or rely on are byte-identical in the export, and the export and main hold 264 files each.
+
+          Result: 26 apply, 7 owner-chooses, 1 leave.
+          - The 26 apply findings come to edits in 17 files, because several pairs are one edit: the two contradictions on prior-art/0.md:34; the two on sources/0.md:16; the two on sources/0.md:41 and :54; the stale and contradiction fixes on L8/0.md:137; the dead path and the unlisted file on L8/L4/work/0.md:39-40; the stale and contradiction fixes on peer-1/object-1/0.md:13; the stale and unlisted fixes on L8/L6/0.md:88.
+          - Several of the report's fixes are corrected against the export; each fix field says what was corrected and why.
+          - The 7 owner-chooses findings are five decisions: one authorial ruling covering three findings (whether the auditonomy coinage is adopted here; the pick keeps "not adopted", as the specification says, and names both senses in the definitions sheet); where a prior-art verdict sits; and three placements (the binder, the definition list, the shared-referent manuscript).
+          - Every pick moves nothing and edits no record, ledger, definition or binder file.
+
+          The one standing dependency is decision 2: whether the order of 14 September 2026 makes Autonomous a read-only exemplar.
+          - The declaration drafted for it exists only on the closed, unmerged branch claude/scholarly-pair-baseline-k8ap82, at L7/governance/restrictions/0.md:34. It would restrict three things. The L0 object and its companions (AUTONOMOUS.md, AUTOMATION.md, DEFINITION_LIST_AUTONOMOUS.md, REGISTER.md) change [source text withheld from the public copy] under L7/ or L8/ is deleted without enumeration at L8/L6/history/ first. The egress exposure is not withdrawn. Main would also be protected so that changes arrive only by pull request.
+          - None of the 26 apply fixes edits the L0 object or a companion, deletes or moves a file, or withdraws the exposure. Their content therefore stands whichever way decision 2 goes. Only their form depends on it: under a read-only ruling they go in as one pull request the owner merges.
+          - The owner-chooses picks keep every file in place, so none of them waits on decision 2.
+          - If the owner rules that the order stands and files the declaration at controlled/, that pass must also reword controlled/0.md:32 ("none exists"), governance/0.md:34 and permissions/0.md:33. Nothing in this batch conflicts with that.
+
+          Standing rules: every apply fix is an update outside the scaffold. The owner's "No outside updates until we are sure I'm close" (aybllc/7lm origin/main, L8/L6/history/harmonization-2026-09-04.md:336) holds such updates back, and §36 makes each one a proposal. The owner's yes to this list lifts that rule for this one pass, and it is worth giving, for three reasons:
+          - the mirror ordered on 11 November has landed, so these sheets now describe the canonical tree;
+          - the owner's word of 2026-09-07 asks that sheets be current;
+          - each fix changes no path, no first line and no rule, and is made by hand in one pass, with a section in this repository's own record (§31).
+
+          Lines shared with findings outside this batch:
+          - L7/0.md:232
+          - sources/0.md:41 and :54
+          - prior-art/0.md:34
+          - peer-1/object-1/0.md:13
+          - L8/0.md:137
+          - L8/L4/0.md:122
+          - L8/L4/work/0.md:40
+          - definitions/0.md:35
+          - binder/0.md:8
+          - copyright/0.md:18 (with the peer-5 fix, its list of binding records that name copyright/ counts four)
+
+          Make each of those lines once, with all of its corrections.
+
+          The owner's candidate branch beta/7lm-exemplar-autonomous (e64b382, commits of 2 November authored by the owner) changes 15 of the 17 files. It still carries every error corrected here, except on three lines that it rewords for its own content; one of those wordings (sources/0.md:54) is true on main and is the pick. Whichever of this pass and that branch is reconciled second must carry these lines, so the record section should list each line changed.
+
+          Some sentences have twins in aybllc/auditonomous, for example copyright step 5 at its L7/governance/copyright/0.md:55; the same choice should be made there.
+
+          Nothing under the four repository paths was modified, and no git command that changes anything was run. Scratch files are in /tmp/claude-0/-home-user/bfcfd013-a2da-5019-961e-7f46116f08be/scratchpad/advice/scratch/C2-autonomous-other/.
+      - **check**
+        - **checks**
+          - item 1
+            - **ref**: L7/0.md:232 (against L7/provenance/sources/0.md lines 41 and 54)
+            - **cls_ok**: yes
+            - **final_cls**: apply
+            - **note**: Confirmed against the export, which is byte-identical to main 9fa3744. L7/provenance/sources/LEDGER.md has 121 rows, S-001 to S-121 with no gap, and every row is pinned to 7540a9d6951c. The pin appears on 122 lines because LEDGER.md:189 also names it in prose. Both replacements match exactly once in L7/provenance/sources/0.md (lines 41 and 54). The new text for line 54 matches origin/beta/7lm-exemplar-autonomous (e64b382) L7/provenance/sources/0.md:54 word for word, and it is true on main. One wording point: git shows only that the beta's two commits were made under the owner's account (EDM). Call it the wording on the owner's candidate branch, not the owner's own wording.
+          - item 2
+            - **ref**: L7/governance/controlled/0.md (against L7/provenance/prior-art/0.md):32 (against prior-art/0.md:34)
+            - **cls_ok**: yes
+            - **final_cls**: apply
+            - **note**: Confirmed. controlled/0.md:32 sends every restriction to L7/governance/copyright/, and copyright/0.md:46 states the lane's Q-6 exposure. Only prior-art/0.md:34 points to controlled/. The replaced phrase occurs once. The rest of line 34, which quotes .gitignore saying removal from history "remains [source text withheld from the public copy]", is not changed by this fix. That quotation bears on the finding about copyright step 5.
+          - item 3
+            - **ref**: L7/governance/controlled/0.md (against L7/provenance/sources/0.md):32 (against sources/0.md:16)
+            - **cls_ok**: yes
+            - **final_cls**: apply
+            - **note**: Confirmed. No file under L7/governance/ names IL-001-R2 (searched), and copyright/0.md:44 names the WSU licence for IEEE 7001 and 1788 only. The colleague's wording "a condition for" is therefore the exact one; the report's "a condition stated at" would be untrue. The phrase occurs once. This is one edit, shared with the finding headed L7/provenance/sources/0.md:16.
+          - item 4
+            - **ref**: L7/governance/copyright/0.md (against L7/governance/0.md and L7/governance/permissions/0.md):56 (against 0.md:34 and permissions/0.md:33)
+            - **cls_ok**: no
+            - **final_cls**: owner-chooses
+            - **note**: Not apply, for two reasons. First, the fix rewrites the text of numbered rule 5 of the copyright procedure, and apply excludes a fix that changes a rule. Second, it does not make the two sheets true. The root .gitignore still says removal from history "remains [source text withheld from the public copy]" (line 58), and two live sheets quote it (L7/provenance/prior-art/0.md:34 and prior-art-lane/0.md:8). The record reserves updating the .gitignore notes to the owner (L8/L6/history/harmonization-2026-09-05.md:84). A session wrote the clause (b30c291, 2026-09-05) and another wrote the two sentences (042afbe, 2026-09-07). Options: (a) drop "never a session's" here and at aybllc/auditonomous L7/governance/copyright/0.md:55, also drop the two quotations, and the owner edits .gitignore; (b) keep every rule and make the two sentences true. Pick (b), in both exemplars. In L7/governance/0.md:34 replace "The tree states no rule about what an intelligence may touch, and nothing about it is filed here;" with "The tree states no rule about what an intelligence may touch, beyond reserving removal from git history to the owner (`copyright/`, step 5; the `.gitignore` notes), and nothing about it is filed here;". In L7/governance/permissions/0.md:33 replace "The tree states no rule about what an intelligence may touch;" with "The tree states no rule about what an intelligence may touch, beyond reserving removal from git history to the owner (`L7/governance/copyright/`, step 5);". Each replacement matches once here and once in Auditonomous; its tree has no such .gitignore note, so the parenthesis there names step 5 only. What would change the pick: the owner applying the word of 2026-09-06, that stay-out rules for intelligences are "not our concerm" (aybllc/7lm main, L8/L6/history/harmonization-2026-09-04.md:101), to remove every such clause. Then (a).
+          - item 5
+            - **ref**: L7/peering/private/ingress/peer-3/object-1/0.md:15 (other locator: L8/L0/semantics/definitions/0.md:35)
+            - **cls_ok**: yes
+            - **final_cls**: owner-chooses
+            - **note**: Confirmed as an authorial ruling. REGISTER.md:13 enters the coinage as "[source text withheld from the public copy]", dated 2026-08-05, the day its file moved to the peer. definitions/0.md:35 lists it among the adopted entries. Four live sheets say "not adopted" (L7/0.md:234, L7/peering/0.md:39, peer-3/0.md:8, peer-3/object-1/0.md:15), and so does the specification (aybllc/7lm main :946). The owner's candidate branch keeps both readings unchanged, so it settles nothing. Pick (b) is the smallest true act: it edits only the line that presents the dated register row as the present position, and REGISTER.md is not touched. The replacement matches once. It also reads cleanly together with the change of "five" to "six" compounds, a finding outside this batch on the same line.
+          - item 6
+            - **ref**: L7/peering/private/ingress/peer-3/0.md:8 (other locator: L8/L0/semantics/definitions/0.md:35)
+            - **cls_ok**: yes
+            - **final_cls**: owner-chooses
+            - **note**: This is the same ruling as the finding at peer-3/object-1/0.md:15. Under pick (b) this sentence stays as it is. Its option (a) replacement also matches once.
+          - item 7
+            - **ref**: L7/peering/0.md:39 (other locator: L8/L0/semantics/definitions/0.md:35)
+            - **cls_ok**: yes
+            - **final_cls**: owner-chooses
+            - **note**: This is the same ruling as the finding at peer-3/object-1/0.md:15. The bullet matches the specification's own wording for peer-3, and under pick (b) it stays as it is.
+          - item 8
+            - **ref**: L7/peering/private/ingress/peer-1/object-1/0.md:10 (other locators: L7/provenance/sources/0.md:41 and :54)
+            - **cls_ok**: yes
+            - **final_cls**: apply
+            - **note**: Confirmed. The range S-001…S-121 on line 10 is right, so that line does not change. The two edits to the sources sheet are the ones under the L7/0.md:232 finding and are made once. Replacing the sentence on line 54, rather than deleting it as the report says, is right: deleting it would leave the Standing line no longer saying which register is empty.
+          - item 9
+            - **ref**: L7/peering/public/0.md:42
+            - **cls_ok**: yes
+            - **final_cls**: apply
+            - **note**: Confirmed. The sentence is the scaffold's own, at aybllc/7lm main L7/peering/public/0.md:37. In this repository ingress/ holds peers 1 to 9, the issuing bodies. The receiving side of the originating case is in aybllc/auditonomous (main aa30b03), at L7/peering/public/ingress/peer-1/object-1/, which binds this repository's AUTONOMOUS.md at 0504961. What a sheet says after its first line is a design choice (scaffold record §27). The replacement matches once.
+          - item 10
+            - **ref**: L7/peering/public/ingress/peer-5/object-1/0.md:17
+            - **cls_ok**: yes
+            - **final_cls**: apply
+            - **note**: Confirmed. The cell restates a copyright condition that copyright/0.md:48 already states, which contradicts copyright/0.md:18. The three binding records the colleague names already point to copyright/. The record's NO EDIT, NO DELETE covers the issuer's object, not this cell, and nothing is rebound. The replacement matches once.
+          - item 11
+            - **ref**: L7/provenance/prior-art/0.md:34 (against L7/provenance/prior-art/prior-art-lane/0.md:8)
+            - **cls_ok**: yes
+            - **final_cls**: apply
+            - **note**: Confirmed. prior-art-lane/0.md:8 already sends the exposure to copyright/. This is the same single edit as the controlled/ finding on this line.
+          - item 12
+            - **ref**: L7/provenance/sources/0.md:16 (against line 36 of the same sheet and L7/peering/private/ingress/peer-1/object-1/0.md:17)
+            - **cls_ok**: yes
+            - **final_cls**: apply
+            - **note**: Confirmed. sources/0.md:36 and the Governance cell of the binding record both name copyright/. This is the same single edit as the controlled/ finding on this line, and the colleague's "a condition for" is the exact wording.
+          - item 13
+            - **ref**: L7/provenance/prior-art/ct-lane/0.md:20 (against L7/provenance/prior-art/0.md:27 and :10)
+            - **cls_ok**: yes
+            - **final_cls**: owner-chooses
+            - **note**: Confirmed. Two written rules disagree. The relocated README (L7/provenance/prior-art/README.md:20) puts a verdict in each search record. prior-art/0.md:27, provenance/0.md:27 and the scaffold's prior-art/0.md:30 send the judgment to L8/L5/research/. Which rule stands is the owner's design choice. Pick (a) changes one line and matches the scaffold. Its replacement matches once, and the README stays as written.
+          - item 14
+            - **ref**: L7/provenance/sources/0.md:10 and 18 (against L7/peering/private/ingress/peer-1/object-1/0.md:13, a sheet outside this batch)
+            - **cls_ok**: yes
+            - **final_cls**: apply
+            - **note**: Confirmed. In LEDGER.md, 8277144 occurs only inside the identifier in row S-097's citation, and no row is pinned to it. The single replacement at peer-1/object-1/0.md:13 matches once and also makes the stale fix for that line. It rewords the Version cell without changing the pin.
+          - item 15
+            - **ref**: L8/L5/research/findings/0.md:35
+            - **cls_ok**: yes
+            - **final_cls**: apply
+            - **note**: Confirmed. L8/L1/0.md:107 and the record (harmonization-2026-09-05.md:45) name four findings that fix L1 dimensions. FINDING_IEEE_1872.2 was recorded on [source text withheld from the public copy], and is not one of the four. The two-bullet replacement matches once.
+          - item 16
+            - **ref**: L8/L5/0.md:80 (against L8/0.md line 137, a sheet outside this batch)
+            - **cls_ok**: yes
+            - **final_cls**: apply
+            - **note**: Confirmed by count. review/ holds 23 files beside its sheet plus 11 under autonomous-theory/, 34 in all. L8/L5/0.md:80 lists 19 of them: 5 reviews, 6 audits, 1 external check and 7 relocated adjudications. Edit L8/0.md:137 together with the stale fix on the same line.
+          - item 17
+            - **ref**: L8/L4/work/0.md:39-40
+            - **cls_ok**: yes
+            - **final_cls**: apply
+            - **note**: Confirmed. L8/L4/work/work/ does not exist. writing/ holds AUTONOMY_SCALE.md (49,501 bytes, marked INTERNAL ONLY at its line 5), computation/ holds deep-research-report.md (38,738 bytes), and experiments/ holds only its sheet. The three-bullet replacement of lines 39-40 matches once.
+          - item 18
+            - **ref**: L7/allications/publications/binder/0.md:8
+            - **cls_ok**: yes
+            - **final_cls**: apply
+            - **note**: Confirmed. binder/ stood at the repository root before b49deb0 (2026-09-05), and the record's §4a row moves it (harmonization-2026-09-05.md:34). The owner's word the colleague quotes is verbatim at harmonization-2026-09-05.md:165. Only the sheet changes; the seven binder files stay as written. The replacement matches once.
+          - item 19
+            - **ref**: L7/governance/copyright/0.md:47
+            - **cls_ok**: yes
+            - **final_cls**: apply
+            - **note**: Class right, but the fix is inexact. "are not in this repository" is untrue of its git history. Commit ab8f01f (2026-08-14, authored under the owner's name) added 112 files under _STAGING_TO_L6/sources/_fulltext/. Commit a2dbba9 deleted the 108 texts the same day and moved the hash list and the three logs to staging. Both commits are ancestors of main, so all 36 hash-listed texts and both SEVOCAB extracts are in its history. The rest of the colleague's text checks out. The only .gitignore patterns are on lines 1-3, and lines 21-25 record the removal of the old rules. None of the 36 texts is in the tree, by name or by SHA-256. LEDGER.md has rows for every issuer named. nist1297.pdf is NIST Technical Note 1297. Corrected text for line 47: "- Cached full texts of third-party documents (NIST, EUR-Lex, UNECE, DoD, EASA, IEEE SEVOCAB extracts) are not in this repository's tree; committed on 2026-08-14 and removed the same day, they remain in its git history. The hash list of 36 of them and three download logs are in `L7/provenance/sources/staging-records/`. The `.gitignore` rules that once excluded them were removed on 2026-08-14. `L7/provenance/sources/LEDGER.md` carries pointer rows into the archive `aybllc/l6` for documents of each of those issuers, and each is re-downloadable from its official source. The prior-art lane above holds its own tracked copy of NIST Technical Note 1297." Whether to rewrite the history remains the owner's decision (copyright/0.md:46).
+          - item 20
+            - **ref**: L7/peering/private/ingress/peer-1/0.md:8 (same phrase at L7/peering/private/ingress/peer-1/object-1/0.md:13, "archive HEAD at this pass `53b28f6`")
+            - **cls_ok**: yes
+            - **final_cls**: apply
+            - **note**: Confirmed. Commit b49deb0 wrote both phrases on 2026-09-05. The replacement at peer-1/0.md:8 matches once. For object-1/0.md:13, use the single replacement given under the contradiction finding for that line.
+          - item 21
+            - **ref**: L7/peering/public/egress/peer-1/object-1/0.md:10, 13
+            - **cls_ok**: yes
+            - **final_cls**: apply
+            - **note**: Confirmed. The file at 0504961:research/definitions/AUTONOMOUS.md and the one at main:L8/L0/semantics/definitions/AUTONOMOUS.md are the same blob, ffbdc28, so "unchanged" is true. The bound version stays 0504961, and nothing is withdrawn or rebound. Both replacements match once.
+          - item 22
+            - **ref**: L7/provenance/sources/0.md:10
+            - **cls_ok**: yes
+            - **final_cls**: apply
+            - **note**: Confirmed. b49deb0 (2026-09-05) renamed uso/l6/LEDGER.md to L7/provenance/sources/LEDGER.md with its content unchanged, and the record's §3 records the move. The former path stays as a correct "relocated from", which decision 23 explicitly leaves out. The replacement matches once.
+          - item 23
+            - **ref**: L8/0.md:137
+            - **cls_ok**: yes
+            - **final_cls**: apply
+            - **note**: Confirmed. The record meant is harmonization-2026-09-05.md, continued through its §14. Make this edit together with the "nineteen files" fix on the same line. Both replacements match once and read cleanly together.
+          - item 24
+            - **ref**: L8/L4/work/computation/0.md:50
+            - **cls_ok**: yes
+            - **final_cls**: apply
+            - **note**: Confirmed. deep-research-report.md was filed here on 2026-09-06 (commit 5dbf85c), and line 38 of the same sheet lists it. The replacement matches once.
+          - item 25
+            - **ref**: L8/L6/0.md:88
+            - **cls_ok**: yes
+            - **final_cls**: apply
+            - **note**: Confirmed. Line 74 of the same sheet already uses the replacement wording. I checked it as one replacement together with the two entries the unlisted finding appends to this line.
+          - item 26
+            - **ref**: L8/L6/history/0.md:41
+            - **cls_ok**: yes
+            - **final_cls**: apply
+            - **note**: Confirmed. The replacement matches once, and the clauses about §9 and §14 stand.
+          - item 27
+            - **ref**: L7/0.md:232 (Holdings, provenance bullet)
+            - **cls_ok**: yes
+            - **final_cls**: apply
+            - **note**: Confirmed. JOURNALS.md (667 bytes, one entry: Reliable Computing) is the only file under L7/ that is neither a sheet nor inside a directory the Holdings names. The colleague's grammatical correction matches once. Make it in the same edit as the change of "definitions" to "entries" on this line, a finding outside this batch.
+          - item 28
+            - **ref**: L8/L4/0.md:121
+            - **cls_ok**: yes
+            - **final_cls**: apply
+            - **note**: Confirmed. writing/0.md:35 lists AUTONOMY_SCALE.md, and L8/L1/0.md:107 records the owner's ruling of 2026-09-06 that places it at L4. The appended entry matches once.
+          - item 29
+            - **ref**: L8/L4/work/0.md:39
+            - **cls_ok**: yes
+            - **final_cls**: apply
+            - **note**: Confirmed. This is made by the dead-path replacement of lines 39-40, with the path written from the sheet's own directory.
+          - item 30
+            - **ref**: L8/L6/0.md:73-75 and 88-89
+            - **cls_ok**: yes
+            - **final_cls**: apply
+            - **note**: Confirmed. history/ holds sheets-2026-09-07.md and 7LM_ROUTING_PLAN_2026-09-05.md, and retired/layout-2026-09-06/ holds five files with its sheet: the one-day queue's three rule texts and one duplicate .odt. The layer sheet itemizes none of them. All four insertions match once and read cleanly with the stale fix on line 88.
+          - item 31
+            - **ref**: L7/allications/publications/0.md:29 (with 23 and 33)
+            - **cls_ok**: yes
+            - **final_cls**: owner-chooses
+            - **note**: Confirmed. Line 29 says the directory does not hold drafts stamped internal, while line 33 lists the binder with a glossary stamped DRAFT — INTERNAL. Where the binder belongs is decision 15, which the record leaves open (harmonization-2026-09-05.md:80). Pick (b) moves nothing, and the clause it appends matches once. Outside this batch: line 43 of the same sheet says the harmonized specification is filed at L8/L4/work/writing/, but it is not in this repository. Record §14 (harmonization-2026-09-05.md:212) left that line for the owner, and the audit does not list it.
+          - item 32
+            - **ref**: L7/provenance/sources/staging-records/0.md:21
+            - **cls_ok**: yes
+            - **final_cls**: leave
+            - **note**: Leave is right, but the reason is cost, not that the finding is moot. The observation stands: sources/0.md:37 sends internal history to L8/L6/history/. Nothing in line 21 is false. A move would break the parked tree of 25 files that staging-records/0.md:8 keeps intact ("Files are not edited"). It would also need edits to at least three sheets (staging-records/0.md, sources/0.md:44 and governance/0.md:32). So the fix costs more than it buys. Note that the words "stays where it is" at governance/0.md:32 were written by a session (b30c291); they are not an owner's ruling.
+          - item 33
+            - **ref**: L8/L0/semantics/definitions/0.md:24, 26 (Does not hold); 34-35 (Holdings)
+            - **cls_ok**: yes
+            - **final_cls**: owner-chooses
+            - **note**: Class and pick confirmed. Moving the list is the owner's act: the record names it as one of the four companions of the L0 object (harmonization-2026-09-05.md:44), and the owner commissioned it (DEFINITION_LIST_AUTONOMOUS.md:10-11). The replacement for line 34 matches once. One wording correction: the list also carries its own index of measures (§8) and its refusals and negative findings (§9), so "its one internal note is labelled INTERNALLY DERIVED" overstates. Write instead "(its note on what each definition measures is labelled INTERNALLY DERIVED; the adopted use appears only by pointer, §10)".
+          - item 34
+            - **ref**: L8/L3/engineering-mathematics/tolerances/0.md:26-28, 33
+            - **cls_ok**: yes
+            - **final_cls**: owner-chooses
+            - **note**: Confirmed. Only a move would change anything, and a move is the owner's design choice; the owner has said "we dont want hard strcuture yet." (aybllc/7lm main, record :297). The colleague is right that L8/0.md:137 also names tolerances/THE_SHARED_REFERENT_DEFECT.md. Pick (a), leaving everything as it is, stands.
+        - **overall**: Count: all 34 findings of the batch appear exactly once (16 contradiction, 1 dead path, 9 stale, 4 unlisted, 4 misfiled). Each ref matches its report heading character for character. None is missing and none is doubled. I checked against the export, which is byte-identical to aybllc/autonomous main 9fa3744 (264 files); the range 8257118..9fa3744 changes only the record file. I re-derived all 8 findings marked owner-chooses or leave and re-checked all 26 marked apply. I also ran every proposed replacement on scratch copies, and each text to be replaced matched exactly once.
+
+          Corrected counts for the batch: 25 apply, 8 owner-chooses, 1 leave (the colleague had 26, 7 and 1). The 25 apply findings still come to edits in 17 files. The 8 owner-chooses findings are six decisions:
+          - the coinage ruling (three findings);
+          - copyright step 5;
+          - where a prior-art verdict sits;
+          - the three placements (the binder, the definition list, the shared-referent manuscript).
+
+          What changed from the colleague's result:
+          1. Copyright step 5 (copyright/0.md:56) moves from apply to owner-chooses. The fix rewrites a numbered rule, which apply excludes. It also leaves governance/0.md:34 and permissions/0.md:33 false, because .gitignore:58 still reserves history removal to the owner "not an agent's" and two live sheets quote it. The pick is to keep the rule and correct the two sentences; the wording is in that check. With this change, the colleague's statement that no apply fix changes a rule becomes true.
+          2. copyright/0.md:47 stays apply, but its new text must not say the cached texts are not in this repository. They stand in main's git history: added in commit ab8f01f and removed in a2dbba9, both on 2026-08-14. The corrected text is in that check.
+          3. Three smaller wording corrections:
+          - the leave finding is kept because the fix costs more than it buys, not because it is moot;
+          - the definition-list text should not say the list has one internal note;
+          - the sources-sheet wording comes from the owner's candidate branch; git shows only that it was committed under the owner's account.
+
+          What the owner should know, outside this batch:
+          - The same commit ab8f01f put into main's history PDFs named for IEEE Std 7001-2021, 1788-2015, 1788.1-2017 and 754-2019, of 1.6 to 3.7 MB each. In the extracted text, the 7001 copy carries the line "Authorized licensed use limited to" 54 times and the 1788 copy 97 times; 96 lines of the 1788 copy name Washington State University. copyright/0.md:44 says of 7001 and 1788 "The files do not travel", yet every clone and push of main carries them. Only the owner can decide to remove them from history (copyright/0.md:46); the record lists that decision as open (harmonization-2026-09-05.md:82). The audit does not report this.
+          - L7/allications/publications/0.md:43 says the harmonized specification is filed at L8/L4/work/writing/, but it is not in this repository. Record §14 (line 212) left this for the owner, and the audit does not list it.
+
+          Decision 2: the colleague's account of the dependency is accurate. The read-only declaration exists only on the closed branch claude/scholarly-pair-baseline-k8ap82 (9b49910), at L7/governance/restrictions/0.md:34. Its first item is itself a rule about what a session may do. So if the owner files it, governance/0.md:34 and permissions/0.md:33 must be reworded again, whichever pick is taken for step 5. None of the 25 apply fixes:
+          - edits the L0 object or one of its three companions;
+          - moves or deletes a file;
+          - withdraws the egress exposure.
+
+          Also confirmed: the beta branch (e64b382) differs from main in 15 of the 17 files, and it still carries every error phrase fixed here except on three lines it rewords.
+
+          Nothing under the four repository paths was modified, and no git command that changes anything was run. Scratch files are in /tmp/claude-0/-home-user/bfcfd013-a2da-5019-961e-7f46116f08be/scratchpad/advice/scratch/test-C2-autonomous-other/. To count the licence lines I extracted two PDF copies from history into that folder, and I deleted them after counting.
+    - item 3
+      - **key**: C3-auditonomous-facts
+      - **out**
+        - **findings**
+          - item 1
+            - **ref**: L7/0.md:232
+            - **category**: wrong-fact
+            - **cls**: apply
+            - **touches**: live sheet
+            - **why**: The register at `L7/provenance/sources/LEDGER.md` has 60 [source text withheld from the public copy]-, at its lines 20-79); 62 is that count plus the table's header and delimiter lines, and correcting the number changes nothing else.
+            - **fix**: In L7/0.md line 232 replace "the 62-row pointer register" with "the 60-row pointer register". The finding headed L7/0.md:232 under UNLISTED appends to the end of the same bullet and does not overlap.
+          - item 2
+            - **ref**: README.md:5
+            - **category**: wrong-fact
+            - **cls**: owner-chooses
+            - **touches**: README and live sheets
+            - **why**: This repository's record leaves the sheetless folders to the owner ("Twelve folders carry no sheet", aybllc/auditonomous main aa30b03, L8/L6/history/harmonization-2026-09-05.md:204) and the scaffold's record §41 leaves the same choice open for the specification's matching bullet, so any fix takes a side; the owner's own word favours writing the sheets: "they should all either be blank with just the location" (aybllc/7lm main 6de996b, L8/L6/history/harmonization-2026-09-04.md:388).
+            - **fix**: Options: write the missing sheets, or narrow the sentence. To write them: in each of the twelve folders without a sheet (`L7/allications/publications/binder/internal/` and `press-kit/`; under `L7/provenance/sources/staging-records/` the folders `ieee/`, `ieee/papers/`, `ieee/reading/`, `interval/`, `library/`, `library/reading/`, `library/text/`, `standards/`, `standards/extracted/`; and `L8/L5/research/review/autonomous-theory/`) add a `0.md` whose only line is the folder's path, for example `# L7/provenance/sources/staging-records/ieee/`; in `L7/allications/publications/binder/0.md` line 16 replace "both `internal/` and `press-kit/` are otherwise empty." with "`internal/` and `press-kit/` hold nothing else but their sheets."; and in README.md line 5 replace "every directory under `L7/` and `L8/` describes itself in its own `0.md`," with "every directory under `L7/` and `L8/` describes itself in its own `0.md`, except the folders kept verbatim below the root of each retired set at `L8/L6/retired/`,". To narrow instead: the report's fix, which also excepts "the twelve folders of filed material listed in the record, §13". Pick: write the sheets. It makes the tree follow the owner's rule instead of recording a departure from it, leaves the specification's bullet on every directory's sheet (spec line 934) true outside the retired sets with no new version of the specification, and puts this repository where the scaffold already is, with no live folder lacking a sheet; take the same choice for Autonomous's six such folders and its identical README sentence. The retired-set clause is needed either way: the 13 folders below the roots of the two retired sets (7 in layout-2026-08-14, 6 in layout-2026-09-06) are kept verbatim and the one CI check does not look below a retired set's root. The scaffold's README makes the same claim and has one such folder (`L8/L6/retired/scaffold-2026-08-20/USO`), so under the owner's rule of 20 September 2026 (scaffold record §26) its clause goes in first.
+          - item 3
+            - **ref**: L7/governance/copyright/0.md:43
+            - **category**: wrong-fact
+            - **cls**: apply
+            - **touches**: live sheet
+            - **why**: The rule stays word for word and only what it is said to cover is corrected: 34 rows of `L7/provenance/sources/LEDGER.md` carry the WSU label (27 of them among the 31 documents of the `ieee/` import, 7 not: PR-010, STD-003, STD-023, STD-024, PR-015, PR-016, PR-017), and `ieee/papers/README.md` is the watermark table of three papers, two WSU-watermarked and one open access.
+            - **fix**: In L7/governance/copyright/0.md line 43 make two replacements: "the 31 WSU-licensed IEEE PDFs and their reading captures" becomes "the WSU-licensed IEEE PDFs (34 rows carry the WSU label in `L7/provenance/sources/LEDGER.md`; the `ieee/` import alone is 31 documents) and the captures taken from them"; and "per-file watermark manifest at `L7/provenance/sources/staging-records/ieee/papers/README.md`" becomes "per-file watermark manifest of the three IEEE papers at `L7/provenance/sources/staging-records/ieee/papers/README.md`".
+          - item 4
+            - **ref**: L7/governance/copyright/0.md:18
+            - **category**: wrong-fact
+            - **cls**: owner-chooses
+            - **touches**: live sheet
+            - **why**: The sentence is the copyright sheet's statement of how the owner's one-place rule is applied, the report gives two ways to make it true, and the records it must except are kept as written by the record's own account: "Not changed: the quarantine and licence records under `L7/provenance/sources/staging-records/`, which are history, and the retired README." (aybllc/auditonomous main aa30b03, L8/L6/history/harmonization-2026-09-05.md:103).
+            - **fix**: Options: the report's main fix, which rewrites the sentence to say no file needs a copyright rule of its own and names the records and the two live sheets that restate the rule; or make those two live sheets point to the one place (the fixes under the findings headed L7/peering/private/egress/peer-1/object-1/0.md:17 and L7/provenance/sources/staging-records/0.md:30) and keep the rule's sentence, adding after "and the next step is stated below, once." the sentence "The records kept as written are the exception: `L7/provenance/sources/LEDGER.md`, the quarantine and licence records under `L7/provenance/sources/staging-records/`, and `L7/allications/publications/binder/README.md` still carry the copyright and licence notices they were written with." Pick: the second. It keeps the owner's rule in the sheet's own words, edits no record, and is true once the apply fixes are made, after which every live sheet that states the WSU hold names the one place (those two, and `L7/provenance/sources/0.md:16` and `L8/L4/work/computation/0.md:38` under their own findings).
+          - item 5
+            - **ref**: L7/peering/private/ingress/peer-1/0.md:16
+            - **category**: wrong-fact
+            - **cls**: apply
+            - **touches**: live sheet
+            - **why**: The ledger has 60 rows and only 58 point to holdings in `aybllc/l6`; EXC-001 and EXC-002 carry "— (HELD OUT of l6)" in the path column and no commit (`L7/provenance/sources/LEDGER.md` lines 78-79), so the library holdings are bound by 58 rows.
+            - **fix**: In line 16 replace "bound by the 62 rows of `L7/provenance/sources/LEDGER.md`" with "bound by the 58 pointer rows of `L7/provenance/sources/LEDGER.md`". Corrected from the report's "60 rows": the line counts the rows that bind library holdings, and the two EXC rows name none.
+          - item 6
+            - **ref**: L7/peering/private/ingress/peer-1/object-1/0.md:10
+            - **category**: wrong-fact
+            - **cls**: apply
+            - **touches**: live sheet
+            - **why**: The ledger has 60 rows, two of which (EXC-001, EXC-002) record items held out of the archive, so "62 rows" is wrong and "60 rows" alone would still imply 60 library holdings; the Version pin in line 13 is not touched.
+            - **fix**: In line 10 replace "(62 rows: PR-, STD-, INST-, EXC-)" with "(60 rows: PR-, STD-, INST-, EXC-; the two EXC- rows record items held out of l6)". The report offered the closing clause as optional; it is made part of the fix because the cell names the archive's library holdings.
+          - item 7
+            - **ref**: L7/peering/private/ingress/peer-3/object-1/0.md:13
+            - **category**: wrong-fact
+            - **cls**: apply
+            - **touches**: live sheet
+            - **why**: The definition's appendices do record commits and truncated manuscript hashes (`L8/L0/semantics/definitions/AUDITONOMOUS_DEFINITION.md`, Appendix E lines 370 and 372, Appendix F lines 391 and 404) but no commit for the head of `einstein-integration` and no full-length hash, and the corrected cell still leaves the pin to the owner's next ledgering session.
+            - **fix**: Replace line 13 with: "| Version | as recorded in the definition's appendices: Appendix F names the tip of `v1.0.0-dev` (`ff57986`) and the coining commits (`cd24b10`, `c8c8aca`, `f3bc098`), and Appendix E gives each manuscript file a truncated sha256 (`6a717c70cb983029…`, `520ada05a1539390…`); no commit is recorded for the head of `einstein-integration`, the branch that was read, and no full-length manuscript hash — the owner's next ledgering session pins them |".
+          - item 8
+            - **ref**: L7/peering/private/ingress/peer-2/object-1/0.md:15
+            - **category**: wrong-fact
+            - **cls**: apply
+            - **touches**: live sheet
+            - **why**: The held reference copy labels itself "`[source text withheld from the public copy]`" (aybllc/auditonomous main aa30b03, L7/peering/private/ingress/peer-2/object-1/auditonomous-departure-protocol.md:4) and the sheet leaves out one of its four terms; the copy itself, NO EDIT and NO DELETE, is not touched.
+            - **fix**: In line 15 replace "self-labelled RESEARCH / NOT IMPLEMENTED / NO NOVELTY CLAIM" with "self-labelled [source text withheld from the public copy]".
+          - item 9
+            - **ref**: L7/peering/public/ingress/peer-1/object-1/0.md:34
+            - **category**: wrong-fact
+            - **cls**: apply
+            - **touches**: live sheet
+            - **why**: `AUDITONOMOUS_DEFINITION.md` contains no path under `L7/`, no `aybllc/autonomous`, no `AUTONOMOUS.md` and no `0504961`, while `L8/L0/0.md:98` and `L8/L0/semantics/definitions/0.md:34` do name the binding, so the binding record is corrected and the definition is left alone.
+            - **fix**: In line 34 replace "it names this binding and does not copy the peer definition." with "it does not copy the peer definition and does not itself name this binding; the binding is named from the sheets `L8/L0/0.md` and `L8/L0/semantics/definitions/0.md`." This is the one edit also given under the contradiction headed L8/L0/semantics/definitions/0.md:34; the report's two wordings differ only in naming one sheet or both, and this one names both. Made once.
+          - item 10
+            - **ref**: L7/provenance/0.md:37
+            - **category**: wrong-fact
+            - **cls**: apply
+            - **touches**: live sheet
+            - **why**: `L7/provenance/lineage/` holds `2026-08-05-observed-not-observable-session-provenance.md` (13,733 bytes, record EBA-PROV-2026-08-05-01), so only `authority/` is empty.
+            - **fix**: Replace line 37 with two lines: "- `lineage/2026-08-05-observed-not-observable-session-provenance.md` — record EBA-PROV-2026-08-05-01, a session-provenance record bound to this repository and `aybllc/eb-audit` (see `L7/provenance/lineage/0.md`)." and "- `authority/` — empty; authority for each bound peer object is stated in that object's binding record under `L7/peering/`."
+          - item 11
+            - **ref**: L7/provenance/0.md:20, 33
+            - **category**: wrong-fact
+            - **cls**: apply
+            - **touches**: live sheet
+            - **why**: The register has 60 rows: 58 point into `aybllc/l6` (39 pinned at `b328334`, 19 at `e4f0d5c`) and the two EXC rows carry no path and no commit.
+            - **fix**: Line 20: replace "(62 pointer rows into the aybllc/l6 archive)" with "(60 rows: 58 pointer rows into the aybllc/l6 archive and two rows for items held out of it)". Line 33: replace "62 pointer rows (PR-, STD-, INST-, EXC-) into `aybllc/l6` by path and pinned commit" with "60 rows (PR-, STD-, INST-, EXC-): 58 pointer rows into `aybllc/l6` by path and pinned commit, and two EXC rows for items held out of the archive".
+          - item 12
+            - **ref**: L7/provenance/lineage/0.md:32
+            - **category**: wrong-fact
+            - **cls**: apply
+            - **touches**: live sheet
+            - **why**: The record's binding line for this repository names `manuscripts/main/research/eb-carrier/eb-audit/provenance/`, where it was first committed (`0d134b8`, 2026-08-05), whereas it came to this position from `common/durable/orphan/eb-carrier/eb-audit/provenance/` (moved there at `8c98573`, here at `50f43d3`); the record itself is not touched.
+            - **fix**: Replace "Its binding lines name the path it was filed from; they are the record's own words and stand." with "Its binding line for this repository names a former path of the record, `manuscripts/main/research/eb-carrier/eb-audit/provenance/`; its binding lines are the record's own words and stand." Corrected from the report, whose wording said only what the named path is not; git history shows it is the record's first path in this repository, and the shorter sentence adds no move history to the sheet.
+          - item 13
+            - **ref**: L7/provenance/sources/0.md:10, 41
+            - **category**: wrong-fact
+            - **cls**: apply
+            - **touches**: live sheet
+            - **why**: The register has 60 rows; 58 carry an `l6` path and commit (39 at `b328334`, 19 at `e4f0d5c`) and EXC-001 and EXC-002 carry neither.
+            - **fix**: Line 10: replace "62 pointer rows into the `aybllc/l6` archive (ID, citation, `l6` path, `l6` commit, access, label)," with "60 rows (ID, citation, `l6` path, `l6` commit, access, label), 58 of them pointer rows into the `aybllc/l6` archive and two (EXC-001, EXC-002) for items held out of it," (reordered from the report so the column list stays with the count; the following words "relocated in this pass", which a finding under STALE treats, are left in place). Line 41: replace the first sentence "- `LEDGER.md` — the pointer register into `aybllc/l6`: 62 rows (PR-, STD-, INST-, EXC-), each with citation, `l6` path, `l6` commit (`b328334`; accession rows at `e4f0d5c`), access class, and label." with "- `LEDGER.md` — the pointer register into `aybllc/l6`: 60 rows (PR-, STD-, INST-, EXC-), each with citation, access class, and label; the 58 PR-, STD- and INST- rows carry an `l6` path and an `l6` commit (`b328334`; accession rows at `e4f0d5c`), and the two EXC- rows, held out of `l6`, carry neither."
+          - item 14
+            - **ref**: L7/provenance/sources/0.md:55
+            - **category**: wrong-fact
+            - **cls**: apply
+            - **touches**: live sheet
+            - **why**: `LEDGER.md` has 60 rows; only `datasets-LEDGER.md` is empty ("Currently: **EMPTY** — no datasets held.", aybllc/auditonomous main aa30b03, L7/provenance/sources/datasets-LEDGER.md:8).
+            - **fix**: Replace "The ledger has no rows; that is admissible." with "The datasets ledger has no rows; that is admissible."
+          - item 15
+            - **ref**: L7/provenance/sources/0.md:41
+            - **category**: wrong-fact
+            - **cls**: apply
+            - **touches**: live sheet
+            - **why**: The words "provenance is l6" stand in the master ledger's row (`L8/L6/history/LEDGER.md:31`), not in `L7/provenance/sources/LEDGER.md`, whose only mark of the earlier numbering is its title "L6 SOURCE LEDGER" (its line 1).
+            - **fix**: Replace "so its title and its "provenance is l6" framing reflect the earlier numbering." with "so its title, "L6 SOURCE LEDGER", reflects the earlier numbering." It touches the second sentence of line 41 and fits with the edit to its first sentence under the finding headed L7/provenance/sources/0.md:10, 41.
+          - item 16
+            - **ref**: L7/provenance/sources/staging-records/0.md:8
+            - **category**: wrong-fact
+            - **cls**: apply
+            - **touches**: live sheet
+            - **why**: Three of the nine interior directories carry a README (`ieee/`, `ieee/papers/`, `library/`) and six carry none; the report's closing sentence "None is re-gated here." is left out because whether these folders get sheets is the choice still open under README.md:5.
+            - **fix**: Replace "The interior directories carry their own READMEs from the earlier layout and are not re-gated here." with "Three interior directories carry their own READMEs from the earlier layout (`ieee/`, `ieee/papers/`, `library/`); the other six (`ieee/reading/`, `interval/`, `library/reading/`, `library/text/`, `standards/`, `standards/extracted/`) carry none." If the owner keeps the twelve folders without sheets (the narrowing under README.md:5), the report's "None is re-gated here." may follow it.
+          - item 17
+            - **ref**: L8/L0/ontology/0.md:33
+            - **category**: wrong-fact
+            - **cls**: apply
+            - **touches**: live sheet
+            - **why**: Of the three distinctions the line names, the maximal envelope (lines 12-16) and "invent nothing" (line 18) stand in the file's opening above its heading "## 0." at line 28, and platform given versus deliverable in §0a (line 51); correcting the locator leaves the owner's split-or-cite decision where it is.
+            - **fix**: Replace "`L8/L1/state-space/AUDITON_ENVELOPE.md` §0–0b states the ontological distinctions of the auditon" with "`L8/L1/state-space/AUDITON_ENVELOPE.md`, in its opening statement and §0–0b, states the ontological distinctions of the auditon". So that the three sheets carrying this locator agree (the finding names the repeats), in the same pass in `L8/L1/state-space/0.md` line 37 replace "Its §0–0b are L0 ontological distinctions" with "Its opening statement and §0–0b are L0 ontological distinctions"; `L8/L0/0.md:96` is its own finding.
+          - item 18
+            - **ref**: L8/L0/0.md:96
+            - **category**: wrong-fact
+            - **cls**: apply
+            - **touches**: live sheet
+            - **why**: The cited distinctions stand in the opening statement (lines 12-18) and §0a (line 51) of `AUDITON_ENVELOPE.md`, not wholly within §0–0b.
+            - **fix**: Replace "(§0–0b of `L8/L1/state-space/AUDITON_ENVELOPE.md`)" with "(the opening statement and §0–0b of `L8/L1/state-space/AUDITON_ENVELOPE.md`)".
+          - item 19
+            - **ref**: L8/L0/semantics/definitions/0.md:34
+            - **category**: wrong-fact
+            - **cls**: apply
+            - **touches**: live sheet
+            - **why**: Appendix C quotes the root *autonomous* only from AHD (lines 281-292) and Perseus (lines 293-296) and enters [source text withheld from the public copy] IEEE 7001 page as "Neighboring established concept" (lines 309-336); the definition is not touched and the owner's open edit on the root quotations stays as the sheet states it.
+            - **fix**: Replace "from AHD, Perseus, RFC 4949, NIST CSRC, and the IEEE 7001 scope page" with "from AHD and Perseus".
+          - item 20
+            - **ref**: L8/L3/0.md:92
+            - **category**: wrong-fact
+            - **cls**: apply
+            - **touches**: live sheet
+            - **why**: In the session file cell sizing is §3.1 (line 147), R ∝ (ρt)^¼ is §4.3 (line 217) and only "recoverable, not zero" is §7.4 (line 434); the mislocation came from the dated routing plan (`L8/L6/history/7LM_ROUTING_PLAN_2026-09-05.md:173`), which stays as written.
+            - **fix**: Replace "§7.4 of `L8/L4/work/writing/sessions/SESSION_2026-08-05_AUDITON_ARCHITECTURE.md` (cell sizing, R ∝ (ρt)^¼, "recoverable, not zero")" with "§3.1 (cell sizing), §4.3 (R ∝ (ρt)^¼) and §7.4 ("recoverable, not zero") of `L8/L4/work/writing/sessions/SESSION_2026-08-05_AUDITON_ARCHITECTURE.md`".
+          - item 21
+            - **ref**: L8/L1/state-space/0.md:50
+            - **category**: wrong-fact
+            - **cls**: apply
+            - **touches**: live sheet
+            - **why**: `L8/L1/0.md` says nothing of the reserved terms, which are stated only in the specification's row and in this sheet (lines 33 and 50), so the pointer leads nowhere and removing it loses nothing.
+            - **fix**: Replace "Given no home here; see `L8/L1/0.md`." with "Given no home here." The same sentence stands in the scaffold (aybllc/7lm `L8/L1/state-space/0.md:44`, on main `6de996b` and on the pull request #19 build `38e2ec3`) and in Autonomous (`L8/L1/state-space/0.md:48`); under the owner's rule of 20 September 2026 (scaffold record §26) the scaffold is changed first, then the two exemplars.
+          - item 22
+            - **ref**: L8/L4/work/computation/0.md:54
+            - **category**: wrong-fact
+            - **cls**: apply
+            - **touches**: live sheet
+            - **why**: The folder holds six files besides its sheet, all listed in its own Holdings (lines 38-42); the sentence came with the scaffold's sheet, whose folder is empty and where it stays true.
+            - **fix**: In line 54 delete " It is empty at present." so the bullet ends "unused now does not mean removed."
+          - item 23
+            - **ref**: L8/L4/work/writing/chat/0.md:16 (also 3 and 8)
+            - **category**: wrong-fact
+            - **cls**: apply
+            - **touches**: live sheet
+            - **why**: Both files open with the title "Auditonomous Book Material Sourcebook", name themselves chat-history ingestion volumes I and II with ingestion date 6 August 2026, and state "This is a source-faithful organized corpus." (paragraphs 1 and 7 of each file's text, aybllc/auditonomous main aa30b03, L8/L4/work/writing/chat/auditonomous-chat-1.docx and auditonomouos-chat-2.docx), so they are sourcebook volumes made from chat histories, not transcripts; the files are not touched.
+            - **fix**: As the report gives it: in `L8/L4/work/writing/chat/0.md` line 3 becomes "**Object:** Sourcebook volumes organized from supplied chat histories, as produced."; line 8, first sentence, becomes "Sourcebook volumes organized from supplied chat histories, as produced." (the rest unchanged); line 16 becomes "- `auditonomous-chat-1.docx`, `auditonomouos-chat-2.docx` — "[source text withheld from the public copy] and II (Version 0.1 CHAT-HIST and [source text withheld from the public copy] sources `chat.txt` and `chat_history_chunk_02.txt`): organized corpora made from supplied chat histories, as produced; not the transcripts themselves. Any argument in them belongs at `L8/L5/` only when stated there."; in `L8/L4/0.md:121` and `L8/L4/work/0.md:39` "two chat transcripts" becomes "two chat-history sourcebook volumes"; in `L8/L4/work/writing/0.md:34` "two recorded working sessions as produced (`auditonomous-chat-1.docx`, `auditonomouos-chat-2.docx`); recorded conversation, not argument." becomes "two sourcebook volumes organized from supplied chat histories, as produced (`auditonomous-chat-1.docx`, `auditonomouos-chat-2.docx`)." Added so that no live sheet keeps the old words: `L8/0.md:137` also says "chat transcripts"; make it "chat-history sourcebook volumes", and use those words if the finding headed L8/0.md:137 under UNLISTED is taken. The record's row in §4a that calls them recorded sessions stays as written.
+          - item 24
+            - **ref**: L8/L5/research/lanes/0.md:36
+            - **category**: wrong-fact
+            - **cls**: apply
+            - **touches**: live sheet
+            - **why**: `THEME_LEDGER.md` holds clusters C1 to C11 (headings at its lines 15-128) and named tensions T1 to T16 (lines 146-298), T3 among them as the sheet says.
+            - **fix**: Replace "(C1–C6) and the named tensions T1–T11" with "(C1–C11) and the named tensions T1–T16"; the rest of the line unchanged.
+          - item 25
+            - **ref**: L8/L5/research/review/0.md:38 (governing lines 40-42; the item concerned is line 41)
+            - **category**: wrong-fact
+            - **cls**: apply
+            - **touches**: live sheet
+            - **why**: `STATUS_LADDER.md` and `autonomous-theory/` came on 2026-09-06 from `common/durable/` (commit `50f43d3`), but `STATUS_AND_LABEL_DISCIPLINE.md` came [source text withheld from the public copy] (commit `208769f`, record §10), so one date and one origin cannot cover all three.
+            - **fix**: Replace "Placed here on 2026-09-06 from the dissolved `common/durable/`, none adjudicated:" with "Placed here, none adjudicated:". Lines 40-42 unchanged. Shortened from the report's fix, which adds the second date and is also true: the dates and origins of these moves stand in the record (§8 and §10), where the owner's rule of 7 September 2026 puts them (record §11), and line 40 already names the ladder's source.
+          - item 26
+            - **ref**: L8/L6/history/0.md:35
+            - **category**: wrong-fact
+            - **cls**: apply
+            - **touches**: live sheet
+            - **why**: This repository's master ledger has no staleness section and does not contain the phrase the sheet quotes, which is the heading "Known staleness — declared, not silently repaired" of Autonomous's master ledger (aybllc/autonomous main 9fa3744, L8/L6/history/LEDGER.md:39); its own sections are the current state, the tree by state, standing constraints and known open items, with retired objects as struck-through rows with dated notes (lines 29, 30, 33).
+            - **fix**: Replace `the tree by state, what each area waits on, retired objects, staleness "declared, not silently repaired".` with `the tree by state, what each area waits on, and retired objects (struck through, with a dated note).` The words "this clone is shallow" later in the line belong to a finding under STALE and are left.
+          - item 27
+            - **ref**: L7/governance/controlled/0.md:32 (against L7/provenance/sources/0.md:16, L7/provenance/sources/staging-records/0.md:30, L8/L4/work/computation/0.md:38)
+            - **category**: contradiction
+            - **cls**: apply
+            - **touches**: live sheet
+            - **why**: `controlled/0.md:32` is right and agrees with the specification, "governance/licensing/ and governance/controlled/ point to it rather than restating it." (aybllc/7lm main 6de996b, L8/L4/work/writing/7lm-harmonized-architecture-specification.md:879), so the three sheets that point the WSU hold at `controlled/` are the ones to correct.
+            - **fix**: No change to `L7/governance/controlled/0.md`. The three wrong pointers are corrected by the edits given under the contradictions headed L7/provenance/sources/0.md:16, L7/provenance/sources/staging-records/0.md:30 and L8/L4/work/computation/0.md:38, each made once.
+          - item 28
+            - **ref**: L7/governance/0.md:34 (same sentence at L7/governance/permissions/0.md:33; contrary statement at L7/governance/copyright/0.md:55)
+            - **category**: contradiction
+            - **cls**: owner-chooses
+            - **touches**: live sheet
+            - **why**: Either fix changes the words of a rule; the owner's word keeps rules for intelligences out of the tree, "simply requireng whatvefr 8inteligence you abve to abide byu the stay out rules is not our concerm" (aybllc/auditonomous main aa30b03, L8/L6/history/harmonization-2026-09-05.md:107), and the incident record that step 5 rests on says "[source text withheld from the public copy]" (same commit, L7/provenance/sources/staging-records/standards/SOURCE_LEDGER.md:431-432).
+            - **fix**: Options: in `L7/governance/copyright/0.md` replace line 55 "5. Removing anything from git history is the owner's act, never a session's." with "5. Removing anything from git history is the owner's act." and leave both "no rule" sentences as written; or keep step 5 and rewrite `L7/governance/0.md:34` and `L7/governance/permissions/0.md:33` to say the tree states one such rule (the report's alternative wording). Pick: shorten step 5. It is one edit, it keeps removal from history the owner's act as the incident record has it, it keeps the tree silent about intelligences as the owner ruled, and it leaves true the specification's bullet that neither exemplar has a rule about what an intelligence may touch (spec line 941); make the same edit in Autonomous, whose `L7/governance/copyright/0.md:56` carries the same step beside the same two sentences.
+          - item 29
+            - **ref**: L7/peering/private/egress/peer-1/object-1/0.md:17
+            - **category**: contradiction
+            - **cls**: apply
+            - **touches**: live sheet
+            - **why**: This binding record restates the IL-001-R2 rule without naming the one place, against the copyright sheet's line 18 and the specification's "point to it rather than restating it" (spec line 879), while the ingress binding to the same archive (`L7/peering/private/ingress/peer-1/object-1/0.md:17`) already points; the reconciliation report this position holds is not touched.
+            - **fix**: In line 17 replace "IL-001-R2 discipline: quotations travel, files do not;" with "IL-001-R2 discipline — see `L7/governance/copyright/`, the one place;", giving "| Governance | IL-001-R2 discipline — see `L7/governance/copyright/`, the one place; the repository is private/INTERNAL |". The report's version also changed "the repository" to "`aybllc/l6`", a reading the sheet does not settle; both repositories are INTERNAL, so those words are left.
+          - item 30
+            - **ref**: L7/peering/public/ingress/peer-1/0.md:12
+            - **category**: contradiction
+            - **cls**: apply
+            - **touches**: live sheet
+            - **why**: The line states the owner's rule as the state of the tree, while [source text withheld from the public copy]` (line 268) and rows of `CONTRADICTIONS.md` (lines 36-37, 56, 175) quote definitions of *autonomous* directly; the fix words it as the rule, as the parent sheet already does (`L7/peering/public/ingress/0.md:34`), and leaves the owner's edit of those files open.
+            - **fix**: As the report gives it: replace "This peer is the only source for the definition of *autonomous* in this repository:" with "By the owner's rule this peer is the only source for the definition of *autonomous* in this repository:", and replace "Those bodies' definitions reach this repository only as rows already bound inside the peer's L0 object, with the peer's ownership tags." with "Under that rule those bodies' definitions are to reach this repository only as rows already bound inside the peer's L0 object, with the peer's ownership tags; the [source text withheld from the public copy] elsewhere are named in `object-1/0.md` under "Receiving side"."
+          - item 31
+            - **ref**: L7/provenance/sources/0.md:16
+            - **category**: contradiction
+            - **cls**: apply
+            - **touches**: live sheet
+            - **why**: The IL-001-R2 class-2 hold is stated at `L7/governance/copyright/0.md:43`, and `controlled/` holds nothing and says every copyright-derived condition is stated at `copyright/`.
+            - **fix**: Replace "which is a condition for `L7/governance/controlled/`, not for this directory." with "which is a condition for `L7/governance/copyright/`, the one place, not for this directory." This is the wording given under the finding headed L7/governance/controlled/0.md:32; the report's second wording for this line says the same with "stated at", and only one edit is made.
+          - item 32
+            - **ref**: L7/provenance/sources/staging-records/0.md:30
+            - **category**: contradiction
+            - **cls**: apply
+            - **touches**: live sheet
+            - **why**: The condition is stated at `L7/governance/copyright/0.md:43`, not at `controlled/`, which holds nothing; the rule's own words stay there.
+            - **fix**: Replace line 30 with "- WSU-route material is IL-001-R2 class-2 hold-private — see `L7/governance/copyright/`, the one place." Corrected from the report's line, which kept "quotations travel, files do not" beside the pointer: dropping the restated rule follows the specification's "point to it rather than restating it" and the form of the ingress binding record, and the rule stays word for word at `L7/governance/copyright/0.md:43`.
+          - item 33
+            - **ref**: L8/L0/semantics/definitions/0.md:34
+            - **category**: contradiction
+            - **cls**: apply
+            - **touches**: live sheet
+            - **why**: The definitions sheet and `L8/L0/0.md:98` say the binding is named from the sheets, the binding record says the definition file names it, and the file names it nowhere, so the binding record is the sheet that is wrong.
+            - **fix**: In `L7/peering/public/ingress/peer-1/object-1/0.md` line 34 replace "it names this binding and does not copy the peer definition." with "it does not copy the peer definition and does not itself name this binding; the binding is named from the sheets `L8/L0/0.md` and `L8/L0/semantics/definitions/0.md`." This is the same single edit as under the wrong fact headed L7/peering/public/ingress/peer-1/object-1/0.md:34; nothing in the definitions sheet changes.
+          - item 34
+            - **ref**: L8/L4/0.md:122
+            - **category**: contradiction
+            - **cls**: apply
+            - **touches**: live sheet
+            - **why**: `L8/L4/work/computation/` holds six files besides its sheet, three requirements extractions and one deep-research run with its two `.odt` exports, and its own sheet lists all six (lines 38-42).
+            - **fix**: Replace line 122 with "- `work/computation/` — three requirements extractions as run; one deep-research run with its citation export and activity log."
+          - item 35
+            - **ref**: L8/L4/work/0.md:40
+            - **category**: contradiction
+            - **cls**: apply
+            - **touches**: live sheet
+            - **why**: `L8/L4/work/computation/` holds six files besides its sheet, three requirements extractions and one deep-research run with its two `.odt` exports, and its own sheet lists all six (lines 38-42).
+            - **fix**: Replace line 40 with "- `work/computation/` — three requirements extractions as run; one deep-research run with its citation export and activity log."
+          - item 36
+            - **ref**: L8/L4/work/computation/0.md:38
+            - **category**: contradiction
+            - **cls**: apply
+            - **touches**: live sheet
+            - **why**: The class-2 hold on WSU-route material is stated at `L7/governance/copyright/0.md:43`, which that sheet and `L7/governance/controlled/0.md:32` both call the one place.
+            - **fix**: Replace "(class-2 hold-private, `L7/governance/controlled/`)" with "(class-2 hold-private, `L7/governance/copyright/`)".
+        - **notes**: State: all 36 statements still stand on aybllc/auditonomous main aa30b03. The export is identical to origin/main, and the only change since the audited commit f2d5b37 is the record file. Result: 33 apply, 3 owner-chooses (README.md:5; L7/governance/copyright/0.md:18; L7/governance/0.md:34 against step 5 of the copyright sheet), none leave. The 33 apply findings come to 42 replacements in 27 live sheets. They change no path, no first line, no record, ledger, definition, binder file or staging record. On a scratch copy every replaced string occurs exactly once, all 42 apply in sequence without collision, and all 84 sheets stay headed by their paths; the three picks add 3 replacements and README.md. On the owner's yes this is one pass by hand, recorded as §14 of L8/L6/history/harmonization-2026-09-05.md. Some edits serve two findings and are made once: the sentence at L7/peering/public/ingress/peer-1/object-1/0.md:34, and the three controlled/ pointers. Where a fix differs from the report's, its entry says how and why. The 62-to-60 correction covers all seven live places that say 62. The specification's own Auditonomous paragraph also says 62 (spec line 954, item 6 of the proposals of 12 November); it is the scaffold's to correct, not this repository's. The dated records that say 62 stay as written: L8/L6/history/LEDGER_2026-08-16_l6-close-and-normalization.md:30, and L8/L6/history/7LM_ROUTING_PLAN_2026-09-05.md:80 and :206. Keeping the three repositories in step: the reserved-terms pointer and the README sentence also stand in the scaffold, so under §26 the scaffold changes first. Step 5 with the two 'no rule' sentences, the README sentence and the reserved-terms pointer also stand in Autonomous, where the same picks keep the exemplars alike. Other headings of the same report touch some of these lines: L7/0.md:232 under UNLISTED; L7/provenance/sources/0.md:10, L8/L4/work/writing/chat/0.md:16 and L8/L6/history/0.md:35 under STALE; L8/0.md:137 under STALE and UNLISTED. The fixes here leave those words alone and fit with them. The unmerged ROADMAP branch (9259c18) still carries the old text of several of these sheets and BETA (714480d) carries some of it, so whichever is merged later must be reconciled. Open pull request #28 adds only agent-result files with their own sheets and touches no line here.
+      - **check**
+        - **checks**
+          - item 1
+            - **ref**: L7/0.md:232
+            - **cls_ok**: yes
+            - **final_cls**: apply
+            - **note**: Wrong fact. Checked on aybllc/auditonomous main aa30b03 (the export is byte-identical to it). L7/provenance/sources/LEDGER.md has 60 rows at lines 20-79: [source text withheld from the public copy]. Its table has 62 lines only because the header and delimiter lines are counted. "the 62-row pointer register" occurs once, at L7/0.md:232, so the fix is exact. The UNLISTED fix for the same line only appends to the end of the bullet.
+          - item 2
+            - **ref**: README.md:5
+            - **cls_ok**: yes
+            - **final_cls**: owner-chooses
+            - **note**: Re-derived. There are 109 directories under L7/ and L8/, and 84 have a sheet. The 25 without one are: 12 live folders, the list the record leaves to the owner ("Twelve folders carry no sheet", L8/L6/history/harmonization-2026-09-05.md:204); and 13 folders below the roots of the retired sets (7 and 6), which the CI check skips (.github/workflows/integrity.yml lines 40 and 67). Narrowing the sentence takes a side in that open choice. So does the scaffold record's §41 open item. Writing the sheets creates 12 files. The pick is to write 12 one-line sheets, add the retired-set clause to the README and change binder/0.md:16. The owner's word supports it: "they should all either be blank with just the location" (aybllc/7lm main 6de996b, L8/L6/history/harmonization-2026-09-04.md:388). It is also option (a) of item 1 in the proposals of 12 November. Applied on a scratch copy: the README and binder replacements each match once, no live folder lacks a sheet, and all 96 sheets are headed by their paths. Also confirmed: Autonomous's README line 5 is identical and it has six live folders without a sheet. The scaffold's README line 5 makes the same claim, and its one folder without a sheet is L8/L6/retired/scaffold-2026-08-20/USO.
+          - item 3
+            - **ref**: L7/governance/copyright/0.md:43
+            - **cls_ok**: yes
+            - **final_cls**: apply
+            - **note**: Wrong fact. 34 ledger rows carry WSU in the Label column, and all are IEEE items (PR-010 is IEEE AP Magazine). ieee/README.md:3 says "31 documents". ieee/papers/README.md (lines 7-13) lists three papers: two WSU-watermarked and one open access. Both replaced strings occur once. The rule's own terms stay word for word: hold-private, quotations travel and files do not, no derivative works, private repositories only. Only the list of what the rule covers is corrected.
+          - item 4
+            - **ref**: L7/governance/copyright/0.md:18
+            - **cls_ok**: yes
+            - **final_cls**: owner-chooses
+            - **note**: Re-derived. This sentence is the sheet's statement of the owner's one-place rule. The files that restate the rule are records kept as written (record §7, line 103): LEDGER.md:144-145, the staging READMEs, SOURCE_LEDGER.md and binder/README.md rule 4. So the sentence itself has to change, and any wording edits the statement of an owner's rule. The pick (the second option) inserts its sentence after "and the next step is stated below, once.", and that string matches once. Two refinements. First, say the records "still state the copyright and licence rules they were written with" rather than "notices", to match "restates a copyright rule". Second, the claim that the sentence is true once the apply fixes are made holds only if a sheet that describes a held file's rules does not count as restating them. L7/allications/publications/0.md:33 and binder/0.md:8 describe binder/README.md's cite-only rule and name no copyright position. The report's first option goes out of date once the egress and staging fixes are made, because it says those two sheets do not name this directory.
+          - item 5
+            - **ref**: L7/peering/private/ingress/peer-1/0.md:16
+            - **cls_ok**: yes
+            - **final_cls**: apply
+            - **note**: Wrong fact. The triage corrected the report's "60 rows" to "58 pointer rows", and that is exact. EXC-001 and EXC-002 carry "— (HELD OUT of l6)" and no commit (LEDGER.md:78-79). 58 rows carry an l6 path: 39 pinned at b328334 and 19 at e4f0d5c. The new wording agrees with the new wording at L7/provenance/0.md:20. The string matches once.
+          - item 6
+            - **ref**: L7/peering/private/ingress/peer-1/object-1/0.md:10
+            - **cls_ok**: yes
+            - **final_cls**: apply
+            - **note**: Wrong fact. The edit is to the binding record's Object identity row. The pin (the Version row, line 13) is not touched. The binding record has been edited as a live sheet before, in 3045e07 and f2d5b37. The string matches once.
+          - item 7
+            - **ref**: L7/peering/private/ingress/peer-3/object-1/0.md:13
+            - **cls_ok**: yes
+            - **final_cls**: apply
+            - **note**: Wrong fact. The definition's Appendix E gives truncated sha256 values (AUDITONOMOUS_DEFINITION.md lines 370 and 372). Appendix F gives ff57986 (line 391) and cd24b10, c8c8aca and f3bc098 (line 404). Neither gives a commit for the head of einstein-integration or a full-length hash. The new cell pins nothing and leaves the pin to the owner's ledgering session. The whole-line replacement matches once.
+          - item 8
+            - **ref**: L7/peering/private/ingress/peer-2/object-1/0.md:15
+            - **cls_ok**: yes
+            - **final_cls**: apply
+            - **note**: Wrong fact. The held copy's line 4 reads `[source text withheld from the public copy]`. Only the sheet's Status cell changes. The copy, which is NO EDIT and NO DELETE, is not touched.
+          - item 9
+            - **ref**: L7/peering/public/ingress/peer-1/object-1/0.md:34
+            - **cls_ok**: yes
+            - **final_cls**: apply
+            - **note**: Wrong fact. AUDITONOMOUS_DEFINITION.md contains none of "L7", "binding", "peering", "aybllc/autonomous", "AUTONOMOUS.md" or "0504961". The binding is named at L8/L0/0.md:98 and L8/L0/semantics/definitions/0.md:34. The edit is in the Receiving side section, not the pin (the Version row, line 13). One edit serves this finding and the contradiction headed L8/L0/semantics/definitions/0.md:34. It matches once.
+          - item 10
+            - **ref**: L7/provenance/0.md:37
+            - **cls_ok**: yes
+            - **final_cls**: apply
+            - **note**: Wrong fact. lineage/ holds the 13,733-byte record EBA-PROV-2026-08-05-01, while authority/ holds only its sheet. The two-line replacement matches once, and the record is not touched.
+          - item 11
+            - **ref**: L7/provenance/0.md:20, 33
+            - **cls_ok**: yes
+            - **final_cls**: apply
+            - **note**: Wrong fact. The counts check out: 39 rows at b328334, 19 at e4f0d5c and 2 with neither. Both strings match once.
+          - item 12
+            - **ref**: L7/provenance/lineage/0.md:32
+            - **cls_ok**: yes
+            - **final_cls**: apply
+            - **note**: Wrong fact. git log --follow shows the record was added at manuscripts/main/research/eb-carrier/eb-audit/provenance/ in 0d134b8 (2026-08-05). It moved to common/durable/orphan/… in 8c98573 and to lineage/ in 50f43d3. The record's binding line for this repository (its line 9) names the first path. The triage's corrected wording is exact and adds no move history to the sheet.
+          - item 13
+            - **ref**: L7/provenance/sources/0.md:10, 41
+            - **cls_ok**: yes
+            - **final_cls**: apply
+            - **note**: Wrong fact. The triage reordered the line 10 wording so the column list stays beside the count, and that is right. The report's order would have put the column list after "held out of it". Both strings match once. "relocated in this pass" belongs to a STALE finding and is left in place.
+          - item 14
+            - **ref**: L7/provenance/sources/0.md:55
+            - **cls_ok**: yes
+            - **final_cls**: apply
+            - **note**: Wrong fact. Only the datasets ledger is empty: "Currently: **EMPTY** — no datasets held." (datasets-LEDGER.md:8). The string matches once.
+          - item 15
+            - **ref**: L7/provenance/sources/0.md:41
+            - **cls_ok**: yes
+            - **final_cls**: apply
+            - **note**: Wrong fact. "provenance is l6" occurs only in L8/L6/history/LEDGER.md:31 and in the record's line 26. The register's only mark of the old numbering is its title, "L6 SOURCE LEDGER", on line 1. The string matches once.
+          - item 16
+            - **ref**: L7/provenance/sources/staging-records/0.md:8
+            - **cls_ok**: yes
+            - **final_cls**: apply
+            - **note**: Wrong fact. Three of the nine interior folders carry a README: ieee/, ieee/papers/ and library/. In this tree a folder's README is its gate (binder/0.md:8). Leaving out "None is re-gated here." keeps the line true whichever way README.md:5 is decided. The string matches once.
+          - item 17
+            - **ref**: L8/L0/ontology/0.md:33
+            - **cls_ok**: yes
+            - **final_cls**: apply
+            - **note**: Wrong fact. In AUDITON_ENVELOPE.md the maximal envelope is at lines 12-16, "invent nothing" at line 18, "## 0." at line 28 and the platform-versus-deliverable distinction in §0a at line 51. The triage also edits L8/L1/state-space/0.md:37; that string matches once and keeps the three sheets in agreement. The owner's split-or-cite call (record §5) stays open.
+          - item 18
+            - **ref**: L8/L0/0.md:96
+            - **cls_ok**: yes
+            - **final_cls**: apply
+            - **note**: Wrong fact. The same locator error as at ontology/0.md:33. The string matches once.
+          - item 19
+            - **ref**: L8/L0/semantics/definitions/0.md:34
+            - **cls_ok**: yes
+            - **final_cls**: apply
+            - **note**: This is the wrong-fact finding under this heading. Appendix C quotes the root word only from AHD (lines 281-292) and Perseus (lines 293-296). [source text withheld from the public copy] IEEE 7001 page appear as "Neighboring established concept" (lines 309-336). Only the sheet changes, not the definition, and the owner's edit stays open.
+          - item 20
+            - **ref**: L8/L3/0.md:92
+            - **cls_ok**: yes
+            - **final_cls**: apply
+            - **note**: Wrong fact. In the session file, cell sizing is at line 147 (§3.1), R ∝ (ρt)^¼ at line 217 (§4.3) and "recoverable, not zero" at line 434 (§7.4). The dated routing plan (line 173) stays as written. The string matches once.
+          - item 21
+            - **ref**: L8/L1/state-space/0.md:50
+            - **cls_ok**: yes
+            - **final_cls**: apply
+            - **note**: Wrong fact. L8/L1/0.md contains no "reserved" and no "origidity". The reservation stands only in the specification (line 989) and in this sheet (lines 33 and 50). The same sentence stands in the scaffold (main 6de996b, L8/L1/state-space/0.md:44), whose L8/L1/0.md is equally silent, and in Autonomous (line 48). So under §26 the scaffold is changed first. One citation needs correcting: the pull request #19 build cited as 38e2ec3 was amended. It is now 8aa66c1, still unpushed, and the sentence is at its line 44.
+          - item 22
+            - **ref**: L8/L4/work/computation/0.md:54
+            - **cls_ok**: yes
+            - **final_cls**: apply
+            - **note**: Wrong fact. The folder holds six files besides its sheet, all listed at lines 38-42. On the scaffold's main the folder holds only its sheet, so the same sentence there (line 44) stays true.
+          - item 23
+            - **ref**: L8/L4/work/writing/chat/0.md:16 (also 3 and 8)
+            - **cls_ok**: yes
+            - **final_cls**: apply
+            - **note**: Wrong fact. Both .docx files open with "Auditonomous Book Material Sourcebook", then "Version 0.1 CHAT-HIST" or "[source text withheld from the public copy]" and "This is a source-faithful organized corpus." All seven replacements match once, in order (line 3 before line 8). The fix misses one line: after the seven edits, chat/0.md:12 still says the folder "Keeps a recorded conversation distinct from the drafts it may have informed". Add: replace "Keeps a recorded conversation distinct" with "Keeps what was organized from chat histories distinct" (it occurs once). The specification's Auditonomous paragraph also says "chat transcripts" (spec line 956); that is the scaffold's to correct.
+          - item 24
+            - **ref**: L8/L5/research/lanes/0.md:36
+            - **cls_ok**: yes
+            - **final_cls**: apply
+            - **note**: Wrong fact. THEME_LEDGER.md has cluster headings C1 to C11 at lines 15-128 and tensions T1 to T16 at lines 146-298. The string matches once.
+          - item 25
+            - **ref**: L8/L5/research/review/0.md:38 (governing lines 40-42; the item concerned is line 41)
+            - **cls_ok**: yes
+            - **final_cls**: apply
+            - **note**: Wrong fact. STATUS_LADDER.md and autonomous-theory/ came in 50f43d3 (2026-09-06), and STATUS_AND_LABEL_DISCIPLINE.md came in 208769f (2026-09-07). The triage's shorter fix is true and leaves the dates to the record (§8, §10), which follows the rule of 7 September (record §11). The string matches once.
+          - item 26
+            - **ref**: L8/L6/history/0.md:35
+            - **cls_ok**: yes
+            - **final_cls**: apply
+            - **note**: Wrong fact. This repository's master ledger has no staleness section; its sections start at lines 14, 25, 44 and 57, and its struck-through rows are at lines 29, 30 and 33. The quoted phrase is the heading at Autonomous's LEDGER.md:39 (9fa3744). The string matches once.
+          - item 27
+            - **ref**: L7/governance/controlled/0.md:32 (against L7/provenance/sources/0.md:16, L7/provenance/sources/staging-records/0.md:30, L8/L4/work/computation/0.md:38)
+            - **cls_ok**: yes
+            - **final_cls**: apply
+            - **note**: Contradiction. controlled/0.md:32 is right, and it agrees with spec line 879. The three wrong pointers are each corrected once under their own findings, and each string matches once.
+          - item 28
+            - **ref**: L7/governance/0.md:34 (same sentence at L7/governance/permissions/0.md:33; contrary statement at L7/governance/copyright/0.md:55)
+            - **cls_ok**: yes
+            - **final_cls**: owner-chooses
+            - **note**: Re-derived. Both options change the words of a rule, and the pick edits the copyright sheet. Autonomous has the same step at copyright/0.md:56 and the same two sentences (governance/0.md:34 and permissions/0.md:33); the scaffold has neither. The proposals of 12 November (item 3, option a) word the same edit "5. Removing anything from git history is the owner's act alone.", so the owner should approve one wording for both exemplars. In Autonomous, two .gitignore comments (lines 19 and 58) are of the same kind.
+          - item 29
+            - **ref**: L7/peering/private/egress/peer-1/object-1/0.md:17
+            - **cls_ok**: yes
+            - **final_cls**: apply
+            - **note**: Contradiction. The binding record is a live sheet, edited in 3045e07 and f2d5b37. "the record is preserved" in its Status row refers to the reconciliation report, which is not touched. Pointing to the one place is the only fix the owner's one-place rule allows, so this finding does not wait on the copyright/0.md:18 choice. Keeping "the repository" is fine. The string matches once.
+          - item 30
+            - **ref**: L7/peering/public/ingress/peer-1/0.md:12
+            - **cls_ok**: yes
+            - **final_cls**: apply
+            - **note**: Contradiction. Other definitions of autonomous are quoted at REQUIREMENTS_OWNERSHIP.md:268 and CONTRADICTIONS.md:36-37, 56 and 175. The parent sheet already words this as the owner's rule (L7/peering/public/ingress/0.md:34), and object-1/0.md:34 names the three files. Both strings match once.
+          - item 31
+            - **ref**: L7/provenance/sources/0.md:16
+            - **cls_ok**: yes
+            - **final_cls**: apply
+            - **note**: Contradiction. The hold is stated at copyright/0.md:43, and controlled/ holds nothing. Only one edit is made, and it matches once.
+          - item 32
+            - **ref**: L7/provenance/sources/staging-records/0.md:30
+            - **cls_ok**: yes
+            - **final_cls**: apply
+            - **note**: Contradiction. Dropping the restated "quotations travel, files do not" follows copyright/0.md:18. It also matches the form of L7/peering/private/ingress/peer-1/object-1/0.md:17. The rule stays word for word at copyright/0.md:43. The line matches once.
+          - item 33
+            - **ref**: L8/L0/semantics/definitions/0.md:34
+            - **cls_ok**: yes
+            - **final_cls**: apply
+            - **note**: This is the contradiction finding under this heading. The fix is the same single edit as the wrong fact headed L7/peering/public/ingress/peer-1/object-1/0.md:34, made once. The definitions sheet does not change.
+          - item 34
+            - **ref**: L8/L4/0.md:122
+            - **cls_ok**: yes
+            - **final_cls**: apply
+            - **note**: Contradiction. The folder holds six files besides its sheet: three extractions, one deep-research run and its two .odt exports. The line matches once.
+          - item 35
+            - **ref**: L8/L4/work/0.md:40
+            - **cls_ok**: yes
+            - **final_cls**: apply
+            - **note**: Contradiction. The same fact as L8/L4/0.md:122. The line matches once.
+          - item 36
+            - **ref**: L8/L4/work/computation/0.md:38
+            - **cls_ok**: yes
+            - **final_cls**: apply
+            - **note**: Contradiction. The hold is stated at copyright/0.md:43. The string matches once.
+        - **overall**: Count: all 36 findings of the batch appear exactly once, in the report's order, with refs identical to the report's headings. The heading L8/L0/semantics/definitions/0.md:34 is printed twice by the report itself, once under WRONG-FACT and once under CONTRADICTION. The result also carries it twice, with those two categories, so it is not doubled. Nothing is missing.
+
+          Classes: all 36 confirmed, so the counts stand at 33 apply, 3 owner-chooses and 0 leave. Nothing has settled any of the 36: auditonomous main is still aa30b03, the export is byte-identical to it, and the only change since f2d5b37 is the record file.
+
+          How the fixes were checked: every apply fix edits only 0.md sheets (27 of them). None touches a README, record, ledger, definition, binder file or staging record. On a scratch copy, all 42 replacements match exactly once in sequence, and all 84 sheets stay headed by their paths. The three picks add 4 replacements (README.md, binder/0.md, and copyright/0.md twice) and 12 one-line sheets. After those, no live folder lacks a sheet and all 96 sheets are headed correctly.
+
+          What the owner should know:
+          1. The chat fix leaves one old line. Add a 43rd replacement at L8/L4/work/writing/chat/0.md:12: "Keeps a recorded conversation distinct" becomes "Keeps what was organized from chat histories distinct".
+          2. The pull request #19 build cited as 38e2ec3 was amended. It is now 8aa66c1, still unpushed.
+          3. The specification's Auditonomous paragraph also says "chat transcripts" (spec line 956), beside the "62" at line 954. Both are the scaffold's to correct.
+          4. The step 5 wording is "…the owner's act." here but "…the owner's act alone." in item 3 of the proposals of 12 November. The owner should approve one wording for both exemplars.
+          5. In the copyright/0.md:18 pick, "notices" is better as "rules". Two sheets, L7/allications/publications/0.md:33 and binder/0.md:8, describe the binder README's cite-only rule without naming the copyright position.
+          6. BETA (714480d) already corrects the seven "62" lines, in its own words ("60 archive rows"), and adds a dated correction to the ledger (its LEDGER.md:147-149). So this pass and BETA word those lines differently, and whichever lands second has to reconcile them. ROADMAP (9259c18) still carries the old text.
+          7. Pull request #28 is now at 33135b7 (check-in no. 13, 13 November 20:11 UTC). It still adds only agent-result files, all 14 of its folders have sheets, and it touches no line in this batch.
+
+          Scratch work is in /tmp/claude-0/-home-user/bfcfd013-a2da-5019-961e-7f46116f08be/scratchpad/advice/scratch/test-C3-auditonomous-facts/
+    - item 4
+      - **key**: C4-auditonomous-other
+      - **out**
+        - **findings**
+          - item 1
+            - **ref**: L7/peering/private/egress/peer-1/0.md:8
+            - **category**: dead-path
+            - **cls**: apply
+            - **touches**: live sheet
+            - **why**: The sheet names `_STAGING_TO_L6/` as this repository's without marking it as gone, while the binding record beside it already reads "this repository's former `_STAGING_TO_L6/` (removed 2026-08-16)" (aybllc/auditonomous main aa30b03, L7/peering/private/egress/peer-1/object-1/0.md:12), so one word makes the two agree, and the date the line keeps is the transfer's own.
+            - **fix**: In L7/peering/private/egress/peer-1/0.md line 8 replace "this repository's `_STAGING_TO_L6/`" with "this repository's former `_STAGING_TO_L6/`"; the rest of the line is unchanged.
+          - item 2
+            - **ref**: L7/provenance/sources/0.md:45
+            - **category**: dead-path
+            - **cls**: apply
+            - **touches**: live sheet
+            - **why**: The root file `AUDITONOMOUS.md` was deleted from HEAD by commit `8c98573` (its diff lists the deletion), the same paragraph already marks the toolkit it names "removed at HEAD by `8c98573`", and L8/L5/research/review/0.md line 43 marks this very file the same way, so the parenthetical makes the name findable without touching the retired README the paragraph points to.
+            - **fix**: In L7/provenance/sources/0.md line 45 replace "while preparing `AUDITONOMOUS.md`, every external quote" with "while preparing `AUDITONOMOUS.md` (removed from HEAD at `8c98573`, in git history), every external quote"; the rest of the line is unchanged.
+          - item 3
+            - **ref**: L8/L0/semantics/definitions/0.md:36
+            - **category**: dead-path
+            - **cls**: apply
+            - **touches**: live sheet
+            - **why**: The bare locator names a file deleted with the intake corpus by commit `8c98573`, whose full former path is intake/manuscript/Auditonomous_Theory_Master_Archive.md, where lines 37 and 51 at `8c98573^` hold the two statements (checked), so the fix lets a reader open the source from git history and leaves the definition file and the retired README as they are.
+            - **fix**: In L8/L0/semantics/definitions/0.md line 36 replace "from the intake corpus (" with "from the former intake corpus, removed from HEAD at `8c98573` and in git history only (", and replace "`Auditonomous_Theory_Master_Archive.md:37`" with "formerly `intake/manuscript/Auditonomous_Theory_Master_Archive.md:37`"; the rest of the line is unchanged.
+          - item 4
+            - **ref**: L7/0.md:237
+            - **category**: stale
+            - **cls**: apply
+            - **touches**: live sheet
+            - **why**: Since the Third Power Corpus was filed at its own egress position on 6 September 2026 (the repository's record, §8), L7/peering/private/egress/peer-2/object-1/ holds the files themselves (The_Third_Power_Corpus_v3.md, its .docx and OWNERSHIP_PENDING.md), so "Every binding" is untrue while every ingress binding is still reference-only, and the replacement says only what L7/peering/private/egress/0.md line 32 already says.
+            - **fix**: In L7/0.md line 237 replace "Every binding is reference-only." with "Every ingress binding is reference-only; the pending private egress at `L7/peering/private/egress/peer-2/object-1/` holds the Third Power Corpus files themselves, and nothing has left."; the rest of the line is unchanged.
+          - item 5
+            - **ref**: L7/allications/publications/binder/0.md:8
+            - **category**: stale
+            - **cls**: apply
+            - **touches**: live sheet
+            - **why**: Read at today's commit, "this pass" is the mirror of 11 November, before which the binder already stood at the publications position, so the sentence no longer says where the tree came from; the fix names the root of the earlier layout without adding a date and leaves the three gate files, which the same line says "are not rewritten", untouched.
+            - **fix**: In L7/allications/publications/binder/0.md line 8 replace "The `binder/` tree as it stood at HEAD before this pass, moved whole to the publications position because its subject is release identity" with "The `binder/` tree of the earlier layout, moved whole from the repository root to the publications position because its subject is release identity"; the rest of the line is unchanged.
+          - item 6
+            - **ref**: L7/peering/private/ingress/peer-1/0.md:8
+            - **category**: stale
+            - **cls**: apply
+            - **touches**: live sheet
+            - **why**: The HEAD `53b28f6` and the count 1,368 were written by the instantiation commit `ccc0554` of 5 September 2026 and never read again, so "At this pass ... is" is stale, and dating the observation keeps to the repository's rule that "Dates that belong to the objects (captures, verifications, transfers, runs) stay in the sheets as the objects' provenance." (aybllc/auditonomous main aa30b03, L8/L6/history/harmonization-2026-09-05.md:160).
+            - **fix**: In L7/peering/private/ingress/peer-1/0.md line 8 replace "At this pass its HEAD is `53b28f6` and it holds 1,368 tracked library files filed by venue or issuing body." with "At the 2026-09-05 pass its HEAD was `53b28f6` and it held 1,368 tracked library files filed by venue or issuing body."
+          - item 7
+            - **ref**: L7/peering/private/ingress/peer-1/object-1/0.md:13
+            - **category**: stale
+            - **cls**: apply
+            - **touches**: live sheet
+            - **why**: Only the third clause of the Version cell is stale (written by commit `ccc0554` on 5 September 2026), and the fix dates that observation while leaving both pinned commits, `b328334` and `e4f0d5c`, as they are, so it is no rebinding, which stays the owner's act.
+            - **fix**: In L7/peering/private/ingress/peer-1/object-1/0.md line 13 replace "archive HEAD at this pass `53b28f6`" with "archive HEAD at the 2026-09-05 pass `53b28f6`", giving: | Version | rows pinned to `l6` commit `b328334`; the 2026-08-16 accession at `e4f0d5c`; archive HEAD at the 2026-09-05 pass `53b28f6` |
+          - item 8
+            - **ref**: L7/provenance/sources/0.md:10
+            - **category**: stale
+            - **cls**: apply
+            - **touches**: live sheet
+            - **why**: The register was relocated on 5 September 2026 and in no later pass, and deleting "in this pass" makes the clause true without adding a date, which is what the owner-ordered pass of 7 September 2026 did with the 20 phrases " at HEAD of this pass" it pulled into L8/L6/history/sheets-2026-09-07.md.
+            - **fix**: In L7/provenance/sources/0.md line 10 replace "relocated in this pass from `uso/l6/LEDGER.md` without rewriting" with "relocated from `uso/l6/LEDGER.md` without rewriting". The same line also takes the 62-to-60 correction of the WRONG-FACT finding "L7/provenance/sources/0.md:10, 41" of the same report; the two edits do not overlap.
+          - item 9
+            - **ref**: L8/0.md:137
+            - **category**: stale
+            - **cls**: apply
+            - **touches**: live sheet
+            - **why**: Read at today's commit, "this pass" is the mirror of 11 November, of which the record holds only §13, and "What did not move in that pass" would then name folders dissolved two months before, so dating both to 5 September 2026 makes them true in a line that already dates every other event it tells.
+            - **fix**: In L8/0.md line 137 replace "the L6 record of this pass" with "the L6 record of the pass of 2026-09-05 and of the passes since, `harmonization-2026-09-05.md`", and replace "What did not move in that pass:" with "What did not move in the pass of 2026-09-05:". Make this in one edit with the two UNLISTED fixes on the same line; together that part reads: `L8/L6/` (the master ledger, three session ledgers, the record `sheets-2026-09-07.md` of what the sheets carried about their past, the L6 record of the pass of 2026-09-05 and of the passes since, `harmonization-2026-09-05.md`, and the retired 2026-08-14 layout). What did not move in the pass of 2026-09-05:
+          - item 10
+            - **ref**: L8/L1/0.md:54
+            - **category**: stale
+            - **cls**: apply
+            - **touches**: live sheet
+            - **why**: The specification on 7lm main (6de996b, L8/L4/work/writing/7lm-harmonized-architecture-specification.md lines 389, 400, 410 and 420) prints the four headings at H3, the depth the sheet uses, and so does the reconcile commit of pull request #19, so the note's H2 and its reduced depth are false.
+            - **fix**: Replace L8/L1/0.md line 54 with: (The spec prints the four headings below at H3, as here. Words are unchanged.) The same false line stands at 7lm main L8/L1/0.md:54 and at aybllc/autonomous main L8/L1/0.md:54; under the scaffold record's §26 the scaffold is corrected first and both exemplars then take these same words (the Autonomous audit words its fix differently; one wording keeps the three alike). If pull request #19 is merged, its specification rewords two sentences under these headings, and "Words are unchanged." will need checking again then.
+          - item 11
+            - **ref**: L8/L4/work/writing/chat/0.md:16
+            - **category**: stale
+            - **cls**: apply
+            - **touches**: live sheet
+            - **why**: The two files reached this position on 5 September 2026, so "not read in this pass" now reads as a claim about 11 November, while their text is readable and their title pages say "Auditonomous Book Material Sourcebook" (aybllc/auditonomous main aa30b03, L8/L4/work/writing/chat/auditonomous-chat-1.docx, first paragraph), so the clause is stale and deleting it adds no date.
+            - **fix**: In L8/L4/work/writing/chat/0.md line 16 delete "; binary, not read in this pass". If the replacement of line 16 given by the WRONG-FACT finding "L8/L4/work/writing/chat/0.md:16 (also 3 and 8)" of the same report is applied, it already omits the clause and the two are one edit.
+          - item 12
+            - **ref**: L8/L5/research/0.md:38
+            - **category**: stale
+            - **cls**: apply
+            - **touches**: live sheet
+            - **why**: The owner-ordered pass of 7 September 2026 (commit `595d3b5`) removed from this very line the dated owner's rule that "that day" points back to (kept at L8/L6/history/sheets-2026-09-07.md:183), on the owner's words "please pull out historicallyu referndes to the docuejtnation" (aybllc/auditonomous main aa30b03, L8/L6/history/harmonization-2026-09-05.md:158), so the report's "on 2026-09-06" would put back what was pulled out, while deleting the dangling words makes the sentence true and loses nothing.
+            - **fix**: Corrected from the report: in L8/L5/research/0.md line 38 replace "were dissolved that day:" with "were dissolved:"; the rest of the line is unchanged. The date stays in the record (§8) and in sheets-2026-09-07.md. The same dangling "that day" stands at aybllc/autonomous main L8/L5/research/0.md:40 and is not in that repository's audit.
+          - item 13
+            - **ref**: L8/L6/history/0.md:35
+            - **category**: stale
+            - **cls**: apply
+            - **touches**: live sheet
+            - **why**: The clone at /home/user/auditonomous is not shallow (148 commits from `f2d5b37` down to a parentless root) yet lacks the rescue branch and the commit `9aefa6e`, and a sheet cannot speak for whatever clone its reader holds, so the general wording is the one that is true.
+            - **fix**: In L8/L6/history/0.md line 35 replace "git history is not L6, and this clone is shallow." with "git history is not L6, and a clone may be shallow or lack the rescue branch." The first sentence of the same line takes the WRONG-FACT fix "L8/L6/history/0.md:35" of the same report; the edits do not overlap. aybllc/autonomous main carries "this clone is shallow" at L8/L6/0.md:91, not in its audit.
+          - item 14
+            - **ref**: L8/L6/history/0.md:37
+            - **category**: stale
+            - **cls**: apply
+            - **touches**: live sheet
+            - **why**: The record's own Standing line calls it the record of one displacement event, the instantiation of 5 September 2026, to which dated sections were added up to §13 of 11 November, so "this pass" no longer names it, and line 39's "the pass" needs the same antecedent.
+            - **fix**: In L8/L6/history/0.md line 37 replace "the record of this pass:" with "the record of the instantiation of the canonical topology on 2026-09-05:", and in line 39 replace "the routing proposal the pass followed" with "the routing proposal that instantiation followed"; the rest of both lines is unchanged.
+          - item 15
+            - **ref**: L8/L6/0.md:88
+            - **category**: stale
+            - **cls**: apply
+            - **touches**: live sheet
+            - **why**: Line 74 of the same sheet already calls the file "the L6 record of the instantiation of the canonical topology on 2026-09-05", and no event current at today's commit is "this displacement event", so the Holdings line should say the same.
+            - **fix**: In L8/L6/0.md line 88 replace "the L6 record of this displacement event." with "the L6 record of the instantiation of the canonical topology on 2026-09-05." If the UNLISTED fix "L8/L6/0.md:70-75 and 88-89" is applied in the same pass, line 88 ends with that fix's two entries in place of the final full stop (see there).
+          - item 16
+            - **ref**: L8/L6/retired/0.md:34
+            - **category**: stale
+            - **cls**: apply
+            - **touches**: live sheet
+            - **why**: The set preserves the layout as it stood before the topology was instantiated on 5 September 2026, as the set's own sheet says at L8/L6/retired/layout-2026-08-14/0.md line 3, not as it stood before the mirror of 11 November, and the date names the state the set preserves, as the next bullet's date does for its own set.
+            - **fix**: In L8/L6/retired/0.md line 34 replace "as it stood before this pass:" with "as it stood before the Seven-Layer Model topology was instantiated on 2026-09-05:"; the rest of the line is unchanged.
+          - item 17
+            - **ref**: L8/L4/0.md:100
+            - **category**: misquote
+            - **cls**: apply
+            - **touches**: live sheet
+            - **why**: The specification holds "L4 realization bay" and the sentence after it as two cells of one table row with no dash joining them (7lm main 6de996b, L8/L4/work/writing/7lm-harmonized-architecture-specification.md:159), so the sheet's quotation is not verbatim, and the fix quotes each cell as it stands.
+            - **fix**: In L8/L4/0.md line 100 replace the first sentence with: The analytic view of this layer in the specification's outline, "L4 realization bay", reads: "A whole realized architecture may be contained here and may expand internally according to its own native structure without commandeering 7LM layer numbers." The rest of the line is unchanged. The same sentence stands at 7lm main L8/L4/0.md:100 (and on the reconcile commit of pull request #19) and at aybllc/autonomous main L8/L4/0.md:100, which the Autonomous audit does not list; under the scaffold record's §26 the scaffold is corrected first and both exemplars then take these words.
+          - item 18
+            - **ref**: L7/0.md:232
+            - **category**: unlisted
+            - **cls**: apply
+            - **touches**: live sheet
+            - **why**: The desk's Holdings give the provenance branch without the one record filed at L7/provenance/lineage/ (2026-08-05-observed-not-observable-session-provenance.md, 13,733 bytes, record EBA-PROV-2026-08-05-01), which the lineage sheet lists at its line 32, so the list is incomplete.
+            - **fix**: Corrected for punctuation, since the report's text drops the "and" before the prior-art rules without saying so: in L7/0.md line 232 replace "(relocated intact), and the prior-art rules at `L7/provenance/prior-art/README.md` (search still unrun)." with "(relocated intact), the prior-art rules at `L7/provenance/prior-art/README.md` (search still unrun), and one session-provenance record at `L7/provenance/lineage/2026-08-05-observed-not-observable-session-provenance.md`." The same line takes the 62-to-60 fix of the WRONG-FACT finding "L7/0.md:232" of the same report; the edits do not overlap.
+          - item 19
+            - **ref**: L8/0.md:137
+            - **category**: unlisted
+            - **cls**: apply
+            - **touches**: live sheet
+            - **why**: The container sheet's account of what L8/L6/ holds names the routing plan and the retired set of 6 September 2026 later in the same line but nowhere names L8/L6/history/sheets-2026-09-07.md, which only L8/L6/history/0.md line 38 names, so one file of the layer is missing.
+            - **fix**: In L8/0.md line 137, after "three session ledgers," insert " the record `sheets-2026-09-07.md` of what the sheets carried about their past,". Make it in one edit with the STALE fix and the other UNLISTED fix on this line; the combined text is given under the STALE entry for this line.
+          - item 20
+            - **ref**: L8/0.md:137
+            - **category**: unlisted
+            - **cls**: apply
+            - **touches**: live sheet
+            - **why**: L8/L4/work/ holds three drafts, two .docx volumes, one session record, the branch-manuscript rules, three requirements extractions and one deep-research run with its two .odt exports, and the two .docx files are by their own title pages "Auditonomous Book Material Sourcebook" volumes of chat-history ingestion, so the report's fix would keep the untrue "chat transcripts".
+            - **fix**: Corrected from the report: in L8/0.md line 137 replace "`L8/L4/work/` (drafts, chat transcripts, a session record, three requirements extractions)" with "`L8/L4/work/` (drafts, two chat-history sourcebook volumes, a session record, the branch-manuscript rules, three requirements extractions, and one deep-research run with its two exports)", the words the WRONG-FACT finding "L8/L4/work/writing/chat/0.md:16 (also 3 and 8)" of the same report gives for L8/L4/0.md:121 and L8/L4/work/0.md:39. One edit with the other two fixes on this line.
+          - item 21
+            - **ref**: L8/L5/0.md:80
+            - **category**: unlisted
+            - **cls**: apply
+            - **touches**: live sheet
+            - **why**: The layer sheet names two of the five things L8/L5/research/review/ holds besides its sheet and none of the three placed there as the catch-all, which the review sheet lists at its lines 40 to 42, and listing them as in the catch-all takes no side on where Autonomous Theory or the discipline text finally go.
+            - **fix**: Replace L8/L5/0.md line 80 with "- `research/review/` — `CONTRADICTIONS.md`, `PERPETUITY_QUESTION_ADJUDICATION.md`; in the catch-all: `STATUS_LADDER.md`, `STATUS_AND_LABEL_DISCIPLINE.md`, `autonomous-theory/` (`#autonomous(1).txt`, `02_AutonomousTheory(1).pdf`)." If pull request #28 is merged first, it adds `agent-results-2026-11-11/` to the same folder and the list takes it as well.
+          - item 22
+            - **ref**: L8/L6/0.md:70-75 and 88-89
+            - **category**: unlisted
+            - **cls**: apply
+            - **touches**: live sheet
+            - **why**: Both lists in the layer sheet omit history/sheets-2026-09-07.md, history/7LM_ROUTING_PLAN_2026-09-05.md and the retired set layout-2026-09-06/ (its sheet and five files), all three on disk and named in L8/L6/history/0.md and L8/L6/retired/0.md, and listing the set of 6 September decides nothing about the reading the repository's record (line 152) says must come before it may go.
+            - **fix**: As the report gives it, with one correction of punctuation at line 88. After line 74 add "- `L8/L6/history/sheets-2026-09-07.md` — what the sheets carried about their past until 2026-09-07, pulled out verbatim." and "- `L8/L6/history/7LM_ROUTING_PLAN_2026-09-05.md` — the routing proposal the 2026-09-05 instantiation followed; a decision record."; after line 75 add "- `L8/L6/retired/layout-2026-09-06/` — the queue's rule texts (`common/README.md`, `common/durable/README.md`, `intake/README.md`) and two duplicate files, verbatim at their old relative paths."; at the end of line 88 replace the final full stop with "; `history/sheets-2026-09-07.md` — what the sheets carried about their past until 2026-09-07; `history/7LM_ROUTING_PLAN_2026-09-05.md` — the routing proposal the 2026-09-05 instantiation followed." (appending after the full stop, as the report says, would leave ".;"); after line 89 add "- `retired/layout-2026-09-06/` — the queue's rule texts and two duplicate files, preserved verbatim at their old relative paths."
+          - item 23
+            - **ref**: L7/allications/publications/0.md:29 (Does not hold) and 33 (Holdings)
+            - **category**: misfiled
+            - **cls**: owner-chooses
+            - **touches**: live sheet
+            - **why**: Line 29, which is the scaffold's own wording, excludes empty release slots and material that has not left while line 33 holds the binder's internal/ and press-kit/ slots, and where internal/ belongs is held open for the owner in the repository's record (line 94) and in binder/0.md line 27, so any fix either changes what the position says it does not hold or moves a file.
+            - **fix**: Options: (a) end line 29 with "; the binder listed below is such material, held here unreleased (the record, §4a and §5)", the clause the Autonomous audit gives for the same line there; (b) the report's clause, "; the binder's `internal/` and `press-kit/` slots are held here as the release gate, the owner's decision on `internal/` being recorded at `binder/0.md`"; (c) move binder/internal/ to L8/L4/work/writing/ by hand and then reword; (d) change nothing until the owner rules on internal/. Pick: (a), which moves nothing, makes lines 29 and 33 agree, does not call internal/ part of a gate (an argument for one side of the open question), keeps the two exemplars alike, and is reworded in the same pass if the owner later moves internal/.
+          - item 24
+            - **ref**: L7/peering/private/egress/peer-1/object-1/0.md:16, 25
+            - **category**: misfiled
+            - **cls**: leave
+            - **touches**: dated record
+            - **why**: Leave, because the fix costs more than it buys: the report was filed here on purpose as the "receiving-side record of the closed egress to aybllc/l6" (aybllc/auditonomous main aa30b03, L8/L6/history/harmonization-2026-09-05.md:57), the binding record and both parent sheets say truly where it is, its canonical copy is in the archive, and a move would edit four sheets and relocate a dated record only to settle a classification the binding record already states.
+            - **fix**: 
+          - item 25
+            - **ref**: L7/provenance/sources/0.md:33, 43
+            - **category**: misfiled
+            - **cls**: owner-chooses
+            - **touches**: third-party text
+            - **why**: The Ferreira full text is a third-party paper whose licence status the repository's record holds open for the owner (line 94) and whose numbered lines are the citation base of the Ferreira reading capture (L7/provenance/sources/staging-records/library/reading/Ferreira_break-glass-access-control.md line 5), and the copyright sheet's own step for such material is "keep the work, record the class and the route" (aybllc/auditonomous main aa30b03, L7/governance/copyright/0.md:54).
+            - **fix**: Options: (a) keep the file where it is, change no sheet, and have the owner record its licence status at L7/governance/copyright/ (line 45 there); (b) delete it from HEAD, the archive holding the paper as row PR-020; (c) move it under a binding at L7/peering/private/ingress/peer-1/. Pick: (a); what is waited for is the owner's ruling on the licence, which the research handle of 11 November also lists as open, and until then the copyright sheet already says the text is not cited as held.
+          - item 26
+            - **ref**: L7/provenance/sources/0.md:43
+            - **category**: misfiled
+            - **cls**: owner-chooses
+            - **touches**: staging record
+            - **why**: Both sheets call the decorations capture L3 by content and an owner extraction candidate, and the repository's record holds its extraction open for the owner (line 92), while the file itself is a dated reading of a WSU-licensed IEEE standard inside a tree whose files are not edited.
+            - **fix**: Options: (a) keep the capture where it is, unchanged; (b) on the owner's word, write a new L3 object at L8/L3/engineering-mathematics/uncertainty/ that cites the capture by locator and carries quotations only, the standard being class-2 hold-private; (c) move the file to L3. Pick: (a) now, and (b) only when the owner rules on the extraction; never (c), which would break the tree kept intact and file a reading record, not an engineering object, at L3.
+          - item 27
+            - **ref**: L7/provenance/sources/0.md:36, 37, 43
+            - **category**: misfiled
+            - **cls**: leave
+            - **touches**: staging record
+            - **why**: Leave, because the fix costs more than it buys: the licence notices and the incident chain are dated records in a tree relocated intact whose files are not edited, the copyright pass of 5 September 2026 left them in place as records "which are history" (aybllc/auditonomous main aa30b03, L8/L6/history/harmonization-2026-09-05.md:103), and the sheets already cite them from L7/governance/copyright/0.md line 39, L7/provenance/sources/0.md line 43 and L8/L6/0.md line 91.
+            - **fix**: 
+          - item 28
+            - **ref**: L7/provenance/sources/0.md:35, 43
+            - **category**: misfiled
+            - **cls**: leave
+            - **touches**: staging record
+            - **why**: Leave, because the fix costs more than it buys: the two FINDINGS files are reading captures of 4 August 2026 kept as written in the intact staging tree, whose sheet classes them as provenance of reading ("They are not L5 findings and not L0 definitions.", aybllc/auditonomous main aa30b03, L7/provenance/sources/staging-records/0.md:12), and an argument drawn from them belongs at L8/L5/ only when it is stated there.
+            - **fix**: 
+        - **notes**: Of the 28 findings, 22 are best applied, 3 need the owner's choice and 3 are best left. Every finding's text was checked in the export of aybllc/auditonomous main at aa30b03, and each one is still there; nothing in the repositories was changed. The 22 fixes to apply edit 16 live sheets of aybllc/auditonomous and nothing else. They change no path, no sheet's first line and no rule, and they touch no record, retired set, binder gate file, definition, ledger row or third-party text. If the owner takes the pick for the publications sheet, that makes a 17th sheet. Each fix still waits for the owner's yes. The scaffold's record says "No outside updates until we are sure I'm close" (7lm main 6de996b, L8/L6/history/harmonization-2026-09-04.md:336), and its §36 makes every finding a proposal. The owner's words of 11 November, "Get qa hanfle on the research and manuscruipt for Auditonomous but firwst" (aybllc/auditonomous main aa30b03, L8/L6/history/harmonization-2026-09-05.md:178), put this checking after the match. A yes therefore stands as the owner's word for one pass, made by hand, with a new §14 in that record. Dates follow the repository's own rule of 7 September 2026 (its record, §11). The fixes take out "this pass" where it was the sheets' own past, and they add dates only to observations and to records. Four of the report's fixes are corrected here. In L8/L5/research/0.md:38 the report would have put back a date that the 7 September pass took out, so the dangling words are deleted instead. For L8/0.md:137 the fix on L8/L4/work/ is corrected because the .docx files are sourcebook volumes, not transcripts. The other two corrections are punctuation, in L7/0.md:232 and at line 88 of L8/L6/0.md. The report prints "L8/0.md:137" as the heading of three findings, one stale and two unlisted; they are given here in the report's order and are made in one edit. Two fixes share line 88 of L8/L6/0.md. Four fixes share a line with a WRONG-FACT finding of the same report but do not overlap with it: L7/0.md:232, L7/provenance/sources/0.md:10, L8/L6/history/0.md:35 and L8/L4/work/writing/chat/0.md:16. L8/L1/0.md:54 and L8/L4/0.md:100 are the scaffold's own text and are false in all three repositories, including on the reconcile commit of pull request #19. The scaffold should be corrected first and the two exemplars then given the same words. The same stale phrases stand in aybllc/autonomous main at L7/allications/publications/binder/0.md:8, L7/peering/private/ingress/peer-1/0.md:8, L7/peering/private/ingress/peer-1/object-1/0.md:13, L7/provenance/sources/0.md:10, L8/0.md:137, L8/L1/0.md:54, L8/L4/0.md:100, L8/L5/research/0.md:40, L8/L6/0.md:88 and 91, and L8/L6/history/0.md:41. Three of these are not in that repository's audit: L8/L4/0.md:100, L8/L5/research/0.md:40 and L8/L6/0.md:91. For binder/0.md:8 and sources/0.md:10, that audit's fixes add a date where these fixes do not. Using these words in both exemplars keeps them alike and within the same rule, which aybllc/autonomous carries as §12 of its record. The scaffold's own L7/provenance/sources/0.md:10 has the same kind of leftover ("relocated in this pass"). The branch beta/7lm-exemplar-auditonomous (714480d) carries, unchanged, every sentence that the 17 dead-path, stale and misquote fixes change. Whichever of this pass and that branch lands second must take the same edits. Pull request #28 changes no sheet; if it is merged first, its agent-results-2026-11-11/ folder joins the list at L8/L5/0.md line 80. The three dead-path fixes mark removed paths as removed, as the same sheets already do elsewhere. They touch none of the binder files, staging READMEs, ledgers or manuscript that decision 23 of the owner-decision resolutions of 11 November is about.
+      - **check**
+        - **checks**
+          - item 1
+            - **ref**: L7/peering/private/egress/peer-1/0.md:8
+            - **cls_ok**: yes
+            - **final_cls**: apply
+            - **note**: Line 8 at aa30b03 reads "this repository's `_STAGING_TO_L6/`". The folder is not in the tree. The binding record beside it already reads "this repository's former `_STAGING_TO_L6/` (removed 2026-08-16)" (aybllc/auditonomous main aa30b03, L7/peering/private/egress/peer-1/object-1/0.md:12), and the result quotes it verbatim. The old text occurs once in the line. Inserting "former" changes no path, rule or record. Confirmed as given.
+          - item 2
+            - **ref**: L7/provenance/sources/0.md:45
+            - **cls_ok**: yes
+            - **final_cls**: apply
+            - **note**: `AUDITONOMOUS.md` is not at aa30b03, and the diff of 8c98573 lists "D AUDITONOMOUS.md". The old text occurs once. The paragraph is the sheet's own summary of the retired README's "Known external gaps", which words it differently (for example "was ever reached"). The inserted parenthetical therefore breaks no verbatim claim. One locator in the result's reasoning is off by one: the sheet that marks the same file "removed from HEAD at `8c98573`, in git history" is L8/L5/research/review/0.md line 44, not line 43. The fix uses exactly that line's words.
+          - item 3
+            - **ref**: L8/L0/semantics/definitions/0.md:36
+            - **cls_ok**: yes
+            - **final_cls**: apply
+            - **note**: The edit is to the directory's sheet, not to AUDITONOMOUS_DEFINITION.md. Commit 8c98573 deleted intake/manuscript/Auditonomous_Theory_Master_Archive.md. At 8c98573^ its lines 37 and 51 hold the two statements (checked), and the retired README holds them at its lines 6 and 14. Both old strings occur once in line 36. The fix touches none of the files that decision 23 of the owner-decision resolutions is about.
+          - item 4
+            - **ref**: L7/0.md:237
+            - **cls_ok**: yes
+            - **final_cls**: apply
+            - **note**: Line 237 reads "Every binding is reference-only." L7/peering/private/egress/peer-2/object-1/ holds The_Third_Power_Corpus_v3.md (28,080 bytes), its .docx (33,007 bytes) and OWNERSHIP_PENDING.md, all listed from the export. The four ingress bindings hold no more than one reference copy (private ingress peer-2). The new words repeat L7/peering/private/egress/0.md line 32. They take no side on the corpus's final home, which is still open.
+          - item 5
+            - **ref**: L7/allications/publications/binder/0.md:8
+            - **cls_ok**: yes
+            - **final_cls**: apply
+            - **note**: This is the binder's sheet, which the 11 November mirror already edited (record §13, line 182). The three files that line 8 says "are not rewritten" are untouched. git blame shows the sentence was written by ccc0554 on 5 September. Since then the binder stood at the publications position, so "this pass" now reads as the 11 November mirror. The old text occurs once, and the new text is true.
+          - item 6
+            - **ref**: L7/peering/private/ingress/peer-1/0.md:8
+            - **cls_ok**: yes
+            - **final_cls**: apply
+            - **note**: git blame and git show confirm that the clause "At this pass its HEAD is `53b28f6`" comes from ccc0554 (5 September). The 7 September pass (595d3b5) took "On 2026-09-05" out of this same line but left the clause in place. Dating the observation of the archive fits the rule quoted from the record, harmonization-2026-09-05.md:160 (verbatim). The old text is exact. For consistency: L7/provenance/sources/0.md line 16 still says "It holds 1,368 tracked library files" in the present tense. That line is not in this audit.
+          - item 7
+            - **ref**: L7/peering/private/ingress/peer-1/object-1/0.md:13
+            - **cls_ok**: yes
+            - **final_cls**: apply
+            - **note**: git blame confirms line 13 was written by ccc0554. The old string "archive HEAD at this pass `53b28f6`" occurs once. The fix keeps both pins, `b328334` and `e4f0d5c`, so it rebinds nothing.
+          - item 8
+            - **ref**: L7/provenance/sources/0.md:10
+            - **cls_ok**: yes
+            - **final_cls**: apply
+            - **note**: git blame confirms line 10 was written by ccc0554. The register was not moved by the passes of 12 September or 11 November. sheets-2026-09-07.md holds 20 occurrences of " at HEAD of this pass" (counted). The deletion does not overlap the 62-to-60 edit of the WRONG-FACT finding on the same line.
+          - item 9
+            - **ref**: L8/0.md:137
+            - **cls_ok**: yes
+            - **final_cls**: apply
+            - **note**: This is the STALE finding, the first of three with this heading. The 7 September pass (595d3b5) removed " at HEAD of this pass" from this line but kept "this pass" and "that pass", which now read as the 11 November mirror. Both old strings occur once. The combined text the result gives for all three fixes on this line is correct against the export. One caveat: this fix dates a pass ("What did not move in the pass of 2026-09-05"), not only an observation or a record, so the result's general remark that dates are added "only to observations and to records" is too broad here. Dating it is still right, because the line already dates every other event it tells.
+          - item 10
+            - **ref**: L8/L1/0.md:54
+            - **cls_ok**: yes
+            - **final_cls**: apply
+            - **note**: The specification on 7lm main (6de996b) prints the four headings at H3, at lines 389, 400, 410 and 420. So does the local reconcile commit 8aa66c1 in /home/user/7lm-pr19. Line 54 still says H2 on 7lm main, on 8aa66c1 and in aybllc/autonomous. Order of work: correct the scaffold first (§26), on 7lm main after PR #19's reconcile lands so the merge commit under review is not left behind main, then give both exemplars the same words. After #19, the scaffold reads "Example:" and "The rule became:". This sheet keeps "Example used in session:" (line 75) and "The session rule became:" (line 83). In the exemplars, "Words are unchanged." stays true only if those two sentences are mirrored too.
+          - item 11
+            - **ref**: L8/L4/work/writing/chat/0.md:16
+            - **cls_ok**: yes
+            - **final_cls**: apply
+            - **note**: Deleting "; binary, not read in this pass" leaves "as produced. They are records of conversation". The first paragraph of auditonomous-chat-1.docx reads "Auditonomous Book Material Sourcebook" (extracted and checked). The WRONG-FACT finding on this line replaces the whole line and already omits the clause, so the two edits overlap and are one edit. This entry says so, but the result's notes list this line among those that "do not overlap", which is wrong for this one.
+          - item 12
+            - **ref**: L8/L5/research/0.md:38
+            - **cls_ok**: yes
+            - **final_cls**: apply
+            - **note**: The corrected fix stands: replace "were dissolved that day:" with "were dissolved:". The diff of 595d3b5 shows that the 7 September pass removed "[source text withheld from the public copy], quoted as written: ..." from this very line, leaving "that day" with nothing to point back to. The removed words stand at L8/L6/history/sheets-2026-09-07.md:183. Re-adding the date would undo the owner's word "please pull out historicallyu referndes to the docuejtnation" (aybllc/auditonomous main aa30b03, L8/L6/history/harmonization-2026-09-05.md:158). The ground for departing from the report is that rule, not any inexactness in the report's text.
+          - item 13
+            - **ref**: L8/L6/history/0.md:35
+            - **cls_ok**: yes
+            - **final_cls**: apply
+            - **note**: /home/user/auditonomous is not shallow: git reports false and there is no shallow file. 148 commits from f2d5b37 reach the parentless root fc3b018. Commit 9aefa6e and the rescue branch are absent. The edit does not overlap the WRONG-FACT edit to the first sentence of the same line. aybllc/autonomous main has the same phrase at L8/L6/0.md:91, which its audit does not list (checked).
+          - item 14
+            - **ref**: L8/L6/history/0.md:37
+            - **cls_ok**: yes
+            - **final_cls**: apply
+            - **note**: "the record of this pass:" occurs once at line 37, and "the routing proposal the pass followed" occurs once at line 39. The record's Standing line, line 3, calls it "The L6 record of one displacement event". An optional wording for line 39: "the routing proposal the 2026-09-05 instantiation followed". It matches the words the UNLISTED fix gives L8/L6/0.md and avoids an antecedent two lines up. "that instantiation" is also true.
+          - item 15
+            - **ref**: L8/L6/0.md:88
+            - **cls_ok**: yes
+            - **final_cls**: apply
+            - **note**: Line 74 of the same sheet already says "the L6 record of the instantiation of the canonical topology on 2026-09-05." The old text occurs once. Combined with the UNLISTED fix, line 88 ends with that fix's two entries in place of the final full stop, as the result says.
+          - item 16
+            - **ref**: L8/L6/retired/0.md:34
+            - **cls_ok**: yes
+            - **final_cls**: apply
+            - **note**: This is the retired container's own sheet, not a file inside a retired set. Line 30 of the sheet says only a 0.md below a set's root is a retained prior state. The set's own sheet, line 3, reads "as it stood before the Seven-Layer Model topology was instantiated". The old text occurs once.
+          - item 17
+            - **ref**: L8/L4/0.md:100
+            - **cls_ok**: yes
+            - **final_cls**: apply
+            - **note**: Spec line 159 on 7lm main holds "L4 realization bay" and the sentence as two cells of one row, with no dash between them. The same unchanged line 100 stands on 7lm main, on reconcile 8aa66c1 and in aybllc/autonomous, and the Autonomous audit does not list it. The fix quotes each cell verbatim. Same order as L8/L1/0.md:54: scaffold first, after PR #19 lands, then both exemplars.
+          - item 18
+            - **ref**: L7/0.md:232
+            - **cls_ok**: yes
+            - **final_cls**: apply
+            - **note**: This is the UNLISTED finding. L7/provenance/lineage/ holds 2026-08-05-observed-not-observable-session-provenance.md (13,733 bytes, record EBA-PROV-2026-08-05-01), which the lineage sheet lists at its line 32. The result's old string "(relocated intact), and the prior-art rules at `L7/provenance/prior-art/README.md` (search still unrun)." occurs once. Its punctuation correction is right. The edit does not overlap the 62-to-60 fix.
+          - item 19
+            - **ref**: L8/0.md:137
+            - **cls_ok**: yes
+            - **final_cls**: apply
+            - **note**: This is the first UNLISTED finding with this heading (the sheets record). Among live files, only L8/L6/history/0.md line 38 names sheets-2026-09-07.md; I searched every .md outside the records. The insertion point "three session ledgers," occurs once.
+          - item 20
+            - **ref**: L8/0.md:137
+            - **cls_ok**: yes
+            - **final_cls**: apply
+            - **note**: This is the second UNLISTED finding with this heading (L8/L4/work/), and the corrected fix stands. Counted from the tree, L8/L4/work/ holds three drafts, two .docx volumes titled "Auditonomous Book Material Sourcebook", one session record, branch/README.md, three requirements extractions, and deep-research-auditonomous.md with two .odt exports. "chat transcripts" is untrue. Apply it in the same pass as the WRONG-FACT chat finding, so this line, L8/L4/0.md:121 and L8/L4/work/0.md:39 use the same words.
+          - item 21
+            - **ref**: L8/L5/0.md:80
+            - **cls_ok**: yes
+            - **final_cls**: apply
+            - **note**: Besides its sheet, L8/L5/research/review/ holds five things (counted): CONTRADICTIONS.md, PERPETUITY_QUESTION_ADJUDICATION.md, STATUS_LADDER.md, STATUS_AND_LABEL_DISCIPLINE.md and autonomous-theory/ with two files. Line 83 of the same sheet already calls the folder the catch-all. On PR #28: the clone's tracking ref for ccr-9391bd81-f2enmj now reads 33135b7 (check-in no. 13, 13 November 2026 20:11 UTC), not 3696894. It still adds only the 352 files under agent-results-2026-11-11/, including new 0.md sheets for its own folders, and changes no existing sheet.
+          - item 22
+            - **ref**: L8/L6/0.md:70-75 and 88-89
+            - **cls_ok**: yes
+            - **final_cls**: apply
+            - **note**: history/ holds sheets-2026-09-07.md and 7LM_ROUTING_PLAN_2026-09-05.md. retired/layout-2026-09-06/ holds its sheet and five files (listed). The correction from ".;" is right. Listing the set of 6 September takes no side on the reading that the record's line 152 says must come before it may go.
+          - item 23
+            - **ref**: L7/allications/publications/0.md:29 (Does not hold) and 33 (Holdings)
+            - **cls_ok**: yes
+            - **final_cls**: owner-chooses
+            - **note**: Line 29 is word for word the same in 7lm main 6de996b and in aybllc/autonomous. Where internal/ belongs is still open: record line 94, binder/0.md line 27, and resolution 15, which says "Move nothing and write nothing" on internal/. Pick (a) is right. It moves nothing and rules nothing on internal/. It also stays true whichever way internal/ goes, because press-kit/ is an empty release slot that remains here either way. Its references "(the record, §4a and §5)" resolve in this repository's record (lines 35 and 94). Nuance: binder/0.md:8 already calls all three files "the tree's own gates", so what tips (b) is "held here as the release gate" as the reason for holding them here.
+          - item 24
+            - **ref**: L7/peering/private/egress/peer-1/object-1/0.md:16, 25
+            - **cls_ok**: yes
+            - **final_cls**: leave
+            - **note**: The routing plan marks this file MOVE with no owner decision (L8/L6/history/7LM_ROUTING_PLAN_2026-09-05.md:184, "Receiving-side record of the closed egress to `aybllc/l6` (canonical copy lives in l6)."). The record states the same at line 57, and egress/0.md:31 and peer-1/0.md:16 say truly where the file is. Nothing is false, and the only remedy is moving a dated record, so leave it: the fix costs more than it buys.
+          - item 25
+            - **ref**: L7/provenance/sources/0.md:33, 43
+            - **cls_ok**: yes
+            - **final_cls**: owner-chooses
+            - **note**: The routing plan marks the Ferreira text "IN TREE · OWNER DECISION" (line 193). The record holds its licence status open (line 94), copyright/0.md:45 says it is not cited as held until it is recorded, and the research handle lists it as O-09 and owner decision 24. Pick (a) is right. Option (c) would also contradict the l6 binding's own status cell, "This directory holds no source files" (L7/peering/private/ingress/peer-1/object-1/0.md:15). Option (b) would orphan the "cite as `Ferreira:NNN`" base of the reading capture (its line 5).
+          - item 26
+            - **ref**: L7/provenance/sources/0.md:43
+            - **cls_ok**: yes
+            - **final_cls**: owner-chooses
+            - **note**: The routing plan says "IN TREE · OWNER DECISION on extraction" (line 194), and the record lists it under "Extract and register" (line 92). The file reads a WSU IEEE Xplore copy of IEEE 1788-2015 under IL-001-R2, inside a tree whose sheet says "its files are not edited" (staging-records/0.md:8). Pick (a) now and (b) only on the owner's ruling is right.
+          - item 27
+            - **ref**: L7/provenance/sources/0.md:36, 37, 43
+            - **cls_ok**: yes
+            - **final_cls**: leave
+            - **note**: The routing plan places ieee/README.md, ieee/papers/README.md and standards/SOURCE_LEDGER.md "IN TREE" with no owner decision, cited from the governance and history sheets (lines 188, 195). The record keeps them as records "which are history" (line 103). L7/governance/copyright/0.md:39 and :43, L7/provenance/sources/0.md:43 and L8/L6/0.md:91 already cite them. Leave.
+          - item 28
+            - **ref**: L7/provenance/sources/0.md:35, 43
+            - **cls_ok**: yes
+            - **final_cls**: leave
+            - **note**: The routing plan files both FINDINGS captures "IN TREE" as "Reading findings under the reading protocol ... not L5 findings" with no owner decision (line 189). The staging sheet says "They are not L5 findings and not L0 definitions." (staging-records/0.md:12). The three review-or-findings placements that are open (research handle O-11) are other files. Leave.
+        - **overall**: The colleague's classes all stand, so the counts are unchanged: 22 apply, 3 owner-chooses, 3 leave, 28 in all.
+
+          Count: every finding of the batch appears exactly once. Nothing is missing and nothing is doubled. The report prints "L8/0.md:137" as the heading of three findings (one stale, two unlisted), and the result gives all three in the report's order.
+
+          How the checks were made: the export was checked against aa30b03 file by file (175 files, no mismatch). I re-derived all six owner-chooses and leave classes from the files, from the routing plan the owner had run, and from the record. All 22 apply fixes edit only 0.md sheets, 16 files in all, and none edits a README or any other file. I re-checked all 22, not just fifteen. Every old string occurs once and every quotation in the result is verbatim at its locator, apart from the corrections below. Nothing was modified.
+
+          Corrections the owner should know:
+          1. In the reasoning for L7/provenance/sources/0.md:45, the sheet that already marks AUDITONOMOUS.md as removed is L8/L5/research/review/0.md line 44, not line 43.
+          2. The notes say the fix to L8/L4/work/writing/chat/0.md:16 does not overlap its WRONG-FACT finding. It does: that finding replaces the whole line and already omits the stale clause, so the two are one edit. The other three shared lines (L7/0.md:232, L7/provenance/sources/0.md:10, L8/L6/history/0.md:35) do not overlap.
+          3. The notes say dates are added "only to observations and to records". That is too broad for L8/0.md:137, where "the pass of 2026-09-05" dates a pass. That is acceptable in a line that already dates every other event.
+          4. Order of work for L8/L1/0.md:54 and L8/L4/0.md:100. Both are the scaffold's text, false on 7lm main and on the local reconcile commit 8aa66c1. Under §26 ("All repos should mirror the 7lm. Manually."; aybllc/7lm main 6de996b, L8/L6/history/harmonization-2026-09-04.md:336), correct the scaffold first. Do it on main after PR #19's reconcile lands, so the merge under review is not left behind main, and then mirror into both exemplars. PR #19 rewords "Example used in session:" and "The session rule became:" under the L1 headings. The exemplars' "Words are unchanged." therefore stays true only if those two sentences are mirrored too.
+          5. The clone's tracking ref for PR #28 now reads 33135b7 (13 November 2026, 20:11 UTC), not the 3696894 the state file gives. It still adds only the agent-results folder.
+          6. On beta/7lm-exemplar-auditonomous (714480d), every phrase the 17 dead-path, stale and misquote fixes change is present. Some sit at other line numbers (L8/L0/semantics/definitions/0.md:38; L8/L6/history/0.md lines 37, 39 and 41), and beta's L7/provenance/sources/0.md:10 already says 60 rows.
+          7. For consistency (not a finding in this audit): L7/provenance/sources/0.md:16 still says the archive "holds 1,368 tracked library files" in the present tense, while the peer-1 fix dates the same observation.
+
+          Rules: the result rightly treats every class as waiting on the owner's yes, under §36 and the §26 words "No outside updates until we are sure I'm close". It rightly keeps the three dead-path fixes clear of the binder, ledger and manuscript files that decision 23 concerns.
+    - item 5
+      - **key**: C5-public-sources
+      - **out**
+        - **findings**
+          - item 1
+            - **ref**: sp800-53-1 (COUNT-WRONG)
+            - **category**: count-wrong
+            - **cls**: owner-chooses
+            - **touches**: staging record
+            - **why**: The extraction is a staging record whose folder's sheet says its files are not edited, and its own header admits no commentary inside it, so the missing entry is recorded beside it rather than inserted.
+            - **fix**: Options: insert the entry in place with a dated note, or leave the file as written and record beside at L8/L6/history/source-corrections-2026-11-11.md. Pick: record beside. Entry for aybllc/auditonomous main aa30b03, L7/provenance/sources/staging-records/standards/extracted/SP800-53r5_AC-AU_verbatim.md, between line 637 (AC-12(3)) and line 642 (AC-14): the source's withdrawn base control AC-13 (Supervision and Review, Access Control; withdrawn, incorporated into AC-2 and AU-6) is absent. Locators: NIST SP 800-53 Rev. 5, update of 10 December 2020, section 3.1, printed page 44 (PDF page 71); Appendix C, Table C-1, printed page 431. It is the only source entry the file lacks. Counted in the file: 24 AC base headings, none for AC-13.
+          - item 2
+            - **ref**: sp800-53-2 (MISATTRIBUTED)
+            - **category**: misattributed
+            - **cls**: owner-chooses
+            - **touches**: staging record
+            - **why**: Same staging record: the wrong entry is the run's own output, so it is kept as the record of the run and corrected beside it.
+            - **fix**: Options: rewrite lines 830-832 in place with a dated note, or leave them and record beside at L8/L6/history/source-corrections-2026-11-11.md. Pick: record beside. Entry for the same file (aa30b03), lines 830-832: AC-19(3) is a withdrawn enhancement with no control statement, incorporated into MP-7 (section 3.1, printed page 52, PDF page 79; Table C-1, printed page 432). Its title runs on through the two words that line 832 shows as a statement, "IDENTIFIABLE OWNER", and the entry should carry the file's withdrawn marker. The source has 14 withdrawn AC enhancements; the file marks 13 (counted).
+          - item 3
+            - **ref**: sp800-53-3 (MISMATCH)
+            - **category**: mismatch
+            - **cls**: owner-chooses
+            - **touches**: staging record
+            - **why**: Same staging record, left as the parser produced it; the misplaced title word is recorded beside it.
+            - **fix**: Options: move the word in place with a dated note, or record beside at L8/L6/history/source-corrections-2026-11-11.md. Pick: record beside. Entry for the same file (aa30b03), lines 1137-1141: the title of AU-6(8) ends with the word "COMMANDS", which line 1139 shows as the first word of the statement (section 3.3, printed page 72, PDF page 99). Every other word of the statement matches the source.
+          - item 4
+            - **ref**: sp800-53-4 (MISMATCH)
+            - **category**: mismatch
+            - **cls**: owner-chooses
+            - **touches**: staging record
+            - **why**: Same staging record, left as the parser produced it; the misplaced title words are recorded beside it.
+            - **fix**: Options: move the words in place with a dated note, or record beside at L8/L6/history/source-corrections-2026-11-11.md. Pick: record beside. Entry for the same file (aa30b03), lines 1143-1147: the title of AU-6(9) ends with the words "NONTECHNICAL SOURCES", which line 1145 shows as the start of the statement (section 3.3, printed page 72, PDF page 99). Every other word of the statement matches the source.
+          - item 5
+            - **ref**: sp800-53-5 (MISMATCH)
+            - **category**: mismatch
+            - **cls**: owner-chooses
+            - **touches**: staging record
+            - **why**: Same staging record, left as the parser produced it; the misplaced title word is recorded beside it.
+            - **fix**: Options: move the word in place with a dated note, or record beside at L8/L6/history/source-corrections-2026-11-11.md. Pick: record beside. Entry for the same file (aa30b03), lines 1223-1227: the title of AU-9(7) ends with the word "SYSTEM", which line 1225 shows as the start of the statement (section 3.3, printed page 75, PDF page 102). Every other word of the statement matches the source.
+          - item 6
+            - **ref**: sp800-53-6 (MISMATCH)
+            - **category**: mismatch
+            - **cls**: owner-chooses
+            - **touches**: staging record
+            - **why**: Same staging record, left as the parser produced it; the misplaced title word is recorded beside it.
+            - **fix**: Options: move the word in place with a dated note, or record beside at L8/L6/history/source-corrections-2026-11-11.md. Pick: record beside. Entry for the same file (aa30b03), lines 1303-1307: the title of AU-12(4) ends with the word "INFORMATION", which line 1305 shows as the start of the statement (section 3.3, printed page 79, PDF page 106). Every other word of the statement matches the source.
+          - item 7
+            - **ref**: sp800-53-7 (COUNT-WRONG)
+            - **category**: count-wrong
+            - **cls**: owner-chooses
+            - **touches**: staging record, live sheet, dated record
+            - **why**: The wrong total stands in a staging record and in a decision record, which stay as written, and in a live sheet, whose sentence can be made true now in words that stay true whichever way the extraction is handled.
+            - **fix**: Two acts, in order. (1) In the live sheet aybllc/auditonomous main aa30b03, L8/L4/work/computation/0.md line 44, replace "(215 control statements, SHA-256 recorded)" with "(187 control statements, SHA-256 recorded)". Counted in the file: 215 entries, 27 marked withdrawn, AC-19(3) a title fragment, 187 with a control statement. The report offers 216 entries, or 215 as the file stands; the sheet describes the file, and the statement count is the figure that is true now and stays true after any correction of the extraction. (2) Leave line 20 of the extraction and line 198 of L8/L6/history/7LM_ROUTING_PLAN_2026-09-05.md as written, and record beside at L8/L6/history/source-corrections-2026-11-11.md. Line 20's figures (24 AC base controls, 146 AC entries, 215 in all) count the file, not the source. As the check counted the source: the AC family has 25 base controls and 147 entries, AU has 69, 216 in all; 29 are withdrawn and 187 carry a control statement (section 3.1, printed pages 18-58; section 3.3, printed pages 65-81; Appendix C, Tables C-1 and C-3). The routing plan's figure is 215 entries, 187 of them control statements.
+          - item 8
+            - **ref**: nist-requirements-1 (MISMATCH)
+            - **category**: mismatch
+            - **cls**: owner-chooses
+            - **touches**: dated record (L4 extraction as run, 4-5 August)
+            - **why**: The file is the recorded output of an extraction run of 4 and 5 August, filed as computation as actually run, so it is kept as recorded and the correction goes beside it; what the correction means for [source text withheld from the public copy] an L5 ruling that the entry does not make.
+            - **fix**: Options: rewrite lines 242, 360 and 396 in place with a dated note, or leave the run as recorded and record beside at L8/L6/history/source-corrections-2026-11-11.md. Pick: record beside. Entry for aybllc/auditonomous main aa30b03, L8/L4/work/computation/nist-requirements-for-autonomouos.md: NIST SP 1011-II-1.0, section 6.1, printed page 35, keeps the weighted average as the default. It also says weighted minimum or maximum values may be more suitable in some cases, and gives one case on the MC axis where the lower of two metric scores governs instead of the average. This is hedged, it concerns metric scores, and it is not a general per-function rule. So none of these holds as written: line 360's "none found" and its only-partial-support sentence; line 396's sentence that the weakest-link rule appears nowhere; and line 242's last sentence, "[source text withheld from the public copy]". Section 6.1 (page 35) and section 2.4 (page 25) are partial support. The report names line 242 but gives no wording for that last sentence; the entry includes it.
+          - item 9
+            - **ref**: nist-requirements-2 (COUNT-WRONG)
+            - **category**: count-wrong
+            - **cls**: owner-chooses
+            - **touches**: dated record (L4 extraction as run, 4-5 August)
+            - **why**: The file is the recorded output of an extraction run, kept as recorded, so the count is corrected beside it.
+            - **fix**: Options: correct line 364 in place with a dated note, or leave the run as recorded and record beside at L8/L6/history/source-corrections-2026-11-11.md. Pick: record beside. Entry for the same file (aa30b03), line 364: the stem occurs four times in NIST AI 100-1, not "exactly three". The four are page 1 (systems operating with varying levels of autonomy), page 17 (section 3.6, human autonomy), and two in Appendix C, item 1, page 40 (fully autonomous; autonomously). The fourth is a use, not a definition.
+          - item 10
+            - **ref**: nist-requirements-3 (MISATTRIBUTED)
+            - **category**: misattributed
+            - **cls**: owner-chooses
+            - **touches**: dated record (L4 extraction as run, 4-5 August)
+            - **why**: The file is the recorded output of an extraction run, kept as recorded, so the page is corrected beside it.
+            - **fix**: Options: correct line 364 in place with a dated note, or record beside at L8/L6/history/source-corrections-2026-11-11.md. Pick: record beside. Entry for the same file (aa30b03), line 364: the privacy sentence it cites as "p.13" is in NIST AI 100-1, section 3.6 Privacy-Enhanced, printed page 17 (PDF page 22).
+          - item 11
+            - **ref**: nist-requirements-4 (MISMATCH)
+            - **category**: mismatch
+            - **cls**: owner-chooses
+            - **touches**: dated record (L4 extraction as run, 4-5 August)
+            - **why**: The block is part of the recorded output of an extraction run, kept as recorded, so the unmarked gap is recorded beside it.
+            - **fix**: Options: restore the sentence or insert an ellipsis in place with a dated note, or record beside at L8/L6/history/source-corrections-2026-11-11.md. Pick: record beside. Entry for the same file (aa30b03), lines 262-264 (NIST-R15, labelled Verbatim): NIST SP 1011-II-1.0, section 4, printed page 29, has one more sentence between the Description and the Scale/Measure lines. It concerns mixed-initiative collaboration and neglect tolerance and cites references 67 to 71. The block drops it without an ellipsis after "interacting with the UMS."
+          - item 12
+            - **ref**: nist-requirements-5 (MISATTRIBUTED)
+            - **category**: misattributed
+            - **cls**: owner-chooses
+            - **touches**: dated record (L4 extraction as run, 4-5 August)
+            - **why**: The file is the recorded output of an extraction run, kept as recorded, so the page is corrected beside it.
+            - **fix**: Options: correct line 177 in place with a dated note, or record beside at L8/L6/history/source-corrections-2026-11-11.md. Pick: record beside. Entry for the same file (aa30b03), line 177 (NIST-R9 Source), for the quotation at line 173: in [source text withheld from the public copy], item A.8, the question is on printed page 41 (PDF page 42) and the quoted definition of scripted operation is on printed page 42 (PDF page 43). The source should read printed pages 41-42.
+          - item 13
+            - **ref**: nist-requirements-6 (MISATTRIBUTED)
+            - **category**: misattributed
+            - **cls**: owner-chooses
+            - **touches**: dated record (L4 extraction as run, 4-5 August)
+            - **why**: The file is the recorded output of an extraction run, kept as recorded, so the page is corrected beside it.
+            - **fix**: Options: correct line 318 in place with a dated note, or record beside at L8/L6/history/source-corrections-2026-11-11.md. Pick: record beside. Entry for the same file (aa30b03), line 318 (NIST-R18 Source), for the quotation at line 314: in NIST SP 1011-II-1.0, section 6.3 Context, the opening question is on printed page 37 and the quoted paragraph is on printed page 38.
+          - item 14
+            - **ref**: nist-requirements-7 (MISATTRIBUTED)
+            - **category**: misattributed
+            - **cls**: owner-chooses
+            - **touches**: dated record (L4 extraction as run, 4-5 August)
+            - **why**: The file is the recorded output of an extraction run, kept as recorded, so the page is corrected beside it.
+            - **fix**: Options: correct line 65 in place with a dated note, or record beside at L8/L6/history/source-corrections-2026-11-11.md. Pick: record beside. Entry for the same file (aa30b03), line 65 (NIST-R1, Normative status): the sentence it quotes from NIST SP 1011-II-1.0, section 2.1 B Autonomy, is on printed page 17, not at "Vol II §2.1 B, p.16".
+          - item 15
+            - **ref**: nist-requirements-8 (MISATTRIBUTED)
+            - **category**: misattributed
+            - **cls**: owner-chooses
+            - **touches**: dated record (L4 extraction as run, 4-5 August)
+            - **why**: The file is the recorded output of an extraction run, kept as recorded, so the page is corrected beside it.
+            - **fix**: Options: correct line 376 in place with a dated note, or record beside at L8/L6/history/source-corrections-2026-11-11.md. Pick: record beside. Entry for the same file (aa30b03), line 376: the sentence on learning and world modeling it quotes from NIST SP 1011-II-1.0, section 2.1 B, is on printed page 17, not at "(p.16)".
+          - item 16
+            - **ref**: nist-requirements-9 (COUNT-WRONG)
+            - **category**: count-wrong
+            - **cls**: owner-chooses
+            - **touches**: dated record (L4 extraction as run, 4-5 August)
+            - **why**: The file is the recorded output of an extraction run, kept as recorded, so the counts are corrected beside it.
+            - **fix**: Options: correct line 358 in place with a dated note, or record beside at L8/L6/history/source-corrections-2026-11-11.md. Pick: record beside. Entry for the same file (aa30b03), line 358. As the check counted over NIST SP 1011-I-2.0 (47 PDF pages), whole word and ignoring case: "may" occurs 63 times (62 as a modal; the other is the month in reference 15) and "can" 53 times. Counted by matching lines (grep -ciw), the figures are 57 and 47. Neither pair is the line's "60 'may', 51 'can'"; its should 11, must 1 and shall 0 hold.
+          - item 17
+            - **ref**: nist-requirements-10 (MISMATCH)
+            - **category**: mismatch
+            - **cls**: owner-chooses
+            - **touches**: dated record (L4 extraction as run, 4-5 August)
+            - **why**: The file is the recorded output of an extraction run, kept as recorded, so the overbroad claim is corrected beside it; what follows for the tension with ISO/IEC 22989 is the author's to rule at L5.
+            - **fix**: Options: limit the two sentences in place with a dated note, or record beside at L8/L6/history/source-corrections-2026-11-11.md. Pick: record beside. Entry for the same file (aa30b03), line 372: ALFUS holds the mission externally assigned, but it describes goals below the mission generated on board, and its HI scale rewards that. Locators: NIST SP 1011-I-2.0, section 2, Mission Planning, printed page 22 (plans generated by operators or by onboard software); NIST SP 1011-II-1.0, section 4, printed page 30 (Level of Human Interaction, from assigning the mission down to servo; Ratio of Human Planning Time), and Table 1, page 45 (HI column: humans provide strategic goals at levels 7-9 and tactical goals at 4-6). Two sentences hold only of the mission: "[source text withheld from the public copy]", and "[source text withheld from the public copy]".
+          - item 18
+            - **ref**: nist-requirements-11 (MISMATCH)
+            - **category**: mismatch
+            - **cls**: owner-chooses
+            - **touches**: dated record (L4 extraction as run, 4-5 August)
+            - **why**: The file is the recorded output of an extraction run, kept as recorded, so the misread scope is corrected beside it; whether the auditon can be an ALFUS object is the author's ruling at L5, which the entry does not make.
+            - **fix**: Options: correct lines 195 and 394 in place with a dated note, or record beside at L8/L6/history/source-corrections-2026-11-11.md. Pick: record beside. Entry for the same file (aa30b03), lines 195 and 394. NIST SP 1011-I-2.0, section 2, Unmanned System, associated term Logical UMS, printed pages 28-29, gives two senses: (A) a model of a UMS; (B) inherently non-physical software that operates as an independent entity, interacting with its associated UMSs or commanding and coordinating them (see also NIST SP 1011-II-1.0, section 9.2, page 57). Section 6.2 item d, printed page 35, excludes a desktop computer running software "that is irrelevant to UMS operations", not desktop software as such. So three statements do not hold as written: line 195's "§6.2(d) excludes desktop software"; line 394's quotation of item d, which is cut before those words with no ellipsis (the report does not name this cut); and line 394's description of the Logical UMS as only a model.
+          - item 19
+            - **ref**: rfc6962-1 (MISMATCH)
+            - **category**: mismatch
+            - **cls**: owner-chooses
+            - **touches**: staging record
+            - **why**: The reading record of 4 August is a staging record whose folder's sheet says its files are not edited, so the error is recorded beside it and the record is cited as written.
+            - **fix**: Options: correct the reading record in place with a dated note, or leave it as written and record beside at L8/L6/history/source-corrections-2026-11-11.md. Pick: record beside. Entry for aybllc/auditonomous main aa30b03, L7/provenance/sources/staging-records/library/reading/RFC6962_Certificate-Transparency.md. Line 366's "[source text withheld from the public copy]." does not hold. RFC 6962 puts MUST on submitters and CAs (section 3.1, pages 9-10) and MUST NOT and SHOULD on log clients (section 4.1, pages 17-18; section 4.6, page 20). Section 5.3, steps 3 and 7 (page 22), send a monitor to section 4.6 as a log client. The line's first sentence holds: no RFC 2119 keyword names an auditor or a monitor. Line 211 calls the section 3 auditor sentence a "normative operational sentence", but it carries no RFC 2119 keyword.
+          - item 20
+            - **ref**: rfc6962-2 (MISMATCH)
+            - **category**: mismatch
+            - **cls**: owner-chooses
+            - **touches**: staging record
+            - **why**: The reading record is a staging record that is not edited, so the misread classification is recorded beside it.
+            - **fix**: Options: correct line 323 in place with a dated note, or record beside at L8/L6/history/source-corrections-2026-11-11.md. Pick: record beside. Entry for the same file (aa30b03), line 323 (C27, Bears on): "[source text withheld from the public copy]" does not hold. RFC 6962, section 7.3 (page 24), calls a failure to incorporate a certificate within the MMD a violation of the MMD contract, and only conflicting views a violation of the append-only property. What it says of both is that both are promptly and publicly detectable.
+          - item 21
+            - **ref**: rfc6962-3 (MISATTRIBUTED)
+            - **category**: misattributed
+            - **cls**: owner-chooses
+            - **touches**: staging record
+            - **why**: The reading record is a staging record that is not edited, so the page span is corrected beside it.
+            - **fix**: Options: correct the heading in place with a dated note, or record beside at L8/L6/history/source-corrections-2026-11-11.md. Pick: record beside. Entry for the same file (aa30b03), line 329 (heading of C28), for the quotation at line 331: the capture runs over PDF pages 48-49 (printed pages 24-25) and breaks after "two conflicting Signed Tree". The heading's "PDF p.48 (printed p.24)" names only the first page. Checked here against Autonomous's text of the same print (aybllc/autonomous main 9fa3744, L7/provenance/prior-art/ct-lane/RFC6962.txt), a repository object.
+          - item 22
+            - **ref**: rfc6962-5 (MISMATCH)
+            - **category**: mismatch
+            - **cls**: owner-chooses
+            - **touches**: staging record
+            - **why**: The reading record is a staging record that is not edited, so the unmarked emphasis is recorded beside it.
+            - **fix**: Options: lower-case the words or add an emphasis note in place with a dated note, or record beside at L8/L6/history/source-corrections-2026-11-11.md. Pick: record beside. Entry for the same file (aa30b03), lines 139 and 366: three capitalised words are the record's own emphasis, not the RFC's: the verb show (line 139), and could and might (line 366). RFC 6962 has them in lower case (section 1, page 4; section 5, page 21; section 5.4, page 23). Line 366 already marks the source's lower case for its other two capitalised words; these three need the same mark or the words emphasis added.
+          - item 23
+            - **ref**: rfc6962-7 (COUNT-WRONG)
+            - **category**: count-wrong
+            - **cls**: owner-chooses
+            - **touches**: staging record
+            - **why**: The reading record is a staging record that is not edited, so the count is corrected beside it.
+            - **fix**: Options: correct line 29 in place with a dated note, or record beside at L8/L6/history/source-corrections-2026-11-11.md. Pick: record beside. Entry for the same file (aa30b03), line 29: four captures straddle a PDF page break, not "Three": C4 (PDF pages 5-6) as well as C18 (31-32), C23 (43-44) and C28 (48-49). The record's own lines 121 and 390 count C4. All four breaks were confirmed here in Autonomous's text of the same print.
+          - item 24
+            - **ref**: rfc6962-8 (COUNT-WRONG)
+            - **category**: count-wrong
+            - **cls**: owner-chooses
+            - **touches**: staging record
+            - **why**: The reading record is a staging record that is not edited, so the count is corrected beside it.
+            - **fix**: Options: correct line 390 in place with a dated note, or record beside at L8/L6/history/source-corrections-2026-11-11.md. Pick: record beside. Entry for the same file (aa30b03), line 390 (adversarial verification, class 1): Q18 has 14 words (54 of its 201 non-space characters) on the cited PDF page 31, not "only 12". The rest is on PDF page 32 (RFC 6962 section 3.5, printed page 16). Counted here; the break was confirmed in Autonomous's text of the same print.
+          - item 25
+            - **ref**: rfc9162-1 (MISMATCH)
+            - **category**: mismatch
+            - **cls**: owner-chooses
+            - **touches**: staging record
+            - **why**: The reading record of 4 August is a staging record whose folder's sheet says its files are not edited, so the error is recorded beside it and the record is cited as written.
+            - **fix**: Options: correct the reading record in place with a dated note, or leave it as written and record beside at L8/L6/history/source-corrections-2026-11-11.md. Pick: record beside. Entry for aybllc/auditonomous main aa30b03, L7/provenance/sources/staging-records/library/reading/RFC9162_Certificate-Transparency-v2.md, line 241 (capture C14): the quotation ends "is known).", where RFC 9162, section 2.1.4.1, has a colon that introduces the formula on the next line (rfc9162.txt lines 498-505).
+          - item 26
+            - **ref**: rfc9162-2 (MISMATCH)
+            - **category**: mismatch
+            - **cls**: owner-chooses
+            - **touches**: staging record
+            - **why**: The reading record is a staging record that is not edited, so the shortened heading is recorded beside it.
+            - **fix**: Options: complete line 76 in place with a dated note, or record beside at L8/L6/history/source-corrections-2026-11-11.md. Pick: record beside. Entry for the same file (aa30b03), line 76: the table-of-contents entry for section 5.5 lacks the heading's last words, "by Leaf Hash" (rfc9162.txt lines 1544-1545; table of contents, lines 105-106).
+          - item 27
+            - **ref**: rfc9162-3 (MISMATCH)
+            - **category**: mismatch
+            - **cls**: owner-chooses
+            - **touches**: staging record
+            - **why**: The record states the absence as a property of RFC 9162 when [source text withheld from the public copy] browser print it read; it is not edited, so the fact goes beside it, where a citation will need it.
+            - **fix**: Options: correct lines 12 and 543 in place with a dated note, or record beside at L8/L6/history/source-corrections-2026-11-11.md. Pick: record beside. Entry for the same file (aa30b03), lines 12 and 543: the missing ISSN is the browser print's, not the RFC's. RFC 9162 as issued prints ISSN 2070-1721 in its first-page header (rfc9162.txt lines 6-10) and prints no DOI for itself. The RFC Editor's info page gives its DOI as 10.17487/RFC9162.
+          - item 28
+            - **ref**: rfc9162-4 (MISATTRIBUTED)
+            - **category**: misattributed
+            - **cls**: owner-chooses
+            - **touches**: staging record
+            - **why**: The reading record is a staging record that is not edited, so the page is corrected beside it.
+            - **fix**: Options: correct the heading in place with a dated note, or record beside at L8/L6/history/source-corrections-2026-11-11.md. Pick: record beside. Entry for the same file (aa30b03), line 501 (heading of C46), for the quotation at line 503: the quoted words of section 6.2 fall on page 37 of the 62-page print, not page 36 as the heading says. Page 36 holds only the section heading and the start of its first bullet. Confirmed here in Autonomous's text of the same print (aybllc/autonomous main 9fa3744, L7/provenance/prior-art/ct-lane/RFC9162.txt): heading on its page 36, quoted words on its page 37.
+          - item 29
+            - **ref**: rfc9162-5 (MISATTRIBUTED)
+            - **category**: misattributed
+            - **cls**: owner-chooses
+            - **touches**: staging record
+            - **why**: The reading record is a staging record that is not edited, so the page is corrected beside it.
+            - **fix**: Options: correct line 533 in place with a dated note, or record beside at L8/L6/history/source-corrections-2026-11-11.md. Pick: record beside. Entry for the same file (aa30b03), line 533: the registry sentence on immutable fields (RFC 9162 section 10.2.5, rfc9162.txt lines 2439-2441) is on page 51 of the print, and only the heading is on page 50. Confirmed in Autonomous's text of the same print: heading on page 50, sentence on page 51.
+          - item 30
+            - **ref**: rfc9162-6 (MISMATCH)
+            - **category**: mismatch
+            - **cls**: owner-chooses
+            - **touches**: staging record
+            - **why**: The reading record is a staging record that is not edited, so the overstatement is recorded beside it.
+            - **fix**: Options: correct line 489 in place with a dated note, or record beside at L8/L6/history/source-corrections-2026-11-11.md. Pick: record beside. Entry for the same file (aa30b03), line 489 (C44, [source text withheld from the public copy]" does not hold. RFC 9162 section 11.3 introduces its five misbehaviours as examples (rfc9162.txt lines 2588-2594) and does not present them as complete.
+          - item 31
+            - **ref**: rfc9162-7 (NOT-FOUND)
+            - **category**: not-found
+            - **cls**: owner-chooses
+            - **touches**: staging record
+            - **why**: The reading record is a staging record that is not edited, so the requirement the RFC does not make is recorded beside it.
+            - **fix**: Options: correct line 301 in place with a dated note, or record beside at L8/L6/history/source-corrections-2026-11-11.md. Pick: record beside. Entry for the same file (aa30b03), line 301 (C21, Bears on): RFC 9162 does not require a log to publish its acceptance criteria in advance, which is what the line's item (a) says. It requires the list of accepted trust anchors to be retrievable (section 4.2, SHALL; rfc9162.txt lines 870-871), sets minimum criteria itself (section 4.2.1) and leaves the rest to the log's discretion (section 4.2.2). The one acceptance limit a log fixes beforehand is its Maximum Chain Length parameter (section 4.1).
+          - item 32
+            - **ref**: rfc9162-8 (MISMATCH)
+            - **category**: mismatch
+            - **cls**: owner-chooses
+            - **touches**: staging record
+            - **why**: The reading record is a staging record that is not edited, so the overstatement is recorded beside it.
+            - **fix**: Options: correct line 497 in place with a dated note, or record beside at L8/L6/history/source-corrections-2026-11-11.md. Pick: record beside. Entry for the same file (aa30b03), line 497 (C45, Bears on): RFC 9162 section 11.3 says a violation of the append-only property "can be detected" by multiple clients comparing their STHs (rfc9162.txt lines 2602-2604). It does not say it is detected only that way, as line 497 says. Section 8.1.5 (a TLS client SHOULD verify consistency with an STH it knows) and section 8.3 (a monitor can audit by verifying consistency) describe checks made by a single party.
+          - item 33
+            - **ref**: rfc9162-9 (MISATTRIBUTED)
+            - **category**: misattributed
+            - **cls**: owner-chooses
+            - **touches**: staging record
+            - **why**: The reading record is a staging record that is not edited, so the sentence order is corrected beside it.
+            - **fix**: Options: correct line 139 in place with a dated note, or record beside at L8/L6/history/source-corrections-2026-11-11.md. Pick: record beside. Entry for the same file (aa30b03), line 139 (C1, Bears on). In the first paragraph of RFC 9162 section 1 (rfc9162.txt lines 159-165), the sentence the line calls the opening sentence (logs do not themselves prevent misissuance) is the second. The sentence it calls the second (any form of binary data) is the third. The opening sentence states the aim: to mitigate misissued certificates through append-only logs.
+          - item 34
+            - **ref**: rfc9162-14 (MISMATCH)
+            - **category**: mismatch
+            - **cls**: owner-chooses
+            - **touches**: staging record
+            - **why**: The reading record is a staging record that is not edited, so the claim about pages it did not read is corrected beside it.
+            - **fix**: Options: correct line 25 in place with a dated note, or record beside at L8/L6/history/source-corrections-2026-11-11.md. Pick: record beside. Entry for the same file (aa30b03), line 25: the print's text cuts more than the page-10 formula. Page 19 has six more cut code lines, which RFC 9162 section 4.5 gives in full (rfc9162.txt lines 974, 987-990 and 992). Page 19 is among the pages the record lists as not read, so "Every other page extracted cleanly" does not hold. Page 19's cut lines were confirmed here in Autonomous's text of the same print.
+          - item 35
+            - **ref**: rfc9162-15 (MISMATCH)
+            - **category**: mismatch
+            - **cls**: leave
+            - **touches**: third-party text
+            - **why**: Moot. The file is a third-party page capture kept as captured: its folder's sheet (aybllc/autonomous main 9fa3744, L7/provenance/prior-art/ct-lane/0.md line 20) says "Files are not edited." and names it a page capture beside the canonical edition, which equals the official text, and Autonomous quotes RFC 9162 only from the canonical file (L8/L5/research/review/CLOSED_LOOP_GOVERNANCE.md lines 36-37 and 95), so nothing in the repository states anything false about it.
+            - **fix**: 
+          - item 36
+            - **ref**: fips180-4-1 (COUNT-WRONG)
+            - **category**: count-wrong
+            - **cls**: owner-chooses
+            - **touches**: staging record
+            - **why**: The reading record of 4 August is a staging record whose folder's sheet says its files are not edited, so the counts are corrected beside it.
+            - **fix**: Options: correct lines 17 and 21 in place with a dated note, or leave the record as written and record beside at L8/L6/history/source-corrections-2026-11-11.md. Pick: record beside. Entry for aybllc/auditonomous main aa30b03, L7/provenance/sources/staging-records/library/reading/NIST_FIPS-180-4_Secure-Hash-Standard.md. By the record's own lists, 24 of the 36 PDF pages were read (pages 1-12, 18-19, 21-25, 32-36) and 12 were not (pages 13-17, 20, 26-31; counted from line 21). Line 17's "[source text withheld from the public copy]" should be 24, and line 21's "eleven unread pages" should be twelve. Line 29's figure, 24, is right.
+          - item 37
+            - **ref**: fips180-4-2 (MISATTRIBUTED)
+            - **category**: misattributed
+            - **cls**: owner-chooses
+            - **touches**: staging record
+            - **why**: The reading record is a staging record that is not edited, so the page contents are corrected beside it.
+            - **fix**: Options: rewrite the unread-pages list in place with a dated note, or record beside at L8/L6/history/source-corrections-2026-11-11.md. Pick: record beside. Entry for the same file (aa30b03), line 21. PDF pages 13-17 (printed 8-12) hold the end of section 3.1, section 3.2 and section 4 with the K-constant tables, and no part of section 5. Section 5 and 5.1 begin on PDF page 18 (printed 13), a page the record read. PDF page 20 (printed 15) holds the end of 5.3.2, sections 5.3.3 and 5.3.4, and the start of 5.3.5 (H0 and H1 only). The unread pages should read: pages 13-17 (end of section 3.1, section 3.2 operations on words, section [source text withheld from the public copy]) and page 20 (sections 5.3.3-5.3.5: SHA-256, SHA-384 and the first SHA-512 IV words).
+          - item 38
+            - **ref**: fips180-4-3 (MISMATCH)
+            - **category**: mismatch
+            - **cls**: owner-chooses
+            - **touches**: staging record
+            - **why**: The reading record is a staging record that is not edited, so the altered word is recorded beside it.
+            - **fix**: Options: correct line 216 in place with a dated note, or record beside at L8/L6/history/source-corrections-2026-11-11.md. Pick: record beside. Entry for the same file (aa30b03), line 216 (C14, Bears on): FIPS 180-4 section 6.1.3 (PDF page 25, printed page 20) has "yields the same message digest", but the line quotes "yield the same message digest". A quotation taken from the line should be made exact, written yield[s], or have the verb moved outside the quotation marks.
+          - item 39
+            - **ref**: definition-citations-1 (NOT-FOUND)
+            - **category**: not-found
+            - **cls**: owner-chooses
+            - **touches**: definition
+            - **why**: The active definition is not edited: the owner rulings of 16 August resolve its issues by a note beside it, "never by editing the definition" (aybllc/auditonomous main aa30b03, L8/L6/history/LEDGER_2026-08-16_l6-close-and-normalization.md line 50), and its folder's sheet already records a pending edit beside it and cites the definition as written.
+            - **fix**: Options: change the label in Appendix C in place, or leave the definition as written and record beside at L8/L6/history/source-corrections-2026-11-11.md, with one line on the definitions sheet (aa30b03 L8/L0/semantics/definitions/0.md line 32). Pick: record beside. Entry for aybllc/auditonomous main aa30b03, L8/L0/semantics/definitions/AUDITONOMOUS_DEFINITION.md, lines 310-312 (Appendix C). As fetched on 11 November 2026, the NIST CSRC glossary page for audit trail carries neither the access-record sentence nor an attribution to CNSSI 4009-2015. Its CNSS definition is the chronological-record sense, sourced to CNSSI 4009-2022. No hash of the 30 July download was recorded, so the label VERIFIED cannot be earned again at that address, and the sentence is not reproducible there.
+          - item 40
+            - **ref**: definition-citations-2 (MISMATCH)
+            - **category**: mismatch
+            - **cls**: owner-chooses
+            - **touches**: dated record (L5 finding of 4 August)
+            - **why**: The file is a dated finding, which its folder keeps as it stood, and the dropped word changes no verdict, so one line beside costs less than any edit of the finding.
+            - **fix**: Options: insert the word in place with a dated note, or record beside at L8/L6/history/source-corrections-2026-11-11.md. Pick: record beside. Entry for aybllc/auditonomous main aa30b03, L8/L5/research/findings/OVERRIDE_NECESSITY_2026-08-04.md, line 53: NIST SP 800-53 Rev. 5, SI-10(1)(b), reads "[Assignment: organization-defined authorized individuals]"; the quotation drops "Assignment:".
+          - item 41
+            - **ref**: definition-citations-3 (MISMATCH)
+            - **category**: mismatch
+            - **cls**: owner-chooses
+            - **touches**: dated record (L5 finding of 4 August)
+            - **why**: The file is a dated finding, which its folder keeps as it stood, and the dropped word changes no verdict, so one line beside costs less than any edit of the finding.
+            - **fix**: Options: insert the word in place with a dated note, or record beside at L8/L6/history/source-corrections-2026-11-11.md. Pick: record beside. Entry for the same file (aa30b03), line 133: AC-3(10) ends "by [Assignment: organization-defined roles]."; the quotation drops "Assignment:".
+          - item 42
+            - **ref**: definition-citations-4 (MISATTRIBUTED)
+            - **category**: misattributed
+            - **cls**: owner-chooses
+            - **touches**: working file (L1 design instrument whose quotations carry a dated verification label)
+            - **why**: HUMINT_ENCODE's quotations stand under its own label of verification on 4 August (aybllc/auditonomous main aa30b03, L8/L1/state-space/HUMINT_ENCODE.md line 264), so a correction made inside them would sit under a verification it never had; whether the file is split or cited is also still open, so the correction is recorded beside and the file is left as written.
+            - **fix**: Options: edit line 41 in place with a dated note, or record beside at L8/L6/history/source-corrections-2026-11-11.md. Pick: record beside. Entry for HUMINT_ENCODE.md (aa30b03), line 41. In NIST [source text withheld from the public copy] automated-mechanisms assignment appears at CM-2(2) and CM-3(3) in the form the line quotes, and at CM-3(1) in another sentence form. It does not appear at CM-3(5), which names automation only by the adverb automatically. So the line's "[source text withheld from the public copy])" holds for CM-3(3) only. The report's fix keeps CM-3(1) in the list, although its form differs.
+          - item 43
+            - **ref**: definition-citations-5 (MISMATCH)
+            - **category**: mismatch
+            - **cls**: owner-chooses
+            - **touches**: working file (L1 design instrument whose quotations carry a dated verification label)
+            - **why**: Same file, left as written under its dated verification label; the dropped word is recorded beside it.
+            - **fix**: Options: restore the word in place with a dated note, or record beside at L8/L6/history/source-corrections-2026-11-11.md. Pick: record beside. Entry for the same file (aa30b03), line 80 (slot H3): the ALFUS wording is "as assigned by its human operator(s)" (NIST SP 1011-I-2.0, section 2, Autonomy, printed page 15). The slot drops its. The same file quotes the clause in full at line 37.
+          - item 44
+            - **ref**: definition-citations-6 (COUNT-WRONG)
+            - **category**: count-wrong
+            - **cls**: owner-chooses
+            - **touches**: working file (L1 design instrument whose quotations carry a dated verification label)
+            - **why**: Same file, left as written; the count is corrected beside it.
+            - **fix**: Options: correct the heading in place with a dated note, or record beside at L8/L6/history/source-corrections-2026-11-11.md. Pick: record beside. Entry for the same file (aa30b03), line 159 (heading of 6.1). The next line names the set SR-2 to SR-11 with CM-2, CM-3 and SA-10: 13 controls (counted from the names). As the check counted, the set has 37 listed enhancements, 34 active and 3 withdrawn (CM-2(1), CM-2(4), CM-2(5)). The heading's "eleven controls and twenty-seven enhancements" should be thirteen and thirty-four. Of the report's two forms, this one is chosen because line 161 names all thirteen.
+          - item 45
+            - **ref**: definition-citations-7 (MISATTRIBUTED)
+            - **category**: misattributed
+            - **cls**: owner-chooses
+            - **touches**: working file (L1 design instrument whose quotations carry a dated verification label)
+            - **why**: Same file, left as written; the overstated claim is recorded beside it, and any rewording of the instrument's key claim, if the file is ever revised, is the author's.
+            - **fix**: Options: narrow the claim in place with a dated note, or record beside at L8/L6/history/source-corrections-2026-11-11.md. Pick: record beside. Entry for the same file (aa30b03), lines 180-181, and the section heading at line 175, which states the same claim (the report names only lines 180-181). Of the 18 occurrences of "personnel" in the SR family, three do not make the person an object: the Discussion of SR-5(2) (personnel, or independent external entities, conduct assessments); SR-2(1) (a team of personnel to lead and support supply chain risk management activities); and SR-3a (in coordination with supply chain personnel). The claim holds only if narrowed, for example as the check words it: no SR control statement requires that a natural person render the judgment.
+          - item 46
+            - **ref**: definition-citations-8 (MISMATCH)
+            - **category**: mismatch
+            - **cls**: owner-chooses
+            - **touches**: working file (L1 design instrument whose quotations carry a dated verification label)
+            - **why**: Same file, left as written; the merged quotation is recorded beside it.
+            - **fix**: Options: split or shorten the quotation in place with a dated note, or record beside at L8/L6/history/source-corrections-2026-11-11.md. Pick: record beside. Entry for the same file (aa30b03), lines 240-241. CM-3(4) and SA-10(7) differ after "to be": CM-3(4) requires the representatives to be members of the change control element, and SA-10(7) requires them to be included in the change management and control process. The shared quotation is exact only up to "to be". Of the report's two forms, the entry records each enhancement's wording.
+          - item 47
+            - **ref**: definition-citations-9 (COUNT-WRONG)
+            - **category**: count-wrong
+            - **cls**: owner-chooses
+            - **touches**: working file (L1 design instrument whose quotations carry a dated verification label)
+            - **why**: Same file, left as written; the count is corrected beside it.
+            - **fix**: Options: correct the count in place with a dated note, or record beside at L8/L6/history/source-corrections-2026-11-11.md. Pick: record beside. Entry for the same file (aa30b03), lines 243-244. In the control statements of SR-2 to SR-11, CM-2, CM-3, SA-10 and their enhancements, three assignment parameters name personnel without "or roles", not two: SR-3a, SA-10e and CM-3(1)(f). Three further uses are not parameters: SA-10(2), and SR-4(1) twice. SR-2(1) names personnel, roles and responsibilities, and only SR-11b and SR-11(1) say personnel or roles. "[source text withheld from the public copy]" should say three.
+          - item 48
+            - **ref**: autonomous-definitions-1 (MISMATCH)
+            - **category**: mismatch
+            - **cls**: owner-chooses
+            - **touches**: definition
+            - **why**: The row is in the definition Auditonomous binds (blob ffbdc28 both at 0504961 and on main 9fa3744), which its folder versions rather than rewrites, in a repository the owner has opened only for the mirror: "No outside updates until we are sure I'm close." (aybllc/7lm main 6de996b, L8/L6/history/harmonization-2026-09-04.md line 336).
+            - **fix**: Options: version the definition now with the token restored (a new version, and a rebinding decision in Auditonomous); record beside now in Autonomous's own L6; or wait. Pick: wait, then record beside. Waited for: the owner's word opening Autonomous's research to corrections. Done first: nothing; the finding is kept in the check's results on the scaffold's main (L8/L5/research/review/agent-results-2026-11-11/public-source-verification/15-verify-autonomous-definitions.md). Then make an entry in a dated correction record at Autonomous's L8/L6/history/ (its own L6, record section 31), with one line on its definitions sheet. Entry: aybllc/autonomous L8/L0/semantics/definitions/AUTONOMOUS.md line 75, row A6, omits the source's cross-reference token <A.4> after acting/executing without marking it, and its bold is added emphasis. The exact source form is at DEFINITION_LIST_AUTONOMOUS.md line 28 (NIST SP 1011-I-2.0, section 2, Autonomy, printed page 15). The definition stays as written.
+          - item 49
+            - **ref**: autonomous-definitions-2 (MISATTRIBUTED)
+            - **category**: misattributed
+            - **cls**: owner-chooses
+            - **touches**: binder file
+            - **why**: The page is wrong in a draft glossary meant for release, but the binder's sheet says its files "are not rewritten" (aybllc/autonomous main 9fa3744, L7/allications/publications/binder/0.md line 8), and the owner has opened Autonomous only for the mirror, so this waits with the other Autonomous item.
+            - **fix**: Options: correct entry [5](b) in place now; record beside now in Autonomous's own L6; or wait. Pick: wait, then record beside. Waited for: the owner's word opening Autonomous's research, or the binder's first release draft, whichever comes first. Done first: nothing; the finding stands in the check's results on the scaffold's main. Then make an entry in Autonomous's dated correction record at L8/L6/history/. Corrected path: the file is now L7/allications/publications/binder/press-kit/GLOSSARY_AUTONOMOUS.md; the report gives L7/publications/..., the path before the mirror of 11 November. Entry: at line 385, entry [5](b), the definition of Fully Autonomous is on printed page 22 (PDF page 23) of NIST SP 1011-I-2.0, under the entry Mode of Operation for Unmanned Systems; page 15 holds only a pointer to it. The served slot named at line 389 is not yet built; when the binder's served pages are made, build it under the page-22 name.
+          - item 50
+            - **ref**: zenodo-and-ledger-2 (MISMATCH)
+            - **category**: mismatch
+            - **cls**: leave
+            - **touches**: ledger
+            - **why**: The fix costs more than it buys. Row 27 of aybllc/auditonomous main aa30b03, L7/provenance/sources/LEDGER.md, is incomplete, not false: NASA NTRS 20180003358 identifies the paper uniquely, its bytes match the hash the repository recorded, and the ledger was relocated without rewriting. The full citation (subtitle "Additional On-Orbit Results", 2018, SpaceOps 2018, Marseille) stands in the check's results for the day a bibliography is drafted.
+            - **fix**: 
+        - **notes**: One owner choice decides 46 of the 50 findings, all in Auditonomous files: is a record that misstates its public source corrected in place, or left as written with the correction filed beside it? Pick: beside, in one new dated record per repository at L8/L6/history/source-corrections-2026-11-11.md. The reasons for that place: both exemplars' L6 history sheets hold corrections with the prior state retained, and Auditonomous's sources sheet (aa30b03 L7/provenance/sources/0.md line 37) assigns the history of when a source was corrected to L8/L6/history/. In addition, one line goes in the Holdings of each folder sheet whose file is corrected, saying the file is cited as written and where its corrections are. That way no correction is a one-way pointer, the defect named in aybllc/autonomous main 9fa3744, L8/L6/history/AUDIT_L3_CORRECTION_CHAIN.md line 13.
+
+          Why beside, by the repositories' own practice. They correct a record in place only on the day it is written: the reading records of 4 August (commit e9b7a26), and the same-day second commits at the ends of Auditonomous record section 13 and scaffold section 41. Later work is corrected beside it, leaving the earlier text: "Corrections to this record, stated here and left in place there." (aybllc/7lm main 6de996b, L8/L6/history/harmonization-2026-09-04.md line 506). Auditonomous section 8 likewise supersedes sections 4d and 6 without editing them. The staging records' folder says "its files are not edited" (aa30b03 L7/provenance/sources/staging-records/0.md line 8). The same rule appears in the 16 August ledger (lines 31 and 50, the latter for the definition) and in Auditonomous record sections 7, 10 and 13. The definitions sheet already records a pending edit beside the definition and cites it as written (line 32). The SP 800-53 extraction's own header admits no commentary inside it. The alternative, in place with a dated note, is the practice of 4 August, used only on the day of writing.
+
+          The pass in Auditonomous is made by hand, with no script (record section 39), in this order:
+          (1) Write the correction record: 46 entries grouped by file. Each gives the file and line, what it says, the issuing body's words taken afresh from its own document (nvlpubs.nist.gov, csrc.nist.gov, www.rfc-editor.org) with a locator, and the corrected statement.
+          (2) Add one line each to the Holdings of L7/provenance/sources/staging-records/0.md (lines 18 and 20, since library/reading/ and standards/extracted/ have no sheet), L8/L4/work/computation/0.md (line 40), L8/L5/research/findings/0.md (line 36), L8/L1/state-space/0.md (line 38) and L8/L0/semantics/definitions/0.md (line 32), and an entry in L8/L6/history/0.md.
+          (3) Make step 1 of sp800-53-7: line 44 of the computation sheet.
+          (4) Add section 14 to L8/L6/history/harmonization-2026-09-05.md.
+          The sheet audit's fixes to the staging-records sheet are at lines 8 and 30, so the two batches do not collide.
+
+          Tally: 48 owner-chooses (the 46 above, plus 2 in Autonomous that wait), 2 leave, 0 apply. The only live-sheet sentence among the 50 is line 44 of the computation sheet (step 1 of sp800-53-7). Its new wording is true whatever is chosen for the records, so it can also go into the apply pass on its own.
+
+          Autonomous. Record section 26 holds the owner's rule that no outside update is made until the owner is sure the scaffold is close. The owner's word of 11 November opened Autonomous only for the mirror, which is done. Its two definition items therefore wait. When the owner opens Autonomous's research, they are recorded in Autonomous's own L6 (record section 31), not in Auditonomous's. Nothing is lost meanwhile: the check's results stand on the scaffold's main at L8/L5/research/review/agent-results-2026-11-11/public-source-verification/ (with source text withheld) and, complete, on Auditonomous PR #28 (unmerged). The scaffold carries none of these files.
+
+          No finding here is an authorial ruling. Four corrections bear on the author's own claims: belief #1 (nist-requirements-1), the goal and physicality readings of ALFUS (nist-requirements-10 and -11), and the key claim of HUMINT_ENCODE section 6.2 (definition-citations-7). The correction record states what the sources say. What follows for those claims is the author's to rule at L5. The corrections take no side in the open decisions on splitting or citing HUMINT_ENCODE, or on whether the second ALFUS volume is used as a definition.
+
+          Checked against the exports at aa30b03 and 9fa3744: every line the report names holds the text it describes. The report's fixes are corrected in six places:
+          - autonomous-definitions-2: the file's path, now under L7/allications/.
+          - sp800-53-7: the sheet wording.
+          - nist-requirements-1: adds the last sentence of line 242.
+          - nist-requirements-11: adds line 394's cut quotation.
+          - definition-citations-4: CM-3(1)'s sentence form differs.
+          - definition-citations-7: adds the heading at line 175.
+
+          Counted here: the SP 800-53 extraction's 215 entries, 27 withdrawn marks (13 on AC enhancements) and 187 statements; the FIPS record's 12 unread pages; and the RFC page breaks in Autonomous's copies of the prints. The source-side figures (216 entries, 29 withdrawn, the SR, CM and SA counts, the may and can counts) are the check's, made on the issuing bodies' documents and confirmed by its skeptic. No network was used. No repository file was modified. Scratch scripts are in /tmp/claude-0/-home-user/bfcfd013-a2da-5019-961e-7f46116f08be/scratchpad/advice/scratch/C5-public-sources/.
+      - **check**
+        - **checks**
+          - item 1
+            - **ref**: sp800-53-1 (COUNT-WRONG)
+            - **cls_ok**: yes
+            - **final_cls**: owner-chooses
+            - **note**: Opened the export at aa30b03. The file is a verbatim extraction kept as a staging record. Its folder's sheet says 'its files are not edited' (L7/provenance/sources/staging-records/0.md line 8), and its own header admits no commentary (line 5). The file has 24 '### AC-' headings and none for AC-13 (counted). The entry is exact, and filing it beside the file is right.
+          - item 2
+            - **ref**: sp800-53-2 (MISATTRIBUTED)
+            - **cls_ok**: yes
+            - **final_cls**: owner-chooses
+            - **note**: Lines 830-832 split the title as the finding says. Counted in the file: 27 entries carry the withdrawn mark, 13 of them AC enhancements, and AC-19(3) is not among them. Same staging record and same grounds as sp800-53-1.
+          - item 3
+            - **ref**: sp800-53-3 (MISMATCH)
+            - **cls_ok**: yes
+            - **final_cls**: owner-chooses
+            - **note**: Lines 1137-1141 show 'COMMANDS' heading the statement, as stated. Same staging record and same grounds.
+          - item 4
+            - **ref**: sp800-53-4 (MISMATCH)
+            - **cls_ok**: yes
+            - **final_cls**: owner-chooses
+            - **note**: Lines 1143-1147 show 'NONTECHNICAL SOURCES' heading the statement, as stated. Same staging record and same grounds.
+          - item 5
+            - **ref**: sp800-53-5 (MISMATCH)
+            - **cls_ok**: yes
+            - **final_cls**: owner-chooses
+            - **note**: Lines 1223-1227 show 'SYSTEM' heading the statement, as stated. Same staging record and same grounds.
+          - item 6
+            - **ref**: sp800-53-6 (MISMATCH)
+            - **cls_ok**: yes
+            - **final_cls**: owner-chooses
+            - **note**: Lines 1303-1307 show 'INFORMATION' heading the statement, as stated. Same staging record and same grounds.
+          - item 7
+            - **ref**: sp800-53-7 (COUNT-WRONG)
+            - **cls_ok**: yes
+            - **final_cls**: owner-chooses
+            - **note**: Confirmed all three places. Line 20 of the extraction gives 24/146/69/215, which are true counts of the file. Line 44 of the computation sheet says '(215 control statements, SHA-256 recorded)'. Line 198 of the routing plan says the same, and the history sheet's line 39 calls that plan a decision record. Counted in the file: 215 entries, 27 withdrawn marks and one title fragment, which leaves 187 statements. So '187 control statements' is true now and stays true after any correction. Step 1 is therefore an edit of a live sheet that can go into the apply pass alone. The rest of the finding touches a staging record and a decision record, so the finding stays owner-chooses.
+          - item 8
+            - **ref**: nist-requirements-1 (MISMATCH)
+            - **cls_ok**: yes
+            - **final_cls**: owner-chooses
+            - **note**: Lines 242, 360 and 396 hold the text. The file is the recorded output of an L4 run: 'Extraction date: 2026-08-04/05' (line 9), and the computation sheet's lines 3, 38 and 40 file it as computation as run. One qualification the result missed: commit 4a1c1db of 16 August rewrote line 7 of this file in place, and its message calls the three requirements files 'active text' while leaving 'historical records untouched'. Correcting in place with a dated note is therefore a real alternative for this file. Filing beside still fits how the file is filed today. What follows for belief #1 is the author's ruling at L5.
+          - item 9
+            - **ref**: nist-requirements-2 (COUNT-WRONG)
+            - **cls_ok**: yes
+            - **final_cls**: owner-chooses
+            - **note**: Line 364 says 'exactly three occurrences of the stem'. The entry is exact. Same grounds as nist-requirements-1.
+          - item 10
+            - **ref**: nist-requirements-3 (MISATTRIBUTED)
+            - **cls_ok**: yes
+            - **final_cls**: owner-chooses
+            - **note**: Line 364 cites the privacy sentence as '(2) p.13'. The entry is exact. Same grounds.
+          - item 11
+            - **ref**: nist-requirements-4 (MISMATCH)
+            - **cls_ok**: yes
+            - **final_cls**: owner-chooses
+            - **note**: The Verbatim block at lines 262-264 lacks the mixed-initiative sentence and has no ellipsis. The report itself offers two ways to fix it in place (restore the sentence, or mark the gap), which is a further reason the owner must choose.
+          - item 12
+            - **ref**: nist-requirements-5 (MISATTRIBUTED)
+            - **cls_ok**: yes
+            - **final_cls**: owner-chooses
+            - **note**: Line 177 says 'printed p. 41'. The entry is exact. Same grounds.
+          - item 13
+            - **ref**: nist-requirements-6 (MISATTRIBUTED)
+            - **cls_ok**: yes
+            - **final_cls**: owner-chooses
+            - **note**: Line 318 says 'printed p. 37'. The entry is exact. Same grounds.
+          - item 14
+            - **ref**: nist-requirements-7 (MISATTRIBUTED)
+            - **cls_ok**: yes
+            - **final_cls**: owner-chooses
+            - **note**: Line 65 says 'Vol II §2.1 B, p.16'. The entry is exact. Same grounds.
+          - item 15
+            - **ref**: nist-requirements-8 (MISATTRIBUTED)
+            - **cls_ok**: yes
+            - **final_cls**: owner-chooses
+            - **note**: Line 376 says 'Vol II §2.1 B (p.16)'. The entry is exact. Same grounds.
+          - item 16
+            - **ref**: nist-requirements-9 (COUNT-WRONG)
+            - **cls_ok**: yes
+            - **final_cls**: owner-chooses
+            - **note**: Line 358 says '60 "may", 51 "can"'. The report gives two counting methods, and the entry rightly records both. Same grounds.
+          - item 17
+            - **ref**: nist-requirements-10 (MISMATCH)
+            - **cls_ok**: yes
+            - **final_cls**: owner-chooses
+            - **note**: Line 372 holds both sentences. The entry is incomplete: line 400 repeats the same claim ('[source text withheld from the public copy]'), and neither the report nor the entry names it. The entry should name line 400 as well. What follows for the ISO/IEC 22989 tension is the author's ruling.
+          - item 18
+            - **ref**: nist-requirements-11 (MISMATCH)
+            - **cls_ok**: yes
+            - **final_cls**: owner-chooses
+            - **note**: Lines 195 and 394 hold the text, and the cut quotation of item d at line 394 is confirmed. One inexactness: the reading of the Logical UMS as only a model of a UMS stands at line 195 too ('[source text withheld from the public copy] only at line 394. The entry should name both lines for that statement.
+          - item 19
+            - **ref**: rfc6962-1 (MISMATCH)
+            - **cls_ok**: yes
+            - **final_cls**: owner-chooses
+            - **note**: This reading record has had no change of content since commit 370425e of 4 August. It is a staging record, and its sheet says it is not edited. Lines 366 and 211 hold the text. The duties the RFC places on submitters and log clients are confirmed in Autonomous's canonical copy, rfc6962-canonical.txt, at lines 488, 522, 968, 1095 and 1101.
+          - item 20
+            - **ref**: rfc6962-2 (MISMATCH)
+            - **cls_ok**: yes
+            - **final_cls**: owner-chooses
+            - **note**: Line 323 says what the finding says. The canonical copy, lines 1328-1340, names the two violations separately. Same staging record and same grounds.
+          - item 21
+            - **ref**: rfc6962-3 (MISATTRIBUTED)
+            - **cls_ok**: yes
+            - **final_cls**: owner-chooses
+            - **note**: The heading at line 329 reads 'PDF p.48 (printed p.24)'. The record's own line 333 already says the quote 'completes on PDF page 49', and its verifier (line 390) called the start-page citation defensible. What is missing is printed page 25: by the record's own page mapping (line 25), PDF page 49 is printed page 25. The entry should say this, so it does not read as if the span were undisclosed. The page break was confirmed in RFC6962.txt (pages 48 and 49).
+          - item 22
+            - **ref**: rfc6962-5 (MISMATCH)
+            - **cls_ok**: yes
+            - **final_cls**: owner-chooses
+            - **note**: Lines 139 and 366 hold the capitalised words. The canonical copy has them in lower case at lines 185, 1166, 1206 and 1260. Same grounds.
+          - item 23
+            - **ref**: rfc6962-7 (COUNT-WRONG)
+            - **cls_ok**: yes
+            - **final_cls**: owner-chooses
+            - **note**: Line 29 lists three captures that cross a page break. C4's break between PDF pages 5 and 6 is confirmed in RFC6962.txt and stated at the record's line 121. Same grounds.
+          - item 24
+            - **ref**: rfc6962-8 (COUNT-WRONG)
+            - **cls_ok**: yes
+            - **final_cls**: owner-chooses
+            - **note**: Line 390 is the verifier's output, recorded in the file. Counted on page 31 of RFC6962.txt: 14 words, 54 of 201 non-space characters. The verifier's conclusion that Q18 should cite pages 31-32 holds with 14 words as it did with 12, so the entry is only a footnote. Recording it is in keeping with '[source text withheld from the public copy]' (library/README.md line 21).
+          - item 25
+            - **ref**: rfc9162-1 (MISMATCH)
+            - **cls_ok**: yes
+            - **final_cls**: owner-chooses
+            - **note**: Line 241 ends 'is known).'. The canonical copy, rfc9162-canonical.txt, ends the sentence with a colon at lines 498-503, and the formula follows at line 505. Same staging record and same grounds.
+          - item 26
+            - **ref**: rfc9162-2 (MISMATCH)
+            - **cls_ok**: yes
+            - **final_cls**: owner-chooses
+            - **note**: Line 76 lacks the last words of the heading. The canonical copy gives the full heading at lines 1544-1545 and 105-106.
+          - item 27
+            - **ref**: rfc9162-3 (MISMATCH)
+            - **cls_ok**: yes
+            - **final_cls**: owner-chooses
+            - **note**: Lines 12 and 543 hold the text. The result's reason overstates: the record says the absence of the print it read ('The file nowhere prints', line 12; 'the document as captured', line 10; 'browser print', line 544). Line 543 still sits under 'Recorded absences', which a reader takes as results about the RFC, and the citation block lacks the issued RFC's ISSN (canonical line 9) and its DOI. The entry beside is therefore still worth its line.
+          - item 28
+            - **ref**: rfc9162-4 (MISATTRIBUTED)
+            - **cls_ok**: yes
+            - **final_cls**: owner-chooses
+            - **note**: Line 501 cites page 36. Counted by page breaks in RFC9162.txt: the heading of section 6.2 is on page 36 and 'If a CA and a log collude' on page 37.
+          - item 29
+            - **ref**: rfc9162-5 (MISATTRIBUTED)
+            - **cls_ok**: yes
+            - **final_cls**: owner-chooses
+            - **note**: Line 533 already says that the heading on page 50 was '[source text withheld from the public copy]', yet it gives the quoted phrase that page. In RFC9162.txt the phrase is on page 51. Same grounds.
+          - item 30
+            - **ref**: rfc9162-6 (MISMATCH)
+            - **cls_ok**: yes
+            - **final_cls**: owner-chooses
+            - **note**: Line 489 holds the text. The canonical copy, lines 2588-2594, introduces the five as examples. Same grounds.
+          - item 31
+            - **ref**: rfc9162-7 (NOT-FOUND)
+            - **cls_ok**: yes
+            - **final_cls**: owner-chooses
+            - **note**: Item (a) at line 301 holds the claim. Confirmed in the canonical copy at lines 870-871, 879-880 and 908-909. One small point of precision: section 4.1 defines Maximum Chain Length 'if the log imposes any limit' (line 842), so it is fixed in advance only when a log sets one.
+          - item 32
+            - **ref**: rfc9162-8 (MISMATCH)
+            - **cls_ok**: yes
+            - **final_cls**: owner-chooses
+            - **note**: Line 497 says 'detected ONLY by'. The canonical copy has 'can be detected' at lines 2602-2604, and single-party checks at lines 1985-1986 and 2096-2097.
+          - item 33
+            - **ref**: rfc9162-9 (MISATTRIBUTED)
+            - **cls_ok**: yes
+            - **final_cls**: owner-chooses
+            - **note**: Line 139 numbers the sentences wrongly. The canonical copy, lines 159-165, confirms the order.
+          - item 34
+            - **ref**: rfc9162-14 (MISMATCH)
+            - **cls_ok**: yes
+            - **final_cls**: owner-chooses
+            - **note**: Line 25 says 'Every other page extracted cleanly'. Page 19 of RFC9162.txt has six cut lines (counted), and the record's own line 23 lists page 19 as not read.
+          - item 35
+            - **ref**: rfc9162-15 (MISMATCH)
+            - **cls_ok**: yes
+            - **final_cls**: leave
+            - **note**: Moot. The ct-lane sheet (9fa3744, L7/provenance/prior-art/ct-lane/0.md lines 8, 16-18 and 20) calls RFC9162.txt an RFC Editor page capture, kept beside the canonical editions, and says 'Files are not edited.' The prior-art sheet (line 33) calls the texts 'captured'. Nothing in Autonomous says the capture is the RFC as issued. The quotations that name their file name the canonical one: CLOSED_LOOP_GOVERNANCE.md lines 36-37 and 95, AUDIT_L6_ADVERSARIAL.md line 361, AUDIT_L1_QUOTE_FIDELITY.md line 46. The result's word 'only' is slightly too strong: EBIOS_RECODE_single_object.md line 147 names no file. But it quotes prose that the capture carries intact.
+          - item 36
+            - **ref**: fips180-4-1 (COUNT-WRONG)
+            - **cls_ok**: yes
+            - **final_cls**: owner-chooses
+            - **note**: Lines 17, 21 and 29 hold the text. Counted from the record's own lists: 24 pages read and 12 not read. Same staging record and same grounds.
+          - item 37
+            - **ref**: fips180-4-2 (MISATTRIBUTED)
+            - **cls_ok**: yes
+            - **final_cls**: owner-chooses
+            - **note**: Line 21 gives the page contents that the finding corrects. The entry is exact. Same grounds.
+          - item 38
+            - **ref**: fips180-4-3 (MISMATCH)
+            - **cls_ok**: yes
+            - **final_cls**: owner-chooses
+            - **note**: Line 216 puts 'yield the same message digest' in quotation marks, while the record's own capture at line 214 reads 'yields'. The defect is minor, but a quotation taken from line 216 would be inexact, so one line beside is proportionate.
+          - item 39
+            - **ref**: definition-citations-1 (NOT-FOUND)
+            - **cls_ok**: yes
+            - **final_cls**: owner-chooses
+            - **note**: Lines 310-312 hold the text. The class is right, but the reason the result cites is inexact. Line 50 of the 16 August ledger is an item in the next session's queue about two other ambiguities, not an owner ruling covering the definition's issues. The definition's protection rests on four things: ruling AU-NORM-02, which restored it verbatim as the active record (that ledger, line 32); the definitions sheet, which 'versions a changed definition rather than silently rewriting prior use' (line 10) and says the definition 'is cited as written' (line 32); and Appendix C, which is itself an open owner decision (sheet line 34; Auditonomous record section 5, line 93). The entry rightly says only what the page showed on 11 November and that no hash was kept.
+          - item 40
+            - **ref**: definition-citations-2 (MISMATCH)
+            - **cls_ok**: yes
+            - **final_cls**: owner-chooses
+            - **note**: Line 53 drops 'Assignment:'. The file is a dated finding. The findings sheet (line 10) qualifies a finding only when review rejects or supersedes it, and a dropped word does neither, so one line beside fits.
+          - item 41
+            - **ref**: definition-citations-3 (MISMATCH)
+            - **cls_ok**: yes
+            - **final_cls**: owner-chooses
+            - **note**: Line 133 drops 'Assignment:'. Same grounds as definition-citations-2.
+          - item 42
+            - **ref**: definition-citations-4 (MISATTRIBUTED)
+            - **cls_ok**: yes
+            - **final_cls**: owner-chooses
+            - **note**: Line 41 holds the text. The class stands, but on better grounds than the result gives. Line 264 labels only the section 6 quotations, while line 41 is in section 1, whose labels are its own Status cell and lines 9-10. The open split-or-cite decision concerns section 0 only (Auditonomous record section 5, line 91), so the correction takes no side in it. The grounds that hold are these: the file's VERIFIED attestations (lines 9-10, 40-41, 157 and 264), and the corpus's standing rule '[source text withheld from the public copy] lines 18-20). That rule rules out a plain edit in place.
+          - item 43
+            - **ref**: definition-citations-5 (MISMATCH)
+            - **cls_ok**: yes
+            - **final_cls**: owner-chooses
+            - **note**: Line 80 drops 'its', and line 37 of the same file has the full clause. The slot table carries no label of its own. Same grounds as definition-citations-4.
+          - item 44
+            - **ref**: definition-citations-6 (COUNT-WRONG)
+            - **cls_ok**: yes
+            - **final_cls**: owner-chooses
+            - **note**: The heading at line 159 holds the wrong figures. Line 161 names 13 controls (counted from the names), which supports the form the entry chose.
+          - item 45
+            - **ref**: definition-citations-7 (MISATTRIBUTED)
+            - **cls_ok**: yes
+            - **final_cls**: owner-chooses
+            - **note**: Lines 175 and 180-181 hold the claim, and the result rightly adds the heading at line 175. The entry states what the source says. Any rewording of the instrument's key claim is the author's.
+          - item 46
+            - **ref**: definition-citations-8 (MISMATCH)
+            - **cls_ok**: yes
+            - **final_cls**: owner-chooses
+            - **note**: Lines 240-241 hold the merged quotation. The report gives two forms, and recording each enhancement's own wording is the better one.
+          - item 47
+            - **ref**: definition-citations-9 (COUNT-WRONG)
+            - **cls_ok**: yes
+            - **final_cls**: owner-chooses
+            - **note**: Both 'the only two normative uses' (line 243) and 'The two parameters' (line 244) are wrong. The entry's count covers both.
+          - item 48
+            - **ref**: autonomous-definitions-1 (MISMATCH)
+            - **cls_ok**: yes
+            - **final_cls**: owner-chooses
+            - **note**: Row A6 at line 75 drops '<A.4>' and adds bold, while DEFINITION_LIST_AUTONOMOUS.md line 28 has the exact form. Checked: blob ffbdc28 is the same at 0504961 and at 9fa3744. The definitions sheet says it 'versions a changed definition' (line 10). The owner's words in section 26 are confirmed at line 336 of the scaffold's record. Waiting fits section 25 ('We are only from now on updating the 7LM.') and section 26, since the 11 November word opened Autonomous only for the mirror.
+          - item 49
+            - **ref**: autonomous-definitions-2 (MISATTRIBUTED)
+            - **cls_ok**: yes
+            - **final_cls**: owner-chooses
+            - **note**: The path is rightly corrected to L7/allications/publications/binder/press-kit/GLOSSARY_AUTONOMOUS.md. Line 385 reads '(b) Terms and Definitions, p. 15.', and the slot named at line 389 is marked DEFERRED. The binder's sheet says its files 'are not rewritten' (line 8).
+          - item 50
+            - **ref**: zenodo-and-ledger-2 (MISMATCH)
+            - **cls_ok**: yes
+            - **final_cls**: leave
+            - **note**: Row 27 is a shortened citation like its neighbours (row 25 reads 'HEALPix…'), not a false one. The NTRS number identifies the paper, and the ledger was relocated without rewriting (sources sheet line 41). The result says the hash is recorded but not where: it is not in LEDGER.md. It and the full title, verbatim, stand at staging-records/standards/SOURCE_LEDGER.md line 333, and the hash is also in L7/peering/private/egress/peer-1/object-1/RECONCILIATION_FROM_L6_2026-08-16.md line 23. Nothing is lost by leaving the row.
+        - **overall**: Count. The result lists all 50 findings under the report's heading, each exactly once. Compared against the report's 50 headings: none is missing and none is doubled. No finding is marked apply, so step 3 of the test had nothing to re-check.
+
+          Classes. I re-derived all 50 from the exports at aa30b03 and 9fa3744, and all 50 stand as given. The corrected counts are therefore unchanged:
+          - 48 owner-chooses: 46 in Auditonomous, and 2 in Autonomous that wait.
+          - 2 leave: rfc9162-15 and zenodo-and-ledger-2.
+          - 0 apply.
+          One act inside sp800-53-7 is of the apply kind: line 44 of the computation sheet becomes '187 control statements'. Counted in the file: 215 entries, 27 withdrawn marks and one title fragment. That wording is true whatever the owner picks for the records, so it can go into the apply pass on its own.
+
+          The repositories' practice supports filing beside, and the result's evidence checks out:
+          - The staging-records sheet, line 8.
+          - The SP 800-53 file's header, line 5.
+          - Auditonomous record sections 7, 8, 10 and 13.
+          - The scaffold record, line 506.
+          - The same-day second commits that close Auditonomous section 13 and scaffold section 41.
+          - Commit e9b7a26, which corrected the Ferreira record in place on the day it was written.
+          The strongest source is one the result did not cite: L8/L5/research/review/STATUS_AND_LABEL_DISCIPLINE.md lines 18-20, '[source text withheld from the public copy].' That rule rules out a plain edit in place anywhere in the research files, which is why none of the 48 can be apply.
+
+          What the owner should know before saying yes:
+          (1) The result says the repositories correct a record in place only on the day it is written. There is one exception. Commit 4a1c1db of 16 August rewrote line 7 of the three requirements files in place; its message calls them 'active text' and leaves 'historical records untouched'. That was governance wording, not a correction of a source, so the pick stands. But for the NIST requirements run, correcting in place with a dated note is a real alternative, which it is not for the staging records.
+          (2) The new lines on the folder sheets do not put a mark on the corrected files. Autonomous's own audit of its corrections (L8/L6/history/AUDIT_L3_CORRECTION_CHAIN.md lines 12-14) counts a correction that 'leaves no mark on the corrected text' as not propagated: a reader who lands on the file directly still sees the old claim. Marking the files themselves needs the owner to allow a one-line dated pointer at the head of each.
+             - For the staging records, that means lifting 'its files are not edited'.
+             - For HUMINT_ENCODE.md, the NIST requirements run and the override finding, no sheet forbids it.
+             - The definition stays unmarked under its own rule.
+          (3) The two Autonomous items wait on the owner's word under sections 25 and 26. A yes in the same answer would be that word.
+
+          Entries to tighten before the pass (none changes a class):
+          - nist-requirements-10: add line 400, which repeats the claim.
+          - nist-requirements-11: name line 195 as well as line 394 for the reading of the Logical UMS as a model.
+          - definition-citations-4: fix the locator, and drop the split-or-cite reason.
+          - definition-citations-1: fix the grounds it cites.
+          - rfc9162-3: fix the reason given.
+          - rfc6962-3: note that line 333 already gives the PDF span.
+          - rfc9162-7: add 'if the log imposes any limit'.
+          - zenodo-and-ledger-2: say where the full title and the hash already stand.
+
+          Collisions. The plan's sheet lines do not collide with the sheet audit's fixes:
+          - staging-records sheet: the audit's lines 8 and 30 against the plan's 18 and 20;
+          - computation sheet: 38 and 54 against 40 and 44;
+          - definitions sheet: 34 and 36 against 32;
+          - state-space sheet: 50 against 38;
+          - history sheet: 35 and 37 against a new entry.
+
+          No network was used and no repository file was changed. Scratch files are in /tmp/claude-0/-home-user/bfcfd013-a2da-5019-961e-7f46116f08be/scratchpad/advice/scratch/test-C5-public-sources/.
+- **workflowProgress**
+  - item 1
+    - **type**: workflow_phase
+    - **index**: 1
+    - **title**: Resolve
+  - item 2
+    - **type**: workflow_phase
+    - **index**: 2
+    - **title**: Test
+  - item 3
+    - **type**: workflow_agent
+    - **index**: 1
+    - **label**: resolve:C1-autonomous-wrong-fact
+    - **phaseIndex**: 1
+    - **phaseTitle**: Resolve
+    - **agentId**: aece8be7ca7ad0caa
+    - **model**: claude-opus-5-5
+    - **state**: done
+    - **startedAt**: 1794595885900
+    - **queuedAt**: 1794595885875
+    - **attempt**: 1
+    - **lastToolName**: StructuredOutput
+    - **lastToolSummary**: 47 findings: 42 apply, 5 owner-chooses (README.md:5; copyri…
+    - **promptPreview**: You are advising the owner of three git repositories on the decisions that wait on them. The owner asked, exactly: "give me best choices for 1-4" — one best choice for each open item, so that they can answer yes or no.
+
+      READ FIRST, in full: /tmp/claude-0/-home-user/bfcfd013-a2da-5019-961e-7f46116f08be/scratchpad/advice/state-2026-11-13.md . It says where the three repositories stand today, what ha…
+    - **promptFramed**: yes
+    - **lastProgressAt**: 1794597216895
+    - **tokens**: 355495
+    - **toolCalls**: 103
+    - **durationMs**: 1330995
+    - **resultPreview**: {"findings":[{"ref":"L7/allications/publications/binder/0.md:8","category":"wrong-fact","cls":"apply","touches":"live sheet","why":"The binder's README has no rule about introducing a coinage. Its rule 5 (README.md lines 21-23) keeps terms coined in this repository off binder pages, and the fix edits only the binder's sheet, not the binder files that its line 8 says \"are not rewritten\".","fix":"…
+  - item 4
+    - **type**: workflow_agent
+    - **index**: 2
+    - **label**: resolve:C2-autonomous-other
+    - **phaseIndex**: 1
+    - **phaseTitle**: Resolve
+    - **agentId**: ae3c3df60aef3cd6d
+    - **model**: claude-opus-5-5
+    - **state**: done
+    - **startedAt**: 1794595885900
+    - **queuedAt**: 1794595885876
+    - **attempt**: 1
+    - **lastToolName**: StructuredOutput
+    - **lastToolSummary**: Batch C2-autonomous-other covers the 34 findings under CONT…
+    - **promptPreview**: You are advising the owner of three git repositories on the decisions that wait on them. The owner asked, exactly: "give me best choices for 1-4" — one best choice for each open item, so that they can answer yes or no.
+
+      READ FIRST, in full: /tmp/claude-0/-home-user/bfcfd013-a2da-5019-961e-7f46116f08be/scratchpad/advice/state-2026-11-13.md . It says where the three repositories stand today, what ha…
+    - **promptFramed**: yes
+    - **lastProgressAt**: 1794597326133
+    - **tokens**: 365070
+    - **toolCalls**: 94
+    - **durationMs**: 1439377
+    - **resultPreview**: {"findings":[{"ref":"L7/0.md:232 (against L7/provenance/sources/0.md lines 41 and 54)","category":"contradiction","cls":"apply","touches":"live sheet","why":"L7/provenance/sources/LEDGER.md holds 121 rows, S-001 to S-121 with no gap, every one pinned to 7540a9d6951c (counted; 122 is the number of lines that carry the pin), so L7/0.md:232 is right and L7/provenance/sources/0.md is wrong twice, sayi…
+  - item 5
+    - **type**: workflow_agent
+    - **index**: 3
+    - **label**: resolve:C3-auditonomous-facts
+    - **phaseIndex**: 1
+    - **phaseTitle**: Resolve
+    - **agentId**: a2bee8ca5d55f0b30
+    - **model**: claude-opus-5-5
+    - **state**: done
+    - **startedAt**: 1794597216905
+    - **queuedAt**: 1794595885876
+    - **attempt**: 1
+    - **lastToolName**: StructuredOutput
+    - **lastToolSummary**: State: all 36 statements still stand on aybllc/auditonomous…
+    - **promptPreview**: You are advising the owner of three git repositories on the decisions that wait on them. The owner asked, exactly: "give me best choices for 1-4" — one best choice for each open item, so that they can answer yes or no.
+
+      READ FIRST, in full: /tmp/claude-0/-home-user/bfcfd013-a2da-5019-961e-7f46116f08be/scratchpad/advice/state-2026-11-13.md . It says where the three repositories stand today, what ha…
+    - **promptFramed**: yes
+    - **lastProgressAt**: 1794598913265
+    - **tokens**: 408015
+    - **toolCalls**: 106
+    - **durationMs**: 1696360
+    - **resultPreview**: {"findings":[{"ref":"L7/0.md:232","category":"wrong-fact","cls":"apply","touches":"live sheet","why":"The register at `L7/provenance/sources/LEDGER.md` has 60 [source text withheld from the public copy]-, at its lines 20-79); 62 is that count plus the table's header and delimiter lines, and correcting the number changes nothing else.","fix":"In L7/0.md line 232 replace \"the 62-row pointer register\" wi…
+  - item 6
+    - **type**: workflow_agent
+    - **index**: 4
+    - **label**: resolve:C4-auditonomous-other
+    - **phaseIndex**: 1
+    - **phaseTitle**: Resolve
+    - **agentId**: a66df66d7f90a9a2f
+    - **model**: claude-opus-5-5
+    - **state**: done
+    - **startedAt**: 1794597326141
+    - **queuedAt**: 1794595885876
+    - **attempt**: 1
+    - **lastToolName**: StructuredOutput
+    - **lastToolSummary**: Of the 28 findings, 22 are best applied, 3 need the owner's…
+    - **promptPreview**: You are advising the owner of three git repositories on the decisions that wait on them. The owner asked, exactly: "give me best choices for 1-4" — one best choice for each open item, so that they can answer yes or no.
+
+      READ FIRST, in full: /tmp/claude-0/-home-user/bfcfd013-a2da-5019-961e-7f46116f08be/scratchpad/advice/state-2026-11-13.md . It says where the three repositories stand today, what ha…
+    - **promptFramed**: yes
+    - **lastProgressAt**: 1794598816310
+    - **tokens**: 384715
+    - **toolCalls**: 88
+    - **durationMs**: 1490168
+    - **resultPreview**: {"findings":[{"ref":"L7/peering/private/egress/peer-1/0.md:8","category":"dead-path","cls":"apply","touches":"live sheet","why":"The sheet names `_STAGING_TO_L6/` as this repository's without marking it as gone, while the binding record beside it already reads \"this repository's former `_STAGING_TO_L6/` (removed 2026-08-16)\" (aybllc/auditonomous main aa30b03, L7/peering/private/egress/peer-1/obj…
+  - item 7
+    - **type**: workflow_agent
+    - **index**: 5
+    - **label**: resolve:C5-public-sources
+    - **phaseIndex**: 1
+    - **phaseTitle**: Resolve
+    - **agentId**: a6d631644f6e79e5c
+    - **model**: claude-opus-5-5
+    - **state**: done
+    - **startedAt**: 1794598816317
+    - **queuedAt**: 1794595885876
+    - **attempt**: 1
+    - **lastToolName**: StructuredOutput
+    - **lastToolSummary**: One owner choice decides 46 of the 50 findings, all in Audi…
+    - **promptPreview**: You are advising the owner of three git repositories on the decisions that wait on them. The owner asked, exactly: "give me best choices for 1-4" — one best choice for each open item, so that they can answer yes or no.
+
+      READ FIRST, in full: /tmp/claude-0/-home-user/bfcfd013-a2da-5019-961e-7f46116f08be/scratchpad/advice/state-2026-11-13.md . It says where the three repositories stand today, what ha…
+    - **promptFramed**: yes
+    - **lastProgressAt**: 1794600577036
+    - **tokens**: 405821
+    - **toolCalls**: 77
+    - **durationMs**: 1760717
+    - **resultPreview**: {"findings":[{"ref":"sp800-53-1 (COUNT-WRONG)","category":"count-wrong","cls":"owner-chooses","touches":"staging record","why":"The extraction is a staging record whose folder's sheet says its files are not edited, and its own header admits no commentary inside it, so the missing entry is recorded beside it rather than inserted.","fix":"Options: insert the entry in place with a dated note, or leav…
+  - item 8
+    - **type**: workflow_agent
+    - **index**: 6
+    - **label**: test:C1-autonomous-wrong-fact
+    - **phaseIndex**: 2
+    - **phaseTitle**: Test
+    - **agentId**: aaeae32e4d13b95f3
+    - **model**: claude-opus-5-5
+    - **state**: done
+    - **startedAt**: 1794598913290
+    - **queuedAt**: 1794597216927
+    - **attempt**: 1
+    - **lastToolName**: StructuredOutput
+    - **lastToolSummary**: Count: all 47 findings under "## WRONG-FACT (47)" appear ex…
+    - **promptPreview**: You are advising the owner of three git repositories on the decisions that wait on them. The owner asked, exactly: "give me best choices for 1-4" — one best choice for each open item, so that they can answer yes or no.
+
+      READ FIRST, in full: /tmp/claude-0/-home-user/bfcfd013-a2da-5019-961e-7f46116f08be/scratchpad/advice/state-2026-11-13.md . It says where the three repositories stand today, what ha…
+    - **promptFramed**: yes
+    - **lastProgressAt**: 1794600330646
+    - **tokens**: 371937
+    - **toolCalls**: 96
+    - **durationMs**: 1417356
+    - **resultPreview**: {"checks":[{"ref":"L7/allications/publications/binder/0.md:8","cls_ok":true,"final_cls":"apply","note":"Confirmed in the export of main at 9fa3744. The binder's README.md has seven rules. Its rule 5 reads \"[source text withheld from the public copy]\" (README.md:22-23), and no rule says a coinage is introduced as a coinage. The edit is to the binder's sheet, not to the binde…
+  - item 9
+    - **type**: workflow_agent
+    - **index**: 7
+    - **label**: test:C2-autonomous-other
+    - **phaseIndex**: 2
+    - **phaseTitle**: Test
+    - **agentId**: a19a94352253c1f95
+    - **model**: claude-opus-5-5
+    - **state**: done
+    - **startedAt**: 1794600330653
+    - **queuedAt**: 1794597326163
+    - **attempt**: 1
+    - **lastToolName**: StructuredOutput
+    - **lastToolSummary**: Count: all 34 findings of the batch appear exactly once (16…
+    - **promptPreview**: You are advising the owner of three git repositories on the decisions that wait on them. The owner asked, exactly: "give me best choices for 1-4" — one best choice for each open item, so that they can answer yes or no.
+
+      READ FIRST, in full: /tmp/claude-0/-home-user/bfcfd013-a2da-5019-961e-7f46116f08be/scratchpad/advice/state-2026-11-13.md . It says where the three repositories stand today, what ha…
+    - **promptFramed**: yes
+    - **lastProgressAt**: 1794601585133
+    - **tokens**: 337200
+    - **toolCalls**: 91
+    - **durationMs**: 1254479
+    - **resultPreview**: {"checks":[{"ref":"L7/0.md:232 (against L7/provenance/sources/0.md lines 41 and 54)","cls_ok":true,"final_cls":"apply","note":"Confirmed against the export, which is byte-identical to main 9fa3744. L7/provenance/sources/LEDGER.md has 121 rows, S-001 to S-121 with no gap, and every row is pinned to 7540a9d6951c. The pin appears on 122 lines because LEDGER.md:189 also names it in prose. Both replace…
+  - item 10
+    - **type**: workflow_agent
+    - **index**: 8
+    - **label**: test:C4-auditonomous-other
+    - **phaseIndex**: 2
+    - **phaseTitle**: Test
+    - **agentId**: a64a8a82350325eb5
+    - **model**: claude-opus-5-5
+    - **state**: done
+    - **startedAt**: 1794600577045
+    - **queuedAt**: 1794598816342
+    - **attempt**: 1
+    - **lastToolName**: StructuredOutput
+    - **lastToolSummary**: The colleague's classes all stand, so the counts are unchan…
+    - **promptPreview**: You are advising the owner of three git repositories on the decisions that wait on them. The owner asked, exactly: "give me best choices for 1-4" — one best choice for each open item, so that they can answer yes or no.
+
+      READ FIRST, in full: /tmp/claude-0/-home-user/bfcfd013-a2da-5019-961e-7f46116f08be/scratchpad/advice/state-2026-11-13.md . It says where the three repositories stand today, what ha…
+    - **promptFramed**: yes
+    - **lastProgressAt**: 1794601489568
+    - **tokens**: 270460
+    - **toolCalls**: 73
+    - **durationMs**: 912523
+    - **resultPreview**: {"checks":[{"ref":"L7/peering/private/egress/peer-1/0.md:8","cls_ok":true,"final_cls":"apply","note":"Line 8 at aa30b03 reads \"this repository's `_STAGING_TO_L6/`\". The folder is not in the tree. The binding record beside it already reads \"this repository's former `_STAGING_TO_L6/` (removed 2026-08-16)\" (aybllc/auditonomous main aa30b03, L7/peering/private/egress/peer-1/object-1/0.md:12), and …
+  - item 11
+    - **type**: workflow_agent
+    - **index**: 9
+    - **label**: test:C3-auditonomous-facts
+    - **phaseIndex**: 2
+    - **phaseTitle**: Test
+    - **agentId**: a21e3cb46c837a8de
+    - **model**: claude-opus-5-5
+    - **state**: done
+    - **startedAt**: 1794601489574
+    - **queuedAt**: 1794598913311
+    - **attempt**: 1
+    - **lastToolName**: StructuredOutput
+    - **lastToolSummary**: Count: all 36 findings of the batch appear exactly once, in…
+    - **promptPreview**: You are advising the owner of three git repositories on the decisions that wait on them. The owner asked, exactly: "give me best choices for 1-4" — one best choice for each open item, so that they can answer yes or no.
+
+      READ FIRST, in full: /tmp/claude-0/-home-user/bfcfd013-a2da-5019-961e-7f46116f08be/scratchpad/advice/state-2026-11-13.md . It says where the three repositories stand today, what ha…
+    - **promptFramed**: yes
+    - **lastProgressAt**: 1794602674872
+    - **tokens**: 335551
+    - **toolCalls**: 94
+    - **durationMs**: 1185298
+    - **resultPreview**: {"checks":[{"ref":"L7/0.md:232","cls_ok":true,"final_cls":"apply","note":"Wrong fact. Checked on aybllc/auditonomous main aa30b03 (the export is byte-identical to it). L7/provenance/sources/LEDGER.md has 60 rows at lines 20-79: [source text withheld from the public copy]. Its table has 62 lines only because the header and delimiter lines are counted. \"the 62-row pointer register\" occurs once, at L7/0.md:232, s…
+  - item 12
+    - **type**: workflow_agent
+    - **index**: 10
+    - **label**: test:C5-public-sources
+    - **phaseIndex**: 2
+    - **phaseTitle**: Test
+    - **agentId**: a59e34af1d1649ec1
+    - **model**: claude-opus-5-5
+    - **state**: done
+    - **startedAt**: 1794601585140
+    - **queuedAt**: 1794600577080
+    - **attempt**: 1
+    - **lastToolName**: StructuredOutput
+    - **lastToolSummary**: Count. The result lists all 50 findings under the report's …
+    - **promptPreview**: You are advising the owner of three git repositories on the decisions that wait on them. The owner asked, exactly: "give me best choices for 1-4" — one best choice for each open item, so that they can answer yes or no.
+
+      READ FIRST, in full: /tmp/claude-0/-home-user/bfcfd013-a2da-5019-961e-7f46116f08be/scratchpad/advice/state-2026-11-13.md . It says where the three repositories stand today, what ha…
+    - **promptFramed**: yes
+    - **lastProgressAt**: 1794602815854
+    - **tokens**: 381678
+    - **toolCalls**: 78
+    - **durationMs**: 1230713
+    - **resultPreview**: {"checks":[{"ref":"sp800-53-1 (COUNT-WRONG)","cls_ok":true,"final_cls":"owner-chooses","note":"Opened the export at aa30b03. The file is a verbatim extraction kept as a staging record. Its folder's sheet says 'its files are not edited' (L7/provenance/sources/staging-records/0.md line 8), and its own header admits no commentary (line 5). The file has 24 '### AC-' headings and none for AC-13 (counte…
+- **totalTokens**: 3615942
+- **totalToolCalls**: 900

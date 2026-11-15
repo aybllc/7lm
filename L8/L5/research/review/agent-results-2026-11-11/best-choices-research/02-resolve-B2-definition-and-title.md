@@ -1,0 +1,179 @@
+# resolve:B2-definition-and-title
+
+Agent result, as returned. Workflow: Best choices: the research and manuscript decisions. Run `wf_b77d2bd0-834`. Phase: Resolve.
+
+- **decisions**
+  - item 1
+    - **id**: RH3
+    - **title**: Which text defines auditonomous for the book, and how the others relate
+    - **kind**: authorial
+    - **status_now**: open
+    - **best_choice**: Rule the entry of 30 July 2026 the book's one definition; where texts overlap, its wording governs. Print the constitutional sentence as epigraph, keep the fused form retired, and carry AUDITONOMY.md at its last version, 9c123b0, as your later statement of the noun; conditions A to E stay anchor analysis.
+    - **why**: Your ruling AU-NORM-02 of 16 August made the entry the active lexicographic record; main, the consolidated document (line 7) and the scaffold's specification, which gives each exemplar one locally authored L0 definition, already treat it as the record, and nothing true becomes false. AUDITONOMY.md's header ranks its section 0 over its conditions A to E, not over the entry. Its restored bytes, e27ca78, were kept only for a freeze pin, and the freeze was retired on your instruction; 9c123b0 adds your later words and grounds condition B. The roadmap's D20 framings are argument, not definition; D20's text needs correcting.
+    - **owner_words**
+      - item 1
+        - **quote**: [source text withheld from the public copy].
+        - **where**: aybllc/auditonomous, branch claude/book-structure-roadmap-k8ap82 (9259c18), L8/L5/research/review/BOOK_STRUCTURE_AND_ROADMAP_2026-09-13.md:643 (your instruction of 14 September 2026, quoted as written)
+      - item 2
+        - **quote**: i dont thik we shoudl dress p decisions with emtoins
+        - **where**: aybllc/autonomous, commit 9c123b0, auditonomous/definitions/AUDITONOMY.md:51-52 (your words of 5 August 2026; not in the restored e27ca78 bytes)
+    - **evidence**
+      - item 1
+        - **fact**: Commit 4a1c1db (16 August 2026) restores the 30 July entry verbatim and names it the active lexicographic record per AU-NORM-02; the consolidated root file stays history-only.
+        - **where**: aybllc/auditonomous commit 4a1c1db, commit message
+      - item 2
+        - **fact**: Main's start page names the entry the L0 object and the active definition of record (AU-NORM-02).
+        - **where**: aybllc/auditonomous origin/main aa30b03, README.md:11
+      - item 3
+        - **fact**: Main's definitions sheet says the constitutional sentence and the fused form stand verbatim in a retired README and that the entry is the record.
+        - **where**: aybllc/auditonomous origin/main aa30b03, L8/L0/semantics/definitions/0.md:36
+      - item 4
+        - **fact**: The scaffold's specification gives each exemplar one locally authored L0 definition and names AUDITONOMOUS_DEFINITION.md for Auditonomous; the unpushed PR #19 reconciliation commit 38e2ec3 keeps that line.
+        - **where**: aybllc/7lm origin/main 6de996b, L8/L4/work/writing/7lm-harmonized-architecture-specification.md:935; /home/user/7lm-pr19 at 38e2ec3, same path, line 935
+      - item 5
+        - **fact**: The Auditonomous harmonization record states that under the model a definition lives once, at its owner.
+        - **where**: aybllc/auditonomous origin/main aa30b03, L8/L6/history/harmonization-2026-09-05.md:5
+      - item 6
+        - **fact**: AUDITONOMY.md's header ranks its v2 section 0 over its own five-condition formalisation of 4 August, which it keeps as anchor analysis; section 2 is headed as the prior form retained as the analysis behind section 0.
+        - **where**: aybllc/auditonomous branch claude/book-structure-roadmap-k8ap82 (9259c18), L8/L0/semantics/definitions/AUDITONOMY.md:3-5 and :191
+      - item 7
+        - **fact**: The consolidated document of 4 August says the entry is [source text withheld from the public copy]; it calls the constitutional sentence the primary definiens and declines to prefer it over the fused form.
+        - **where**: same branch, L8/L6/retired/consolidated-2026-08-04/AUDITONOMOUS.md:7, :74, :96
+      - item 8
+        - **fact**: The roadmap branch restored AUDITONOMY.md as the freeze had pinned it, a byte string found only at Autonomous commit e27ca78; the freeze check was retired on the owner's instruction (commit 1d83788, 14 August) and its retirement completed in active text (commit 4a1c1db).
+        - **where**: same branch, L8/L6/history/LEDGER_2026-08-14_reorganisation.md:19-22; aybllc/auditonomous commits 1d83788 and 4a1c1db
+      - item 9
+        - **fact**: Autonomous history holds three later versions of AUDITONOMY.md; the last, 9c123b0 (6 August 2026, 475 lines against 462), adds the two-tier stop passage in the owner's words and grounds condition B, where the restored text calls condition B's sources both unread.
+        - **where**: aybllc/autonomous 9c123b0:auditonomous/definitions/AUDITONOMY.md:48-53 and :215; restored copy on the roadmap branch, L8/L0/semantics/definitions/AUDITONOMY.md:202 and :272
+      - item 10
+        - **fact**: The entry's noun gloss already carries the first two clauses and the second sentence of the constitutional sentence, quoted from the 2026 manuscript.
+        - **where**: aybllc/auditonomous origin/main aa30b03, L8/L0/semantics/definitions/AUDITONOMOUS_DEFINITION.md:28
+      - item 11
+        - **fact**: D20's corrected text says no Aud(S,F) predicate occurs in the sourcebook, but the sourcebook writes it in LaTeX at lines 115 to 124.
+        - **where**: roadmap branch 9259c18, L8/L5/research/review/BOOK_STRUCTURE_AND_ROADMAP_2026-09-13.md:630 and :647; L8/L4/work/writing/sourcebook/Auditonomous_Book_Material_Sourcebook_v0.1.md:115-124
+    - **on_yes**: A session drafts, for your word, a dated ruling entry for Auditonomous's L6 record and a note beside main's DISTILLATION.md line 21, which calls AUDITONOMY.md the governing text; nothing is rewritten. AUDITONOMY.md is filed at 9c123b0, beside e27ca78, when RH2 settles the roadmap branch's restore.
+    - **cost_or_risk**: The noun's fuller formulation stays labelled conjecture in print. This would change it: your saying the v2 header was meant to outrank the entry; then section 0 enters the entry as a dated new version.
+    - **confidence**: medium
+    - **rejected**: AUDITONOMY.md as the definition: two L0 definitions against the specification, and conjecture with unreconciled tensions. The constitutional sentence: its third clause is contested and the entry already carries its first two. The fused form: a restatement, retired. The e27ca78 version: superseded by your later edits.
+    - **depends_on**: (empty)
+  - item 2
+    - **id**: RH4
+    - **title**: Whether the ruling scholarly only still stands, and whether Part VI stays
+    - **kind**: authorial
+    - **status_now**: open
+    - **best_choice**: Rule that the ruling of 14 August, scholarly only, stands, read with your instruction of 13 September 2026: one academic book, with first contact argued only as a scholarly subject in Part VI, and the conspiracy and scenario narrative kept for a later companion volume (the roadmap's D1, option a).
+    - **why**: Your own words of 14 August speak only of conspiracies: '[source text withheld from the public copy].' The ban on contact material is the recording session's wording. On 13 September you asked for an 'academic book for auditbonomy and first contact'. Read together: scholarly register, conspiracies after, first contact in as scholarship. Only option (a) meets both; (b) keeps the narrative inside the book as case files, and (c) takes first contact out of the academic book. The spine your ruling confirmed already set that narrative apart as a severed volume, outside the scholarly claims.
+    - **owner_words**
+      - item 1
+        - **quote**: [source text withheld from the public copy].
+        - **where**: aybllc/auditonomous commit 1d83788, HUB_LEDGER.md:49-50 (owner decisions recorded 14 August 2026; in no live tree)
+      - item 2
+        - **quote**: [source text withheld from the public copy].
+        - **where**: aybllc/auditonomous, branch claude/book-structure-roadmap-k8ap82 (9259c18), L8/L5/research/review/BOOK_STRUCTURE_AND_ROADMAP_2026-09-13.md:3 (your instruction of 13 September 2026, quoted as written)
+    - **evidence**
+      - item 1
+        - **fact**: The ruling is item 5 of the owner decisions the hub stabilization session recorded on 14 August: book register scholarly only, no conspiracy or contact material in the book, the owner's quoted sentence, and the spine's Appendix F severance stands. Only the sentence in quotation marks is given as the owner's own words.
+        - **where**: aybllc/auditonomous commit 1d83788, HUB_LEDGER.md:2, :39, :49-50
+      - item 2
+        - **fact**: The spine of 14 August has Part VI as the mission only (chapters 35 to 39, no contact chapter) and Appendix F as the severed volume holding [source text withheld from the public copy], outside the scholarly claims.
+        - **where**: commit 1d83788, manuscripts/SPINE_v0.1_2026-08-14.md:178-197 and :220-221
+      - item 3
+        - **fact**: The roadmap, written on the instruction of 13 September, adds contact to Part VI (census, second contact, testimony, four case laboratories); its D1 row offers (a) one academic book with the narrative in a companion volume, (b) the narrative kept as case files, (c) two books, recommends (a), and cites the spine's cut but not the ruling.
+        - **where**: aybllc/auditonomous branch claude/book-structure-roadmap-k8ap82 (9259c18), L8/L5/research/review/BOOK_STRUCTURE_AND_ROADMAP_2026-09-13.md:270 and :612
+      - item 4
+        - **fact**: The table of contents of 2 August, the scenario book, opens with Part I, The Secret, including a chapter on how to deny without the lie.
+        - **where**: same branch, L8/L4/work/writing/manuscript/Auditonomous_Theory_TOC.md:24-33
+      - item 5
+        - **fact**: The roadmap's done-condition 6 lets secrecy appear only as hypothesis H6 with its own evidence.
+        - **where**: same branch, L8/L5/research/review/BOOK_STRUCTURE_AND_ROADMAP_2026-09-13.md:37
+      - item 6
+        - **fact**: No later word of yours on the book's scope is recorded; your messages of 11 to 13 November do not touch it.
+        - **where**: /tmp/claude-0/-home-user/bfcfd013-a2da-5019-961e-7f46116f08be/scratchpad/reconcile19/owner-words.txt
+    - **on_yes**: A session drafts, for your word, one dated entry for Auditonomous's L6 record quoting both statements and this reading; the ruling, held only at commit 1d83788, is cited, not moved. Then D8, D12 and D21, which set Part VI's cases and sources, can be ruled.
+    - **cost_or_risk**: Every Part VI chapter must pass the scholarly test on its own; Roswell 1947 and the secrecy hypothesis are where conspiracy can re-enter, so secrecy appears only as a tested hypothesis with its own evidence.
+    - **confidence**: medium
+    - **rejected**: Holding the ruling literally (no contact at all), which is option (c): it drops Part VI against your later instruction. Option (b), the narrative kept as case files inside the book: it puts the conspiracy material back in.
+    - **depends_on**: (empty)
+  - item 3
+    - **id**: RH26
+    - **title**: The adjective: auditonomous or auditonomic
+    - **kind**: authorial
+    - **status_now**: open
+    - **best_choice**: Rule auditonomous the book's one adjective. Keep auditonomic as the recorded variant, used only inside quotations of the eBIOS corpus and the 2026 manuscript. Record the rule as a dated entry citing the definition's line 16, which stays as written because it describes the corpus.
+    - **why**: The record supports a pick here. Auditonomous is the headword of the definition of record, the form the 30 July task gave (line 339), the repository's name and your own word on 11 November. On main, auditonomic occurs 25 times, all where the definition describes the corpus (24) or a search lists terms (1), against 327 for auditonomous. The tipping fact: the etymology is AUDIT plus AUTONOMOUS (line 18), and the bound Autonomous entry warns that autonomic is a different word on which no argument may rest; the -ous form keeps the coinage's second element the bound word.
+    - **owner_words**
+      - item 1
+        - **quote**: Auditonomous gets the definitions of autonomous from Autonomous and nowhere else.
+        - **where**: aybllc/auditonomous origin/main aa30b03, L8/L6/history/harmonization-2026-09-05.md:9 (your rule of 5 September 2026)
+      - item 2
+        - **quote**: Get qa hanfle on the research and manuscruipt for Auditonomous
+        - **where**: aybllc/auditonomous origin/main aa30b03, L8/L6/history/harmonization-2026-09-05.md:178 (your words of 11 November 2026, quoted as written)
+    - **evidence**
+      - item 1
+        - **fact**: The headword line gives auditonomous (adjective), with auditonomic as a variant and no stated rule between them.
+        - **where**: aybllc/auditonomous origin/main aa30b03, L8/L0/semantics/definitions/AUDITONOMOUS_DEFINITION.md:14-16
+      - item 2
+        - **fact**: The entry dates auditonomic to 20 October 2025 (eBIOS commit cd24b10) and auditonomous to 21 October 2025 (commit c8c8aca), and lists the two forms as unresolved in the corpus.
+        - **where**: same file, lines 75, 79 and 182
+      - item 3
+        - **fact**: The entry says the -omous form was the one given in its task, and that outside the eBIOS repository the searched corpus has only auditonomic.
+        - **where**: same file, lines 280 and 339
+      - item 4
+        - **fact**: The etymology gives the word as a blend of AUDIT and AUTONOMOUS.
+        - **where**: same file, line 18
+      - item 5
+        - **fact**: The bound Autonomous entry lists autonomic among [source text withheld from the public copy] and says no argument in the project may rest on autonomic and autonomous being equivalent.
+        - **where**: aybllc/autonomous origin/main 9fa3744, L8/L0/semantics/definitions/AUTONOMOUS.md:208-221 (blob ffbdc28, identical to the pinned 0504961:research/definitions/AUTONOMOUS.md)
+      - item 6
+        - **fact**: Counted with git grep (whole word, any case, text files) on main: auditonomic 25 times in two files (24 in the definition, 1 in the perpetuity adjudication's list of searched words at line 91); auditonomous 327 times.
+        - **where**: aybllc/auditonomous origin/main aa30b03
+      - item 7
+        - **fact**: The 2026 embodied-auditonomy manuscript uses auditonomic 9 times, auditonomy 17 times and auditonomous never.
+        - **where**: aybllc/auditonomous branch claude/book-structure-roadmap-k8ap82 (9259c18), L7/peering/private/ingress/peer-3/object-1/martin_2026_embodied_auditonomy_lexrom_cabin_model_v0.2_ea08f59.md
+    - **on_yes**: A session drafts, for your word, a one-line dated ruling for Auditonomous's L6 record citing line 16. The definition stays unedited; its next dated version, such as the line-52 edit, may add a usage note beside line 16. Book prose uses auditonomous throughout.
+    - **cost_or_risk**: The 2026 manuscript's form (auditonomic 9 times, auditonomous never) is set aside except in quotation. What would change it: your choosing to follow that manuscript, or a meaning you want auditonomic to carry.
+    - **confidence**: high
+    - **rejected**: Auditonomic: older by one day (20 October 2025) and the 2026 manuscript's form, but its ending matches autonomic, which the bound entry says must not be equated with autonomous. Both forms with a split of meaning: no record proposes one.
+    - **depends_on**: (empty)
+  - item 4
+    - **id**: RH36
+    - **title**: The book's title and its press
+    - **kind**: authorial
+    - **status_now**: open
+    - **best_choice**: Take [source text withheld from the public copy] as the working title, and target a university press series in AI governance and accountable computing. Fix both only when the proposal is assembled, after one of the papers has passed peer review.
+    - **why**: Near-preference: no candidate is in your own words. The prospectus's title is a model's working title in its reply to your notes; Auditonomous Theory heads the scenario book, whose Part I is The Secret; Auditon was the hub session's unfixed offer. Tipping fact: on 13 September you asked for an 'academic book for auditbonomy and first contact', and only the prospectus's title names both. The press: the roadmap puts a peer-reviewed paper before the proposal, and every planned paper serves the proven leg (Chapters 2, 6, 14 and 16; the pair of 14 September), which its recommended series matches.
+    - **owner_words**
+      - item 1
+        - **quote**: [source text withheld from the public copy].
+        - **where**: aybllc/auditonomous, branch claude/book-structure-roadmap-k8ap82 (9259c18), L8/L5/research/review/BOOK_STRUCTURE_AND_ROADMAP_2026-09-13.md:3 (13 September 2026, quoted as written)
+      - item 2
+        - **quote**: [source text withheld from the public copy].
+        - **where**: aybllc/auditonomous commit 1d83788, HUB_LEDGER.md:49-50 (14 August 2026)
+    - **evidence**
+      - item 1
+        - **fact**: The roadmap lists the three title candidates in date order with their sources and recommends none; among three series options it recommends a university press series in AI governance and accountable computing, because [source text withheld from the public copy].
+        - **where**: aybllc/auditonomous branch claude/book-structure-roadmap-k8ap82 (9259c18), L8/L5/research/review/BOOK_STRUCTURE_AND_ROADMAP_2026-09-13.md:44-48, :613 and :627
+      - item 2
+        - **fact**: The prospectus of 3 August is a model's reply to the owner's uploaded notes; it gives the working title, 5 parts, 20 chapters and a target of about 100,000 to 115,000 words.
+        - **where**: aybllc/auditonomous origin/main aa30b03, L8/L4/work/writing/auditonomous-08-03-26.odt (content.xml paragraphs beginning Your uploaded notes, Working title, Target length, and Pro thinking)
+      - item 3
+        - **fact**: The table of contents titled AUDITONOMOUS THEORY is the scenario book: its working subtitles include contact and concealment, and its Part I is The Secret.
+        - **where**: roadmap branch 9259c18, L8/L4/work/writing/manuscript/Auditonomous_Theory_TOC.md:1-6 and :24
+      - item 4
+        - **fact**: The spine's Auditon titles were assembled by the hub session, which calls its titles offers and lists the title as an open decision.
+        - **where**: aybllc/auditonomous commit 1d83788, manuscripts/SPINE_v0.1_2026-08-14.md:4, :11 and :25-26
+      - item 5
+        - **fact**: The eBIOS core-architecture draft states [source text withheld from the public copy].
+        - **where**: roadmap branch 9259c18, L8/L4/work/writing/auditonomous_ebios_core_architecture_math_source-535f70d_draft.md:22
+      - item 6
+        - **fact**: The roadmap's done-condition 8 requires one of its three papers to pass peer review before the proposal goes out; those papers serve Chapters 2, 6, 14 and 16.
+        - **where**: roadmap branch 9259c18, L8/L5/research/review/BOOK_STRUCTURE_AND_ROADMAP_2026-09-13.md:39 and :682
+      - item 7
+        - **fact**: The word auditon does not occur in the definition of record.
+        - **where**: aybllc/auditonomous origin/main aa30b03, L8/L0/semantics/definitions/AUDITONOMOUS_DEFINITION.md (whole-word search, 0 hits)
+    - **on_yes**: Nothing is filed now. When the book's front matter reaches main (RH2), it lists the working title first, the other two beneath. The first paper goes to a venue in that field; the press is named when the proposal is written.
+    - **cost_or_risk**: The subtitle names the argued leg, not the proven one, so it is the part most likely to change. What would change the title: first contact leaving this book (RH4 answered no).
+    - **confidence**: low
+    - **rejected**: Auditonomous Theory: titles the scenario book and sits beside your separate work Autonomous Theory. Auditon: names only the unit, absent from the definition of record. Astrobiology or space-technology series: they centre the argued leg, which the roadmap says is not the book's evidence.
+    - **depends_on**
+      - RH4

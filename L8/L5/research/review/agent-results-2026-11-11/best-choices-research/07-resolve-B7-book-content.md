@@ -1,0 +1,178 @@
+# resolve:B7-book-content
+
+Agent result, as returned. Workflow: Best choices: the research and manuscript decisions. Run `wf_b77d2bd0-834`. Phase: Resolve.
+
+- **decisions**
+  - item 1
+    - **id**: RH18
+    - **title**: Reconstitution thesis: Part VII theme, Chapter 25 objection, or out of the book
+    - **kind**: authorial
+    - **status_now**: open
+    - **best_choice**: Keep reconstitution out of the academic book. Leave Blocks 37 and 38 whole in the archive, file them with the severed scenario material for the companion volume, and give Chapter 25 no reconstitution text. Only Block 38's calibration discipline enters, in Chapter 1, where the record already routes it.
+    - **why**: Blocks 37 and 38 need the contact premise: the 2 August proposal counts them among sixteen premise-bound blocks, and on 14 August you ruled the book scholarly only and confirmed the spine's severance of premise-bound material. Block 38's own pick, a theme in the reckoning part, was made for the scenario book before that ruling, and Block 38 concedes the fossil record does not support the thesis. Chapter 25 tests six laws and four falsifiers of the layer; seeding breaks none, so an objection there is misfiled. What would change it: D1 keeping the narrative inside one book.
+    - **owner_words**
+      - item 1
+        - **quote**: [source text withheld from the public copy].
+        - **where**: aybllc/auditonomous, commit 1d83788 (history only: the tree before the prune of 15 August 2026), HUB_LEDGER.md:49-50. Owner decision 5 of 14 August 2026 as the hub ledger records it; the owner's own words are the part in inner quotation marks.
+      - item 2
+        - **quote**: [source text withheld from the public copy].
+        - **where**: aybllc/auditonomous, branch claude/book-structure-roadmap-k8ap82 (9259c18), L8/L5/research/review/BOOK_STRUCTURE_AND_ROADMAP_2026-09-13.md:3. The owner's instruction of 13 September 2026, quoted there as written.
+    - **evidence**
+      - item 1
+        - **fact**: The 2 August structure proposal counts 16 premise-bound blocks, Blocks 37 and 38 among them, and lists Block 38 among the book's self-directed objections.
+        - **where**: aybllc/auditonomous branch claude/book-structure-roadmap-k8ap82 (9259c18), L8/L5/research/review/BOOK_STRUCTURE_PROPOSAL.md:22, 85-89
+      - item 2
+        - **fact**: The spine of 14 August 2026 severs the premise-bound material [source text withheld from the public copy]; the owner's ruling of the same day says that severance stands. The spine's own block list for that appendix is wrong (it names the instrument blocks 45 to 52), as the roadmap reports.
+        - **where**: same branch, L8/L5/research/review/SPINE_v0.1_2026-08-14.md:13-16, 220-221, 233-234; L8/L5/research/review/BOOK_STRUCTURE_AND_ROADMAP_2026-09-13.md:612; commit 1d83788 HUB_LEDGER.md:49-50
+      - item 3
+        - **fact**: Block 38 recommends a chapter-scale theme in the reckoning part of the 2 August table of contents (its Part V, which the roadmap renumbers Part VII); in the same block it says the hominin record is a branching bush that the chapter cannot claim as evidence, and that the thesis collides with the book's plausibility spine.
+        - **where**: same branch, L8/L4/work/writing/manuscript/Auditonomous_Theory_Master_Archive.md:460, 462, 466; L8/L4/work/writing/manuscript/Auditonomous_Theory_TOC.md:82
+      - item 4
+        - **fact**: Chapter 25 is gated on D9 and drafted from the distillation's six candidate laws and four falsification conditions and from the perpetuity adjudication. None of the ten concerns seeding, and Block 38 itself says the constitution forbids hiding a seeding, not the seeding.
+        - **where**: same branch, L8/L4/work/writing/book/ch25-six-candidate-laws-and-four-ways-to-kill-the-layer-the-ratchet.md; origin/main (aa30b03) L8/L5/research/findings/DISTILLATION.md:46-103, 132-139; archive line 450
+      - item 5
+        - **fact**: The roadmap keeps the proven leg and the argued leg apart and labels Chapter 25 proven-leg. Its D9 recommendation (a stated objection) never weighs the 14 August ruling: the roadmap does not cite it.
+        - **where**: same branch, BOOK_STRUCTURE_AND_ROADMAP_2026-09-13.md:56, 341-347, 620; research handle open register item X-30
+      - item 6
+        - **fact**: Block 38's calibration discipline already feeds Chapter 1 in both the 2 August proposal and the roadmap, whatever D9 rules.
+        - **where**: same branch, BOOK_STRUCTURE_PROPOSAL.md:33-34; BOOK_STRUCTURE_AND_ROADMAP_2026-09-13.md:100
+      - item 7
+        - **fact**: The theme ledger on main records the placement of Blocks 37 and 38 as undecided (tension T2).
+        - **where**: aybllc/auditonomous origin/main (aa30b03), L8/L5/research/lanes/THEME_LEDGER.md:154
+    - **on_yes**: A session drafts a dated line for theme-ledger entry T2 on main recording the ruling, applied on your word. When the roadmap branch joins, D9's row and Chapter 25's gate are marked ruled, and Chapter 25 is drafted from the distillation and the perpetuity adjudication.
+    - **cost_or_risk**: The academic book loses a thesis you wrote yourself and Block 38 calls genuinely moving. Nothing is deleted: both blocks stay whole in the archive, and a later dated ruling can bring them back.
+    - **confidence**: medium
+    - **rejected**: A Part VII theme follows Block 38's own pick, made for the scenario book before the 14 August ruling. A Chapter 25 objection misfiles the thesis: that chapter tests the layer's six laws and four falsifiers, and seeding breaks none.
+    - **depends_on**
+      - RH4
+  - item 2
+    - **id**: RH19
+    - **title**: Carry Reactive-to-Responsive and the Block 51 attribution fix through the archive by dated note
+    - **kind**: process
+    - **status_now**: open
+    - **best_choice**: Yes: carry both by dated note beside the original words, never by overwriting. Mark Blocks 43 and 44, in the archive and their outlines, as superseded by Block 45's Responsive; note at Block 51 that Block 50 had already declined the navigation reading. Enter them once the roadmap branch joins.
+    - **why**: The term itself is settled: Block 45 records that the author's specification says Responsive and that the book uses it, the table of contents adopts it, and the archive's open items mark it resolved. What remains is eight lines in three files still using Reactive, and a Block 51 note and outline saying Block 50 read the GPS phrase as navigation when Block 50 had said it is not. A dated note beside each makes the record true and keeps the author's words; the archive already corrects itself this way, and your 7 September rule enforces integrity, not deletion.
+    - **owner_words**
+      - item 1
+        - **quote**: we cant enforce integroty by ebforceing no deletion. we can only imply no deletion to enforcer integiortyty
+        - **where**: aybllc/auditonomous origin/main (aa30b03), L8/L6/history/harmonization-2026-09-05.md:154 (owner, 7 September 2026); also .github/workflows/integrity.yml:3-4
+      - item 2
+        - **quote**: [source text withheld from the public copy].
+        - **where**: aybllc/auditonomous branch claude/book-structure-roadmap-k8ap82 (9259c18), L8/L4/work/writing/manuscript/Auditonomous_Theory_Master_Archive.md:657 (Block 51, the author's correction); also Block_51_UHA_As_Record_Key.md:10
+    - **evidence**
+      - item 1
+        - **fact**: The book's term is settled in the record: Block 45 gives the specification's term as Responsive and says the book uses it; the 2 August table of contents adopts it; the archive's open-items line marks it resolved.
+        - **where**: aybllc/auditonomous branch claude/book-structure-roadmap-k8ap82 (9259c18), L8/L4/work/writing/manuscript/Auditonomous_Theory_Master_Archive.md:564, 748; Auditonomous_Theory_TOC.md:62
+      - item 2
+        - **fact**: The superseded term still stands on 8 lines in 3 files: archive lines 526, 536, 540 and 542 (Blocks 43 and 44); Block_43_OMMP_UHA_Thesis.md line 12; Block_44_Ontology_Free_Classification.md lines 11, 25 and 29. Archive line 312 uses the word in another sense and needs nothing.
+        - **where**: same branch, L8/L4/work/writing/manuscript/
+      - item 3
+        - **fact**: The Block 51 note (archive line 659) and its outline (line 14) say Block 50 read the GPS phrase as a navigation claim; Block 50 had called it not a navigation system (archive line 643), and the phrase is the author's own Block 49 prompt (archive line 627).
+        - **where**: same branch, Auditonomous_Theory_Master_Archive.md:627, 643, 659; Block_51_UHA_As_Record_Key.md:14
+      - item 4
+        - **fact**: The archive already corrects itself by dated notes beside retained text: Block 43's access note and its date correction, and the resolved entries in its open items.
+        - **where**: same branch, Auditonomous_Theory_Master_Archive.md:528, 530, 748
+      - item 5
+        - **fact**: Main holds none of these files (no manuscript block, no archive). They stand on the roadmap branch, whose pull request #27 was closed unmerged, and in history at 1d83788.
+        - **where**: git ls-tree of aybllc/auditonomous origin/main (aa30b03); state file of 13 November 2026
+      - item 6
+        - **fact**: Auditonomous's own record says dated research records are not rewritten.
+        - **where**: aybllc/auditonomous origin/main, L8/L6/history/harmonization-2026-09-05.md:148
+      - item 7
+        - **fact**: Main's theme ledger carries the two items as tensions T4 and T6, unruled; the docket marks the Block 51 item for the author.
+        - **where**: origin/main L8/L5/research/lanes/THEME_LEDGER.md:274, 278; roadmap branch L8/L5/research/review/RESEARCH_DOCKET.md:158, 160
+    - **on_yes**: A session writes the six dated notes now as a proposal, giving file, line and exact text, and a dated line for theme-ledger entries T4 and T6 on main. You say when to apply; the archive notes go in with the roadmap branch.
+    - **cost_or_risk**: Six notes in four files; nothing removed. Until the roadmap branch joins, the stale term stays unflagged there. The note at Block 43 must sit beside the author's own prompt, never inside it.
+    - **confidence**: high
+    - **rejected**: Leave and disclose keeps eight lines presenting a term the specification does not use, and a note that misdescribes Block 50. Overwriting the old words would falsify what the author and the sessions actually wrote.
+    - **depends_on**
+      - RH2
+  - item 3
+    - **id**: RH20
+    - **title**: Homes for the deep stratum and evidence ranking; which historical cases the book uses
+    - **kind**: authorial
+    - **status_now**: open
+    - **best_choice**: Take the roadmap's picks. Put the evidence ranking in Chapter 1 now, without the cut Egyptian examples, as the 2 August table of contents already words it. Use the prospectus's four case laboratories, never the three case files. Use the deep stratum only as Chapter 19's worked example of accretion.
+    - **why**: The ranking is method, not Egyptian content: the table of contents, corrected after your cut, already states it without the Eye of Ra and ties it to OMMP's declaration order, and the theme ledger, the 2 August proposal and the roadmap all name the method chapter as its home. The three case files are premise-bound, and the spine you confirmed on 14 August severs the 1947 case file; the four laboratories run each case archive-first and end with what remains unknown. Block 34 opens by resolving a remembered story into its sources, which is the accretion Chapter 19 teaches.
+    - **owner_words**
+      - item 1
+        - **quote**: remove all eye of ra
+        - **where**: aybllc/auditonomous origin/main (aa30b03), L8/L5/research/lanes/THEME_LEDGER.md:146 (owner, 2 August 2026, cutting Blocks 35 and 36)
+      - item 2
+        - **quote**: [source text withheld from the public copy].
+        - **where**: aybllc/auditonomous, commit 1d83788 (history only), HUB_LEDGER.md:49-50. Owner decision 5 of 14 August 2026 as the hub ledger records it; the owner's own words are the part in inner quotation marks.
+    - **evidence**
+      - item 1
+        - **fact**: The ranking originated in cut Block 36 (archive line 436); Blocks 44 and 46 still cite it (archive lines 540 and 572); the theme ledger flags its new home for the author and names the Note on Method.
+        - **where**: origin/main L8/L5/research/lanes/THEME_LEDGER.md:152; branch claude/book-structure-roadmap-k8ap82 (9259c18), L8/L4/work/writing/manuscript/Auditonomous_Theory_Master_Archive.md:436, 540, 572
+      - item 2
+        - **fact**: The 2 August table of contents, corrected after the cut, states the ranking without the Egyptian material and ties it to OMMP's order of declaration: domain, then motion, then form.
+        - **where**: same branch, L8/L4/work/writing/manuscript/Auditonomous_Theory_TOC.md:53
+      - item 3
+        - **fact**: The roadmap's Chapter 1 succeeds the Note on Method and is done only when the ranking is re-homed; its D8 row recommends the ranking to Chapter 1 and the deep stratum as Chapter 19's worked example.
+        - **where**: same branch, L8/L5/research/review/BOOK_STRUCTURE_AND_ROADMAP_2026-09-13.md:97-103, 619
+      - item 4
+        - **fact**: The 2 August proposal counts Block 34 severable except its Raphael-as-Thor mapping; Block 34 opens by showing a remembered angel story is a composite of several real texts.
+        - **where**: same branch, L8/L5/research/review/BOOK_STRUCTURE_PROPOSAL.md:19-20; Auditonomous_Theory_Master_Archive.md:406, 408
+      - item 5
+        - **fact**: The table of contents has three case files: 1947 (empty), the emissary of 1957 to 1960, and the long audit. The proposal groups the case files as premise-bound, and the spine's severed appendix holds the 1947 case file.
+        - **where**: same branch, Auditonomous_Theory_TOC.md:55-62; BOOK_STRUCTURE_PROPOSAL.md:76-78; L8/L5/research/review/SPINE_v0.1_2026-08-14.md:220-221
+      - item 6
+        - **fact**: The prospectus has four case [source text withheld from the public copy]), each run through a twelve-step workflow from the exact claim to a verdict, with the official finding kept as the baseline.
+        - **where**: origin/main L8/L4/work/writing/auditonomous-08-03-26.odt, Part IV chapters 14 to 17 and section 17
+      - item 7
+        - **fact**: The long audit's material (Blocks 43, 44, 49 and 50) already feeds the Nimitz laboratory in Chapter 24, so declining the case files loses none of it.
+        - **where**: same roadmap branch, BOOK_STRUCTURE_AND_ROADMAP_2026-09-13.md:328-335
+      - item 8
+        - **fact**: On 4 August 2026 the owner asked that paleocontact material be absorbed as recorded datum, never as interpretation.
+        - **where**: same roadmap branch, L8/L5/research/review/CONTRIBUTION_INDEX_AND_TOC.md:100-116
+    - **on_yes**: A session records the ruling in theme-ledger entry T1 on main. When the roadmap branch joins, Chapter 1's header names the ranking as re-homed, and dated notes beside archive lines 540 and 572 point to Chapter 1. Case facts wait for a network session.
+    - **cost_or_risk**: If D1 keeps 14 August's scholarly-only ruling as written, the laboratories and the deep stratum move to the companion volume; the ranking still goes to Chapter 1. Every case fact is unchecked.
+    - **confidence**: medium
+    - **rejected**: A Case File 0 fails the laboratories' workflow, which needs an earliest record. The case files are severed by the spine you said stands. Companion-only loses a clean accretion example; dropping the ranking loses method two surviving blocks cite.
+    - **depends_on**
+      - RH4
+      - RH2
+  - item 4
+    - **id**: RH34
+    - **title**: Whether the finding that the refusal disposes and enforcement is physical is adopted
+    - **kind**: authorial
+    - **status_now**: settled-by-events
+    - **best_choice**: No. Your own later words of 5 August settle it: a stop is not refusable, and physical intervention is only a gated backstop. Leave B6 standing, add a dated note beside it saying so, and keep only its recall point: a recall refused on demonstrable evidence means fetching the unit.
+    - **why**: B4 framed the fork for the stop: a refusal only recorded conforms to IEEE 7009, an effective one does not. B6 chose the effective refusal on your words of 5 August, matching what Autonomous recorded at 02:22 Pacific time. At 10:54 the same day you ruled the stop not refusable, and the entry dropped the physical-retrieval sentences; at 12:21 you made physical intervention a gated second tier. B6 was never amended and says nothing is adopted. What survives is its recall point, which fits the entry's rule that an ordinary instruction may be declined only on demonstrable evidence.
+    - **owner_words**
+      - item 1
+        - **quote**: NOt refusable. [source text withheld from the public copy]
+        - **where**: aybllc/autonomous, commit e27ca78 (5 August 2026, 10:54 Pacific time), LEDGER.md:365-367; the first two words are restored on aybllc/auditonomous branch claude/book-structure-roadmap-k8ap82 at L8/L0/semantics/definitions/AUDITONOMY.md:44
+      - item 2
+        - **quote**: The stop sequence is if you dont stop I come mnake you
+        - **where**: aybllc/autonomous, commit 5c2b2e1 (5 August 2026, 12:21 Pacific time), auditonomous/definitions/AUDITONOMY.md:50; the same line stands in the last version, commit 9c123b0
+    - **evidence**
+      - item 1
+        - **fact**: B4 frames the fork for the stop: a refusal that is only recorded while the safety-critical element still stops is conformant; one that can prevent the stop is barred. B6 decides it for the effective refusal and says there is no command that compels. Its owner quotation concerns a recall.
+        - **where**: aybllc/auditonomous branch claude/book-structure-roadmap-k8ap82 (9259c18), L8/L5/research/findings/AUTONOMY_AT_DISTANCE.md:252-261, 284-297
+      - item 2
+        - **fact**: The finding is append-and-strike and its limits line says nothing is adopted. It stands only on the roadmap branch and in history, not on main or the beta.
+        - **where**: same file, lines 6 and 404; git ls-tree of origin/main and origin/beta/7lm-exemplar-auditonomous
+      - item 3
+        - **fact**: On 5 August 2026 (Pacific time) Autonomous recorded at 02:22 that a unit may refuse a stop and the base must fetch it; at 10:54 the owner ruled the stop not refusable and the entry removed those sentences; at 12:21 physical intervention became a second tier, triggered only by harm or a protocol rule.
+        - **where**: aybllc/autonomous commits f258a79, e27ca78 and 5c2b2e1, file auditonomous/definitions/AUDITONOMY.md; e27ca78 LEDGER.md:355-367
+      - item 4
+        - **fact**: The auditonomy entry restored on the roadmap branch (the bytes of e27ca78) says a received stop signal is not refusable and that an ordinary instruction may be declined only with provenance, presence and a specific memory; it lacks the two-tier backstop, which only the later version 9c123b0 carries.
+        - **where**: roadmap branch L8/L0/semantics/definitions/AUDITONOMY.md:44, 91-99; aybllc/autonomous 9c123b0 auditonomous/definitions/AUDITONOMY.md:50
+      - item 5
+        - **fact**: The freeze record of 5 August held the stop conflict pending the owner's own correction, after he said the changed text was not meant to be there.
+        - **where**: aybllc/auditonomous commit 1d83788 (history only), FREEZE.md:163-178
+      - item 6
+        - **fact**: The IEEE 7009 classification of return, on which B6 says conformance turns, has not been run in any state.
+        - **where**: AUTONOMY_AT_DISTANCE.md:306-308; research handle open register item U-11
+      - item 7
+        - **fact**: Main's distillation still says the stop is adjudicated by warrant and that the unit may refuse or delay.
+        - **where**: aybllc/auditonomous origin/main (aa30b03), L8/L5/research/findings/DISTILLATION.md:38, 262-263
+    - **on_yes**: A session drafts the dated note for B6, entered when the roadmap branch joins, alongside the correction already listed for main's distillation, lines 38 and 262. The IEEE 7009 classification of return runs as work; your version ruling decides whether the backstop is carried.
+    - **cost_or_risk**: Nothing in the theory is lost. The risk is leaving B6 unflagged, so a chapter quotes it as your ruling. The two-tier backstop stands only in the later entry version, not the restored one.
+    - **confidence**: high
+    - **rejected**: Adopting B6 as worded contradicts your ruling that a stop is not refusable and reopens the IEEE 7009 conflict that ruling dissolved. Deleting or rewriting B6 would lose the record of the position you held that morning, and your recall point.
+    - **depends_on**
+      - RH2
+      - RH3

@@ -1,0 +1,381 @@
+# resolve:C5-public-sources
+
+Agent result, as returned. Workflow: Best choices: the audit findings and the source problems, triaged. Run `wf_c64d0b80-b2c`. Phase: Resolve.
+
+- **findings**
+  - item 1
+    - **ref**: sp800-53-1 (COUNT-WRONG)
+    - **category**: count-wrong
+    - **cls**: owner-chooses
+    - **touches**: staging record
+    - **why**: The extraction is a staging record whose folder's sheet says its files are not edited, and its own header admits no commentary inside it, so the missing entry is recorded beside it rather than inserted.
+    - **fix**: Options: insert the entry in place with a dated note, or leave the file as written and record beside at L8/L6/history/source-corrections-2026-11-11.md. Pick: record beside. Entry for aybllc/auditonomous main aa30b03, L7/provenance/sources/staging-records/standards/extracted/SP800-53r5_AC-AU_verbatim.md, between line 637 (AC-12(3)) and line 642 (AC-14): the source's withdrawn base control AC-13 (Supervision and Review, Access Control; withdrawn, incorporated into AC-2 and AU-6) is absent. Locators: NIST SP 800-53 Rev. 5, update of 10 December 2020, section 3.1, printed page 44 (PDF page 71); Appendix C, Table C-1, printed page 431. It is the only source entry the file lacks. Counted in the file: 24 AC base headings, none for AC-13.
+  - item 2
+    - **ref**: sp800-53-2 (MISATTRIBUTED)
+    - **category**: misattributed
+    - **cls**: owner-chooses
+    - **touches**: staging record
+    - **why**: Same staging record: the wrong entry is the run's own output, so it is kept as the record of the run and corrected beside it.
+    - **fix**: Options: rewrite lines 830-832 in place with a dated note, or leave them and record beside at L8/L6/history/source-corrections-2026-11-11.md. Pick: record beside. Entry for the same file (aa30b03), lines 830-832: AC-19(3) is a withdrawn enhancement with no control statement, incorporated into MP-7 (section 3.1, printed page 52, PDF page 79; Table C-1, printed page 432). Its title runs on through the two words that line 832 shows as a statement, "IDENTIFIABLE OWNER", and the entry should carry the file's withdrawn marker. The source has 14 withdrawn AC enhancements; the file marks 13 (counted).
+  - item 3
+    - **ref**: sp800-53-3 (MISMATCH)
+    - **category**: mismatch
+    - **cls**: owner-chooses
+    - **touches**: staging record
+    - **why**: Same staging record, left as the parser produced it; the misplaced title word is recorded beside it.
+    - **fix**: Options: move the word in place with a dated note, or record beside at L8/L6/history/source-corrections-2026-11-11.md. Pick: record beside. Entry for the same file (aa30b03), lines 1137-1141: the title of AU-6(8) ends with the word "COMMANDS", which line 1139 shows as the first word of the statement (section 3.3, printed page 72, PDF page 99). Every other word of the statement matches the source.
+  - item 4
+    - **ref**: sp800-53-4 (MISMATCH)
+    - **category**: mismatch
+    - **cls**: owner-chooses
+    - **touches**: staging record
+    - **why**: Same staging record, left as the parser produced it; the misplaced title words are recorded beside it.
+    - **fix**: Options: move the words in place with a dated note, or record beside at L8/L6/history/source-corrections-2026-11-11.md. Pick: record beside. Entry for the same file (aa30b03), lines 1143-1147: the title of AU-6(9) ends with the words "NONTECHNICAL SOURCES", which line 1145 shows as the start of the statement (section 3.3, printed page 72, PDF page 99). Every other word of the statement matches the source.
+  - item 5
+    - **ref**: sp800-53-5 (MISMATCH)
+    - **category**: mismatch
+    - **cls**: owner-chooses
+    - **touches**: staging record
+    - **why**: Same staging record, left as the parser produced it; the misplaced title word is recorded beside it.
+    - **fix**: Options: move the word in place with a dated note, or record beside at L8/L6/history/source-corrections-2026-11-11.md. Pick: record beside. Entry for the same file (aa30b03), lines 1223-1227: the title of AU-9(7) ends with the word "SYSTEM", which line 1225 shows as the start of the statement (section 3.3, printed page 75, PDF page 102). Every other word of the statement matches the source.
+  - item 6
+    - **ref**: sp800-53-6 (MISMATCH)
+    - **category**: mismatch
+    - **cls**: owner-chooses
+    - **touches**: staging record
+    - **why**: Same staging record, left as the parser produced it; the misplaced title word is recorded beside it.
+    - **fix**: Options: move the word in place with a dated note, or record beside at L8/L6/history/source-corrections-2026-11-11.md. Pick: record beside. Entry for the same file (aa30b03), lines 1303-1307: the title of AU-12(4) ends with the word "INFORMATION", which line 1305 shows as the start of the statement (section 3.3, printed page 79, PDF page 106). Every other word of the statement matches the source.
+  - item 7
+    - **ref**: sp800-53-7 (COUNT-WRONG)
+    - **category**: count-wrong
+    - **cls**: owner-chooses
+    - **touches**: staging record, live sheet, dated record
+    - **why**: The wrong total stands in a staging record and in a decision record, which stay as written, and in a live sheet, whose sentence can be made true now in words that stay true whichever way the extraction is handled.
+    - **fix**: Two acts, in order. (1) In the live sheet aybllc/auditonomous main aa30b03, L8/L4/work/computation/0.md line 44, replace "(215 control statements, SHA-256 recorded)" with "(187 control statements, SHA-256 recorded)". Counted in the file: 215 entries, 27 marked withdrawn, AC-19(3) a title fragment, 187 with a control statement. The report offers 216 entries, or 215 as the file stands; the sheet describes the file, and the statement count is the figure that is true now and stays true after any correction of the extraction. (2) Leave line 20 of the extraction and line 198 of L8/L6/history/7LM_ROUTING_PLAN_2026-09-05.md as written, and record beside at L8/L6/history/source-corrections-2026-11-11.md. Line 20's figures (24 AC base controls, 146 AC entries, 215 in all) count the file, not the source. As the check counted the source: the AC family has 25 base controls and 147 entries, AU has 69, 216 in all; 29 are withdrawn and 187 carry a control statement (section 3.1, printed pages 18-58; section 3.3, printed pages 65-81; Appendix C, Tables C-1 and C-3). The routing plan's figure is 215 entries, 187 of them control statements.
+  - item 8
+    - **ref**: nist-requirements-1 (MISMATCH)
+    - **category**: mismatch
+    - **cls**: owner-chooses
+    - **touches**: dated record (L4 extraction as run, 4-5 August)
+    - **why**: The file is the recorded output of an extraction run of 4 and 5 August, filed as computation as actually run, so it is kept as recorded and the correction goes beside it; what the correction means for [source text withheld from the public copy] an L5 ruling that the entry does not make.
+    - **fix**: Options: rewrite lines 242, 360 and 396 in place with a dated note, or leave the run as recorded and record beside at L8/L6/history/source-corrections-2026-11-11.md. Pick: record beside. Entry for aybllc/auditonomous main aa30b03, L8/L4/work/computation/nist-requirements-for-autonomouos.md: NIST SP 1011-II-1.0, section 6.1, printed page 35, keeps the weighted average as the default. It also says weighted minimum or maximum values may be more suitable in some cases, and gives one case on the MC axis where the lower of two metric scores governs instead of the average. This is hedged, it concerns metric scores, and it is not a general per-function rule. So none of these holds as written: line 360's "none found" and its only-partial-support sentence; line 396's sentence that the weakest-link rule appears nowhere; and line 242's last sentence, "[source text withheld from the public copy]". Section 6.1 (page 35) and section 2.4 (page 25) are partial support. The report names line 242 but gives no wording for that last sentence; the entry includes it.
+  - item 9
+    - **ref**: nist-requirements-2 (COUNT-WRONG)
+    - **category**: count-wrong
+    - **cls**: owner-chooses
+    - **touches**: dated record (L4 extraction as run, 4-5 August)
+    - **why**: The file is the recorded output of an extraction run, kept as recorded, so the count is corrected beside it.
+    - **fix**: Options: correct line 364 in place with a dated note, or leave the run as recorded and record beside at L8/L6/history/source-corrections-2026-11-11.md. Pick: record beside. Entry for the same file (aa30b03), line 364: the stem occurs four times in NIST AI 100-1, not "exactly three". The four are page 1 (systems operating with varying levels of autonomy), page 17 (section 3.6, human autonomy), and two in Appendix C, item 1, page 40 (fully autonomous; autonomously). The fourth is a use, not a definition.
+  - item 10
+    - **ref**: nist-requirements-3 (MISATTRIBUTED)
+    - **category**: misattributed
+    - **cls**: owner-chooses
+    - **touches**: dated record (L4 extraction as run, 4-5 August)
+    - **why**: The file is the recorded output of an extraction run, kept as recorded, so the page is corrected beside it.
+    - **fix**: Options: correct line 364 in place with a dated note, or record beside at L8/L6/history/source-corrections-2026-11-11.md. Pick: record beside. Entry for the same file (aa30b03), line 364: the privacy sentence it cites as "p.13" is in NIST AI 100-1, section 3.6 Privacy-Enhanced, printed page 17 (PDF page 22).
+  - item 11
+    - **ref**: nist-requirements-4 (MISMATCH)
+    - **category**: mismatch
+    - **cls**: owner-chooses
+    - **touches**: dated record (L4 extraction as run, 4-5 August)
+    - **why**: The block is part of the recorded output of an extraction run, kept as recorded, so the unmarked gap is recorded beside it.
+    - **fix**: Options: restore the sentence or insert an ellipsis in place with a dated note, or record beside at L8/L6/history/source-corrections-2026-11-11.md. Pick: record beside. Entry for the same file (aa30b03), lines 262-264 (NIST-R15, labelled Verbatim): NIST SP 1011-II-1.0, section 4, printed page 29, has one more sentence between the Description and the Scale/Measure lines. It concerns mixed-initiative collaboration and neglect tolerance and cites references 67 to 71. The block drops it without an ellipsis after "interacting with the UMS."
+  - item 12
+    - **ref**: nist-requirements-5 (MISATTRIBUTED)
+    - **category**: misattributed
+    - **cls**: owner-chooses
+    - **touches**: dated record (L4 extraction as run, 4-5 August)
+    - **why**: The file is the recorded output of an extraction run, kept as recorded, so the page is corrected beside it.
+    - **fix**: Options: correct line 177 in place with a dated note, or record beside at L8/L6/history/source-corrections-2026-11-11.md. Pick: record beside. Entry for the same file (aa30b03), line 177 (NIST-R9 Source), for the quotation at line 173: in [source text withheld from the public copy], item A.8, the question is on printed page 41 (PDF page 42) and the quoted definition of scripted operation is on printed page 42 (PDF page 43). The source should read printed pages 41-42.
+  - item 13
+    - **ref**: nist-requirements-6 (MISATTRIBUTED)
+    - **category**: misattributed
+    - **cls**: owner-chooses
+    - **touches**: dated record (L4 extraction as run, 4-5 August)
+    - **why**: The file is the recorded output of an extraction run, kept as recorded, so the page is corrected beside it.
+    - **fix**: Options: correct line 318 in place with a dated note, or record beside at L8/L6/history/source-corrections-2026-11-11.md. Pick: record beside. Entry for the same file (aa30b03), line 318 (NIST-R18 Source), for the quotation at line 314: in NIST SP 1011-II-1.0, section 6.3 Context, the opening question is on printed page 37 and the quoted paragraph is on printed page 38.
+  - item 14
+    - **ref**: nist-requirements-7 (MISATTRIBUTED)
+    - **category**: misattributed
+    - **cls**: owner-chooses
+    - **touches**: dated record (L4 extraction as run, 4-5 August)
+    - **why**: The file is the recorded output of an extraction run, kept as recorded, so the page is corrected beside it.
+    - **fix**: Options: correct line 65 in place with a dated note, or record beside at L8/L6/history/source-corrections-2026-11-11.md. Pick: record beside. Entry for the same file (aa30b03), line 65 (NIST-R1, Normative status): the sentence it quotes from NIST SP 1011-II-1.0, section 2.1 B Autonomy, is on printed page 17, not at "Vol II §2.1 B, p.16".
+  - item 15
+    - **ref**: nist-requirements-8 (MISATTRIBUTED)
+    - **category**: misattributed
+    - **cls**: owner-chooses
+    - **touches**: dated record (L4 extraction as run, 4-5 August)
+    - **why**: The file is the recorded output of an extraction run, kept as recorded, so the page is corrected beside it.
+    - **fix**: Options: correct line 376 in place with a dated note, or record beside at L8/L6/history/source-corrections-2026-11-11.md. Pick: record beside. Entry for the same file (aa30b03), line 376: the sentence on learning and world modeling it quotes from NIST SP 1011-II-1.0, section 2.1 B, is on printed page 17, not at "(p.16)".
+  - item 16
+    - **ref**: nist-requirements-9 (COUNT-WRONG)
+    - **category**: count-wrong
+    - **cls**: owner-chooses
+    - **touches**: dated record (L4 extraction as run, 4-5 August)
+    - **why**: The file is the recorded output of an extraction run, kept as recorded, so the counts are corrected beside it.
+    - **fix**: Options: correct line 358 in place with a dated note, or record beside at L8/L6/history/source-corrections-2026-11-11.md. Pick: record beside. Entry for the same file (aa30b03), line 358. As the check counted over NIST SP 1011-I-2.0 (47 PDF pages), whole word and ignoring case: "may" occurs 63 times (62 as a modal; the other is the month in reference 15) and "can" 53 times. Counted by matching lines (grep -ciw), the figures are 57 and 47. Neither pair is the line's "60 'may', 51 'can'"; its should 11, must 1 and shall 0 hold.
+  - item 17
+    - **ref**: nist-requirements-10 (MISMATCH)
+    - **category**: mismatch
+    - **cls**: owner-chooses
+    - **touches**: dated record (L4 extraction as run, 4-5 August)
+    - **why**: The file is the recorded output of an extraction run, kept as recorded, so the overbroad claim is corrected beside it; what follows for the tension with ISO/IEC 22989 is the author's to rule at L5.
+    - **fix**: Options: limit the two sentences in place with a dated note, or record beside at L8/L6/history/source-corrections-2026-11-11.md. Pick: record beside. Entry for the same file (aa30b03), line 372: ALFUS holds the mission externally assigned, but it describes goals below the mission generated on board, and its HI scale rewards that. Locators: NIST SP 1011-I-2.0, section 2, Mission Planning, printed page 22 (plans generated by operators or by onboard software); NIST SP 1011-II-1.0, section 4, printed page 30 (Level of Human Interaction, from assigning the mission down to servo; Ratio of Human Planning Time), and Table 1, page 45 (HI column: humans provide strategic goals at levels 7-9 and tactical goals at 4-6). Two sentences hold only of the mission: "[source text withheld from the public copy]", and "[source text withheld from the public copy]".
+  - item 18
+    - **ref**: nist-requirements-11 (MISMATCH)
+    - **category**: mismatch
+    - **cls**: owner-chooses
+    - **touches**: dated record (L4 extraction as run, 4-5 August)
+    - **why**: The file is the recorded output of an extraction run, kept as recorded, so the misread scope is corrected beside it; whether the auditon can be an ALFUS object is the author's ruling at L5, which the entry does not make.
+    - **fix**: Options: correct lines 195 and 394 in place with a dated note, or record beside at L8/L6/history/source-corrections-2026-11-11.md. Pick: record beside. Entry for the same file (aa30b03), lines 195 and 394. NIST SP 1011-I-2.0, section 2, Unmanned System, associated term Logical UMS, printed pages 28-29, gives two senses: (A) a model of a UMS; (B) inherently non-physical software that operates as an independent entity, interacting with its associated UMSs or commanding and coordinating them (see also NIST SP 1011-II-1.0, section 9.2, page 57). Section 6.2 item d, printed page 35, excludes a desktop computer running software "that is irrelevant to UMS operations", not desktop software as such. So three statements do not hold as written: line 195's "§6.2(d) excludes desktop software"; line 394's quotation of item d, which is cut before those words with no ellipsis (the report does not name this cut); and line 394's description of the Logical UMS as only a model.
+  - item 19
+    - **ref**: rfc6962-1 (MISMATCH)
+    - **category**: mismatch
+    - **cls**: owner-chooses
+    - **touches**: staging record
+    - **why**: The reading record of 4 August is a staging record whose folder's sheet says its files are not edited, so the error is recorded beside it and the record is cited as written.
+    - **fix**: Options: correct the reading record in place with a dated note, or leave it as written and record beside at L8/L6/history/source-corrections-2026-11-11.md. Pick: record beside. Entry for aybllc/auditonomous main aa30b03, L7/provenance/sources/staging-records/library/reading/RFC6962_Certificate-Transparency.md. Line 366's "[source text withheld from the public copy]." does not hold. RFC 6962 puts MUST on submitters and CAs (section 3.1, pages 9-10) and MUST NOT and SHOULD on log clients (section 4.1, pages 17-18; section 4.6, page 20). Section 5.3, steps 3 and 7 (page 22), send a monitor to section 4.6 as a log client. The line's first sentence holds: no RFC 2119 keyword names an auditor or a monitor. Line 211 calls the section 3 auditor sentence a "normative operational sentence", but it carries no RFC 2119 keyword.
+  - item 20
+    - **ref**: rfc6962-2 (MISMATCH)
+    - **category**: mismatch
+    - **cls**: owner-chooses
+    - **touches**: staging record
+    - **why**: The reading record is a staging record that is not edited, so the misread classification is recorded beside it.
+    - **fix**: Options: correct line 323 in place with a dated note, or record beside at L8/L6/history/source-corrections-2026-11-11.md. Pick: record beside. Entry for the same file (aa30b03), line 323 (C27, Bears on): "[source text withheld from the public copy]" does not hold. RFC 6962, section 7.3 (page 24), calls a failure to incorporate a certificate within the MMD a violation of the MMD contract, and only conflicting views a violation of the append-only property. What it says of both is that both are promptly and publicly detectable.
+  - item 21
+    - **ref**: rfc6962-3 (MISATTRIBUTED)
+    - **category**: misattributed
+    - **cls**: owner-chooses
+    - **touches**: staging record
+    - **why**: The reading record is a staging record that is not edited, so the page span is corrected beside it.
+    - **fix**: Options: correct the heading in place with a dated note, or record beside at L8/L6/history/source-corrections-2026-11-11.md. Pick: record beside. Entry for the same file (aa30b03), line 329 (heading of C28), for the quotation at line 331: the capture runs over PDF pages 48-49 (printed pages 24-25) and breaks after "two conflicting Signed Tree". The heading's "PDF p.48 (printed p.24)" names only the first page. Checked here against Autonomous's text of the same print (aybllc/autonomous main 9fa3744, L7/provenance/prior-art/ct-lane/RFC6962.txt), a repository object.
+  - item 22
+    - **ref**: rfc6962-5 (MISMATCH)
+    - **category**: mismatch
+    - **cls**: owner-chooses
+    - **touches**: staging record
+    - **why**: The reading record is a staging record that is not edited, so the unmarked emphasis is recorded beside it.
+    - **fix**: Options: lower-case the words or add an emphasis note in place with a dated note, or record beside at L8/L6/history/source-corrections-2026-11-11.md. Pick: record beside. Entry for the same file (aa30b03), lines 139 and 366: three capitalised words are the record's own emphasis, not the RFC's: the verb show (line 139), and could and might (line 366). RFC 6962 has them in lower case (section 1, page 4; section 5, page 21; section 5.4, page 23). Line 366 already marks the source's lower case for its other two capitalised words; these three need the same mark or the words emphasis added.
+  - item 23
+    - **ref**: rfc6962-7 (COUNT-WRONG)
+    - **category**: count-wrong
+    - **cls**: owner-chooses
+    - **touches**: staging record
+    - **why**: The reading record is a staging record that is not edited, so the count is corrected beside it.
+    - **fix**: Options: correct line 29 in place with a dated note, or record beside at L8/L6/history/source-corrections-2026-11-11.md. Pick: record beside. Entry for the same file (aa30b03), line 29: four captures straddle a PDF page break, not "Three": C4 (PDF pages 5-6) as well as C18 (31-32), C23 (43-44) and C28 (48-49). The record's own lines 121 and 390 count C4. All four breaks were confirmed here in Autonomous's text of the same print.
+  - item 24
+    - **ref**: rfc6962-8 (COUNT-WRONG)
+    - **category**: count-wrong
+    - **cls**: owner-chooses
+    - **touches**: staging record
+    - **why**: The reading record is a staging record that is not edited, so the count is corrected beside it.
+    - **fix**: Options: correct line 390 in place with a dated note, or record beside at L8/L6/history/source-corrections-2026-11-11.md. Pick: record beside. Entry for the same file (aa30b03), line 390 (adversarial verification, class 1): Q18 has 14 words (54 of its 201 non-space characters) on the cited PDF page 31, not "only 12". The rest is on PDF page 32 (RFC 6962 section 3.5, printed page 16). Counted here; the break was confirmed in Autonomous's text of the same print.
+  - item 25
+    - **ref**: rfc9162-1 (MISMATCH)
+    - **category**: mismatch
+    - **cls**: owner-chooses
+    - **touches**: staging record
+    - **why**: The reading record of 4 August is a staging record whose folder's sheet says its files are not edited, so the error is recorded beside it and the record is cited as written.
+    - **fix**: Options: correct the reading record in place with a dated note, or leave it as written and record beside at L8/L6/history/source-corrections-2026-11-11.md. Pick: record beside. Entry for aybllc/auditonomous main aa30b03, L7/provenance/sources/staging-records/library/reading/RFC9162_Certificate-Transparency-v2.md, line 241 (capture C14): the quotation ends "is known).", where RFC 9162, section 2.1.4.1, has a colon that introduces the formula on the next line (rfc9162.txt lines 498-505).
+  - item 26
+    - **ref**: rfc9162-2 (MISMATCH)
+    - **category**: mismatch
+    - **cls**: owner-chooses
+    - **touches**: staging record
+    - **why**: The reading record is a staging record that is not edited, so the shortened heading is recorded beside it.
+    - **fix**: Options: complete line 76 in place with a dated note, or record beside at L8/L6/history/source-corrections-2026-11-11.md. Pick: record beside. Entry for the same file (aa30b03), line 76: the table-of-contents entry for section 5.5 lacks the heading's last words, "by Leaf Hash" (rfc9162.txt lines 1544-1545; table of contents, lines 105-106).
+  - item 27
+    - **ref**: rfc9162-3 (MISMATCH)
+    - **category**: mismatch
+    - **cls**: owner-chooses
+    - **touches**: staging record
+    - **why**: The record states the absence as a property of RFC 9162 when [source text withheld from the public copy] browser print it read; it is not edited, so the fact goes beside it, where a citation will need it.
+    - **fix**: Options: correct lines 12 and 543 in place with a dated note, or record beside at L8/L6/history/source-corrections-2026-11-11.md. Pick: record beside. Entry for the same file (aa30b03), lines 12 and 543: the missing ISSN is the browser print's, not the RFC's. RFC 9162 as issued prints ISSN 2070-1721 in its first-page header (rfc9162.txt lines 6-10) and prints no DOI for itself. The RFC Editor's info page gives its DOI as 10.17487/RFC9162.
+  - item 28
+    - **ref**: rfc9162-4 (MISATTRIBUTED)
+    - **category**: misattributed
+    - **cls**: owner-chooses
+    - **touches**: staging record
+    - **why**: The reading record is a staging record that is not edited, so the page is corrected beside it.
+    - **fix**: Options: correct the heading in place with a dated note, or record beside at L8/L6/history/source-corrections-2026-11-11.md. Pick: record beside. Entry for the same file (aa30b03), line 501 (heading of C46), for the quotation at line 503: the quoted words of section 6.2 fall on page 37 of the 62-page print, not page 36 as the heading says. Page 36 holds only the section heading and the start of its first bullet. Confirmed here in Autonomous's text of the same print (aybllc/autonomous main 9fa3744, L7/provenance/prior-art/ct-lane/RFC9162.txt): heading on its page 36, quoted words on its page 37.
+  - item 29
+    - **ref**: rfc9162-5 (MISATTRIBUTED)
+    - **category**: misattributed
+    - **cls**: owner-chooses
+    - **touches**: staging record
+    - **why**: The reading record is a staging record that is not edited, so the page is corrected beside it.
+    - **fix**: Options: correct line 533 in place with a dated note, or record beside at L8/L6/history/source-corrections-2026-11-11.md. Pick: record beside. Entry for the same file (aa30b03), line 533: the registry sentence on immutable fields (RFC 9162 section 10.2.5, rfc9162.txt lines 2439-2441) is on page 51 of the print, and only the heading is on page 50. Confirmed in Autonomous's text of the same print: heading on page 50, sentence on page 51.
+  - item 30
+    - **ref**: rfc9162-6 (MISMATCH)
+    - **category**: mismatch
+    - **cls**: owner-chooses
+    - **touches**: staging record
+    - **why**: The reading record is a staging record that is not edited, so the overstatement is recorded beside it.
+    - **fix**: Options: correct line 489 in place with a dated note, or record beside at L8/L6/history/source-corrections-2026-11-11.md. Pick: record beside. Entry for the same file (aa30b03), line 489 (C44, [source text withheld from the public copy]" does not hold. RFC 9162 section 11.3 introduces its five misbehaviours as examples (rfc9162.txt lines 2588-2594) and does not present them as complete.
+  - item 31
+    - **ref**: rfc9162-7 (NOT-FOUND)
+    - **category**: not-found
+    - **cls**: owner-chooses
+    - **touches**: staging record
+    - **why**: The reading record is a staging record that is not edited, so the requirement the RFC does not make is recorded beside it.
+    - **fix**: Options: correct line 301 in place with a dated note, or record beside at L8/L6/history/source-corrections-2026-11-11.md. Pick: record beside. Entry for the same file (aa30b03), line 301 (C21, Bears on): RFC 9162 does not require a log to publish its acceptance criteria in advance, which is what the line's item (a) says. It requires the list of accepted trust anchors to be retrievable (section 4.2, SHALL; rfc9162.txt lines 870-871), sets minimum criteria itself (section 4.2.1) and leaves the rest to the log's discretion (section 4.2.2). The one acceptance limit a log fixes beforehand is its Maximum Chain Length parameter (section 4.1).
+  - item 32
+    - **ref**: rfc9162-8 (MISMATCH)
+    - **category**: mismatch
+    - **cls**: owner-chooses
+    - **touches**: staging record
+    - **why**: The reading record is a staging record that is not edited, so the overstatement is recorded beside it.
+    - **fix**: Options: correct line 497 in place with a dated note, or record beside at L8/L6/history/source-corrections-2026-11-11.md. Pick: record beside. Entry for the same file (aa30b03), line 497 (C45, Bears on): RFC 9162 section 11.3 says a violation of the append-only property "can be detected" by multiple clients comparing their STHs (rfc9162.txt lines 2602-2604). It does not say it is detected only that way, as line 497 says. Section 8.1.5 (a TLS client SHOULD verify consistency with an STH it knows) and section 8.3 (a monitor can audit by verifying consistency) describe checks made by a single party.
+  - item 33
+    - **ref**: rfc9162-9 (MISATTRIBUTED)
+    - **category**: misattributed
+    - **cls**: owner-chooses
+    - **touches**: staging record
+    - **why**: The reading record is a staging record that is not edited, so the sentence order is corrected beside it.
+    - **fix**: Options: correct line 139 in place with a dated note, or record beside at L8/L6/history/source-corrections-2026-11-11.md. Pick: record beside. Entry for the same file (aa30b03), line 139 (C1, Bears on). In the first paragraph of RFC 9162 section 1 (rfc9162.txt lines 159-165), the sentence the line calls the opening sentence (logs do not themselves prevent misissuance) is the second. The sentence it calls the second (any form of binary data) is the third. The opening sentence states the aim: to mitigate misissued certificates through append-only logs.
+  - item 34
+    - **ref**: rfc9162-14 (MISMATCH)
+    - **category**: mismatch
+    - **cls**: owner-chooses
+    - **touches**: staging record
+    - **why**: The reading record is a staging record that is not edited, so the claim about pages it did not read is corrected beside it.
+    - **fix**: Options: correct line 25 in place with a dated note, or record beside at L8/L6/history/source-corrections-2026-11-11.md. Pick: record beside. Entry for the same file (aa30b03), line 25: the print's text cuts more than the page-10 formula. Page 19 has six more cut code lines, which RFC 9162 section 4.5 gives in full (rfc9162.txt lines 974, 987-990 and 992). Page 19 is among the pages the record lists as not read, so "Every other page extracted cleanly" does not hold. Page 19's cut lines were confirmed here in Autonomous's text of the same print.
+  - item 35
+    - **ref**: rfc9162-15 (MISMATCH)
+    - **category**: mismatch
+    - **cls**: leave
+    - **touches**: third-party text
+    - **why**: Moot. The file is a third-party page capture kept as captured: its folder's sheet (aybllc/autonomous main 9fa3744, L7/provenance/prior-art/ct-lane/0.md line 20) says "Files are not edited." and names it a page capture beside the canonical edition, which equals the official text, and Autonomous quotes RFC 9162 only from the canonical file (L8/L5/research/review/CLOSED_LOOP_GOVERNANCE.md lines 36-37 and 95), so nothing in the repository states anything false about it.
+    - **fix**: 
+  - item 36
+    - **ref**: fips180-4-1 (COUNT-WRONG)
+    - **category**: count-wrong
+    - **cls**: owner-chooses
+    - **touches**: staging record
+    - **why**: The reading record of 4 August is a staging record whose folder's sheet says its files are not edited, so the counts are corrected beside it.
+    - **fix**: Options: correct lines 17 and 21 in place with a dated note, or leave the record as written and record beside at L8/L6/history/source-corrections-2026-11-11.md. Pick: record beside. Entry for aybllc/auditonomous main aa30b03, L7/provenance/sources/staging-records/library/reading/NIST_FIPS-180-4_Secure-Hash-Standard.md. By the record's own lists, 24 of the 36 PDF pages were read (pages 1-12, 18-19, 21-25, 32-36) and 12 were not (pages 13-17, 20, 26-31; counted from line 21). Line 17's "[source text withheld from the public copy]" should be 24, and line 21's "eleven unread pages" should be twelve. Line 29's figure, 24, is right.
+  - item 37
+    - **ref**: fips180-4-2 (MISATTRIBUTED)
+    - **category**: misattributed
+    - **cls**: owner-chooses
+    - **touches**: staging record
+    - **why**: The reading record is a staging record that is not edited, so the page contents are corrected beside it.
+    - **fix**: Options: rewrite the unread-pages list in place with a dated note, or record beside at L8/L6/history/source-corrections-2026-11-11.md. Pick: record beside. Entry for the same file (aa30b03), line 21. PDF pages 13-17 (printed 8-12) hold the end of section 3.1, section 3.2 and section 4 with the K-constant tables, and no part of section 5. Section 5 and 5.1 begin on PDF page 18 (printed 13), a page the record read. PDF page 20 (printed 15) holds the end of 5.3.2, sections 5.3.3 and 5.3.4, and the start of 5.3.5 (H0 and H1 only). The unread pages should read: pages 13-17 (end of section 3.1, section 3.2 operations on words, section [source text withheld from the public copy]) and page 20 (sections 5.3.3-5.3.5: SHA-256, SHA-384 and the first SHA-512 IV words).
+  - item 38
+    - **ref**: fips180-4-3 (MISMATCH)
+    - **category**: mismatch
+    - **cls**: owner-chooses
+    - **touches**: staging record
+    - **why**: The reading record is a staging record that is not edited, so the altered word is recorded beside it.
+    - **fix**: Options: correct line 216 in place with a dated note, or record beside at L8/L6/history/source-corrections-2026-11-11.md. Pick: record beside. Entry for the same file (aa30b03), line 216 (C14, Bears on): FIPS 180-4 section 6.1.3 (PDF page 25, printed page 20) has "yields the same message digest", but the line quotes "yield the same message digest". A quotation taken from the line should be made exact, written yield[s], or have the verb moved outside the quotation marks.
+  - item 39
+    - **ref**: definition-citations-1 (NOT-FOUND)
+    - **category**: not-found
+    - **cls**: owner-chooses
+    - **touches**: definition
+    - **why**: The active definition is not edited: the owner rulings of 16 August resolve its issues by a note beside it, "never by editing the definition" (aybllc/auditonomous main aa30b03, L8/L6/history/LEDGER_2026-08-16_l6-close-and-normalization.md line 50), and its folder's sheet already records a pending edit beside it and cites the definition as written.
+    - **fix**: Options: change the label in Appendix C in place, or leave the definition as written and record beside at L8/L6/history/source-corrections-2026-11-11.md, with one line on the definitions sheet (aa30b03 L8/L0/semantics/definitions/0.md line 32). Pick: record beside. Entry for aybllc/auditonomous main aa30b03, L8/L0/semantics/definitions/AUDITONOMOUS_DEFINITION.md, lines 310-312 (Appendix C). As fetched on 11 November 2026, the NIST CSRC glossary page for audit trail carries neither the access-record sentence nor an attribution to CNSSI 4009-2015. Its CNSS definition is the chronological-record sense, sourced to CNSSI 4009-2022. No hash of the 30 July download was recorded, so the label VERIFIED cannot be earned again at that address, and the sentence is not reproducible there.
+  - item 40
+    - **ref**: definition-citations-2 (MISMATCH)
+    - **category**: mismatch
+    - **cls**: owner-chooses
+    - **touches**: dated record (L5 finding of 4 August)
+    - **why**: The file is a dated finding, which its folder keeps as it stood, and the dropped word changes no verdict, so one line beside costs less than any edit of the finding.
+    - **fix**: Options: insert the word in place with a dated note, or record beside at L8/L6/history/source-corrections-2026-11-11.md. Pick: record beside. Entry for aybllc/auditonomous main aa30b03, L8/L5/research/findings/OVERRIDE_NECESSITY_2026-08-04.md, line 53: NIST SP 800-53 Rev. 5, SI-10(1)(b), reads "[Assignment: organization-defined authorized individuals]"; the quotation drops "Assignment:".
+  - item 41
+    - **ref**: definition-citations-3 (MISMATCH)
+    - **category**: mismatch
+    - **cls**: owner-chooses
+    - **touches**: dated record (L5 finding of 4 August)
+    - **why**: The file is a dated finding, which its folder keeps as it stood, and the dropped word changes no verdict, so one line beside costs less than any edit of the finding.
+    - **fix**: Options: insert the word in place with a dated note, or record beside at L8/L6/history/source-corrections-2026-11-11.md. Pick: record beside. Entry for the same file (aa30b03), line 133: AC-3(10) ends "by [Assignment: organization-defined roles]."; the quotation drops "Assignment:".
+  - item 42
+    - **ref**: definition-citations-4 (MISATTRIBUTED)
+    - **category**: misattributed
+    - **cls**: owner-chooses
+    - **touches**: working file (L1 design instrument whose quotations carry a dated verification label)
+    - **why**: HUMINT_ENCODE's quotations stand under its own label of verification on 4 August (aybllc/auditonomous main aa30b03, L8/L1/state-space/HUMINT_ENCODE.md line 264), so a correction made inside them would sit under a verification it never had; whether the file is split or cited is also still open, so the correction is recorded beside and the file is left as written.
+    - **fix**: Options: edit line 41 in place with a dated note, or record beside at L8/L6/history/source-corrections-2026-11-11.md. Pick: record beside. Entry for HUMINT_ENCODE.md (aa30b03), line 41. In NIST [source text withheld from the public copy] automated-mechanisms assignment appears at CM-2(2) and CM-3(3) in the form the line quotes, and at CM-3(1) in another sentence form. It does not appear at CM-3(5), which names automation only by the adverb automatically. So the line's "[source text withheld from the public copy])" holds for CM-3(3) only. The report's fix keeps CM-3(1) in the list, although its form differs.
+  - item 43
+    - **ref**: definition-citations-5 (MISMATCH)
+    - **category**: mismatch
+    - **cls**: owner-chooses
+    - **touches**: working file (L1 design instrument whose quotations carry a dated verification label)
+    - **why**: Same file, left as written under its dated verification label; the dropped word is recorded beside it.
+    - **fix**: Options: restore the word in place with a dated note, or record beside at L8/L6/history/source-corrections-2026-11-11.md. Pick: record beside. Entry for the same file (aa30b03), line 80 (slot H3): the ALFUS wording is "as assigned by its human operator(s)" (NIST SP 1011-I-2.0, section 2, Autonomy, printed page 15). The slot drops its. The same file quotes the clause in full at line 37.
+  - item 44
+    - **ref**: definition-citations-6 (COUNT-WRONG)
+    - **category**: count-wrong
+    - **cls**: owner-chooses
+    - **touches**: working file (L1 design instrument whose quotations carry a dated verification label)
+    - **why**: Same file, left as written; the count is corrected beside it.
+    - **fix**: Options: correct the heading in place with a dated note, or record beside at L8/L6/history/source-corrections-2026-11-11.md. Pick: record beside. Entry for the same file (aa30b03), line 159 (heading of 6.1). The next line names the set SR-2 to SR-11 with CM-2, CM-3 and SA-10: 13 controls (counted from the names). As the check counted, the set has 37 listed enhancements, 34 active and 3 withdrawn (CM-2(1), CM-2(4), CM-2(5)). The heading's "eleven controls and twenty-seven enhancements" should be thirteen and thirty-four. Of the report's two forms, this one is chosen because line 161 names all thirteen.
+  - item 45
+    - **ref**: definition-citations-7 (MISATTRIBUTED)
+    - **category**: misattributed
+    - **cls**: owner-chooses
+    - **touches**: working file (L1 design instrument whose quotations carry a dated verification label)
+    - **why**: Same file, left as written; the overstated claim is recorded beside it, and any rewording of the instrument's key claim, if the file is ever revised, is the author's.
+    - **fix**: Options: narrow the claim in place with a dated note, or record beside at L8/L6/history/source-corrections-2026-11-11.md. Pick: record beside. Entry for the same file (aa30b03), lines 180-181, and the section heading at line 175, which states the same claim (the report names only lines 180-181). Of the 18 occurrences of "personnel" in the SR family, three do not make the person an object: the Discussion of SR-5(2) (personnel, or independent external entities, conduct assessments); SR-2(1) (a team of personnel to lead and support supply chain risk management activities); and SR-3a (in coordination with supply chain personnel). The claim holds only if narrowed, for example as the check words it: no SR control statement requires that a natural person render the judgment.
+  - item 46
+    - **ref**: definition-citations-8 (MISMATCH)
+    - **category**: mismatch
+    - **cls**: owner-chooses
+    - **touches**: working file (L1 design instrument whose quotations carry a dated verification label)
+    - **why**: Same file, left as written; the merged quotation is recorded beside it.
+    - **fix**: Options: split or shorten the quotation in place with a dated note, or record beside at L8/L6/history/source-corrections-2026-11-11.md. Pick: record beside. Entry for the same file (aa30b03), lines 240-241. CM-3(4) and SA-10(7) differ after "to be": CM-3(4) requires the representatives to be members of the change control element, and SA-10(7) requires them to be included in the change management and control process. The shared quotation is exact only up to "to be". Of the report's two forms, the entry records each enhancement's wording.
+  - item 47
+    - **ref**: definition-citations-9 (COUNT-WRONG)
+    - **category**: count-wrong
+    - **cls**: owner-chooses
+    - **touches**: working file (L1 design instrument whose quotations carry a dated verification label)
+    - **why**: Same file, left as written; the count is corrected beside it.
+    - **fix**: Options: correct the count in place with a dated note, or record beside at L8/L6/history/source-corrections-2026-11-11.md. Pick: record beside. Entry for the same file (aa30b03), lines 243-244. In the control statements of SR-2 to SR-11, CM-2, CM-3, SA-10 and their enhancements, three assignment parameters name personnel without "or roles", not two: SR-3a, SA-10e and CM-3(1)(f). Three further uses are not parameters: SA-10(2), and SR-4(1) twice. SR-2(1) names personnel, roles and responsibilities, and only SR-11b and SR-11(1) say personnel or roles. "[source text withheld from the public copy]" should say three.
+  - item 48
+    - **ref**: autonomous-definitions-1 (MISMATCH)
+    - **category**: mismatch
+    - **cls**: owner-chooses
+    - **touches**: definition
+    - **why**: The row is in the definition Auditonomous binds (blob ffbdc28 both at 0504961 and on main 9fa3744), which its folder versions rather than rewrites, in a repository the owner has opened only for the mirror: "No outside updates until we are sure I'm close." (aybllc/7lm main 6de996b, L8/L6/history/harmonization-2026-09-04.md line 336).
+    - **fix**: Options: version the definition now with the token restored (a new version, and a rebinding decision in Auditonomous); record beside now in Autonomous's own L6; or wait. Pick: wait, then record beside. Waited for: the owner's word opening Autonomous's research to corrections. Done first: nothing; the finding is kept in the check's results on the scaffold's main (L8/L5/research/review/agent-results-2026-11-11/public-source-verification/15-verify-autonomous-definitions.md). Then make an entry in a dated correction record at Autonomous's L8/L6/history/ (its own L6, record section 31), with one line on its definitions sheet. Entry: aybllc/autonomous L8/L0/semantics/definitions/AUTONOMOUS.md line 75, row A6, omits the source's cross-reference token <A.4> after acting/executing without marking it, and its bold is added emphasis. The exact source form is at DEFINITION_LIST_AUTONOMOUS.md line 28 (NIST SP 1011-I-2.0, section 2, Autonomy, printed page 15). The definition stays as written.
+  - item 49
+    - **ref**: autonomous-definitions-2 (MISATTRIBUTED)
+    - **category**: misattributed
+    - **cls**: owner-chooses
+    - **touches**: binder file
+    - **why**: The page is wrong in a draft glossary meant for release, but the binder's sheet says its files "are not rewritten" (aybllc/autonomous main 9fa3744, L7/allications/publications/binder/0.md line 8), and the owner has opened Autonomous only for the mirror, so this waits with the other Autonomous item.
+    - **fix**: Options: correct entry [5](b) in place now; record beside now in Autonomous's own L6; or wait. Pick: wait, then record beside. Waited for: the owner's word opening Autonomous's research, or the binder's first release draft, whichever comes first. Done first: nothing; the finding stands in the check's results on the scaffold's main. Then make an entry in Autonomous's dated correction record at L8/L6/history/. Corrected path: the file is now L7/allications/publications/binder/press-kit/GLOSSARY_AUTONOMOUS.md; the report gives L7/publications/..., the path before the mirror of 11 November. Entry: at line 385, entry [5](b), the definition of Fully Autonomous is on printed page 22 (PDF page 23) of NIST SP 1011-I-2.0, under the entry Mode of Operation for Unmanned Systems; page 15 holds only a pointer to it. The served slot named at line 389 is not yet built; when the binder's served pages are made, build it under the page-22 name.
+  - item 50
+    - **ref**: zenodo-and-ledger-2 (MISMATCH)
+    - **category**: mismatch
+    - **cls**: leave
+    - **touches**: ledger
+    - **why**: The fix costs more than it buys. Row 27 of aybllc/auditonomous main aa30b03, L7/provenance/sources/LEDGER.md, is incomplete, not false: NASA NTRS 20180003358 identifies the paper uniquely, its bytes match the hash the repository recorded, and the ledger was relocated without rewriting. The full citation (subtitle "Additional On-Orbit Results", 2018, SpaceOps 2018, Marseille) stands in the check's results for the day a bibliography is drafted.
+    - **fix**: 
+- **notes**: One owner choice decides 46 of the 50 findings, all in Auditonomous files: is a record that misstates its public source corrected in place, or left as written with the correction filed beside it? Pick: beside, in one new dated record per repository at L8/L6/history/source-corrections-2026-11-11.md. The reasons for that place: both exemplars' L6 history sheets hold corrections with the prior state retained, and Auditonomous's sources sheet (aa30b03 L7/provenance/sources/0.md line 37) assigns the history of when a source was corrected to L8/L6/history/. In addition, one line goes in the Holdings of each folder sheet whose file is corrected, saying the file is cited as written and where its corrections are. That way no correction is a one-way pointer, the defect named in aybllc/autonomous main 9fa3744, L8/L6/history/AUDIT_L3_CORRECTION_CHAIN.md line 13.
+
+  Why beside, by the repositories' own practice. They correct a record in place only on the day it is written: the reading records of 4 August (commit e9b7a26), and the same-day second commits at the ends of Auditonomous record section 13 and scaffold section 41. Later work is corrected beside it, leaving the earlier text: "Corrections to this record, stated here and left in place there." (aybllc/7lm main 6de996b, L8/L6/history/harmonization-2026-09-04.md line 506). Auditonomous section 8 likewise supersedes sections 4d and 6 without editing them. The staging records' folder says "its files are not edited" (aa30b03 L7/provenance/sources/staging-records/0.md line 8). The same rule appears in the 16 August ledger (lines 31 and 50, the latter for the definition) and in Auditonomous record sections 7, 10 and 13. The definitions sheet already records a pending edit beside the definition and cites it as written (line 32). The SP 800-53 extraction's own header admits no commentary inside it. The alternative, in place with a dated note, is the practice of 4 August, used only on the day of writing.
+
+  The pass in Auditonomous is made by hand, with no script (record section 39), in this order:
+  (1) Write the correction record: 46 entries grouped by file. Each gives the file and line, what it says, the issuing body's words taken afresh from its own document (nvlpubs.nist.gov, csrc.nist.gov, www.rfc-editor.org) with a locator, and the corrected statement.
+  (2) Add one line each to the Holdings of L7/provenance/sources/staging-records/0.md (lines 18 and 20, since library/reading/ and standards/extracted/ have no sheet), L8/L4/work/computation/0.md (line 40), L8/L5/research/findings/0.md (line 36), L8/L1/state-space/0.md (line 38) and L8/L0/semantics/definitions/0.md (line 32), and an entry in L8/L6/history/0.md.
+  (3) Make step 1 of sp800-53-7: line 44 of the computation sheet.
+  (4) Add section 14 to L8/L6/history/harmonization-2026-09-05.md.
+  The sheet audit's fixes to the staging-records sheet are at lines 8 and 30, so the two batches do not collide.
+
+  Tally: 48 owner-chooses (the 46 above, plus 2 in Autonomous that wait), 2 leave, 0 apply. The only live-sheet sentence among the 50 is line 44 of the computation sheet (step 1 of sp800-53-7). Its new wording is true whatever is chosen for the records, so it can also go into the apply pass on its own.
+
+  Autonomous. Record section 26 holds the owner's rule that no outside update is made until the owner is sure the scaffold is close. The owner's word of 11 November opened Autonomous only for the mirror, which is done. Its two definition items therefore wait. When the owner opens Autonomous's research, they are recorded in Autonomous's own L6 (record section 31), not in Auditonomous's. Nothing is lost meanwhile: the check's results stand on the scaffold's main at L8/L5/research/review/agent-results-2026-11-11/public-source-verification/ (with source text withheld) and, complete, on Auditonomous PR #28 (unmerged). The scaffold carries none of these files.
+
+  No finding here is an authorial ruling. Four corrections bear on the author's own claims: belief #1 (nist-requirements-1), the goal and physicality readings of ALFUS (nist-requirements-10 and -11), and the key claim of HUMINT_ENCODE section 6.2 (definition-citations-7). The correction record states what the sources say. What follows for those claims is the author's to rule at L5. The corrections take no side in the open decisions on splitting or citing HUMINT_ENCODE, or on whether the second ALFUS volume is used as a definition.
+
+  Checked against the exports at aa30b03 and 9fa3744: every line the report names holds the text it describes. The report's fixes are corrected in six places:
+  - autonomous-definitions-2: the file's path, now under L7/allications/.
+  - sp800-53-7: the sheet wording.
+  - nist-requirements-1: adds the last sentence of line 242.
+  - nist-requirements-11: adds line 394's cut quotation.
+  - definition-citations-4: CM-3(1)'s sentence form differs.
+  - definition-citations-7: adds the heading at line 175.
+
+  Counted here: the SP 800-53 extraction's 215 entries, 27 withdrawn marks (13 on AC enhancements) and 187 statements; the FIPS record's 12 unread pages; and the RFC page breaks in Autonomous's copies of the prints. The source-side figures (216 entries, 29 withdrawn, the SR, CM and SA counts, the may and can counts) are the check's, made on the issuing bodies' documents and confirmed by its skeptic. No network was used. No repository file was modified. Scratch scripts are in /tmp/claude-0/-home-user/bfcfd013-a2da-5019-961e-7f46116f08be/scratchpad/advice/scratch/C5-public-sources/.

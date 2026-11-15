@@ -1,0 +1,202 @@
+# resolve:C4-auditonomous-other
+
+Agent result, as returned. Workflow: Best choices: the audit findings and the source problems, triaged. Run `wf_c64d0b80-b2c`. Phase: Resolve.
+
+- **findings**
+  - item 1
+    - **ref**: L7/peering/private/egress/peer-1/0.md:8
+    - **category**: dead-path
+    - **cls**: apply
+    - **touches**: live sheet
+    - **why**: The sheet names `_STAGING_TO_L6/` as this repository's without marking it as gone, while the binding record beside it already reads "this repository's former `_STAGING_TO_L6/` (removed 2026-08-16)" (aybllc/auditonomous main aa30b03, L7/peering/private/egress/peer-1/object-1/0.md:12), so one word makes the two agree, and the date the line keeps is the transfer's own.
+    - **fix**: In L7/peering/private/egress/peer-1/0.md line 8 replace "this repository's `_STAGING_TO_L6/`" with "this repository's former `_STAGING_TO_L6/`"; the rest of the line is unchanged.
+  - item 2
+    - **ref**: L7/provenance/sources/0.md:45
+    - **category**: dead-path
+    - **cls**: apply
+    - **touches**: live sheet
+    - **why**: The root file `AUDITONOMOUS.md` was deleted from HEAD by commit `8c98573` (its diff lists the deletion), the same paragraph already marks the toolkit it names "removed at HEAD by `8c98573`", and L8/L5/research/review/0.md line 43 marks this very file the same way, so the parenthetical makes the name findable without touching the retired README the paragraph points to.
+    - **fix**: In L7/provenance/sources/0.md line 45 replace "while preparing `AUDITONOMOUS.md`, every external quote" with "while preparing `AUDITONOMOUS.md` (removed from HEAD at `8c98573`, in git history), every external quote"; the rest of the line is unchanged.
+  - item 3
+    - **ref**: L8/L0/semantics/definitions/0.md:36
+    - **category**: dead-path
+    - **cls**: apply
+    - **touches**: live sheet
+    - **why**: The bare locator names a file deleted with the intake corpus by commit `8c98573`, whose full former path is intake/manuscript/Auditonomous_Theory_Master_Archive.md, where lines 37 and 51 at `8c98573^` hold the two statements (checked), so the fix lets a reader open the source from git history and leaves the definition file and the retired README as they are.
+    - **fix**: In L8/L0/semantics/definitions/0.md line 36 replace "from the intake corpus (" with "from the former intake corpus, removed from HEAD at `8c98573` and in git history only (", and replace "`Auditonomous_Theory_Master_Archive.md:37`" with "formerly `intake/manuscript/Auditonomous_Theory_Master_Archive.md:37`"; the rest of the line is unchanged.
+  - item 4
+    - **ref**: L7/0.md:237
+    - **category**: stale
+    - **cls**: apply
+    - **touches**: live sheet
+    - **why**: Since the Third Power Corpus was filed at its own egress position on 6 September 2026 (the repository's record, §8), L7/peering/private/egress/peer-2/object-1/ holds the files themselves (The_Third_Power_Corpus_v3.md, its .docx and OWNERSHIP_PENDING.md), so "Every binding" is untrue while every ingress binding is still reference-only, and the replacement says only what L7/peering/private/egress/0.md line 32 already says.
+    - **fix**: In L7/0.md line 237 replace "Every binding is reference-only." with "Every ingress binding is reference-only; the pending private egress at `L7/peering/private/egress/peer-2/object-1/` holds the Third Power Corpus files themselves, and nothing has left."; the rest of the line is unchanged.
+  - item 5
+    - **ref**: L7/allications/publications/binder/0.md:8
+    - **category**: stale
+    - **cls**: apply
+    - **touches**: live sheet
+    - **why**: Read at today's commit, "this pass" is the mirror of 11 November, before which the binder already stood at the publications position, so the sentence no longer says where the tree came from; the fix names the root of the earlier layout without adding a date and leaves the three gate files, which the same line says "are not rewritten", untouched.
+    - **fix**: In L7/allications/publications/binder/0.md line 8 replace "The `binder/` tree as it stood at HEAD before this pass, moved whole to the publications position because its subject is release identity" with "The `binder/` tree of the earlier layout, moved whole from the repository root to the publications position because its subject is release identity"; the rest of the line is unchanged.
+  - item 6
+    - **ref**: L7/peering/private/ingress/peer-1/0.md:8
+    - **category**: stale
+    - **cls**: apply
+    - **touches**: live sheet
+    - **why**: The HEAD `53b28f6` and the count 1,368 were written by the instantiation commit `ccc0554` of 5 September 2026 and never read again, so "At this pass ... is" is stale, and dating the observation keeps to the repository's rule that "Dates that belong to the objects (captures, verifications, transfers, runs) stay in the sheets as the objects' provenance." (aybllc/auditonomous main aa30b03, L8/L6/history/harmonization-2026-09-05.md:160).
+    - **fix**: In L7/peering/private/ingress/peer-1/0.md line 8 replace "At this pass its HEAD is `53b28f6` and it holds 1,368 tracked library files filed by venue or issuing body." with "At the 2026-09-05 pass its HEAD was `53b28f6` and it held 1,368 tracked library files filed by venue or issuing body."
+  - item 7
+    - **ref**: L7/peering/private/ingress/peer-1/object-1/0.md:13
+    - **category**: stale
+    - **cls**: apply
+    - **touches**: live sheet
+    - **why**: Only the third clause of the Version cell is stale (written by commit `ccc0554` on 5 September 2026), and the fix dates that observation while leaving both pinned commits, `b328334` and `e4f0d5c`, as they are, so it is no rebinding, which stays the owner's act.
+    - **fix**: In L7/peering/private/ingress/peer-1/object-1/0.md line 13 replace "archive HEAD at this pass `53b28f6`" with "archive HEAD at the 2026-09-05 pass `53b28f6`", giving: | Version | rows pinned to `l6` commit `b328334`; the 2026-08-16 accession at `e4f0d5c`; archive HEAD at the 2026-09-05 pass `53b28f6` |
+  - item 8
+    - **ref**: L7/provenance/sources/0.md:10
+    - **category**: stale
+    - **cls**: apply
+    - **touches**: live sheet
+    - **why**: The register was relocated on 5 September 2026 and in no later pass, and deleting "in this pass" makes the clause true without adding a date, which is what the owner-ordered pass of 7 September 2026 did with the 20 phrases " at HEAD of this pass" it pulled into L8/L6/history/sheets-2026-09-07.md.
+    - **fix**: In L7/provenance/sources/0.md line 10 replace "relocated in this pass from `uso/l6/LEDGER.md` without rewriting" with "relocated from `uso/l6/LEDGER.md` without rewriting". The same line also takes the 62-to-60 correction of the WRONG-FACT finding "L7/provenance/sources/0.md:10, 41" of the same report; the two edits do not overlap.
+  - item 9
+    - **ref**: L8/0.md:137
+    - **category**: stale
+    - **cls**: apply
+    - **touches**: live sheet
+    - **why**: Read at today's commit, "this pass" is the mirror of 11 November, of which the record holds only §13, and "What did not move in that pass" would then name folders dissolved two months before, so dating both to 5 September 2026 makes them true in a line that already dates every other event it tells.
+    - **fix**: In L8/0.md line 137 replace "the L6 record of this pass" with "the L6 record of the pass of 2026-09-05 and of the passes since, `harmonization-2026-09-05.md`", and replace "What did not move in that pass:" with "What did not move in the pass of 2026-09-05:". Make this in one edit with the two UNLISTED fixes on the same line; together that part reads: `L8/L6/` (the master ledger, three session ledgers, the record `sheets-2026-09-07.md` of what the sheets carried about their past, the L6 record of the pass of 2026-09-05 and of the passes since, `harmonization-2026-09-05.md`, and the retired 2026-08-14 layout). What did not move in the pass of 2026-09-05:
+  - item 10
+    - **ref**: L8/L1/0.md:54
+    - **category**: stale
+    - **cls**: apply
+    - **touches**: live sheet
+    - **why**: The specification on 7lm main (6de996b, L8/L4/work/writing/7lm-harmonized-architecture-specification.md lines 389, 400, 410 and 420) prints the four headings at H3, the depth the sheet uses, and so does the reconcile commit of pull request #19, so the note's H2 and its reduced depth are false.
+    - **fix**: Replace L8/L1/0.md line 54 with: (The spec prints the four headings below at H3, as here. Words are unchanged.) The same false line stands at 7lm main L8/L1/0.md:54 and at aybllc/autonomous main L8/L1/0.md:54; under the scaffold record's §26 the scaffold is corrected first and both exemplars then take these same words (the Autonomous audit words its fix differently; one wording keeps the three alike). If pull request #19 is merged, its specification rewords two sentences under these headings, and "Words are unchanged." will need checking again then.
+  - item 11
+    - **ref**: L8/L4/work/writing/chat/0.md:16
+    - **category**: stale
+    - **cls**: apply
+    - **touches**: live sheet
+    - **why**: The two files reached this position on 5 September 2026, so "not read in this pass" now reads as a claim about 11 November, while their text is readable and their title pages say "Auditonomous Book Material Sourcebook" (aybllc/auditonomous main aa30b03, L8/L4/work/writing/chat/auditonomous-chat-1.docx, first paragraph), so the clause is stale and deleting it adds no date.
+    - **fix**: In L8/L4/work/writing/chat/0.md line 16 delete "; binary, not read in this pass". If the replacement of line 16 given by the WRONG-FACT finding "L8/L4/work/writing/chat/0.md:16 (also 3 and 8)" of the same report is applied, it already omits the clause and the two are one edit.
+  - item 12
+    - **ref**: L8/L5/research/0.md:38
+    - **category**: stale
+    - **cls**: apply
+    - **touches**: live sheet
+    - **why**: The owner-ordered pass of 7 September 2026 (commit `595d3b5`) removed from this very line the dated owner's rule that "that day" points back to (kept at L8/L6/history/sheets-2026-09-07.md:183), on the owner's words "please pull out historicallyu referndes to the docuejtnation" (aybllc/auditonomous main aa30b03, L8/L6/history/harmonization-2026-09-05.md:158), so the report's "on 2026-09-06" would put back what was pulled out, while deleting the dangling words makes the sentence true and loses nothing.
+    - **fix**: Corrected from the report: in L8/L5/research/0.md line 38 replace "were dissolved that day:" with "were dissolved:"; the rest of the line is unchanged. The date stays in the record (§8) and in sheets-2026-09-07.md. The same dangling "that day" stands at aybllc/autonomous main L8/L5/research/0.md:40 and is not in that repository's audit.
+  - item 13
+    - **ref**: L8/L6/history/0.md:35
+    - **category**: stale
+    - **cls**: apply
+    - **touches**: live sheet
+    - **why**: The clone at /home/user/auditonomous is not shallow (148 commits from `f2d5b37` down to a parentless root) yet lacks the rescue branch and the commit `9aefa6e`, and a sheet cannot speak for whatever clone its reader holds, so the general wording is the one that is true.
+    - **fix**: In L8/L6/history/0.md line 35 replace "git history is not L6, and this clone is shallow." with "git history is not L6, and a clone may be shallow or lack the rescue branch." The first sentence of the same line takes the WRONG-FACT fix "L8/L6/history/0.md:35" of the same report; the edits do not overlap. aybllc/autonomous main carries "this clone is shallow" at L8/L6/0.md:91, not in its audit.
+  - item 14
+    - **ref**: L8/L6/history/0.md:37
+    - **category**: stale
+    - **cls**: apply
+    - **touches**: live sheet
+    - **why**: The record's own Standing line calls it the record of one displacement event, the instantiation of 5 September 2026, to which dated sections were added up to §13 of 11 November, so "this pass" no longer names it, and line 39's "the pass" needs the same antecedent.
+    - **fix**: In L8/L6/history/0.md line 37 replace "the record of this pass:" with "the record of the instantiation of the canonical topology on 2026-09-05:", and in line 39 replace "the routing proposal the pass followed" with "the routing proposal that instantiation followed"; the rest of both lines is unchanged.
+  - item 15
+    - **ref**: L8/L6/0.md:88
+    - **category**: stale
+    - **cls**: apply
+    - **touches**: live sheet
+    - **why**: Line 74 of the same sheet already calls the file "the L6 record of the instantiation of the canonical topology on 2026-09-05", and no event current at today's commit is "this displacement event", so the Holdings line should say the same.
+    - **fix**: In L8/L6/0.md line 88 replace "the L6 record of this displacement event." with "the L6 record of the instantiation of the canonical topology on 2026-09-05." If the UNLISTED fix "L8/L6/0.md:70-75 and 88-89" is applied in the same pass, line 88 ends with that fix's two entries in place of the final full stop (see there).
+  - item 16
+    - **ref**: L8/L6/retired/0.md:34
+    - **category**: stale
+    - **cls**: apply
+    - **touches**: live sheet
+    - **why**: The set preserves the layout as it stood before the topology was instantiated on 5 September 2026, as the set's own sheet says at L8/L6/retired/layout-2026-08-14/0.md line 3, not as it stood before the mirror of 11 November, and the date names the state the set preserves, as the next bullet's date does for its own set.
+    - **fix**: In L8/L6/retired/0.md line 34 replace "as it stood before this pass:" with "as it stood before the Seven-Layer Model topology was instantiated on 2026-09-05:"; the rest of the line is unchanged.
+  - item 17
+    - **ref**: L8/L4/0.md:100
+    - **category**: misquote
+    - **cls**: apply
+    - **touches**: live sheet
+    - **why**: The specification holds "L4 realization bay" and the sentence after it as two cells of one table row with no dash joining them (7lm main 6de996b, L8/L4/work/writing/7lm-harmonized-architecture-specification.md:159), so the sheet's quotation is not verbatim, and the fix quotes each cell as it stands.
+    - **fix**: In L8/L4/0.md line 100 replace the first sentence with: The analytic view of this layer in the specification's outline, "L4 realization bay", reads: "A whole realized architecture may be contained here and may expand internally according to its own native structure without commandeering 7LM layer numbers." The rest of the line is unchanged. The same sentence stands at 7lm main L8/L4/0.md:100 (and on the reconcile commit of pull request #19) and at aybllc/autonomous main L8/L4/0.md:100, which the Autonomous audit does not list; under the scaffold record's §26 the scaffold is corrected first and both exemplars then take these words.
+  - item 18
+    - **ref**: L7/0.md:232
+    - **category**: unlisted
+    - **cls**: apply
+    - **touches**: live sheet
+    - **why**: The desk's Holdings give the provenance branch without the one record filed at L7/provenance/lineage/ (2026-08-05-observed-not-observable-session-provenance.md, 13,733 bytes, record EBA-PROV-2026-08-05-01), which the lineage sheet lists at its line 32, so the list is incomplete.
+    - **fix**: Corrected for punctuation, since the report's text drops the "and" before the prior-art rules without saying so: in L7/0.md line 232 replace "(relocated intact), and the prior-art rules at `L7/provenance/prior-art/README.md` (search still unrun)." with "(relocated intact), the prior-art rules at `L7/provenance/prior-art/README.md` (search still unrun), and one session-provenance record at `L7/provenance/lineage/2026-08-05-observed-not-observable-session-provenance.md`." The same line takes the 62-to-60 fix of the WRONG-FACT finding "L7/0.md:232" of the same report; the edits do not overlap.
+  - item 19
+    - **ref**: L8/0.md:137
+    - **category**: unlisted
+    - **cls**: apply
+    - **touches**: live sheet
+    - **why**: The container sheet's account of what L8/L6/ holds names the routing plan and the retired set of 6 September 2026 later in the same line but nowhere names L8/L6/history/sheets-2026-09-07.md, which only L8/L6/history/0.md line 38 names, so one file of the layer is missing.
+    - **fix**: In L8/0.md line 137, after "three session ledgers," insert " the record `sheets-2026-09-07.md` of what the sheets carried about their past,". Make it in one edit with the STALE fix and the other UNLISTED fix on this line; the combined text is given under the STALE entry for this line.
+  - item 20
+    - **ref**: L8/0.md:137
+    - **category**: unlisted
+    - **cls**: apply
+    - **touches**: live sheet
+    - **why**: L8/L4/work/ holds three drafts, two .docx volumes, one session record, the branch-manuscript rules, three requirements extractions and one deep-research run with its two .odt exports, and the two .docx files are by their own title pages "Auditonomous Book Material Sourcebook" volumes of chat-history ingestion, so the report's fix would keep the untrue "chat transcripts".
+    - **fix**: Corrected from the report: in L8/0.md line 137 replace "`L8/L4/work/` (drafts, chat transcripts, a session record, three requirements extractions)" with "`L8/L4/work/` (drafts, two chat-history sourcebook volumes, a session record, the branch-manuscript rules, three requirements extractions, and one deep-research run with its two exports)", the words the WRONG-FACT finding "L8/L4/work/writing/chat/0.md:16 (also 3 and 8)" of the same report gives for L8/L4/0.md:121 and L8/L4/work/0.md:39. One edit with the other two fixes on this line.
+  - item 21
+    - **ref**: L8/L5/0.md:80
+    - **category**: unlisted
+    - **cls**: apply
+    - **touches**: live sheet
+    - **why**: The layer sheet names two of the five things L8/L5/research/review/ holds besides its sheet and none of the three placed there as the catch-all, which the review sheet lists at its lines 40 to 42, and listing them as in the catch-all takes no side on where Autonomous Theory or the discipline text finally go.
+    - **fix**: Replace L8/L5/0.md line 80 with "- `research/review/` — `CONTRADICTIONS.md`, `PERPETUITY_QUESTION_ADJUDICATION.md`; in the catch-all: `STATUS_LADDER.md`, `STATUS_AND_LABEL_DISCIPLINE.md`, `autonomous-theory/` (`#autonomous(1).txt`, `02_AutonomousTheory(1).pdf`)." If pull request #28 is merged first, it adds `agent-results-2026-11-11/` to the same folder and the list takes it as well.
+  - item 22
+    - **ref**: L8/L6/0.md:70-75 and 88-89
+    - **category**: unlisted
+    - **cls**: apply
+    - **touches**: live sheet
+    - **why**: Both lists in the layer sheet omit history/sheets-2026-09-07.md, history/7LM_ROUTING_PLAN_2026-09-05.md and the retired set layout-2026-09-06/ (its sheet and five files), all three on disk and named in L8/L6/history/0.md and L8/L6/retired/0.md, and listing the set of 6 September decides nothing about the reading the repository's record (line 152) says must come before it may go.
+    - **fix**: As the report gives it, with one correction of punctuation at line 88. After line 74 add "- `L8/L6/history/sheets-2026-09-07.md` — what the sheets carried about their past until 2026-09-07, pulled out verbatim." and "- `L8/L6/history/7LM_ROUTING_PLAN_2026-09-05.md` — the routing proposal the 2026-09-05 instantiation followed; a decision record."; after line 75 add "- `L8/L6/retired/layout-2026-09-06/` — the queue's rule texts (`common/README.md`, `common/durable/README.md`, `intake/README.md`) and two duplicate files, verbatim at their old relative paths."; at the end of line 88 replace the final full stop with "; `history/sheets-2026-09-07.md` — what the sheets carried about their past until 2026-09-07; `history/7LM_ROUTING_PLAN_2026-09-05.md` — the routing proposal the 2026-09-05 instantiation followed." (appending after the full stop, as the report says, would leave ".;"); after line 89 add "- `retired/layout-2026-09-06/` — the queue's rule texts and two duplicate files, preserved verbatim at their old relative paths."
+  - item 23
+    - **ref**: L7/allications/publications/0.md:29 (Does not hold) and 33 (Holdings)
+    - **category**: misfiled
+    - **cls**: owner-chooses
+    - **touches**: live sheet
+    - **why**: Line 29, which is the scaffold's own wording, excludes empty release slots and material that has not left while line 33 holds the binder's internal/ and press-kit/ slots, and where internal/ belongs is held open for the owner in the repository's record (line 94) and in binder/0.md line 27, so any fix either changes what the position says it does not hold or moves a file.
+    - **fix**: Options: (a) end line 29 with "; the binder listed below is such material, held here unreleased (the record, §4a and §5)", the clause the Autonomous audit gives for the same line there; (b) the report's clause, "; the binder's `internal/` and `press-kit/` slots are held here as the release gate, the owner's decision on `internal/` being recorded at `binder/0.md`"; (c) move binder/internal/ to L8/L4/work/writing/ by hand and then reword; (d) change nothing until the owner rules on internal/. Pick: (a), which moves nothing, makes lines 29 and 33 agree, does not call internal/ part of a gate (an argument for one side of the open question), keeps the two exemplars alike, and is reworded in the same pass if the owner later moves internal/.
+  - item 24
+    - **ref**: L7/peering/private/egress/peer-1/object-1/0.md:16, 25
+    - **category**: misfiled
+    - **cls**: leave
+    - **touches**: dated record
+    - **why**: Leave, because the fix costs more than it buys: the report was filed here on purpose as the "receiving-side record of the closed egress to aybllc/l6" (aybllc/auditonomous main aa30b03, L8/L6/history/harmonization-2026-09-05.md:57), the binding record and both parent sheets say truly where it is, its canonical copy is in the archive, and a move would edit four sheets and relocate a dated record only to settle a classification the binding record already states.
+    - **fix**: 
+  - item 25
+    - **ref**: L7/provenance/sources/0.md:33, 43
+    - **category**: misfiled
+    - **cls**: owner-chooses
+    - **touches**: third-party text
+    - **why**: The Ferreira full text is a third-party paper whose licence status the repository's record holds open for the owner (line 94) and whose numbered lines are the citation base of the Ferreira reading capture (L7/provenance/sources/staging-records/library/reading/Ferreira_break-glass-access-control.md line 5), and the copyright sheet's own step for such material is "keep the work, record the class and the route" (aybllc/auditonomous main aa30b03, L7/governance/copyright/0.md:54).
+    - **fix**: Options: (a) keep the file where it is, change no sheet, and have the owner record its licence status at L7/governance/copyright/ (line 45 there); (b) delete it from HEAD, the archive holding the paper as row PR-020; (c) move it under a binding at L7/peering/private/ingress/peer-1/. Pick: (a); what is waited for is the owner's ruling on the licence, which the research handle of 11 November also lists as open, and until then the copyright sheet already says the text is not cited as held.
+  - item 26
+    - **ref**: L7/provenance/sources/0.md:43
+    - **category**: misfiled
+    - **cls**: owner-chooses
+    - **touches**: staging record
+    - **why**: Both sheets call the decorations capture L3 by content and an owner extraction candidate, and the repository's record holds its extraction open for the owner (line 92), while the file itself is a dated reading of a WSU-licensed IEEE standard inside a tree whose files are not edited.
+    - **fix**: Options: (a) keep the capture where it is, unchanged; (b) on the owner's word, write a new L3 object at L8/L3/engineering-mathematics/uncertainty/ that cites the capture by locator and carries quotations only, the standard being class-2 hold-private; (c) move the file to L3. Pick: (a) now, and (b) only when the owner rules on the extraction; never (c), which would break the tree kept intact and file a reading record, not an engineering object, at L3.
+  - item 27
+    - **ref**: L7/provenance/sources/0.md:36, 37, 43
+    - **category**: misfiled
+    - **cls**: leave
+    - **touches**: staging record
+    - **why**: Leave, because the fix costs more than it buys: the licence notices and the incident chain are dated records in a tree relocated intact whose files are not edited, the copyright pass of 5 September 2026 left them in place as records "which are history" (aybllc/auditonomous main aa30b03, L8/L6/history/harmonization-2026-09-05.md:103), and the sheets already cite them from L7/governance/copyright/0.md line 39, L7/provenance/sources/0.md line 43 and L8/L6/0.md line 91.
+    - **fix**: 
+  - item 28
+    - **ref**: L7/provenance/sources/0.md:35, 43
+    - **category**: misfiled
+    - **cls**: leave
+    - **touches**: staging record
+    - **why**: Leave, because the fix costs more than it buys: the two FINDINGS files are reading captures of 4 August 2026 kept as written in the intact staging tree, whose sheet classes them as provenance of reading ("They are not L5 findings and not L0 definitions.", aybllc/auditonomous main aa30b03, L7/provenance/sources/staging-records/0.md:12), and an argument drawn from them belongs at L8/L5/ only when it is stated there.
+    - **fix**: 
+- **notes**: Of the 28 findings, 22 are best applied, 3 need the owner's choice and 3 are best left. Every finding's text was checked in the export of aybllc/auditonomous main at aa30b03, and each one is still there; nothing in the repositories was changed. The 22 fixes to apply edit 16 live sheets of aybllc/auditonomous and nothing else. They change no path, no sheet's first line and no rule, and they touch no record, retired set, binder gate file, definition, ledger row or third-party text. If the owner takes the pick for the publications sheet, that makes a 17th sheet. Each fix still waits for the owner's yes. The scaffold's record says "No outside updates until we are sure I'm close" (7lm main 6de996b, L8/L6/history/harmonization-2026-09-04.md:336), and its §36 makes every finding a proposal. The owner's words of 11 November, "Get qa hanfle on the research and manuscruipt for Auditonomous but firwst" (aybllc/auditonomous main aa30b03, L8/L6/history/harmonization-2026-09-05.md:178), put this checking after the match. A yes therefore stands as the owner's word for one pass, made by hand, with a new §14 in that record. Dates follow the repository's own rule of 7 September 2026 (its record, §11). The fixes take out "this pass" where it was the sheets' own past, and they add dates only to observations and to records. Four of the report's fixes are corrected here. In L8/L5/research/0.md:38 the report would have put back a date that the 7 September pass took out, so the dangling words are deleted instead. For L8/0.md:137 the fix on L8/L4/work/ is corrected because the .docx files are sourcebook volumes, not transcripts. The other two corrections are punctuation, in L7/0.md:232 and at line 88 of L8/L6/0.md. The report prints "L8/0.md:137" as the heading of three findings, one stale and two unlisted; they are given here in the report's order and are made in one edit. Two fixes share line 88 of L8/L6/0.md. Four fixes share a line with a WRONG-FACT finding of the same report but do not overlap with it: L7/0.md:232, L7/provenance/sources/0.md:10, L8/L6/history/0.md:35 and L8/L4/work/writing/chat/0.md:16. L8/L1/0.md:54 and L8/L4/0.md:100 are the scaffold's own text and are false in all three repositories, including on the reconcile commit of pull request #19. The scaffold should be corrected first and the two exemplars then given the same words. The same stale phrases stand in aybllc/autonomous main at L7/allications/publications/binder/0.md:8, L7/peering/private/ingress/peer-1/0.md:8, L7/peering/private/ingress/peer-1/object-1/0.md:13, L7/provenance/sources/0.md:10, L8/0.md:137, L8/L1/0.md:54, L8/L4/0.md:100, L8/L5/research/0.md:40, L8/L6/0.md:88 and 91, and L8/L6/history/0.md:41. Three of these are not in that repository's audit: L8/L4/0.md:100, L8/L5/research/0.md:40 and L8/L6/0.md:91. For binder/0.md:8 and sources/0.md:10, that audit's fixes add a date where these fixes do not. Using these words in both exemplars keeps them alike and within the same rule, which aybllc/autonomous carries as §12 of its record. The scaffold's own L7/provenance/sources/0.md:10 has the same kind of leftover ("relocated in this pass"). The branch beta/7lm-exemplar-auditonomous (714480d) carries, unchanged, every sentence that the 17 dead-path, stale and misquote fixes change. Whichever of this pass and that branch lands second must take the same edits. Pull request #28 changes no sheet; if it is merged first, its agent-results-2026-11-11/ folder joins the list at L8/L5/0.md line 80. The three dead-path fixes mark removed paths as removed, as the same sheets already do elsewhere. They touch none of the binder files, staging READMEs, ledgers or manuscript that decision 23 of the owner-decision resolutions of 11 November is about.
